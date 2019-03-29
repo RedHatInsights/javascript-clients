@@ -1,0 +1,8 @@
+language: node_js
+cache:
+  directories:
+  - "$HOME/.npm"
+node_js:
+- '10'
+after_success:
+- npm run release

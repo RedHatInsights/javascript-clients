@@ -1,0 +1,3 @@
+node_modules
+packages/**/git_push.sh
+packages/**/dist

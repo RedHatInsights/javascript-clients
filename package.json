@@ -1,0 +1,49 @@
+{
+  "name": "@redhat-cloud-services/javascript-clients",
+  "version": "0.0.1",
+  "description": "Javascript clients for swagger API",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "release": "semantic-release",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "generate": "npm run generate:prod && npm run build && npm run doc",
+    "doc": "lerna run doc",
+    "build": "lerna run build",
+    "generate:prod": "lerna run generate:prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karelhala/javascript-clients.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/karelhala/javascript-clients/issues"
+  },
+  "homepage": "https://github.com/karelhala/javascript-clients#readme",
+  "devDependencies": {
+    "@khala/commit-analyzer-wildcard": "^2.2.0",
+    "@khala/npm-release-monorepo": "^2.2.0",
+    "@khala/wildcard-release-notes": "^2.2.0",
+    "@openapitools/openapi-generator-cli": "0.0.8-4.0.0-beta2",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/github": "^5.2.10",
+    "@semantic-release/npm": "^5.1.4",
+    "@types/node": "^11.11.3",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "axios": "^0.18.0",
+    "lerna": "^3.13.1",
+    "semantic-release": "^15.13.3",
+    "typescript": "^3.3.4000"
+  },
+  "release": {
+    "monorepo": "./packages",
+    "plugins": [
+      "@khala/commit-analyzer-wildcard",
+      "@khala/npm-release-monorepo",
+      "@khala/wildcard-release-notes",
+      "@semantic-release/github"
+    ]
+  }
+}
