@@ -4,5 +4,10 @@ cache:
   - "$HOME/.npm"
 node_js:
 - '10'
+install:
+  - npm ci
+  - npm run bootstrap
+script:
+  - npm run generate
 after_success:
 - npm run release
