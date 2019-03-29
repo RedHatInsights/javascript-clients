@@ -1,5 +1,5 @@
 {
-  "name": "@redhat-cloud-services/catalog-client",
+  "name": "@redhat-cloud-services/host-inventory",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
@@ -18,7 +18,7 @@
     "doc": "typedoc --theme markdown --out doc --module commonjs --mode file",
     "build": "tsc",
     "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
-    "generate:prod": "SPEC='https://raw.githubusercontent.com/ManageIQ/catalog-api/master/public/catalog/v1.0.0/openapi.json' npm run generate"
+    "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/insights-host-inventory/master/swagger/api.spec.yaml' npm run generate"
   },
   "dependencies": {
     "axios": "^0.18.0"

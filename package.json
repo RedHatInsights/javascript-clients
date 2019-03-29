@@ -5,6 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "bootstrap": "lerna exec npm install",
     "release": "semantic-release",
     "test": "echo \"Error: no test specified\" && exit 0",
     "generate": "npm run generate:prod && npm run build && npm run doc",
@@ -14,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/karelhala/javascript-clients.git"
+    "url": "git+https://github.com/RedHatInsights/javascript-clients.git"
   },
   "author": "",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/karelhala/javascript-clients/issues"
+    "url": "https://github.com/RedHatInsights/javascript-clients/issues"
   },
-  "homepage": "https://github.com/karelhala/javascript-clients#readme",
+  "homepage": "https://github.com/RedHatInsights/javascript-clients#readme",
   "devDependencies": {
     "@khala/commit-analyzer-wildcard": "^2.2.0",
     "@khala/npm-release-monorepo": "^2.2.0",
