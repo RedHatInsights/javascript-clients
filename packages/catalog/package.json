@@ -1,0 +1,26 @@
+{
+  "name": "@redhat-cloud-services/catalog-client",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karelhala/javascript-clients.git"
+  },
+  "scripts": {
+    "doc": "typedoc --theme markdown --out doc --module commonjs --mode file",
+    "build": "tsc",
+    "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
+    "generate:prod": "SPEC='https://raw.githubusercontent.com/ManageIQ/catalog-api/master/public/catalog/v1.0.0/openapi.json' npm run generate"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "typedoc": "^0.14.2",
+    "typedoc-plugin-markdown": "^1.1.27"
+  }
+}
