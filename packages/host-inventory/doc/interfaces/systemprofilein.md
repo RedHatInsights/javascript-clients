@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [SystemProfileIn](../interfaces/systemprofilein.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [SystemProfileIn](../interfaces/systemprofilein.md)
 
 # Interface: SystemProfileIn
 

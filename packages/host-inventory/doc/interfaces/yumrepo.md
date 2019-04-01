@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [YumRepo](../interfaces/yumrepo.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [YumRepo](../interfaces/yumrepo.md)
 
 # Interface: YumRepo
 

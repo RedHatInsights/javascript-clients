@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [InstalledProduct](../interfaces/installedproduct.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [InstalledProduct](../interfaces/installedproduct.md)
 
 # Interface: InstalledProduct
 

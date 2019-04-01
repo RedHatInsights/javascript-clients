@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [DiskDevice](../interfaces/diskdevice.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [DiskDevice](../interfaces/diskdevice.md)
 
 # Interface: DiskDevice
 

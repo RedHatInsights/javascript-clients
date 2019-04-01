@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [HostsApi](../classes/hostsapi.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [HostsApi](../classes/hostsapi.md)
 
 # Class: HostsApi
 

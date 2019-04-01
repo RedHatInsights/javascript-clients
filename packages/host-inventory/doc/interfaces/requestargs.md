@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [RequestArgs](../interfaces/requestargs.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [RequestArgs](../interfaces/requestargs.md)
 
 # Interface: RequestArgs
 

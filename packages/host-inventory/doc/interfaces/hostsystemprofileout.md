@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [HostSystemProfileOut](../interfaces/hostsystemprofileout.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [HostSystemProfileOut](../interfaces/hostsystemprofileout.md)
 
 # Interface: HostSystemProfileOut
 

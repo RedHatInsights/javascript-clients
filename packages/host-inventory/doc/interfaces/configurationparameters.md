@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [ConfigurationParameters](../interfaces/configurationparameters.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [ConfigurationParameters](../interfaces/configurationparameters.md)
 
 # Interface: ConfigurationParameters
 

@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [FactSet](../interfaces/factset.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [FactSet](../interfaces/factset.md)
 
 # Interface: FactSet
 
