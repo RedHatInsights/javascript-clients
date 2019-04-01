@@ -1,15 +1,15 @@
-# Javascript client for Inventory API
-If you want to use [RedHatInsights/insights-host-inventory](https://github.com/RedHatInsights/insights-host-inventory) you shouldn't use get requests directly, but rather use this client to integrate with this service.
+# Javascript client for Approval API
+If you want to use [ManageIQ/approval-api](https://github.com/ManageIQ/approval-api) you shouldn't use get requests directly, but rather use this client to integrate with this service.
 
 ## Install
 NPM
 ```bash
-npm install --save @redhat-cloud-services/host-inventory-client
+npm install --save @redhat-cloud-services/approval-client
 ```
 
 Or Yarn
 ```bash
-yarn add @redhat-cloud-services/host-inventory-client
+yarn add @redhat-cloud-services/approval-client
 ```
 
 ### Usage
@@ -19,19 +19,19 @@ To correctly bootstrap this API you should use this config (no need to define it
 ```JS
 // api.js
 import axios from 'axios';
-import { HostsApi } from '@redhat-cloud-services/host-inventory-client';
+import { ActionApi } from '@redhat-cloud-services/approval-client';
 const instance = axios.create();
 
 // BASE_PATH should be set in your constants file
-const hostsApi = new HostsApi(undefined, BASE_PATH, instance);
-export hostsApi;
+const actionsApi = new ActionApi(undefined, BASE_PATH, instance);
+export actionsApi;
 ```
 
 If you want to add some interceptors you can use axios build in interceptors
 ```JS
 // api.js
 import axios from 'axios';
-import { HostsApi } from '@redhat-cloud-services/host-inventory-client';
+import { ActionApi } from '@redhat-cloud-services/approval-client';
 const instance = axios.create();
 
 // Request interceptor
@@ -50,10 +50,11 @@ instance.interceptors.response.use(null, (error) => {
 });
 
 // BASE_PATH should be set in your constants file
-const hostsApi = new HostsApi(undefined, BASE_PATH, instance);
-export hostsApi;
+const actionsApi = new ActionApi(undefined, BASE_PATH, instance);
+export actionsApi;
 ```
 
 ## API documentation
 
 * [README](doc/README.md)
+
