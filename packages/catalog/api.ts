@@ -17,7 +17,7 @@ import * as url from "url";
 import { Configuration } from "./configuration";
 import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 
-const BASE_PATH = "https://localhost/api/catalog".replace(/\/+$/, "");
+const BASE_PATH = "https://localhost/api/catalog/v1.0".replace(/\/+$/, "");
 
 /**
  *
