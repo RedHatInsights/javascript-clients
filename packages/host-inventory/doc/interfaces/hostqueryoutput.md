@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [HostQueryOutput](../interfaces/hostqueryoutput.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [HostQueryOutput](../interfaces/hostqueryoutput.md)
 
 # Interface: HostQueryOutput
 

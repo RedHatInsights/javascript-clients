@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [NetworkInterface](../interfaces/networkinterface.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [NetworkInterface](../interfaces/networkinterface.md)
 
 # Interface: NetworkInterface
 

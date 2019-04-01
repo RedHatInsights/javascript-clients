@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [HostOut](../interfaces/hostout.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [HostOut](../interfaces/hostout.md)
 
 # Interface: HostOut
 

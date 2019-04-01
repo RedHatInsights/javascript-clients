@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [BaseAPI](../classes/baseapi.md)
+[@redhat-cloud-services/entitlements-client](../README.md) > [BaseAPI](../classes/baseapi.md)
 
 # Class: BaseAPI
 
@@ -10,7 +10,7 @@
 
 **BaseAPI**
 
-↳  [HostsApi](hostsapi.md)
+↳  [ServicesApi](servicesapi.md)
 
 ## Index
 

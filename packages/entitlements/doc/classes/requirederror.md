@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [RequiredError](../classes/requirederror.md)
+[@redhat-cloud-services/entitlements-client](../README.md) > [RequiredError](../classes/requirederror.md)
 
 # Class: RequiredError
 

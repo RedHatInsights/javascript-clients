@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [Configuration](../classes/configuration.md)
+[@redhat-cloud-services/entitlements-client](../README.md) > [Configuration](../classes/configuration.md)
 
 # Class: Configuration
 

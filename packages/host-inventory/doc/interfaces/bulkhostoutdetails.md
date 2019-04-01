@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [BulkHostOutDetails](../interfaces/bulkhostoutdetails.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [BulkHostOutDetails](../interfaces/bulkhostoutdetails.md)
 
 # Interface: BulkHostOutDetails
 

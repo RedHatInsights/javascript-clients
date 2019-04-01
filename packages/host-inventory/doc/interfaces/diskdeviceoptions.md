@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [DiskDeviceOptions](../interfaces/diskdeviceoptions.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [DiskDeviceOptions](../interfaces/diskdeviceoptions.md)
 
 # Interface: DiskDeviceOptions
 

@@ -1,4 +1,4 @@
-[@redhat-cloud-services/host-inventory](../README.md) > [CreateHostIn](../interfaces/createhostin.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) > [CreateHostIn](../interfaces/createhostin.md)
 
 # Interface: CreateHostIn
 
