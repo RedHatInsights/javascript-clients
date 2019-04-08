@@ -16,7 +16,6 @@
 
 * [email](principal.md#email)
 * [firstName](principal.md#firstname)
-* [isOrgAdmin](principal.md#isorgadmin)
 * [lastName](principal.md#lastname)
 * [username](principal.md#username)
 
@@ -30,7 +29,7 @@
 
 **● email**: *`string`*
 
-*Defined in api.ts:485*
+*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L485)*
 
 *__type__*: {string}
 
@@ -43,22 +42,9 @@ ___
 
 **● firstName**: *`string`*
 
-*Defined in api.ts:491*
+*Defined in [api.ts:491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L491)*
 
 *__type__*: {string}
-
-*__memberof__*: Principal
-
-___
-<a id="isorgadmin"></a>
-
-### `<Optional>` isOrgAdmin
-
-**● isOrgAdmin**: *`boolean`*
-
-*Defined in api.ts:503*
-
-*__type__*: {boolean}
 
 *__memberof__*: Principal
 
@@ -69,7 +55,7 @@ ___
 
 **● lastName**: *`string`*
 
-*Defined in api.ts:497*
+*Defined in [api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L497)*
 
 *__type__*: {string}
 
@@ -82,7 +68,7 @@ ___
 
 **● username**: *`string`*
 
-*Defined in api.ts:479*
+*Defined in [api.ts:479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L479)*
 
 *__type__*: {string}
 

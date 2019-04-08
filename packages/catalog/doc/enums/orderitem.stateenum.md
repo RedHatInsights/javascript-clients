@@ -10,6 +10,7 @@
 
 ### Enumeration members
 
+* [ApprovalPending](orderitem.stateenum.md#approvalpending)
 * [Completed](orderitem.stateenum.md#completed)
 * [Created](orderitem.stateenum.md#created)
 * [Failed](orderitem.stateenum.md#failed)
@@ -19,13 +20,22 @@
 
 ## Enumeration members
 
+<a id="approvalpending"></a>
+
+###  ApprovalPending
+
+**ApprovalPending**:  = "Approval Pending"
+
+*Defined in [api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L391)*
+
+___
 <a id="completed"></a>
 
 ###  Completed
 
 **Completed**:  = "Completed"
 
-*Defined in api.ts:306*
+*Defined in [api.ts:394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L394)*
 
 ___
 <a id="created"></a>
@@ -34,7 +44,7 @@ ___
 
 **Created**:  = "Created"
 
-*Defined in api.ts:303*
+*Defined in [api.ts:390](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L390)*
 
 ___
 <a id="failed"></a>
@@ -43,7 +53,7 @@ ___
 
 **Failed**:  = "Failed"
 
-*Defined in api.ts:305*
+*Defined in [api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L393)*
 
 ___
 <a id="ordered"></a>
@@ -52,7 +62,7 @@ ___
 
 **Ordered**:  = "Ordered"
 
-*Defined in api.ts:304*
+*Defined in [api.ts:392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L392)*
 
 ___
 

@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[BulkHostOutDetails](bulkhostoutdetails.md)>*
 
-*Defined in api.ts:95*
+*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L95)*
 
 List of hosts that were created, updated or failed to be processed.
 
@@ -43,7 +43,7 @@ ___
 
 **● errors**: *`number`*
 
-*Defined in api.ts:89*
+*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L89)*
 
 Number of items in the "data" list that contain errors.
 
@@ -58,7 +58,7 @@ ___
 
 **● total**: *`number`*
 
-*Defined in api.ts:83*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L83)*
 
 Total number of items in the "data" list.
 

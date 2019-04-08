@@ -29,7 +29,7 @@
 
 **● first**: *`string`*
 
-*Defined in api.ts:97*
+*Defined in [api.ts:183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L183)*
 
 The link to fetch the first group of items in the result set
 
@@ -44,7 +44,7 @@ ___
 
 **● last**: *`string`*
 
-*Defined in api.ts:103*
+*Defined in [api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L189)*
 
 The link to fetch the last group of items in the result set
 
@@ -59,7 +59,7 @@ ___
 
 **● next**: *`string`*
 
-*Defined in api.ts:115*
+*Defined in [api.ts:201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L201)*
 
 The link to fetch the next group of items in the result set
 
@@ -74,7 +74,7 @@ ___
 
 **● prev**: *`string`*
 
-*Defined in api.ts:109*
+*Defined in [api.ts:195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L195)*
 
 The link to fetch the previous group of items in the result set
 

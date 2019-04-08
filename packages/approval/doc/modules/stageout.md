@@ -32,7 +32,7 @@
 
 **● decision**: *[DecisionEnum](../enums/stageout.decisionenum.md)*
 
-*Defined in api.ts:431*
+*Defined in [api.ts:431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L431)*
 
 Final decision, may be one of the value (undecided, approved, or denied)
 
@@ -47,7 +47,7 @@ ___
 
 **● groupRef**: *`string`*
 
-*Defined in api.ts:419*
+*Defined in [api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L419)*
 
 Associated group reference id
 
@@ -62,7 +62,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:407*
+*Defined in [api.ts:407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L407)*
 
 *__type__*: {string}
 
@@ -75,7 +75,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:413*
+*Defined in [api.ts:413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L413)*
 
 name of the group that processes the stage
 
@@ -90,7 +90,7 @@ ___
 
 **● notifiedAt**: *`string`*
 
-*Defined in api.ts:437*
+*Defined in [api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L437)*
 
 the time approvers in the stage are notified
 
@@ -105,7 +105,7 @@ ___
 
 **● state**: *[StateEnum](../enums/stageout.stateenum.md)*
 
-*Defined in api.ts:425*
+*Defined in [api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L425)*
 
 The state of stage or request. It may be one of values (pending, skipped, notified or finished)
 

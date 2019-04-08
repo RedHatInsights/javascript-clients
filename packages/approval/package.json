@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/RedHatInsights/javascript-clients#readme",
   "scripts": {
-    "doc": "typedoc --theme markdown --out doc --module commonjs --mode file",
+    "doc": "typedoc --theme markdown --out doc --module commonjs --mode file --gitRevision master",
     "build": "tsc",
     "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
     "generate:prod": "SPEC='https://raw.githubusercontent.com/ManageIQ/approval-api/master/public/approval/v1.0/openapi.json' npm run generate"

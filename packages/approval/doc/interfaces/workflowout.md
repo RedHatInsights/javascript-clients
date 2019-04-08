@@ -32,7 +32,7 @@ The workflow to process approval requests. Each workflow is linked to multiple g
 
 **● description**: *`string`*
 
-*Defined in api.ts:587*
+*Defined in [api.ts:587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L587)*
 
 *__type__*: {string}
 
@@ -45,7 +45,7 @@ ___
 
 **● groupRefs**: *`Array`<`string`>*
 
-*Defined in api.ts:593*
+*Defined in [api.ts:593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L593)*
 
 Group reference ids associated with workflow
 
@@ -60,7 +60,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:599*
+*Defined in [api.ts:599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L599)*
 
 *__type__*: {string}
 
@@ -73,7 +73,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:581*
+*Defined in [api.ts:581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L581)*
 
 *__type__*: {string}
 
@@ -86,7 +86,7 @@ ___
 
 **● templateId**: *`string`*
 
-*Defined in api.ts:605*
+*Defined in [api.ts:605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L605)*
 
 Associated template id
 

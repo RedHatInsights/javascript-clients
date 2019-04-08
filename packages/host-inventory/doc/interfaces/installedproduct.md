@@ -30,7 +30,7 @@ Representation of one installed product
 
 **● id**: *`string`*
 
-*Defined in api.ts:565*
+*Defined in [api.ts:565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L565)*
 
 the product ID
 
@@ -45,7 +45,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:559*
+*Defined in [api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L559)*
 
 *__type__*: {string}
 
@@ -58,7 +58,7 @@ ___
 
 **● status**: *`string`*
 
-*Defined in api.ts:571*
+*Defined in [api.ts:571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L571)*
 
 subscription status for product
 

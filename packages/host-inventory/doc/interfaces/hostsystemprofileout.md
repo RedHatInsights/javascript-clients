@@ -29,7 +29,7 @@ Individual host record that contains only the host id and system profile
 
 **● id**: *`string`*
 
-*Defined in api.ts:539*
+*Defined in [api.ts:539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L539)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● systemProfile**: *[SystemProfileIn](systemprofilein.md)*
 
-*Defined in api.ts:545*
+*Defined in [api.ts:545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L545)*
 
 *__type__*: {SystemProfileIn}
 

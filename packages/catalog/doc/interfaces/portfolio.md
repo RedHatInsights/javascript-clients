@@ -20,6 +20,7 @@
 * [imageUrl](portfolio.md#imageurl)
 * [name](portfolio.md#name)
 * [owner](portfolio.md#owner)
+* [serviceOfferingIconRef](portfolio.md#serviceofferingiconref)
 * [workflowRef](portfolio.md#workflowref)
 
 ---
@@ -32,7 +33,7 @@
 
 **● description**: *`string`*
 
-*Defined in api.ts:399*
+*Defined in [api.ts:487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L487)*
 
 *__type__*: {string}
 
@@ -45,7 +46,7 @@ ___
 
 **● enabled**: *`boolean`*
 
-*Defined in api.ts:405*
+*Defined in [api.ts:493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L493)*
 
 *__type__*: {boolean}
 
@@ -58,7 +59,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:387*
+*Defined in [api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L475)*
 
 *__type__*: {string}
 
@@ -71,7 +72,7 @@ ___
 
 **● imageUrl**: *`string`*
 
-*Defined in api.ts:411*
+*Defined in [api.ts:499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L499)*
 
 *__type__*: {string}
 
@@ -84,7 +85,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:393*
+*Defined in [api.ts:481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L481)*
 
 *__type__*: {string}
 
@@ -97,7 +98,20 @@ ___
 
 **● owner**: *`string`*
 
-*Defined in api.ts:423*
+*Defined in [api.ts:511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L511)*
+
+*__type__*: {string}
+
+*__memberof__*: Portfolio
+
+___
+<a id="serviceofferingiconref"></a>
+
+### `<Optional>` serviceOfferingIconRef
+
+**● serviceOfferingIconRef**: *`string`*
+
+*Defined in [api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L517)*
 
 *__type__*: {string}
 
@@ -110,7 +124,7 @@ ___
 
 **● workflowRef**: *`string`*
 
-*Defined in api.ts:417*
+*Defined in [api.ts:505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L505)*
 
 *__type__*: {string}
 

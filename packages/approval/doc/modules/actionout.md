@@ -31,7 +31,7 @@
 
 **● comments**: *`string`*
 
-*Defined in api.ts:139*
+*Defined in [api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L139)*
 
 Comments for action
 
@@ -46,7 +46,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in api.ts:151*
+*Defined in [api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L151)*
 
 Timestamp of creation
 
@@ -61,7 +61,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:145*
+*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L145)*
 
 *__type__*: {string}
 
@@ -74,7 +74,7 @@ ___
 
 **● operation**: *[OperationEnum](../enums/actionout.operationenum.md)*
 
-*Defined in api.ts:133*
+*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L133)*
 
 Types of action, may be one of the value (approve, deny, notify, memo, or skip). The stage will be updated according to the operation.
 
@@ -89,7 +89,7 @@ ___
 
 **● processedBy**: *`string`*
 
-*Defined in api.ts:127*
+*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L127)*
 
 The person who performs the action
 
@@ -104,7 +104,7 @@ ___
 
 **● stageId**: *`string`*
 
-*Defined in api.ts:157*
+*Defined in [api.ts:157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L157)*
 
 Associated stage id
 

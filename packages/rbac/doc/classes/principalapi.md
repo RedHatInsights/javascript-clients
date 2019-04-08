@@ -30,7 +30,6 @@ PrincipalApi - object-oriented interface
 
 ### Methods
 
-* [getPrincipal](principalapi.md#getprincipal)
 * [listPrincipals](principalapi.md#listprincipals)
 
 ---
@@ -45,7 +44,7 @@ PrincipalApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
 
 **Parameters:**
 
@@ -69,7 +68,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -80,7 +79,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -91,43 +90,19 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
 
 ___
 
 ## Methods
 
-<a id="getprincipal"></a>
-
-###  getPrincipal
-
-▸ **getPrincipal**(username: *`string`*, options?: *`any`*): `AxiosPromise`<[Principal](../interfaces/principal.md)>
-
-*Defined in api.ts:2270*
-
-*__summary__*: Get a principal in the tenant
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: PrincipalApi
-
-**Parameters:**
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| username | `string` |  Username of principal to get |
-| `Optional` options | `any` |
-
-**Returns:** `AxiosPromise`<[Principal](../interfaces/principal.md)>
-
-___
 <a id="listprincipals"></a>
 
 ###  listPrincipals
 
-▸ **listPrincipals**(limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[PrincipalPagination](../interfaces/principalpagination.md)>
+▸ **listPrincipals**(limit?: *`number`*, offset?: *`number`*, usernames?: *`string`*, options?: *`any`*): `AxiosPromise`<[PrincipalPagination](../interfaces/principalpagination.md)>
 
-*Defined in api.ts:2283*
+*Defined in [api.ts:2204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2204)*
 
 *__summary__*: List the principals for a tenant
 
@@ -141,6 +116,7 @@ ___
 | ------ | ------ |
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
+| `Optional` usernames | `string` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[PrincipalPagination](../interfaces/principalpagination.md)>

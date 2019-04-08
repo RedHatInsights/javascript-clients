@@ -26,7 +26,7 @@
 
 **● id**: *`string`*
 
-*Defined in api.ts:373*
+*Defined in [api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L461)*
 
 *__type__*: {string}
 

@@ -31,7 +31,7 @@ Representation of one yum repository
 
 **● baseurl**: *`string`*
 
-*Defined in api.ts:873*
+*Defined in [api.ts:873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L873)*
 
 *__type__*: {string}
 
@@ -44,7 +44,7 @@ ___
 
 **● enabled**: *`boolean`*
 
-*Defined in api.ts:867*
+*Defined in [api.ts:867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L867)*
 
 *__type__*: {boolean}
 
@@ -57,7 +57,7 @@ ___
 
 **● gpgcheck**: *`boolean`*
 
-*Defined in api.ts:861*
+*Defined in [api.ts:861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L861)*
 
 *__type__*: {boolean}
 
@@ -70,7 +70,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:855*
+*Defined in [api.ts:855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L855)*
 
 *__type__*: {string}
 

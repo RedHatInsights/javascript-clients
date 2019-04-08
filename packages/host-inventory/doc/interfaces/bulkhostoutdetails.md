@@ -29,7 +29,7 @@
 
 **● detail**: *`string`*
 
-*Defined in api.ts:127*
+*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L127)*
 
 Details about why a host failed to be created or updated.
 
@@ -44,7 +44,7 @@ ___
 
 **● host**: *[CreateHostOut](createhostout.md)*
 
-*Defined in api.ts:115*
+*Defined in [api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L115)*
 
 *__type__*: {CreateHostOut}
 
@@ -57,7 +57,7 @@ ___
 
 **● status**: *`number`*
 
-*Defined in api.ts:109*
+*Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L109)*
 
 HTTP status code of the results of the host create/update process
 
@@ -72,7 +72,7 @@ ___
 
 **● title**: *`string`*
 
-*Defined in api.ts:121*
+*Defined in [api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L121)*
 
 Short description of why a host failed to be created or updated.
 

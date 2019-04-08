@@ -27,7 +27,7 @@
 
 **● permission**: *`string`*
 
-*Defined in api.ts:83*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L83)*
 
 *__type__*: {string}
 
@@ -40,7 +40,7 @@ ___
 
 **● resourceDefinitions**: *`Array`<[ResourceDefinition](resourcedefinition.md)>*
 
-*Defined in api.ts:89*
+*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L89)*
 
 *__type__*: {Array}
 

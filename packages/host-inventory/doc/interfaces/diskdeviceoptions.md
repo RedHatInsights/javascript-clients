@@ -29,7 +29,7 @@ mount options
 
 **● name**: *`string`*
 
-*Defined in api.ts:363*
+*Defined in [api.ts:363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L363)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● value**: *`string`*
 
-*Defined in api.ts:369*
+*Defined in [api.ts:369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L369)*
 
 *__type__*: {string}
 

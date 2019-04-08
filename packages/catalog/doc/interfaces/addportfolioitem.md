@@ -26,7 +26,7 @@
 
 **● portfolioItemId**: *`string`*
 
-*Defined in api.ts:83*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L83)*
 
 This is the ID of the portfolio item object.
 

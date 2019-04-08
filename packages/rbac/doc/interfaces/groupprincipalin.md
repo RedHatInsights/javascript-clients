@@ -26,7 +26,7 @@
 
 **● principals**: *`Array`<[PrincipalIn](principalin.md)>*
 
-*Defined in api.ts:213*
+*Defined in [api.ts:213](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L213)*
 
 *__type__*: {Array}
 
