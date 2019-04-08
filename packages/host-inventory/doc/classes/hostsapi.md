@@ -49,7 +49,7 @@ HostsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L49)*
 
 **Parameters:**
 
@@ -73,7 +73,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -84,7 +84,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -95,7 +95,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L49)*
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 ▸ **apiHostAddHostList**(createHostIn: *`Array`<[CreateHostIn](../interfaces/createhostin.md)>*, options?: *`any`*): `AxiosPromise`<[BulkHostOut](../interfaces/bulkhostout.md)>
 
-*Defined in api.ts:1418*
+*Defined in [api.ts:1418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1418)*
 
 Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account.
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **apiHostGetHostById**(hostIdList: *`Array`<`string`>*, perPage?: *`number`*, page?: *`number`*, options?: *`any`*): `AxiosPromise`<[HostQueryOutput](../interfaces/hostqueryoutput.md)>
 
-*Defined in api.ts:1432*
+*Defined in [api.ts:1432](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1432)*
 
 Find one or more hosts by their ID.
 
@@ -161,7 +161,7 @@ ___
 
 ▸ **apiHostGetHostList**(displayName?: *`string`*, fqdn?: *`string`*, hostnameOrId?: *`string`*, insightsId?: *`string`*, perPage?: *`number`*, page?: *`number`*, options?: *`any`*): `AxiosPromise`<[HostQueryOutput](../interfaces/hostqueryoutput.md)>
 
-*Defined in api.ts:1449*
+*Defined in [api.ts:1449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1449)*
 
 Read the entire list of all hosts available to the account.
 
@@ -192,7 +192,7 @@ ___
 
 ▸ **apiHostGetHostSystemProfileById**(hostIdList: *`Array`<`string`>*, perPage?: *`number`*, page?: *`number`*, options?: *`any`*): `AxiosPromise`<[SystemProfileByHostOut](../interfaces/systemprofilebyhostout.md)>
 
-*Defined in api.ts:1463*
+*Defined in [api.ts:1463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1463)*
 
 Find one or more hosts by their ID and return the id and system profile
 
@@ -220,7 +220,7 @@ ___
 
 ▸ **apiHostMergeFacts**(hostIdList: *`Array`<`string`>*, namespace: *`string`*, body: *`any`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in api.ts:1477*
+*Defined in [api.ts:1477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1477)*
 
 Merge one or multiple hosts facts under a namespace.
 
@@ -248,7 +248,7 @@ ___
 
 ▸ **apiHostReplaceFacts**(hostIdList: *`Array`<`string`>*, namespace: *`string`*, body: *`any`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in api.ts:1491*
+*Defined in [api.ts:1491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1491)*
 
 Replace facts under a namespace
 

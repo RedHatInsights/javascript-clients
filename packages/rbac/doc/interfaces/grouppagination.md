@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[GroupOut](groupout.md)>*
 
-*Defined in api.ts:199*
+*Defined in [api.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L199)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[PaginationLinks](paginationlinks.md)*
 
-*Defined in api.ts:193*
+*Defined in [api.ts:193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L193)*
 
 *__type__*: {PaginationLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[PaginationMeta](paginationmeta.md)*
 
-*Defined in api.ts:187*
+*Defined in [api.ts:187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L187)*
 
 *__type__*: {PaginationMeta}
 

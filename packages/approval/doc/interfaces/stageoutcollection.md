@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[StageOut](../modules/stageout.md)>*
 
-*Defined in api.ts:489*
+*Defined in [api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L489)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[CollectionLinks](collectionlinks.md)*
 
-*Defined in api.ts:483*
+*Defined in [api.ts:483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L483)*
 
 *__type__*: {CollectionLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in api.ts:477*
+*Defined in [api.ts:477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L477)*
 
 *__type__*: {CollectionMetadata}
 

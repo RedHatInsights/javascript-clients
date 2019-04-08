@@ -31,7 +31,7 @@
 
 **● apiVersion**: *`number`*
 
-*Defined in api.ts:810*
+*Defined in [api.ts:798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L798)*
 
 *__type__*: {number}
 
@@ -44,7 +44,7 @@ ___
 
 **● commit**: *`string`*
 
-*Defined in api.ts:816*
+*Defined in [api.ts:804](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L804)*
 
 *__type__*: {string}
 
@@ -57,7 +57,7 @@ ___
 
 **● modules**: *`any`*
 
-*Defined in api.ts:840*
+*Defined in [api.ts:828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L828)*
 
 *__type__*: {any}
 
@@ -70,7 +70,7 @@ ___
 
 **● platformInfo**: *`any`*
 
-*Defined in api.ts:828*
+*Defined in [api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L816)*
 
 *__type__*: {any}
 
@@ -83,7 +83,7 @@ ___
 
 **● pythonVersion**: *`string`*
 
-*Defined in api.ts:834*
+*Defined in [api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L822)*
 
 *__type__*: {string}
 
@@ -96,7 +96,7 @@ ___
 
 **● serverAddress**: *`string`*
 
-*Defined in api.ts:822*
+*Defined in [api.ts:810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L810)*
 
 *__type__*: {string}
 

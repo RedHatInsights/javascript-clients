@@ -35,7 +35,7 @@
 
 **● content**: *`any`*
 
-*Defined in api.ts:311*
+*Defined in [api.ts:311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L311)*
 
 JSON object with request content
 
@@ -50,7 +50,7 @@ ___
 
 **● decision**: *[DecisionEnum](../enums/requestout.decisionenum.md)*
 
-*Defined in api.ts:329*
+*Defined in [api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L329)*
 
 Final decision, may be one of the value (undecided, approved, or denied)
 
@@ -65,7 +65,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in api.ts:305*
+*Defined in [api.ts:305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L305)*
 
 Request description
 
@@ -80,7 +80,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:317*
+*Defined in [api.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L317)*
 
 *__type__*: {string}
 
@@ -93,7 +93,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:299*
+*Defined in [api.ts:299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L299)*
 
 Request name
 
@@ -108,7 +108,7 @@ ___
 
 **● reason**: *`string`*
 
-*Defined in api.ts:335*
+*Defined in [api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L335)*
 
 Comments for requests
 
@@ -123,7 +123,7 @@ ___
 
 **● requester**: *`string`*
 
-*Defined in api.ts:293*
+*Defined in [api.ts:293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L293)*
 
 Requester id
 
@@ -138,7 +138,7 @@ ___
 
 **● state**: *[StateEnum](../enums/requestout.stateenum.md)*
 
-*Defined in api.ts:323*
+*Defined in [api.ts:323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L323)*
 
 The state of stage or request. It may be one of values (pending, skipped, notified or finished)
 
@@ -153,7 +153,7 @@ ___
 
 **● workflowId**: *`string`*
 
-*Defined in api.ts:341*
+*Defined in [api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L341)*
 
 Associate workflow id
 

@@ -31,7 +31,7 @@
 
 **● access**: *`Array`<[Access](access.md)>*
 
-*Defined in api.ts:796*
+*Defined in [api.ts:784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L784)*
 
 *__type__*: {Array}
 
@@ -44,7 +44,7 @@ ___
 
 **● created**: *`Date`*
 
-*Defined in api.ts:784*
+*Defined in [api.ts:772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L772)*
 
 *__type__*: {Date}
 
@@ -57,7 +57,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in api.ts:772*
+*Defined in [api.ts:760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L760)*
 
 *__type__*: {string}
 
@@ -70,7 +70,7 @@ ___
 
 **● modified**: *`Date`*
 
-*Defined in api.ts:790*
+*Defined in [api.ts:778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L778)*
 
 *__type__*: {Date}
 
@@ -83,7 +83,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:766*
+*Defined in [api.ts:754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L754)*
 
 *__type__*: {string}
 
@@ -96,7 +96,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in api.ts:778*
+*Defined in [api.ts:766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L766)*
 
 *__type__*: {string}
 

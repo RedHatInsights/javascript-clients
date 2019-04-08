@@ -27,7 +27,7 @@
 
 **● options**: *`any`*
 
-*Defined in api.ts:40*
+*Defined in [api.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L40)*
 
 ___
 <a id="url"></a>
@@ -36,7 +36,7 @@ ___
 
 **● url**: *`string`*
 
-*Defined in api.ts:39*
+*Defined in [api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L39)*
 
 ___
 

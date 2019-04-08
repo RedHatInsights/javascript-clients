@@ -46,7 +46,7 @@ ActionApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L49)*
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -81,7 +81,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -92,7 +92,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L49)*
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **createAction**(stageId: *`number`*, actionIn: *[ActionIn](../modules/actionin.md)*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
-*Defined in api.ts:878*
+*Defined in [api.ts:878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L878)*
 
 Add an action to a given stage
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **listActionsByStage**(stageId: *`number`*, options?: *`any`*): `AxiosPromise`<[ActionOutCollection](../interfaces/actionoutcollection.md)>
 
-*Defined in api.ts:890*
+*Defined in [api.ts:890](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L890)*
 
 List all actions of a stage
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **showAction**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
-*Defined in api.ts:902*
+*Defined in [api.ts:902](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L902)*
 
 Return an user action by id
 

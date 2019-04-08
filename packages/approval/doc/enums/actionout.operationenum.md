@@ -26,7 +26,7 @@
 
 **Approve**:  = "approve"
 
-*Defined in api.ts:170*
+*Defined in [api.ts:170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L170)*
 
 ___
 <a id="deny"></a>
@@ -35,7 +35,7 @@ ___
 
 **Deny**:  = "deny"
 
-*Defined in api.ts:171*
+*Defined in [api.ts:171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L171)*
 
 ___
 <a id="memo"></a>
@@ -44,7 +44,7 @@ ___
 
 **Memo**:  = "memo"
 
-*Defined in api.ts:173*
+*Defined in [api.ts:173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L173)*
 
 ___
 <a id="notify"></a>
@@ -53,7 +53,7 @@ ___
 
 **Notify**:  = "notify"
 
-*Defined in api.ts:172*
+*Defined in [api.ts:172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L172)*
 
 ___
 <a id="skip"></a>
@@ -62,7 +62,7 @@ ___
 
 **Skip**:  = "skip"
 
-*Defined in api.ts:174*
+*Defined in [api.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L174)*
 
 ___
 

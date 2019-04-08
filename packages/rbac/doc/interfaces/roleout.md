@@ -30,7 +30,7 @@
 
 **● created**: *`Date`*
 
-*Defined in api.ts:720*
+*Defined in [api.ts:708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L708)*
 
 *__type__*: {Date}
 
@@ -43,7 +43,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in api.ts:708*
+*Defined in [api.ts:696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L696)*
 
 *__type__*: {string}
 
@@ -56,7 +56,7 @@ ___
 
 **● modified**: *`Date`*
 
-*Defined in api.ts:726*
+*Defined in [api.ts:714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L714)*
 
 *__type__*: {Date}
 
@@ -69,7 +69,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:702*
+*Defined in [api.ts:690](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L690)*
 
 *__type__*: {string}
 
@@ -82,7 +82,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in api.ts:714*
+*Defined in [api.ts:702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L702)*
 
 *__type__*: {string}
 

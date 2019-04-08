@@ -1,8 +1,73 @@
 
-javascript-clients
-==================
+Javascript client for Inventory API
+===================================
 
-Javascript clients for swagger API
+If you want to use [RedHatInsights/insights-host-inventory](https://github.com/RedHatInsights/insights-host-inventory) you shouldn't use get requests directly, but rather use this client to integrate with this service.
+
+Install
+-------
+
+NPM
+
+```bash
+npm install --save @redhat-cloud-services/host-inventory-client
+```
+
+Or Yarn
+
+```bash
+yarn add @redhat-cloud-services/host-inventory-client
+```
+
+### Usage
+
+This client is using typescript and axios. Types are distributed with this package, so no need to define or install them separately.
+
+To correctly bootstrap this API you should use this config (no need to define it multiple times, just one config and reimport it anywhere you want to use it).
+
+```JS
+// api.js
+import axios from 'axios';
+import { HostsApi } from '@redhat-cloud-services/host-inventory-client';
+const instance = axios.create();
+
+// BASE_PATH should be set in your constants file
+const hostsApi = new HostsApi(undefined, BASE_PATH, instance);
+export hostsApi;
+```
+
+If you want to add some interceptors you can use axios build in interceptors
+
+```JS
+// api.js
+import axios from 'axios';
+import { HostsApi } from '@redhat-cloud-services/host-inventory-client';
+const instance = axios.create();
+
+// Request interceptor
+instance.interceptors.request.use((request) => {
+    // some logic to do with request
+});
+
+// Response interceptor
+instance.interceptors.response.use((response) => {
+    // some logic to do with request
+});
+
+// Error interceptor
+instance.interceptors.response.use(null, (error) => {
+    // some logic to do with error
+});
+
+// BASE_PATH should be set in your constants file
+const hostsApi = new HostsApi(undefined, BASE_PATH, instance);
+export hostsApi;
+```
+
+API documentation
+-----------------
+
+*   [README](doc/README.md)
 
 ## Index
 
@@ -57,7 +122,7 @@ Javascript clients for swagger API
 
 **● BASE_PATH**: *`string`* =  "http://localhost".replace(/\/+$/, "")
 
-*Defined in api.ts:20*
+*Defined in [api.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L20)*
 
 ___
 
@@ -69,7 +134,7 @@ ___
 
 ▸ **HostsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in api.ts:881*
+*Defined in [api.ts:881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L881)*
 
 HostsApi - axios parameter creator
 
@@ -88,7 +153,7 @@ ___
 
 ▸ **HostsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in api.ts:1325*
+*Defined in [api.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1325)*
 
 HostsApi - factory interface
 
@@ -109,7 +174,7 @@ ___
 
 ▸ **HostsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in api.ts:1219*
+*Defined in [api.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1219)*
 
 HostsApi - functional programming interface
 
@@ -131,7 +196,7 @@ ___
 
 **COLLECTION_FORMATS**: *`object`*
 
-*Defined in api.ts:26*
+*Defined in [api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L26)*
 
 *__export__*: 
 
@@ -141,7 +206,7 @@ ___
 
 **● csv**: *`string`* = ","
 
-*Defined in api.ts:27*
+*Defined in [api.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L27)*
 
 ___
 <a id="collection_formats.pipes"></a>
@@ -150,7 +215,7 @@ ___
 
 **● pipes**: *`string`* = "|"
 
-*Defined in api.ts:30*
+*Defined in [api.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L30)*
 
 ___
 <a id="collection_formats.ssv"></a>
@@ -159,7 +224,7 @@ ___
 
 **● ssv**: *`string`* = " "
 
-*Defined in api.ts:28*
+*Defined in [api.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L28)*
 
 ___
 <a id="collection_formats.tsv"></a>
@@ -168,7 +233,7 @@ ___
 
 **● tsv**: *`string`* = "	"
 
-*Defined in api.ts:29*
+*Defined in [api.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L29)*
 
 ___
 

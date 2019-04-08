@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[PolicyExtended](policyextended.md)>*
 
-*Defined in api.ts:465*
+*Defined in [api.ts:465](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L465)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[PaginationLinks](paginationlinks.md)*
 
-*Defined in api.ts:459*
+*Defined in [api.ts:459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L459)*
 
 *__type__*: {PaginationLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[PaginationMeta](paginationmeta.md)*
 
-*Defined in api.ts:453*
+*Defined in [api.ts:453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L453)*
 
 *__type__*: {PaginationMeta}
 

@@ -32,7 +32,7 @@
 
 **● completedAt**: *`Date`*
 
-*Defined in api.ts:187*
+*Defined in [api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L273)*
 
 *__type__*: {Date}
 
@@ -45,7 +45,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in api.ts:175*
+*Defined in [api.ts:261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L261)*
 
 *__type__*: {Date}
 
@@ -58,7 +58,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:157*
+*Defined in [api.ts:243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L243)*
 
 *__type__*: {string}
 
@@ -71,7 +71,7 @@ ___
 
 **● orderedAt**: *`Date`*
 
-*Defined in api.ts:181*
+*Defined in [api.ts:267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L267)*
 
 *__type__*: {Date}
 
@@ -84,7 +84,7 @@ ___
 
 **● owner**: *`string`*
 
-*Defined in api.ts:193*
+*Defined in [api.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L279)*
 
 *__type__*: {string}
 
@@ -97,7 +97,7 @@ ___
 
 **● state**: *[StateEnum](../enums/order.stateenum.md)*
 
-*Defined in api.ts:169*
+*Defined in [api.ts:255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L255)*
 
 Current State of the order.
 
@@ -112,7 +112,7 @@ ___
 
 **● userId**: *`string`*
 
-*Defined in api.ts:163*
+*Defined in [api.ts:249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L249)*
 
 *__type__*: {string}
 

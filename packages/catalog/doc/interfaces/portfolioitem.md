@@ -38,7 +38,7 @@
 
 **● description**: *`string`*
 
-*Defined in api.ts:455*
+*Defined in [api.ts:549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L549)*
 
 *__type__*: {string}
 
@@ -51,7 +51,7 @@ ___
 
 **● displayName**: *`string`*
 
-*Defined in api.ts:473*
+*Defined in [api.ts:567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L567)*
 
 *__type__*: {string}
 
@@ -64,7 +64,7 @@ ___
 
 **● distributor**: *`string`*
 
-*Defined in api.ts:485*
+*Defined in [api.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L579)*
 
 *__type__*: {string}
 
@@ -77,7 +77,7 @@ ___
 
 **● documentationUrl**: *`string`*
 
-*Defined in api.ts:491*
+*Defined in [api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L585)*
 
 *__type__*: {string}
 
@@ -90,7 +90,7 @@ ___
 
 **● favorite**: *`boolean`*
 
-*Defined in api.ts:443*
+*Defined in [api.ts:537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L537)*
 
 *__type__*: {boolean}
 
@@ -103,7 +103,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:437*
+*Defined in [api.ts:531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L531)*
 
 *__type__*: {string}
 
@@ -116,7 +116,7 @@ ___
 
 **● longDescription**: *`string`*
 
-*Defined in api.ts:479*
+*Defined in [api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L573)*
 
 *__type__*: {string}
 
@@ -129,7 +129,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:449*
+*Defined in [api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L543)*
 
 *__type__*: {string}
 
@@ -142,7 +142,7 @@ ___
 
 **● orphan**: *`boolean`*
 
-*Defined in api.ts:461*
+*Defined in [api.ts:555](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L555)*
 
 *__type__*: {boolean}
 
@@ -155,7 +155,7 @@ ___
 
 **● owner**: *`string`*
 
-*Defined in api.ts:509*
+*Defined in [api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L603)*
 
 *__type__*: {string}
 
@@ -168,7 +168,7 @@ ___
 
 **● state**: *`string`*
 
-*Defined in api.ts:467*
+*Defined in [api.ts:561](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L561)*
 
 *__type__*: {string}
 
@@ -181,7 +181,7 @@ ___
 
 **● supportUrl**: *`string`*
 
-*Defined in api.ts:497*
+*Defined in [api.ts:591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L591)*
 
 *__type__*: {string}
 
@@ -194,7 +194,7 @@ ___
 
 **● workflowRef**: *`string`*
 
-*Defined in api.ts:503*
+*Defined in [api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L597)*
 
 *__type__*: {string}
 

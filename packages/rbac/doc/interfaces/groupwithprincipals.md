@@ -31,7 +31,7 @@
 
 **● created**: *`Date`*
 
-*Defined in api.ts:245*
+*Defined in [api.ts:245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L245)*
 
 *__type__*: {Date}
 
@@ -44,7 +44,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in api.ts:233*
+*Defined in [api.ts:233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L233)*
 
 *__type__*: {string}
 
@@ -57,7 +57,7 @@ ___
 
 **● modified**: *`Date`*
 
-*Defined in api.ts:251*
+*Defined in [api.ts:251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L251)*
 
 *__type__*: {Date}
 
@@ -70,7 +70,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:227*
+*Defined in [api.ts:227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L227)*
 
 *__type__*: {string}
 
@@ -81,9 +81,9 @@ ___
 
 ###  principals
 
-**● principals**: *`Array`<[PrincipalOut](principalout.md)>*
+**● principals**: *`Array`<[Principal](principal.md)>*
 
-*Defined in api.ts:257*
+*Defined in [api.ts:257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L257)*
 
 *__type__*: {Array}
 
@@ -96,7 +96,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in api.ts:239*
+*Defined in [api.ts:239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L239)*
 
 *__type__*: {string}
 

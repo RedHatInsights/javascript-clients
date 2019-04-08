@@ -48,7 +48,7 @@ PolicyApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
 
 **Parameters:**
 
@@ -72,7 +72,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -83,7 +83,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -94,7 +94,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 ▸ **createPolicies**(policyIn: *[PolicyIn](../interfaces/policyin.md)*, options?: *`any`*): `AxiosPromise`<[PolicyExtended](../interfaces/policyextended.md)>
 
-*Defined in api.ts:2038*
+*Defined in [api.ts:2026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2026)*
 
 *__summary__*: Create a policy in a tenant
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **deletePolicy**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in api.ts:2050*
+*Defined in [api.ts:2038](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2038)*
 
 *__summary__*: Delete a policy in the tenant
 
@@ -154,7 +154,7 @@ ___
 
 ▸ **getPolicy**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[PolicyExtended](../interfaces/policyextended.md)>
 
-*Defined in api.ts:2062*
+*Defined in [api.ts:2050](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2050)*
 
 *__summary__*: Get a policy in the tenant
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **listPolicies**(limit?: *`number`*, offset?: *`number`*, name?: *`string`*, orderBy?: *`string`*, options?: *`any`*): `AxiosPromise`<[PolicyPagination](../interfaces/policypagination.md)>
 
-*Defined in api.ts:2077*
+*Defined in [api.ts:2065](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2065)*
 
 *__summary__*: List the policies in the tenant
 
@@ -205,7 +205,7 @@ ___
 
 ▸ **updatePolicy**(uuid: *`string`*, policyIn: *[PolicyIn](../interfaces/policyin.md)*, options?: *`any`*): `AxiosPromise`<[PolicyExtended](../interfaces/policyextended.md)>
 
-*Defined in api.ts:2090*
+*Defined in [api.ts:2078](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2078)*
 
 *__summary__*: Update a policy in the tenant
 

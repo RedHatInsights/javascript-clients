@@ -26,7 +26,7 @@
 
 **● isEntitled**: *`boolean`*
 
-*Defined in api.ts:83*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L83)*
 
 *__type__*: {boolean}
 

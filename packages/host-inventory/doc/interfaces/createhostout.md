@@ -42,7 +42,7 @@ Data of a single host belonging to an account. Represents the hosts without its 
 
 **● account**: *`string`*
 
-*Defined in api.ts:233*
+*Defined in [api.ts:233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L233)*
 
 A Red Hat Account number that owns the host.
 
@@ -57,7 +57,7 @@ ___
 
 **● biosUuid**: *`string` \| `null`*
 
-*Defined in api.ts:263*
+*Defined in [api.ts:263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L263)*
 
 A UUID of the host machine BIOS. This field is considered to be a canonical fact.
 
@@ -72,7 +72,7 @@ ___
 
 **● created**: *`Date`*
 
-*Defined in api.ts:299*
+*Defined in [api.ts:299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L299)*
 
 A timestamp when the entry was created.
 
@@ -87,7 +87,7 @@ ___
 
 **● displayName**: *`string` \| `null`*
 
-*Defined in api.ts:227*
+*Defined in [api.ts:227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L227)*
 
 A host’s human-readable display name, e.g. in a form of a domain name.
 
@@ -102,7 +102,7 @@ ___
 
 **● externalId**: *`string` \| `null`*
 
-*Defined in api.ts:287*
+*Defined in [api.ts:287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L287)*
 
 Host’s reference in the external source e.g. AWS EC2, Azure, OpenStack, etc. This field is considered to be a canonical fact.
 
@@ -117,7 +117,7 @@ ___
 
 **● facts**: *`Array`<[FactSet](factset.md)>*
 
-*Defined in api.ts:311*
+*Defined in [api.ts:311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L311)*
 
 A set of facts belonging to the host.
 
@@ -132,7 +132,7 @@ ___
 
 **● fqdn**: *`string` \| `null`*
 
-*Defined in api.ts:275*
+*Defined in [api.ts:275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L275)*
 
 A host’s Fully Qualified Domain Name. This field is considered to be a canonical fact.
 
@@ -147,7 +147,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:293*
+*Defined in [api.ts:293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L293)*
 
 A durable and reliable platform-wide host identifier. Applications should use this identifier to reference hosts.
 
@@ -162,7 +162,7 @@ ___
 
 **● insightsId**: *`string` \| `null`*
 
-*Defined in api.ts:239*
+*Defined in [api.ts:239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L239)*
 
 An ID defined in /etc/insights-client/machine-id. This field is considered a canonical fact.
 
@@ -177,7 +177,7 @@ ___
 
 **● ipAddresses**: *`Array`<`string`> \| `null`*
 
-*Defined in api.ts:269*
+*Defined in [api.ts:269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L269)*
 
 Host’s network IP addresses. This field is considered to be a canonical fact.
 
@@ -192,7 +192,7 @@ ___
 
 **● macAddresses**: *`Array`<`string`> \| `null`*
 
-*Defined in api.ts:281*
+*Defined in [api.ts:281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L281)*
 
 Host’s network interfaces MAC addresses. This field is considered to be a canonical fact.
 
@@ -207,7 +207,7 @@ ___
 
 **● rhelMachineId**: *`string` \| `null`*
 
-*Defined in api.ts:245*
+*Defined in [api.ts:245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L245)*
 
 A Machine ID of a RHEL host. This field is considered to be a canonical fact.
 
@@ -222,7 +222,7 @@ ___
 
 **● satelliteId**: *`string` \| `null`*
 
-*Defined in api.ts:257*
+*Defined in [api.ts:257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L257)*
 
 A Red Hat Satellite ID of a RHEL host. This field is considered to be a canonical fact.
 
@@ -237,7 +237,7 @@ ___
 
 **● subscriptionManagerId**: *`string` \| `null`*
 
-*Defined in api.ts:251*
+*Defined in [api.ts:251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L251)*
 
 A Red Hat Subcription Manager ID of a RHEL host. This field is considered to be a canonical fact.
 
@@ -252,7 +252,7 @@ ___
 
 **● updated**: *`Date`*
 
-*Defined in api.ts:305*
+*Defined in [api.ts:305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L305)*
 
 A timestamp when the entry was last updated.
 

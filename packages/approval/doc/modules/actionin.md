@@ -28,7 +28,7 @@
 
 **● comments**: *`string`*
 
-*Defined in api.ts:95*
+*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L95)*
 
 Comments for action
 
@@ -43,7 +43,7 @@ ___
 
 **● operation**: *[OperationEnum](../enums/actionin.operationenum.md)*
 
-*Defined in api.ts:89*
+*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L89)*
 
 Types of action, may be one of the value (approve, deny, notify, memo, or skip). The stage will be updated according to the operation.
 
@@ -58,7 +58,7 @@ ___
 
 **● processedBy**: *`string`*
 
-*Defined in api.ts:83*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L83)*
 
 The person who performs the action
 

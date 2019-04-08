@@ -29,7 +29,7 @@
 
 **● createJsonSchema**: *`any`*
 
-*Defined in api.ts:668*
+*Defined in [api.ts:788](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L788)*
 
 JSON schema for the object.
 
@@ -44,7 +44,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in api.ts:656*
+*Defined in [api.ts:776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L776)*
 
 The service plan description.
 
@@ -59,7 +59,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:662*
+*Defined in [api.ts:782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L782)*
 
 The unique identifier for this service plan.
 
@@ -74,7 +74,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:650*
+*Defined in [api.ts:770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L770)*
 
 The name of the service plan.
 
