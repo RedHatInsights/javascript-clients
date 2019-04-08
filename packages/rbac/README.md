@@ -19,19 +19,19 @@ To correctly bootstrap this API you should use this config (no need to define it
 ```JS
 // api.js
 import axios from 'axios';
-import { HostsApi } from '@redhat-cloud-services/host-inventory-client';
+import { GroupApi } from '@redhat-cloud-services/rbac-client';
 const instance = axios.create();
 
 // BASE_PATH should be set in your constants file
-const hostsApi = new HostsApi(undefined, BASE_PATH, instance);
-export hostsApi;
+const groupApi = new GroupApi(undefined, BASE_PATH, instance);
+export groupApi;
 ```
 
 If you want to add some interceptors you can use axios build in interceptors
 ```JS
 // api.js
 import axios from 'axios';
-import { HostsApi } from '@redhat-cloud-services/host-inventory-client';
+import { GroupApi } from '@redhat-cloud-services/rbac-client';
 const instance = axios.create();
 
 // Request interceptor
@@ -50,8 +50,8 @@ instance.interceptors.response.use(null, (error) => {
 });
 
 // BASE_PATH should be set in your constants file
-const hostsApi = new HostsApi(undefined, BASE_PATH, instance);
-export hostsApi;
+const groupApi = new HostsApi(undefined, BASE_PATH, instance);
+export groupApi;
 ```
 
 ## API documentation

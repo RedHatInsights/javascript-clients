@@ -251,10 +251,10 @@ export interface GroupWithPrincipals {
     modified: Date;
     /**
      * 
-     * @type {Array<PrincipalOut>}
+     * @type {Array<Principal>}
      * @memberof GroupWithPrincipals
      */
-    principals: Array<PrincipalOut>;
+    principals: Array<Principal>;
 }
 
 /**
@@ -495,12 +495,6 @@ export interface Principal {
      * @memberof Principal
      */
     lastName?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Principal
-     */
-    isOrgAdmin?: boolean;
 }
 
 /**
@@ -547,12 +541,6 @@ export interface PrincipalOut {
      * @memberof PrincipalOut
      */
     lastName?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PrincipalOut
-     */
-    isOrgAdmin?: boolean;
     /**
      * 
      * @type {string}
@@ -2101,52 +2089,14 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
     return {
         /**
          * 
-         * @summary Get a principal in the tenant
-         * @param {string} username Username of principal to get
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getPrincipal(username: string, options: any = {}): RequestArgs {
-            // verify required parameter 'username' is not null or undefined
-            if (username === null || username === undefined) {
-                throw new RequiredError('username','Required parameter username was null or undefined when calling getPrincipal.');
-            }
-            const localVarPath = `/principals/{username}/`
-                .replace(`{${"username"}}`, encodeURIComponent(String(username)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @summary List the principals for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {string} [usernames] Usernames of principals to get
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listPrincipals(limit?: number, offset?: number, usernames?: string, options: any = {}): RequestArgs {
             const localVarPath = `/principals/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -2171,6 +2121,10 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (usernames !== undefined) {
+                localVarQueryParameter['usernames'] = usernames;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2192,28 +2146,15 @@ export const PrincipalApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @summary Get a principal in the tenant
-         * @param {string} username Username of principal to get
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getPrincipal(username: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Principal> {
-            const localVarAxiosArgs = PrincipalApiAxiosParamCreator(configuration).getPrincipal(username, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
-            };
-        },
-        /**
-         * 
          * @summary List the principals for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {string} [usernames] Usernames of principals to get
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
-            const localVarAxiosArgs = PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, options);
+        listPrincipals(limit?: number, offset?: number, usernames?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
+            const localVarAxiosArgs = PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, usernames, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);                
@@ -2230,24 +2171,15 @@ export const PrincipalApiFactory = function (configuration?: Configuration, base
     return {
         /**
          * 
-         * @summary Get a principal in the tenant
-         * @param {string} username Username of principal to get
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getPrincipal(username: string, options?: any) {
-            return PrincipalApiFp(configuration).getPrincipal(username, options)(axios, basePath);
-        },
-        /**
-         * 
          * @summary List the principals for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {string} [usernames] Usernames of principals to get
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, options?: any) {
-            return PrincipalApiFp(configuration).listPrincipals(limit, offset, options)(axios, basePath);
+        listPrincipals(limit?: number, offset?: number, usernames?: string, options?: any) {
+            return PrincipalApiFp(configuration).listPrincipals(limit, offset, usernames, options)(axios, basePath);
         },
     };
 };
@@ -2261,27 +2193,16 @@ export const PrincipalApiFactory = function (configuration?: Configuration, base
 export class PrincipalApi extends BaseAPI {
     /**
      * 
-     * @summary Get a principal in the tenant
-     * @param {string} username Username of principal to get
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PrincipalApi
-     */
-    public getPrincipal(username: string, options?: any) {
-        return PrincipalApiFp(this.configuration).getPrincipal(username, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * 
      * @summary List the principals for a tenant
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {string} [usernames] Usernames of principals to get
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PrincipalApi
      */
-    public listPrincipals(limit?: number, offset?: number, options?: any) {
-        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, options)(this.axios, this.basePath);
+    public listPrincipals(limit?: number, offset?: number, usernames?: string, options?: any) {
+        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, usernames, options)(this.axios, this.basePath);
     }
 
 }
