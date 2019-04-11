@@ -1,0 +1,33 @@
+{
+  "name": "@redhat-cloud-services/vulnerabilities-client",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedHatInsights/javascript-clients.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/RedHatInsights/javascript-clients/issues"
+  },
+  "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/vulnerabilities#readme",
+  "scripts": {
+    "doc": "typedoc --theme markdown --out doc --module commonjs --mode file --gitRevision master",
+    "build": "tsc",
+    "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
+    "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/vulnerability-engine/bf5ed8566fd784951e99d85eb9108f34d78e5fdc/manager.spec.yaml' npm run generate"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "typedoc": "^0.14.2",
+    "typedoc-plugin-markdown": "^1.1.27"
+  }
+}
