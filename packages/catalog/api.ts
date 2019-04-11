@@ -17,7 +17,7 @@ import * as url from "url";
 import { Configuration } from "./configuration";
 import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 
-const BASE_PATH = "https://localhost/api/catalog/v1.0".replace(/\/+$/, "");
+const BASE_PATH = "https://cloud.redhat.com//api/catalog/v1.0".replace(/\/+$/, "");
 
 /**
  *
@@ -889,14 +889,6 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
-
             // authentication BasicAuth required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
@@ -933,14 +925,6 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -982,14 +966,6 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -1033,14 +1009,6 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -1095,14 +1063,6 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
-
             // authentication BasicAuth required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
@@ -1141,14 +1101,6 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -1455,14 +1407,6 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
-
             // authentication BasicAuth required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
@@ -1511,14 +1455,6 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -1692,14 +1628,6 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
-
             // authentication BasicAuth required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
@@ -1741,14 +1669,6 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -1793,14 +1713,6 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
-
             // authentication BasicAuth required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
@@ -1841,14 +1753,6 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -1892,14 +1796,6 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -1948,14 +1844,6 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
-
             // authentication BasicAuth required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
@@ -2000,14 +1888,6 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
-
             // authentication BasicAuth required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
@@ -2050,14 +1930,6 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -2102,14 +1974,6 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -2158,14 +2022,6 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -2626,14 +2482,6 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
-
             // authentication BasicAuth required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
@@ -2677,14 +2525,6 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
-
             // authentication BasicAuth required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
@@ -2719,14 +2559,6 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -2775,14 +2607,6 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
-
             // authentication BasicAuth required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
@@ -2821,14 +2645,6 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -2869,14 +2685,6 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
-
             // authentication BasicAuth required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
@@ -2915,14 +2723,6 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
@@ -2967,14 +2767,6 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("x-rh-auth-identity")
-					: configuration.apiKey;
-                localVarHeaderParameter["x-rh-auth-identity"] = localVarApiKeyValue;
-            }
 
             // authentication BasicAuth required
             // http basic authentication required
