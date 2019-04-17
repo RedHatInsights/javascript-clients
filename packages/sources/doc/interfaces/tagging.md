@@ -28,7 +28,7 @@
 
 **● name**: *`string`*
 
-*Defined in api.ts:647*
+*Defined in [api.ts:647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L647)*
 
 *__type__*: {string}
 
@@ -41,7 +41,7 @@ ___
 
 **● tagId**: *`string`*
 
-*Defined in api.ts:641*
+*Defined in [api.ts:641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L641)*
 
 ID of the resource
 
@@ -56,7 +56,7 @@ ___
 
 **● value**: *`string`*
 
-*Defined in api.ts:653*
+*Defined in [api.ts:653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L653)*
 
 *__type__*: {string}
 

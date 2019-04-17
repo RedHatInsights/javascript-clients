@@ -30,7 +30,7 @@
 
 **● applicationTypeId**: *`string`*
 
-*Defined in api.ts:83*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L83)*
 
 ID of the resource
 
@@ -45,7 +45,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in api.ts:89*
+*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L89)*
 
 *__type__*: {Date}
 
@@ -58,7 +58,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:95*
+*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L95)*
 
 ID of the resource
 
@@ -73,7 +73,7 @@ ___
 
 **● sourceId**: *`string`*
 
-*Defined in api.ts:101*
+*Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L101)*
 
 ID of the resource
 
@@ -88,7 +88,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in api.ts:107*
+*Defined in [api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L107)*
 
 *__type__*: {Date}
 

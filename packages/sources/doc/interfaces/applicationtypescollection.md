@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[ApplicationType](applicationtype.md)>*
 
-*Defined in api.ts:171*
+*Defined in [api.ts:171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L171)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[CollectionLinks](collectionlinks.md)*
 
-*Defined in api.ts:165*
+*Defined in [api.ts:165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L165)*
 
 *__type__*: {CollectionLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in api.ts:159*
+*Defined in [api.ts:159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L159)*
 
 *__type__*: {CollectionMetadata}
 

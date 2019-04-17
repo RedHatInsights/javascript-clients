@@ -4,6 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RedHatInsights/javascript-clients.git"
@@ -13,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/RedHatInsights/javascript-clients/issues"
   },
-  "homepage": "https://github.com/RedHatInsights/javascript-clients#readme",
+  "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/sources#readme",
   "scripts": {
     "doc": "typedoc --theme markdown --out doc --module commonjs --mode file --gitRevision master",
     "build": "tsc",

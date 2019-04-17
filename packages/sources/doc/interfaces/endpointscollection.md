@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[Endpoint](endpoint.md)>*
 
-*Defined in api.ts:449*
+*Defined in [api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L449)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[CollectionLinks](collectionlinks.md)*
 
-*Defined in api.ts:443*
+*Defined in [api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L443)*
 
 *__type__*: {CollectionLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in api.ts:437*
+*Defined in [api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L437)*
 
 *__type__*: {CollectionMetadata}
 
