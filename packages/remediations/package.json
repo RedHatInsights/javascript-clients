@@ -1,0 +1,47 @@
+{
+  "name": "@redhat-cloud-services/remediations-client",
+  "version": "0.1.3",
+  "description": "TypeScript client for Insights Remediations using Axios",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedHatInsights/javascript-clients.git"
+  },
+  "author": "Jozef Hartinger",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/RedHatInsights/javascript-clients/issues"
+  },
+  "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/remediations#readme",
+  "scripts": {
+    "build": "tsc",
+    "doc": "typedoc --theme markdown --out doc --module commonjs --mode file --gitRevision master",
+    "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
+    "generate:local": "SPEC='http://localhost:9002/api/remediations/v1/openapi.json' npm run generate",
+    "generate:prod": "SPEC='http://cloud.redhat.com/api/remediations/v1/openapi.json' npm run generate",
+    "lint": "eslint test/*.ts",
+    "test": "jest --passWithNoTests",
+    "verify": "npm-run-all build lint test"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "0.0.8-4.0.0-beta2",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.0",
+    "@typescript-eslint/eslint-plugin": "^1.5.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "jest": "^24.6.0",
+    "npm-run-all": "^4.1.5",
+    "ts-jest": "^24.0.1",
+    "typedoc": "^0.14.2",
+    "typedoc-plugin-markdown": "^1.1.27",
+    "typescript": "^3.4.1"
+  }
+}
