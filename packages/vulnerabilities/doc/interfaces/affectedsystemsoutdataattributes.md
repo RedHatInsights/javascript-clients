@@ -30,7 +30,7 @@
 
 **● inventoryId**: *`string`*
 
-*Defined in api.ts:135*
+*Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L135)*
 
 Host ID.
 
@@ -45,7 +45,7 @@ ___
 
 **● lastEvaluation**: *`string`*
 
-*Defined in api.ts:141*
+*Defined in [api.ts:141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L141)*
 
 Date of last evaluation.
 
@@ -60,7 +60,7 @@ ___
 
 **● satelliteManaged**: *`boolean`*
 
-*Defined in api.ts:147*
+*Defined in [api.ts:147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L147)*
 
 Whether the host is managed by Satellite or not.
 
@@ -75,7 +75,7 @@ ___
 
 **● status**: *`string`*
 
-*Defined in api.ts:153*
+*Defined in [api.ts:153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L153)*
 
 Status of the vulnerability for the application's point of view.
 
@@ -90,7 +90,7 @@ ___
 
 **● statusId**: *`number`*
 
-*Defined in api.ts:159*
+*Defined in [api.ts:159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L159)*
 
 Internal ID of the vulnerability status.
 

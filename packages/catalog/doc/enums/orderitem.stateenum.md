@@ -26,7 +26,7 @@
 
 **ApprovalPending**:  = "Approval Pending"
 
-*Defined in [api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L391)*
+*Defined in [api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L397)*
 
 ___
 <a id="completed"></a>
@@ -35,7 +35,7 @@ ___
 
 **Completed**:  = "Completed"
 
-*Defined in [api.ts:394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L394)*
+*Defined in [api.ts:400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L400)*
 
 ___
 <a id="created"></a>
@@ -44,7 +44,7 @@ ___
 
 **Created**:  = "Created"
 
-*Defined in [api.ts:390](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L390)*
+*Defined in [api.ts:396](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L396)*
 
 ___
 <a id="failed"></a>
@@ -53,7 +53,7 @@ ___
 
 **Failed**:  = "Failed"
 
-*Defined in [api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L393)*
+*Defined in [api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L399)*
 
 ___
 <a id="ordered"></a>
@@ -62,7 +62,7 @@ ___
 
 **Ordered**:  = "Ordered"
 
-*Defined in [api.ts:392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L392)*
+*Defined in [api.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L398)*
 
 ___
 

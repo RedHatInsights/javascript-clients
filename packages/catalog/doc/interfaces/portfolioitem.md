@@ -38,7 +38,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L549)*
+*Defined in [api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L541)*
 
 *__type__*: {string}
 
@@ -51,7 +51,7 @@ ___
 
 **● displayName**: *`string`*
 
-*Defined in [api.ts:567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L567)*
+*Defined in [api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L559)*
 
 *__type__*: {string}
 
@@ -64,7 +64,7 @@ ___
 
 **● distributor**: *`string`*
 
-*Defined in [api.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L579)*
+*Defined in [api.ts:571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L571)*
 
 *__type__*: {string}
 
@@ -77,7 +77,7 @@ ___
 
 **● documentationUrl**: *`string`*
 
-*Defined in [api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L585)*
+*Defined in [api.ts:577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L577)*
 
 *__type__*: {string}
 
@@ -90,7 +90,7 @@ ___
 
 **● favorite**: *`boolean`*
 
-*Defined in [api.ts:537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L537)*
+*Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L529)*
 
 *__type__*: {boolean}
 
@@ -103,7 +103,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L531)*
+*Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L523)*
 
 *__type__*: {string}
 
@@ -116,7 +116,7 @@ ___
 
 **● longDescription**: *`string`*
 
-*Defined in [api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L573)*
+*Defined in [api.ts:565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L565)*
 
 *__type__*: {string}
 
@@ -129,7 +129,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L543)*
+*Defined in [api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L535)*
 
 *__type__*: {string}
 
@@ -142,7 +142,7 @@ ___
 
 **● orphan**: *`boolean`*
 
-*Defined in [api.ts:555](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L555)*
+*Defined in [api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L547)*
 
 *__type__*: {boolean}
 
@@ -155,7 +155,7 @@ ___
 
 **● owner**: *`string`*
 
-*Defined in [api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L603)*
+*Defined in [api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L595)*
 
 *__type__*: {string}
 
@@ -168,7 +168,7 @@ ___
 
 **● state**: *`string`*
 
-*Defined in [api.ts:561](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L561)*
+*Defined in [api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L553)*
 
 *__type__*: {string}
 
@@ -181,7 +181,7 @@ ___
 
 **● supportUrl**: *`string`*
 
-*Defined in [api.ts:591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L591)*
+*Defined in [api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L583)*
 
 *__type__*: {string}
 
@@ -194,7 +194,7 @@ ___
 
 **● workflowRef**: *`string`*
 
-*Defined in [api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L597)*
+*Defined in [api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L589)*
 
 *__type__*: {string}
 

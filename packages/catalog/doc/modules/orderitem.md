@@ -17,6 +17,7 @@
 * [completedAt](orderitem.md#completedat)
 * [count](orderitem.md#count)
 * [createdAt](orderitem.md#createdat)
+* [externalUrl](orderitem.md#externalurl)
 * [id](orderitem.md#id)
 * [orderedAt](orderitem.md#orderedat)
 * [owner](orderitem.md#owner)
@@ -66,6 +67,21 @@ ___
 *Defined in [api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L353)*
 
 *__type__*: {Date}
+
+*__memberof__*: OrderItem
+
+___
+<a id="externalurl"></a>
+
+### `<Optional>` externalUrl
+
+**● externalUrl**: *`string`*
+
+*Defined in [api.ts:383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L383)*
+
+The external url of the service instance used with relation to this order item
+
+*__type__*: {string}
 
 *__memberof__*: OrderItem
 
