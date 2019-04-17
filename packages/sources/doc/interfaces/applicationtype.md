@@ -30,7 +30,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in api.ts:121*
+*Defined in [api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L121)*
 
 *__type__*: {Date}
 
@@ -43,7 +43,7 @@ ___
 
 **● displayName**: *`string`*
 
-*Defined in api.ts:127*
+*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L127)*
 
 *__type__*: {string}
 
@@ -56,7 +56,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:133*
+*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L133)*
 
 ID of the resource
 
@@ -71,7 +71,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:139*
+*Defined in [api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L139)*
 
 *__type__*: {string}
 
@@ -84,7 +84,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in api.ts:145*
+*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L145)*
 
 *__type__*: {Date}
 

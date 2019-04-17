@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[Authentication](authentication.md)>*
 
-*Defined in api.ts:291*
+*Defined in [api.ts:291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L291)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[CollectionLinks](collectionlinks.md)*
 
-*Defined in api.ts:285*
+*Defined in [api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L285)*
 
 *__type__*: {CollectionLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in api.ts:279*
+*Defined in [api.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L279)*
 
 *__type__*: {CollectionMetadata}
 

@@ -32,7 +32,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in api.ts:539*
+*Defined in [api.ts:539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L539)*
 
 *__type__*: {Date}
 
@@ -45,7 +45,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:545*
+*Defined in [api.ts:545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L545)*
 
 ID of the resource
 
@@ -60,7 +60,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:551*
+*Defined in [api.ts:551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L551)*
 
 *__type__*: {string}
 
@@ -73,7 +73,7 @@ ___
 
 **● productName**: *`string`*
 
-*Defined in api.ts:557*
+*Defined in [api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L557)*
 
 *__type__*: {string}
 
@@ -86,7 +86,7 @@ ___
 
 **● schema**: *`string`*
 
-*Defined in api.ts:563*
+*Defined in [api.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L563)*
 
 *__type__*: {string}
 
@@ -99,7 +99,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in api.ts:569*
+*Defined in [api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L569)*
 
 *__type__*: {Date}
 
@@ -112,7 +112,7 @@ ___
 
 **● vendor**: *`string`*
 
-*Defined in api.ts:575*
+*Defined in [api.ts:575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L575)*
 
 *__type__*: {string}
 

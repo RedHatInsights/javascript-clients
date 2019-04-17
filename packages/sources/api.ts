@@ -31,7 +31,7 @@ export const COLLECTION_FORMATS = {
 };
 
 /**
- *  
+ *
  * @export
  * @interface RequestArgs
  */
@@ -41,7 +41,7 @@ export interface RequestArgs {
 }
 
 /**
- * 
+ *
  * @export
  * @class BaseAPI
  */
@@ -57,7 +57,7 @@ export class BaseAPI {
 };
 
 /**
- * 
+ *
  * @export
  * @class RequiredError
  * @extends {Error}
@@ -70,7 +70,7 @@ export class RequiredError extends Error {
 }
 
 /**
- * 
+ *
  * @export
  * @interface Application
  */
@@ -82,7 +82,7 @@ export interface Application {
      */
     applicationTypeId?: string;
     /**
-     * 
+     *
      * @type {Date}
      * @memberof Application
      */
@@ -100,7 +100,7 @@ export interface Application {
      */
     sourceId?: string;
     /**
-     * 
+     *
      * @type {Date}
      * @memberof Application
      */
@@ -108,19 +108,19 @@ export interface Application {
 }
 
 /**
- * 
+ *
  * @export
  * @interface ApplicationType
  */
 export interface ApplicationType {
     /**
-     * 
+     *
      * @type {Date}
      * @memberof ApplicationType
      */
     createdAt?: Date;
     /**
-     * 
+     *
      * @type {string}
      * @memberof ApplicationType
      */
@@ -132,13 +132,13 @@ export interface ApplicationType {
      */
     id?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof ApplicationType
      */
     name?: string;
     /**
-     * 
+     *
      * @type {Date}
      * @memberof ApplicationType
      */
@@ -146,25 +146,25 @@ export interface ApplicationType {
 }
 
 /**
- * 
+ *
  * @export
  * @interface ApplicationTypesCollection
  */
 export interface ApplicationTypesCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof ApplicationTypesCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof ApplicationTypesCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<ApplicationType>}
      * @memberof ApplicationTypesCollection
      */
@@ -172,25 +172,25 @@ export interface ApplicationTypesCollection {
 }
 
 /**
- * 
+ *
  * @export
  * @interface ApplicationsCollection
  */
 export interface ApplicationsCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof ApplicationsCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof ApplicationsCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<Application>}
      * @memberof ApplicationsCollection
      */
@@ -198,13 +198,13 @@ export interface ApplicationsCollection {
 }
 
 /**
- * 
+ *
  * @export
  * @interface Authentication
  */
 export interface Authentication {
     /**
-     * 
+     *
      * @type {string}
      * @memberof Authentication
      */
@@ -216,13 +216,13 @@ export interface Authentication {
      */
     id?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Authentication
      */
     name?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Authentication
      */
@@ -234,31 +234,31 @@ export interface Authentication {
      */
     resourceId?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Authentication
      */
     resourceType?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Authentication
      */
     status?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Authentication
      */
     statusDetails?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Authentication
      */
     tenant?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Authentication
      */
@@ -266,25 +266,25 @@ export interface Authentication {
 }
 
 /**
- * 
+ *
  * @export
  * @interface AuthenticationsCollection
  */
 export interface AuthenticationsCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof AuthenticationsCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof AuthenticationsCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<Authentication>}
      * @memberof AuthenticationsCollection
      */
@@ -292,31 +292,31 @@ export interface AuthenticationsCollection {
 }
 
 /**
- * 
+ *
  * @export
  * @interface CollectionLinks
  */
 export interface CollectionLinks {
     /**
-     * 
+     *
      * @type {string}
      * @memberof CollectionLinks
      */
     first?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof CollectionLinks
      */
     last?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof CollectionLinks
      */
     prev?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof CollectionLinks
      */
@@ -324,13 +324,13 @@ export interface CollectionLinks {
 }
 
 /**
- * 
+ *
  * @export
  * @interface CollectionMetadata
  */
 export interface CollectionMetadata {
     /**
-     * 
+     *
      * @type {number}
      * @memberof CollectionMetadata
      */
@@ -338,7 +338,7 @@ export interface CollectionMetadata {
 }
 
 /**
- * 
+ *
  * @export
  * @interface Endpoint
  */
@@ -350,13 +350,13 @@ export interface Endpoint {
      */
     certificateAuthority?: string;
     /**
-     * 
+     *
      * @type {Date}
      * @memberof Endpoint
      */
     createdAt?: Date;
     /**
-     * 
+     *
      * @type {boolean}
      * @memberof Endpoint
      */
@@ -386,7 +386,7 @@ export interface Endpoint {
      */
     port?: number;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Endpoint
      */
@@ -404,13 +404,13 @@ export interface Endpoint {
      */
     sourceId?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Endpoint
      */
     tenant?: string;
     /**
-     * 
+     *
      * @type {Date}
      * @memberof Endpoint
      */
@@ -424,25 +424,25 @@ export interface Endpoint {
 }
 
 /**
- * 
+ *
  * @export
  * @interface EndpointsCollection
  */
 export interface EndpointsCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof EndpointsCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof EndpointsCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<Endpoint>}
      * @memberof EndpointsCollection
      */
@@ -450,7 +450,7 @@ export interface EndpointsCollection {
 }
 
 /**
- * 
+ *
  * @export
  * @interface OrderParameters
  */
@@ -470,13 +470,13 @@ export interface OrderParameters {
 }
 
 /**
- * 
+ *
  * @export
  * @interface Source
  */
 export interface Source {
     /**
-     * 
+     *
      * @type {Date}
      * @memberof Source
      */
@@ -488,7 +488,7 @@ export interface Source {
      */
     id?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Source
      */
@@ -500,25 +500,25 @@ export interface Source {
      */
     sourceTypeId?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Source
      */
     tenant?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Source
      */
     uid?: string;
     /**
-     * 
+     *
      * @type {Date}
      * @memberof Source
      */
     updatedAt?: Date;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Source
      */
@@ -526,13 +526,13 @@ export interface Source {
 }
 
 /**
- * 
+ *
  * @export
  * @interface SourceType
  */
 export interface SourceType {
     /**
-     * 
+     *
      * @type {Date}
      * @memberof SourceType
      */
@@ -544,31 +544,31 @@ export interface SourceType {
      */
     id?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof SourceType
      */
     name?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof SourceType
      */
     productName?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof SourceType
      */
     schema?: string;
     /**
-     * 
+     *
      * @type {Date}
      * @memberof SourceType
      */
     updatedAt?: Date;
     /**
-     * 
+     *
      * @type {string}
      * @memberof SourceType
      */
@@ -576,25 +576,25 @@ export interface SourceType {
 }
 
 /**
- * 
+ *
  * @export
  * @interface SourceTypesCollection
  */
 export interface SourceTypesCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof SourceTypesCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof SourceTypesCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<SourceType>}
      * @memberof SourceTypesCollection
      */
@@ -602,25 +602,25 @@ export interface SourceTypesCollection {
 }
 
 /**
- * 
+ *
  * @export
  * @interface SourcesCollection
  */
 export interface SourcesCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof SourcesCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof SourcesCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<Source>}
      * @memberof SourcesCollection
      */
@@ -628,7 +628,7 @@ export interface SourcesCollection {
 }
 
 /**
- * 
+ *
  * @export
  * @interface Tagging
  */
@@ -640,13 +640,13 @@ export interface Tagging {
      */
     tagId?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Tagging
      */
     name?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Tagging
      */
@@ -654,25 +654,25 @@ export interface Tagging {
 }
 
 /**
- * 
+ *
  * @export
  * @interface Tenant
  */
 export interface Tenant {
     /**
-     * 
+     *
      * @type {string}
      * @memberof Tenant
      */
     name?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Tenant
      */
     description?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Tenant
      */
@@ -1053,7 +1053,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * 
+         *
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1090,10 +1090,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @summary List ApplicationTypes
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplicationTypes(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listApplicationTypes(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/application_types`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1118,6 +1119,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1133,10 +1138,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @summary List Applications
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplications(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listApplications(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/applications`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1161,6 +1167,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1176,10 +1186,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @summary List Authentications
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAuthentications(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listAuthentications(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/authentications`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1204,6 +1215,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1220,10 +1235,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listEndpointAuthentications(id: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listEndpointAuthentications.');
@@ -1253,6 +1269,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1268,10 +1288,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @summary List Endpoints
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listEndpoints(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listEndpoints(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/endpoints`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1296,6 +1317,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1312,10 +1337,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceApplications(id: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listSourceApplications(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceApplications.');
@@ -1345,6 +1371,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1361,10 +1391,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceEndpoints(id: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceEndpoints.');
@@ -1394,6 +1425,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1410,10 +1445,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceTypeSources(id: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceTypeSources.');
@@ -1443,6 +1479,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1458,10 +1498,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @summary List SourceTypes
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceTypes(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listSourceTypes(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/source_types`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1486,6 +1527,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1501,10 +1546,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @summary List Sources
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSources(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listSources(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/sources`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1527,6 +1573,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1937,7 +1987,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createApplication(application, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -1951,7 +2001,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createAuthentication(authentication, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -1965,7 +2015,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createEndpoint(endpoint, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -1979,7 +2029,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createSource(source, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -1993,7 +2043,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createSourceType(sourceType, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2007,7 +2057,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteApplication(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2021,7 +2071,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteAuthentication(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2035,7 +2085,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteEndpoint(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2049,11 +2099,11 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteSource(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * 
+         *
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2062,7 +2112,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2070,14 +2120,15 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @summary List ApplicationTypes
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplicationTypes(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationTypesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listApplicationTypes(limit, offset, options);
+        listApplicationTypes(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationTypesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listApplicationTypes(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2085,14 +2136,15 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @summary List Applications
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplications(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listApplications(limit, offset, options);
+        listApplications(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listApplications(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2100,14 +2152,15 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @summary List Authentications
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAuthentications(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listAuthentications(limit, offset, options);
+        listAuthentications(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listAuthentications(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2116,14 +2169,15 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listEndpointAuthentications(id: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listEndpointAuthentications(id, limit, offset, options);
+        listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listEndpointAuthentications(id, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2131,14 +2185,15 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @summary List Endpoints
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listEndpoints(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listEndpoints(limit, offset, options);
+        listEndpoints(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listEndpoints(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2147,14 +2202,15 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceApplications(id: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceApplications(id, limit, offset, options);
+        listSourceApplications(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceApplications(id, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2163,14 +2219,15 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceEndpoints(id: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceEndpoints(id, limit, offset, options);
+        listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceEndpoints(id, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2179,14 +2236,15 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceTypeSources(id: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceTypeSources(id, limit, offset, options);
+        listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceTypeSources(id, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2194,14 +2252,15 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @summary List SourceTypes
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceTypes(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceTypesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceTypes(limit, offset, options);
+        listSourceTypes(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceTypesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceTypes(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2209,14 +2268,15 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @summary List Sources
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSources(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSources(limit, offset, options);
+        listSources(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSources(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2230,7 +2290,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showApplication(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2244,7 +2304,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showApplicationType(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2258,7 +2318,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showAuthentication(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2272,7 +2332,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showEndpoint(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2286,7 +2346,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSource(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2300,7 +2360,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSourceType(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2315,7 +2375,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).updateAuthentication(id, authentication, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2330,7 +2390,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).updateEndpoint(id, endpoint, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2345,7 +2405,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).updateSource(id, source, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
     }
@@ -2448,7 +2508,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).deleteSource(id, options)(axios, basePath);
         },
         /**
-         * 
+         *
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2461,33 +2521,36 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @summary List ApplicationTypes
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplicationTypes(limit?: number, offset?: number, options?: any) {
-            return DefaultApiFp(configuration).listApplicationTypes(limit, offset, options)(axios, basePath);
+        listApplicationTypes(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listApplicationTypes(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Application objects
          * @summary List Applications
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplications(limit?: number, offset?: number, options?: any) {
-            return DefaultApiFp(configuration).listApplications(limit, offset, options)(axios, basePath);
+        listApplications(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listApplications(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Authentication objects
          * @summary List Authentications
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAuthentications(limit?: number, offset?: number, options?: any) {
-            return DefaultApiFp(configuration).listAuthentications(limit, offset, options)(axios, basePath);
+        listAuthentications(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listAuthentications(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Authentication objects
@@ -2495,22 +2558,24 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listEndpointAuthentications(id: string, limit?: number, offset?: number, options?: any) {
-            return DefaultApiFp(configuration).listEndpointAuthentications(id, limit, offset, options)(axios, basePath);
+        listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listEndpointAuthentications(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Endpoint objects
          * @summary List Endpoints
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listEndpoints(limit?: number, offset?: number, options?: any) {
-            return DefaultApiFp(configuration).listEndpoints(limit, offset, options)(axios, basePath);
+        listEndpoints(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listEndpoints(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Application objects
@@ -2518,11 +2583,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceApplications(id: string, limit?: number, offset?: number, options?: any) {
-            return DefaultApiFp(configuration).listSourceApplications(id, limit, offset, options)(axios, basePath);
+        listSourceApplications(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceApplications(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Endpoint objects
@@ -2530,11 +2596,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceEndpoints(id: string, limit?: number, offset?: number, options?: any) {
-            return DefaultApiFp(configuration).listSourceEndpoints(id, limit, offset, options)(axios, basePath);
+        listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceEndpoints(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Source objects
@@ -2542,33 +2609,36 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceTypeSources(id: string, limit?: number, offset?: number, options?: any) {
-            return DefaultApiFp(configuration).listSourceTypeSources(id, limit, offset, options)(axios, basePath);
+        listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceTypeSources(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of SourceType objects
          * @summary List SourceTypes
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceTypes(limit?: number, offset?: number, options?: any) {
-            return DefaultApiFp(configuration).listSourceTypes(limit, offset, options)(axios, basePath);
+        listSourceTypes(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceTypes(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Source objects
          * @summary List Sources
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSources(limit?: number, offset?: number, options?: any) {
-            return DefaultApiFp(configuration).listSources(limit, offset, options)(axios, basePath);
+        listSources(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSources(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns a Application object
@@ -2782,7 +2852,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * 
+     *
      * @summary Return this API document in JSON format
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2797,12 +2867,13 @@ export class DefaultApi extends BaseAPI {
      * @summary List ApplicationTypes
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listApplicationTypes(limit?: number, offset?: number, options?: any) {
-        return DefaultApiFp(this.configuration).listApplicationTypes(limit, offset, options)(this.axios, this.basePath);
+    public listApplicationTypes(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listApplicationTypes(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2810,12 +2881,13 @@ export class DefaultApi extends BaseAPI {
      * @summary List Applications
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listApplications(limit?: number, offset?: number, options?: any) {
-        return DefaultApiFp(this.configuration).listApplications(limit, offset, options)(this.axios, this.basePath);
+    public listApplications(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listApplications(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2823,12 +2895,13 @@ export class DefaultApi extends BaseAPI {
      * @summary List Authentications
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listAuthentications(limit?: number, offset?: number, options?: any) {
-        return DefaultApiFp(this.configuration).listAuthentications(limit, offset, options)(this.axios, this.basePath);
+    public listAuthentications(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listAuthentications(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2837,12 +2910,13 @@ export class DefaultApi extends BaseAPI {
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listEndpointAuthentications(id: string, limit?: number, offset?: number, options?: any) {
-        return DefaultApiFp(this.configuration).listEndpointAuthentications(id, limit, offset, options)(this.axios, this.basePath);
+    public listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listEndpointAuthentications(id, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2850,12 +2924,13 @@ export class DefaultApi extends BaseAPI {
      * @summary List Endpoints
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listEndpoints(limit?: number, offset?: number, options?: any) {
-        return DefaultApiFp(this.configuration).listEndpoints(limit, offset, options)(this.axios, this.basePath);
+    public listEndpoints(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listEndpoints(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2864,12 +2939,13 @@ export class DefaultApi extends BaseAPI {
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listSourceApplications(id: string, limit?: number, offset?: number, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceApplications(id, limit, offset, options)(this.axios, this.basePath);
+    public listSourceApplications(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceApplications(id, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2878,12 +2954,13 @@ export class DefaultApi extends BaseAPI {
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listSourceEndpoints(id: string, limit?: number, offset?: number, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceEndpoints(id, limit, offset, options)(this.axios, this.basePath);
+    public listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceEndpoints(id, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2892,12 +2969,13 @@ export class DefaultApi extends BaseAPI {
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listSourceTypeSources(id: string, limit?: number, offset?: number, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceTypeSources(id, limit, offset, options)(this.axios, this.basePath);
+    public listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceTypeSources(id, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2905,12 +2983,13 @@ export class DefaultApi extends BaseAPI {
      * @summary List SourceTypes
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listSourceTypes(limit?: number, offset?: number, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceTypes(limit, offset, options)(this.axios, this.basePath);
+    public listSourceTypes(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceTypes(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2918,12 +2997,13 @@ export class DefaultApi extends BaseAPI {
      * @summary List Sources
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listSources(limit?: number, offset?: number, options?: any) {
-        return DefaultApiFp(this.configuration).listSources(limit, offset, options)(this.axios, this.basePath);
+    public listSources(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSources(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**

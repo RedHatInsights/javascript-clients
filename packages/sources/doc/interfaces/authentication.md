@@ -35,7 +35,7 @@
 
 **● authtype**: *`string`*
 
-*Defined in api.ts:211*
+*Defined in [api.ts:211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L211)*
 
 *__type__*: {string}
 
@@ -48,7 +48,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:217*
+*Defined in [api.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L217)*
 
 ID of the resource
 
@@ -63,7 +63,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:223*
+*Defined in [api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L223)*
 
 *__type__*: {string}
 
@@ -76,7 +76,7 @@ ___
 
 **● password**: *`string`*
 
-*Defined in api.ts:229*
+*Defined in [api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L229)*
 
 *__type__*: {string}
 
@@ -89,7 +89,7 @@ ___
 
 **● resourceId**: *`string`*
 
-*Defined in api.ts:235*
+*Defined in [api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L235)*
 
 ID of the resource
 
@@ -104,7 +104,7 @@ ___
 
 **● resourceType**: *`string`*
 
-*Defined in api.ts:241*
+*Defined in [api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L241)*
 
 *__type__*: {string}
 
@@ -117,7 +117,7 @@ ___
 
 **● status**: *`string`*
 
-*Defined in api.ts:247*
+*Defined in [api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L247)*
 
 *__type__*: {string}
 
@@ -130,7 +130,7 @@ ___
 
 **● statusDetails**: *`string`*
 
-*Defined in api.ts:253*
+*Defined in [api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L253)*
 
 *__type__*: {string}
 
@@ -143,7 +143,7 @@ ___
 
 **● tenant**: *`string`*
 
-*Defined in api.ts:259*
+*Defined in [api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L259)*
 
 *__type__*: {string}
 
@@ -156,7 +156,7 @@ ___
 
 **● username**: *`string`*
 
-*Defined in api.ts:265*
+*Defined in [api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L265)*
 
 *__type__*: {string}
 
