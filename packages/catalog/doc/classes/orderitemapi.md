@@ -103,7 +103,7 @@ ___
 
 ▸ **listApprovalRequests**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[ApprovalRequestsCollection](../interfaces/approvalrequestscollection.md)>
 
-*Defined in [api.ts:1577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1577)*
+*Defined in [api.ts:1569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1569)*
 
 Gets a list of approval request associated with an order item. As the item is being approved one can check the status of the approvals.
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **listProgressMessages**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[ProgressMessagesCollection](../interfaces/progressmessagescollection.md)>
 
-*Defined in [api.ts:1591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1591)*
+*Defined in [api.ts:1583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1583)*
 
 Gets a list of progress messages associated with an order item. As the item is being processed the provider can update the progress messages.
 

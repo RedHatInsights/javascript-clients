@@ -51,7 +51,7 @@ DefaultApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L49)*
 
 **Parameters:**
 
@@ -75,7 +75,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -86,7 +86,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -97,7 +97,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L49)*
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **v1CvesCveIdAffectedSystemsGet**(cveId: *`string`*, options?: *`any`*): `AxiosPromise`<[AffectedSystemsOut](../interfaces/affectedsystemsout.md)>
 
-*Defined in api.ts:1501*
+*Defined in [api.ts:1501](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1501)*
 
 Report of affected systems for a given CVE.
 
@@ -135,7 +135,7 @@ ___
 
 ▸ **v1CvesCveIdGet**(cveId: *`string`*, options?: *`any`*): `AxiosPromise`<[CveDetailOut](../interfaces/cvedetailout.md)>
 
-*Defined in api.ts:1513*
+*Defined in [api.ts:1513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1513)*
 
 Show all information about given CVE.
 
@@ -161,7 +161,7 @@ ___
 
 ▸ **v1StatusGet**(options?: *`any`*): `AxiosPromise`<[StatusListOut](../interfaces/statuslistout.md)>
 
-*Defined in api.ts:1524*
+*Defined in [api.ts:1524](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1524)*
 
 Returns available status and status\_id pairs where status\_id is internal ID of the status.
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **v1StatusPatch**(statusIn: *[StatusIn](../interfaces/statusin.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in api.ts:1536*
+*Defined in [api.ts:1536](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1536)*
 
 Sets status for given host and CVE.
 
@@ -212,7 +212,7 @@ ___
 
 ▸ **v1SystemsGet**(filter?: *`string`*, limit?: *`number`*, offset?: *`number`*, page?: *`number`*, pageSize?: *`number`*, sort?: *`string`*, optOut?: *`boolean`*, options?: *`any`*): `AxiosPromise`<[SystemListOut](../interfaces/systemlistout.md)>
 
-*Defined in api.ts:1554*
+*Defined in [api.ts:1554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1554)*
 
 List systems visible to logged in account with basic information related to vulnerabilities.
 
@@ -244,7 +244,7 @@ ___
 
 ▸ **v1SystemsInventoryIdCvesGet**(inventoryId: *`string`*, options?: *`any`*): `AxiosPromise`<[SystemCvesOut](../interfaces/systemcvesout.md)>
 
-*Defined in api.ts:1566*
+*Defined in [api.ts:1566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1566)*
 
 Shows detailed infomation about all CVEs the system is exposed to.
 
@@ -270,7 +270,7 @@ ___
 
 ▸ **v1SystemsInventoryIdOptOutPatch**(inventoryId: *`string`*, value: *`boolean`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in api.ts:1579*
+*Defined in [api.ts:1579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1579)*
 
 Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
 
@@ -297,7 +297,7 @@ ___
 
 ▸ **v1VulnerabilitiesCvesGet**(filter?: *`string`*, limit?: *`number`*, offset?: *`number`*, page?: *`number`*, pageSize?: *`number`*, sort?: *`string`*, showAll?: *`boolean`*, options?: *`any`*): `AxiosPromise`<[VulnerabilitiesOut](../interfaces/vulnerabilitiesout.md)>
 
-*Defined in api.ts:1597*
+*Defined in [api.ts:1597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1597)*
 
 Overview of vulnerabilities across whole host inventory.
 

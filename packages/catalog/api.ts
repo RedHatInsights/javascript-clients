@@ -375,6 +375,12 @@ export interface OrderItem {
      * @memberof OrderItem
      */
     owner?: string;
+    /**
+     * The external url of the service instance used with relation to this order item
+     * @type {string}
+     * @memberof OrderItem
+     */
+    externalUrl?: string;
 }
 
 /**
@@ -445,20 +451,6 @@ export interface OrdersCollection {
      * @memberof OrdersCollection
      */
     data?: Array<Order>;
-}
-
-/**
- * 
- * @export
- * @interface Organization
- */
-export interface Organization {
-    /**
-     * 
-     * @type {string}
-     * @memberof Organization
-     */
-    id?: string;
 }
 
 /**

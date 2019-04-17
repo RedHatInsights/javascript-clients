@@ -34,7 +34,7 @@
 
 **● filter**: *`string`*
 
-*Defined in api.ts:427*
+*Defined in [api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L427)*
 
 Full text filter
 
@@ -49,7 +49,7 @@ ___
 
 **● limit**: *`number`*
 
-*Defined in api.ts:433*
+*Defined in [api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L433)*
 
 Maximum number of paginated results.
 
@@ -64,7 +64,7 @@ ___
 
 **● offset**: *`number`*
 
-*Defined in api.ts:439*
+*Defined in [api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L439)*
 
 First record of paginated response.
 
@@ -79,7 +79,7 @@ ___
 
 **● optOut**: *`boolean`*
 
-*Defined in api.ts:475*
+*Defined in [api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L475)*
 
 Whether the filter to show opted out systems is active or not. If not set, defaults to hiding opted out systems.
 
@@ -94,7 +94,7 @@ ___
 
 **● page**: *`number`*
 
-*Defined in api.ts:445*
+*Defined in [api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L445)*
 
 Page number of paginated response.
 
@@ -109,7 +109,7 @@ ___
 
 **● pageSize**: *`number`*
 
-*Defined in api.ts:451*
+*Defined in [api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L451)*
 
 Number of records per page of paginated response.
 
@@ -124,7 +124,7 @@ ___
 
 **● pages**: *`number`*
 
-*Defined in api.ts:457*
+*Defined in [api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L457)*
 
 Total number of pages of paginated response.
 
@@ -139,7 +139,7 @@ ___
 
 **● sort**: *`string`*
 
-*Defined in api.ts:463*
+*Defined in [api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L463)*
 
 Sorting filter.
 
@@ -154,7 +154,7 @@ ___
 
 **● totalItems**: *`number`*
 
-*Defined in api.ts:469*
+*Defined in [api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L469)*
 
 Total number of records.
 

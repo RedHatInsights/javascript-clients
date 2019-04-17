@@ -30,7 +30,7 @@
 
 **● cveCount**: *`number`*
 
-*Defined in api.ts:729*
+*Defined in [api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L729)*
 
 Number of CVE exposures for the system.
 
@@ -45,7 +45,7 @@ ___
 
 **● inventoryId**: *`string`*
 
-*Defined in api.ts:735*
+*Defined in [api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L735)*
 
 Host ID.
 
@@ -60,7 +60,7 @@ ___
 
 **● lastEvaluation**: *`string`*
 
-*Defined in api.ts:741*
+*Defined in [api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L741)*
 
 Date of last evaluation.
 
@@ -75,7 +75,7 @@ ___
 
 **● optOut**: *`boolean`*
 
-*Defined in api.ts:747*
+*Defined in [api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L747)*
 
 Opt out status of the system.
 
@@ -90,7 +90,7 @@ ___
 
 **● satelliteManaged**: *`boolean`*
 
-*Defined in api.ts:753*
+*Defined in [api.ts:753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L753)*
 
 Whether the host is managed by Satellite or not.
 

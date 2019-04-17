@@ -28,7 +28,7 @@
 
 **● data**: *`string`*
 
-*Defined in [api.ts:750](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L750)*
+*Defined in [api.ts:742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L742)*
 
 The raw SVG data for this icon
 
@@ -43,7 +43,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:744](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L744)*
+*Defined in [api.ts:736](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L736)*
 
 The unique identifier for this Service Offering Icon
 
@@ -58,7 +58,7 @@ ___
 
 **● sourceRef**: *`string`*
 
-*Defined in [api.ts:756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L756)*
+*Defined in [api.ts:748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L748)*
 
 Stores the Source Ref for this icon
 

@@ -32,7 +32,7 @@
 
 **● cvss2Score**: *`string`*
 
-*Defined in api.ts:819*
+*Defined in [api.ts:819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L819)*
 
 String representation of cvss2 score of the CVE.
 
@@ -47,7 +47,7 @@ ___
 
 **● cvss3Score**: *`string`*
 
-*Defined in api.ts:825*
+*Defined in [api.ts:825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L825)*
 
 String representation of cvss3 score of the CVE.
 
@@ -62,7 +62,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in api.ts:831*
+*Defined in [api.ts:831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L831)*
 
 Description of the CVE.
 
@@ -77,7 +77,7 @@ ___
 
 **● impact**: *`string`*
 
-*Defined in api.ts:837*
+*Defined in [api.ts:837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L837)*
 
 Red Hat security impact of the CVE.
 
@@ -92,7 +92,7 @@ ___
 
 **● publicDate**: *`string`*
 
-*Defined in api.ts:843*
+*Defined in [api.ts:843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L843)*
 
 String representation of ISO-8601 formatted date of first public disclosure of the CVE.
 
@@ -107,7 +107,7 @@ ___
 
 **● synopsis**: *`string`*
 
-*Defined in api.ts:849*
+*Defined in [api.ts:849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L849)*
 
 Synopsis of the CVE.
 
@@ -122,7 +122,7 @@ ___
 
 **● systemsAffected**: *`number`*
 
-*Defined in api.ts:855*
+*Defined in [api.ts:855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L855)*
 
 Number of systems affected by the CVE.
 

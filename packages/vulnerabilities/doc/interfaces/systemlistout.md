@@ -28,7 +28,7 @@
 
 **● data**: *[SystemListOutData](systemlistoutdata.md)*
 
-*Defined in api.ts:677*
+*Defined in [api.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L677)*
 
 *__type__*: {SystemListOutData}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[Links](links.md)*
 
-*Defined in api.ts:683*
+*Defined in [api.ts:683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L683)*
 
 *__type__*: {Links}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[MetaSystems](metasystems.md)*
 
-*Defined in api.ts:689*
+*Defined in [api.ts:689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L689)*
 
 *__type__*: {MetaSystems}
 

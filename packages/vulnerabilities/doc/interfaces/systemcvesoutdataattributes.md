@@ -33,7 +33,7 @@
 
 **● cvss2Score**: *`string`*
 
-*Defined in api.ts:621*
+*Defined in [api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L621)*
 
 String representation of cvss2 score of the CVE.
 
@@ -48,7 +48,7 @@ ___
 
 **● cvss3Score**: *`string`*
 
-*Defined in api.ts:627*
+*Defined in [api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L627)*
 
 String representation of cvss3 score of the CVE.
 
@@ -63,7 +63,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in api.ts:633*
+*Defined in [api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L633)*
 
 Description of the CVE.
 
@@ -78,7 +78,7 @@ ___
 
 **● impact**: *`string`*
 
-*Defined in api.ts:639*
+*Defined in [api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L639)*
 
 Red Hat security impact of the CVE.
 
@@ -93,7 +93,7 @@ ___
 
 **● publicDate**: *`string`*
 
-*Defined in api.ts:645*
+*Defined in [api.ts:645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L645)*
 
 String representation of ISO-8601 formatted date of first public disclosure of the CVE.
 
@@ -108,7 +108,7 @@ ___
 
 **● status**: *`string`*
 
-*Defined in api.ts:651*
+*Defined in [api.ts:651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L651)*
 
 Status of the vulnerability for the application's point of view.
 
@@ -123,7 +123,7 @@ ___
 
 **● statusId**: *`number`*
 
-*Defined in api.ts:657*
+*Defined in [api.ts:657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L657)*
 
 Internal ID of the vulnerability status.
 
@@ -138,7 +138,7 @@ ___
 
 **● synopsis**: *`string`*
 
-*Defined in api.ts:663*
+*Defined in [api.ts:663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L663)*
 
 Synopsis of the CVE.
 
