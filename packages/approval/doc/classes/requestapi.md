@@ -105,7 +105,7 @@ ___
 
 ▸ **createRequest**(workflowId: *`number`*, requestIn: *[RequestIn](../interfaces/requestin.md)*, options?: *`any`*): `AxiosPromise`<[RequestOut](../modules/requestout.md)>
 
-*Defined in [api.ts:1255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1255)*
+*Defined in [api.ts:1279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1279)*
 
 Add an approval request by given parameters
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **listRequests**(decision?: *`Array`<"undecided" \| "approved" \| "denied">*, state?: *`Array`<"pending" \| "skipped" \| "notified" \| "finished">*, requester?: *`string`*, limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[RequestOutCollection](../interfaces/requestoutcollection.md)>
 
-*Defined in [api.ts:1271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1271)*
+*Defined in [api.ts:1295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1295)*
 
 Return an array of requests
 
@@ -162,7 +162,7 @@ ___
 
 ▸ **listRequestsByWorkflow**(workflowId: *`number`*, limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[RequestOutCollection](../interfaces/requestoutcollection.md)>
 
-*Defined in [api.ts:1285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1285)*
+*Defined in [api.ts:1309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1309)*
 
 Return approval requests by given workflow id
 
@@ -190,7 +190,7 @@ ___
 
 ▸ **showRequest**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[RequestOut](../modules/requestout.md)>
 
-*Defined in [api.ts:1297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1297)*
+*Defined in [api.ts:1321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1321)*
 
 Return an approval request by given id
 

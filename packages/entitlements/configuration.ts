@@ -1,7 +1,7 @@
 // tslint:disable
 /**
  * Entitlements
- * Service for determining subscriptions in cloud management [cloud.redhat.com](http://cloud.redhat.com/api/v1/entitlements) 
+ * Service for determining subscriptions in cloud management [cloud.redhat.com](http://cloud.redhat.com/api/v1/entitlements)
  *
  * OpenAPI spec version: 1.0.0
  * Contact: ihands@redhat.com
@@ -30,14 +30,14 @@ export class Configuration {
     apiKey?: string | ((name: string) => string);
     /**
      * parameter for basic security
-     * 
+     *
      * @type {string}
      * @memberof Configuration
      */
     username?: string;
     /**
      * parameter for basic security
-     * 
+     *
      * @type {string}
      * @memberof Configuration
      */
@@ -51,7 +51,7 @@ export class Configuration {
     accessToken?: string | ((name: string, scopes?: string[]) => string);
     /**
      * override base path
-     * 
+     *
      * @type {string}
      * @memberof Configuration
      */

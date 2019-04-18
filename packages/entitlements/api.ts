@@ -2,7 +2,7 @@
 /// <reference path="./custom.d.ts" />
 /**
  * Entitlements
- * Service for determining subscriptions in cloud management [cloud.redhat.com](http://cloud.redhat.com/api/v1/entitlements) 
+ * Service for determining subscriptions in cloud management [cloud.redhat.com](http://cloud.redhat.com/api/v1/entitlements)
  *
  * OpenAPI spec version: 1.0.0
  * Contact: ihands@redhat.com
@@ -31,7 +31,7 @@ export const COLLECTION_FORMATS = {
 };
 
 /**
- *  
+ *
  * @export
  * @interface RequestArgs
  */
@@ -41,7 +41,7 @@ export interface RequestArgs {
 }
 
 /**
- * 
+ *
  * @export
  * @class BaseAPI
  */
@@ -57,7 +57,7 @@ export class BaseAPI {
 };
 
 /**
- * 
+ *
  * @export
  * @class RequiredError
  * @extends {Error}
@@ -70,13 +70,13 @@ export class RequiredError extends Error {
 }
 
 /**
- * 
+ *
  * @export
  * @interface ServiceDetails
  */
 export interface ServiceDetails {
     /**
-     * 
+     *
      * @type {boolean}
      * @memberof ServiceDetails
      */
@@ -91,7 +91,7 @@ export interface ServiceDetails {
 export const ServicesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * 
+         *
          * @summary get a list of services a user is entitled to
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -127,7 +127,7 @@ export const ServicesApiAxiosParamCreator = function (configuration?: Configurat
 export const ServicesApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * 
+         *
          * @summary get a list of services a user is entitled to
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -136,7 +136,7 @@ export const ServicesApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = ServicesApiAxiosParamCreator(configuration).servicesGet(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
     }
@@ -149,7 +149,7 @@ export const ServicesApiFp = function(configuration?: Configuration) {
 export const ServicesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * 
+         *
          * @summary get a list of services a user is entitled to
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -168,7 +168,7 @@ export const ServicesApiFactory = function (configuration?: Configuration, baseP
  */
 export class ServicesApi extends BaseAPI {
     /**
-     * 
+     *
      * @summary get a list of services a user is entitled to
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

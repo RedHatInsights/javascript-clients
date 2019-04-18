@@ -31,7 +31,7 @@ export const COLLECTION_FORMATS = {
 };
 
 /**
- *  
+ *
  * @export
  * @interface RequestArgs
  */
@@ -41,7 +41,7 @@ export interface RequestArgs {
 }
 
 /**
- * 
+ *
  * @export
  * @class BaseAPI
  */
@@ -57,7 +57,7 @@ export class BaseAPI {
 };
 
 /**
- * 
+ *
  * @export
  * @class RequiredError
  * @extends {Error}
@@ -114,7 +114,7 @@ export namespace ActionIn {
 }
 
 /**
- * 
+ *
  * @export
  * @interface ActionOut
  */
@@ -138,7 +138,7 @@ export interface ActionOut {
      */
     comments?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof ActionOut
      */
@@ -176,25 +176,25 @@ export namespace ActionOut {
 }
 
 /**
- * 
+ *
  * @export
  * @interface ActionOutCollection
  */
 export interface ActionOutCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof ActionOutCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof ActionOutCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<ActionOut>}
      * @memberof ActionOutCollection
      */
@@ -202,7 +202,7 @@ export interface ActionOutCollection {
 }
 
 /**
- * 
+ *
  * @export
  * @interface CollectionLinks
  */
@@ -234,7 +234,7 @@ export interface CollectionLinks {
 }
 
 /**
- * 
+ *
  * @export
  * @interface CollectionMetadata
  */
@@ -310,7 +310,7 @@ export interface RequestOut {
      */
     content: any;
     /**
-     * 
+     *
      * @type {string}
      * @memberof RequestOut
      */
@@ -339,6 +339,30 @@ export interface RequestOut {
      * @memberof RequestOut
      */
     workflowId?: string;
+    /**
+     * Timestamp of creation
+     * @type {Date}
+     * @memberof RequestOut
+     */
+    createdAt?: Date;
+    /**
+     * Timestamp of last update
+     * @type {Date}
+     * @memberof RequestOut
+     */
+    updatedAt?: Date;
+    /**
+     * Current (or last) active stage. For regular approver this number is always 0
+     * @type {number}
+     * @memberof RequestOut
+     */
+    activeStage?: number;
+    /**
+     * Total number of stages. For regular approver this number is always 0.
+     * @type {number}
+     * @memberof RequestOut
+     */
+    totalStages?: number;
 }
 
 /**
@@ -368,25 +392,25 @@ export namespace RequestOut {
 }
 
 /**
- * 
+ *
  * @export
  * @interface RequestOutCollection
  */
 export interface RequestOutCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof RequestOutCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof RequestOutCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<RequestOut>}
      * @memberof RequestOutCollection
      */
@@ -400,7 +424,7 @@ export interface RequestOutCollection {
  */
 export interface StageOut {
     /**
-     * 
+     *
      * @type {string}
      * @memberof StageOut
      */
@@ -464,25 +488,25 @@ export namespace StageOut {
 }
 
 /**
- * 
+ *
  * @export
  * @interface StageOutCollection
  */
 export interface StageOutCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof StageOutCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof StageOutCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<StageOut>}
      * @memberof StageOutCollection
      */
@@ -496,19 +520,19 @@ export interface StageOutCollection {
  */
 export interface TemplateOut {
     /**
-     * 
+     *
      * @type {string}
      * @memberof TemplateOut
      */
     id?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof TemplateOut
      */
     title?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof TemplateOut
      */
@@ -516,25 +540,25 @@ export interface TemplateOut {
 }
 
 /**
- * 
+ *
  * @export
  * @interface TemplateOutCollection
  */
 export interface TemplateOutCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof TemplateOutCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof TemplateOutCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<TemplateOut>}
      * @memberof TemplateOutCollection
      */
@@ -542,19 +566,19 @@ export interface TemplateOutCollection {
 }
 
 /**
- * 
+ *
  * @export
  * @interface WorkflowIn
  */
 export interface WorkflowIn {
     /**
-     * 
+     *
      * @type {string}
      * @memberof WorkflowIn
      */
     name: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof WorkflowIn
      */
@@ -574,13 +598,13 @@ export interface WorkflowIn {
  */
 export interface WorkflowOut {
     /**
-     * 
+     *
      * @type {string}
      * @memberof WorkflowOut
      */
     name: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof WorkflowOut
      */
@@ -592,7 +616,7 @@ export interface WorkflowOut {
      */
     groupRefs: Array<string>;
     /**
-     * 
+     *
      * @type {string}
      * @memberof WorkflowOut
      */
@@ -606,25 +630,25 @@ export interface WorkflowOut {
 }
 
 /**
- * 
+ *
  * @export
  * @interface WorkflowOutCollection
  */
 export interface WorkflowOutCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof WorkflowOutCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof WorkflowOutCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<WorkflowOut>}
      * @memberof WorkflowOutCollection
      */
@@ -785,7 +809,7 @@ export const ActionApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).createAction(stageId, actionIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -799,7 +823,7 @@ export const ActionApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).listActionsByStage(stageId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -813,7 +837,7 @@ export const ActionApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).showAction(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
     }
@@ -1126,7 +1150,7 @@ export const RequestApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).createRequest(workflowId, requestIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -1144,7 +1168,7 @@ export const RequestApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequests(decision, state, requester, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -1160,7 +1184,7 @@ export const RequestApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequestsByWorkflow(workflowId, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -1174,7 +1198,7 @@ export const RequestApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).showRequest(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
     }
@@ -1404,7 +1428,7 @@ export const StageApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = StageApiAxiosParamCreator(configuration).listStagesByRequest(requestId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -1418,7 +1442,7 @@ export const StageApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = StageApiAxiosParamCreator(configuration).showStage(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
     }
@@ -1595,7 +1619,7 @@ export const TemplateApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = TemplateApiAxiosParamCreator(configuration).listTemplates(limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -1609,7 +1633,7 @@ export const TemplateApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = TemplateApiAxiosParamCreator(configuration).showTemplate(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
     }
@@ -1972,7 +1996,7 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).addWorkflowToTemplate(templateId, workflowIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -1986,7 +2010,7 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).destroyWorkflow(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2001,7 +2025,7 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).listWorkflows(limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2017,7 +2041,7 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).listWorkflowsByTemplate(templateId, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2031,7 +2055,7 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).showWorkflow(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
         /**
@@ -2046,7 +2070,7 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).updateWorkflow(id, workflowIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);                
+                return axios.request(axiosRequestArgs);
             };
         },
     }

@@ -24,7 +24,7 @@
 
 **Approved**:  = "approved"
 
-*Defined in [api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L365)*
+*Defined in [api.ts:389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L389)*
 
 ___
 <a id="denied"></a>
@@ -33,7 +33,7 @@ ___
 
 **Denied**:  = "denied"
 
-*Defined in [api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L366)*
+*Defined in [api.ts:390](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L390)*
 
 ___
 <a id="undecided"></a>
@@ -42,7 +42,7 @@ ___
 
 **Undecided**:  = "undecided"
 
-*Defined in [api.ts:364](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L364)*
+*Defined in [api.ts:388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L388)*
 
 ___
 

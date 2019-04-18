@@ -122,7 +122,7 @@ API documentation
 
 ### `<Const>` BASE_PATH
 
-**● BASE_PATH**: *`string`* =  "https://cloud.redhat.com//api/sources/v0.1".replace(/\/+$/, "")
+**● BASE_PATH**: *`string`* =  "https://cloud.redhat.com//api/sources/v1.0".replace(/\/+$/, "")
 
 *Defined in [api.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L20)*
 
