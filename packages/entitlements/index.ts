@@ -1,7 +1,7 @@
 // tslint:disable
 /**
  * Entitlements
- * Service for determining subscriptions in cloud management [cloud.redhat.com](http://cloud.redhat.com/api/v1/entitlements) 
+ * Service for determining subscriptions in cloud management [cloud.redhat.com](http://cloud.redhat.com/api/v1/entitlements)
  *
  * OpenAPI spec version: 1.0.0
  * Contact: ihands@redhat.com

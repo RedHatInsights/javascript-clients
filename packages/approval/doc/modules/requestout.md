@@ -15,7 +15,9 @@
 
 ### Properties
 
+* [activeStage](requestout.md#activestage)
 * [content](requestout.md#content)
+* [createdAt](requestout.md#createdat)
 * [decision](requestout.md#decision)
 * [description](requestout.md#description)
 * [id](requestout.md#id)
@@ -23,12 +25,29 @@
 * [reason](requestout.md#reason)
 * [requester](requestout.md#requester)
 * [state](requestout.md#state)
+* [totalStages](requestout.md#totalstages)
+* [updatedAt](requestout.md#updatedat)
 * [workflowId](requestout.md#workflowid)
 
 ---
 
 ## Properties
 
+<a id="activestage"></a>
+
+### `<Optional>` activeStage
+
+**● activeStage**: *`number`*
+
+*Defined in [api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L359)*
+
+Current (or last) active stage. For regular approver this number is always 0
+
+*__type__*: {number}
+
+*__memberof__*: RequestOut
+
+___
 <a id="content"></a>
 
 ###  content
@@ -40,6 +59,21 @@
 JSON object with request content
 
 *__type__*: {any}
+
+*__memberof__*: RequestOut
+
+___
+<a id="createdat"></a>
+
+### `<Optional>` createdAt
+
+**● createdAt**: *`Date`*
+
+*Defined in [api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L347)*
+
+Timestamp of creation
+
+*__type__*: {Date}
 
 *__memberof__*: RequestOut
 
@@ -143,6 +177,36 @@ ___
 The state of stage or request. It may be one of values (pending, skipped, notified or finished)
 
 *__type__*: {string}
+
+*__memberof__*: RequestOut
+
+___
+<a id="totalstages"></a>
+
+### `<Optional>` totalStages
+
+**● totalStages**: *`number`*
+
+*Defined in [api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L365)*
+
+Total number of stages. For regular approver this number is always 0.
+
+*__type__*: {number}
+
+*__memberof__*: RequestOut
+
+___
+<a id="updatedat"></a>
+
+### `<Optional>` updatedAt
+
+**● updatedAt**: *`Date`*
+
+*Defined in [api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L353)*
+
+Timestamp of last update
+
+*__type__*: {Date}
 
 *__memberof__*: RequestOut
 

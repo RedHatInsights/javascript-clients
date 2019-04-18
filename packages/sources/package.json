@@ -21,7 +21,7 @@
     "doc": "typedoc --theme markdown --out doc --module commonjs --mode file --gitRevision master",
     "build": "tsc",
     "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
-    "generate:prod": "SPEC='https://raw.githubusercontent.com/ManageIQ/sources-api/master/public/doc/openapi-3-v0.1.0.json' npm run generate"
+    "generate:prod": "SPEC='https://raw.githubusercontent.com/ManageIQ/sources-api/master/public/doc/openapi-3-v1.0.0.json' npm run generate"
   },
   "dependencies": {
     "axios": "^0.18.0"

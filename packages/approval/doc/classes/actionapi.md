@@ -104,7 +104,7 @@ ___
 
 ▸ **createAction**(stageId: *`number`*, actionIn: *[ActionIn](../modules/actionin.md)*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
-*Defined in [api.ts:878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L878)*
+*Defined in [api.ts:902](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L902)*
 
 Add an action to a given stage
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **listActionsByStage**(stageId: *`number`*, options?: *`any`*): `AxiosPromise`<[ActionOutCollection](../interfaces/actionoutcollection.md)>
 
-*Defined in [api.ts:890](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L890)*
+*Defined in [api.ts:914](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L914)*
 
 List all actions of a stage
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **showAction**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
-*Defined in [api.ts:902](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L902)*
+*Defined in [api.ts:926](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L926)*
 
 Return an user action by id
 
