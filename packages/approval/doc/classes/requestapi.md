@@ -103,7 +103,7 @@ ___
 
 ###  createRequest
 
-▸ **createRequest**(workflowId: *`number`*, requestIn: *[RequestIn](../interfaces/requestin.md)*, options?: *`any`*): `AxiosPromise`<[RequestOut](../modules/requestout.md)>
+▸ **createRequest**(workflowId: *`string`*, requestIn: *[RequestIn](../interfaces/requestin.md)*, options?: *`any`*): `AxiosPromise`<[RequestOut](../modules/requestout.md)>
 
 *Defined in [api.ts:1279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1279)*
 
@@ -119,7 +119,7 @@ Add an approval request by given parameters
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| workflowId | `number` |  Id of workflow |
+| workflowId | `string` |  Id of workflow |
 | requestIn | [RequestIn](../interfaces/requestin.md) |  Parameters need to create a request |
 | `Optional` options | `any` |
 
@@ -160,7 +160,7 @@ ___
 
 ###  listRequestsByWorkflow
 
-▸ **listRequestsByWorkflow**(workflowId: *`number`*, limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[RequestOutCollection](../interfaces/requestoutcollection.md)>
+▸ **listRequestsByWorkflow**(workflowId: *`string`*, limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[RequestOutCollection](../interfaces/requestoutcollection.md)>
 
 *Defined in [api.ts:1309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1309)*
 
@@ -176,7 +176,7 @@ Return approval requests by given workflow id
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| workflowId | `number` |  Id of workflow |
+| workflowId | `string` |  Id of workflow |
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` options | `any` |
@@ -188,7 +188,7 @@ ___
 
 ###  showRequest
 
-▸ **showRequest**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[RequestOut](../modules/requestout.md)>
+▸ **showRequest**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[RequestOut](../modules/requestout.md)>
 
 *Defined in [api.ts:1321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1321)*
 
@@ -204,7 +204,7 @@ Return an approval request by given id
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| id | `number` |  Query by id |
+| id | `string` |  Query by id |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[RequestOut](../modules/requestout.md)>

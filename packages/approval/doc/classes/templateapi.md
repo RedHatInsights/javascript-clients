@@ -128,7 +128,7 @@ ___
 
 ###  showTemplate
 
-▸ **showTemplate**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[TemplateOut](../interfaces/templateout.md)>
+▸ **showTemplate**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[TemplateOut](../interfaces/templateout.md)>
 
 *Defined in [api.ts:1700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1700)*
 
@@ -144,7 +144,7 @@ Return a template by given id
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| id | `number` |  Query by id |
+| id | `string` |  Query by id |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TemplateOut](../interfaces/templateout.md)>

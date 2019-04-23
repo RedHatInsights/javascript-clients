@@ -140,6 +140,12 @@ export interface CreateHostIn {
      */
     displayName?: string;
     /**
+     * The ansible host name for remediations
+     * @type {string}
+     * @memberof CreateHostIn
+     */
+    ansibleHost?: string;
+    /**
      * A Red Hat Account number that owns the host.
      * @type {string}
      * @memberof CreateHostIn
@@ -225,6 +231,12 @@ export interface CreateHostOut {
      * @memberof CreateHostOut
      */
     displayName?: string | null;
+    /**
+     * The ansible host name for remediations
+     * @type {string}
+     * @memberof CreateHostOut
+     */
+    ansibleHost?: string | null;
     /**
      * A Red Hat Account number that owns the host.
      * @type {string}
@@ -401,6 +413,12 @@ export interface HostOut {
      * @memberof HostOut
      */
     displayName?: string | null;
+    /**
+     * The ansible host name for remediations
+     * @type {string}
+     * @memberof HostOut
+     */
+    ansibleHost?: string | null;
     /**
      * A Red Hat Account number that owns the host.
      * @type {string}
@@ -622,6 +640,26 @@ export interface NetworkInterface {
 }
 
 /**
+ * Data of a single host to be updated.
+ * @export
+ * @interface PatchHostIn
+ */
+export interface PatchHostIn {
+    /**
+     * The ansible host name for remediations
+     * @type {string}
+     * @memberof PatchHostIn
+     */
+    ansibleHost?: string;
+    /**
+     * A host’s human-readable display name, e.g. in a form of a domain name.
+     * @type {string}
+     * @memberof PatchHostIn
+     */
+    displayName?: string;
+}
+
+/**
  * Structure of the output of the host system profile query
  * @export
  * @interface SystemProfileByHostOut
@@ -797,6 +835,12 @@ export interface SystemProfileIn {
      * @memberof SystemProfileIn
      */
     satelliteManaged?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfileIn
+     */
+    cloudProvider?: string;
     /**
      *
      * @type {Array<YumRepo>}
@@ -1154,6 +1198,56 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
+         * Update a host
+         * @summary Update a host
+         * @param {string} hostId A host ID
+         * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostPatchHost(hostId: string, patchHostIn: PatchHostIn, options: any = {}): RequestArgs {
+            // verify required parameter 'hostId' is not null or undefined
+            if (hostId === null || hostId === undefined) {
+                throw new RequiredError('hostId','Required parameter hostId was null or undefined when calling apiHostPatchHost.');
+            }
+            // verify required parameter 'patchHostIn' is not null or undefined
+            if (patchHostIn === null || patchHostIn === undefined) {
+                throw new RequiredError('patchHostIn','Required parameter patchHostIn was null or undefined when calling apiHostPatchHost.');
+            }
+            const localVarPath = `/hosts/{host_id}`
+                .replace(`{${"host_id"}}`, encodeURIComponent(String(hostId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("x-rh-identity")
+					: configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PatchHostIn" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(patchHostIn || {}) : (patchHostIn || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Replace facts under a namespace
          * @summary Replace facts under a namespace
          * @param {Array<string>} hostIdList IDs of the hosts that own the facts to be replaced.
@@ -1300,6 +1394,21 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Update a host
+         * @summary Update a host
+         * @param {string} hostId A host ID
+         * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostPatchHost(hostId: string, patchHostIn: PatchHostIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostPatchHost(hostId, patchHostIn, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Replace facts under a namespace
          * @summary Replace facts under a namespace
          * @param {Array<string>} hostIdList IDs of the hosts that own the facts to be replaced.
@@ -1384,6 +1493,17 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          */
         apiHostMergeFacts(hostIdList: Array<string>, namespace: string, body: any, options?: any) {
             return HostsApiFp(configuration).apiHostMergeFacts(hostIdList, namespace, body, options)(axios, basePath);
+        },
+        /**
+         * Update a host
+         * @summary Update a host
+         * @param {string} hostId A host ID
+         * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostPatchHost(hostId: string, patchHostIn: PatchHostIn, options?: any) {
+            return HostsApiFp(configuration).apiHostPatchHost(hostId, patchHostIn, options)(axios, basePath);
         },
         /**
          * Replace facts under a namespace
@@ -1476,6 +1596,19 @@ export class HostsApi extends BaseAPI {
      */
     public apiHostMergeFacts(hostIdList: Array<string>, namespace: string, body: any, options?: any) {
         return HostsApiFp(this.configuration).apiHostMergeFacts(hostIdList, namespace, body, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Update a host
+     * @summary Update a host
+     * @param {string} hostId A host ID
+     * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HostsApi
+     */
+    public apiHostPatchHost(hostId: string, patchHostIn: PatchHostIn, options?: any) {
+        return HostsApiFp(this.configuration).apiHostPatchHost(hostId, patchHostIn, options)(this.axios, this.basePath);
     }
 
     /**

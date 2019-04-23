@@ -105,7 +105,7 @@ ___
 
 ###  addWorkflowToTemplate
 
-▸ **addWorkflowToTemplate**(templateId: *`number`*, workflowIn: *[WorkflowIn](../interfaces/workflowin.md)*, options?: *`any`*): `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
+▸ **addWorkflowToTemplate**(templateId: *`string`*, workflowIn: *[WorkflowIn](../interfaces/workflowin.md)*, options?: *`any`*): `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
 
 *Defined in [api.ts:2169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2169)*
 
@@ -121,7 +121,7 @@ Add a workflow by given template id
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| templateId | `number` |  Id of template |
+| templateId | `string` |  Id of template |
 | workflowIn | [WorkflowIn](../interfaces/workflowin.md) |  Parameters need to create workflow |
 | `Optional` options | `any` |
 
@@ -132,7 +132,7 @@ ___
 
 ###  destroyWorkflow
 
-▸ **destroyWorkflow**(id: *`number`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **destroyWorkflow**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
 *Defined in [api.ts:2181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2181)*
 
@@ -148,7 +148,7 @@ Delete approval workflow by given id
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| id | `number` |  Query by id |
+| id | `string` |  Query by id |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<`Response`>
@@ -185,7 +185,7 @@ ___
 
 ###  listWorkflowsByTemplate
 
-▸ **listWorkflowsByTemplate**(templateId: *`number`*, limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[WorkflowOutCollection](../interfaces/workflowoutcollection.md)>
+▸ **listWorkflowsByTemplate**(templateId: *`string`*, limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[WorkflowOutCollection](../interfaces/workflowoutcollection.md)>
 
 *Defined in [api.ts:2208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2208)*
 
@@ -201,7 +201,7 @@ Return an array of workflows by given template id
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| templateId | `number` |  Id of template |
+| templateId | `string` |  Id of template |
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` options | `any` |
@@ -213,7 +213,7 @@ ___
 
 ###  showWorkflow
 
-▸ **showWorkflow**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
+▸ **showWorkflow**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
 
 *Defined in [api.ts:2220](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2220)*
 
@@ -229,7 +229,7 @@ Return an approval workflow by given id
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| id | `number` |  Query by id |
+| id | `string` |  Query by id |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
@@ -239,7 +239,7 @@ ___
 
 ###  updateWorkflow
 
-▸ **updateWorkflow**(id: *`number`*, workflowIn: *[WorkflowIn](../interfaces/workflowin.md)*, options?: *`any`*): `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
+▸ **updateWorkflow**(id: *`string`*, workflowIn: *[WorkflowIn](../interfaces/workflowin.md)*, options?: *`any`*): `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
 
 *Defined in [api.ts:2233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2233)*
 
@@ -255,7 +255,7 @@ Update an approval workflow by given id
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| id | `number` |  Query by id |
+| id | `string` |  Query by id |
 | workflowIn | [WorkflowIn](../interfaces/workflowin.md) |  Parameters need to update approval workflow |
 | `Optional` options | `any` |
 
