@@ -28,11 +28,11 @@ To correctly bootstrap this API you should use this config (no need to define it
 ```JS
 // api.js
 import axios from 'axios';
-import { BaseApi } from '@redhat-cloud-services/sources-client';
+import { DefaultApi } from '@redhat-cloud-services/sources-client';
 const instance = axios.create();
 
 // BASE_PATH should be set in your constants file
-const baseApi = new BaseApi(undefined, BASE_PATH, instance);
+const baseApi = new DefaultApi(undefined, BASE_PATH, instance);
 export baseApi;
 ```
 
@@ -41,7 +41,7 @@ If you want to add some interceptors you can use axios build in interceptors
 ```JS
 // api.js
 import axios from 'axios';
-import { BaseApi } from '@redhat-cloud-services/catalog-client';
+import { DefaultApi } from '@redhat-cloud-services/catalog-client';
 const instance = axios.create();
 
 // Request interceptor
@@ -60,7 +60,7 @@ instance.interceptors.response.use(null, (error) => {
 });
 
 // BASE_PATH should be set in your constants file
-const baseApi = new BaseApi(undefined, BASE_PATH, instance);
+const baseApi = new DefaultApi(undefined, BASE_PATH, instance);
 export baseApi;
 ```
 
