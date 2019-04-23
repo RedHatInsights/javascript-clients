@@ -665,12 +665,12 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * Add an action to a given stage
          * @summary Add an action to a given stage
-         * @param {number} stageId Id of stage
+         * @param {string} stageId Id of stage
          * @param {ActionIn} actionIn Action object that will be added
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAction(stageId: number, actionIn: ActionIn, options: any = {}): RequestArgs {
+        createAction(stageId: string, actionIn: ActionIn, options: any = {}): RequestArgs {
             // verify required parameter 'stageId' is not null or undefined
             if (stageId === null || stageId === undefined) {
                 throw new RequiredError('stageId','Required parameter stageId was null or undefined when calling createAction.');
@@ -713,11 +713,11 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * List all actions of a stage
          * @summary Return actions in a given stage
-         * @param {number} stageId Id of stage
+         * @param {string} stageId Id of stage
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listActionsByStage(stageId: number, options: any = {}): RequestArgs {
+        listActionsByStage(stageId: string, options: any = {}): RequestArgs {
             // verify required parameter 'stageId' is not null or undefined
             if (stageId === null || stageId === undefined) {
                 throw new RequiredError('stageId','Required parameter stageId was null or undefined when calling listActionsByStage.');
@@ -752,11 +752,11 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * Return an user action by id
          * @summary Return an user action by id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showAction(id: number, options: any = {}): RequestArgs {
+        showAction(id: string, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showAction.');
@@ -800,12 +800,12 @@ export const ActionApiFp = function(configuration?: Configuration) {
         /**
          * Add an action to a given stage
          * @summary Add an action to a given stage
-         * @param {number} stageId Id of stage
+         * @param {string} stageId Id of stage
          * @param {ActionIn} actionIn Action object that will be added
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAction(stageId: number, actionIn: ActionIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionOut> {
+        createAction(stageId: string, actionIn: ActionIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionOut> {
             const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).createAction(stageId, actionIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -815,11 +815,11 @@ export const ActionApiFp = function(configuration?: Configuration) {
         /**
          * List all actions of a stage
          * @summary Return actions in a given stage
-         * @param {number} stageId Id of stage
+         * @param {string} stageId Id of stage
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listActionsByStage(stageId: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionOutCollection> {
+        listActionsByStage(stageId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionOutCollection> {
             const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).listActionsByStage(stageId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -829,11 +829,11 @@ export const ActionApiFp = function(configuration?: Configuration) {
         /**
          * Return an user action by id
          * @summary Return an user action by id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showAction(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionOut> {
+        showAction(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionOut> {
             const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).showAction(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -852,32 +852,32 @@ export const ActionApiFactory = function (configuration?: Configuration, basePat
         /**
          * Add an action to a given stage
          * @summary Add an action to a given stage
-         * @param {number} stageId Id of stage
+         * @param {string} stageId Id of stage
          * @param {ActionIn} actionIn Action object that will be added
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAction(stageId: number, actionIn: ActionIn, options?: any) {
+        createAction(stageId: string, actionIn: ActionIn, options?: any) {
             return ActionApiFp(configuration).createAction(stageId, actionIn, options)(axios, basePath);
         },
         /**
          * List all actions of a stage
          * @summary Return actions in a given stage
-         * @param {number} stageId Id of stage
+         * @param {string} stageId Id of stage
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listActionsByStage(stageId: number, options?: any) {
+        listActionsByStage(stageId: string, options?: any) {
             return ActionApiFp(configuration).listActionsByStage(stageId, options)(axios, basePath);
         },
         /**
          * Return an user action by id
          * @summary Return an user action by id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showAction(id: number, options?: any) {
+        showAction(id: string, options?: any) {
             return ActionApiFp(configuration).showAction(id, options)(axios, basePath);
         },
     };
@@ -893,37 +893,37 @@ export class ActionApi extends BaseAPI {
     /**
      * Add an action to a given stage
      * @summary Add an action to a given stage
-     * @param {number} stageId Id of stage
+     * @param {string} stageId Id of stage
      * @param {ActionIn} actionIn Action object that will be added
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActionApi
      */
-    public createAction(stageId: number, actionIn: ActionIn, options?: any) {
+    public createAction(stageId: string, actionIn: ActionIn, options?: any) {
         return ActionApiFp(this.configuration).createAction(stageId, actionIn, options)(this.axios, this.basePath);
     }
 
     /**
      * List all actions of a stage
      * @summary Return actions in a given stage
-     * @param {number} stageId Id of stage
+     * @param {string} stageId Id of stage
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActionApi
      */
-    public listActionsByStage(stageId: number, options?: any) {
+    public listActionsByStage(stageId: string, options?: any) {
         return ActionApiFp(this.configuration).listActionsByStage(stageId, options)(this.axios, this.basePath);
     }
 
     /**
      * Return an user action by id
      * @summary Return an user action by id
-     * @param {number} id Query by id
+     * @param {string} id Query by id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActionApi
      */
-    public showAction(id: number, options?: any) {
+    public showAction(id: string, options?: any) {
         return ActionApiFp(this.configuration).showAction(id, options)(this.axios, this.basePath);
     }
 
@@ -938,12 +938,12 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Add an approval request by given parameters
          * @summary Add an approval request by given parameters
-         * @param {number} workflowId Id of workflow
+         * @param {string} workflowId Id of workflow
          * @param {RequestIn} requestIn Parameters need to create a request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRequest(workflowId: number, requestIn: RequestIn, options: any = {}): RequestArgs {
+        createRequest(workflowId: string, requestIn: RequestIn, options: any = {}): RequestArgs {
             // verify required parameter 'workflowId' is not null or undefined
             if (workflowId === null || workflowId === undefined) {
                 throw new RequiredError('workflowId','Required parameter workflowId was null or undefined when calling createRequest.');
@@ -1044,13 +1044,13 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Return approval requests by given workflow id
          * @summary Return approval requests by given workflow id
-         * @param {number} workflowId Id of workflow
+         * @param {string} workflowId Id of workflow
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequestsByWorkflow(workflowId: number, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
             // verify required parameter 'workflowId' is not null or undefined
             if (workflowId === null || workflowId === undefined) {
                 throw new RequiredError('workflowId','Required parameter workflowId was null or undefined when calling listRequestsByWorkflow.');
@@ -1093,11 +1093,11 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Return an approval request by given id
          * @summary Return an approval request by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRequest(id: number, options: any = {}): RequestArgs {
+        showRequest(id: string, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showRequest.');
@@ -1141,12 +1141,12 @@ export const RequestApiFp = function(configuration?: Configuration) {
         /**
          * Add an approval request by given parameters
          * @summary Add an approval request by given parameters
-         * @param {number} workflowId Id of workflow
+         * @param {string} workflowId Id of workflow
          * @param {RequestIn} requestIn Parameters need to create a request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRequest(workflowId: number, requestIn: RequestIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOut> {
+        createRequest(workflowId: string, requestIn: RequestIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOut> {
             const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).createRequest(workflowId, requestIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1174,13 +1174,13 @@ export const RequestApiFp = function(configuration?: Configuration) {
         /**
          * Return approval requests by given workflow id
          * @summary Return approval requests by given workflow id
-         * @param {number} workflowId Id of workflow
+         * @param {string} workflowId Id of workflow
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequestsByWorkflow(workflowId: number, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOutCollection> {
+        listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOutCollection> {
             const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequestsByWorkflow(workflowId, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1190,11 +1190,11 @@ export const RequestApiFp = function(configuration?: Configuration) {
         /**
          * Return an approval request by given id
          * @summary Return an approval request by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRequest(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOut> {
+        showRequest(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOut> {
             const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).showRequest(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1213,12 +1213,12 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
         /**
          * Add an approval request by given parameters
          * @summary Add an approval request by given parameters
-         * @param {number} workflowId Id of workflow
+         * @param {string} workflowId Id of workflow
          * @param {RequestIn} requestIn Parameters need to create a request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRequest(workflowId: number, requestIn: RequestIn, options?: any) {
+        createRequest(workflowId: string, requestIn: RequestIn, options?: any) {
             return RequestApiFp(configuration).createRequest(workflowId, requestIn, options)(axios, basePath);
         },
         /**
@@ -1238,23 +1238,23 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
         /**
          * Return approval requests by given workflow id
          * @summary Return approval requests by given workflow id
-         * @param {number} workflowId Id of workflow
+         * @param {string} workflowId Id of workflow
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequestsByWorkflow(workflowId: number, limit?: number, offset?: number, options?: any) {
+        listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, options?: any) {
             return RequestApiFp(configuration).listRequestsByWorkflow(workflowId, limit, offset, options)(axios, basePath);
         },
         /**
          * Return an approval request by given id
          * @summary Return an approval request by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRequest(id: number, options?: any) {
+        showRequest(id: string, options?: any) {
             return RequestApiFp(configuration).showRequest(id, options)(axios, basePath);
         },
     };
@@ -1270,13 +1270,13 @@ export class RequestApi extends BaseAPI {
     /**
      * Add an approval request by given parameters
      * @summary Add an approval request by given parameters
-     * @param {number} workflowId Id of workflow
+     * @param {string} workflowId Id of workflow
      * @param {RequestIn} requestIn Parameters need to create a request
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RequestApi
      */
-    public createRequest(workflowId: number, requestIn: RequestIn, options?: any) {
+    public createRequest(workflowId: string, requestIn: RequestIn, options?: any) {
         return RequestApiFp(this.configuration).createRequest(workflowId, requestIn, options)(this.axios, this.basePath);
     }
 
@@ -1299,26 +1299,26 @@ export class RequestApi extends BaseAPI {
     /**
      * Return approval requests by given workflow id
      * @summary Return approval requests by given workflow id
-     * @param {number} workflowId Id of workflow
+     * @param {string} workflowId Id of workflow
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RequestApi
      */
-    public listRequestsByWorkflow(workflowId: number, limit?: number, offset?: number, options?: any) {
+    public listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, options?: any) {
         return RequestApiFp(this.configuration).listRequestsByWorkflow(workflowId, limit, offset, options)(this.axios, this.basePath);
     }
 
     /**
      * Return an approval request by given id
      * @summary Return an approval request by given id
-     * @param {number} id Query by id
+     * @param {string} id Query by id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RequestApi
      */
-    public showRequest(id: number, options?: any) {
+    public showRequest(id: string, options?: any) {
         return RequestApiFp(this.configuration).showRequest(id, options)(this.axios, this.basePath);
     }
 
@@ -1333,11 +1333,11 @@ export const StageApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * Return an array of stages by given request id
          * @summary Return an array of stages by given request id
-         * @param {number} requestId Id of request
+         * @param {string} requestId Id of request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listStagesByRequest(requestId: number, options: any = {}): RequestArgs {
+        listStagesByRequest(requestId: string, options: any = {}): RequestArgs {
             // verify required parameter 'requestId' is not null or undefined
             if (requestId === null || requestId === undefined) {
                 throw new RequiredError('requestId','Required parameter requestId was null or undefined when calling listStagesByRequest.');
@@ -1372,11 +1372,11 @@ export const StageApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * Return an approval stage by given id
          * @summary Return an approval stage by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showStage(id: number, options: any = {}): RequestArgs {
+        showStage(id: string, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showStage.');
@@ -1420,11 +1420,11 @@ export const StageApiFp = function(configuration?: Configuration) {
         /**
          * Return an array of stages by given request id
          * @summary Return an array of stages by given request id
-         * @param {number} requestId Id of request
+         * @param {string} requestId Id of request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listStagesByRequest(requestId: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StageOutCollection> {
+        listStagesByRequest(requestId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StageOutCollection> {
             const localVarAxiosArgs = StageApiAxiosParamCreator(configuration).listStagesByRequest(requestId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1434,11 +1434,11 @@ export const StageApiFp = function(configuration?: Configuration) {
         /**
          * Return an approval stage by given id
          * @summary Return an approval stage by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showStage(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StageOut> {
+        showStage(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StageOut> {
             const localVarAxiosArgs = StageApiAxiosParamCreator(configuration).showStage(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1457,21 +1457,21 @@ export const StageApiFactory = function (configuration?: Configuration, basePath
         /**
          * Return an array of stages by given request id
          * @summary Return an array of stages by given request id
-         * @param {number} requestId Id of request
+         * @param {string} requestId Id of request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listStagesByRequest(requestId: number, options?: any) {
+        listStagesByRequest(requestId: string, options?: any) {
             return StageApiFp(configuration).listStagesByRequest(requestId, options)(axios, basePath);
         },
         /**
          * Return an approval stage by given id
          * @summary Return an approval stage by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showStage(id: number, options?: any) {
+        showStage(id: string, options?: any) {
             return StageApiFp(configuration).showStage(id, options)(axios, basePath);
         },
     };
@@ -1487,24 +1487,24 @@ export class StageApi extends BaseAPI {
     /**
      * Return an array of stages by given request id
      * @summary Return an array of stages by given request id
-     * @param {number} requestId Id of request
+     * @param {string} requestId Id of request
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StageApi
      */
-    public listStagesByRequest(requestId: number, options?: any) {
+    public listStagesByRequest(requestId: string, options?: any) {
         return StageApiFp(this.configuration).listStagesByRequest(requestId, options)(this.axios, this.basePath);
     }
 
     /**
      * Return an approval stage by given id
      * @summary Return an approval stage by given id
-     * @param {number} id Query by id
+     * @param {string} id Query by id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StageApi
      */
-    public showStage(id: number, options?: any) {
+    public showStage(id: string, options?: any) {
         return StageApiFp(this.configuration).showStage(id, options)(this.axios, this.basePath);
     }
 
@@ -1562,11 +1562,11 @@ export const TemplateApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * Return a template by given id
          * @summary Return a template by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showTemplate(id: number, options: any = {}): RequestArgs {
+        showTemplate(id: string, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showTemplate.');
@@ -1625,11 +1625,11 @@ export const TemplateApiFp = function(configuration?: Configuration) {
         /**
          * Return a template by given id
          * @summary Return a template by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showTemplate(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TemplateOut> {
+        showTemplate(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TemplateOut> {
             const localVarAxiosArgs = TemplateApiAxiosParamCreator(configuration).showTemplate(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1659,11 +1659,11 @@ export const TemplateApiFactory = function (configuration?: Configuration, baseP
         /**
          * Return a template by given id
          * @summary Return a template by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showTemplate(id: number, options?: any) {
+        showTemplate(id: string, options?: any) {
             return TemplateApiFp(configuration).showTemplate(id, options)(axios, basePath);
         },
     };
@@ -1692,12 +1692,12 @@ export class TemplateApi extends BaseAPI {
     /**
      * Return a template by given id
      * @summary Return a template by given id
-     * @param {number} id Query by id
+     * @param {string} id Query by id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TemplateApi
      */
-    public showTemplate(id: number, options?: any) {
+    public showTemplate(id: string, options?: any) {
         return TemplateApiFp(this.configuration).showTemplate(id, options)(this.axios, this.basePath);
     }
 
@@ -1712,12 +1712,12 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * Add a workflow by given template id
          * @summary Add a workflow by given template id
-         * @param {number} templateId Id of template
+         * @param {string} templateId Id of template
          * @param {WorkflowIn} workflowIn Parameters need to create workflow
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addWorkflowToTemplate(templateId: number, workflowIn: WorkflowIn, options: any = {}): RequestArgs {
+        addWorkflowToTemplate(templateId: string, workflowIn: WorkflowIn, options: any = {}): RequestArgs {
             // verify required parameter 'templateId' is not null or undefined
             if (templateId === null || templateId === undefined) {
                 throw new RequiredError('templateId','Required parameter templateId was null or undefined when calling addWorkflowToTemplate.');
@@ -1760,11 +1760,11 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * Delete approval workflow by given id
          * @summary Delete approval workflow by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyWorkflow(id: number, options: any = {}): RequestArgs {
+        destroyWorkflow(id: string, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling destroyWorkflow.');
@@ -1842,13 +1842,13 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * Return an array of workflows by given template id
          * @summary Return an array of workflows by given template id
-         * @param {number} templateId Id of template
+         * @param {string} templateId Id of template
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflowsByTemplate(templateId: number, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
             // verify required parameter 'templateId' is not null or undefined
             if (templateId === null || templateId === undefined) {
                 throw new RequiredError('templateId','Required parameter templateId was null or undefined when calling listWorkflowsByTemplate.');
@@ -1891,11 +1891,11 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * Return an approval workflow by given id
          * @summary Return an approval workflow by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showWorkflow(id: number, options: any = {}): RequestArgs {
+        showWorkflow(id: string, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showWorkflow.');
@@ -1930,12 +1930,12 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * Update an approval workflow by given id
          * @summary Update an approval workflow by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {WorkflowIn} workflowIn Parameters need to update approval workflow
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateWorkflow(id: number, workflowIn: WorkflowIn, options: any = {}): RequestArgs {
+        updateWorkflow(id: string, workflowIn: WorkflowIn, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling updateWorkflow.');
@@ -1987,12 +1987,12 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
         /**
          * Add a workflow by given template id
          * @summary Add a workflow by given template id
-         * @param {number} templateId Id of template
+         * @param {string} templateId Id of template
          * @param {WorkflowIn} workflowIn Parameters need to create workflow
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addWorkflowToTemplate(templateId: number, workflowIn: WorkflowIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOut> {
+        addWorkflowToTemplate(templateId: string, workflowIn: WorkflowIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOut> {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).addWorkflowToTemplate(templateId, workflowIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2002,11 +2002,11 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
         /**
          * Delete approval workflow by given id
          * @summary Delete approval workflow by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyWorkflow(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+        destroyWorkflow(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).destroyWorkflow(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2031,13 +2031,13 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
         /**
          * Return an array of workflows by given template id
          * @summary Return an array of workflows by given template id
-         * @param {number} templateId Id of template
+         * @param {string} templateId Id of template
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflowsByTemplate(templateId: number, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOutCollection> {
+        listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOutCollection> {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).listWorkflowsByTemplate(templateId, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2047,11 +2047,11 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
         /**
          * Return an approval workflow by given id
          * @summary Return an approval workflow by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showWorkflow(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOut> {
+        showWorkflow(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOut> {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).showWorkflow(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2061,12 +2061,12 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
         /**
          * Update an approval workflow by given id
          * @summary Update an approval workflow by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {WorkflowIn} workflowIn Parameters need to update approval workflow
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateWorkflow(id: number, workflowIn: WorkflowIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOut> {
+        updateWorkflow(id: string, workflowIn: WorkflowIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOut> {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).updateWorkflow(id, workflowIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2085,22 +2085,22 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
         /**
          * Add a workflow by given template id
          * @summary Add a workflow by given template id
-         * @param {number} templateId Id of template
+         * @param {string} templateId Id of template
          * @param {WorkflowIn} workflowIn Parameters need to create workflow
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addWorkflowToTemplate(templateId: number, workflowIn: WorkflowIn, options?: any) {
+        addWorkflowToTemplate(templateId: string, workflowIn: WorkflowIn, options?: any) {
             return WorkflowApiFp(configuration).addWorkflowToTemplate(templateId, workflowIn, options)(axios, basePath);
         },
         /**
          * Delete approval workflow by given id
          * @summary Delete approval workflow by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyWorkflow(id: number, options?: any) {
+        destroyWorkflow(id: string, options?: any) {
             return WorkflowApiFp(configuration).destroyWorkflow(id, options)(axios, basePath);
         },
         /**
@@ -2117,34 +2117,34 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
         /**
          * Return an array of workflows by given template id
          * @summary Return an array of workflows by given template id
-         * @param {number} templateId Id of template
+         * @param {string} templateId Id of template
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflowsByTemplate(templateId: number, limit?: number, offset?: number, options?: any) {
+        listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, options?: any) {
             return WorkflowApiFp(configuration).listWorkflowsByTemplate(templateId, limit, offset, options)(axios, basePath);
         },
         /**
          * Return an approval workflow by given id
          * @summary Return an approval workflow by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showWorkflow(id: number, options?: any) {
+        showWorkflow(id: string, options?: any) {
             return WorkflowApiFp(configuration).showWorkflow(id, options)(axios, basePath);
         },
         /**
          * Update an approval workflow by given id
          * @summary Update an approval workflow by given id
-         * @param {number} id Query by id
+         * @param {string} id Query by id
          * @param {WorkflowIn} workflowIn Parameters need to update approval workflow
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateWorkflow(id: number, workflowIn: WorkflowIn, options?: any) {
+        updateWorkflow(id: string, workflowIn: WorkflowIn, options?: any) {
             return WorkflowApiFp(configuration).updateWorkflow(id, workflowIn, options)(axios, basePath);
         },
     };
@@ -2160,25 +2160,25 @@ export class WorkflowApi extends BaseAPI {
     /**
      * Add a workflow by given template id
      * @summary Add a workflow by given template id
-     * @param {number} templateId Id of template
+     * @param {string} templateId Id of template
      * @param {WorkflowIn} workflowIn Parameters need to create workflow
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkflowApi
      */
-    public addWorkflowToTemplate(templateId: number, workflowIn: WorkflowIn, options?: any) {
+    public addWorkflowToTemplate(templateId: string, workflowIn: WorkflowIn, options?: any) {
         return WorkflowApiFp(this.configuration).addWorkflowToTemplate(templateId, workflowIn, options)(this.axios, this.basePath);
     }
 
     /**
      * Delete approval workflow by given id
      * @summary Delete approval workflow by given id
-     * @param {number} id Query by id
+     * @param {string} id Query by id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkflowApi
      */
-    public destroyWorkflow(id: number, options?: any) {
+    public destroyWorkflow(id: string, options?: any) {
         return WorkflowApiFp(this.configuration).destroyWorkflow(id, options)(this.axios, this.basePath);
     }
 
@@ -2198,39 +2198,39 @@ export class WorkflowApi extends BaseAPI {
     /**
      * Return an array of workflows by given template id
      * @summary Return an array of workflows by given template id
-     * @param {number} templateId Id of template
+     * @param {string} templateId Id of template
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkflowApi
      */
-    public listWorkflowsByTemplate(templateId: number, limit?: number, offset?: number, options?: any) {
+    public listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, options?: any) {
         return WorkflowApiFp(this.configuration).listWorkflowsByTemplate(templateId, limit, offset, options)(this.axios, this.basePath);
     }
 
     /**
      * Return an approval workflow by given id
      * @summary Return an approval workflow by given id
-     * @param {number} id Query by id
+     * @param {string} id Query by id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkflowApi
      */
-    public showWorkflow(id: number, options?: any) {
+    public showWorkflow(id: string, options?: any) {
         return WorkflowApiFp(this.configuration).showWorkflow(id, options)(this.axios, this.basePath);
     }
 
     /**
      * Update an approval workflow by given id
      * @summary Update an approval workflow by given id
-     * @param {number} id Query by id
+     * @param {string} id Query by id
      * @param {WorkflowIn} workflowIn Parameters need to update approval workflow
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkflowApi
      */
-    public updateWorkflow(id: number, workflowIn: WorkflowIn, options?: any) {
+    public updateWorkflow(id: string, workflowIn: WorkflowIn, options?: any) {
         return WorkflowApiFp(this.configuration).updateWorkflow(id, workflowIn, options)(this.axios, this.basePath);
     }
 

@@ -101,7 +101,7 @@ ___
 
 ###  listStagesByRequest
 
-▸ **listStagesByRequest**(requestId: *`number`*, options?: *`any`*): `AxiosPromise`<[StageOutCollection](../interfaces/stageoutcollection.md)>
+▸ **listStagesByRequest**(requestId: *`string`*, options?: *`any`*): `AxiosPromise`<[StageOutCollection](../interfaces/stageoutcollection.md)>
 
 *Defined in [api.ts:1495](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1495)*
 
@@ -117,7 +117,7 @@ Return an array of stages by given request id
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| requestId | `number` |  Id of request |
+| requestId | `string` |  Id of request |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[StageOutCollection](../interfaces/stageoutcollection.md)>
@@ -127,7 +127,7 @@ ___
 
 ###  showStage
 
-▸ **showStage**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[StageOut](../modules/stageout.md)>
+▸ **showStage**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[StageOut](../modules/stageout.md)>
 
 *Defined in [api.ts:1507](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1507)*
 
@@ -143,7 +143,7 @@ Return an approval stage by given id
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| id | `number` |  Query by id |
+| id | `string` |  Query by id |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[StageOut](../modules/stageout.md)>

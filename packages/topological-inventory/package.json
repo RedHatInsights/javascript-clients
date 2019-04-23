@@ -1,0 +1,33 @@
+{
+  "name": "@redhat-cloud-services/topological-inventory-client",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedHatInsights/javascript-clients.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/RedHatInsights/javascript-clients/issues"
+  },
+  "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/topological-inventory#readme",
+  "scripts": {
+    "doc": "typedoc --theme markdown --out doc --module commonjs --mode file --gitRevision master",
+    "build": "tsc",
+    "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
+    "generate:prod": "SPEC='https://raw.githubusercontent.com/ManageIQ/topological_inventory-api/master/public/doc/openapi-3-v1.0.0.json' npm run generate"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "typedoc": "^0.14.2",
+    "typedoc-plugin-markdown": "^1.1.27"
+  }
+}

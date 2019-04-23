@@ -93,6 +93,7 @@ API documentation
 * [HostSystemProfileOut](interfaces/hostsystemprofileout.md)
 * [InstalledProduct](interfaces/installedproduct.md)
 * [NetworkInterface](interfaces/networkinterface.md)
+* [PatchHostIn](interfaces/patchhostin.md)
 * [RequestArgs](interfaces/requestargs.md)
 * [SystemProfileByHostOut](interfaces/systemprofilebyhostout.md)
 * [SystemProfileIn](interfaces/systemprofilein.md)
@@ -134,7 +135,7 @@ ___
 
 ▸ **HostsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L881)*
+*Defined in [api.ts:925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L925)*
 
 HostsApi - axios parameter creator
 
@@ -153,7 +154,7 @@ ___
 
 ▸ **HostsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1325)*
+*Defined in [api.ts:1434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1434)*
 
 HostsApi - factory interface
 
@@ -174,7 +175,7 @@ ___
 
 ▸ **HostsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1219)*
+*Defined in [api.ts:1313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1313)*
 
 HostsApi - functional programming interface
 

@@ -102,7 +102,7 @@ ___
 
 ###  createAction
 
-▸ **createAction**(stageId: *`number`*, actionIn: *[ActionIn](../modules/actionin.md)*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
+▸ **createAction**(stageId: *`string`*, actionIn: *[ActionIn](../modules/actionin.md)*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
 *Defined in [api.ts:902](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L902)*
 
@@ -118,7 +118,7 @@ Add an action to a given stage
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| stageId | `number` |  Id of stage |
+| stageId | `string` |  Id of stage |
 | actionIn | [ActionIn](../modules/actionin.md) |  Action object that will be added |
 | `Optional` options | `any` |
 
@@ -129,7 +129,7 @@ ___
 
 ###  listActionsByStage
 
-▸ **listActionsByStage**(stageId: *`number`*, options?: *`any`*): `AxiosPromise`<[ActionOutCollection](../interfaces/actionoutcollection.md)>
+▸ **listActionsByStage**(stageId: *`string`*, options?: *`any`*): `AxiosPromise`<[ActionOutCollection](../interfaces/actionoutcollection.md)>
 
 *Defined in [api.ts:914](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L914)*
 
@@ -145,7 +145,7 @@ List all actions of a stage
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| stageId | `number` |  Id of stage |
+| stageId | `string` |  Id of stage |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ActionOutCollection](../interfaces/actionoutcollection.md)>
@@ -155,7 +155,7 @@ ___
 
 ###  showAction
 
-▸ **showAction**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
+▸ **showAction**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
 *Defined in [api.ts:926](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L926)*
 
@@ -171,7 +171,7 @@ Return an user action by id
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| id | `number` |  Query by id |
+| id | `string` |  Query by id |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ActionOut](../modules/actionout.md)>
