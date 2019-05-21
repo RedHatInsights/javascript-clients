@@ -107,7 +107,7 @@ ___
 
 ▸ **addToOrder**(orderId: *`string`*, orderItem: *[OrderItem](../modules/orderitem.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1302)*
+*Defined in [api.ts:1460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1460)*
 
 Adds an order item to an order in pending state
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **createOrder**(options?: *`any`*): `AxiosPromise`<[Order](../modules/order.md)>
 
-*Defined in [api.ts:1313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1313)*
+*Defined in [api.ts:1471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1471)*
 
 Creates a new order.
 
@@ -157,9 +157,9 @@ ___
 
 ###  listOrderItems
 
-▸ **listOrderItems**(orderId: *`string`*, limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[OrderItemsCollection](../interfaces/orderitemscollection.md)>
+▸ **listOrderItems**(orderId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[OrderItemsCollection](../interfaces/orderitemscollection.md)>
 
-*Defined in [api.ts:1327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1327)*
+*Defined in [api.ts:1486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1486)*
 
 Gets a list of items associated with an order.
 
@@ -176,6 +176,7 @@ Gets a list of items associated with an order.
 | orderId | `string` |  The Order ID |
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
+| `Optional` filter | `any` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[OrderItemsCollection](../interfaces/orderitemscollection.md)>
@@ -185,9 +186,9 @@ ___
 
 ###  listOrders
 
-▸ **listOrders**(limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[OrdersCollection](../interfaces/orderscollection.md)>
+▸ **listOrders**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[OrdersCollection](../interfaces/orderscollection.md)>
 
-*Defined in [api.ts:1340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1340)*
+*Defined in [api.ts:1500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1500)*
 
 Gets a list of orders associated with the logged in user.
 
@@ -203,6 +204,7 @@ Gets a list of orders associated with the logged in user.
 | ------ | ------ |
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
+| `Optional` filter | `any` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[OrdersCollection](../interfaces/orderscollection.md)>
@@ -214,7 +216,7 @@ ___
 
 ▸ **showOrderItem**(orderId: *`string`*, id: *`string`*, options?: *`any`*): `AxiosPromise`<[OrderItem](../modules/orderitem.md)>
 
-*Defined in [api.ts:1353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1353)*
+*Defined in [api.ts:1513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1513)*
 
 Gets an order item associated with an order.
 
@@ -241,7 +243,7 @@ ___
 
 ▸ **submitOrder**(orderId: *`string`*, options?: *`any`*): `AxiosPromise`<[Order](../modules/order.md)>
 
-*Defined in [api.ts:1365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1365)*
+*Defined in [api.ts:1525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1525)*
 
 Returns an updated order.
 

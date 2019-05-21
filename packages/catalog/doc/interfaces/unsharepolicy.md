@@ -27,7 +27,7 @@
 
 **● groupUuids**: *`Array`<`string`>*
 
-*Defined in [api.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L846)*
+*Defined in [api.ts:888](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L888)*
 
 An array of group UUID's retrieved from the RBAC Service from which the permissions have to be removed. If group uuids are not specified we will unshare it from all groups.
 
@@ -42,7 +42,7 @@ ___
 
 **● permissions**: *`Array`<`string`>*
 
-*Defined in [api.ts:840](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L840)*
+*Defined in [api.ts:882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L882)*
 
 The permissions to remove for this resource.
 

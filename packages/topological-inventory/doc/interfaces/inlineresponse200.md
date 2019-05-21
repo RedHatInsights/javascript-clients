@@ -26,7 +26,7 @@
 
 **● taskId**: *`string`*
 
-*Defined in api.ts:1507*
+*Defined in [api.ts:1167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1167)*
 
 *__type__*: {string}
 

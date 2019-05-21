@@ -218,6 +218,26 @@ export interface CollectionMetadata {
 /**
  *
  * @export
+ * @interface CopyPortfolioItem
+ */
+export interface CopyPortfolioItem {
+    /**
+     * The portfolio to place the new copy of the Portfolio Item in
+     * @type {string}
+     * @memberof CopyPortfolioItem
+     */
+    portfolioId?: string;
+    /**
+     * The name of the copied portfolio item
+     * @type {string}
+     * @memberof CopyPortfolioItem
+     */
+    portfolioItemName?: string;
+}
+
+/**
+ *
+ * @export
  * @interface CreatePortfolioItem
  */
 export interface CreatePortfolioItem {
@@ -381,6 +401,12 @@ export interface OrderItem {
      * @memberof OrderItem
      */
     externalUrl?: string;
+    /**
+     * The insights request id can be used to collect log data for this order item as its processed by the system
+     * @type {string}
+     * @memberof OrderItem
+     */
+    insightsRequestId?: string;
 }
 
 /**
@@ -397,7 +423,9 @@ export namespace OrderItem {
         ApprovalPending = 'Approval Pending',
         Ordered = 'Ordered',
         Failed = 'Failed',
-        Completed = 'Completed'
+        Completed = 'Completed',
+        Approved = 'Approved',
+        Denied = 'Denied'
     }
 }
 
@@ -725,6 +753,20 @@ export interface ProgressMessagesCollection {
 /**
  *
  * @export
+ * @interface RestoreKey
+ */
+export interface RestoreKey {
+    /**
+     *
+     * @type {string}
+     * @memberof RestoreKey
+     */
+    restoreKey?: string;
+}
+
+/**
+ *
+ * @export
  * @interface ServiceOfferingIcon
  */
 export interface ServiceOfferingIcon {
@@ -848,6 +890,108 @@ export interface UnsharePolicy {
 
 
 /**
+ * DefaultApi - axios parameter creator
+ * @export
+ */
+export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Return this API document in JSON format
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getDocumentation(options: any = {}): RequestArgs {
+            const localVarPath = `/openapi.json`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * DefaultApi - functional programming interface
+ * @export
+ */
+export const DefaultApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Return this API document in JSON format
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getDocumentation(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * DefaultApi - factory interface
+ * @export
+ */
+export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         *
+         * @summary Return this API document in JSON format
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getDocumentation(options?: any) {
+            return DefaultApiFp(configuration).getDocumentation(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * DefaultApi - object-oriented interface
+ * @export
+ * @class DefaultApi
+ * @extends {BaseAPI}
+ */
+export class DefaultApi extends BaseAPI {
+    /**
+     *
+     * @summary Return this API document in JSON format
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public getDocumentation(options?: any) {
+        return DefaultApiFp(this.configuration).getDocumentation(options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
  * OrderApi - axios parameter creator
  * @export
  */
@@ -940,10 +1084,11 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} orderId The Order ID
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrderItems(orderId: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listOrderItems(orderId: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             // verify required parameter 'orderId' is not null or undefined
             if (orderId === null || orderId === undefined) {
                 throw new RequiredError('orderId','Required parameter orderId was null or undefined when calling listOrderItems.');
@@ -973,6 +1118,10 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -988,10 +1137,11 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @summary Get a list of orders
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrders(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listOrders(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/orders`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1014,6 +1164,10 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1153,11 +1307,12 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @param {string} orderId The Order ID
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrderItems(orderId: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItemsCollection> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).listOrderItems(orderId, limit, offset, options);
+        listOrderItems(orderId: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItemsCollection> {
+            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).listOrderItems(orderId, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1168,11 +1323,12 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @summary Get a list of orders
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrders(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrdersCollection> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).listOrders(limit, offset, options);
+        listOrders(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrdersCollection> {
+            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).listOrders(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1242,22 +1398,24 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {string} orderId The Order ID
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrderItems(orderId: string, limit?: number, offset?: number, options?: any) {
-            return OrderApiFp(configuration).listOrderItems(orderId, limit, offset, options)(axios, basePath);
+        listOrderItems(orderId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return OrderApiFp(configuration).listOrderItems(orderId, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Gets a list of orders associated with the logged in user.
          * @summary Get a list of orders
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrders(limit?: number, offset?: number, options?: any) {
-            return OrderApiFp(configuration).listOrders(limit, offset, options)(axios, basePath);
+        listOrders(limit?: number, offset?: number, filter?: any, options?: any) {
+            return OrderApiFp(configuration).listOrders(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Gets an order item associated with an order.
@@ -1320,12 +1478,13 @@ export class OrderApi extends BaseAPI {
      * @param {string} orderId The Order ID
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrderApi
      */
-    public listOrderItems(orderId: string, limit?: number, offset?: number, options?: any) {
-        return OrderApiFp(this.configuration).listOrderItems(orderId, limit, offset, options)(this.axios, this.basePath);
+    public listOrderItems(orderId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return OrderApiFp(this.configuration).listOrderItems(orderId, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1333,12 +1492,13 @@ export class OrderApi extends BaseAPI {
      * @summary Get a list of orders
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrderApi
      */
-    public listOrders(limit?: number, offset?: number, options?: any) {
-        return OrderApiFp(this.configuration).listOrders(limit, offset, options)(this.axios, this.basePath);
+    public listOrders(limit?: number, offset?: number, filter?: any, options?: any) {
+        return OrderApiFp(this.configuration).listOrders(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1380,10 +1540,11 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
          * @param {string} orderItemId The Order Item ID
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApprovalRequests(orderItemId: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listApprovalRequests(orderItemId: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             // verify required parameter 'orderItemId' is not null or undefined
             if (orderItemId === null || orderItemId === undefined) {
                 throw new RequiredError('orderItemId','Required parameter orderItemId was null or undefined when calling listApprovalRequests.');
@@ -1413,6 +1574,58 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets a list of order items.
+         * @summary List Order Items
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrderItems(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            const localVarPath = `/order_items`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1429,10 +1642,11 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
          * @param {string} orderItemId The Order Item ID
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listProgressMessages(orderItemId: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listProgressMessages(orderItemId: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             // verify required parameter 'orderItemId' is not null or undefined
             if (orderItemId === null || orderItemId === undefined) {
                 throw new RequiredError('orderItemId','Required parameter orderItemId was null or undefined when calling listProgressMessages.');
@@ -1462,6 +1676,49 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets a specific order item based on the portfolio item ID passed
+         * @summary Gets a specific order item
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showOrderItem(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showOrderItem.');
+            }
+            const localVarPath = `/order_items/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1487,11 +1744,28 @@ export const OrderItemApiFp = function(configuration?: Configuration) {
          * @param {string} orderItemId The Order Item ID
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApprovalRequests(orderItemId: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApprovalRequestsCollection> {
-            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).listApprovalRequests(orderItemId, limit, offset, options);
+        listApprovalRequests(orderItemId: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApprovalRequestsCollection> {
+            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).listApprovalRequests(orderItemId, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Gets a list of order items.
+         * @summary List Order Items
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrderItems(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItemsCollection> {
+            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).listOrderItems(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1503,11 +1777,26 @@ export const OrderItemApiFp = function(configuration?: Configuration) {
          * @param {string} orderItemId The Order Item ID
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listProgressMessages(orderItemId: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProgressMessagesCollection> {
-            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).listProgressMessages(orderItemId, limit, offset, options);
+        listProgressMessages(orderItemId: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProgressMessagesCollection> {
+            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).listProgressMessages(orderItemId, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Gets a specific order item based on the portfolio item ID passed
+         * @summary Gets a specific order item
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showOrderItem(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItem> {
+            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).showOrderItem(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1528,11 +1817,24 @@ export const OrderItemApiFactory = function (configuration?: Configuration, base
          * @param {string} orderItemId The Order Item ID
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApprovalRequests(orderItemId: string, limit?: number, offset?: number, options?: any) {
-            return OrderItemApiFp(configuration).listApprovalRequests(orderItemId, limit, offset, options)(axios, basePath);
+        listApprovalRequests(orderItemId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return OrderItemApiFp(configuration).listApprovalRequests(orderItemId, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Gets a list of order items.
+         * @summary List Order Items
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrderItems(limit?: number, offset?: number, filter?: any, options?: any) {
+            return OrderItemApiFp(configuration).listOrderItems(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Gets a list of progress messages associated with an order item. As the item is being processed the provider can update the progress messages.
@@ -1540,11 +1842,22 @@ export const OrderItemApiFactory = function (configuration?: Configuration, base
          * @param {string} orderItemId The Order Item ID
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listProgressMessages(orderItemId: string, limit?: number, offset?: number, options?: any) {
-            return OrderItemApiFp(configuration).listProgressMessages(orderItemId, limit, offset, options)(axios, basePath);
+        listProgressMessages(orderItemId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return OrderItemApiFp(configuration).listProgressMessages(orderItemId, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Gets a specific order item based on the portfolio item ID passed
+         * @summary Gets a specific order item
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showOrderItem(id: string, options?: any) {
+            return OrderItemApiFp(configuration).showOrderItem(id, options)(axios, basePath);
         },
     };
 };
@@ -1562,12 +1875,27 @@ export class OrderItemApi extends BaseAPI {
      * @param {string} orderItemId The Order Item ID
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrderItemApi
      */
-    public listApprovalRequests(orderItemId: string, limit?: number, offset?: number, options?: any) {
-        return OrderItemApiFp(this.configuration).listApprovalRequests(orderItemId, limit, offset, options)(this.axios, this.basePath);
+    public listApprovalRequests(orderItemId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return OrderItemApiFp(this.configuration).listApprovalRequests(orderItemId, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Gets a list of order items.
+     * @summary List Order Items
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OrderItemApi
+     */
+    public listOrderItems(limit?: number, offset?: number, filter?: any, options?: any) {
+        return OrderItemApiFp(this.configuration).listOrderItems(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1576,12 +1904,25 @@ export class OrderItemApi extends BaseAPI {
      * @param {string} orderItemId The Order Item ID
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrderItemApi
      */
-    public listProgressMessages(orderItemId: string, limit?: number, offset?: number, options?: any) {
-        return OrderItemApiFp(this.configuration).listProgressMessages(orderItemId, limit, offset, options)(this.axios, this.basePath);
+    public listProgressMessages(orderItemId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return OrderItemApiFp(this.configuration).listProgressMessages(orderItemId, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Gets a specific order item based on the portfolio item ID passed
+     * @summary Gets a specific order item
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OrderItemApi
+     */
+    public showOrderItem(id: string, options?: any) {
+        return OrderItemApiFp(this.configuration).showOrderItem(id, options)(this.axios, this.basePath);
     }
 
 }
@@ -1727,10 +2068,11 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {string} portfolioId The Portfolio ID
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fetchPortfolioItemsWithPortfolio(portfolioId: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        fetchPortfolioItemsWithPortfolio(portfolioId: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             // verify required parameter 'portfolioId' is not null or undefined
             if (portfolioId === null || portfolioId === undefined) {
                 throw new RequiredError('portfolioId','Required parameter portfolioId was null or undefined when calling fetchPortfolioItemsWithPortfolio.');
@@ -1760,6 +2102,10 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1775,10 +2121,11 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @summary List portfolios
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolios(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listPortfolios(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/portfolios`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1801,6 +2148,49 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Make a copy of the Portfolio.
+         * @summary Make a copy of the Portfolio
+         * @param {string} portfolioId The Portfolio ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postCopyPortfolio(portfolioId: string, options: any = {}): RequestArgs {
+            // verify required parameter 'portfolioId' is not null or undefined
+            if (portfolioId === null || portfolioId === undefined) {
+                throw new RequiredError('portfolioId','Required parameter portfolioId was null or undefined when calling postCopyPortfolio.');
+            }
+            const localVarPath = `/portfolios/{portfolio_id}/copy`
+                .replace(`{${"portfolio_id"}}`, encodeURIComponent(String(portfolioId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -2093,11 +2483,12 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {string} portfolioId The Portfolio ID
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fetchPortfolioItemsWithPortfolio(portfolioId: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItemsCollection> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).fetchPortfolioItemsWithPortfolio(portfolioId, limit, offset, options);
+        fetchPortfolioItemsWithPortfolio(portfolioId: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItemsCollection> {
+            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).fetchPortfolioItemsWithPortfolio(portfolioId, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2108,11 +2499,26 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @summary List portfolios
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolios(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfoliosCollection> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).listPortfolios(limit, offset, options);
+        listPortfolios(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfoliosCollection> {
+            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).listPortfolios(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Make a copy of the Portfolio.
+         * @summary Make a copy of the Portfolio
+         * @param {string} portfolioId The Portfolio ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postCopyPortfolio(portfolioId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio> {
+            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).postCopyPortfolio(portfolioId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2237,22 +2643,34 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @param {string} portfolioId The Portfolio ID
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fetchPortfolioItemsWithPortfolio(portfolioId: string, limit?: number, offset?: number, options?: any) {
-            return PortfolioApiFp(configuration).fetchPortfolioItemsWithPortfolio(portfolioId, limit, offset, options)(axios, basePath);
+        fetchPortfolioItemsWithPortfolio(portfolioId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return PortfolioApiFp(configuration).fetchPortfolioItemsWithPortfolio(portfolioId, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Gets a list of portfolios.
          * @summary List portfolios
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolios(limit?: number, offset?: number, options?: any) {
-            return PortfolioApiFp(configuration).listPortfolios(limit, offset, options)(axios, basePath);
+        listPortfolios(limit?: number, offset?: number, filter?: any, options?: any) {
+            return PortfolioApiFp(configuration).listPortfolios(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Make a copy of the Portfolio.
+         * @summary Make a copy of the Portfolio
+         * @param {string} portfolioId The Portfolio ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postCopyPortfolio(portfolioId: string, options?: any) {
+            return PortfolioApiFp(configuration).postCopyPortfolio(portfolioId, options)(axios, basePath);
         },
         /**
          * Fetch share information about a portfolio
@@ -2360,12 +2778,13 @@ export class PortfolioApi extends BaseAPI {
      * @param {string} portfolioId The Portfolio ID
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioApi
      */
-    public fetchPortfolioItemsWithPortfolio(portfolioId: string, limit?: number, offset?: number, options?: any) {
-        return PortfolioApiFp(this.configuration).fetchPortfolioItemsWithPortfolio(portfolioId, limit, offset, options)(this.axios, this.basePath);
+    public fetchPortfolioItemsWithPortfolio(portfolioId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return PortfolioApiFp(this.configuration).fetchPortfolioItemsWithPortfolio(portfolioId, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2373,12 +2792,25 @@ export class PortfolioApi extends BaseAPI {
      * @summary List portfolios
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioApi
      */
-    public listPortfolios(limit?: number, offset?: number, options?: any) {
-        return PortfolioApiFp(this.configuration).listPortfolios(limit, offset, options)(this.axios, this.basePath);
+    public listPortfolios(limit?: number, offset?: number, filter?: any, options?: any) {
+        return PortfolioApiFp(this.configuration).listPortfolios(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Make a copy of the Portfolio.
+     * @summary Make a copy of the Portfolio
+     * @param {string} portfolioId The Portfolio ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PortfolioApi
+     */
+    public postCopyPortfolio(portfolioId: string, options?: any) {
+        return PortfolioApiFp(this.configuration).postCopyPortfolio(portfolioId, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2538,10 +2970,11 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @summary List all portfolio items
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolioItems(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listPortfolioItems(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/portfolio_items`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -2564,6 +2997,10 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -2694,6 +3131,98 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
+         * If a record has been discarded, this operation will undelete it so it can be requested normally.
+         * @summary Undelete a specified Portfolio Item
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {RestoreKey} restoreKey
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        portfolioItemsPortfolioItemIdUndeletePost(portfolioItemId: string, restoreKey: RestoreKey, options: any = {}): RequestArgs {
+            // verify required parameter 'portfolioItemId' is not null or undefined
+            if (portfolioItemId === null || portfolioItemId === undefined) {
+                throw new RequiredError('portfolioItemId','Required parameter portfolioItemId was null or undefined when calling portfolioItemsPortfolioItemIdUndeletePost.');
+            }
+            // verify required parameter 'restoreKey' is not null or undefined
+            if (restoreKey === null || restoreKey === undefined) {
+                throw new RequiredError('restoreKey','Required parameter restoreKey was null or undefined when calling portfolioItemsPortfolioItemIdUndeletePost.');
+            }
+            const localVarPath = `/portfolio_items/{portfolio_item_id}/undelete`
+                .replace(`{${"portfolio_item_id"}}`, encodeURIComponent(String(portfolioItemId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"RestoreKey" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(restoreKey || {}) : (restoreKey || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Make a copy of the Portfolio Item.
+         * @summary Make a copy of the Portfolio Item
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {CopyPortfolioItem} [copyPortfolioItem]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postCopyPortfolioItem(portfolioItemId: string, copyPortfolioItem?: CopyPortfolioItem, options: any = {}): RequestArgs {
+            // verify required parameter 'portfolioItemId' is not null or undefined
+            if (portfolioItemId === null || portfolioItemId === undefined) {
+                throw new RequiredError('portfolioItemId','Required parameter portfolioItemId was null or undefined when calling postCopyPortfolioItem.');
+            }
+            const localVarPath = `/portfolio_items/{portfolio_item_id}/copy`
+                .replace(`{${"portfolio_item_id"}}`, encodeURIComponent(String(portfolioItemId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CopyPortfolioItem" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(copyPortfolioItem || {}) : (copyPortfolioItem || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets a specific portfolio item based on the portfolio item ID passed
          * @summary Gets a specific portfolio item
          * @param {string} id ID of the resource
@@ -2810,7 +3339,7 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyPortfolioItem(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+        destroyPortfolioItem(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RestoreKey> {
             const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).destroyPortfolioItem(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2822,11 +3351,12 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @summary List all portfolio items
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolioItems(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItemsCollection> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).listPortfolioItems(limit, offset, options);
+        listPortfolioItems(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItemsCollection> {
+            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).listPortfolioItems(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2869,6 +3399,36 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          */
         listServicePlans(portfolioItemId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ServicePlan>> {
             const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).listServicePlans(portfolioItemId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * If a record has been discarded, this operation will undelete it so it can be requested normally.
+         * @summary Undelete a specified Portfolio Item
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {RestoreKey} restoreKey
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        portfolioItemsPortfolioItemIdUndeletePost(portfolioItemId: string, restoreKey: RestoreKey, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem> {
+            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).portfolioItemsPortfolioItemIdUndeletePost(portfolioItemId, restoreKey, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Make a copy of the Portfolio Item.
+         * @summary Make a copy of the Portfolio Item
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {CopyPortfolioItem} [copyPortfolioItem]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postCopyPortfolioItem(portfolioItemId: string, copyPortfolioItem?: CopyPortfolioItem, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem> {
+            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).postCopyPortfolioItem(portfolioItemId, copyPortfolioItem, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2937,11 +3497,12 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @summary List all portfolio items
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolioItems(limit?: number, offset?: number, options?: any) {
-            return PortfolioItemApiFp(configuration).listPortfolioItems(limit, offset, options)(axios, basePath);
+        listPortfolioItems(limit?: number, offset?: number, filter?: any, options?: any) {
+            return PortfolioItemApiFp(configuration).listPortfolioItems(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Gets the provider control parameters for a portfolio item.
@@ -2972,6 +3533,28 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          */
         listServicePlans(portfolioItemId: string, options?: any) {
             return PortfolioItemApiFp(configuration).listServicePlans(portfolioItemId, options)(axios, basePath);
+        },
+        /**
+         * If a record has been discarded, this operation will undelete it so it can be requested normally.
+         * @summary Undelete a specified Portfolio Item
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {RestoreKey} restoreKey
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        portfolioItemsPortfolioItemIdUndeletePost(portfolioItemId: string, restoreKey: RestoreKey, options?: any) {
+            return PortfolioItemApiFp(configuration).portfolioItemsPortfolioItemIdUndeletePost(portfolioItemId, restoreKey, options)(axios, basePath);
+        },
+        /**
+         * Make a copy of the Portfolio Item.
+         * @summary Make a copy of the Portfolio Item
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {CopyPortfolioItem} [copyPortfolioItem]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postCopyPortfolioItem(portfolioItemId: string, copyPortfolioItem?: CopyPortfolioItem, options?: any) {
+            return PortfolioItemApiFp(configuration).postCopyPortfolioItem(portfolioItemId, copyPortfolioItem, options)(axios, basePath);
         },
         /**
          * Gets a specific portfolio item based on the portfolio item ID passed
@@ -3033,12 +3616,13 @@ export class PortfolioItemApi extends BaseAPI {
      * @summary List all portfolio items
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioItemApi
      */
-    public listPortfolioItems(limit?: number, offset?: number, options?: any) {
-        return PortfolioItemApiFp(this.configuration).listPortfolioItems(limit, offset, options)(this.axios, this.basePath);
+    public listPortfolioItems(limit?: number, offset?: number, filter?: any, options?: any) {
+        return PortfolioItemApiFp(this.configuration).listPortfolioItems(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3075,6 +3659,32 @@ export class PortfolioItemApi extends BaseAPI {
      */
     public listServicePlans(portfolioItemId: string, options?: any) {
         return PortfolioItemApiFp(this.configuration).listServicePlans(portfolioItemId, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * If a record has been discarded, this operation will undelete it so it can be requested normally.
+     * @summary Undelete a specified Portfolio Item
+     * @param {string} portfolioItemId The Portfolio Item ID
+     * @param {RestoreKey} restoreKey
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PortfolioItemApi
+     */
+    public portfolioItemsPortfolioItemIdUndeletePost(portfolioItemId: string, restoreKey: RestoreKey, options?: any) {
+        return PortfolioItemApiFp(this.configuration).portfolioItemsPortfolioItemIdUndeletePost(portfolioItemId, restoreKey, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Make a copy of the Portfolio Item.
+     * @summary Make a copy of the Portfolio Item
+     * @param {string} portfolioItemId The Portfolio Item ID
+     * @param {CopyPortfolioItem} [copyPortfolioItem]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PortfolioItemApi
+     */
+    public postCopyPortfolioItem(portfolioItemId: string, copyPortfolioItem?: CopyPortfolioItem, options?: any) {
+        return PortfolioItemApiFp(this.configuration).postCopyPortfolioItem(portfolioItemId, copyPortfolioItem, options)(this.axios, this.basePath);
     }
 
     /**

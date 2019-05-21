@@ -117,7 +117,7 @@ Provides information about resolutions available for the given issue
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| issue | `string` |  Issue identifier (e.g. &#x60;vulnerabilities:CVE\_2017\_6074\_kernel\|KERNEL\_CVE\_2017\_6074&#x60;) |
+| issue | `string` |  Issue identifier (e.g. &#x60;advisor:CVE\_2017\_6074\_kernel\|KERNEL\_CVE\_2017\_6074&#x60;) |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[Resolutions](../interfaces/resolutions.md)>

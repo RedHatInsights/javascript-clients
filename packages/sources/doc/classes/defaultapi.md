@@ -128,7 +128,7 @@ ___
 
 ###  createApplication
 
-▸ **createApplication**(application: *[Application](../interfaces/application.md)*, options?: *`any`*): `AxiosPromise`<[Application](../interfaces/application.md)[]>
+▸ **createApplication**(application: *[Application](../interfaces/application.md)*, options?: *`any`*): `AxiosPromise`<[Application](../interfaces/application.md)>
 
 *Defined in [api.ts:2754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2754)*
 
@@ -147,14 +147,14 @@ Creates a Application object
 | application | [Application](../interfaces/application.md) |  Application attributes to create |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[Application](../interfaces/application.md)[]>
+**Returns:** `AxiosPromise`<[Application](../interfaces/application.md)>
 
 ___
 <a id="createauthentication"></a>
 
 ###  createAuthentication
 
-▸ **createAuthentication**(authentication: *[Authentication](../interfaces/authentication.md)*, options?: *`any`*): `AxiosPromise`<[Authentication](../interfaces/authentication.md)[]>
+▸ **createAuthentication**(authentication: *[Authentication](../interfaces/authentication.md)*, options?: *`any`*): `AxiosPromise`<[Authentication](../interfaces/authentication.md)>
 
 *Defined in [api.ts:2766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2766)*
 
@@ -173,14 +173,14 @@ Creates a Authentication object
 | authentication | [Authentication](../interfaces/authentication.md) |  Authentication attributes to create |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[Authentication](../interfaces/authentication.md)[]>
+**Returns:** `AxiosPromise`<[Authentication](../interfaces/authentication.md)>
 
 ___
 <a id="createendpoint"></a>
 
 ###  createEndpoint
 
-▸ **createEndpoint**(endpoint: *[Endpoint](../interfaces/endpoint.md)*, options?: *`any`*): `AxiosPromise`<[Endpoint](../interfaces/endpoint.md)[]>
+▸ **createEndpoint**(endpoint: *[Endpoint](../interfaces/endpoint.md)*, options?: *`any`*): `AxiosPromise`<[Endpoint](../interfaces/endpoint.md)>
 
 *Defined in [api.ts:2778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2778)*
 
@@ -199,14 +199,14 @@ Creates a Endpoint object
 | endpoint | [Endpoint](../interfaces/endpoint.md) |  Endpoint attributes to create |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[Endpoint](../interfaces/endpoint.md)[]>
+**Returns:** `AxiosPromise`<[Endpoint](../interfaces/endpoint.md)>
 
 ___
 <a id="createsource"></a>
 
 ###  createSource
 
-▸ **createSource**(source: *[Source](../interfaces/source.md)*, options?: *`any`*): `AxiosPromise`<[Source](../interfaces/source.md)[]>
+▸ **createSource**(source: *[Source](../interfaces/source.md)*, options?: *`any`*): `AxiosPromise`<[Source](../interfaces/source.md)>
 
 *Defined in [api.ts:2790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2790)*
 
@@ -225,14 +225,14 @@ Creates a Source object
 | source | [Source](../interfaces/source.md) |  Source attributes to create |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[Source](../interfaces/source.md)[]>
+**Returns:** `AxiosPromise`<[Source](../interfaces/source.md)>
 
 ___
 <a id="createsourcetype"></a>
 
 ###  createSourceType
 
-▸ **createSourceType**(sourceType: *[SourceType](../interfaces/sourcetype.md)*, options?: *`any`*): `AxiosPromise`<[SourceType](../interfaces/sourcetype.md)[]>
+▸ **createSourceType**(sourceType: *[SourceType](../interfaces/sourcetype.md)*, options?: *`any`*): `AxiosPromise`<[SourceType](../interfaces/sourcetype.md)>
 
 *Defined in [api.ts:2802](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2802)*
 
@@ -251,7 +251,7 @@ Creates a SourceType object
 | sourceType | [SourceType](../interfaces/sourcetype.md) |  SourceType attributes to create |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[SourceType](../interfaces/sourcetype.md)[]>
+**Returns:** `AxiosPromise`<[SourceType](../interfaces/sourcetype.md)>
 
 ___
 <a id="deleteapplication"></a>

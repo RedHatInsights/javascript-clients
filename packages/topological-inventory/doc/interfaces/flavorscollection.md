@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[Flavor](flavor.md)>*
 
-*Defined in api.ts:1493*
+*Defined in [api.ts:1153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1153)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[CollectionLinks](collectionlinks.md)*
 
-*Defined in api.ts:1487*
+*Defined in [api.ts:1147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1147)*
 
 *__type__*: {CollectionLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in api.ts:1481*
+*Defined in [api.ts:1141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1141)*
 
 *__type__*: {CollectionMetadata}
 

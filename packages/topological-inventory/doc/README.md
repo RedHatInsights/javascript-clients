@@ -80,12 +80,6 @@ API documentation
 
 ### Interfaces
 
-* [Application](interfaces/application.md)
-* [ApplicationType](interfaces/applicationtype.md)
-* [ApplicationTypesCollection](interfaces/applicationtypescollection.md)
-* [ApplicationsCollection](interfaces/applicationscollection.md)
-* [Authentication](interfaces/authentication.md)
-* [AuthenticationsCollection](interfaces/authenticationscollection.md)
 * [AvailabilitiesCollection](interfaces/availabilitiescollection.md)
 * [Availability](interfaces/availability.md)
 * [CollectionLinks](interfaces/collectionlinks.md)
@@ -105,8 +99,6 @@ API documentation
 * [ContainerTemplate](interfaces/containertemplate.md)
 * [ContainerTemplatesCollection](interfaces/containertemplatescollection.md)
 * [ContainersCollection](interfaces/containerscollection.md)
-* [Endpoint](interfaces/endpoint.md)
-* [EndpointsCollection](interfaces/endpointscollection.md)
 * [Flavor](interfaces/flavor.md)
 * [FlavorsCollection](interfaces/flavorscollection.md)
 * [InlineResponse200](interfaces/inlineresponse200.md)
@@ -123,8 +115,6 @@ API documentation
 * [ServicePlan](interfaces/serviceplan.md)
 * [ServicePlansCollection](interfaces/serviceplanscollection.md)
 * [Source](interfaces/source.md)
-* [SourceType](interfaces/sourcetype.md)
-* [SourceTypesCollection](interfaces/sourcetypescollection.md)
 * [SourcesCollection](interfaces/sourcescollection.md)
 * [Tag](interfaces/tag.md)
 * [Tagging](interfaces/tagging.md)
@@ -164,7 +154,7 @@ API documentation
 
 **● BASE_PATH**: *`string`* =  "https://cloud.redhat.com//api/topological-inventory/v1.0".replace(/\/+$/, "")
 
-*Defined in api.ts:20*
+*Defined in [api.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20)*
 
 ___
 
@@ -176,7 +166,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in api.ts:2927*
+*Defined in [api.ts:2493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2493)*
 
 DefaultApi - axios parameter creator
 
@@ -195,7 +185,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in api.ts:9829*
+*Defined in [api.ts:7774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L7774)*
 
 DefaultApi - factory interface
 
@@ -216,7 +206,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in api.ts:8111*
+*Defined in [api.ts:6462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L6462)*
 
 DefaultApi - functional programming interface
 
@@ -238,7 +228,7 @@ ___
 
 **COLLECTION_FORMATS**: *`object`*
 
-*Defined in api.ts:26*
+*Defined in [api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L26)*
 
 *__export__*: 
 
@@ -248,7 +238,7 @@ ___
 
 **● csv**: *`string`* = ","
 
-*Defined in api.ts:27*
+*Defined in [api.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L27)*
 
 ___
 <a id="collection_formats.pipes"></a>
@@ -257,7 +247,7 @@ ___
 
 **● pipes**: *`string`* = "|"
 
-*Defined in api.ts:30*
+*Defined in [api.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L30)*
 
 ___
 <a id="collection_formats.ssv"></a>
@@ -266,7 +256,7 @@ ___
 
 **● ssv**: *`string`* = " "
 
-*Defined in api.ts:28*
+*Defined in [api.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L28)*
 
 ___
 <a id="collection_formats.tsv"></a>
@@ -275,7 +265,7 @@ ___
 
 **● tsv**: *`string`* = "	"
 
-*Defined in api.ts:29*
+*Defined in [api.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L29)*
 
 ___
 

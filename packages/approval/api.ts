@@ -17,7 +17,7 @@ import * as url from "url";
 import { Configuration } from "./configuration";
 import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 
-const BASE_PATH = "http://localhost/api/approval/v1.0".replace(/\/+$/, "");
+const BASE_PATH = "https://cloud.redhat.com//api/approval/v1.0".replace(/\/+$/, "");
 
 /**
  *
@@ -120,24 +120,6 @@ export namespace ActionIn {
  */
 export interface ActionOut {
     /**
-     * The person who performs the action
-     * @type {string}
-     * @memberof ActionOut
-     */
-    processedBy?: string;
-    /**
-     * Types of action, may be one of the value (approve, deny, notify, memo, or skip). The stage will be updated according to the operation.
-     * @type {string}
-     * @memberof ActionOut
-     */
-    operation: ActionOut.OperationEnum;
-    /**
-     * Comments for action
-     * @type {string}
-     * @memberof ActionOut
-     */
-    comments?: string;
-    /**
      *
      * @type {string}
      * @memberof ActionOut
@@ -155,6 +137,24 @@ export interface ActionOut {
      * @memberof ActionOut
      */
     stageId: string;
+    /**
+     * The person who performs the action
+     * @type {string}
+     * @memberof ActionOut
+     */
+    processedBy?: string;
+    /**
+     * Types of action, may be one of the value (approve, deny, notify, memo, or skip). The stage will be updated according to the operation.
+     * @type {string}
+     * @memberof ActionOut
+     */
+    operation?: ActionOut.OperationEnum;
+    /**
+     * Comments for action
+     * @type {string}
+     * @memberof ActionOut
+     */
+    comments?: string;
 }
 
 /**
@@ -286,30 +286,6 @@ export interface RequestIn {
  */
 export interface RequestOut {
     /**
-     * Requester id
-     * @type {string}
-     * @memberof RequestOut
-     */
-    requester?: string;
-    /**
-     * Request name
-     * @type {string}
-     * @memberof RequestOut
-     */
-    name: string;
-    /**
-     * Request description
-     * @type {string}
-     * @memberof RequestOut
-     */
-    description?: string;
-    /**
-     * JSON object with request content
-     * @type {any}
-     * @memberof RequestOut
-     */
-    content: any;
-    /**
      *
      * @type {string}
      * @memberof RequestOut
@@ -363,6 +339,30 @@ export interface RequestOut {
      * @memberof RequestOut
      */
     totalStages?: number;
+    /**
+     * Requester id
+     * @type {string}
+     * @memberof RequestOut
+     */
+    requester?: string;
+    /**
+     * Request name
+     * @type {string}
+     * @memberof RequestOut
+     */
+    name?: string;
+    /**
+     * Request description
+     * @type {string}
+     * @memberof RequestOut
+     */
+    description?: string;
+    /**
+     * JSON object with request content
+     * @type {any}
+     * @memberof RequestOut
+     */
+    content?: any;
 }
 
 /**
@@ -602,7 +602,19 @@ export interface WorkflowOut {
      * @type {string}
      * @memberof WorkflowOut
      */
-    name: string;
+    id?: string;
+    /**
+     * Associated template id
+     * @type {string}
+     * @memberof WorkflowOut
+     */
+    templateId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkflowOut
+     */
+    name?: string;
     /**
      *
      * @type {string}
@@ -614,19 +626,7 @@ export interface WorkflowOut {
      * @type {Array<string>}
      * @memberof WorkflowOut
      */
-    groupRefs: Array<string>;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkflowOut
-     */
-    id?: string;
-    /**
-     * Associated template id
-     * @type {string}
-     * @memberof WorkflowOut
-     */
-    templateId?: string;
+    groupRefs?: Array<string>;
 }
 
 /**
@@ -989,12 +989,14 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
          * @param {Array<'undecided' | 'approved' | 'denied'>} [decision] Fetch item by given decision (undecided, approved, denied)
          * @param {Array<'pending' | 'skipped' | 'notified' | 'finished'>} [state] Fetch item by given state (pending, skipped, notified, finished)
          * @param {string} [requester] Fetch item by given requester
+         * @param {string} [approver] Fetch requests by given approver username
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequests(decision?: Array<'undecided' | 'approved' | 'denied'>, state?: Array<'pending' | 'skipped' | 'notified' | 'finished'>, requester?: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listRequests(decision?: Array<'undecided' | 'approved' | 'denied'>, state?: Array<'pending' | 'skipped' | 'notified' | 'finished'>, requester?: string, approver?: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/requests`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1023,12 +1025,20 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['requester'] = requester;
             }
 
+            if (approver !== undefined) {
+                localVarQueryParameter['approver'] = approver;
+            }
+
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
             }
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1047,10 +1057,11 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} workflowId Id of workflow
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             // verify required parameter 'workflowId' is not null or undefined
             if (workflowId === null || workflowId === undefined) {
                 throw new RequiredError('workflowId','Required parameter workflowId was null or undefined when calling listRequestsByWorkflow.');
@@ -1078,6 +1089,10 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1159,13 +1174,15 @@ export const RequestApiFp = function(configuration?: Configuration) {
          * @param {Array<'undecided' | 'approved' | 'denied'>} [decision] Fetch item by given decision (undecided, approved, denied)
          * @param {Array<'pending' | 'skipped' | 'notified' | 'finished'>} [state] Fetch item by given state (pending, skipped, notified, finished)
          * @param {string} [requester] Fetch item by given requester
+         * @param {string} [approver] Fetch requests by given approver username
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequests(decision?: Array<'undecided' | 'approved' | 'denied'>, state?: Array<'pending' | 'skipped' | 'notified' | 'finished'>, requester?: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOutCollection> {
-            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequests(decision, state, requester, limit, offset, options);
+        listRequests(decision?: Array<'undecided' | 'approved' | 'denied'>, state?: Array<'pending' | 'skipped' | 'notified' | 'finished'>, requester?: string, approver?: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOutCollection> {
+            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequests(decision, state, requester, approver, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1177,11 +1194,12 @@ export const RequestApiFp = function(configuration?: Configuration) {
          * @param {string} workflowId Id of workflow
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOutCollection> {
-            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequestsByWorkflow(workflowId, limit, offset, options);
+        listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOutCollection> {
+            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequestsByWorkflow(workflowId, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1227,13 +1245,15 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
          * @param {Array<'undecided' | 'approved' | 'denied'>} [decision] Fetch item by given decision (undecided, approved, denied)
          * @param {Array<'pending' | 'skipped' | 'notified' | 'finished'>} [state] Fetch item by given state (pending, skipped, notified, finished)
          * @param {string} [requester] Fetch item by given requester
+         * @param {string} [approver] Fetch requests by given approver username
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequests(decision?: Array<'undecided' | 'approved' | 'denied'>, state?: Array<'pending' | 'skipped' | 'notified' | 'finished'>, requester?: string, limit?: number, offset?: number, options?: any) {
-            return RequestApiFp(configuration).listRequests(decision, state, requester, limit, offset, options)(axios, basePath);
+        listRequests(decision?: Array<'undecided' | 'approved' | 'denied'>, state?: Array<'pending' | 'skipped' | 'notified' | 'finished'>, requester?: string, approver?: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return RequestApiFp(configuration).listRequests(decision, state, requester, approver, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Return approval requests by given workflow id
@@ -1241,11 +1261,12 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
          * @param {string} workflowId Id of workflow
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, options?: any) {
-            return RequestApiFp(configuration).listRequestsByWorkflow(workflowId, limit, offset, options)(axios, basePath);
+        listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return RequestApiFp(configuration).listRequestsByWorkflow(workflowId, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Return an approval request by given id
@@ -1286,14 +1307,16 @@ export class RequestApi extends BaseAPI {
      * @param {Array<'undecided' | 'approved' | 'denied'>} [decision] Fetch item by given decision (undecided, approved, denied)
      * @param {Array<'pending' | 'skipped' | 'notified' | 'finished'>} [state] Fetch item by given state (pending, skipped, notified, finished)
      * @param {string} [requester] Fetch item by given requester
+     * @param {string} [approver] Fetch requests by given approver username
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RequestApi
      */
-    public listRequests(decision?: Array<'undecided' | 'approved' | 'denied'>, state?: Array<'pending' | 'skipped' | 'notified' | 'finished'>, requester?: string, limit?: number, offset?: number, options?: any) {
-        return RequestApiFp(this.configuration).listRequests(decision, state, requester, limit, offset, options)(this.axios, this.basePath);
+    public listRequests(decision?: Array<'undecided' | 'approved' | 'denied'>, state?: Array<'pending' | 'skipped' | 'notified' | 'finished'>, requester?: string, approver?: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return RequestApiFp(this.configuration).listRequests(decision, state, requester, approver, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1302,12 +1325,13 @@ export class RequestApi extends BaseAPI {
      * @param {string} workflowId Id of workflow
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RequestApi
      */
-    public listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, options?: any) {
-        return RequestApiFp(this.configuration).listRequestsByWorkflow(workflowId, limit, offset, options)(this.axios, this.basePath);
+    public listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return RequestApiFp(this.configuration).listRequestsByWorkflow(workflowId, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1521,10 +1545,11 @@ export const TemplateApiAxiosParamCreator = function (configuration?: Configurat
          * @summary Return all templates
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTemplates(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listTemplates(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/templates`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1547,6 +1572,10 @@ export const TemplateApiAxiosParamCreator = function (configuration?: Configurat
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1612,11 +1641,12 @@ export const TemplateApiFp = function(configuration?: Configuration) {
          * @summary Return all templates
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTemplates(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TemplateOutCollection> {
-            const localVarAxiosArgs = TemplateApiAxiosParamCreator(configuration).listTemplates(limit, offset, options);
+        listTemplates(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TemplateOutCollection> {
+            const localVarAxiosArgs = TemplateApiAxiosParamCreator(configuration).listTemplates(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1650,11 +1680,12 @@ export const TemplateApiFactory = function (configuration?: Configuration, baseP
          * @summary Return all templates
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTemplates(limit?: number, offset?: number, options?: any) {
-            return TemplateApiFp(configuration).listTemplates(limit, offset, options)(axios, basePath);
+        listTemplates(limit?: number, offset?: number, filter?: any, options?: any) {
+            return TemplateApiFp(configuration).listTemplates(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Return a template by given id
@@ -1681,12 +1712,13 @@ export class TemplateApi extends BaseAPI {
      * @summary Return all templates
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TemplateApi
      */
-    public listTemplates(limit?: number, offset?: number, options?: any) {
-        return TemplateApiFp(this.configuration).listTemplates(limit, offset, options)(this.axios, this.basePath);
+    public listTemplates(limit?: number, offset?: number, filter?: any, options?: any) {
+        return TemplateApiFp(this.configuration).listTemplates(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1801,10 +1833,11 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
          * @summary Return all approval workflows
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflows(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listWorkflows(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/workflows`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1829,6 +1862,10 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
                 localVarQueryParameter['offset'] = offset;
             }
 
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1845,10 +1882,11 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
          * @param {string} templateId Id of template
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             // verify required parameter 'templateId' is not null or undefined
             if (templateId === null || templateId === undefined) {
                 throw new RequiredError('templateId','Required parameter templateId was null or undefined when calling listWorkflowsByTemplate.');
@@ -1876,6 +1914,10 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -2018,11 +2060,12 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @summary Return all approval workflows
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflows(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOutCollection> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).listWorkflows(limit, offset, options);
+        listWorkflows(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOutCollection> {
+            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).listWorkflows(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2034,11 +2077,12 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {string} templateId Id of template
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOutCollection> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).listWorkflowsByTemplate(templateId, limit, offset, options);
+        listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOutCollection> {
+            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).listWorkflowsByTemplate(templateId, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2108,11 +2152,12 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          * @summary Return all approval workflows
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflows(limit?: number, offset?: number, options?: any) {
-            return WorkflowApiFp(configuration).listWorkflows(limit, offset, options)(axios, basePath);
+        listWorkflows(limit?: number, offset?: number, filter?: any, options?: any) {
+            return WorkflowApiFp(configuration).listWorkflows(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Return an array of workflows by given template id
@@ -2120,11 +2165,12 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          * @param {string} templateId Id of template
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
+         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, options?: any) {
-            return WorkflowApiFp(configuration).listWorkflowsByTemplate(templateId, limit, offset, options)(axios, basePath);
+        listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return WorkflowApiFp(configuration).listWorkflowsByTemplate(templateId, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Return an approval workflow by given id
@@ -2187,12 +2233,13 @@ export class WorkflowApi extends BaseAPI {
      * @summary Return all approval workflows
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkflowApi
      */
-    public listWorkflows(limit?: number, offset?: number, options?: any) {
-        return WorkflowApiFp(this.configuration).listWorkflows(limit, offset, options)(this.axios, this.basePath);
+    public listWorkflows(limit?: number, offset?: number, filter?: any, options?: any) {
+        return WorkflowApiFp(this.configuration).listWorkflows(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2201,12 +2248,13 @@ export class WorkflowApi extends BaseAPI {
      * @param {string} templateId Id of template
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
+     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkflowApi
      */
-    public listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, options?: any) {
-        return WorkflowApiFp(this.configuration).listWorkflowsByTemplate(templateId, limit, offset, options)(this.axios, this.basePath);
+    public listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return WorkflowApiFp(this.configuration).listWorkflowsByTemplate(templateId, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**

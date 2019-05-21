@@ -31,7 +31,9 @@ OrderItemApi - object-oriented interface
 ### Methods
 
 * [listApprovalRequests](orderitemapi.md#listapprovalrequests)
+* [listOrderItems](orderitemapi.md#listorderitems)
 * [listProgressMessages](orderitemapi.md#listprogressmessages)
+* [showOrderItem](orderitemapi.md#showorderitem)
 
 ---
 
@@ -101,9 +103,9 @@ ___
 
 ###  listApprovalRequests
 
-▸ **listApprovalRequests**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[ApprovalRequestsCollection](../interfaces/approvalrequestscollection.md)>
+▸ **listApprovalRequests**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ApprovalRequestsCollection](../interfaces/approvalrequestscollection.md)>
 
-*Defined in [api.ts:1569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1569)*
+*Defined in [api.ts:1883](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1883)*
 
 Gets a list of approval request associated with an order item. As the item is being approved one can check the status of the approvals.
 
@@ -120,18 +122,47 @@ Gets a list of approval request associated with an order item. As the item is be
 | orderItemId | `string` |  The Order Item ID |
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
+| `Optional` filter | `any` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ApprovalRequestsCollection](../interfaces/approvalrequestscollection.md)>
+
+___
+<a id="listorderitems"></a>
+
+###  listOrderItems
+
+▸ **listOrderItems**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[OrderItemsCollection](../interfaces/orderitemscollection.md)>
+
+*Defined in [api.ts:1897](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1897)*
+
+Gets a list of order items.
+
+*__summary__*: List Order Items
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: OrderItemApi
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` limit | `number` |
+| `Optional` offset | `number` |
+| `Optional` filter | `any` |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[OrderItemsCollection](../interfaces/orderitemscollection.md)>
 
 ___
 <a id="listprogressmessages"></a>
 
 ###  listProgressMessages
 
-▸ **listProgressMessages**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[ProgressMessagesCollection](../interfaces/progressmessagescollection.md)>
+▸ **listProgressMessages**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ProgressMessagesCollection](../interfaces/progressmessagescollection.md)>
 
-*Defined in [api.ts:1583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1583)*
+*Defined in [api.ts:1912](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1912)*
 
 Gets a list of progress messages associated with an order item. As the item is being processed the provider can update the progress messages.
 
@@ -148,9 +179,36 @@ Gets a list of progress messages associated with an order item. As the item is b
 | orderItemId | `string` |  The Order Item ID |
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
+| `Optional` filter | `any` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ProgressMessagesCollection](../interfaces/progressmessagescollection.md)>
+
+___
+<a id="showorderitem"></a>
+
+###  showOrderItem
+
+▸ **showOrderItem**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[OrderItem](../modules/orderitem.md)>
+
+*Defined in [api.ts:1924](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1924)*
+
+Gets a specific order item based on the portfolio item ID passed
+
+*__summary__*: Gets a specific order item
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: OrderItemApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| id | `string` |  ID of the resource |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[OrderItem](../modules/orderitem.md)>
 
 ___
 

@@ -32,7 +32,7 @@ The workflow to process approval requests. Each workflow is linked to multiple g
 
 **● description**: *`string`*
 
-*Defined in [api.ts:611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L611)*
+*Defined in [api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L623)*
 
 *__type__*: {string}
 
@@ -41,11 +41,11 @@ The workflow to process approval requests. Each workflow is linked to multiple g
 ___
 <a id="grouprefs"></a>
 
-###  groupRefs
+### `<Optional>` groupRefs
 
 **● groupRefs**: *`Array`<`string`>*
 
-*Defined in [api.ts:617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L617)*
+*Defined in [api.ts:629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L629)*
 
 Group reference ids associated with workflow
 
@@ -60,7 +60,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L623)*
+*Defined in [api.ts:605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L605)*
 
 *__type__*: {string}
 
@@ -69,11 +69,11 @@ ___
 ___
 <a id="name"></a>
 
-###  name
+### `<Optional>` name
 
 **● name**: *`string`*
 
-*Defined in [api.ts:605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L605)*
+*Defined in [api.ts:617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L617)*
 
 *__type__*: {string}
 
@@ -86,7 +86,7 @@ ___
 
 **● templateId**: *`string`*
 
-*Defined in [api.ts:629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L629)*
+*Defined in [api.ts:611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L611)*
 
 Associated template id
 

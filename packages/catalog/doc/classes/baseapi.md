@@ -10,6 +10,8 @@
 
 **BaseAPI**
 
+↳  [DefaultApi](defaultapi.md)
+
 ↳  [OrderApi](orderapi.md)
 
 ↳  [OrderItemApi](orderitemapi.md)

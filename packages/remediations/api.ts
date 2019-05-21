@@ -1023,7 +1023,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * Removes the given Issue from the Remediation
          * @summary Remove Remediation Issue
          * @param {string} id Remediation identifier
-         * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+         * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1062,7 +1062,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * Removes the given System from the Issue Remediation
          * @summary Remove Remediation Issue System
          * @param {string} id Remediation identifier
-         * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+         * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {string} system System identifier
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1267,7 +1267,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * Updates the given Remediation Issue
          * @summary Update Remediation Issue
          * @param {string} id Remediation identifier
-         * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+         * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {RemediationIssueIn} remediationIssueIn
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1352,7 +1352,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * Removes the given Issue from the Remediation
          * @summary Remove Remediation Issue
          * @param {string} id Remediation identifier
-         * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+         * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1367,7 +1367,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * Removes the given System from the Issue Remediation
          * @summary Remove Remediation Issue System
          * @param {string} id Remediation identifier
-         * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+         * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {string} system System identifier
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1444,7 +1444,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * Updates the given Remediation Issue
          * @summary Update Remediation Issue
          * @param {string} id Remediation identifier
-         * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+         * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {RemediationIssueIn} remediationIssueIn
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1489,7 +1489,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * Removes the given Issue from the Remediation
          * @summary Remove Remediation Issue
          * @param {string} id Remediation identifier
-         * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+         * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1500,7 +1500,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * Removes the given System from the Issue Remediation
          * @summary Remove Remediation Issue System
          * @param {string} id Remediation identifier
-         * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+         * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {string} system System identifier
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1557,7 +1557,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * Updates the given Remediation Issue
          * @summary Update Remediation Issue
          * @param {string} id Remediation identifier
-         * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+         * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {RemediationIssueIn} remediationIssueIn
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1603,7 +1603,7 @@ export class RemediationsApi extends BaseAPI {
      * Removes the given Issue from the Remediation
      * @summary Remove Remediation Issue
      * @param {string} id Remediation identifier
-     * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+     * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi
@@ -1616,7 +1616,7 @@ export class RemediationsApi extends BaseAPI {
      * Removes the given System from the Issue Remediation
      * @summary Remove Remediation Issue System
      * @param {string} id Remediation identifier
-     * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+     * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
      * @param {string} system System identifier
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1683,7 +1683,7 @@ export class RemediationsApi extends BaseAPI {
      * Updates the given Remediation Issue
      * @summary Update Remediation Issue
      * @param {string} id Remediation identifier
-     * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+     * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
      * @param {RemediationIssueIn} remediationIssueIn
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1704,7 +1704,7 @@ export const ResolutionsApiAxiosParamCreator = function (configuration?: Configu
         /**
          * Provides information about resolutions available for the given issue
          * @summary Resolution metadata
-         * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+         * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1782,7 +1782,7 @@ export const ResolutionsApiFp = function(configuration?: Configuration) {
         /**
          * Provides information about resolutions available for the given issue
          * @summary Resolution metadata
-         * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+         * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1819,7 +1819,7 @@ export const ResolutionsApiFactory = function (configuration?: Configuration, ba
         /**
          * Provides information about resolutions available for the given issue
          * @summary Resolution metadata
-         * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+         * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1849,7 +1849,7 @@ export class ResolutionsApi extends BaseAPI {
     /**
      * Provides information about resolutions available for the given issue
      * @summary Resolution metadata
-     * @param {string} issue Issue identifier (e.g. &#x60;vulnerabilities:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
+     * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResolutionsApi
