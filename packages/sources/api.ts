@@ -1983,7 +1983,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApplication(application: Application, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Application>> {
+        createApplication(application: Application, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Application> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createApplication(application, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1997,7 +1997,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAuthentication(authentication: Authentication, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Authentication>> {
+        createAuthentication(authentication: Authentication, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Authentication> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createAuthentication(authentication, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2011,7 +2011,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createEndpoint(endpoint: Endpoint, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Endpoint>> {
+        createEndpoint(endpoint: Endpoint, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Endpoint> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createEndpoint(endpoint, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2025,7 +2025,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createSource(source: Source, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Source>> {
+        createSource(source: Source, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Source> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createSource(source, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2039,7 +2039,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createSourceType(sourceType: SourceType, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SourceType>> {
+        createSourceType(sourceType: SourceType, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceType> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createSourceType(sourceType, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})

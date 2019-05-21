@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[ServicePlan](serviceplan.md)>*
 
-*Defined in api.ts:2129*
+*Defined in [api.ts:1789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1789)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[CollectionLinks](collectionlinks.md)*
 
-*Defined in api.ts:2123*
+*Defined in [api.ts:1783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1783)*
 
 *__type__*: {CollectionLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in api.ts:2117*
+*Defined in [api.ts:1777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1777)*
 
 *__type__*: {CollectionMetadata}
 

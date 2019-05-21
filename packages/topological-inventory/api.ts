@@ -72,234 +72,6 @@ export class RequiredError extends Error {
 /**
  *
  * @export
- * @interface Application
- */
-export interface Application {
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof Application
-     */
-    applicationTypeId?: string;
-    /**
-     *
-     * @type {Date}
-     * @memberof Application
-     */
-    createdAt?: Date;
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof Application
-     */
-    id?: string;
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof Application
-     */
-    sourceId?: string;
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof Application
-     */
-    tenantId?: string;
-    /**
-     *
-     * @type {Date}
-     * @memberof Application
-     */
-    updatedAt?: Date;
-}
-
-/**
- *
- * @export
- * @interface ApplicationType
- */
-export interface ApplicationType {
-    /**
-     *
-     * @type {Date}
-     * @memberof ApplicationType
-     */
-    createdAt?: Date;
-    /**
-     *
-     * @type {string}
-     * @memberof ApplicationType
-     */
-    displayName?: string;
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof ApplicationType
-     */
-    id?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof ApplicationType
-     */
-    name?: string;
-    /**
-     *
-     * @type {Date}
-     * @memberof ApplicationType
-     */
-    updatedAt?: Date;
-}
-
-/**
- *
- * @export
- * @interface ApplicationTypesCollection
- */
-export interface ApplicationTypesCollection {
-    /**
-     *
-     * @type {CollectionMetadata}
-     * @memberof ApplicationTypesCollection
-     */
-    meta?: CollectionMetadata;
-    /**
-     *
-     * @type {CollectionLinks}
-     * @memberof ApplicationTypesCollection
-     */
-    links?: CollectionLinks;
-    /**
-     *
-     * @type {Array<ApplicationType>}
-     * @memberof ApplicationTypesCollection
-     */
-    data?: Array<ApplicationType>;
-}
-
-/**
- *
- * @export
- * @interface ApplicationsCollection
- */
-export interface ApplicationsCollection {
-    /**
-     *
-     * @type {CollectionMetadata}
-     * @memberof ApplicationsCollection
-     */
-    meta?: CollectionMetadata;
-    /**
-     *
-     * @type {CollectionLinks}
-     * @memberof ApplicationsCollection
-     */
-    links?: CollectionLinks;
-    /**
-     *
-     * @type {Array<Application>}
-     * @memberof ApplicationsCollection
-     */
-    data?: Array<Application>;
-}
-
-/**
- *
- * @export
- * @interface Authentication
- */
-export interface Authentication {
-    /**
-     *
-     * @type {string}
-     * @memberof Authentication
-     */
-    authtype?: string;
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof Authentication
-     */
-    id?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Authentication
-     */
-    name?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Authentication
-     */
-    password?: string;
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof Authentication
-     */
-    resourceId?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Authentication
-     */
-    resourceType?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Authentication
-     */
-    status?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Authentication
-     */
-    statusDetails?: string;
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof Authentication
-     */
-    tenantId?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Authentication
-     */
-    username?: string;
-}
-
-/**
- *
- * @export
- * @interface AuthenticationsCollection
- */
-export interface AuthenticationsCollection {
-    /**
-     *
-     * @type {CollectionMetadata}
-     * @memberof AuthenticationsCollection
-     */
-    meta?: CollectionMetadata;
-    /**
-     *
-     * @type {CollectionLinks}
-     * @memberof AuthenticationsCollection
-     */
-    links?: CollectionLinks;
-    /**
-     *
-     * @type {Array<Authentication>}
-     * @memberof AuthenticationsCollection
-     */
-    data?: Array<Authentication>;
-}
-
-/**
- *
- * @export
  * @interface AvailabilitiesCollection
  */
 export interface AvailabilitiesCollection {
@@ -1272,118 +1044,6 @@ export interface ContainersCollection {
 /**
  *
  * @export
- * @interface Endpoint
- */
-export interface Endpoint {
-    /**
-     * Optional X.509 Certificate Authority
-     * @type {string}
-     * @memberof Endpoint
-     */
-    certificateAuthority?: string;
-    /**
-     *
-     * @type {Date}
-     * @memberof Endpoint
-     */
-    createdAt?: Date;
-    /**
-     *
-     * @type {boolean}
-     * @memberof Endpoint
-     */
-    _default?: boolean;
-    /**
-     * URI host component
-     * @type {string}
-     * @memberof Endpoint
-     */
-    host?: string;
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof Endpoint
-     */
-    id?: string;
-    /**
-     * URI path component
-     * @type {string}
-     * @memberof Endpoint
-     */
-    path?: string;
-    /**
-     * URI port component
-     * @type {number}
-     * @memberof Endpoint
-     */
-    port?: number;
-    /**
-     *
-     * @type {string}
-     * @memberof Endpoint
-     */
-    role?: string;
-    /**
-     * URI scheme component
-     * @type {string}
-     * @memberof Endpoint
-     */
-    scheme?: string;
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof Endpoint
-     */
-    sourceId?: string;
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof Endpoint
-     */
-    tenantId?: string;
-    /**
-     *
-     * @type {Date}
-     * @memberof Endpoint
-     */
-    updatedAt?: Date;
-    /**
-     * Should SSL be verified
-     * @type {boolean}
-     * @memberof Endpoint
-     */
-    verifySsl?: boolean;
-}
-
-/**
- *
- * @export
- * @interface EndpointsCollection
- */
-export interface EndpointsCollection {
-    /**
-     *
-     * @type {CollectionMetadata}
-     * @memberof EndpointsCollection
-     */
-    meta?: CollectionMetadata;
-    /**
-     *
-     * @type {CollectionLinks}
-     * @memberof EndpointsCollection
-     */
-    links?: CollectionLinks;
-    /**
-     *
-     * @type {Array<Endpoint>}
-     * @memberof EndpointsCollection
-     */
-    data?: Array<Endpoint>;
-}
-
-/**
- *
- * @export
  * @interface Flavor
  */
 export interface Flavor {
@@ -2148,18 +1808,6 @@ export interface Source {
      */
     id?: string;
     /**
-     *
-     * @type {string}
-     * @memberof Source
-     */
-    name?: string;
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof Source
-     */
-    sourceTypeId?: string;
-    /**
      * ID of the resource
      * @type {string}
      * @memberof Source
@@ -2177,88 +1825,6 @@ export interface Source {
      * @memberof Source
      */
     updatedAt?: Date;
-    /**
-     *
-     * @type {string}
-     * @memberof Source
-     */
-    version?: string;
-}
-
-/**
- *
- * @export
- * @interface SourceType
- */
-export interface SourceType {
-    /**
-     *
-     * @type {Date}
-     * @memberof SourceType
-     */
-    createdAt?: Date;
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof SourceType
-     */
-    id?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof SourceType
-     */
-    name?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof SourceType
-     */
-    productName?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof SourceType
-     */
-    schema?: string;
-    /**
-     *
-     * @type {Date}
-     * @memberof SourceType
-     */
-    updatedAt?: Date;
-    /**
-     *
-     * @type {string}
-     * @memberof SourceType
-     */
-    vendor?: string;
-}
-
-/**
- *
- * @export
- * @interface SourceTypesCollection
- */
-export interface SourceTypesCollection {
-    /**
-     *
-     * @type {CollectionMetadata}
-     * @memberof SourceTypesCollection
-     */
-    meta?: CollectionMetadata;
-    /**
-     *
-     * @type {CollectionLinks}
-     * @memberof SourceTypesCollection
-     */
-    links?: CollectionLinks;
-    /**
-     *
-     * @type {Array<SourceType>}
-     * @memberof SourceTypesCollection
-     */
-    data?: Array<SourceType>;
 }
 
 /**
@@ -2927,372 +2493,6 @@ export interface VolumesCollection {
 export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Creates a Application object
-         * @summary Create a new Application
-         * @param {Application} application Application attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApplication(application: Application, options: any = {}): RequestArgs {
-            // verify required parameter 'application' is not null or undefined
-            if (application === null || application === undefined) {
-                throw new RequiredError('application','Required parameter application was null or undefined when calling createApplication.');
-            }
-            const localVarPath = `/applications`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"Application" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(application || {}) : (application || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Creates a Authentication object
-         * @summary Create a new Authentication
-         * @param {Authentication} authentication Authentication attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createAuthentication(authentication: Authentication, options: any = {}): RequestArgs {
-            // verify required parameter 'authentication' is not null or undefined
-            if (authentication === null || authentication === undefined) {
-                throw new RequiredError('authentication','Required parameter authentication was null or undefined when calling createAuthentication.');
-            }
-            const localVarPath = `/authentications`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"Authentication" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(authentication || {}) : (authentication || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Creates a Endpoint object
-         * @summary Create a new Endpoint
-         * @param {Endpoint} endpoint Endpoint attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createEndpoint(endpoint: Endpoint, options: any = {}): RequestArgs {
-            // verify required parameter 'endpoint' is not null or undefined
-            if (endpoint === null || endpoint === undefined) {
-                throw new RequiredError('endpoint','Required parameter endpoint was null or undefined when calling createEndpoint.');
-            }
-            const localVarPath = `/endpoints`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"Endpoint" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(endpoint || {}) : (endpoint || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Creates a Source object
-         * @summary Create a new Source
-         * @param {Source} source Source attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createSource(source: Source, options: any = {}): RequestArgs {
-            // verify required parameter 'source' is not null or undefined
-            if (source === null || source === undefined) {
-                throw new RequiredError('source','Required parameter source was null or undefined when calling createSource.');
-            }
-            const localVarPath = `/sources`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"Source" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(source || {}) : (source || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Creates a SourceType object
-         * @summary Create a new SourceType
-         * @param {SourceType} sourceType SourceType attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createSourceType(sourceType: SourceType, options: any = {}): RequestArgs {
-            // verify required parameter 'sourceType' is not null or undefined
-            if (sourceType === null || sourceType === undefined) {
-                throw new RequiredError('sourceType','Required parameter sourceType was null or undefined when calling createSourceType.');
-            }
-            const localVarPath = `/source_types`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"SourceType" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(sourceType || {}) : (sourceType || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Deletes a Application object
-         * @summary Delete an existing Application
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteApplication(id: string, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling deleteApplication.');
-            }
-            const localVarPath = `/applications/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'DELETE' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Deletes a Authentication object
-         * @summary Delete an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteAuthentication(id: string, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling deleteAuthentication.');
-            }
-            const localVarPath = `/authentications/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'DELETE' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Deletes a Endpoint object
-         * @summary Delete an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteEndpoint(id: string, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling deleteEndpoint.');
-            }
-            const localVarPath = `/endpoints/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'DELETE' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Deletes a Source object
-         * @summary Delete an existing Source
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteSource(id: string, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling deleteSource.');
-            }
-            const localVarPath = `/sources/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'DELETE' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          *
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
@@ -3313,150 +2513,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of ApplicationType objects
-         * @summary List ApplicationTypes
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApplicationTypes(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
-            const localVarPath = `/application_types`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Application objects
-         * @summary List Applications
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApplications(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
-            const localVarPath = `/applications`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listAuthentications(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
-            const localVarPath = `/authentications`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -4346,108 +3402,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications for Endpoint
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling listEndpointAuthentications.');
-            }
-            const localVarPath = `/endpoints/{id}/authentications`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Endpoint objects
-         * @summary List Endpoints
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listEndpoints(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
-            const localVarPath = `/endpoints`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Returns an array of Flavor objects
          * @summary List Flavors
          * @param {number} [limit] The numbers of items to return per page.
@@ -4952,60 +3906,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Application objects
-         * @summary List Applications for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceApplications(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceApplications.');
-            }
-            const localVarPath = `/sources/{id}/applications`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Returns an array of Availability objects
          * @summary List Availabilities for Source
          * @param {string} id ID of the resource
@@ -5384,60 +4284,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Endpoint objects
-         * @summary List Endpoints for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceEndpoints.');
-            }
-            const localVarPath = `/sources/{id}/endpoints`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Returns an array of OrchestrationStack objects
          * @summary List OrchestrationStacks for Source
          * @param {string} id ID of the resource
@@ -5616,162 +4462,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/sources/{id}/service_plans`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Availability objects
-         * @summary List Availabilities for SourceType
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceTypeAvailabilities(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceTypeAvailabilities.');
-            }
-            const localVarPath = `/source_types/{id}/availabilities`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Source objects
-         * @summary List Sources for SourceType
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceTypeSources.');
-            }
-            const localVarPath = `/source_types/{id}/sources`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of SourceType objects
-         * @summary List SourceTypes
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceTypes(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
-            const localVarPath = `/source_types`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -6896,123 +5586,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns a Application object
-         * @summary Show an existing Application
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showApplication(id: string, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling showApplication.');
-            }
-            const localVarPath = `/applications/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns a ApplicationType object
-         * @summary Show an existing ApplicationType
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showApplicationType(id: string, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling showApplicationType.');
-            }
-            const localVarPath = `/application_types/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns a Authentication object
-         * @summary Show an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showAuthentication(id: string, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling showAuthentication.');
-            }
-            const localVarPath = `/authentications/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Returns a Container object
          * @summary Show an existing Container
          * @param {string} id ID of the resource
@@ -7259,45 +5832,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showContainerTemplate.');
             }
             const localVarPath = `/container_templates/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns a Endpoint object
-         * @summary Show an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showEndpoint(id: string, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling showEndpoint.');
-            }
-            const localVarPath = `/endpoints/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -7637,45 +6171,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns a SourceType object
-         * @summary Show an existing SourceType
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showSourceType(id: string, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling showSourceType.');
-            }
-            const localVarPath = `/source_types/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Returns a Tag object
          * @summary Show an existing Tag
          * @param {string} id ID of the resource
@@ -7910,150 +6405,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Updates a Authentication object
-         * @summary Update an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {Authentication} authentication Authentication attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateAuthentication(id: string, authentication: Authentication, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling updateAuthentication.');
-            }
-            // verify required parameter 'authentication' is not null or undefined
-            if (authentication === null || authentication === undefined) {
-                throw new RequiredError('authentication','Required parameter authentication was null or undefined when calling updateAuthentication.');
-            }
-            const localVarPath = `/authentications/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"Authentication" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(authentication || {}) : (authentication || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Updates a Endpoint object
-         * @summary Update an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {Endpoint} endpoint Endpoint attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateEndpoint(id: string, endpoint: Endpoint, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling updateEndpoint.');
-            }
-            // verify required parameter 'endpoint' is not null or undefined
-            if (endpoint === null || endpoint === undefined) {
-                throw new RequiredError('endpoint','Required parameter endpoint was null or undefined when calling updateEndpoint.');
-            }
-            const localVarPath = `/endpoints/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"Endpoint" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(endpoint || {}) : (endpoint || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Updates a Source object
-         * @summary Update an existing Source
-         * @param {string} id ID of the resource
-         * @param {Source} source Source attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateSource(id: string, source: Source, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling updateSource.');
-            }
-            // verify required parameter 'source' is not null or undefined
-            if (source === null || source === undefined) {
-                throw new RequiredError('source','Required parameter source was null or undefined when calling updateSource.');
-            }
-            const localVarPath = `/sources/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"Source" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(source || {}) : (source || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Updates a Task object
          * @summary Update an existing Task
          * @param {string} id ID of the resource
@@ -8111,132 +6462,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 export const DefaultApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Creates a Application object
-         * @summary Create a new Application
-         * @param {Application} application Application attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApplication(application: Application, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Application>> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createApplication(application, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Creates a Authentication object
-         * @summary Create a new Authentication
-         * @param {Authentication} authentication Authentication attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createAuthentication(authentication: Authentication, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Authentication>> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createAuthentication(authentication, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Creates a Endpoint object
-         * @summary Create a new Endpoint
-         * @param {Endpoint} endpoint Endpoint attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createEndpoint(endpoint: Endpoint, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Endpoint>> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createEndpoint(endpoint, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Creates a Source object
-         * @summary Create a new Source
-         * @param {Source} source Source attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createSource(source: Source, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Source>> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createSource(source, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Creates a SourceType object
-         * @summary Create a new SourceType
-         * @param {SourceType} sourceType SourceType attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createSourceType(sourceType: SourceType, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SourceType>> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createSourceType(sourceType, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Deletes a Application object
-         * @summary Delete an existing Application
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteApplication(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteApplication(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Deletes a Authentication object
-         * @summary Delete an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteAuthentication(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteAuthentication(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Deletes a Endpoint object
-         * @summary Delete an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteEndpoint(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteEndpoint(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Deletes a Source object
-         * @summary Delete an existing Source
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteSource(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteSource(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          *
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
@@ -8244,54 +6469,6 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         getDocumentation(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of ApplicationType objects
-         * @summary List ApplicationTypes
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApplicationTypes(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationTypesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listApplicationTypes(limit, offset, filter, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Application objects
-         * @summary List Applications
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApplications(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listApplications(limit, offset, filter, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listAuthentications(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listAuthentications(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -8580,39 +6757,6 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications for Endpoint
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listEndpointAuthentications(id, limit, offset, filter, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Endpoint objects
-         * @summary List Endpoints
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listEndpoints(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listEndpoints(limit, offset, filter, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Returns an array of Flavor objects
          * @summary List Flavors
          * @param {number} [limit] The numbers of items to return per page.
@@ -8777,23 +6921,6 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Application objects
-         * @summary List Applications for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceApplications(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceApplications(id, limit, offset, filter, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Returns an array of Availability objects
          * @summary List Availabilities for Source
          * @param {string} id ID of the resource
@@ -8913,23 +7040,6 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Endpoint objects
-         * @summary List Endpoints for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceEndpoints(id, limit, offset, filter, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Returns an array of OrchestrationStack objects
          * @summary List OrchestrationStacks for Source
          * @param {string} id ID of the resource
@@ -8992,56 +7102,6 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         listSourceServicePlans(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceServicePlans(id, limit, offset, filter, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Availability objects
-         * @summary List Availabilities for SourceType
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceTypeAvailabilities(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AvailabilitiesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceTypeAvailabilities(id, limit, offset, filter, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Source objects
-         * @summary List Sources for SourceType
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceTypeSources(id, limit, offset, filter, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of SourceType objects
-         * @summary List SourceTypes
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceTypes(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceTypesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceTypes(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -9396,48 +7456,6 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns a Application object
-         * @summary Show an existing Application
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showApplication(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Application> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showApplication(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns a ApplicationType object
-         * @summary Show an existing ApplicationType
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showApplicationType(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationType> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showApplicationType(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns a Authentication object
-         * @summary Show an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showAuthentication(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Authentication> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showAuthentication(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Returns a Container object
          * @summary Show an existing Container
          * @param {string} id ID of the resource
@@ -9530,20 +7548,6 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         showContainerTemplate(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerTemplate> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showContainerTemplate(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns a Endpoint object
-         * @summary Show an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showEndpoint(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Endpoint> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showEndpoint(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -9662,20 +7666,6 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns a SourceType object
-         * @summary Show an existing SourceType
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showSourceType(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceType> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSourceType(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Returns a Tag object
          * @summary Show an existing Tag
          * @param {string} id ID of the resource
@@ -9760,51 +7750,6 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Updates a Authentication object
-         * @summary Update an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {Authentication} authentication Authentication attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateAuthentication(id: string, authentication: Authentication, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).updateAuthentication(id, authentication, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Updates a Endpoint object
-         * @summary Update an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {Endpoint} endpoint Endpoint attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateEndpoint(id: string, endpoint: Endpoint, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).updateEndpoint(id, endpoint, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Updates a Source object
-         * @summary Update an existing Source
-         * @param {string} id ID of the resource
-         * @param {Source} source Source attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateSource(id: string, source: Source, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).updateSource(id, source, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Updates a Task object
          * @summary Update an existing Task
          * @param {string} id ID of the resource
@@ -9829,96 +7774,6 @@ export const DefaultApiFp = function(configuration?: Configuration) {
 export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Creates a Application object
-         * @summary Create a new Application
-         * @param {Application} application Application attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApplication(application: Application, options?: any) {
-            return DefaultApiFp(configuration).createApplication(application, options)(axios, basePath);
-        },
-        /**
-         * Creates a Authentication object
-         * @summary Create a new Authentication
-         * @param {Authentication} authentication Authentication attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createAuthentication(authentication: Authentication, options?: any) {
-            return DefaultApiFp(configuration).createAuthentication(authentication, options)(axios, basePath);
-        },
-        /**
-         * Creates a Endpoint object
-         * @summary Create a new Endpoint
-         * @param {Endpoint} endpoint Endpoint attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createEndpoint(endpoint: Endpoint, options?: any) {
-            return DefaultApiFp(configuration).createEndpoint(endpoint, options)(axios, basePath);
-        },
-        /**
-         * Creates a Source object
-         * @summary Create a new Source
-         * @param {Source} source Source attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createSource(source: Source, options?: any) {
-            return DefaultApiFp(configuration).createSource(source, options)(axios, basePath);
-        },
-        /**
-         * Creates a SourceType object
-         * @summary Create a new SourceType
-         * @param {SourceType} sourceType SourceType attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createSourceType(sourceType: SourceType, options?: any) {
-            return DefaultApiFp(configuration).createSourceType(sourceType, options)(axios, basePath);
-        },
-        /**
-         * Deletes a Application object
-         * @summary Delete an existing Application
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteApplication(id: string, options?: any) {
-            return DefaultApiFp(configuration).deleteApplication(id, options)(axios, basePath);
-        },
-        /**
-         * Deletes a Authentication object
-         * @summary Delete an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteAuthentication(id: string, options?: any) {
-            return DefaultApiFp(configuration).deleteAuthentication(id, options)(axios, basePath);
-        },
-        /**
-         * Deletes a Endpoint object
-         * @summary Delete an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteEndpoint(id: string, options?: any) {
-            return DefaultApiFp(configuration).deleteEndpoint(id, options)(axios, basePath);
-        },
-        /**
-         * Deletes a Source object
-         * @summary Delete an existing Source
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteSource(id: string, options?: any) {
-            return DefaultApiFp(configuration).deleteSource(id, options)(axios, basePath);
-        },
-        /**
          *
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
@@ -9926,42 +7781,6 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         getDocumentation(options?: any) {
             return DefaultApiFp(configuration).getDocumentation(options)(axios, basePath);
-        },
-        /**
-         * Returns an array of ApplicationType objects
-         * @summary List ApplicationTypes
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApplicationTypes(limit?: number, offset?: number, filter?: any, options?: any) {
-            return DefaultApiFp(configuration).listApplicationTypes(limit, offset, filter, options)(axios, basePath);
-        },
-        /**
-         * Returns an array of Application objects
-         * @summary List Applications
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApplications(limit?: number, offset?: number, filter?: any, options?: any) {
-            return DefaultApiFp(configuration).listApplications(limit, offset, filter, options)(axios, basePath);
-        },
-        /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listAuthentications(limit?: number, offset?: number, filter?: any, options?: any) {
-            return DefaultApiFp(configuration).listAuthentications(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Container objects
@@ -10178,31 +7997,6 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainers(limit, offset, filter, options)(axios, basePath);
         },
         /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications for Endpoint
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-            return DefaultApiFp(configuration).listEndpointAuthentications(id, limit, offset, filter, options)(axios, basePath);
-        },
-        /**
-         * Returns an array of Endpoint objects
-         * @summary List Endpoints
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listEndpoints(limit?: number, offset?: number, filter?: any, options?: any) {
-            return DefaultApiFp(configuration).listEndpoints(limit, offset, filter, options)(axios, basePath);
-        },
-        /**
          * Returns an array of Flavor objects
          * @summary List Flavors
          * @param {number} [limit] The numbers of items to return per page.
@@ -10327,19 +8121,6 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServicePlans(limit, offset, filter, options)(axios, basePath);
         },
         /**
-         * Returns an array of Application objects
-         * @summary List Applications for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceApplications(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-            return DefaultApiFp(configuration).listSourceApplications(id, limit, offset, filter, options)(axios, basePath);
-        },
-        /**
          * Returns an array of Availability objects
          * @summary List Availabilities for Source
          * @param {string} id ID of the resource
@@ -10431,19 +8212,6 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceContainers(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
-         * Returns an array of Endpoint objects
-         * @summary List Endpoints for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-            return DefaultApiFp(configuration).listSourceEndpoints(id, limit, offset, filter, options)(axios, basePath);
-        },
-        /**
          * Returns an array of OrchestrationStack objects
          * @summary List OrchestrationStacks for Source
          * @param {string} id ID of the resource
@@ -10494,44 +8262,6 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         listSourceServicePlans(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
             return DefaultApiFp(configuration).listSourceServicePlans(id, limit, offset, filter, options)(axios, basePath);
-        },
-        /**
-         * Returns an array of Availability objects
-         * @summary List Availabilities for SourceType
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceTypeAvailabilities(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-            return DefaultApiFp(configuration).listSourceTypeAvailabilities(id, limit, offset, filter, options)(axios, basePath);
-        },
-        /**
-         * Returns an array of Source objects
-         * @summary List Sources for SourceType
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-            return DefaultApiFp(configuration).listSourceTypeSources(id, limit, offset, filter, options)(axios, basePath);
-        },
-        /**
-         * Returns an array of SourceType objects
-         * @summary List SourceTypes
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceTypes(limit?: number, offset?: number, filter?: any, options?: any) {
-            return DefaultApiFp(configuration).listSourceTypes(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Vm objects
@@ -10798,36 +8528,6 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).orderServicePlan(id, orderParameters, options)(axios, basePath);
         },
         /**
-         * Returns a Application object
-         * @summary Show an existing Application
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showApplication(id: string, options?: any) {
-            return DefaultApiFp(configuration).showApplication(id, options)(axios, basePath);
-        },
-        /**
-         * Returns a ApplicationType object
-         * @summary Show an existing ApplicationType
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showApplicationType(id: string, options?: any) {
-            return DefaultApiFp(configuration).showApplicationType(id, options)(axios, basePath);
-        },
-        /**
-         * Returns a Authentication object
-         * @summary Show an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showAuthentication(id: string, options?: any) {
-            return DefaultApiFp(configuration).showAuthentication(id, options)(axios, basePath);
-        },
-        /**
          * Returns a Container object
          * @summary Show an existing Container
          * @param {string} id ID of the resource
@@ -10896,16 +8596,6 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         showContainerTemplate(id: string, options?: any) {
             return DefaultApiFp(configuration).showContainerTemplate(id, options)(axios, basePath);
-        },
-        /**
-         * Returns a Endpoint object
-         * @summary Show an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showEndpoint(id: string, options?: any) {
-            return DefaultApiFp(configuration).showEndpoint(id, options)(axios, basePath);
         },
         /**
          * Returns a Flavor object
@@ -10988,16 +8678,6 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).showSource(id, options)(axios, basePath);
         },
         /**
-         * Returns a SourceType object
-         * @summary Show an existing SourceType
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showSourceType(id: string, options?: any) {
-            return DefaultApiFp(configuration).showSourceType(id, options)(axios, basePath);
-        },
-        /**
          * Returns a Tag object
          * @summary Show an existing Tag
          * @param {string} id ID of the resource
@@ -11058,39 +8738,6 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).showVolumeType(id, options)(axios, basePath);
         },
         /**
-         * Updates a Authentication object
-         * @summary Update an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {Authentication} authentication Authentication attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateAuthentication(id: string, authentication: Authentication, options?: any) {
-            return DefaultApiFp(configuration).updateAuthentication(id, authentication, options)(axios, basePath);
-        },
-        /**
-         * Updates a Endpoint object
-         * @summary Update an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {Endpoint} endpoint Endpoint attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateEndpoint(id: string, endpoint: Endpoint, options?: any) {
-            return DefaultApiFp(configuration).updateEndpoint(id, endpoint, options)(axios, basePath);
-        },
-        /**
-         * Updates a Source object
-         * @summary Update an existing Source
-         * @param {string} id ID of the resource
-         * @param {Source} source Source attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateSource(id: string, source: Source, options?: any) {
-            return DefaultApiFp(configuration).updateSource(id, source, options)(axios, basePath);
-        },
-        /**
          * Updates a Task object
          * @summary Update an existing Task
          * @param {string} id ID of the resource
@@ -11112,114 +8759,6 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
  */
 export class DefaultApi extends BaseAPI {
     /**
-     * Creates a Application object
-     * @summary Create a new Application
-     * @param {Application} application Application attributes to create
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public createApplication(application: Application, options?: any) {
-        return DefaultApiFp(this.configuration).createApplication(application, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Creates a Authentication object
-     * @summary Create a new Authentication
-     * @param {Authentication} authentication Authentication attributes to create
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public createAuthentication(authentication: Authentication, options?: any) {
-        return DefaultApiFp(this.configuration).createAuthentication(authentication, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Creates a Endpoint object
-     * @summary Create a new Endpoint
-     * @param {Endpoint} endpoint Endpoint attributes to create
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public createEndpoint(endpoint: Endpoint, options?: any) {
-        return DefaultApiFp(this.configuration).createEndpoint(endpoint, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Creates a Source object
-     * @summary Create a new Source
-     * @param {Source} source Source attributes to create
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public createSource(source: Source, options?: any) {
-        return DefaultApiFp(this.configuration).createSource(source, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Creates a SourceType object
-     * @summary Create a new SourceType
-     * @param {SourceType} sourceType SourceType attributes to create
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public createSourceType(sourceType: SourceType, options?: any) {
-        return DefaultApiFp(this.configuration).createSourceType(sourceType, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Deletes a Application object
-     * @summary Delete an existing Application
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public deleteApplication(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).deleteApplication(id, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Deletes a Authentication object
-     * @summary Delete an existing Authentication
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public deleteAuthentication(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).deleteAuthentication(id, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Deletes a Endpoint object
-     * @summary Delete an existing Endpoint
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public deleteEndpoint(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).deleteEndpoint(id, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Deletes a Source object
-     * @summary Delete an existing Source
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public deleteSource(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).deleteSource(id, options)(this.axios, this.basePath);
-    }
-
-    /**
      *
      * @summary Return this API document in JSON format
      * @param {*} [options] Override http request option.
@@ -11228,48 +8767,6 @@ export class DefaultApi extends BaseAPI {
      */
     public getDocumentation(options?: any) {
         return DefaultApiFp(this.configuration).getDocumentation(options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Returns an array of ApplicationType objects
-     * @summary List ApplicationTypes
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {any} [filter] Filter for querying collections.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listApplicationTypes(limit?: number, offset?: number, filter?: any, options?: any) {
-        return DefaultApiFp(this.configuration).listApplicationTypes(limit, offset, filter, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Returns an array of Application objects
-     * @summary List Applications
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {any} [filter] Filter for querying collections.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listApplications(limit?: number, offset?: number, filter?: any, options?: any) {
-        return DefaultApiFp(this.configuration).listApplications(limit, offset, filter, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Returns an array of Authentication objects
-     * @summary List Authentications
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {any} [filter] Filter for querying collections.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listAuthentications(limit?: number, offset?: number, filter?: any, options?: any) {
-        return DefaultApiFp(this.configuration).listAuthentications(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -11521,35 +9018,6 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Authentication objects
-     * @summary List Authentications for Endpoint
-     * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {any} [filter] Filter for querying collections.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-        return DefaultApiFp(this.configuration).listEndpointAuthentications(id, limit, offset, filter, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Returns an array of Endpoint objects
-     * @summary List Endpoints
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {any} [filter] Filter for querying collections.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listEndpoints(limit?: number, offset?: number, filter?: any, options?: any) {
-        return DefaultApiFp(this.configuration).listEndpoints(limit, offset, filter, options)(this.axios, this.basePath);
-    }
-
-    /**
      * Returns an array of Flavor objects
      * @summary List Flavors
      * @param {number} [limit] The numbers of items to return per page.
@@ -11694,21 +9162,6 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Application objects
-     * @summary List Applications for Source
-     * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {any} [filter] Filter for querying collections.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSourceApplications(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceApplications(id, limit, offset, filter, options)(this.axios, this.basePath);
-    }
-
-    /**
      * Returns an array of Availability objects
      * @summary List Availabilities for Source
      * @param {string} id ID of the resource
@@ -11814,21 +9267,6 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Endpoint objects
-     * @summary List Endpoints for Source
-     * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {any} [filter] Filter for querying collections.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceEndpoints(id, limit, offset, filter, options)(this.axios, this.basePath);
-    }
-
-    /**
      * Returns an array of OrchestrationStack objects
      * @summary List OrchestrationStacks for Source
      * @param {string} id ID of the resource
@@ -11886,50 +9324,6 @@ export class DefaultApi extends BaseAPI {
      */
     public listSourceServicePlans(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
         return DefaultApiFp(this.configuration).listSourceServicePlans(id, limit, offset, filter, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Returns an array of Availability objects
-     * @summary List Availabilities for SourceType
-     * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {any} [filter] Filter for querying collections.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSourceTypeAvailabilities(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceTypeAvailabilities(id, limit, offset, filter, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Returns an array of Source objects
-     * @summary List Sources for SourceType
-     * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {any} [filter] Filter for querying collections.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceTypeSources(id, limit, offset, filter, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Returns an array of SourceType objects
-     * @summary List SourceTypes
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {any} [filter] Filter for querying collections.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSourceTypes(limit?: number, offset?: number, filter?: any, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceTypes(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -12239,42 +9633,6 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns a Application object
-     * @summary Show an existing Application
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public showApplication(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showApplication(id, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Returns a ApplicationType object
-     * @summary Show an existing ApplicationType
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public showApplicationType(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showApplicationType(id, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Returns a Authentication object
-     * @summary Show an existing Authentication
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public showAuthentication(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showAuthentication(id, options)(this.axios, this.basePath);
-    }
-
-    /**
      * Returns a Container object
      * @summary Show an existing Container
      * @param {string} id ID of the resource
@@ -12356,18 +9714,6 @@ export class DefaultApi extends BaseAPI {
      */
     public showContainerTemplate(id: string, options?: any) {
         return DefaultApiFp(this.configuration).showContainerTemplate(id, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Returns a Endpoint object
-     * @summary Show an existing Endpoint
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public showEndpoint(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showEndpoint(id, options)(this.axios, this.basePath);
     }
 
     /**
@@ -12467,18 +9813,6 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns a SourceType object
-     * @summary Show an existing SourceType
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public showSourceType(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showSourceType(id, options)(this.axios, this.basePath);
-    }
-
-    /**
      * Returns a Tag object
      * @summary Show an existing Tag
      * @param {string} id ID of the resource
@@ -12548,45 +9882,6 @@ export class DefaultApi extends BaseAPI {
      */
     public showVolumeType(id: string, options?: any) {
         return DefaultApiFp(this.configuration).showVolumeType(id, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Updates a Authentication object
-     * @summary Update an existing Authentication
-     * @param {string} id ID of the resource
-     * @param {Authentication} authentication Authentication attributes to update
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public updateAuthentication(id: string, authentication: Authentication, options?: any) {
-        return DefaultApiFp(this.configuration).updateAuthentication(id, authentication, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Updates a Endpoint object
-     * @summary Update an existing Endpoint
-     * @param {string} id ID of the resource
-     * @param {Endpoint} endpoint Endpoint attributes to update
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public updateEndpoint(id: string, endpoint: Endpoint, options?: any) {
-        return DefaultApiFp(this.configuration).updateEndpoint(id, endpoint, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Updates a Source object
-     * @summary Update an existing Source
-     * @param {string} id ID of the resource
-     * @param {Source} source Source attributes to update
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public updateSource(id: string, source: Source, options?: any) {
-        return DefaultApiFp(this.configuration).updateSource(id, source, options)(this.axios, this.basePath);
     }
 
     /**

@@ -31,7 +31,7 @@
 
 ⊕ **new Configuration**(param?: *[ConfigurationParameters](../interfaces/configurationparameters.md)*): [Configuration](configuration.md)
 
-*Defined in configuration.ts:65*
+*Defined in [configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/configuration.ts#L65)*
 
 **Parameters:**
 
@@ -51,7 +51,7 @@ ___
 
 **● accessToken**: *`string` \| `function`*
 
-*Defined in configuration.ts:51*
+*Defined in [configuration.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/configuration.ts#L51)*
 
 parameter for oauth2 security
 
@@ -68,7 +68,7 @@ ___
 
 **● apiKey**: *`string` \| `function`*
 
-*Defined in configuration.ts:30*
+*Defined in [configuration.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/configuration.ts#L30)*
 
 parameter for apiKey security
 
@@ -83,7 +83,7 @@ ___
 
 **● baseOptions**: *`any`*
 
-*Defined in configuration.ts:65*
+*Defined in [configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/configuration.ts#L65)*
 
 base options for axios calls
 
@@ -98,7 +98,7 @@ ___
 
 **● basePath**: *`string`*
 
-*Defined in configuration.ts:58*
+*Defined in [configuration.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/configuration.ts#L58)*
 
 override base path
 
@@ -113,7 +113,7 @@ ___
 
 **● password**: *`string`*
 
-*Defined in configuration.ts:44*
+*Defined in [configuration.ts:44](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/configuration.ts#L44)*
 
 parameter for basic security
 
@@ -128,7 +128,7 @@ ___
 
 **● username**: *`string`*
 
-*Defined in configuration.ts:37*
+*Defined in [configuration.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/configuration.ts#L37)*
 
 parameter for basic security
 

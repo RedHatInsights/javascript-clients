@@ -29,7 +29,7 @@
 
 **● first**: *`string`*
 
-*Defined in api.ts:405*
+*Defined in [api.ts:177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L177)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● last**: *`string`*
 
-*Defined in api.ts:411*
+*Defined in [api.ts:183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L183)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● next**: *`string`*
 
-*Defined in api.ts:423*
+*Defined in [api.ts:195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L195)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● prev**: *`string`*
 
-*Defined in api.ts:417*
+*Defined in [api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L189)*
 
 *__type__*: {string}
 

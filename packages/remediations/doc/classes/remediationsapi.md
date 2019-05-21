@@ -177,7 +177,7 @@ Removes the given Issue from the Remediation
 | Name | Type | Description |
 | ------ | ------ | ------ |
 | id | `string` |  Remediation identifier |
-| issue | `string` |  Issue identifier (e.g. &#x60;vulnerabilities:CVE\_2017\_6074\_kernel\|KERNEL\_CVE\_2017\_6074&#x60;) |
+| issue | `string` |  Issue identifier (e.g. &#x60;advisor:CVE\_2017\_6074\_kernel\|KERNEL\_CVE\_2017\_6074&#x60;) |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<`Response`>
@@ -204,7 +204,7 @@ Removes the given System from the Issue Remediation
 | Name | Type | Description |
 | ------ | ------ | ------ |
 | id | `string` |  Remediation identifier |
-| issue | `string` |  Issue identifier (e.g. &#x60;vulnerabilities:CVE\_2017\_6074\_kernel\|KERNEL\_CVE\_2017\_6074&#x60;) |
+| issue | `string` |  Issue identifier (e.g. &#x60;advisor:CVE\_2017\_6074\_kernel\|KERNEL\_CVE\_2017\_6074&#x60;) |
 | system | `string` |  System identifier |
 | `Optional` options | `any` |
 
@@ -341,7 +341,7 @@ Updates the given Remediation Issue
 | Name | Type | Description |
 | ------ | ------ | ------ |
 | id | `string` |  Remediation identifier |
-| issue | `string` |  Issue identifier (e.g. &#x60;vulnerabilities:CVE\_2017\_6074\_kernel\|KERNEL\_CVE\_2017\_6074&#x60;) |
+| issue | `string` |  Issue identifier (e.g. &#x60;advisor:CVE\_2017\_6074\_kernel\|KERNEL\_CVE\_2017\_6074&#x60;) |
 | remediationIssueIn | [RemediationIssueIn](../interfaces/remediationissuein.md) |  \- |
 | `Optional` options | `any` |
 

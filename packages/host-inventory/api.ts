@@ -978,12 +978,13 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * Find one or more hosts by their ID.
          * @summary Find hosts by their IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
+         * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById(hostIdList: Array<string>, perPage?: number, page?: number, options: any = {}): RequestArgs {
+        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, options: any = {}): RequestArgs {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostById.');
@@ -1005,6 +1006,10 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 					? configuration.apiKey("x-rh-identity")
 					: configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (branchId !== undefined) {
+                localVarQueryParameter['branch_id'] = branchId;
             }
 
             if (perPage !== undefined) {
@@ -1032,12 +1037,13 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [fqdn] Filter by a host&#39;s FQDN
          * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
          * @param {string} [insightsId] Search for a host by insights_id
+         * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, perPage?: number, page?: number, options: any = {}): RequestArgs {
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, options: any = {}): RequestArgs {
             const localVarPath = `/hosts`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1070,6 +1076,10 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 
             if (insightsId !== undefined) {
                 localVarQueryParameter['insights_id'] = insightsId;
+            }
+
+            if (branchId !== undefined) {
+                localVarQueryParameter['branch_id'] = branchId;
             }
 
             if (perPage !== undefined) {
@@ -1200,22 +1210,23 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * Update a host
          * @summary Update a host
-         * @param {string} hostId A host ID
+         * @param {Array<string>} hostIdList A host ID
          * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
+         * @param {string} [branchId] Filter by branch_id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostPatchHost(hostId: string, patchHostIn: PatchHostIn, options: any = {}): RequestArgs {
-            // verify required parameter 'hostId' is not null or undefined
-            if (hostId === null || hostId === undefined) {
-                throw new RequiredError('hostId','Required parameter hostId was null or undefined when calling apiHostPatchHost.');
+        apiHostPatchById(hostIdList: Array<string>, patchHostIn: PatchHostIn, branchId?: string, options: any = {}): RequestArgs {
+            // verify required parameter 'hostIdList' is not null or undefined
+            if (hostIdList === null || hostIdList === undefined) {
+                throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostPatchById.');
             }
             // verify required parameter 'patchHostIn' is not null or undefined
             if (patchHostIn === null || patchHostIn === undefined) {
-                throw new RequiredError('patchHostIn','Required parameter patchHostIn was null or undefined when calling apiHostPatchHost.');
+                throw new RequiredError('patchHostIn','Required parameter patchHostIn was null or undefined when calling apiHostPatchById.');
             }
-            const localVarPath = `/hosts/{host_id}`
-                .replace(`{${"host_id"}}`, encodeURIComponent(String(hostId)));
+            const localVarPath = `/hosts/{host_id_list}`
+                .replace(`{${"host_id_list"}}`, encodeURIComponent(String(hostIdList)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -1231,6 +1242,10 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 					? configuration.apiKey("x-rh-identity")
 					: configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (branchId !== undefined) {
+                localVarQueryParameter['branch_id'] = branchId;
             }
 
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -1330,13 +1345,14 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * Find one or more hosts by their ID.
          * @summary Find hosts by their IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
+         * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById(hostIdList: Array<string>, perPage?: number, page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostById(hostIdList, perPage, page, options);
+        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1349,13 +1365,14 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {string} [fqdn] Filter by a host&#39;s FQDN
          * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
          * @param {string} [insightsId] Search for a host by insights_id
+         * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, perPage?: number, page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, perPage, page, options);
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1396,13 +1413,14 @@ export const HostsApiFp = function(configuration?: Configuration) {
         /**
          * Update a host
          * @summary Update a host
-         * @param {string} hostId A host ID
+         * @param {Array<string>} hostIdList A host ID
          * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
+         * @param {string} [branchId] Filter by branch_id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostPatchHost(hostId: string, patchHostIn: PatchHostIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostPatchHost(hostId, patchHostIn, options);
+        apiHostPatchById(hostIdList: Array<string>, patchHostIn: PatchHostIn, branchId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostPatchById(hostIdList, patchHostIn, branchId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1447,13 +1465,14 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * Find one or more hosts by their ID.
          * @summary Find hosts by their IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
+         * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById(hostIdList: Array<string>, perPage?: number, page?: number, options?: any) {
-            return HostsApiFp(configuration).apiHostGetHostById(hostIdList, perPage, page, options)(axios, basePath);
+        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, options?: any) {
+            return HostsApiFp(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, options)(axios, basePath);
         },
         /**
          * Read the entire list of all hosts available to the account.
@@ -1462,13 +1481,14 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [fqdn] Filter by a host&#39;s FQDN
          * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
          * @param {string} [insightsId] Search for a host by insights_id
+         * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, perPage?: number, page?: number, options?: any) {
-            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, perPage, page, options)(axios, basePath);
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, options?: any) {
+            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, options)(axios, basePath);
         },
         /**
          * Find one or more hosts by their ID and return the id and system profile
@@ -1497,13 +1517,14 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
         /**
          * Update a host
          * @summary Update a host
-         * @param {string} hostId A host ID
+         * @param {Array<string>} hostIdList A host ID
          * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
+         * @param {string} [branchId] Filter by branch_id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostPatchHost(hostId: string, patchHostIn: PatchHostIn, options?: any) {
-            return HostsApiFp(configuration).apiHostPatchHost(hostId, patchHostIn, options)(axios, basePath);
+        apiHostPatchById(hostIdList: Array<string>, patchHostIn: PatchHostIn, branchId?: string, options?: any) {
+            return HostsApiFp(configuration).apiHostPatchById(hostIdList, patchHostIn, branchId, options)(axios, basePath);
         },
         /**
          * Replace facts under a namespace
@@ -1543,14 +1564,15 @@ export class HostsApi extends BaseAPI {
      * Find one or more hosts by their ID.
      * @summary Find hosts by their IDs
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
+     * @param {string} [branchId] Filter by branch_id
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostById(hostIdList: Array<string>, perPage?: number, page?: number, options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostById(hostIdList, perPage, page, options)(this.axios, this.basePath);
+    public apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1560,14 +1582,15 @@ export class HostsApi extends BaseAPI {
      * @param {string} [fqdn] Filter by a host&#39;s FQDN
      * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
      * @param {string} [insightsId] Search for a host by insights_id
+     * @param {string} [branchId] Filter by branch_id
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, perPage?: number, page?: number, options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, perPage, page, options)(this.axios, this.basePath);
+    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1601,14 +1624,15 @@ export class HostsApi extends BaseAPI {
     /**
      * Update a host
      * @summary Update a host
-     * @param {string} hostId A host ID
+     * @param {Array<string>} hostIdList A host ID
      * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
+     * @param {string} [branchId] Filter by branch_id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostPatchHost(hostId: string, patchHostIn: PatchHostIn, options?: any) {
-        return HostsApiFp(this.configuration).apiHostPatchHost(hostId, patchHostIn, options)(this.axios, this.basePath);
+    public apiHostPatchById(hostIdList: Array<string>, patchHostIn: PatchHostIn, branchId?: string, options?: any) {
+        return HostsApiFp(this.configuration).apiHostPatchById(hostIdList, patchHostIn, branchId, options)(this.axios, this.basePath);
     }
 
     /**

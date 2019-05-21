@@ -38,7 +38,7 @@
 
 **● archivedAt**: *`Date`*
 
-*Defined in api.ts:1395*
+*Defined in [api.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1055)*
 
 *__type__*: {Date}
 
@@ -51,7 +51,7 @@ ___
 
 **● cpus**: *`number`*
 
-*Defined in api.ts:1401*
+*Defined in [api.ts:1061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1061)*
 
 Number of CPUs
 
@@ -66,7 +66,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in api.ts:1407*
+*Defined in [api.ts:1067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1067)*
 
 *__type__*: {Date}
 
@@ -79,7 +79,7 @@ ___
 
 **● diskCount**: *`number`*
 
-*Defined in api.ts:1413*
+*Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1073)*
 
 The number of default disks
 
@@ -94,7 +94,7 @@ ___
 
 **● diskSize**: *`number`*
 
-*Defined in api.ts:1419*
+*Defined in [api.ts:1079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1079)*
 
 Size of the default disks in bytes
 
@@ -109,7 +109,7 @@ ___
 
 **● extra**: *`string`*
 
-*Defined in api.ts:1425*
+*Defined in [api.ts:1085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1085)*
 
 *__type__*: {string}
 
@@ -122,7 +122,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:1431*
+*Defined in [api.ts:1091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1091)*
 
 ID of the resource
 
@@ -137,7 +137,7 @@ ___
 
 **● lastSeenAt**: *`Date`*
 
-*Defined in api.ts:1437*
+*Defined in [api.ts:1097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1097)*
 
 *__type__*: {Date}
 
@@ -150,7 +150,7 @@ ___
 
 **● memory**: *`number`*
 
-*Defined in api.ts:1443*
+*Defined in [api.ts:1103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1103)*
 
 Amount of RAM in bytes
 
@@ -165,7 +165,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:1449*
+*Defined in [api.ts:1109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1109)*
 
 *__type__*: {string}
 
@@ -178,7 +178,7 @@ ___
 
 **● sourceId**: *`string`*
 
-*Defined in api.ts:1455*
+*Defined in [api.ts:1115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1115)*
 
 ID of the resource
 
@@ -193,7 +193,7 @@ ___
 
 **● sourceRef**: *`string`*
 
-*Defined in api.ts:1461*
+*Defined in [api.ts:1121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1121)*
 
 *__type__*: {string}
 
@@ -206,7 +206,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in api.ts:1467*
+*Defined in [api.ts:1127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1127)*
 
 *__type__*: {Date}
 
