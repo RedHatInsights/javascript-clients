@@ -21,7 +21,8 @@
     "doc": "typedoc --theme markdown --out doc --module commonjs --mode file --gitRevision master",
     "build": "tsc",
     "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
-    "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/vulnerability-engine/bf5ed8566fd784951e99d85eb9108f34d78e5fdc/manager.spec.yaml' npm run generate"
+    "generate:prod": "SPEC=$(node preProcess.js 'https://cloud.redhat.com/api/vulnerability/v1/openapi.json') npm run generate",
+    "generate:single": "npm run generate:prod && npm run doc"
   },
   "dependencies": {
     "axios": "^0.19.0"
