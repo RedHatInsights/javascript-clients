@@ -975,6 +975,47 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
+         * Delete hosts by IDs
+         * @summary Delete hosts by IDs
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostDeleteById(hostIdList: Array<string>, options: any = {}): RequestArgs {
+            // verify required parameter 'hostIdList' is not null or undefined
+            if (hostIdList === null || hostIdList === undefined) {
+                throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostDeleteById.');
+            }
+            const localVarPath = `/hosts/{host_id_list}`
+                .replace(`{${"host_id_list"}}`, encodeURIComponent(String(hostIdList)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'DELETE' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("x-rh-identity")
+					: configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Find one or more hosts by their ID.
          * @summary Find hosts by their IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
@@ -1342,6 +1383,20 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Delete hosts by IDs
+         * @summary Delete hosts by IDs
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostDeleteById(hostIdList: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostDeleteById(hostIdList, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Find one or more hosts by their ID.
          * @summary Find hosts by their IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
@@ -1462,6 +1517,16 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
             return HostsApiFp(configuration).apiHostAddHostList(createHostIn, options)(axios, basePath);
         },
         /**
+         * Delete hosts by IDs
+         * @summary Delete hosts by IDs
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostDeleteById(hostIdList: Array<string>, options?: any) {
+            return HostsApiFp(configuration).apiHostDeleteById(hostIdList, options)(axios, basePath);
+        },
+        /**
          * Find one or more hosts by their ID.
          * @summary Find hosts by their IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
@@ -1558,6 +1623,18 @@ export class HostsApi extends BaseAPI {
      */
     public apiHostAddHostList(createHostIn: Array<CreateHostIn>, options?: any) {
         return HostsApiFp(this.configuration).apiHostAddHostList(createHostIn, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Delete hosts by IDs
+     * @summary Delete hosts by IDs
+     * @param {Array<string>} hostIdList A comma separated list of host IDs.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HostsApi
+     */
+    public apiHostDeleteById(hostIdList: Array<string>, options?: any) {
+        return HostsApiFp(this.configuration).apiHostDeleteById(hostIdList, options)(this.axios, this.basePath);
     }
 
     /**
