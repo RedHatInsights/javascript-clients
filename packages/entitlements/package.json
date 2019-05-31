@@ -24,7 +24,7 @@
     "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/entitlements-api/master/swagger/api.spec.json' npm run generate"
   },
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.19.0"
   },
   "devDependencies": {
     "typedoc": "^0.14.2",
