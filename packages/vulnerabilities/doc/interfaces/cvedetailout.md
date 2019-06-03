@@ -26,7 +26,7 @@
 
 **● data**: *[CveDetailOutData](cvedetailoutdata.md)*
 
-*Defined in [api.ts:173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L173)*
+*Defined in [api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L58)*
 
 *__type__*: {CveDetailOutData}
 

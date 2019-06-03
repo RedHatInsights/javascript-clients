@@ -22,11 +22,11 @@
 
 <a id="errors-1"></a>
 
-### `<Optional>` errors
+###  errors
 
 **● errors**: *`Array`<[ErrorsErrors](errorserrors.md)>*
 
-*Defined in [api.ts:305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L305)*
+*Defined in [api.ts:190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L190)*
 
 *__type__*: {Array}
 
