@@ -29,7 +29,7 @@
 
 **● first**: *`string`*
 
-*Defined in [api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L339)*
+*Defined in [api.ts:224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L224)*
 
 Link to first page.
 
@@ -44,7 +44,7 @@ ___
 
 **● last**: *`string`*
 
-*Defined in [api.ts:345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L345)*
+*Defined in [api.ts:230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L230)*
 
 Link to last page.
 
@@ -57,9 +57,9 @@ ___
 
 ###  next
 
-**● next**: *`string`*
+**● next**: *`string` \| `null`*
 
-*Defined in [api.ts:351](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L351)*
+*Defined in [api.ts:236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L236)*
 
 Link to next page.
 
@@ -72,9 +72,9 @@ ___
 
 ###  previous
 
-**● previous**: *`string`*
+**● previous**: *`string` \| `null`*
 
-*Defined in [api.ts:357](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L357)*
+*Defined in [api.ts:242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L242)*
 
 Link to next page.
 

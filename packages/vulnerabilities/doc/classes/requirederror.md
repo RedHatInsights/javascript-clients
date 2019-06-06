@@ -38,7 +38,7 @@
 
 ⊕ **new RequiredError**(field: *`string`*, msg?: *`string`*): [RequiredError](requirederror.md)
 
-*Defined in [api.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L66)*
+*Defined in base.ts:65*
 
 **Parameters:**
 
@@ -59,7 +59,7 @@ ___
 
 **● field**: *`string`*
 
-*Defined in [api.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L67)*
+*Defined in base.ts:66*
 
 ___
 <a id="message"></a>
@@ -81,7 +81,7 @@ ___
 
 *Overrides Error.name*
 
-*Defined in [api.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L66)*
+*Defined in base.ts:65*
 
 ___
 <a id="stack"></a>
