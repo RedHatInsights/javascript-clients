@@ -39,7 +39,7 @@
 
 **● cvss2Metrics**: *`string`*
 
-*Defined in [api.ts:98](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L98)*
+*Defined in [api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L149)*
 
 cvss2 metrics of the CVE.
 
@@ -54,7 +54,7 @@ ___
 
 **● cvss2Score**: *`string`*
 
-*Defined in [api.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L104)*
+*Defined in [api.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L155)*
 
 String representation of cvss2 score of the CVE.
 
@@ -69,7 +69,7 @@ ___
 
 **● cvss3Metrics**: *`string`*
 
-*Defined in [api.ts:110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L110)*
+*Defined in [api.ts:161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L161)*
 
 cvss3 metrics of the CVE.
 
@@ -84,7 +84,7 @@ ___
 
 **● cvss3Score**: *`string`*
 
-*Defined in [api.ts:116](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L116)*
+*Defined in [api.ts:167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L167)*
 
 String representation of cvss3 score of the CVE.
 
@@ -99,7 +99,7 @@ ___
 
 **● cweList**: *`Array`<`string`>*
 
-*Defined in [api.ts:122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L122)*
+*Defined in [api.ts:173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L173)*
 
 *__type__*: {Array}
 
@@ -112,7 +112,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L128)*
+*Defined in [api.ts:179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L179)*
 
 Description of the CVE.
 
@@ -127,7 +127,7 @@ ___
 
 **● errataList**: *`Array`<`string`>*
 
-*Defined in [api.ts:134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L134)*
+*Defined in [api.ts:185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L185)*
 
 List of Red Hat erratas fixing the CVE.
 
@@ -142,7 +142,7 @@ ___
 
 **● impact**: *`string`*
 
-*Defined in [api.ts:140](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L140)*
+*Defined in [api.ts:191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L191)*
 
 Red Hat security impact of the CVE.
 
@@ -157,7 +157,7 @@ ___
 
 **● modifiedDate**: *`string`*
 
-*Defined in [api.ts:146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L146)*
+*Defined in [api.ts:197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L197)*
 
 String representation of ISO-8601 formatted date of last modification of the CVE.
 
@@ -172,7 +172,7 @@ ___
 
 **● packageList**: *`Array`<`string`>*
 
-*Defined in [api.ts:152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L152)*
+*Defined in [api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L203)*
 
 List of packages where the fix for the CVE appeared.
 
@@ -187,7 +187,7 @@ ___
 
 **● publicDate**: *`string`*
 
-*Defined in [api.ts:158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L158)*
+*Defined in [api.ts:209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L209)*
 
 String representation of ISO-8601 formatted date of first public disclosure of the CVE.
 
@@ -202,7 +202,7 @@ ___
 
 **● redhatUrl**: *`string`*
 
-*Defined in [api.ts:164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L164)*
+*Defined in [api.ts:215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L215)*
 
 Additional resource about the CVE, provided by Red Hat.
 
@@ -217,7 +217,7 @@ ___
 
 **● secondaryUrl**: *`string`*
 
-*Defined in [api.ts:170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L170)*
+*Defined in [api.ts:221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L221)*
 
 Additional resources about the CVE.
 
@@ -232,7 +232,7 @@ ___
 
 **● synopsis**: *`string`*
 
-*Defined in [api.ts:176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L176)*
+*Defined in [api.ts:227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L227)*
 
 Synopsis of the CVE.
 

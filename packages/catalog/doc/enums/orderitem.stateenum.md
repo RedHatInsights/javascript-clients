@@ -28,7 +28,7 @@
 
 **ApprovalPending**:  = "Approval Pending"
 
-*Defined in [api.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L423)*
+*Defined in [api.ts:429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L429)*
 
 ___
 <a id="approved"></a>
@@ -37,7 +37,7 @@ ___
 
 **Approved**:  = "Approved"
 
-*Defined in [api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L427)*
+*Defined in [api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L433)*
 
 ___
 <a id="completed"></a>
@@ -46,7 +46,7 @@ ___
 
 **Completed**:  = "Completed"
 
-*Defined in [api.ts:426](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L426)*
+*Defined in [api.ts:432](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L432)*
 
 ___
 <a id="created"></a>
@@ -55,7 +55,7 @@ ___
 
 **Created**:  = "Created"
 
-*Defined in [api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L422)*
+*Defined in [api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L428)*
 
 ___
 <a id="denied"></a>
@@ -64,7 +64,7 @@ ___
 
 **Denied**:  = "Denied"
 
-*Defined in [api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L428)*
+*Defined in [api.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L434)*
 
 ___
 <a id="failed"></a>
@@ -73,7 +73,7 @@ ___
 
 **Failed**:  = "Failed"
 
-*Defined in [api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L425)*
+*Defined in [api.ts:431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L431)*
 
 ___
 <a id="ordered"></a>
@@ -82,7 +82,7 @@ ___
 
 **Ordered**:  = "Ordered"
 
-*Defined in [api.ts:424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L424)*
+*Defined in [api.ts:430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L430)*
 
 ___
 

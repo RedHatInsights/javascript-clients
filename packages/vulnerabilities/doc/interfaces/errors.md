@@ -26,7 +26,7 @@
 
 **● errors**: *`Array`<[ErrorsErrors](errorserrors.md)>*
 
-*Defined in [api.ts:190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L190)*
+*Defined in [api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L241)*
 
 *__type__*: {Array}
 

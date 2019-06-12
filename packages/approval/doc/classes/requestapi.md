@@ -105,7 +105,7 @@ ___
 
 ▸ **createRequest**(workflowId: *`string`*, requestIn: *[RequestIn](../interfaces/requestin.md)*, options?: *`any`*): `AxiosPromise`<[RequestOut](../modules/requestout.md)>
 
-*Defined in [api.ts:1300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1300)*
+*Defined in [api.ts:1279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1279)*
 
 Add an approval request by given parameters
 
@@ -130,9 +130,9 @@ ___
 
 ###  listRequests
 
-▸ **listRequests**(decision?: *`Array`<"undecided" \| "approved" \| "denied">*, state?: *`Array`<"pending" \| "skipped" \| "notified" \| "finished">*, requester?: *`string`*, approver?: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[RequestOutCollection](../interfaces/requestoutcollection.md)>
+▸ **listRequests**(approver?: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[RequestOutCollection](../interfaces/requestoutcollection.md)>
 
-*Defined in [api.ts:1318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1318)*
+*Defined in [api.ts:1294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1294)*
 
 Return an array of requests
 
@@ -146,9 +146,6 @@ Return an array of requests
 
 | Name | Type |
 | ------ | ------ |
-| `Optional` decision | `Array`<"undecided" \| "approved" \| "denied"> |
-| `Optional` state | `Array`<"pending" \| "skipped" \| "notified" \| "finished"> |
-| `Optional` requester | `string` |
 | `Optional` approver | `string` |
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
@@ -164,7 +161,7 @@ ___
 
 ▸ **listRequestsByWorkflow**(workflowId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[RequestOutCollection](../interfaces/requestoutcollection.md)>
 
-*Defined in [api.ts:1333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1333)*
+*Defined in [api.ts:1309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1309)*
 
 Return approval requests by given workflow id
 
@@ -193,7 +190,7 @@ ___
 
 ▸ **showRequest**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[RequestOut](../modules/requestout.md)>
 
-*Defined in [api.ts:1345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1345)*
+*Defined in [api.ts:1321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1321)*
 
 Return an approval request by given id
 

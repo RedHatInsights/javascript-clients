@@ -125,7 +125,7 @@ API documentation
 
 **● BASE_PATH**: *`string`* =  "http://localhost/api/vulnerability".replace(/\/+$/, "")
 
-*Defined in base.ts:19*
+*Defined in [api.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L20)*
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L680)*
+*Defined in [api.ts:731](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L731)*
 
 DefaultApi - axios parameter creator
 
@@ -156,7 +156,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1479)*
+*Defined in [api.ts:1521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1521)*
 
 DefaultApi - factory interface
 
@@ -177,7 +177,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1305)*
+*Defined in [api.ts:1347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1347)*
 
 DefaultApi - functional programming interface
 
@@ -199,7 +199,7 @@ ___
 
 **COLLECTION_FORMATS**: *`object`*
 
-*Defined in base.ts:25*
+*Defined in [api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L26)*
 
 *__export__*: 
 
@@ -209,7 +209,7 @@ ___
 
 **● csv**: *`string`* = ","
 
-*Defined in base.ts:26*
+*Defined in [api.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L27)*
 
 ___
 <a id="collection_formats.pipes"></a>
@@ -218,7 +218,7 @@ ___
 
 **● pipes**: *`string`* = "|"
 
-*Defined in base.ts:29*
+*Defined in [api.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L30)*
 
 ___
 <a id="collection_formats.ssv"></a>
@@ -227,7 +227,7 @@ ___
 
 **● ssv**: *`string`* = " "
 
-*Defined in base.ts:27*
+*Defined in [api.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L28)*
 
 ___
 <a id="collection_formats.tsv"></a>
@@ -236,7 +236,7 @@ ___
 
 **● tsv**: *`string`* = "	"
 
-*Defined in base.ts:28*
+*Defined in [api.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L29)*
 
 ___
 

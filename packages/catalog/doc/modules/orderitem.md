@@ -20,6 +20,7 @@
 * [externalUrl](orderitem.md#externalurl)
 * [id](orderitem.md#id)
 * [insightsRequestId](orderitem.md#insightsrequestid)
+* [orderId](orderitem.md#orderid)
 * [orderedAt](orderitem.md#orderedat)
 * [owner](orderitem.md#owner)
 * [portfolioItemId](orderitem.md#portfolioitemid)
@@ -39,7 +40,7 @@
 
 **● completedAt**: *`Date`*
 
-*Defined in [api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L385)*
+*Defined in [api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L391)*
 
 *__type__*: {Date}
 
@@ -65,7 +66,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L373)*
+*Defined in [api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L379)*
 
 *__type__*: {Date}
 
@@ -78,7 +79,7 @@ ___
 
 **● externalUrl**: *`string`*
 
-*Defined in [api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L403)*
+*Defined in [api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L409)*
 
 The external url of the service instance used with relation to this order item
 
@@ -106,9 +107,24 @@ ___
 
 **● insightsRequestId**: *`string`*
 
-*Defined in [api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L409)*
+*Defined in [api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L415)*
 
 The insights request id can be used to collect log data for this order item as its processed by the system
+
+*__type__*: {string}
+
+*__memberof__*: OrderItem
+
+___
+<a id="orderid"></a>
+
+### `<Optional>` orderId
+
+**● orderId**: *`string`*
+
+*Defined in [api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L373)*
+
+The Order that the OrderItem belongs to.
 
 *__type__*: {string}
 
@@ -121,7 +137,7 @@ ___
 
 **● orderedAt**: *`Date`*
 
-*Defined in [api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L379)*
+*Defined in [api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L385)*
 
 *__type__*: {Date}
 
@@ -134,7 +150,7 @@ ___
 
 **● owner**: *`string`*
 
-*Defined in [api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L397)*
+*Defined in [api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L403)*
 
 *__type__*: {string}
 
@@ -220,7 +236,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L391)*
+*Defined in [api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L397)*
 
 *__type__*: {Date}
 

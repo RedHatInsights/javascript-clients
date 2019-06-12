@@ -102,7 +102,7 @@ ___
 
 ▸ **getDocumentation**(options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L988)*
+*Defined in [api.ts:1024](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1024)*
 
 *__summary__*: Return this API document in JSON format
 

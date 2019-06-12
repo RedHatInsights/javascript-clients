@@ -39,6 +39,7 @@ PortfolioApi - object-oriented interface
 * [shareInfo](portfolioapi.md#shareinfo)
 * [sharePortfolio](portfolioapi.md#shareportfolio)
 * [showPortfolio](portfolioapi.md#showportfolio)
+* [unDeletePortfolio](portfolioapi.md#undeleteportfolio)
 * [unsharePortfolio](portfolioapi.md#unshareportfolio)
 * [updatePortfolio](portfolioapi.md#updateportfolio)
 
@@ -112,7 +113,7 @@ ___
 
 ▸ **addPortfolioItemToPortfolio**(portfolioId: *`string`*, addPortfolioItem: *[AddPortfolioItem](../interfaces/addportfolioitem.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2747)*
+*Defined in [api.ts:2857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2857)*
 
 Adds a new portfolio item to an existing portfolio.
 
@@ -139,7 +140,7 @@ ___
 
 ▸ **createPortfolio**(portfolio: *[Portfolio](../interfaces/portfolio.md)*, options?: *`any`*): `AxiosPromise`<[Portfolio](../interfaces/portfolio.md)>
 
-*Defined in [api.ts:2759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2759)*
+*Defined in [api.ts:2869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2869)*
 
 Adds a portfolio.
 
@@ -163,9 +164,9 @@ ___
 
 ###  destroyPortfolio
 
-▸ **destroyPortfolio**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **destroyPortfolio**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[RestoreKey](../interfaces/restorekey.md)>
 
-*Defined in [api.ts:2771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2771)*
+*Defined in [api.ts:2881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2881)*
 
 Deletes the portfolio specified by the ID.
 
@@ -182,7 +183,7 @@ Deletes the portfolio specified by the ID.
 | id | `string` |  ID of the resource |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** `AxiosPromise`<[RestoreKey](../interfaces/restorekey.md)>
 
 ___
 <a id="fetchportfolioitemswithportfolio"></a>
@@ -191,7 +192,7 @@ ___
 
 ▸ **fetchPortfolioItemsWithPortfolio**(portfolioId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[PortfolioItemsCollection](../interfaces/portfolioitemscollection.md)>
 
-*Defined in [api.ts:2786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2786)*
+*Defined in [api.ts:2896](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2896)*
 
 Gets all portfilio items in the portfolio specified by the given ID.
 
@@ -220,7 +221,7 @@ ___
 
 ▸ **listPortfolios**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[PortfoliosCollection](../interfaces/portfolioscollection.md)>
 
-*Defined in [api.ts:2800](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2800)*
+*Defined in [api.ts:2910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2910)*
 
 Gets a list of portfolios.
 
@@ -248,7 +249,7 @@ ___
 
 ▸ **postCopyPortfolio**(portfolioId: *`string`*, options?: *`any`*): `AxiosPromise`<[Portfolio](../interfaces/portfolio.md)>
 
-*Defined in [api.ts:2812](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2812)*
+*Defined in [api.ts:2922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2922)*
 
 Make a copy of the Portfolio.
 
@@ -274,7 +275,7 @@ ___
 
 ▸ **shareInfo**(portfolioId: *`string`*, options?: *`any`*): `AxiosPromise`<[ShareInfo](../interfaces/shareinfo.md)[]>
 
-*Defined in [api.ts:2824](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2824)*
+*Defined in [api.ts:2934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2934)*
 
 Fetch share information about a portfolio
 
@@ -300,7 +301,7 @@ ___
 
 ▸ **sharePortfolio**(portfolioId: *`string`*, sharePolicy: *[SharePolicy](../interfaces/sharepolicy.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2837)*
+*Defined in [api.ts:2947](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2947)*
 
 Share a Portfolio with one or more groups with specific permissions
 
@@ -327,7 +328,7 @@ ___
 
 ▸ **showPortfolio**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Portfolio](../interfaces/portfolio.md)>
 
-*Defined in [api.ts:2849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2849)*
+*Defined in [api.ts:2959](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2959)*
 
 Gets the portfolio specified by the portfolio ID.
 
@@ -347,13 +348,40 @@ Gets the portfolio specified by the portfolio ID.
 **Returns:** `AxiosPromise`<[Portfolio](../interfaces/portfolio.md)>
 
 ___
+<a id="undeleteportfolio"></a>
+
+###  unDeletePortfolio
+
+▸ **unDeletePortfolio**(id: *`string`*, restoreKey: *[RestoreKey](../interfaces/restorekey.md)*, options?: *`any`*): `AxiosPromise`<[Portfolio](../interfaces/portfolio.md)>
+
+*Defined in [api.ts:2972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2972)*
+
+Undeletes the portfolio specified by the portfolio ID.
+
+*__summary__*: Undelete specific portfolio
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: PortfolioApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| id | `string` |  ID of the resource |
+| restoreKey | [RestoreKey](../interfaces/restorekey.md) |  \- |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[Portfolio](../interfaces/portfolio.md)>
+
+___
 <a id="unshareportfolio"></a>
 
 ###  unsharePortfolio
 
 ▸ **unsharePortfolio**(portfolioId: *`string`*, unsharePolicy: *[UnsharePolicy](../interfaces/unsharepolicy.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2862)*
+*Defined in [api.ts:2985](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2985)*
 
 Unshare a Portfolio with one or more groups with specific permissions
 
@@ -380,7 +408,7 @@ ___
 
 ▸ **updatePortfolio**(id: *`string`*, portfolio: *[Portfolio](../interfaces/portfolio.md)*, options?: *`any`*): `AxiosPromise`<[Portfolio](../interfaces/portfolio.md)>
 
-*Defined in [api.ts:2875](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2875)*
+*Defined in [api.ts:2998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2998)*
 
 Returns the edited portfolio.
 
