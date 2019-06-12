@@ -26,7 +26,7 @@
 
 **● restoreKey**: *`string`*
 
-*Defined in [api.ts:764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L764)*
+*Defined in [api.ts:800](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L800)*
 
 *__type__*: {string}
 

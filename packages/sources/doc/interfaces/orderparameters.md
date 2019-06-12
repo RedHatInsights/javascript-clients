@@ -27,7 +27,7 @@
 
 **● providerControlParameters**: *`any`*
 
-*Defined in [api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L469)*
+*Defined in [api.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L515)*
 
 The provider specific parameters needed to provision this service. This might include namespaces, special keys
 
@@ -42,7 +42,7 @@ ___
 
 **● serviceParameters**: *`any`*
 
-*Defined in [api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L463)*
+*Defined in [api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L509)*
 
 JSON object with provisioning parameters
 

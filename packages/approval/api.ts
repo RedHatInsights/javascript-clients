@@ -986,9 +986,6 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Return an array of requests
          * @summary Return an array of approval requests
-         * @param {Array<'undecided' | 'approved' | 'denied'>} [decision] Fetch item by given decision (undecided, approved, denied)
-         * @param {Array<'pending' | 'skipped' | 'notified' | 'finished'>} [state] Fetch item by given state (pending, skipped, notified, finished)
-         * @param {string} [requester] Fetch item by given requester
          * @param {string} [approver] Fetch requests by given approver username
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
@@ -996,7 +993,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequests(decision?: Array<'undecided' | 'approved' | 'denied'>, state?: Array<'pending' | 'skipped' | 'notified' | 'finished'>, requester?: string, approver?: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+        listRequests(approver?: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/requests`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1011,18 +1008,6 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (decision) {
-                localVarQueryParameter['decision'] = decision;
-            }
-
-            if (state) {
-                localVarQueryParameter['state'] = state;
-            }
-
-            if (requester !== undefined) {
-                localVarQueryParameter['requester'] = requester;
             }
 
             if (approver !== undefined) {
@@ -1171,9 +1156,6 @@ export const RequestApiFp = function(configuration?: Configuration) {
         /**
          * Return an array of requests
          * @summary Return an array of approval requests
-         * @param {Array<'undecided' | 'approved' | 'denied'>} [decision] Fetch item by given decision (undecided, approved, denied)
-         * @param {Array<'pending' | 'skipped' | 'notified' | 'finished'>} [state] Fetch item by given state (pending, skipped, notified, finished)
-         * @param {string} [requester] Fetch item by given requester
          * @param {string} [approver] Fetch requests by given approver username
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
@@ -1181,8 +1163,8 @@ export const RequestApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequests(decision?: Array<'undecided' | 'approved' | 'denied'>, state?: Array<'pending' | 'skipped' | 'notified' | 'finished'>, requester?: string, approver?: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOutCollection> {
-            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequests(decision, state, requester, approver, limit, offset, filter, options);
+        listRequests(approver?: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOutCollection> {
+            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequests(approver, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1242,9 +1224,6 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
         /**
          * Return an array of requests
          * @summary Return an array of approval requests
-         * @param {Array<'undecided' | 'approved' | 'denied'>} [decision] Fetch item by given decision (undecided, approved, denied)
-         * @param {Array<'pending' | 'skipped' | 'notified' | 'finished'>} [state] Fetch item by given state (pending, skipped, notified, finished)
-         * @param {string} [requester] Fetch item by given requester
          * @param {string} [approver] Fetch requests by given approver username
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
@@ -1252,8 +1231,8 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequests(decision?: Array<'undecided' | 'approved' | 'denied'>, state?: Array<'pending' | 'skipped' | 'notified' | 'finished'>, requester?: string, approver?: string, limit?: number, offset?: number, filter?: any, options?: any) {
-            return RequestApiFp(configuration).listRequests(decision, state, requester, approver, limit, offset, filter, options)(axios, basePath);
+        listRequests(approver?: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return RequestApiFp(configuration).listRequests(approver, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Return approval requests by given workflow id
@@ -1304,9 +1283,6 @@ export class RequestApi extends BaseAPI {
     /**
      * Return an array of requests
      * @summary Return an array of approval requests
-     * @param {Array<'undecided' | 'approved' | 'denied'>} [decision] Fetch item by given decision (undecided, approved, denied)
-     * @param {Array<'pending' | 'skipped' | 'notified' | 'finished'>} [state] Fetch item by given state (pending, skipped, notified, finished)
-     * @param {string} [requester] Fetch item by given requester
      * @param {string} [approver] Fetch requests by given approver username
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
@@ -1315,8 +1291,8 @@ export class RequestApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RequestApi
      */
-    public listRequests(decision?: Array<'undecided' | 'approved' | 'denied'>, state?: Array<'pending' | 'skipped' | 'notified' | 'finished'>, requester?: string, approver?: string, limit?: number, offset?: number, filter?: any, options?: any) {
-        return RequestApiFp(this.configuration).listRequests(decision, state, requester, approver, limit, offset, filter, options)(this.axios, this.basePath);
+    public listRequests(approver?: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return RequestApiFp(this.configuration).listRequests(approver, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**

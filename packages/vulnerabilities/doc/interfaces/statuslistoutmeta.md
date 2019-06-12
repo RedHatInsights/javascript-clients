@@ -26,7 +26,7 @@
 
 **● totalItems**: *`number`*
 
-*Defined in [api.ts:594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L594)*
+*Defined in [api.ts:645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L645)*
 
 Total number of available status/status\_id pairs.
 

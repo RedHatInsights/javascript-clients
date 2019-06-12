@@ -32,7 +32,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L539)*
+*Defined in [api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L585)*
 
 *__type__*: {Date}
 
@@ -45,7 +45,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L545)*
+*Defined in [api.ts:591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L591)*
 
 ID of the resource
 
@@ -60,7 +60,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L551)*
+*Defined in [api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L597)*
 
 *__type__*: {string}
 
@@ -73,7 +73,7 @@ ___
 
 **● productName**: *`string`*
 
-*Defined in [api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L557)*
+*Defined in [api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L603)*
 
 *__type__*: {string}
 
@@ -86,7 +86,7 @@ ___
 
 **● schema**: *`string`*
 
-*Defined in [api.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L563)*
+*Defined in [api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L609)*
 
 *__type__*: {string}
 
@@ -99,7 +99,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L569)*
+*Defined in [api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L615)*
 
 *__type__*: {Date}
 
@@ -112,7 +112,7 @@ ___
 
 **● vendor**: *`string`*
 
-*Defined in [api.ts:575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L575)*
+*Defined in [api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L621)*
 
 *__type__*: {string}
 

@@ -91,6 +91,8 @@ API documentation
 * [ConfigurationParameters](interfaces/configurationparameters.md)
 * [Endpoint](interfaces/endpoint.md)
 * [EndpointsCollection](interfaces/endpointscollection.md)
+* [InlineObject](interfaces/inlineobject.md)
+* [InlineResponse200](interfaces/inlineresponse200.md)
 * [OrderParameters](interfaces/orderparameters.md)
 * [RequestArgs](interfaces/requestargs.md)
 * [Source](interfaces/source.md)
@@ -136,7 +138,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L687)*
+*Defined in [api.ts:733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L733)*
 
 DefaultApi - axios parameter creator
 
@@ -155,7 +157,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2418)*
+*Defined in [api.ts:2520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2520)*
 
 DefaultApi - factory interface
 
@@ -176,7 +178,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L1977)*
+*Defined in [api.ts:2065](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2065)*
 
 DefaultApi - functional programming interface
 

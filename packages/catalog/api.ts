@@ -366,6 +366,12 @@ export interface OrderItem {
      */
     state?: OrderItem.StateEnum;
     /**
+     * The Order that the OrderItem belongs to.
+     * @type {string}
+     * @memberof OrderItem
+     */
+    orderId?: string;
+    /**
      *
      * @type {Date}
      * @memberof OrderItem
@@ -531,10 +537,16 @@ export interface Portfolio {
     owner?: string;
     /**
      *
-     * @type {string}
+     * @type {Date}
      * @memberof Portfolio
      */
-    serviceOfferingIconRef?: string;
+    createdAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof Portfolio
+     */
+    updatedAt?: Date;
 }
 
 /**
@@ -621,6 +633,30 @@ export interface PortfolioItem {
      * @memberof PortfolioItem
      */
     owner?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PortfolioItem
+     */
+    serviceOfferingIconRef?: string;
+    /**
+     * The source reference this product was created from
+     * @type {string}
+     * @memberof PortfolioItem
+     */
+    serviceOfferingSourceRef?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof PortfolioItem
+     */
+    createdAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof PortfolioItem
+     */
+    updatedAt?: Date;
 }
 
 /**
@@ -2330,6 +2366,54 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             };
         },
         /**
+         * Undeletes the portfolio specified by the portfolio ID.
+         * @summary Undelete specific portfolio
+         * @param {string} id ID of the resource
+         * @param {RestoreKey} restoreKey
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        unDeletePortfolio(id: string, restoreKey: RestoreKey, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling unDeletePortfolio.');
+            }
+            // verify required parameter 'restoreKey' is not null or undefined
+            if (restoreKey === null || restoreKey === undefined) {
+                throw new RequiredError('restoreKey','Required parameter restoreKey was null or undefined when calling unDeletePortfolio.');
+            }
+            const localVarPath = `/portfolios/{id}/undelete`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"RestoreKey" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(restoreKey || {}) : (restoreKey || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Unshare a Portfolio with one or more groups with specific permissions
          * @summary Unshare a portfolio from one or more groups with specific permission
          * @param {string} portfolioId The Portfolio ID
@@ -2470,7 +2554,7 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyPortfolio(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+        destroyPortfolio(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RestoreKey> {
             const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).destroyPortfolio(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2562,6 +2646,21 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          */
         showPortfolio(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio> {
             const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).showPortfolio(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Undeletes the portfolio specified by the portfolio ID.
+         * @summary Undelete specific portfolio
+         * @param {string} id ID of the resource
+         * @param {RestoreKey} restoreKey
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        unDeletePortfolio(id: string, restoreKey: RestoreKey, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio> {
+            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).unDeletePortfolio(id, restoreKey, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2702,6 +2801,17 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          */
         showPortfolio(id: string, options?: any) {
             return PortfolioApiFp(configuration).showPortfolio(id, options)(axios, basePath);
+        },
+        /**
+         * Undeletes the portfolio specified by the portfolio ID.
+         * @summary Undelete specific portfolio
+         * @param {string} id ID of the resource
+         * @param {RestoreKey} restoreKey
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        unDeletePortfolio(id: string, restoreKey: RestoreKey, options?: any) {
+            return PortfolioApiFp(configuration).unDeletePortfolio(id, restoreKey, options)(axios, basePath);
         },
         /**
          * Unshare a Portfolio with one or more groups with specific permissions
@@ -2848,6 +2958,19 @@ export class PortfolioApi extends BaseAPI {
      */
     public showPortfolio(id: string, options?: any) {
         return PortfolioApiFp(this.configuration).showPortfolio(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Undeletes the portfolio specified by the portfolio ID.
+     * @summary Undelete specific portfolio
+     * @param {string} id ID of the resource
+     * @param {RestoreKey} restoreKey
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PortfolioApi
+     */
+    public unDeletePortfolio(id: string, restoreKey: RestoreKey, options?: any) {
+        return PortfolioApiFp(this.configuration).unDeletePortfolio(id, restoreKey, options)(this.axios, this.basePath);
     }
 
     /**

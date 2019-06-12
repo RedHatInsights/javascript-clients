@@ -101,7 +101,9 @@ API documentation
 * [ContainersCollection](interfaces/containerscollection.md)
 * [Flavor](interfaces/flavor.md)
 * [FlavorsCollection](interfaces/flavorscollection.md)
+* [InlineObject](interfaces/inlineobject.md)
 * [InlineResponse200](interfaces/inlineresponse200.md)
+* [InlineResponse2001](interfaces/inlineresponse2001.md)
 * [OrchestrationStack](interfaces/orchestrationstack.md)
 * [OrchestrationStacksCollection](interfaces/orchestrationstackscollection.md)
 * [OrderParameters](interfaces/orderparameters.md)
@@ -166,7 +168,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2493)*
+*Defined in [api.ts:2539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2539)*
 
 DefaultApi - axios parameter creator
 
@@ -185,7 +187,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:7774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L7774)*
+*Defined in [api.ts:7876](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L7876)*
 
 DefaultApi - factory interface
 
@@ -206,7 +208,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L6462)*
+*Defined in [api.ts:6550](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L6550)*
 
 DefaultApi - functional programming interface
 
