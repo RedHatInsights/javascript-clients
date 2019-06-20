@@ -31,6 +31,7 @@ DefaultApi - object-oriented interface
 ### Methods
 
 * [getDocumentation](defaultapi.md#getdocumentation)
+* [postGraphQL](defaultapi.md#postgraphql)
 
 ---
 
@@ -102,7 +103,7 @@ ___
 
 ▸ **getDocumentation**(options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1024](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1024)*
+*Defined in [api.ts:1136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1136)*
 
 *__summary__*: Return this API document in JSON format
 
@@ -117,6 +118,32 @@ ___
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<`Response`>
+
+___
+<a id="postgraphql"></a>
+
+###  postGraphQL
+
+▸ **postGraphQL**(inlineObject: *[InlineObject](../interfaces/inlineobject.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
+
+*Defined in [api.ts:1148](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1148)*
+
+Performs a GraphQL Query
+
+*__summary__*: Perform a GraphQL Query
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: DefaultApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| inlineObject | [InlineObject](../interfaces/inlineobject.md) |  \- |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
 
 ___
 

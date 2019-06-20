@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[RuleForAccount](ruleforaccount.md)>*
 
-*Defined in api.ts:135*
+*Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L135)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[InlineResponse200Links](inlineresponse200links.md)*
 
-*Defined in api.ts:129*
+*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L129)*
 
 *__type__*: {InlineResponse200Links}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *`any`*
 
-*Defined in api.ts:123*
+*Defined in [api.ts:123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L123)*
 
 *__type__*: {any}
 

@@ -26,7 +26,7 @@
 
 **● rule**: *`string`*
 
-*Defined in api.ts:83*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L83)*
 
 *__type__*: {string}
 

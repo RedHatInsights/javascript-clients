@@ -46,7 +46,7 @@ StatsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -81,7 +81,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -92,7 +92,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **statsReports**(options?: *`any`*): `AxiosPromise`<[RulesStats](../interfaces/rulesstats.md)>
 
-*Defined in api.ts:1487*
+*Defined in [api.ts:1487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1487)*
 
 View the statistics for this account.
 
@@ -127,7 +127,7 @@ ___
 
 ▸ **statsRules**(options?: *`any`*): `AxiosPromise`<[RulesStats](../interfaces/rulesstats.md)>
 
-*Defined in api.ts:1497*
+*Defined in [api.ts:1497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1497)*
 
 View the statistics for this account.
 
@@ -150,7 +150,7 @@ ___
 
 ▸ **statsSystems**(options?: *`any`*): `AxiosPromise`<[SystemsStats](../interfaces/systemsstats.md)>
 
-*Defined in api.ts:1507*
+*Defined in [api.ts:1507](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1507)*
 
 View the statistics for this account.
 

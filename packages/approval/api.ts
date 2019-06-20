@@ -711,6 +711,54 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
+         * Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
+         * @summary Add an action to current active stage of a given request
+         * @param {string} requestId Id of request
+         * @param {ActionIn} actionIn Action object that will be added
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createActionByRequest(requestId: string, actionIn: ActionIn, options: any = {}): RequestArgs {
+            // verify required parameter 'requestId' is not null or undefined
+            if (requestId === null || requestId === undefined) {
+                throw new RequiredError('requestId','Required parameter requestId was null or undefined when calling createActionByRequest.');
+            }
+            // verify required parameter 'actionIn' is not null or undefined
+            if (actionIn === null || actionIn === undefined) {
+                throw new RequiredError('actionIn','Required parameter actionIn was null or undefined when calling createActionByRequest.');
+            }
+            const localVarPath = `/requests/{request_id}/actions`
+                .replace(`{${"request_id"}}`, encodeURIComponent(String(requestId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"ActionIn" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(actionIn || {}) : (actionIn || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * List all actions of a stage
          * @summary Return actions in a given stage
          * @param {string} stageId Id of stage
@@ -813,6 +861,21 @@ export const ActionApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
+         * @summary Add an action to current active stage of a given request
+         * @param {string} requestId Id of request
+         * @param {ActionIn} actionIn Action object that will be added
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createActionByRequest(requestId: string, actionIn: ActionIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionOut> {
+            const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).createActionByRequest(requestId, actionIn, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * List all actions of a stage
          * @summary Return actions in a given stage
          * @param {string} stageId Id of stage
@@ -861,6 +924,17 @@ export const ActionApiFactory = function (configuration?: Configuration, basePat
             return ActionApiFp(configuration).createAction(stageId, actionIn, options)(axios, basePath);
         },
         /**
+         * Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
+         * @summary Add an action to current active stage of a given request
+         * @param {string} requestId Id of request
+         * @param {ActionIn} actionIn Action object that will be added
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createActionByRequest(requestId: string, actionIn: ActionIn, options?: any) {
+            return ActionApiFp(configuration).createActionByRequest(requestId, actionIn, options)(axios, basePath);
+        },
+        /**
          * List all actions of a stage
          * @summary Return actions in a given stage
          * @param {string} stageId Id of stage
@@ -901,6 +975,19 @@ export class ActionApi extends BaseAPI {
      */
     public createAction(stageId: string, actionIn: ActionIn, options?: any) {
         return ActionApiFp(this.configuration).createAction(stageId, actionIn, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
+     * @summary Add an action to current active stage of a given request
+     * @param {string} requestId Id of request
+     * @param {ActionIn} actionIn Action object that will be added
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ActionApi
+     */
+    public createActionByRequest(requestId: string, actionIn: ActionIn, options?: any) {
+        return ActionApiFp(this.configuration).createActionByRequest(requestId, actionIn, options)(this.axios, this.basePath);
     }
 
     /**

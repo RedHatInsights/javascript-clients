@@ -27,7 +27,7 @@
 
 **● groupUuids**: *`Array`<`string`>*
 
-*Defined in [api.ts:904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L904)*
+*Defined in [api.ts:950](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L950)*
 
 An array of group UUID's retrieved from the RBAC Service with whom the resource has to be shared.
 
@@ -42,7 +42,7 @@ ___
 
 **● permissions**: *`Array`<`string`>*
 
-*Defined in [api.ts:898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L898)*
+*Defined in [api.ts:944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L944)*
 
 The permissions to apply for this share.
 

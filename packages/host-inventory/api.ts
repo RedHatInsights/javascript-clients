@@ -1022,10 +1022,12 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, options: any = {}): RequestArgs {
+        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): RequestArgs {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostById.');
@@ -1061,6 +1063,14 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['page'] = page;
             }
 
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (orderHow !== undefined) {
+                localVarQueryParameter['order_how'] = orderHow;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1081,10 +1091,12 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, options: any = {}): RequestArgs {
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): RequestArgs {
             const localVarPath = `/hosts`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1131,6 +1143,14 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['page'] = page;
             }
 
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (orderHow !== undefined) {
+                localVarQueryParameter['order_how'] = orderHow;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1147,10 +1167,12 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, options: any = {}): RequestArgs {
+        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): RequestArgs {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostSystemProfileById.');
@@ -1182,6 +1204,14 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['page'] = page;
             }
 
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (orderHow !== undefined) {
+                localVarQueryParameter['order_how'] = orderHow;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1195,7 +1225,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * Merge one or multiple hosts facts under a namespace.
          * @summary Merge facts under a namespace
-         * @param {Array<string>} hostIdList IDs of the hosts that own the facts to be merged.
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} namespace A namespace of the merged facts.
          * @param {any} body A dictionary with the new facts to merge with the original ones.
          * @param {*} [options] Override http request option.
@@ -1251,7 +1281,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * Update a host
          * @summary Update a host
-         * @param {Array<string>} hostIdList A host ID
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
          * @param {string} [branchId] Filter by branch_id
          * @param {*} [options] Override http request option.
@@ -1306,7 +1336,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * Replace facts under a namespace
          * @summary Replace facts under a namespace
-         * @param {Array<string>} hostIdList IDs of the hosts that own the facts to be replaced.
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} namespace A namespace of the merged facts.
          * @param {any} body A dictionary with the new facts to replace the original ones.
          * @param {*} [options] Override http request option.
@@ -1403,11 +1433,13 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, options);
+        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1423,11 +1455,13 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, options);
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1439,11 +1473,13 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileByHostOut> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, options);
+        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileByHostOut> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1452,7 +1488,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
         /**
          * Merge one or multiple hosts facts under a namespace.
          * @summary Merge facts under a namespace
-         * @param {Array<string>} hostIdList IDs of the hosts that own the facts to be merged.
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} namespace A namespace of the merged facts.
          * @param {any} body A dictionary with the new facts to merge with the original ones.
          * @param {*} [options] Override http request option.
@@ -1468,7 +1504,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
         /**
          * Update a host
          * @summary Update a host
-         * @param {Array<string>} hostIdList A host ID
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
          * @param {string} [branchId] Filter by branch_id
          * @param {*} [options] Override http request option.
@@ -1484,7 +1520,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
         /**
          * Replace facts under a namespace
          * @summary Replace facts under a namespace
-         * @param {Array<string>} hostIdList IDs of the hosts that own the facts to be replaced.
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} namespace A namespace of the merged facts.
          * @param {any} body A dictionary with the new facts to replace the original ones.
          * @param {*} [options] Override http request option.
@@ -1533,11 +1569,13 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, options?: any) {
-            return HostsApiFp(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, options)(axios, basePath);
+        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+            return HostsApiFp(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options)(axios, basePath);
         },
         /**
          * Read the entire list of all hosts available to the account.
@@ -1549,11 +1587,13 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, options?: any) {
-            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, options)(axios, basePath);
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, options)(axios, basePath);
         },
         /**
          * Find one or more hosts by their ID and return the id and system profile
@@ -1561,16 +1601,18 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, options?: any) {
-            return HostsApiFp(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, options)(axios, basePath);
+        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+            return HostsApiFp(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, options)(axios, basePath);
         },
         /**
          * Merge one or multiple hosts facts under a namespace.
          * @summary Merge facts under a namespace
-         * @param {Array<string>} hostIdList IDs of the hosts that own the facts to be merged.
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} namespace A namespace of the merged facts.
          * @param {any} body A dictionary with the new facts to merge with the original ones.
          * @param {*} [options] Override http request option.
@@ -1582,7 +1624,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
         /**
          * Update a host
          * @summary Update a host
-         * @param {Array<string>} hostIdList A host ID
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
          * @param {string} [branchId] Filter by branch_id
          * @param {*} [options] Override http request option.
@@ -1594,7 +1636,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
         /**
          * Replace facts under a namespace
          * @summary Replace facts under a namespace
-         * @param {Array<string>} hostIdList IDs of the hosts that own the facts to be replaced.
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} namespace A namespace of the merged facts.
          * @param {any} body A dictionary with the new facts to replace the original ones.
          * @param {*} [options] Override http request option.
@@ -1644,12 +1686,14 @@ export class HostsApi extends BaseAPI {
      * @param {string} [branchId] Filter by branch_id
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
+     * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, options)(this.axios, this.basePath);
+    public apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1662,12 +1706,14 @@ export class HostsApi extends BaseAPI {
      * @param {string} [branchId] Filter by branch_id
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
+     * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, options)(this.axios, this.basePath);
+    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1676,18 +1722,20 @@ export class HostsApi extends BaseAPI {
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
+     * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, options)(this.axios, this.basePath);
+    public apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, options)(this.axios, this.basePath);
     }
 
     /**
      * Merge one or multiple hosts facts under a namespace.
      * @summary Merge facts under a namespace
-     * @param {Array<string>} hostIdList IDs of the hosts that own the facts to be merged.
+     * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {string} namespace A namespace of the merged facts.
      * @param {any} body A dictionary with the new facts to merge with the original ones.
      * @param {*} [options] Override http request option.
@@ -1701,7 +1749,7 @@ export class HostsApi extends BaseAPI {
     /**
      * Update a host
      * @summary Update a host
-     * @param {Array<string>} hostIdList A host ID
+     * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
      * @param {string} [branchId] Filter by branch_id
      * @param {*} [options] Override http request option.
@@ -1715,7 +1763,7 @@ export class HostsApi extends BaseAPI {
     /**
      * Replace facts under a namespace
      * @summary Replace facts under a namespace
-     * @param {Array<string>} hostIdList IDs of the hosts that own the facts to be replaced.
+     * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {string} namespace A namespace of the merged facts.
      * @param {any} body A dictionary with the new facts to replace the original ones.
      * @param {*} [options] Override http request option.

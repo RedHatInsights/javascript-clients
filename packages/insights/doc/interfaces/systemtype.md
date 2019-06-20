@@ -28,7 +28,7 @@
 
 **● id**: *`number`*
 
-*Defined in api.ts:523*
+*Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L523)*
 
 *__type__*: {number}
 
@@ -41,7 +41,7 @@ ___
 
 **● productCode**: *`string`*
 
-*Defined in api.ts:535*
+*Defined in [api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L535)*
 
 *__type__*: {string}
 
@@ -54,7 +54,7 @@ ___
 
 **● role**: *`string`*
 
-*Defined in api.ts:529*
+*Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L529)*
 
 *__type__*: {string}
 

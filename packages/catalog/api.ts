@@ -252,6 +252,52 @@ export interface CreatePortfolioItem {
 /**
  *
  * @export
+ * @interface InlineObject
+ */
+export interface InlineObject {
+    /**
+     * The GraphQL query
+     * @type {string}
+     * @memberof InlineObject
+     */
+    query: string;
+    /**
+     * If the Query contains several named operations, the operationName controls which one should be executed
+     * @type {string}
+     * @memberof InlineObject
+     */
+    operationName?: string;
+    /**
+     * Optional Query variables
+     * @type {any}
+     * @memberof InlineObject
+     */
+    variables?: any;
+}
+
+/**
+ *
+ * @export
+ * @interface InlineResponse200
+ */
+export interface InlineResponse200 {
+    /**
+     * Results from the GraphQL query
+     * @type {any}
+     * @memberof InlineResponse200
+     */
+    data?: any;
+    /**
+     * Errors resulting from the GraphQL query
+     * @type {Array<any>}
+     * @memberof InlineResponse200
+     */
+    errors?: Array<any>;
+}
+
+/**
+ *
+ * @export
  * @interface Order
  */
 export interface Order {
@@ -964,6 +1010,48 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Performs a GraphQL Query
+         * @summary Perform a GraphQL Query
+         * @param {InlineObject} inlineObject
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postGraphQL(inlineObject: InlineObject, options: any = {}): RequestArgs {
+            // verify required parameter 'inlineObject' is not null or undefined
+            if (inlineObject === null || inlineObject === undefined) {
+                throw new RequiredError('inlineObject','Required parameter inlineObject was null or undefined when calling postGraphQL.');
+            }
+            const localVarPath = `/graphql`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"InlineObject" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(inlineObject || {}) : (inlineObject || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -981,6 +1069,20 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         getDocumentation(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Performs a GraphQL Query
+         * @summary Perform a GraphQL Query
+         * @param {InlineObject} inlineObject
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postGraphQL(inlineObject: InlineObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).postGraphQL(inlineObject, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1004,6 +1106,16 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         getDocumentation(options?: any) {
             return DefaultApiFp(configuration).getDocumentation(options)(axios, basePath);
         },
+        /**
+         * Performs a GraphQL Query
+         * @summary Perform a GraphQL Query
+         * @param {InlineObject} inlineObject
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postGraphQL(inlineObject: InlineObject, options?: any) {
+            return DefaultApiFp(configuration).postGraphQL(inlineObject, options)(axios, basePath);
+        },
     };
 };
 
@@ -1023,6 +1135,18 @@ export class DefaultApi extends BaseAPI {
      */
     public getDocumentation(options?: any) {
         return DefaultApiFp(this.configuration).getDocumentation(options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Performs a GraphQL Query
+     * @summary Perform a GraphQL Query
+     * @param {InlineObject} inlineObject
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public postGraphQL(inlineObject: InlineObject, options?: any) {
+        return DefaultApiFp(this.configuration).postGraphQL(inlineObject, options)(this.axios, this.basePath);
     }
 
 }
