@@ -154,7 +154,7 @@ ___
 
 ▸ **HostsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1507](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1507)*
+*Defined in [api.ts:1543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1543)*
 
 HostsApi - factory interface
 
@@ -175,7 +175,7 @@ ___
 
 ▸ **HostsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1369)*
+*Defined in [api.ts:1399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1399)*
 
 HostsApi - functional programming interface
 

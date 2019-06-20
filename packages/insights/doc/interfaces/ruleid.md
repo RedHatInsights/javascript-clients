@@ -26,7 +26,7 @@
 
 **● ruleId**: *`string`*
 
-*Defined in api.ts:399*
+*Defined in [api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L399)*
 
 *__type__*: {string}
 

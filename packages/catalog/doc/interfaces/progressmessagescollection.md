@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[ProgressMessage](../modules/progressmessage.md)>*
 
-*Defined in [api.ts:786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L786)*
+*Defined in [api.ts:832](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L832)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L780)*
+*Defined in [api.ts:826](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L826)*
 
 *__type__*: {CollectionLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L774)*
+*Defined in [api.ts:820](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L820)*
 
 *__type__*: {CollectionMetadata}
 

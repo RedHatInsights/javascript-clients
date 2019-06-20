@@ -31,6 +31,7 @@ ActionApi - object-oriented interface
 ### Methods
 
 * [createAction](actionapi.md#createaction)
+* [createActionByRequest](actionapi.md#createactionbyrequest)
 * [listActionsByStage](actionapi.md#listactionsbystage)
 * [showAction](actionapi.md#showaction)
 
@@ -104,7 +105,7 @@ ___
 
 ▸ **createAction**(stageId: *`string`*, actionIn: *[ActionIn](../modules/actionin.md)*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
-*Defined in [api.ts:902](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L902)*
+*Defined in [api.ts:976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L976)*
 
 Add an action to a given stage
 
@@ -125,13 +126,40 @@ Add an action to a given stage
 **Returns:** `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
 ___
+<a id="createactionbyrequest"></a>
+
+###  createActionByRequest
+
+▸ **createActionByRequest**(requestId: *`string`*, actionIn: *[ActionIn](../modules/actionin.md)*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
+
+*Defined in [api.ts:989](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L989)*
+
+Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
+
+*__summary__*: Add an action to current active stage of a given request
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: ActionApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| requestId | `string` |  Id of request |
+| actionIn | [ActionIn](../modules/actionin.md) |  Action object that will be added |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[ActionOut](../modules/actionout.md)>
+
+___
 <a id="listactionsbystage"></a>
 
 ###  listActionsByStage
 
 ▸ **listActionsByStage**(stageId: *`string`*, options?: *`any`*): `AxiosPromise`<[ActionOutCollection](../interfaces/actionoutcollection.md)>
 
-*Defined in [api.ts:914](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L914)*
+*Defined in [api.ts:1001](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1001)*
 
 List all actions of a stage
 
@@ -157,7 +185,7 @@ ___
 
 ▸ **showAction**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
-*Defined in [api.ts:926](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L926)*
+*Defined in [api.ts:1013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1013)*
 
 Return an user action by id
 

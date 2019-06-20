@@ -27,7 +27,7 @@
 
 **● category**: *`object`*
 
-*Defined in api.ts:569*
+*Defined in [api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L569)*
 
 *__type__*: {{ \[key: string\]: number; }}
 
@@ -44,7 +44,7 @@ ___
 
 **● totalRisk**: *`object`*
 
-*Defined in api.ts:563*
+*Defined in [api.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L563)*
 
 *__type__*: {{ \[key: string\]: number; }}
 
