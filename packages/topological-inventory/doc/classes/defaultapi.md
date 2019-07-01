@@ -1867,7 +1867,7 @@ ___
 
 ###  orderServicePlan
 
-▸ **orderServicePlan**(id: *`string`*, orderParameters: *[OrderParameters](../interfaces/orderparameters.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)>
+▸ **orderServicePlan**(id: *`string`*, orderParameters: *[OrderParameters](../interfaces/orderparameters.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
 
 *Defined in [api.ts:9743](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L9743)*
 
@@ -1887,14 +1887,14 @@ Returns a Task id
 | orderParameters | [OrderParameters](../interfaces/orderparameters.md) |  Order parameters defining the service and provider control |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)>
+**Returns:** `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
 
 ___
 <a id="postgraphql"></a>
 
 ###  postGraphQL
 
-▸ **postGraphQL**(inlineObject: *[InlineObject](../interfaces/inlineobject.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
+▸ **postGraphQL**(inlineObject: *[InlineObject](../interfaces/inlineobject.md)*, options?: *`any`*): `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
 
 *Defined in [api.ts:9755](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L9755)*
 
@@ -1913,7 +1913,7 @@ Performs a GraphQL Query
 | inlineObject | [InlineObject](../interfaces/inlineobject.md) |  \- |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
+**Returns:** `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
 
 ___
 <a id="showcontainer"></a>

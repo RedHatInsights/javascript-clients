@@ -1,12 +1,12 @@
-[@redhat-cloud-services/insights-client](../README.md) > [SystemApi](../classes/systemapi.md)
+[@redhat-cloud-services/insights-client](../README.md) > [ExportApi](../classes/exportapi.md)
 
-# Class: SystemApi
+# Class: ExportApi
 
-SystemApi - object-oriented interface
+ExportApi - object-oriented interface
 
 *__export__*: 
 
-*__class__*: SystemApi
+*__class__*: ExportApi
 
 *__extends__*: {BaseAPI}
 
@@ -14,23 +14,23 @@ SystemApi - object-oriented interface
 
  [BaseAPI](baseapi.md)
 
-**↳ SystemApi**
+**↳ ExportApi**
 
 ## Index
 
 ### Constructors
 
-* [constructor](systemapi.md#constructor)
+* [constructor](exportapi.md#constructor)
 
 ### Properties
 
-* [axios](systemapi.md#axios)
-* [basePath](systemapi.md#basepath)
-* [configuration](systemapi.md#configuration)
+* [axios](exportapi.md#axios)
+* [basePath](exportapi.md#basepath)
+* [configuration](exportapi.md#configuration)
 
 ### Methods
 
-* [systemReports](systemapi.md#systemreports)
+* [exportHitsList](exportapi.md#exporthitslist)
 
 ---
 
@@ -40,7 +40,7 @@ SystemApi - object-oriented interface
 
 ###  constructor
 
-⊕ **new SystemApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [SystemApi](systemapi.md)
+⊕ **new ExportApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [ExportApi](exportapi.md)
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -54,7 +54,7 @@ SystemApi - object-oriented interface
 | `Default value` basePath | `string` |  BASE_PATH |
 | `Default value` axios | `AxiosInstance` |  globalAxios |
 
-**Returns:** [SystemApi](systemapi.md)
+**Returns:** [ExportApi](exportapi.md)
 
 ___
 
@@ -96,28 +96,27 @@ ___
 
 ## Methods
 
-<a id="systemreports"></a>
+<a id="exporthitslist"></a>
 
-###  systemReports
+###  exportHitsList
 
-▸ **systemReports**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **exportHitsList**(options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
 
-*Defined in [api.ts:1897](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1897)*
+*Defined in [api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1045)*
 
-Returns the list of latest reports for an Inventory Host ID that: \* are in the user's account \* have an active, not-deleted rule \* where the rule has not been acked by this account If the host ID is not found, return an empty list.
+Get each host and all rules currently affecting it. This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store). We also only present active, non-acked rules.
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: SystemApi
+*__memberof__*: ExportApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| uuid | `string` |  The system&#39;s Host ID in the Inventory |
+| Name | Type |
+| ------ | ------ |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
 
 ___
 

@@ -104,7 +104,7 @@ ___
 
 ▸ **topicList**(options?: *`any`*): `AxiosPromise`<[RuleTopic](../interfaces/ruletopic.md)[]>
 
-*Defined in [api.ts:1965](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1965)*
+*Defined in [api.ts:2254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2254)*
 
 Rules have topics, set by Insights administrators. This is a view of the topics available, along with the rules and systems to which they apply.
 
@@ -127,7 +127,7 @@ ___
 
 ▸ **topicRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[RuleTopic](../interfaces/ruletopic.md)>
 
-*Defined in [api.ts:1976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1976)*
+*Defined in [api.ts:2265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2265)*
 
 Rules have topics, set by Insights administrators. This is a view of the topics available, along with the rules and systems to which they apply.
 
@@ -151,7 +151,7 @@ ___
 
 ▸ **topicSystems**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
 
-*Defined in [api.ts:1987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1987)*
+*Defined in [api.ts:2276](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2276)*
 
 List all systems affected by this rule topic.
 

@@ -105,7 +105,7 @@ ___
 
 ▸ **createRequest**(workflowId: *`string`*, requestIn: *[RequestIn](../interfaces/requestin.md)*, options?: *`any`*): `AxiosPromise`<[RequestOut](../modules/requestout.md)>
 
-*Defined in [api.ts:1366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1366)*
+*Defined in [api.ts:1372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1372)*
 
 Add an approval request by given parameters
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **listRequests**(approver?: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[RequestOutCollection](../interfaces/requestoutcollection.md)>
 
-*Defined in [api.ts:1381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1381)*
+*Defined in [api.ts:1387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1387)*
 
 Return an array of requests
 
@@ -161,7 +161,7 @@ ___
 
 ▸ **listRequestsByWorkflow**(workflowId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[RequestOutCollection](../interfaces/requestoutcollection.md)>
 
-*Defined in [api.ts:1396](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1396)*
+*Defined in [api.ts:1402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1402)*
 
 Return approval requests by given workflow id
 
@@ -190,7 +190,7 @@ ___
 
 ▸ **showRequest**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[RequestOut](../modules/requestout.md)>
 
-*Defined in [api.ts:1408](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1408)*
+*Defined in [api.ts:1414](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1414)*
 
 Return an approval request by given id
 

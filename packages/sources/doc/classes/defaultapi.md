@@ -670,7 +670,7 @@ ___
 
 ###  postGraphQL
 
-▸ **postGraphQL**(inlineObject: *[InlineObject](../interfaces/inlineobject.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
+▸ **postGraphQL**(inlineObject: *[InlineObject](../interfaces/inlineobject.md)*, options?: *`any`*): `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
 
 *Defined in [api.ts:3129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3129)*
 
@@ -689,7 +689,7 @@ Performs a GraphQL Query
 | inlineObject | [InlineObject](../interfaces/inlineobject.md) |  \- |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
+**Returns:** `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
 
 ___
 <a id="showapplication"></a>

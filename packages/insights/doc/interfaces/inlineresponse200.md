@@ -52,11 +52,11 @@ ___
 
 ### `<Optional>` meta
 
-**● meta**: *`any`*
+**● meta**: *[InlineResponse200Meta](inlineresponse200meta.md)*
 
 *Defined in [api.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L97)*
 
-*__type__*: {any}
+*__type__*: {InlineResponse200Meta}
 
 *__memberof__*: InlineResponse200
 

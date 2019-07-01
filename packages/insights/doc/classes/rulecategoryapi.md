@@ -31,6 +31,7 @@ RulecategoryApi - object-oriented interface
 ### Methods
 
 * [rulecategoryList](rulecategoryapi.md#rulecategorylist)
+* [rulecategoryRead](rulecategoryapi.md#rulecategoryread)
 
 ---
 
@@ -102,7 +103,7 @@ ___
 
 ▸ **rulecategoryList**(options?: *`any`*): `AxiosPromise`<[RuleCategory](../interfaces/rulecategory.md)[]>
 
-*Defined in [api.ts:1303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1303)*
+*Defined in [api.ts:1525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1525)*
 
 Rules are divided into categories, the usual being Availability, Stability, Security and Performance
 
@@ -117,6 +118,30 @@ Rules are divided into categories, the usual being Availability, Stability, Secu
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[RuleCategory](../interfaces/rulecategory.md)[]>
+
+___
+<a id="rulecategoryread"></a>
+
+###  rulecategoryRead
+
+▸ **rulecategoryRead**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[RuleCategory](../interfaces/rulecategory.md)>
+
+*Defined in [api.ts:1536](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1536)*
+
+Rules are divided into categories, the usual being Availability, Stability, Security and Performance
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: RulecategoryApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| id | `number` |  A unique integer value identifying this rule category. |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[RuleCategory](../interfaces/rulecategory.md)>
 
 ___
 

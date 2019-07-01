@@ -102,9 +102,9 @@ ___
 
 ###  ruleList
 
-▸ **ruleList**(limit?: *`number`*, offset?: *`number`*, category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, hasTag?: *`Array`<`string`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impacting?: *`boolean`*, incident?: *`boolean`*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, reportsShown?: *`boolean`*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, sort?: *"category" \| "description" \| "impact" \| "impacted_count" \| "likelihood" \| "playbook_count" \| "publish_date" \| "rule_id" \| "total_risk" \| "-category" \| "-description" \| "-impact" \| "-impacted_count" \| "-likelihood" \| "-playbook_count" \| "-publish_date" \| "-rule_id" \| "-total_risk"*, text?: *`string`*, topic?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)>
+▸ **ruleList**(limit?: *`number`*, offset?: *`number`*, category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, hasTag?: *`Array`<`string`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impacting?: *`boolean`*, incident?: *`boolean`*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, reportsShown?: *`boolean`*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, sort?: *"category" \| "description" \| "impact" \| "impacted_count" \| "likelihood" \| "playbook_count" \| "publish_date" \| "rule_id" \| "total_risk" \| "-category" \| "-description" \| "-impact" \| "-impacted_count" \| "-likelihood" \| "-playbook_count" \| "-publish_date" \| "-rule_id" \| "-total_risk"*, text?: *`string`*, topic?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2002](../interfaces/inlineresponse2002.md)>
 
-*Defined in [api.ts:1189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1189)*
+*Defined in [api.ts:1357](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1357)*
 
 List all active rules for this account. If 'acked' is False or not given, then only rules that are not acked will be shown. If acked is set and 'true' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
 
@@ -132,7 +132,7 @@ List all active rules for this account. If 'acked' is False or not given, then o
 | `Optional` totalRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)>
+**Returns:** `AxiosPromise`<[InlineResponse2002](../interfaces/inlineresponse2002.md)>
 
 ___
 <a id="ruleread"></a>
@@ -141,7 +141,7 @@ ___
 
 ▸ **ruleRead**(ruleId: *`string`*, options?: *`any`*): `AxiosPromise`<[RuleForAccount](../interfaces/ruleforaccount.md)>
 
-*Defined in [api.ts:1200](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1200)*
+*Defined in [api.ts:1368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1368)*
 
 Retrieve a single rule and its associated details.
 
@@ -165,7 +165,7 @@ ___
 
 ▸ **ruleSystems**(ruleId: *`string`*, options?: *`any`*): `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
 
-*Defined in [api.ts:1211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1211)*
+*Defined in [api.ts:1379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1379)*
 
 List all systems affected by this rule.
 

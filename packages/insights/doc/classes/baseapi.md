@@ -12,6 +12,8 @@
 
 ↳  [AckApi](ackapi.md)
 
+↳  [ExportApi](exportapi.md)
+
 ↳  [RuleApi](ruleapi.md)
 
 ↳  [RulecategoryApi](rulecategoryapi.md)

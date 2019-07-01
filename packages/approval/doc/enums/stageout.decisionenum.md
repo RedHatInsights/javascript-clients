@@ -11,6 +11,7 @@
 ### Enumeration members
 
 * [Approved](stageout.decisionenum.md#approved)
+* [Canceled](stageout.decisionenum.md#canceled)
 * [Denied](stageout.decisionenum.md#denied)
 * [Undecided](stageout.decisionenum.md#undecided)
 
@@ -24,7 +25,16 @@
 
 **Approved**:  = "approved"
 
-*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L485)*
+*Defined in [api.ts:490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L490)*
+
+___
+<a id="canceled"></a>
+
+###  Canceled
+
+**Canceled**:  = "canceled"
+
+*Defined in [api.ts:491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L491)*
 
 ___
 <a id="denied"></a>
@@ -33,7 +43,7 @@ ___
 
 **Denied**:  = "denied"
 
-*Defined in [api.ts:486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L486)*
+*Defined in [api.ts:492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L492)*
 
 ___
 <a id="undecided"></a>
@@ -42,7 +52,7 @@ ___
 
 **Undecided**:  = "undecided"
 
-*Defined in [api.ts:484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L484)*
+*Defined in [api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L489)*
 
 ___
 

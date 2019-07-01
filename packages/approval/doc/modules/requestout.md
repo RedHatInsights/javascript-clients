@@ -39,7 +39,7 @@
 
 **● activeStage**: *`number`*
 
-*Defined in [api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L335)*
+*Defined in [api.ts:337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L337)*
 
 Current (or last) active stage. For regular approver this number is always 0
 
@@ -54,7 +54,7 @@ ___
 
 **● content**: *`any`*
 
-*Defined in [api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L365)*
+*Defined in [api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L367)*
 
 JSON object with request content
 
@@ -69,7 +69,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L323)*
+*Defined in [api.ts:325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L325)*
 
 Timestamp of creation
 
@@ -84,9 +84,9 @@ ___
 
 **● decision**: *[DecisionEnum](../enums/requestout.decisionenum.md)*
 
-*Defined in [api.ts:305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L305)*
+*Defined in [api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L307)*
 
-Final decision, may be one of the value (undecided, approved, or denied)
+Final decision, may be one of the value (undecided, approved, canceled or denied)
 
 *__type__*: {string}
 
@@ -99,7 +99,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L359)*
+*Defined in [api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L361)*
 
 Request description
 
@@ -114,7 +114,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L293)*
+*Defined in [api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L295)*
 
 *__type__*: {string}
 
@@ -127,7 +127,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L353)*
+*Defined in [api.ts:355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L355)*
 
 Request name
 
@@ -142,7 +142,7 @@ ___
 
 **● reason**: *`string`*
 
-*Defined in [api.ts:311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L311)*
+*Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L313)*
 
 Comments for requests
 
@@ -157,7 +157,7 @@ ___
 
 **● requester**: *`string`*
 
-*Defined in [api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L347)*
+*Defined in [api.ts:349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L349)*
 
 Requester id
 
@@ -172,9 +172,9 @@ ___
 
 **● state**: *[StateEnum](../enums/requestout.stateenum.md)*
 
-*Defined in [api.ts:299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L299)*
+*Defined in [api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L301)*
 
-The state of stage or request. It may be one of values (pending, skipped, notified or finished)
+The state of stage or request. It may be one of values (canceled, pending, skipped, notified or finished)
 
 *__type__*: {string}
 
@@ -187,7 +187,7 @@ ___
 
 **● totalStages**: *`number`*
 
-*Defined in [api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L341)*
+*Defined in [api.ts:343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L343)*
 
 Total number of stages. For regular approver this number is always 0.
 
@@ -202,7 +202,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L329)*
+*Defined in [api.ts:331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L331)*
 
 Timestamp of last update
 
@@ -217,7 +217,7 @@ ___
 
 **● workflowId**: *`string`*
 
-*Defined in [api.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L317)*
+*Defined in [api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L319)*
 
 Associate workflow id
 

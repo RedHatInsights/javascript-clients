@@ -14,39 +14,21 @@
 
 ### Properties
 
-* [data](inlineresponse200.md#data)
-* [errors](inlineresponse200.md#errors)
+* [taskId](inlineresponse200.md#taskid)
 
 ---
 
 ## Properties
 
-<a id="data"></a>
+<a id="taskid"></a>
 
-### `<Optional>` data
+### `<Optional>` taskId
 
-**● data**: *`any`*
+**● taskId**: *`string`*
 
-*Defined in [api.ts:1193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1193)*
+*Defined in [api.ts:1213](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1213)*
 
-Results from the GraphQL query
-
-*__type__*: {any}
-
-*__memberof__*: InlineResponse200
-
-___
-<a id="errors"></a>
-
-### `<Optional>` errors
-
-**● errors**: *`Array`<`any`>*
-
-*Defined in [api.ts:1199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1199)*
-
-Errors resulting from the GraphQL query
-
-*__type__*: {Array}
+*__type__*: {string}
 
 *__memberof__*: InlineResponse200
 

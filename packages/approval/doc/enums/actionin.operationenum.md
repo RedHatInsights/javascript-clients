@@ -11,6 +11,7 @@
 ### Enumeration members
 
 * [Approve](actionin.operationenum.md#approve)
+* [Cancel](actionin.operationenum.md#cancel)
 * [Deny](actionin.operationenum.md#deny)
 * [Memo](actionin.operationenum.md#memo)
 * [Notify](actionin.operationenum.md#notify)
@@ -29,13 +30,22 @@
 *Defined in [api.ts:108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L108)*
 
 ___
+<a id="cancel"></a>
+
+###  Cancel
+
+**Cancel**:  = "cancel"
+
+*Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L109)*
+
+___
 <a id="deny"></a>
 
 ###  Deny
 
 **Deny**:  = "deny"
 
-*Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L109)*
+*Defined in [api.ts:110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L110)*
 
 ___
 <a id="memo"></a>
@@ -44,7 +54,7 @@ ___
 
 **Memo**:  = "memo"
 
-*Defined in [api.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L111)*
+*Defined in [api.ts:112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L112)*
 
 ___
 <a id="notify"></a>
@@ -53,7 +63,7 @@ ___
 
 **Notify**:  = "notify"
 
-*Defined in [api.ts:110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L110)*
+*Defined in [api.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L111)*
 
 ___
 <a id="skip"></a>
@@ -62,7 +72,7 @@ ___
 
 **Skip**:  = "skip"
 
-*Defined in [api.ts:112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L112)*
+*Defined in [api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L113)*
 
 ___
 

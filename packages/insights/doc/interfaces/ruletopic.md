@@ -29,7 +29,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L477)*
+*Defined in [api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L553)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:465](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L465)*
+*Defined in [api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L541)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● slug**: *`string`*
 
-*Defined in [api.ts:471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L471)*
+*Defined in [api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L547)*
 
 Rule topic slug
 
@@ -70,7 +70,7 @@ ___
 
 **● tags**: *`string`*
 
-*Defined in [api.ts:483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L483)*
+*Defined in [api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L559)*
 
 *__type__*: {string}
 
