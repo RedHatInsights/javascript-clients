@@ -708,6 +708,20 @@ export interface PortfolioItem {
 /**
  *
  * @export
+ * @interface PortfolioItemNextName
+ */
+export interface PortfolioItemNextName {
+    /**
+     *
+     * @type {string}
+     * @memberof PortfolioItemNextName
+     */
+    nextName?: string;
+}
+
+/**
+ *
+ * @export
  * @interface PortfolioItemsCollection
  */
 export interface PortfolioItemsCollection {
@@ -3213,6 +3227,50 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
+         * Get the next name for a the Portfolio Item prior to a copy operation
+         * @summary Get the next name for a the Portfolio Item prior to a copy operation
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {string} [destinationPortfolioId] The destination portfolio to compare names against
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPortfolioItemNextName(portfolioItemId: string, destinationPortfolioId?: string, options: any = {}): RequestArgs {
+            // verify required parameter 'portfolioItemId' is not null or undefined
+            if (portfolioItemId === null || portfolioItemId === undefined) {
+                throw new RequiredError('portfolioItemId','Required parameter portfolioItemId was null or undefined when calling getPortfolioItemNextName.');
+            }
+            const localVarPath = `/portfolio_items/{portfolio_item_id}/next_name`
+                .replace(`{${"portfolio_item_id"}}`, encodeURIComponent(String(portfolioItemId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (destinationPortfolioId !== undefined) {
+                localVarQueryParameter['destination_portfolio_id'] = destinationPortfolioId;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets a list of portfolio items.
          * @summary List all portfolio items
          * @param {number} [limit] The numbers of items to return per page.
@@ -3594,6 +3652,21 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Get the next name for a the Portfolio Item prior to a copy operation
+         * @summary Get the next name for a the Portfolio Item prior to a copy operation
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {string} [destinationPortfolioId] The destination portfolio to compare names against
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPortfolioItemNextName(portfolioItemId: string, destinationPortfolioId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItemNextName> {
+            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).getPortfolioItemNextName(portfolioItemId, destinationPortfolioId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Gets a list of portfolio items.
          * @summary List all portfolio items
          * @param {number} [limit] The numbers of items to return per page.
@@ -3740,6 +3813,17 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
             return PortfolioItemApiFp(configuration).destroyPortfolioItem(id, options)(axios, basePath);
         },
         /**
+         * Get the next name for a the Portfolio Item prior to a copy operation
+         * @summary Get the next name for a the Portfolio Item prior to a copy operation
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {string} [destinationPortfolioId] The destination portfolio to compare names against
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPortfolioItemNextName(portfolioItemId: string, destinationPortfolioId?: string, options?: any) {
+            return PortfolioItemApiFp(configuration).getPortfolioItemNextName(portfolioItemId, destinationPortfolioId, options)(axios, basePath);
+        },
+        /**
          * Gets a list of portfolio items.
          * @summary List all portfolio items
          * @param {number} [limit] The numbers of items to return per page.
@@ -3856,6 +3940,19 @@ export class PortfolioItemApi extends BaseAPI {
      */
     public destroyPortfolioItem(id: string, options?: any) {
         return PortfolioItemApiFp(this.configuration).destroyPortfolioItem(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Get the next name for a the Portfolio Item prior to a copy operation
+     * @summary Get the next name for a the Portfolio Item prior to a copy operation
+     * @param {string} portfolioItemId The Portfolio Item ID
+     * @param {string} [destinationPortfolioId] The destination portfolio to compare names against
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PortfolioItemApi
+     */
+    public getPortfolioItemNextName(portfolioItemId: string, destinationPortfolioId?: string, options?: any) {
+        return PortfolioItemApiFp(this.configuration).getPortfolioItemNextName(portfolioItemId, destinationPortfolioId, options)(this.axios, this.basePath);
     }
 
     /**

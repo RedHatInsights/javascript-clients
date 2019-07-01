@@ -26,7 +26,7 @@
 
 **● count**: *`number`*
 
-*Defined in [api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L247)*
+*Defined in [api.ts:249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L249)*
 
 This is the total number of items in the result set, of which only a subset is returned defined by the QueryLimit parameter
 

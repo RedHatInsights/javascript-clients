@@ -82,7 +82,7 @@ export interface ActionIn {
      */
     processedBy?: string;
     /**
-     * Types of action, may be one of the value (approve, deny, notify, memo, or skip). The stage will be updated according to the operation.
+     * Types of action, may be one of the value (approve, cancel, deny, notify, memo, or skip). The stage will be updated according to the operation.
      * @type {string}
      * @memberof ActionIn
      */
@@ -106,6 +106,7 @@ export namespace ActionIn {
      */
     export enum OperationEnum {
         Approve = 'approve',
+        Cancel = 'cancel',
         Deny = 'deny',
         Notify = 'notify',
         Memo = 'memo',
@@ -144,7 +145,7 @@ export interface ActionOut {
      */
     processedBy?: string;
     /**
-     * Types of action, may be one of the value (approve, deny, notify, memo, or skip). The stage will be updated according to the operation.
+     * Types of action, may be one of the value (approve, cancel, deny, notify, memo, or skip). The stage will be updated according to the operation.
      * @type {string}
      * @memberof ActionOut
      */
@@ -168,6 +169,7 @@ export namespace ActionOut {
      */
     export enum OperationEnum {
         Approve = 'approve',
+        Cancel = 'cancel',
         Deny = 'deny',
         Notify = 'notify',
         Memo = 'memo',
@@ -292,13 +294,13 @@ export interface RequestOut {
      */
     id?: string;
     /**
-     * The state of stage or request. It may be one of values (pending, skipped, notified or finished)
+     * The state of stage or request. It may be one of values (canceled, pending, skipped, notified or finished)
      * @type {string}
      * @memberof RequestOut
      */
     state?: RequestOut.StateEnum;
     /**
-     * Final decision, may be one of the value (undecided, approved, or denied)
+     * Final decision, may be one of the value (undecided, approved, canceled or denied)
      * @type {string}
      * @memberof RequestOut
      */
@@ -375,6 +377,7 @@ export namespace RequestOut {
      * @enum {string}
      */
     export enum StateEnum {
+        Canceled = 'canceled',
         Pending = 'pending',
         Skipped = 'skipped',
         Notified = 'notified',
@@ -387,6 +390,7 @@ export namespace RequestOut {
     export enum DecisionEnum {
         Undecided = 'undecided',
         Approved = 'approved',
+        Canceled = 'canceled',
         Denied = 'denied'
     }
 }
@@ -442,13 +446,13 @@ export interface StageOut {
      */
     groupRef?: string;
     /**
-     * The state of stage or request. It may be one of values (pending, skipped, notified or finished)
+     * The state of stage or request. It may be one of values (canceled, pending, skipped, notified or finished)
      * @type {string}
      * @memberof StageOut
      */
     state?: StageOut.StateEnum;
     /**
-     * Final decision, may be one of the value (undecided, approved, or denied)
+     * Final decision, may be one of the value (undecided, approved, canceled or denied)
      * @type {string}
      * @memberof StageOut
      */
@@ -471,6 +475,7 @@ export namespace StageOut {
      * @enum {string}
      */
     export enum StateEnum {
+        Canceled = 'canceled',
         Pending = 'pending',
         Skipped = 'skipped',
         Notified = 'notified',
@@ -483,6 +488,7 @@ export namespace StageOut {
     export enum DecisionEnum {
         Undecided = 'undecided',
         Approved = 'approved',
+        Canceled = 'canceled',
         Denied = 'denied'
     }
 }

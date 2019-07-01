@@ -11,6 +11,7 @@
 ### Enumeration members
 
 * [Approve](actionout.operationenum.md#approve)
+* [Cancel](actionout.operationenum.md#cancel)
 * [Deny](actionout.operationenum.md#deny)
 * [Memo](actionout.operationenum.md#memo)
 * [Notify](actionout.operationenum.md#notify)
@@ -26,7 +27,16 @@
 
 **Approve**:  = "approve"
 
-*Defined in [api.ts:170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L170)*
+*Defined in [api.ts:171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L171)*
+
+___
+<a id="cancel"></a>
+
+###  Cancel
+
+**Cancel**:  = "cancel"
+
+*Defined in [api.ts:172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L172)*
 
 ___
 <a id="deny"></a>
@@ -35,7 +45,7 @@ ___
 
 **Deny**:  = "deny"
 
-*Defined in [api.ts:171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L171)*
+*Defined in [api.ts:173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L173)*
 
 ___
 <a id="memo"></a>
@@ -44,7 +54,7 @@ ___
 
 **Memo**:  = "memo"
 
-*Defined in [api.ts:173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L173)*
+*Defined in [api.ts:175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L175)*
 
 ___
 <a id="notify"></a>
@@ -53,7 +63,7 @@ ___
 
 **Notify**:  = "notify"
 
-*Defined in [api.ts:172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L172)*
+*Defined in [api.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L174)*
 
 ___
 <a id="skip"></a>
@@ -62,7 +72,7 @@ ___
 
 **Skip**:  = "skip"
 
-*Defined in [api.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L174)*
+*Defined in [api.ts:176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L176)*
 
 ___
 

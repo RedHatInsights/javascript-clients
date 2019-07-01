@@ -105,7 +105,7 @@ ___
 
 ▸ **listApprovalRequests**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ApprovalRequestsCollection](../interfaces/approvalrequestscollection.md)>
 
-*Defined in [api.ts:2043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2043)*
+*Defined in [api.ts:2057](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2057)*
 
 Gets a list of approval request associated with an order item. As the item is being approved one can check the status of the approvals.
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **listOrderItems**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[OrderItemsCollection](../interfaces/orderitemscollection.md)>
 
-*Defined in [api.ts:2057](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2057)*
+*Defined in [api.ts:2071](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2071)*
 
 Gets a list of order items.
 
@@ -162,7 +162,7 @@ ___
 
 ▸ **listProgressMessages**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ProgressMessagesCollection](../interfaces/progressmessagescollection.md)>
 
-*Defined in [api.ts:2072](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2072)*
+*Defined in [api.ts:2086](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2086)*
 
 Gets a list of progress messages associated with an order item. As the item is being processed the provider can update the progress messages.
 
@@ -191,7 +191,7 @@ ___
 
 ▸ **showOrderItem**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[OrderItem](../modules/orderitem.md)>
 
-*Defined in [api.ts:2084](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2084)*
+*Defined in [api.ts:2098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2098)*
 
 Gets a specific order item based on the portfolio item ID passed
 

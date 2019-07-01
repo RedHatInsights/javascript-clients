@@ -29,7 +29,7 @@
 
 **● createJsonSchema**: *`any`*
 
-*Defined in [api.ts:904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L904)*
+*Defined in [api.ts:918](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L918)*
 
 JSON schema for the object.
 
@@ -44,7 +44,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L892)*
+*Defined in [api.ts:906](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L906)*
 
 The service plan description.
 
@@ -59,7 +59,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L898)*
+*Defined in [api.ts:912](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L912)*
 
 The unique identifier for this service plan.
 
@@ -74,7 +74,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L886)*
+*Defined in [api.ts:900](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L900)*
 
 The name of the service plan.
 

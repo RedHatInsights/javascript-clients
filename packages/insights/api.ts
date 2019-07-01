@@ -17,7 +17,7 @@ import * as url from "url";
 import { Configuration } from "./configuration";
 import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 
-const BASE_PATH = "https://cloud.redhat.com/api/insights/v1/cloud.redhat.com/api/insights/v1".replace(/\/+$/, "");
+const BASE_PATH = "https://cloud.redhat.com/api/insights/v1".replace(/\/+$/, "");
 
 /**
  *
@@ -91,10 +91,10 @@ export interface Ack {
 export interface InlineResponse200 {
     /**
      *
-     * @type {any}
+     * @type {InlineResponse200Meta}
      * @memberof InlineResponse200
      */
-    meta?: any;
+    meta?: InlineResponse200Meta;
     /**
      *
      * @type {InlineResponse200Links}
@@ -117,20 +117,82 @@ export interface InlineResponse200 {
 export interface InlineResponse2001 {
     /**
      *
-     * @type {any}
+     * @type {string}
      * @memberof InlineResponse2001
      */
-    meta?: any;
+    hostname?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof InlineResponse2001
+     */
+    uuid?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof InlineResponse2001
+     */
+    lastSeen?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof InlineResponse2001
+     */
+    title?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof InlineResponse2001
+     */
+    solutionUrl?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof InlineResponse2001
+     */
+    totalRisk?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof InlineResponse2001
+     */
+    likelihood?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof InlineResponse2001
+     */
+    publishDate?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof InlineResponse2001
+     */
+    resultsUrl?: string;
+}
+
+/**
+ *
+ * @export
+ * @interface InlineResponse2002
+ */
+export interface InlineResponse2002 {
+    /**
+     *
+     * @type {InlineResponse200Meta}
+     * @memberof InlineResponse2002
+     */
+    meta?: InlineResponse200Meta;
     /**
      *
      * @type {InlineResponse200Links}
-     * @memberof InlineResponse2001
+     * @memberof InlineResponse2002
      */
     links?: InlineResponse200Links;
     /**
      *
      * @type {Array<RuleForAccount>}
-     * @memberof InlineResponse2001
+     * @memberof InlineResponse2002
      */
     data: Array<RuleForAccount>;
 }
@@ -165,6 +227,20 @@ export interface InlineResponse200Links {
      * @memberof InlineResponse200Links
      */
     last?: string | null;
+}
+
+/**
+ *
+ * @export
+ * @interface InlineResponse200Meta
+ */
+export interface InlineResponse200Meta {
+    /**
+     *
+     * @type {number}
+     * @memberof InlineResponse200Meta
+     */
+    count: number;
 }
 
 /**
@@ -881,6 +957,98 @@ export class AckApi extends BaseAPI {
 }
 
 /**
+ * ExportApi - axios parameter creator
+ * @export
+ */
+export const ExportApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Get each host and all rules currently affecting it.  This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store).  We also only present active, non-acked rules.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportHitsList(options: any = {}): RequestArgs {
+            const localVarPath = `/export/hits/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ExportApi - functional programming interface
+ * @export
+ */
+export const ExportApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Get each host and all rules currently affecting it.  This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store).  We also only present active, non-acked rules.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportHitsList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse2001>> {
+            const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportHitsList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * ExportApi - factory interface
+ * @export
+ */
+export const ExportApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Get each host and all rules currently affecting it.  This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store).  We also only present active, non-acked rules.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportHitsList(options?: any) {
+            return ExportApiFp(configuration).exportHitsList(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * ExportApi - object-oriented interface
+ * @export
+ * @class ExportApi
+ * @extends {BaseAPI}
+ */
+export class ExportApi extends BaseAPI {
+    /**
+     * Get each host and all rules currently affecting it.  This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store).  We also only present active, non-acked rules.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportApi
+     */
+    public exportHitsList(options?: any) {
+        return ExportApiFp(this.configuration).exportHitsList(options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
  * RuleApi - axios parameter creator
  * @export
  */
@@ -925,15 +1093,15 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
             }
 
             if (category) {
-                localVarQueryParameter['category'] = category;
+                localVarQueryParameter['category'] = category.join(COLLECTION_FORMATS["csv"]);
             }
 
             if (hasTag) {
-                localVarQueryParameter['has_tag'] = hasTag;
+                localVarQueryParameter['has_tag'] = hasTag.join(COLLECTION_FORMATS["csv"]);
             }
 
             if (impact) {
-                localVarQueryParameter['impact'] = impact;
+                localVarQueryParameter['impact'] = impact.join(COLLECTION_FORMATS["csv"]);
             }
 
             if (impacting !== undefined) {
@@ -945,7 +1113,7 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
             }
 
             if (likelihood) {
-                localVarQueryParameter['likelihood'] = likelihood;
+                localVarQueryParameter['likelihood'] = likelihood.join(COLLECTION_FORMATS["csv"]);
             }
 
             if (reportsShown !== undefined) {
@@ -953,7 +1121,7 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
             }
 
             if (resRisk) {
-                localVarQueryParameter['res_risk'] = resRisk;
+                localVarQueryParameter['res_risk'] = resRisk.join(COLLECTION_FORMATS["csv"]);
             }
 
             if (sort !== undefined) {
@@ -969,7 +1137,7 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
             }
 
             if (totalRisk) {
-                localVarQueryParameter['total_risk'] = totalRisk;
+                localVarQueryParameter['total_risk'] = totalRisk.join(COLLECTION_FORMATS["csv"]);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1074,7 +1242,7 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2001> {
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002> {
             const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleList(limit, offset, category, hasTag, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1246,6 +1414,38 @@ export const RulecategoryApiAxiosParamCreator = function (configuration?: Config
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Rules are divided into categories, the usual being Availability, Stability, Security and Performance
+         * @param {number} id A unique integer value identifying this rule category.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        rulecategoryRead(id: number, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling rulecategoryRead.');
+            }
+            const localVarPath = `/rulecategory/{id}/`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -1262,6 +1462,19 @@ export const RulecategoryApiFp = function(configuration?: Configuration) {
          */
         rulecategoryList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RuleCategory>> {
             const localVarAxiosArgs = RulecategoryApiAxiosParamCreator(configuration).rulecategoryList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Rules are divided into categories, the usual being Availability, Stability, Security and Performance
+         * @param {number} id A unique integer value identifying this rule category.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        rulecategoryRead(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleCategory> {
+            const localVarAxiosArgs = RulecategoryApiAxiosParamCreator(configuration).rulecategoryRead(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1284,6 +1497,15 @@ export const RulecategoryApiFactory = function (configuration?: Configuration, b
         rulecategoryList(options?: any) {
             return RulecategoryApiFp(configuration).rulecategoryList(options)(axios, basePath);
         },
+        /**
+         * Rules are divided into categories, the usual being Availability, Stability, Security and Performance
+         * @param {number} id A unique integer value identifying this rule category.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        rulecategoryRead(id: number, options?: any) {
+            return RulecategoryApiFp(configuration).rulecategoryRead(id, options)(axios, basePath);
+        },
     };
 };
 
@@ -1304,6 +1526,17 @@ export class RulecategoryApi extends BaseAPI {
         return RulecategoryApiFp(this.configuration).rulecategoryList(options)(this.axios, this.basePath);
     }
 
+    /**
+     * Rules are divided into categories, the usual being Availability, Stability, Security and Performance
+     * @param {number} id A unique integer value identifying this rule category.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RulecategoryApi
+     */
+    public rulecategoryRead(id: number, options?: any) {
+        return RulecategoryApiFp(this.configuration).rulecategoryRead(id, options)(this.axios, this.basePath);
+    }
+
 }
 
 /**
@@ -1312,6 +1545,32 @@ export class RulecategoryApi extends BaseAPI {
  */
 export const StatsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * Provide a simple list of URLs contained here.  Copied sort-of from the APIRootView's `get` method.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsList(options: any = {}): RequestArgs {
+            const localVarPath = `/stats/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * View the statistics for this account.
          * @param {*} [options] Override http request option.
@@ -1400,6 +1659,18 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
 export const StatsApiFp = function(configuration?: Configuration) {
     return {
         /**
+         * Provide a simple list of URLs contained here.  Copied sort-of from the APIRootView's `get` method.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * View the statistics for this account.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1445,6 +1716,14 @@ export const StatsApiFp = function(configuration?: Configuration) {
 export const StatsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
+         * Provide a simple list of URLs contained here.  Copied sort-of from the APIRootView's `get` method.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsList(options?: any) {
+            return StatsApiFp(configuration).statsList(options)(axios, basePath);
+        },
+        /**
          * View the statistics for this account.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1478,6 +1757,16 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
  * @extends {BaseAPI}
  */
 export class StatsApi extends BaseAPI {
+    /**
+     * Provide a simple list of URLs contained here.  Copied sort-of from the APIRootView's `get` method.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StatsApi
+     */
+    public statsList(options?: any) {
+        return StatsApiFp(this.configuration).statsList(options)(this.axios, this.basePath);
+    }
+
     /**
      * View the statistics for this account.
      * @param {*} [options] Override http request option.

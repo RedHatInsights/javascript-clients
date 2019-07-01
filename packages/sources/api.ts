@@ -452,6 +452,26 @@ export interface EndpointsCollection {
 /**
  *
  * @export
+ * @interface GraphQLResponse
+ */
+export interface GraphQLResponse {
+    /**
+     * Results from the GraphQL query
+     * @type {any}
+     * @memberof GraphQLResponse
+     */
+    data?: any;
+    /**
+     * Errors resulting from the GraphQL query
+     * @type {Array<any>}
+     * @memberof GraphQLResponse
+     */
+    errors?: Array<any>;
+}
+
+/**
+ *
+ * @export
  * @interface InlineObject
  */
 export interface InlineObject {
@@ -473,26 +493,6 @@ export interface InlineObject {
      * @memberof InlineObject
      */
     variables?: any;
-}
-
-/**
- *
- * @export
- * @interface InlineResponse200
- */
-export interface InlineResponse200 {
-    /**
-     * Results from the GraphQL query
-     * @type {any}
-     * @memberof InlineResponse200
-     */
-    data?: any;
-    /**
-     * Errors resulting from the GraphQL query
-     * @type {Array<any>}
-     * @memberof InlineResponse200
-     */
-    errors?: Array<any>;
 }
 
 /**
@@ -2374,7 +2374,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphQL(inlineObject: InlineObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
+        postGraphQL(inlineObject: InlineObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphQLResponse> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).postGraphQL(inlineObject, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})

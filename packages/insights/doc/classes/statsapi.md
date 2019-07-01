@@ -30,6 +30,7 @@ StatsApi - object-oriented interface
 
 ### Methods
 
+* [statsList](statsapi.md#statslist)
 * [statsReports](statsapi.md#statsreports)
 * [statsRules](statsapi.md#statsrules)
 * [statsSystems](statsapi.md#statssystems)
@@ -98,13 +99,36 @@ ___
 
 ## Methods
 
+<a id="statslist"></a>
+
+###  statsList
+
+▸ **statsList**(options?: *`any`*): `AxiosPromise`<`Response`>
+
+*Defined in [api.ts:1766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1766)*
+
+Provide a simple list of URLs contained here. Copied sort-of from the APIRootView's `get` method.
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: StatsApi
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<`Response`>
+
+___
 <a id="statsreports"></a>
 
 ###  statsReports
 
 ▸ **statsReports**(options?: *`any`*): `AxiosPromise`<[RulesStats](../interfaces/rulesstats.md)>
 
-*Defined in [api.ts:1487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1487)*
+*Defined in [api.ts:1776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1776)*
 
 View the statistics for this account.
 
@@ -127,7 +151,7 @@ ___
 
 ▸ **statsRules**(options?: *`any`*): `AxiosPromise`<[RulesStats](../interfaces/rulesstats.md)>
 
-*Defined in [api.ts:1497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1497)*
+*Defined in [api.ts:1786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1786)*
 
 View the statistics for this account.
 
@@ -150,7 +174,7 @@ ___
 
 ▸ **statsSystems**(options?: *`any`*): `AxiosPromise`<[SystemsStats](../interfaces/systemsstats.md)>
 
-*Defined in [api.ts:1507](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1507)*
+*Defined in [api.ts:1796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1796)*
 
 View the statistics for this account.
 

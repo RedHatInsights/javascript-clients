@@ -105,7 +105,7 @@ ___
 
 ▸ **ackCreate**(data: *[RuleId](../interfaces/ruleid.md)*, options?: *`any`*): `AxiosPromise`<[Ack](../interfaces/ack.md)>
 
-*Defined in [api.ts:842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L842)*
+*Defined in [api.ts:918](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L918)*
 
 Add an acknowledgement for a rule, by rule ID, and return the new ack. If there's already an acknowledgement of this rule by this account, then return that.
 
@@ -129,7 +129,7 @@ ___
 
 ▸ **ackDelete**(ruleId: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:853](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L853)*
+*Defined in [api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L929)*
 
 Delete an acknowledgement for a rule, by its rule ID.
 
@@ -153,7 +153,7 @@ ___
 
 ▸ **ackList**(limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
 
-*Defined in [api.ts:865](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L865)*
+*Defined in [api.ts:941](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L941)*
 
 List acks from this account where the rule is active
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **ackRead**(ruleId: *`string`*, options?: *`any`*): `AxiosPromise`<[Ack](../interfaces/ack.md)>
 
-*Defined in [api.ts:877](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L877)*
+*Defined in [api.ts:953](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L953)*
 
 This view handles listing, retrieving, creating and deleting acks. Acks are created and deleted by Insights rule ID, not by their own ack ID.
 
