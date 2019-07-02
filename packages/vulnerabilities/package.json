@@ -18,14 +18,19 @@
   },
   "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/vulnerabilities#readme",
   "scripts": {
-    "doc": "typedoc --theme markdown --out doc --module commonjs --mode file --gitRevision master",
+    "doc:production": "typedoc --theme markdown --out doc --module commonjs --mode file --exclude \"**/git-api/*.ts\" --gitRevision master",
+    "doc:git-api": "typedoc --theme markdown --out git-api/doc --module commonjs --mode file --gitRevision master ./git-api",
+    "doc": "npm run doc:git-api && npm run doc:production",
     "build": "tsc",
-    "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
-    "generate:prod": "SPEC=$(node preProcess.js 'https://cloud.redhat.com/api/vulnerability/v1/openapi.json') npm run generate",
+    "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o $OUTPUT --skip-validate-spec --enable-post-process-file",
+    "generate:production": "OUTPUT=. SPEC=$(node preProcess.js 'https://cloud.redhat.com/api/vulnerability/v1/openapi.json') npm run generate",
+    "generate:git-api": "OUTPUT=git-api SPEC=$(node preProcess.js 'https://raw.githubusercontent.com/RedHatInsights/vulnerability-engine/master/manager.spec.yaml') npm run generate",
+    "generate:prod": "npm run generate:git-api && npm run generate:production && ./postProcess.sh",
     "generate:single": "npm run generate:prod && npm run doc"
   },
   "dependencies": {
-    "axios": "^0.19.0"
+    "axios": "^0.19.0",
+    "yaml": "^1.6.0"
   },
   "devDependencies": {
     "typedoc": "^0.14.2",
