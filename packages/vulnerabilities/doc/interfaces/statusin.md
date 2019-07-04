@@ -28,7 +28,7 @@
 
 **● cve**: *`string`*
 
-*Defined in [api.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L579)*
+*Defined in [api.ts:671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L671)*
 
 CVE name.
 
@@ -43,7 +43,7 @@ ___
 
 **● inventoryId**: *`string`*
 
-*Defined in [api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L585)*
+*Defined in [api.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L677)*
 
 Host ID.
 
@@ -58,7 +58,7 @@ ___
 
 **● statusId**: *`number`*
 
-*Defined in [api.ts:591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L591)*
+*Defined in [api.ts:683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L683)*
 
 Status ID to be set, obtained by GET method.
 
