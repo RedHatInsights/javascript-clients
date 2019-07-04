@@ -76,6 +76,7 @@ API documentation
 * [BaseAPI](classes/baseapi.md)
 * [Configuration](classes/configuration.md)
 * [DefaultApi](classes/defaultapi.md)
+* [InternalApi](classes/internalapi.md)
 * [RequiredError](classes/requirederror.md)
 
 ### Interfaces
@@ -92,13 +93,17 @@ API documentation
 * [MetaAffectedSystems](interfaces/metaaffectedsystems.md)
 * [MetaCves](interfaces/metacves.md)
 * [MetaSystems](interfaces/metasystems.md)
+* [MetaVulnerabilitiesOut](interfaces/metavulnerabilitiesout.md)
 * [RequestArgs](interfaces/requestargs.md)
 * [StatusIn](interfaces/statusin.md)
 * [StatusListOut](interfaces/statuslistout.md)
 * [StatusListOutData](interfaces/statuslistoutdata.md)
 * [StatusListOutMeta](interfaces/statuslistoutmeta.md)
 * [SystemCvesOut](interfaces/systemcvesout.md)
+* [SystemDetailsOut](interfaces/systemdetailsout.md)
+* [SystemDetailsOutData](interfaces/systemdetailsoutdata.md)
 * [SystemListOut](interfaces/systemlistout.md)
+* [VersionOut](interfaces/versionout.md)
 * [VulnerabilitiesOut](interfaces/vulnerabilitiesout.md)
 
 ### Variables
@@ -110,6 +115,9 @@ API documentation
 * [DefaultApiAxiosParamCreator](#defaultapiaxiosparamcreator)
 * [DefaultApiFactory](#defaultapifactory)
 * [DefaultApiFp](#defaultapifp)
+* [InternalApiAxiosParamCreator](#internalapiaxiosparamcreator)
+* [InternalApiFactory](#internalapifactory)
+* [InternalApiFp](#internalapifp)
 
 ### Object literals
 
@@ -137,7 +145,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:731](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L731)*
+*Defined in [api.ts:883](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L883)*
 
 DefaultApi - axios parameter creator
 
@@ -156,7 +164,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1521)*
+*Defined in [api.ts:1795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1795)*
 
 DefaultApi - factory interface
 
@@ -177,9 +185,68 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1347)*
+*Defined in [api.ts:1593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1593)*
 
 DefaultApi - functional programming interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
+<a id="internalapiaxiosparamcreator"></a>
+
+### `<Const>` InternalApiAxiosParamCreator
+
+▸ **InternalApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:2133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2133)*
+
+InternalApi - axios parameter creator
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
+<a id="internalapifactory"></a>
+
+### `<Const>` InternalApiFactory
+
+▸ **InternalApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
+
+*Defined in [api.ts:2402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2402)*
+
+InternalApi - factory interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+| `Optional` basePath | `string` |
+| `Optional` axios | `AxiosInstance` |
+
+**Returns:** `object`
+
+___
+<a id="internalapifp"></a>
+
+### `<Const>` InternalApiFp
+
+▸ **InternalApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:2336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2336)*
+
+InternalApi - functional programming interface
 
 **Parameters:**
 

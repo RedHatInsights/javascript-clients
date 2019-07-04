@@ -12,6 +12,8 @@
 
 ↳  [DefaultApi](defaultapi.md)
 
+↳  [InternalApi](internalapi.md)
+
 ## Index
 
 ### Constructors

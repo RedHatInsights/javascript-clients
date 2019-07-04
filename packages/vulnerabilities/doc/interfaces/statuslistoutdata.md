@@ -27,7 +27,7 @@
 
 **● id**: *`number`*
 
-*Defined in [api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L625)*
+*Defined in [api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L717)*
 
 Internal status\_id.
 
@@ -42,7 +42,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L631)*
+*Defined in [api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L723)*
 
 Represenation of internal status\_id.
 
