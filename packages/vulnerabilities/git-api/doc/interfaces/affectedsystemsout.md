@@ -28,7 +28,7 @@
 
 **● data**: *`Object`*
 
-*Defined in api.ts:83*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L83)*
 
 *__type__*: {Object}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[Links](links.md)*
 
-*Defined in api.ts:89*
+*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L89)*
 
 *__type__*: {Links}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[MetaAffectedSystems](metaaffectedsystems.md)*
 
-*Defined in api.ts:95*
+*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L95)*
 
 *__type__*: {MetaAffectedSystems}
 

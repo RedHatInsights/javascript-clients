@@ -40,7 +40,7 @@
 
 **● archivedAt**: *`Date`*
 
-*Defined in [api.ts:2257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2257)*
+*Defined in [api.ts:2289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2289)*
 
 *__type__*: {Date}
 
@@ -53,7 +53,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:2263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2263)*
+*Defined in [api.ts:2295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2295)*
 
 *__type__*: {Date}
 
@@ -66,7 +66,7 @@ ___
 
 **● extra**: *`string`*
 
-*Defined in [api.ts:2269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2269)*
+*Defined in [api.ts:2301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2301)*
 
 *__type__*: {string}
 
@@ -79,7 +79,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:2275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2275)*
+*Defined in [api.ts:2307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2307)*
 
 ID of the resource
 
@@ -94,7 +94,7 @@ ___
 
 **● lastSeenAt**: *`Date`*
 
-*Defined in [api.ts:2281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2281)*
+*Defined in [api.ts:2313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2313)*
 
 *__type__*: {Date}
 
@@ -107,7 +107,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:2287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2287)*
+*Defined in [api.ts:2319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2319)*
 
 *__type__*: {string}
 
@@ -120,7 +120,7 @@ ___
 
 **● size**: *`number`*
 
-*Defined in [api.ts:2293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2293)*
+*Defined in [api.ts:2325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2325)*
 
 Size of the volume in bytes
 
@@ -135,7 +135,7 @@ ___
 
 **● sourceCreatedAt**: *`Date`*
 
-*Defined in [api.ts:2299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2299)*
+*Defined in [api.ts:2331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2331)*
 
 *__type__*: {Date}
 
@@ -148,7 +148,7 @@ ___
 
 **● sourceDeletedAt**: *`Date`*
 
-*Defined in [api.ts:2305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2305)*
+*Defined in [api.ts:2337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2337)*
 
 *__type__*: {Date}
 
@@ -161,7 +161,7 @@ ___
 
 **● sourceId**: *`string`*
 
-*Defined in [api.ts:2311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2311)*
+*Defined in [api.ts:2343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2343)*
 
 ID of the resource
 
@@ -176,7 +176,7 @@ ___
 
 **● sourceRef**: *`string`*
 
-*Defined in [api.ts:2317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2317)*
+*Defined in [api.ts:2349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2349)*
 
 *__type__*: {string}
 
@@ -189,7 +189,7 @@ ___
 
 **● sourceRegionId**: *`string`*
 
-*Defined in [api.ts:2323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2323)*
+*Defined in [api.ts:2355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2355)*
 
 ID of the resource
 
@@ -204,7 +204,7 @@ ___
 
 **● state**: *`string`*
 
-*Defined in [api.ts:2329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2329)*
+*Defined in [api.ts:2361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2361)*
 
 *__type__*: {string}
 
@@ -217,7 +217,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:2335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2335)*
+*Defined in [api.ts:2367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2367)*
 
 *__type__*: {Date}
 
@@ -230,7 +230,7 @@ ___
 
 **● volumeTypeId**: *`string`*
 
-*Defined in [api.ts:2341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2341)*
+*Defined in [api.ts:2373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2373)*
 
 ID of the resource
 

@@ -93,7 +93,7 @@ ___
 
 *Defined in [api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L121)*
 
-The state of the approval request (approved, denied, undecided)
+The state of the approval request (approved, denied, undecided, canceled)
 
 *__type__*: {string}
 

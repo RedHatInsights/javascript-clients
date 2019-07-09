@@ -347,6 +347,12 @@ export interface Meta {
      * @memberof Meta
      */
     totalItems: number;
+    /**
+     * Format of the output data, either JSON (default) or CSV.
+     * @type {string}
+     * @memberof Meta
+     */
+    dataFormat: string;
 }
 
 /**
@@ -403,6 +409,12 @@ export interface MetaAffectedSystems {
      * @memberof MetaAffectedSystems
      */
     totalItems: number;
+    /**
+     * Format of the output data, either JSON (default) or CSV.
+     * @type {string}
+     * @memberof MetaAffectedSystems
+     */
+    dataFormat: string;
     /**
      * Filer based on CVE status ID.
      * @type {string}
@@ -465,6 +477,12 @@ export interface MetaCves {
      * @memberof MetaCves
      */
     totalItems: number;
+    /**
+     * Format of the output data, either JSON (default) or CSV.
+     * @type {string}
+     * @memberof MetaCves
+     */
+    dataFormat: string;
     /**
      * Filter based on cvss score, starting from the value.
      * @type {number}
@@ -558,11 +576,115 @@ export interface MetaSystems {
      */
     totalItems: number;
     /**
+     * Format of the output data, either JSON (default) or CSV.
+     * @type {string}
+     * @memberof MetaSystems
+     */
+    dataFormat: string;
+    /**
      * Whether the filter to show opted out systems is active or not. If not set, defaults to hiding opted out systems.
      * @type {boolean}
      * @memberof MetaSystems
      */
     optOut: boolean | null;
+}
+
+/**
+ *
+ * @export
+ * @interface MetaVulnerabilitiesOut
+ */
+export interface MetaVulnerabilitiesOut {
+    /**
+     * Full text filter
+     * @type {string}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    filter: string | null;
+    /**
+     * Maximum number of paginated results.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    limit: number;
+    /**
+     * First record of paginated response.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    offset: number;
+    /**
+     * Page number of paginated response.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    page: number;
+    /**
+     * Number of records per page of paginated response.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    pageSize: number;
+    /**
+     * Total number of pages of paginated response.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    pages: number;
+    /**
+     * Sorting filter.
+     * @type {string}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    sort: string | null;
+    /**
+     * Total number of records.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    totalItems: number;
+    /**
+     * Format of the output data, either JSON (default) or CSV.
+     * @type {string}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    dataFormat: string;
+    /**
+     * Filter based on cvss score, starting from the value.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    cvssFrom: number | null;
+    /**
+     * Filter based on cvss score, up to the value.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    cvssTo: number | null;
+    /**
+     * Show all known vulnerabilities, regardless of number of affected systems.
+     * @type {boolean}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    showAll: boolean | null;
+    /**
+     * Filter CVEs based on their published date, starting from the date.
+     * @type {string}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    publicFrom: string | null;
+    /**
+     * Filter CVEs based on their published date, up to the date.
+     * @type {string}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    publicTo: string | null;
+    /**
+     * Filter based on severity IDs.
+     * @type {string}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    severity: string | null;
 }
 
 /**
@@ -777,10 +899,10 @@ export interface VulnerabilitiesOut {
     links: Links;
     /**
      *
-     * @type {Meta}
+     * @type {MetaVulnerabilitiesOut}
      * @memberof VulnerabilitiesOut
      */
-    meta: Meta;
+    meta: MetaVulnerabilitiesOut;
 }
 
 
@@ -790,6 +912,53 @@ export interface VulnerabilitiesOut {
  */
 export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * Deletes system from database.
+         * @summary Delete system.
+         * @param {string} inventoryId Inventory ID.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteSystem(inventoryId: string, options: any = {}): RequestArgs {
+            // verify required parameter 'inventoryId' is not null or undefined
+            if (inventoryId === null || inventoryId === undefined) {
+                throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling deleteSystem.');
+            }
+            const localVarPath = `/v1/systems/{inventory_id}`
+                .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'DELETE' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("x-rh-identity")
+					: configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * Report of affected systems for a given CVE.
          * @summary Affected systems for a given CVE.
@@ -801,7 +970,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
          * @param {string} [statusId] Filer based on CVE status ID.
-         * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -938,7 +1107,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
          * @param {string} [severity] Filter based on severity IDs.
-         * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1046,7 +1215,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
          * @param {string} [severity] Filter based on severity IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
-         * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1239,7 +1408,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [optOut] If set to true, shows systems which have been opted out from vulnerability application. If not set defaults to false.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1454,6 +1623,20 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 export const DefaultApiFp = function(configuration?: Configuration) {
     return {
         /**
+         * Deletes system from database.
+         * @summary Delete system.
+         * @param {string} inventoryId Inventory ID.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteSystem(inventoryId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteSystem(inventoryId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Report of affected systems for a given CVE.
          * @summary Affected systems for a given CVE.
          * @param {string} cveId CVE id.
@@ -1464,7 +1647,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
          * @param {string} [statusId] Filer based on CVE status ID.
-         * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1503,7 +1686,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
          * @param {string} [severity] Filter based on severity IDs.
-         * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1531,7 +1714,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
          * @param {string} [severity] Filter based on severity IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
-         * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1578,7 +1761,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [optOut] If set to true, shows systems which have been opted out from vulnerability application. If not set defaults to false.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1642,6 +1825,16 @@ export const DefaultApiFp = function(configuration?: Configuration) {
 export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
+         * Deletes system from database.
+         * @summary Delete system.
+         * @param {string} inventoryId Inventory ID.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteSystem(inventoryId: string, options?: any) {
+            return DefaultApiFp(configuration).deleteSystem(inventoryId, options)(axios, basePath);
+        },
+        /**
          * Report of affected systems for a given CVE.
          * @summary Affected systems for a given CVE.
          * @param {string} cveId CVE id.
@@ -1652,7 +1845,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
          * @param {string} [statusId] Filer based on CVE status ID.
-         * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1683,7 +1876,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
          * @param {string} [severity] Filter based on severity IDs.
-         * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1707,7 +1900,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
          * @param {string} [severity] Filter based on severity IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
-         * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1742,7 +1935,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [optOut] If set to true, shows systems which have been opted out from vulnerability application. If not set defaults to false.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1791,6 +1984,18 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
  */
 export class DefaultApi extends BaseAPI {
     /**
+     * Deletes system from database.
+     * @summary Delete system.
+     * @param {string} inventoryId Inventory ID.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public deleteSystem(inventoryId: string, options?: any) {
+        return DefaultApiFp(this.configuration).deleteSystem(inventoryId, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Report of affected systems for a given CVE.
      * @summary Affected systems for a given CVE.
      * @param {string} cveId CVE id.
@@ -1801,7 +2006,7 @@ export class DefaultApi extends BaseAPI {
      * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {string} [sort] Sorting used for response.
      * @param {string} [statusId] Filer based on CVE status ID.
-     * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+     * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
@@ -1836,7 +2041,7 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
      * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
      * @param {string} [severity] Filter based on severity IDs.
-     * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+     * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1862,7 +2067,7 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
      * @param {string} [severity] Filter based on severity IDs.
      * @param {string} [statusId] Filer based on CVE status ID.
-     * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+     * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
@@ -1903,7 +2108,7 @@ export class DefaultApi extends BaseAPI {
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {string} [sort] Sorting used for response.
-     * @param {string} [dataFormat] Format of the output data, either JSON (defualt) or CSV.
+     * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {boolean} [optOut] If set to true, shows systems which have been opted out from vulnerability application. If not set defaults to false.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

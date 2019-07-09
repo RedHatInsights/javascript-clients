@@ -2086,6 +2086,38 @@ export interface TasksCollection {
 /**
  *
  * @export
+ * @interface Tenant
+ */
+export interface Tenant {
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Tenant
+     */
+    id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Tenant
+     */
+    name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Tenant
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Tenant
+     */
+    externalTenant?: string;
+}
+
+/**
+ *
+ * @export
  * @interface Vm
  */
 export interface Vm {

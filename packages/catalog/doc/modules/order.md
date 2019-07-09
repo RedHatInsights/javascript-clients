@@ -32,7 +32,7 @@
 
 **● completedAt**: *`Date`*
 
-*Defined in [api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L339)*
+*Defined in [api.ts:340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L340)*
 
 *__type__*: {Date}
 
@@ -45,7 +45,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L327)*
+*Defined in [api.ts:328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L328)*
 
 *__type__*: {Date}
 
@@ -58,7 +58,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L309)*
+*Defined in [api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L310)*
 
 *__type__*: {string}
 
@@ -71,7 +71,7 @@ ___
 
 **● orderedAt**: *`Date`*
 
-*Defined in [api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L333)*
+*Defined in [api.ts:334](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L334)*
 
 *__type__*: {Date}
 
@@ -84,7 +84,7 @@ ___
 
 **● owner**: *`string`*
 
-*Defined in [api.ts:345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L345)*
+*Defined in [api.ts:346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L346)*
 
 *__type__*: {string}
 
@@ -97,7 +97,7 @@ ___
 
 **● state**: *[StateEnum](../enums/order.stateenum.md)*
 
-*Defined in [api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L321)*
+*Defined in [api.ts:322](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L322)*
 
 Current State of the order.
 
@@ -112,7 +112,7 @@ ___
 
 **● userId**: *`string`*
 
-*Defined in [api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L315)*
+*Defined in [api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L316)*
 
 *__type__*: {string}
 

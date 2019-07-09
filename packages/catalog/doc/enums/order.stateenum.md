@@ -11,6 +11,7 @@
 ### Enumeration members
 
 * [ApprovalPending](order.stateenum.md#approvalpending)
+* [Canceled](order.stateenum.md#canceled)
 * [Completed](order.stateenum.md#completed)
 * [Created](order.stateenum.md#created)
 * [Failed](order.stateenum.md#failed)
@@ -26,7 +27,16 @@
 
 **ApprovalPending**:  = "Approval Pending"
 
-*Defined in [api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L359)*
+*Defined in [api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L360)*
+
+___
+<a id="canceled"></a>
+
+###  Canceled
+
+**Canceled**:  = "Canceled"
+
+*Defined in [api.ts:364](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L364)*
 
 ___
 <a id="completed"></a>
@@ -35,7 +45,7 @@ ___
 
 **Completed**:  = "Completed"
 
-*Defined in [api.ts:362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L362)*
+*Defined in [api.ts:363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L363)*
 
 ___
 <a id="created"></a>
@@ -44,7 +54,7 @@ ___
 
 **Created**:  = "Created"
 
-*Defined in [api.ts:358](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L358)*
+*Defined in [api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L359)*
 
 ___
 <a id="failed"></a>
@@ -53,7 +63,7 @@ ___
 
 **Failed**:  = "Failed"
 
-*Defined in [api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L361)*
+*Defined in [api.ts:362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L362)*
 
 ___
 <a id="ordered"></a>
@@ -62,7 +72,7 @@ ___
 
 **Ordered**:  = "Ordered"
 
-*Defined in [api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L360)*
+*Defined in [api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L361)*
 
 ___
 

@@ -114,7 +114,7 @@ export interface ApprovalRequest {
      */
     reason?: string;
     /**
-     * The state of the approval request (approved, denied, undecided)
+     * The state of the approval request (approved, denied, undecided, canceled)
      * @type {string}
      * @memberof ApprovalRequest
      */
@@ -139,7 +139,8 @@ export namespace ApprovalRequest {
     export enum StateEnum {
         Undecided = 'undecided',
         Approved = 'approved',
-        Denied = 'denied'
+        Denied = 'denied',
+        Canceled = 'canceled'
     }
 }
 
@@ -359,7 +360,8 @@ export namespace Order {
         ApprovalPending = 'Approval Pending',
         Ordered = 'Ordered',
         Failed = 'Failed',
-        Completed = 'Completed'
+        Completed = 'Completed',
+        Canceled = 'Canceled'
     }
 }
 
@@ -951,7 +953,7 @@ export interface ShareInfo {
  */
 export interface SharePolicy {
     /**
-     * The permissions to apply for this share.
+     * The permissions to apply for this share. Each permission comprises of 3 parts catalog:portfolios:verb separated by :. The valid verbs are read, write and order
      * @type {Array<string>}
      * @memberof SharePolicy
      */
@@ -1220,6 +1222,45 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
+         * Returns an updated order.
+         * @summary Cancels a given order
+         * @param {string} orderId The Order ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        cancelOrder(orderId: string, options: any = {}): RequestArgs {
+            // verify required parameter 'orderId' is not null or undefined
+            if (orderId === null || orderId === undefined) {
+                throw new RequiredError('orderId','Required parameter orderId was null or undefined when calling cancelOrder.');
+            }
+            const localVarPath = `/orders/{order_id}/cancel`
+                .replace(`{${"order_id"}}`, encodeURIComponent(String(orderId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Creates a new order.
          * @summary Create a new order
          * @param {*} [options] Override http request option.
@@ -1463,6 +1504,20 @@ export const OrderApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns an updated order.
+         * @summary Cancels a given order
+         * @param {string} orderId The Order ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        cancelOrder(orderId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Order> {
+            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).cancelOrder(orderId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Creates a new order.
          * @summary Create a new order
          * @param {*} [options] Override http request option.
@@ -1558,6 +1613,16 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
             return OrderApiFp(configuration).addToOrder(orderId, orderItem, options)(axios, basePath);
         },
         /**
+         * Returns an updated order.
+         * @summary Cancels a given order
+         * @param {string} orderId The Order ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        cancelOrder(orderId: string, options?: any) {
+            return OrderApiFp(configuration).cancelOrder(orderId, options)(axios, basePath);
+        },
+        /**
          * Creates a new order.
          * @summary Create a new order
          * @param {*} [options] Override http request option.
@@ -1633,6 +1698,18 @@ export class OrderApi extends BaseAPI {
      */
     public addToOrder(orderId: string, orderItem: OrderItem, options?: any) {
         return OrderApiFp(this.configuration).addToOrder(orderId, orderItem, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an updated order.
+     * @summary Cancels a given order
+     * @param {string} orderId The Order ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OrderApi
+     */
+    public cancelOrder(orderId: string, options?: any) {
+        return OrderApiFp(this.configuration).cancelOrder(orderId, options)(this.axios, this.basePath);
     }
 
     /**
