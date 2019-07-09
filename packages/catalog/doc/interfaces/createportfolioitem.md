@@ -26,7 +26,7 @@
 
 **● serviceOfferingRef**: *`string`*
 
-*Defined in [api.ts:249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L249)*
+*Defined in [api.ts:250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L250)*
 
 The service offering ref should be retrieved from a call to the Topology Service.
 

@@ -11,6 +11,7 @@
 ### Enumeration members
 
 * [Approved](approvalrequest.stateenum.md#approved)
+* [Canceled](approvalrequest.stateenum.md#canceled)
 * [Denied](approvalrequest.stateenum.md#denied)
 * [Undecided](approvalrequest.stateenum.md#undecided)
 
@@ -25,6 +26,15 @@
 **Approved**:  = "approved"
 
 *Defined in [api.ts:141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L141)*
+
+___
+<a id="canceled"></a>
+
+###  Canceled
+
+**Canceled**:  = "canceled"
+
+*Defined in [api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L143)*
 
 ___
 <a id="denied"></a>

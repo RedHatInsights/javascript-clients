@@ -14,6 +14,7 @@
 
 ### Properties
 
+* [dataFormat](metaaffectedsystems.md#dataformat)
 * [filter](metaaffectedsystems.md#filter)
 * [limit](metaaffectedsystems.md#limit)
 * [offset](metaaffectedsystems.md#offset)
@@ -28,13 +29,28 @@
 
 ## Properties
 
+<a id="dataformat"></a>
+
+###  dataFormat
+
+**● dataFormat**: *`string`*
+
+*Defined in [api.ts:417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L417)*
+
+Format of the output data, either JSON (default) or CSV.
+
+*__type__*: {string}
+
+*__memberof__*: MetaAffectedSystems
+
+___
 <a id="filter"></a>
 
 ###  filter
 
 **● filter**: *`string` \| `null`*
 
-*Defined in api.ts:363*
+*Defined in [api.ts:369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L369)*
 
 Full text filter
 
@@ -49,7 +65,7 @@ ___
 
 **● limit**: *`number`*
 
-*Defined in api.ts:369*
+*Defined in [api.ts:375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L375)*
 
 Maximum number of paginated results.
 
@@ -64,7 +80,7 @@ ___
 
 **● offset**: *`number`*
 
-*Defined in api.ts:375*
+*Defined in [api.ts:381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L381)*
 
 First record of paginated response.
 
@@ -79,7 +95,7 @@ ___
 
 **● page**: *`number`*
 
-*Defined in api.ts:381*
+*Defined in [api.ts:387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L387)*
 
 Page number of paginated response.
 
@@ -94,7 +110,7 @@ ___
 
 **● pageSize**: *`number`*
 
-*Defined in api.ts:387*
+*Defined in [api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L393)*
 
 Number of records per page of paginated response.
 
@@ -109,7 +125,7 @@ ___
 
 **● pages**: *`number`*
 
-*Defined in api.ts:393*
+*Defined in [api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L399)*
 
 Total number of pages of paginated response.
 
@@ -124,7 +140,7 @@ ___
 
 **● sort**: *`string` \| `null`*
 
-*Defined in api.ts:399*
+*Defined in [api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L405)*
 
 Sorting filter.
 
@@ -139,7 +155,7 @@ ___
 
 **● statusId**: *`string` \| `null`*
 
-*Defined in api.ts:411*
+*Defined in [api.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L423)*
 
 Filer based on CVE status ID.
 
@@ -154,7 +170,7 @@ ___
 
 **● totalItems**: *`number`*
 
-*Defined in api.ts:405*
+*Defined in [api.ts:411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L411)*
 
 Total number of records.
 

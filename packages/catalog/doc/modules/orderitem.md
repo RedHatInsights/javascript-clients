@@ -40,7 +40,7 @@
 
 **● completedAt**: *`Date`*
 
-*Defined in [api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L437)*
+*Defined in [api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L439)*
 
 *__type__*: {Date}
 
@@ -53,7 +53,7 @@ ___
 
 **● count**: *`number`*
 
-*Defined in [api.ts:383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L383)*
+*Defined in [api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L385)*
 
 *__type__*: {number}
 
@@ -66,7 +66,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L425)*
+*Defined in [api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L427)*
 
 *__type__*: {Date}
 
@@ -79,7 +79,7 @@ ___
 
 **● externalUrl**: *`string`*
 
-*Defined in [api.ts:455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L455)*
+*Defined in [api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L457)*
 
 The external url of the service instance used with relation to this order item
 
@@ -94,7 +94,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:377](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L377)*
+*Defined in [api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L379)*
 
 *__type__*: {string}
 
@@ -107,7 +107,7 @@ ___
 
 **● insightsRequestId**: *`string`*
 
-*Defined in [api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L461)*
+*Defined in [api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L463)*
 
 The insights request id can be used to collect log data for this order item as its processed by the system
 
@@ -122,7 +122,7 @@ ___
 
 **● orderId**: *`string`*
 
-*Defined in [api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L419)*
+*Defined in [api.ts:421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L421)*
 
 The Order that the OrderItem belongs to.
 
@@ -137,7 +137,7 @@ ___
 
 **● orderedAt**: *`Date`*
 
-*Defined in [api.ts:431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L431)*
+*Defined in [api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L433)*
 
 *__type__*: {Date}
 
@@ -150,7 +150,7 @@ ___
 
 **● owner**: *`string`*
 
-*Defined in [api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L449)*
+*Defined in [api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L451)*
 
 *__type__*: {string}
 
@@ -163,7 +163,7 @@ ___
 
 **● portfolioItemId**: *`string`*
 
-*Defined in [api.ts:407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L407)*
+*Defined in [api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L409)*
 
 Stores the Portfolio Item ID.
 
@@ -178,7 +178,7 @@ ___
 
 **● providerControlParameters**: *`any`*
 
-*Defined in [api.ts:395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L395)*
+*Defined in [api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L397)*
 
 The provider specific parameters needed to provision this service. This might include namespaces, special keys.
 
@@ -193,7 +193,7 @@ ___
 
 **● serviceParameters**: *`any`*
 
-*Defined in [api.ts:389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L389)*
+*Defined in [api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L391)*
 
 *__type__*: {any}
 
@@ -206,7 +206,7 @@ ___
 
 **● servicePlanRef**: *`string`*
 
-*Defined in [api.ts:401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L401)*
+*Defined in [api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L403)*
 
 Stores the service plan ref from the Topology Service.
 
@@ -221,7 +221,7 @@ ___
 
 **● state**: *[StateEnum](../enums/orderitem.stateenum.md)*
 
-*Defined in [api.ts:413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L413)*
+*Defined in [api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L415)*
 
 Current state of this order item.
 
@@ -236,7 +236,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L443)*
+*Defined in [api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L445)*
 
 *__type__*: {Date}
 

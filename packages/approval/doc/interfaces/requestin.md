@@ -19,7 +19,7 @@ Input parameters for approval request object.
 * [content](requestin.md#content)
 * [description](requestin.md#description)
 * [name](requestin.md#name)
-* [requester](requestin.md#requester)
+* [requesterName](requestin.md#requestername)
 
 ---
 
@@ -31,7 +31,7 @@ Input parameters for approval request object.
 
 **● content**: *`any`*
 
-*Defined in [api.ts:281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L281)*
+*Defined in [api.ts:293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L293)*
 
 JSON object with request content
 
@@ -46,7 +46,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L275)*
+*Defined in [api.ts:287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L287)*
 
 Request description
 
@@ -61,7 +61,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L269)*
+*Defined in [api.ts:281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L281)*
 
 Request name
 
@@ -70,13 +70,13 @@ Request name
 *__memberof__*: RequestIn
 
 ___
-<a id="requester"></a>
+<a id="requestername"></a>
 
-### `<Optional>` requester
+### `<Optional>` requesterName
 
-**● requester**: *`string`*
+**● requesterName**: *`string`*
 
-*Defined in [api.ts:263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L263)*
+*Defined in [api.ts:275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L275)*
 
 Requester id
 

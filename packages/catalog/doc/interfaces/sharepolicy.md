@@ -27,7 +27,7 @@
 
 **● groupUuids**: *`Array`<`string`>*
 
-*Defined in [api.ts:964](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L964)*
+*Defined in [api.ts:966](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L966)*
 
 An array of group UUID's retrieved from the RBAC Service with whom the resource has to be shared.
 
@@ -42,9 +42,9 @@ ___
 
 **● permissions**: *`Array`<`string`>*
 
-*Defined in [api.ts:958](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L958)*
+*Defined in [api.ts:960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L960)*
 
-The permissions to apply for this share.
+The permissions to apply for this share. Each permission comprises of 3 parts catalog:portfolios:verb separated by :. The valid verbs are read, write and order
 
 *__type__*: {Array}
 

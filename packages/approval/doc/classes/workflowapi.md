@@ -107,7 +107,7 @@ ___
 
 ▸ **addWorkflowToTemplate**(templateId: *`string`*, workflowIn: *[WorkflowIn](../interfaces/workflowin.md)*, options?: *`any`*): `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
 
-*Defined in [api.ts:2284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2284)*
+*Defined in [api.ts:2302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2302)*
 
 Add a workflow by given template id
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **destroyWorkflow**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2296)*
+*Defined in [api.ts:2314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2314)*
 
 Delete approval workflow by given id
 
@@ -160,7 +160,7 @@ ___
 
 ▸ **listWorkflows**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[WorkflowOutCollection](../interfaces/workflowoutcollection.md)>
 
-*Defined in [api.ts:2310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2310)*
+*Defined in [api.ts:2328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2328)*
 
 Return all approval workflows
 
@@ -188,7 +188,7 @@ ___
 
 ▸ **listWorkflowsByTemplate**(templateId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[WorkflowOutCollection](../interfaces/workflowoutcollection.md)>
 
-*Defined in [api.ts:2325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2325)*
+*Defined in [api.ts:2343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2343)*
 
 Return an array of workflows by given template id
 
@@ -217,7 +217,7 @@ ___
 
 ▸ **showWorkflow**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
 
-*Defined in [api.ts:2337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2337)*
+*Defined in [api.ts:2355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2355)*
 
 Return an approval workflow by given id
 
@@ -243,7 +243,7 @@ ___
 
 ▸ **updateWorkflow**(id: *`string`*, workflowIn: *[WorkflowIn](../interfaces/workflowin.md)*, options?: *`any`*): `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
 
-*Defined in [api.ts:2350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2350)*
+*Defined in [api.ts:2368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2368)*
 
 Update an approval workflow by given id
 

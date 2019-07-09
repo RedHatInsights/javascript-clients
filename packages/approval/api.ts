@@ -247,6 +247,18 @@ export interface CollectionMetadata {
      * @memberof CollectionMetadata
      */
     count?: number;
+    /**
+     * This is the number of items each page can display
+     * @type {number}
+     * @memberof CollectionMetadata
+     */
+    limit?: number;
+    /**
+     * This is the offset from beginning of the result set
+     * @type {number}
+     * @memberof CollectionMetadata
+     */
+    offset?: number;
 }
 
 /**
@@ -260,7 +272,7 @@ export interface RequestIn {
      * @type {string}
      * @memberof RequestIn
      */
-    requester?: string;
+    requesterName?: string;
     /**
      * Request name
      * @type {string}
@@ -342,11 +354,17 @@ export interface RequestOut {
      */
     totalStages?: number;
     /**
-     * Requester id
+     * Owner id
      * @type {string}
      * @memberof RequestOut
      */
-    requester?: string;
+    owner?: string;
+    /**
+     * Requester name
+     * @type {string}
+     * @memberof RequestOut
+     */
+    requesterName?: string;
     /**
      * Request name
      * @type {string}

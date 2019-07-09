@@ -29,7 +29,7 @@
 
 **● first**: *`string`*
 
-*Defined in api.ts:275*
+*Defined in [api.ts:275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L275)*
 
 Link to first page.
 
@@ -44,7 +44,7 @@ ___
 
 **● last**: *`string`*
 
-*Defined in api.ts:281*
+*Defined in [api.ts:281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L281)*
 
 Link to last page.
 
@@ -59,7 +59,7 @@ ___
 
 **● next**: *`string` \| `null`*
 
-*Defined in api.ts:287*
+*Defined in [api.ts:287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L287)*
 
 Link to next page.
 
@@ -74,7 +74,7 @@ ___
 
 **● previous**: *`string` \| `null`*
 
-*Defined in api.ts:293*
+*Defined in [api.ts:293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L293)*
 
 Link to next page.
 

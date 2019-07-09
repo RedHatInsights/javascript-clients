@@ -123,6 +123,7 @@ API documentation
 * [TagsCollection](interfaces/tagscollection.md)
 * [Task](interfaces/task.md)
 * [TasksCollection](interfaces/taskscollection.md)
+* [Tenant](interfaces/tenant.md)
 * [Vm](interfaces/vm.md)
 * [VmsCollection](interfaces/vmscollection.md)
 * [Volume](interfaces/volume.md)
@@ -168,7 +169,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2539)*
+*Defined in [api.ts:2571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2571)*
 
 DefaultApi - axios parameter creator
 
@@ -187,7 +188,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:7876](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L7876)*
+*Defined in [api.ts:7908](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L7908)*
 
 DefaultApi - factory interface
 
@@ -208,7 +209,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6550](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L6550)*
+*Defined in [api.ts:6582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L6582)*
 
 DefaultApi - functional programming interface
 

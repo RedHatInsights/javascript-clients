@@ -105,7 +105,7 @@ ___
 
 ▸ **createAction**(stageId: *`string`*, actionIn: *[ActionIn](../modules/actionin.md)*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
-*Defined in [api.ts:982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L982)*
+*Defined in [api.ts:1000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1000)*
 
 Add an action to a given stage
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **createActionByRequest**(requestId: *`string`*, actionIn: *[ActionIn](../modules/actionin.md)*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
-*Defined in [api.ts:995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L995)*
+*Defined in [api.ts:1013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1013)*
 
 Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
 
@@ -159,7 +159,7 @@ ___
 
 ▸ **listActionsByStage**(stageId: *`string`*, options?: *`any`*): `AxiosPromise`<[ActionOutCollection](../interfaces/actionoutcollection.md)>
 
-*Defined in [api.ts:1007](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1007)*
+*Defined in [api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1025)*
 
 List all actions of a stage
 
@@ -185,7 +185,7 @@ ___
 
 ▸ **showAction**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
-*Defined in [api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1019)*
+*Defined in [api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1037)*
 
 Return an user action by id
 
