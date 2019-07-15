@@ -32,7 +32,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:1605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1605)*
+*Defined in [api.ts:1983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1983)*
 
 *__type__*: {Date}
 
@@ -45,7 +45,7 @@ ___
 
 **● data**: *`string`*
 
-*Defined in [api.ts:1611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1611)*
+*Defined in [api.ts:1989](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1989)*
 
 Raw icon data
 
@@ -60,7 +60,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:1617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1617)*
+*Defined in [api.ts:1995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1995)*
 
 ID of the resource
 
@@ -75,7 +75,7 @@ ___
 
 **● lastSeenAt**: *`Date`*
 
-*Defined in [api.ts:1623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1623)*
+*Defined in [api.ts:2001](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2001)*
 
 *__type__*: {Date}
 
@@ -88,7 +88,7 @@ ___
 
 **● sourceId**: *`string`*
 
-*Defined in [api.ts:1629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1629)*
+*Defined in [api.ts:2007](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2007)*
 
 ID of the resource
 
@@ -103,7 +103,7 @@ ___
 
 **● sourceRef**: *`string`*
 
-*Defined in [api.ts:1635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1635)*
+*Defined in [api.ts:2013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2013)*
 
 *__type__*: {string}
 
@@ -116,7 +116,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:1641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1641)*
+*Defined in [api.ts:2019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2019)*
 
 *__type__*: {Date}
 

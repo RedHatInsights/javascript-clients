@@ -825,12 +825,6 @@ export interface SystemDetailsOutData {
      * @memberof SystemDetailsOutData
      */
     optOut: boolean;
-    /**
-     * Managed by Satellite server
-     * @type {boolean}
-     * @memberof SystemDetailsOutData
-     */
-    satelliteManaged: boolean;
 }
 
 /**

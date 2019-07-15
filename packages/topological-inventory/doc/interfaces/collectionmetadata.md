@@ -26,7 +26,7 @@
 
 **● count**: *`number`*
 
-*Defined in [api.ts:209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L209)*
+*Defined in [api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L315)*
 
 *__type__*: {number}
 
