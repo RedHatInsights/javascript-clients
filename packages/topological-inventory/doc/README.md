@@ -82,6 +82,8 @@ API documentation
 
 * [AvailabilitiesCollection](interfaces/availabilitiescollection.md)
 * [Availability](interfaces/availability.md)
+* [Cluster](interfaces/cluster.md)
+* [ClustersCollection](interfaces/clusterscollection.md)
 * [CollectionLinks](interfaces/collectionlinks.md)
 * [CollectionMetadata](interfaces/collectionmetadata.md)
 * [ConfigurationParameters](interfaces/configurationparameters.md)
@@ -99,9 +101,13 @@ API documentation
 * [ContainerTemplate](interfaces/containertemplate.md)
 * [ContainerTemplatesCollection](interfaces/containertemplatescollection.md)
 * [ContainersCollection](interfaces/containerscollection.md)
+* [Datastore](interfaces/datastore.md)
+* [DatastoresCollection](interfaces/datastorescollection.md)
 * [Flavor](interfaces/flavor.md)
 * [FlavorsCollection](interfaces/flavorscollection.md)
 * [GraphQLResponse](interfaces/graphqlresponse.md)
+* [Host](interfaces/host.md)
+* [HostsCollection](interfaces/hostscollection.md)
 * [InlineObject](interfaces/inlineobject.md)
 * [InlineResponse200](interfaces/inlineresponse200.md)
 * [OrchestrationStack](interfaces/orchestrationstack.md)
@@ -169,7 +175,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2571)*
+*Defined in [api.ts:2949](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2949)*
 
 DefaultApi - axios parameter creator
 
@@ -188,7 +194,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:7908](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L7908)*
+*Defined in [api.ts:8708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L8708)*
 
 DefaultApi - factory interface
 
@@ -209,7 +215,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L6582)*
+*Defined in [api.ts:7275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L7275)*
 
 DefaultApi - functional programming interface
 

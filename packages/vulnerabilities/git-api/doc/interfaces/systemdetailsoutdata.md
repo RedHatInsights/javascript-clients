@@ -16,7 +16,6 @@
 
 * [lastEvaluation](systemdetailsoutdata.md#lastevaluation)
 * [optOut](systemdetailsoutdata.md#optout)
-* [satelliteManaged](systemdetailsoutdata.md#satellitemanaged)
 
 ---
 
@@ -46,21 +45,6 @@ ___
 *Defined in [api.ts:827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L827)*
 
 System opt out status
-
-*__type__*: {boolean}
-
-*__memberof__*: SystemDetailsOutData
-
-___
-<a id="satellitemanaged"></a>
-
-###  satelliteManaged
-
-**● satelliteManaged**: *`boolean`*
-
-*Defined in [api.ts:833](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L833)*
-
-Managed by Satellite server
 
 *__type__*: {boolean}
 
