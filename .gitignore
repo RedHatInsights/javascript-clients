@@ -1,3 +1,4 @@
 node_modules
 packages/**/git_push.sh
 packages/**/dist
+packages/**/package-lock.json

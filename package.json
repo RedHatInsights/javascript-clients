@@ -7,7 +7,8 @@
   "scripts": {
     "bootstrap": "lerna exec npm install",
     "release": "semantic-release",
-    "clear-packages": "lerna exec rm -- -rf node_modules",
+    "clear-packages": "lerna exec rm -- -rf node_modules; rm -rf node_modules",
+    "prepare": "npm run bootstrap && npm run generate && npm run build",
     "audit": "lerna exec npm audit",
     "test": "echo \"Error: no test specified\" && exit 0",
     "generate": "npm run generate:prod && npm run build && npm run doc",
@@ -40,7 +41,7 @@
     "semantic-release": "^15.13.14",
     "typedoc": "^0.14.2",
     "typedoc-plugin-markdown": "^1.1.27",
-    "typescript": "^3.3.4000"
+    "typescript": "^3.5.3"
   },
   "release": {
     "monorepo": "./packages",
