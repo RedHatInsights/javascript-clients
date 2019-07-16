@@ -1,0 +1,28 @@
+[@redhat-cloud-services/notifications-client](../README.md) > [Level](../modules/level.md) > [TypeEnum](../enums/level.typeenum.md)
+
+# Enumeration: TypeEnum
+
+*__export__*: 
+
+*__enum__*: {string}
+
+## Index
+
+### Enumeration members
+
+* [Level](level.typeenum.md#level)
+
+---
+
+## Enumeration members
+
+<a id="level"></a>
+
+###  Level
+
+**Level**:  = "level"
+
+*Defined in api.ts:901*
+
+___
+
