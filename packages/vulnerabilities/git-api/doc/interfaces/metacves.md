@@ -18,6 +18,7 @@
 * [cvssTo](metacves.md#cvssto)
 * [dataFormat](metacves.md#dataformat)
 * [filter](metacves.md#filter)
+* [impact](metacves.md#impact)
 * [limit](metacves.md#limit)
 * [offset](metacves.md#offset)
 * [page](metacves.md#page)
@@ -25,7 +26,6 @@
 * [pages](metacves.md#pages)
 * [publicFrom](metacves.md#publicfrom)
 * [publicTo](metacves.md#publicto)
-* [severity](metacves.md#severity)
 * [sort](metacves.md#sort)
 * [statusId](metacves.md#statusid)
 * [totalItems](metacves.md#totalitems)
@@ -88,6 +88,21 @@ ___
 *Defined in [api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L437)*
 
 Full text filter
+
+*__type__*: {string}
+
+*__memberof__*: MetaCves
+
+___
+<a id="impact"></a>
+
+### `<Optional>` impact
+
+**● impact**: *`string` \| `null`*
+
+*Defined in [api.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L515)*
+
+Filter based on impact IDs.
 
 *__type__*: {string}
 
@@ -193,21 +208,6 @@ ___
 *Defined in [api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L509)*
 
 Filter CVEs based on their published date, up to the date.
-
-*__type__*: {string}
-
-*__memberof__*: MetaCves
-
-___
-<a id="severity"></a>
-
-### `<Optional>` severity
-
-**● severity**: *`string` \| `null`*
-
-*Defined in [api.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L515)*
-
-Filter based on severity IDs.
 
 *__type__*: {string}
 
