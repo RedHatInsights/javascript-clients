@@ -508,17 +508,121 @@ export interface MetaCves {
      */
     publicTo: string | null;
     /**
-     * Filter based on severity IDs.
+     * Filter based on impact IDs.
      * @type {string}
      * @memberof MetaCves
      */
-    severity?: string | null;
+    impact?: string | null;
     /**
      * Filer based on CVE status ID.
      * @type {string}
      * @memberof MetaCves
      */
     statusId: string | null;
+}
+
+/**
+ *
+ * @export
+ * @interface MetaCvesSystems
+ */
+export interface MetaCvesSystems {
+    /**
+     * Full text filter
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    filter: string | null;
+    /**
+     * Maximum number of paginated results.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    limit: number;
+    /**
+     * First record of paginated response.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    offset: number;
+    /**
+     * Page number of paginated response.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    page: number;
+    /**
+     * Number of records per page of paginated response.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    pageSize: number;
+    /**
+     * Total number of pages of paginated response.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    pages: number;
+    /**
+     * Sorting filter.
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    sort: string | null;
+    /**
+     * Total number of records.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    totalItems: number;
+    /**
+     * Format of the output data, either JSON (default) or CSV.
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    dataFormat: string;
+    /**
+     * Filter based on cvss score, starting from the value.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    cvssFrom: number | null;
+    /**
+     * Filter based on cvss score, up to the value.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    cvssTo: number | null;
+    /**
+     * Filter CVEs based on their published date, starting from the date.
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    publicFrom: string | null;
+    /**
+     * Filter CVEs based on their published date, up to the date.
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    publicTo: string | null;
+    /**
+     * Filter based on impact IDs.
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    impact?: string | null;
+    /**
+     * Filer based on CVE status ID.
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    statusId: string | null;
+    /**
+     * If given system was opted out.
+     * @type {boolean}
+     * @memberof MetaCvesSystems
+     */
+    optOut: boolean;
 }
 
 /**
@@ -680,11 +784,11 @@ export interface MetaVulnerabilitiesOut {
      */
     publicTo: string | null;
     /**
-     * Filter based on severity IDs.
+     * Filter based on impact IDs.
      * @type {string}
      * @memberof MetaVulnerabilitiesOut
      */
-    severity: string | null;
+    impact: string | null;
 }
 
 /**
@@ -820,7 +924,7 @@ export interface SystemDetailsOutData {
      */
     lastEvaluation: string;
     /**
-     * System opt out status
+     * System opt out status.
      * @type {boolean}
      * @memberof SystemDetailsOutData
      */
@@ -1100,13 +1204,13 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
-         * @param {string} [severity] Filter based on severity IDs.
+         * @param {string} [impact] Filter based on impact IDs.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, severity?: string, dataFormat?: string, showAll?: boolean, options: any = {}): RequestArgs {
+        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, showAll?: boolean, options: any = {}): RequestArgs {
             const localVarPath = `/v1/vulnerabilities/cves`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1171,8 +1275,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['public_to'] = publicTo;
             }
 
-            if (severity !== undefined) {
-                localVarQueryParameter['severity'] = severity;
+            if (impact !== undefined) {
+                localVarQueryParameter['impact'] = impact;
             }
 
             if (dataFormat !== undefined) {
@@ -1207,13 +1311,13 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
-         * @param {string} [severity] Filter based on severity IDs.
+         * @param {string} [impact] Filter based on impact IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, severity?: string, statusId?: string, dataFormat?: string, options: any = {}): RequestArgs {
+        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, options: any = {}): RequestArgs {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getCveListBySystem.');
@@ -1283,8 +1387,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['public_to'] = publicTo;
             }
 
-            if (severity !== undefined) {
-                localVarQueryParameter['severity'] = severity;
+            if (impact !== undefined) {
+                localVarQueryParameter['impact'] = impact;
             }
 
             if (statusId !== undefined) {
@@ -1679,14 +1783,14 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
-         * @param {string} [severity] Filter based on severity IDs.
+         * @param {string} [impact] Filter based on impact IDs.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, severity?: string, dataFormat?: string, showAll?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, severity, dataFormat, showAll, options);
+        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, showAll?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, showAll, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1706,14 +1810,14 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
-         * @param {string} [severity] Filter based on severity IDs.
+         * @param {string} [impact] Filter based on impact IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, severity?: string, statusId?: string, dataFormat?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, severity, statusId, dataFormat, options);
+        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1869,14 +1973,14 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
-         * @param {string} [severity] Filter based on severity IDs.
+         * @param {string} [impact] Filter based on impact IDs.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, severity?: string, dataFormat?: string, showAll?: boolean, options?: any) {
-            return DefaultApiFp(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, severity, dataFormat, showAll, options)(axios, basePath);
+        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, showAll?: boolean, options?: any) {
+            return DefaultApiFp(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, showAll, options)(axios, basePath);
         },
         /**
          * Shows detailed infomation about all CVEs the system is exposed to.
@@ -1892,14 +1996,14 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
-         * @param {string} [severity] Filter based on severity IDs.
+         * @param {string} [impact] Filter based on impact IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, severity?: string, statusId?: string, dataFormat?: string, options?: any) {
-            return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, severity, statusId, dataFormat, options)(axios, basePath);
+        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, options?: any) {
+            return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, options)(axios, basePath);
         },
         /**
          * Returns available status and status_id pairs where status_id is internal ID of the status.
@@ -2034,15 +2138,15 @@ export class DefaultApi extends BaseAPI {
      * @param {number} [cvssTo] Filter based on cvss score, up to the value.
      * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
      * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
-     * @param {string} [severity] Filter based on severity IDs.
+     * @param {string} [impact] Filter based on impact IDs.
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, severity?: string, dataFormat?: string, showAll?: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, severity, dataFormat, showAll, options)(this.axios, this.basePath);
+    public getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, showAll?: boolean, options?: any) {
+        return DefaultApiFp(this.configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, showAll, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2059,15 +2163,15 @@ export class DefaultApi extends BaseAPI {
      * @param {number} [cvssTo] Filter based on cvss score, up to the value.
      * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
      * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
-     * @param {string} [severity] Filter based on severity IDs.
+     * @param {string} [impact] Filter based on impact IDs.
      * @param {string} [statusId] Filer based on CVE status ID.
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, severity?: string, statusId?: string, dataFormat?: string, options?: any) {
-        return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, severity, statusId, dataFormat, options)(this.axios, this.basePath);
+    public getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, options)(this.axios, this.basePath);
     }
 
     /**

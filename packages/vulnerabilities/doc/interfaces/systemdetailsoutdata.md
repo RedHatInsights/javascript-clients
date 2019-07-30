@@ -16,7 +16,6 @@
 
 * [lastEvaluation](systemdetailsoutdata.md#lastevaluation)
 * [optOut](systemdetailsoutdata.md#optout)
-* [satelliteManaged](systemdetailsoutdata.md#satellitemanaged)
 
 ---
 
@@ -28,7 +27,7 @@
 
 **● lastEvaluation**: *`string`*
 
-*Defined in [api.ts:791](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L791)*
+*Defined in [api.ts:821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L821)*
 
 Date of last evaluation.
 
@@ -43,24 +42,9 @@ ___
 
 **● optOut**: *`boolean`*
 
-*Defined in [api.ts:797](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L797)*
+*Defined in [api.ts:827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L827)*
 
 System opt out status
-
-*__type__*: {boolean}
-
-*__memberof__*: SystemDetailsOutData
-
-___
-<a id="satellitemanaged"></a>
-
-###  satelliteManaged
-
-**● satelliteManaged**: *`boolean`*
-
-*Defined in [api.ts:803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L803)*
-
-Managed by Satellite server
 
 *__type__*: {boolean}
 
