@@ -28,7 +28,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L719)*
+*Defined in [api.ts:731](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L731)*
 
 *__type__*: {string}
 
@@ -41,7 +41,7 @@ ___
 
 **● externalTenant**: *`string`*
 
-*Defined in [api.ts:725](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L725)*
+*Defined in [api.ts:737](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L737)*
 
 *__type__*: {string}
 
@@ -54,7 +54,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:713](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L713)*
+*Defined in [api.ts:725](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L725)*
 
 *__type__*: {string}
 

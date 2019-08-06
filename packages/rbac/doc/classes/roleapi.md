@@ -106,7 +106,7 @@ ___
 
 ▸ **createRoles**(roleIn: *[RoleIn](../interfaces/rolein.md)*, options?: *`any`*): `AxiosPromise`<[RoleWithAccess](../interfaces/rolewithaccess.md)>
 
-*Defined in [api.ts:2601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2601)*
+*Defined in [api.ts:2617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2617)*
 
 *__summary__*: Create a roles for a tenant
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **deleteRole**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2613)*
+*Defined in [api.ts:2629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2629)*
 
 *__summary__*: Delete a role in the tenant
 
@@ -154,7 +154,7 @@ ___
 
 ▸ **getRole**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[RoleWithAccess](../interfaces/rolewithaccess.md)>
 
-*Defined in [api.ts:2625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2625)*
+*Defined in [api.ts:2641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2641)*
 
 *__summary__*: Get a role in the tenant
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **listRoles**(limit?: *`number`*, offset?: *`number`*, name?: *`string`*, orderBy?: *`string`*, options?: *`any`*): `AxiosPromise`<[RolePagination](../interfaces/rolepagination.md)>
 
-*Defined in [api.ts:2640](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2640)*
+*Defined in [api.ts:2656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2656)*
 
 *__summary__*: List the roles for a tenant
 
@@ -205,7 +205,7 @@ ___
 
 ▸ **updateRole**(uuid: *`string`*, roleWithAccess: *[RoleWithAccess](../interfaces/rolewithaccess.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2653)*
+*Defined in [api.ts:2669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2669)*
 
 *__summary__*: Update a Role in the tenant
 

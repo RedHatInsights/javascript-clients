@@ -50,7 +50,7 @@ EndpointsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L49)*
 
 **Parameters:**
 
@@ -74,7 +74,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -85,7 +85,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -96,7 +96,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L49)*
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 ▸ **endpointsCreate**(X_RH_IDENTITY: *`string`*, inlineObject1: *[InlineObject1](../interfaces/inlineobject1.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse201](../interfaces/inlineresponse201.md)>
 
-*Defined in api.ts:1832*
+*Defined in [api.ts:1832](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1832)*
 
 Creates an endpoint
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **endpointsDestroy**(X_RH_IDENTITY: *`string`*, id: *`number`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in api.ts:1844*
+*Defined in [api.ts:1844](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1844)*
 
 *__throws__*: {RequiredError}
 
@@ -156,7 +156,7 @@ ___
 
 ▸ **endpointsIndex**(X_RH_IDENTITY: *`string`*, order?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse2003](../interfaces/inlineresponse2003.md)>
 
-*Defined in api.ts:1858*
+*Defined in [api.ts:1858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1858)*
 
 List all endpoints
 
@@ -183,7 +183,7 @@ ___
 
 ▸ **endpointsShow**(X_RH_IDENTITY: *`string`*, id: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse201](../interfaces/inlineresponse201.md)>
 
-*Defined in api.ts:1870*
+*Defined in [api.ts:1870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1870)*
 
 Shows the requested endpoint
 
@@ -208,7 +208,7 @@ ___
 
 ▸ **endpointsTest**(X_RH_IDENTITY: *`string`*, id: *`number`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in api.ts:1882*
+*Defined in [api.ts:1882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1882)*
 
 Send a test message to the endpoint
 
@@ -233,7 +233,7 @@ ___
 
 ▸ **endpointsUpdate**(X_RH_IDENTITY: *`string`*, id: *`number`*, inlineObject2: *[InlineObject2](../interfaces/inlineobject2.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse201](../interfaces/inlineresponse201.md)>
 
-*Defined in api.ts:1895*
+*Defined in [api.ts:1895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1895)*
 
 Updates the requested endpoint
 
@@ -259,7 +259,7 @@ ___
 
 ▸ **endpointsUpdate_1**(X_RH_IDENTITY: *`string`*, id: *`number`*, inlineObject3: *[InlineObject3](../interfaces/inlineobject3.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse201](../interfaces/inlineresponse201.md)>
 
-*Defined in api.ts:1908*
+*Defined in [api.ts:1908](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1908)*
 
 Updates the requested endpoint
 

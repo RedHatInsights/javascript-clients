@@ -31,7 +31,7 @@ Input parameters for approval request object.
 
 **● content**: *`any`*
 
-*Defined in [api.ts:293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L293)*
+*Defined in [api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L339)*
 
 JSON object with request content
 
@@ -46,7 +46,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L287)*
+*Defined in [api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L333)*
 
 Request description
 
@@ -61,7 +61,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L281)*
+*Defined in [api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L327)*
 
 Request name
 
@@ -76,7 +76,7 @@ ___
 
 **● requesterName**: *`string`*
 
-*Defined in [api.ts:275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L275)*
+*Defined in [api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L321)*
 
 Requester id
 

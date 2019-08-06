@@ -12,6 +12,8 @@
 
 ↳  [DefaultApi](defaultapi.md)
 
+↳  [IconApi](iconapi.md)
+
 ↳  [OrderApi](orderapi.md)
 
 ↳  [OrderItemApi](orderitemapi.md)

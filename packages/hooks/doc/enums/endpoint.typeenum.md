@@ -22,7 +22,7 @@
 
 **Endpoint**:  = "endpoint"
 
-*Defined in api.ts:254*
+*Defined in [api.ts:254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L254)*
 
 ___
 

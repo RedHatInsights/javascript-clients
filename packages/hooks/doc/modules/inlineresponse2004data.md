@@ -29,7 +29,7 @@
 
 **● attributes**: *[InlineResponse2004DataAttributes](../interfaces/inlineresponse2004dataattributes.md)*
 
-*Defined in api.ts:782*
+*Defined in [api.ts:782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L782)*
 
 *__type__*: {InlineResponse2004DataAttributes}
 
@@ -42,7 +42,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in api.ts:770*
+*Defined in [api.ts:770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L770)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● relationships**: *[InlineResponse2004DataRelationships](../interfaces/inlineresponse2004datarelationships.md)*
 
-*Defined in api.ts:788*
+*Defined in [api.ts:788](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L788)*
 
 *__type__*: {InlineResponse2004DataRelationships}
 
@@ -68,7 +68,7 @@ ___
 
 **● type**: *[TypeEnum](../enums/inlineresponse2004data.typeenum.md)*
 
-*Defined in api.ts:776*
+*Defined in [api.ts:776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L776)*
 
 *__type__*: {string}
 

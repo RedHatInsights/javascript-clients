@@ -335,6 +335,18 @@ export interface CollectionMetadata {
      * @memberof CollectionMetadata
      */
     count?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof CollectionMetadata
+     */
+    limit?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof CollectionMetadata
+     */
+    offset?: number;
 }
 
 /**

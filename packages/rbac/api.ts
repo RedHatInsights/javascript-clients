@@ -1764,11 +1764,13 @@ export const PolicyApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
+         * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
          * @param {string} [orderBy] Parameter for ordering resource by value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPolicies(limit?: number, offset?: number, name?: string, orderBy?: string, options: any = {}): RequestArgs {
+        listPolicies(limit?: number, offset?: number, name?: string, groupName?: string, groupUuid?: string, orderBy?: string, options: any = {}): RequestArgs {
             const localVarPath = `/policies/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1795,6 +1797,14 @@ export const PolicyApiAxiosParamCreator = function (configuration?: Configuratio
 
             if (name !== undefined) {
                 localVarQueryParameter['name'] = name;
+            }
+
+            if (groupName !== undefined) {
+                localVarQueryParameter['group_name'] = groupName;
+            }
+
+            if (groupUuid !== undefined) {
+                localVarQueryParameter['group_uuid'] = groupUuid;
             }
 
             if (orderBy !== undefined) {
@@ -1916,12 +1926,14 @@ export const PolicyApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
+         * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
          * @param {string} [orderBy] Parameter for ordering resource by value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPolicies(limit?: number, offset?: number, name?: string, orderBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyPagination> {
-            const localVarAxiosArgs = PolicyApiAxiosParamCreator(configuration).listPolicies(limit, offset, name, orderBy, options);
+        listPolicies(limit?: number, offset?: number, name?: string, groupName?: string, groupUuid?: string, orderBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyPagination> {
+            const localVarAxiosArgs = PolicyApiAxiosParamCreator(configuration).listPolicies(limit, offset, name, groupName, groupUuid, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1987,12 +1999,14 @@ export const PolicyApiFactory = function (configuration?: Configuration, basePat
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
+         * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
          * @param {string} [orderBy] Parameter for ordering resource by value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPolicies(limit?: number, offset?: number, name?: string, orderBy?: string, options?: any) {
-            return PolicyApiFp(configuration).listPolicies(limit, offset, name, orderBy, options)(axios, basePath);
+        listPolicies(limit?: number, offset?: number, name?: string, groupName?: string, groupUuid?: string, orderBy?: string, options?: any) {
+            return PolicyApiFp(configuration).listPolicies(limit, offset, name, groupName, groupUuid, orderBy, options)(axios, basePath);
         },
         /**
          *
@@ -2057,13 +2071,15 @@ export class PolicyApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {string} [name] Parameter for filtering resource by name using string contains search.
+     * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
+     * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
      * @param {string} [orderBy] Parameter for ordering resource by value.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PolicyApi
      */
-    public listPolicies(limit?: number, offset?: number, name?: string, orderBy?: string, options?: any) {
-        return PolicyApiFp(this.configuration).listPolicies(limit, offset, name, orderBy, options)(this.axios, this.basePath);
+    public listPolicies(limit?: number, offset?: number, name?: string, groupName?: string, groupUuid?: string, orderBy?: string, options?: any) {
+        return PolicyApiFp(this.configuration).listPolicies(limit, offset, name, groupName, groupUuid, orderBy, options)(this.axios, this.basePath);
     }
 
     /**

@@ -27,7 +27,7 @@
 
 **● name**: *`string`*
 
-*Defined in api.ts:129*
+*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L129)*
 
 Name of the application, used to identify the sender in messages
 
@@ -42,7 +42,7 @@ ___
 
 **● title**: *`string`*
 
-*Defined in api.ts:135*
+*Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L135)*
 
 Title of the application, shown to the user when configuring filters
 

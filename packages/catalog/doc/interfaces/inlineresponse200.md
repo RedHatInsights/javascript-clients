@@ -27,7 +27,7 @@
 
 **● data**: *`any`*
 
-*Defined in [api.ts:290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L290)*
+*Defined in [api.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L336)*
 
 Results from the GraphQL query
 
@@ -42,7 +42,7 @@ ___
 
 **● errors**: *`Array`<`any`>*
 
-*Defined in [api.ts:296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L296)*
+*Defined in [api.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L342)*
 
 Errors resulting from the GraphQL query
 

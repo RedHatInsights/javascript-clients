@@ -72,6 +72,20 @@ export class RequiredError extends Error {
 /**
  *
  * @export
+ * @interface AddIcon
+ */
+export interface AddIcon {
+    /**
+     * This is the ID of the icon object.
+     * @type {string}
+     * @memberof AddIcon
+     */
+    iconId?: string;
+}
+
+/**
+ *
+ * @export
  * @interface AddPortfolioItem
  */
 export interface AddPortfolioItem {
@@ -248,6 +262,38 @@ export interface CreatePortfolioItem {
      * @memberof CreatePortfolioItem
      */
     serviceOfferingRef?: string;
+}
+
+/**
+ *
+ * @export
+ * @interface Icon
+ */
+export interface Icon {
+    /**
+     * The unique identifier for this Service Offering Icon
+     * @type {string}
+     * @memberof Icon
+     */
+    id?: string;
+    /**
+     * The raw SVG data for this icon
+     * @type {string}
+     * @memberof Icon
+     */
+    data?: string;
+    /**
+     * Stores the Source Ref for this icon
+     * @type {string}
+     * @memberof Icon
+     */
+    sourceRef?: string;
+    /**
+     * The source ID for this icon
+     * @type {string}
+     * @memberof Icon
+     */
+    sourceId?: string;
 }
 
 /**
@@ -538,6 +584,20 @@ export interface OrdersCollection {
 /**
  *
  * @export
+ * @interface OverrideIcon
+ */
+export interface OverrideIcon {
+    /**
+     * Tthe ID of the portfolio which the icon will override
+     * @type {string}
+     * @memberof OverrideIcon
+     */
+    portfolioItemId?: string;
+}
+
+/**
+ *
+ * @export
  * @interface Portfolio
  */
 export interface Portfolio {
@@ -681,12 +741,6 @@ export interface PortfolioItem {
      * @memberof PortfolioItem
      */
     owner?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof PortfolioItem
-     */
-    serviceOfferingIconRef?: string;
     /**
      * The source reference this product was created from
      * @type {string}
@@ -860,32 +914,6 @@ export interface RestoreKey {
      * @memberof RestoreKey
      */
     restoreKey?: string;
-}
-
-/**
- *
- * @export
- * @interface ServiceOfferingIcon
- */
-export interface ServiceOfferingIcon {
-    /**
-     * The unique identifier for this Service Offering Icon
-     * @type {string}
-     * @memberof ServiceOfferingIcon
-     */
-    id?: string;
-    /**
-     * The raw SVG data for this icon
-     * @type {string}
-     * @memberof ServiceOfferingIcon
-     */
-    data?: string;
-    /**
-     * Stores the Source Ref for this icon
-     * @type {string}
-     * @memberof ServiceOfferingIcon
-     */
-    sourceRef?: string;
 }
 
 /**
@@ -1163,6 +1191,511 @@ export class DefaultApi extends BaseAPI {
      */
     public postGraphQL(inlineObject: InlineObject, options?: any) {
         return DefaultApiFp(this.configuration).postGraphQL(inlineObject, options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
+ * IconApi - axios parameter creator
+ * @export
+ */
+export const IconApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Deletes the icon based on the icon ID passed
+         * @summary Delete an existing Icon
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyIcon(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling destroyIcon.');
+            }
+            const localVarPath = `/icons/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'DELETE' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Fetch an Icon by ID
+         * @summary Fetch an Icon by ID
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        iconsIdGet(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling iconsIdGet.');
+            }
+            const localVarPath = `/icons/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Creates an Icon from the specified parameters
+         * @summary Create an Icon
+         * @param {Icon} [icon]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        iconsPost(icon?: Icon, options: any = {}): RequestArgs {
+            const localVarPath = `/icons`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"Icon" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(icon || {}) : (icon || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Override the specified Portfolio Item's Icon
+         * @summary Override the specified Portfolio Item's Icon
+         * @param {string} id ID of the resource
+         * @param {OverrideIcon} [overrideIcon]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        overrideIcon(id: string, overrideIcon?: OverrideIcon, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling overrideIcon.');
+            }
+            const localVarPath = `/icons/{id}/override`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"OverrideIcon" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(overrideIcon || {}) : (overrideIcon || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Fetch the specified portfolio item's icon image.
+         * @summary Fetches the specified icon's image
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showIconData(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showIconData.');
+            }
+            const localVarPath = `/icons/{id}/icon_data`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Edits Icon specified by the given ID.
+         * @summary Edit an existing Icon
+         * @param {string} id ID of the resource
+         * @param {Icon} icon Parameters needed to update an Icon
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateIcon(id: string, icon: Icon, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling updateIcon.');
+            }
+            // verify required parameter 'icon' is not null or undefined
+            if (icon === null || icon === undefined) {
+                throw new RequiredError('icon','Required parameter icon was null or undefined when calling updateIcon.');
+            }
+            const localVarPath = `/icons/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"Icon" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(icon || {}) : (icon || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * IconApi - functional programming interface
+ * @export
+ */
+export const IconApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Deletes the icon based on the icon ID passed
+         * @summary Delete an existing Icon
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyIcon(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = IconApiAxiosParamCreator(configuration).destroyIcon(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Fetch an Icon by ID
+         * @summary Fetch an Icon by ID
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        iconsIdGet(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Icon> {
+            const localVarAxiosArgs = IconApiAxiosParamCreator(configuration).iconsIdGet(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Creates an Icon from the specified parameters
+         * @summary Create an Icon
+         * @param {Icon} [icon]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        iconsPost(icon?: Icon, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Icon> {
+            const localVarAxiosArgs = IconApiAxiosParamCreator(configuration).iconsPost(icon, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Override the specified Portfolio Item's Icon
+         * @summary Override the specified Portfolio Item's Icon
+         * @param {string} id ID of the resource
+         * @param {OverrideIcon} [overrideIcon]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        overrideIcon(id: string, overrideIcon?: OverrideIcon, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Icon> {
+            const localVarAxiosArgs = IconApiAxiosParamCreator(configuration).overrideIcon(id, overrideIcon, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Fetch the specified portfolio item's icon image.
+         * @summary Fetches the specified icon's image
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showIconData(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = IconApiAxiosParamCreator(configuration).showIconData(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Edits Icon specified by the given ID.
+         * @summary Edit an existing Icon
+         * @param {string} id ID of the resource
+         * @param {Icon} icon Parameters needed to update an Icon
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateIcon(id: string, icon: Icon, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Icon> {
+            const localVarAxiosArgs = IconApiAxiosParamCreator(configuration).updateIcon(id, icon, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * IconApi - factory interface
+ * @export
+ */
+export const IconApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Deletes the icon based on the icon ID passed
+         * @summary Delete an existing Icon
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyIcon(id: string, options?: any) {
+            return IconApiFp(configuration).destroyIcon(id, options)(axios, basePath);
+        },
+        /**
+         * Fetch an Icon by ID
+         * @summary Fetch an Icon by ID
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        iconsIdGet(id: string, options?: any) {
+            return IconApiFp(configuration).iconsIdGet(id, options)(axios, basePath);
+        },
+        /**
+         * Creates an Icon from the specified parameters
+         * @summary Create an Icon
+         * @param {Icon} [icon]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        iconsPost(icon?: Icon, options?: any) {
+            return IconApiFp(configuration).iconsPost(icon, options)(axios, basePath);
+        },
+        /**
+         * Override the specified Portfolio Item's Icon
+         * @summary Override the specified Portfolio Item's Icon
+         * @param {string} id ID of the resource
+         * @param {OverrideIcon} [overrideIcon]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        overrideIcon(id: string, overrideIcon?: OverrideIcon, options?: any) {
+            return IconApiFp(configuration).overrideIcon(id, overrideIcon, options)(axios, basePath);
+        },
+        /**
+         * Fetch the specified portfolio item's icon image.
+         * @summary Fetches the specified icon's image
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showIconData(id: string, options?: any) {
+            return IconApiFp(configuration).showIconData(id, options)(axios, basePath);
+        },
+        /**
+         * Edits Icon specified by the given ID.
+         * @summary Edit an existing Icon
+         * @param {string} id ID of the resource
+         * @param {Icon} icon Parameters needed to update an Icon
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateIcon(id: string, icon: Icon, options?: any) {
+            return IconApiFp(configuration).updateIcon(id, icon, options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * IconApi - object-oriented interface
+ * @export
+ * @class IconApi
+ * @extends {BaseAPI}
+ */
+export class IconApi extends BaseAPI {
+    /**
+     * Deletes the icon based on the icon ID passed
+     * @summary Delete an existing Icon
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof IconApi
+     */
+    public destroyIcon(id: string, options?: any) {
+        return IconApiFp(this.configuration).destroyIcon(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Fetch an Icon by ID
+     * @summary Fetch an Icon by ID
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof IconApi
+     */
+    public iconsIdGet(id: string, options?: any) {
+        return IconApiFp(this.configuration).iconsIdGet(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Creates an Icon from the specified parameters
+     * @summary Create an Icon
+     * @param {Icon} [icon]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof IconApi
+     */
+    public iconsPost(icon?: Icon, options?: any) {
+        return IconApiFp(this.configuration).iconsPost(icon, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Override the specified Portfolio Item's Icon
+     * @summary Override the specified Portfolio Item's Icon
+     * @param {string} id ID of the resource
+     * @param {OverrideIcon} [overrideIcon]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof IconApi
+     */
+    public overrideIcon(id: string, overrideIcon?: OverrideIcon, options?: any) {
+        return IconApiFp(this.configuration).overrideIcon(id, overrideIcon, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Fetch the specified portfolio item's icon image.
+     * @summary Fetches the specified icon's image
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof IconApi
+     */
+    public showIconData(id: string, options?: any) {
+        return IconApiFp(this.configuration).showIconData(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Edits Icon specified by the given ID.
+     * @summary Edit an existing Icon
+     * @param {string} id ID of the resource
+     * @param {Icon} icon Parameters needed to update an Icon
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof IconApi
+     */
+    public updateIcon(id: string, icon: Icon, options?: any) {
+        return IconApiFp(this.configuration).updateIcon(id, icon, options)(this.axios, this.basePath);
     }
 
 }
@@ -3223,6 +3756,54 @@ export class PortfolioApi extends BaseAPI {
 export const PortfolioItemApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
+         * Add an Icon to a Portfolio Item
+         * @summary Add an Icon to a Portfolio Item
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {AddIcon} addIcon
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        addIconToPortfolioItem(portfolioItemId: string, addIcon: AddIcon, options: any = {}): RequestArgs {
+            // verify required parameter 'portfolioItemId' is not null or undefined
+            if (portfolioItemId === null || portfolioItemId === undefined) {
+                throw new RequiredError('portfolioItemId','Required parameter portfolioItemId was null or undefined when calling addIconToPortfolioItem.');
+            }
+            // verify required parameter 'addIcon' is not null or undefined
+            if (addIcon === null || addIcon === undefined) {
+                throw new RequiredError('addIcon','Required parameter addIcon was null or undefined when calling addIconToPortfolioItem.');
+            }
+            const localVarPath = `/portfolio_items/{portfolio_item_id}/icon`
+                .replace(`{${"portfolio_item_id"}}`, encodeURIComponent(String(portfolioItemId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"AddIcon" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(addIcon || {}) : (addIcon || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Adds a name and description for a portfolio item and returns the newly created portfolio item.
          * @summary Add a new portfolio item
          * @param {CreatePortfolioItem} createPortfolioItem
@@ -3435,45 +4016,6 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
-         * Fetch the specified portfolio item's icon information.
-         * @summary Fetches the specified portfolio item's icon information
-         * @param {string} portfolioItemId The Portfolio Item ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listServiceOfferingIcon(portfolioItemId: string, options: any = {}): RequestArgs {
-            // verify required parameter 'portfolioItemId' is not null or undefined
-            if (portfolioItemId === null || portfolioItemId === undefined) {
-                throw new RequiredError('portfolioItemId','Required parameter portfolioItemId was null or undefined when calling listServiceOfferingIcon.');
-            }
-            const localVarPath = `/portfolio_items/{portfolio_item_id}/icon`
-                .replace(`{${"portfolio_item_id"}}`, encodeURIComponent(String(portfolioItemId)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication BasicAuth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets all service plans for a portfolio item.
          * @summary Gets all service plans for a specific portfolio item; requires a connection to the topology service.
          * @param {string} portfolioItemId The Portfolio Item ID
@@ -3644,6 +4186,45 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
+         * Fetch the specified portfolio item's icon image.
+         * @summary Fetches the specified portfolio item's icon image
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showPortfolioItemIcon(portfolioItemId: string, options: any = {}): RequestArgs {
+            // verify required parameter 'portfolioItemId' is not null or undefined
+            if (portfolioItemId === null || portfolioItemId === undefined) {
+                throw new RequiredError('portfolioItemId','Required parameter portfolioItemId was null or undefined when calling showPortfolioItemIcon.');
+            }
+            const localVarPath = `/portfolio_items/{portfolio_item_id}/icon`
+                .replace(`{${"portfolio_item_id"}}`, encodeURIComponent(String(portfolioItemId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Edits portfolio item specified by the given ID.
          * @summary Edit an existing portfolio item
          * @param {string} id ID of the resource
@@ -3700,6 +4281,21 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
  */
 export const PortfolioItemApiFp = function(configuration?: Configuration) {
     return {
+        /**
+         * Add an Icon to a Portfolio Item
+         * @summary Add an Icon to a Portfolio Item
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {AddIcon} addIcon
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        addIconToPortfolioItem(portfolioItemId: string, addIcon: AddIcon, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Icon> {
+            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).addIconToPortfolioItem(portfolioItemId, addIcon, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
         /**
          * Adds a name and description for a portfolio item and returns the newly created portfolio item.
          * @summary Add a new portfolio item
@@ -3774,20 +4370,6 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Fetch the specified portfolio item's icon information.
-         * @summary Fetches the specified portfolio item's icon information
-         * @param {string} portfolioItemId The Portfolio Item ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listServiceOfferingIcon(portfolioItemId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingIcon> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).listServiceOfferingIcon(portfolioItemId, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Gets all service plans for a portfolio item.
          * @summary Gets all service plans for a specific portfolio item; requires a connection to the topology service.
          * @param {string} portfolioItemId The Portfolio Item ID
@@ -3846,6 +4428,20 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Fetch the specified portfolio item's icon image.
+         * @summary Fetches the specified portfolio item's icon image
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showPortfolioItemIcon(portfolioItemId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).showPortfolioItemIcon(portfolioItemId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Edits portfolio item specified by the given ID.
          * @summary Edit an existing portfolio item
          * @param {string} id ID of the resource
@@ -3869,6 +4465,17 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
  */
 export const PortfolioItemApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
+        /**
+         * Add an Icon to a Portfolio Item
+         * @summary Add an Icon to a Portfolio Item
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {AddIcon} addIcon
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        addIconToPortfolioItem(portfolioItemId: string, addIcon: AddIcon, options?: any) {
+            return PortfolioItemApiFp(configuration).addIconToPortfolioItem(portfolioItemId, addIcon, options)(axios, basePath);
+        },
         /**
          * Adds a name and description for a portfolio item and returns the newly created portfolio item.
          * @summary Add a new portfolio item
@@ -3923,16 +4530,6 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
             return PortfolioItemApiFp(configuration).listProviderControlParameters(portfolioItemId, options)(axios, basePath);
         },
         /**
-         * Fetch the specified portfolio item's icon information.
-         * @summary Fetches the specified portfolio item's icon information
-         * @param {string} portfolioItemId The Portfolio Item ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listServiceOfferingIcon(portfolioItemId: string, options?: any) {
-            return PortfolioItemApiFp(configuration).listServiceOfferingIcon(portfolioItemId, options)(axios, basePath);
-        },
-        /**
          * Gets all service plans for a portfolio item.
          * @summary Gets all service plans for a specific portfolio item; requires a connection to the topology service.
          * @param {string} portfolioItemId The Portfolio Item ID
@@ -3975,6 +4572,16 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
             return PortfolioItemApiFp(configuration).showPortfolioItem(id, options)(axios, basePath);
         },
         /**
+         * Fetch the specified portfolio item's icon image.
+         * @summary Fetches the specified portfolio item's icon image
+         * @param {string} portfolioItemId The Portfolio Item ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showPortfolioItemIcon(portfolioItemId: string, options?: any) {
+            return PortfolioItemApiFp(configuration).showPortfolioItemIcon(portfolioItemId, options)(axios, basePath);
+        },
+        /**
          * Edits portfolio item specified by the given ID.
          * @summary Edit an existing portfolio item
          * @param {string} id ID of the resource
@@ -3995,6 +4602,19 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
  * @extends {BaseAPI}
  */
 export class PortfolioItemApi extends BaseAPI {
+    /**
+     * Add an Icon to a Portfolio Item
+     * @summary Add an Icon to a Portfolio Item
+     * @param {string} portfolioItemId The Portfolio Item ID
+     * @param {AddIcon} addIcon
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PortfolioItemApi
+     */
+    public addIconToPortfolioItem(portfolioItemId: string, addIcon: AddIcon, options?: any) {
+        return PortfolioItemApiFp(this.configuration).addIconToPortfolioItem(portfolioItemId, addIcon, options)(this.axios, this.basePath);
+    }
+
     /**
      * Adds a name and description for a portfolio item and returns the newly created portfolio item.
      * @summary Add a new portfolio item
@@ -4059,18 +4679,6 @@ export class PortfolioItemApi extends BaseAPI {
     }
 
     /**
-     * Fetch the specified portfolio item's icon information.
-     * @summary Fetches the specified portfolio item's icon information
-     * @param {string} portfolioItemId The Portfolio Item ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PortfolioItemApi
-     */
-    public listServiceOfferingIcon(portfolioItemId: string, options?: any) {
-        return PortfolioItemApiFp(this.configuration).listServiceOfferingIcon(portfolioItemId, options)(this.axios, this.basePath);
-    }
-
-    /**
      * Gets all service plans for a portfolio item.
      * @summary Gets all service plans for a specific portfolio item; requires a connection to the topology service.
      * @param {string} portfolioItemId The Portfolio Item ID
@@ -4118,6 +4726,18 @@ export class PortfolioItemApi extends BaseAPI {
      */
     public showPortfolioItem(id: string, options?: any) {
         return PortfolioItemApiFp(this.configuration).showPortfolioItem(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Fetch the specified portfolio item's icon image.
+     * @summary Fetches the specified portfolio item's icon image
+     * @param {string} portfolioItemId The Portfolio Item ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PortfolioItemApi
+     */
+    public showPortfolioItemIcon(portfolioItemId: string, options?: any) {
+        return PortfolioItemApiFp(this.configuration).showPortfolioItemIcon(portfolioItemId, options)(this.axios, this.basePath);
     }
 
     /**

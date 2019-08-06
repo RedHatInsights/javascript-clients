@@ -31,7 +31,7 @@
 
 **● approvalRequestRef**: *`string`*
 
-*Defined in [api.ts:103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L103)*
+*Defined in [api.ts:117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L117)*
 
 The id of the approval submitted to approval-api
 
@@ -46,7 +46,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L97)*
+*Defined in [api.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L111)*
 
 The unique identifier for this approval request.
 
@@ -61,7 +61,7 @@ ___
 
 **● orderItemId**: *`string`*
 
-*Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L109)*
+*Defined in [api.ts:123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L123)*
 
 The Order Item which the approval request belongs to
 
@@ -76,7 +76,7 @@ ___
 
 **● reason**: *`string`*
 
-*Defined in [api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L115)*
+*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L129)*
 
 The reason for the current state.
 
@@ -91,7 +91,7 @@ ___
 
 **● state**: *[StateEnum](../enums/approvalrequest.stateenum.md)*
 
-*Defined in [api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L121)*
+*Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L135)*
 
 The state of the approval request (approved, denied, undecided, canceled)
 
@@ -106,7 +106,7 @@ ___
 
 **● workflowRef**: *`string`*
 
-*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L127)*
+*Defined in [api.ts:141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L141)*
 
 The workflow that was requested
 

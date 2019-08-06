@@ -175,7 +175,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2949](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2949)*
+*Defined in [api.ts:2955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2955)*
 
 DefaultApi - axios parameter creator
 
@@ -194,7 +194,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:8708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L8708)*
+*Defined in [api.ts:8927](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L8927)*
 
 DefaultApi - factory interface
 
@@ -215,7 +215,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:7275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L7275)*
+*Defined in [api.ts:7443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L7443)*
 
 DefaultApi - functional programming interface
 

@@ -10,6 +10,8 @@
 
 **BaseAPI**
 
+↳  [AccountSettingApi](accountsettingapi.md)
+
 ↳  [AckApi](ackapi.md)
 
 ↳  [ExportApi](exportapi.md)

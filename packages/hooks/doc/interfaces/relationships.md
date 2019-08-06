@@ -26,7 +26,7 @@
 
 **● data**: *`Array`<[Relationship](relationship.md)>*
 
-*Defined in api.ts:1008*
+*Defined in [api.ts:1008](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1008)*
 
 *__type__*: {Array}
 

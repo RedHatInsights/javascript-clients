@@ -27,7 +27,7 @@
 
 **● providerControlParameters**: *`any`*
 
-*Defined in [api.ts:1711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1711)*
+*Defined in [api.ts:1723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1723)*
 
 The provider specific parameters needed to provision this service. This might include namespaces, special keys
 
@@ -42,7 +42,7 @@ ___
 
 **● serviceParameters**: *`any`*
 
-*Defined in [api.ts:1705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1705)*
+*Defined in [api.ts:1717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1717)*
 
 JSON object with provisioning parameters
 

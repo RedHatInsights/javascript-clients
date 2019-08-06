@@ -22,7 +22,7 @@
 
 **EventType**:  = "event_type"
 
-*Defined in api.ts:565*
+*Defined in [api.ts:565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L565)*
 
 ___
 

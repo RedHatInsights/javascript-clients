@@ -262,6 +262,52 @@ export interface CollectionMetadata {
 }
 
 /**
+ *
+ * @export
+ * @interface GraphqlIn
+ */
+export interface GraphqlIn {
+    /**
+     * The GraphQL query
+     * @type {string}
+     * @memberof GraphqlIn
+     */
+    query: string;
+    /**
+     * If the Query contains several named operations, the operationName controls which one should be executed
+     * @type {string}
+     * @memberof GraphqlIn
+     */
+    operationName?: string;
+    /**
+     * Optional Query variables
+     * @type {any}
+     * @memberof GraphqlIn
+     */
+    variables?: any;
+}
+
+/**
+ *
+ * @export
+ * @interface GraphqlOut
+ */
+export interface GraphqlOut {
+    /**
+     * Results from the GraphQL query
+     * @type {any}
+     * @memberof GraphqlOut
+     */
+    data?: any;
+    /**
+     * Errors resulting from the GraphQL query
+     * @type {Array<any>}
+     * @memberof GraphqlOut
+     */
+    errors?: Array<any>;
+}
+
+/**
  * Input parameters for approval request object.
  * @export
  * @interface RequestIn
@@ -1036,6 +1082,120 @@ export class ActionApi extends BaseAPI {
      */
     public showAction(id: string, options?: any) {
         return ActionApiFp(this.configuration).showAction(id, options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
+ * GraphqlApi - axios parameter creator
+ * @export
+ */
+export const GraphqlApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Performs a GraphQL Query
+         * @summary Perform a GraphQL Query
+         * @param {GraphqlIn} graphqlIn GraphQL Query Request
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postGraphql(graphqlIn: GraphqlIn, options: any = {}): RequestArgs {
+            // verify required parameter 'graphqlIn' is not null or undefined
+            if (graphqlIn === null || graphqlIn === undefined) {
+                throw new RequiredError('graphqlIn','Required parameter graphqlIn was null or undefined when calling postGraphql.');
+            }
+            const localVarPath = `/graphql`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"GraphqlIn" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(graphqlIn || {}) : (graphqlIn || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * GraphqlApi - functional programming interface
+ * @export
+ */
+export const GraphqlApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Performs a GraphQL Query
+         * @summary Perform a GraphQL Query
+         * @param {GraphqlIn} graphqlIn GraphQL Query Request
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postGraphql(graphqlIn: GraphqlIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphqlOut> {
+            const localVarAxiosArgs = GraphqlApiAxiosParamCreator(configuration).postGraphql(graphqlIn, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * GraphqlApi - factory interface
+ * @export
+ */
+export const GraphqlApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Performs a GraphQL Query
+         * @summary Perform a GraphQL Query
+         * @param {GraphqlIn} graphqlIn GraphQL Query Request
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postGraphql(graphqlIn: GraphqlIn, options?: any) {
+            return GraphqlApiFp(configuration).postGraphql(graphqlIn, options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * GraphqlApi - object-oriented interface
+ * @export
+ * @class GraphqlApi
+ * @extends {BaseAPI}
+ */
+export class GraphqlApi extends BaseAPI {
+    /**
+     * Performs a GraphQL Query
+     * @summary Perform a GraphQL Query
+     * @param {GraphqlIn} graphqlIn GraphQL Query Request
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GraphqlApi
+     */
+    public postGraphql(graphqlIn: GraphqlIn, options?: any) {
+        return GraphqlApiFp(this.configuration).postGraphql(graphqlIn, options)(this.axios, this.basePath);
     }
 
 }

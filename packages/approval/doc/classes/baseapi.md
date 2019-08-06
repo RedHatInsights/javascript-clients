@@ -12,6 +12,8 @@
 
 ↳  [ActionApi](actionapi.md)
 
+↳  [GraphqlApi](graphqlapi.md)
+
 ↳  [RequestApi](requestapi.md)
 
 ↳  [StageApi](stageapi.md)

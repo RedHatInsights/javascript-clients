@@ -29,7 +29,7 @@
 
 **● filter**: *[EndpointsEndpointFilter](endpointsendpointfilter.md)*
 
-*Defined in api.ts:346*
+*Defined in [api.ts:346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L346)*
 
 *__type__*: {EndpointsEndpointFilter}
 
@@ -42,7 +42,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:334*
+*Defined in [api.ts:334](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L334)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● type**: *`string`*
 
-*Defined in api.ts:340*
+*Defined in [api.ts:340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L340)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● url**: *`Url`*
 
-*Defined in api.ts:328*
+*Defined in [api.ts:328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L328)*
 
 *__type__*: {Url}
 

@@ -28,7 +28,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L609)*
+*Defined in [api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L655)*
 
 *__type__*: {string}
 
@@ -41,7 +41,7 @@ ___
 
 **● groupRefs**: *`Array`<`string`>*
 
-*Defined in [api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L615)*
+*Defined in [api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L661)*
 
 Group reference ids associated with workflow
 
@@ -56,7 +56,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L603)*
+*Defined in [api.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L649)*
 
 *__type__*: {string}
 

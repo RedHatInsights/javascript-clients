@@ -26,7 +26,7 @@
 
 **● enabled**: *`boolean`*
 
-*Defined in api.ts:816*
+*Defined in [api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L816)*
 
 *__type__*: {boolean}
 
