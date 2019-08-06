@@ -15,6 +15,8 @@
 ### Properties
 
 * [count](collectionmetadata.md#count)
+* [limit](collectionmetadata.md#limit)
+* [offset](collectionmetadata.md#offset)
 
 ---
 
@@ -27,6 +29,32 @@
 **● count**: *`number`*
 
 *Defined in [api.ts:337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L337)*
+
+*__type__*: {number}
+
+*__memberof__*: CollectionMetadata
+
+___
+<a id="limit"></a>
+
+### `<Optional>` limit
+
+**● limit**: *`number`*
+
+*Defined in [api.ts:343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L343)*
+
+*__type__*: {number}
+
+*__memberof__*: CollectionMetadata
+
+___
+<a id="offset"></a>
+
+### `<Optional>` offset
+
+**● offset**: *`number`*
+
+*Defined in [api.ts:349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L349)*
 
 *__type__*: {number}
 

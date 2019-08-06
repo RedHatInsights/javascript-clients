@@ -313,6 +313,18 @@ export interface CollectionMetadata {
      * @memberof CollectionMetadata
      */
     count?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof CollectionMetadata
+     */
+    offset?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof CollectionMetadata
+     */
+    limit?: number;
 }
 
 /**
@@ -1315,10 +1327,10 @@ export interface Flavor {
     diskSize?: number;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Flavor
      */
-    extra?: string;
+    extra?: any;
     /**
      * ID of the resource
      * @type {string}
@@ -1737,10 +1749,10 @@ export interface ServiceInstance {
     externalUrl?: string;
     /**
      * Extra information about this object in JSON format
-     * @type {string}
+     * @type {any}
      * @memberof ServiceInstance
      */
-    extra?: string;
+    extra?: any;
     /**
      * ID of the resource
      * @type {string}
@@ -1885,10 +1897,10 @@ export interface ServiceOffering {
     documentationUrl?: string;
     /**
      * Extra information about this object in JSON format
-     * @type {string}
+     * @type {any}
      * @memberof ServiceOffering
      */
-    extra?: string;
+    extra?: any;
     /**
      * ID of the resource
      * @type {string}
@@ -2103,10 +2115,10 @@ export interface ServicePlan {
     description?: string;
     /**
      * Extra information about this object in JSON format
-     * @type {string}
+     * @type {any}
      * @memberof ServicePlan
      */
-    extra?: string;
+    extra?: any;
     /**
      * ID of the resource
      * @type {string}
@@ -2231,12 +2243,6 @@ export interface Source {
      * @memberof Source
      */
     id?: string;
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof Source
-     */
-    tenantId?: string;
     /**
      *
      * @type {string}
@@ -2525,10 +2531,10 @@ export interface Vm {
     description?: string;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Vm
      */
-    extra?: string;
+    extra?: any;
     /**
      * ID of the resource
      * @type {string}
@@ -2673,10 +2679,10 @@ export interface Volume {
     createdAt?: Date;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Volume
      */
-    extra?: string;
+    extra?: any;
     /**
      * ID of the resource
      * @type {string}
@@ -2847,10 +2853,10 @@ export interface VolumeType {
     description?: string;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof VolumeType
      */
-    extra?: string;
+    extra?: any;
     /**
      * ID of the resource
      * @type {string}
@@ -4614,6 +4620,60 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns an array of Cluster objects
+         * @summary List Clusters for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceClusters(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceClusters.');
+            }
+            const localVarPath = `/sources/{id}/clusters`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns an array of ContainerGroup objects
          * @summary List ContainerGroups for Source
          * @param {string} id ID of the resource
@@ -4899,6 +4959,114 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceContainers.');
             }
             const localVarPath = `/sources/{id}/containers`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Datastore objects
+         * @summary List Datastores for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceDatastores(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceDatastores.');
+            }
+            const localVarPath = `/sources/{id}/datastores`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Host objects
+         * @summary List Hosts for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceHosts(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceHosts.');
+            }
+            const localVarPath = `/sources/{id}/hosts`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -7816,6 +7984,23 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns an array of Cluster objects
+         * @summary List Clusters for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceClusters(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClustersCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceClusters(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns an array of ContainerGroup objects
          * @summary List ContainerGroups for Source
          * @param {string} id ID of the resource
@@ -7912,6 +8097,40 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         listSourceContainers(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainersCollection> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceContainers(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Datastore objects
+         * @summary List Datastores for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceDatastores(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DatastoresCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceDatastores(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Host objects
+         * @summary List Hosts for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceHosts(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceHosts(id, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -9117,6 +9336,19 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceAvailabilities(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
+         * Returns an array of Cluster objects
+         * @summary List Clusters for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceClusters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceClusters(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
          * Returns an array of ContainerGroup objects
          * @summary List ContainerGroups for Source
          * @param {string} id ID of the resource
@@ -9193,6 +9425,32 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         listSourceContainers(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
             return DefaultApiFp(configuration).listSourceContainers(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Datastore objects
+         * @summary List Datastores for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceDatastores(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceDatastores(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Host objects
+         * @summary List Hosts for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceHosts(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceHosts(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of OrchestrationStack objects
@@ -10257,6 +10515,21 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Returns an array of Cluster objects
+     * @summary List Clusters for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceClusters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceClusters(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns an array of ContainerGroup objects
      * @summary List ContainerGroups for Source
      * @param {string} id ID of the resource
@@ -10344,6 +10617,36 @@ export class DefaultApi extends BaseAPI {
      */
     public listSourceContainers(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
         return DefaultApiFp(this.configuration).listSourceContainers(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Datastore objects
+     * @summary List Datastores for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceDatastores(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceDatastores(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Host objects
+     * @summary List Hosts for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceHosts(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceHosts(id, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**

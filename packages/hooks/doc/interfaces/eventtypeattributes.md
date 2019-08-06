@@ -27,7 +27,7 @@
 
 **● name**: *`string`*
 
-*Defined in api.ts:580*
+*Defined in [api.ts:580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L580)*
 
 Identifier of the event type, used to identify the event type in messages
 
@@ -42,7 +42,7 @@ ___
 
 **● title**: *`string`*
 
-*Defined in api.ts:586*
+*Defined in [api.ts:586](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L586)*
 
 Human readable description of the event type, shown to the user when configuring filters
 

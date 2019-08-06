@@ -31,7 +31,7 @@
 
 **● active**: *`boolean`*
 
-*Defined in api.ts:275*
+*Defined in [api.ts:275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L275)*
 
 A flag determining whether this endpoint should be used
 
@@ -46,7 +46,7 @@ ___
 
 **● lastDeliveryStatus**: *[LastDeliveryStatusEnum](../enums/endpointattributes.lastdeliverystatusenum.md)*
 
-*Defined in api.ts:287*
+*Defined in [api.ts:287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L287)*
 
 Status of the last delivery
 
@@ -61,7 +61,7 @@ ___
 
 **● lastDeliveryTime**: *`Date` \| `null`*
 
-*Defined in api.ts:293*
+*Defined in [api.ts:293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L293)*
 
 Timestamp of last delivery attempt
 
@@ -76,7 +76,7 @@ ___
 
 **● lastFailureTime**: *`Date`*
 
-*Defined in api.ts:299*
+*Defined in [api.ts:299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L299)*
 
 Timestamp of first failure. If the status is "failure", this marks when the endpoint "went down"
 
@@ -91,7 +91,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in api.ts:269*
+*Defined in [api.ts:269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L269)*
 
 Human readable description of the endpoint
 
@@ -106,7 +106,7 @@ ___
 
 **● url**: *`string`*
 
-*Defined in api.ts:281*
+*Defined in [api.ts:281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L281)*
 
 URL to which messages should be POSTed
 

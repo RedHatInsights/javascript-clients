@@ -103,7 +103,7 @@ ___
 
 ▸ **listStagesByRequest**(requestId: *`string`*, options?: *`any`*): `AxiosPromise`<[StageOutCollection](../interfaces/stageoutcollection.md)>
 
-*Defined in [api.ts:1606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1606)*
+*Defined in [api.ts:1766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1766)*
 
 Return an array of stages by given request id
 
@@ -129,7 +129,7 @@ ___
 
 ▸ **showStage**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[StageOut](../modules/stageout.md)>
 
-*Defined in [api.ts:1618](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1618)*
+*Defined in [api.ts:1778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1778)*
 
 Return an approval stage by given id
 

@@ -83,6 +83,7 @@ API documentation
 * [BaseAPI](classes/baseapi.md)
 * [Configuration](classes/configuration.md)
 * [DefaultApi](classes/defaultapi.md)
+* [IconApi](classes/iconapi.md)
 * [OrderApi](classes/orderapi.md)
 * [OrderItemApi](classes/orderitemapi.md)
 * [PortfolioApi](classes/portfolioapi.md)
@@ -91,6 +92,7 @@ API documentation
 
 ### Interfaces
 
+* [AddIcon](interfaces/addicon.md)
 * [AddPortfolioItem](interfaces/addportfolioitem.md)
 * [ApprovalRequestsCollection](interfaces/approvalrequestscollection.md)
 * [CollectionLinks](interfaces/collectionlinks.md)
@@ -98,10 +100,12 @@ API documentation
 * [ConfigurationParameters](interfaces/configurationparameters.md)
 * [CopyPortfolioItem](interfaces/copyportfolioitem.md)
 * [CreatePortfolioItem](interfaces/createportfolioitem.md)
+* [Icon](interfaces/icon.md)
 * [InlineObject](interfaces/inlineobject.md)
 * [InlineResponse200](interfaces/inlineresponse200.md)
 * [OrderItemsCollection](interfaces/orderitemscollection.md)
 * [OrdersCollection](interfaces/orderscollection.md)
+* [OverrideIcon](interfaces/overrideicon.md)
 * [Portfolio](interfaces/portfolio.md)
 * [PortfolioItem](interfaces/portfolioitem.md)
 * [PortfolioItemNextName](interfaces/portfolioitemnextname.md)
@@ -110,7 +114,6 @@ API documentation
 * [ProgressMessagesCollection](interfaces/progressmessagescollection.md)
 * [RequestArgs](interfaces/requestargs.md)
 * [RestoreKey](interfaces/restorekey.md)
-* [ServiceOfferingIcon](interfaces/serviceofferingicon.md)
 * [ServicePlan](interfaces/serviceplan.md)
 * [ShareInfo](interfaces/shareinfo.md)
 * [SharePolicy](interfaces/sharepolicy.md)
@@ -125,6 +128,9 @@ API documentation
 * [DefaultApiAxiosParamCreator](#defaultapiaxiosparamcreator)
 * [DefaultApiFactory](#defaultapifactory)
 * [DefaultApiFp](#defaultapifp)
+* [IconApiAxiosParamCreator](#iconapiaxiosparamcreator)
+* [IconApiFactory](#iconapifactory)
+* [IconApiFp](#iconapifp)
 * [OrderApiAxiosParamCreator](#orderapiaxiosparamcreator)
 * [OrderApiFactory](#orderapifactory)
 * [OrderApiFp](#orderapifp)
@@ -164,7 +170,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L994)*
+*Defined in [api.ts:1022](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1022)*
 
 DefaultApi - axios parameter creator
 
@@ -183,7 +189,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1114)*
+*Defined in [api.ts:1142](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1142)*
 
 DefaultApi - factory interface
 
@@ -204,9 +210,68 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1078](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1078)*
+*Defined in [api.ts:1106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1106)*
 
 DefaultApi - functional programming interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
+<a id="iconapiaxiosparamcreator"></a>
+
+### `<Const>` IconApiAxiosParamCreator
+
+▸ **IconApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:1202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1202)*
+
+IconApi - axios parameter creator
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
+<a id="iconapifactory"></a>
+
+### `<Const>` IconApiFactory
+
+▸ **IconApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
+
+*Defined in [api.ts:1553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1553)*
+
+IconApi - factory interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+| `Optional` basePath | `string` |
+| `Optional` axios | `AxiosInstance` |
+
+**Returns:** `object`
+
+___
+<a id="iconapifp"></a>
+
+### `<Const>` IconApiFp
+
+▸ **IconApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:1458](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1458)*
+
+IconApi - functional programming interface
 
 **Parameters:**
 
@@ -223,7 +288,7 @@ ___
 
 ▸ **OrderApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1174)*
+*Defined in [api.ts:1707](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1707)*
 
 OrderApi - axios parameter creator
 
@@ -242,7 +307,7 @@ ___
 
 ▸ **OrderApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1602)*
+*Defined in [api.ts:2135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2135)*
 
 OrderApi - factory interface
 
@@ -263,7 +328,7 @@ ___
 
 ▸ **OrderApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1489)*
+*Defined in [api.ts:2022](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2022)*
 
 OrderApi - functional programming interface
 
@@ -282,7 +347,7 @@ ___
 
 ▸ **OrderItemApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1786)*
+*Defined in [api.ts:2319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2319)*
 
 OrderItemApi - axios parameter creator
 
@@ -301,7 +366,7 @@ ___
 
 ▸ **OrderItemApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2063)*
+*Defined in [api.ts:2596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2596)*
 
 OrderItemApi - factory interface
 
@@ -322,7 +387,7 @@ ___
 
 ▸ **OrderItemApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1990)*
+*Defined in [api.ts:2523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2523)*
 
 OrderItemApi - functional programming interface
 
@@ -341,7 +406,7 @@ ___
 
 ▸ **PortfolioApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2185)*
+*Defined in [api.ts:2718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2718)*
 
 PortfolioApi - axios parameter creator
 
@@ -360,7 +425,7 @@ ___
 
 ▸ **PortfolioApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2921](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2921)*
+*Defined in [api.ts:3454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3454)*
 
 PortfolioApi - factory interface
 
@@ -381,7 +446,7 @@ ___
 
 ▸ **PortfolioApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2734](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2734)*
+*Defined in [api.ts:3267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3267)*
 
 PortfolioApi - functional programming interface
 
@@ -400,7 +465,7 @@ ___
 
 ▸ **PortfolioItemApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3223)*
+*Defined in [api.ts:3756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3756)*
 
 PortfolioItemApi - axios parameter creator
 
@@ -419,7 +484,7 @@ ___
 
 ▸ **PortfolioItemApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:3870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3870)*
+*Defined in [api.ts:4466](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4466)*
 
 PortfolioItemApi - factory interface
 
@@ -440,7 +505,7 @@ ___
 
 ▸ **PortfolioItemApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3701)*
+*Defined in [api.ts:4282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4282)*
 
 PortfolioItemApi - functional programming interface
 

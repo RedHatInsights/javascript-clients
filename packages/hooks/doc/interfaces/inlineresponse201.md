@@ -26,7 +26,7 @@
 
 **● data**: *[Endpoint](../modules/endpoint.md)*
 
-*Defined in api.ts:862*
+*Defined in [api.ts:862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L862)*
 
 *__type__*: {Endpoint}
 

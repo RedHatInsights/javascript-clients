@@ -105,7 +105,7 @@ ___
 
 ▸ **statsList**(options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1766)*
+*Defined in [api.ts:2080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2080)*
 
 Provide a simple list of URLs contained here. Copied sort-of from the APIRootView's `get` method.
 
@@ -128,7 +128,7 @@ ___
 
 ▸ **statsReports**(options?: *`any`*): `AxiosPromise`<[RulesStats](../interfaces/rulesstats.md)>
 
-*Defined in [api.ts:1776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1776)*
+*Defined in [api.ts:2090](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2090)*
 
 View the statistics for this account.
 
@@ -151,7 +151,7 @@ ___
 
 ▸ **statsRules**(options?: *`any`*): `AxiosPromise`<[RulesStats](../interfaces/rulesstats.md)>
 
-*Defined in [api.ts:1786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1786)*
+*Defined in [api.ts:2100](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2100)*
 
 View the statistics for this account.
 
@@ -174,7 +174,7 @@ ___
 
 ▸ **statsSystems**(options?: *`any`*): `AxiosPromise`<[SystemsStats](../interfaces/systemsstats.md)>
 
-*Defined in [api.ts:1796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1796)*
+*Defined in [api.ts:2110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2110)*
 
 View the statistics for this account.
 

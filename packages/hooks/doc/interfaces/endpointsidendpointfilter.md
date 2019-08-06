@@ -29,7 +29,7 @@
 
 **● appIds**: *`Array`<`string`>*
 
-*Defined in api.ts:418*
+*Defined in [api.ts:418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L418)*
 
 *__type__*: {Array}
 
@@ -42,7 +42,7 @@ ___
 
 **● destroy**: *`boolean`*
 
-*Defined in api.ts:436*
+*Defined in [api.ts:436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L436)*
 
 *__type__*: {boolean}
 
@@ -55,7 +55,7 @@ ___
 
 **● eventTypeIds**: *`Array`<`string`>*
 
-*Defined in api.ts:424*
+*Defined in [api.ts:424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L424)*
 
 *__type__*: {Array}
 
@@ -68,7 +68,7 @@ ___
 
 **● levelIds**: *`Array`<`string`>*
 
-*Defined in api.ts:430*
+*Defined in [api.ts:430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L430)*
 
 *__type__*: {Array}
 

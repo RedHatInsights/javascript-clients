@@ -29,7 +29,7 @@
 
 **● first**: *`string`*
 
-*Defined in api.ts:930*
+*Defined in [api.ts:930](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L930)*
 
 Link to the first page of records
 
@@ -44,7 +44,7 @@ ___
 
 **● last**: *`string`*
 
-*Defined in api.ts:936*
+*Defined in [api.ts:936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L936)*
 
 Link to the last page of records
 
@@ -59,7 +59,7 @@ ___
 
 **● next**: *`string`*
 
-*Defined in api.ts:948*
+*Defined in [api.ts:948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L948)*
 
 Link to next page of records, if such page exists
 
@@ -74,7 +74,7 @@ ___
 
 **● previous**: *`string`*
 
-*Defined in api.ts:942*
+*Defined in [api.ts:942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L942)*
 
 Link to previous page of records, if such page exists
 

@@ -27,7 +27,7 @@
 
 **● parameter**: *`string`*
 
-*Defined in api.ts:520*
+*Defined in [api.ts:520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L520)*
 
 *__type__*: {string}
 
@@ -40,7 +40,7 @@ ___
 
 **● pointer**: *`string`*
 
-*Defined in api.ts:514*
+*Defined in [api.ts:514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L514)*
 
 *__type__*: {string}
 

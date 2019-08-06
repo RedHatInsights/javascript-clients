@@ -103,7 +103,7 @@ ___
 
 ▸ **listTemplates**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TemplateOutCollection](../interfaces/templateoutcollection.md)>
 
-*Defined in [api.ts:1807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1807)*
+*Defined in [api.ts:1967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1967)*
 
 Return all templates
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **showTemplate**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[TemplateOut](../interfaces/templateout.md)>
 
-*Defined in [api.ts:1819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1819)*
+*Defined in [api.ts:1979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1979)*
 
 Return a template by given id
 

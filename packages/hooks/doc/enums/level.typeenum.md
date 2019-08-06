@@ -22,7 +22,7 @@
 
 **Level**:  = "level"
 
-*Defined in api.ts:901*
+*Defined in [api.ts:901](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L901)*
 
 ___
 

@@ -26,7 +26,7 @@
 
 **● levels**: *[Relationships](relationships.md)*
 
-*Defined in api.ts:600*
+*Defined in [api.ts:600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L600)*
 
 *__type__*: {Relationships}
 

@@ -102,7 +102,7 @@ ___
 
 ▸ **exportHitsList**(options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
 
-*Defined in [api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1045)*
+*Defined in [api.ts:1359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1359)*
 
 Get each host and all rules currently affecting it. This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store). We also only present active, non-acked rules.
 

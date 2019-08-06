@@ -72,6 +72,20 @@ export class RequiredError extends Error {
 /**
  *
  * @export
+ * @interface AccountSetting
+ */
+export interface AccountSetting {
+    /**
+     *
+     * @type {boolean}
+     * @memberof AccountSetting
+     */
+    showSatelliteHosts?: boolean;
+}
+
+/**
+ *
+ * @export
  * @interface Ack
  */
 export interface Ack {
@@ -293,6 +307,134 @@ export interface ResolutionRisk {
      * @memberof ResolutionRisk
      */
     risk?: number;
+}
+
+/**
+ *
+ * @export
+ * @interface Rule
+ */
+export interface Rule {
+    /**
+     * Rule ID from Insights
+     * @type {string}
+     * @memberof Rule
+     */
+    ruleId: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Rule
+     */
+    createdAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof Rule
+     */
+    updatedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof Rule
+     */
+    deletedAt?: Date;
+    /**
+     *
+     * @type {RuleSet}
+     * @memberof Rule
+     */
+    ruleset: RuleSet;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    description: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Rule
+     */
+    active?: boolean;
+    /**
+     *
+     * @type {RuleCategory}
+     * @memberof Rule
+     */
+    category: RuleCategory;
+    /**
+     *
+     * @type {RuleImpact}
+     * @memberof Rule
+     */
+    impact: RuleImpact;
+    /**
+     *
+     * @type {number}
+     * @memberof Rule
+     */
+    likelihood?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    nodeId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    tags?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Rule
+     */
+    rebootRequired?: boolean;
+    /**
+     *
+     * @type {Date}
+     * @memberof Rule
+     */
+    publishDate?: Date | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    summary: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    generic: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    reason: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    moreInfo?: string;
+    /**
+     *
+     * @type {Array<Resolution>}
+     * @memberof Rule
+     */
+    resolutionSet: Array<Resolution>;
+    /**
+     *
+     * @type {number}
+     * @memberof Rule
+     */
+    totalRisk?: number;
 }
 
 /**
@@ -530,38 +672,6 @@ export interface RuleSet {
 /**
  *
  * @export
- * @interface RuleTopic
- */
-export interface RuleTopic {
-    /**
-     *
-     * @type {string}
-     * @memberof RuleTopic
-     */
-    name: string;
-    /**
-     * Rule topic slug
-     * @type {string}
-     * @memberof RuleTopic
-     */
-    slug: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RuleTopic
-     */
-    description: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RuleTopic
-     */
-    tags?: string;
-}
-
-/**
- *
- * @export
  * @interface RulesStats
  */
 export interface RulesStats {
@@ -645,6 +755,210 @@ export interface SystemsStats {
     category: { [key: string]: number; };
 }
 
+/**
+ *
+ * @export
+ * @interface TopicWithRules
+ */
+export interface TopicWithRules {
+    /**
+     *
+     * @type {string}
+     * @memberof TopicWithRules
+     */
+    name: string;
+    /**
+     * Rule topic slug
+     * @type {string}
+     * @memberof TopicWithRules
+     */
+    slug: string;
+    /**
+     *
+     * @type {string}
+     * @memberof TopicWithRules
+     */
+    description: string;
+    /**
+     *
+     * @type {string}
+     * @memberof TopicWithRules
+     */
+    tags?: string;
+    /**
+     *
+     * @type {Array<Rule>}
+     * @memberof TopicWithRules
+     */
+    rules: Array<Rule>;
+    /**
+     *
+     * @type {number}
+     * @memberof TopicWithRules
+     */
+    impactedSystemsCount?: number;
+}
+
+
+/**
+ * AccountSettingApi - axios parameter creator
+ * @export
+ */
+export const AccountSettingApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Update this account's settings, and return the updated settings.
+         * @param {AccountSetting} data
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountSettingCreate(data: AccountSetting, options: any = {}): RequestArgs {
+            // verify required parameter 'data' is not null or undefined
+            if (data === null || data === undefined) {
+                throw new RequiredError('data','Required parameter data was null or undefined when calling accountSettingCreate.');
+            }
+            const localVarPath = `/account_setting/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (data !== undefined) {
+                localVarQueryParameter['data'] = data;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Show this account's settings, or the defaults.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountSettingList(options: any = {}): RequestArgs {
+            const localVarPath = `/account_setting/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AccountSettingApi - functional programming interface
+ * @export
+ */
+export const AccountSettingApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Update this account's settings, and return the updated settings.
+         * @param {AccountSetting} data
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountSettingCreate(data: AccountSetting, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountSetting> {
+            const localVarAxiosArgs = AccountSettingApiAxiosParamCreator(configuration).accountSettingCreate(data, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Show this account's settings, or the defaults.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountSettingList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = AccountSettingApiAxiosParamCreator(configuration).accountSettingList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * AccountSettingApi - factory interface
+ * @export
+ */
+export const AccountSettingApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Update this account's settings, and return the updated settings.
+         * @param {AccountSetting} data
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountSettingCreate(data: AccountSetting, options?: any) {
+            return AccountSettingApiFp(configuration).accountSettingCreate(data, options)(axios, basePath);
+        },
+        /**
+         * Show this account's settings, or the defaults.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountSettingList(options?: any) {
+            return AccountSettingApiFp(configuration).accountSettingList(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * AccountSettingApi - object-oriented interface
+ * @export
+ * @class AccountSettingApi
+ * @extends {BaseAPI}
+ */
+export class AccountSettingApi extends BaseAPI {
+    /**
+     * Update this account's settings, and return the updated settings.
+     * @param {AccountSetting} data
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountSettingApi
+     */
+    public accountSettingCreate(data: AccountSetting, options?: any) {
+        return AccountSettingApiFp(this.configuration).accountSettingCreate(data, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Show this account's settings, or the defaults.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountSettingApi
+     */
+    public accountSettingList(options?: any) {
+        return AccountSettingApiFp(this.configuration).accountSettingList(options)(this.axios, this.basePath);
+    }
+
+}
 
 /**
  * AckApi - axios parameter creator
@@ -1066,14 +1380,14 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
          * @param {boolean} [reportsShown] Display rules where reports are shown or not
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
-         * @param {'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk'} [sort] Order by this field
+         * @param {'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'} [sort] Order by this field
          * @param {string} [text] Display rules with this text in their text fields
          * @param {string} [topic] Display rules in this topic (slug)
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options: any = {}): RequestArgs {
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options: any = {}): RequestArgs {
             const localVarPath = `/rule/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1235,14 +1549,14 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
          * @param {boolean} [reportsShown] Display rules where reports are shown or not
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
-         * @param {'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk'} [sort] Order by this field
+         * @param {'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'} [sort] Order by this field
          * @param {string} [text] Display rules with this text in their text fields
          * @param {string} [topic] Display rules in this topic (slug)
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002> {
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002> {
             const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleList(limit, offset, category, hasTag, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1296,14 +1610,14 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
          * @param {boolean} [reportsShown] Display rules where reports are shown or not
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
-         * @param {'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk'} [sort] Order by this field
+         * @param {'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'} [sort] Order by this field
          * @param {string} [text] Display rules with this text in their text fields
          * @param {string} [topic] Display rules in this topic (slug)
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
             return RuleApiFp(configuration).ruleList(limit, offset, category, hasTag, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, options)(axios, basePath);
         },
         /**
@@ -1346,7 +1660,7 @@ export class RuleApi extends BaseAPI {
      * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
      * @param {boolean} [reportsShown] Display rules where reports are shown or not
      * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
-     * @param {'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk'} [sort] Order by this field
+     * @param {'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'} [sort] Order by this field
      * @param {string} [text] Display rules with this text in their text fields
      * @param {string} [topic] Display rules in this topic (slug)
      * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
@@ -1354,7 +1668,7 @@ export class RuleApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RuleApi
      */
-    public ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
+    public ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
         return RuleApiFp(this.configuration).ruleList(limit, offset, category, hasTag, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, options)(this.axios, this.basePath);
     }
 
@@ -2167,7 +2481,7 @@ export const TopicApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RuleTopic>> {
+        topicList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<TopicWithRules>> {
             const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicList(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2180,7 +2494,7 @@ export const TopicApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicRead(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleTopic> {
+        topicRead(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TopicWithRules> {
             const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicRead(slug, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
