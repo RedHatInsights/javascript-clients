@@ -142,7 +142,7 @@ ___
 
 **● impact**: *`string`*
 
-*Defined in [api.ts:191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L191)*
+*Defined in [api.ts:197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L197)*
 
 Red Hat security impact of the CVE.
 
@@ -157,7 +157,7 @@ ___
 
 **● modifiedDate**: *`string`*
 
-*Defined in [api.ts:197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L197)*
+*Defined in [api.ts:191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L191)*
 
 String representation of ISO-8601 formatted date of last modification of the CVE.
 

@@ -18,6 +18,7 @@
 * [cvssTo](metacves.md#cvssto)
 * [dataFormat](metacves.md#dataformat)
 * [filter](metacves.md#filter)
+* [impact](metacves.md#impact)
 * [limit](metacves.md#limit)
 * [offset](metacves.md#offset)
 * [page](metacves.md#page)
@@ -25,7 +26,6 @@
 * [pages](metacves.md#pages)
 * [publicFrom](metacves.md#publicfrom)
 * [publicTo](metacves.md#publicto)
-* [severity](metacves.md#severity)
 * [sort](metacves.md#sort)
 * [statusId](metacves.md#statusid)
 * [totalItems](metacves.md#totalitems)
@@ -70,7 +70,7 @@ ___
 
 **● dataFormat**: *`string`*
 
-*Defined in [api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L437)*
+*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L485)*
 
 Format of the output data, either JSON (default) or CSV.
 
@@ -85,9 +85,24 @@ ___
 
 **● filter**: *`string` \| `null`*
 
-*Defined in [api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L443)*
+*Defined in [api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L437)*
 
 Full text filter
+
+*__type__*: {string}
+
+*__memberof__*: MetaCves
+
+___
+<a id="impact"></a>
+
+### `<Optional>` impact
+
+**● impact**: *`string` \| `null`*
+
+*Defined in [api.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L515)*
+
+Filter based on impact IDs.
 
 *__type__*: {string}
 
@@ -100,7 +115,7 @@ ___
 
 **● limit**: *`number`*
 
-*Defined in [api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L449)*
+*Defined in [api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L443)*
 
 Maximum number of paginated results.
 
@@ -115,7 +130,7 @@ ___
 
 **● offset**: *`number`*
 
-*Defined in [api.ts:455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L455)*
+*Defined in [api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L449)*
 
 First record of paginated response.
 
@@ -130,7 +145,7 @@ ___
 
 **● page**: *`number`*
 
-*Defined in [api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L461)*
+*Defined in [api.ts:455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L455)*
 
 Page number of paginated response.
 
@@ -145,7 +160,7 @@ ___
 
 **● pageSize**: *`number`*
 
-*Defined in [api.ts:467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L467)*
+*Defined in [api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L461)*
 
 Number of records per page of paginated response.
 
@@ -160,7 +175,7 @@ ___
 
 **● pages**: *`number`*
 
-*Defined in [api.ts:473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L473)*
+*Defined in [api.ts:467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L467)*
 
 Total number of pages of paginated response.
 
@@ -199,28 +214,13 @@ Filter CVEs based on their published date, up to the date.
 *__memberof__*: MetaCves
 
 ___
-<a id="severity"></a>
-
-### `<Optional>` severity
-
-**● severity**: *`string` \| `null`*
-
-*Defined in [api.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L515)*
-
-Filter based on severity IDs.
-
-*__type__*: {string}
-
-*__memberof__*: MetaCves
-
-___
 <a id="sort"></a>
 
 ###  sort
 
 **● sort**: *`string` \| `null`*
 
-*Defined in [api.ts:479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L479)*
+*Defined in [api.ts:473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L473)*
 
 Sorting filter.
 
@@ -250,7 +250,7 @@ ___
 
 **● totalItems**: *`number`*
 
-*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L485)*
+*Defined in [api.ts:479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L479)*
 
 Total number of records.
 
