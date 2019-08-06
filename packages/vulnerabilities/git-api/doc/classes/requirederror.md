@@ -70,7 +70,7 @@ ___
 
 *Inherited from Error.message*
 
-*Defined in /home/RedHatInsights/git/javascript-clients-fork/packages/vulnerabilities/node_modules/typescript/lib/lib.es5.d.ts:964*
+*Defined in /git/javascript-clients/packages/vulnerabilities/node_modules/typescript/lib/lib.es5.d.ts:964*
 
 ___
 <a id="name"></a>
@@ -94,7 +94,7 @@ ___
 
 *Overrides Error.stack*
 
-*Defined in /home/RedHatInsights/git/javascript-clients-fork/packages/vulnerabilities/node_modules/typescript/lib/lib.es5.d.ts:965*
+*Defined in /git/javascript-clients/packages/vulnerabilities/node_modules/typescript/lib/lib.es5.d.ts:965*
 
 ___
 <a id="error"></a>
@@ -103,7 +103,7 @@ ___
 
 **● Error**: *`ErrorConstructor`*
 
-*Defined in /home/RedHatInsights/git/javascript-clients-fork/packages/vulnerabilities/node_modules/typescript/lib/lib.es5.d.ts:974*
+*Defined in /git/javascript-clients/packages/vulnerabilities/node_modules/typescript/lib/lib.es5.d.ts:974*
 
 ___
 
