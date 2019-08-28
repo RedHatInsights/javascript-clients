@@ -28,7 +28,7 @@
 
 **● data**: *`Object`*
 
-*Defined in [api.ts:951](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L951)*
+*Defined in [api.ts:993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L993)*
 
 *__type__*: {Object}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[Links](links.md)*
 
-*Defined in [api.ts:957](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L957)*
+*Defined in [api.ts:999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L999)*
 
 *__type__*: {Links}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[MetaSystems](metasystems.md)*
 
-*Defined in [api.ts:963](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L963)*
+*Defined in [api.ts:1005](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1005)*
 
 *__type__*: {MetaSystems}
 

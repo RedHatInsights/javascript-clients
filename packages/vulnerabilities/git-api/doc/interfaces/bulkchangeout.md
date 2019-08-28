@@ -28,7 +28,7 @@
 
 *Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L109)*
 
-List of updated inventory IDs.
+List of updated objects/updated object IDs.
 
 *__type__*: {Array}
 

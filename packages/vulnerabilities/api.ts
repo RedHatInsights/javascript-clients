@@ -98,6 +98,20 @@ export interface AffectedSystemsOut {
 /**
  *
  * @export
+ * @interface BulkChangeOut
+ */
+export interface BulkChangeOut {
+    /**
+     * List of updated inventory IDs.
+     * @type {Array<string>}
+     * @memberof BulkChangeOut
+     */
+    updated: Array<string>;
+}
+
+/**
+ *
+ * @export
  * @interface CveDetailOut
  */
 export interface CveDetailOut {
@@ -259,6 +273,14 @@ export interface ErrorsErrors {
      * @memberof ErrorsErrors
      */
     status: string;
+}
+
+/**
+ *
+ * @export
+ * @interface InventoryIdOrList
+ */
+export interface InventoryIdOrList {
 }
 
 /**
@@ -789,6 +811,26 @@ export interface MetaVulnerabilitiesOut {
      * @memberof MetaVulnerabilitiesOut
      */
     impact: string | null;
+}
+
+/**
+ *
+ * @export
+ * @interface OptOutIn
+ */
+export interface OptOutIn {
+    /**
+     *
+     * @type {InventoryIdOrList}
+     * @memberof OptOutIn
+     */
+    inventoryId: InventoryIdOrList;
+    /**
+     * Opt out setting to be set.
+     * @type {boolean}
+     * @memberof OptOutIn
+     */
+    optOut: boolean;
 }
 
 /**
@@ -1717,6 +1759,56 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
+         * @summary Opt in/out a system to/from vulnerability application.
+         * @param {OptOutIn} optOutIn Values to be set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        setSystemsOptOut(optOutIn: OptOutIn, options: any = {}): RequestArgs {
+            // verify required parameter 'optOutIn' is not null or undefined
+            if (optOutIn === null || optOutIn === undefined) {
+                throw new RequiredError('optOutIn','Required parameter optOutIn was null or undefined when calling setSystemsOptOut.');
+            }
+            const localVarPath = `/v1/systems/opt_out`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("x-rh-identity")
+					: configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"OptOutIn" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(optOutIn || {}) : (optOutIn || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -1919,6 +2011,20 @@ export const DefaultApiFp = function(configuration?: Configuration) {
                 return axios.request(axiosRequestArgs);
             };
         },
+        /**
+         * Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
+         * @summary Opt in/out a system to/from vulnerability application.
+         * @param {OptOutIn} optOutIn Values to be set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        setSystemsOptOut(optOutIn: OptOutIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<BulkChangeOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).setSystemsOptOut(optOutIn, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
     }
 };
 
@@ -2076,6 +2182,16 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         setSystemOptOut(inventoryId: string, value: boolean, options?: any) {
             return DefaultApiFp(configuration).setSystemOptOut(inventoryId, value, options)(axios, basePath);
+        },
+        /**
+         * Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
+         * @summary Opt in/out a system to/from vulnerability application.
+         * @param {OptOutIn} optOutIn Values to be set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        setSystemsOptOut(optOutIn: OptOutIn, options?: any) {
+            return DefaultApiFp(configuration).setSystemsOptOut(optOutIn, options)(axios, basePath);
         },
     };
 };
@@ -2256,6 +2372,18 @@ export class DefaultApi extends BaseAPI {
      */
     public setSystemOptOut(inventoryId: string, value: boolean, options?: any) {
         return DefaultApiFp(this.configuration).setSystemOptOut(inventoryId, value, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
+     * @summary Opt in/out a system to/from vulnerability application.
+     * @param {OptOutIn} optOutIn Values to be set.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public setSystemsOptOut(optOutIn: OptOutIn, options?: any) {
+        return DefaultApiFp(this.configuration).setSystemsOptOut(optOutIn, options)(this.axios, this.basePath);
     }
 
 }
