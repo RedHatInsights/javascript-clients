@@ -34,7 +34,7 @@
 
 **● dataFormat**: *`string`*
 
-*Defined in [api.ts:355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L355)*
+*Defined in [api.ts:377](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L377)*
 
 Format of the output data, either JSON (default) or CSV.
 
@@ -49,7 +49,7 @@ ___
 
 **● filter**: *`string` \| `null`*
 
-*Defined in [api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L307)*
+*Defined in [api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L329)*
 
 Full text filter
 
@@ -64,7 +64,7 @@ ___
 
 **● limit**: *`number`*
 
-*Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L313)*
+*Defined in [api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L335)*
 
 Maximum number of paginated results.
 
@@ -79,7 +79,7 @@ ___
 
 **● offset**: *`number`*
 
-*Defined in [api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L319)*
+*Defined in [api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L341)*
 
 First record of paginated response.
 
@@ -94,7 +94,7 @@ ___
 
 **● page**: *`number`*
 
-*Defined in [api.ts:325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L325)*
+*Defined in [api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L347)*
 
 Page number of paginated response.
 
@@ -109,7 +109,7 @@ ___
 
 **● pageSize**: *`number`*
 
-*Defined in [api.ts:331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L331)*
+*Defined in [api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L353)*
 
 Number of records per page of paginated response.
 
@@ -124,7 +124,7 @@ ___
 
 **● pages**: *`number`*
 
-*Defined in [api.ts:337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L337)*
+*Defined in [api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L359)*
 
 Total number of pages of paginated response.
 
@@ -139,7 +139,7 @@ ___
 
 **● sort**: *`string` \| `null`*
 
-*Defined in [api.ts:343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L343)*
+*Defined in [api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L365)*
 
 Sorting filter.
 
@@ -154,7 +154,7 @@ ___
 
 **● totalItems**: *`number`*
 
-*Defined in [api.ts:349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L349)*
+*Defined in [api.ts:371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L371)*
 
 Total number of records.
 

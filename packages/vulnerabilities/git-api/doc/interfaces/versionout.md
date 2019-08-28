@@ -27,7 +27,7 @@
 
 **● applicationVersion**: *`Object`*
 
-*Defined in [api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1019)*
+*Defined in [api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1143)*
 
 Version of application.
 
@@ -42,7 +42,7 @@ ___
 
 **● databaseVersion**: *`Object`*
 
-*Defined in [api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1025)*
+*Defined in [api.ts:1149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1149)*
 
 Version of database schema.
 
