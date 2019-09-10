@@ -277,11 +277,11 @@ export interface Icon {
      */
     id?: string;
     /**
-     * The raw SVG data for this icon
+     * The Image reference containing the binary image data for this icon
      * @type {string}
      * @memberof Icon
      */
-    data?: string;
+    imageId?: string;
     /**
      * Stores the Source Ref for this icon
      * @type {string}
@@ -294,6 +294,20 @@ export interface Icon {
      * @memberof Icon
      */
     sourceId?: string;
+}
+
+/**
+ *
+ * @export
+ * @interface Image
+ */
+export interface Image {
+    /**
+     * The unique identifier for this Service Offering Icon
+     * @type {string}
+     * @memberof Image
+     */
+    id?: string;
 }
 
 /**
@@ -373,11 +387,11 @@ export interface Order {
      */
     createdAt?: Date;
     /**
-     *
+     * The time at which the order request was sent to the Topology Service
      * @type {Date}
      * @memberof Order
      */
-    orderedAt?: Date;
+    orderRequestSentAt?: Date;
     /**
      *
      * @type {Date}
@@ -472,11 +486,11 @@ export interface OrderItem {
      */
     createdAt?: Date;
     /**
-     *
+     * The time at which the order request was sent to the Topology Service
      * @type {Date}
      * @memberof OrderItem
      */
-    orderedAt?: Date;
+    orderRequestSentAt?: Date;
     /**
      *
      * @type {Date}
@@ -618,7 +632,7 @@ export interface Portfolio {
      * @type {string}
      * @memberof Portfolio
      */
-    description: string;
+    description?: string;
     /**
      *
      * @type {boolean}
@@ -680,7 +694,7 @@ export interface PortfolioItem {
      * @type {string}
      * @memberof PortfolioItem
      */
-    name?: string;
+    name: string;
     /**
      *
      * @type {string}
@@ -951,6 +965,26 @@ export interface ServicePlan {
 /**
  *
  * @export
+ * @interface Setting
+ */
+export interface Setting {
+    /**
+     *
+     * @type {string}
+     * @memberof Setting
+     */
+    name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Setting
+     */
+    value?: string;
+}
+
+/**
+ *
+ * @export
  * @interface ShareInfo
  */
 export interface ShareInfo {
@@ -992,6 +1026,26 @@ export interface SharePolicy {
      * @memberof SharePolicy
      */
     groupUuids: Array<string>;
+}
+
+/**
+ * The tenant settings and schema
+ * @export
+ * @interface TenantSettings
+ */
+export interface TenantSettings {
+    /**
+     * The current settings for this tenant
+     * @type {any}
+     * @memberof TenantSettings
+     */
+    current?: any;
+    /**
+     * JSON Schema for the Tenant Settings
+     * @type {any}
+     * @memberof TenantSettings
+     */
+    schema?: any;
 }
 
 /**
@@ -1827,6 +1881,45 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
+         * Deletes the Order based on order ID passed
+         * @summary Delete an existing Order
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyOrder(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling destroyOrder.');
+            }
+            const localVarPath = `/orders/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'DELETE' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets a list of items associated with an order.
          * @summary Gets a list of items in a given order
          * @param {string} orderId The Order ID
@@ -1836,10 +1929,10 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrderItems(orderId: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+        listOrderItemsFromOrder(orderId: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             // verify required parameter 'orderId' is not null or undefined
             if (orderId === null || orderId === undefined) {
-                throw new RequiredError('orderId','Required parameter orderId was null or undefined when calling listOrderItems.');
+                throw new RequiredError('orderId','Required parameter orderId was null or undefined when calling listOrderItemsFromOrder.');
             }
             const localVarPath = `/orders/{order_id}/order_items`
                 .replace(`{${"order_id"}}`, encodeURIComponent(String(orderId)));
@@ -1929,6 +2022,54 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
+         * Restores the order specified by the order ID.
+         * @summary Restore specific Order
+         * @param {string} id ID of the resource
+         * @param {RestoreKey} restoreKey
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        restoreOrder(id: string, restoreKey: RestoreKey, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling restoreOrder.');
+            }
+            // verify required parameter 'restoreKey' is not null or undefined
+            if (restoreKey === null || restoreKey === undefined) {
+                throw new RequiredError('restoreKey','Required parameter restoreKey was null or undefined when calling restoreOrder.');
+            }
+            const localVarPath = `/orders/{id}/restore`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"RestoreKey" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(restoreKey || {}) : (restoreKey || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets an order item associated with an order.
          * @summary Gets an individual order item from a given order
          * @param {string} orderId The Order ID
@@ -1936,14 +2077,14 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showOrderItem(orderId: string, id: string, options: any = {}): RequestArgs {
+        showOrderItemFromOrder(orderId: string, id: string, options: any = {}): RequestArgs {
             // verify required parameter 'orderId' is not null or undefined
             if (orderId === null || orderId === undefined) {
-                throw new RequiredError('orderId','Required parameter orderId was null or undefined when calling showOrderItem.');
+                throw new RequiredError('orderId','Required parameter orderId was null or undefined when calling showOrderItemFromOrder.');
             }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling showOrderItem.');
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showOrderItemFromOrder.');
             }
             const localVarPath = `/orders/{order_id}/order_items/{id}`
                 .replace(`{${"order_id"}}`, encodeURIComponent(String(orderId)))
@@ -2064,6 +2205,20 @@ export const OrderApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Deletes the Order based on order ID passed
+         * @summary Delete an existing Order
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyOrder(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RestoreKey> {
+            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).destroyOrder(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Gets a list of items associated with an order.
          * @summary Gets a list of items in a given order
          * @param {string} orderId The Order ID
@@ -2073,8 +2228,8 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrderItems(orderId: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItemsCollection> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).listOrderItems(orderId, limit, offset, filter, options);
+        listOrderItemsFromOrder(orderId: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItemsCollection> {
+            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).listOrderItemsFromOrder(orderId, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2097,6 +2252,21 @@ export const OrderApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Restores the order specified by the order ID.
+         * @summary Restore specific Order
+         * @param {string} id ID of the resource
+         * @param {RestoreKey} restoreKey
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        restoreOrder(id: string, restoreKey: RestoreKey, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Order> {
+            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).restoreOrder(id, restoreKey, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Gets an order item associated with an order.
          * @summary Gets an individual order item from a given order
          * @param {string} orderId The Order ID
@@ -2104,8 +2274,8 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showOrderItem(orderId: string, id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItem> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).showOrderItem(orderId, id, options);
+        showOrderItemFromOrder(orderId: string, id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItem> {
+            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).showOrderItemFromOrder(orderId, id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2165,6 +2335,16 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
             return OrderApiFp(configuration).createOrder(options)(axios, basePath);
         },
         /**
+         * Deletes the Order based on order ID passed
+         * @summary Delete an existing Order
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyOrder(id: string, options?: any) {
+            return OrderApiFp(configuration).destroyOrder(id, options)(axios, basePath);
+        },
+        /**
          * Gets a list of items associated with an order.
          * @summary Gets a list of items in a given order
          * @param {string} orderId The Order ID
@@ -2174,8 +2354,8 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrderItems(orderId: string, limit?: number, offset?: number, filter?: any, options?: any) {
-            return OrderApiFp(configuration).listOrderItems(orderId, limit, offset, filter, options)(axios, basePath);
+        listOrderItemsFromOrder(orderId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return OrderApiFp(configuration).listOrderItemsFromOrder(orderId, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Gets a list of orders associated with the logged in user.
@@ -2190,6 +2370,17 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
             return OrderApiFp(configuration).listOrders(limit, offset, filter, options)(axios, basePath);
         },
         /**
+         * Restores the order specified by the order ID.
+         * @summary Restore specific Order
+         * @param {string} id ID of the resource
+         * @param {RestoreKey} restoreKey
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        restoreOrder(id: string, restoreKey: RestoreKey, options?: any) {
+            return OrderApiFp(configuration).restoreOrder(id, restoreKey, options)(axios, basePath);
+        },
+        /**
          * Gets an order item associated with an order.
          * @summary Gets an individual order item from a given order
          * @param {string} orderId The Order ID
@@ -2197,8 +2388,8 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showOrderItem(orderId: string, id: string, options?: any) {
-            return OrderApiFp(configuration).showOrderItem(orderId, id, options)(axios, basePath);
+        showOrderItemFromOrder(orderId: string, id: string, options?: any) {
+            return OrderApiFp(configuration).showOrderItemFromOrder(orderId, id, options)(axios, basePath);
         },
         /**
          * Returns an updated order.
@@ -2257,6 +2448,18 @@ export class OrderApi extends BaseAPI {
     }
 
     /**
+     * Deletes the Order based on order ID passed
+     * @summary Delete an existing Order
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OrderApi
+     */
+    public destroyOrder(id: string, options?: any) {
+        return OrderApiFp(this.configuration).destroyOrder(id, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Gets a list of items associated with an order.
      * @summary Gets a list of items in a given order
      * @param {string} orderId The Order ID
@@ -2267,8 +2470,8 @@ export class OrderApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof OrderApi
      */
-    public listOrderItems(orderId: string, limit?: number, offset?: number, filter?: any, options?: any) {
-        return OrderApiFp(this.configuration).listOrderItems(orderId, limit, offset, filter, options)(this.axios, this.basePath);
+    public listOrderItemsFromOrder(orderId: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return OrderApiFp(this.configuration).listOrderItemsFromOrder(orderId, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2286,6 +2489,19 @@ export class OrderApi extends BaseAPI {
     }
 
     /**
+     * Restores the order specified by the order ID.
+     * @summary Restore specific Order
+     * @param {string} id ID of the resource
+     * @param {RestoreKey} restoreKey
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OrderApi
+     */
+    public restoreOrder(id: string, restoreKey: RestoreKey, options?: any) {
+        return OrderApiFp(this.configuration).restoreOrder(id, restoreKey, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Gets an order item associated with an order.
      * @summary Gets an individual order item from a given order
      * @param {string} orderId The Order ID
@@ -2294,8 +2510,8 @@ export class OrderApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof OrderApi
      */
-    public showOrderItem(orderId: string, id: string, options?: any) {
-        return OrderApiFp(this.configuration).showOrderItem(orderId, id, options)(this.axios, this.basePath);
+    public showOrderItemFromOrder(orderId: string, id: string, options?: any) {
+        return OrderApiFp(this.configuration).showOrderItemFromOrder(orderId, id, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2318,6 +2534,45 @@ export class OrderApi extends BaseAPI {
  */
 export const OrderItemApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * Deletes the order item  based on order item ID passed
+         * @summary Delete an existing OrderItem
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyOrderItem(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling destroyOrderItem.');
+            }
+            const localVarPath = `/order_items/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'DELETE' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * Gets a list of approval request associated with an order item. As the item is being approved one can check the status of the approvals.
          * @summary Gets a list of approval requests for an item
@@ -2475,7 +2730,55 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets a specific order item based on the portfolio item ID passed
+         * Restores the order item specified by the order item ID.
+         * @summary Restore specific Order item
+         * @param {string} id ID of the resource
+         * @param {RestoreKey} restoreKey
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        restoreOrderItem(id: string, restoreKey: RestoreKey, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling restoreOrderItem.');
+            }
+            // verify required parameter 'restoreKey' is not null or undefined
+            if (restoreKey === null || restoreKey === undefined) {
+                throw new RequiredError('restoreKey','Required parameter restoreKey was null or undefined when calling restoreOrderItem.');
+            }
+            const localVarPath = `/order_items/{id}/restore`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"RestoreKey" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(restoreKey || {}) : (restoreKey || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets a specific order item based on the order item ID passed
          * @summary Gets a specific order item
          * @param {string} id ID of the resource
          * @param {*} [options] Override http request option.
@@ -2522,6 +2825,20 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
  */
 export const OrderItemApiFp = function(configuration?: Configuration) {
     return {
+        /**
+         * Deletes the order item  based on order item ID passed
+         * @summary Delete an existing OrderItem
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyOrderItem(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RestoreKey> {
+            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).destroyOrderItem(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
         /**
          * Gets a list of approval request associated with an order item. As the item is being approved one can check the status of the approvals.
          * @summary Gets a list of approval requests for an item
@@ -2573,7 +2890,22 @@ export const OrderItemApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Gets a specific order item based on the portfolio item ID passed
+         * Restores the order item specified by the order item ID.
+         * @summary Restore specific Order item
+         * @param {string} id ID of the resource
+         * @param {RestoreKey} restoreKey
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        restoreOrderItem(id: string, restoreKey: RestoreKey, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItem> {
+            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).restoreOrderItem(id, restoreKey, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Gets a specific order item based on the order item ID passed
          * @summary Gets a specific order item
          * @param {string} id ID of the resource
          * @param {*} [options] Override http request option.
@@ -2595,6 +2927,16 @@ export const OrderItemApiFp = function(configuration?: Configuration) {
  */
 export const OrderItemApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
+        /**
+         * Deletes the order item  based on order item ID passed
+         * @summary Delete an existing OrderItem
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyOrderItem(id: string, options?: any) {
+            return OrderItemApiFp(configuration).destroyOrderItem(id, options)(axios, basePath);
+        },
         /**
          * Gets a list of approval request associated with an order item. As the item is being approved one can check the status of the approvals.
          * @summary Gets a list of approval requests for an item
@@ -2634,7 +2976,18 @@ export const OrderItemApiFactory = function (configuration?: Configuration, base
             return OrderItemApiFp(configuration).listProgressMessages(orderItemId, limit, offset, filter, options)(axios, basePath);
         },
         /**
-         * Gets a specific order item based on the portfolio item ID passed
+         * Restores the order item specified by the order item ID.
+         * @summary Restore specific Order item
+         * @param {string} id ID of the resource
+         * @param {RestoreKey} restoreKey
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        restoreOrderItem(id: string, restoreKey: RestoreKey, options?: any) {
+            return OrderItemApiFp(configuration).restoreOrderItem(id, restoreKey, options)(axios, basePath);
+        },
+        /**
+         * Gets a specific order item based on the order item ID passed
          * @summary Gets a specific order item
          * @param {string} id ID of the resource
          * @param {*} [options] Override http request option.
@@ -2653,6 +3006,18 @@ export const OrderItemApiFactory = function (configuration?: Configuration, base
  * @extends {BaseAPI}
  */
 export class OrderItemApi extends BaseAPI {
+    /**
+     * Deletes the order item  based on order item ID passed
+     * @summary Delete an existing OrderItem
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OrderItemApi
+     */
+    public destroyOrderItem(id: string, options?: any) {
+        return OrderItemApiFp(this.configuration).destroyOrderItem(id, options)(this.axios, this.basePath);
+    }
+
     /**
      * Gets a list of approval request associated with an order item. As the item is being approved one can check the status of the approvals.
      * @summary Gets a list of approval requests for an item
@@ -2698,7 +3063,20 @@ export class OrderItemApi extends BaseAPI {
     }
 
     /**
-     * Gets a specific order item based on the portfolio item ID passed
+     * Restores the order item specified by the order item ID.
+     * @summary Restore specific Order item
+     * @param {string} id ID of the resource
+     * @param {RestoreKey} restoreKey
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OrderItemApi
+     */
+    public restoreOrderItem(id: string, restoreKey: RestoreKey, options?: any) {
+        return OrderItemApiFp(this.configuration).restoreOrderItem(id, restoreKey, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Gets a specific order item based on the order item ID passed
      * @summary Gets a specific order item
      * @param {string} id ID of the resource
      * @param {*} [options] Override http request option.
@@ -4751,6 +5129,411 @@ export class PortfolioItemApi extends BaseAPI {
      */
     public updatePortfolioItem(id: string, portfolioItem: PortfolioItem, options?: any) {
         return PortfolioItemApiFp(this.configuration).updatePortfolioItem(id, portfolioItem, options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
+ * SettingsApi - axios parameter creator
+ * @export
+ */
+export const SettingsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Create Tenant Setting
+         * @summary Create Tenant Setting
+         * @param {Setting} setting Json encoded key/value pair to create a new setting
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createSetting(setting: Setting, options: any = {}): RequestArgs {
+            // verify required parameter 'setting' is not null or undefined
+            if (setting === null || setting === undefined) {
+                throw new RequiredError('setting','Required parameter setting was null or undefined when calling createSetting.');
+            }
+            const localVarPath = `/settings`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"Setting" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(setting || {}) : (setting || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Delete a Tenant Setting
+         * @summary Delete a Tenant Setting
+         * @param {string} name name of the setting
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroySetting(name: string, options: any = {}): RequestArgs {
+            // verify required parameter 'name' is not null or undefined
+            if (name === null || name === undefined) {
+                throw new RequiredError('name','Required parameter name was null or undefined when calling destroySetting.');
+            }
+            const localVarPath = `/settings/{name}`
+                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'DELETE' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List Tenant Settings
+         * @summary List Tenant Settings
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSettings(options: any = {}): RequestArgs {
+            const localVarPath = `/settings`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get a specific Tenant Setting
+         * @summary Get a specific Tenant Setting
+         * @param {string} name name of the setting
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSetting(name: string, options: any = {}): RequestArgs {
+            // verify required parameter 'name' is not null or undefined
+            if (name === null || name === undefined) {
+                throw new RequiredError('name','Required parameter name was null or undefined when calling showSetting.');
+            }
+            const localVarPath = `/settings/{name}`
+                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Update a Tenant Setting
+         * @summary Update a Tenant Setting
+         * @param {string} name name of the setting
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateSetting(name: string, options: any = {}): RequestArgs {
+            // verify required parameter 'name' is not null or undefined
+            if (name === null || name === undefined) {
+                throw new RequiredError('name','Required parameter name was null or undefined when calling updateSetting.');
+            }
+            const localVarPath = `/settings/{name}`
+                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * SettingsApi - functional programming interface
+ * @export
+ */
+export const SettingsApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Create Tenant Setting
+         * @summary Create Tenant Setting
+         * @param {Setting} setting Json encoded key/value pair to create a new setting
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createSetting(setting: Setting, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).createSetting(setting, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Delete a Tenant Setting
+         * @summary Delete a Tenant Setting
+         * @param {string} name name of the setting
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroySetting(name: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).destroySetting(name, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List Tenant Settings
+         * @summary List Tenant Settings
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSettings(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TenantSettings> {
+            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).listSettings(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Get a specific Tenant Setting
+         * @summary Get a specific Tenant Setting
+         * @param {string} name name of the setting
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSetting(name: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).showSetting(name, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Update a Tenant Setting
+         * @summary Update a Tenant Setting
+         * @param {string} name name of the setting
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateSetting(name: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).updateSetting(name, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * SettingsApi - factory interface
+ * @export
+ */
+export const SettingsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Create Tenant Setting
+         * @summary Create Tenant Setting
+         * @param {Setting} setting Json encoded key/value pair to create a new setting
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createSetting(setting: Setting, options?: any) {
+            return SettingsApiFp(configuration).createSetting(setting, options)(axios, basePath);
+        },
+        /**
+         * Delete a Tenant Setting
+         * @summary Delete a Tenant Setting
+         * @param {string} name name of the setting
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroySetting(name: string, options?: any) {
+            return SettingsApiFp(configuration).destroySetting(name, options)(axios, basePath);
+        },
+        /**
+         * List Tenant Settings
+         * @summary List Tenant Settings
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSettings(options?: any) {
+            return SettingsApiFp(configuration).listSettings(options)(axios, basePath);
+        },
+        /**
+         * Get a specific Tenant Setting
+         * @summary Get a specific Tenant Setting
+         * @param {string} name name of the setting
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSetting(name: string, options?: any) {
+            return SettingsApiFp(configuration).showSetting(name, options)(axios, basePath);
+        },
+        /**
+         * Update a Tenant Setting
+         * @summary Update a Tenant Setting
+         * @param {string} name name of the setting
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateSetting(name: string, options?: any) {
+            return SettingsApiFp(configuration).updateSetting(name, options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * SettingsApi - object-oriented interface
+ * @export
+ * @class SettingsApi
+ * @extends {BaseAPI}
+ */
+export class SettingsApi extends BaseAPI {
+    /**
+     * Create Tenant Setting
+     * @summary Create Tenant Setting
+     * @param {Setting} setting Json encoded key/value pair to create a new setting
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SettingsApi
+     */
+    public createSetting(setting: Setting, options?: any) {
+        return SettingsApiFp(this.configuration).createSetting(setting, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Delete a Tenant Setting
+     * @summary Delete a Tenant Setting
+     * @param {string} name name of the setting
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SettingsApi
+     */
+    public destroySetting(name: string, options?: any) {
+        return SettingsApiFp(this.configuration).destroySetting(name, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * List Tenant Settings
+     * @summary List Tenant Settings
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SettingsApi
+     */
+    public listSettings(options?: any) {
+        return SettingsApiFp(this.configuration).listSettings(options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Get a specific Tenant Setting
+     * @summary Get a specific Tenant Setting
+     * @param {string} name name of the setting
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SettingsApi
+     */
+    public showSetting(name: string, options?: any) {
+        return SettingsApiFp(this.configuration).showSetting(name, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Update a Tenant Setting
+     * @summary Update a Tenant Setting
+     * @param {string} name name of the setting
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SettingsApi
+     */
+    public updateSetting(name: string, options?: any) {
+        return SettingsApiFp(this.configuration).updateSetting(name, options)(this.axios, this.basePath);
     }
 
 }

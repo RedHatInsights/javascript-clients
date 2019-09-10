@@ -38,7 +38,7 @@
 
 **● _default**: *`boolean`*
 
-*Defined in [api.ts:375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L375)*
+*Defined in [api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L427)*
 
 *__type__*: {boolean}
 
@@ -51,7 +51,7 @@ ___
 
 **● certificateAuthority**: *`string`*
 
-*Defined in [api.ts:363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L363)*
+*Defined in [api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L415)*
 
 Optional X.509 Certificate Authority
 
@@ -66,7 +66,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L369)*
+*Defined in [api.ts:421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L421)*
 
 *__type__*: {Date}
 
@@ -79,7 +79,7 @@ ___
 
 **● host**: *`string`*
 
-*Defined in [api.ts:381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L381)*
+*Defined in [api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L433)*
 
 URI host component
 
@@ -94,7 +94,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L387)*
+*Defined in [api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L439)*
 
 ID of the resource
 
@@ -109,7 +109,7 @@ ___
 
 **● path**: *`string`*
 
-*Defined in [api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L393)*
+*Defined in [api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L445)*
 
 URI path component
 
@@ -124,7 +124,7 @@ ___
 
 **● port**: *`number`*
 
-*Defined in [api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L399)*
+*Defined in [api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L451)*
 
 URI port component
 
@@ -139,7 +139,7 @@ ___
 
 **● role**: *`string`*
 
-*Defined in [api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L405)*
+*Defined in [api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L457)*
 
 *__type__*: {string}
 
@@ -152,7 +152,7 @@ ___
 
 **● scheme**: *`string`*
 
-*Defined in [api.ts:411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L411)*
+*Defined in [api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L463)*
 
 URI scheme component
 
@@ -167,7 +167,7 @@ ___
 
 **● sourceId**: *`string`*
 
-*Defined in [api.ts:417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L417)*
+*Defined in [api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L469)*
 
 ID of the resource
 
@@ -182,7 +182,7 @@ ___
 
 **● tenant**: *`string`*
 
-*Defined in [api.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L423)*
+*Defined in [api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L475)*
 
 *__type__*: {string}
 
@@ -195,7 +195,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L429)*
+*Defined in [api.ts:481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L481)*
 
 *__type__*: {Date}
 
@@ -208,7 +208,7 @@ ___
 
 **● verifySsl**: *`boolean`*
 
-*Defined in [api.ts:435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L435)*
+*Defined in [api.ts:487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L487)*
 
 Should SSL be verified
 

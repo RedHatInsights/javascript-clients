@@ -103,7 +103,7 @@ ___
 
 ▸ **accountSettingCreate**(data: *[AccountSetting](../interfaces/accountsetting.md)*, options?: *`any`*): `AxiosPromise`<[AccountSetting](../interfaces/accountsetting.md)>
 
-*Defined in [api.ts:947](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L947)*
+*Defined in [api.ts:967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L967)*
 
 Update this account's settings, and return the updated settings.
 
@@ -127,7 +127,7 @@ ___
 
 ▸ **accountSettingList**(options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:957](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L957)*
+*Defined in [api.ts:977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L977)*
 
 Show this account's settings, or the defaults.
 

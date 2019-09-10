@@ -106,7 +106,7 @@ ___
 
 ▸ **createRoles**(roleIn: *[RoleIn](../interfaces/rolein.md)*, options?: *`any`*): `AxiosPromise`<[RoleWithAccess](../interfaces/rolewithaccess.md)>
 
-*Defined in [api.ts:2617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2617)*
+*Defined in [api.ts:2640](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2640)*
 
 *__summary__*: Create a roles for a tenant
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **deleteRole**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2629)*
+*Defined in [api.ts:2652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2652)*
 
 *__summary__*: Delete a role in the tenant
 
@@ -154,7 +154,7 @@ ___
 
 ▸ **getRole**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[RoleWithAccess](../interfaces/rolewithaccess.md)>
 
-*Defined in [api.ts:2641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2641)*
+*Defined in [api.ts:2664](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2664)*
 
 *__summary__*: Get a role in the tenant
 
@@ -176,9 +176,9 @@ ___
 
 ###  listRoles
 
-▸ **listRoles**(limit?: *`number`*, offset?: *`number`*, name?: *`string`*, orderBy?: *`string`*, options?: *`any`*): `AxiosPromise`<[RolePagination](../interfaces/rolepagination.md)>
+▸ **listRoles**(limit?: *`number`*, offset?: *`number`*, name?: *`string`*, scope?: *"account" \| "principal"*, orderBy?: *`string`*, options?: *`any`*): `AxiosPromise`<[RolePagination](../interfaces/rolepagination.md)>
 
-*Defined in [api.ts:2656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2656)*
+*Defined in [api.ts:2680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2680)*
 
 *__summary__*: List the roles for a tenant
 
@@ -193,6 +193,7 @@ ___
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` name | `string` |
+| `Optional` scope | "account" \| "principal" |
 | `Optional` orderBy | `string` |
 | `Optional` options | `any` |
 
@@ -205,7 +206,7 @@ ___
 
 ▸ **updateRole**(uuid: *`string`*, roleWithAccess: *[RoleWithAccess](../interfaces/rolewithaccess.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2669)*
+*Defined in [api.ts:2693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2693)*
 
 *__summary__*: Update a Role in the tenant
 

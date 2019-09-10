@@ -1606,6 +1606,402 @@ export interface InlineResponse200 {
 /**
  *
  * @export
+ * @interface Ipaddress
+ */
+export interface Ipaddress {
+    /**
+     *
+     * @type {Date}
+     * @memberof Ipaddress
+     */
+    archivedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof Ipaddress
+     */
+    createdAt?: Date;
+    /**
+     *
+     * @type {any}
+     * @memberof Ipaddress
+     */
+    extra?: any;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Ipaddress
+     */
+    id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Ipaddress
+     */
+    ipaddress?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Ipaddress
+     */
+    kind?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Ipaddress
+     */
+    lastSeenAt?: Date;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Ipaddress
+     */
+    networkAdapterId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Ipaddress
+     */
+    orchestrationStackId?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Ipaddress
+     */
+    sourceCreatedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof Ipaddress
+     */
+    sourceDeletedAt?: Date;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Ipaddress
+     */
+    sourceId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Ipaddress
+     */
+    sourceRef?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Ipaddress
+     */
+    sourceRegionId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Ipaddress
+     */
+    subnetId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Ipaddress
+     */
+    subscriptionId?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Ipaddress
+     */
+    updatedAt?: Date;
+}
+
+/**
+ *
+ * @export
+ * @interface IpaddressesCollection
+ */
+export interface IpaddressesCollection {
+    /**
+     *
+     * @type {CollectionMetadata}
+     * @memberof IpaddressesCollection
+     */
+    meta?: CollectionMetadata;
+    /**
+     *
+     * @type {CollectionLinks}
+     * @memberof IpaddressesCollection
+     */
+    links?: CollectionLinks;
+    /**
+     *
+     * @type {Array<Ipaddress>}
+     * @memberof IpaddressesCollection
+     */
+    data?: Array<Ipaddress>;
+}
+
+/**
+ *
+ * @export
+ * @interface Network
+ */
+export interface Network {
+    /**
+     *
+     * @type {Date}
+     * @memberof Network
+     */
+    archivedAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof Network
+     */
+    cidr?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Network
+     */
+    createdAt?: Date;
+    /**
+     *
+     * @type {any}
+     * @memberof Network
+     */
+    extra?: any;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Network
+     */
+    id?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Network
+     */
+    lastSeenAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof Network
+     */
+    name?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Network
+     */
+    orchestrationStackId?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Network
+     */
+    sourceCreatedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof Network
+     */
+    sourceDeletedAt?: Date;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Network
+     */
+    sourceId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Network
+     */
+    sourceRef?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Network
+     */
+    sourceRegionId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Network
+     */
+    status?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Network
+     */
+    subscriptionId?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Network
+     */
+    updatedAt?: Date;
+}
+
+/**
+ *
+ * @export
+ * @interface NetworkAdapter
+ */
+export interface NetworkAdapter {
+    /**
+     *
+     * @type {Date}
+     * @memberof NetworkAdapter
+     */
+    archivedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof NetworkAdapter
+     */
+    createdAt?: Date;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof NetworkAdapter
+     */
+    deviceId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof NetworkAdapter
+     */
+    deviceType?: string;
+    /**
+     *
+     * @type {any}
+     * @memberof NetworkAdapter
+     */
+    extra?: any;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof NetworkAdapter
+     */
+    id?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof NetworkAdapter
+     */
+    lastSeenAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof NetworkAdapter
+     */
+    macAddress?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof NetworkAdapter
+     */
+    orchestrationStackId?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof NetworkAdapter
+     */
+    sourceCreatedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof NetworkAdapter
+     */
+    sourceDeletedAt?: Date;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof NetworkAdapter
+     */
+    sourceId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof NetworkAdapter
+     */
+    sourceRef?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof NetworkAdapter
+     */
+    sourceRegionId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof NetworkAdapter
+     */
+    subscriptionId?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof NetworkAdapter
+     */
+    updatedAt?: Date;
+}
+
+/**
+ *
+ * @export
+ * @interface NetworkAdaptersCollection
+ */
+export interface NetworkAdaptersCollection {
+    /**
+     *
+     * @type {CollectionMetadata}
+     * @memberof NetworkAdaptersCollection
+     */
+    meta?: CollectionMetadata;
+    /**
+     *
+     * @type {CollectionLinks}
+     * @memberof NetworkAdaptersCollection
+     */
+    links?: CollectionLinks;
+    /**
+     *
+     * @type {Array<NetworkAdapter>}
+     * @memberof NetworkAdaptersCollection
+     */
+    data?: Array<NetworkAdapter>;
+}
+
+/**
+ *
+ * @export
+ * @interface NetworksCollection
+ */
+export interface NetworksCollection {
+    /**
+     *
+     * @type {CollectionMetadata}
+     * @memberof NetworksCollection
+     */
+    meta?: CollectionMetadata;
+    /**
+     *
+     * @type {CollectionLinks}
+     * @memberof NetworksCollection
+     */
+    links?: CollectionLinks;
+    /**
+     *
+     * @type {Array<Network>}
+     * @memberof NetworksCollection
+     */
+    data?: Array<Network>;
+}
+
+/**
+ *
+ * @export
  * @interface OrchestrationStack
  */
 export interface OrchestrationStack {
@@ -1646,6 +2042,12 @@ export interface OrchestrationStack {
      */
     name?: string;
     /**
+     * ID of the resource
+     * @type {string}
+     * @memberof OrchestrationStack
+     */
+    parentOrchestrationStackId?: string;
+    /**
      *
      * @type {Date}
      * @memberof OrchestrationStack
@@ -1669,6 +2071,18 @@ export interface OrchestrationStack {
      * @memberof OrchestrationStack
      */
     sourceRef?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof OrchestrationStack
+     */
+    sourceRegionId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof OrchestrationStack
+     */
+    subscriptionId?: string;
     /**
      *
      * @type {Date}
@@ -1721,6 +2135,136 @@ export interface OrderParameters {
      * @memberof OrderParameters
      */
     providerControlParameters?: any;
+}
+
+/**
+ *
+ * @export
+ * @interface SecurityGroup
+ */
+export interface SecurityGroup {
+    /**
+     *
+     * @type {Date}
+     * @memberof SecurityGroup
+     */
+    archivedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof SecurityGroup
+     */
+    createdAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof SecurityGroup
+     */
+    description?: string;
+    /**
+     *
+     * @type {any}
+     * @memberof SecurityGroup
+     */
+    extra?: any;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof SecurityGroup
+     */
+    id?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof SecurityGroup
+     */
+    lastSeenAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof SecurityGroup
+     */
+    name?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof SecurityGroup
+     */
+    networkId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof SecurityGroup
+     */
+    orchestrationStackId?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof SecurityGroup
+     */
+    sourceCreatedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof SecurityGroup
+     */
+    sourceDeletedAt?: Date;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof SecurityGroup
+     */
+    sourceId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SecurityGroup
+     */
+    sourceRef?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof SecurityGroup
+     */
+    sourceRegionId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof SecurityGroup
+     */
+    subscriptionId?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof SecurityGroup
+     */
+    updatedAt?: Date;
+}
+
+/**
+ *
+ * @export
+ * @interface SecurityGroupsCollection
+ */
+export interface SecurityGroupsCollection {
+    /**
+     *
+     * @type {CollectionMetadata}
+     * @memberof SecurityGroupsCollection
+     */
+    meta?: CollectionMetadata;
+    /**
+     *
+     * @type {CollectionLinks}
+     * @memberof SecurityGroupsCollection
+     */
+    links?: CollectionLinks;
+    /**
+     *
+     * @type {Array<SecurityGroup>}
+     * @memberof SecurityGroupsCollection
+     */
+    data?: Array<SecurityGroup>;
 }
 
 /**
@@ -2248,6 +2792,12 @@ export interface Source {
      * @type {string}
      * @memberof Source
      */
+    refreshStatus?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Source
+     */
     uid?: string;
     /**
      *
@@ -2255,6 +2805,94 @@ export interface Source {
      * @memberof Source
      */
     updatedAt?: Date;
+}
+
+/**
+ *
+ * @export
+ * @interface SourceRegion
+ */
+export interface SourceRegion {
+    /**
+     *
+     * @type {Date}
+     * @memberof SourceRegion
+     */
+    archivedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof SourceRegion
+     */
+    createdAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof SourceRegion
+     */
+    endpoint?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof SourceRegion
+     */
+    id?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof SourceRegion
+     */
+    lastSeenAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof SourceRegion
+     */
+    name?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof SourceRegion
+     */
+    sourceId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SourceRegion
+     */
+    sourceRef?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof SourceRegion
+     */
+    updatedAt?: Date;
+}
+
+/**
+ *
+ * @export
+ * @interface SourceRegionsCollection
+ */
+export interface SourceRegionsCollection {
+    /**
+     *
+     * @type {CollectionMetadata}
+     * @memberof SourceRegionsCollection
+     */
+    meta?: CollectionMetadata;
+    /**
+     *
+     * @type {CollectionLinks}
+     * @memberof SourceRegionsCollection
+     */
+    links?: CollectionLinks;
+    /**
+     *
+     * @type {Array<SourceRegion>}
+     * @memberof SourceRegionsCollection
+     */
+    data?: Array<SourceRegion>;
 }
 
 /**
@@ -2281,6 +2919,224 @@ export interface SourcesCollection {
      * @memberof SourcesCollection
      */
     data?: Array<Source>;
+}
+
+/**
+ *
+ * @export
+ * @interface Subnet
+ */
+export interface Subnet {
+    /**
+     *
+     * @type {Date}
+     * @memberof Subnet
+     */
+    archivedAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof Subnet
+     */
+    cidr?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Subnet
+     */
+    createdAt?: Date;
+    /**
+     *
+     * @type {any}
+     * @memberof Subnet
+     */
+    extra?: any;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Subnet
+     */
+    id?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Subnet
+     */
+    lastSeenAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof Subnet
+     */
+    name?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Subnet
+     */
+    networkId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Subnet
+     */
+    orchestrationStackId?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Subnet
+     */
+    sourceCreatedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof Subnet
+     */
+    sourceDeletedAt?: Date;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Subnet
+     */
+    sourceId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Subnet
+     */
+    sourceRef?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Subnet
+     */
+    sourceRegionId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Subnet
+     */
+    status?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Subnet
+     */
+    subscriptionId?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Subnet
+     */
+    updatedAt?: Date;
+}
+
+/**
+ *
+ * @export
+ * @interface SubnetsCollection
+ */
+export interface SubnetsCollection {
+    /**
+     *
+     * @type {CollectionMetadata}
+     * @memberof SubnetsCollection
+     */
+    meta?: CollectionMetadata;
+    /**
+     *
+     * @type {CollectionLinks}
+     * @memberof SubnetsCollection
+     */
+    links?: CollectionLinks;
+    /**
+     *
+     * @type {Array<Subnet>}
+     * @memberof SubnetsCollection
+     */
+    data?: Array<Subnet>;
+}
+
+/**
+ *
+ * @export
+ * @interface Subscription
+ */
+export interface Subscription {
+    /**
+     *
+     * @type {Date}
+     * @memberof Subscription
+     */
+    archivedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof Subscription
+     */
+    createdAt?: Date;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Subscription
+     */
+    id?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Subscription
+     */
+    lastSeenAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof Subscription
+     */
+    name?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Subscription
+     */
+    sourceId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Subscription
+     */
+    sourceRef?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof Subscription
+     */
+    updatedAt?: Date;
+}
+
+/**
+ *
+ * @export
+ * @interface SubscriptionsCollection
+ */
+export interface SubscriptionsCollection {
+    /**
+     *
+     * @type {CollectionMetadata}
+     * @memberof SubscriptionsCollection
+     */
+    meta?: CollectionMetadata;
+    /**
+     *
+     * @type {CollectionLinks}
+     * @memberof SubscriptionsCollection
+     */
+    links?: CollectionLinks;
+    /**
+     *
+     * @type {Array<Subscription>}
+     * @memberof SubscriptionsCollection
+     */
+    data?: Array<Subscription>;
 }
 
 /**
@@ -2399,10 +3255,10 @@ export interface Task {
     completedAt?: Date;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Task
      */
-    context?: string;
+    context?: any;
     /**
      *
      * @type {Date}
@@ -2620,6 +3476,18 @@ export interface Vm {
      */
     sourceRef?: string;
     /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Vm
+     */
+    sourceRegionId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Vm
+     */
+    subscriptionId?: string;
+    /**
      * Cross-Source Unique Reference
      * @type {string}
      * @memberof Vm
@@ -2702,6 +3570,12 @@ export interface Volume {
      */
     name?: string;
     /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Volume
+     */
+    orchestrationStackId?: string;
+    /**
      * Size of the volume in bytes
      * @type {number}
      * @memberof Volume
@@ -2743,6 +3617,12 @@ export interface Volume {
      * @memberof Volume
      */
     state?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Volume
+     */
+    subscriptionId?: string;
     /**
      *
      * @type {Date}
@@ -4110,6 +4990,798 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns an array of Tag objects
+         * @summary List Tags for Ipaddress
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listIpaddressTags(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listIpaddressTags.');
+            }
+            const localVarPath = `/ipaddresses/{id}/tags`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listIpaddresses(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            const localVarPath = `/ipaddresses`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for NetworkAdapter
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkAdapterIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listNetworkAdapterIpaddresses.');
+            }
+            const localVarPath = `/network_adapters/{id}/ipaddresses`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for NetworkAdapter
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkAdapterTags(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listNetworkAdapterTags.');
+            }
+            const localVarPath = `/network_adapters/{id}/tags`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkAdapters(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            const localVarPath = `/network_adapters`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for Network
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkSubnets(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listNetworkSubnets.');
+            }
+            const localVarPath = `/networks/{id}/subnets`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for Network
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkTags(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listNetworkTags.');
+            }
+            const localVarPath = `/networks/{id}/tags`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworks(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            const localVarPath = `/networks`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackIpaddresses.');
+            }
+            const localVarPath = `/orchestration_stacks/{id}/ipaddresses`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackNetworkAdapters.');
+            }
+            const localVarPath = `/orchestration_stacks/{id}/network_adapters`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackNetworks(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackNetworks.');
+            }
+            const localVarPath = `/orchestration_stacks/{id}/networks`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackSecurityGroups.');
+            }
+            const localVarPath = `/orchestration_stacks/{id}/security_groups`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackSubnets(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackSubnets.');
+            }
+            const localVarPath = `/orchestration_stacks/{id}/subnets`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Vm objects
+         * @summary List Vms for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackVms(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackVms.');
+            }
+            const localVarPath = `/orchestration_stacks/{id}/vms`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Volume objects
+         * @summary List Volumes for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackVolumes(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackVolumes.');
+            }
+            const localVarPath = `/orchestration_stacks/{id}/volumes`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns an array of OrchestrationStack objects
          * @summary List OrchestrationStacks
          * @param {number} [limit] The numbers of items to return per page.
@@ -4120,6 +5792,162 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          */
         listOrchestrationStacks(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/orchestration_stacks`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for SecurityGroup
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSecurityGroupTags(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSecurityGroupTags.');
+            }
+            const localVarPath = `/security_groups/{id}/tags`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Vm objects
+         * @summary List Vms for SecurityGroup
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSecurityGroupVms(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSecurityGroupVms.');
+            }
+            const localVarPath = `/security_groups/{id}/vms`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSecurityGroups(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            const localVarPath = `/security_groups`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -5106,6 +6934,168 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceIpaddresses.');
+            }
+            const localVarPath = `/sources/{id}/ipaddresses`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceNetworkAdapters.');
+            }
+            const localVarPath = `/sources/{id}/network_adapters`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceNetworks(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceNetworks.');
+            }
+            const localVarPath = `/sources/{id}/networks`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns an array of OrchestrationStack objects
          * @summary List OrchestrationStacks for Source
          * @param {string} id ID of the resource
@@ -5121,6 +7111,702 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceOrchestrationStacks.');
             }
             const localVarPath = `/sources/{id}/orchestration_stacks`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionIpaddresses.');
+            }
+            const localVarPath = `/source_regions/{id}/ipaddresses`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionNetworkAdapters.');
+            }
+            const localVarPath = `/source_regions/{id}/network_adapters`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionNetworks(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionNetworks.');
+            }
+            const localVarPath = `/source_regions/{id}/networks`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of OrchestrationStack objects
+         * @summary List OrchestrationStacks for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionOrchestrationStacks.');
+            }
+            const localVarPath = `/source_regions/{id}/orchestration_stacks`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionSecurityGroups.');
+            }
+            const localVarPath = `/source_regions/{id}/security_groups`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of ServiceInstance objects
+         * @summary List ServiceInstances for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionServiceInstances.');
+            }
+            const localVarPath = `/source_regions/{id}/service_instances`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of ServiceOffering objects
+         * @summary List ServiceOfferings for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionServiceOfferings(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionServiceOfferings.');
+            }
+            const localVarPath = `/source_regions/{id}/service_offerings`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of ServicePlan objects
+         * @summary List ServicePlans for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionServicePlans(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionServicePlans.');
+            }
+            const localVarPath = `/source_regions/{id}/service_plans`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionSubnets(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionSubnets.');
+            }
+            const localVarPath = `/source_regions/{id}/subnets`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Vm objects
+         * @summary List Vms for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionVms(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionVms.');
+            }
+            const localVarPath = `/source_regions/{id}/vms`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Volume objects
+         * @summary List Volumes for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionVolumes(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionVolumes.');
+            }
+            const localVarPath = `/source_regions/{id}/volumes`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of SourceRegion objects
+         * @summary List SourceRegions
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegions(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            const localVarPath = `/source_regions`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceSecurityGroups.');
+            }
+            const localVarPath = `/sources/{id}/security_groups`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -5283,6 +7969,168 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceServicePlans.');
             }
             const localVarPath = `/sources/{id}/service_plans`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of SourceRegion objects
+         * @summary List SourceRegions for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceSourceRegions(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceSourceRegions.');
+            }
+            const localVarPath = `/sources/{id}/source_regions`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceSubnets(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceSubnets.');
+            }
+            const localVarPath = `/sources/{id}/subnets`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Subscription objects
+         * @summary List Subscriptions for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceSubscriptions(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceSubscriptions.');
+            }
+            const localVarPath = `/sources/{id}/subscriptions`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -5494,6 +8342,858 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          */
         listSources(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/sources`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for Subnet
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubnetIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubnetIpaddresses.');
+            }
+            const localVarPath = `/subnets/{id}/ipaddresses`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Subnet
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubnetNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubnetNetworkAdapters.');
+            }
+            const localVarPath = `/subnets/{id}/network_adapters`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for Subnet
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubnetTags(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubnetTags.');
+            }
+            const localVarPath = `/subnets/{id}/tags`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubnets(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            const localVarPath = `/subnets`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionIpaddresses.');
+            }
+            const localVarPath = `/subscriptions/{id}/ipaddresses`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionNetworkAdapters.');
+            }
+            const localVarPath = `/subscriptions/{id}/network_adapters`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionNetworks(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionNetworks.');
+            }
+            const localVarPath = `/subscriptions/{id}/networks`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of OrchestrationStack objects
+         * @summary List OrchestrationStacks for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionOrchestrationStacks.');
+            }
+            const localVarPath = `/subscriptions/{id}/orchestration_stacks`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionSecurityGroups.');
+            }
+            const localVarPath = `/subscriptions/{id}/security_groups`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of ServiceInstance objects
+         * @summary List ServiceInstances for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionServiceInstances.');
+            }
+            const localVarPath = `/subscriptions/{id}/service_instances`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of ServiceOffering objects
+         * @summary List ServiceOfferings for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionServiceOfferings(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionServiceOfferings.');
+            }
+            const localVarPath = `/subscriptions/{id}/service_offerings`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of ServicePlan objects
+         * @summary List ServicePlans for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionServicePlans(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionServicePlans.');
+            }
+            const localVarPath = `/subscriptions/{id}/service_plans`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionSubnets(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionSubnets.');
+            }
+            const localVarPath = `/subscriptions/{id}/subnets`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Vm objects
+         * @summary List Vms for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionVms(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionVms.');
+            }
+            const localVarPath = `/subscriptions/{id}/vms`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Volume objects
+         * @summary List Volumes for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionVolumes(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionVolumes.');
+            }
+            const localVarPath = `/subscriptions/{id}/volumes`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Subscription objects
+         * @summary List Subscriptions
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptions(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            const localVarPath = `/subscriptions`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -5802,6 +9502,222 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listTagIpaddresses.');
+            }
+            const localVarPath = `/tags/{id}/ipaddresses`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listTagNetworkAdapters.');
+            }
+            const localVarPath = `/tags/{id}/network_adapters`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagNetworks(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listTagNetworks.');
+            }
+            const localVarPath = `/tags/{id}/networks`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listTagSecurityGroups.');
+            }
+            const localVarPath = `/tags/{id}/security_groups`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns an array of ServiceOffering objects
          * @summary List ServiceOfferings for Tag
          * @param {string} id ID of the resource
@@ -5817,6 +9733,60 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagServiceOfferings.');
             }
             const localVarPath = `/tags/{id}/service_offerings`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagSubnets(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listTagSubnets.');
+            }
+            const localVarPath = `/tags/{id}/subnets`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -5968,6 +9938,114 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          */
         listTasks(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/tasks`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Vm
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listVmNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listVmNetworkAdapters.');
+            }
+            const localVarPath = `/vms/{id}/network_adapters`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for Vm
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listVmSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listVmSecurityGroups.');
+            }
+            const localVarPath = `/vms/{id}/security_groups`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -6264,6 +10342,60 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns an array of Volume objects
+         * @summary List Volumes for VolumeType
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listVolumeTypeVolumes(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listVolumeTypeVolumes.');
+            }
+            const localVarPath = `/volume_types/{id}/volumes`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns an array of VolumeType objects
          * @summary List VolumeTypes
          * @param {number} [limit] The numbers of items to return per page.
@@ -6274,6 +10406,60 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          */
         listVolumeTypes(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/volume_types`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Vm objects
+         * @summary List Vms for Volume
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listVolumeVms(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listVolumeVms.');
+            }
+            const localVarPath = `/volumes/{id}/vms`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -6353,6 +10539,54 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns a Task id
+         * @summary Order an existing ServiceOffering
+         * @param {string} id ID of the resource
+         * @param {OrderParameters} orderParameters Order parameters defining the service and provider control
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        orderServiceOffering(id: string, orderParameters: OrderParameters, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling orderServiceOffering.');
+            }
+            // verify required parameter 'orderParameters' is not null or undefined
+            if (orderParameters === null || orderParameters === undefined) {
+                throw new RequiredError('orderParameters','Required parameter orderParameters was null or undefined when calling orderServiceOffering.');
+            }
+            const localVarPath = `/service_offerings/{id}/order`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"OrderParameters" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(orderParameters || {}) : (orderParameters || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -6879,6 +11113,123 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns a Ipaddress object
+         * @summary Show an existing Ipaddress
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showIpaddress(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showIpaddress.');
+            }
+            const localVarPath = `/ipaddresses/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns a Network object
+         * @summary Show an existing Network
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showNetwork(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showNetwork.');
+            }
+            const localVarPath = `/networks/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns a NetworkAdapter object
+         * @summary Show an existing NetworkAdapter
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showNetworkAdapter(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showNetworkAdapter.');
+            }
+            const localVarPath = `/network_adapters/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns a OrchestrationStack object
          * @summary Show an existing OrchestrationStack
          * @param {string} id ID of the resource
@@ -6891,6 +11242,45 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showOrchestrationStack.');
             }
             const localVarPath = `/orchestration_stacks/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns a SecurityGroup object
+         * @summary Show an existing SecurityGroup
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSecurityGroup(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showSecurityGroup.');
+            }
+            const localVarPath = `/security_groups/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -7125,6 +11515,123 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showSource.');
             }
             const localVarPath = `/sources/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns a SourceRegion object
+         * @summary Show an existing SourceRegion
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSourceRegion(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showSourceRegion.');
+            }
+            const localVarPath = `/source_regions/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns a Subnet object
+         * @summary Show an existing Subnet
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSubnet(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showSubnet.');
+            }
+            const localVarPath = `/subnets/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns a Subscription object
+         * @summary Show an existing Subscription
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSubscription(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showSubscription.');
+            }
+            const localVarPath = `/subscriptions/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -7819,6 +12326,258 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns an array of Tag objects
+         * @summary List Tags for Ipaddress
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listIpaddressTags(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listIpaddressTags(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listIpaddresses(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listIpaddresses(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for NetworkAdapter
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkAdapterIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listNetworkAdapterIpaddresses(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for NetworkAdapter
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkAdapterTags(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listNetworkAdapterTags(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkAdapters(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listNetworkAdapters(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for Network
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listNetworkSubnets(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for Network
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkTags(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listNetworkTags(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworks(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listNetworks(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackIpaddresses(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackNetworkAdapters(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackNetworks(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackSecurityGroups(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackSubnets(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Vm objects
+         * @summary List Vms for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackVms(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackVms(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Volume objects
+         * @summary List Volumes for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackVolumes(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackVolumes(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns an array of OrchestrationStack objects
          * @summary List OrchestrationStacks
          * @param {number} [limit] The numbers of items to return per page.
@@ -7829,6 +12588,56 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         listOrchestrationStacks(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStacksCollection> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStacks(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for SecurityGroup
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSecurityGroupTags(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSecurityGroupTags(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Vm objects
+         * @summary List Vms for SecurityGroup
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSecurityGroupVms(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSecurityGroupVms(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSecurityGroups(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSecurityGroups(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -8137,6 +12946,57 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceIpaddresses(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceNetworkAdapters(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceNetworks(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns an array of OrchestrationStack objects
          * @summary List OrchestrationStacks for Source
          * @param {string} id ID of the resource
@@ -8148,6 +13008,226 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         listSourceOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStacksCollection> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceOrchestrationStacks(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionIpaddresses(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionNetworkAdapters(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionNetworks(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of OrchestrationStack objects
+         * @summary List OrchestrationStacks for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStacksCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionOrchestrationStacks(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionSecurityGroups(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of ServiceInstance objects
+         * @summary List ServiceInstances for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionServiceInstances(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of ServiceOffering objects
+         * @summary List ServiceOfferings for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionServiceOfferings(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionServiceOfferings(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of ServicePlan objects
+         * @summary List ServicePlans for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionServicePlans(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionServicePlans(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionSubnets(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Vm objects
+         * @summary List Vms for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionVms(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionVms(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Volume objects
+         * @summary List Volumes for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionVolumes(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionVolumes(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of SourceRegion objects
+         * @summary List SourceRegions
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegions(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceRegionsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegions(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceSecurityGroups(id, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -8199,6 +13279,57 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         listSourceServicePlans(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceServicePlans(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of SourceRegion objects
+         * @summary List SourceRegions for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceSourceRegions(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceRegionsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceSourceRegions(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceSubnets(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Subscription objects
+         * @summary List Subscriptions for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceSubscriptions(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubscriptionsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceSubscriptions(id, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -8266,6 +13397,276 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         listSources(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSources(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for Subnet
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubnetIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubnetIpaddresses(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Subnet
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubnetNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubnetNetworkAdapters(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for Subnet
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubnetTags(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubnetTags(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubnets(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubnets(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionIpaddresses(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionNetworkAdapters(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionNetworks(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of OrchestrationStack objects
+         * @summary List OrchestrationStacks for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStacksCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionOrchestrationStacks(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionSecurityGroups(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of ServiceInstance objects
+         * @summary List ServiceInstances for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionServiceInstances(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of ServiceOffering objects
+         * @summary List ServiceOfferings for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionServiceOfferings(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionServiceOfferings(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of ServicePlan objects
+         * @summary List ServicePlans for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionServicePlans(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionServicePlans(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionSubnets(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Vm objects
+         * @summary List Vms for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionVms(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionVms(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Volume objects
+         * @summary List Volumes for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionVolumes(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionVolumes(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Subscription objects
+         * @summary List Subscriptions
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptions(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubscriptionsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptions(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -8357,6 +13758,74 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagIpaddresses(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagNetworkAdapters(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagNetworks(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagSecurityGroups(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns an array of ServiceOffering objects
          * @summary List ServiceOfferings for Tag
          * @param {string} id ID of the resource
@@ -8368,6 +13837,23 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         listTagServiceOfferings(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingsCollection> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagServiceOfferings(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagSubnets(id, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -8417,6 +13903,40 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         listTasks(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TasksCollection> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTasks(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Vm
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listVmNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVmNetworkAdapters(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for Vm
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listVmSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVmSecurityGroups(id, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -8506,6 +14026,23 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns an array of Volume objects
+         * @summary List Volumes for VolumeType
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listVolumeTypeVolumes(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVolumeTypeVolumes(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns an array of VolumeType objects
          * @summary List VolumeTypes
          * @param {number} [limit] The numbers of items to return per page.
@@ -8522,6 +14059,23 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns an array of Vm objects
+         * @summary List Vms for Volume
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listVolumeVms(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVolumeVms(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns an array of Volume objects
          * @summary List Volumes
          * @param {number} [limit] The numbers of items to return per page.
@@ -8532,6 +14086,21 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         listVolumes(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVolumes(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns a Task id
+         * @summary Order an existing ServiceOffering
+         * @param {string} id ID of the resource
+         * @param {OrderParameters} orderParameters Order parameters defining the service and provider control
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        orderServiceOffering(id: string, orderParameters: OrderParameters, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).orderServiceOffering(id, orderParameters, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -8721,6 +14290,48 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns a Ipaddress object
+         * @summary Show an existing Ipaddress
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showIpaddress(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Ipaddress> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showIpaddress(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns a Network object
+         * @summary Show an existing Network
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showNetwork(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Network> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showNetwork(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns a NetworkAdapter object
+         * @summary Show an existing NetworkAdapter
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showNetworkAdapter(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdapter> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showNetworkAdapter(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns a OrchestrationStack object
          * @summary Show an existing OrchestrationStack
          * @param {string} id ID of the resource
@@ -8729,6 +14340,20 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         showOrchestrationStack(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStack> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showOrchestrationStack(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns a SecurityGroup object
+         * @summary Show an existing SecurityGroup
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSecurityGroup(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroup> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSecurityGroup(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -8813,6 +14438,48 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         showSource(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Source> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSource(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns a SourceRegion object
+         * @summary Show an existing SourceRegion
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSourceRegion(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceRegion> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSourceRegion(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns a Subnet object
+         * @summary Show an existing Subnet
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSubnet(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Subnet> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSubnet(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns a Subscription object
+         * @summary Show an existing Subscription
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSubscription(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Subscription> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSubscription(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -9211,6 +14878,198 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listHosts(limit, offset, filter, options)(axios, basePath);
         },
         /**
+         * Returns an array of Tag objects
+         * @summary List Tags for Ipaddress
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listIpaddressTags(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listIpaddressTags(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listIpaddresses(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listIpaddresses(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for NetworkAdapter
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkAdapterIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listNetworkAdapterIpaddresses(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for NetworkAdapter
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkAdapterTags(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listNetworkAdapterTags(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkAdapters(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listNetworkAdapters(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for Network
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listNetworkSubnets(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for Network
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworkTags(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listNetworkTags(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listNetworks(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listNetworks(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listOrchestrationStackIpaddresses(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listOrchestrationStackNetworkAdapters(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listOrchestrationStackNetworks(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listOrchestrationStackSecurityGroups(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listOrchestrationStackSubnets(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Vm objects
+         * @summary List Vms for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackVms(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listOrchestrationStackVms(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Volume objects
+         * @summary List Volumes for OrchestrationStack
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listOrchestrationStackVolumes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listOrchestrationStackVolumes(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
          * Returns an array of OrchestrationStack objects
          * @summary List OrchestrationStacks
          * @param {number} [limit] The numbers of items to return per page.
@@ -9221,6 +15080,44 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         listOrchestrationStacks(limit?: number, offset?: number, filter?: any, options?: any) {
             return DefaultApiFp(configuration).listOrchestrationStacks(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for SecurityGroup
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSecurityGroupTags(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSecurityGroupTags(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Vm objects
+         * @summary List Vms for SecurityGroup
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSecurityGroupVms(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSecurityGroupVms(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSecurityGroups(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSecurityGroups(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of ServiceInstance objects
@@ -9453,6 +15350,45 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceHosts(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceIpaddresses(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceNetworkAdapters(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceNetworks(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
          * Returns an array of OrchestrationStack objects
          * @summary List OrchestrationStacks for Source
          * @param {string} id ID of the resource
@@ -9464,6 +15400,174 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         listSourceOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
             return DefaultApiFp(configuration).listSourceOrchestrationStacks(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceRegionIpaddresses(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceRegionNetworkAdapters(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceRegionNetworks(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of OrchestrationStack objects
+         * @summary List OrchestrationStacks for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceRegionOrchestrationStacks(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceRegionSecurityGroups(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of ServiceInstance objects
+         * @summary List ServiceInstances for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceRegionServiceInstances(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of ServiceOffering objects
+         * @summary List ServiceOfferings for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionServiceOfferings(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceRegionServiceOfferings(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of ServicePlan objects
+         * @summary List ServicePlans for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionServicePlans(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceRegionServicePlans(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceRegionSubnets(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Vm objects
+         * @summary List Vms for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionVms(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceRegionVms(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Volume objects
+         * @summary List Volumes for SourceRegion
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegionVolumes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceRegionVolumes(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of SourceRegion objects
+         * @summary List SourceRegions
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceRegions(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceRegions(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceSecurityGroups(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of ServiceInstance objects
@@ -9503,6 +15607,45 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         listSourceServicePlans(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
             return DefaultApiFp(configuration).listSourceServicePlans(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of SourceRegion objects
+         * @summary List SourceRegions for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceSourceRegions(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceSourceRegions(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceSubnets(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Subscription objects
+         * @summary List Subscriptions for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceSubscriptions(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceSubscriptions(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Vm objects
@@ -9554,6 +15697,212 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         listSources(limit?: number, offset?: number, filter?: any, options?: any) {
             return DefaultApiFp(configuration).listSources(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for Subnet
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubnetIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubnetIpaddresses(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Subnet
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubnetNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubnetNetworkAdapters(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for Subnet
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubnetTags(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubnetTags(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubnets(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubnets(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubscriptionIpaddresses(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubscriptionNetworkAdapters(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubscriptionNetworks(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of OrchestrationStack objects
+         * @summary List OrchestrationStacks for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubscriptionOrchestrationStacks(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubscriptionSecurityGroups(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of ServiceInstance objects
+         * @summary List ServiceInstances for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubscriptionServiceInstances(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of ServiceOffering objects
+         * @summary List ServiceOfferings for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionServiceOfferings(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubscriptionServiceOfferings(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of ServicePlan objects
+         * @summary List ServicePlans for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionServicePlans(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubscriptionServicePlans(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubscriptionSubnets(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Vm objects
+         * @summary List Vms for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionVms(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubscriptionVms(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Volume objects
+         * @summary List Volumes for Subscription
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptionVolumes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubscriptionVolumes(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Subscription objects
+         * @summary List Subscriptions
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSubscriptions(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSubscriptions(limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of ContainerGroup objects
@@ -9621,6 +15970,58 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagContainerTemplates(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
+         * Returns an array of Ipaddress objects
+         * @summary List Ipaddresses for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listTagIpaddresses(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listTagNetworkAdapters(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Network objects
+         * @summary List Networks for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listTagNetworks(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listTagSecurityGroups(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
          * Returns an array of ServiceOffering objects
          * @summary List ServiceOfferings for Tag
          * @param {string} id ID of the resource
@@ -9632,6 +16033,19 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         listTagServiceOfferings(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
             return DefaultApiFp(configuration).listTagServiceOfferings(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Subnet objects
+         * @summary List Subnets for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listTagSubnets(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Vm objects
@@ -9669,6 +16083,32 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         listTasks(limit?: number, offset?: number, filter?: any, options?: any) {
             return DefaultApiFp(configuration).listTasks(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of NetworkAdapter objects
+         * @summary List NetworkAdapters for Vm
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listVmNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listVmNetworkAdapters(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of SecurityGroup objects
+         * @summary List SecurityGroups for Vm
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listVmSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listVmSecurityGroups(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Tag objects
@@ -9734,6 +16174,19 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listVolumeAttachments(limit, offset, filter, options)(axios, basePath);
         },
         /**
+         * Returns an array of Volume objects
+         * @summary List Volumes for VolumeType
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listVolumeTypeVolumes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listVolumeTypeVolumes(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
          * Returns an array of VolumeType objects
          * @summary List VolumeTypes
          * @param {number} [limit] The numbers of items to return per page.
@@ -9746,6 +16199,19 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listVolumeTypes(limit, offset, filter, options)(axios, basePath);
         },
         /**
+         * Returns an array of Vm objects
+         * @summary List Vms for Volume
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listVolumeVms(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listVolumeVms(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
          * Returns an array of Volume objects
          * @summary List Volumes
          * @param {number} [limit] The numbers of items to return per page.
@@ -9756,6 +16222,17 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         listVolumes(limit?: number, offset?: number, filter?: any, options?: any) {
             return DefaultApiFp(configuration).listVolumes(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns a Task id
+         * @summary Order an existing ServiceOffering
+         * @param {string} id ID of the resource
+         * @param {OrderParameters} orderParameters Order parameters defining the service and provider control
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        orderServiceOffering(id: string, orderParameters: OrderParameters, options?: any) {
+            return DefaultApiFp(configuration).orderServiceOffering(id, orderParameters, options)(axios, basePath);
         },
         /**
          * Returns a Task id
@@ -9889,6 +16366,36 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).showHost(id, options)(axios, basePath);
         },
         /**
+         * Returns a Ipaddress object
+         * @summary Show an existing Ipaddress
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showIpaddress(id: string, options?: any) {
+            return DefaultApiFp(configuration).showIpaddress(id, options)(axios, basePath);
+        },
+        /**
+         * Returns a Network object
+         * @summary Show an existing Network
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showNetwork(id: string, options?: any) {
+            return DefaultApiFp(configuration).showNetwork(id, options)(axios, basePath);
+        },
+        /**
+         * Returns a NetworkAdapter object
+         * @summary Show an existing NetworkAdapter
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showNetworkAdapter(id: string, options?: any) {
+            return DefaultApiFp(configuration).showNetworkAdapter(id, options)(axios, basePath);
+        },
+        /**
          * Returns a OrchestrationStack object
          * @summary Show an existing OrchestrationStack
          * @param {string} id ID of the resource
@@ -9897,6 +16404,16 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         showOrchestrationStack(id: string, options?: any) {
             return DefaultApiFp(configuration).showOrchestrationStack(id, options)(axios, basePath);
+        },
+        /**
+         * Returns a SecurityGroup object
+         * @summary Show an existing SecurityGroup
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSecurityGroup(id: string, options?: any) {
+            return DefaultApiFp(configuration).showSecurityGroup(id, options)(axios, basePath);
         },
         /**
          * Returns a ServiceInstance object
@@ -9957,6 +16474,36 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         showSource(id: string, options?: any) {
             return DefaultApiFp(configuration).showSource(id, options)(axios, basePath);
+        },
+        /**
+         * Returns a SourceRegion object
+         * @summary Show an existing SourceRegion
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSourceRegion(id: string, options?: any) {
+            return DefaultApiFp(configuration).showSourceRegion(id, options)(axios, basePath);
+        },
+        /**
+         * Returns a Subnet object
+         * @summary Show an existing Subnet
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSubnet(id: string, options?: any) {
+            return DefaultApiFp(configuration).showSubnet(id, options)(axios, basePath);
+        },
+        /**
+         * Returns a Subscription object
+         * @summary Show an existing Subscription
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSubscription(id: string, options?: any) {
+            return DefaultApiFp(configuration).showSubscription(id, options)(axios, basePath);
         },
         /**
          * Returns a Tag object
@@ -10370,6 +16917,228 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Returns an array of Tag objects
+     * @summary List Tags for Ipaddress
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listIpaddressTags(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listIpaddressTags(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Ipaddress objects
+     * @summary List Ipaddresses
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listIpaddresses(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listIpaddresses(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Ipaddress objects
+     * @summary List Ipaddresses for NetworkAdapter
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listNetworkAdapterIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listNetworkAdapterIpaddresses(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Tag objects
+     * @summary List Tags for NetworkAdapter
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listNetworkAdapterTags(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listNetworkAdapterTags(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of NetworkAdapter objects
+     * @summary List NetworkAdapters
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listNetworkAdapters(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listNetworkAdapters(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Subnet objects
+     * @summary List Subnets for Network
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listNetworkSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listNetworkSubnets(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Tag objects
+     * @summary List Tags for Network
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listNetworkTags(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listNetworkTags(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Network objects
+     * @summary List Networks
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listNetworks(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listNetworks(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Ipaddress objects
+     * @summary List Ipaddresses for OrchestrationStack
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listOrchestrationStackIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listOrchestrationStackIpaddresses(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of NetworkAdapter objects
+     * @summary List NetworkAdapters for OrchestrationStack
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listOrchestrationStackNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listOrchestrationStackNetworkAdapters(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Network objects
+     * @summary List Networks for OrchestrationStack
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listOrchestrationStackNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listOrchestrationStackNetworks(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of SecurityGroup objects
+     * @summary List SecurityGroups for OrchestrationStack
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listOrchestrationStackSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listOrchestrationStackSecurityGroups(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Subnet objects
+     * @summary List Subnets for OrchestrationStack
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listOrchestrationStackSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listOrchestrationStackSubnets(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Vm objects
+     * @summary List Vms for OrchestrationStack
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listOrchestrationStackVms(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listOrchestrationStackVms(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Volume objects
+     * @summary List Volumes for OrchestrationStack
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listOrchestrationStackVolumes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listOrchestrationStackVolumes(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns an array of OrchestrationStack objects
      * @summary List OrchestrationStacks
      * @param {number} [limit] The numbers of items to return per page.
@@ -10381,6 +17150,50 @@ export class DefaultApi extends BaseAPI {
      */
     public listOrchestrationStacks(limit?: number, offset?: number, filter?: any, options?: any) {
         return DefaultApiFp(this.configuration).listOrchestrationStacks(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Tag objects
+     * @summary List Tags for SecurityGroup
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSecurityGroupTags(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSecurityGroupTags(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Vm objects
+     * @summary List Vms for SecurityGroup
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSecurityGroupVms(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSecurityGroupVms(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of SecurityGroup objects
+     * @summary List SecurityGroups
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSecurityGroups(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSecurityGroups(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -10650,6 +17463,51 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Returns an array of Ipaddress objects
+     * @summary List Ipaddresses for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceIpaddresses(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of NetworkAdapter objects
+     * @summary List NetworkAdapters for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceNetworkAdapters(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Network objects
+     * @summary List Networks for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceNetworks(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns an array of OrchestrationStack objects
      * @summary List OrchestrationStacks for Source
      * @param {string} id ID of the resource
@@ -10662,6 +17520,200 @@ export class DefaultApi extends BaseAPI {
      */
     public listSourceOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
         return DefaultApiFp(this.configuration).listSourceOrchestrationStacks(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Ipaddress objects
+     * @summary List Ipaddresses for SourceRegion
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceRegionIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceRegionIpaddresses(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of NetworkAdapter objects
+     * @summary List NetworkAdapters for SourceRegion
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceRegionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceRegionNetworkAdapters(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Network objects
+     * @summary List Networks for SourceRegion
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceRegionNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceRegionNetworks(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of OrchestrationStack objects
+     * @summary List OrchestrationStacks for SourceRegion
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceRegionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceRegionOrchestrationStacks(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of SecurityGroup objects
+     * @summary List SecurityGroups for SourceRegion
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceRegionSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceRegionSecurityGroups(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of ServiceInstance objects
+     * @summary List ServiceInstances for SourceRegion
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceRegionServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceRegionServiceInstances(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of ServiceOffering objects
+     * @summary List ServiceOfferings for SourceRegion
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceRegionServiceOfferings(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceRegionServiceOfferings(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of ServicePlan objects
+     * @summary List ServicePlans for SourceRegion
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceRegionServicePlans(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceRegionServicePlans(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Subnet objects
+     * @summary List Subnets for SourceRegion
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceRegionSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceRegionSubnets(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Vm objects
+     * @summary List Vms for SourceRegion
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceRegionVms(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceRegionVms(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Volume objects
+     * @summary List Volumes for SourceRegion
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceRegionVolumes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceRegionVolumes(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of SourceRegion objects
+     * @summary List SourceRegions
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceRegions(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceRegions(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of SecurityGroup objects
+     * @summary List SecurityGroups for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceSecurityGroups(id, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -10707,6 +17759,51 @@ export class DefaultApi extends BaseAPI {
      */
     public listSourceServicePlans(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
         return DefaultApiFp(this.configuration).listSourceServicePlans(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of SourceRegion objects
+     * @summary List SourceRegions for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceSourceRegions(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceSourceRegions(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Subnet objects
+     * @summary List Subnets for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceSubnets(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Subscription objects
+     * @summary List Subscriptions for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceSubscriptions(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceSubscriptions(id, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -10766,6 +17863,244 @@ export class DefaultApi extends BaseAPI {
      */
     public listSources(limit?: number, offset?: number, filter?: any, options?: any) {
         return DefaultApiFp(this.configuration).listSources(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Ipaddress objects
+     * @summary List Ipaddresses for Subnet
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubnetIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubnetIpaddresses(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of NetworkAdapter objects
+     * @summary List NetworkAdapters for Subnet
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubnetNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubnetNetworkAdapters(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Tag objects
+     * @summary List Tags for Subnet
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubnetTags(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubnetTags(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Subnet objects
+     * @summary List Subnets
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubnets(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubnets(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Ipaddress objects
+     * @summary List Ipaddresses for Subscription
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubscriptionIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubscriptionIpaddresses(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of NetworkAdapter objects
+     * @summary List NetworkAdapters for Subscription
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubscriptionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubscriptionNetworkAdapters(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Network objects
+     * @summary List Networks for Subscription
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubscriptionNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubscriptionNetworks(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of OrchestrationStack objects
+     * @summary List OrchestrationStacks for Subscription
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubscriptionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubscriptionOrchestrationStacks(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of SecurityGroup objects
+     * @summary List SecurityGroups for Subscription
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubscriptionSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubscriptionSecurityGroups(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of ServiceInstance objects
+     * @summary List ServiceInstances for Subscription
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubscriptionServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubscriptionServiceInstances(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of ServiceOffering objects
+     * @summary List ServiceOfferings for Subscription
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubscriptionServiceOfferings(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubscriptionServiceOfferings(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of ServicePlan objects
+     * @summary List ServicePlans for Subscription
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubscriptionServicePlans(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubscriptionServicePlans(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Subnet objects
+     * @summary List Subnets for Subscription
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubscriptionSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubscriptionSubnets(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Vm objects
+     * @summary List Vms for Subscription
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubscriptionVms(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubscriptionVms(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Volume objects
+     * @summary List Volumes for Subscription
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubscriptionVolumes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubscriptionVolumes(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Subscription objects
+     * @summary List Subscriptions
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSubscriptions(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSubscriptions(limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -10844,6 +18179,66 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Returns an array of Ipaddress objects
+     * @summary List Ipaddresses for Tag
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listTagIpaddresses(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listTagIpaddresses(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of NetworkAdapter objects
+     * @summary List NetworkAdapters for Tag
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listTagNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listTagNetworkAdapters(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Network objects
+     * @summary List Networks for Tag
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listTagNetworks(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listTagNetworks(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of SecurityGroup objects
+     * @summary List SecurityGroups for Tag
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listTagSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listTagSecurityGroups(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns an array of ServiceOffering objects
      * @summary List ServiceOfferings for Tag
      * @param {string} id ID of the resource
@@ -10856,6 +18251,21 @@ export class DefaultApi extends BaseAPI {
      */
     public listTagServiceOfferings(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
         return DefaultApiFp(this.configuration).listTagServiceOfferings(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Subnet objects
+     * @summary List Subnets for Tag
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listTagSubnets(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listTagSubnets(id, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -10899,6 +18309,36 @@ export class DefaultApi extends BaseAPI {
      */
     public listTasks(limit?: number, offset?: number, filter?: any, options?: any) {
         return DefaultApiFp(this.configuration).listTasks(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of NetworkAdapter objects
+     * @summary List NetworkAdapters for Vm
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listVmNetworkAdapters(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listVmNetworkAdapters(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of SecurityGroup objects
+     * @summary List SecurityGroups for Vm
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listVmSecurityGroups(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listVmSecurityGroups(id, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -10975,6 +18415,21 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Returns an array of Volume objects
+     * @summary List Volumes for VolumeType
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listVolumeTypeVolumes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listVolumeTypeVolumes(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns an array of VolumeType objects
      * @summary List VolumeTypes
      * @param {number} [limit] The numbers of items to return per page.
@@ -10989,6 +18444,21 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Returns an array of Vm objects
+     * @summary List Vms for Volume
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listVolumeVms(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listVolumeVms(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns an array of Volume objects
      * @summary List Volumes
      * @param {number} [limit] The numbers of items to return per page.
@@ -11000,6 +18470,19 @@ export class DefaultApi extends BaseAPI {
      */
     public listVolumes(limit?: number, offset?: number, filter?: any, options?: any) {
         return DefaultApiFp(this.configuration).listVolumes(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns a Task id
+     * @summary Order an existing ServiceOffering
+     * @param {string} id ID of the resource
+     * @param {OrderParameters} orderParameters Order parameters defining the service and provider control
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public orderServiceOffering(id: string, orderParameters: OrderParameters, options?: any) {
+        return DefaultApiFp(this.configuration).orderServiceOffering(id, orderParameters, options)(this.axios, this.basePath);
     }
 
     /**
@@ -11160,6 +18643,42 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Returns a Ipaddress object
+     * @summary Show an existing Ipaddress
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public showIpaddress(id: string, options?: any) {
+        return DefaultApiFp(this.configuration).showIpaddress(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns a Network object
+     * @summary Show an existing Network
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public showNetwork(id: string, options?: any) {
+        return DefaultApiFp(this.configuration).showNetwork(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns a NetworkAdapter object
+     * @summary Show an existing NetworkAdapter
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public showNetworkAdapter(id: string, options?: any) {
+        return DefaultApiFp(this.configuration).showNetworkAdapter(id, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns a OrchestrationStack object
      * @summary Show an existing OrchestrationStack
      * @param {string} id ID of the resource
@@ -11169,6 +18688,18 @@ export class DefaultApi extends BaseAPI {
      */
     public showOrchestrationStack(id: string, options?: any) {
         return DefaultApiFp(this.configuration).showOrchestrationStack(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns a SecurityGroup object
+     * @summary Show an existing SecurityGroup
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public showSecurityGroup(id: string, options?: any) {
+        return DefaultApiFp(this.configuration).showSecurityGroup(id, options)(this.axios, this.basePath);
     }
 
     /**
@@ -11241,6 +18772,42 @@ export class DefaultApi extends BaseAPI {
      */
     public showSource(id: string, options?: any) {
         return DefaultApiFp(this.configuration).showSource(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns a SourceRegion object
+     * @summary Show an existing SourceRegion
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public showSourceRegion(id: string, options?: any) {
+        return DefaultApiFp(this.configuration).showSourceRegion(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns a Subnet object
+     * @summary Show an existing Subnet
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public showSubnet(id: string, options?: any) {
+        return DefaultApiFp(this.configuration).showSubnet(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns a Subscription object
+     * @summary Show an existing Subscription
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public showSubscription(id: string, options?: any) {
+        return DefaultApiFp(this.configuration).showSubscription(id, options)(this.axios, this.basePath);
     }
 
     /**

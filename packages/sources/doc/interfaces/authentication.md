@@ -15,6 +15,7 @@
 ### Properties
 
 * [authtype](authentication.md#authtype)
+* [extra](authentication.md#extra)
 * [id](authentication.md#id)
 * [name](authentication.md#name)
 * [password](authentication.md#password)
@@ -35,9 +36,22 @@
 
 **● authtype**: *`string`*
 
-*Defined in [api.ts:211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L211)*
+*Defined in [api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L229)*
 
 *__type__*: {string}
+
+*__memberof__*: Authentication
+
+___
+<a id="extra"></a>
+
+### `<Optional>` extra
+
+**● extra**: *[AuthenticationExtra](authenticationextra.md)*
+
+*Defined in [api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L235)*
+
+*__type__*: {AuthenticationExtra}
 
 *__memberof__*: Authentication
 
@@ -48,7 +62,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L217)*
+*Defined in [api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L241)*
 
 ID of the resource
 
@@ -63,7 +77,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L223)*
+*Defined in [api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L247)*
 
 *__type__*: {string}
 
@@ -76,7 +90,7 @@ ___
 
 **● password**: *`string`*
 
-*Defined in [api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L229)*
+*Defined in [api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L253)*
 
 *__type__*: {string}
 
@@ -89,7 +103,7 @@ ___
 
 **● resourceId**: *`string`*
 
-*Defined in [api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L235)*
+*Defined in [api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L259)*
 
 ID of the resource
 
@@ -104,7 +118,7 @@ ___
 
 **● resourceType**: *`string`*
 
-*Defined in [api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L241)*
+*Defined in [api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L265)*
 
 *__type__*: {string}
 
@@ -117,7 +131,7 @@ ___
 
 **● status**: *`string`*
 
-*Defined in [api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L247)*
+*Defined in [api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L271)*
 
 *__type__*: {string}
 
@@ -130,7 +144,7 @@ ___
 
 **● statusDetails**: *`string`*
 
-*Defined in [api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L253)*
+*Defined in [api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L277)*
 
 *__type__*: {string}
 
@@ -143,7 +157,7 @@ ___
 
 **● tenant**: *`string`*
 
-*Defined in [api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L259)*
+*Defined in [api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L283)*
 
 *__type__*: {string}
 
@@ -156,7 +170,7 @@ ___
 
 **● username**: *`string`*
 
-*Defined in [api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L265)*
+*Defined in [api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L289)*
 
 *__type__*: {string}
 

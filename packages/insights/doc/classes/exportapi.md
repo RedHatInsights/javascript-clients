@@ -31,6 +31,8 @@ ExportApi - object-oriented interface
 ### Methods
 
 * [exportHitsList](exportapi.md#exporthitslist)
+* [exportListCsv](exportapi.md#exportlistcsv)
+* [exportListJson](exportapi.md#exportlistjson)
 
 ---
 
@@ -102,9 +104,55 @@ ___
 
 ▸ **exportHitsList**(options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
 
-*Defined in [api.ts:1359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1359)*
+*Defined in [api.ts:1471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1471)*
 
 Get each host and all rules currently affecting it. This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store). We also only present active, non-acked rules.
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: ExportApi
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
+
+___
+<a id="exportlistcsv"></a>
+
+###  exportListCsv
+
+▸ **exportListCsv**(options?: *`any`*): `AxiosPromise`<`Response`>
+
+*Defined in [api.ts:1481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1481)*
+
+Export the hosts and rules listing as CSV or JSON
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: ExportApi
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<`Response`>
+
+___
+<a id="exportlistjson"></a>
+
+###  exportListJson
+
+▸ **exportListJson**(options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
+
+*Defined in [api.ts:1491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1491)*
+
+Export the hosts and rules listing as CSV or JSON
 
 *__throws__*: {RequiredError}
 

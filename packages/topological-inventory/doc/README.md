@@ -110,10 +110,18 @@ API documentation
 * [HostsCollection](interfaces/hostscollection.md)
 * [InlineObject](interfaces/inlineobject.md)
 * [InlineResponse200](interfaces/inlineresponse200.md)
+* [Ipaddress](interfaces/ipaddress.md)
+* [IpaddressesCollection](interfaces/ipaddressescollection.md)
+* [Network](interfaces/network.md)
+* [NetworkAdapter](interfaces/networkadapter.md)
+* [NetworkAdaptersCollection](interfaces/networkadapterscollection.md)
+* [NetworksCollection](interfaces/networkscollection.md)
 * [OrchestrationStack](interfaces/orchestrationstack.md)
 * [OrchestrationStacksCollection](interfaces/orchestrationstackscollection.md)
 * [OrderParameters](interfaces/orderparameters.md)
 * [RequestArgs](interfaces/requestargs.md)
+* [SecurityGroup](interfaces/securitygroup.md)
+* [SecurityGroupsCollection](interfaces/securitygroupscollection.md)
 * [ServiceInstance](interfaces/serviceinstance.md)
 * [ServiceInstancesCollection](interfaces/serviceinstancescollection.md)
 * [ServiceOffering](interfaces/serviceoffering.md)
@@ -123,7 +131,13 @@ API documentation
 * [ServicePlan](interfaces/serviceplan.md)
 * [ServicePlansCollection](interfaces/serviceplanscollection.md)
 * [Source](interfaces/source.md)
+* [SourceRegion](interfaces/sourceregion.md)
+* [SourceRegionsCollection](interfaces/sourceregionscollection.md)
 * [SourcesCollection](interfaces/sourcescollection.md)
+* [Subnet](interfaces/subnet.md)
+* [SubnetsCollection](interfaces/subnetscollection.md)
+* [Subscription](interfaces/subscription.md)
+* [SubscriptionsCollection](interfaces/subscriptionscollection.md)
 * [Tag](interfaces/tag.md)
 * [Tagging](interfaces/tagging.md)
 * [TagsCollection](interfaces/tagscollection.md)
@@ -175,7 +189,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2955)*
+*Defined in [api.ts:3835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3835)*
 
 DefaultApi - axios parameter creator
 
@@ -194,7 +208,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:8927](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L8927)*
+*Defined in [api.ts:14594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L14594)*
 
 DefaultApi - factory interface
 
@@ -215,7 +229,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:7443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L7443)*
+*Defined in [api.ts:11950](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L11950)*
 
 DefaultApi - functional programming interface
 

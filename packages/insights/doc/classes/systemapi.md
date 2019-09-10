@@ -102,7 +102,7 @@ ___
 
 ▸ **systemReports**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2211)*
+*Defined in [api.ts:2343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2343)*
 
 Returns the list of latest reports for an Inventory Host ID that: \* are in the user's account \* have an active, not-deleted rule \* where the rule has not been acked by this account If the host ID is not found, return an empty list.
 

@@ -30,9 +30,11 @@ OrderItemApi - object-oriented interface
 
 ### Methods
 
+* [destroyOrderItem](orderitemapi.md#destroyorderitem)
 * [listApprovalRequests](orderitemapi.md#listapprovalrequests)
 * [listOrderItems](orderitemapi.md#listorderitems)
 * [listProgressMessages](orderitemapi.md#listprogressmessages)
+* [restoreOrderItem](orderitemapi.md#restoreorderitem)
 * [showOrderItem](orderitemapi.md#showorderitem)
 
 ---
@@ -99,13 +101,39 @@ ___
 
 ## Methods
 
+<a id="destroyorderitem"></a>
+
+###  destroyOrderItem
+
+▸ **destroyOrderItem**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[RestoreKey](../interfaces/restorekey.md)>
+
+*Defined in [api.ts:3017](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3017)*
+
+Deletes the order item based on order item ID passed
+
+*__summary__*: Delete an existing OrderItem
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: OrderItemApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| id | `string` |  ID of the resource |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[RestoreKey](../interfaces/restorekey.md)>
+
+___
 <a id="listapprovalrequests"></a>
 
 ###  listApprovalRequests
 
 ▸ **listApprovalRequests**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ApprovalRequestsCollection](../interfaces/approvalrequestscollection.md)>
 
-*Defined in [api.ts:2667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2667)*
+*Defined in [api.ts:3032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3032)*
 
 Gets a list of approval request associated with an order item. As the item is being approved one can check the status of the approvals.
 
@@ -134,7 +162,7 @@ ___
 
 ▸ **listOrderItems**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[OrderItemsCollection](../interfaces/orderitemscollection.md)>
 
-*Defined in [api.ts:2681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2681)*
+*Defined in [api.ts:3046](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3046)*
 
 Gets a list of order items.
 
@@ -162,7 +190,7 @@ ___
 
 ▸ **listProgressMessages**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ProgressMessagesCollection](../interfaces/progressmessagescollection.md)>
 
-*Defined in [api.ts:2696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2696)*
+*Defined in [api.ts:3061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3061)*
 
 Gets a list of progress messages associated with an order item. As the item is being processed the provider can update the progress messages.
 
@@ -185,15 +213,42 @@ Gets a list of progress messages associated with an order item. As the item is b
 **Returns:** `AxiosPromise`<[ProgressMessagesCollection](../interfaces/progressmessagescollection.md)>
 
 ___
+<a id="restoreorderitem"></a>
+
+###  restoreOrderItem
+
+▸ **restoreOrderItem**(id: *`string`*, restoreKey: *[RestoreKey](../interfaces/restorekey.md)*, options?: *`any`*): `AxiosPromise`<[OrderItem](../modules/orderitem.md)>
+
+*Defined in [api.ts:3074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3074)*
+
+Restores the order item specified by the order item ID.
+
+*__summary__*: Restore specific Order item
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: OrderItemApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| id | `string` |  ID of the resource |
+| restoreKey | [RestoreKey](../interfaces/restorekey.md) |  \- |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[OrderItem](../modules/orderitem.md)>
+
+___
 <a id="showorderitem"></a>
 
 ###  showOrderItem
 
 ▸ **showOrderItem**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[OrderItem](../modules/orderitem.md)>
 
-*Defined in [api.ts:2708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2708)*
+*Defined in [api.ts:3086](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3086)*
 
-Gets a specific order item based on the portfolio item ID passed
+Gets a specific order item based on the order item ID passed
 
 *__summary__*: Gets a specific order item
 

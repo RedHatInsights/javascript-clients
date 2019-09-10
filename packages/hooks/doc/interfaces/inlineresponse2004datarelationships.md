@@ -29,7 +29,7 @@
 
 **● apps**: *[Relationships](relationships.md)*
 
-*Defined in [api.ts:830](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L830)*
+*Defined in [api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L816)*
 
 *__type__*: {Relationships}
 
@@ -42,7 +42,7 @@ ___
 
 **● endpoint**: *[Relationship](relationship.md)*
 
-*Defined in [api.ts:848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L848)*
+*Defined in [api.ts:834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L834)*
 
 *__type__*: {Relationship}
 
@@ -55,7 +55,7 @@ ___
 
 **● eventTypes**: *[Relationships](relationships.md)*
 
-*Defined in [api.ts:836](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L836)*
+*Defined in [api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L822)*
 
 *__type__*: {Relationships}
 
@@ -68,7 +68,7 @@ ___
 
 **● levels**: *[Relationships](relationships.md)*
 
-*Defined in [api.ts:842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L842)*
+*Defined in [api.ts:828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L828)*
 
 *__type__*: {Relationships}
 

@@ -758,6 +758,20 @@ export interface SystemsStats {
 /**
  *
  * @export
+ * @interface Tag
+ */
+export interface Tag {
+    /**
+     *
+     * @type {string}
+     * @memberof Tag
+     */
+    name: string;
+}
+
+/**
+ *
+ * @export
  * @interface TopicWithRules
  */
 export interface TopicWithRules {
@@ -787,10 +801,16 @@ export interface TopicWithRules {
     tags?: string;
     /**
      *
-     * @type {Array<Rule>}
+     * @type {boolean}
      * @memberof TopicWithRules
      */
-    rules: Array<Rule>;
+    featured?: boolean;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof TopicWithRules
+     */
+    rules?: Array<string>;
     /**
      *
      * @type {number}
@@ -1302,6 +1322,58 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Export the hosts and rules listing as CSV or JSON
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportListCsv(options: any = {}): RequestArgs {
+            const localVarPath = `/export/hits.csv`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Export the hosts and rules listing as CSV or JSON
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportListJson(options: any = {}): RequestArgs {
+            const localVarPath = `/export/hits.json`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -1318,6 +1390,30 @@ export const ExportApiFp = function(configuration?: Configuration) {
          */
         exportHitsList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse2001>> {
             const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportHitsList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Export the hosts and rules listing as CSV or JSON
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportListCsv(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportListCsv(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Export the hosts and rules listing as CSV or JSON
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportListJson(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse2001>> {
+            const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportListJson(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1340,6 +1436,22 @@ export const ExportApiFactory = function (configuration?: Configuration, basePat
         exportHitsList(options?: any) {
             return ExportApiFp(configuration).exportHitsList(options)(axios, basePath);
         },
+        /**
+         * Export the hosts and rules listing as CSV or JSON
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportListCsv(options?: any) {
+            return ExportApiFp(configuration).exportListCsv(options)(axios, basePath);
+        },
+        /**
+         * Export the hosts and rules listing as CSV or JSON
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportListJson(options?: any) {
+            return ExportApiFp(configuration).exportListJson(options)(axios, basePath);
+        },
     };
 };
 
@@ -1358,6 +1470,26 @@ export class ExportApi extends BaseAPI {
      */
     public exportHitsList(options?: any) {
         return ExportApiFp(this.configuration).exportHitsList(options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Export the hosts and rules listing as CSV or JSON
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportApi
+     */
+    public exportListCsv(options?: any) {
+        return ExportApiFp(this.configuration).exportListCsv(options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Export the hosts and rules listing as CSV or JSON
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportApi
+     */
+    public exportListJson(options?: any) {
+        return ExportApiFp(this.configuration).exportListJson(options)(this.axios, this.basePath);
     }
 
 }
@@ -2436,6 +2568,70 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
+         * View, add to or delete from the rules in this topic
+         * @param {string} slug Rule topic slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicRulesRead(slug: string, options: any = {}): RequestArgs {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicRulesRead.');
+            }
+            const localVarPath = `/topic/{slug}/rules/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Lists the available rules that share a tag with this topic.  Some of these may also be in the given topic - can we show that?
+         * @param {string} slug Rule topic slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicRulesWithTags(slug: string, options: any = {}): RequestArgs {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicRulesWithTags.');
+            }
+            const localVarPath = `/topic/{slug}/rules_with_tags/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * List all systems affected by this rule topic.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
@@ -2447,6 +2643,38 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
                 throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicSystems.');
             }
             const localVarPath = `/topic/{slug}/systems/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * View, add to or delete from the tags in a topic.
+         * @param {string} slug Rule topic slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicTagsRead(slug: string, options: any = {}): RequestArgs {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicTagsRead.');
+            }
+            const localVarPath = `/topic/{slug}/tags/`
                 .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -2502,6 +2730,32 @@ export const TopicApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * View, add to or delete from the rules in this topic
+         * @param {string} slug Rule topic slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicRulesRead(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Rule>> {
+            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicRulesRead(slug, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Lists the available rules that share a tag with this topic.  Some of these may also be in the given topic - can we show that?
+         * @param {string} slug Rule topic slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicRulesWithTags(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Rule>> {
+            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicRulesWithTags(slug, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * List all systems affected by this rule topic.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
@@ -2509,6 +2763,19 @@ export const TopicApiFp = function(configuration?: Configuration) {
          */
         topicSystems(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule> {
             const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicSystems(slug, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * View, add to or delete from the tags in a topic.
+         * @param {string} slug Rule topic slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicTagsRead(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Tag>> {
+            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicTagsRead(slug, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2541,6 +2808,24 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
             return TopicApiFp(configuration).topicRead(slug, options)(axios, basePath);
         },
         /**
+         * View, add to or delete from the rules in this topic
+         * @param {string} slug Rule topic slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicRulesRead(slug: string, options?: any) {
+            return TopicApiFp(configuration).topicRulesRead(slug, options)(axios, basePath);
+        },
+        /**
+         * Lists the available rules that share a tag with this topic.  Some of these may also be in the given topic - can we show that?
+         * @param {string} slug Rule topic slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicRulesWithTags(slug: string, options?: any) {
+            return TopicApiFp(configuration).topicRulesWithTags(slug, options)(axios, basePath);
+        },
+        /**
          * List all systems affected by this rule topic.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
@@ -2548,6 +2833,15 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
          */
         topicSystems(slug: string, options?: any) {
             return TopicApiFp(configuration).topicSystems(slug, options)(axios, basePath);
+        },
+        /**
+         * View, add to or delete from the tags in a topic.
+         * @param {string} slug Rule topic slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicTagsRead(slug: string, options?: any) {
+            return TopicApiFp(configuration).topicTagsRead(slug, options)(axios, basePath);
         },
     };
 };
@@ -2581,6 +2875,28 @@ export class TopicApi extends BaseAPI {
     }
 
     /**
+     * View, add to or delete from the rules in this topic
+     * @param {string} slug Rule topic slug
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TopicApi
+     */
+    public topicRulesRead(slug: string, options?: any) {
+        return TopicApiFp(this.configuration).topicRulesRead(slug, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Lists the available rules that share a tag with this topic.  Some of these may also be in the given topic - can we show that?
+     * @param {string} slug Rule topic slug
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TopicApi
+     */
+    public topicRulesWithTags(slug: string, options?: any) {
+        return TopicApiFp(this.configuration).topicRulesWithTags(slug, options)(this.axios, this.basePath);
+    }
+
+    /**
      * List all systems affected by this rule topic.
      * @param {string} slug Rule topic slug
      * @param {*} [options] Override http request option.
@@ -2589,6 +2905,17 @@ export class TopicApi extends BaseAPI {
      */
     public topicSystems(slug: string, options?: any) {
         return TopicApiFp(this.configuration).topicSystems(slug, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * View, add to or delete from the tags in a topic.
+     * @param {string} slug Rule topic slug
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TopicApi
+     */
+    public topicTagsRead(slug: string, options?: any) {
+        return TopicApiFp(this.configuration).topicTagsRead(slug, options)(this.axios, this.basePath);
     }
 
 }

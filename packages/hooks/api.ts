@@ -322,10 +322,10 @@ export namespace EndpointAttributes {
 export interface EndpointsEndpoint {
     /**
      *
-     * @type {Url}
+     * @type {string}
      * @memberof EndpointsEndpoint
      */
-    url?: Url;
+    url?: string;
     /**
      *
      * @type {string}
@@ -380,10 +380,10 @@ export interface EndpointsEndpointFilter {
 export interface EndpointsIdEndpoint {
     /**
      *
-     * @type {Url}
+     * @type {string}
      * @memberof EndpointsIdEndpoint
      */
-    url?: Url;
+    url?: string;
     /**
      *
      * @type {string}
@@ -644,20 +644,6 @@ export interface InlineObject2 {
      *
      * @type {EndpointsIdEndpoint}
      * @memberof InlineObject2
-     */
-    endpoint?: EndpointsIdEndpoint;
-}
-
-/**
- *
- * @export
- * @interface InlineObject3
- */
-export interface InlineObject3 {
-    /**
-     *
-     * @type {EndpointsIdEndpoint}
-     * @memberof InlineObject3
      */
     endpoint?: EndpointsIdEndpoint;
 }
@@ -1567,56 +1553,6 @@ export const EndpointsApiAxiosParamCreator = function (configuration?: Configura
                 options: localVarRequestOptions,
             };
         },
-        /**
-         * Updates the requested endpoint
-         * @param {string} X_RH_IDENTITY
-         * @param {number} id
-         * @param {InlineObject3} inlineObject3
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        endpointsUpdate_1(X_RH_IDENTITY: string, id: number, inlineObject3: InlineObject3, options: any = {}): RequestArgs {
-            // verify required parameter 'X_RH_IDENTITY' is not null or undefined
-            if (X_RH_IDENTITY === null || X_RH_IDENTITY === undefined) {
-                throw new RequiredError('X_RH_IDENTITY','Required parameter X_RH_IDENTITY was null or undefined when calling endpointsUpdate_1.');
-            }
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling endpointsUpdate_1.');
-            }
-            // verify required parameter 'inlineObject3' is not null or undefined
-            if (inlineObject3 === null || inlineObject3 === undefined) {
-                throw new RequiredError('inlineObject3','Required parameter inlineObject3 was null or undefined when calling endpointsUpdate_1.');
-            }
-            const localVarPath = `/endpoints/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (X_RH_IDENTITY !== undefined && X_RH_IDENTITY !== null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = String(X_RH_IDENTITY);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"InlineObject3" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(inlineObject3 || {}) : (inlineObject3 || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
     }
 };
 
@@ -1713,21 +1649,6 @@ export const EndpointsApiFp = function(configuration?: Configuration) {
                 return axios.request(axiosRequestArgs);
             };
         },
-        /**
-         * Updates the requested endpoint
-         * @param {string} X_RH_IDENTITY
-         * @param {number} id
-         * @param {InlineObject3} inlineObject3
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        endpointsUpdate_1(X_RH_IDENTITY: string, id: number, inlineObject3: InlineObject3, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse201> {
-            const localVarAxiosArgs = EndpointsApiAxiosParamCreator(configuration).endpointsUpdate_1(X_RH_IDENTITY, id, inlineObject3, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
     }
 };
 
@@ -1799,17 +1720,6 @@ export const EndpointsApiFactory = function (configuration?: Configuration, base
          */
         endpointsUpdate(X_RH_IDENTITY: string, id: number, inlineObject2: InlineObject2, options?: any) {
             return EndpointsApiFp(configuration).endpointsUpdate(X_RH_IDENTITY, id, inlineObject2, options)(axios, basePath);
-        },
-        /**
-         * Updates the requested endpoint
-         * @param {string} X_RH_IDENTITY
-         * @param {number} id
-         * @param {InlineObject3} inlineObject3
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        endpointsUpdate_1(X_RH_IDENTITY: string, id: number, inlineObject3: InlineObject3, options?: any) {
-            return EndpointsApiFp(configuration).endpointsUpdate_1(X_RH_IDENTITY, id, inlineObject3, options)(axios, basePath);
         },
     };
 };
@@ -1894,19 +1804,6 @@ export class EndpointsApi extends BaseAPI {
      */
     public endpointsUpdate(X_RH_IDENTITY: string, id: number, inlineObject2: InlineObject2, options?: any) {
         return EndpointsApiFp(this.configuration).endpointsUpdate(X_RH_IDENTITY, id, inlineObject2, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Updates the requested endpoint
-     * @param {string} X_RH_IDENTITY
-     * @param {number} id
-     * @param {InlineObject3} inlineObject3
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof EndpointsApi
-     */
-    public endpointsUpdate_1(X_RH_IDENTITY: string, id: number, inlineObject3: InlineObject3, options?: any) {
-        return EndpointsApiFp(this.configuration).endpointsUpdate_1(X_RH_IDENTITY, id, inlineObject3, options)(this.axios, this.basePath);
     }
 
 }

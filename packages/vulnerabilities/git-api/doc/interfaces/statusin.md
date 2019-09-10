@@ -17,6 +17,7 @@
 * [cve](statusin.md#cve)
 * [inventoryId](statusin.md#inventoryid)
 * [statusId](statusin.md#statusid)
+* [statusText](statusin.md#statustext)
 
 ---
 
@@ -26,43 +27,54 @@
 
 ###  cve
 
-**● cve**: *`string`*
+**● cve**: *[CveOrList](cveorlist.md)*
 
-*Defined in [api.ts:977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L977)*
+*Defined in [api.ts:1009](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1009)*
 
-CVE name.
-
-*__type__*: {string}
+*__type__*: {CveOrList}
 
 *__memberof__*: StatusIn
 
 ___
 <a id="inventoryid"></a>
 
-###  inventoryId
+### `<Optional>` inventoryId
 
-**● inventoryId**: *`string`*
+**● inventoryId**: *[InventoryIdOrList](inventoryidorlist.md)*
 
-*Defined in [api.ts:971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L971)*
+*Defined in [api.ts:1003](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1003)*
 
-Host ID.
-
-*__type__*: {string}
+*__type__*: {InventoryIdOrList}
 
 *__memberof__*: StatusIn
 
 ___
 <a id="statusid"></a>
 
-###  statusId
+### `<Optional>` statusId
 
 **● statusId**: *`number`*
 
-*Defined in [api.ts:983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L983)*
+*Defined in [api.ts:1015](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1015)*
 
-Status ID to be set, obtained by GET method.
+Status ID to be set, obtained by GET method. If not specified, global CVE status is set.
 
 *__type__*: {number}
+
+*__memberof__*: StatusIn
+
+___
+<a id="statustext"></a>
+
+### `<Optional>` statusText
+
+**● statusText**: *`string` \| `null`*
+
+*Defined in [api.ts:1021](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1021)*
+
+Complementary text to the status.
+
+*__type__*: {string}
 
 *__memberof__*: StatusIn
 
