@@ -14,6 +14,7 @@
 
 ### Properties
 
+* [availabilityStatus](source.md#availabilitystatus)
 * [createdAt](source.md#createdat)
 * [id](source.md#id)
 * [name](source.md#name)
@@ -27,13 +28,26 @@
 
 ## Properties
 
+<a id="availabilitystatus"></a>
+
+### `<Optional>` availabilityStatus
+
+**● availabilityStatus**: *`string`*
+
+*Defined in [api.ts:593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L593)*
+
+*__type__*: {string}
+
+*__memberof__*: Source
+
+___
 <a id="createdat"></a>
 
 ### `<Optional>` createdAt
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L541)*
+*Defined in [api.ts:599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L599)*
 
 *__type__*: {Date}
 
@@ -46,7 +60,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L547)*
+*Defined in [api.ts:605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L605)*
 
 ID of the resource
 
@@ -61,7 +75,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L553)*
+*Defined in [api.ts:611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L611)*
 
 *__type__*: {string}
 
@@ -74,7 +88,7 @@ ___
 
 **● sourceTypeId**: *`string`*
 
-*Defined in [api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L559)*
+*Defined in [api.ts:617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L617)*
 
 ID of the resource
 
@@ -89,7 +103,7 @@ ___
 
 **● tenant**: *`string`*
 
-*Defined in [api.ts:565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L565)*
+*Defined in [api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L623)*
 
 *__type__*: {string}
 
@@ -102,7 +116,7 @@ ___
 
 **● uid**: *`string`*
 
-*Defined in [api.ts:571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L571)*
+*Defined in [api.ts:629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L629)*
 
 *__type__*: {string}
 
@@ -115,7 +129,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L577)*
+*Defined in [api.ts:635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L635)*
 
 *__type__*: {Date}
 
@@ -128,7 +142,7 @@ ___
 
 **● version**: *`string`*
 
-*Defined in [api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L583)*
+*Defined in [api.ts:641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L641)*
 
 *__type__*: {string}
 

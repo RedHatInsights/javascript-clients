@@ -26,7 +26,7 @@
 
 **● nextName**: *`string`*
 
-*Defined in [api.ts:775](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L775)*
+*Defined in [api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L789)*
 
 *__type__*: {string}
 

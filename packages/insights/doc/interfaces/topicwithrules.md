@@ -15,6 +15,7 @@
 ### Properties
 
 * [description](topicwithrules.md#description)
+* [featured](topicwithrules.md#featured)
 * [impactedSystemsCount](topicwithrules.md#impactedsystemscount)
 * [name](topicwithrules.md#name)
 * [rules](topicwithrules.md#rules)
@@ -31,9 +32,22 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L781)*
+*Defined in [api.ts:795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L795)*
 
 *__type__*: {string}
+
+*__memberof__*: TopicWithRules
+
+___
+<a id="featured"></a>
+
+### `<Optional>` featured
+
+**● featured**: *`boolean`*
+
+*Defined in [api.ts:807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L807)*
+
+*__type__*: {boolean}
 
 *__memberof__*: TopicWithRules
 
@@ -44,7 +58,7 @@ ___
 
 **● impactedSystemsCount**: *`number`*
 
-*Defined in [api.ts:799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L799)*
+*Defined in [api.ts:819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L819)*
 
 *__type__*: {number}
 
@@ -57,7 +71,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:769](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L769)*
+*Defined in [api.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L783)*
 
 *__type__*: {string}
 
@@ -66,11 +80,11 @@ ___
 ___
 <a id="rules"></a>
 
-###  rules
+### `<Optional>` rules
 
-**● rules**: *`Array`<[Rule](rule.md)>*
+**● rules**: *`Array`<`string`>*
 
-*Defined in [api.ts:793](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L793)*
+*Defined in [api.ts:813](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L813)*
 
 *__type__*: {Array}
 
@@ -83,7 +97,7 @@ ___
 
 **● slug**: *`string`*
 
-*Defined in [api.ts:775](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L775)*
+*Defined in [api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L789)*
 
 Rule topic slug
 
@@ -98,7 +112,7 @@ ___
 
 **● tags**: *`string`*
 
-*Defined in [api.ts:787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L787)*
+*Defined in [api.ts:801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L801)*
 
 *__type__*: {string}
 

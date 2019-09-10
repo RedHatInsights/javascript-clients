@@ -22,6 +22,8 @@
 
 ↳  [PortfolioItemApi](portfolioitemapi.md)
 
+↳  [SettingsApi](settingsapi.md)
+
 ## Index
 
 ### Constructors

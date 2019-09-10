@@ -15,9 +15,12 @@
 ### Properties
 
 * [createdAt](applicationtype.md#createdat)
+* [dependentApplications](applicationtype.md#dependentapplications)
 * [displayName](applicationtype.md#displayname)
 * [id](applicationtype.md#id)
 * [name](applicationtype.md#name)
+* [supportedAuthenticationTypes](applicationtype.md#supportedauthenticationtypes)
+* [supportedSourceTypes](applicationtype.md#supportedsourcetypes)
 * [updatedAt](applicationtype.md#updatedat)
 
 ---
@@ -37,13 +40,26 @@
 *__memberof__*: ApplicationType
 
 ___
+<a id="dependentapplications"></a>
+
+### `<Optional>` dependentApplications
+
+**● dependentApplications**: *`any`*
+
+*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L127)*
+
+*__type__*: {any}
+
+*__memberof__*: ApplicationType
+
+___
 <a id="displayname"></a>
 
 ### `<Optional>` displayName
 
 **● displayName**: *`string`*
 
-*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L127)*
+*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L133)*
 
 *__type__*: {string}
 
@@ -56,7 +72,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L133)*
+*Defined in [api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L139)*
 
 ID of the resource
 
@@ -71,9 +87,35 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L139)*
+*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L145)*
 
 *__type__*: {string}
+
+*__memberof__*: ApplicationType
+
+___
+<a id="supportedauthenticationtypes"></a>
+
+### `<Optional>` supportedAuthenticationTypes
+
+**● supportedAuthenticationTypes**: *`any`*
+
+*Defined in [api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L151)*
+
+*__type__*: {any}
+
+*__memberof__*: ApplicationType
+
+___
+<a id="supportedsourcetypes"></a>
+
+### `<Optional>` supportedSourceTypes
+
+**● supportedSourceTypes**: *`any`*
+
+*Defined in [api.ts:157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L157)*
+
+*__type__*: {any}
 
 *__memberof__*: ApplicationType
 
@@ -84,7 +126,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L145)*
+*Defined in [api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L163)*
 
 *__type__*: {Date}
 

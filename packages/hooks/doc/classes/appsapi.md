@@ -103,7 +103,7 @@ ___
 
 ▸ **appsIndex**(X_RH_IDENTITY: *`string`*, options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
 
-*Defined in [api.ts:1279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1279)*
+*Defined in [api.ts:1265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1265)*
 
 Lists all apps requested
 
@@ -127,7 +127,7 @@ ___
 
 ▸ **appsShow**(X_RH_IDENTITY: *`string`*, id: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse2002](../interfaces/inlineresponse2002.md)>
 
-*Defined in [api.ts:1291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1291)*
+*Defined in [api.ts:1277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1277)*
 
 Shows the requested app
 

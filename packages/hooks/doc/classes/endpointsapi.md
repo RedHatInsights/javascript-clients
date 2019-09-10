@@ -36,7 +36,6 @@ EndpointsApi - object-oriented interface
 * [endpointsShow](endpointsapi.md#endpointsshow)
 * [endpointsTest](endpointsapi.md#endpointstest)
 * [endpointsUpdate](endpointsapi.md#endpointsupdate)
-* [endpointsUpdate_1](endpointsapi.md#endpointsupdate_1)
 
 ---
 
@@ -108,7 +107,7 @@ ___
 
 ▸ **endpointsCreate**(X_RH_IDENTITY: *`string`*, inlineObject1: *[InlineObject1](../interfaces/inlineobject1.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse201](../interfaces/inlineresponse201.md)>
 
-*Defined in [api.ts:1832](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1832)*
+*Defined in [api.ts:1742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1742)*
 
 Creates an endpoint
 
@@ -133,7 +132,7 @@ ___
 
 ▸ **endpointsDestroy**(X_RH_IDENTITY: *`string`*, id: *`number`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1844](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1844)*
+*Defined in [api.ts:1754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1754)*
 
 *__throws__*: {RequiredError}
 
@@ -156,7 +155,7 @@ ___
 
 ▸ **endpointsIndex**(X_RH_IDENTITY: *`string`*, order?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse2003](../interfaces/inlineresponse2003.md)>
 
-*Defined in [api.ts:1858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1858)*
+*Defined in [api.ts:1768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1768)*
 
 List all endpoints
 
@@ -183,7 +182,7 @@ ___
 
 ▸ **endpointsShow**(X_RH_IDENTITY: *`string`*, id: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse201](../interfaces/inlineresponse201.md)>
 
-*Defined in [api.ts:1870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1870)*
+*Defined in [api.ts:1780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1780)*
 
 Shows the requested endpoint
 
@@ -208,7 +207,7 @@ ___
 
 ▸ **endpointsTest**(X_RH_IDENTITY: *`string`*, id: *`number`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1882)*
+*Defined in [api.ts:1792](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1792)*
 
 Send a test message to the endpoint
 
@@ -233,7 +232,7 @@ ___
 
 ▸ **endpointsUpdate**(X_RH_IDENTITY: *`string`*, id: *`number`*, inlineObject2: *[InlineObject2](../interfaces/inlineobject2.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse201](../interfaces/inlineresponse201.md)>
 
-*Defined in [api.ts:1895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1895)*
+*Defined in [api.ts:1805](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1805)*
 
 Updates the requested endpoint
 
@@ -248,32 +247,6 @@ Updates the requested endpoint
 | X_RH_IDENTITY | `string` |  \- |
 | id | `number` |  \- |
 | inlineObject2 | [InlineObject2](../interfaces/inlineobject2.md) |  \- |
-| `Optional` options | `any` |
-
-**Returns:** `AxiosPromise`<[InlineResponse201](../interfaces/inlineresponse201.md)>
-
-___
-<a id="endpointsupdate_1"></a>
-
-###  endpointsUpdate_1
-
-▸ **endpointsUpdate_1**(X_RH_IDENTITY: *`string`*, id: *`number`*, inlineObject3: *[InlineObject3](../interfaces/inlineobject3.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse201](../interfaces/inlineresponse201.md)>
-
-*Defined in [api.ts:1908](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1908)*
-
-Updates the requested endpoint
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: EndpointsApi
-
-**Parameters:**
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| X_RH_IDENTITY | `string` |  \- |
-| id | `number` |  \- |
-| inlineObject3 | [InlineObject3](../interfaces/inlineobject3.md) |  \- |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[InlineResponse201](../interfaces/inlineresponse201.md)>

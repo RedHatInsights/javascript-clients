@@ -102,7 +102,7 @@ ___
 
 ▸ **appRegistrationCreate**(inlineObject: *[InlineObject](../interfaces/inlineobject.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)>
 
-*Defined in [api.ts:1110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1110)*
+*Defined in [api.ts:1096](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1096)*
 
 Register an application
 

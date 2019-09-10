@@ -26,7 +26,7 @@
 
 **● portfolioItemId**: *`string`*
 
-*Defined in [api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L595)*
+*Defined in [api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L609)*
 
 Tthe ID of the portfolio which the icon will override
 

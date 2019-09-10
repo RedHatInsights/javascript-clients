@@ -104,7 +104,7 @@ ___
 
 ▸ **ruleList**(limit?: *`number`*, offset?: *`number`*, category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, hasTag?: *`Array`<`string`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impacting?: *`boolean`*, incident?: *`boolean`*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, reportsShown?: *`boolean`*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, sort?: *"category" \| "description" \| "impact" \| "impacted_count" \| "likelihood" \| "playbook_count" \| "publish_date" \| "rule_id" \| "total_risk" \| "resolution_risk" \| "-category" \| "-description" \| "-impact" \| "-impacted_count" \| "-likelihood" \| "-playbook_count" \| "-publish_date" \| "-rule_id" \| "-total_risk" \| "-resolution_risk"*, text?: *`string`*, topic?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2002](../interfaces/inlineresponse2002.md)>
 
-*Defined in [api.ts:1671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1671)*
+*Defined in [api.ts:1803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1803)*
 
 List all active rules for this account. If 'acked' is False or not given, then only rules that are not acked will be shown. If acked is set and 'true' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
 
@@ -141,7 +141,7 @@ ___
 
 ▸ **ruleRead**(ruleId: *`string`*, options?: *`any`*): `AxiosPromise`<[RuleForAccount](../interfaces/ruleforaccount.md)>
 
-*Defined in [api.ts:1682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1682)*
+*Defined in [api.ts:1814](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1814)*
 
 Retrieve a single rule and its associated details.
 
@@ -165,7 +165,7 @@ ___
 
 ▸ **ruleSystems**(ruleId: *`string`*, options?: *`any`*): `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
 
-*Defined in [api.ts:1693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1693)*
+*Defined in [api.ts:1825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1825)*
 
 List all systems affected by this rule.
 

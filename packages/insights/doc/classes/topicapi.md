@@ -32,7 +32,10 @@ TopicApi - object-oriented interface
 
 * [topicList](topicapi.md#topiclist)
 * [topicRead](topicapi.md#topicread)
+* [topicRulesRead](topicapi.md#topicrulesread)
+* [topicRulesWithTags](topicapi.md#topicruleswithtags)
 * [topicSystems](topicapi.md#topicsystems)
+* [topicTagsRead](topicapi.md#topictagsread)
 
 ---
 
@@ -104,7 +107,7 @@ ___
 
 ▸ **topicList**(options?: *`any`*): `AxiosPromise`<[TopicWithRules](../interfaces/topicwithrules.md)[]>
 
-*Defined in [api.ts:2568](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2568)*
+*Defined in [api.ts:2862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2862)*
 
 Rules have topics, set by Insights administrators. This is a view of the topics available, along with the rules and systems to which they apply.
 
@@ -127,7 +130,7 @@ ___
 
 ▸ **topicRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[TopicWithRules](../interfaces/topicwithrules.md)>
 
-*Defined in [api.ts:2579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2579)*
+*Defined in [api.ts:2873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2873)*
 
 Rules have topics, set by Insights administrators. This is a view of the topics available, along with the rules and systems to which they apply.
 
@@ -145,13 +148,61 @@ Rules have topics, set by Insights administrators. This is a view of the topics 
 **Returns:** `AxiosPromise`<[TopicWithRules](../interfaces/topicwithrules.md)>
 
 ___
+<a id="topicrulesread"></a>
+
+###  topicRulesRead
+
+▸ **topicRulesRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
+
+*Defined in [api.ts:2884](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2884)*
+
+View, add to or delete from the rules in this topic
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: TopicApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| slug | `string` |  Rule topic slug |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
+
+___
+<a id="topicruleswithtags"></a>
+
+###  topicRulesWithTags
+
+▸ **topicRulesWithTags**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
+
+*Defined in [api.ts:2895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2895)*
+
+Lists the available rules that share a tag with this topic. Some of these may also be in the given topic - can we show that
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: TopicApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| slug | `string` |  Rule topic slug |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
+
+___
 <a id="topicsystems"></a>
 
 ###  topicSystems
 
 ▸ **topicSystems**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
 
-*Defined in [api.ts:2590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2590)*
+*Defined in [api.ts:2906](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2906)*
 
 List all systems affected by this rule topic.
 
@@ -167,6 +218,30 @@ List all systems affected by this rule topic.
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
+
+___
+<a id="topictagsread"></a>
+
+###  topicTagsRead
+
+▸ **topicTagsRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Tag](../interfaces/tag.md)[]>
+
+*Defined in [api.ts:2917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2917)*
+
+View, add to or delete from the tags in a topic.
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: TopicApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| slug | `string` |  Rule topic slug |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[Tag](../interfaces/tag.md)[]>
 
 ___
 

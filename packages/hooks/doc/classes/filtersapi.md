@@ -102,7 +102,7 @@ ___
 
 ▸ **filtersShow**(X_RH_IDENTITY: *`string`*, endpointId: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse2004](../interfaces/inlineresponse2004.md)>
 
-*Defined in [api.ts:2021](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L2021)*
+*Defined in [api.ts:1918](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1918)*
 
 Show the filter of the endpoint
 

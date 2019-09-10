@@ -22,7 +22,7 @@
 
 **Filter**:  = "filter"
 
-*Defined in [api.ts:801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L801)*
+*Defined in [api.ts:787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L787)*
 
 ___
 

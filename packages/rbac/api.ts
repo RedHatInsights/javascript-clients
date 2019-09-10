@@ -1229,12 +1229,13 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [username] A username for a principal to filter for groups
          * @param {string} [orderBy] Parameter for ordering resource by value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listGroups(limit?: number, offset?: number, name?: string, username?: string, orderBy?: string, options: any = {}): RequestArgs {
+        listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, orderBy?: string, options: any = {}): RequestArgs {
             const localVarPath = `/groups/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1261,6 +1262,10 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
 
             if (name !== undefined) {
                 localVarQueryParameter['name'] = name;
+            }
+
+            if (scope !== undefined) {
+                localVarQueryParameter['scope'] = scope;
             }
 
             if (username !== undefined) {
@@ -1416,13 +1421,14 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [username] A username for a principal to filter for groups
          * @param {string} [orderBy] Parameter for ordering resource by value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listGroups(limit?: number, offset?: number, name?: string, username?: string, orderBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupPagination> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listGroups(limit, offset, name, username, orderBy, options);
+        listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, orderBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupPagination> {
+            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listGroups(limit, offset, name, scope, username, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1510,13 +1516,14 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [username] A username for a principal to filter for groups
          * @param {string} [orderBy] Parameter for ordering resource by value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listGroups(limit?: number, offset?: number, name?: string, username?: string, orderBy?: string, options?: any) {
-            return GroupApiFp(configuration).listGroups(limit, offset, name, username, orderBy, options)(axios, basePath);
+        listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, orderBy?: string, options?: any) {
+            return GroupApiFp(configuration).listGroups(limit, offset, name, scope, username, orderBy, options)(axios, basePath);
         },
         /**
          *
@@ -1607,14 +1614,15 @@ export class GroupApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {string} [name] Parameter for filtering resource by name using string contains search.
+     * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
      * @param {string} [username] A username for a principal to filter for groups
      * @param {string} [orderBy] Parameter for ordering resource by value.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public listGroups(limit?: number, offset?: number, name?: string, username?: string, orderBy?: string, options?: any) {
-        return GroupApiFp(this.configuration).listGroups(limit, offset, name, username, orderBy, options)(this.axios, this.basePath);
+    public listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, orderBy?: string, options?: any) {
+        return GroupApiFp(this.configuration).listGroups(limit, offset, name, scope, username, orderBy, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1764,13 +1772,14 @@ export const PolicyApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
          * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
          * @param {string} [orderBy] Parameter for ordering resource by value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPolicies(limit?: number, offset?: number, name?: string, groupName?: string, groupUuid?: string, orderBy?: string, options: any = {}): RequestArgs {
+        listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: string, options: any = {}): RequestArgs {
             const localVarPath = `/policies/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1797,6 +1806,10 @@ export const PolicyApiAxiosParamCreator = function (configuration?: Configuratio
 
             if (name !== undefined) {
                 localVarQueryParameter['name'] = name;
+            }
+
+            if (scope !== undefined) {
+                localVarQueryParameter['scope'] = scope;
             }
 
             if (groupName !== undefined) {
@@ -1926,14 +1939,15 @@ export const PolicyApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
          * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
          * @param {string} [orderBy] Parameter for ordering resource by value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPolicies(limit?: number, offset?: number, name?: string, groupName?: string, groupUuid?: string, orderBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyPagination> {
-            const localVarAxiosArgs = PolicyApiAxiosParamCreator(configuration).listPolicies(limit, offset, name, groupName, groupUuid, orderBy, options);
+        listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyPagination> {
+            const localVarAxiosArgs = PolicyApiAxiosParamCreator(configuration).listPolicies(limit, offset, name, scope, groupName, groupUuid, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1999,14 +2013,15 @@ export const PolicyApiFactory = function (configuration?: Configuration, basePat
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
          * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
          * @param {string} [orderBy] Parameter for ordering resource by value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPolicies(limit?: number, offset?: number, name?: string, groupName?: string, groupUuid?: string, orderBy?: string, options?: any) {
-            return PolicyApiFp(configuration).listPolicies(limit, offset, name, groupName, groupUuid, orderBy, options)(axios, basePath);
+        listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: string, options?: any) {
+            return PolicyApiFp(configuration).listPolicies(limit, offset, name, scope, groupName, groupUuid, orderBy, options)(axios, basePath);
         },
         /**
          *
@@ -2071,6 +2086,7 @@ export class PolicyApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {string} [name] Parameter for filtering resource by name using string contains search.
+     * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
      * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
      * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
      * @param {string} [orderBy] Parameter for ordering resource by value.
@@ -2078,8 +2094,8 @@ export class PolicyApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PolicyApi
      */
-    public listPolicies(limit?: number, offset?: number, name?: string, groupName?: string, groupUuid?: string, orderBy?: string, options?: any) {
-        return PolicyApiFp(this.configuration).listPolicies(limit, offset, name, groupName, groupUuid, orderBy, options)(this.axios, this.basePath);
+    public listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: string, options?: any) {
+        return PolicyApiFp(this.configuration).listPolicies(limit, offset, name, scope, groupName, groupUuid, orderBy, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2355,11 +2371,12 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [orderBy] Parameter for ordering resource by value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, orderBy?: string, options: any = {}): RequestArgs {
+        listRoles(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', orderBy?: string, options: any = {}): RequestArgs {
             const localVarPath = `/roles/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -2386,6 +2403,10 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (name !== undefined) {
                 localVarQueryParameter['name'] = name;
+            }
+
+            if (scope !== undefined) {
+                localVarQueryParameter['scope'] = scope;
             }
 
             if (orderBy !== undefined) {
@@ -2507,12 +2528,13 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [orderBy] Parameter for ordering resource by value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, orderBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePagination> {
-            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, orderBy, options);
+        listRoles(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', orderBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePagination> {
+            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, scope, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2578,12 +2600,13 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [orderBy] Parameter for ordering resource by value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, orderBy?: string, options?: any) {
-            return RoleApiFp(configuration).listRoles(limit, offset, name, orderBy, options)(axios, basePath);
+        listRoles(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', orderBy?: string, options?: any) {
+            return RoleApiFp(configuration).listRoles(limit, offset, name, scope, orderBy, options)(axios, basePath);
         },
         /**
          *
@@ -2648,13 +2671,14 @@ export class RoleApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {string} [name] Parameter for filtering resource by name using string contains search.
+     * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
      * @param {string} [orderBy] Parameter for ordering resource by value.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public listRoles(limit?: number, offset?: number, name?: string, orderBy?: string, options?: any) {
-        return RoleApiFp(this.configuration).listRoles(limit, offset, name, orderBy, options)(this.axios, this.basePath);
+    public listRoles(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', orderBy?: string, options?: any) {
+        return RoleApiFp(this.configuration).listRoles(limit, offset, name, scope, orderBy, options)(this.axios, this.basePath);
     }
 
     /**

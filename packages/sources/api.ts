@@ -121,6 +121,12 @@ export interface ApplicationType {
     createdAt?: Date;
     /**
      *
+     * @type {any}
+     * @memberof ApplicationType
+     */
+    dependentApplications?: any;
+    /**
+     *
      * @type {string}
      * @memberof ApplicationType
      */
@@ -137,6 +143,18 @@ export interface ApplicationType {
      * @memberof ApplicationType
      */
     name?: string;
+    /**
+     *
+     * @type {any}
+     * @memberof ApplicationType
+     */
+    supportedAuthenticationTypes?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof ApplicationType
+     */
+    supportedSourceTypes?: any;
     /**
      *
      * @type {Date}
@@ -210,6 +228,12 @@ export interface Authentication {
      */
     authtype?: string;
     /**
+     *
+     * @type {AuthenticationExtra}
+     * @memberof Authentication
+     */
+    extra?: AuthenticationExtra;
+    /**
      * ID of the resource
      * @type {string}
      * @memberof Authentication
@@ -263,6 +287,34 @@ export interface Authentication {
      * @memberof Authentication
      */
     username?: string;
+}
+
+/**
+ *
+ * @export
+ * @interface AuthenticationExtra
+ */
+export interface AuthenticationExtra {
+    /**
+     *
+     * @type {AuthenticationExtraAzure}
+     * @memberof AuthenticationExtra
+     */
+    azure?: AuthenticationExtraAzure;
+}
+
+/**
+ *
+ * @export
+ * @interface AuthenticationExtraAzure
+ */
+export interface AuthenticationExtraAzure {
+    /**
+     *
+     * @type {string}
+     * @memberof AuthenticationExtraAzure
+     */
+    tenantId?: string;
 }
 
 /**
@@ -535,6 +587,12 @@ export interface OrderParameters {
 export interface Source {
     /**
      *
+     * @type {string}
+     * @memberof Source
+     */
+    availabilityStatus?: string;
+    /**
+     *
      * @type {Date}
      * @memberof Source
      */
@@ -595,6 +653,12 @@ export interface SourceType {
      * @memberof SourceType
      */
     createdAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof SourceType
+     */
+    iconUrl?: string;
     /**
      * ID of the resource
      * @type {string}
@@ -1144,6 +1208,60 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns an array of Source objects
+         * @summary List Sources for ApplicationType
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listApplicationTypeSources.');
+            }
+            const localVarPath = `/application_types/{id}/sources`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns an array of ApplicationType objects
          * @summary List ApplicationTypes
          * @param {number} [limit] The numbers of items to return per page.
@@ -1352,6 +1470,60 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          */
         listEndpoints(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/endpoints`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of ApplicationType objects
+         * @summary List ApplicationTypes for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceApplicationTypes.');
+            }
+            const localVarPath = `/sources/{id}/application_types`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2216,6 +2388,23 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns an array of Source objects
+         * @summary List Sources for ApplicationType
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listApplicationTypeSources(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns an array of ApplicationType objects
          * @summary List ApplicationTypes
          * @param {number} [limit] The numbers of items to return per page.
@@ -2291,6 +2480,23 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         listEndpoints(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listEndpoints(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of ApplicationType objects
+         * @summary List ApplicationTypes for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationTypesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceApplicationTypes(id, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2631,6 +2837,19 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).getDocumentation(options)(axios, basePath);
         },
         /**
+         * Returns an array of Source objects
+         * @summary List Sources for ApplicationType
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listApplicationTypeSources(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
          * Returns an array of ApplicationType objects
          * @summary List ApplicationTypes
          * @param {number} [limit] The numbers of items to return per page.
@@ -2690,6 +2909,19 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         listEndpoints(limit?: number, offset?: number, filter?: any, options?: any) {
             return DefaultApiFp(configuration).listEndpoints(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of ApplicationType objects
+         * @summary List ApplicationTypes for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceApplicationTypes(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of Application objects
@@ -2987,6 +3219,21 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Returns an array of Source objects
+     * @summary List Sources for ApplicationType
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listApplicationTypeSources(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns an array of ApplicationType objects
      * @summary List ApplicationTypes
      * @param {number} [limit] The numbers of items to return per page.
@@ -3055,6 +3302,21 @@ export class DefaultApi extends BaseAPI {
      */
     public listEndpoints(limit?: number, offset?: number, filter?: any, options?: any) {
         return DefaultApiFp(this.configuration).listEndpoints(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of ApplicationType objects
+     * @summary List ApplicationTypes for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceApplicationTypes(id, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**

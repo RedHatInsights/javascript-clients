@@ -66,11 +66,11 @@ ___
 
 ### `<Optional>` url
 
-**● url**: *`Url`*
+**● url**: *`string`*
 
 *Defined in [api.ts:386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L386)*
 
-*__type__*: {Url}
+*__type__*: {string}
 
 *__memberof__*: EndpointsIdEndpoint
 

@@ -17,7 +17,7 @@
 * [completedAt](order.md#completedat)
 * [createdAt](order.md#createdat)
 * [id](order.md#id)
-* [orderedAt](order.md#orderedat)
+* [orderRequestSentAt](order.md#orderrequestsentat)
 * [owner](order.md#owner)
 * [state](order.md#state)
 * [userId](order.md#userid)
@@ -32,7 +32,7 @@
 
 **● completedAt**: *`Date`*
 
-*Defined in [api.ts:386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L386)*
+*Defined in [api.ts:400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L400)*
 
 *__type__*: {Date}
 
@@ -45,7 +45,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:374](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L374)*
+*Defined in [api.ts:388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L388)*
 
 *__type__*: {Date}
 
@@ -58,20 +58,22 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L356)*
+*Defined in [api.ts:370](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L370)*
 
 *__type__*: {string}
 
 *__memberof__*: Order
 
 ___
-<a id="orderedat"></a>
+<a id="orderrequestsentat"></a>
 
-### `<Optional>` orderedAt
+### `<Optional>` orderRequestSentAt
 
-**● orderedAt**: *`Date`*
+**● orderRequestSentAt**: *`Date`*
 
-*Defined in [api.ts:380](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L380)*
+*Defined in [api.ts:394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L394)*
+
+The time at which the order request was sent to the Topology Service
 
 *__type__*: {Date}
 
@@ -84,7 +86,7 @@ ___
 
 **● owner**: *`string`*
 
-*Defined in [api.ts:392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L392)*
+*Defined in [api.ts:406](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L406)*
 
 *__type__*: {string}
 
@@ -97,7 +99,7 @@ ___
 
 **● state**: *[StateEnum](../enums/order.stateenum.md)*
 
-*Defined in [api.ts:368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L368)*
+*Defined in [api.ts:382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L382)*
 
 Current State of the order.
 
@@ -112,7 +114,7 @@ ___
 
 **● userId**: *`string`*
 
-*Defined in [api.ts:362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L362)*
+*Defined in [api.ts:376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L376)*
 
 *__type__*: {string}
 

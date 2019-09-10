@@ -232,31 +232,25 @@ export interface CveDetailOutDataAttributes {
      * @type {string}
      * @memberof CveDetailOutDataAttributes
      */
-    cvss2Metrics: string;
+    cvss2Metrics: string | null;
     /**
      * String representation of cvss2 score of the CVE.
      * @type {string}
      * @memberof CveDetailOutDataAttributes
      */
-    cvss2Score: string;
+    cvss2Score: string | null;
     /**
      * cvss3 metrics of the CVE.
      * @type {string}
      * @memberof CveDetailOutDataAttributes
      */
-    cvss3Metrics: string;
+    cvss3Metrics: string | null;
     /**
      * String representation of cvss3 score of the CVE.
      * @type {string}
      * @memberof CveDetailOutDataAttributes
      */
-    cvss3Score: string;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof CveDetailOutDataAttributes
-     */
-    cweList: Array<string>;
+    cvss3Score: string | null;
     /**
      * Description of the CVE.
      * @type {string}
@@ -264,17 +258,11 @@ export interface CveDetailOutDataAttributes {
      */
     description: string;
     /**
-     * List of Red Hat erratas fixing the CVE.
-     * @type {Array<string>}
-     * @memberof CveDetailOutDataAttributes
-     */
-    errataList: Array<string>;
-    /**
      * String representation of ISO-8601 formatted date of last modification of the CVE.
      * @type {string}
      * @memberof CveDetailOutDataAttributes
      */
-    modifiedDate: string;
+    modifiedDate: string | null;
     /**
      * Red Hat security impact of the CVE.
      * @type {string}
@@ -282,29 +270,41 @@ export interface CveDetailOutDataAttributes {
      */
     impact: string;
     /**
-     * List of packages where the fix for the CVE appeared.
-     * @type {Array<string>}
-     * @memberof CveDetailOutDataAttributes
-     */
-    packageList: Array<string>;
-    /**
      * String representation of ISO-8601 formatted date of first public disclosure of the CVE.
      * @type {string}
      * @memberof CveDetailOutDataAttributes
      */
-    publicDate: string;
+    publicDate: string | null;
     /**
      * Additional resource about the CVE, provided by Red Hat.
      * @type {string}
      * @memberof CveDetailOutDataAttributes
      */
-    redhatUrl: string;
+    redhatUrl: string | null;
     /**
      * Additional resources about the CVE.
      * @type {string}
      * @memberof CveDetailOutDataAttributes
      */
-    secondaryUrl: string;
+    secondaryUrl: string | null;
+    /**
+     * Status of the vulnerability.
+     * @type {string}
+     * @memberof CveDetailOutDataAttributes
+     */
+    status: string;
+    /**
+     * Internal ID of the vulnerability status.
+     * @type {number}
+     * @memberof CveDetailOutDataAttributes
+     */
+    statusId: number;
+    /**
+     * Complementary text to the status.
+     * @type {string}
+     * @memberof CveDetailOutDataAttributes
+     */
+    statusText: string | null;
     /**
      * Synopsis of the CVE.
      * @type {string}
@@ -344,7 +344,39 @@ export interface CveRiskIn {
      * @type {string}
      * @memberof CveRiskIn
      */
-    businessRiskText?: string;
+    businessRiskText?: string | null;
+}
+
+/**
+ *
+ * @export
+ * @interface CveStatusIn
+ */
+export interface CveStatusIn {
+    /**
+     *
+     * @type {CveOrList}
+     * @memberof CveStatusIn
+     */
+    cve: CveOrList;
+    /**
+     * Status ID to be set, obtained by GET method.
+     * @type {number}
+     * @memberof CveStatusIn
+     */
+    statusId?: number;
+    /**
+     * Complementary text to the status.
+     * @type {string}
+     * @memberof CveStatusIn
+     */
+    statusText?: string | null;
+    /**
+     * Preserve previously set status for individual hosts.
+     * @type {boolean}
+     * @memberof CveStatusIn
+     */
+    preserveIndividual?: boolean;
 }
 
 /**
@@ -616,7 +648,7 @@ export interface MetaCves {
      * @type {string}
      * @memberof MetaCves
      */
-    businessRisk?: string | null;
+    businessRiskId: string | null;
     /**
      * Filter based on cvss score, starting from the value.
      * @type {number}
@@ -646,7 +678,7 @@ export interface MetaCves {
      * @type {string}
      * @memberof MetaCves
      */
-    impact?: string | null;
+    impact: string | null;
     /**
      * Filer based on CVE status ID.
      * @type {string}
@@ -720,7 +752,7 @@ export interface MetaCvesSystems {
      * @type {string}
      * @memberof MetaCvesSystems
      */
-    businessRisk?: string | null;
+    businessRiskId: string | null;
     /**
      * Filter based on cvss score, starting from the value.
      * @type {number}
@@ -750,7 +782,7 @@ export interface MetaCvesSystems {
      * @type {string}
      * @memberof MetaCvesSystems
      */
-    impact?: string | null;
+    impact: string | null;
     /**
      * Filer based on CVE status ID.
      * @type {string}
@@ -898,7 +930,7 @@ export interface MetaVulnerabilitiesOut {
      * @type {string}
      * @memberof MetaVulnerabilitiesOut
      */
-    businessRisk?: string | null;
+    businessRiskId: string | null;
     /**
      * Filter based on cvss score, starting from the value.
      * @type {number}
@@ -964,23 +996,29 @@ export interface OptOutIn {
  */
 export interface StatusIn {
     /**
-     * Host ID.
-     * @type {string}
+     *
+     * @type {InventoryIdOrList}
      * @memberof StatusIn
      */
-    inventoryId: string;
+    inventoryId?: InventoryIdOrList;
     /**
-     * CVE name.
-     * @type {string}
+     *
+     * @type {CveOrList}
      * @memberof StatusIn
      */
-    cve: string;
+    cve: CveOrList;
     /**
-     * Status ID to be set, obtained by GET method.
+     * Status ID to be set, obtained by GET method. If not specified, global CVE status is set.
      * @type {number}
      * @memberof StatusIn
      */
-    statusId: number;
+    statusId?: number;
+    /**
+     * Complementary text to the status.
+     * @type {string}
+     * @memberof StatusIn
+     */
+    statusText?: string | null;
 }
 
 /**
@@ -1035,6 +1073,40 @@ export interface StatusListOutMeta {
      * @memberof StatusListOutMeta
      */
     totalItems: number;
+}
+
+/**
+ *
+ * @export
+ * @interface StatusOut
+ */
+export interface StatusOut {
+    /**
+     * List of updated objects/updated object IDs.
+     * @type {Array<StatusOutUpdated>}
+     * @memberof StatusOut
+     */
+    updated: Array<StatusOutUpdated>;
+}
+
+/**
+ *
+ * @export
+ * @interface StatusOutUpdated
+ */
+export interface StatusOutUpdated {
+    /**
+     *
+     * @type {string}
+     * @memberof StatusOutUpdated
+     */
+    inventoryId: string;
+    /**
+     *
+     * @type {string}
+     * @memberof StatusOutUpdated
+     */
+    cve: string;
 }
 
 /**
@@ -1419,12 +1491,13 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
          * @param {string} [impact] Filter based on impact IDs.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
-         * @param {string} [businessRisk] Filter based on business risk IDs.
+         * @param {string} [businessRiskId] Filter based on business risk IDs.
+         * @param {string} [statusId] Filer based on CVE status ID.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRisk?: string, showAll?: boolean, options: any = {}): RequestArgs {
+        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, showAll?: boolean, options: any = {}): RequestArgs {
             const localVarPath = `/v1/vulnerabilities/cves`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1497,8 +1570,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['data_format'] = dataFormat;
             }
 
-            if (businessRisk !== undefined) {
-                localVarQueryParameter['business_risk'] = businessRisk;
+            if (businessRiskId !== undefined) {
+                localVarQueryParameter['business_risk_id'] = businessRiskId;
+            }
+
+            if (statusId !== undefined) {
+                localVarQueryParameter['status_id'] = statusId;
             }
 
             if (showAll !== undefined) {
@@ -1532,11 +1609,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [impact] Filter based on impact IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
-         * @param {string} [businessRisk] Filter based on business risk IDs.
+         * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRisk?: string, options: any = {}): RequestArgs {
+        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, options: any = {}): RequestArgs {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getCveListBySystem.');
@@ -1618,8 +1695,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['data_format'] = dataFormat;
             }
 
-            if (businessRisk !== undefined) {
-                localVarQueryParameter['business_risk'] = businessRisk;
+            if (businessRiskId !== undefined) {
+                localVarQueryParameter['business_risk_id'] = businessRiskId;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1879,8 +1956,58 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Sets status for given host and CVE.
-         * @summary Set status for system vulnerability.
+         * Sets status for a CVE.
+         * @summary Set status for a CVE.
+         * @param {CveStatusIn} cveStatusIn Values to be set. At least one of the \&quot;status_id\&quot; or \&quot;status_text\&quot; parameters is required.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        setCveStatus(cveStatusIn: CveStatusIn, options: any = {}): RequestArgs {
+            // verify required parameter 'cveStatusIn' is not null or undefined
+            if (cveStatusIn === null || cveStatusIn === undefined) {
+                throw new RequiredError('cveStatusIn','Required parameter cveStatusIn was null or undefined when calling setCveStatus.');
+            }
+            const localVarPath = `/v1/cves/status`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("x-rh-identity")
+					: configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CveStatusIn" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(cveStatusIn || {}) : (cveStatusIn || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Sets status for given hosts and CVEs.
+         * @summary Set status for system vulnerabilites.
          * @param {StatusIn} statusIn Values to be set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2121,13 +2248,14 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
          * @param {string} [impact] Filter based on impact IDs.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
-         * @param {string} [businessRisk] Filter based on business risk IDs.
+         * @param {string} [businessRiskId] Filter based on business risk IDs.
+         * @param {string} [statusId] Filer based on CVE status ID.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRisk?: string, showAll?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRisk, showAll, options);
+        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, showAll?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, showAll, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2150,12 +2278,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [impact] Filter based on impact IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
-         * @param {string} [businessRisk] Filter based on business risk IDs.
+         * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRisk?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRisk, options);
+        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2237,13 +2365,27 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Sets status for given host and CVE.
-         * @summary Set status for system vulnerability.
+         * Sets status for a CVE.
+         * @summary Set status for a CVE.
+         * @param {CveStatusIn} cveStatusIn Values to be set. At least one of the \&quot;status_id\&quot; or \&quot;status_text\&quot; parameters is required.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        setCveStatus(cveStatusIn: CveStatusIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<BulkChangeOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).setCveStatus(cveStatusIn, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Sets status for given hosts and CVEs.
+         * @summary Set status for system vulnerabilites.
          * @param {StatusIn} statusIn Values to be set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setStatus(statusIn: StatusIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+        setStatus(statusIn: StatusIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusOut> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).setStatus(statusIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2350,13 +2492,14 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
          * @param {string} [impact] Filter based on impact IDs.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
-         * @param {string} [businessRisk] Filter based on business risk IDs.
+         * @param {string} [businessRiskId] Filter based on business risk IDs.
+         * @param {string} [statusId] Filer based on CVE status ID.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRisk?: string, showAll?: boolean, options?: any) {
-            return DefaultApiFp(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRisk, showAll, options)(axios, basePath);
+        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, showAll?: boolean, options?: any) {
+            return DefaultApiFp(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, showAll, options)(axios, basePath);
         },
         /**
          * Shows detailed infomation about all CVEs the system is exposed to.
@@ -2375,12 +2518,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [impact] Filter based on impact IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
-         * @param {string} [businessRisk] Filter based on business risk IDs.
+         * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRisk?: string, options?: any) {
-            return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRisk, options)(axios, basePath);
+        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, options?: any) {
+            return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, options)(axios, basePath);
         },
         /**
          * Returns available status and status_id pairs where status_id is internal ID of the status.
@@ -2438,8 +2581,18 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).setCveBusinessRisk(cveRiskIn, options)(axios, basePath);
         },
         /**
-         * Sets status for given host and CVE.
-         * @summary Set status for system vulnerability.
+         * Sets status for a CVE.
+         * @summary Set status for a CVE.
+         * @param {CveStatusIn} cveStatusIn Values to be set. At least one of the \&quot;status_id\&quot; or \&quot;status_text\&quot; parameters is required.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        setCveStatus(cveStatusIn: CveStatusIn, options?: any) {
+            return DefaultApiFp(configuration).setCveStatus(cveStatusIn, options)(axios, basePath);
+        },
+        /**
+         * Sets status for given hosts and CVEs.
+         * @summary Set status for system vulnerabilites.
          * @param {StatusIn} statusIn Values to be set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2548,14 +2701,15 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
      * @param {string} [impact] Filter based on impact IDs.
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
-     * @param {string} [businessRisk] Filter based on business risk IDs.
+     * @param {string} [businessRiskId] Filter based on business risk IDs.
+     * @param {string} [statusId] Filer based on CVE status ID.
      * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRisk?: string, showAll?: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRisk, showAll, options)(this.axios, this.basePath);
+    public getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, showAll?: boolean, options?: any) {
+        return DefaultApiFp(this.configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, showAll, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2575,13 +2729,13 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [impact] Filter based on impact IDs.
      * @param {string} [statusId] Filer based on CVE status ID.
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
-     * @param {string} [businessRisk] Filter based on business risk IDs.
+     * @param {string} [businessRiskId] Filter based on business risk IDs.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRisk?: string, options?: any) {
-        return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRisk, options)(this.axios, this.basePath);
+    public getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2650,8 +2804,20 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Sets status for given host and CVE.
-     * @summary Set status for system vulnerability.
+     * Sets status for a CVE.
+     * @summary Set status for a CVE.
+     * @param {CveStatusIn} cveStatusIn Values to be set. At least one of the \&quot;status_id\&quot; or \&quot;status_text\&quot; parameters is required.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public setCveStatus(cveStatusIn: CveStatusIn, options?: any) {
+        return DefaultApiFp(this.configuration).setCveStatus(cveStatusIn, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Sets status for given hosts and CVEs.
+     * @summary Set status for system vulnerabilites.
      * @param {StatusIn} statusIn Values to be set.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

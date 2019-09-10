@@ -92,6 +92,7 @@ API documentation
 * [CveDetailOutDataAttributes](interfaces/cvedetailoutdataattributes.md)
 * [CveOrList](interfaces/cveorlist.md)
 * [CveRiskIn](interfaces/cveriskin.md)
+* [CveStatusIn](interfaces/cvestatusin.md)
 * [Errors](interfaces/errors.md)
 * [ErrorsErrors](interfaces/errorserrors.md)
 * [InventoryIdOrList](interfaces/inventoryidorlist.md)
@@ -108,6 +109,8 @@ API documentation
 * [StatusListOut](interfaces/statuslistout.md)
 * [StatusListOutData](interfaces/statuslistoutdata.md)
 * [StatusListOutMeta](interfaces/statuslistoutmeta.md)
+* [StatusOut](interfaces/statusout.md)
+* [StatusOutUpdated](interfaces/statusoutupdated.md)
 * [SystemCvesOut](interfaces/systemcvesout.md)
 * [SystemDetailsOut](interfaces/systemdetailsout.md)
 * [SystemDetailsOutData](interfaces/systemdetailsoutdata.md)
@@ -154,7 +157,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1183)*
+*Defined in [api.ts:1255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1255)*
 
 DefaultApi - axios parameter creator
 
@@ -173,7 +176,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2289)*
+*Defined in [api.ts:2431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2431)*
 
 DefaultApi - factory interface
 
@@ -194,7 +197,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2044](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2044)*
+*Defined in [api.ts:2171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2171)*
 
 DefaultApi - functional programming interface
 
@@ -213,7 +216,7 @@ ___
 
 ▸ **InternalApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2695)*
+*Defined in [api.ts:2861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2861)*
 
 InternalApi - axios parameter creator
 
@@ -232,7 +235,7 @@ ___
 
 ▸ **InternalApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2964](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2964)*
+*Defined in [api.ts:3130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3130)*
 
 InternalApi - factory interface
 
@@ -253,7 +256,7 @@ ___
 
 ▸ **InternalApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2898)*
+*Defined in [api.ts:3064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3064)*
 
 InternalApi - functional programming interface
 

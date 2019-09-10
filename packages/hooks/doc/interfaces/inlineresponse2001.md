@@ -26,7 +26,7 @@
 
 **● data**: *[App](../modules/app.md)*
 
-*Defined in [api.ts:696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L696)*
+*Defined in [api.ts:682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L682)*
 
 *__type__*: {App}
 

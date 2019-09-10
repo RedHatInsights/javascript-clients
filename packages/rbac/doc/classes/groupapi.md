@@ -108,7 +108,7 @@ ___
 
 ▸ **addPrincipalToGroup**(uuid: *`string`*, groupPrincipalIn: *[GroupPrincipalIn](../interfaces/groupprincipalin.md)*, options?: *`any`*): `AxiosPromise`<[GroupWithPrincipals](../interfaces/groupwithprincipals.md)>
 
-*Defined in [api.ts:1551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1551)*
+*Defined in [api.ts:1558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1558)*
 
 *__summary__*: Add a principal to a group in the tenant
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **createGroup**(group: *[Group](../interfaces/group.md)*, options?: *`any`*): `AxiosPromise`<[GroupOut](../interfaces/groupout.md)>
 
-*Defined in [api.ts:1563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1563)*
+*Defined in [api.ts:1570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1570)*
 
 *__summary__*: Create a group in a tenant
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **deleteGroup**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1575)*
+*Defined in [api.ts:1582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1582)*
 
 *__summary__*: Delete a group in the tenant
 
@@ -181,7 +181,7 @@ ___
 
 ▸ **deletePrincipalFromGroup**(uuid: *`string`*, usernames: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1588)*
+*Defined in [api.ts:1595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1595)*
 
 *__summary__*: Remove a principal from a group in the tenant
 
@@ -206,7 +206,7 @@ ___
 
 ▸ **getGroup**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[GroupWithPrincipals](../interfaces/groupwithprincipals.md)>
 
-*Defined in [api.ts:1600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1600)*
+*Defined in [api.ts:1607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1607)*
 
 *__summary__*: Get a group in the tenant
 
@@ -228,9 +228,9 @@ ___
 
 ###  listGroups
 
-▸ **listGroups**(limit?: *`number`*, offset?: *`number`*, name?: *`string`*, username?: *`string`*, orderBy?: *`string`*, options?: *`any`*): `AxiosPromise`<[GroupPagination](../interfaces/grouppagination.md)>
+▸ **listGroups**(limit?: *`number`*, offset?: *`number`*, name?: *`string`*, scope?: *"account" \| "principal"*, username?: *`string`*, orderBy?: *`string`*, options?: *`any`*): `AxiosPromise`<[GroupPagination](../interfaces/grouppagination.md)>
 
-*Defined in [api.ts:1616](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1616)*
+*Defined in [api.ts:1624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1624)*
 
 *__summary__*: List the groups for a tenant
 
@@ -245,6 +245,7 @@ ___
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` name | `string` |
+| `Optional` scope | "account" \| "principal" |
 | `Optional` username | `string` |
 | `Optional` orderBy | `string` |
 | `Optional` options | `any` |
@@ -258,7 +259,7 @@ ___
 
 ▸ **updateGroup**(uuid: *`string`*, group: *[Group](../interfaces/group.md)*, options?: *`any`*): `AxiosPromise`<[GroupOut](../interfaces/groupout.md)>
 
-*Defined in [api.ts:1629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1629)*
+*Defined in [api.ts:1637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1637)*
 
 *__summary__*: Udate a group in the tenant
 
