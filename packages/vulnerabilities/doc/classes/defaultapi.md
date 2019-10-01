@@ -32,6 +32,7 @@ DefaultApi - object-oriented interface
 
 * [deleteSystem](defaultapi.md#deletesystem)
 * [getAffectedSystemsByCve](defaultapi.md#getaffectedsystemsbycve)
+* [getBusinessRiskList](defaultapi.md#getbusinessrisklist)
 * [getCveDetails](defaultapi.md#getcvedetails)
 * [getCveList](defaultapi.md#getcvelist)
 * [getCveListBySystem](defaultapi.md#getcvelistbysystem)
@@ -39,6 +40,8 @@ DefaultApi - object-oriented interface
 * [getSystemDetails](defaultapi.md#getsystemdetails)
 * [getSystemsList](defaultapi.md#getsystemslist)
 * [getVersion](defaultapi.md#getversion)
+* [setCveBusinessRisk](defaultapi.md#setcvebusinessrisk)
+* [setCveStatus](defaultapi.md#setcvestatus)
 * [setStatus](defaultapi.md#setstatus)
 * [setSystemOptOut](defaultapi.md#setsystemoptout)
 * [setSystemsOptOut](defaultapi.md#setsystemsoptout)
@@ -113,7 +116,7 @@ ___
 
 ▸ **deleteSystem**(inventoryId: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2214)*
+*Defined in [api.ts:2642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2642)*
 
 Deletes system from database.
 
@@ -139,7 +142,7 @@ ___
 
 ▸ **getAffectedSystemsByCve**(cveId: *`string`*, filter?: *`string`*, limit?: *`number`*, offset?: *`number`*, page?: *`number`*, pageSize?: *`number`*, sort?: *`string`*, statusId?: *`string`*, dataFormat?: *`string`*, options?: *`any`*): `AxiosPromise`<[AffectedSystemsOut](../interfaces/affectedsystemsout.md)>
 
-*Defined in [api.ts:2234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2234)*
+*Defined in [api.ts:2662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2662)*
 
 Report of affected systems for a given CVE.
 
@@ -167,13 +170,38 @@ Report of affected systems for a given CVE.
 **Returns:** `AxiosPromise`<[AffectedSystemsOut](../interfaces/affectedsystemsout.md)>
 
 ___
+<a id="getbusinessrisklist"></a>
+
+###  getBusinessRiskList
+
+▸ **getBusinessRiskList**(options?: *`any`*): `AxiosPromise`<[BusinessRiskListOut](../interfaces/businessrisklistout.md)>
+
+*Defined in [api.ts:2673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2673)*
+
+Returns available business risk and business\_risk\_id pairs where business\_risk\_id is internal ID of the business risk.
+
+*__summary__*: Available business risk/business\_risk\_id pairs.
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: DefaultApi
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[BusinessRiskListOut](../interfaces/businessrisklistout.md)>
+
+___
 <a id="getcvedetails"></a>
 
 ###  getCveDetails
 
 ▸ **getCveDetails**(cveId: *`string`*, options?: *`any`*): `AxiosPromise`<[CveDetailOut](../interfaces/cvedetailout.md)>
 
-*Defined in [api.ts:2246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2246)*
+*Defined in [api.ts:2685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2685)*
 
 Show all information about given CVE.
 
@@ -197,9 +225,9 @@ ___
 
 ###  getCveList
 
-▸ **getCveList**(filter?: *`string`*, limit?: *`number`*, offset?: *`number`*, page?: *`number`*, pageSize?: *`number`*, sort?: *`string`*, cvssFrom?: *`number`*, cvssTo?: *`number`*, publicFrom?: *`string`*, publicTo?: *`string`*, impact?: *`string`*, dataFormat?: *`string`*, showAll?: *`boolean`*, options?: *`any`*): `AxiosPromise`<[VulnerabilitiesOut](../interfaces/vulnerabilitiesout.md)>
+▸ **getCveList**(filter?: *`string`*, limit?: *`number`*, offset?: *`number`*, page?: *`number`*, pageSize?: *`number`*, sort?: *`string`*, cvssFrom?: *`number`*, cvssTo?: *`number`*, publicFrom?: *`string`*, publicTo?: *`string`*, impact?: *`string`*, dataFormat?: *`string`*, businessRiskId?: *`string`*, statusId?: *`string`*, showAll?: *`boolean`*, options?: *`any`*): `AxiosPromise`<[VulnerabilitiesOut](../interfaces/vulnerabilitiesout.md)>
 
-*Defined in [api.ts:2270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2270)*
+*Defined in [api.ts:2711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2711)*
 
 Overview of vulnerabilities across whole host inventory.
 
@@ -225,6 +253,8 @@ Overview of vulnerabilities across whole host inventory.
 | `Optional` publicTo | `string` |
 | `Optional` impact | `string` |
 | `Optional` dataFormat | `string` |
+| `Optional` businessRiskId | `string` |
+| `Optional` statusId | `string` |
 | `Optional` showAll | `boolean` |
 | `Optional` options | `any` |
 
@@ -235,9 +265,9 @@ ___
 
 ###  getCveListBySystem
 
-▸ **getCveListBySystem**(inventoryId: *`string`*, filter?: *`string`*, limit?: *`number`*, offset?: *`number`*, page?: *`number`*, pageSize?: *`number`*, sort?: *`string`*, cvssFrom?: *`number`*, cvssTo?: *`number`*, publicFrom?: *`string`*, publicTo?: *`string`*, impact?: *`string`*, statusId?: *`string`*, dataFormat?: *`string`*, options?: *`any`*): `AxiosPromise`<[SystemCvesOut](../interfaces/systemcvesout.md)>
+▸ **getCveListBySystem**(inventoryId: *`string`*, filter?: *`string`*, limit?: *`number`*, offset?: *`number`*, page?: *`number`*, pageSize?: *`number`*, sort?: *`string`*, cvssFrom?: *`number`*, cvssTo?: *`number`*, publicFrom?: *`string`*, publicTo?: *`string`*, impact?: *`string`*, statusId?: *`string`*, dataFormat?: *`string`*, businessRiskId?: *`string`*, options?: *`any`*): `AxiosPromise`<[SystemCvesOut](../interfaces/systemcvesout.md)>
 
-*Defined in [api.ts:2295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2295)*
+*Defined in [api.ts:2737](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2737)*
 
 Shows detailed infomation about all CVEs the system is exposed to.
 
@@ -265,6 +295,7 @@ Shows detailed infomation about all CVEs the system is exposed to.
 | `Optional` impact | `string` |
 | `Optional` statusId | `string` |
 | `Optional` dataFormat | `string` |
+| `Optional` businessRiskId | `string` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SystemCvesOut](../interfaces/systemcvesout.md)>
@@ -276,7 +307,7 @@ ___
 
 ▸ **getStatusList**(options?: *`any`*): `AxiosPromise`<[StatusListOut](../interfaces/statuslistout.md)>
 
-*Defined in [api.ts:2306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2306)*
+*Defined in [api.ts:2748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2748)*
 
 Returns available status and status\_id pairs where status\_id is internal ID of the status.
 
@@ -301,7 +332,7 @@ ___
 
 ▸ **getSystemDetails**(inventoryId: *`string`*, options?: *`any`*): `AxiosPromise`<[SystemDetailsOut](../interfaces/systemdetailsout.md)>
 
-*Defined in [api.ts:2318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2318)*
+*Defined in [api.ts:2760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2760)*
 
 Provides details of a system, e.g. it's opt out status.
 
@@ -327,7 +358,7 @@ ___
 
 ▸ **getSystemsList**(filter?: *`string`*, limit?: *`number`*, offset?: *`number`*, page?: *`number`*, pageSize?: *`number`*, sort?: *`string`*, dataFormat?: *`string`*, optOut?: *`boolean`*, options?: *`any`*): `AxiosPromise`<[SystemListOut](../interfaces/systemlistout.md)>
 
-*Defined in [api.ts:2337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2337)*
+*Defined in [api.ts:2779](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2779)*
 
 List systems visible to logged in account with basic information related to vulnerabilities.
 
@@ -360,7 +391,7 @@ ___
 
 ▸ **getVersion**(options?: *`any`*): `AxiosPromise`<[VersionOut](../interfaces/versionout.md)>
 
-*Defined in [api.ts:2348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2348)*
+*Defined in [api.ts:2790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2790)*
 
 Get application version.
 
@@ -379,17 +410,69 @@ Get application version.
 **Returns:** `AxiosPromise`<[VersionOut](../interfaces/versionout.md)>
 
 ___
+<a id="setcvebusinessrisk"></a>
+
+###  setCveBusinessRisk
+
+▸ **setCveBusinessRisk**(cveRiskIn: *[CveRiskIn](../interfaces/cveriskin.md)*, options?: *`any`*): `AxiosPromise`<[BulkChangeOut](../interfaces/bulkchangeout.md)>
+
+*Defined in [api.ts:2802](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2802)*
+
+Sets business risk for a CVE.
+
+*__summary__*: Set business risk for a CVE.
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: DefaultApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| cveRiskIn | [CveRiskIn](../interfaces/cveriskin.md) |  Values to be set. At least one of the &quot;business\_risk\_id&quot; or &quot;business\_risk\_text&quot; parameters is required. |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[BulkChangeOut](../interfaces/bulkchangeout.md)>
+
+___
+<a id="setcvestatus"></a>
+
+###  setCveStatus
+
+▸ **setCveStatus**(cveStatusIn: *[CveStatusIn](../interfaces/cvestatusin.md)*, options?: *`any`*): `AxiosPromise`<[BulkChangeOut](../interfaces/bulkchangeout.md)>
+
+*Defined in [api.ts:2814](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2814)*
+
+Sets status for a CVE.
+
+*__summary__*: Set status for a CVE.
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: DefaultApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| cveStatusIn | [CveStatusIn](../interfaces/cvestatusin.md) |  Values to be set. At least one of the &quot;status\_id&quot; or &quot;status\_text&quot; parameters is required. |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[BulkChangeOut](../interfaces/bulkchangeout.md)>
+
+___
 <a id="setstatus"></a>
 
 ###  setStatus
 
-▸ **setStatus**(statusIn: *[StatusIn](../interfaces/statusin.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **setStatus**(statusIn: *[StatusIn](../interfaces/statusin.md)*, options?: *`any`*): `AxiosPromise`<[StatusOut](../interfaces/statusout.md)>
 
-*Defined in [api.ts:2360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2360)*
+*Defined in [api.ts:2826](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2826)*
 
-Sets status for given host and CVE.
+Sets status for given hosts and CVEs.
 
-*__summary__*: Set status for system vulnerability.
+*__summary__*: Set status for system vulnerabilites.
 
 *__throws__*: {RequiredError}
 
@@ -402,7 +485,7 @@ Sets status for given host and CVE.
 | statusIn | [StatusIn](../interfaces/statusin.md) |  Values to be set. |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** `AxiosPromise`<[StatusOut](../interfaces/statusout.md)>
 
 ___
 <a id="setsystemoptout"></a>
@@ -411,7 +494,7 @@ ___
 
 ▸ **setSystemOptOut**(inventoryId: *`string`*, value: *`boolean`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2373)*
+*Defined in [api.ts:2839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2839)*
 
 Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
 
@@ -438,7 +521,7 @@ ___
 
 ▸ **setSystemsOptOut**(optOutIn: *[OptOutIn](../interfaces/optoutin.md)*, options?: *`any`*): `AxiosPromise`<[BulkChangeOut](../interfaces/bulkchangeout.md)>
 
-*Defined in [api.ts:2385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2385)*
+*Defined in [api.ts:2851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2851)*
 
 Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
 

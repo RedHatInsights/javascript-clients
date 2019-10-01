@@ -14,6 +14,7 @@
 
 ### Properties
 
+* [businessRiskId](metavulnerabilitiesout.md#businessriskid)
 * [cvssFrom](metavulnerabilitiesout.md#cvssfrom)
 * [cvssTo](metavulnerabilitiesout.md#cvssto)
 * [dataFormat](metavulnerabilitiesout.md#dataformat)
@@ -34,13 +35,28 @@
 
 ## Properties
 
+<a id="businessriskid"></a>
+
+###  businessRiskId
+
+**● businessRiskId**: *`string` \| `null`*
+
+*Defined in [api.ts:933](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L933)*
+
+Filter based on business risk IDs.
+
+*__type__*: {string}
+
+*__memberof__*: MetaVulnerabilitiesOut
+
+___
 <a id="cvssfrom"></a>
 
 ###  cvssFrom
 
 **● cvssFrom**: *`number` \| `null`*
 
-*Defined in [api.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L783)*
+*Defined in [api.ts:939](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L939)*
 
 Filter based on cvss score, starting from the value.
 
@@ -55,7 +71,7 @@ ___
 
 **● cvssTo**: *`number` \| `null`*
 
-*Defined in [api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L789)*
+*Defined in [api.ts:945](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L945)*
 
 Filter based on cvss score, up to the value.
 
@@ -70,7 +86,7 @@ ___
 
 **● dataFormat**: *`string`*
 
-*Defined in [api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L777)*
+*Defined in [api.ts:927](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L927)*
 
 Format of the output data, either JSON (default) or CSV.
 
@@ -85,7 +101,7 @@ ___
 
 **● filter**: *`string` \| `null`*
 
-*Defined in [api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L729)*
+*Defined in [api.ts:879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L879)*
 
 Full text filter
 
@@ -100,7 +116,7 @@ ___
 
 **● impact**: *`string` \| `null`*
 
-*Defined in [api.ts:813](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L813)*
+*Defined in [api.ts:969](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L969)*
 
 Filter based on impact IDs.
 
@@ -115,7 +131,7 @@ ___
 
 **● limit**: *`number`*
 
-*Defined in [api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L735)*
+*Defined in [api.ts:885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L885)*
 
 Maximum number of paginated results.
 
@@ -130,7 +146,7 @@ ___
 
 **● offset**: *`number`*
 
-*Defined in [api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L741)*
+*Defined in [api.ts:891](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L891)*
 
 First record of paginated response.
 
@@ -145,7 +161,7 @@ ___
 
 **● page**: *`number`*
 
-*Defined in [api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L747)*
+*Defined in [api.ts:897](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L897)*
 
 Page number of paginated response.
 
@@ -160,7 +176,7 @@ ___
 
 **● pageSize**: *`number`*
 
-*Defined in [api.ts:753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L753)*
+*Defined in [api.ts:903](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L903)*
 
 Number of records per page of paginated response.
 
@@ -175,7 +191,7 @@ ___
 
 **● pages**: *`number`*
 
-*Defined in [api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L759)*
+*Defined in [api.ts:909](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L909)*
 
 Total number of pages of paginated response.
 
@@ -190,7 +206,7 @@ ___
 
 **● publicFrom**: *`string` \| `null`*
 
-*Defined in [api.ts:801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L801)*
+*Defined in [api.ts:957](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L957)*
 
 Filter CVEs based on their published date, starting from the date.
 
@@ -205,7 +221,7 @@ ___
 
 **● publicTo**: *`string` \| `null`*
 
-*Defined in [api.ts:807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L807)*
+*Defined in [api.ts:963](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L963)*
 
 Filter CVEs based on their published date, up to the date.
 
@@ -220,7 +236,7 @@ ___
 
 **● showAll**: *`boolean` \| `null`*
 
-*Defined in [api.ts:795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L795)*
+*Defined in [api.ts:951](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L951)*
 
 Show all known vulnerabilities, regardless of number of affected systems.
 
@@ -235,7 +251,7 @@ ___
 
 **● sort**: *`string` \| `null`*
 
-*Defined in [api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L765)*
+*Defined in [api.ts:915](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L915)*
 
 Sorting filter.
 
@@ -250,7 +266,7 @@ ___
 
 **● totalItems**: *`number`*
 
-*Defined in [api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L771)*
+*Defined in [api.ts:921](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L921)*
 
 Total number of records.
 
