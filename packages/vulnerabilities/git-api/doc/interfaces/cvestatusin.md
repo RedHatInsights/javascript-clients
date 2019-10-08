@@ -15,7 +15,6 @@
 ### Properties
 
 * [cve](cvestatusin.md#cve)
-* [preserveIndividual](cvestatusin.md#preserveindividual)
 * [statusId](cvestatusin.md#statusid)
 * [statusText](cvestatusin.md#statustext)
 
@@ -29,24 +28,9 @@
 
 **● cve**: *[CveOrList](cveorlist.md)*
 
-*Defined in [api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L361)*
+*Defined in [api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L373)*
 
 *__type__*: {CveOrList}
-
-*__memberof__*: CveStatusIn
-
-___
-<a id="preserveindividual"></a>
-
-### `<Optional>` preserveIndividual
-
-**● preserveIndividual**: *`boolean`*
-
-*Defined in [api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L379)*
-
-Preserve previously set status for individual hosts.
-
-*__type__*: {boolean}
 
 *__memberof__*: CveStatusIn
 
@@ -57,7 +41,7 @@ ___
 
 **● statusId**: *`number`*
 
-*Defined in [api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L367)*
+*Defined in [api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L379)*
 
 Status ID to be set, obtained by GET method.
 
@@ -72,7 +56,7 @@ ___
 
 **● statusText**: *`string` \| `null`*
 
-*Defined in [api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L373)*
+*Defined in [api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L385)*
 
 Complementary text to the status.
 

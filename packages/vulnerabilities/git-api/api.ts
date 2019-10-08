@@ -311,6 +311,18 @@ export interface CveDetailOutDataAttributes {
      * @memberof CveDetailOutDataAttributes
      */
     synopsis: string;
+    /**
+     * Counts of systems with given status type.
+     * @type {any}
+     * @memberof CveDetailOutDataAttributes
+     */
+    systemsStatusDetail: any;
+    /**
+     * How many systems-CVE pairs have different status than CVE-level.
+     * @type {number}
+     * @memberof CveDetailOutDataAttributes
+     */
+    systemsStatusDivergent: number;
 }
 
 /**
@@ -371,12 +383,6 @@ export interface CveStatusIn {
      * @memberof CveStatusIn
      */
     statusText?: string | null;
-    /**
-     * Preserve previously set status for individual hosts.
-     * @type {boolean}
-     * @memberof CveStatusIn
-     */
-    preserveIndividual?: boolean;
 }
 
 /**
