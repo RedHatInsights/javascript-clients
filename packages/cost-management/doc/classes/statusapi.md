@@ -30,7 +30,7 @@ StatusApi - object-oriented interface
 
 ### Methods
 
-* [statusList](statusapi.md#statuslist)
+* [getStatus](statusapi.md#getstatus)
 
 ---
 
@@ -44,7 +44,7 @@ StatusApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 **Parameters:**
 
@@ -68,7 +68,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -79,7 +79,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -90,21 +90,21 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 ___
 
 ## Methods
 
-<a id="statuslist"></a>
+<a id="getstatus"></a>
 
-###  statusList
+###  getStatus
 
-▸ **statusList**(options?: *`any`*): `AxiosPromise`<[StatusResponse](../interfaces/statusresponse.md)>
+▸ **getStatus**(options?: *`any`*): `AxiosPromise`<[Status](../interfaces/status.md)>
 
-*Defined in api.ts:795*
+*Defined in [api.ts:4732](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4732)*
 
-Packages response for class-based view.
+*__summary__*: Obtain server status
 
 *__throws__*: {RequiredError}
 
@@ -116,7 +116,7 @@ Packages response for class-based view.
 | ------ | ------ |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[StatusResponse](../interfaces/statusresponse.md)>
+**Returns:** `AxiosPromise`<[Status](../interfaces/status.md)>
 
 ___
 

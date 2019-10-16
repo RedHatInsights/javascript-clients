@@ -1,7 +1,7 @@
 // tslint:disable
 /**
- * Cost Management Admin
- * The Admin 'Masu' API for Cost Management.  You can find out more about     Cost Management at [https://github.com/project-koku/](https://github.com/project-koku/).
+ * Cost Management
+ * The API for Cost Management.  You can find out more about     Cost Management at [https://github.com/project-koku/](https://github.com/project-koku/).
  *
  * OpenAPI spec version: 1.0.0
  *

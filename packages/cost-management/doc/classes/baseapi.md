@@ -10,15 +10,23 @@
 
 **BaseAPI**
 
-↳  [DownloadApi](downloadapi.md)
+↳  [AWSReportApi](awsreportapi.md)
 
-↳  [ExpiredDataApi](expireddataapi.md)
+↳  [CostModelApi](costmodelapi.md)
 
-↳  [ReportDataApi](reportdataapi.md)
+↳  [DataExportRequestApi](dataexportrequestapi.md)
+
+↳  [MetricsApi](metricsapi.md)
+
+↳  [OpenShiftReportApi](openshiftreportapi.md)
+
+↳  [ProviderApi](providerapi.md)
 
 ↳  [StatusApi](statusapi.md)
 
-↳  [UpdateChargeApi](updatechargeapi.md)
+↳  [TagsApi](tagsapi.md)
+
+↳  [UserPreferenceApi](userpreferenceapi.md)
 
 ## Index
 
@@ -42,7 +50,7 @@
 
 ⊕ **new BaseAPI**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [BaseAPI](baseapi.md)
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 **Parameters:**
 
@@ -64,7 +72,7 @@ ___
 
 **● axios**: *`AxiosInstance`*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -73,7 +81,7 @@ ___
 
 **● basePath**: *`string`*
 
-*Defined in api.ts:51*
+*Defined in [api.ts:51](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -82,7 +90,7 @@ ___
 
 **● configuration**: *[Configuration](configuration.md) \| `undefined`*
 
-*Defined in api.ts:49*
+*Defined in [api.ts:49](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 ___
 
