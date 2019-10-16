@@ -11,3 +11,4 @@ tsconfig.json
 .eslintrc.yml
 .openapi-generator-ignore
 !dist/*
+.openapi-generator

@@ -24,10 +24,10 @@ yarn add @redhat-cloud-services/cost-management-client
 This client is using typescript and axios. Types are distributed with this package, so no need to define or install them separately.
 
 ```js
-import { CostManagementApi } from '@redhat-cloud-services/cost-management-client';
+import { DownloadApi } from '@redhat-cloud-services/cost-management-client';
 
-const api = new CostManagementApi();
-const costManagement = await api.get();
+const api = new DownloadApi();
+const costManagement = await api.getDownload();
 ```
 
 ## API documentation
