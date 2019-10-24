@@ -26,7 +26,7 @@
 
 **● errors**: *`Array`<`any`>*
 
-*Defined in [api.ts:502](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L502)*
+*Defined in [api.ts:542](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L542)*
 
 *__type__*: {Array}
 

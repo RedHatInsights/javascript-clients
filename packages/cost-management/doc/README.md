@@ -40,6 +40,8 @@ API documentation
 ### Modules
 
 * [DataExportRequestOut](modules/dataexportrequestout.md)
+* [Markup](modules/markup.md)
+* [ReportAzureOrdering](modules/reportazureordering.md)
 * [ReportCostsOpenShiftOrdering](modules/reportcostsopenshiftordering.md)
 * [ReportInventoryOpenShiftOrdering](modules/reportinventoryopenshiftordering.md)
 * [ReportOpenShiftAWSOrdering](modules/reportopenshiftawsordering.md)
@@ -55,6 +57,7 @@ API documentation
 ### Classes
 
 * [AWSReportApi](classes/awsreportapi.md)
+* [AzureReportApi](classes/azurereportapi.md)
 * [BaseAPI](classes/baseapi.md)
 * [Configuration](classes/configuration.md)
 * [CostModelApi](classes/costmodelapi.md)
@@ -63,6 +66,8 @@ API documentation
 * [OpenShiftReportApi](classes/openshiftreportapi.md)
 * [ProviderApi](classes/providerapi.md)
 * [RequiredError](classes/requirederror.md)
+* [SourcesAuthenticationApi](classes/sourcesauthenticationapi.md)
+* [SourcesBillingSourceApi](classes/sourcesbillingsourceapi.md)
 * [StatusApi](classes/statusapi.md)
 * [TagsApi](classes/tagsapi.md)
 * [UserPreferenceApi](classes/userpreferenceapi.md)
@@ -95,12 +100,12 @@ API documentation
 * [ProviderPagination](interfaces/providerpagination.md)
 * [Rate](interfaces/rate.md)
 * [Report](interfaces/report.md)
+* [ReportAzureFilter](interfaces/reportazurefilter.md)
+* [ReportAzureGrouping](interfaces/reportazuregrouping.md)
 * [ReportCost](interfaces/reportcost.md)
 * [ReportCosts](interfaces/reportcosts.md)
-* [ReportCostsOpenShift](interfaces/reportcostsopenshift.md)
 * [ReportDelta](interfaces/reportdelta.md)
 * [ReportFilter](interfaces/reportfilter.md)
-* [ReportFilterOpenShift](interfaces/reportfilteropenshift.md)
 * [ReportGrouping](interfaces/reportgrouping.md)
 * [ReportInstanceInventory](interfaces/reportinstanceinventory.md)
 * [ReportOpenShiftAWSFilter](interfaces/reportopenshiftawsfilter.md)
@@ -108,12 +113,19 @@ API documentation
 * [ReportOpenShiftAWSInstanceInventory](interfaces/reportopenshiftawsinstanceinventory.md)
 * [ReportOpenShiftAWSStorageInventory](interfaces/reportopenshiftawsstorageinventory.md)
 * [ReportOpenShiftCpu](interfaces/reportopenshiftcpu.md)
+* [ReportOpenShiftFilter](interfaces/reportopenshiftfilter.md)
 * [ReportOpenShiftGrouping](interfaces/reportopenshiftgrouping.md)
 * [ReportOpenShiftMemory](interfaces/reportopenshiftmemory.md)
 * [ReportOpenShiftVolume](interfaces/reportopenshiftvolume.md)
 * [ReportPaginationMeta](interfaces/reportpaginationmeta.md)
 * [ReportStorageInventory](interfaces/reportstorageinventory.md)
 * [RequestArgs](interfaces/requestargs.md)
+* [SourcesAuthentication](interfaces/sourcesauthentication.md)
+* [SourcesAuthenticationIn](interfaces/sourcesauthenticationin.md)
+* [SourcesAuthenticationOut](interfaces/sourcesauthenticationout.md)
+* [SourcesBillingSource](interfaces/sourcesbillingsource.md)
+* [SourcesBillingSourceIn](interfaces/sourcesbillingsourcein.md)
+* [SourcesBillingSourceOut](interfaces/sourcesbillingsourceout.md)
 * [Status](interfaces/status.md)
 * [Tags](interfaces/tags.md)
 * [TagsFilter](interfaces/tagsfilter.md)
@@ -129,54 +141,42 @@ API documentation
 
 ### Functions
 
-- [Javascript client for Cost Management API](#javascript-client-for-cost-management-api)
-  - [Install](#install)
-    - [Usage](#usage)
-  - [API documentation](#api-documentation)
-  - [Index](#index)
-    - [Modules](#modules)
-    - [Enumerations](#enumerations)
-    - [Classes](#classes)
-    - [Interfaces](#interfaces)
-    - [Variables](#variables)
-    - [Functions](#functions)
-    - [Object literals](#object-literals)
-  - [Variables](#variables-1)
-    - [`<Const>` BASE_PATH](#const-basepath)
-  - [Functions](#functions-1)
-    - [`<Const>` AWSReportApiAxiosParamCreator](#const-awsreportapiaxiosparamcreator)
-    - [`<Const>` AWSReportApiFactory](#const-awsreportapifactory)
-    - [`<Const>` AWSReportApiFp](#const-awsreportapifp)
-    - [`<Const>` CostModelApiAxiosParamCreator](#const-costmodelapiaxiosparamcreator)
-    - [`<Const>` CostModelApiFactory](#const-costmodelapifactory)
-    - [`<Const>` CostModelApiFp](#const-costmodelapifp)
-    - [`<Const>` DataExportRequestApiAxiosParamCreator](#const-dataexportrequestapiaxiosparamcreator)
-    - [`<Const>` DataExportRequestApiFactory](#const-dataexportrequestapifactory)
-    - [`<Const>` DataExportRequestApiFp](#const-dataexportrequestapifp)
-    - [`<Const>` MetricsApiAxiosParamCreator](#const-metricsapiaxiosparamcreator)
-    - [`<Const>` MetricsApiFactory](#const-metricsapifactory)
-    - [`<Const>` MetricsApiFp](#const-metricsapifp)
-    - [`<Const>` OpenShiftReportApiAxiosParamCreator](#const-openshiftreportapiaxiosparamcreator)
-    - [`<Const>` OpenShiftReportApiFactory](#const-openshiftreportapifactory)
-    - [`<Const>` OpenShiftReportApiFp](#const-openshiftreportapifp)
-    - [`<Const>` ProviderApiAxiosParamCreator](#const-providerapiaxiosparamcreator)
-    - [`<Const>` ProviderApiFactory](#const-providerapifactory)
-    - [`<Const>` ProviderApiFp](#const-providerapifp)
-    - [`<Const>` StatusApiAxiosParamCreator](#const-statusapiaxiosparamcreator)
-    - [`<Const>` StatusApiFactory](#const-statusapifactory)
-    - [`<Const>` StatusApiFp](#const-statusapifp)
-    - [`<Const>` TagsApiAxiosParamCreator](#const-tagsapiaxiosparamcreator)
-    - [`<Const>` TagsApiFactory](#const-tagsapifactory)
-    - [`<Const>` TagsApiFp](#const-tagsapifp)
-    - [`<Const>` UserPreferenceApiAxiosParamCreator](#const-userpreferenceapiaxiosparamcreator)
-    - [`<Const>` UserPreferenceApiFactory](#const-userpreferenceapifactory)
-    - [`<Const>` UserPreferenceApiFp](#const-userpreferenceapifp)
-  - [Object literals](#object-literals-1)
-    - [`<Const>` COLLECTION_FORMATS](#const-collectionformats)
-      - [csv](#csv)
-      - [pipes](#pipes)
-      - [ssv](#ssv)
-      - [tsv](#tsv)
+* [AWSReportApiAxiosParamCreator](#awsreportapiaxiosparamcreator)
+* [AWSReportApiFactory](#awsreportapifactory)
+* [AWSReportApiFp](#awsreportapifp)
+* [AzureReportApiAxiosParamCreator](#azurereportapiaxiosparamcreator)
+* [AzureReportApiFactory](#azurereportapifactory)
+* [AzureReportApiFp](#azurereportapifp)
+* [CostModelApiAxiosParamCreator](#costmodelapiaxiosparamcreator)
+* [CostModelApiFactory](#costmodelapifactory)
+* [CostModelApiFp](#costmodelapifp)
+* [DataExportRequestApiAxiosParamCreator](#dataexportrequestapiaxiosparamcreator)
+* [DataExportRequestApiFactory](#dataexportrequestapifactory)
+* [DataExportRequestApiFp](#dataexportrequestapifp)
+* [MetricsApiAxiosParamCreator](#metricsapiaxiosparamcreator)
+* [MetricsApiFactory](#metricsapifactory)
+* [MetricsApiFp](#metricsapifp)
+* [OpenShiftReportApiAxiosParamCreator](#openshiftreportapiaxiosparamcreator)
+* [OpenShiftReportApiFactory](#openshiftreportapifactory)
+* [OpenShiftReportApiFp](#openshiftreportapifp)
+* [ProviderApiAxiosParamCreator](#providerapiaxiosparamcreator)
+* [ProviderApiFactory](#providerapifactory)
+* [ProviderApiFp](#providerapifp)
+* [SourcesAuthenticationApiAxiosParamCreator](#sourcesauthenticationapiaxiosparamcreator)
+* [SourcesAuthenticationApiFactory](#sourcesauthenticationapifactory)
+* [SourcesAuthenticationApiFp](#sourcesauthenticationapifp)
+* [SourcesBillingSourceApiAxiosParamCreator](#sourcesbillingsourceapiaxiosparamcreator)
+* [SourcesBillingSourceApiFactory](#sourcesbillingsourceapifactory)
+* [SourcesBillingSourceApiFp](#sourcesbillingsourceapifp)
+* [StatusApiAxiosParamCreator](#statusapiaxiosparamcreator)
+* [StatusApiFactory](#statusapifactory)
+* [StatusApiFp](#statusapifp)
+* [TagsApiAxiosParamCreator](#tagsapiaxiosparamcreator)
+* [TagsApiFactory](#tagsapifactory)
+* [TagsApiFp](#tagsapifp)
+* [UserPreferenceApiAxiosParamCreator](#userpreferenceapiaxiosparamcreator)
+* [UserPreferenceApiFactory](#userpreferenceapifactory)
+* [UserPreferenceApiFp](#userpreferenceapifp)
 
 ### Object literals
 
@@ -204,7 +204,7 @@ ___
 
 ▸ **AWSReportApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2278](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2278)*
+*Defined in [api.ts:2631](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2631)*
 
 AWSReportApi - axios parameter creator
 
@@ -223,7 +223,7 @@ ___
 
 ▸ **AWSReportApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2542](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2542)*
+*Defined in [api.ts:2895](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2895)*
 
 AWSReportApi - factory interface
 
@@ -244,9 +244,68 @@ ___
 
 ▸ **AWSReportApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2476](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2476)*
+*Defined in [api.ts:2829](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2829)*
 
 AWSReportApi - functional programming interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
+<a id="azurereportapiaxiosparamcreator"></a>
+
+### `<Const>` AzureReportApiAxiosParamCreator
+
+▸ **AzureReportApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:3009](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3009)*
+
+AzureReportApi - axios parameter creator
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
+<a id="azurereportapifactory"></a>
+
+### `<Const>` AzureReportApiFactory
+
+▸ **AzureReportApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
+
+*Defined in [api.ts:3273](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3273)*
+
+AzureReportApi - factory interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+| `Optional` basePath | `string` |
+| `Optional` axios | `AxiosInstance` |
+
+**Returns:** `object`
+
+___
+<a id="azurereportapifp"></a>
+
+### `<Const>` AzureReportApiFp
+
+▸ **AzureReportApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:3207](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3207)*
+
+AzureReportApi - functional programming interface
 
 **Parameters:**
 
@@ -263,7 +322,7 @@ ___
 
 ▸ **CostModelApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2656](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2656)*
+*Defined in [api.ts:3387](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3387)*
 
 CostModelApi - axios parameter creator
 
@@ -282,7 +341,7 @@ ___
 
 ▸ **CostModelApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2969](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2969)*
+*Defined in [api.ts:3700](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3700)*
 
 CostModelApi - factory interface
 
@@ -303,7 +362,7 @@ ___
 
 ▸ **CostModelApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2885](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2885)*
+*Defined in [api.ts:3616](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3616)*
 
 CostModelApi - functional programming interface
 
@@ -322,7 +381,7 @@ ___
 
 ▸ **DataExportRequestApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3107](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3107)*
+*Defined in [api.ts:3838](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3838)*
 
 DataExportRequestApi - axios parameter creator
 
@@ -341,7 +400,7 @@ ___
 
 ▸ **DataExportRequestApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:3292](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3292)*
+*Defined in [api.ts:4023](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4023)*
 
 DataExportRequestApi - factory interface
 
@@ -362,7 +421,7 @@ ___
 
 ▸ **DataExportRequestApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3240](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3240)*
+*Defined in [api.ts:3971](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3971)*
 
 DataExportRequestApi - functional programming interface
 
@@ -381,7 +440,7 @@ ___
 
 ▸ **MetricsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3378](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3378)*
+*Defined in [api.ts:4109](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4109)*
 
 MetricsApi - axios parameter creator
 
@@ -400,7 +459,7 @@ ___
 
 ▸ **MetricsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:3436](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3436)*
+*Defined in [api.ts:4167](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4167)*
 
 MetricsApi - factory interface
 
@@ -421,7 +480,7 @@ ___
 
 ▸ **MetricsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3414](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3414)*
+*Defined in [api.ts:4145](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4145)*
 
 MetricsApi - functional programming interface
 
@@ -440,7 +499,7 @@ ___
 
 ▸ **OpenShiftReportApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3474](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3474)*
+*Defined in [api.ts:4205](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4205)*
 
 OpenShiftReportApi - axios parameter creator
 
@@ -459,7 +518,7 @@ ___
 
 ▸ **OpenShiftReportApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:4048](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4048)*
+*Defined in [api.ts:4779](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4779)*
 
 OpenShiftReportApi - factory interface
 
@@ -480,7 +539,7 @@ ___
 
 ▸ **OpenShiftReportApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3909](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L3909)*
+*Defined in [api.ts:4640](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4640)*
 
 OpenShiftReportApi - functional programming interface
 
@@ -499,7 +558,7 @@ ___
 
 ▸ **ProviderApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:4284](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4284)*
+*Defined in [api.ts:5015](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5015)*
 
 ProviderApi - axios parameter creator
 
@@ -518,7 +577,7 @@ ___
 
 ▸ **ProviderApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:4534](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4534)*
+*Defined in [api.ts:5265](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5265)*
 
 ProviderApi - factory interface
 
@@ -539,9 +598,127 @@ ___
 
 ▸ **ProviderApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:4466](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4466)*
+*Defined in [api.ts:5197](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5197)*
 
 ProviderApi - functional programming interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
+<a id="sourcesauthenticationapiaxiosparamcreator"></a>
+
+### `<Const>` SourcesAuthenticationApiAxiosParamCreator
+
+▸ **SourcesAuthenticationApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:5377](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5377)*
+
+SourcesAuthenticationApi - axios parameter creator
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
+<a id="sourcesauthenticationapifactory"></a>
+
+### `<Const>` SourcesAuthenticationApiFactory
+
+▸ **SourcesAuthenticationApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
+
+*Defined in [api.ts:5451](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5451)*
+
+SourcesAuthenticationApi - factory interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+| `Optional` basePath | `string` |
+| `Optional` axios | `AxiosInstance` |
+
+**Returns:** `object`
+
+___
+<a id="sourcesauthenticationapifp"></a>
+
+### `<Const>` SourcesAuthenticationApiFp
+
+▸ **SourcesAuthenticationApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:5428](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5428)*
+
+SourcesAuthenticationApi - functional programming interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
+<a id="sourcesbillingsourceapiaxiosparamcreator"></a>
+
+### `<Const>` SourcesBillingSourceApiAxiosParamCreator
+
+▸ **SourcesBillingSourceApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:5491](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5491)*
+
+SourcesBillingSourceApi - axios parameter creator
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
+<a id="sourcesbillingsourceapifactory"></a>
+
+### `<Const>` SourcesBillingSourceApiFactory
+
+▸ **SourcesBillingSourceApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
+
+*Defined in [api.ts:5565](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5565)*
+
+SourcesBillingSourceApi - factory interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+| `Optional` basePath | `string` |
+| `Optional` axios | `AxiosInstance` |
+
+**Returns:** `object`
+
+___
+<a id="sourcesbillingsourceapifp"></a>
+
+### `<Const>` SourcesBillingSourceApiFp
+
+▸ **SourcesBillingSourceApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:5542](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5542)*
+
+SourcesBillingSourceApi - functional programming interface
 
 **Parameters:**
 
@@ -558,7 +735,7 @@ ___
 
 ▸ **StatusApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:4646](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4646)*
+*Defined in [api.ts:5605](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5605)*
 
 StatusApi - axios parameter creator
 
@@ -577,7 +754,7 @@ ___
 
 ▸ **StatusApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:4704](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4704)*
+*Defined in [api.ts:5663](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5663)*
 
 StatusApi - factory interface
 
@@ -598,7 +775,7 @@ ___
 
 ▸ **StatusApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:4682](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4682)*
+*Defined in [api.ts:5641](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5641)*
 
 StatusApi - functional programming interface
 
@@ -617,7 +794,7 @@ ___
 
 ▸ **TagsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:4742](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4742)*
+*Defined in [api.ts:5701](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5701)*
 
 TagsApi - axios parameter creator
 
@@ -636,7 +813,7 @@ ___
 
 ▸ **TagsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:4970](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4970)*
+*Defined in [api.ts:5999](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5999)*
 
 TagsApi - factory interface
 
@@ -657,7 +834,7 @@ ___
 
 ▸ **TagsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:4910](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4910)*
+*Defined in [api.ts:5922](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5922)*
 
 TagsApi - functional programming interface
 
@@ -676,7 +853,7 @@ ___
 
 ▸ **UserPreferenceApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5072](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5072)*
+*Defined in [api.ts:6129](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6129)*
 
 UserPreferenceApi - axios parameter creator
 
@@ -695,7 +872,7 @@ ___
 
 ▸ **UserPreferenceApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:5373](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5373)*
+*Defined in [api.ts:6430](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6430)*
 
 UserPreferenceApi - factory interface
 
@@ -716,7 +893,7 @@ ___
 
 ▸ **UserPreferenceApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5292](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5292)*
+*Defined in [api.ts:6349](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6349)*
 
 UserPreferenceApi - functional programming interface
 

@@ -36,7 +36,7 @@
 
 **● accountAlias**: *[AccountAliasEnum](../enums/reportordering.accountaliasenum.md)*
 
-*Defined in [api.ts:1857](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1857)*
+*Defined in [api.ts:2102](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2102)*
 
 *__type__*: {string}
 
@@ -49,7 +49,7 @@ ___
 
 **● cost**: *[CostEnum](../enums/reportordering.costenum.md)*
 
-*Defined in [api.ts:1839](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1839)*
+*Defined in [api.ts:2084](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2084)*
 
 *__type__*: {string}
 
@@ -62,7 +62,7 @@ ___
 
 **● delta**: *[DeltaEnum](../enums/reportordering.deltaenum.md)*
 
-*Defined in [api.ts:1851](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1851)*
+*Defined in [api.ts:2096](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2096)*
 
 *__type__*: {string}
 
@@ -75,7 +75,7 @@ ___
 
 **● region**: *[RegionEnum](../enums/reportordering.regionenum.md)*
 
-*Defined in [api.ts:1863](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1863)*
+*Defined in [api.ts:2108](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2108)*
 
 *__type__*: {string}
 
@@ -88,7 +88,7 @@ ___
 
 **● service**: *[ServiceEnum](../enums/reportordering.serviceenum.md)*
 
-*Defined in [api.ts:1869](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1869)*
+*Defined in [api.ts:2114](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2114)*
 
 *__type__*: {string}
 
@@ -101,7 +101,7 @@ ___
 
 **● usage**: *[UsageEnum](../enums/reportordering.usageenum.md)*
 
-*Defined in [api.ts:1845](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1845)*
+*Defined in [api.ts:2090](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2090)*
 
 *__type__*: {string}
 

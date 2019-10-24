@@ -28,7 +28,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:2206](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2206)*
+*Defined in [api.ts:2559](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2559)*
 
 *__type__*: {string}
 
@@ -41,7 +41,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:2194](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2194)*
+*Defined in [api.ts:2547](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2547)*
 
 *__type__*: {string}
 
@@ -54,7 +54,7 @@ ___
 
 **● preference**: *`any`*
 
-*Defined in [api.ts:2200](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2200)*
+*Defined in [api.ts:2553](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2553)*
 
 *__type__*: {any}
 

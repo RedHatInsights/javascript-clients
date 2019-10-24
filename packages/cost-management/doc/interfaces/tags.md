@@ -27,7 +27,7 @@
 
 **● data**: *`Array`<`any`>*
 
-*Defined in [api.ts:2108](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2108)*
+*Defined in [api.ts:2461](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2461)*
 
 *__type__*: {Array}
 
@@ -40,7 +40,7 @@ ___
 
 **● filter**: *[TagsFilter](tagsfilter.md)*
 
-*Defined in [api.ts:2102](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2102)*
+*Defined in [api.ts:2455](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2455)*
 
 *__type__*: {TagsFilter}
 

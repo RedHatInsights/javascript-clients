@@ -23,11 +23,11 @@
 
 <a id="bucket"></a>
 
-###  bucket
+### `<Optional>` bucket
 
 **● bucket**: *`string`*
 
-*Defined in [api.ts:628](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L628)*
+*Defined in [api.ts:668](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L668)*
 
 *__type__*: {string}
 
@@ -36,11 +36,11 @@
 ___
 <a id="datasource"></a>
 
-###  dataSource
+### `<Optional>` dataSource
 
 **● dataSource**: *`any`*
 
-*Defined in [api.ts:634](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L634)*
+*Defined in [api.ts:674](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L674)*
 
 *__type__*: {any}
 

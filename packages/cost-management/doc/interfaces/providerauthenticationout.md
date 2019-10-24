@@ -24,11 +24,11 @@
 
 <a id="credentials"></a>
 
-###  credentials
+### `<Optional>` credentials
 
 **● credentials**: *`any`*
 
-*Defined in [api.ts:608](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L608)*
+*Defined in [api.ts:648](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L648)*
 
 *__type__*: {any}
 
@@ -37,11 +37,11 @@
 ___
 <a id="providerresourcename"></a>
 
-###  providerResourceName
+### `<Optional>` providerResourceName
 
 **● providerResourceName**: *`string`*
 
-*Defined in [api.ts:602](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L602)*
+*Defined in [api.ts:642](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L642)*
 
 *__type__*: {string}
 
@@ -54,7 +54,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:614](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L614)*
+*Defined in [api.ts:654](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L654)*
 
 *__type__*: {string}
 

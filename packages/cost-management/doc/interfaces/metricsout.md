@@ -30,7 +30,7 @@
 
 **● labelMeasurement**: *`string`*
 
-*Defined in [api.ts:482](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L482)*
+*Defined in [api.ts:522](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L522)*
 
 *__type__*: {string}
 
@@ -43,7 +43,7 @@ ___
 
 **● labelMeasurementUnit**: *`string`*
 
-*Defined in [api.ts:488](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L488)*
+*Defined in [api.ts:528](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L528)*
 
 *__type__*: {string}
 
@@ -56,7 +56,7 @@ ___
 
 **● labelMetric**: *`string`*
 
-*Defined in [api.ts:476](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L476)*
+*Defined in [api.ts:516](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L516)*
 
 *__type__*: {string}
 
@@ -69,7 +69,7 @@ ___
 
 **● metric**: *`string`*
 
-*Defined in [api.ts:470](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L470)*
+*Defined in [api.ts:510](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L510)*
 
 *__type__*: {string}
 
@@ -82,7 +82,7 @@ ___
 
 **● sourceType**: *`string`*
 
-*Defined in [api.ts:464](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L464)*
+*Defined in [api.ts:504](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L504)*
 
 *__type__*: {string}
 

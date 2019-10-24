@@ -39,7 +39,7 @@
 
 **● account**: *`Array`<`string`>*
 
-*Defined in [api.ts:1376](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1376)*
+*Defined in [api.ts:1541](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1541)*
 
 *__type__*: {Array}
 
@@ -52,7 +52,7 @@ ___
 
 **● az**: *`Array`<`string`>*
 
-*Defined in [api.ts:1394](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1394)*
+*Defined in [api.ts:1559](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1559)*
 
 *__type__*: {Array}
 
@@ -65,7 +65,7 @@ ___
 
 **● cluster**: *`Array`<`string`>*
 
-*Defined in [api.ts:1412](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1412)*
+*Defined in [api.ts:1577](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1577)*
 
 *__type__*: {Array}
 
@@ -78,7 +78,7 @@ ___
 
 **● limit**: *`number`*
 
-*Defined in [api.ts:1340](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1340)*
+*Defined in [api.ts:1505](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1505)*
 
 Limits the data points returns and aggregates remaining data.
 
@@ -93,7 +93,7 @@ ___
 
 **● node**: *`Array`<`string`>*
 
-*Defined in [api.ts:1418](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1418)*
+*Defined in [api.ts:1583](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1583)*
 
 *__type__*: {Array}
 
@@ -106,7 +106,7 @@ ___
 
 **● offset**: *`number`*
 
-*Defined in [api.ts:1346](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1346)*
+*Defined in [api.ts:1511](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1511)*
 
 Offsets the data points returned when using limit.
 
@@ -121,7 +121,7 @@ ___
 
 **● project**: *`Array`<`string`>*
 
-*Defined in [api.ts:1406](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1406)*
+*Defined in [api.ts:1571](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1571)*
 
 *__type__*: {Array}
 
@@ -134,7 +134,7 @@ ___
 
 **● region**: *`Array`<`string`>*
 
-*Defined in [api.ts:1388](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1388)*
+*Defined in [api.ts:1553](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1553)*
 
 *__type__*: {Array}
 
@@ -147,7 +147,7 @@ ___
 
 **● resolution**: *[ReportResolution](../enums/reportresolution.md)*
 
-*Defined in [api.ts:1352](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1352)*
+*Defined in [api.ts:1517](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1517)*
 
 *__type__*: {ReportResolution}
 
@@ -160,7 +160,7 @@ ___
 
 **● resourceScope**: *`Array`<[ReportResourceScope](../enums/reportresourcescope.md)>*
 
-*Defined in [api.ts:1370](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1370)*
+*Defined in [api.ts:1535](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1535)*
 
 *__type__*: {Array}
 
@@ -173,7 +173,7 @@ ___
 
 **● service**: *`Array`<`string`>*
 
-*Defined in [api.ts:1382](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1382)*
+*Defined in [api.ts:1547](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1547)*
 
 *__type__*: {Array}
 
@@ -186,7 +186,7 @@ ___
 
 **● tag**: *`Array`<`string`>*
 
-*Defined in [api.ts:1400](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1400)*
+*Defined in [api.ts:1565](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1565)*
 
 *__type__*: {Array}
 
@@ -199,7 +199,7 @@ ___
 
 **● timeScopeUnits**: *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
 
-*Defined in [api.ts:1364](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1364)*
+*Defined in [api.ts:1529](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1529)*
 
 *__type__*: {ReportTimeScopeUnits}
 
@@ -212,7 +212,7 @@ ___
 
 **● timeScopeValue**: *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
 
-*Defined in [api.ts:1358](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1358)*
+*Defined in [api.ts:1523](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1523)*
 
 *__type__*: {ReportTimeScopeValue}
 

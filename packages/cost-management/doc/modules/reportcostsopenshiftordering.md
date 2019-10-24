@@ -32,7 +32,7 @@
 
 **● cluster**: *[ClusterEnum](../enums/reportcostsopenshiftordering.clusterenum.md)*
 
-*Defined in [api.ts:912](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L912)*
+*Defined in [api.ts:1157](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1157)*
 
 *__type__*: {string}
 
@@ -45,7 +45,7 @@ ___
 
 **● cost**: *[CostEnum](../enums/reportcostsopenshiftordering.costenum.md)*
 
-*Defined in [api.ts:930](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L930)*
+*Defined in [api.ts:1175](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1175)*
 
 *__type__*: {string}
 
@@ -58,7 +58,7 @@ ___
 
 **● node**: *[NodeEnum](../enums/reportcostsopenshiftordering.nodeenum.md)*
 
-*Defined in [api.ts:924](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L924)*
+*Defined in [api.ts:1169](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1169)*
 
 *__type__*: {string}
 
@@ -71,7 +71,7 @@ ___
 
 **● project**: *[ProjectEnum](../enums/reportcostsopenshiftordering.projectenum.md)*
 
-*Defined in [api.ts:918](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L918)*
+*Defined in [api.ts:1163](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1163)*
 
 *__type__*: {string}
 

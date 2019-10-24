@@ -28,7 +28,7 @@
 
 **● metric**: *`any`*
 
-*Defined in [api.ts:800](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L800)*
+*Defined in [api.ts:840](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L840)*
 
 *__type__*: {any}
 
@@ -41,7 +41,7 @@ ___
 
 **● tieredRates**: *`Array`<`any`>*
 
-*Defined in [api.ts:806](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L806)*
+*Defined in [api.ts:846](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L846)*
 
 *__type__*: {Array}
 
@@ -54,7 +54,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:794](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L794)*
+*Defined in [api.ts:834](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L834)*
 
 *__type__*: {string}
 

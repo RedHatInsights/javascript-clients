@@ -30,7 +30,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:2232](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2232)*
+*Defined in [api.ts:2585](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2585)*
 
 *__type__*: {string}
 
@@ -43,7 +43,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:2220](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2220)*
+*Defined in [api.ts:2573](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2573)*
 
 *__type__*: {string}
 
@@ -56,7 +56,7 @@ ___
 
 **● preference**: *`any`*
 
-*Defined in [api.ts:2226](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2226)*
+*Defined in [api.ts:2579](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2579)*
 
 *__type__*: {any}
 
@@ -69,7 +69,7 @@ ___
 
 **● user**: *[UserOut](userout.md)*
 
-*Defined in [api.ts:2244](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2244)*
+*Defined in [api.ts:2597](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2597)*
 
 *__type__*: {UserOut}
 
@@ -82,7 +82,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:2238](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2238)*
+*Defined in [api.ts:2591](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2591)*
 
 *__type__*: {string}
 

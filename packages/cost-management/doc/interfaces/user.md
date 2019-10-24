@@ -27,7 +27,7 @@
 
 **● email**: *`string`*
 
-*Defined in [api.ts:2154](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2154)*
+*Defined in [api.ts:2507](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2507)*
 
 *__type__*: {string}
 
@@ -40,7 +40,7 @@ ___
 
 **● username**: *`string`*
 
-*Defined in [api.ts:2148](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2148)*
+*Defined in [api.ts:2501](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2501)*
 
 *__type__*: {string}
 

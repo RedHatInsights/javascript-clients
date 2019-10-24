@@ -26,7 +26,7 @@
 
 **● count**: *`number`*
 
-*Defined in [api.ts:548](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L548)*
+*Defined in [api.ts:588](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L588)*
 
 *__type__*: {number}
 

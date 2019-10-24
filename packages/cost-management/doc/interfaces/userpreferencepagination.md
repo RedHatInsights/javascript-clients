@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[UserPreferenceOut](userpreferenceout.md)>*
 
-*Defined in [api.ts:2270](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2270)*
+*Defined in [api.ts:2623](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2623)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:2264](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2264)*
+*Defined in [api.ts:2617](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2617)*
 
 *__type__*: {PaginationLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [api.ts:2258](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2258)*
+*Defined in [api.ts:2611](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2611)*
 
 *__type__*: {PaginationMeta}
 

@@ -105,6 +105,12 @@ export interface CostModel {
      * @memberof CostModel
      */
     rates?: Array<Rate>;
+    /**
+     *
+     * @type {Markup}
+     * @memberof CostModel
+     */
+    markup?: Markup;
 }
 
 /**
@@ -427,6 +433,40 @@ export interface ListPagination {
 /**
  *
  * @export
+ * @interface Markup
+ */
+export interface Markup {
+    /**
+     *
+     * @type {number}
+     * @memberof Markup
+     */
+    value?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof Markup
+     */
+    unit?: Markup.UnitEnum;
+}
+
+/**
+ * @export
+ * @namespace Markup
+ */
+export namespace Markup {
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum UnitEnum {
+        Percent = 'percent'
+    }
+}
+
+/**
+ *
+ * @export
  * @interface Metrics
  */
 export interface Metrics {
@@ -579,13 +619,13 @@ export interface ProviderAuthenticationIn {
      * @type {string}
      * @memberof ProviderAuthenticationIn
      */
-    providerResourceName: string;
+    providerResourceName?: string;
     /**
      *
      * @type {any}
      * @memberof ProviderAuthenticationIn
      */
-    credentials: any;
+    credentials?: any;
 }
 
 /**
@@ -599,13 +639,13 @@ export interface ProviderAuthenticationOut {
      * @type {string}
      * @memberof ProviderAuthenticationOut
      */
-    providerResourceName: string;
+    providerResourceName?: string;
     /**
      *
      * @type {any}
      * @memberof ProviderAuthenticationOut
      */
-    credentials: any;
+    credentials?: any;
     /**
      *
      * @type {string}
@@ -625,13 +665,13 @@ export interface ProviderBillingSourceIn {
      * @type {string}
      * @memberof ProviderBillingSourceIn
      */
-    bucket: string;
+    bucket?: string;
     /**
      *
      * @type {any}
      * @memberof ProviderBillingSourceIn
      */
-    dataSource: any;
+    dataSource?: any;
 }
 
 /**
@@ -645,13 +685,13 @@ export interface ProviderBillingSourceOut {
      * @type {string}
      * @memberof ProviderBillingSourceOut
      */
-    bucket: string;
+    bucket?: string;
     /**
      *
      * @type {any}
      * @memberof ProviderBillingSourceOut
      */
-    dataSource: any;
+    dataSource?: any;
     /**
      *
      * @type {string}
@@ -829,6 +869,231 @@ export interface Report {
 /**
  *
  * @export
+ * @interface ReportAzureFilter
+ */
+export interface ReportAzureFilter {
+    /**
+     * Limits the data points returns and aggregates remaining data.
+     * @type {number}
+     * @memberof ReportAzureFilter
+     */
+    limit?: number;
+    /**
+     * Offsets the data points returned when using limit.
+     * @type {number}
+     * @memberof ReportAzureFilter
+     */
+    offset?: number;
+    /**
+     *
+     * @type {ReportResolution}
+     * @memberof ReportAzureFilter
+     */
+    resolution?: ReportResolution;
+    /**
+     *
+     * @type {ReportTimeScopeValue}
+     * @memberof ReportAzureFilter
+     */
+    timeScopeValue?: ReportTimeScopeValue;
+    /**
+     *
+     * @type {ReportTimeScopeUnits}
+     * @memberof ReportAzureFilter
+     */
+    timeScopeUnits?: ReportTimeScopeUnits;
+    /**
+     *
+     * @type {Array<ReportResourceScope>}
+     * @memberof ReportAzureFilter
+     */
+    resourceScope?: Array<ReportResourceScope>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportAzureFilter
+     */
+    subscriptionGuid?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportAzureFilter
+     */
+    serviceName?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportAzureFilter
+     */
+    resourceLocation?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportAzureFilter
+     */
+    instanceType?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportAzureFilter
+     */
+    tag?: Array<string>;
+}
+
+/**
+ * The grouping to apply to the report. No grouping by default. When grouping by account the account_alias will be provided if avaiable.
+ * @export
+ * @interface ReportAzureGrouping
+ */
+export interface ReportAzureGrouping {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportAzureGrouping
+     */
+    subscriptionGuid?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportAzureGrouping
+     */
+    serviceName?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportAzureGrouping
+     */
+    resourceLocation?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportAzureGrouping
+     */
+    instanceType?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportAzureGrouping
+     */
+    tag?: Array<string>;
+}
+
+/**
+ * The ordering to apply to the report. Default is ascending order for the data.
+ * @export
+ * @interface ReportAzureOrdering
+ */
+export interface ReportAzureOrdering {
+    /**
+     *
+     * @type {string}
+     * @memberof ReportAzureOrdering
+     */
+    cost?: ReportAzureOrdering.CostEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportAzureOrdering
+     */
+    usage?: ReportAzureOrdering.UsageEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportAzureOrdering
+     */
+    delta?: ReportAzureOrdering.DeltaEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportAzureOrdering
+     */
+    subscriptionGuid?: ReportAzureOrdering.SubscriptionGuidEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportAzureOrdering
+     */
+    resourceLocation?: ReportAzureOrdering.ResourceLocationEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportAzureOrdering
+     */
+    serviceName?: ReportAzureOrdering.ServiceNameEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportAzureOrdering
+     */
+    instanceType?: ReportAzureOrdering.InstanceTypeEnum;
+}
+
+/**
+ * @export
+ * @namespace ReportAzureOrdering
+ */
+export namespace ReportAzureOrdering {
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum CostEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum UsageEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum DeltaEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum SubscriptionGuidEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum ResourceLocationEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum ServiceNameEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum InstanceTypeEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+}
+
+/**
+ *
+ * @export
  * @interface ReportCost
  */
 export interface ReportCost {
@@ -876,26 +1141,6 @@ export interface ReportCosts {
      * @memberof ReportCosts
      */
     data: Array<any>;
-}
-
-/**
- *
- * @export
- * @interface ReportCostsOpenShift
- */
-export interface ReportCostsOpenShift {
-    /**
-     *
-     * @type {ReportPaginationMeta}
-     * @memberof ReportCostsOpenShift
-     */
-    meta?: ReportPaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof ReportCostsOpenShift
-     */
-    links?: PaginationLinks;
 }
 
 /**
@@ -1055,86 +1300,6 @@ export interface ReportFilter {
      * @memberof ReportFilter
      */
     tag?: Array<string>;
-}
-
-/**
- *
- * @export
- * @interface ReportFilterOpenShift
- */
-export interface ReportFilterOpenShift {
-    /**
-     * Limits the data points returns and aggregates remaining data.
-     * @type {number}
-     * @memberof ReportFilterOpenShift
-     */
-    limit?: number;
-    /**
-     * Offsets the data points returned when using limit.
-     * @type {number}
-     * @memberof ReportFilterOpenShift
-     */
-    offset?: number;
-    /**
-     *
-     * @type {ReportResolution}
-     * @memberof ReportFilterOpenShift
-     */
-    resolution?: ReportResolution;
-    /**
-     *
-     * @type {ReportTimeScopeValue}
-     * @memberof ReportFilterOpenShift
-     */
-    timeScopeValue?: ReportTimeScopeValue;
-    /**
-     *
-     * @type {ReportTimeScopeUnits}
-     * @memberof ReportFilterOpenShift
-     */
-    timeScopeUnits?: ReportTimeScopeUnits;
-    /**
-     *
-     * @type {Array<ReportResourceScope>}
-     * @memberof ReportFilterOpenShift
-     */
-    resourceScope?: Array<ReportResourceScope>;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof ReportFilterOpenShift
-     */
-    project?: Array<string>;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof ReportFilterOpenShift
-     */
-    cluster?: Array<string>;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof ReportFilterOpenShift
-     */
-    pod?: Array<string>;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof ReportFilterOpenShift
-     */
-    node?: Array<string>;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof ReportFilterOpenShift
-     */
-    tag?: Array<string>;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof ReportFilterOpenShift
-     */
-    infrastructures?: Array<string>;
 }
 
 /**
@@ -1742,6 +1907,86 @@ export interface ReportOpenShiftCpu {
 }
 
 /**
+ *
+ * @export
+ * @interface ReportOpenShiftFilter
+ */
+export interface ReportOpenShiftFilter {
+    /**
+     * Limits the data points returns and aggregates remaining data.
+     * @type {number}
+     * @memberof ReportOpenShiftFilter
+     */
+    limit?: number;
+    /**
+     * Offsets the data points returned when using limit.
+     * @type {number}
+     * @memberof ReportOpenShiftFilter
+     */
+    offset?: number;
+    /**
+     *
+     * @type {ReportResolution}
+     * @memberof ReportOpenShiftFilter
+     */
+    resolution?: ReportResolution;
+    /**
+     *
+     * @type {ReportTimeScopeValue}
+     * @memberof ReportOpenShiftFilter
+     */
+    timeScopeValue?: ReportTimeScopeValue;
+    /**
+     *
+     * @type {ReportTimeScopeUnits}
+     * @memberof ReportOpenShiftFilter
+     */
+    timeScopeUnits?: ReportTimeScopeUnits;
+    /**
+     *
+     * @type {Array<ReportResourceScope>}
+     * @memberof ReportOpenShiftFilter
+     */
+    resourceScope?: Array<ReportResourceScope>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftFilter
+     */
+    project?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftFilter
+     */
+    cluster?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftFilter
+     */
+    pod?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftFilter
+     */
+    node?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftFilter
+     */
+    tag?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftFilter
+     */
+    infrastructures?: Array<string>;
+}
+
+/**
  * The grouping to apply to the report. No grouping by default.
  * @export
  * @interface ReportOpenShiftGrouping
@@ -1944,22 +2189,22 @@ export interface ReportPaginationMeta {
     delta?: ReportDelta;
     /**
      *
-     * @type {ReportGrouping}
+     * @type {Object}
      * @memberof ReportPaginationMeta
      */
-    groupBy?: ReportGrouping;
+    groupBy?: Object;
     /**
      *
-     * @type {ReportOrdering}
+     * @type {Object}
      * @memberof ReportPaginationMeta
      */
-    orderBy?: ReportOrdering;
+    orderBy?: Object;
     /**
      *
-     * @type {ReportFilter}
+     * @type {Object}
      * @memberof ReportPaginationMeta
      */
-    filter?: ReportFilter;
+    filter?: Object;
     /**
      * The units for the output data.
      * @type {string}
@@ -2036,6 +2281,114 @@ export enum ReportTimeScopeValue {
     NUMBER_MINUS_2 = -2,
     NUMBER_MINUS_10 = -10,
     NUMBER_MINUS_30 = -30
+}
+
+/**
+ *
+ * @export
+ * @interface SourcesAuthentication
+ */
+export interface SourcesAuthentication {
+    /**
+     *
+     * @type {number}
+     * @memberof SourcesAuthentication
+     */
+    sourceId: number;
+    /**
+     *
+     * @type {SourcesAuthenticationIn}
+     * @memberof SourcesAuthentication
+     */
+    credentials: SourcesAuthenticationIn;
+}
+
+/**
+ *
+ * @export
+ * @interface SourcesAuthenticationIn
+ */
+export interface SourcesAuthenticationIn {
+    /**
+     *
+     * @type {any}
+     * @memberof SourcesAuthenticationIn
+     */
+    credentials?: any;
+}
+
+/**
+ *
+ * @export
+ * @interface SourcesAuthenticationOut
+ */
+export interface SourcesAuthenticationOut {
+    /**
+     *
+     * @type {any}
+     * @memberof SourcesAuthenticationOut
+     */
+    credentials?: any;
+    /**
+     *
+     * @type {number}
+     * @memberof SourcesAuthenticationOut
+     */
+    uuid?: number;
+}
+
+/**
+ *
+ * @export
+ * @interface SourcesBillingSource
+ */
+export interface SourcesBillingSource {
+    /**
+     *
+     * @type {number}
+     * @memberof SourcesBillingSource
+     */
+    sourceId: number;
+    /**
+     *
+     * @type {SourcesBillingSourceIn}
+     * @memberof SourcesBillingSource
+     */
+    billingSource: SourcesBillingSourceIn;
+}
+
+/**
+ *
+ * @export
+ * @interface SourcesBillingSourceIn
+ */
+export interface SourcesBillingSourceIn {
+    /**
+     *
+     * @type {any}
+     * @memberof SourcesBillingSourceIn
+     */
+    billingSource?: any;
+}
+
+/**
+ *
+ * @export
+ * @interface SourcesBillingSourceOut
+ */
+export interface SourcesBillingSourceOut {
+    /**
+     *
+     * @type {any}
+     * @memberof SourcesBillingSourceOut
+     */
+    billingSource?: any;
+    /**
+     *
+     * @type {number}
+     * @memberof SourcesBillingSourceOut
+     */
+    uuid?: number;
 }
 
 /**
@@ -2645,6 +2998,384 @@ export class AWSReportApi extends BaseAPI {
      */
     public getAWSStorageReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
         return AWSReportApiFp(this.configuration).getAWSStorageReports(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
+ * AzureReportApi - axios parameter creator
+ * @export
+ */
+export const AzureReportApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Query to obtain cost reports
+         * @param {string} [delta] Toggle to include delta values in report.
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options: any = {}): RequestArgs {
+            const localVarPath = `/reports/azure/costs/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (delta !== undefined) {
+                localVarQueryParameter['delta'] = delta;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (groupBy !== undefined) {
+                localVarQueryParameter['group_by'] = groupBy;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @summary Query to obtain Azure instance type data
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {string} [units] The units used to report data.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAzureInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options: any = {}): RequestArgs {
+            const localVarPath = `/reports/azure/instance-types/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (groupBy !== undefined) {
+                localVarQueryParameter['group_by'] = groupBy;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (units !== undefined) {
+                localVarQueryParameter['units'] = units;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @summary Query to obtain AWS storage data
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {string} [units] The units used to report data.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAzureStorageReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options: any = {}): RequestArgs {
+            const localVarPath = `/reports/azure/storage/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (groupBy !== undefined) {
+                localVarQueryParameter['group_by'] = groupBy;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (units !== undefined) {
+                localVarQueryParameter['units'] = units;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AzureReportApi - functional programming interface
+ * @export
+ */
+export const AzureReportApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Query to obtain cost reports
+         * @param {string} [delta] Toggle to include delta values in report.
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportCost> {
+            const localVarAxiosArgs = AzureReportApiAxiosParamCreator(configuration).getAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
+         * @summary Query to obtain Azure instance type data
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {string} [units] The units used to report data.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAzureInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportInstanceInventory> {
+            const localVarAxiosArgs = AzureReportApiAxiosParamCreator(configuration).getAzureInstanceReports(filter, groupBy, orderBy, units, offset, limit, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
+         * @summary Query to obtain AWS storage data
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {string} [units] The units used to report data.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAzureStorageReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportStorageInventory> {
+            const localVarAxiosArgs = AzureReportApiAxiosParamCreator(configuration).getAzureStorageReports(filter, groupBy, orderBy, units, offset, limit, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * AzureReportApi - factory interface
+ * @export
+ */
+export const AzureReportApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         *
+         * @summary Query to obtain cost reports
+         * @param {string} [delta] Toggle to include delta values in report.
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
+            return AzureReportApiFp(configuration).getAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
+        },
+        /**
+         *
+         * @summary Query to obtain Azure instance type data
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {string} [units] The units used to report data.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAzureInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
+            return AzureReportApiFp(configuration).getAzureInstanceReports(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
+        },
+        /**
+         *
+         * @summary Query to obtain AWS storage data
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {string} [units] The units used to report data.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAzureStorageReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
+            return AzureReportApiFp(configuration).getAzureStorageReports(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * AzureReportApi - object-oriented interface
+ * @export
+ * @class AzureReportApi
+ * @extends {BaseAPI}
+ */
+export class AzureReportApi extends BaseAPI {
+    /**
+     *
+     * @summary Query to obtain cost reports
+     * @param {string} [delta] Toggle to include delta values in report.
+     * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+     * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+     * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AzureReportApi
+     */
+    public getAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
+        return AzureReportApiFp(this.configuration).getAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary Query to obtain Azure instance type data
+     * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+     * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+     * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+     * @param {string} [units] The units used to report data.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AzureReportApi
+     */
+    public getAzureInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
+        return AzureReportApiFp(this.configuration).getAzureInstanceReports(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary Query to obtain AWS storage data
+     * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+     * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+     * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+     * @param {string} [units] The units used to report data.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AzureReportApi
+     */
+    public getAzureStorageReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
+        return AzureReportApiFp(this.configuration).getAzureStorageReports(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
     }
 
 }
@@ -3384,7 +4115,7 @@ export const MetricsApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         getMetrics(options: any = {}): RequestArgs {
-            const localVarPath = `/metrics`;
+            const localVarPath = `/metrics/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -4640,6 +5371,234 @@ export class ProviderApi extends BaseAPI {
 }
 
 /**
+ * SourcesAuthenticationApi - axios parameter creator
+ * @export
+ */
+export const SourcesAuthenticationApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Create an authentication entry for a Platform-Source.
+         * @param {SourcesAuthentication} sourcesAuthentication
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAuthentication(sourcesAuthentication: SourcesAuthentication, options: any = {}): RequestArgs {
+            // verify required parameter 'sourcesAuthentication' is not null or undefined
+            if (sourcesAuthentication === null || sourcesAuthentication === undefined) {
+                throw new RequiredError('sourcesAuthentication','Required parameter sourcesAuthentication was null or undefined when calling createAuthentication.');
+            }
+            const localVarPath = `/sources/authentication/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"SourcesAuthentication" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(sourcesAuthentication || {}) : (sourcesAuthentication || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * SourcesAuthenticationApi - functional programming interface
+ * @export
+ */
+export const SourcesAuthenticationApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Create an authentication entry for a Platform-Source.
+         * @param {SourcesAuthentication} sourcesAuthentication
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAuthentication(sourcesAuthentication: SourcesAuthentication, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesAuthenticationOut> {
+            const localVarAxiosArgs = SourcesAuthenticationApiAxiosParamCreator(configuration).createAuthentication(sourcesAuthentication, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * SourcesAuthenticationApi - factory interface
+ * @export
+ */
+export const SourcesAuthenticationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         *
+         * @summary Create an authentication entry for a Platform-Source.
+         * @param {SourcesAuthentication} sourcesAuthentication
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAuthentication(sourcesAuthentication: SourcesAuthentication, options?: any) {
+            return SourcesAuthenticationApiFp(configuration).createAuthentication(sourcesAuthentication, options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * SourcesAuthenticationApi - object-oriented interface
+ * @export
+ * @class SourcesAuthenticationApi
+ * @extends {BaseAPI}
+ */
+export class SourcesAuthenticationApi extends BaseAPI {
+    /**
+     *
+     * @summary Create an authentication entry for a Platform-Source.
+     * @param {SourcesAuthentication} sourcesAuthentication
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SourcesAuthenticationApi
+     */
+    public createAuthentication(sourcesAuthentication: SourcesAuthentication, options?: any) {
+        return SourcesAuthenticationApiFp(this.configuration).createAuthentication(sourcesAuthentication, options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
+ * SourcesBillingSourceApi - axios parameter creator
+ * @export
+ */
+export const SourcesBillingSourceApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Create a billing source for a Platform-Source.
+         * @param {SourcesBillingSource} sourcesBillingSource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createBillingSource(sourcesBillingSource: SourcesBillingSource, options: any = {}): RequestArgs {
+            // verify required parameter 'sourcesBillingSource' is not null or undefined
+            if (sourcesBillingSource === null || sourcesBillingSource === undefined) {
+                throw new RequiredError('sourcesBillingSource','Required parameter sourcesBillingSource was null or undefined when calling createBillingSource.');
+            }
+            const localVarPath = `/sources/billing_source/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"SourcesBillingSource" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(sourcesBillingSource || {}) : (sourcesBillingSource || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * SourcesBillingSourceApi - functional programming interface
+ * @export
+ */
+export const SourcesBillingSourceApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Create a billing source for a Platform-Source.
+         * @param {SourcesBillingSource} sourcesBillingSource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createBillingSource(sourcesBillingSource: SourcesBillingSource, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesBillingSourceOut> {
+            const localVarAxiosArgs = SourcesBillingSourceApiAxiosParamCreator(configuration).createBillingSource(sourcesBillingSource, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * SourcesBillingSourceApi - factory interface
+ * @export
+ */
+export const SourcesBillingSourceApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         *
+         * @summary Create a billing source for a Platform-Source.
+         * @param {SourcesBillingSource} sourcesBillingSource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createBillingSource(sourcesBillingSource: SourcesBillingSource, options?: any) {
+            return SourcesBillingSourceApiFp(configuration).createBillingSource(sourcesBillingSource, options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * SourcesBillingSourceApi - object-oriented interface
+ * @export
+ * @class SourcesBillingSourceApi
+ * @extends {BaseAPI}
+ */
+export class SourcesBillingSourceApi extends BaseAPI {
+    /**
+     *
+     * @summary Create a billing source for a Platform-Source.
+     * @param {SourcesBillingSource} sourcesBillingSource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SourcesBillingSourceApi
+     */
+    public createBillingSource(sourcesBillingSource: SourcesBillingSource, options?: any) {
+        return SourcesBillingSourceApiFp(this.configuration).createBillingSource(sourcesBillingSource, options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
  * StatusApi - axios parameter creator
  * @export
  */
@@ -4753,6 +5712,59 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
          */
         getAWSTagData(filter?: any, keyOnly?: boolean, offset?: number, limit?: number, options: any = {}): RequestArgs {
             const localVarPath = `/tags/aws/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (keyOnly !== undefined) {
+                localVarQueryParameter['key_only'] = keyOnly;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @summary Query to obtain AWS tags
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {boolean} [keyOnly] Flag to indicate whether or not only the tag key values will be returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAzureTagData(filter?: any, keyOnly?: boolean, offset?: number, limit?: number, options: any = {}): RequestArgs {
+            const localVarPath = `/tags/azure/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -4928,6 +5940,23 @@ export const TagsApiFp = function(configuration?: Configuration) {
         },
         /**
          *
+         * @summary Query to obtain AWS tags
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {boolean} [keyOnly] Flag to indicate whether or not only the tag key values will be returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAzureTagData(filter?: any, keyOnly?: boolean, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tags> {
+            const localVarAxiosArgs = TagsApiAxiosParamCreator(configuration).getAzureTagData(filter, keyOnly, offset, limit, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
          * @summary Query to obtain OpenShift-on-AWS tags
          * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
          * @param {boolean} [keyOnly] Flag to indicate whether or not only the tag key values will be returned.
@@ -4984,6 +6013,19 @@ export const TagsApiFactory = function (configuration?: Configuration, basePath?
         },
         /**
          *
+         * @summary Query to obtain AWS tags
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {boolean} [keyOnly] Flag to indicate whether or not only the tag key values will be returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAzureTagData(filter?: any, keyOnly?: boolean, offset?: number, limit?: number, options?: any) {
+            return TagsApiFp(configuration).getAzureTagData(filter, keyOnly, offset, limit, options)(axios, basePath);
+        },
+        /**
+         *
          * @summary Query to obtain OpenShift-on-AWS tags
          * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
          * @param {boolean} [keyOnly] Flag to indicate whether or not only the tag key values will be returned.
@@ -5031,6 +6073,21 @@ export class TagsApi extends BaseAPI {
      */
     public getAWSTagData(filter?: any, keyOnly?: boolean, offset?: number, limit?: number, options?: any) {
         return TagsApiFp(this.configuration).getAWSTagData(filter, keyOnly, offset, limit, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary Query to obtain AWS tags
+     * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+     * @param {boolean} [keyOnly] Flag to indicate whether or not only the tag key values will be returned.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TagsApi
+     */
+    public getAzureTagData(filter?: any, keyOnly?: boolean, offset?: number, limit?: number, options?: any) {
+        return TagsApiFp(this.configuration).getAzureTagData(filter, keyOnly, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
