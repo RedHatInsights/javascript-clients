@@ -23,7 +23,7 @@
 
 **Complete**:  = "complete"
 
-*Defined in [api.ts:377](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L377)*
+*Defined in [api.ts:383](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L383)*
 
 ___
 <a id="pending"></a>
@@ -32,7 +32,7 @@ ___
 
 **Pending**:  = "pending"
 
-*Defined in [api.ts:376](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L376)*
+*Defined in [api.ts:382](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L382)*
 
 ___
 

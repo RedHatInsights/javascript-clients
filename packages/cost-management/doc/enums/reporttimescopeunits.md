@@ -25,7 +25,7 @@ The units to apply to the report. Default time\_scope\_units is day.
 
 **Day**:  = "day"
 
-*Defined in [api.ts:2025](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2025)*
+*Defined in [api.ts:2270](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2270)*
 
 ___
 <a id="month"></a>
@@ -34,7 +34,7 @@ ___
 
 **Month**:  = "month"
 
-*Defined in [api.ts:2026](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2026)*
+*Defined in [api.ts:2271](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2271)*
 
 ___
 

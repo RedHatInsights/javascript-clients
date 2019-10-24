@@ -105,7 +105,7 @@ ___
 
 ▸ **createProvider**(providerIn: *[ProviderIn](../interfaces/providerin.md)*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
-*Defined in [api.ts:4597](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4597)*
+*Defined in [api.ts:5328](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5328)*
 
 *__summary__*: Create a provider
 
@@ -129,7 +129,7 @@ ___
 
 ▸ **deleteProvider**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:4609](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4609)*
+*Defined in [api.ts:5340](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5340)*
 
 *__summary__*: Delete a provider
 
@@ -153,7 +153,7 @@ ___
 
 ▸ **getProvider**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
-*Defined in [api.ts:4621](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4621)*
+*Defined in [api.ts:5352](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5352)*
 
 *__summary__*: Get a provider
 
@@ -177,7 +177,7 @@ ___
 
 ▸ **listProviders**(type?: *`string`*, name?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ProviderPagination](../interfaces/providerpagination.md)>
 
-*Defined in [api.ts:4636](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4636)*
+*Defined in [api.ts:5367](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5367)*
 
 *__summary__*: List the providers
 

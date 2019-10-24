@@ -104,7 +104,7 @@ ___
 
 ▸ **getAWSCostReports**(delta?: *`string`*, filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportCost](../interfaces/reportcost.md)>
 
-*Defined in [api.ts:2612](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2612)*
+*Defined in [api.ts:2965](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2965)*
 
 *__summary__*: Query to obtain cost reports
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **getAWSInstanceReports**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportInstanceInventory](../interfaces/reportinstanceinventory.md)>
 
-*Defined in [api.ts:2629](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2629)*
+*Defined in [api.ts:2982](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2982)*
 
 *__summary__*: Query to obtain AWS instance type data
 
@@ -162,7 +162,7 @@ ___
 
 ▸ **getAWSStorageReports**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportStorageInventory](../interfaces/reportstorageinventory.md)>
 
-*Defined in [api.ts:2646](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2646)*
+*Defined in [api.ts:2999](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2999)*
 
 *__summary__*: Query to obtain AWS storage data
 

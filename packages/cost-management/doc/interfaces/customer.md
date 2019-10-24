@@ -26,7 +26,7 @@
 
 **● accountId**: *`string`*
 
-*Defined in [api.ts:261](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L261)*
+*Defined in [api.ts:267](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L267)*
 
 *__type__*: {string}
 

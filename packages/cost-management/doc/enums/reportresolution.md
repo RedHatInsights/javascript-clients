@@ -25,7 +25,7 @@ The resolution to apply to the report. Default resolution is daily.
 
 **Daily**:  = "daily"
 
-*Defined in [api.ts:1977](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1977)*
+*Defined in [api.ts:2222](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2222)*
 
 ___
 <a id="monthly"></a>
@@ -34,7 +34,7 @@ ___
 
 **Monthly**:  = "monthly"
 
-*Defined in [api.ts:1978](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1978)*
+*Defined in [api.ts:2223](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2223)*
 
 ___
 

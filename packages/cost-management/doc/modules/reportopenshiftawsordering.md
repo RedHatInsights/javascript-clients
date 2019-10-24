@@ -42,7 +42,7 @@
 
 **● accountAlias**: *[AccountAliasEnum](../enums/reportopenshiftawsordering.accountaliasenum.md)*
 
-*Defined in [api.ts:1562](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1562)*
+*Defined in [api.ts:1727](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1727)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● cluster**: *[ClusterEnum](../enums/reportopenshiftawsordering.clusterenum.md)*
 
-*Defined in [api.ts:1580](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1580)*
+*Defined in [api.ts:1745](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1745)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● cost**: *[CostEnum](../enums/reportopenshiftawsordering.costenum.md)*
 
-*Defined in [api.ts:1544](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1544)*
+*Defined in [api.ts:1709](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1709)*
 
 *__type__*: {string}
 
@@ -81,7 +81,7 @@ ___
 
 **● delta**: *[DeltaEnum](../enums/reportopenshiftawsordering.deltaenum.md)*
 
-*Defined in [api.ts:1556](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1556)*
+*Defined in [api.ts:1721](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1721)*
 
 *__type__*: {string}
 
@@ -94,7 +94,7 @@ ___
 
 **● node**: *[NodeEnum](../enums/reportopenshiftawsordering.nodeenum.md)*
 
-*Defined in [api.ts:1592](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1592)*
+*Defined in [api.ts:1757](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1757)*
 
 *__type__*: {string}
 
@@ -107,7 +107,7 @@ ___
 
 **● project**: *[ProjectEnum](../enums/reportopenshiftawsordering.projectenum.md)*
 
-*Defined in [api.ts:1586](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1586)*
+*Defined in [api.ts:1751](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1751)*
 
 *__type__*: {string}
 
@@ -120,7 +120,7 @@ ___
 
 **● region**: *[RegionEnum](../enums/reportopenshiftawsordering.regionenum.md)*
 
-*Defined in [api.ts:1568](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1568)*
+*Defined in [api.ts:1733](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1733)*
 
 *__type__*: {string}
 
@@ -133,7 +133,7 @@ ___
 
 **● service**: *[ServiceEnum](../enums/reportopenshiftawsordering.serviceenum.md)*
 
-*Defined in [api.ts:1574](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1574)*
+*Defined in [api.ts:1739](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1739)*
 
 *__type__*: {string}
 
@@ -146,7 +146,7 @@ ___
 
 **● usage**: *[UsageEnum](../enums/reportopenshiftawsordering.usageenum.md)*
 
-*Defined in [api.ts:1550](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1550)*
+*Defined in [api.ts:1715](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1715)*
 
 *__type__*: {string}
 

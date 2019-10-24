@@ -24,11 +24,11 @@
 
 <a id="bucket"></a>
 
-###  bucket
+### `<Optional>` bucket
 
 **● bucket**: *`string`*
 
-*Defined in [api.ts:648](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L648)*
+*Defined in [api.ts:688](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L688)*
 
 *__type__*: {string}
 
@@ -37,11 +37,11 @@
 ___
 <a id="datasource"></a>
 
-###  dataSource
+### `<Optional>` dataSource
 
 **● dataSource**: *`any`*
 
-*Defined in [api.ts:654](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L654)*
+*Defined in [api.ts:694](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L694)*
 
 *__type__*: {any}
 
@@ -54,7 +54,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:660](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L660)*
+*Defined in [api.ts:700](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L700)*
 
 *__type__*: {string}
 

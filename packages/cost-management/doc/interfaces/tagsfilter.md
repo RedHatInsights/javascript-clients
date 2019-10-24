@@ -28,7 +28,7 @@
 
 **● resolution**: *[ReportResolution](../enums/reportresolution.md)*
 
-*Defined in [api.ts:2122](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2122)*
+*Defined in [api.ts:2475](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2475)*
 
 *__type__*: {ReportResolution}
 
@@ -41,7 +41,7 @@ ___
 
 **● timeScopeUnits**: *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
 
-*Defined in [api.ts:2134](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2134)*
+*Defined in [api.ts:2487](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2487)*
 
 *__type__*: {ReportTimeScopeUnits}
 
@@ -54,7 +54,7 @@ ___
 
 **● timeScopeValue**: *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
 
-*Defined in [api.ts:2128](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2128)*
+*Defined in [api.ts:2481](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2481)*
 
 *__type__*: {ReportTimeScopeValue}
 

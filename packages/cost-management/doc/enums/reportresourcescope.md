@@ -27,7 +27,7 @@ The resources scope to apply to the report. Default resource scope is null, mean
 
 **EBS**:  = "EBS"
 
-*Defined in [api.ts:1988](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1988)*
+*Defined in [api.ts:2233](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2233)*
 
 ___
 <a id="ec2"></a>
@@ -36,7 +36,7 @@ ___
 
 **EC2**:  = "EC2"
 
-*Defined in [api.ts:1987](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1987)*
+*Defined in [api.ts:2232](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2232)*
 
 ___
 <a id="efs"></a>
@@ -45,7 +45,7 @@ ___
 
 **EFS**:  = "EFS"
 
-*Defined in [api.ts:1989](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1989)*
+*Defined in [api.ts:2234](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2234)*
 
 ___
 <a id="s3"></a>
@@ -54,7 +54,7 @@ ___
 
 **S3**:  = "S3"
 
-*Defined in [api.ts:1990](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1990)*
+*Defined in [api.ts:2235](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2235)*
 
 ___
 

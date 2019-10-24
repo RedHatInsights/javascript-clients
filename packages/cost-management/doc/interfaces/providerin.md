@@ -29,7 +29,7 @@
 
 **● authentication**: *[ProviderAuthenticationIn](providerauthenticationin.md)*
 
-*Defined in [api.ts:686](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L686)*
+*Defined in [api.ts:726](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L726)*
 
 *__type__*: {ProviderAuthenticationIn}
 
@@ -42,7 +42,7 @@ ___
 
 **● billingSource**: *[ProviderBillingSourceIn](providerbillingsourcein.md)*
 
-*Defined in [api.ts:692](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L692)*
+*Defined in [api.ts:732](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L732)*
 
 *__type__*: {ProviderBillingSourceIn}
 
@@ -55,7 +55,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:674](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L674)*
+*Defined in [api.ts:714](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L714)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● type**: *`string`*
 
-*Defined in [api.ts:680](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L680)*
+*Defined in [api.ts:720](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L720)*
 
 *__type__*: {string}
 

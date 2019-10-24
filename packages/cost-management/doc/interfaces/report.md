@@ -27,7 +27,7 @@
 
 **● links**: *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:826](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L826)*
+*Defined in [api.ts:866](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L866)*
 
 *__type__*: {PaginationLinks}
 
@@ -40,7 +40,7 @@ ___
 
 **● meta**: *[ReportPaginationMeta](reportpaginationmeta.md)*
 
-*Defined in [api.ts:820](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L820)*
+*Defined in [api.ts:860](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L860)*
 
 *__type__*: {ReportPaginationMeta}
 

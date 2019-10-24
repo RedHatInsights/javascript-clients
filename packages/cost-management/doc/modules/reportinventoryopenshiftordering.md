@@ -38,7 +38,7 @@
 
 **● cluster**: *[ClusterEnum](../enums/reportinventoryopenshiftordering.clusterenum.md)*
 
-*Defined in [api.ts:1227](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1227)*
+*Defined in [api.ts:1392](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1392)*
 
 *__type__*: {string}
 
@@ -51,7 +51,7 @@ ___
 
 **● cost**: *[CostEnum](../enums/reportinventoryopenshiftordering.costenum.md)*
 
-*Defined in [api.ts:1257](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1257)*
+*Defined in [api.ts:1422](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1422)*
 
 *__type__*: {string}
 
@@ -64,7 +64,7 @@ ___
 
 **● limit**: *[LimitEnum](../enums/reportinventoryopenshiftordering.limitenum.md)*
 
-*Defined in [api.ts:1263](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1263)*
+*Defined in [api.ts:1428](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1428)*
 
 *__type__*: {string}
 
@@ -77,7 +77,7 @@ ___
 
 **● node**: *[NodeEnum](../enums/reportinventoryopenshiftordering.nodeenum.md)*
 
-*Defined in [api.ts:1239](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1239)*
+*Defined in [api.ts:1404](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1404)*
 
 *__type__*: {string}
 
@@ -90,7 +90,7 @@ ___
 
 **● project**: *[ProjectEnum](../enums/reportinventoryopenshiftordering.projectenum.md)*
 
-*Defined in [api.ts:1233](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1233)*
+*Defined in [api.ts:1398](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1398)*
 
 *__type__*: {string}
 
@@ -103,7 +103,7 @@ ___
 
 **● request**: *[RequestEnum](../enums/reportinventoryopenshiftordering.requestenum.md)*
 
-*Defined in [api.ts:1251](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1251)*
+*Defined in [api.ts:1416](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1416)*
 
 *__type__*: {string}
 
@@ -116,7 +116,7 @@ ___
 
 **● usage**: *[UsageEnum](../enums/reportinventoryopenshiftordering.usageenum.md)*
 
-*Defined in [api.ts:1245](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1245)*
+*Defined in [api.ts:1410](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1410)*
 
 *__type__*: {string}
 

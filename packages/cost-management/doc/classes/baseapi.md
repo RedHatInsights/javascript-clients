@@ -12,6 +12,8 @@
 
 ↳  [AWSReportApi](awsreportapi.md)
 
+↳  [AzureReportApi](azurereportapi.md)
+
 ↳  [CostModelApi](costmodelapi.md)
 
 ↳  [DataExportRequestApi](dataexportrequestapi.md)
@@ -21,6 +23,10 @@
 ↳  [OpenShiftReportApi](openshiftreportapi.md)
 
 ↳  [ProviderApi](providerapi.md)
+
+↳  [SourcesAuthenticationApi](sourcesauthenticationapi.md)
+
+↳  [SourcesBillingSourceApi](sourcesbillingsourceapi.md)
 
 ↳  [StatusApi](statusapi.md)
 

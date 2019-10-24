@@ -37,7 +37,7 @@ The grouping to apply to the report. No grouping by default. When grouping by ac
 
 **● account**: *`Array`<`string`>*
 
-*Defined in [api.ts:1432](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1432)*
+*Defined in [api.ts:1597](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1597)*
 
 *__type__*: {Array}
 
@@ -50,7 +50,7 @@ ___
 
 **● az**: *`Array`<`string`>*
 
-*Defined in [api.ts:1450](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1450)*
+*Defined in [api.ts:1615](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1615)*
 
 *__type__*: {Array}
 
@@ -63,7 +63,7 @@ ___
 
 **● cluster**: *`Array`<`string`>*
 
-*Defined in [api.ts:1474](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1474)*
+*Defined in [api.ts:1639](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1639)*
 
 *__type__*: {Array}
 
@@ -76,7 +76,7 @@ ___
 
 **● instanceType**: *`Array`<`string`>*
 
-*Defined in [api.ts:1456](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1456)*
+*Defined in [api.ts:1621](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1621)*
 
 *__type__*: {Array}
 
@@ -89,7 +89,7 @@ ___
 
 **● node**: *`Array`<`string`>*
 
-*Defined in [api.ts:1486](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1486)*
+*Defined in [api.ts:1651](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1651)*
 
 *__type__*: {Array}
 
@@ -102,7 +102,7 @@ ___
 
 **● project**: *`Array`<`string`>*
 
-*Defined in [api.ts:1480](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1480)*
+*Defined in [api.ts:1645](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1645)*
 
 *__type__*: {Array}
 
@@ -115,7 +115,7 @@ ___
 
 **● region**: *`Array`<`string`>*
 
-*Defined in [api.ts:1444](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1444)*
+*Defined in [api.ts:1609](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1609)*
 
 *__type__*: {Array}
 
@@ -128,7 +128,7 @@ ___
 
 **● service**: *`Array`<`string`>*
 
-*Defined in [api.ts:1438](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1438)*
+*Defined in [api.ts:1603](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1603)*
 
 *__type__*: {Array}
 
@@ -141,7 +141,7 @@ ___
 
 **● storageType**: *`Array`<`string`>*
 
-*Defined in [api.ts:1462](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1462)*
+*Defined in [api.ts:1627](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1627)*
 
 *__type__*: {Array}
 
@@ -154,7 +154,7 @@ ___
 
 **● tag**: *`Array`<`string`>*
 
-*Defined in [api.ts:1468](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1468)*
+*Defined in [api.ts:1633](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1633)*
 
 *__type__*: {Array}
 

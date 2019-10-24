@@ -102,7 +102,7 @@ ___
 
 ▸ **getStatus**(options?: *`any`*): `AxiosPromise`<[Status](../interfaces/status.md)>
 
-*Defined in [api.ts:4732](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L4732)*
+*Defined in [api.ts:5691](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5691)*
 
 *__summary__*: Obtain server status
 

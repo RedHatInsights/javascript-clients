@@ -32,7 +32,7 @@
 
 **● bucketName**: *`string`*
 
-*Defined in [api.ts:339](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L339)*
+*Defined in [api.ts:345](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L345)*
 
 *__type__*: {string}
 
@@ -45,7 +45,7 @@ ___
 
 **● createdTimestamp**: *`Date`*
 
-*Defined in [api.ts:351](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L351)*
+*Defined in [api.ts:357](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L357)*
 
 *__type__*: {Date}
 
@@ -58,7 +58,7 @@ ___
 
 **● endDate**: *`string`*
 
-*Defined in [api.ts:333](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L333)*
+*Defined in [api.ts:339](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L339)*
 
 *__type__*: {string}
 
@@ -71,7 +71,7 @@ ___
 
 **● startDate**: *`string`*
 
-*Defined in [api.ts:327](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L327)*
+*Defined in [api.ts:333](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L333)*
 
 *__type__*: {string}
 
@@ -84,7 +84,7 @@ ___
 
 **● status**: *[StatusEnum](../enums/dataexportrequestout.statusenum.md)*
 
-*Defined in [api.ts:363](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L363)*
+*Defined in [api.ts:369](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L369)*
 
 *__type__*: {string}
 
@@ -97,7 +97,7 @@ ___
 
 **● updatedTimestamp**: *`Date`*
 
-*Defined in [api.ts:357](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L357)*
+*Defined in [api.ts:363](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L363)*
 
 *__type__*: {Date}
 
@@ -110,7 +110,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:345](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L345)*
+*Defined in [api.ts:351](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L351)*
 
 *__type__*: {string}
 

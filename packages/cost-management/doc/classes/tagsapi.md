@@ -31,6 +31,7 @@ TagsApi - object-oriented interface
 ### Methods
 
 * [getAWSTagData](tagsapi.md#getawstagdata)
+* [getAzureTagData](tagsapi.md#getazuretagdata)
 * [getOpenShiftAWSTagData](tagsapi.md#getopenshiftawstagdata)
 * [getOpenShiftTagData](tagsapi.md#getopenshifttagdata)
 
@@ -104,7 +105,34 @@ ___
 
 ▸ **getAWSTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:5032](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5032)*
+*Defined in [api.ts:6074](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6074)*
+
+*__summary__*: Query to obtain AWS tags
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: TagsApi
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` filter | `any` |
+| `Optional` keyOnly | `boolean` |
+| `Optional` offset | `number` |
+| `Optional` limit | `number` |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[Tags](../interfaces/tags.md)>
+
+___
+<a id="getazuretagdata"></a>
+
+###  getAzureTagData
+
+▸ **getAzureTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
+
+*Defined in [api.ts:6089](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6089)*
 
 *__summary__*: Query to obtain AWS tags
 
@@ -131,7 +159,7 @@ ___
 
 ▸ **getOpenShiftAWSTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:5047](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5047)*
+*Defined in [api.ts:6104](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6104)*
 
 *__summary__*: Query to obtain OpenShift-on-AWS tags
 
@@ -158,7 +186,7 @@ ___
 
 ▸ **getOpenShiftTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:5062](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L5062)*
+*Defined in [api.ts:6119](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6119)*
 
 *__summary__*: Query to obtain OpenShift tags
 

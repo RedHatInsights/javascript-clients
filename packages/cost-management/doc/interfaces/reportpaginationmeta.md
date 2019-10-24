@@ -31,7 +31,7 @@
 
 **● count**: *`number`*
 
-*Defined in [api.ts:1938](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1938)*
+*Defined in [api.ts:2183](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2183)*
 
 *__type__*: {number}
 
@@ -44,7 +44,7 @@ ___
 
 **● delta**: *[ReportDelta](reportdelta.md)*
 
-*Defined in [api.ts:1944](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1944)*
+*Defined in [api.ts:2189](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2189)*
 
 *__type__*: {ReportDelta}
 
@@ -55,11 +55,11 @@ ___
 
 ### `<Optional>` filter
 
-**● filter**: *[ReportFilter](reportfilter.md)*
+**● filter**: *`Object`*
 
-*Defined in [api.ts:1962](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1962)*
+*Defined in [api.ts:2207](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2207)*
 
-*__type__*: {ReportFilter}
+*__type__*: {Object}
 
 *__memberof__*: ReportPaginationMeta
 
@@ -68,11 +68,11 @@ ___
 
 ### `<Optional>` groupBy
 
-**● groupBy**: *[ReportGrouping](reportgrouping.md)*
+**● groupBy**: *`Object`*
 
-*Defined in [api.ts:1950](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1950)*
+*Defined in [api.ts:2195](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2195)*
 
-*__type__*: {ReportGrouping}
+*__type__*: {Object}
 
 *__memberof__*: ReportPaginationMeta
 
@@ -81,11 +81,11 @@ ___
 
 ### `<Optional>` orderBy
 
-**● orderBy**: *[ReportOrdering](../modules/reportordering.md)*
+**● orderBy**: *`Object`*
 
-*Defined in [api.ts:1956](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1956)*
+*Defined in [api.ts:2201](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2201)*
 
-*__type__*: {ReportOrdering}
+*__type__*: {Object}
 
 *__memberof__*: ReportPaginationMeta
 
@@ -96,7 +96,7 @@ ___
 
 **● units**: *`string`*
 
-*Defined in [api.ts:1968](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1968)*
+*Defined in [api.ts:2213](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2213)*
 
 The units for the output data.
 

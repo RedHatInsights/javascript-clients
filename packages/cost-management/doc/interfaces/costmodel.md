@@ -15,6 +15,7 @@
 ### Properties
 
 * [description](costmodel.md#description)
+* [markup](costmodel.md#markup)
 * [name](costmodel.md#name)
 * [providerUuids](costmodel.md#provideruuids)
 * [rates](costmodel.md#rates)
@@ -33,6 +34,19 @@
 *Defined in [api.ts:89](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L89)*
 
 *__type__*: {string}
+
+*__memberof__*: CostModel
+
+___
+<a id="markup"></a>
+
+### `<Optional>` markup
+
+**● markup**: *[Markup](../modules/markup.md)*
+
+*Defined in [api.ts:113](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L113)*
+
+*__type__*: {Markup}
 
 *__memberof__*: CostModel
 
