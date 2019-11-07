@@ -30,6 +30,8 @@ SystemApi - object-oriented interface
 
 ### Methods
 
+* [systemList](systemapi.md#systemlist)
+* [systemRead](systemapi.md#systemread)
 * [systemReports](systemapi.md#systemreports)
 
 ---
@@ -96,13 +98,64 @@ ___
 
 ## Methods
 
+<a id="systemlist"></a>
+
+###  systemList
+
+▸ **systemList**(limit?: *`number`*, offset?: *`number`*, sort?: *"hits" \| "last_seen" \| "display_name" \| "-hits" \| "-last_seen" \| "-display_name"*, displayName?: *`string`*, options?: *`any`*): `AxiosPromise`<[InlineResponse2004](../interfaces/inlineresponse2004.md)>
+
+*Defined in [api.ts:3282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3282)*
+
+Returns systems with their hit count and last upload time.
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: SystemApi
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` limit | `number` |
+| `Optional` offset | `number` |
+| `Optional` sort | "hits" \| "last_seen" \| "display_name" \| "-hits" \| "-last_seen" \| "-display_name" |
+| `Optional` displayName | `string` |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[InlineResponse2004](../interfaces/inlineresponse2004.md)>
+
+___
+<a id="systemread"></a>
+
+###  systemRead
+
+▸ **systemRead**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[System](../interfaces/system.md)>
+
+*Defined in [api.ts:3293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3293)*
+
+List systems, or retrieve a system by UUID.
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: SystemApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| uuid | `string` |  The system&#39;s Host ID in the Inventory |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[System](../interfaces/system.md)>
+
+___
 <a id="systemreports"></a>
 
 ###  systemReports
 
 ▸ **systemReports**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2343)*
+*Defined in [api.ts:3304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3304)*
 
 Returns the list of latest reports for an Inventory Host ID that: \* are in the user's account \* have an active, not-deleted rule \* where the rule has not been acked by this account If the host ID is not found, return an empty list.
 

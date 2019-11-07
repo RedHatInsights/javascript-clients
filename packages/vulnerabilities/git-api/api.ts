@@ -422,6 +422,134 @@ export interface ErrorsErrors {
 /**
  *
  * @export
+ * @interface ExecutiveReport
+ */
+export interface ExecutiveReport {
+    /**
+     * Total number of systems managed by vulnerability application.
+     * @type {number}
+     * @memberof ExecutiveReport
+     */
+    systemCount: number;
+    /**
+     * Number of unique CVEs discovered on the managed systems.
+     * @type {number}
+     * @memberof ExecutiveReport
+     */
+    cvesTotal: number;
+    /**
+     *
+     * @type {ExecutiveReportCvesBySeverity}
+     * @memberof ExecutiveReport
+     */
+    cvesBySeverity: ExecutiveReportCvesBySeverity;
+    /**
+     *
+     * @type {ExecutiveReportRecentCves}
+     * @memberof ExecutiveReport
+     */
+    recentCves: ExecutiveReportRecentCves;
+    /**
+     *
+     * @type {Array<ExecutiveReportTopCves>}
+     * @memberof ExecutiveReport
+     */
+    topCves?: Array<ExecutiveReportTopCves>;
+}
+
+/**
+ * Number of CVEs discovered on the managed systems, divided into buckets based on their CVSSv3 score (CVSSv2 is used when CVSSv3 is not available).
+ * @export
+ * @interface ExecutiveReportCvesBySeverity
+ */
+export interface ExecutiveReportCvesBySeverity {
+    /**
+     * Number of CVEs with CVSS score lower than 4.
+     * @type {number}
+     * @memberof ExecutiveReportCvesBySeverity
+     */
+    _0to39: number;
+    /**
+     * Number of CVEs with CVSS score higher or equal to 4 and lower then 8.
+     * @type {number}
+     * @memberof ExecutiveReportCvesBySeverity
+     */
+    _4to79: number;
+    /**
+     * Number of CVEs with CVSS score higher or equal to 8.
+     * @type {number}
+     * @memberof ExecutiveReportCvesBySeverity
+     */
+    _8to10: number;
+}
+
+/**
+ * Number of recently published CVEs identified on managed systems
+ * @export
+ * @interface ExecutiveReportRecentCves
+ */
+export interface ExecutiveReportRecentCves {
+    /**
+     * Number of CVEs identified on managed systems published in last 7 days.
+     * @type {number}
+     * @memberof ExecutiveReportRecentCves
+     */
+    last7days: number;
+    /**
+     * Number of CVEs identified on managed systems published in last 30 days.
+     * @type {number}
+     * @memberof ExecutiveReportRecentCves
+     */
+    last30days: number;
+    /**
+     * Number of CVEs identified on managed systems published in last 90 days.
+     * @type {number}
+     * @memberof ExecutiveReportRecentCves
+     */
+    last90days: number;
+}
+
+/**
+ *
+ * @export
+ * @interface ExecutiveReportTopCves
+ */
+export interface ExecutiveReportTopCves {
+    /**
+     * CVE synopsis
+     * @type {string}
+     * @memberof ExecutiveReportTopCves
+     */
+    synopsis: string;
+    /**
+     * String representation of cvss2 score of the CVE.
+     * @type {string}
+     * @memberof ExecutiveReportTopCves
+     */
+    cvss2Score: string | null;
+    /**
+     * String representation of cvss3 score of the CVE.
+     * @type {string}
+     * @memberof ExecutiveReportTopCves
+     */
+    cvss3Score: string | null;
+    /**
+     * Description of the CVE.
+     * @type {string}
+     * @memberof ExecutiveReportTopCves
+     */
+    description: string;
+    /**
+     * Systems affected by the CVE.
+     * @type {number}
+     * @memberof ExecutiveReportTopCves
+     */
+    systemsAffected: number;
+}
+
+/**
+ *
+ * @export
  * @interface InventoryIdOrList
  */
 export interface InventoryIdOrList {
@@ -1215,10 +1343,10 @@ export interface SystemListOut {
 export interface VersionOut {
     /**
      * Version of application.
-     * @type {Object}
+     * @type {string}
      * @memberof VersionOut
      */
-    applicationVersion: Object;
+    applicationVersion: string;
     /**
      * Version of database schema.
      * @type {Object}
@@ -1599,7 +1727,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Shows detailed infomation about all CVEs the system is exposed to.
+         * Shows detailed information about all CVEs the system is exposed to.
          * @summary CVE report for a system.
          * @param {string} inventoryId Inventory ID.
          * @param {string} [filter] Full text filter.
@@ -1703,6 +1831,47 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (businessRiskId !== undefined) {
                 localVarQueryParameter['business_risk_id'] = businessRiskId;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns top level overview of vulnerabilities affecting given account.
+         * @summary Top level overview of vulnerabilities.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getExecutiveReport(options: any = {}): RequestArgs {
+            const localVarPath = `/v1/report/executive`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("x-rh-identity")
+					: configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -2013,7 +2182,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * Sets status for given hosts and CVEs.
-         * @summary Set status for system vulnerabilites.
+         * @summary Set status for system vulnerabilities.
          * @param {StatusIn} statusIn Values to be set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2268,7 +2437,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Shows detailed infomation about all CVEs the system is exposed to.
+         * Shows detailed information about all CVEs the system is exposed to.
          * @summary CVE report for a system.
          * @param {string} inventoryId Inventory ID.
          * @param {string} [filter] Full text filter.
@@ -2290,6 +2459,19 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns top level overview of vulnerabilities affecting given account.
+         * @summary Top level overview of vulnerabilities.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getExecutiveReport(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExecutiveReport> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getExecutiveReport(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2386,7 +2568,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         },
         /**
          * Sets status for given hosts and CVEs.
-         * @summary Set status for system vulnerabilites.
+         * @summary Set status for system vulnerabilities.
          * @param {StatusIn} statusIn Values to be set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2508,7 +2690,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, showAll, options)(axios, basePath);
         },
         /**
-         * Shows detailed infomation about all CVEs the system is exposed to.
+         * Shows detailed information about all CVEs the system is exposed to.
          * @summary CVE report for a system.
          * @param {string} inventoryId Inventory ID.
          * @param {string} [filter] Full text filter.
@@ -2530,6 +2712,15 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, options?: any) {
             return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, options)(axios, basePath);
+        },
+        /**
+         * Returns top level overview of vulnerabilities affecting given account.
+         * @summary Top level overview of vulnerabilities.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getExecutiveReport(options?: any) {
+            return DefaultApiFp(configuration).getExecutiveReport(options)(axios, basePath);
         },
         /**
          * Returns available status and status_id pairs where status_id is internal ID of the status.
@@ -2598,7 +2789,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         },
         /**
          * Sets status for given hosts and CVEs.
-         * @summary Set status for system vulnerabilites.
+         * @summary Set status for system vulnerabilities.
          * @param {StatusIn} statusIn Values to be set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2719,7 +2910,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Shows detailed infomation about all CVEs the system is exposed to.
+     * Shows detailed information about all CVEs the system is exposed to.
      * @summary CVE report for a system.
      * @param {string} inventoryId Inventory ID.
      * @param {string} [filter] Full text filter.
@@ -2742,6 +2933,17 @@ export class DefaultApi extends BaseAPI {
      */
     public getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, options?: any) {
         return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns top level overview of vulnerabilities affecting given account.
+     * @summary Top level overview of vulnerabilities.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public getExecutiveReport(options?: any) {
+        return DefaultApiFp(this.configuration).getExecutiveReport(options)(this.axios, this.basePath);
     }
 
     /**
@@ -2823,7 +3025,7 @@ export class DefaultApi extends BaseAPI {
 
     /**
      * Sets status for given hosts and CVEs.
-     * @summary Set status for system vulnerabilites.
+     * @summary Set status for system vulnerabilities.
      * @param {StatusIn} statusIn Values to be set.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

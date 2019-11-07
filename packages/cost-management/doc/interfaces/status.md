@@ -32,7 +32,7 @@
 
 **● apiVersion**: *`number`*
 
-*Defined in [api.ts:2405](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2405)*
+*Defined in [api.ts:2405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2405)*
 
 *__type__*: {number}
 
@@ -45,7 +45,7 @@ ___
 
 **● commit**: *`string`*
 
-*Defined in [api.ts:2411](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2411)*
+*Defined in [api.ts:2411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2411)*
 
 *__type__*: {string}
 
@@ -58,7 +58,7 @@ ___
 
 **● modules**: *`any`*
 
-*Defined in [api.ts:2441](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2441)*
+*Defined in [api.ts:2441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2441)*
 
 *__type__*: {any}
 
@@ -71,7 +71,7 @@ ___
 
 **● platformInfo**: *`any`*
 
-*Defined in [api.ts:2429](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2429)*
+*Defined in [api.ts:2429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2429)*
 
 *__type__*: {any}
 
@@ -84,7 +84,7 @@ ___
 
 **● pythonVersion**: *`string`*
 
-*Defined in [api.ts:2435](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2435)*
+*Defined in [api.ts:2435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2435)*
 
 *__type__*: {string}
 
@@ -97,7 +97,7 @@ ___
 
 **● rbacCacheTtl**: *`number`*
 
-*Defined in [api.ts:2423](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2423)*
+*Defined in [api.ts:2423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2423)*
 
 *__type__*: {number}
 
@@ -110,7 +110,7 @@ ___
 
 **● serverAddress**: *`string`*
 
-*Defined in [api.ts:2417](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2417)*
+*Defined in [api.ts:2417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2417)*
 
 *__type__*: {string}
 

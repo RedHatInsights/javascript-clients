@@ -27,7 +27,7 @@
 
 **● data**: *`any`*
 
-*Defined in [api.ts:1415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1415)*
+*Defined in [api.ts:1489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1489)*
 
 Results from the GraphQL query
 
@@ -42,7 +42,7 @@ ___
 
 **● errors**: *`Array`<`any`>*
 
-*Defined in [api.ts:1421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1421)*
+*Defined in [api.ts:1495](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1495)*
 
 Errors resulting from the GraphQL query
 

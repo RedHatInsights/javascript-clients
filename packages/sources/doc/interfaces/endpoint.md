@@ -15,12 +15,15 @@
 ### Properties
 
 * [_default](endpoint.md#_default)
+* [availabilityStatus](endpoint.md#availabilitystatus)
+* [availabilityStatusError](endpoint.md#availabilitystatuserror)
 * [certificateAuthority](endpoint.md#certificateauthority)
 * [createdAt](endpoint.md#createdat)
 * [host](endpoint.md#host)
 * [id](endpoint.md#id)
 * [path](endpoint.md#path)
 * [port](endpoint.md#port)
+* [receptorNode](endpoint.md#receptornode)
 * [role](endpoint.md#role)
 * [scheme](endpoint.md#scheme)
 * [sourceId](endpoint.md#sourceid)
@@ -38,9 +41,35 @@
 
 **● _default**: *`boolean`*
 
-*Defined in [api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L427)*
+*Defined in [api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L469)*
 
 *__type__*: {boolean}
+
+*__memberof__*: Endpoint
+
+___
+<a id="availabilitystatus"></a>
+
+### `<Optional>` availabilityStatus
+
+**● availabilityStatus**: *`string`*
+
+*Defined in [api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L445)*
+
+*__type__*: {string}
+
+*__memberof__*: Endpoint
+
+___
+<a id="availabilitystatuserror"></a>
+
+### `<Optional>` availabilityStatusError
+
+**● availabilityStatusError**: *`string`*
+
+*Defined in [api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L451)*
+
+*__type__*: {string}
 
 *__memberof__*: Endpoint
 
@@ -51,7 +80,7 @@ ___
 
 **● certificateAuthority**: *`string`*
 
-*Defined in [api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L415)*
+*Defined in [api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L457)*
 
 Optional X.509 Certificate Authority
 
@@ -66,7 +95,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L421)*
+*Defined in [api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L463)*
 
 *__type__*: {Date}
 
@@ -79,7 +108,7 @@ ___
 
 **● host**: *`string`*
 
-*Defined in [api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L433)*
+*Defined in [api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L475)*
 
 URI host component
 
@@ -94,7 +123,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L439)*
+*Defined in [api.ts:481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L481)*
 
 ID of the resource
 
@@ -109,7 +138,7 @@ ___
 
 **● path**: *`string`*
 
-*Defined in [api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L445)*
+*Defined in [api.ts:487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L487)*
 
 URI path component
 
@@ -124,11 +153,26 @@ ___
 
 **● port**: *`number`*
 
-*Defined in [api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L451)*
+*Defined in [api.ts:493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L493)*
 
 URI port component
 
 *__type__*: {number}
+
+*__memberof__*: Endpoint
+
+___
+<a id="receptornode"></a>
+
+### `<Optional>` receptorNode
+
+**● receptorNode**: *`string`*
+
+*Defined in [api.ts:499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L499)*
+
+Identifier of a receptor node
+
+*__type__*: {string}
 
 *__memberof__*: Endpoint
 
@@ -139,7 +183,7 @@ ___
 
 **● role**: *`string`*
 
-*Defined in [api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L457)*
+*Defined in [api.ts:505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L505)*
 
 *__type__*: {string}
 
@@ -152,7 +196,7 @@ ___
 
 **● scheme**: *`string`*
 
-*Defined in [api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L463)*
+*Defined in [api.ts:511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L511)*
 
 URI scheme component
 
@@ -167,7 +211,7 @@ ___
 
 **● sourceId**: *`string`*
 
-*Defined in [api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L469)*
+*Defined in [api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L517)*
 
 ID of the resource
 
@@ -182,7 +226,7 @@ ___
 
 **● tenant**: *`string`*
 
-*Defined in [api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L475)*
+*Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L523)*
 
 *__type__*: {string}
 
@@ -195,7 +239,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L481)*
+*Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L529)*
 
 *__type__*: {Date}
 
@@ -208,7 +252,7 @@ ___
 
 **● verifySsl**: *`boolean`*
 
-*Defined in [api.ts:487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L487)*
+*Defined in [api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L535)*
 
 Should SSL be verified
 

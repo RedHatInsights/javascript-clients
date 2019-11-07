@@ -33,7 +33,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L655)*
+*Defined in [api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L729)*
 
 *__type__*: {Date}
 
@@ -46,7 +46,7 @@ ___
 
 **● iconUrl**: *`string`*
 
-*Defined in [api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L661)*
+*Defined in [api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L735)*
 
 *__type__*: {string}
 
@@ -59,7 +59,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L667)*
+*Defined in [api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L741)*
 
 ID of the resource
 
@@ -74,7 +74,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L673)*
+*Defined in [api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L747)*
 
 *__type__*: {string}
 
@@ -87,7 +87,7 @@ ___
 
 **● productName**: *`string`*
 
-*Defined in [api.ts:679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L679)*
+*Defined in [api.ts:753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L753)*
 
 *__type__*: {string}
 
@@ -100,7 +100,7 @@ ___
 
 **● schema**: *`string`*
 
-*Defined in [api.ts:685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L685)*
+*Defined in [api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L759)*
 
 *__type__*: {string}
 
@@ -113,7 +113,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L691)*
+*Defined in [api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L765)*
 
 *__type__*: {Date}
 
@@ -126,7 +126,7 @@ ___
 
 **● vendor**: *`string`*
 
-*Defined in [api.ts:697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L697)*
+*Defined in [api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L771)*
 
 *__type__*: {string}
 

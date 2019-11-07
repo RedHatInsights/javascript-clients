@@ -26,7 +26,7 @@
 
 **● azure**: *[AuthenticationExtraAzure](authenticationextraazure.md)*
 
-*Defined in [api.ts:303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L303)*
+*Defined in [api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L333)*
 
 *__type__*: {AuthenticationExtraAzure}
 

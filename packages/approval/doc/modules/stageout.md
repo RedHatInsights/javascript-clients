@@ -32,7 +32,7 @@
 
 **● decision**: *[DecisionEnum](../enums/stageout.decisionenum.md)*
 
-*Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L523)*
+*Defined in [api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L543)*
 
 Final decision, may be one of the value (undecided, approved, canceled or denied)
 
@@ -47,7 +47,7 @@ ___
 
 **● groupRef**: *`string`*
 
-*Defined in [api.ts:511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L511)*
+*Defined in [api.ts:531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L531)*
 
 Associated group reference id
 
@@ -62,7 +62,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L499)*
+*Defined in [api.ts:519](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L519)*
 
 *__type__*: {string}
 
@@ -75,7 +75,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L505)*
+*Defined in [api.ts:525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L525)*
 
 name of the group that processes the stage
 
@@ -90,7 +90,7 @@ ___
 
 **● notifiedAt**: *`string`*
 
-*Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L529)*
+*Defined in [api.ts:549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L549)*
 
 the time approvers in the stage are notified
 
@@ -105,7 +105,7 @@ ___
 
 **● state**: *[StateEnum](../enums/stageout.stateenum.md)*
 
-*Defined in [api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L517)*
+*Defined in [api.ts:537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L537)*
 
 The state of stage or request. It may be one of values (canceled, pending, skipped, notified or finished)
 

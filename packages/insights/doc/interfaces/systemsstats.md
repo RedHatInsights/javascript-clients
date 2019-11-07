@@ -27,7 +27,7 @@
 
 **● category**: *`object`*
 
-*Defined in [api.ts:755](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L755)*
+*Defined in [api.ts:885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L885)*
 
 *__type__*: {{ \[key: string\]: number; }}
 
@@ -44,7 +44,7 @@ ___
 
 **● totalRisk**: *`object`*
 
-*Defined in [api.ts:749](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L749)*
+*Defined in [api.ts:879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L879)*
 
 *__type__*: {{ \[key: string\]: number; }}
 

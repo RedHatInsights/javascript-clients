@@ -103,11 +103,11 @@ ___
 
 ▸ **listTemplates**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TemplateOutCollection](../interfaces/templateoutcollection.md)>
 
-*Defined in [api.ts:1967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1967)*
+*Defined in [api.ts:1943](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1943)*
 
 Return all templates
 
-*__summary__*: Return all templates
+*__summary__*: Return all templates, only available for admin
 
 *__throws__*: {RequiredError}
 
@@ -131,11 +131,11 @@ ___
 
 ▸ **showTemplate**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[TemplateOut](../interfaces/templateout.md)>
 
-*Defined in [api.ts:1979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1979)*
+*Defined in [api.ts:1955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1955)*
 
 Return a template by given id
 
-*__summary__*: Return a template by given id
+*__summary__*: Return a template by given id, only available for admin
 
 *__throws__*: {RequiredError}
 

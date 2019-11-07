@@ -83,6 +83,18 @@ export interface Application {
     applicationTypeId?: string;
     /**
      *
+     * @type {string}
+     * @memberof Application
+     */
+    availabilityStatus?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Application
+     */
+    availabilityStatusError?: string;
+    /**
+     *
      * @type {Date}
      * @memberof Application
      */
@@ -99,6 +111,12 @@ export interface Application {
      * @memberof Application
      */
     sourceId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Application
+     */
+    tenant?: string;
     /**
      *
      * @type {Date}
@@ -227,6 +245,18 @@ export interface Authentication {
      * @memberof Authentication
      */
     authtype?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Authentication
+     */
+    availabilityStatus?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Authentication
+     */
+    availabilityStatusError?: string;
     /**
      *
      * @type {AuthenticationExtra}
@@ -366,13 +396,13 @@ export interface CollectionLinks {
      * @type {string}
      * @memberof CollectionLinks
      */
-    prev?: string;
+    next?: string;
     /**
      *
      * @type {string}
      * @memberof CollectionLinks
      */
-    next?: string;
+    prev?: string;
 }
 
 /**
@@ -407,6 +437,18 @@ export interface CollectionMetadata {
  * @interface Endpoint
  */
 export interface Endpoint {
+    /**
+     *
+     * @type {string}
+     * @memberof Endpoint
+     */
+    availabilityStatus?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Endpoint
+     */
+    availabilityStatusError?: string;
     /**
      * Optional X.509 Certificate Authority
      * @type {string}
@@ -449,6 +491,12 @@ export interface Endpoint {
      * @memberof Endpoint
      */
     port?: number;
+    /**
+     * Identifier of a receptor node
+     * @type {string}
+     * @memberof Endpoint
+     */
+    receptorNode?: string;
     /**
      *
      * @type {string}
@@ -516,6 +564,66 @@ export interface EndpointsCollection {
 /**
  *
  * @export
+ * @interface ErrorNotFound
+ */
+export interface ErrorNotFound {
+    /**
+     *
+     * @type {Array<ErrorNotFoundErrors>}
+     * @memberof ErrorNotFound
+     */
+    errors?: Array<ErrorNotFoundErrors>;
+}
+
+/**
+ *
+ * @export
+ * @interface ErrorNotFoundErrors
+ */
+export interface ErrorNotFoundErrors {
+    /**
+     *
+     * @type {number}
+     * @memberof ErrorNotFoundErrors
+     */
+    status?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof ErrorNotFoundErrors
+     */
+    detail?: string;
+}
+
+/**
+ *
+ * @export
+ * @interface GraphQLRequest
+ */
+export interface GraphQLRequest {
+    /**
+     * The GraphQL query
+     * @type {string}
+     * @memberof GraphQLRequest
+     */
+    query: string;
+    /**
+     * If the Query contains several named operations, the operationName controls which one should be executed
+     * @type {string}
+     * @memberof GraphQLRequest
+     */
+    operationName?: string;
+    /**
+     * Optional Query variables
+     * @type {any}
+     * @memberof GraphQLRequest
+     */
+    variables?: any | null;
+}
+
+/**
+ *
+ * @export
  * @interface GraphQLResponse
  */
 export interface GraphQLResponse {
@@ -531,52 +639,6 @@ export interface GraphQLResponse {
      * @memberof GraphQLResponse
      */
     errors?: Array<any>;
-}
-
-/**
- *
- * @export
- * @interface InlineObject
- */
-export interface InlineObject {
-    /**
-     * The GraphQL query
-     * @type {string}
-     * @memberof InlineObject
-     */
-    query: string;
-    /**
-     * If the Query contains several named operations, the operationName controls which one should be executed
-     * @type {string}
-     * @memberof InlineObject
-     */
-    operationName?: string;
-    /**
-     * Optional Query variables
-     * @type {any}
-     * @memberof InlineObject
-     */
-    variables?: any;
-}
-
-/**
- *
- * @export
- * @interface OrderParameters
- */
-export interface OrderParameters {
-    /**
-     * JSON object with provisioning parameters
-     * @type {any}
-     * @memberof OrderParameters
-     */
-    serviceParameters?: any;
-    /**
-     * The provider specific parameters needed to provision this service. This might include namespaces, special keys
-     * @type {any}
-     * @memberof OrderParameters
-     */
-    providerControlParameters?: any;
 }
 
 /**
@@ -608,7 +670,19 @@ export interface Source {
      * @type {string}
      * @memberof Source
      */
+    imported?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Source
+     */
     name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Source
+     */
+    sourceRef?: string;
     /**
      * ID of the resource
      * @type {string}
@@ -747,32 +821,6 @@ export interface SourcesCollection {
      * @memberof SourcesCollection
      */
     data?: Array<Source>;
-}
-
-/**
- *
- * @export
- * @interface Tagging
- */
-export interface Tagging {
-    /**
-     * ID of the resource
-     * @type {string}
-     * @memberof Tagging
-     */
-    tagId?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Tagging
-     */
-    name?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Tagging
-     */
-    value?: string;
 }
 
 /**
@@ -1822,14 +1870,14 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Performs a GraphQL Query
          * @summary Perform a GraphQL Query
-         * @param {InlineObject} inlineObject
+         * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphQL(inlineObject: InlineObject, options: any = {}): RequestArgs {
-            // verify required parameter 'inlineObject' is not null or undefined
-            if (inlineObject === null || inlineObject === undefined) {
-                throw new RequiredError('inlineObject','Required parameter inlineObject was null or undefined when calling postGraphQL.');
+        postGraphQL(graphQLRequest: GraphQLRequest, options: any = {}): RequestArgs {
+            // verify required parameter 'graphQLRequest' is not null or undefined
+            if (graphQLRequest === null || graphQLRequest === undefined) {
+                throw new RequiredError('graphQLRequest','Required parameter graphQLRequest was null or undefined when calling postGraphQL.');
             }
             const localVarPath = `/graphql`;
             const localVarUrlObj = url.parse(localVarPath, true);
@@ -1853,8 +1901,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"InlineObject" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(inlineObject || {}) : (inlineObject || "");
+            const needsSerialization = (<any>"GraphQLRequest" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(graphQLRequest || {}) : (graphQLRequest || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -2089,6 +2137,54 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Updates a Application object
+         * @summary Update an existing Application
+         * @param {string} id ID of the resource
+         * @param {Application} application Application attributes to update
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateApplication(id: string, application: Application, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling updateApplication.');
+            }
+            // verify required parameter 'application' is not null or undefined
+            if (application === null || application === undefined) {
+                throw new RequiredError('application','Required parameter application was null or undefined when calling updateApplication.');
+            }
+            const localVarPath = `/applications/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"Application" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(application || {}) : (application || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -2380,7 +2476,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDocumentation(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+        getDocumentation(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2588,12 +2684,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         /**
          * Performs a GraphQL Query
          * @summary Perform a GraphQL Query
-         * @param {InlineObject} inlineObject
+         * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphQL(inlineObject: InlineObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphQLResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).postGraphQL(inlineObject, options);
+        postGraphQL(graphQLRequest: GraphQLRequest, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphQLResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).postGraphQL(graphQLRequest, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2678,6 +2774,21 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         showSourceType(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceType> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSourceType(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Updates a Application object
+         * @summary Update an existing Application
+         * @param {string} id ID of the resource
+         * @param {Application} application Application attributes to update
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateApplication(id: string, application: Application, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).updateApplication(id, application, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2989,12 +3100,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         /**
          * Performs a GraphQL Query
          * @summary Perform a GraphQL Query
-         * @param {InlineObject} inlineObject
+         * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphQL(inlineObject: InlineObject, options?: any) {
-            return DefaultApiFp(configuration).postGraphQL(inlineObject, options)(axios, basePath);
+        postGraphQL(graphQLRequest: GraphQLRequest, options?: any) {
+            return DefaultApiFp(configuration).postGraphQL(graphQLRequest, options)(axios, basePath);
         },
         /**
          * Returns a Application object
@@ -3055,6 +3166,17 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         showSourceType(id: string, options?: any) {
             return DefaultApiFp(configuration).showSourceType(id, options)(axios, basePath);
+        },
+        /**
+         * Updates a Application object
+         * @summary Update an existing Application
+         * @param {string} id ID of the resource
+         * @param {Application} application Application attributes to update
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateApplication(id: string, application: Application, options?: any) {
+            return DefaultApiFp(configuration).updateApplication(id, application, options)(axios, basePath);
         },
         /**
          * Updates a Authentication object
@@ -3395,13 +3517,13 @@ export class DefaultApi extends BaseAPI {
     /**
      * Performs a GraphQL Query
      * @summary Perform a GraphQL Query
-     * @param {InlineObject} inlineObject
+     * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public postGraphQL(inlineObject: InlineObject, options?: any) {
-        return DefaultApiFp(this.configuration).postGraphQL(inlineObject, options)(this.axios, this.basePath);
+    public postGraphQL(graphQLRequest: GraphQLRequest, options?: any) {
+        return DefaultApiFp(this.configuration).postGraphQL(graphQLRequest, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3474,6 +3596,19 @@ export class DefaultApi extends BaseAPI {
      */
     public showSourceType(id: string, options?: any) {
         return DefaultApiFp(this.configuration).showSourceType(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Updates a Application object
+     * @summary Update an existing Application
+     * @param {string} id ID of the resource
+     * @param {Application} application Application attributes to update
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public updateApplication(id: string, application: Application, options?: any) {
+        return DefaultApiFp(this.configuration).updateApplication(id, application, options)(this.axios, this.basePath);
     }
 
     /**

@@ -16,6 +16,8 @@
 
 ↳  [ExportApi](exportapi.md)
 
+↳  [HostackApi](hostackapi.md)
+
 ↳  [RuleApi](ruleapi.md)
 
 ↳  [RulecategoryApi](rulecategoryapi.md)

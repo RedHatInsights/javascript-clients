@@ -28,7 +28,7 @@
 
 **● bucketName**: *`string`*
 
-*Defined in [api.ts:319](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L319)*
+*Defined in [api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L319)*
 
 *__type__*: {string}
 
@@ -41,7 +41,7 @@ ___
 
 **● endDate**: *`string`*
 
-*Defined in [api.ts:313](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L313)*
+*Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L313)*
 
 *__type__*: {string}
 
@@ -54,7 +54,7 @@ ___
 
 **● startDate**: *`string`*
 
-*Defined in [api.ts:307](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L307)*
+*Defined in [api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L307)*
 
 *__type__*: {string}
 
