@@ -30,10 +30,9 @@ IconApi - object-oriented interface
 
 ### Methods
 
+* [createIcon](iconapi.md#createicon)
 * [destroyIcon](iconapi.md#destroyicon)
-* [iconsIdGet](iconapi.md#iconsidget)
-* [iconsPost](iconapi.md#iconspost)
-* [overrideIcon](iconapi.md#overrideicon)
+* [getIcon](iconapi.md#geticon)
 * [showIconData](iconapi.md#showicondata)
 * [updateIcon](iconapi.md#updateicon)
 
@@ -101,13 +100,39 @@ ___
 
 ## Methods
 
+<a id="createicon"></a>
+
+###  createIcon
+
+▸ **createIcon**(content?: *`any`*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
+
+*Defined in [api.ts:1820](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1820)*
+
+Creates an Icon from the specified parameters
+
+*__summary__*: Create an Icon
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: IconApi
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` content | `any` |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[Icon](../interfaces/icon.md)>
+
+___
 <a id="destroyicon"></a>
 
 ###  destroyIcon
 
 ▸ **destroyIcon**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1689)*
+*Defined in [api.ts:1832](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1832)*
 
 Deletes the icon based on the icon ID passed
 
@@ -127,13 +152,13 @@ Deletes the icon based on the icon ID passed
 **Returns:** `AxiosPromise`<`Response`>
 
 ___
-<a id="iconsidget"></a>
+<a id="geticon"></a>
 
-###  iconsIdGet
+###  getIcon
 
-▸ **iconsIdGet**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
+▸ **getIcon**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
 
-*Defined in [api.ts:1701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1701)*
+*Defined in [api.ts:1844](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1844)*
 
 Fetch an Icon by ID
 
@@ -153,66 +178,13 @@ Fetch an Icon by ID
 **Returns:** `AxiosPromise`<[Icon](../interfaces/icon.md)>
 
 ___
-<a id="iconspost"></a>
-
-###  iconsPost
-
-▸ **iconsPost**(icon?: *[Icon](../interfaces/icon.md)*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
-
-*Defined in [api.ts:1713](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1713)*
-
-Creates an Icon from the specified parameters
-
-*__summary__*: Create an Icon
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: IconApi
-
-**Parameters:**
-
-| Name | Type |
-| ------ | ------ |
-| `Optional` icon | [Icon](../interfaces/icon.md) |
-| `Optional` options | `any` |
-
-**Returns:** `AxiosPromise`<[Icon](../interfaces/icon.md)>
-
-___
-<a id="overrideicon"></a>
-
-###  overrideIcon
-
-▸ **overrideIcon**(id: *`string`*, overrideIcon?: *[OverrideIcon](../interfaces/overrideicon.md)*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
-
-*Defined in [api.ts:1726](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1726)*
-
-Override the specified Portfolio Item's Icon
-
-*__summary__*: Override the specified Portfolio Item's Icon
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: IconApi
-
-**Parameters:**
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` overrideIcon | [OverrideIcon](../interfaces/overrideicon.md) |
-| `Optional` options | `any` |
-
-**Returns:** `AxiosPromise`<[Icon](../interfaces/icon.md)>
-
-___
 <a id="showicondata"></a>
 
 ###  showIconData
 
 ▸ **showIconData**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1738](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1738)*
+*Defined in [api.ts:1856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1856)*
 
 Fetch the specified portfolio item's icon image.
 
@@ -238,7 +210,7 @@ ___
 
 ▸ **updateIcon**(id: *`string`*, icon: *[Icon](../interfaces/icon.md)*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
 
-*Defined in [api.ts:1751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1751)*
+*Defined in [api.ts:1869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1869)*
 
 Edits Icon specified by the given ID.
 

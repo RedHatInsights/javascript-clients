@@ -27,7 +27,7 @@ The time scope to apply to the report. Default time scope is '-10', meaning the 
 
 **NUMBER_MINUS_1**:  =  -1
 
-*Defined in [api.ts:2280](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2280)*
+*Defined in [api.ts:2280](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2280)*
 
 ___
 <a id="number_minus_10"></a>
@@ -36,7 +36,7 @@ ___
 
 **NUMBER_MINUS_10**:  =  -10
 
-*Defined in [api.ts:2282](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2282)*
+*Defined in [api.ts:2282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2282)*
 
 ___
 <a id="number_minus_2"></a>
@@ -45,7 +45,7 @@ ___
 
 **NUMBER_MINUS_2**:  =  -2
 
-*Defined in [api.ts:2281](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2281)*
+*Defined in [api.ts:2281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2281)*
 
 ___
 <a id="number_minus_30"></a>
@@ -54,7 +54,7 @@ ___
 
 **NUMBER_MINUS_30**:  =  -30
 
-*Defined in [api.ts:2283](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L2283)*
+*Defined in [api.ts:2283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2283)*
 
 ___
 

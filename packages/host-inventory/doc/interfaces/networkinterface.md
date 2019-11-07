@@ -62,7 +62,7 @@ ___
 
 *Defined in [api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L621)*
 
-MAC address
+MAC address (with or without colons)
 
 *__type__*: {string}
 
@@ -107,7 +107,7 @@ ___
 
 *Defined in [api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L633)*
 
-interface state
+interface state (UP, DOWN, UNKNOWN)
 
 *__type__*: {string}
 
@@ -122,7 +122,7 @@ ___
 
 *Defined in [api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L639)*
 
-interface type
+interface type (ether, loopback)
 
 *__type__*: {string}
 

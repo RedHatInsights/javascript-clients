@@ -38,7 +38,7 @@
 
 **● cost**: *[CostEnum](../enums/reportazureordering.costenum.md)*
 
-*Defined in [api.ts:992](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L992)*
+*Defined in [api.ts:992](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L992)*
 
 *__type__*: {string}
 
@@ -51,7 +51,7 @@ ___
 
 **● delta**: *[DeltaEnum](../enums/reportazureordering.deltaenum.md)*
 
-*Defined in [api.ts:1004](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1004)*
+*Defined in [api.ts:1004](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1004)*
 
 *__type__*: {string}
 
@@ -64,7 +64,7 @@ ___
 
 **● instanceType**: *[InstanceTypeEnum](../enums/reportazureordering.instancetypeenum.md)*
 
-*Defined in [api.ts:1028](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1028)*
+*Defined in [api.ts:1028](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1028)*
 
 *__type__*: {string}
 
@@ -77,7 +77,7 @@ ___
 
 **● resourceLocation**: *[ResourceLocationEnum](../enums/reportazureordering.resourcelocationenum.md)*
 
-*Defined in [api.ts:1016](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1016)*
+*Defined in [api.ts:1016](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1016)*
 
 *__type__*: {string}
 
@@ -90,7 +90,7 @@ ___
 
 **● serviceName**: *[ServiceNameEnum](../enums/reportazureordering.servicenameenum.md)*
 
-*Defined in [api.ts:1022](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1022)*
+*Defined in [api.ts:1022](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1022)*
 
 *__type__*: {string}
 
@@ -103,7 +103,7 @@ ___
 
 **● subscriptionGuid**: *[SubscriptionGuidEnum](../enums/reportazureordering.subscriptionguidenum.md)*
 
-*Defined in [api.ts:1010](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L1010)*
+*Defined in [api.ts:1010](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1010)*
 
 *__type__*: {string}
 
@@ -116,7 +116,7 @@ ___
 
 **● usage**: *[UsageEnum](../enums/reportazureordering.usageenum.md)*
 
-*Defined in [api.ts:998](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L998)*
+*Defined in [api.ts:998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L998)*
 
 *__type__*: {string}
 

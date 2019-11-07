@@ -107,7 +107,7 @@ ___
 
 ▸ **topicList**(options?: *`any`*): `AxiosPromise`<[TopicWithRules](../interfaces/topicwithrules.md)[]>
 
-*Defined in [api.ts:2862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2862)*
+*Defined in [api.ts:3823](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3823)*
 
 Rules have topics, set by Insights administrators. This is a view of the topics available, along with the rules and systems to which they apply.
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **topicRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[TopicWithRules](../interfaces/topicwithrules.md)>
 
-*Defined in [api.ts:2873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2873)*
+*Defined in [api.ts:3834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3834)*
 
 Rules have topics, set by Insights administrators. This is a view of the topics available, along with the rules and systems to which they apply.
 
@@ -154,7 +154,7 @@ ___
 
 ▸ **topicRulesRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
 
-*Defined in [api.ts:2884](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2884)*
+*Defined in [api.ts:3845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3845)*
 
 View, add to or delete from the rules in this topic
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **topicRulesWithTags**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
 
-*Defined in [api.ts:2895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2895)*
+*Defined in [api.ts:3856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3856)*
 
 Lists the available rules that share a tag with this topic. Some of these may also be in the given topic - can we show that
 
@@ -202,7 +202,7 @@ ___
 
 ▸ **topicSystems**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
 
-*Defined in [api.ts:2906](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2906)*
+*Defined in [api.ts:3867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3867)*
 
 List all systems affected by this rule topic.
 
@@ -226,7 +226,7 @@ ___
 
 ▸ **topicTagsRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Tag](../interfaces/tag.md)[]>
 
-*Defined in [api.ts:2917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2917)*
+*Defined in [api.ts:3878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3878)*
 
 View, add to or delete from the tags in a topic.
 

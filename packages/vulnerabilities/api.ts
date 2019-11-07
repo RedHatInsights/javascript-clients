@@ -317,6 +317,12 @@ export interface CveDetailOutDataAttributes {
      * @memberof CveDetailOutDataAttributes
      */
     systemsStatusDetail: any;
+    /**
+     * How many systems-CVE pairs have different status than CVE-level.
+     * @type {number}
+     * @memberof CveDetailOutDataAttributes
+     */
+    systemsStatusDivergent: number;
 }
 
 /**
@@ -1209,10 +1215,10 @@ export interface SystemListOut {
 export interface VersionOut {
     /**
      * Version of application.
-     * @type {Object}
+     * @type {string}
      * @memberof VersionOut
      */
-    applicationVersion: Object;
+    applicationVersion: string;
     /**
      * Version of database schema.
      * @type {Object}

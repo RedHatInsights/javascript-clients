@@ -103,9 +103,9 @@ ___
 
 ###  ackCreate
 
-▸ **ackCreate**(data: *[RuleId](../interfaces/ruleid.md)*, options?: *`any`*): `AxiosPromise`<[Ack](../interfaces/ack.md)>
+▸ **ackCreate**(ruleId: *[RuleId](../interfaces/ruleid.md)*, options?: *`any`*): `AxiosPromise`<[Ack](../interfaces/ack.md)>
 
-*Defined in [api.ts:1252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1252)*
+*Defined in [api.ts:1382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1382)*
 
 Add an acknowledgement for a rule, by rule ID, and return the new ack. If there's already an acknowledgement of this rule by this account, then return that.
 
@@ -117,7 +117,7 @@ Add an acknowledgement for a rule, by rule ID, and return the new ack. If there'
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| data | [RuleId](../interfaces/ruleid.md) |  \- |
+| ruleId | [RuleId](../interfaces/ruleid.md) |  \- |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[Ack](../interfaces/ack.md)>
@@ -129,7 +129,7 @@ ___
 
 ▸ **ackDelete**(ruleId: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1263)*
+*Defined in [api.ts:1393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1393)*
 
 Delete an acknowledgement for a rule, by its rule ID.
 
@@ -153,7 +153,7 @@ ___
 
 ▸ **ackList**(limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
 
-*Defined in [api.ts:1275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1275)*
+*Defined in [api.ts:1405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1405)*
 
 List acks from this account where the rule is active
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **ackRead**(ruleId: *`string`*, options?: *`any`*): `AxiosPromise`<[Ack](../interfaces/ack.md)>
 
-*Defined in [api.ts:1287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1287)*
+*Defined in [api.ts:1417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1417)*
 
 This view handles listing, retrieving, creating and deleting acks. Acks are created and deleted by Insights rule ID, not by their own ack ID.
 

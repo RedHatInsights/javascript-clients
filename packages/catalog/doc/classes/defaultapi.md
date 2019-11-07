@@ -103,7 +103,7 @@ ___
 
 ▸ **getDocumentation**(options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1234)*
+*Defined in [api.ts:1431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1431)*
 
 *__summary__*: Return this API document in JSON format
 
@@ -124,9 +124,9 @@ ___
 
 ###  postGraphQL
 
-▸ **postGraphQL**(inlineObject: *[InlineObject](../interfaces/inlineobject.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
+▸ **postGraphQL**(graphQLRequest: *[GraphQLRequest](../interfaces/graphqlrequest.md)*, options?: *`any`*): `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
 
-*Defined in [api.ts:1246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1246)*
+*Defined in [api.ts:1443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1443)*
 
 Performs a GraphQL Query
 
@@ -140,10 +140,10 @@ Performs a GraphQL Query
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| inlineObject | [InlineObject](../interfaces/inlineobject.md) |  \- |
+| graphQLRequest | [GraphQLRequest](../interfaces/graphqlrequest.md) |  GraphQL Query Request |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
+**Returns:** `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
 
 ___
 

@@ -22,7 +22,13 @@
 
 ↳  [PortfolioItemApi](portfolioitemapi.md)
 
+↳  [ServicePlansApi](serviceplansapi.md)
+
 ↳  [SettingsApi](settingsapi.md)
+
+↳  [TagsApi](tagsapi.md)
+
+↳  [TenantApi](tenantapi.md)
 
 ## Index
 

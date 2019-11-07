@@ -28,7 +28,7 @@
 
 **● bucket**: *`string`*
 
-*Defined in [api.ts:688](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L688)*
+*Defined in [api.ts:688](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L688)*
 
 *__type__*: {string}
 
@@ -41,7 +41,7 @@ ___
 
 **● dataSource**: *`any`*
 
-*Defined in [api.ts:694](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L694)*
+*Defined in [api.ts:694](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L694)*
 
 *__type__*: {any}
 
@@ -54,7 +54,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:700](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L700)*
+*Defined in [api.ts:700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L700)*
 
 *__type__*: {string}
 

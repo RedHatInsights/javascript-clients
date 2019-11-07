@@ -59,6 +59,7 @@ DefaultApi - object-oriented interface
 * [showEndpoint](defaultapi.md#showendpoint)
 * [showSource](defaultapi.md#showsource)
 * [showSourceType](defaultapi.md#showsourcetype)
+* [updateApplication](defaultapi.md#updateapplication)
 * [updateAuthentication](defaultapi.md#updateauthentication)
 * [updateEndpoint](defaultapi.md#updateendpoint)
 * [updateSource](defaultapi.md#updatesource)
@@ -133,7 +134,7 @@ ___
 
 ▸ **createApplication**(application: *[Application](../interfaces/application.md)*, options?: *`any`*): `AxiosPromise`<[Application](../interfaces/application.md)>
 
-*Defined in [api.ts:3110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3110)*
+*Defined in [api.ts:3232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3232)*
 
 Creates a Application object
 
@@ -159,7 +160,7 @@ ___
 
 ▸ **createAuthentication**(authentication: *[Authentication](../interfaces/authentication.md)*, options?: *`any`*): `AxiosPromise`<[Authentication](../interfaces/authentication.md)>
 
-*Defined in [api.ts:3122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3122)*
+*Defined in [api.ts:3244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3244)*
 
 Creates a Authentication object
 
@@ -185,7 +186,7 @@ ___
 
 ▸ **createEndpoint**(endpoint: *[Endpoint](../interfaces/endpoint.md)*, options?: *`any`*): `AxiosPromise`<[Endpoint](../interfaces/endpoint.md)>
 
-*Defined in [api.ts:3134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3134)*
+*Defined in [api.ts:3256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3256)*
 
 Creates a Endpoint object
 
@@ -211,7 +212,7 @@ ___
 
 ▸ **createSource**(source: *[Source](../interfaces/source.md)*, options?: *`any`*): `AxiosPromise`<[Source](../interfaces/source.md)>
 
-*Defined in [api.ts:3146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3146)*
+*Defined in [api.ts:3268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3268)*
 
 Creates a Source object
 
@@ -237,7 +238,7 @@ ___
 
 ▸ **createSourceType**(sourceType: *[SourceType](../interfaces/sourcetype.md)*, options?: *`any`*): `AxiosPromise`<[SourceType](../interfaces/sourcetype.md)>
 
-*Defined in [api.ts:3158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3158)*
+*Defined in [api.ts:3280](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3280)*
 
 Creates a SourceType object
 
@@ -263,7 +264,7 @@ ___
 
 ▸ **deleteApplication**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:3170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3170)*
+*Defined in [api.ts:3292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3292)*
 
 Deletes a Application object
 
@@ -289,7 +290,7 @@ ___
 
 ▸ **deleteAuthentication**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:3182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3182)*
+*Defined in [api.ts:3304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3304)*
 
 Deletes a Authentication object
 
@@ -315,7 +316,7 @@ ___
 
 ▸ **deleteEndpoint**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:3194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3194)*
+*Defined in [api.ts:3316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3316)*
 
 Deletes a Endpoint object
 
@@ -341,7 +342,7 @@ ___
 
 ▸ **deleteSource**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:3206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3206)*
+*Defined in [api.ts:3328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3328)*
 
 Deletes a Source object
 
@@ -365,9 +366,9 @@ ___
 
 ###  getDocumentation
 
-▸ **getDocumentation**(options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **getDocumentation**(options?: *`any`*): `AxiosPromise`<`any`>
 
-*Defined in [api.ts:3217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3217)*
+*Defined in [api.ts:3339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3339)*
 
 *__summary__*: Return this API document in JSON format
 
@@ -381,7 +382,7 @@ ___
 | ------ | ------ |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** `AxiosPromise`<`any`>
 
 ___
 <a id="listapplicationtypesources"></a>
@@ -390,7 +391,7 @@ ___
 
 ▸ **listApplicationTypeSources**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SourcesCollection](../interfaces/sourcescollection.md)>
 
-*Defined in [api.ts:3232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3232)*
+*Defined in [api.ts:3354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3354)*
 
 Returns an array of Source objects
 
@@ -419,7 +420,7 @@ ___
 
 ▸ **listApplicationTypes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)>
 
-*Defined in [api.ts:3246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3246)*
+*Defined in [api.ts:3368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3368)*
 
 Returns an array of ApplicationType objects
 
@@ -447,7 +448,7 @@ ___
 
 ▸ **listApplications**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ApplicationsCollection](../interfaces/applicationscollection.md)>
 
-*Defined in [api.ts:3260](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3260)*
+*Defined in [api.ts:3382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3382)*
 
 Returns an array of Application objects
 
@@ -475,7 +476,7 @@ ___
 
 ▸ **listAuthentications**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[AuthenticationsCollection](../interfaces/authenticationscollection.md)>
 
-*Defined in [api.ts:3274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3274)*
+*Defined in [api.ts:3396](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3396)*
 
 Returns an array of Authentication objects
 
@@ -503,7 +504,7 @@ ___
 
 ▸ **listEndpointAuthentications**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[AuthenticationsCollection](../interfaces/authenticationscollection.md)>
 
-*Defined in [api.ts:3289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3289)*
+*Defined in [api.ts:3411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3411)*
 
 Returns an array of Authentication objects
 
@@ -532,7 +533,7 @@ ___
 
 ▸ **listEndpoints**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[EndpointsCollection](../interfaces/endpointscollection.md)>
 
-*Defined in [api.ts:3303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3303)*
+*Defined in [api.ts:3425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3425)*
 
 Returns an array of Endpoint objects
 
@@ -560,7 +561,7 @@ ___
 
 ▸ **listSourceApplicationTypes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)>
 
-*Defined in [api.ts:3318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3318)*
+*Defined in [api.ts:3440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3440)*
 
 Returns an array of ApplicationType objects
 
@@ -589,7 +590,7 @@ ___
 
 ▸ **listSourceApplications**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ApplicationsCollection](../interfaces/applicationscollection.md)>
 
-*Defined in [api.ts:3333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3333)*
+*Defined in [api.ts:3455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3455)*
 
 Returns an array of Application objects
 
@@ -618,7 +619,7 @@ ___
 
 ▸ **listSourceEndpoints**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[EndpointsCollection](../interfaces/endpointscollection.md)>
 
-*Defined in [api.ts:3348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3348)*
+*Defined in [api.ts:3470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3470)*
 
 Returns an array of Endpoint objects
 
@@ -647,7 +648,7 @@ ___
 
 ▸ **listSourceTypeSources**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SourcesCollection](../interfaces/sourcescollection.md)>
 
-*Defined in [api.ts:3363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3363)*
+*Defined in [api.ts:3485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3485)*
 
 Returns an array of Source objects
 
@@ -676,7 +677,7 @@ ___
 
 ▸ **listSourceTypes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SourceTypesCollection](../interfaces/sourcetypescollection.md)>
 
-*Defined in [api.ts:3377](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3377)*
+*Defined in [api.ts:3499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3499)*
 
 Returns an array of SourceType objects
 
@@ -704,7 +705,7 @@ ___
 
 ▸ **listSources**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SourcesCollection](../interfaces/sourcescollection.md)>
 
-*Defined in [api.ts:3391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3391)*
+*Defined in [api.ts:3513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3513)*
 
 Returns an array of Source objects
 
@@ -730,9 +731,9 @@ ___
 
 ###  postGraphQL
 
-▸ **postGraphQL**(inlineObject: *[InlineObject](../interfaces/inlineobject.md)*, options?: *`any`*): `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
+▸ **postGraphQL**(graphQLRequest: *[GraphQLRequest](../interfaces/graphqlrequest.md)*, options?: *`any`*): `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
 
-*Defined in [api.ts:3403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3403)*
+*Defined in [api.ts:3525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3525)*
 
 Performs a GraphQL Query
 
@@ -746,7 +747,7 @@ Performs a GraphQL Query
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| inlineObject | [InlineObject](../interfaces/inlineobject.md) |  \- |
+| graphQLRequest | [GraphQLRequest](../interfaces/graphqlrequest.md) |  GraphQL Query Request |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
@@ -758,7 +759,7 @@ ___
 
 ▸ **showApplication**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Application](../interfaces/application.md)>
 
-*Defined in [api.ts:3415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3415)*
+*Defined in [api.ts:3537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3537)*
 
 Returns a Application object
 
@@ -784,7 +785,7 @@ ___
 
 ▸ **showApplicationType**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ApplicationType](../interfaces/applicationtype.md)>
 
-*Defined in [api.ts:3427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3427)*
+*Defined in [api.ts:3549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3549)*
 
 Returns a ApplicationType object
 
@@ -810,7 +811,7 @@ ___
 
 ▸ **showAuthentication**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Authentication](../interfaces/authentication.md)>
 
-*Defined in [api.ts:3439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3439)*
+*Defined in [api.ts:3561](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3561)*
 
 Returns a Authentication object
 
@@ -836,7 +837,7 @@ ___
 
 ▸ **showEndpoint**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Endpoint](../interfaces/endpoint.md)>
 
-*Defined in [api.ts:3451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3451)*
+*Defined in [api.ts:3573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3573)*
 
 Returns a Endpoint object
 
@@ -862,7 +863,7 @@ ___
 
 ▸ **showSource**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Source](../interfaces/source.md)>
 
-*Defined in [api.ts:3463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3463)*
+*Defined in [api.ts:3585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3585)*
 
 Returns a Source object
 
@@ -888,7 +889,7 @@ ___
 
 ▸ **showSourceType**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[SourceType](../interfaces/sourcetype.md)>
 
-*Defined in [api.ts:3475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3475)*
+*Defined in [api.ts:3597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3597)*
 
 Returns a SourceType object
 
@@ -908,13 +909,40 @@ Returns a SourceType object
 **Returns:** `AxiosPromise`<[SourceType](../interfaces/sourcetype.md)>
 
 ___
+<a id="updateapplication"></a>
+
+###  updateApplication
+
+▸ **updateApplication**(id: *`string`*, application: *[Application](../interfaces/application.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
+
+*Defined in [api.ts:3610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3610)*
+
+Updates a Application object
+
+*__summary__*: Update an existing Application
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: DefaultApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| id | `string` |  ID of the resource |
+| application | [Application](../interfaces/application.md) |  Application attributes to update |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<`Response`>
+
+___
 <a id="updateauthentication"></a>
 
 ###  updateAuthentication
 
 ▸ **updateAuthentication**(id: *`string`*, authentication: *[Authentication](../interfaces/authentication.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:3488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3488)*
+*Defined in [api.ts:3623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3623)*
 
 Updates a Authentication object
 
@@ -941,7 +969,7 @@ ___
 
 ▸ **updateEndpoint**(id: *`string`*, endpoint: *[Endpoint](../interfaces/endpoint.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:3501](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3501)*
+*Defined in [api.ts:3636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3636)*
 
 Updates a Endpoint object
 
@@ -968,7 +996,7 @@ ___
 
 ▸ **updateSource**(id: *`string`*, source: *[Source](../interfaces/source.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:3514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3514)*
+*Defined in [api.ts:3649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3649)*
 
 Updates a Source object
 

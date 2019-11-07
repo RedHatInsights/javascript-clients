@@ -17,6 +17,7 @@
 * [description](workflowin.md#description)
 * [groupRefs](workflowin.md#grouprefs)
 * [name](workflowin.md#name)
+* [sequence](workflowin.md#sequence)
 
 ---
 
@@ -28,7 +29,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L655)*
+*Defined in [api.ts:727](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L727)*
 
 *__type__*: {string}
 
@@ -41,7 +42,7 @@ ___
 
 **● groupRefs**: *`Array`<`string`>*
 
-*Defined in [api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L661)*
+*Defined in [api.ts:739](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L739)*
 
 Group reference ids associated with workflow
 
@@ -56,9 +57,24 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L649)*
+*Defined in [api.ts:721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L721)*
 
 *__type__*: {string}
+
+*__memberof__*: WorkflowIn
+
+___
+<a id="sequence"></a>
+
+### `<Optional>` sequence
+
+**● sequence**: *`number`*
+
+*Defined in [api.ts:733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L733)*
+
+an indicator of the execution order for selected workflows
+
+*__type__*: {number}
 
 *__memberof__*: WorkflowIn
 

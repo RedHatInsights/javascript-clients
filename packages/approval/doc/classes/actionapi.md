@@ -105,11 +105,11 @@ ___
 
 ▸ **createAction**(stageId: *`string`*, actionIn: *[ActionIn](../modules/actionin.md)*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
-*Defined in [api.ts:1046](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1046)*
+*Defined in [api.ts:1130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1130)*
 
 Add an action to a given stage
 
-*__summary__*: Add an action to a given stage
+*__summary__*: Add an action to a given stage, available for admin/approver/requester
 
 *__throws__*: {RequiredError}
 
@@ -132,11 +132,11 @@ ___
 
 ▸ **createActionByRequest**(requestId: *`string`*, actionIn: *[ActionIn](../modules/actionin.md)*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
-*Defined in [api.ts:1059](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1059)*
+*Defined in [api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1143)*
 
 Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
 
-*__summary__*: Add an action to current active stage of a given request
+*__summary__*: Add an action to current active stage of a given request, available for admin/approver/requester
 
 *__throws__*: {RequiredError}
 
@@ -159,11 +159,11 @@ ___
 
 ▸ **listActionsByStage**(stageId: *`string`*, options?: *`any`*): `AxiosPromise`<[ActionOutCollection](../interfaces/actionoutcollection.md)>
 
-*Defined in [api.ts:1071](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1071)*
+*Defined in [api.ts:1155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1155)*
 
 List all actions of a stage
 
-*__summary__*: Return actions in a given stage
+*__summary__*: Return actions in a given stage, available for admin/approver
 
 *__throws__*: {RequiredError}
 
@@ -185,11 +185,11 @@ ___
 
 ▸ **showAction**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
 
-*Defined in [api.ts:1083](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1083)*
+*Defined in [api.ts:1167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1167)*
 
 Return an user action by id
 
-*__summary__*: Return an user action by id
+*__summary__*: Return an user action by id, available for admin/approver
 
 *__throws__*: {RequiredError}
 

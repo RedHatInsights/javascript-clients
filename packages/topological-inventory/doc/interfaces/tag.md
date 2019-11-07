@@ -32,7 +32,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:3153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3153)*
+*Defined in [api.ts:3587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3587)*
 
 *__type__*: {Date}
 
@@ -45,7 +45,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:3159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3159)*
+*Defined in [api.ts:3593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3593)*
 
 *__type__*: {string}
 
@@ -58,7 +58,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:3165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3165)*
+*Defined in [api.ts:3599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3599)*
 
 ID of the resource
 
@@ -73,7 +73,7 @@ ___
 
 **● lastSeenAt**: *`Date`*
 
-*Defined in [api.ts:3171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3171)*
+*Defined in [api.ts:3605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3605)*
 
 *__type__*: {Date}
 
@@ -86,7 +86,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:3177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3177)*
+*Defined in [api.ts:3611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3611)*
 
 *__type__*: {string}
 
@@ -99,7 +99,7 @@ ___
 
 **● namespace**: *`string`*
 
-*Defined in [api.ts:3183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3183)*
+*Defined in [api.ts:3617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3617)*
 
 *__type__*: {string}
 
@@ -112,7 +112,7 @@ ___
 
 **● value**: *`string`*
 
-*Defined in [api.ts:3189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3189)*
+*Defined in [api.ts:3623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3623)*
 
 *__type__*: {string}
 

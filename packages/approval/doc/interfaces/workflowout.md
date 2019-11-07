@@ -20,6 +20,7 @@ The workflow to process approval requests. Each workflow is linked to multiple g
 * [groupRefs](workflowout.md#grouprefs)
 * [id](workflowout.md#id)
 * [name](workflowout.md#name)
+* [sequence](workflowout.md#sequence)
 * [templateId](workflowout.md#templateid)
 
 ---
@@ -32,7 +33,7 @@ The workflow to process approval requests. Each workflow is linked to multiple g
 
 **● description**: *`string`*
 
-*Defined in [api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L693)*
+*Defined in [api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L771)*
 
 *__type__*: {string}
 
@@ -45,7 +46,7 @@ ___
 
 **● groupRefs**: *`Array`<`string`>*
 
-*Defined in [api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L699)*
+*Defined in [api.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L783)*
 
 Group reference ids associated with workflow
 
@@ -60,7 +61,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L675)*
+*Defined in [api.ts:753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L753)*
 
 *__type__*: {string}
 
@@ -73,9 +74,24 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L687)*
+*Defined in [api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L765)*
 
 *__type__*: {string}
+
+*__memberof__*: WorkflowOut
+
+___
+<a id="sequence"></a>
+
+### `<Optional>` sequence
+
+**● sequence**: *`number`*
+
+*Defined in [api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L777)*
+
+an indicator of the execution order for selected workflows
+
+*__type__*: {number}
 
 *__memberof__*: WorkflowOut
 
@@ -86,7 +102,7 @@ ___
 
 **● templateId**: *`string`*
 
-*Defined in [api.ts:681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L681)*
+*Defined in [api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L759)*
 
 Associated template id
 

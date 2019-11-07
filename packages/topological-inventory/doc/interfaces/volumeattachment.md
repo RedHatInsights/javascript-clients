@@ -31,7 +31,7 @@
 
 **● device**: *`string`*
 
-*Defined in [api.ts:3651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3651)*
+*Defined in [api.ts:4085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4085)*
 
 *__type__*: {string}
 
@@ -44,7 +44,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:3657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3657)*
+*Defined in [api.ts:4091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4091)*
 
 ID of the resource
 
@@ -59,7 +59,7 @@ ___
 
 **● lastSeenAt**: *`Date`*
 
-*Defined in [api.ts:3663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3663)*
+*Defined in [api.ts:4097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4097)*
 
 *__type__*: {Date}
 
@@ -72,7 +72,7 @@ ___
 
 **● state**: *`string`*
 
-*Defined in [api.ts:3669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3669)*
+*Defined in [api.ts:4103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4103)*
 
 *__type__*: {string}
 
@@ -85,7 +85,7 @@ ___
 
 **● vmId**: *`string`*
 
-*Defined in [api.ts:3675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3675)*
+*Defined in [api.ts:4109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4109)*
 
 ID of the resource
 
@@ -100,7 +100,7 @@ ___
 
 **● volumeId**: *`string`*
 
-*Defined in [api.ts:3681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3681)*
+*Defined in [api.ts:4115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4115)*
 
 ID of the resource
 

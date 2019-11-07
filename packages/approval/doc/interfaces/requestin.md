@@ -19,7 +19,7 @@ Input parameters for approval request object.
 * [content](requestin.md#content)
 * [description](requestin.md#description)
 * [name](requestin.md#name)
-* [requesterName](requestin.md#requestername)
+* [tagResources](requestin.md#tagresources)
 
 ---
 
@@ -31,7 +31,7 @@ Input parameters for approval request object.
 
 **● content**: *`any`*
 
-*Defined in [api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L339)*
+*Defined in [api.ts:473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L473)*
 
 JSON object with request content
 
@@ -46,7 +46,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L333)*
+*Defined in [api.ts:467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L467)*
 
 Request description
 
@@ -61,7 +61,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L327)*
+*Defined in [api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L461)*
 
 Request name
 
@@ -70,17 +70,17 @@ Request name
 *__memberof__*: RequestIn
 
 ___
-<a id="requestername"></a>
+<a id="tagresources"></a>
 
-### `<Optional>` requesterName
+###  tagResources
 
-**● requesterName**: *`string`*
+**● tagResources**: *`Array`<[TagResource](tagresource.md)>*
 
-*Defined in [api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L321)*
+*Defined in [api.ts:479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L479)*
 
-Requester id
+collection of resources having tags that determine the workflows for the request
 
-*__type__*: {string}
+*__type__*: {Array}
 
 *__memberof__*: RequestIn
 

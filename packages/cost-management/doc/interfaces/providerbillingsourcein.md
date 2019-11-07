@@ -27,7 +27,7 @@
 
 **● bucket**: *`string`*
 
-*Defined in [api.ts:668](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L668)*
+*Defined in [api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L668)*
 
 *__type__*: {string}
 
@@ -40,7 +40,7 @@ ___
 
 **● dataSource**: *`any`*
 
-*Defined in [api.ts:674](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L674)*
+*Defined in [api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L674)*
 
 *__type__*: {any}
 

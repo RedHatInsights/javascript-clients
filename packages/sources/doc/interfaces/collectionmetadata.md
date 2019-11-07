@@ -28,7 +28,7 @@
 
 **● count**: *`number`*
 
-*Defined in [api.ts:389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L389)*
+*Defined in [api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L419)*
 
 *__type__*: {number}
 
@@ -41,7 +41,7 @@ ___
 
 **● limit**: *`number`*
 
-*Defined in [api.ts:395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L395)*
+*Defined in [api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L425)*
 
 *__type__*: {number}
 
@@ -54,7 +54,7 @@ ___
 
 **● offset**: *`number`*
 
-*Defined in [api.ts:401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L401)*
+*Defined in [api.ts:431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L431)*
 
 *__type__*: {number}
 

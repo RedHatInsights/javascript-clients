@@ -48,7 +48,7 @@ UserPreferenceApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 **Parameters:**
 
@@ -72,7 +72,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -83,7 +83,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -94,7 +94,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 ▸ **createUserPreference**(userPreference: *[UserPreference](../interfaces/userpreference.md)*, options?: *`any`*): `AxiosPromise`<[UserPreferenceOut](../interfaces/userpreferenceout.md)>
 
-*Defined in [api.ts:6502](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6502)*
+*Defined in [api.ts:6502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6502)*
 
 *__summary__*: Create a user preference
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **deleteUserPreference**(prefUuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:6514](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6514)*
+*Defined in [api.ts:6514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6514)*
 
 *__summary__*: Delete a user preference
 
@@ -154,7 +154,7 @@ ___
 
 ▸ **getUserPreference**(prefUuid: *`string`*, options?: *`any`*): `AxiosPromise`<[UserPreferenceOut](../interfaces/userpreferenceout.md)>
 
-*Defined in [api.ts:6526](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6526)*
+*Defined in [api.ts:6526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6526)*
 
 *__summary__*: Get a user preference
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **listUserPreferences**(offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[UserPreferencePagination](../interfaces/userpreferencepagination.md)>
 
-*Defined in [api.ts:6539](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6539)*
+*Defined in [api.ts:6539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6539)*
 
 *__summary__*: List the user's preferences
 
@@ -203,7 +203,7 @@ ___
 
 ▸ **updateUserPreference**(prefUuid: *`string`*, userPreference: *[UserPreference](../interfaces/userpreference.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:6552](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6552)*
+*Defined in [api.ts:6552](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6552)*
 
 *__summary__*: Update a user preference
 

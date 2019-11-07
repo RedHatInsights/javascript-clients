@@ -32,6 +32,7 @@
 * [statusText](cvedetailoutdataattributes.md#statustext)
 * [synopsis](cvedetailoutdataattributes.md#synopsis)
 * [systemsStatusDetail](cvedetailoutdataattributes.md#systemsstatusdetail)
+* [systemsStatusDivergent](cvedetailoutdataattributes.md#systemsstatusdivergent)
 
 ---
 
@@ -303,6 +304,21 @@ ___
 Counts of systems with given status type.
 
 *__type__*: {any}
+
+*__memberof__*: CveDetailOutDataAttributes
+
+___
+<a id="systemsstatusdivergent"></a>
+
+###  systemsStatusDivergent
+
+**● systemsStatusDivergent**: *`number`*
+
+*Defined in [api.ts:325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L325)*
+
+How many systems-CVE pairs have different status than CVE-level.
+
+*__type__*: {number}
 
 *__memberof__*: CveDetailOutDataAttributes
 

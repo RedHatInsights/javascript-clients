@@ -16,6 +16,8 @@
 
 * [id](icon.md#id)
 * [imageId](icon.md#imageid)
+* [portfolioId](icon.md#portfolioid)
+* [portfolioItemId](icon.md#portfolioitemid)
 * [sourceId](icon.md#sourceid)
 * [sourceRef](icon.md#sourceref)
 
@@ -29,7 +31,7 @@
 
 **● id**: *`string`*
 
-*Defined in [api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L278)*
+*Defined in [api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L310)*
 
 The unique identifier for this Service Offering Icon
 
@@ -44,9 +46,39 @@ ___
 
 **● imageId**: *`string`*
 
-*Defined in [api.ts:284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L284)*
+*Defined in [api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L316)*
 
 The Image reference containing the binary image data for this icon
+
+*__type__*: {string}
+
+*__memberof__*: Icon
+
+___
+<a id="portfolioid"></a>
+
+### `<Optional>` portfolioId
+
+**● portfolioId**: *`string`*
+
+*Defined in [api.ts:334](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L334)*
+
+The portfolio this icon belongs to.
+
+*__type__*: {string}
+
+*__memberof__*: Icon
+
+___
+<a id="portfolioitemid"></a>
+
+### `<Optional>` portfolioItemId
+
+**● portfolioItemId**: *`string`*
+
+*Defined in [api.ts:340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L340)*
+
+The portfolio\_item this icon belongs to.
 
 *__type__*: {string}
 
@@ -59,7 +91,7 @@ ___
 
 **● sourceId**: *`string`*
 
-*Defined in [api.ts:296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L296)*
+*Defined in [api.ts:328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L328)*
 
 The source ID for this icon
 
@@ -74,7 +106,7 @@ ___
 
 **● sourceRef**: *`string`*
 
-*Defined in [api.ts:290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L290)*
+*Defined in [api.ts:322](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L322)*
 
 Stores the Source Ref for this icon
 

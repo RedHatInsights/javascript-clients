@@ -103,7 +103,7 @@ ___
 
 ▸ **rulecategoryList**(options?: *`any`*): `AxiosPromise`<[RuleCategory](../interfaces/rulecategory.md)[]>
 
-*Defined in [api.ts:1971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1971)*
+*Defined in [api.ts:2459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2459)*
 
 Rules are divided into categories, the usual being Availability, Stability, Security and Performance
 
@@ -126,7 +126,7 @@ ___
 
 ▸ **rulecategoryRead**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[RuleCategory](../interfaces/rulecategory.md)>
 
-*Defined in [api.ts:1982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1982)*
+*Defined in [api.ts:2470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2470)*
 
 Rules are divided into categories, the usual being Availability, Stability, Security and Performance
 

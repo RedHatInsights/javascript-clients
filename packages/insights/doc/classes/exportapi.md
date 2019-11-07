@@ -102,11 +102,11 @@ ___
 
 ###  exportHitsList
 
-▸ **exportHitsList**(options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
+▸ **exportHitsList**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
 
-*Defined in [api.ts:1471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1471)*
+*Defined in [api.ts:1649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1649)*
 
-Get each host and all rules currently affecting it. This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store). We also only present active, non-acked rules.
+Get each host and all rules currently affecting it. This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store). We also only present active, non-acked (on an account AND host level) rules.
 
 *__throws__*: {RequiredError}
 
@@ -116,6 +116,12 @@ Get each host and all rules currently affecting it. This will eventually require
 
 | Name | Type |
 | ------ | ------ |
+| `Optional` category | `Array`<`1` \| `2` \| `3` \| `4`> |
+| `Optional` impact | `Array`<`1` \| `2` \| `3` \| `4`> |
+| `Optional` likelihood | `Array`<`1` \| `2` \| `3` \| `4`> |
+| `Optional` resRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
+| `Optional` text | `string` |
+| `Optional` totalRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
@@ -127,7 +133,7 @@ ___
 
 ▸ **exportListCsv**(options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1481)*
+*Defined in [api.ts:1659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1659)*
 
 Export the hosts and rules listing as CSV or JSON
 
@@ -150,7 +156,7 @@ ___
 
 ▸ **exportListJson**(options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
 
-*Defined in [api.ts:1491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1491)*
+*Defined in [api.ts:1669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1669)*
 
 Export the hosts and rules listing as CSV or JSON
 

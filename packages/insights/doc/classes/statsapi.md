@@ -30,10 +30,14 @@ StatsApi - object-oriented interface
 
 ### Methods
 
+* [statsHitsSeries](statsapi.md#statshitsseries)
 * [statsList](statsapi.md#statslist)
 * [statsReports](statsapi.md#statsreports)
 * [statsRules](statsapi.md#statsrules)
+* [statsRulesHitSeries](statsapi.md#statsruleshitseries)
 * [statsSystems](statsapi.md#statssystems)
+* [statsSystemsImpactedSeries](statsapi.md#statssystemsimpactedseries)
+* [statsSystemsReportingSeries](statsapi.md#statssystemsreportingseries)
 
 ---
 
@@ -99,13 +103,39 @@ ___
 
 ## Methods
 
+<a id="statshitsseries"></a>
+
+###  statsHitsSeries
+
+▸ **statsHitsSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
+
+*Defined in [api.ts:2971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2971)*
+
+Simple time series of day and number of hits (per system-rule tuple) per day.
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: StatsApi
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` start | `string` |
+| `Optional` end | `string` |
+| `Optional` grain | "ever" \| "year" \| "quarter" \| "month" \| "week" \| "day" |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
+
+___
 <a id="statslist"></a>
 
 ###  statsList
 
 ▸ **statsList**(options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2212)*
+*Defined in [api.ts:2981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2981)*
 
 Provide a simple list of URLs contained here. Copied sort-of from the APIRootView's `get` method.
 
@@ -128,7 +158,7 @@ ___
 
 ▸ **statsReports**(options?: *`any`*): `AxiosPromise`<[RulesStats](../interfaces/rulesstats.md)>
 
-*Defined in [api.ts:2222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2222)*
+*Defined in [api.ts:2991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2991)*
 
 View the statistics for this account.
 
@@ -151,7 +181,7 @@ ___
 
 ▸ **statsRules**(options?: *`any`*): `AxiosPromise`<[RulesStats](../interfaces/rulesstats.md)>
 
-*Defined in [api.ts:2232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2232)*
+*Defined in [api.ts:3001](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3001)*
 
 View the statistics for this account.
 
@@ -168,13 +198,39 @@ View the statistics for this account.
 **Returns:** `AxiosPromise`<[RulesStats](../interfaces/rulesstats.md)>
 
 ___
+<a id="statsruleshitseries"></a>
+
+###  statsRulesHitSeries
+
+▸ **statsRulesHitSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
+
+*Defined in [api.ts:3014](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3014)*
+
+Simple time series of day and number of systems impacted by any rule
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: StatsApi
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` start | `string` |
+| `Optional` end | `string` |
+| `Optional` grain | "ever" \| "year" \| "quarter" \| "month" \| "week" \| "day" |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
+
+___
 <a id="statssystems"></a>
 
 ###  statsSystems
 
 ▸ **statsSystems**(options?: *`any`*): `AxiosPromise`<[SystemsStats](../interfaces/systemsstats.md)>
 
-*Defined in [api.ts:2242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2242)*
+*Defined in [api.ts:3024](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3024)*
 
 View the statistics for this account.
 
@@ -189,6 +245,58 @@ View the statistics for this account.
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SystemsStats](../interfaces/systemsstats.md)>
+
+___
+<a id="statssystemsimpactedseries"></a>
+
+###  statsSystemsImpactedSeries
+
+▸ **statsSystemsImpactedSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
+
+*Defined in [api.ts:3037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3037)*
+
+Simple time series of day and number of systems impacted by any rule
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: StatsApi
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` start | `string` |
+| `Optional` end | `string` |
+| `Optional` grain | "ever" \| "year" \| "quarter" \| "month" \| "week" \| "day" |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
+
+___
+<a id="statssystemsreportingseries"></a>
+
+###  statsSystemsReportingSeries
+
+▸ **statsSystemsReportingSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
+
+*Defined in [api.ts:3050](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3050)*
+
+Simple time series of day and number of systems having uploaded that day.
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: StatsApi
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` start | `string` |
+| `Optional` end | `string` |
+| `Optional` grain | "ever" \| "year" \| "quarter" \| "month" \| "week" \| "day" |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
 
 ___
 

@@ -28,7 +28,7 @@
 
 **● credentials**: *`any`*
 
-*Defined in [api.ts:648](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L648)*
+*Defined in [api.ts:648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L648)*
 
 *__type__*: {any}
 
@@ -41,7 +41,7 @@ ___
 
 **● providerResourceName**: *`string`*
 
-*Defined in [api.ts:642](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L642)*
+*Defined in [api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L642)*
 
 *__type__*: {string}
 
@@ -54,7 +54,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:654](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L654)*
+*Defined in [api.ts:654](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L654)*
 
 *__type__*: {string}
 

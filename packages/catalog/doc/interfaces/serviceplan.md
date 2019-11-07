@@ -14,24 +14,26 @@
 
 ### Properties
 
-* [createJsonSchema](serviceplan.md#createjsonschema)
+* [base](serviceplan.md#base)
 * [description](serviceplan.md#description)
 * [id](serviceplan.md#id)
+* [modified](serviceplan.md#modified)
 * [name](serviceplan.md#name)
+* [portfolioItemId](serviceplan.md#portfolioitemid)
 
 ---
 
 ## Properties
 
-<a id="createjsonschema"></a>
+<a id="base"></a>
 
-### `<Optional>` createJsonSchema
+### `<Optional>` base
 
-**● createJsonSchema**: *`any`*
+**● base**: *`any`*
 
-*Defined in [api.ts:962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L962)*
+*Defined in [api.ts:948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L948)*
 
-JSON schema for the object.
+The base schema imported from Topology
 
 *__type__*: {any}
 
@@ -44,7 +46,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:950](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L950)*
+*Defined in [api.ts:942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L942)*
 
 The service plan description.
 
@@ -59,11 +61,26 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:956](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L956)*
+*Defined in [api.ts:966](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L966)*
 
 The unique identifier for this service plan.
 
 *__type__*: {string}
+
+*__memberof__*: ServicePlan
+
+___
+<a id="modified"></a>
+
+### `<Optional>` modified
+
+**● modified**: *`any`*
+
+*Defined in [api.ts:954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L954)*
+
+The modified schema for Catalog
+
+*__type__*: {any}
 
 *__memberof__*: ServicePlan
 
@@ -74,9 +91,24 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L944)*
+*Defined in [api.ts:936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L936)*
 
 The name of the service plan.
+
+*__type__*: {string}
+
+*__memberof__*: ServicePlan
+
+___
+<a id="portfolioitemid"></a>
+
+### `<Optional>` portfolioItemId
+
+**● portfolioItemId**: *`string`*
+
+*Defined in [api.ts:960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L960)*
+
+The reference ID of the Portfolio Item
 
 *__type__*: {string}
 

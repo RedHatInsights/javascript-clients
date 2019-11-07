@@ -33,7 +33,7 @@
 
 **● createdTimestamp**: *`Date`*
 
-*Defined in [api.ts:163](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L163)*
+*Defined in [api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L163)*
 
 *__type__*: {Date}
 
@@ -46,7 +46,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:133](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L133)*
+*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L133)*
 
 *__type__*: {string}
 
@@ -59,7 +59,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:127](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L127)*
+*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L127)*
 
 *__type__*: {string}
 
@@ -72,7 +72,7 @@ ___
 
 **● providers**: *`Array`<[CostModelRespProviders](costmodelrespproviders.md)>*
 
-*Defined in [api.ts:145](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L145)*
+*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L145)*
 
 *__type__*: {Array}
 
@@ -85,7 +85,7 @@ ___
 
 **● rates**: *`Array`<[Rate](rate.md)>*
 
-*Defined in [api.ts:151](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L151)*
+*Defined in [api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L151)*
 
 *__type__*: {Array}
 
@@ -98,7 +98,7 @@ ___
 
 **● sourceType**: *`string`*
 
-*Defined in [api.ts:139](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L139)*
+*Defined in [api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L139)*
 
 *__type__*: {string}
 
@@ -111,7 +111,7 @@ ___
 
 **● updatedTimestamp**: *`Date`*
 
-*Defined in [api.ts:169](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L169)*
+*Defined in [api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L169)*
 
 *__type__*: {Date}
 
@@ -124,7 +124,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:157](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L157)*
+*Defined in [api.ts:157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L157)*
 
 *__type__*: {string}
 

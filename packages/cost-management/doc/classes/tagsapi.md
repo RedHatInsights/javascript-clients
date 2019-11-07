@@ -47,7 +47,7 @@ TagsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 **Parameters:**
 
@@ -71,7 +71,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -82,7 +82,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -93,7 +93,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 ▸ **getAWSTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:6074](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6074)*
+*Defined in [api.ts:6074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6074)*
 
 *__summary__*: Query to obtain AWS tags
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **getAzureTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:6089](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6089)*
+*Defined in [api.ts:6089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6089)*
 
 *__summary__*: Query to obtain AWS tags
 
@@ -159,7 +159,7 @@ ___
 
 ▸ **getOpenShiftAWSTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:6104](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6104)*
+*Defined in [api.ts:6104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6104)*
 
 *__summary__*: Query to obtain OpenShift-on-AWS tags
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **getOpenShiftTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:6119](https://github.com/rvsia/javascript-clients/blob/master/packages/cost-management/api.ts#L6119)*
+*Defined in [api.ts:6119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6119)*
 
 *__summary__*: Query to obtain OpenShift tags
 

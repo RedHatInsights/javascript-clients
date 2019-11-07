@@ -72,6 +72,20 @@ export class RequiredError extends Error {
 /**
  *
  * @export
+ * @interface AppliedInventoriesParametersServicePlan
+ */
+export interface AppliedInventoriesParametersServicePlan {
+    /**
+     * The provider specific parameters needed to compute list of used service inventories
+     * @type {any}
+     * @memberof AppliedInventoriesParametersServicePlan
+     */
+    serviceParameters?: any;
+}
+
+/**
+ *
+ * @export
  * @interface AvailabilitiesCollection
  */
 export interface AvailabilitiesCollection {
@@ -292,13 +306,13 @@ export interface CollectionLinks {
      * @type {string}
      * @memberof CollectionLinks
      */
-    prev?: string;
+    next?: string;
     /**
      *
      * @type {string}
      * @memberof CollectionLinks
      */
-    next?: string;
+    prev?: string;
 }
 
 /**
@@ -318,13 +332,13 @@ export interface CollectionMetadata {
      * @type {number}
      * @memberof CollectionMetadata
      */
-    offset?: number;
+    limit?: number;
     /**
      *
      * @type {number}
      * @memberof CollectionMetadata
      */
-    limit?: number;
+    offset?: number;
 }
 
 /**
@@ -1292,6 +1306,40 @@ export interface DatastoresCollection {
 /**
  *
  * @export
+ * @interface ErrorNotFound
+ */
+export interface ErrorNotFound {
+    /**
+     *
+     * @type {Array<ErrorNotFoundErrors>}
+     * @memberof ErrorNotFound
+     */
+    errors?: Array<ErrorNotFoundErrors>;
+}
+
+/**
+ *
+ * @export
+ * @interface ErrorNotFoundErrors
+ */
+export interface ErrorNotFoundErrors {
+    /**
+     *
+     * @type {number}
+     * @memberof ErrorNotFoundErrors
+     */
+    status?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof ErrorNotFoundErrors
+     */
+    detail?: string;
+}
+
+/**
+ *
+ * @export
  * @interface Flavor
  */
 export interface Flavor {
@@ -1399,6 +1447,32 @@ export interface FlavorsCollection {
      * @memberof FlavorsCollection
      */
     data?: Array<Flavor>;
+}
+
+/**
+ *
+ * @export
+ * @interface GraphQLRequest
+ */
+export interface GraphQLRequest {
+    /**
+     * The GraphQL query
+     * @type {string}
+     * @memberof GraphQLRequest
+     */
+    query: string;
+    /**
+     * If the Query contains several named operations, the operationName controls which one should be executed
+     * @type {string}
+     * @memberof GraphQLRequest
+     */
+    operationName?: string;
+    /**
+     * Optional Query variables
+     * @type {any}
+     * @memberof GraphQLRequest
+     */
+    variables?: any | null;
 }
 
 /**
@@ -1561,32 +1635,6 @@ export interface HostsCollection {
      * @memberof HostsCollection
      */
     data?: Array<Host>;
-}
-
-/**
- *
- * @export
- * @interface InlineObject
- */
-export interface InlineObject {
-    /**
-     * The GraphQL query
-     * @type {string}
-     * @memberof InlineObject
-     */
-    query: string;
-    /**
-     * If the Query contains several named operations, the operationName controls which one should be executed
-     * @type {string}
-     * @memberof InlineObject
-     */
-    operationName?: string;
-    /**
-     * Optional Query variables
-     * @type {any}
-     * @memberof InlineObject
-     */
-    variables?: any;
 }
 
 /**
@@ -2120,19 +2168,45 @@ export interface OrchestrationStacksCollection {
 /**
  *
  * @export
- * @interface OrderParameters
+ * @interface OrderParametersServiceOffering
  */
-export interface OrderParameters {
+export interface OrderParametersServiceOffering {
     /**
      * JSON object with provisioning parameters
      * @type {any}
-     * @memberof OrderParameters
+     * @memberof OrderParametersServiceOffering
      */
     serviceParameters?: any;
     /**
      * The provider specific parameters needed to provision this service. This might include namespaces, special keys
      * @type {any}
-     * @memberof OrderParameters
+     * @memberof OrderParametersServiceOffering
+     */
+    providerControlParameters?: any;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof OrderParametersServiceOffering
+     */
+    servicePlanId?: string;
+}
+
+/**
+ *
+ * @export
+ * @interface OrderParametersServicePlan
+ */
+export interface OrderParametersServicePlan {
+    /**
+     * JSON object with provisioning parameters
+     * @type {any}
+     * @memberof OrderParametersServicePlan
+     */
+    serviceParameters?: any;
+    /**
+     * The provider specific parameters needed to provision this service. This might include namespaces, special keys
+     * @type {any}
+     * @memberof OrderParametersServicePlan
      */
     providerControlParameters?: any;
 }
@@ -2320,6 +2394,18 @@ export interface ServiceInstance {
      * @type {string}
      * @memberof ServiceInstance
      */
+    rootServiceInstanceId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceInstance
+     */
+    serviceInventoryId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceInstance
+     */
     serviceOfferingId?: string;
     /**
      * ID of the resource
@@ -2374,6 +2460,124 @@ export interface ServiceInstance {
 /**
  *
  * @export
+ * @interface ServiceInstanceNode
+ */
+export interface ServiceInstanceNode {
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceInstanceNode
+     */
+    archivedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceInstanceNode
+     */
+    createdAt?: Date;
+    /**
+     *
+     * @type {any}
+     * @memberof ServiceInstanceNode
+     */
+    extra?: any;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceInstanceNode
+     */
+    id?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceInstanceNode
+     */
+    lastSeenAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceInstanceNode
+     */
+    name?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceInstanceNode
+     */
+    rootServiceInstanceId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceInstanceNode
+     */
+    serviceInstanceId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceInstanceNode
+     */
+    serviceInventoryId?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceInstanceNode
+     */
+    sourceCreatedAt?: Date;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceInstanceNode
+     */
+    sourceId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceInstanceNode
+     */
+    sourceRef?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceInstanceNode
+     */
+    sourceUpdatedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceInstanceNode
+     */
+    updatedAt?: Date;
+}
+
+/**
+ *
+ * @export
+ * @interface ServiceInstanceNodesCollection
+ */
+export interface ServiceInstanceNodesCollection {
+    /**
+     *
+     * @type {CollectionMetadata}
+     * @memberof ServiceInstanceNodesCollection
+     */
+    meta?: CollectionMetadata;
+    /**
+     *
+     * @type {CollectionLinks}
+     * @memberof ServiceInstanceNodesCollection
+     */
+    links?: CollectionLinks;
+    /**
+     *
+     * @type {Array<ServiceInstanceNode>}
+     * @memberof ServiceInstanceNodesCollection
+     */
+    data?: Array<ServiceInstanceNode>;
+}
+
+/**
+ *
+ * @export
  * @interface ServiceInstancesCollection
  */
 export interface ServiceInstancesCollection {
@@ -2395,6 +2599,112 @@ export interface ServiceInstancesCollection {
      * @memberof ServiceInstancesCollection
      */
     data?: Array<ServiceInstance>;
+}
+
+/**
+ *
+ * @export
+ * @interface ServiceInventoriesCollection
+ */
+export interface ServiceInventoriesCollection {
+    /**
+     *
+     * @type {CollectionMetadata}
+     * @memberof ServiceInventoriesCollection
+     */
+    meta?: CollectionMetadata;
+    /**
+     *
+     * @type {CollectionLinks}
+     * @memberof ServiceInventoriesCollection
+     */
+    links?: CollectionLinks;
+    /**
+     *
+     * @type {Array<ServiceInventory>}
+     * @memberof ServiceInventoriesCollection
+     */
+    data?: Array<ServiceInventory>;
+}
+
+/**
+ *
+ * @export
+ * @interface ServiceInventory
+ */
+export interface ServiceInventory {
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceInventory
+     */
+    archivedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceInventory
+     */
+    createdAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceInventory
+     */
+    description?: string;
+    /**
+     *
+     * @type {any}
+     * @memberof ServiceInventory
+     */
+    extra?: any;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceInventory
+     */
+    id?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceInventory
+     */
+    lastSeenAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceInventory
+     */
+    name?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceInventory
+     */
+    sourceCreatedAt?: Date;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceInventory
+     */
+    sourceId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceInventory
+     */
+    sourceRef?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceInventory
+     */
+    sourceUpdatedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceInventory
+     */
+    updatedAt?: Date;
 }
 
 /**
@@ -2469,6 +2779,12 @@ export interface ServiceOffering {
      * @memberof ServiceOffering
      */
     name?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceOffering
+     */
+    serviceInventoryId?: string;
     /**
      * ID of the resource
      * @type {string}
@@ -2599,6 +2915,124 @@ export interface ServiceOfferingIconsCollection {
      * @memberof ServiceOfferingIconsCollection
      */
     data?: Array<ServiceOfferingIcon>;
+}
+
+/**
+ *
+ * @export
+ * @interface ServiceOfferingNode
+ */
+export interface ServiceOfferingNode {
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceOfferingNode
+     */
+    archivedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceOfferingNode
+     */
+    createdAt?: Date;
+    /**
+     *
+     * @type {any}
+     * @memberof ServiceOfferingNode
+     */
+    extra?: any;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceOfferingNode
+     */
+    id?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceOfferingNode
+     */
+    lastSeenAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceOfferingNode
+     */
+    name?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceOfferingNode
+     */
+    rootServiceOfferingId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceOfferingNode
+     */
+    serviceInventoryId?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceOfferingNode
+     */
+    serviceOfferingId?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceOfferingNode
+     */
+    sourceCreatedAt?: Date;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof ServiceOfferingNode
+     */
+    sourceId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceOfferingNode
+     */
+    sourceRef?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceOfferingNode
+     */
+    sourceUpdatedAt?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof ServiceOfferingNode
+     */
+    updatedAt?: Date;
+}
+
+/**
+ *
+ * @export
+ * @interface ServiceOfferingNodesCollection
+ */
+export interface ServiceOfferingNodesCollection {
+    /**
+     *
+     * @type {CollectionMetadata}
+     * @memberof ServiceOfferingNodesCollection
+     */
+    meta?: CollectionMetadata;
+    /**
+     *
+     * @type {CollectionLinks}
+     * @memberof ServiceOfferingNodesCollection
+     */
+    links?: CollectionLinks;
+    /**
+     *
+     * @type {Array<ServiceOfferingNode>}
+     * @memberof ServiceOfferingNodesCollection
+     */
+    data?: Array<ServiceOfferingNode>;
 }
 
 /**
@@ -3834,6 +4268,54 @@ export interface VolumesCollection {
  */
 export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * Returns a Task id
+         * @summary Invokes computing of ServiceInventories for given ServiceOffering
+         * @param {string} id ID of the resource
+         * @param {AppliedInventoriesParametersServicePlan} appliedInventoriesParametersServicePlan Parameters defining input data for computing inventories
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appliedInventoriesForServiceOffering(id: string, appliedInventoriesParametersServicePlan: AppliedInventoriesParametersServicePlan, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling appliedInventoriesForServiceOffering.');
+            }
+            // verify required parameter 'appliedInventoriesParametersServicePlan' is not null or undefined
+            if (appliedInventoriesParametersServicePlan === null || appliedInventoriesParametersServicePlan === undefined) {
+                throw new RequiredError('appliedInventoriesParametersServicePlan','Required parameter appliedInventoriesParametersServicePlan was null or undefined when calling appliedInventoriesForServiceOffering.');
+            }
+            const localVarPath = `/service_offerings/{id}/applied_inventories`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"AppliedInventoriesParametersServicePlan" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(appliedInventoriesParametersServicePlan || {}) : (appliedInventoriesParametersServicePlan || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          *
          * @summary Return this API document in JSON format
@@ -5986,6 +6468,108 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns an array of ServiceInstanceNode objects
+         * @summary List ServiceInstanceNodes
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceInstanceNodes(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            const localVarPath = `/service_instance_nodes`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of ServiceInstanceNode objects
+         * @summary List ServiceInstanceNodes for ServiceInstance
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceInstanceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listServiceInstanceServiceInstanceNodes.');
+            }
+            const localVarPath = `/service_instances/{id}/service_instance_nodes`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns an array of ServiceInstance objects
          * @summary List ServiceInstances
          * @param {number} [limit] The numbers of items to return per page.
@@ -5996,6 +6580,108 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          */
         listServiceInstances(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/service_instances`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of ServiceInventory objects
+         * @summary List ServiceInventories
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceInventories(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            const localVarPath = `/service_inventories`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for ServiceInventory
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceInventoryTags(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listServiceInventoryTags.');
+            }
+            const localVarPath = `/service_inventories/{id}/tags`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -6082,6 +6768,54 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns an array of ServiceOfferingNode objects
+         * @summary List ServiceOfferingNodes
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceOfferingNodes(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            const localVarPath = `/service_offering_nodes`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns an array of ServiceInstance objects
          * @summary List ServiceInstances for ServiceOffering
          * @param {string} id ID of the resource
@@ -6097,6 +6831,60 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listServiceOfferingServiceInstances.');
             }
             const localVarPath = `/service_offerings/{id}/service_instances`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of ServiceOfferingNode objects
+         * @summary List ServiceOfferingNodes for ServiceOffering
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceOfferingServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listServiceOfferingServiceOfferingNodes.');
+            }
+            const localVarPath = `/service_offerings/{id}/service_offering_nodes`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -7846,6 +8634,60 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns an array of ServiceInstanceNode objects
+         * @summary List ServiceInstanceNodes for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceServiceInstanceNodes.');
+            }
+            const localVarPath = `/sources/{id}/service_instance_nodes`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns an array of ServiceInstance objects
          * @summary List ServiceInstances for Source
          * @param {string} id ID of the resource
@@ -7861,6 +8703,114 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceServiceInstances.');
             }
             const localVarPath = `/sources/{id}/service_instances`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of ServiceInventory objects
+         * @summary List ServiceInventories for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceServiceInventories(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceServiceInventories.');
+            }
+            const localVarPath = `/sources/{id}/service_inventories`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an array of ServiceOfferingNode objects
+         * @summary List ServiceOfferingNodes for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceServiceOfferingNodes.');
+            }
+            const localVarPath = `/sources/{id}/service_offering_nodes`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -9718,6 +10668,60 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns an array of ServiceInventory objects
+         * @summary List ServiceInventories for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagServiceInventories(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listTagServiceInventories.');
+            }
+            const localVarPath = `/tags/{id}/service_inventories`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns an array of ServiceOffering objects
          * @summary List ServiceOfferings for Tag
          * @param {string} id ID of the resource
@@ -10549,18 +11553,18 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * Returns a Task id
          * @summary Order an existing ServiceOffering
          * @param {string} id ID of the resource
-         * @param {OrderParameters} orderParameters Order parameters defining the service and provider control
+         * @param {OrderParametersServiceOffering} orderParametersServiceOffering Order parameters defining the service and provider control
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        orderServiceOffering(id: string, orderParameters: OrderParameters, options: any = {}): RequestArgs {
+        orderServiceOffering(id: string, orderParametersServiceOffering: OrderParametersServiceOffering, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling orderServiceOffering.');
             }
-            // verify required parameter 'orderParameters' is not null or undefined
-            if (orderParameters === null || orderParameters === undefined) {
-                throw new RequiredError('orderParameters','Required parameter orderParameters was null or undefined when calling orderServiceOffering.');
+            // verify required parameter 'orderParametersServiceOffering' is not null or undefined
+            if (orderParametersServiceOffering === null || orderParametersServiceOffering === undefined) {
+                throw new RequiredError('orderParametersServiceOffering','Required parameter orderParametersServiceOffering was null or undefined when calling orderServiceOffering.');
             }
             const localVarPath = `/service_offerings/{id}/order`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -10585,8 +11589,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"OrderParameters" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(orderParameters || {}) : (orderParameters || "");
+            const needsSerialization = (<any>"OrderParametersServiceOffering" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(orderParametersServiceOffering || {}) : (orderParametersServiceOffering || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -10597,18 +11601,18 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * Returns a Task id
          * @summary Order an existing ServicePlan
          * @param {string} id ID of the resource
-         * @param {OrderParameters} orderParameters Order parameters defining the service and provider control
+         * @param {OrderParametersServicePlan} orderParametersServicePlan Order parameters defining the service and provider control
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        orderServicePlan(id: string, orderParameters: OrderParameters, options: any = {}): RequestArgs {
+        orderServicePlan(id: string, orderParametersServicePlan: OrderParametersServicePlan, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling orderServicePlan.');
             }
-            // verify required parameter 'orderParameters' is not null or undefined
-            if (orderParameters === null || orderParameters === undefined) {
-                throw new RequiredError('orderParameters','Required parameter orderParameters was null or undefined when calling orderServicePlan.');
+            // verify required parameter 'orderParametersServicePlan' is not null or undefined
+            if (orderParametersServicePlan === null || orderParametersServicePlan === undefined) {
+                throw new RequiredError('orderParametersServicePlan','Required parameter orderParametersServicePlan was null or undefined when calling orderServicePlan.');
             }
             const localVarPath = `/service_plans/{id}/order`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -10633,8 +11637,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"OrderParameters" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(orderParameters || {}) : (orderParameters || "");
+            const needsSerialization = (<any>"OrderParametersServicePlan" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(orderParametersServicePlan || {}) : (orderParametersServicePlan || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -10644,14 +11648,14 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Performs a GraphQL Query
          * @summary Perform a GraphQL Query
-         * @param {InlineObject} inlineObject
+         * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphQL(inlineObject: InlineObject, options: any = {}): RequestArgs {
-            // verify required parameter 'inlineObject' is not null or undefined
-            if (inlineObject === null || inlineObject === undefined) {
-                throw new RequiredError('inlineObject','Required parameter inlineObject was null or undefined when calling postGraphQL.');
+        postGraphQL(graphQLRequest: GraphQLRequest, options: any = {}): RequestArgs {
+            // verify required parameter 'graphQLRequest' is not null or undefined
+            if (graphQLRequest === null || graphQLRequest === undefined) {
+                throw new RequiredError('graphQLRequest','Required parameter graphQLRequest was null or undefined when calling postGraphQL.');
             }
             const localVarPath = `/graphql`;
             const localVarUrlObj = url.parse(localVarPath, true);
@@ -10675,8 +11679,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"InlineObject" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(inlineObject || {}) : (inlineObject || "");
+            const needsSerialization = (<any>"GraphQLRequest" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(graphQLRequest || {}) : (graphQLRequest || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11347,6 +12351,84 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns a ServiceInstanceNode object
+         * @summary Show an existing ServiceInstanceNode
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showServiceInstanceNode(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showServiceInstanceNode.');
+            }
+            const localVarPath = `/service_instance_nodes/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns a ServiceInventory object
+         * @summary Show an existing ServiceInventory
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showServiceInventory(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showServiceInventory.');
+            }
+            const localVarPath = `/service_inventories/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns a ServiceOffering object
          * @summary Show an existing ServiceOffering
          * @param {string} id ID of the resource
@@ -11437,6 +12519,45 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showServiceOfferingIconIconData.');
             }
             const localVarPath = `/service_offering_icons/{id}/icon_data`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns a ServiceOfferingNode object
+         * @summary Show an existing ServiceOfferingNode
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showServiceOfferingNode(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showServiceOfferingNode.');
+            }
+            const localVarPath = `/service_offering_nodes/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -11950,12 +13071,27 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 export const DefaultApiFp = function(configuration?: Configuration) {
     return {
         /**
+         * Returns a Task id
+         * @summary Invokes computing of ServiceInventories for given ServiceOffering
+         * @param {string} id ID of the resource
+         * @param {AppliedInventoriesParametersServicePlan} appliedInventoriesParametersServicePlan Parameters defining input data for computing inventories
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appliedInventoriesForServiceOffering(id: string, appliedInventoriesParametersServicePlan: AppliedInventoriesParametersServicePlan, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).appliedInventoriesForServiceOffering(id, appliedInventoriesParametersServicePlan, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          *
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDocumentation(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+        getDocumentation(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -12644,6 +13780,39 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns an array of ServiceInstanceNode objects
+         * @summary List ServiceInstanceNodes
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceInstanceNodes(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstanceNodesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceInstanceNodes(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of ServiceInstanceNode objects
+         * @summary List ServiceInstanceNodes for ServiceInstance
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceInstanceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstanceNodesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceInstanceServiceInstanceNodes(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns an array of ServiceInstance objects
          * @summary List ServiceInstances
          * @param {number} [limit] The numbers of items to return per page.
@@ -12654,6 +13823,39 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         listServiceInstances(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceInstances(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of ServiceInventory objects
+         * @summary List ServiceInventories
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceInventories(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInventoriesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceInventories(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for ServiceInventory
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceInventoryTags(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceInventoryTags(id, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -12676,6 +13878,22 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns an array of ServiceOfferingNode objects
+         * @summary List ServiceOfferingNodes
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceOfferingNodes(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingNodesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceOfferingNodes(limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns an array of ServiceInstance objects
          * @summary List ServiceInstances for ServiceOffering
          * @param {string} id ID of the resource
@@ -12687,6 +13905,23 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         listServiceOfferingServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceOfferingServiceInstances(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of ServiceOfferingNode objects
+         * @summary List ServiceOfferingNodes for ServiceOffering
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceOfferingServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingNodesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceOfferingServiceOfferingNodes(id, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -13234,6 +14469,23 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns an array of ServiceInstanceNode objects
+         * @summary List ServiceInstanceNodes for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstanceNodesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceServiceInstanceNodes(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns an array of ServiceInstance objects
          * @summary List ServiceInstances for Source
          * @param {string} id ID of the resource
@@ -13245,6 +14497,40 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         listSourceServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceServiceInstances(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of ServiceInventory objects
+         * @summary List ServiceInventories for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceServiceInventories(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInventoriesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceServiceInventories(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an array of ServiceOfferingNode objects
+         * @summary List ServiceOfferingNodes for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingNodesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceServiceOfferingNodes(id, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -13826,6 +15112,23 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns an array of ServiceInventory objects
+         * @summary List ServiceInventories for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagServiceInventories(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInventoriesCollection> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagServiceInventories(id, limit, offset, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns an array of ServiceOffering objects
          * @summary List ServiceOfferings for Tag
          * @param {string} id ID of the resource
@@ -14095,12 +15398,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * Returns a Task id
          * @summary Order an existing ServiceOffering
          * @param {string} id ID of the resource
-         * @param {OrderParameters} orderParameters Order parameters defining the service and provider control
+         * @param {OrderParametersServiceOffering} orderParametersServiceOffering Order parameters defining the service and provider control
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        orderServiceOffering(id: string, orderParameters: OrderParameters, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).orderServiceOffering(id, orderParameters, options);
+        orderServiceOffering(id: string, orderParametersServiceOffering: OrderParametersServiceOffering, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).orderServiceOffering(id, orderParametersServiceOffering, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -14110,12 +15413,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * Returns a Task id
          * @summary Order an existing ServicePlan
          * @param {string} id ID of the resource
-         * @param {OrderParameters} orderParameters Order parameters defining the service and provider control
+         * @param {OrderParametersServicePlan} orderParametersServicePlan Order parameters defining the service and provider control
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        orderServicePlan(id: string, orderParameters: OrderParameters, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).orderServicePlan(id, orderParameters, options);
+        orderServicePlan(id: string, orderParametersServicePlan: OrderParametersServicePlan, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).orderServicePlan(id, orderParametersServicePlan, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -14124,12 +15427,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         /**
          * Performs a GraphQL Query
          * @summary Perform a GraphQL Query
-         * @param {InlineObject} inlineObject
+         * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphQL(inlineObject: InlineObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphQLResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).postGraphQL(inlineObject, options);
+        postGraphQL(graphQLRequest: GraphQLRequest, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphQLResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).postGraphQL(graphQLRequest, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -14374,6 +15677,34 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns a ServiceInstanceNode object
+         * @summary Show an existing ServiceInstanceNode
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showServiceInstanceNode(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstanceNode> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showServiceInstanceNode(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns a ServiceInventory object
+         * @summary Show an existing ServiceInventory
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showServiceInventory(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInventory> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showServiceInventory(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns a ServiceOffering object
          * @summary Show an existing ServiceOffering
          * @param {string} id ID of the resource
@@ -14410,6 +15741,20 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         showServiceOfferingIconIconData(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showServiceOfferingIconIconData(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns a ServiceOfferingNode object
+         * @summary Show an existing ServiceOfferingNode
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showServiceOfferingNode(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingNode> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showServiceOfferingNode(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -14593,6 +15938,17 @@ export const DefaultApiFp = function(configuration?: Configuration) {
  */
 export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
+        /**
+         * Returns a Task id
+         * @summary Invokes computing of ServiceInventories for given ServiceOffering
+         * @param {string} id ID of the resource
+         * @param {AppliedInventoriesParametersServicePlan} appliedInventoriesParametersServicePlan Parameters defining input data for computing inventories
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appliedInventoriesForServiceOffering(id: string, appliedInventoriesParametersServicePlan: AppliedInventoriesParametersServicePlan, options?: any) {
+            return DefaultApiFp(configuration).appliedInventoriesForServiceOffering(id, appliedInventoriesParametersServicePlan, options)(axios, basePath);
+        },
         /**
          *
          * @summary Return this API document in JSON format
@@ -15120,6 +16476,31 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSecurityGroups(limit, offset, filter, options)(axios, basePath);
         },
         /**
+         * Returns an array of ServiceInstanceNode objects
+         * @summary List ServiceInstanceNodes
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceInstanceNodes(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listServiceInstanceNodes(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of ServiceInstanceNode objects
+         * @summary List ServiceInstanceNodes for ServiceInstance
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceInstanceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listServiceInstanceServiceInstanceNodes(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
          * Returns an array of ServiceInstance objects
          * @summary List ServiceInstances
          * @param {number} [limit] The numbers of items to return per page.
@@ -15130,6 +16511,31 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         listServiceInstances(limit?: number, offset?: number, filter?: any, options?: any) {
             return DefaultApiFp(configuration).listServiceInstances(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of ServiceInventory objects
+         * @summary List ServiceInventories
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceInventories(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listServiceInventories(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of Tag objects
+         * @summary List Tags for ServiceInventory
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceInventoryTags(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listServiceInventoryTags(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of ServiceOfferingIcon objects
@@ -15144,6 +16550,18 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServiceOfferingIcons(limit, offset, filter, options)(axios, basePath);
         },
         /**
+         * Returns an array of ServiceOfferingNode objects
+         * @summary List ServiceOfferingNodes
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceOfferingNodes(limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listServiceOfferingNodes(limit, offset, filter, options)(axios, basePath);
+        },
+        /**
          * Returns an array of ServiceInstance objects
          * @summary List ServiceInstances for ServiceOffering
          * @param {string} id ID of the resource
@@ -15155,6 +16573,19 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         listServiceOfferingServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
             return DefaultApiFp(configuration).listServiceOfferingServiceInstances(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of ServiceOfferingNode objects
+         * @summary List ServiceOfferingNodes for ServiceOffering
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listServiceOfferingServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listServiceOfferingServiceOfferingNodes(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of ServicePlan objects
@@ -15570,6 +17001,19 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceSecurityGroups(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
+         * Returns an array of ServiceInstanceNode objects
+         * @summary List ServiceInstanceNodes for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceServiceInstanceNodes(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
          * Returns an array of ServiceInstance objects
          * @summary List ServiceInstances for Source
          * @param {string} id ID of the resource
@@ -15581,6 +17025,32 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         listSourceServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
             return DefaultApiFp(configuration).listSourceServiceInstances(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of ServiceInventory objects
+         * @summary List ServiceInventories for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceServiceInventories(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceServiceInventories(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Returns an array of ServiceOfferingNode objects
+         * @summary List ServiceOfferingNodes for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listSourceServiceOfferingNodes(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Returns an array of ServiceOffering objects
@@ -16022,6 +17492,19 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagSecurityGroups(id, limit, offset, filter, options)(axios, basePath);
         },
         /**
+         * Returns an array of ServiceInventory objects
+         * @summary List ServiceInventories for Tag
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {any} [filter] Filter for querying collections.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTagServiceInventories(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return DefaultApiFp(configuration).listTagServiceInventories(id, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
          * Returns an array of ServiceOffering objects
          * @summary List ServiceOfferings for Tag
          * @param {string} id ID of the resource
@@ -16227,33 +17710,33 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * Returns a Task id
          * @summary Order an existing ServiceOffering
          * @param {string} id ID of the resource
-         * @param {OrderParameters} orderParameters Order parameters defining the service and provider control
+         * @param {OrderParametersServiceOffering} orderParametersServiceOffering Order parameters defining the service and provider control
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        orderServiceOffering(id: string, orderParameters: OrderParameters, options?: any) {
-            return DefaultApiFp(configuration).orderServiceOffering(id, orderParameters, options)(axios, basePath);
+        orderServiceOffering(id: string, orderParametersServiceOffering: OrderParametersServiceOffering, options?: any) {
+            return DefaultApiFp(configuration).orderServiceOffering(id, orderParametersServiceOffering, options)(axios, basePath);
         },
         /**
          * Returns a Task id
          * @summary Order an existing ServicePlan
          * @param {string} id ID of the resource
-         * @param {OrderParameters} orderParameters Order parameters defining the service and provider control
+         * @param {OrderParametersServicePlan} orderParametersServicePlan Order parameters defining the service and provider control
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        orderServicePlan(id: string, orderParameters: OrderParameters, options?: any) {
-            return DefaultApiFp(configuration).orderServicePlan(id, orderParameters, options)(axios, basePath);
+        orderServicePlan(id: string, orderParametersServicePlan: OrderParametersServicePlan, options?: any) {
+            return DefaultApiFp(configuration).orderServicePlan(id, orderParametersServicePlan, options)(axios, basePath);
         },
         /**
          * Performs a GraphQL Query
          * @summary Perform a GraphQL Query
-         * @param {InlineObject} inlineObject
+         * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphQL(inlineObject: InlineObject, options?: any) {
-            return DefaultApiFp(configuration).postGraphQL(inlineObject, options)(axios, basePath);
+        postGraphQL(graphQLRequest: GraphQLRequest, options?: any) {
+            return DefaultApiFp(configuration).postGraphQL(graphQLRequest, options)(axios, basePath);
         },
         /**
          * Returns a Cluster object
@@ -16426,6 +17909,26 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).showServiceInstance(id, options)(axios, basePath);
         },
         /**
+         * Returns a ServiceInstanceNode object
+         * @summary Show an existing ServiceInstanceNode
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showServiceInstanceNode(id: string, options?: any) {
+            return DefaultApiFp(configuration).showServiceInstanceNode(id, options)(axios, basePath);
+        },
+        /**
+         * Returns a ServiceInventory object
+         * @summary Show an existing ServiceInventory
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showServiceInventory(id: string, options?: any) {
+            return DefaultApiFp(configuration).showServiceInventory(id, options)(axios, basePath);
+        },
+        /**
          * Returns a ServiceOffering object
          * @summary Show an existing ServiceOffering
          * @param {string} id ID of the resource
@@ -16454,6 +17957,16 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         showServiceOfferingIconIconData(id: string, options?: any) {
             return DefaultApiFp(configuration).showServiceOfferingIconIconData(id, options)(axios, basePath);
+        },
+        /**
+         * Returns a ServiceOfferingNode object
+         * @summary Show an existing ServiceOfferingNode
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showServiceOfferingNode(id: string, options?: any) {
+            return DefaultApiFp(configuration).showServiceOfferingNode(id, options)(axios, basePath);
         },
         /**
          * Returns a ServicePlan object
@@ -16586,6 +18099,19 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
  * @extends {BaseAPI}
  */
 export class DefaultApi extends BaseAPI {
+    /**
+     * Returns a Task id
+     * @summary Invokes computing of ServiceInventories for given ServiceOffering
+     * @param {string} id ID of the resource
+     * @param {AppliedInventoriesParametersServicePlan} appliedInventoriesParametersServicePlan Parameters defining input data for computing inventories
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public appliedInventoriesForServiceOffering(id: string, appliedInventoriesParametersServicePlan: AppliedInventoriesParametersServicePlan, options?: any) {
+        return DefaultApiFp(this.configuration).appliedInventoriesForServiceOffering(id, appliedInventoriesParametersServicePlan, options)(this.axios, this.basePath);
+    }
+
     /**
      *
      * @summary Return this API document in JSON format
@@ -17197,6 +18723,35 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Returns an array of ServiceInstanceNode objects
+     * @summary List ServiceInstanceNodes
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listServiceInstanceNodes(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listServiceInstanceNodes(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of ServiceInstanceNode objects
+     * @summary List ServiceInstanceNodes for ServiceInstance
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listServiceInstanceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listServiceInstanceServiceInstanceNodes(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns an array of ServiceInstance objects
      * @summary List ServiceInstances
      * @param {number} [limit] The numbers of items to return per page.
@@ -17208,6 +18763,35 @@ export class DefaultApi extends BaseAPI {
      */
     public listServiceInstances(limit?: number, offset?: number, filter?: any, options?: any) {
         return DefaultApiFp(this.configuration).listServiceInstances(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of ServiceInventory objects
+     * @summary List ServiceInventories
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listServiceInventories(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listServiceInventories(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of Tag objects
+     * @summary List Tags for ServiceInventory
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listServiceInventoryTags(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listServiceInventoryTags(id, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -17225,6 +18809,20 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Returns an array of ServiceOfferingNode objects
+     * @summary List ServiceOfferingNodes
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listServiceOfferingNodes(limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listServiceOfferingNodes(limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns an array of ServiceInstance objects
      * @summary List ServiceInstances for ServiceOffering
      * @param {string} id ID of the resource
@@ -17237,6 +18835,21 @@ export class DefaultApi extends BaseAPI {
      */
     public listServiceOfferingServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
         return DefaultApiFp(this.configuration).listServiceOfferingServiceInstances(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of ServiceOfferingNode objects
+     * @summary List ServiceOfferingNodes for ServiceOffering
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listServiceOfferingServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listServiceOfferingServiceOfferingNodes(id, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -17717,6 +19330,21 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Returns an array of ServiceInstanceNode objects
+     * @summary List ServiceInstanceNodes for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceServiceInstanceNodes(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns an array of ServiceInstance objects
      * @summary List ServiceInstances for Source
      * @param {string} id ID of the resource
@@ -17729,6 +19357,36 @@ export class DefaultApi extends BaseAPI {
      */
     public listSourceServiceInstances(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
         return DefaultApiFp(this.configuration).listSourceServiceInstances(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of ServiceInventory objects
+     * @summary List ServiceInventories for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceServiceInventories(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceServiceInventories(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns an array of ServiceOfferingNode objects
+     * @summary List ServiceOfferingNodes for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceServiceOfferingNodes(id, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -18239,6 +19897,21 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Returns an array of ServiceInventory objects
+     * @summary List ServiceInventories for Tag
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {any} [filter] Filter for querying collections.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listTagServiceInventories(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return DefaultApiFp(this.configuration).listTagServiceInventories(id, limit, offset, filter, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns an array of ServiceOffering objects
      * @summary List ServiceOfferings for Tag
      * @param {string} id ID of the resource
@@ -18476,38 +20149,38 @@ export class DefaultApi extends BaseAPI {
      * Returns a Task id
      * @summary Order an existing ServiceOffering
      * @param {string} id ID of the resource
-     * @param {OrderParameters} orderParameters Order parameters defining the service and provider control
+     * @param {OrderParametersServiceOffering} orderParametersServiceOffering Order parameters defining the service and provider control
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public orderServiceOffering(id: string, orderParameters: OrderParameters, options?: any) {
-        return DefaultApiFp(this.configuration).orderServiceOffering(id, orderParameters, options)(this.axios, this.basePath);
+    public orderServiceOffering(id: string, orderParametersServiceOffering: OrderParametersServiceOffering, options?: any) {
+        return DefaultApiFp(this.configuration).orderServiceOffering(id, orderParametersServiceOffering, options)(this.axios, this.basePath);
     }
 
     /**
      * Returns a Task id
      * @summary Order an existing ServicePlan
      * @param {string} id ID of the resource
-     * @param {OrderParameters} orderParameters Order parameters defining the service and provider control
+     * @param {OrderParametersServicePlan} orderParametersServicePlan Order parameters defining the service and provider control
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public orderServicePlan(id: string, orderParameters: OrderParameters, options?: any) {
-        return DefaultApiFp(this.configuration).orderServicePlan(id, orderParameters, options)(this.axios, this.basePath);
+    public orderServicePlan(id: string, orderParametersServicePlan: OrderParametersServicePlan, options?: any) {
+        return DefaultApiFp(this.configuration).orderServicePlan(id, orderParametersServicePlan, options)(this.axios, this.basePath);
     }
 
     /**
      * Performs a GraphQL Query
      * @summary Perform a GraphQL Query
-     * @param {InlineObject} inlineObject
+     * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public postGraphQL(inlineObject: InlineObject, options?: any) {
-        return DefaultApiFp(this.configuration).postGraphQL(inlineObject, options)(this.axios, this.basePath);
+    public postGraphQL(graphQLRequest: GraphQLRequest, options?: any) {
+        return DefaultApiFp(this.configuration).postGraphQL(graphQLRequest, options)(this.axios, this.basePath);
     }
 
     /**
@@ -18715,6 +20388,30 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Returns a ServiceInstanceNode object
+     * @summary Show an existing ServiceInstanceNode
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public showServiceInstanceNode(id: string, options?: any) {
+        return DefaultApiFp(this.configuration).showServiceInstanceNode(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns a ServiceInventory object
+     * @summary Show an existing ServiceInventory
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public showServiceInventory(id: string, options?: any) {
+        return DefaultApiFp(this.configuration).showServiceInventory(id, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns a ServiceOffering object
      * @summary Show an existing ServiceOffering
      * @param {string} id ID of the resource
@@ -18748,6 +20445,18 @@ export class DefaultApi extends BaseAPI {
      */
     public showServiceOfferingIconIconData(id: string, options?: any) {
         return DefaultApiFp(this.configuration).showServiceOfferingIconIconData(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns a ServiceOfferingNode object
+     * @summary Show an existing ServiceOfferingNode
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public showServiceOfferingNode(id: string, options?: any) {
+        return DefaultApiFp(this.configuration).showServiceOfferingNode(id, options)(this.axios, this.basePath);
     }
 
     /**

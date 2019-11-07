@@ -18,8 +18,8 @@
 * [id](approvalrequest.md#id)
 * [orderItemId](approvalrequest.md#orderitemid)
 * [reason](approvalrequest.md#reason)
+* [requestCompletedAt](approvalrequest.md#requestcompletedat)
 * [state](approvalrequest.md#state)
-* [workflowRef](approvalrequest.md#workflowref)
 
 ---
 
@@ -31,7 +31,7 @@
 
 **● approvalRequestRef**: *`string`*
 
-*Defined in [api.ts:117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L117)*
+*Defined in [api.ts:103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L103)*
 
 The id of the approval submitted to approval-api
 
@@ -46,7 +46,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L111)*
+*Defined in [api.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L97)*
 
 The unique identifier for this approval request.
 
@@ -61,7 +61,7 @@ ___
 
 **● orderItemId**: *`string`*
 
-*Defined in [api.ts:123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L123)*
+*Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L109)*
 
 The Order Item which the approval request belongs to
 
@@ -76,11 +76,24 @@ ___
 
 **● reason**: *`string`*
 
-*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L129)*
+*Defined in [api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L115)*
 
 The reason for the current state.
 
 *__type__*: {string}
+
+*__memberof__*: ApprovalRequest
+
+___
+<a id="requestcompletedat"></a>
+
+### `<Optional>` requestCompletedAt
+
+**● requestCompletedAt**: *`Date`*
+
+*Defined in [api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L121)*
+
+*__type__*: {Date}
 
 *__memberof__*: ApprovalRequest
 
@@ -91,24 +104,9 @@ ___
 
 **● state**: *[StateEnum](../enums/approvalrequest.stateenum.md)*
 
-*Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L135)*
+*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L127)*
 
 The state of the approval request (approved, denied, undecided, canceled)
-
-*__type__*: {string}
-
-*__memberof__*: ApprovalRequest
-
-___
-<a id="workflowref"></a>
-
-### `<Optional>` workflowRef
-
-**● workflowRef**: *`string`*
-
-*Defined in [api.ts:141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L141)*
-
-The workflow that was requested
 
 *__type__*: {string}
 

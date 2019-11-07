@@ -284,7 +284,7 @@ export interface GraphqlIn {
      * @type {any}
      * @memberof GraphqlIn
      */
-    variables?: any;
+    variables?: any | null;
 }
 
 /**
@@ -308,134 +308,96 @@ export interface GraphqlOut {
 }
 
 /**
- * Input parameters for approval request object.
+ * Approval request. It may have child requests. Only a leaf node request can have workflow_id and actions
  * @export
- * @interface RequestIn
+ * @interface Request
  */
-export interface RequestIn {
-    /**
-     * Requester id
-     * @type {string}
-     * @memberof RequestIn
-     */
-    requesterName?: string;
-    /**
-     * Request name
-     * @type {string}
-     * @memberof RequestIn
-     */
-    name: string;
-    /**
-     * Request description
-     * @type {string}
-     * @memberof RequestIn
-     */
-    description?: string;
-    /**
-     * JSON object with request content
-     * @type {any}
-     * @memberof RequestIn
-     */
-    content: any;
-}
-
-/**
- * Approval request. Each request will associate with a workflow. Corresponding to the groups of the associated workflow, every request will have a list of stages to record the request processing details.
- * @export
- * @interface RequestOut
- */
-export interface RequestOut {
+export interface Request {
     /**
      *
      * @type {string}
-     * @memberof RequestOut
+     * @memberof Request
      */
     id?: string;
     /**
-     * The state of stage or request. It may be one of values (canceled, pending, skipped, notified or finished)
+     * The state of the request. Possible value: canceled, pending, skipped, notified, or finished
      * @type {string}
-     * @memberof RequestOut
+     * @memberof Request
      */
-    state?: RequestOut.StateEnum;
+    state?: Request.StateEnum;
     /**
-     * Final decision, may be one of the value (undecided, approved, canceled or denied)
+     * Approval decision. Possible value: undecided, approved, canceled, or denied
      * @type {string}
-     * @memberof RequestOut
+     * @memberof Request
      */
-    decision?: RequestOut.DecisionEnum;
+    decision?: Request.DecisionEnum;
     /**
-     * Comments for requests
+     * Reason for the decision. Optional. Present normally when the decision is denied
      * @type {string}
-     * @memberof RequestOut
+     * @memberof Request
      */
     reason?: string;
     /**
-     * Associate workflow id
+     * Associate workflow id. Available only if the request is a leaf node
      * @type {string}
-     * @memberof RequestOut
+     * @memberof Request
      */
     workflowId?: string;
     /**
      * Timestamp of creation
      * @type {Date}
-     * @memberof RequestOut
+     * @memberof Request
      */
     createdAt?: Date;
     /**
      * Timestamp of last update
      * @type {Date}
-     * @memberof RequestOut
+     * @memberof Request
      */
     updatedAt?: Date;
     /**
-     * Current (or last) active stage. For regular approver this number is always 0
+     * Number of child requests
      * @type {number}
-     * @memberof RequestOut
+     * @memberof Request
      */
-    activeStage?: number;
+    numberOfChildren?: number;
     /**
-     * Total number of stages. For regular approver this number is always 0.
+     * Number of finished child requests
      * @type {number}
-     * @memberof RequestOut
+     * @memberof Request
      */
-    totalStages?: number;
+    numberOfFinishedChildren?: number;
     /**
-     * Owner id
+     * Requester's id
      * @type {string}
-     * @memberof RequestOut
+     * @memberof Request
      */
     owner?: string;
     /**
-     * Requester name
+     * Requester's full name
      * @type {string}
-     * @memberof RequestOut
+     * @memberof Request
      */
     requesterName?: string;
     /**
      * Request name
      * @type {string}
-     * @memberof RequestOut
+     * @memberof Request
      */
     name?: string;
     /**
      * Request description
      * @type {string}
-     * @memberof RequestOut
+     * @memberof Request
      */
     description?: string;
-    /**
-     * JSON object with request content
-     * @type {any}
-     * @memberof RequestOut
-     */
-    content?: any;
 }
 
 /**
  * @export
- * @namespace RequestOut
+ * @namespace Request
  */
-export namespace RequestOut {
+export namespace Request {
     /**
      * @export
      * @enum {string}
@@ -462,27 +424,85 @@ export namespace RequestOut {
 /**
  *
  * @export
- * @interface RequestOutCollection
+ * @interface RequestCollection
  */
-export interface RequestOutCollection {
+export interface RequestCollection {
     /**
      *
      * @type {CollectionMetadata}
-     * @memberof RequestOutCollection
+     * @memberof RequestCollection
      */
     meta?: CollectionMetadata;
     /**
      *
      * @type {CollectionLinks}
-     * @memberof RequestOutCollection
+     * @memberof RequestCollection
      */
     links?: CollectionLinks;
     /**
      *
-     * @type {Array<RequestOut>}
-     * @memberof RequestOutCollection
+     * @type {Array<Request>}
+     * @memberof RequestCollection
      */
-    data?: Array<RequestOut>;
+    data?: Array<Request>;
+}
+
+/**
+ * Input parameters for approval request object.
+ * @export
+ * @interface RequestIn
+ */
+export interface RequestIn {
+    /**
+     * Request name
+     * @type {string}
+     * @memberof RequestIn
+     */
+    name: string;
+    /**
+     * Request description
+     * @type {string}
+     * @memberof RequestIn
+     */
+    description?: string;
+    /**
+     * JSON object with request content
+     * @type {any}
+     * @memberof RequestIn
+     */
+    content: any;
+    /**
+     * collection of resources having tags that determine the workflows for the request
+     * @type {Array<TagResource>}
+     * @memberof RequestIn
+     */
+    tagResources: Array<TagResource>;
+}
+
+/**
+ * Resource object definition
+ * @export
+ * @interface ResourceObject
+ */
+export interface ResourceObject {
+    /**
+     * Object type
+     * @type {string}
+     * @memberof ResourceObject
+     */
+    objectType: string;
+    /**
+     * Application name the object belongs to
+     * @type {string}
+     * @memberof ResourceObject
+     */
+    appName: string;
+    /**
+     * Id of the object
+     * @type {string}
+     * @memberof ResourceObject
+     */
+    objectId: string;
 }
 
 /**
@@ -584,6 +604,58 @@ export interface StageOutCollection {
 }
 
 /**
+ * tag details
+ * @export
+ * @interface Tag
+ */
+export interface Tag {
+    /**
+     *
+     * @type {string}
+     * @memberof Tag
+     */
+    namespace: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Tag
+     */
+    name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Tag
+     */
+    value?: string;
+}
+
+/**
+ * Resource with tags
+ * @export
+ * @interface TagResource
+ */
+export interface TagResource {
+    /**
+     *
+     * @type {string}
+     * @memberof TagResource
+     */
+    appName: string;
+    /**
+     *
+     * @type {string}
+     * @memberof TagResource
+     */
+    objectType: string;
+    /**
+     *
+     * @type {Array<Tag>}
+     * @memberof TagResource
+     */
+    tags: Array<Tag>;
+}
+
+/**
  * The template to categorize workflows.
  * @export
  * @interface TemplateOut
@@ -654,6 +726,12 @@ export interface WorkflowIn {
      */
     description?: string;
     /**
+     * an indicator of the execution order for selected workflows
+     * @type {number}
+     * @memberof WorkflowIn
+     */
+    sequence?: number;
+    /**
      * Group reference ids associated with workflow
      * @type {Array<string>}
      * @memberof WorkflowIn
@@ -691,6 +769,12 @@ export interface WorkflowOut {
      * @memberof WorkflowOut
      */
     description?: string;
+    /**
+     * an indicator of the execution order for selected workflows
+     * @type {number}
+     * @memberof WorkflowOut
+     */
+    sequence?: number;
     /**
      * Group reference ids associated with workflow
      * @type {Array<string>}
@@ -734,7 +818,7 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
     return {
         /**
          * Add an action to a given stage
-         * @summary Add an action to a given stage
+         * @summary Add an action to a given stage, available for admin/approver/requester
          * @param {string} stageId Id of stage
          * @param {ActionIn} actionIn Action object that will be added
          * @param {*} [options] Override http request option.
@@ -782,7 +866,7 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
         },
         /**
          * Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
-         * @summary Add an action to current active stage of a given request
+         * @summary Add an action to current active stage of a given request, available for admin/approver/requester
          * @param {string} requestId Id of request
          * @param {ActionIn} actionIn Action object that will be added
          * @param {*} [options] Override http request option.
@@ -830,7 +914,7 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
         },
         /**
          * List all actions of a stage
-         * @summary Return actions in a given stage
+         * @summary Return actions in a given stage, available for admin/approver
          * @param {string} stageId Id of stage
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -869,7 +953,7 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
         },
         /**
          * Return an user action by id
-         * @summary Return an user action by id
+         * @summary Return an user action by id, available for admin/approver
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -917,7 +1001,7 @@ export const ActionApiFp = function(configuration?: Configuration) {
     return {
         /**
          * Add an action to a given stage
-         * @summary Add an action to a given stage
+         * @summary Add an action to a given stage, available for admin/approver/requester
          * @param {string} stageId Id of stage
          * @param {ActionIn} actionIn Action object that will be added
          * @param {*} [options] Override http request option.
@@ -932,7 +1016,7 @@ export const ActionApiFp = function(configuration?: Configuration) {
         },
         /**
          * Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
-         * @summary Add an action to current active stage of a given request
+         * @summary Add an action to current active stage of a given request, available for admin/approver/requester
          * @param {string} requestId Id of request
          * @param {ActionIn} actionIn Action object that will be added
          * @param {*} [options] Override http request option.
@@ -947,7 +1031,7 @@ export const ActionApiFp = function(configuration?: Configuration) {
         },
         /**
          * List all actions of a stage
-         * @summary Return actions in a given stage
+         * @summary Return actions in a given stage, available for admin/approver
          * @param {string} stageId Id of stage
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -961,7 +1045,7 @@ export const ActionApiFp = function(configuration?: Configuration) {
         },
         /**
          * Return an user action by id
-         * @summary Return an user action by id
+         * @summary Return an user action by id, available for admin/approver
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -984,7 +1068,7 @@ export const ActionApiFactory = function (configuration?: Configuration, basePat
     return {
         /**
          * Add an action to a given stage
-         * @summary Add an action to a given stage
+         * @summary Add an action to a given stage, available for admin/approver/requester
          * @param {string} stageId Id of stage
          * @param {ActionIn} actionIn Action object that will be added
          * @param {*} [options] Override http request option.
@@ -995,7 +1079,7 @@ export const ActionApiFactory = function (configuration?: Configuration, basePat
         },
         /**
          * Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
-         * @summary Add an action to current active stage of a given request
+         * @summary Add an action to current active stage of a given request, available for admin/approver/requester
          * @param {string} requestId Id of request
          * @param {ActionIn} actionIn Action object that will be added
          * @param {*} [options] Override http request option.
@@ -1006,7 +1090,7 @@ export const ActionApiFactory = function (configuration?: Configuration, basePat
         },
         /**
          * List all actions of a stage
-         * @summary Return actions in a given stage
+         * @summary Return actions in a given stage, available for admin/approver
          * @param {string} stageId Id of stage
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1016,7 +1100,7 @@ export const ActionApiFactory = function (configuration?: Configuration, basePat
         },
         /**
          * Return an user action by id
-         * @summary Return an user action by id
+         * @summary Return an user action by id, available for admin/approver
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1036,7 +1120,7 @@ export const ActionApiFactory = function (configuration?: Configuration, basePat
 export class ActionApi extends BaseAPI {
     /**
      * Add an action to a given stage
-     * @summary Add an action to a given stage
+     * @summary Add an action to a given stage, available for admin/approver/requester
      * @param {string} stageId Id of stage
      * @param {ActionIn} actionIn Action object that will be added
      * @param {*} [options] Override http request option.
@@ -1049,7 +1133,7 @@ export class ActionApi extends BaseAPI {
 
     /**
      * Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
-     * @summary Add an action to current active stage of a given request
+     * @summary Add an action to current active stage of a given request, available for admin/approver/requester
      * @param {string} requestId Id of request
      * @param {ActionIn} actionIn Action object that will be added
      * @param {*} [options] Override http request option.
@@ -1062,7 +1146,7 @@ export class ActionApi extends BaseAPI {
 
     /**
      * List all actions of a stage
-     * @summary Return actions in a given stage
+     * @summary Return actions in a given stage, available for admin/approver
      * @param {string} stageId Id of stage
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1074,7 +1158,7 @@ export class ActionApi extends BaseAPI {
 
     /**
      * Return an user action by id
-     * @summary Return an user action by id
+     * @summary Return an user action by id, available for admin/approver
      * @param {string} id Query by id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1207,24 +1291,18 @@ export class GraphqlApi extends BaseAPI {
 export const RequestApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Add an approval request by given parameters
+         * Add an approval request by given parameters, available to anyone
          * @summary Add an approval request by given parameters
-         * @param {string} workflowId Id of workflow
          * @param {RequestIn} requestIn Parameters need to create a request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRequest(workflowId: string, requestIn: RequestIn, options: any = {}): RequestArgs {
-            // verify required parameter 'workflowId' is not null or undefined
-            if (workflowId === null || workflowId === undefined) {
-                throw new RequiredError('workflowId','Required parameter workflowId was null or undefined when calling createRequest.');
-            }
+        createRequest(requestIn: RequestIn, options: any = {}): RequestArgs {
             // verify required parameter 'requestIn' is not null or undefined
             if (requestIn === null || requestIn === undefined) {
                 throw new RequiredError('requestIn','Required parameter requestIn was null or undefined when calling createRequest.');
             }
-            const localVarPath = `/workflows/{workflow_id}/requests`
-                .replace(`{${"workflow_id"}}`, encodeURIComponent(String(workflowId)));
+            const localVarPath = `/requests`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -1255,16 +1333,16 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Return an array of requests
-         * @summary Return an array of approval requests
-         * @param {string} [approver] Fetch requests by given approver username
+         * Return an array of requests. The result depends on the x-rh-persona header
+         * @summary Return an array of approval requests, available to anyone
+         * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Current login user&#39;s persona
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequests(approver?: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+        listRequests(xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/requests`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1281,10 +1359,6 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
             }
 
-            if (approver !== undefined) {
-                localVarQueryParameter['approver'] = approver;
-            }
-
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
             }
@@ -1295,6 +1369,10 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
 
             if (filter !== undefined) {
                 localVarQueryParameter['filter'] = filter;
+            }
+
+            if (xRhPersona !== undefined && xRhPersona !== null) {
+                localVarHeaderParameter['x-rh-persona'] = String(xRhPersona);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1308,61 +1386,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Return approval requests by given workflow id
-         * @summary Return approval requests by given workflow id
-         * @param {string} workflowId Id of workflow
-         * @param {number} [limit] How many items to return at one time (max 1000)
-         * @param {number} [offset] Starting Offset
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
-            // verify required parameter 'workflowId' is not null or undefined
-            if (workflowId === null || workflowId === undefined) {
-                throw new RequiredError('workflowId','Required parameter workflowId was null or undefined when calling listRequestsByWorkflow.');
-            }
-            const localVarPath = `/workflows/{workflow_id}/requests`
-                .replace(`{${"workflow_id"}}`, encodeURIComponent(String(workflowId)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Return an approval request by given id
+         * Return an approval request by given id, available to anyone who can access the request
          * @summary Return an approval request by given id
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
@@ -1410,62 +1434,44 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
 export const RequestApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Add an approval request by given parameters
+         * Add an approval request by given parameters, available to anyone
          * @summary Add an approval request by given parameters
-         * @param {string} workflowId Id of workflow
          * @param {RequestIn} requestIn Parameters need to create a request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRequest(workflowId: string, requestIn: RequestIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOut> {
-            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).createRequest(workflowId, requestIn, options);
+        createRequest(requestIn: RequestIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Request> {
+            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).createRequest(requestIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * Return an array of requests
-         * @summary Return an array of approval requests
-         * @param {string} [approver] Fetch requests by given approver username
+         * Return an array of requests. The result depends on the x-rh-persona header
+         * @summary Return an array of approval requests, available to anyone
+         * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Current login user&#39;s persona
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequests(approver?: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOutCollection> {
-            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequests(approver, limit, offset, filter, options);
+        listRequests(xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestCollection> {
+            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequests(xRhPersona, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * Return approval requests by given workflow id
-         * @summary Return approval requests by given workflow id
-         * @param {string} workflowId Id of workflow
-         * @param {number} [limit] How many items to return at one time (max 1000)
-         * @param {number} [offset] Starting Offset
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOutCollection> {
-            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequestsByWorkflow(workflowId, limit, offset, filter, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Return an approval request by given id
+         * Return an approval request by given id, available to anyone who can access the request
          * @summary Return an approval request by given id
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRequest(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestOut> {
+        showRequest(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Request> {
             const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).showRequest(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1482,44 +1488,30 @@ export const RequestApiFp = function(configuration?: Configuration) {
 export const RequestApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Add an approval request by given parameters
+         * Add an approval request by given parameters, available to anyone
          * @summary Add an approval request by given parameters
-         * @param {string} workflowId Id of workflow
          * @param {RequestIn} requestIn Parameters need to create a request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRequest(workflowId: string, requestIn: RequestIn, options?: any) {
-            return RequestApiFp(configuration).createRequest(workflowId, requestIn, options)(axios, basePath);
+        createRequest(requestIn: RequestIn, options?: any) {
+            return RequestApiFp(configuration).createRequest(requestIn, options)(axios, basePath);
         },
         /**
-         * Return an array of requests
-         * @summary Return an array of approval requests
-         * @param {string} [approver] Fetch requests by given approver username
+         * Return an array of requests. The result depends on the x-rh-persona header
+         * @summary Return an array of approval requests, available to anyone
+         * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Current login user&#39;s persona
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequests(approver?: string, limit?: number, offset?: number, filter?: any, options?: any) {
-            return RequestApiFp(configuration).listRequests(approver, limit, offset, filter, options)(axios, basePath);
+        listRequests(xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', limit?: number, offset?: number, filter?: any, options?: any) {
+            return RequestApiFp(configuration).listRequests(xRhPersona, limit, offset, filter, options)(axios, basePath);
         },
         /**
-         * Return approval requests by given workflow id
-         * @summary Return approval requests by given workflow id
-         * @param {string} workflowId Id of workflow
-         * @param {number} [limit] How many items to return at one time (max 1000)
-         * @param {number} [offset] Starting Offset
-         * @param {any} [filter] Filter for querying collections.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, filter?: any, options?: any) {
-            return RequestApiFp(configuration).listRequestsByWorkflow(workflowId, limit, offset, filter, options)(axios, basePath);
-        },
-        /**
-         * Return an approval request by given id
+         * Return an approval request by given id, available to anyone who can access the request
          * @summary Return an approval request by given id
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
@@ -1539,22 +1531,21 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
  */
 export class RequestApi extends BaseAPI {
     /**
-     * Add an approval request by given parameters
+     * Add an approval request by given parameters, available to anyone
      * @summary Add an approval request by given parameters
-     * @param {string} workflowId Id of workflow
      * @param {RequestIn} requestIn Parameters need to create a request
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RequestApi
      */
-    public createRequest(workflowId: string, requestIn: RequestIn, options?: any) {
-        return RequestApiFp(this.configuration).createRequest(workflowId, requestIn, options)(this.axios, this.basePath);
+    public createRequest(requestIn: RequestIn, options?: any) {
+        return RequestApiFp(this.configuration).createRequest(requestIn, options)(this.axios, this.basePath);
     }
 
     /**
-     * Return an array of requests
-     * @summary Return an array of approval requests
-     * @param {string} [approver] Fetch requests by given approver username
+     * Return an array of requests. The result depends on the x-rh-persona header
+     * @summary Return an array of approval requests, available to anyone
+     * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Current login user&#39;s persona
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
      * @param {any} [filter] Filter for querying collections.
@@ -1562,27 +1553,12 @@ export class RequestApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RequestApi
      */
-    public listRequests(approver?: string, limit?: number, offset?: number, filter?: any, options?: any) {
-        return RequestApiFp(this.configuration).listRequests(approver, limit, offset, filter, options)(this.axios, this.basePath);
+    public listRequests(xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', limit?: number, offset?: number, filter?: any, options?: any) {
+        return RequestApiFp(this.configuration).listRequests(xRhPersona, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
-     * Return approval requests by given workflow id
-     * @summary Return approval requests by given workflow id
-     * @param {string} workflowId Id of workflow
-     * @param {number} [limit] How many items to return at one time (max 1000)
-     * @param {number} [offset] Starting Offset
-     * @param {any} [filter] Filter for querying collections.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof RequestApi
-     */
-    public listRequestsByWorkflow(workflowId: string, limit?: number, offset?: number, filter?: any, options?: any) {
-        return RequestApiFp(this.configuration).listRequestsByWorkflow(workflowId, limit, offset, filter, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Return an approval request by given id
+     * Return an approval request by given id, available to anyone who can access the request
      * @summary Return an approval request by given id
      * @param {string} id Query by id
      * @param {*} [options] Override http request option.
@@ -1603,7 +1579,7 @@ export const StageApiAxiosParamCreator = function (configuration?: Configuration
     return {
         /**
          * Return an array of stages by given request id
-         * @summary Return an array of stages by given request id
+         * @summary Return an array of stages by given request id, available for admin/requester
          * @param {string} requestId Id of request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1642,7 +1618,7 @@ export const StageApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * Return an approval stage by given id
-         * @summary Return an approval stage by given id
+         * @summary Return an approval stage by given id, available for admin/approver/requester
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1690,7 +1666,7 @@ export const StageApiFp = function(configuration?: Configuration) {
     return {
         /**
          * Return an array of stages by given request id
-         * @summary Return an array of stages by given request id
+         * @summary Return an array of stages by given request id, available for admin/requester
          * @param {string} requestId Id of request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1704,7 +1680,7 @@ export const StageApiFp = function(configuration?: Configuration) {
         },
         /**
          * Return an approval stage by given id
-         * @summary Return an approval stage by given id
+         * @summary Return an approval stage by given id, available for admin/approver/requester
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1727,7 +1703,7 @@ export const StageApiFactory = function (configuration?: Configuration, basePath
     return {
         /**
          * Return an array of stages by given request id
-         * @summary Return an array of stages by given request id
+         * @summary Return an array of stages by given request id, available for admin/requester
          * @param {string} requestId Id of request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1737,7 +1713,7 @@ export const StageApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * Return an approval stage by given id
-         * @summary Return an approval stage by given id
+         * @summary Return an approval stage by given id, available for admin/approver/requester
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1757,7 +1733,7 @@ export const StageApiFactory = function (configuration?: Configuration, basePath
 export class StageApi extends BaseAPI {
     /**
      * Return an array of stages by given request id
-     * @summary Return an array of stages by given request id
+     * @summary Return an array of stages by given request id, available for admin/requester
      * @param {string} requestId Id of request
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1769,7 +1745,7 @@ export class StageApi extends BaseAPI {
 
     /**
      * Return an approval stage by given id
-     * @summary Return an approval stage by given id
+     * @summary Return an approval stage by given id, available for admin/approver/requester
      * @param {string} id Query by id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1789,7 +1765,7 @@ export const TemplateApiAxiosParamCreator = function (configuration?: Configurat
     return {
         /**
          * Return all templates
-         * @summary Return all templates
+         * @summary Return all templates, only available for admin
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {any} [filter] Filter for querying collections.
@@ -1837,7 +1813,7 @@ export const TemplateApiAxiosParamCreator = function (configuration?: Configurat
         },
         /**
          * Return a template by given id
-         * @summary Return a template by given id
+         * @summary Return a template by given id, only available for admin
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1885,7 +1861,7 @@ export const TemplateApiFp = function(configuration?: Configuration) {
     return {
         /**
          * Return all templates
-         * @summary Return all templates
+         * @summary Return all templates, only available for admin
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {any} [filter] Filter for querying collections.
@@ -1901,7 +1877,7 @@ export const TemplateApiFp = function(configuration?: Configuration) {
         },
         /**
          * Return a template by given id
-         * @summary Return a template by given id
+         * @summary Return a template by given id, only available for admin
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1924,7 +1900,7 @@ export const TemplateApiFactory = function (configuration?: Configuration, baseP
     return {
         /**
          * Return all templates
-         * @summary Return all templates
+         * @summary Return all templates, only available for admin
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {any} [filter] Filter for querying collections.
@@ -1936,7 +1912,7 @@ export const TemplateApiFactory = function (configuration?: Configuration, baseP
         },
         /**
          * Return a template by given id
-         * @summary Return a template by given id
+         * @summary Return a template by given id, only available for admin
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1956,7 +1932,7 @@ export const TemplateApiFactory = function (configuration?: Configuration, baseP
 export class TemplateApi extends BaseAPI {
     /**
      * Return all templates
-     * @summary Return all templates
+     * @summary Return all templates, only available for admin
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
      * @param {any} [filter] Filter for querying collections.
@@ -1970,7 +1946,7 @@ export class TemplateApi extends BaseAPI {
 
     /**
      * Return a template by given id
-     * @summary Return a template by given id
+     * @summary Return a template by given id, only available for admin
      * @param {string} id Query by id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1990,7 +1966,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
     return {
         /**
          * Add a workflow by given template id
-         * @summary Add a workflow by given template id
+         * @summary Add a workflow by given template id, only available for admin
          * @param {string} templateId Id of template
          * @param {WorkflowIn} workflowIn Parameters need to create workflow
          * @param {*} [options] Override http request option.
@@ -2038,7 +2014,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
         },
         /**
          * Delete approval workflow by given id
-         * @summary Delete approval workflow by given id
+         * @summary Delete approval workflow by given id, only available for admin
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2076,8 +2052,56 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * Return all approval workflows
-         * @summary Return all approval workflows
+         * Link a resource object to a given workflow
+         * @summary Create a resource link to a given workflow
+         * @param {string} id Query by id
+         * @param {ResourceObject} resourceObject Parameters needed to create a link
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        linkWorkflow(id: string, resourceObject: ResourceObject, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling linkWorkflow.');
+            }
+            // verify required parameter 'resourceObject' is not null or undefined
+            if (resourceObject === null || resourceObject === undefined) {
+                throw new RequiredError('resourceObject','Required parameter resourceObject was null or undefined when calling linkWorkflow.');
+            }
+            const localVarPath = `/workflows/{id}/link`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"ResourceObject" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(resourceObject || {}) : (resourceObject || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Return all approval workflows in ascending sequence order
+         * @summary Return all approval workflows, only available for admin
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {any} [filter] Filter for querying collections.
@@ -2125,7 +2149,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
         },
         /**
          * Return an array of workflows by given template id
-         * @summary Return an array of workflows by given template id
+         * @summary Return an array of workflows by given template id, only available for admin
          * @param {string} templateId Id of template
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
@@ -2178,8 +2202,50 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
+         * Get all workflows linked to a resource object.
+         * @summary Get all workflows linked to a resource object.
+         * @param {ResourceObject} resourceObject Resource object used to resolve workflows.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resolveWorkflows(resourceObject: ResourceObject, options: any = {}): RequestArgs {
+            // verify required parameter 'resourceObject' is not null or undefined
+            if (resourceObject === null || resourceObject === undefined) {
+                throw new RequiredError('resourceObject','Required parameter resourceObject was null or undefined when calling resolveWorkflows.');
+            }
+            const localVarPath = `/workflows/resolve`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"ResourceObject" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(resourceObject || {}) : (resourceObject || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Return an approval workflow by given id
-         * @summary Return an approval workflow by given id
+         * @summary Return an approval workflow by given id, only available for admin
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2217,8 +2283,98 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
+         * Break all links between a resource object and its assigned workflows
+         * @summary Break all links between a resource object and its assigned workflows
+         * @param {ResourceObject} resourceObject Parameters needed to remove a link
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        unlinkAll(resourceObject: ResourceObject, options: any = {}): RequestArgs {
+            // verify required parameter 'resourceObject' is not null or undefined
+            if (resourceObject === null || resourceObject === undefined) {
+                throw new RequiredError('resourceObject','Required parameter resourceObject was null or undefined when calling unlinkAll.');
+            }
+            const localVarPath = `/workflows/unlink`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"ResourceObject" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(resourceObject || {}) : (resourceObject || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Break the link between a resource object and selected workflow
+         * @summary Break the link between a resource object and selected workflow
+         * @param {string} id Query by id
+         * @param {ResourceObject} resourceObject Parameters needed to remove a link
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        unlinkWorkflow(id: string, resourceObject: ResourceObject, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling unlinkWorkflow.');
+            }
+            // verify required parameter 'resourceObject' is not null or undefined
+            if (resourceObject === null || resourceObject === undefined) {
+                throw new RequiredError('resourceObject','Required parameter resourceObject was null or undefined when calling unlinkWorkflow.');
+            }
+            const localVarPath = `/workflows/{id}/unlink`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"ResourceObject" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(resourceObject || {}) : (resourceObject || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Update an approval workflow by given id
-         * @summary Update an approval workflow by given id
+         * @summary Update an approval workflow by given id, only available for admin
          * @param {string} id Query by id
          * @param {WorkflowIn} workflowIn Parameters need to update approval workflow
          * @param {*} [options] Override http request option.
@@ -2275,7 +2431,7 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
     return {
         /**
          * Add a workflow by given template id
-         * @summary Add a workflow by given template id
+         * @summary Add a workflow by given template id, only available for admin
          * @param {string} templateId Id of template
          * @param {WorkflowIn} workflowIn Parameters need to create workflow
          * @param {*} [options] Override http request option.
@@ -2290,7 +2446,7 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
         },
         /**
          * Delete approval workflow by given id
-         * @summary Delete approval workflow by given id
+         * @summary Delete approval workflow by given id, only available for admin
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2303,8 +2459,23 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Return all approval workflows
-         * @summary Return all approval workflows
+         * Link a resource object to a given workflow
+         * @summary Create a resource link to a given workflow
+         * @param {string} id Query by id
+         * @param {ResourceObject} resourceObject Parameters needed to create a link
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        linkWorkflow(id: string, resourceObject: ResourceObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).linkWorkflow(id, resourceObject, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Return all approval workflows in ascending sequence order
+         * @summary Return all approval workflows, only available for admin
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {any} [filter] Filter for querying collections.
@@ -2320,7 +2491,7 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
         },
         /**
          * Return an array of workflows by given template id
-         * @summary Return an array of workflows by given template id
+         * @summary Return an array of workflows by given template id, only available for admin
          * @param {string} templateId Id of template
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
@@ -2336,8 +2507,22 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Get all workflows linked to a resource object.
+         * @summary Get all workflows linked to a resource object.
+         * @param {ResourceObject} resourceObject Resource object used to resolve workflows.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resolveWorkflows(resourceObject: ResourceObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<WorkflowOut>> {
+            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).resolveWorkflows(resourceObject, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Return an approval workflow by given id
-         * @summary Return an approval workflow by given id
+         * @summary Return an approval workflow by given id, only available for admin
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2350,8 +2535,37 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Break all links between a resource object and its assigned workflows
+         * @summary Break all links between a resource object and its assigned workflows
+         * @param {ResourceObject} resourceObject Parameters needed to remove a link
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        unlinkAll(resourceObject: ResourceObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).unlinkAll(resourceObject, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Break the link between a resource object and selected workflow
+         * @summary Break the link between a resource object and selected workflow
+         * @param {string} id Query by id
+         * @param {ResourceObject} resourceObject Parameters needed to remove a link
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        unlinkWorkflow(id: string, resourceObject: ResourceObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).unlinkWorkflow(id, resourceObject, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Update an approval workflow by given id
-         * @summary Update an approval workflow by given id
+         * @summary Update an approval workflow by given id, only available for admin
          * @param {string} id Query by id
          * @param {WorkflowIn} workflowIn Parameters need to update approval workflow
          * @param {*} [options] Override http request option.
@@ -2375,7 +2589,7 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
     return {
         /**
          * Add a workflow by given template id
-         * @summary Add a workflow by given template id
+         * @summary Add a workflow by given template id, only available for admin
          * @param {string} templateId Id of template
          * @param {WorkflowIn} workflowIn Parameters need to create workflow
          * @param {*} [options] Override http request option.
@@ -2386,7 +2600,7 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
         },
         /**
          * Delete approval workflow by given id
-         * @summary Delete approval workflow by given id
+         * @summary Delete approval workflow by given id, only available for admin
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2395,8 +2609,19 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
             return WorkflowApiFp(configuration).destroyWorkflow(id, options)(axios, basePath);
         },
         /**
-         * Return all approval workflows
-         * @summary Return all approval workflows
+         * Link a resource object to a given workflow
+         * @summary Create a resource link to a given workflow
+         * @param {string} id Query by id
+         * @param {ResourceObject} resourceObject Parameters needed to create a link
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        linkWorkflow(id: string, resourceObject: ResourceObject, options?: any) {
+            return WorkflowApiFp(configuration).linkWorkflow(id, resourceObject, options)(axios, basePath);
+        },
+        /**
+         * Return all approval workflows in ascending sequence order
+         * @summary Return all approval workflows, only available for admin
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {any} [filter] Filter for querying collections.
@@ -2408,7 +2633,7 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
         },
         /**
          * Return an array of workflows by given template id
-         * @summary Return an array of workflows by given template id
+         * @summary Return an array of workflows by given template id, only available for admin
          * @param {string} templateId Id of template
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
@@ -2420,8 +2645,18 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
             return WorkflowApiFp(configuration).listWorkflowsByTemplate(templateId, limit, offset, filter, options)(axios, basePath);
         },
         /**
+         * Get all workflows linked to a resource object.
+         * @summary Get all workflows linked to a resource object.
+         * @param {ResourceObject} resourceObject Resource object used to resolve workflows.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resolveWorkflows(resourceObject: ResourceObject, options?: any) {
+            return WorkflowApiFp(configuration).resolveWorkflows(resourceObject, options)(axios, basePath);
+        },
+        /**
          * Return an approval workflow by given id
-         * @summary Return an approval workflow by given id
+         * @summary Return an approval workflow by given id, only available for admin
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2430,8 +2665,29 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
             return WorkflowApiFp(configuration).showWorkflow(id, options)(axios, basePath);
         },
         /**
+         * Break all links between a resource object and its assigned workflows
+         * @summary Break all links between a resource object and its assigned workflows
+         * @param {ResourceObject} resourceObject Parameters needed to remove a link
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        unlinkAll(resourceObject: ResourceObject, options?: any) {
+            return WorkflowApiFp(configuration).unlinkAll(resourceObject, options)(axios, basePath);
+        },
+        /**
+         * Break the link between a resource object and selected workflow
+         * @summary Break the link between a resource object and selected workflow
+         * @param {string} id Query by id
+         * @param {ResourceObject} resourceObject Parameters needed to remove a link
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        unlinkWorkflow(id: string, resourceObject: ResourceObject, options?: any) {
+            return WorkflowApiFp(configuration).unlinkWorkflow(id, resourceObject, options)(axios, basePath);
+        },
+        /**
          * Update an approval workflow by given id
-         * @summary Update an approval workflow by given id
+         * @summary Update an approval workflow by given id, only available for admin
          * @param {string} id Query by id
          * @param {WorkflowIn} workflowIn Parameters need to update approval workflow
          * @param {*} [options] Override http request option.
@@ -2452,7 +2708,7 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
 export class WorkflowApi extends BaseAPI {
     /**
      * Add a workflow by given template id
-     * @summary Add a workflow by given template id
+     * @summary Add a workflow by given template id, only available for admin
      * @param {string} templateId Id of template
      * @param {WorkflowIn} workflowIn Parameters need to create workflow
      * @param {*} [options] Override http request option.
@@ -2465,7 +2721,7 @@ export class WorkflowApi extends BaseAPI {
 
     /**
      * Delete approval workflow by given id
-     * @summary Delete approval workflow by given id
+     * @summary Delete approval workflow by given id, only available for admin
      * @param {string} id Query by id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2476,8 +2732,21 @@ export class WorkflowApi extends BaseAPI {
     }
 
     /**
-     * Return all approval workflows
-     * @summary Return all approval workflows
+     * Link a resource object to a given workflow
+     * @summary Create a resource link to a given workflow
+     * @param {string} id Query by id
+     * @param {ResourceObject} resourceObject Parameters needed to create a link
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WorkflowApi
+     */
+    public linkWorkflow(id: string, resourceObject: ResourceObject, options?: any) {
+        return WorkflowApiFp(this.configuration).linkWorkflow(id, resourceObject, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Return all approval workflows in ascending sequence order
+     * @summary Return all approval workflows, only available for admin
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
      * @param {any} [filter] Filter for querying collections.
@@ -2491,7 +2760,7 @@ export class WorkflowApi extends BaseAPI {
 
     /**
      * Return an array of workflows by given template id
-     * @summary Return an array of workflows by given template id
+     * @summary Return an array of workflows by given template id, only available for admin
      * @param {string} templateId Id of template
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
@@ -2505,8 +2774,20 @@ export class WorkflowApi extends BaseAPI {
     }
 
     /**
+     * Get all workflows linked to a resource object.
+     * @summary Get all workflows linked to a resource object.
+     * @param {ResourceObject} resourceObject Resource object used to resolve workflows.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WorkflowApi
+     */
+    public resolveWorkflows(resourceObject: ResourceObject, options?: any) {
+        return WorkflowApiFp(this.configuration).resolveWorkflows(resourceObject, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Return an approval workflow by given id
-     * @summary Return an approval workflow by given id
+     * @summary Return an approval workflow by given id, only available for admin
      * @param {string} id Query by id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2517,8 +2798,33 @@ export class WorkflowApi extends BaseAPI {
     }
 
     /**
+     * Break all links between a resource object and its assigned workflows
+     * @summary Break all links between a resource object and its assigned workflows
+     * @param {ResourceObject} resourceObject Parameters needed to remove a link
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WorkflowApi
+     */
+    public unlinkAll(resourceObject: ResourceObject, options?: any) {
+        return WorkflowApiFp(this.configuration).unlinkAll(resourceObject, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Break the link between a resource object and selected workflow
+     * @summary Break the link between a resource object and selected workflow
+     * @param {string} id Query by id
+     * @param {ResourceObject} resourceObject Parameters needed to remove a link
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WorkflowApi
+     */
+    public unlinkWorkflow(id: string, resourceObject: ResourceObject, options?: any) {
+        return WorkflowApiFp(this.configuration).unlinkWorkflow(id, resourceObject, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Update an approval workflow by given id
-     * @summary Update an approval workflow by given id
+     * @summary Update an approval workflow by given id, only available for admin
      * @param {string} id Query by id
      * @param {WorkflowIn} workflowIn Parameters need to update approval workflow
      * @param {*} [options] Override http request option.

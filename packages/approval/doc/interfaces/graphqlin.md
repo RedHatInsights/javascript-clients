@@ -56,7 +56,7 @@ ___
 
 ### `<Optional>` variables
 
-**● variables**: *`any`*
+**● variables**: *`any` \| `null`*
 
 *Defined in [api.ts:287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L287)*
 
