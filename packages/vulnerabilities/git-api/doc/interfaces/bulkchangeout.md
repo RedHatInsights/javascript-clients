@@ -26,7 +26,7 @@
 
 **● updated**: *`Array`<`string`>*
 
-*Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L109)*
+*Defined in [git-api/api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L109)*
 
 List of updated objects/updated object IDs.
 

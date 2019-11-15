@@ -430,7 +430,7 @@ Sets business risk for a CVE.
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| cveRiskIn | [CveRiskIn](../interfaces/cveriskin.md) |  Values to be set. At least one of the &quot;business\_risk\_id&quot; or &quot;business\_risk\_text&quot; parameters is required. |
+| cveRiskIn | [CveRiskIn](../interfaces/cveriskin.md) |  Values to be set. At least one of the &amp;quot;business\_risk\_id&amp;quot; or &amp;quot;business\_risk\_text&amp;quot; parameters is required. |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[BulkChangeOut](../interfaces/bulkchangeout.md)>
@@ -456,7 +456,7 @@ Sets status for a CVE.
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| cveStatusIn | [CveStatusIn](../interfaces/cvestatusin.md) |  Values to be set. At least one of the &quot;status\_id&quot; or &quot;status\_text&quot; parameters is required. |
+| cveStatusIn | [CveStatusIn](../interfaces/cvestatusin.md) |  Values to be set. At least one of the &amp;quot;status\_id&amp;quot; or &amp;quot;status\_text&amp;quot; parameters is required. |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[BulkChangeOut](../interfaces/bulkchangeout.md)>

@@ -1,11 +1,19 @@
 
+[
+
 Javascript client for Inventory API
 ===================================
 
+](#javascript-client-for-inventory-api)
+
 If you want to use [RedHatInsights/entitlements-api](https://github.com/RedHatInsights/entitlements-api) you shouldn't use get requests directly, but rather use this client to integrate with this service.
+
+[
 
 Install
 -------
+
+](#install)
 
 NPM
 
@@ -19,7 +27,11 @@ Or Yarn
 yarn add @redhat-cloud-services/entitlements-client
 ```
 
+[
+
 ### Usage
+
+](#usage)
 
 This client is using typescript and axios. Types are distributed with this package, so no need to define or install them separately.
 
@@ -64,8 +76,12 @@ const actionAPI = new ActionApi(undefined, BASE_PATH, instance);
 export actionAPI;
 ```
 
+[
+
 API documentation
 -----------------
+
+](#api-documentation)
 
 *   [README](doc/README.md)
 

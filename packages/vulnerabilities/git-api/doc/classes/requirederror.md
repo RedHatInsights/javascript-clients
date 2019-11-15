@@ -38,7 +38,7 @@
 
 ⊕ **new RequiredError**(field: *`string`*, msg?: *`string`*): [RequiredError](requirederror.md)
 
-*Defined in [api.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L66)*
+*Defined in [git-api/api.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L66)*
 
 **Parameters:**
 
@@ -59,7 +59,7 @@ ___
 
 **● field**: *`string`*
 
-*Defined in [api.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L67)*
+*Defined in [git-api/api.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L67)*
 
 ___
 <a id="message"></a>
@@ -70,7 +70,7 @@ ___
 
 *Inherited from Error.message*
 
-*Defined in /home/khala/Documents/git/RedHatInsights/javascript-clients/packages/vulnerabilities/node_modules/typescript/lib/lib.es5.d.ts:964*
+*Defined in node_modules/typescript/lib/lib.es5.d.ts:974*
 
 ___
 <a id="name"></a>
@@ -81,7 +81,7 @@ ___
 
 *Overrides Error.name*
 
-*Defined in [api.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L66)*
+*Defined in [git-api/api.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L66)*
 
 ___
 <a id="stack"></a>
@@ -94,7 +94,7 @@ ___
 
 *Overrides Error.stack*
 
-*Defined in /home/khala/Documents/git/RedHatInsights/javascript-clients/packages/vulnerabilities/node_modules/typescript/lib/lib.es5.d.ts:965*
+*Defined in node_modules/typescript/lib/lib.es5.d.ts:975*
 
 ___
 <a id="error"></a>
@@ -103,7 +103,7 @@ ___
 
 **● Error**: *`ErrorConstructor`*
 
-*Defined in /home/khala/Documents/git/RedHatInsights/javascript-clients/packages/vulnerabilities/node_modules/typescript/lib/lib.es5.d.ts:974*
+*Defined in node_modules/typescript/lib/lib.es5.d.ts:984*
 
 ___
 

@@ -1,11 +1,19 @@
 
+[
+
 Javascript client for Remediations API
 ======================================
 
+](#javascript-client-for-remediations-api)
+
 This is a client library for [RedHatInsights/insights-remediations](https://github.com/RedHatInsights/insights-remediations).
+
+[
 
 Install
 -------
+
+](#install)
 
 NPM
 
@@ -19,7 +27,11 @@ Or Yarn
 yarn add @redhat-cloud-services/remediations-client
 ```
 
+[
+
 ### Usage
+
+](#usage)
 
 This client is using typescript and axios. Types are distributed with this package, so no need to define or install them separately.
 
@@ -30,8 +42,12 @@ const api = new RemediationsApi();
 const remediations = await api.getRemediations();
 ```
 
+[
+
 API documentation
 -----------------
+
+](#api-documentation)
 
 *   [README](doc/README.md)
 
