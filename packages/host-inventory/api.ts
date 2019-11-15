@@ -321,6 +321,12 @@ export interface CreateHostOut {
      * @memberof CreateHostOut
      */
     facts?: Array<FactSet>;
+    /**
+     *
+     * @type {Array<StructuredTag>}
+     * @memberof CreateHostOut
+     */
+    tags?: Array<StructuredTag>;
 }
 
 /**
@@ -503,6 +509,12 @@ export interface HostOut {
      * @memberof HostOut
      */
     facts?: Array<FactSet>;
+    /**
+     *
+     * @type {Array<StructuredTag>}
+     * @memberof HostOut
+     */
+    tags?: Array<StructuredTag>;
 }
 
 /**
@@ -657,6 +669,32 @@ export interface PatchHostIn {
      * @memberof PatchHostIn
      */
     displayName?: string;
+}
+
+/**
+ *
+ * @export
+ * @interface StructuredTag
+ */
+export interface StructuredTag {
+    /**
+     *
+     * @type {string}
+     * @memberof StructuredTag
+     */
+    namespace?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof StructuredTag
+     */
+    key?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof StructuredTag
+     */
+    value?: string | null;
 }
 
 /**
@@ -886,6 +924,82 @@ export interface SystemProfileIn {
 }
 
 /**
+ *
+ * @export
+ * @interface TagCountOut
+ */
+export interface TagCountOut {
+    /**
+     * Total number of items in the \"data\" list.
+     * @type {number}
+     * @memberof TagCountOut
+     */
+    total?: number;
+    /**
+     * A number of entries on the current page.
+     * @type {number}
+     * @memberof TagCountOut
+     */
+    count?: number;
+    /**
+     * A current page number.
+     * @type {number}
+     * @memberof TagCountOut
+     */
+    page?: number;
+    /**
+     * A page size – a number of entries per single page.
+     * @type {number}
+     * @memberof TagCountOut
+     */
+    perPage?: number;
+    /**
+     * The list of tags on the systems
+     * @type {{ [key: string]: number; }}
+     * @memberof TagCountOut
+     */
+    results?: { [key: string]: number; };
+}
+
+/**
+ *
+ * @export
+ * @interface TagsOut
+ */
+export interface TagsOut {
+    /**
+     * Total number of items in the \"data\" list.
+     * @type {number}
+     * @memberof TagsOut
+     */
+    total?: number;
+    /**
+     * A number of entries on the current page.
+     * @type {number}
+     * @memberof TagsOut
+     */
+    count?: number;
+    /**
+     * A current page number.
+     * @type {number}
+     * @memberof TagsOut
+     */
+    page?: number;
+    /**
+     * A page size – a number of entries per single page.
+     * @type {number}
+     * @memberof TagsOut
+     */
+    perPage?: number;
+    /**
+     * The list of tags on the systems
+     * @type {{ [key: string]: Array<StructuredTag>; }}
+     * @memberof TagsOut
+     */
+    results?: { [key: string]: Array<StructuredTag>; };
+}
+
+/**
  * Representation of one yum repository
  * @export
  * @interface YumRepo
@@ -1093,6 +1207,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [fqdn] Filter by a host&#39;s FQDN
          * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
          * @param {string} [insightsId] Search for a host by insights_id
+         * @param {Array<string>} [tags] search for a host by the tags on the system
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -1101,7 +1216,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): RequestArgs {
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): RequestArgs {
             const localVarPath = `/hosts`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1134,6 +1249,10 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 
             if (insightsId !== undefined) {
                 localVarQueryParameter['insights_id'] = insightsId;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
             }
 
             if (branchId !== undefined) {
@@ -1220,6 +1339,128 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 
             if (branchId !== undefined) {
                 localVarQueryParameter['branch_id'] = branchId;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get the number of tags on a host
+         * @summary Get the number of tags on a host
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): RequestArgs {
+            // verify required parameter 'hostIdList' is not null or undefined
+            if (hostIdList === null || hostIdList === undefined) {
+                throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostTagCount.');
+            }
+            const localVarPath = `/hosts/{host_id_list}/tags/count`
+                .replace(`{${"host_id_list"}}`, encodeURIComponent(String(hostIdList)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("x-rh-identity")
+					: configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (perPage !== undefined) {
+                localVarQueryParameter['per_page'] = perPage;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (orderHow !== undefined) {
+                localVarQueryParameter['order_how'] = orderHow;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get the tags on a host
+         * @summary Get the tags on a host
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): RequestArgs {
+            // verify required parameter 'hostIdList' is not null or undefined
+            if (hostIdList === null || hostIdList === undefined) {
+                throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostTags.');
+            }
+            const localVarPath = `/hosts/{host_id_list}/tags`
+                .replace(`{${"host_id_list"}}`, encodeURIComponent(String(hostIdList)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("x-rh-identity")
+					: configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (perPage !== undefined) {
+                localVarQueryParameter['per_page'] = perPage;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (orderHow !== undefined) {
+                localVarQueryParameter['order_how'] = orderHow;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1473,6 +1714,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {string} [fqdn] Filter by a host&#39;s FQDN
          * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
          * @param {string} [insightsId] Search for a host by insights_id
+         * @param {Array<string>} [tags] search for a host by the tags on the system
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -1481,8 +1723,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, options);
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, tags, branchId, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1502,6 +1744,42 @@ export const HostsApiFp = function(configuration?: Configuration) {
          */
         apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileByHostOut> {
             const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Get the number of tags on a host
+         * @summary Get the number of tags on a host
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagCountOut> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Get the tags on a host
+         * @summary Get the tags on a host
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsOut> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1609,6 +1887,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [fqdn] Filter by a host&#39;s FQDN
          * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
          * @param {string} [insightsId] Search for a host by insights_id
+         * @param {Array<string>} [tags] search for a host by the tags on the system
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -1617,8 +1896,8 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
-            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, options)(axios, basePath);
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, tags, branchId, perPage, page, orderBy, orderHow, options)(axios, basePath);
         },
         /**
          * Find one or more hosts by their ID and return the id and system profile
@@ -1634,6 +1913,34 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          */
         apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, options?: any) {
             return HostsApiFp(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, options)(axios, basePath);
+        },
+        /**
+         * Get the number of tags on a host
+         * @summary Get the number of tags on a host
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+            return HostsApiFp(configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options)(axios, basePath);
+        },
+        /**
+         * Get the tags on a host
+         * @summary Get the tags on a host
+         * @param {Array<string>} hostIdList A comma separated list of host IDs.
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+            return HostsApiFp(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, options)(axios, basePath);
         },
         /**
          * Merge one or multiple hosts facts under a namespace.
@@ -1732,6 +2039,7 @@ export class HostsApi extends BaseAPI {
      * @param {string} [fqdn] Filter by a host&#39;s FQDN
      * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
      * @param {string} [insightsId] Search for a host by insights_id
+     * @param {Array<string>} [tags] search for a host by the tags on the system
      * @param {string} [branchId] Filter by branch_id
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
@@ -1741,8 +2049,8 @@ export class HostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, options)(this.axios, this.basePath);
+    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, tags, branchId, perPage, page, orderBy, orderHow, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1760,6 +2068,38 @@ export class HostsApi extends BaseAPI {
      */
     public apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Get the number of tags on a host
+     * @summary Get the number of tags on a host
+     * @param {Array<string>} hostIdList A comma separated list of host IDs.
+     * @param {number} [perPage] A number of items to return per page.
+     * @param {number} [page] A page number of the items to return.
+     * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HostsApi
+     */
+    public apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Get the tags on a host
+     * @summary Get the tags on a host
+     * @param {Array<string>} hostIdList A comma separated list of host IDs.
+     * @param {number} [perPage] A number of items to return per page.
+     * @param {number} [page] A page number of the items to return.
+     * @param {'display_name' | 'updated'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HostsApi
+     */
+    public apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, options)(this.axios, this.basePath);
     }
 
     /**

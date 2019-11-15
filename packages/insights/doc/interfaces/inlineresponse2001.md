@@ -34,7 +34,7 @@
 
 **● hostname**: *`string`*
 
-*Defined in [api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L163)*
+*Defined in [api.ts:291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L291)*
 
 *__type__*: {string}
 
@@ -47,7 +47,7 @@ ___
 
 **● lastSeen**: *`string`*
 
-*Defined in [api.ts:175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L175)*
+*Defined in [api.ts:303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L303)*
 
 *__type__*: {string}
 
@@ -60,7 +60,7 @@ ___
 
 **● likelihood**: *`number`*
 
-*Defined in [api.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L199)*
+*Defined in [api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L327)*
 
 *__type__*: {number}
 
@@ -73,7 +73,7 @@ ___
 
 **● publishDate**: *`string`*
 
-*Defined in [api.ts:205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L205)*
+*Defined in [api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L333)*
 
 *__type__*: {string}
 
@@ -86,7 +86,7 @@ ___
 
 **● resultsUrl**: *`string`*
 
-*Defined in [api.ts:211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L211)*
+*Defined in [api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L339)*
 
 *__type__*: {string}
 
@@ -99,7 +99,7 @@ ___
 
 **● solutionUrl**: *`string`*
 
-*Defined in [api.ts:187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L187)*
+*Defined in [api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L315)*
 
 *__type__*: {string}
 
@@ -112,7 +112,7 @@ ___
 
 **● title**: *`string`*
 
-*Defined in [api.ts:181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L181)*
+*Defined in [api.ts:309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L309)*
 
 *__type__*: {string}
 
@@ -125,7 +125,7 @@ ___
 
 **● totalRisk**: *`number`*
 
-*Defined in [api.ts:193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L193)*
+*Defined in [api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L321)*
 
 *__type__*: {number}
 
@@ -138,7 +138,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L169)*
+*Defined in [api.ts:297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L297)*
 
 *__type__*: {string}
 

@@ -25,7 +25,7 @@
 
 **Delete**:  = "catalog:portfolios:delete"
 
-*Defined in [api.ts:1263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1263)*
+*Defined in [api.ts:1301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1301)*
 
 ___
 <a id="order"></a>
@@ -34,7 +34,7 @@ ___
 
 **Order**:  = "catalog:portfolios:order"
 
-*Defined in [api.ts:1264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1264)*
+*Defined in [api.ts:1302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1302)*
 
 ___
 <a id="read"></a>
@@ -43,7 +43,7 @@ ___
 
 **Read**:  = "catalog:portfolios:read"
 
-*Defined in [api.ts:1261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1261)*
+*Defined in [api.ts:1299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1299)*
 
 ___
 <a id="update"></a>
@@ -52,7 +52,7 @@ ___
 
 **Update**:  = "catalog:portfolios:update"
 
-*Defined in [api.ts:1262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1262)*
+*Defined in [api.ts:1300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1300)*
 
 ___
 

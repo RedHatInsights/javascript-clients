@@ -26,7 +26,7 @@
 
 **● name**: *`string`*
 
-*Defined in [api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L899)*
+*Defined in [api.ts:1013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1013)*
 
 *__type__*: {string}
 

@@ -26,7 +26,7 @@
 
 **Canceled**:  = "canceled"
 
-*Defined in [api.ts:406](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L406)*
+*Defined in [api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L367)*
 
 ___
 <a id="finished"></a>
@@ -35,7 +35,7 @@ ___
 
 **Finished**:  = "finished"
 
-*Defined in [api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L410)*
+*Defined in [api.ts:371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L371)*
 
 ___
 <a id="notified"></a>
@@ -44,7 +44,7 @@ ___
 
 **Notified**:  = "notified"
 
-*Defined in [api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L409)*
+*Defined in [api.ts:370](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L370)*
 
 ___
 <a id="pending"></a>
@@ -53,7 +53,7 @@ ___
 
 **Pending**:  = "pending"
 
-*Defined in [api.ts:407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L407)*
+*Defined in [api.ts:368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L368)*
 
 ___
 <a id="skipped"></a>
@@ -62,7 +62,7 @@ ___
 
 **Skipped**:  = "skipped"
 
-*Defined in [api.ts:408](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L408)*
+*Defined in [api.ts:369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L369)*
 
 ___
 

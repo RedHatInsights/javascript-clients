@@ -28,7 +28,7 @@ Field to calculate delta values for in report.
 
 **● delta**: *`string`*
 
-*Defined in [api.ts:1228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1228)*
+*Defined in [api.ts:1240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1240)*
 
 *__type__*: {string}
 

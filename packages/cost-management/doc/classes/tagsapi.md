@@ -105,7 +105,7 @@ ___
 
 ▸ **getAWSTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:6074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6074)*
+*Defined in [api.ts:6086](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6086)*
 
 *__summary__*: Query to obtain AWS tags
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **getAzureTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:6089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6089)*
+*Defined in [api.ts:6101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6101)*
 
 *__summary__*: Query to obtain AWS tags
 
@@ -159,7 +159,7 @@ ___
 
 ▸ **getOpenShiftAWSTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:6104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6104)*
+*Defined in [api.ts:6116](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6116)*
 
 *__summary__*: Query to obtain OpenShift-on-AWS tags
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **getOpenShiftTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:6119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6119)*
+*Defined in [api.ts:6131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6131)*
 
 *__summary__*: Query to obtain OpenShift tags
 

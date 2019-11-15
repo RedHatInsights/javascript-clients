@@ -45,7 +45,7 @@
 
 **● active**: *`boolean`*
 
-*Defined in [api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L437)*
+*Defined in [api.ts:565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L565)*
 
 *__type__*: {boolean}
 
@@ -58,7 +58,7 @@ ___
 
 **● category**: *[RuleCategory](rulecategory.md)*
 
-*Defined in [api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L443)*
+*Defined in [api.ts:571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L571)*
 
 *__type__*: {RuleCategory}
 
@@ -71,7 +71,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L407)*
+*Defined in [api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L535)*
 
 *__type__*: {Date}
 
@@ -84,7 +84,7 @@ ___
 
 **● deletedAt**: *`Date`*
 
-*Defined in [api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L419)*
+*Defined in [api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L547)*
 
 *__type__*: {Date}
 
@@ -97,7 +97,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L431)*
+*Defined in [api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L559)*
 
 *__type__*: {string}
 
@@ -110,7 +110,7 @@ ___
 
 **● generic**: *`string`*
 
-*Defined in [api.ts:491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L491)*
+*Defined in [api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L619)*
 
 *__type__*: {string}
 
@@ -123,7 +123,7 @@ ___
 
 **● impact**: *[RuleImpact](ruleimpact.md)*
 
-*Defined in [api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L449)*
+*Defined in [api.ts:577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L577)*
 
 *__type__*: {RuleImpact}
 
@@ -136,7 +136,7 @@ ___
 
 **● likelihood**: *`number`*
 
-*Defined in [api.ts:455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L455)*
+*Defined in [api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L583)*
 
 *__type__*: {number}
 
@@ -149,7 +149,7 @@ ___
 
 **● moreInfo**: *`string`*
 
-*Defined in [api.ts:503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L503)*
+*Defined in [api.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L631)*
 
 *__type__*: {string}
 
@@ -162,7 +162,7 @@ ___
 
 **● nodeId**: *`string`*
 
-*Defined in [api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L461)*
+*Defined in [api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L589)*
 
 *__type__*: {string}
 
@@ -175,7 +175,7 @@ ___
 
 **● publishDate**: *`Date` \| `null`*
 
-*Defined in [api.ts:479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L479)*
+*Defined in [api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L607)*
 
 *__type__*: {Date}
 
@@ -188,7 +188,7 @@ ___
 
 **● reason**: *`string`*
 
-*Defined in [api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L497)*
+*Defined in [api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L625)*
 
 *__type__*: {string}
 
@@ -201,7 +201,7 @@ ___
 
 **● rebootRequired**: *`boolean`*
 
-*Defined in [api.ts:473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L473)*
+*Defined in [api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L601)*
 
 *__type__*: {boolean}
 
@@ -214,7 +214,7 @@ ___
 
 **● resolutionSet**: *`Array`<[Resolution](resolution.md)>*
 
-*Defined in [api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L509)*
+*Defined in [api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L637)*
 
 *__type__*: {Array}
 
@@ -227,7 +227,7 @@ ___
 
 **● ruleId**: *`string`*
 
-*Defined in [api.ts:401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L401)*
+*Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L529)*
 
 Rule ID from Insights
 
@@ -242,7 +242,7 @@ ___
 
 **● ruleset**: *[RuleSet](ruleset.md)*
 
-*Defined in [api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L425)*
+*Defined in [api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L553)*
 
 *__type__*: {RuleSet}
 
@@ -255,7 +255,7 @@ ___
 
 **● summary**: *`string`*
 
-*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L485)*
+*Defined in [api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L613)*
 
 *__type__*: {string}
 
@@ -268,7 +268,7 @@ ___
 
 **● tags**: *`string`*
 
-*Defined in [api.ts:467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L467)*
+*Defined in [api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L595)*
 
 *__type__*: {string}
 
@@ -281,7 +281,7 @@ ___
 
 **● totalRisk**: *`number`*
 
-*Defined in [api.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L515)*
+*Defined in [api.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L643)*
 
 *__type__*: {number}
 
@@ -294,7 +294,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L413)*
+*Defined in [api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L541)*
 
 *__type__*: {Date}
 

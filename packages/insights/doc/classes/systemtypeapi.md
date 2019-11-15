@@ -103,7 +103,7 @@ ___
 
 ▸ **systemtypeList**(options?: *`any`*): `AxiosPromise`<[SystemType](../interfaces/systemtype.md)[]>
 
-*Defined in [api.ts:3450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3450)*
+*Defined in [api.ts:3836](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3836)*
 
 List all system types
 
@@ -126,7 +126,7 @@ ___
 
 ▸ **systemtypeRead**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[SystemType](../interfaces/systemtype.md)>
 
-*Defined in [api.ts:3461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3461)*
+*Defined in [api.ts:3847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3847)*
 
 Display a single system type
 

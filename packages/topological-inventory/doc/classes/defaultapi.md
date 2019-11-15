@@ -278,7 +278,7 @@ ___
 
 ▸ **appliedInventoriesForServiceOffering**(id: *`string`*, appliedInventoriesParametersServicePlan: *[AppliedInventoriesParametersServicePlan](../interfaces/appliedinventoriesparametersserviceplan.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
 
-*Defined in [api.ts:18111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18111)*
+*Defined in [api.ts:19070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19070)*
 
 Returns a Task id
 
@@ -305,7 +305,7 @@ ___
 
 ▸ **getDocumentation**(options?: *`any`*): `AxiosPromise`<`any`>
 
-*Defined in [api.ts:18122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18122)*
+*Defined in [api.ts:19081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19081)*
 
 *__summary__*: Return this API document in JSON format
 
@@ -326,9 +326,9 @@ ___
 
 ###  listClusterHosts
 
-▸ **listClusterHosts**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[HostsCollection](../interfaces/hostscollection.md)>
+▸ **listClusterHosts**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[HostsCollection](../interfaces/hostscollection.md)>
 
-*Defined in [api.ts:18137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18137)*
+*Defined in [api.ts:19097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19097)*
 
 Returns an array of Host objects
 
@@ -346,6 +346,7 @@ Returns an array of Host objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[HostsCollection](../interfaces/hostscollection.md)>
@@ -355,9 +356,9 @@ ___
 
 ###  listClusters
 
-▸ **listClusters**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ClustersCollection](../interfaces/clusterscollection.md)>
+▸ **listClusters**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ClustersCollection](../interfaces/clusterscollection.md)>
 
-*Defined in [api.ts:18151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18151)*
+*Defined in [api.ts:19112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19112)*
 
 Returns an array of Cluster objects
 
@@ -374,6 +375,7 @@ Returns an array of Cluster objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ClustersCollection](../interfaces/clusterscollection.md)>
@@ -383,9 +385,9 @@ ___
 
 ###  listContainerGroupContainers
 
-▸ **listContainerGroupContainers**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainersCollection](../interfaces/containerscollection.md)>
+▸ **listContainerGroupContainers**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainersCollection](../interfaces/containerscollection.md)>
 
-*Defined in [api.ts:18166](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18166)*
+*Defined in [api.ts:19128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19128)*
 
 Returns an array of Container objects
 
@@ -403,6 +405,7 @@ Returns an array of Container objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainersCollection](../interfaces/containerscollection.md)>
@@ -412,9 +415,9 @@ ___
 
 ###  listContainerGroupTags
 
-▸ **listContainerGroupTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listContainerGroupTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:18181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18181)*
+*Defined in [api.ts:19144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19144)*
 
 Returns an array of Tag objects
 
@@ -432,6 +435,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -441,9 +445,9 @@ ___
 
 ###  listContainerGroups
 
-▸ **listContainerGroups**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
+▸ **listContainerGroups**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
 
-*Defined in [api.ts:18195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18195)*
+*Defined in [api.ts:19159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19159)*
 
 Returns an array of ContainerGroup objects
 
@@ -460,6 +464,7 @@ Returns an array of ContainerGroup objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
@@ -469,9 +474,9 @@ ___
 
 ###  listContainerImageTags
 
-▸ **listContainerImageTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listContainerImageTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:18210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18210)*
+*Defined in [api.ts:19175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19175)*
 
 Returns an array of Tag objects
 
@@ -489,6 +494,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -498,9 +504,9 @@ ___
 
 ###  listContainerImages
 
-▸ **listContainerImages**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerImagesCollection](../interfaces/containerimagescollection.md)>
+▸ **listContainerImages**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerImagesCollection](../interfaces/containerimagescollection.md)>
 
-*Defined in [api.ts:18224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18224)*
+*Defined in [api.ts:19190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19190)*
 
 Returns an array of ContainerImage objects
 
@@ -517,6 +523,7 @@ Returns an array of ContainerImage objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerImagesCollection](../interfaces/containerimagescollection.md)>
@@ -526,9 +533,9 @@ ___
 
 ###  listContainerNodeContainerGroups
 
-▸ **listContainerNodeContainerGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
+▸ **listContainerNodeContainerGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
 
-*Defined in [api.ts:18239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18239)*
+*Defined in [api.ts:19206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19206)*
 
 Returns an array of ContainerGroup objects
 
@@ -546,6 +553,7 @@ Returns an array of ContainerGroup objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
@@ -555,9 +563,9 @@ ___
 
 ###  listContainerNodeTags
 
-▸ **listContainerNodeTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listContainerNodeTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:18254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18254)*
+*Defined in [api.ts:19222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19222)*
 
 Returns an array of Tag objects
 
@@ -575,6 +583,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -584,9 +593,9 @@ ___
 
 ###  listContainerNodes
 
-▸ **listContainerNodes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerNodesCollection](../interfaces/containernodescollection.md)>
+▸ **listContainerNodes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerNodesCollection](../interfaces/containernodescollection.md)>
 
-*Defined in [api.ts:18268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18268)*
+*Defined in [api.ts:19237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19237)*
 
 Returns an array of ContainerNode objects
 
@@ -603,6 +612,7 @@ Returns an array of ContainerNode objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerNodesCollection](../interfaces/containernodescollection.md)>
@@ -612,9 +622,9 @@ ___
 
 ###  listContainerProjectContainerGroups
 
-▸ **listContainerProjectContainerGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
+▸ **listContainerProjectContainerGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
 
-*Defined in [api.ts:18283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18283)*
+*Defined in [api.ts:19253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19253)*
 
 Returns an array of ContainerGroup objects
 
@@ -632,6 +642,7 @@ Returns an array of ContainerGroup objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
@@ -641,9 +652,9 @@ ___
 
 ###  listContainerProjectContainerResourceQuota
 
-▸ **listContainerProjectContainerResourceQuota**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)>
+▸ **listContainerProjectContainerResourceQuota**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)>
 
-*Defined in [api.ts:18298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18298)*
+*Defined in [api.ts:19269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19269)*
 
 Returns an array of ContainerResourceQuota objects
 
@@ -661,6 +672,7 @@ Returns an array of ContainerResourceQuota objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)>
@@ -670,9 +682,9 @@ ___
 
 ###  listContainerProjectContainerTemplates
 
-▸ **listContainerProjectContainerTemplates**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)>
+▸ **listContainerProjectContainerTemplates**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)>
 
-*Defined in [api.ts:18313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18313)*
+*Defined in [api.ts:19285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19285)*
 
 Returns an array of ContainerTemplate objects
 
@@ -690,6 +702,7 @@ Returns an array of ContainerTemplate objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)>
@@ -699,9 +712,9 @@ ___
 
 ###  listContainerProjectTags
 
-▸ **listContainerProjectTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listContainerProjectTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:18328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18328)*
+*Defined in [api.ts:19301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19301)*
 
 Returns an array of Tag objects
 
@@ -719,6 +732,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -728,9 +742,9 @@ ___
 
 ###  listContainerProjects
 
-▸ **listContainerProjects**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)>
+▸ **listContainerProjects**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)>
 
-*Defined in [api.ts:18342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18342)*
+*Defined in [api.ts:19316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19316)*
 
 Returns an array of ContainerProject objects
 
@@ -747,6 +761,7 @@ Returns an array of ContainerProject objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)>
@@ -756,9 +771,9 @@ ___
 
 ###  listContainerResourceQuota
 
-▸ **listContainerResourceQuota**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)>
+▸ **listContainerResourceQuota**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)>
 
-*Defined in [api.ts:18356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18356)*
+*Defined in [api.ts:19331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19331)*
 
 Returns an array of ContainerResourceQuota objects
 
@@ -775,6 +790,7 @@ Returns an array of ContainerResourceQuota objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)>
@@ -784,9 +800,9 @@ ___
 
 ###  listContainerTemplateTags
 
-▸ **listContainerTemplateTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listContainerTemplateTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:18371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18371)*
+*Defined in [api.ts:19347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19347)*
 
 Returns an array of Tag objects
 
@@ -804,6 +820,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -813,9 +830,9 @@ ___
 
 ###  listContainerTemplates
 
-▸ **listContainerTemplates**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)>
+▸ **listContainerTemplates**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)>
 
-*Defined in [api.ts:18385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18385)*
+*Defined in [api.ts:19362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19362)*
 
 Returns an array of ContainerTemplate objects
 
@@ -832,6 +849,7 @@ Returns an array of ContainerTemplate objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)>
@@ -841,9 +859,9 @@ ___
 
 ###  listContainers
 
-▸ **listContainers**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainersCollection](../interfaces/containerscollection.md)>
+▸ **listContainers**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainersCollection](../interfaces/containerscollection.md)>
 
-*Defined in [api.ts:18399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18399)*
+*Defined in [api.ts:19377](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19377)*
 
 Returns an array of Container objects
 
@@ -860,6 +878,7 @@ Returns an array of Container objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainersCollection](../interfaces/containerscollection.md)>
@@ -869,9 +888,9 @@ ___
 
 ###  listDatastores
 
-▸ **listDatastores**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[DatastoresCollection](../interfaces/datastorescollection.md)>
+▸ **listDatastores**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[DatastoresCollection](../interfaces/datastorescollection.md)>
 
-*Defined in [api.ts:18413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18413)*
+*Defined in [api.ts:19392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19392)*
 
 Returns an array of Datastore objects
 
@@ -888,6 +907,7 @@ Returns an array of Datastore objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[DatastoresCollection](../interfaces/datastorescollection.md)>
@@ -897,9 +917,9 @@ ___
 
 ###  listFlavors
 
-▸ **listFlavors**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[FlavorsCollection](../interfaces/flavorscollection.md)>
+▸ **listFlavors**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[FlavorsCollection](../interfaces/flavorscollection.md)>
 
-*Defined in [api.ts:18427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18427)*
+*Defined in [api.ts:19407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19407)*
 
 Returns an array of Flavor objects
 
@@ -916,6 +936,7 @@ Returns an array of Flavor objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[FlavorsCollection](../interfaces/flavorscollection.md)>
@@ -925,9 +946,9 @@ ___
 
 ###  listHosts
 
-▸ **listHosts**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[HostsCollection](../interfaces/hostscollection.md)>
+▸ **listHosts**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[HostsCollection](../interfaces/hostscollection.md)>
 
-*Defined in [api.ts:18441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18441)*
+*Defined in [api.ts:19422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19422)*
 
 Returns an array of Host objects
 
@@ -944,6 +965,7 @@ Returns an array of Host objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[HostsCollection](../interfaces/hostscollection.md)>
@@ -953,9 +975,9 @@ ___
 
 ###  listIpaddressTags
 
-▸ **listIpaddressTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listIpaddressTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:18456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18456)*
+*Defined in [api.ts:19438](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19438)*
 
 Returns an array of Tag objects
 
@@ -973,6 +995,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -982,9 +1005,9 @@ ___
 
 ###  listIpaddresses
 
-▸ **listIpaddresses**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
+▸ **listIpaddresses**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
 
-*Defined in [api.ts:18470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18470)*
+*Defined in [api.ts:19453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19453)*
 
 Returns an array of Ipaddress objects
 
@@ -1001,6 +1024,7 @@ Returns an array of Ipaddress objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
@@ -1010,9 +1034,9 @@ ___
 
 ###  listNetworkAdapterIpaddresses
 
-▸ **listNetworkAdapterIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
+▸ **listNetworkAdapterIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
 
-*Defined in [api.ts:18485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18485)*
+*Defined in [api.ts:19469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19469)*
 
 Returns an array of Ipaddress objects
 
@@ -1030,6 +1054,7 @@ Returns an array of Ipaddress objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
@@ -1039,9 +1064,9 @@ ___
 
 ###  listNetworkAdapterTags
 
-▸ **listNetworkAdapterTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listNetworkAdapterTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:18500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18500)*
+*Defined in [api.ts:19485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19485)*
 
 Returns an array of Tag objects
 
@@ -1059,6 +1084,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -1068,9 +1094,9 @@ ___
 
 ###  listNetworkAdapters
 
-▸ **listNetworkAdapters**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
+▸ **listNetworkAdapters**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
 
-*Defined in [api.ts:18514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18514)*
+*Defined in [api.ts:19500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19500)*
 
 Returns an array of NetworkAdapter objects
 
@@ -1087,6 +1113,7 @@ Returns an array of NetworkAdapter objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
@@ -1096,9 +1123,9 @@ ___
 
 ###  listNetworkSubnets
 
-▸ **listNetworkSubnets**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
+▸ **listNetworkSubnets**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
 
-*Defined in [api.ts:18529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18529)*
+*Defined in [api.ts:19516](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19516)*
 
 Returns an array of Subnet objects
 
@@ -1116,6 +1143,7 @@ Returns an array of Subnet objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
@@ -1125,9 +1153,9 @@ ___
 
 ###  listNetworkTags
 
-▸ **listNetworkTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listNetworkTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:18544](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18544)*
+*Defined in [api.ts:19532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19532)*
 
 Returns an array of Tag objects
 
@@ -1145,6 +1173,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -1154,9 +1183,9 @@ ___
 
 ###  listNetworks
 
-▸ **listNetworks**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
+▸ **listNetworks**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
 
-*Defined in [api.ts:18558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18558)*
+*Defined in [api.ts:19547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19547)*
 
 Returns an array of Network objects
 
@@ -1173,6 +1202,7 @@ Returns an array of Network objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
@@ -1182,9 +1212,9 @@ ___
 
 ###  listOrchestrationStackIpaddresses
 
-▸ **listOrchestrationStackIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
+▸ **listOrchestrationStackIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
 
-*Defined in [api.ts:18573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18573)*
+*Defined in [api.ts:19563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19563)*
 
 Returns an array of Ipaddress objects
 
@@ -1202,6 +1232,7 @@ Returns an array of Ipaddress objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
@@ -1211,9 +1242,9 @@ ___
 
 ###  listOrchestrationStackNetworkAdapters
 
-▸ **listOrchestrationStackNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
+▸ **listOrchestrationStackNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
 
-*Defined in [api.ts:18588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18588)*
+*Defined in [api.ts:19579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19579)*
 
 Returns an array of NetworkAdapter objects
 
@@ -1231,6 +1262,7 @@ Returns an array of NetworkAdapter objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
@@ -1240,9 +1272,9 @@ ___
 
 ###  listOrchestrationStackNetworks
 
-▸ **listOrchestrationStackNetworks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
+▸ **listOrchestrationStackNetworks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
 
-*Defined in [api.ts:18603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18603)*
+*Defined in [api.ts:19595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19595)*
 
 Returns an array of Network objects
 
@@ -1260,6 +1292,7 @@ Returns an array of Network objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
@@ -1269,9 +1302,9 @@ ___
 
 ###  listOrchestrationStackSecurityGroups
 
-▸ **listOrchestrationStackSecurityGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
+▸ **listOrchestrationStackSecurityGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
 
-*Defined in [api.ts:18618](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18618)*
+*Defined in [api.ts:19611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19611)*
 
 Returns an array of SecurityGroup objects
 
@@ -1289,6 +1322,7 @@ Returns an array of SecurityGroup objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
@@ -1298,9 +1332,9 @@ ___
 
 ###  listOrchestrationStackSubnets
 
-▸ **listOrchestrationStackSubnets**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
+▸ **listOrchestrationStackSubnets**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
 
-*Defined in [api.ts:18633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18633)*
+*Defined in [api.ts:19627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19627)*
 
 Returns an array of Subnet objects
 
@@ -1318,6 +1352,7 @@ Returns an array of Subnet objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
@@ -1327,9 +1362,9 @@ ___
 
 ###  listOrchestrationStackVms
 
-▸ **listOrchestrationStackVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
+▸ **listOrchestrationStackVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
 
-*Defined in [api.ts:18648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18648)*
+*Defined in [api.ts:19643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19643)*
 
 Returns an array of Vm objects
 
@@ -1347,6 +1382,7 @@ Returns an array of Vm objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
@@ -1356,9 +1392,9 @@ ___
 
 ###  listOrchestrationStackVolumes
 
-▸ **listOrchestrationStackVolumes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
+▸ **listOrchestrationStackVolumes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
 
-*Defined in [api.ts:18663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18663)*
+*Defined in [api.ts:19659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19659)*
 
 Returns an array of Volume objects
 
@@ -1376,6 +1412,7 @@ Returns an array of Volume objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
@@ -1385,9 +1422,9 @@ ___
 
 ###  listOrchestrationStacks
 
-▸ **listOrchestrationStacks**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)>
+▸ **listOrchestrationStacks**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)>
 
-*Defined in [api.ts:18677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18677)*
+*Defined in [api.ts:19674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19674)*
 
 Returns an array of OrchestrationStack objects
 
@@ -1404,6 +1441,7 @@ Returns an array of OrchestrationStack objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)>
@@ -1413,9 +1451,9 @@ ___
 
 ###  listSecurityGroupTags
 
-▸ **listSecurityGroupTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listSecurityGroupTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:18692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18692)*
+*Defined in [api.ts:19690](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19690)*
 
 Returns an array of Tag objects
 
@@ -1433,6 +1471,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -1442,9 +1481,9 @@ ___
 
 ###  listSecurityGroupVms
 
-▸ **listSecurityGroupVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
+▸ **listSecurityGroupVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
 
-*Defined in [api.ts:18707](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18707)*
+*Defined in [api.ts:19706](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19706)*
 
 Returns an array of Vm objects
 
@@ -1462,6 +1501,7 @@ Returns an array of Vm objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
@@ -1471,9 +1511,9 @@ ___
 
 ###  listSecurityGroups
 
-▸ **listSecurityGroups**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
+▸ **listSecurityGroups**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
 
-*Defined in [api.ts:18721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18721)*
+*Defined in [api.ts:19721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19721)*
 
 Returns an array of SecurityGroup objects
 
@@ -1490,6 +1530,7 @@ Returns an array of SecurityGroup objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
@@ -1499,9 +1540,9 @@ ___
 
 ###  listServiceInstanceNodes
 
-▸ **listServiceInstanceNodes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)>
+▸ **listServiceInstanceNodes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)>
 
-*Defined in [api.ts:18735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18735)*
+*Defined in [api.ts:19736](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19736)*
 
 Returns an array of ServiceInstanceNode objects
 
@@ -1518,6 +1559,7 @@ Returns an array of ServiceInstanceNode objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)>
@@ -1527,9 +1569,9 @@ ___
 
 ###  listServiceInstanceServiceInstanceNodes
 
-▸ **listServiceInstanceServiceInstanceNodes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)>
+▸ **listServiceInstanceServiceInstanceNodes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)>
 
-*Defined in [api.ts:18750](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18750)*
+*Defined in [api.ts:19752](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19752)*
 
 Returns an array of ServiceInstanceNode objects
 
@@ -1547,6 +1589,7 @@ Returns an array of ServiceInstanceNode objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)>
@@ -1556,9 +1599,9 @@ ___
 
 ###  listServiceInstances
 
-▸ **listServiceInstances**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
+▸ **listServiceInstances**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
 
-*Defined in [api.ts:18764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18764)*
+*Defined in [api.ts:19767](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19767)*
 
 Returns an array of ServiceInstance objects
 
@@ -1575,6 +1618,7 @@ Returns an array of ServiceInstance objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
@@ -1584,9 +1628,9 @@ ___
 
 ###  listServiceInventories
 
-▸ **listServiceInventories**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)>
+▸ **listServiceInventories**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)>
 
-*Defined in [api.ts:18778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18778)*
+*Defined in [api.ts:19782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19782)*
 
 Returns an array of ServiceInventory objects
 
@@ -1603,6 +1647,7 @@ Returns an array of ServiceInventory objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)>
@@ -1612,9 +1657,9 @@ ___
 
 ###  listServiceInventoryTags
 
-▸ **listServiceInventoryTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listServiceInventoryTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:18793](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18793)*
+*Defined in [api.ts:19798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19798)*
 
 Returns an array of Tag objects
 
@@ -1632,6 +1677,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -1641,9 +1687,9 @@ ___
 
 ###  listServiceOfferingIcons
 
-▸ **listServiceOfferingIcons**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingIconsCollection](../interfaces/serviceofferingiconscollection.md)>
+▸ **listServiceOfferingIcons**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingIconsCollection](../interfaces/serviceofferingiconscollection.md)>
 
-*Defined in [api.ts:18807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18807)*
+*Defined in [api.ts:19813](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19813)*
 
 Returns an array of ServiceOfferingIcon objects
 
@@ -1660,6 +1706,7 @@ Returns an array of ServiceOfferingIcon objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceOfferingIconsCollection](../interfaces/serviceofferingiconscollection.md)>
@@ -1669,9 +1716,9 @@ ___
 
 ###  listServiceOfferingNodes
 
-▸ **listServiceOfferingNodes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)>
+▸ **listServiceOfferingNodes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)>
 
-*Defined in [api.ts:18821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18821)*
+*Defined in [api.ts:19828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19828)*
 
 Returns an array of ServiceOfferingNode objects
 
@@ -1688,6 +1735,7 @@ Returns an array of ServiceOfferingNode objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)>
@@ -1697,9 +1745,9 @@ ___
 
 ###  listServiceOfferingServiceInstances
 
-▸ **listServiceOfferingServiceInstances**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
+▸ **listServiceOfferingServiceInstances**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
 
-*Defined in [api.ts:18836](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18836)*
+*Defined in [api.ts:19844](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19844)*
 
 Returns an array of ServiceInstance objects
 
@@ -1717,6 +1765,7 @@ Returns an array of ServiceInstance objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
@@ -1726,9 +1775,9 @@ ___
 
 ###  listServiceOfferingServiceOfferingNodes
 
-▸ **listServiceOfferingServiceOfferingNodes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)>
+▸ **listServiceOfferingServiceOfferingNodes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)>
 
-*Defined in [api.ts:18851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18851)*
+*Defined in [api.ts:19860](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19860)*
 
 Returns an array of ServiceOfferingNode objects
 
@@ -1746,6 +1795,7 @@ Returns an array of ServiceOfferingNode objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)>
@@ -1755,9 +1805,9 @@ ___
 
 ###  listServiceOfferingServicePlans
 
-▸ **listServiceOfferingServicePlans**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
+▸ **listServiceOfferingServicePlans**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
 
-*Defined in [api.ts:18866](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18866)*
+*Defined in [api.ts:19876](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19876)*
 
 Returns an array of ServicePlan objects
 
@@ -1775,6 +1825,7 @@ Returns an array of ServicePlan objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
@@ -1784,9 +1835,9 @@ ___
 
 ###  listServiceOfferingTags
 
-▸ **listServiceOfferingTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listServiceOfferingTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:18881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18881)*
+*Defined in [api.ts:19892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19892)*
 
 Returns an array of Tag objects
 
@@ -1804,6 +1855,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -1813,9 +1865,9 @@ ___
 
 ###  listServiceOfferings
 
-▸ **listServiceOfferings**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
+▸ **listServiceOfferings**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
 
-*Defined in [api.ts:18895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18895)*
+*Defined in [api.ts:19907](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19907)*
 
 Returns an array of ServiceOffering objects
 
@@ -1832,6 +1884,7 @@ Returns an array of ServiceOffering objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
@@ -1841,9 +1894,9 @@ ___
 
 ###  listServicePlanServiceInstances
 
-▸ **listServicePlanServiceInstances**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
+▸ **listServicePlanServiceInstances**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
 
-*Defined in [api.ts:18910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18910)*
+*Defined in [api.ts:19923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19923)*
 
 Returns an array of ServiceInstance objects
 
@@ -1861,6 +1914,7 @@ Returns an array of ServiceInstance objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
@@ -1870,9 +1924,9 @@ ___
 
 ###  listServicePlans
 
-▸ **listServicePlans**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
+▸ **listServicePlans**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
 
-*Defined in [api.ts:18924](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18924)*
+*Defined in [api.ts:19938](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19938)*
 
 Returns an array of ServicePlan objects
 
@@ -1889,6 +1943,7 @@ Returns an array of ServicePlan objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
@@ -1898,9 +1953,9 @@ ___
 
 ###  listSourceAvailabilities
 
-▸ **listSourceAvailabilities**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[AvailabilitiesCollection](../interfaces/availabilitiescollection.md)>
+▸ **listSourceAvailabilities**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[AvailabilitiesCollection](../interfaces/availabilitiescollection.md)>
 
-*Defined in [api.ts:18939](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18939)*
+*Defined in [api.ts:19954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19954)*
 
 Returns an array of Availability objects
 
@@ -1918,6 +1973,7 @@ Returns an array of Availability objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[AvailabilitiesCollection](../interfaces/availabilitiescollection.md)>
@@ -1927,9 +1983,9 @@ ___
 
 ###  listSourceClusters
 
-▸ **listSourceClusters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ClustersCollection](../interfaces/clusterscollection.md)>
+▸ **listSourceClusters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ClustersCollection](../interfaces/clusterscollection.md)>
 
-*Defined in [api.ts:18954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18954)*
+*Defined in [api.ts:19970](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19970)*
 
 Returns an array of Cluster objects
 
@@ -1947,6 +2003,7 @@ Returns an array of Cluster objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ClustersCollection](../interfaces/clusterscollection.md)>
@@ -1956,9 +2013,9 @@ ___
 
 ###  listSourceContainerGroups
 
-▸ **listSourceContainerGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
+▸ **listSourceContainerGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
 
-*Defined in [api.ts:18969](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18969)*
+*Defined in [api.ts:19986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19986)*
 
 Returns an array of ContainerGroup objects
 
@@ -1976,6 +2033,7 @@ Returns an array of ContainerGroup objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
@@ -1985,9 +2043,9 @@ ___
 
 ###  listSourceContainerImages
 
-▸ **listSourceContainerImages**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerImagesCollection](../interfaces/containerimagescollection.md)>
+▸ **listSourceContainerImages**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerImagesCollection](../interfaces/containerimagescollection.md)>
 
-*Defined in [api.ts:18984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18984)*
+*Defined in [api.ts:20002](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20002)*
 
 Returns an array of ContainerImage objects
 
@@ -2005,6 +2063,7 @@ Returns an array of ContainerImage objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerImagesCollection](../interfaces/containerimagescollection.md)>
@@ -2014,9 +2073,9 @@ ___
 
 ###  listSourceContainerNodes
 
-▸ **listSourceContainerNodes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerNodesCollection](../interfaces/containernodescollection.md)>
+▸ **listSourceContainerNodes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerNodesCollection](../interfaces/containernodescollection.md)>
 
-*Defined in [api.ts:18999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L18999)*
+*Defined in [api.ts:20018](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20018)*
 
 Returns an array of ContainerNode objects
 
@@ -2034,6 +2093,7 @@ Returns an array of ContainerNode objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerNodesCollection](../interfaces/containernodescollection.md)>
@@ -2043,9 +2103,9 @@ ___
 
 ###  listSourceContainerProjects
 
-▸ **listSourceContainerProjects**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)>
+▸ **listSourceContainerProjects**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)>
 
-*Defined in [api.ts:19014](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19014)*
+*Defined in [api.ts:20034](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20034)*
 
 Returns an array of ContainerProject objects
 
@@ -2063,6 +2123,7 @@ Returns an array of ContainerProject objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)>
@@ -2072,9 +2133,9 @@ ___
 
 ###  listSourceContainerTemplates
 
-▸ **listSourceContainerTemplates**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)>
+▸ **listSourceContainerTemplates**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)>
 
-*Defined in [api.ts:19029](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19029)*
+*Defined in [api.ts:20050](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20050)*
 
 Returns an array of ContainerTemplate objects
 
@@ -2092,6 +2153,7 @@ Returns an array of ContainerTemplate objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)>
@@ -2101,9 +2163,9 @@ ___
 
 ###  listSourceContainers
 
-▸ **listSourceContainers**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainersCollection](../interfaces/containerscollection.md)>
+▸ **listSourceContainers**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainersCollection](../interfaces/containerscollection.md)>
 
-*Defined in [api.ts:19044](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19044)*
+*Defined in [api.ts:20066](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20066)*
 
 Returns an array of Container objects
 
@@ -2121,6 +2183,7 @@ Returns an array of Container objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainersCollection](../interfaces/containerscollection.md)>
@@ -2130,9 +2193,9 @@ ___
 
 ###  listSourceDatastores
 
-▸ **listSourceDatastores**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[DatastoresCollection](../interfaces/datastorescollection.md)>
+▸ **listSourceDatastores**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[DatastoresCollection](../interfaces/datastorescollection.md)>
 
-*Defined in [api.ts:19059](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19059)*
+*Defined in [api.ts:20082](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20082)*
 
 Returns an array of Datastore objects
 
@@ -2150,6 +2213,7 @@ Returns an array of Datastore objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[DatastoresCollection](../interfaces/datastorescollection.md)>
@@ -2159,9 +2223,9 @@ ___
 
 ###  listSourceHosts
 
-▸ **listSourceHosts**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[HostsCollection](../interfaces/hostscollection.md)>
+▸ **listSourceHosts**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[HostsCollection](../interfaces/hostscollection.md)>
 
-*Defined in [api.ts:19074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19074)*
+*Defined in [api.ts:20098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20098)*
 
 Returns an array of Host objects
 
@@ -2179,6 +2243,7 @@ Returns an array of Host objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[HostsCollection](../interfaces/hostscollection.md)>
@@ -2188,9 +2253,9 @@ ___
 
 ###  listSourceIpaddresses
 
-▸ **listSourceIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
+▸ **listSourceIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
 
-*Defined in [api.ts:19089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19089)*
+*Defined in [api.ts:20114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20114)*
 
 Returns an array of Ipaddress objects
 
@@ -2208,6 +2273,7 @@ Returns an array of Ipaddress objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
@@ -2217,9 +2283,9 @@ ___
 
 ###  listSourceNetworkAdapters
 
-▸ **listSourceNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
+▸ **listSourceNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
 
-*Defined in [api.ts:19104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19104)*
+*Defined in [api.ts:20130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20130)*
 
 Returns an array of NetworkAdapter objects
 
@@ -2237,6 +2303,7 @@ Returns an array of NetworkAdapter objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
@@ -2246,9 +2313,9 @@ ___
 
 ###  listSourceNetworks
 
-▸ **listSourceNetworks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
+▸ **listSourceNetworks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
 
-*Defined in [api.ts:19119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19119)*
+*Defined in [api.ts:20146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20146)*
 
 Returns an array of Network objects
 
@@ -2266,6 +2333,7 @@ Returns an array of Network objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
@@ -2275,9 +2343,9 @@ ___
 
 ###  listSourceOrchestrationStacks
 
-▸ **listSourceOrchestrationStacks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)>
+▸ **listSourceOrchestrationStacks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)>
 
-*Defined in [api.ts:19134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19134)*
+*Defined in [api.ts:20162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20162)*
 
 Returns an array of OrchestrationStack objects
 
@@ -2295,6 +2363,7 @@ Returns an array of OrchestrationStack objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)>
@@ -2304,9 +2373,9 @@ ___
 
 ###  listSourceRegionIpaddresses
 
-▸ **listSourceRegionIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
+▸ **listSourceRegionIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
 
-*Defined in [api.ts:19149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19149)*
+*Defined in [api.ts:20178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20178)*
 
 Returns an array of Ipaddress objects
 
@@ -2324,6 +2393,7 @@ Returns an array of Ipaddress objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
@@ -2333,9 +2403,9 @@ ___
 
 ###  listSourceRegionNetworkAdapters
 
-▸ **listSourceRegionNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
+▸ **listSourceRegionNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
 
-*Defined in [api.ts:19164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19164)*
+*Defined in [api.ts:20194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20194)*
 
 Returns an array of NetworkAdapter objects
 
@@ -2353,6 +2423,7 @@ Returns an array of NetworkAdapter objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
@@ -2362,9 +2433,9 @@ ___
 
 ###  listSourceRegionNetworks
 
-▸ **listSourceRegionNetworks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
+▸ **listSourceRegionNetworks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
 
-*Defined in [api.ts:19179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19179)*
+*Defined in [api.ts:20210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20210)*
 
 Returns an array of Network objects
 
@@ -2382,6 +2453,7 @@ Returns an array of Network objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
@@ -2391,9 +2463,9 @@ ___
 
 ###  listSourceRegionOrchestrationStacks
 
-▸ **listSourceRegionOrchestrationStacks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)>
+▸ **listSourceRegionOrchestrationStacks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)>
 
-*Defined in [api.ts:19194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19194)*
+*Defined in [api.ts:20226](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20226)*
 
 Returns an array of OrchestrationStack objects
 
@@ -2411,6 +2483,7 @@ Returns an array of OrchestrationStack objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)>
@@ -2420,9 +2493,9 @@ ___
 
 ###  listSourceRegionSecurityGroups
 
-▸ **listSourceRegionSecurityGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
+▸ **listSourceRegionSecurityGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
 
-*Defined in [api.ts:19209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19209)*
+*Defined in [api.ts:20242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20242)*
 
 Returns an array of SecurityGroup objects
 
@@ -2440,6 +2513,7 @@ Returns an array of SecurityGroup objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
@@ -2449,9 +2523,9 @@ ___
 
 ###  listSourceRegionServiceInstances
 
-▸ **listSourceRegionServiceInstances**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
+▸ **listSourceRegionServiceInstances**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
 
-*Defined in [api.ts:19224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19224)*
+*Defined in [api.ts:20258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20258)*
 
 Returns an array of ServiceInstance objects
 
@@ -2469,6 +2543,7 @@ Returns an array of ServiceInstance objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
@@ -2478,9 +2553,9 @@ ___
 
 ###  listSourceRegionServiceOfferings
 
-▸ **listSourceRegionServiceOfferings**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
+▸ **listSourceRegionServiceOfferings**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
 
-*Defined in [api.ts:19239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19239)*
+*Defined in [api.ts:20274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20274)*
 
 Returns an array of ServiceOffering objects
 
@@ -2498,6 +2573,7 @@ Returns an array of ServiceOffering objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
@@ -2507,9 +2583,9 @@ ___
 
 ###  listSourceRegionServicePlans
 
-▸ **listSourceRegionServicePlans**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
+▸ **listSourceRegionServicePlans**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
 
-*Defined in [api.ts:19254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19254)*
+*Defined in [api.ts:20290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20290)*
 
 Returns an array of ServicePlan objects
 
@@ -2527,6 +2603,7 @@ Returns an array of ServicePlan objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
@@ -2536,9 +2613,9 @@ ___
 
 ###  listSourceRegionSubnets
 
-▸ **listSourceRegionSubnets**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
+▸ **listSourceRegionSubnets**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
 
-*Defined in [api.ts:19269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19269)*
+*Defined in [api.ts:20306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20306)*
 
 Returns an array of Subnet objects
 
@@ -2556,6 +2633,7 @@ Returns an array of Subnet objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
@@ -2565,9 +2643,9 @@ ___
 
 ###  listSourceRegionVms
 
-▸ **listSourceRegionVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
+▸ **listSourceRegionVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
 
-*Defined in [api.ts:19284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19284)*
+*Defined in [api.ts:20322](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20322)*
 
 Returns an array of Vm objects
 
@@ -2585,6 +2663,7 @@ Returns an array of Vm objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
@@ -2594,9 +2673,9 @@ ___
 
 ###  listSourceRegionVolumes
 
-▸ **listSourceRegionVolumes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
+▸ **listSourceRegionVolumes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
 
-*Defined in [api.ts:19299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19299)*
+*Defined in [api.ts:20338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20338)*
 
 Returns an array of Volume objects
 
@@ -2614,6 +2693,7 @@ Returns an array of Volume objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
@@ -2623,9 +2703,9 @@ ___
 
 ###  listSourceRegions
 
-▸ **listSourceRegions**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SourceRegionsCollection](../interfaces/sourceregionscollection.md)>
+▸ **listSourceRegions**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SourceRegionsCollection](../interfaces/sourceregionscollection.md)>
 
-*Defined in [api.ts:19313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19313)*
+*Defined in [api.ts:20353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20353)*
 
 Returns an array of SourceRegion objects
 
@@ -2642,6 +2722,7 @@ Returns an array of SourceRegion objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SourceRegionsCollection](../interfaces/sourceregionscollection.md)>
@@ -2651,9 +2732,9 @@ ___
 
 ###  listSourceSecurityGroups
 
-▸ **listSourceSecurityGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
+▸ **listSourceSecurityGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
 
-*Defined in [api.ts:19328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19328)*
+*Defined in [api.ts:20369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20369)*
 
 Returns an array of SecurityGroup objects
 
@@ -2671,6 +2752,7 @@ Returns an array of SecurityGroup objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
@@ -2680,9 +2762,9 @@ ___
 
 ###  listSourceServiceInstanceNodes
 
-▸ **listSourceServiceInstanceNodes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)>
+▸ **listSourceServiceInstanceNodes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)>
 
-*Defined in [api.ts:19343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19343)*
+*Defined in [api.ts:20385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20385)*
 
 Returns an array of ServiceInstanceNode objects
 
@@ -2700,6 +2782,7 @@ Returns an array of ServiceInstanceNode objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)>
@@ -2709,9 +2792,9 @@ ___
 
 ###  listSourceServiceInstances
 
-▸ **listSourceServiceInstances**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
+▸ **listSourceServiceInstances**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
 
-*Defined in [api.ts:19358](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19358)*
+*Defined in [api.ts:20401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20401)*
 
 Returns an array of ServiceInstance objects
 
@@ -2729,6 +2812,7 @@ Returns an array of ServiceInstance objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
@@ -2738,9 +2822,9 @@ ___
 
 ###  listSourceServiceInventories
 
-▸ **listSourceServiceInventories**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)>
+▸ **listSourceServiceInventories**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)>
 
-*Defined in [api.ts:19373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19373)*
+*Defined in [api.ts:20417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20417)*
 
 Returns an array of ServiceInventory objects
 
@@ -2758,6 +2842,7 @@ Returns an array of ServiceInventory objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)>
@@ -2767,9 +2852,9 @@ ___
 
 ###  listSourceServiceOfferingNodes
 
-▸ **listSourceServiceOfferingNodes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)>
+▸ **listSourceServiceOfferingNodes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)>
 
-*Defined in [api.ts:19388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19388)*
+*Defined in [api.ts:20433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20433)*
 
 Returns an array of ServiceOfferingNode objects
 
@@ -2787,6 +2872,7 @@ Returns an array of ServiceOfferingNode objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)>
@@ -2796,9 +2882,9 @@ ___
 
 ###  listSourceServiceOfferings
 
-▸ **listSourceServiceOfferings**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
+▸ **listSourceServiceOfferings**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
 
-*Defined in [api.ts:19403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19403)*
+*Defined in [api.ts:20449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20449)*
 
 Returns an array of ServiceOffering objects
 
@@ -2816,6 +2902,7 @@ Returns an array of ServiceOffering objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
@@ -2825,9 +2912,9 @@ ___
 
 ###  listSourceServicePlans
 
-▸ **listSourceServicePlans**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
+▸ **listSourceServicePlans**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
 
-*Defined in [api.ts:19418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19418)*
+*Defined in [api.ts:20465](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20465)*
 
 Returns an array of ServicePlan objects
 
@@ -2845,6 +2932,7 @@ Returns an array of ServicePlan objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
@@ -2854,9 +2942,9 @@ ___
 
 ###  listSourceSourceRegions
 
-▸ **listSourceSourceRegions**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SourceRegionsCollection](../interfaces/sourceregionscollection.md)>
+▸ **listSourceSourceRegions**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SourceRegionsCollection](../interfaces/sourceregionscollection.md)>
 
-*Defined in [api.ts:19433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19433)*
+*Defined in [api.ts:20481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20481)*
 
 Returns an array of SourceRegion objects
 
@@ -2874,6 +2962,7 @@ Returns an array of SourceRegion objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SourceRegionsCollection](../interfaces/sourceregionscollection.md)>
@@ -2883,9 +2972,9 @@ ___
 
 ###  listSourceSubnets
 
-▸ **listSourceSubnets**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
+▸ **listSourceSubnets**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
 
-*Defined in [api.ts:19448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19448)*
+*Defined in [api.ts:20497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20497)*
 
 Returns an array of Subnet objects
 
@@ -2903,6 +2992,7 @@ Returns an array of Subnet objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
@@ -2912,9 +3002,9 @@ ___
 
 ###  listSourceSubscriptions
 
-▸ **listSourceSubscriptions**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SubscriptionsCollection](../interfaces/subscriptionscollection.md)>
+▸ **listSourceSubscriptions**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SubscriptionsCollection](../interfaces/subscriptionscollection.md)>
 
-*Defined in [api.ts:19463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19463)*
+*Defined in [api.ts:20513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20513)*
 
 Returns an array of Subscription objects
 
@@ -2932,6 +3022,7 @@ Returns an array of Subscription objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SubscriptionsCollection](../interfaces/subscriptionscollection.md)>
@@ -2941,9 +3032,9 @@ ___
 
 ###  listSourceVms
 
-▸ **listSourceVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
+▸ **listSourceVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
 
-*Defined in [api.ts:19478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19478)*
+*Defined in [api.ts:20529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20529)*
 
 Returns an array of Vm objects
 
@@ -2961,6 +3052,7 @@ Returns an array of Vm objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
@@ -2970,9 +3062,9 @@ ___
 
 ###  listSourceVolumeTypes
 
-▸ **listSourceVolumeTypes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VolumeTypesCollection](../interfaces/volumetypescollection.md)>
+▸ **listSourceVolumeTypes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VolumeTypesCollection](../interfaces/volumetypescollection.md)>
 
-*Defined in [api.ts:19493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19493)*
+*Defined in [api.ts:20545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20545)*
 
 Returns an array of VolumeType objects
 
@@ -2990,6 +3082,7 @@ Returns an array of VolumeType objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VolumeTypesCollection](../interfaces/volumetypescollection.md)>
@@ -2999,9 +3092,9 @@ ___
 
 ###  listSourceVolumes
 
-▸ **listSourceVolumes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
+▸ **listSourceVolumes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
 
-*Defined in [api.ts:19508](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19508)*
+*Defined in [api.ts:20561](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20561)*
 
 Returns an array of Volume objects
 
@@ -3019,6 +3112,7 @@ Returns an array of Volume objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
@@ -3028,9 +3122,9 @@ ___
 
 ###  listSources
 
-▸ **listSources**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SourcesCollection](../interfaces/sourcescollection.md)>
+▸ **listSources**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SourcesCollection](../interfaces/sourcescollection.md)>
 
-*Defined in [api.ts:19522](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19522)*
+*Defined in [api.ts:20576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20576)*
 
 Returns an array of Source objects
 
@@ -3047,6 +3141,7 @@ Returns an array of Source objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SourcesCollection](../interfaces/sourcescollection.md)>
@@ -3056,9 +3151,9 @@ ___
 
 ###  listSubnetIpaddresses
 
-▸ **listSubnetIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
+▸ **listSubnetIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
 
-*Defined in [api.ts:19537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19537)*
+*Defined in [api.ts:20592](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20592)*
 
 Returns an array of Ipaddress objects
 
@@ -3076,6 +3171,7 @@ Returns an array of Ipaddress objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
@@ -3085,9 +3181,9 @@ ___
 
 ###  listSubnetNetworkAdapters
 
-▸ **listSubnetNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
+▸ **listSubnetNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
 
-*Defined in [api.ts:19552](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19552)*
+*Defined in [api.ts:20608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20608)*
 
 Returns an array of NetworkAdapter objects
 
@@ -3105,6 +3201,7 @@ Returns an array of NetworkAdapter objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
@@ -3114,9 +3211,9 @@ ___
 
 ###  listSubnetTags
 
-▸ **listSubnetTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listSubnetTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:19567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19567)*
+*Defined in [api.ts:20624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20624)*
 
 Returns an array of Tag objects
 
@@ -3134,6 +3231,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -3143,9 +3241,9 @@ ___
 
 ###  listSubnets
 
-▸ **listSubnets**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
+▸ **listSubnets**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
 
-*Defined in [api.ts:19581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19581)*
+*Defined in [api.ts:20639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20639)*
 
 Returns an array of Subnet objects
 
@@ -3162,6 +3260,7 @@ Returns an array of Subnet objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
@@ -3171,9 +3270,9 @@ ___
 
 ###  listSubscriptionIpaddresses
 
-▸ **listSubscriptionIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
+▸ **listSubscriptionIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
 
-*Defined in [api.ts:19596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19596)*
+*Defined in [api.ts:20655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20655)*
 
 Returns an array of Ipaddress objects
 
@@ -3191,6 +3290,7 @@ Returns an array of Ipaddress objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
@@ -3200,9 +3300,9 @@ ___
 
 ###  listSubscriptionNetworkAdapters
 
-▸ **listSubscriptionNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
+▸ **listSubscriptionNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
 
-*Defined in [api.ts:19611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19611)*
+*Defined in [api.ts:20671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20671)*
 
 Returns an array of NetworkAdapter objects
 
@@ -3220,6 +3320,7 @@ Returns an array of NetworkAdapter objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
@@ -3229,9 +3330,9 @@ ___
 
 ###  listSubscriptionNetworks
 
-▸ **listSubscriptionNetworks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
+▸ **listSubscriptionNetworks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
 
-*Defined in [api.ts:19626](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19626)*
+*Defined in [api.ts:20687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20687)*
 
 Returns an array of Network objects
 
@@ -3249,6 +3350,7 @@ Returns an array of Network objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
@@ -3258,9 +3360,9 @@ ___
 
 ###  listSubscriptionOrchestrationStacks
 
-▸ **listSubscriptionOrchestrationStacks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)>
+▸ **listSubscriptionOrchestrationStacks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)>
 
-*Defined in [api.ts:19641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19641)*
+*Defined in [api.ts:20703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20703)*
 
 Returns an array of OrchestrationStack objects
 
@@ -3278,6 +3380,7 @@ Returns an array of OrchestrationStack objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)>
@@ -3287,9 +3390,9 @@ ___
 
 ###  listSubscriptionSecurityGroups
 
-▸ **listSubscriptionSecurityGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
+▸ **listSubscriptionSecurityGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
 
-*Defined in [api.ts:19656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19656)*
+*Defined in [api.ts:20719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20719)*
 
 Returns an array of SecurityGroup objects
 
@@ -3307,6 +3410,7 @@ Returns an array of SecurityGroup objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
@@ -3316,9 +3420,9 @@ ___
 
 ###  listSubscriptionServiceInstances
 
-▸ **listSubscriptionServiceInstances**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
+▸ **listSubscriptionServiceInstances**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
 
-*Defined in [api.ts:19671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19671)*
+*Defined in [api.ts:20735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20735)*
 
 Returns an array of ServiceInstance objects
 
@@ -3336,6 +3440,7 @@ Returns an array of ServiceInstance objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)>
@@ -3345,9 +3450,9 @@ ___
 
 ###  listSubscriptionServiceOfferings
 
-▸ **listSubscriptionServiceOfferings**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
+▸ **listSubscriptionServiceOfferings**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
 
-*Defined in [api.ts:19686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19686)*
+*Defined in [api.ts:20751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20751)*
 
 Returns an array of ServiceOffering objects
 
@@ -3365,6 +3470,7 @@ Returns an array of ServiceOffering objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
@@ -3374,9 +3480,9 @@ ___
 
 ###  listSubscriptionServicePlans
 
-▸ **listSubscriptionServicePlans**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
+▸ **listSubscriptionServicePlans**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
 
-*Defined in [api.ts:19701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19701)*
+*Defined in [api.ts:20767](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20767)*
 
 Returns an array of ServicePlan objects
 
@@ -3394,6 +3500,7 @@ Returns an array of ServicePlan objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServicePlansCollection](../interfaces/serviceplanscollection.md)>
@@ -3403,9 +3510,9 @@ ___
 
 ###  listSubscriptionSubnets
 
-▸ **listSubscriptionSubnets**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
+▸ **listSubscriptionSubnets**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
 
-*Defined in [api.ts:19716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19716)*
+*Defined in [api.ts:20783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20783)*
 
 Returns an array of Subnet objects
 
@@ -3423,6 +3530,7 @@ Returns an array of Subnet objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
@@ -3432,9 +3540,9 @@ ___
 
 ###  listSubscriptionVms
 
-▸ **listSubscriptionVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
+▸ **listSubscriptionVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
 
-*Defined in [api.ts:19731](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19731)*
+*Defined in [api.ts:20799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20799)*
 
 Returns an array of Vm objects
 
@@ -3452,6 +3560,7 @@ Returns an array of Vm objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
@@ -3461,9 +3570,9 @@ ___
 
 ###  listSubscriptionVolumes
 
-▸ **listSubscriptionVolumes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
+▸ **listSubscriptionVolumes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
 
-*Defined in [api.ts:19746](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19746)*
+*Defined in [api.ts:20815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20815)*
 
 Returns an array of Volume objects
 
@@ -3481,6 +3590,7 @@ Returns an array of Volume objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
@@ -3490,9 +3600,9 @@ ___
 
 ###  listSubscriptions
 
-▸ **listSubscriptions**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SubscriptionsCollection](../interfaces/subscriptionscollection.md)>
+▸ **listSubscriptions**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SubscriptionsCollection](../interfaces/subscriptionscollection.md)>
 
-*Defined in [api.ts:19760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19760)*
+*Defined in [api.ts:20830](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20830)*
 
 Returns an array of Subscription objects
 
@@ -3509,6 +3619,7 @@ Returns an array of Subscription objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SubscriptionsCollection](../interfaces/subscriptionscollection.md)>
@@ -3518,9 +3629,9 @@ ___
 
 ###  listTagContainerGroups
 
-▸ **listTagContainerGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
+▸ **listTagContainerGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
 
-*Defined in [api.ts:19775](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19775)*
+*Defined in [api.ts:20846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20846)*
 
 Returns an array of ContainerGroup objects
 
@@ -3538,6 +3649,7 @@ Returns an array of ContainerGroup objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerGroupsCollection](../interfaces/containergroupscollection.md)>
@@ -3547,9 +3659,9 @@ ___
 
 ###  listTagContainerImages
 
-▸ **listTagContainerImages**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerImagesCollection](../interfaces/containerimagescollection.md)>
+▸ **listTagContainerImages**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerImagesCollection](../interfaces/containerimagescollection.md)>
 
-*Defined in [api.ts:19790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19790)*
+*Defined in [api.ts:20862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20862)*
 
 Returns an array of ContainerImage objects
 
@@ -3567,6 +3679,7 @@ Returns an array of ContainerImage objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerImagesCollection](../interfaces/containerimagescollection.md)>
@@ -3576,9 +3689,9 @@ ___
 
 ###  listTagContainerNodes
 
-▸ **listTagContainerNodes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerNodesCollection](../interfaces/containernodescollection.md)>
+▸ **listTagContainerNodes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerNodesCollection](../interfaces/containernodescollection.md)>
 
-*Defined in [api.ts:19805](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19805)*
+*Defined in [api.ts:20878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20878)*
 
 Returns an array of ContainerNode objects
 
@@ -3596,6 +3709,7 @@ Returns an array of ContainerNode objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerNodesCollection](../interfaces/containernodescollection.md)>
@@ -3605,9 +3719,9 @@ ___
 
 ###  listTagContainerProjects
 
-▸ **listTagContainerProjects**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)>
+▸ **listTagContainerProjects**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)>
 
-*Defined in [api.ts:19820](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19820)*
+*Defined in [api.ts:20894](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20894)*
 
 Returns an array of ContainerProject objects
 
@@ -3625,6 +3739,7 @@ Returns an array of ContainerProject objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)>
@@ -3634,9 +3749,9 @@ ___
 
 ###  listTagContainerTemplates
 
-▸ **listTagContainerTemplates**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)>
+▸ **listTagContainerTemplates**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)>
 
-*Defined in [api.ts:19835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19835)*
+*Defined in [api.ts:20910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20910)*
 
 Returns an array of ContainerTemplate objects
 
@@ -3654,6 +3769,7 @@ Returns an array of ContainerTemplate objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)>
@@ -3663,9 +3779,9 @@ ___
 
 ###  listTagIpaddresses
 
-▸ **listTagIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
+▸ **listTagIpaddresses**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
 
-*Defined in [api.ts:19850](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19850)*
+*Defined in [api.ts:20926](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20926)*
 
 Returns an array of Ipaddress objects
 
@@ -3683,6 +3799,7 @@ Returns an array of Ipaddress objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[IpaddressesCollection](../interfaces/ipaddressescollection.md)>
@@ -3692,9 +3809,9 @@ ___
 
 ###  listTagNetworkAdapters
 
-▸ **listTagNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
+▸ **listTagNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
 
-*Defined in [api.ts:19865](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19865)*
+*Defined in [api.ts:20942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20942)*
 
 Returns an array of NetworkAdapter objects
 
@@ -3712,6 +3829,7 @@ Returns an array of NetworkAdapter objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
@@ -3721,9 +3839,9 @@ ___
 
 ###  listTagNetworks
 
-▸ **listTagNetworks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
+▸ **listTagNetworks**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
 
-*Defined in [api.ts:19880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19880)*
+*Defined in [api.ts:20958](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20958)*
 
 Returns an array of Network objects
 
@@ -3741,6 +3859,7 @@ Returns an array of Network objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworksCollection](../interfaces/networkscollection.md)>
@@ -3750,9 +3869,9 @@ ___
 
 ###  listTagSecurityGroups
 
-▸ **listTagSecurityGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
+▸ **listTagSecurityGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
 
-*Defined in [api.ts:19895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19895)*
+*Defined in [api.ts:20974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20974)*
 
 Returns an array of SecurityGroup objects
 
@@ -3770,6 +3889,7 @@ Returns an array of SecurityGroup objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
@@ -3779,9 +3899,9 @@ ___
 
 ###  listTagServiceInventories
 
-▸ **listTagServiceInventories**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)>
+▸ **listTagServiceInventories**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)>
 
-*Defined in [api.ts:19910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19910)*
+*Defined in [api.ts:20990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20990)*
 
 Returns an array of ServiceInventory objects
 
@@ -3799,6 +3919,7 @@ Returns an array of ServiceInventory objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)>
@@ -3808,9 +3929,9 @@ ___
 
 ###  listTagServiceOfferings
 
-▸ **listTagServiceOfferings**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
+▸ **listTagServiceOfferings**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
 
-*Defined in [api.ts:19925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19925)*
+*Defined in [api.ts:21006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21006)*
 
 Returns an array of ServiceOffering objects
 
@@ -3828,6 +3949,7 @@ Returns an array of ServiceOffering objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)>
@@ -3837,9 +3959,9 @@ ___
 
 ###  listTagSubnets
 
-▸ **listTagSubnets**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
+▸ **listTagSubnets**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
 
-*Defined in [api.ts:19940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19940)*
+*Defined in [api.ts:21022](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21022)*
 
 Returns an array of Subnet objects
 
@@ -3857,6 +3979,7 @@ Returns an array of Subnet objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SubnetsCollection](../interfaces/subnetscollection.md)>
@@ -3866,9 +3989,9 @@ ___
 
 ###  listTagVms
 
-▸ **listTagVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
+▸ **listTagVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
 
-*Defined in [api.ts:19955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19955)*
+*Defined in [api.ts:21038](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21038)*
 
 Returns an array of Vm objects
 
@@ -3886,6 +4009,7 @@ Returns an array of Vm objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
@@ -3895,9 +4019,9 @@ ___
 
 ###  listTags
 
-▸ **listTags**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listTags**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:19969](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19969)*
+*Defined in [api.ts:21053](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21053)*
 
 Returns an array of Tag objects
 
@@ -3914,6 +4038,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -3923,9 +4048,9 @@ ___
 
 ###  listTasks
 
-▸ **listTasks**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TasksCollection](../interfaces/taskscollection.md)>
+▸ **listTasks**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TasksCollection](../interfaces/taskscollection.md)>
 
-*Defined in [api.ts:19983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19983)*
+*Defined in [api.ts:21068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21068)*
 
 Returns an array of Task objects
 
@@ -3942,6 +4067,7 @@ Returns an array of Task objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TasksCollection](../interfaces/taskscollection.md)>
@@ -3951,9 +4077,9 @@ ___
 
 ###  listVmNetworkAdapters
 
-▸ **listVmNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
+▸ **listVmNetworkAdapters**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
 
-*Defined in [api.ts:19998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19998)*
+*Defined in [api.ts:21084](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21084)*
 
 Returns an array of NetworkAdapter objects
 
@@ -3971,6 +4097,7 @@ Returns an array of NetworkAdapter objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)>
@@ -3980,9 +4107,9 @@ ___
 
 ###  listVmSecurityGroups
 
-▸ **listVmSecurityGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
+▸ **listVmSecurityGroups**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
 
-*Defined in [api.ts:20013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20013)*
+*Defined in [api.ts:21100](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21100)*
 
 Returns an array of SecurityGroup objects
 
@@ -4000,6 +4127,7 @@ Returns an array of SecurityGroup objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)>
@@ -4009,9 +4137,9 @@ ___
 
 ###  listVmTags
 
-▸ **listVmTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listVmTags**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:20028](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20028)*
+*Defined in [api.ts:21116](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21116)*
 
 Returns an array of Tag objects
 
@@ -4029,6 +4157,7 @@ Returns an array of Tag objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
@@ -4038,9 +4167,9 @@ ___
 
 ###  listVmVolumeAttachments
 
-▸ **listVmVolumeAttachments**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)>
+▸ **listVmVolumeAttachments**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)>
 
-*Defined in [api.ts:20043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20043)*
+*Defined in [api.ts:21132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21132)*
 
 Returns an array of VolumeAttachment objects
 
@@ -4058,6 +4187,7 @@ Returns an array of VolumeAttachment objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)>
@@ -4067,9 +4197,9 @@ ___
 
 ###  listVmVolumes
 
-▸ **listVmVolumes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
+▸ **listVmVolumes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
 
-*Defined in [api.ts:20058](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20058)*
+*Defined in [api.ts:21148](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21148)*
 
 Returns an array of Volume objects
 
@@ -4087,6 +4217,7 @@ Returns an array of Volume objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
@@ -4096,9 +4227,9 @@ ___
 
 ###  listVms
 
-▸ **listVms**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
+▸ **listVms**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
 
-*Defined in [api.ts:20072](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20072)*
+*Defined in [api.ts:21163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21163)*
 
 Returns an array of Vm objects
 
@@ -4115,6 +4246,7 @@ Returns an array of Vm objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
@@ -4124,9 +4256,9 @@ ___
 
 ###  listVolumeAttachments
 
-▸ **listVolumeAttachments**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)>
+▸ **listVolumeAttachments**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)>
 
-*Defined in [api.ts:20086](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20086)*
+*Defined in [api.ts:21178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21178)*
 
 Returns an array of VolumeAttachment objects
 
@@ -4143,6 +4275,7 @@ Returns an array of VolumeAttachment objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)>
@@ -4152,9 +4285,9 @@ ___
 
 ###  listVolumeTypeVolumes
 
-▸ **listVolumeTypeVolumes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
+▸ **listVolumeTypeVolumes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
 
-*Defined in [api.ts:20101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20101)*
+*Defined in [api.ts:21194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21194)*
 
 Returns an array of Volume objects
 
@@ -4172,6 +4305,7 @@ Returns an array of Volume objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
@@ -4181,9 +4315,9 @@ ___
 
 ###  listVolumeTypes
 
-▸ **listVolumeTypes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VolumeTypesCollection](../interfaces/volumetypescollection.md)>
+▸ **listVolumeTypes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VolumeTypesCollection](../interfaces/volumetypescollection.md)>
 
-*Defined in [api.ts:20115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20115)*
+*Defined in [api.ts:21209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21209)*
 
 Returns an array of VolumeType objects
 
@@ -4200,6 +4334,7 @@ Returns an array of VolumeType objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VolumeTypesCollection](../interfaces/volumetypescollection.md)>
@@ -4209,9 +4344,9 @@ ___
 
 ###  listVolumeVms
 
-▸ **listVolumeVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
+▸ **listVolumeVms**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
 
-*Defined in [api.ts:20130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20130)*
+*Defined in [api.ts:21225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21225)*
 
 Returns an array of Vm objects
 
@@ -4229,6 +4364,7 @@ Returns an array of Vm objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VmsCollection](../interfaces/vmscollection.md)>
@@ -4238,9 +4374,9 @@ ___
 
 ###  listVolumes
 
-▸ **listVolumes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
+▸ **listVolumes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
 
-*Defined in [api.ts:20144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20144)*
+*Defined in [api.ts:21240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21240)*
 
 Returns an array of Volume objects
 
@@ -4257,6 +4393,7 @@ Returns an array of Volume objects
 | `Optional` limit | `number` |
 | `Optional` offset | `number` |
 | `Optional` filter | `any` |
+| `Optional` sortBy | `Object` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[VolumesCollection](../interfaces/volumescollection.md)>
@@ -4268,7 +4405,7 @@ ___
 
 ▸ **orderServiceOffering**(id: *`string`*, orderParametersServiceOffering: *[OrderParametersServiceOffering](../interfaces/orderparametersserviceoffering.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
 
-*Defined in [api.ts:20157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20157)*
+*Defined in [api.ts:21253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21253)*
 
 Returns a Task id
 
@@ -4295,7 +4432,7 @@ ___
 
 ▸ **orderServicePlan**(id: *`string`*, orderParametersServicePlan: *[OrderParametersServicePlan](../interfaces/orderparametersserviceplan.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
 
-*Defined in [api.ts:20170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20170)*
+*Defined in [api.ts:21266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21266)*
 
 Returns a Task id
 
@@ -4322,7 +4459,7 @@ ___
 
 ▸ **postGraphQL**(graphQLRequest: *[GraphQLRequest](../interfaces/graphqlrequest.md)*, options?: *`any`*): `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
 
-*Defined in [api.ts:20182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20182)*
+*Defined in [api.ts:21278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21278)*
 
 Performs a GraphQL Query
 
@@ -4348,7 +4485,7 @@ ___
 
 ▸ **showCluster**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Cluster](../interfaces/cluster.md)>
 
-*Defined in [api.ts:20194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20194)*
+*Defined in [api.ts:21290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21290)*
 
 Returns a Cluster object
 
@@ -4374,7 +4511,7 @@ ___
 
 ▸ **showContainer**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Container](../interfaces/container.md)>
 
-*Defined in [api.ts:20206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20206)*
+*Defined in [api.ts:21302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21302)*
 
 Returns a Container object
 
@@ -4400,7 +4537,7 @@ ___
 
 ▸ **showContainerGroup**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ContainerGroup](../interfaces/containergroup.md)>
 
-*Defined in [api.ts:20218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20218)*
+*Defined in [api.ts:21314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21314)*
 
 Returns a ContainerGroup object
 
@@ -4426,7 +4563,7 @@ ___
 
 ▸ **showContainerImage**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ContainerImage](../interfaces/containerimage.md)>
 
-*Defined in [api.ts:20230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20230)*
+*Defined in [api.ts:21326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21326)*
 
 Returns a ContainerImage object
 
@@ -4452,7 +4589,7 @@ ___
 
 ▸ **showContainerNode**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ContainerNode](../interfaces/containernode.md)>
 
-*Defined in [api.ts:20242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20242)*
+*Defined in [api.ts:21338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21338)*
 
 Returns a ContainerNode object
 
@@ -4478,7 +4615,7 @@ ___
 
 ▸ **showContainerProject**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ContainerProject](../interfaces/containerproject.md)>
 
-*Defined in [api.ts:20254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20254)*
+*Defined in [api.ts:21350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21350)*
 
 Returns a ContainerProject object
 
@@ -4504,7 +4641,7 @@ ___
 
 ▸ **showContainerResourceQuota**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ContainerResourceQuota](../interfaces/containerresourcequota.md)>
 
-*Defined in [api.ts:20266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20266)*
+*Defined in [api.ts:21362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21362)*
 
 Returns a ContainerResourceQuota object
 
@@ -4530,7 +4667,7 @@ ___
 
 ▸ **showContainerTemplate**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ContainerTemplate](../interfaces/containertemplate.md)>
 
-*Defined in [api.ts:20278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20278)*
+*Defined in [api.ts:21374](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21374)*
 
 Returns a ContainerTemplate object
 
@@ -4556,7 +4693,7 @@ ___
 
 ▸ **showDatastore**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Datastore](../interfaces/datastore.md)>
 
-*Defined in [api.ts:20290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20290)*
+*Defined in [api.ts:21386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21386)*
 
 Returns a Datastore object
 
@@ -4582,7 +4719,7 @@ ___
 
 ▸ **showFlavor**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Flavor](../interfaces/flavor.md)>
 
-*Defined in [api.ts:20302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20302)*
+*Defined in [api.ts:21398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21398)*
 
 Returns a Flavor object
 
@@ -4608,7 +4745,7 @@ ___
 
 ▸ **showHost**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Host](../interfaces/host.md)>
 
-*Defined in [api.ts:20314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20314)*
+*Defined in [api.ts:21410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21410)*
 
 Returns a Host object
 
@@ -4634,7 +4771,7 @@ ___
 
 ▸ **showIpaddress**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Ipaddress](../interfaces/ipaddress.md)>
 
-*Defined in [api.ts:20326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20326)*
+*Defined in [api.ts:21422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21422)*
 
 Returns a Ipaddress object
 
@@ -4660,7 +4797,7 @@ ___
 
 ▸ **showNetwork**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Network](../interfaces/network.md)>
 
-*Defined in [api.ts:20338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20338)*
+*Defined in [api.ts:21434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21434)*
 
 Returns a Network object
 
@@ -4686,7 +4823,7 @@ ___
 
 ▸ **showNetworkAdapter**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[NetworkAdapter](../interfaces/networkadapter.md)>
 
-*Defined in [api.ts:20350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20350)*
+*Defined in [api.ts:21446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21446)*
 
 Returns a NetworkAdapter object
 
@@ -4712,7 +4849,7 @@ ___
 
 ▸ **showOrchestrationStack**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[OrchestrationStack](../interfaces/orchestrationstack.md)>
 
-*Defined in [api.ts:20362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20362)*
+*Defined in [api.ts:21458](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21458)*
 
 Returns a OrchestrationStack object
 
@@ -4738,7 +4875,7 @@ ___
 
 ▸ **showSecurityGroup**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[SecurityGroup](../interfaces/securitygroup.md)>
 
-*Defined in [api.ts:20374](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20374)*
+*Defined in [api.ts:21470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21470)*
 
 Returns a SecurityGroup object
 
@@ -4764,7 +4901,7 @@ ___
 
 ▸ **showServiceInstance**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ServiceInstance](../interfaces/serviceinstance.md)>
 
-*Defined in [api.ts:20386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20386)*
+*Defined in [api.ts:21482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21482)*
 
 Returns a ServiceInstance object
 
@@ -4790,7 +4927,7 @@ ___
 
 ▸ **showServiceInstanceNode**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ServiceInstanceNode](../interfaces/serviceinstancenode.md)>
 
-*Defined in [api.ts:20398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20398)*
+*Defined in [api.ts:21494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21494)*
 
 Returns a ServiceInstanceNode object
 
@@ -4816,7 +4953,7 @@ ___
 
 ▸ **showServiceInventory**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ServiceInventory](../interfaces/serviceinventory.md)>
 
-*Defined in [api.ts:20410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20410)*
+*Defined in [api.ts:21506](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21506)*
 
 Returns a ServiceInventory object
 
@@ -4842,7 +4979,7 @@ ___
 
 ▸ **showServiceOffering**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ServiceOffering](../interfaces/serviceoffering.md)>
 
-*Defined in [api.ts:20422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20422)*
+*Defined in [api.ts:21518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21518)*
 
 Returns a ServiceOffering object
 
@@ -4868,7 +5005,7 @@ ___
 
 ▸ **showServiceOfferingIcon**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingIcon](../interfaces/serviceofferingicon.md)>
 
-*Defined in [api.ts:20434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20434)*
+*Defined in [api.ts:21530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21530)*
 
 Returns a ServiceOfferingIcon object
 
@@ -4894,7 +5031,7 @@ ___
 
 ▸ **showServiceOfferingIconIconData**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`any`>
 
-*Defined in [api.ts:20446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20446)*
+*Defined in [api.ts:21542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21542)*
 
 Returns a ServiceOfferingIcon IconData
 
@@ -4920,7 +5057,7 @@ ___
 
 ▸ **showServiceOfferingNode**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ServiceOfferingNode](../interfaces/serviceofferingnode.md)>
 
-*Defined in [api.ts:20458](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20458)*
+*Defined in [api.ts:21554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21554)*
 
 Returns a ServiceOfferingNode object
 
@@ -4946,7 +5083,7 @@ ___
 
 ▸ **showServicePlan**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ServicePlan](../interfaces/serviceplan.md)>
 
-*Defined in [api.ts:20470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20470)*
+*Defined in [api.ts:21566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21566)*
 
 Returns a ServicePlan object
 
@@ -4972,7 +5109,7 @@ ___
 
 ▸ **showSource**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Source](../interfaces/source.md)>
 
-*Defined in [api.ts:20482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20482)*
+*Defined in [api.ts:21578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21578)*
 
 Returns a Source object
 
@@ -4998,7 +5135,7 @@ ___
 
 ▸ **showSourceRegion**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[SourceRegion](../interfaces/sourceregion.md)>
 
-*Defined in [api.ts:20494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20494)*
+*Defined in [api.ts:21590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21590)*
 
 Returns a SourceRegion object
 
@@ -5024,7 +5161,7 @@ ___
 
 ▸ **showSubnet**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Subnet](../interfaces/subnet.md)>
 
-*Defined in [api.ts:20506](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20506)*
+*Defined in [api.ts:21602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21602)*
 
 Returns a Subnet object
 
@@ -5050,7 +5187,7 @@ ___
 
 ▸ **showSubscription**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Subscription](../interfaces/subscription.md)>
 
-*Defined in [api.ts:20518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20518)*
+*Defined in [api.ts:21614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21614)*
 
 Returns a Subscription object
 
@@ -5076,7 +5213,7 @@ ___
 
 ▸ **showTag**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Tag](../interfaces/tag.md)>
 
-*Defined in [api.ts:20530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20530)*
+*Defined in [api.ts:21626](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21626)*
 
 Returns a Tag object
 
@@ -5102,7 +5239,7 @@ ___
 
 ▸ **showTask**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Task](../interfaces/task.md)>
 
-*Defined in [api.ts:20542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20542)*
+*Defined in [api.ts:21638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21638)*
 
 Returns a Task object
 
@@ -5128,7 +5265,7 @@ ___
 
 ▸ **showVm**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Vm](../interfaces/vm.md)>
 
-*Defined in [api.ts:20554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20554)*
+*Defined in [api.ts:21650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21650)*
 
 Returns a Vm object
 
@@ -5154,7 +5291,7 @@ ___
 
 ▸ **showVolume**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Volume](../interfaces/volume.md)>
 
-*Defined in [api.ts:20566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20566)*
+*Defined in [api.ts:21662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21662)*
 
 Returns a Volume object
 
@@ -5180,7 +5317,7 @@ ___
 
 ▸ **showVolumeAttachment**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[VolumeAttachment](../interfaces/volumeattachment.md)>
 
-*Defined in [api.ts:20578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20578)*
+*Defined in [api.ts:21674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21674)*
 
 Returns a VolumeAttachment object
 
@@ -5206,7 +5343,7 @@ ___
 
 ▸ **showVolumeType**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[VolumeType](../interfaces/volumetype.md)>
 
-*Defined in [api.ts:20590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20590)*
+*Defined in [api.ts:21686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21686)*
 
 Returns a VolumeType object
 
@@ -5232,7 +5369,7 @@ ___
 
 ▸ **updateTask**(id: *`string`*, task: *[Task](../interfaces/task.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:20603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20603)*
+*Defined in [api.ts:21699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21699)*
 
 Updates a Task object
 

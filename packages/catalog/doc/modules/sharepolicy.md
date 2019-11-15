@@ -27,7 +27,7 @@
 
 **● groupUuids**: *`Array`<`string`>*
 
-*Defined in [api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1049)*
+*Defined in [api.ts:1087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1087)*
 
 An array of group UUID's retrieved from the RBAC Service with whom the resource has to be shared.
 
@@ -42,7 +42,7 @@ ___
 
 **● permissions**: *`Array`<[PermissionsEnum](../enums/sharepolicy.permissionsenum.md)>*
 
-*Defined in [api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1043)*
+*Defined in [api.ts:1081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1081)*
 
 The permissions to apply for this share. Each permission comprises of 3 parts catalog:portfolios:verb separated by :. The valid verbs are read, update, delete and order
 

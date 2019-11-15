@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[Tenant](tenant.md)>*
 
-*Defined in [api.ts:1228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1228)*
+*Defined in [api.ts:1266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1266)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:1222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1222)*
+*Defined in [api.ts:1260](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1260)*
 
 *__type__*: {CollectionLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:1216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1216)*
+*Defined in [api.ts:1254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1254)*
 
 *__type__*: {CollectionMetadata}
 

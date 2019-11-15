@@ -27,7 +27,7 @@
 
 **● links**: *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:866](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L866)*
+*Defined in [api.ts:878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L878)*
 
 *__type__*: {PaginationLinks}
 
@@ -40,7 +40,7 @@ ___
 
 **● meta**: *[ReportPaginationMeta](reportpaginationmeta.md)*
 
-*Defined in [api.ts:860](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L860)*
+*Defined in [api.ts:872](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L872)*
 
 *__type__*: {ReportPaginationMeta}
 

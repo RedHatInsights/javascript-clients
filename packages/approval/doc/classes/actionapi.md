@@ -31,8 +31,7 @@ ActionApi - object-oriented interface
 ### Methods
 
 * [createAction](actionapi.md#createaction)
-* [createActionByRequest](actionapi.md#createactionbyrequest)
-* [listActionsByStage](actionapi.md#listactionsbystage)
+* [listActionsByRequest](actionapi.md#listactionsbyrequest)
 * [showAction](actionapi.md#showaction)
 
 ---
@@ -103,40 +102,13 @@ ___
 
 ###  createAction
 
-▸ **createAction**(stageId: *`string`*, actionIn: *[ActionIn](../modules/actionin.md)*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
+▸ **createAction**(requestId: *`string`*, action: *[Action](../modules/action.md)*, options?: *`any`*): `AxiosPromise`<[Action](../modules/action.md)>
 
-*Defined in [api.ts:1130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1130)*
+*Defined in [api.ts:887](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L887)*
 
-Add an action to a given stage
+Add an action to a given request, available for admin/approver/requester
 
-*__summary__*: Add an action to a given stage, available for admin/approver/requester
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: ActionApi
-
-**Parameters:**
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| stageId | `string` |  Id of stage |
-| actionIn | [ActionIn](../modules/actionin.md) |  Action object that will be added |
-| `Optional` options | `any` |
-
-**Returns:** `AxiosPromise`<[ActionOut](../modules/actionout.md)>
-
-___
-<a id="createactionbyrequest"></a>
-
-###  createActionByRequest
-
-▸ **createActionByRequest**(requestId: *`string`*, actionIn: *[ActionIn](../modules/actionin.md)*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
-
-*Defined in [api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1143)*
-
-Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
-
-*__summary__*: Add an action to current active stage of a given request, available for admin/approver/requester
+*__summary__*: Add an action to a given request
 
 *__throws__*: {RequiredError}
 
@@ -147,23 +119,23 @@ Add an action to current active stage of a given request. If request is finished
 | Name | Type | Description |
 | ------ | ------ | ------ |
 | requestId | `string` |  Id of request |
-| actionIn | [ActionIn](../modules/actionin.md) |  Action object that will be added |
+| action | [Action](../modules/action.md) |  Action object that will be added |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[ActionOut](../modules/actionout.md)>
+**Returns:** `AxiosPromise`<[Action](../modules/action.md)>
 
 ___
-<a id="listactionsbystage"></a>
+<a id="listactionsbyrequest"></a>
 
-###  listActionsByStage
+###  listActionsByRequest
 
-▸ **listActionsByStage**(stageId: *`string`*, options?: *`any`*): `AxiosPromise`<[ActionOutCollection](../interfaces/actionoutcollection.md)>
+▸ **listActionsByRequest**(requestId: *`string`*, options?: *`any`*): `AxiosPromise`<[ActionCollection](../interfaces/actioncollection.md)>
 
-*Defined in [api.ts:1155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1155)*
+*Defined in [api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L899)*
 
-List all actions of a stage
+Return actions in a given request, available for admin/approver
 
-*__summary__*: Return actions in a given stage, available for admin/approver
+*__summary__*: List all actions of a request
 
 *__throws__*: {RequiredError}
 
@@ -173,23 +145,23 @@ List all actions of a stage
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| stageId | `string` |  Id of stage |
+| requestId | `string` |  Id of request |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[ActionOutCollection](../interfaces/actionoutcollection.md)>
+**Returns:** `AxiosPromise`<[ActionCollection](../interfaces/actioncollection.md)>
 
 ___
 <a id="showaction"></a>
 
 ###  showAction
 
-▸ **showAction**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ActionOut](../modules/actionout.md)>
+▸ **showAction**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Action](../modules/action.md)>
 
-*Defined in [api.ts:1167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1167)*
+*Defined in [api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L911)*
 
-Return an user action by id
+Return an user action by id, available to all
 
-*__summary__*: Return an user action by id, available for admin/approver
+*__summary__*: Return an user action by id
 
 *__throws__*: {RequiredError}
 
@@ -202,7 +174,7 @@ Return an user action by id
 | id | `string` |  Query by id |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[ActionOut](../modules/actionout.md)>
+**Returns:** `AxiosPromise`<[Action](../modules/action.md)>
 
 ___
 

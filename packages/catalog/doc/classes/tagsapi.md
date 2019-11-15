@@ -105,7 +105,7 @@ ___
 
 ▸ **listTagPortfolioItems**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[PortfolioItemsCollection](../interfaces/portfolioitemscollection.md)>
 
-*Defined in [api.ts:6610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6610)*
+*Defined in [api.ts:6814](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6814)*
 
 Returns an array of Portfolio Item objects
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **listTagPortfolios**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[PortfoliosCollection](../interfaces/portfolioscollection.md)>
 
-*Defined in [api.ts:6625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6625)*
+*Defined in [api.ts:6829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6829)*
 
 Returns an array of Portfolio objects
 
@@ -163,7 +163,7 @@ ___
 
 ▸ **listTags**(options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:6636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6636)*
+*Defined in [api.ts:6840](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6840)*
 
 List Tags
 
@@ -188,7 +188,7 @@ ___
 
 ▸ **showTag**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Tag](../interfaces/tag.md)>
 
-*Defined in [api.ts:6648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6648)*
+*Defined in [api.ts:6852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6852)*
 
 Show a specific Tag
 

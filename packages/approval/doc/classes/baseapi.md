@@ -16,8 +16,6 @@
 
 ↳  [RequestApi](requestapi.md)
 
-↳  [StageApi](stageapi.md)
-
 ↳  [TemplateApi](templateapi.md)
 
 ↳  [WorkflowApi](workflowapi.md)
