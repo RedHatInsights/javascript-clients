@@ -28,7 +28,7 @@
 
 **● attributes**: *[CveDetailOutDataAttributes](cvedetailoutdataattributes.md)*
 
-*Defined in [api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L203)*
+*Defined in [git-api/api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L203)*
 
 *__type__*: {CveDetailOutDataAttributes}
 
@@ -41,7 +41,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L191)*
+*Defined in [git-api/api.ts:191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L191)*
 
 CVE id.
 
@@ -56,7 +56,7 @@ ___
 
 **● type**: *`string`*
 
-*Defined in [api.ts:197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L197)*
+*Defined in [git-api/api.ts:197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L197)*
 
 Type of the record.
 

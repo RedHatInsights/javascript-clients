@@ -6,9 +6,7 @@ node_js:
 - '10'
 install:
   - npm ci
-  - npm run bootstrap
-script:
-  - npm run generate
+before_script:
+  - npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
 after_success:
-  - cp .npmrc.template $HOME/.npmrc
   - npm run release

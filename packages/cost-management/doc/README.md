@@ -1,11 +1,19 @@
 
+[
+
 Javascript client for Cost Management API
 =========================================
 
+](#javascript-client-for-cost-management-api)
+
 This is a client library for [RedHatInsights/Cost Management](https://github.com/project-koku).
+
+[
 
 Install
 -------
+
+](#install)
 
 NPM
 
@@ -19,7 +27,11 @@ Or Yarn
 yarn add @redhat-cloud-services/cost-management-client
 ```
 
+[
+
 ### Usage
+
+](#usage)
 
 This client is using typescript and axios. Types are distributed with this package, so no need to define or install them separately.
 
@@ -30,8 +42,12 @@ const api = new CostModelApi();
 const costManagement = await api.getCostModel();
 ```
 
+[
+
 API documentation
 -----------------
+
+](#api-documentation)
 
 *   [README](doc/README.md)
 
