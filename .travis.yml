@@ -7,5 +7,7 @@ node_js:
 install:
   - npm ci
 after_success:
-  - npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
   - npm run release
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
