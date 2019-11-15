@@ -15,6 +15,7 @@
 ### Properties
 
 * [description](topicwithrules.md#description)
+* [enabled](topicwithrules.md#enabled)
 * [featured](topicwithrules.md#featured)
 * [impactedSystemsCount](topicwithrules.md#impactedsystemscount)
 * [name](topicwithrules.md#name)
@@ -32,9 +33,22 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L925)*
+*Defined in [api.ts:1039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1039)*
 
 *__type__*: {string}
+
+*__memberof__*: TopicWithRules
+
+___
+<a id="enabled"></a>
+
+### `<Optional>` enabled
+
+**● enabled**: *`boolean`*
+
+*Defined in [api.ts:1063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1063)*
+
+*__type__*: {boolean}
 
 *__memberof__*: TopicWithRules
 
@@ -45,7 +59,7 @@ ___
 
 **● featured**: *`boolean`*
 
-*Defined in [api.ts:937](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L937)*
+*Defined in [api.ts:1051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1051)*
 
 *__type__*: {boolean}
 
@@ -58,7 +72,7 @@ ___
 
 **● impactedSystemsCount**: *`number`*
 
-*Defined in [api.ts:949](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L949)*
+*Defined in [api.ts:1069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1069)*
 
 *__type__*: {number}
 
@@ -71,7 +85,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:913](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L913)*
+*Defined in [api.ts:1027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1027)*
 
 *__type__*: {string}
 
@@ -84,7 +98,7 @@ ___
 
 **● rules**: *`Array`<`string`>*
 
-*Defined in [api.ts:943](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L943)*
+*Defined in [api.ts:1057](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1057)*
 
 *__type__*: {Array}
 
@@ -97,7 +111,7 @@ ___
 
 **● slug**: *`string`*
 
-*Defined in [api.ts:919](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L919)*
+*Defined in [api.ts:1033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1033)*
 
 Rule topic slug
 
@@ -112,7 +126,7 @@ ___
 
 **● tags**: *`string`*
 
-*Defined in [api.ts:931](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L931)*
+*Defined in [api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1045)*
 
 *__type__*: {string}
 

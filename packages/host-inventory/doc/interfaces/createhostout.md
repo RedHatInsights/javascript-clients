@@ -31,6 +31,7 @@ Data of a single host belonging to an account. Represents the hosts without its 
 * [rhelMachineId](createhostout.md#rhelmachineid)
 * [satelliteId](createhostout.md#satelliteid)
 * [subscriptionManagerId](createhostout.md#subscriptionmanagerid)
+* [tags](createhostout.md#tags)
 * [updated](createhostout.md#updated)
 
 ---
@@ -258,6 +259,19 @@ ___
 A Red Hat Subcription Manager ID of a RHEL host. This field is considered to be a canonical fact.
 
 *__type__*: {string}
+
+*__memberof__*: CreateHostOut
+
+___
+<a id="tags"></a>
+
+### `<Optional>` tags
+
+**● tags**: *`Array`<[StructuredTag](structuredtag.md)>*
+
+*Defined in [api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L329)*
+
+*__type__*: {Array}
 
 *__memberof__*: CreateHostOut
 

@@ -16,6 +16,7 @@
 
 * [createdTimestamp](costmodelout.md#createdtimestamp)
 * [description](costmodelout.md#description)
+* [markup](costmodelout.md#markup)
 * [name](costmodelout.md#name)
 * [providers](costmodelout.md#providers)
 * [rates](costmodelout.md#rates)
@@ -49,6 +50,19 @@ ___
 *Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L133)*
 
 *__type__*: {string}
+
+*__memberof__*: CostModelOut
+
+___
+<a id="markup"></a>
+
+### `<Optional>` markup
+
+**● markup**: *[Markup](../modules/markup.md)*
+
+*Defined in [api.ts:175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L175)*
+
+*__type__*: {Markup}
 
 *__memberof__*: CostModelOut
 

@@ -23,7 +23,7 @@
 
 **Complete**:  = "complete"
 
-*Defined in [api.ts:383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L383)*
+*Defined in [api.ts:389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L389)*
 
 ___
 <a id="pending"></a>
@@ -32,7 +32,7 @@ ___
 
 **Pending**:  = "pending"
 
-*Defined in [api.ts:382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L382)*
+*Defined in [api.ts:388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L388)*
 
 ___
 

@@ -105,11 +105,13 @@ ___
 
 ###  topicList
 
-▸ **topicList**(options?: *`any`*): `AxiosPromise`<[TopicWithRules](../interfaces/topicwithrules.md)[]>
+▸ **topicList**(showDisabled?: *`boolean`*, options?: *`any`*): `AxiosPromise`<[TopicWithRules](../interfaces/topicwithrules.md)[]>
 
-*Defined in [api.ts:3823](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3823)*
+*Defined in [api.ts:4233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4233)*
 
-Rules have topics, set by Insights administrators. This is a view of the topics available, along with the rules and systems to which they apply.
+Normally this only shows enabled topics, but if the 'show\_disabled' parameter is set to True then this will show disabled topics as well.
+
+*__summary__*: List the rule topics and their impacted systems counts.
 
 *__throws__*: {RequiredError}
 
@@ -119,6 +121,7 @@ Rules have topics, set by Insights administrators. This is a view of the topics 
 
 | Name | Type |
 | ------ | ------ |
+| `Optional` showDisabled | `boolean` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TopicWithRules](../interfaces/topicwithrules.md)[]>
@@ -130,7 +133,7 @@ ___
 
 ▸ **topicRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[TopicWithRules](../interfaces/topicwithrules.md)>
 
-*Defined in [api.ts:3834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3834)*
+*Defined in [api.ts:4244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4244)*
 
 Rules have topics, set by Insights administrators. This is a view of the topics available, along with the rules and systems to which they apply.
 
@@ -154,9 +157,11 @@ ___
 
 ▸ **topicRulesRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
 
-*Defined in [api.ts:3845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3845)*
+*Defined in [api.ts:4256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4256)*
 
-View, add to or delete from the rules in this topic
+This will be deleted in the future.
+
+*__summary__*: View, add to or delete from the rules in this topic
 
 *__throws__*: {RequiredError}
 
@@ -178,9 +183,11 @@ ___
 
 ▸ **topicRulesWithTags**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
 
-*Defined in [api.ts:3856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3856)*
+*Defined in [api.ts:4268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4268)*
 
-Lists the available rules that share a tag with this topic. Some of these may also be in the given topic - can we show that
+Some of these may also be in the given topic - can we show that? This will be deprecated at some point because we only care about the tag link.
+
+*__summary__*: Lists the available rules that share a tag with this topic.
 
 *__throws__*: {RequiredError}
 
@@ -202,9 +209,11 @@ ___
 
 ▸ **topicSystems**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
 
-*Defined in [api.ts:3867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3867)*
+*Defined in [api.ts:4280](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4280)*
 
-List all systems affected by this rule topic.
+Systems are just listed by their UUID.
+
+*__summary__*: List all systems affected by this rule topic.
 
 *__throws__*: {RequiredError}
 
@@ -226,9 +235,11 @@ ___
 
 ▸ **topicTagsRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Tag](../interfaces/tag.md)[]>
 
-*Defined in [api.ts:3878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3878)*
+*Defined in [api.ts:4292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4292)*
 
-View, add to or delete from the tags in a topic.
+This is the main way of linking rules to a topic.
+
+*__summary__*: View, add to or delete from the tags in a topic.
 
 *__throws__*: {RequiredError}
 

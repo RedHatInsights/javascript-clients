@@ -17,6 +17,7 @@
 * [createdAt](portfolio.md#createdat)
 * [description](portfolio.md#description)
 * [enabled](portfolio.md#enabled)
+* [iconId](portfolio.md#iconid)
 * [id](portfolio.md#id)
 * [imageUrl](portfolio.md#imageurl)
 * [name](portfolio.md#name)
@@ -33,7 +34,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L657)*
+*Defined in [api.ts:689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L689)*
 
 *__type__*: {Date}
 
@@ -46,7 +47,7 @@ ___
 
 **● description**: *`string` \| `null`*
 
-*Defined in [api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L633)*
+*Defined in [api.ts:659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L659)*
 
 *__type__*: {string}
 
@@ -59,9 +60,24 @@ ___
 
 **● enabled**: *`boolean`*
 
-*Defined in [api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L639)*
+*Defined in [api.ts:665](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L665)*
 
 *__type__*: {boolean}
+
+*__memberof__*: Portfolio
+
+___
+<a id="iconid"></a>
+
+### `<Optional>` iconId
+
+**● iconId**: *`string`*
+
+*Defined in [api.ts:683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L683)*
+
+The Portfolio Icon ID
+
+*__type__*: {string}
 
 *__memberof__*: Portfolio
 
@@ -72,7 +88,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L621)*
+*Defined in [api.ts:647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L647)*
 
 *__type__*: {string}
 
@@ -85,7 +101,7 @@ ___
 
 **● imageUrl**: *`string`*
 
-*Defined in [api.ts:645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L645)*
+*Defined in [api.ts:671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L671)*
 
 *__type__*: {string}
 
@@ -98,7 +114,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L627)*
+*Defined in [api.ts:653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L653)*
 
 *__type__*: {string}
 
@@ -111,7 +127,7 @@ ___
 
 **● owner**: *`string`*
 
-*Defined in [api.ts:651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L651)*
+*Defined in [api.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L677)*
 
 *__type__*: {string}
 
@@ -124,7 +140,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L663)*
+*Defined in [api.ts:695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L695)*
 
 *__type__*: {Date}
 

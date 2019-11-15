@@ -109,9 +109,9 @@ ___
 
 ###  addWorkflowToTemplate
 
-▸ **addWorkflowToTemplate**(templateId: *`string`*, workflowIn: *[WorkflowIn](../interfaces/workflowin.md)*, options?: *`any`*): `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
+▸ **addWorkflowToTemplate**(templateId: *`string`*, workflow: *[Workflow](../interfaces/workflow.md)*, options?: *`any`*): `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
 
-*Defined in [api.ts:2718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2718)*
+*Defined in [api.ts:2351](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2351)*
 
 Add a workflow by given template id
 
@@ -126,10 +126,10 @@ Add a workflow by given template id
 | Name | Type | Description |
 | ------ | ------ | ------ |
 | templateId | `string` |  Id of template |
-| workflowIn | [WorkflowIn](../interfaces/workflowin.md) |  Parameters need to create workflow |
+| workflow | [Workflow](../interfaces/workflow.md) |  Parameters need to create workflow |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
+**Returns:** `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
 
 ___
 <a id="destroyworkflow"></a>
@@ -138,7 +138,7 @@ ___
 
 ▸ **destroyWorkflow**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2730](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2730)*
+*Defined in [api.ts:2363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2363)*
 
 Delete approval workflow by given id
 
@@ -164,7 +164,7 @@ ___
 
 ▸ **linkWorkflow**(id: *`string`*, resourceObject: *[ResourceObject](../interfaces/resourceobject.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2743](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2743)*
+*Defined in [api.ts:2376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2376)*
 
 Link a resource object to a given workflow
 
@@ -189,9 +189,9 @@ ___
 
 ###  listWorkflows
 
-▸ **listWorkflows**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[WorkflowOutCollection](../interfaces/workflowoutcollection.md)>
+▸ **listWorkflows**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[WorkflowCollection](../interfaces/workflowcollection.md)>
 
-*Defined in [api.ts:2757](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2757)*
+*Defined in [api.ts:2390](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2390)*
 
 Return all approval workflows in ascending sequence order
 
@@ -210,16 +210,16 @@ Return all approval workflows in ascending sequence order
 | `Optional` filter | `any` |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[WorkflowOutCollection](../interfaces/workflowoutcollection.md)>
+**Returns:** `AxiosPromise`<[WorkflowCollection](../interfaces/workflowcollection.md)>
 
 ___
 <a id="listworkflowsbytemplate"></a>
 
 ###  listWorkflowsByTemplate
 
-▸ **listWorkflowsByTemplate**(templateId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[WorkflowOutCollection](../interfaces/workflowoutcollection.md)>
+▸ **listWorkflowsByTemplate**(templateId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[WorkflowCollection](../interfaces/workflowcollection.md)>
 
-*Defined in [api.ts:2772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2772)*
+*Defined in [api.ts:2405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2405)*
 
 Return an array of workflows by given template id
 
@@ -239,16 +239,16 @@ Return an array of workflows by given template id
 | `Optional` filter | `any` |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[WorkflowOutCollection](../interfaces/workflowoutcollection.md)>
+**Returns:** `AxiosPromise`<[WorkflowCollection](../interfaces/workflowcollection.md)>
 
 ___
 <a id="resolveworkflows"></a>
 
 ###  resolveWorkflows
 
-▸ **resolveWorkflows**(resourceObject: *[ResourceObject](../interfaces/resourceobject.md)*, options?: *`any`*): `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)[]>
+▸ **resolveWorkflows**(resourceObject: *[ResourceObject](../interfaces/resourceobject.md)*, options?: *`any`*): `AxiosPromise`<[Workflow](../interfaces/workflow.md)[]>
 
-*Defined in [api.ts:2784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2784)*
+*Defined in [api.ts:2417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2417)*
 
 Get all workflows linked to a resource object.
 
@@ -265,16 +265,16 @@ Get all workflows linked to a resource object.
 | resourceObject | [ResourceObject](../interfaces/resourceobject.md) |  Resource object used to resolve workflows. |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)[]>
+**Returns:** `AxiosPromise`<[Workflow](../interfaces/workflow.md)[]>
 
 ___
 <a id="showworkflow"></a>
 
 ###  showWorkflow
 
-▸ **showWorkflow**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
+▸ **showWorkflow**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
 
-*Defined in [api.ts:2796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2796)*
+*Defined in [api.ts:2429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2429)*
 
 Return an approval workflow by given id
 
@@ -291,7 +291,7 @@ Return an approval workflow by given id
 | id | `string` |  Query by id |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
+**Returns:** `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
 
 ___
 <a id="unlinkall"></a>
@@ -300,7 +300,7 @@ ___
 
 ▸ **unlinkAll**(resourceObject: *[ResourceObject](../interfaces/resourceobject.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2808](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2808)*
+*Defined in [api.ts:2441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2441)*
 
 Break all links between a resource object and its assigned workflows
 
@@ -326,7 +326,7 @@ ___
 
 ▸ **unlinkWorkflow**(id: *`string`*, resourceObject: *[ResourceObject](../interfaces/resourceobject.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2821)*
+*Defined in [api.ts:2454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2454)*
 
 Break the link between a resource object and selected workflow
 
@@ -351,9 +351,9 @@ ___
 
 ###  updateWorkflow
 
-▸ **updateWorkflow**(id: *`string`*, workflowIn: *[WorkflowIn](../interfaces/workflowin.md)*, options?: *`any`*): `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
+▸ **updateWorkflow**(id: *`string`*, workflow: *[Workflow](../interfaces/workflow.md)*, options?: *`any`*): `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
 
-*Defined in [api.ts:2834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2834)*
+*Defined in [api.ts:2467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2467)*
 
 Update an approval workflow by given id
 
@@ -368,10 +368,10 @@ Update an approval workflow by given id
 | Name | Type | Description |
 | ------ | ------ | ------ |
 | id | `string` |  Query by id |
-| workflowIn | [WorkflowIn](../interfaces/workflowin.md) |  Parameters need to update approval workflow |
+| workflow | [Workflow](../interfaces/workflow.md) |  Parameters need to update approval workflow |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[WorkflowOut](../interfaces/workflowout.md)>
+**Returns:** `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
 
 ___
 

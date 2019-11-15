@@ -32,6 +32,7 @@ RequestApi - object-oriented interface
 
 * [createRequest](requestapi.md#createrequest)
 * [listRequests](requestapi.md#listrequests)
+* [listRequestsByRequest](requestapi.md#listrequestsbyrequest)
 * [showRequest](requestapi.md#showrequest)
 
 ---
@@ -104,7 +105,7 @@ ___
 
 ▸ **createRequest**(requestIn: *[RequestIn](../interfaces/requestin.md)*, options?: *`any`*): `AxiosPromise`<[Request](../modules/request.md)>
 
-*Defined in [api.ts:1541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1541)*
+*Defined in [api.ts:1348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1348)*
 
 Add an approval request by given parameters, available to anyone
 
@@ -130,7 +131,7 @@ ___
 
 ▸ **listRequests**(xRhPersona?: *"approval/admin" \| "approval/approver" \| "approval/requester"*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
 
-*Defined in [api.ts:1556](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1556)*
+*Defined in [api.ts:1363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1363)*
 
 Return an array of requests. The result depends on the x-rh-persona header
 
@@ -153,13 +154,39 @@ Return an array of requests. The result depends on the x-rh-persona header
 **Returns:** `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
 
 ___
+<a id="listrequestsbyrequest"></a>
+
+###  listRequestsByRequest
+
+▸ **listRequestsByRequest**(requestId: *`string`*, options?: *`any`*): `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
+
+*Defined in [api.ts:1375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1375)*
+
+Return an array of child request by given request id, available for admin/requester
+
+*__summary__*: Return an array of request children by given request id
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: RequestApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| requestId | `string` |  Id of request |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
+
+___
 <a id="showrequest"></a>
 
 ###  showRequest
 
 ▸ **showRequest**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Request](../modules/request.md)>
 
-*Defined in [api.ts:1568](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1568)*
+*Defined in [api.ts:1387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1387)*
 
 Return an approval request by given id, available to anyone who can access the request
 

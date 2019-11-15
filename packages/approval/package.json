@@ -24,7 +24,7 @@
     "axios": "^0.19.0"
   },
   "devDependencies": {
-    "typedoc": "^0.14.2",
+    "typedoc": "^0.15.2",
     "typedoc-plugin-markdown": "^1.1.27"
   }
 }

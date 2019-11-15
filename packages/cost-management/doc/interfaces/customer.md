@@ -26,7 +26,7 @@
 
 **● accountId**: *`string`*
 
-*Defined in [api.ts:267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L267)*
+*Defined in [api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L273)*
 
 *__type__*: {string}
 

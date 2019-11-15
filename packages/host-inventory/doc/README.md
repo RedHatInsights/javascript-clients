@@ -95,8 +95,11 @@ API documentation
 * [NetworkInterface](interfaces/networkinterface.md)
 * [PatchHostIn](interfaces/patchhostin.md)
 * [RequestArgs](interfaces/requestargs.md)
+* [StructuredTag](interfaces/structuredtag.md)
 * [SystemProfileByHostOut](interfaces/systemprofilebyhostout.md)
 * [SystemProfileIn](interfaces/systemprofilein.md)
+* [TagCountOut](interfaces/tagcountout.md)
+* [TagsOut](interfaces/tagsout.md)
 * [YumRepo](interfaces/yumrepo.md)
 
 ### Variables
@@ -135,7 +138,7 @@ ___
 
 ▸ **HostsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L925)*
+*Defined in [api.ts:1039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1039)*
 
 HostsApi - axios parameter creator
 
@@ -154,7 +157,7 @@ ___
 
 ▸ **HostsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1567)*
+*Defined in [api.ts:1845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1845)*
 
 HostsApi - factory interface
 
@@ -175,7 +178,7 @@ ___
 
 ▸ **HostsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1419)*
+*Defined in [api.ts:1660](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1660)*
 
 HostsApi - functional programming interface
 

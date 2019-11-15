@@ -70,99 +70,60 @@ export class RequiredError extends Error {
 }
 
 /**
- * Input parameters for Action object
- * @export
- * @interface ActionIn
- */
-export interface ActionIn {
-    /**
-     * The person who performs the action
-     * @type {string}
-     * @memberof ActionIn
-     */
-    processedBy?: string;
-    /**
-     * Types of action, may be one of the value (approve, cancel, deny, notify, memo, or skip). The stage will be updated according to the operation.
-     * @type {string}
-     * @memberof ActionIn
-     */
-    operation: ActionIn.OperationEnum;
-    /**
-     * Comments for action
-     * @type {string}
-     * @memberof ActionIn
-     */
-    comments?: string;
-}
-
-/**
- * @export
- * @namespace ActionIn
- */
-export namespace ActionIn {
-    /**
-     * @export
-     * @enum {string}
-     */
-    export enum OperationEnum {
-        Approve = 'approve',
-        Cancel = 'cancel',
-        Deny = 'deny',
-        Notify = 'notify',
-        Memo = 'memo',
-        Skip = 'skip'
-    }
-}
-
-/**
  *
  * @export
- * @interface ActionOut
+ * @interface Action
  */
-export interface ActionOut {
+export interface Action {
     /**
      *
      * @type {string}
-     * @memberof ActionOut
+     * @memberof Action
      */
-    id: string;
+    id?: string;
     /**
      * Timestamp of creation
      * @type {Date}
-     * @memberof ActionOut
+     * @memberof Action
      */
     createdAt?: Date;
     /**
-     * Associated stage id
-     * @type {string}
-     * @memberof ActionOut
+     * Timestamp of update
+     * @type {Date}
+     * @memberof Action
      */
-    stageId: string;
+    updatedAt?: Date;
+    /**
+     * Associated request id
+     * @type {string}
+     * @memberof Action
+     */
+    requestId?: string;
     /**
      * The person who performs the action
      * @type {string}
-     * @memberof ActionOut
+     * @memberof Action
      */
     processedBy?: string;
     /**
-     * Types of action, may be one of the value (approve, cancel, deny, notify, memo, or skip). The stage will be updated according to the operation.
+     * Types of action, may be one of the value (approve, cancel, deny, notify, memo, or skip). The request will be updated according to the operation.
      * @type {string}
-     * @memberof ActionOut
+     * @memberof Action
      */
-    operation?: ActionOut.OperationEnum;
+    operation?: Action.OperationEnum;
     /**
      * Comments for action
      * @type {string}
-     * @memberof ActionOut
+     * @memberof Action
      */
     comments?: string;
 }
 
 /**
  * @export
- * @namespace ActionOut
+ * @namespace Action
  */
-export namespace ActionOut {
+export namespace Action {
     /**
      * @export
      * @enum {string}
@@ -180,27 +141,27 @@ export namespace ActionOut {
 /**
  *
  * @export
- * @interface ActionOutCollection
+ * @interface ActionCollection
  */
-export interface ActionOutCollection {
+export interface ActionCollection {
     /**
      *
      * @type {CollectionMetadata}
-     * @memberof ActionOutCollection
+     * @memberof ActionCollection
      */
     meta?: CollectionMetadata;
     /**
      *
      * @type {CollectionLinks}
-     * @memberof ActionOutCollection
+     * @memberof ActionCollection
      */
     links?: CollectionLinks;
     /**
      *
-     * @type {Array<ActionOut>}
-     * @memberof ActionOutCollection
+     * @type {Array<Action>}
+     * @memberof ActionCollection
      */
-    data?: Array<ActionOut>;
+    data?: Array<Action>;
 }
 
 /**
@@ -506,104 +467,6 @@ export interface ResourceObject {
 }
 
 /**
- * A stage of an approval request.
- * @export
- * @interface StageOut
- */
-export interface StageOut {
-    /**
-     *
-     * @type {string}
-     * @memberof StageOut
-     */
-    id?: string;
-    /**
-     * name of the group that processes the stage
-     * @type {string}
-     * @memberof StageOut
-     */
-    name?: string;
-    /**
-     * Associated group reference id
-     * @type {string}
-     * @memberof StageOut
-     */
-    groupRef?: string;
-    /**
-     * The state of stage or request. It may be one of values (canceled, pending, skipped, notified or finished)
-     * @type {string}
-     * @memberof StageOut
-     */
-    state?: StageOut.StateEnum;
-    /**
-     * Final decision, may be one of the value (undecided, approved, canceled or denied)
-     * @type {string}
-     * @memberof StageOut
-     */
-    decision?: StageOut.DecisionEnum;
-    /**
-     * the time approvers in the stage are notified
-     * @type {string}
-     * @memberof StageOut
-     */
-    notifiedAt?: string;
-}
-
-/**
- * @export
- * @namespace StageOut
- */
-export namespace StageOut {
-    /**
-     * @export
-     * @enum {string}
-     */
-    export enum StateEnum {
-        Canceled = 'canceled',
-        Pending = 'pending',
-        Skipped = 'skipped',
-        Notified = 'notified',
-        Finished = 'finished'
-    }
-    /**
-     * @export
-     * @enum {string}
-     */
-    export enum DecisionEnum {
-        Undecided = 'undecided',
-        Approved = 'approved',
-        Canceled = 'canceled',
-        Denied = 'denied'
-    }
-}
-
-/**
- *
- * @export
- * @interface StageOutCollection
- */
-export interface StageOutCollection {
-    /**
-     *
-     * @type {CollectionMetadata}
-     * @memberof StageOutCollection
-     */
-    meta?: CollectionMetadata;
-    /**
-     *
-     * @type {CollectionLinks}
-     * @memberof StageOutCollection
-     */
-    links?: CollectionLinks;
-    /**
-     *
-     * @type {Array<StageOut>}
-     * @memberof StageOutCollection
-     */
-    data?: Array<StageOut>;
-}
-
-/**
  * tag details
  * @export
  * @interface Tag
@@ -658,25 +521,25 @@ export interface TagResource {
 /**
  * The template to categorize workflows.
  * @export
- * @interface TemplateOut
+ * @interface Template
  */
-export interface TemplateOut {
+export interface Template {
     /**
      *
      * @type {string}
-     * @memberof TemplateOut
+     * @memberof Template
      */
     id?: string;
     /**
      *
      * @type {string}
-     * @memberof TemplateOut
+     * @memberof Template
      */
     title?: string;
     /**
      *
      * @type {string}
-     * @memberof TemplateOut
+     * @memberof Template
      */
     description?: string;
 }
@@ -684,101 +547,69 @@ export interface TemplateOut {
 /**
  *
  * @export
- * @interface TemplateOutCollection
+ * @interface TemplateCollection
  */
-export interface TemplateOutCollection {
+export interface TemplateCollection {
     /**
      *
      * @type {CollectionMetadata}
-     * @memberof TemplateOutCollection
+     * @memberof TemplateCollection
      */
     meta?: CollectionMetadata;
     /**
      *
      * @type {CollectionLinks}
-     * @memberof TemplateOutCollection
+     * @memberof TemplateCollection
      */
     links?: CollectionLinks;
     /**
      *
-     * @type {Array<TemplateOut>}
-     * @memberof TemplateOutCollection
+     * @type {Array<Template>}
+     * @memberof TemplateCollection
      */
-    data?: Array<TemplateOut>;
-}
-
-/**
- *
- * @export
- * @interface WorkflowIn
- */
-export interface WorkflowIn {
-    /**
-     *
-     * @type {string}
-     * @memberof WorkflowIn
-     */
-    name: string;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkflowIn
-     */
-    description?: string;
-    /**
-     * an indicator of the execution order for selected workflows
-     * @type {number}
-     * @memberof WorkflowIn
-     */
-    sequence?: number;
-    /**
-     * Group reference ids associated with workflow
-     * @type {Array<string>}
-     * @memberof WorkflowIn
-     */
-    groupRefs: Array<string>;
+    data?: Array<Template>;
 }
 
 /**
  * The workflow to process approval requests. Each workflow is linked to multiple groups of approvals.
  * @export
- * @interface WorkflowOut
+ * @interface Workflow
  */
-export interface WorkflowOut {
+export interface Workflow {
     /**
      *
      * @type {string}
-     * @memberof WorkflowOut
+     * @memberof Workflow
      */
     id?: string;
     /**
      * Associated template id
      * @type {string}
-     * @memberof WorkflowOut
+     * @memberof Workflow
      */
     templateId?: string;
     /**
      *
      * @type {string}
-     * @memberof WorkflowOut
+     * @memberof Workflow
      */
     name?: string;
     /**
      *
      * @type {string}
-     * @memberof WorkflowOut
+     * @memberof Workflow
      */
-    description?: string;
+    description?: string | null;
     /**
      * an indicator of the execution order for selected workflows
      * @type {number}
-     * @memberof WorkflowOut
+     * @memberof Workflow
      */
     sequence?: number;
     /**
      * Group reference ids associated with workflow
      * @type {Array<string>}
-     * @memberof WorkflowOut
+     * @memberof Workflow
      */
     groupRefs?: Array<string>;
 }
@@ -786,27 +617,27 @@ export interface WorkflowOut {
 /**
  *
  * @export
- * @interface WorkflowOutCollection
+ * @interface WorkflowCollection
  */
-export interface WorkflowOutCollection {
+export interface WorkflowCollection {
     /**
      *
      * @type {CollectionMetadata}
-     * @memberof WorkflowOutCollection
+     * @memberof WorkflowCollection
      */
     meta?: CollectionMetadata;
     /**
      *
      * @type {CollectionLinks}
-     * @memberof WorkflowOutCollection
+     * @memberof WorkflowCollection
      */
     links?: CollectionLinks;
     /**
      *
-     * @type {Array<WorkflowOut>}
-     * @memberof WorkflowOutCollection
+     * @type {Array<Workflow>}
+     * @memberof WorkflowCollection
      */
-    data?: Array<WorkflowOut>;
+    data?: Array<Workflow>;
 }
 
 
@@ -817,69 +648,21 @@ export interface WorkflowOutCollection {
 export const ActionApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Add an action to a given stage
-         * @summary Add an action to a given stage, available for admin/approver/requester
-         * @param {string} stageId Id of stage
-         * @param {ActionIn} actionIn Action object that will be added
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createAction(stageId: string, actionIn: ActionIn, options: any = {}): RequestArgs {
-            // verify required parameter 'stageId' is not null or undefined
-            if (stageId === null || stageId === undefined) {
-                throw new RequiredError('stageId','Required parameter stageId was null or undefined when calling createAction.');
-            }
-            // verify required parameter 'actionIn' is not null or undefined
-            if (actionIn === null || actionIn === undefined) {
-                throw new RequiredError('actionIn','Required parameter actionIn was null or undefined when calling createAction.');
-            }
-            const localVarPath = `/stages/{stage_id}/actions`
-                .replace(`{${"stage_id"}}`, encodeURIComponent(String(stageId)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"ActionIn" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(actionIn || {}) : (actionIn || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
-         * @summary Add an action to current active stage of a given request, available for admin/approver/requester
+         * Add an action to a given request, available for admin/approver/requester
+         * @summary Add an action to a given request
          * @param {string} requestId Id of request
-         * @param {ActionIn} actionIn Action object that will be added
+         * @param {Action} action Action object that will be added
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createActionByRequest(requestId: string, actionIn: ActionIn, options: any = {}): RequestArgs {
+        createAction(requestId: string, action: Action, options: any = {}): RequestArgs {
             // verify required parameter 'requestId' is not null or undefined
             if (requestId === null || requestId === undefined) {
-                throw new RequiredError('requestId','Required parameter requestId was null or undefined when calling createActionByRequest.');
+                throw new RequiredError('requestId','Required parameter requestId was null or undefined when calling createAction.');
             }
-            // verify required parameter 'actionIn' is not null or undefined
-            if (actionIn === null || actionIn === undefined) {
-                throw new RequiredError('actionIn','Required parameter actionIn was null or undefined when calling createActionByRequest.');
+            // verify required parameter 'action' is not null or undefined
+            if (action === null || action === undefined) {
+                throw new RequiredError('action','Required parameter action was null or undefined when calling createAction.');
             }
             const localVarPath = `/requests/{request_id}/actions`
                 .replace(`{${"request_id"}}`, encodeURIComponent(String(requestId)));
@@ -904,8 +687,8 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"ActionIn" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(actionIn || {}) : (actionIn || "");
+            const needsSerialization = (<any>"Action" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(action || {}) : (action || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -913,19 +696,19 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * List all actions of a stage
-         * @summary Return actions in a given stage, available for admin/approver
-         * @param {string} stageId Id of stage
+         * Return actions in a given request, available for admin/approver
+         * @summary List all actions of a request
+         * @param {string} requestId Id of request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listActionsByStage(stageId: string, options: any = {}): RequestArgs {
-            // verify required parameter 'stageId' is not null or undefined
-            if (stageId === null || stageId === undefined) {
-                throw new RequiredError('stageId','Required parameter stageId was null or undefined when calling listActionsByStage.');
+        listActionsByRequest(requestId: string, options: any = {}): RequestArgs {
+            // verify required parameter 'requestId' is not null or undefined
+            if (requestId === null || requestId === undefined) {
+                throw new RequiredError('requestId','Required parameter requestId was null or undefined when calling listActionsByRequest.');
             }
-            const localVarPath = `/stages/{stage_id}/actions`
-                .replace(`{${"stage_id"}}`, encodeURIComponent(String(stageId)));
+            const localVarPath = `/requests/{request_id}/actions`
+                .replace(`{${"request_id"}}`, encodeURIComponent(String(requestId)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -952,8 +735,8 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Return an user action by id
-         * @summary Return an user action by id, available for admin/approver
+         * Return an user action by id, available to all
+         * @summary Return an user action by id
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1000,57 +783,42 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
 export const ActionApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Add an action to a given stage
-         * @summary Add an action to a given stage, available for admin/approver/requester
-         * @param {string} stageId Id of stage
-         * @param {ActionIn} actionIn Action object that will be added
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createAction(stageId: string, actionIn: ActionIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionOut> {
-            const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).createAction(stageId, actionIn, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
-         * @summary Add an action to current active stage of a given request, available for admin/approver/requester
+         * Add an action to a given request, available for admin/approver/requester
+         * @summary Add an action to a given request
          * @param {string} requestId Id of request
-         * @param {ActionIn} actionIn Action object that will be added
+         * @param {Action} action Action object that will be added
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createActionByRequest(requestId: string, actionIn: ActionIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionOut> {
-            const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).createActionByRequest(requestId, actionIn, options);
+        createAction(requestId: string, action: Action, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Action> {
+            const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).createAction(requestId, action, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * List all actions of a stage
-         * @summary Return actions in a given stage, available for admin/approver
-         * @param {string} stageId Id of stage
+         * Return actions in a given request, available for admin/approver
+         * @summary List all actions of a request
+         * @param {string} requestId Id of request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listActionsByStage(stageId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionOutCollection> {
-            const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).listActionsByStage(stageId, options);
+        listActionsByRequest(requestId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionCollection> {
+            const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).listActionsByRequest(requestId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * Return an user action by id
-         * @summary Return an user action by id, available for admin/approver
+         * Return an user action by id, available to all
+         * @summary Return an user action by id
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showAction(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionOut> {
+        showAction(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Action> {
             const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).showAction(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1067,40 +835,29 @@ export const ActionApiFp = function(configuration?: Configuration) {
 export const ActionApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Add an action to a given stage
-         * @summary Add an action to a given stage, available for admin/approver/requester
-         * @param {string} stageId Id of stage
-         * @param {ActionIn} actionIn Action object that will be added
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createAction(stageId: string, actionIn: ActionIn, options?: any) {
-            return ActionApiFp(configuration).createAction(stageId, actionIn, options)(axios, basePath);
-        },
-        /**
-         * Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
-         * @summary Add an action to current active stage of a given request, available for admin/approver/requester
+         * Add an action to a given request, available for admin/approver/requester
+         * @summary Add an action to a given request
          * @param {string} requestId Id of request
-         * @param {ActionIn} actionIn Action object that will be added
+         * @param {Action} action Action object that will be added
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createActionByRequest(requestId: string, actionIn: ActionIn, options?: any) {
-            return ActionApiFp(configuration).createActionByRequest(requestId, actionIn, options)(axios, basePath);
+        createAction(requestId: string, action: Action, options?: any) {
+            return ActionApiFp(configuration).createAction(requestId, action, options)(axios, basePath);
         },
         /**
-         * List all actions of a stage
-         * @summary Return actions in a given stage, available for admin/approver
-         * @param {string} stageId Id of stage
+         * Return actions in a given request, available for admin/approver
+         * @summary List all actions of a request
+         * @param {string} requestId Id of request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listActionsByStage(stageId: string, options?: any) {
-            return ActionApiFp(configuration).listActionsByStage(stageId, options)(axios, basePath);
+        listActionsByRequest(requestId: string, options?: any) {
+            return ActionApiFp(configuration).listActionsByRequest(requestId, options)(axios, basePath);
         },
         /**
-         * Return an user action by id
-         * @summary Return an user action by id, available for admin/approver
+         * Return an user action by id, available to all
+         * @summary Return an user action by id
          * @param {string} id Query by id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1119,46 +876,33 @@ export const ActionApiFactory = function (configuration?: Configuration, basePat
  */
 export class ActionApi extends BaseAPI {
     /**
-     * Add an action to a given stage
-     * @summary Add an action to a given stage, available for admin/approver/requester
-     * @param {string} stageId Id of stage
-     * @param {ActionIn} actionIn Action object that will be added
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ActionApi
-     */
-    public createAction(stageId: string, actionIn: ActionIn, options?: any) {
-        return ActionApiFp(this.configuration).createAction(stageId, actionIn, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Add an action to current active stage of a given request. If request is finished, i.e. no current active stage is available, no action can be posted here.
-     * @summary Add an action to current active stage of a given request, available for admin/approver/requester
+     * Add an action to a given request, available for admin/approver/requester
+     * @summary Add an action to a given request
      * @param {string} requestId Id of request
-     * @param {ActionIn} actionIn Action object that will be added
+     * @param {Action} action Action object that will be added
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActionApi
      */
-    public createActionByRequest(requestId: string, actionIn: ActionIn, options?: any) {
-        return ActionApiFp(this.configuration).createActionByRequest(requestId, actionIn, options)(this.axios, this.basePath);
+    public createAction(requestId: string, action: Action, options?: any) {
+        return ActionApiFp(this.configuration).createAction(requestId, action, options)(this.axios, this.basePath);
     }
 
     /**
-     * List all actions of a stage
-     * @summary Return actions in a given stage, available for admin/approver
-     * @param {string} stageId Id of stage
+     * Return actions in a given request, available for admin/approver
+     * @summary List all actions of a request
+     * @param {string} requestId Id of request
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActionApi
      */
-    public listActionsByStage(stageId: string, options?: any) {
-        return ActionApiFp(this.configuration).listActionsByStage(stageId, options)(this.axios, this.basePath);
+    public listActionsByRequest(requestId: string, options?: any) {
+        return ActionApiFp(this.configuration).listActionsByRequest(requestId, options)(this.axios, this.basePath);
     }
 
     /**
-     * Return an user action by id
-     * @summary Return an user action by id, available for admin/approver
+     * Return an user action by id, available to all
+     * @summary Return an user action by id
      * @param {string} id Query by id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1386,6 +1130,45 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Return an array of child request by given request id, available for admin/requester
+         * @summary Return an array of request children by given request id
+         * @param {string} requestId Id of request
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listRequestsByRequest(requestId: string, options: any = {}): RequestArgs {
+            // verify required parameter 'requestId' is not null or undefined
+            if (requestId === null || requestId === undefined) {
+                throw new RequiredError('requestId','Required parameter requestId was null or undefined when calling listRequestsByRequest.');
+            }
+            const localVarPath = `/requests/{request_id}/requests`
+                .replace(`{${"request_id"}}`, encodeURIComponent(String(requestId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Return an approval request by given id, available to anyone who can access the request
          * @summary Return an approval request by given id
          * @param {string} id Query by id
@@ -1465,6 +1248,20 @@ export const RequestApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Return an array of child request by given request id, available for admin/requester
+         * @summary Return an array of request children by given request id
+         * @param {string} requestId Id of request
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listRequestsByRequest(requestId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestCollection> {
+            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequestsByRequest(requestId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Return an approval request by given id, available to anyone who can access the request
          * @summary Return an approval request by given id
          * @param {string} id Query by id
@@ -1509,6 +1306,16 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
          */
         listRequests(xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', limit?: number, offset?: number, filter?: any, options?: any) {
             return RequestApiFp(configuration).listRequests(xRhPersona, limit, offset, filter, options)(axios, basePath);
+        },
+        /**
+         * Return an array of child request by given request id, available for admin/requester
+         * @summary Return an array of request children by given request id
+         * @param {string} requestId Id of request
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listRequestsByRequest(requestId: string, options?: any) {
+            return RequestApiFp(configuration).listRequestsByRequest(requestId, options)(axios, basePath);
         },
         /**
          * Return an approval request by given id, available to anyone who can access the request
@@ -1558,6 +1365,18 @@ export class RequestApi extends BaseAPI {
     }
 
     /**
+     * Return an array of child request by given request id, available for admin/requester
+     * @summary Return an array of request children by given request id
+     * @param {string} requestId Id of request
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestApi
+     */
+    public listRequestsByRequest(requestId: string, options?: any) {
+        return RequestApiFp(this.configuration).listRequestsByRequest(requestId, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Return an approval request by given id, available to anyone who can access the request
      * @summary Return an approval request by given id
      * @param {string} id Query by id
@@ -1567,192 +1386,6 @@ export class RequestApi extends BaseAPI {
      */
     public showRequest(id: string, options?: any) {
         return RequestApiFp(this.configuration).showRequest(id, options)(this.axios, this.basePath);
-    }
-
-}
-
-/**
- * StageApi - axios parameter creator
- * @export
- */
-export const StageApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * Return an array of stages by given request id
-         * @summary Return an array of stages by given request id, available for admin/requester
-         * @param {string} requestId Id of request
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listStagesByRequest(requestId: string, options: any = {}): RequestArgs {
-            // verify required parameter 'requestId' is not null or undefined
-            if (requestId === null || requestId === undefined) {
-                throw new RequiredError('requestId','Required parameter requestId was null or undefined when calling listStagesByRequest.');
-            }
-            const localVarPath = `/requests/{request_id}/stages`
-                .replace(`{${"request_id"}}`, encodeURIComponent(String(requestId)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Return an approval stage by given id
-         * @summary Return an approval stage by given id, available for admin/approver/requester
-         * @param {string} id Query by id
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showStage(id: string, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling showStage.');
-            }
-            const localVarPath = `/stages/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * StageApi - functional programming interface
- * @export
- */
-export const StageApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * Return an array of stages by given request id
-         * @summary Return an array of stages by given request id, available for admin/requester
-         * @param {string} requestId Id of request
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listStagesByRequest(requestId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StageOutCollection> {
-            const localVarAxiosArgs = StageApiAxiosParamCreator(configuration).listStagesByRequest(requestId, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Return an approval stage by given id
-         * @summary Return an approval stage by given id, available for admin/approver/requester
-         * @param {string} id Query by id
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showStage(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StageOut> {
-            const localVarAxiosArgs = StageApiAxiosParamCreator(configuration).showStage(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * StageApi - factory interface
- * @export
- */
-export const StageApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         * Return an array of stages by given request id
-         * @summary Return an array of stages by given request id, available for admin/requester
-         * @param {string} requestId Id of request
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listStagesByRequest(requestId: string, options?: any) {
-            return StageApiFp(configuration).listStagesByRequest(requestId, options)(axios, basePath);
-        },
-        /**
-         * Return an approval stage by given id
-         * @summary Return an approval stage by given id, available for admin/approver/requester
-         * @param {string} id Query by id
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showStage(id: string, options?: any) {
-            return StageApiFp(configuration).showStage(id, options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * StageApi - object-oriented interface
- * @export
- * @class StageApi
- * @extends {BaseAPI}
- */
-export class StageApi extends BaseAPI {
-    /**
-     * Return an array of stages by given request id
-     * @summary Return an array of stages by given request id, available for admin/requester
-     * @param {string} requestId Id of request
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StageApi
-     */
-    public listStagesByRequest(requestId: string, options?: any) {
-        return StageApiFp(this.configuration).listStagesByRequest(requestId, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Return an approval stage by given id
-     * @summary Return an approval stage by given id, available for admin/approver/requester
-     * @param {string} id Query by id
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StageApi
-     */
-    public showStage(id: string, options?: any) {
-        return StageApiFp(this.configuration).showStage(id, options)(this.axios, this.basePath);
     }
 
 }
@@ -1868,7 +1501,7 @@ export const TemplateApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTemplates(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TemplateOutCollection> {
+        listTemplates(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TemplateCollection> {
             const localVarAxiosArgs = TemplateApiAxiosParamCreator(configuration).listTemplates(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1882,7 +1515,7 @@ export const TemplateApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showTemplate(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TemplateOut> {
+        showTemplate(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Template> {
             const localVarAxiosArgs = TemplateApiAxiosParamCreator(configuration).showTemplate(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1968,18 +1601,18 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
          * Add a workflow by given template id
          * @summary Add a workflow by given template id, only available for admin
          * @param {string} templateId Id of template
-         * @param {WorkflowIn} workflowIn Parameters need to create workflow
+         * @param {Workflow} workflow Parameters need to create workflow
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addWorkflowToTemplate(templateId: string, workflowIn: WorkflowIn, options: any = {}): RequestArgs {
+        addWorkflowToTemplate(templateId: string, workflow: Workflow, options: any = {}): RequestArgs {
             // verify required parameter 'templateId' is not null or undefined
             if (templateId === null || templateId === undefined) {
                 throw new RequiredError('templateId','Required parameter templateId was null or undefined when calling addWorkflowToTemplate.');
             }
-            // verify required parameter 'workflowIn' is not null or undefined
-            if (workflowIn === null || workflowIn === undefined) {
-                throw new RequiredError('workflowIn','Required parameter workflowIn was null or undefined when calling addWorkflowToTemplate.');
+            // verify required parameter 'workflow' is not null or undefined
+            if (workflow === null || workflow === undefined) {
+                throw new RequiredError('workflow','Required parameter workflow was null or undefined when calling addWorkflowToTemplate.');
             }
             const localVarPath = `/templates/{template_id}/workflows`
                 .replace(`{${"template_id"}}`, encodeURIComponent(String(templateId)));
@@ -2004,8 +1637,8 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"WorkflowIn" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(workflowIn || {}) : (workflowIn || "");
+            const needsSerialization = (<any>"Workflow" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(workflow || {}) : (workflow || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -2376,18 +2009,18 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
          * Update an approval workflow by given id
          * @summary Update an approval workflow by given id, only available for admin
          * @param {string} id Query by id
-         * @param {WorkflowIn} workflowIn Parameters need to update approval workflow
+         * @param {Workflow} workflow Parameters need to update approval workflow
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateWorkflow(id: string, workflowIn: WorkflowIn, options: any = {}): RequestArgs {
+        updateWorkflow(id: string, workflow: Workflow, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling updateWorkflow.');
             }
-            // verify required parameter 'workflowIn' is not null or undefined
-            if (workflowIn === null || workflowIn === undefined) {
-                throw new RequiredError('workflowIn','Required parameter workflowIn was null or undefined when calling updateWorkflow.');
+            // verify required parameter 'workflow' is not null or undefined
+            if (workflow === null || workflow === undefined) {
+                throw new RequiredError('workflow','Required parameter workflow was null or undefined when calling updateWorkflow.');
             }
             const localVarPath = `/workflows/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -2412,8 +2045,8 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"WorkflowIn" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(workflowIn || {}) : (workflowIn || "");
+            const needsSerialization = (<any>"Workflow" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(workflow || {}) : (workflow || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -2433,12 +2066,12 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * Add a workflow by given template id
          * @summary Add a workflow by given template id, only available for admin
          * @param {string} templateId Id of template
-         * @param {WorkflowIn} workflowIn Parameters need to create workflow
+         * @param {Workflow} workflow Parameters need to create workflow
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addWorkflowToTemplate(templateId: string, workflowIn: WorkflowIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOut> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).addWorkflowToTemplate(templateId, workflowIn, options);
+        addWorkflowToTemplate(templateId: string, workflow: Workflow, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Workflow> {
+            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).addWorkflowToTemplate(templateId, workflow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2482,7 +2115,7 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflows(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOutCollection> {
+        listWorkflows(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowCollection> {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).listWorkflows(limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2499,7 +2132,7 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOutCollection> {
+        listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowCollection> {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).listWorkflowsByTemplate(templateId, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2513,7 +2146,7 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resolveWorkflows(resourceObject: ResourceObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<WorkflowOut>> {
+        resolveWorkflows(resourceObject: ResourceObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Workflow>> {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).resolveWorkflows(resourceObject, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2527,7 +2160,7 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showWorkflow(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOut> {
+        showWorkflow(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Workflow> {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).showWorkflow(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2567,12 +2200,12 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * Update an approval workflow by given id
          * @summary Update an approval workflow by given id, only available for admin
          * @param {string} id Query by id
-         * @param {WorkflowIn} workflowIn Parameters need to update approval workflow
+         * @param {Workflow} workflow Parameters need to update approval workflow
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateWorkflow(id: string, workflowIn: WorkflowIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowOut> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).updateWorkflow(id, workflowIn, options);
+        updateWorkflow(id: string, workflow: Workflow, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Workflow> {
+            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).updateWorkflow(id, workflow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2591,12 +2224,12 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          * Add a workflow by given template id
          * @summary Add a workflow by given template id, only available for admin
          * @param {string} templateId Id of template
-         * @param {WorkflowIn} workflowIn Parameters need to create workflow
+         * @param {Workflow} workflow Parameters need to create workflow
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addWorkflowToTemplate(templateId: string, workflowIn: WorkflowIn, options?: any) {
-            return WorkflowApiFp(configuration).addWorkflowToTemplate(templateId, workflowIn, options)(axios, basePath);
+        addWorkflowToTemplate(templateId: string, workflow: Workflow, options?: any) {
+            return WorkflowApiFp(configuration).addWorkflowToTemplate(templateId, workflow, options)(axios, basePath);
         },
         /**
          * Delete approval workflow by given id
@@ -2689,12 +2322,12 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          * Update an approval workflow by given id
          * @summary Update an approval workflow by given id, only available for admin
          * @param {string} id Query by id
-         * @param {WorkflowIn} workflowIn Parameters need to update approval workflow
+         * @param {Workflow} workflow Parameters need to update approval workflow
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateWorkflow(id: string, workflowIn: WorkflowIn, options?: any) {
-            return WorkflowApiFp(configuration).updateWorkflow(id, workflowIn, options)(axios, basePath);
+        updateWorkflow(id: string, workflow: Workflow, options?: any) {
+            return WorkflowApiFp(configuration).updateWorkflow(id, workflow, options)(axios, basePath);
         },
     };
 };
@@ -2710,13 +2343,13 @@ export class WorkflowApi extends BaseAPI {
      * Add a workflow by given template id
      * @summary Add a workflow by given template id, only available for admin
      * @param {string} templateId Id of template
-     * @param {WorkflowIn} workflowIn Parameters need to create workflow
+     * @param {Workflow} workflow Parameters need to create workflow
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkflowApi
      */
-    public addWorkflowToTemplate(templateId: string, workflowIn: WorkflowIn, options?: any) {
-        return WorkflowApiFp(this.configuration).addWorkflowToTemplate(templateId, workflowIn, options)(this.axios, this.basePath);
+    public addWorkflowToTemplate(templateId: string, workflow: Workflow, options?: any) {
+        return WorkflowApiFp(this.configuration).addWorkflowToTemplate(templateId, workflow, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2826,13 +2459,13 @@ export class WorkflowApi extends BaseAPI {
      * Update an approval workflow by given id
      * @summary Update an approval workflow by given id, only available for admin
      * @param {string} id Query by id
-     * @param {WorkflowIn} workflowIn Parameters need to update approval workflow
+     * @param {Workflow} workflow Parameters need to update approval workflow
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkflowApi
      */
-    public updateWorkflow(id: string, workflowIn: WorkflowIn, options?: any) {
-        return WorkflowApiFp(this.configuration).updateWorkflow(id, workflowIn, options)(this.axios, this.basePath);
+    public updateWorkflow(id: string, workflow: Workflow, options?: any) {
+        return WorkflowApiFp(this.configuration).updateWorkflow(id, workflow, options)(this.axios, this.basePath);
     }
 
 }

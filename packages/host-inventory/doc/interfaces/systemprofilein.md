@@ -57,7 +57,7 @@ Representation of the system profile fields
 
 **● arch**: *`string`*
 
-*Defined in [api.ts:795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L795)*
+*Defined in [api.ts:833](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L833)*
 
 *__type__*: {string}
 
@@ -70,7 +70,7 @@ ___
 
 **● biosReleaseDate**: *`string`*
 
-*Defined in [api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L771)*
+*Defined in [api.ts:809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L809)*
 
 *__type__*: {string}
 
@@ -83,7 +83,7 @@ ___
 
 **● biosVendor**: *`string`*
 
-*Defined in [api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L759)*
+*Defined in [api.ts:797](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L797)*
 
 *__type__*: {string}
 
@@ -96,7 +96,7 @@ ___
 
 **● biosVersion**: *`string`*
 
-*Defined in [api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L765)*
+*Defined in [api.ts:803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L803)*
 
 *__type__*: {string}
 
@@ -109,7 +109,7 @@ ___
 
 **● cloudProvider**: *`string`*
 
-*Defined in [api.ts:843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L843)*
+*Defined in [api.ts:881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L881)*
 
 *__type__*: {string}
 
@@ -122,7 +122,7 @@ ___
 
 **● coresPerSocket**: *`number`*
 
-*Defined in [api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L723)*
+*Defined in [api.ts:761](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L761)*
 
 *__type__*: {number}
 
@@ -135,7 +135,7 @@ ___
 
 **● cpuFlags**: *`Array`<`string`>*
 
-*Defined in [api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L777)*
+*Defined in [api.ts:815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L815)*
 
 *__type__*: {Array}
 
@@ -148,7 +148,7 @@ ___
 
 **● diskDevices**: *`Array`<[DiskDevice](diskdevice.md)>*
 
-*Defined in [api.ts:753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L753)*
+*Defined in [api.ts:791](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L791)*
 
 *__type__*: {Array}
 
@@ -161,7 +161,7 @@ ___
 
 **● enabledServices**: *`Array`<`string`>*
 
-*Defined in [api.ts:885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L885)*
+*Defined in [api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L923)*
 
 *__type__*: {Array}
 
@@ -174,7 +174,7 @@ ___
 
 **● infrastructureType**: *`string`*
 
-*Defined in [api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L735)*
+*Defined in [api.ts:773](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L773)*
 
 *__type__*: {string}
 
@@ -187,7 +187,7 @@ ___
 
 **● infrastructureVendor**: *`string`*
 
-*Defined in [api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L741)*
+*Defined in [api.ts:779](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L779)*
 
 *__type__*: {string}
 
@@ -200,7 +200,7 @@ ___
 
 **● insightsClientVersion**: *`string`*
 
-*Defined in [api.ts:861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L861)*
+*Defined in [api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L899)*
 
 *__type__*: {string}
 
@@ -213,7 +213,7 @@ ___
 
 **● insightsEggVersion**: *`string`*
 
-*Defined in [api.ts:867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L867)*
+*Defined in [api.ts:905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L905)*
 
 *__type__*: {string}
 
@@ -226,7 +226,7 @@ ___
 
 **● installedPackages**: *`Array`<`string`>*
 
-*Defined in [api.ts:873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L873)*
+*Defined in [api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L911)*
 
 *__type__*: {Array}
 
@@ -239,7 +239,7 @@ ___
 
 **● installedProducts**: *`Array`<[InstalledProduct](installedproduct.md)>*
 
-*Defined in [api.ts:855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L855)*
+*Defined in [api.ts:893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L893)*
 
 *__type__*: {Array}
 
@@ -252,7 +252,7 @@ ___
 
 **● installedServices**: *`Array`<`string`>*
 
-*Defined in [api.ts:879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L879)*
+*Defined in [api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L917)*
 
 *__type__*: {Array}
 
@@ -265,7 +265,7 @@ ___
 
 **● katelloAgentRunning**: *`boolean`*
 
-*Defined in [api.ts:831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L831)*
+*Defined in [api.ts:869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L869)*
 
 *__type__*: {boolean}
 
@@ -278,7 +278,7 @@ ___
 
 **● kernelModules**: *`Array`<`string`>*
 
-*Defined in [api.ts:801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L801)*
+*Defined in [api.ts:839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L839)*
 
 *__type__*: {Array}
 
@@ -291,7 +291,7 @@ ___
 
 **● lastBootTime**: *`Date`*
 
-*Defined in [api.ts:807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L807)*
+*Defined in [api.ts:845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L845)*
 
 *__type__*: {Date}
 
@@ -304,7 +304,7 @@ ___
 
 **● networkInterfaces**: *`Array`<[NetworkInterface](networkinterface.md)>*
 
-*Defined in [api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L747)*
+*Defined in [api.ts:785](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L785)*
 
 *__type__*: {Array}
 
@@ -317,7 +317,7 @@ ___
 
 **● numberOfCpus**: *`number`*
 
-*Defined in [api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L711)*
+*Defined in [api.ts:749](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L749)*
 
 *__type__*: {number}
 
@@ -330,7 +330,7 @@ ___
 
 **● numberOfSockets**: *`number`*
 
-*Defined in [api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L717)*
+*Defined in [api.ts:755](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L755)*
 
 *__type__*: {number}
 
@@ -343,7 +343,7 @@ ___
 
 **● osKernelVersion**: *`string`*
 
-*Defined in [api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L789)*
+*Defined in [api.ts:827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L827)*
 
 *__type__*: {string}
 
@@ -356,7 +356,7 @@ ___
 
 **● osRelease**: *`string`*
 
-*Defined in [api.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L783)*
+*Defined in [api.ts:821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L821)*
 
 *__type__*: {string}
 
@@ -369,7 +369,7 @@ ___
 
 **● runningProcesses**: *`Array`<`string`>*
 
-*Defined in [api.ts:813](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L813)*
+*Defined in [api.ts:851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L851)*
 
 *__type__*: {Array}
 
@@ -382,7 +382,7 @@ ___
 
 **● satelliteManaged**: *`boolean`*
 
-*Defined in [api.ts:837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L837)*
+*Defined in [api.ts:875](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L875)*
 
 *__type__*: {boolean}
 
@@ -395,7 +395,7 @@ ___
 
 **● subscriptionAutoAttach**: *`string`*
 
-*Defined in [api.ts:825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L825)*
+*Defined in [api.ts:863](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L863)*
 
 *__type__*: {string}
 
@@ -408,7 +408,7 @@ ___
 
 **● subscriptionStatus**: *`string`*
 
-*Defined in [api.ts:819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L819)*
+*Defined in [api.ts:857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L857)*
 
 *__type__*: {string}
 
@@ -421,7 +421,7 @@ ___
 
 **● systemMemoryBytes**: *`number`*
 
-*Defined in [api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L729)*
+*Defined in [api.ts:767](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L767)*
 
 *__type__*: {number}
 
@@ -434,7 +434,7 @@ ___
 
 **● yumRepos**: *`Array`<[YumRepo](yumrepo.md)>*
 
-*Defined in [api.ts:849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L849)*
+*Defined in [api.ts:887](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L887)*
 
 *__type__*: {Array}
 

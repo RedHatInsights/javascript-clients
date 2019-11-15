@@ -167,6 +167,12 @@ export interface CostModelOut {
      * @memberof CostModelOut
      */
     updatedTimestamp?: Date;
+    /**
+     *
+     * @type {Markup}
+     * @memberof CostModelOut
+     */
+    markup?: Markup;
 }
 
 /**
@@ -792,6 +798,12 @@ export interface ProviderOut {
      * @memberof ProviderOut
      */
     infrastructure?: string;
+    /**
+     * Flag to indicate when the provider is configured correctly
+     * @type {boolean}
+     * @memberof ProviderOut
+     */
+    active?: boolean;
 }
 
 /**

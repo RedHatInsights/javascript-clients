@@ -239,6 +239,32 @@ export interface CopyPortfolioItem {
 /**
  *
  * @export
+ * @interface CreateIcon
+ */
+export interface CreateIcon {
+    /**
+     * The binary image contents
+     * @type {any}
+     * @memberof CreateIcon
+     */
+    content?: any;
+    /**
+     * The Portfolio this Icon belongs to
+     * @type {string}
+     * @memberof CreateIcon
+     */
+    portfolioId?: string;
+    /**
+     * The Portfolio Item this Icon belongs to
+     * @type {string}
+     * @memberof CreateIcon
+     */
+    portfolioItemId?: string;
+}
+
+/**
+ *
+ * @export
  * @interface CreatePortfolioItem
  */
 export interface CreatePortfolioItem {
@@ -248,6 +274,20 @@ export interface CreatePortfolioItem {
      * @memberof CreatePortfolioItem
      */
     serviceOfferingRef?: string;
+}
+
+/**
+ *
+ * @export
+ * @interface DataDrivenFormSchema
+ */
+export interface DataDrivenFormSchema {
+    /**
+     *
+     * @type {any}
+     * @memberof DataDrivenFormSchema
+     */
+    schema?: any;
 }
 
 /**
@@ -352,20 +392,6 @@ export interface ImportServicePlan {
      * @memberof ImportServicePlan
      */
     portfolioItemId?: string;
-}
-
-/**
- *
- * @export
- * @interface InlineObject
- */
-export interface InlineObject {
-    /**
-     *
-     * @type {any}
-     * @memberof InlineObject
-     */
-    content?: any;
 }
 
 /**
@@ -650,6 +676,12 @@ export interface Portfolio {
      */
     owner?: string;
     /**
+     * The Portfolio Icon ID
+     * @type {string}
+     * @memberof Portfolio
+     */
+    iconId?: string;
+    /**
      *
      * @type {Date}
      * @memberof Portfolio
@@ -753,6 +785,12 @@ export interface PortfolioItem {
      * @memberof PortfolioItem
      */
     portfolioId?: string;
+    /**
+     * The Portfolio Item Icon ID
+     * @type {string}
+     * @memberof PortfolioItem
+     */
+    iconId?: string;
     /**
      *
      * @type {Date}
@@ -1455,11 +1493,13 @@ export const IconApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * Creates an Icon from the specified parameters
          * @summary Create an Icon
-         * @param {any} [content]
+         * @param {any} [content] The binary image contents
+         * @param {string} [portfolioId] The Portfolio this Icon belongs to
+         * @param {string} [portfolioItemId] The Portfolio Item this Icon belongs to
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createIcon(content?: any, options: any = {}): RequestArgs {
+        createIcon(content?: any, portfolioId?: string, portfolioItemId?: string, options: any = {}): RequestArgs {
             const localVarPath = `/icons`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1479,6 +1519,14 @@ export const IconApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (content !== undefined) {
                 localVarFormParams.set('content', content as any);
+            }
+
+            if (portfolioId !== undefined) {
+                localVarFormParams.set('portfolio_id', portfolioId as any);
+            }
+
+            if (portfolioItemId !== undefined) {
+                localVarFormParams.set('portfolio_item_id', portfolioItemId as any);
             }
 
             localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
@@ -1671,12 +1719,14 @@ export const IconApiFp = function(configuration?: Configuration) {
         /**
          * Creates an Icon from the specified parameters
          * @summary Create an Icon
-         * @param {any} [content]
+         * @param {any} [content] The binary image contents
+         * @param {string} [portfolioId] The Portfolio this Icon belongs to
+         * @param {string} [portfolioItemId] The Portfolio Item this Icon belongs to
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createIcon(content?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Icon> {
-            const localVarAxiosArgs = IconApiAxiosParamCreator(configuration).createIcon(content, options);
+        createIcon(content?: any, portfolioId?: string, portfolioItemId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Icon> {
+            const localVarAxiosArgs = IconApiAxiosParamCreator(configuration).createIcon(content, portfolioId, portfolioItemId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1751,12 +1801,14 @@ export const IconApiFactory = function (configuration?: Configuration, basePath?
         /**
          * Creates an Icon from the specified parameters
          * @summary Create an Icon
-         * @param {any} [content]
+         * @param {any} [content] The binary image contents
+         * @param {string} [portfolioId] The Portfolio this Icon belongs to
+         * @param {string} [portfolioItemId] The Portfolio Item this Icon belongs to
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createIcon(content?: any, options?: any) {
-            return IconApiFp(configuration).createIcon(content, options)(axios, basePath);
+        createIcon(content?: any, portfolioId?: string, portfolioItemId?: string, options?: any) {
+            return IconApiFp(configuration).createIcon(content, portfolioId, portfolioItemId, options)(axios, basePath);
         },
         /**
          * Deletes the icon based on the icon ID passed
@@ -1812,13 +1864,15 @@ export class IconApi extends BaseAPI {
     /**
      * Creates an Icon from the specified parameters
      * @summary Create an Icon
-     * @param {any} [content]
+     * @param {any} [content] The binary image contents
+     * @param {string} [portfolioId] The Portfolio this Icon belongs to
+     * @param {string} [portfolioItemId] The Portfolio Item this Icon belongs to
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof IconApi
      */
-    public createIcon(content?: any, options?: any) {
-        return IconApiFp(this.configuration).createIcon(content, options)(this.axios, this.basePath);
+    public createIcon(content?: any, portfolioId?: string, portfolioItemId?: string, options?: any) {
+        return IconApiFp(this.configuration).createIcon(content, portfolioId, portfolioItemId, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5656,6 +5710,45 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
+         *
+         * @summary Patch Service Plan Modified Schema
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        patchServicePlanModified(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling patchServicePlanModified.');
+            }
+            const localVarPath = `/service_plans/{id}/modified`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns the specified Service Plan
          * @summary Show Service Plan
          * @param {string} id ID of the resource
@@ -5733,6 +5826,45 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Returns the specified Service Plan's modified schema
+         * @summary Show Service Plan modified Schema
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showServicePlanModified(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showServicePlanModified.');
+            }
+            const localVarPath = `/service_plans/{id}/modified`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -5751,6 +5883,20 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
          */
         createServicePlan(importServicePlan?: ImportServicePlan, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ServicePlan>> {
             const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).createServicePlan(importServicePlan, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
+         * @summary Patch Service Plan Modified Schema
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        patchServicePlanModified(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DataDrivenFormSchema> {
+            const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).patchServicePlanModified(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -5777,8 +5923,22 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServicePlanBase(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
+        showServicePlanBase(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DataDrivenFormSchema> {
             const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).showServicePlanBase(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns the specified Service Plan's modified schema
+         * @summary Show Service Plan modified Schema
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showServicePlanModified(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DataDrivenFormSchema> {
+            const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).showServicePlanModified(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -5804,6 +5964,16 @@ export const ServicePlansApiFactory = function (configuration?: Configuration, b
             return ServicePlansApiFp(configuration).createServicePlan(importServicePlan, options)(axios, basePath);
         },
         /**
+         *
+         * @summary Patch Service Plan Modified Schema
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        patchServicePlanModified(id: string, options?: any) {
+            return ServicePlansApiFp(configuration).patchServicePlanModified(id, options)(axios, basePath);
+        },
+        /**
          * Returns the specified Service Plan
          * @summary Show Service Plan
          * @param {string} id ID of the resource
@@ -5822,6 +5992,16 @@ export const ServicePlansApiFactory = function (configuration?: Configuration, b
          */
         showServicePlanBase(id: string, options?: any) {
             return ServicePlansApiFp(configuration).showServicePlanBase(id, options)(axios, basePath);
+        },
+        /**
+         * Returns the specified Service Plan's modified schema
+         * @summary Show Service Plan modified Schema
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showServicePlanModified(id: string, options?: any) {
+            return ServicePlansApiFp(configuration).showServicePlanModified(id, options)(axios, basePath);
         },
     };
 };
@@ -5846,6 +6026,18 @@ export class ServicePlansApi extends BaseAPI {
     }
 
     /**
+     *
+     * @summary Patch Service Plan Modified Schema
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ServicePlansApi
+     */
+    public patchServicePlanModified(id: string, options?: any) {
+        return ServicePlansApiFp(this.configuration).patchServicePlanModified(id, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns the specified Service Plan
      * @summary Show Service Plan
      * @param {string} id ID of the resource
@@ -5867,6 +6059,18 @@ export class ServicePlansApi extends BaseAPI {
      */
     public showServicePlanBase(id: string, options?: any) {
         return ServicePlansApiFp(this.configuration).showServicePlanBase(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Returns the specified Service Plan's modified schema
+     * @summary Show Service Plan modified Schema
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ServicePlansApi
+     */
+    public showServicePlanModified(id: string, options?: any) {
+        return ServicePlansApiFp(this.configuration).showServicePlanModified(id, options)(this.axios, this.basePath);
     }
 
 }

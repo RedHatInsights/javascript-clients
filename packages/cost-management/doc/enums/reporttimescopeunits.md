@@ -25,7 +25,7 @@ The units to apply to the report. Default time\_scope\_units is day.
 
 **Day**:  = "day"
 
-*Defined in [api.ts:2270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2270)*
+*Defined in [api.ts:2282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2282)*
 
 ___
 <a id="month"></a>
@@ -34,7 +34,7 @@ ___
 
 **Month**:  = "month"
 
-*Defined in [api.ts:2271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2271)*
+*Defined in [api.ts:2283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2283)*
 
 ___
 

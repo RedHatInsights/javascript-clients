@@ -25,7 +25,7 @@
 
 **Approved**:  = "approved"
 
-*Defined in [api.ts:418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L418)*
+*Defined in [api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L379)*
 
 ___
 <a id="canceled"></a>
@@ -34,7 +34,7 @@ ___
 
 **Canceled**:  = "canceled"
 
-*Defined in [api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L419)*
+*Defined in [api.ts:380](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L380)*
 
 ___
 <a id="denied"></a>
@@ -43,7 +43,7 @@ ___
 
 **Denied**:  = "denied"
 
-*Defined in [api.ts:420](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L420)*
+*Defined in [api.ts:381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L381)*
 
 ___
 <a id="undecided"></a>
@@ -52,7 +52,7 @@ ___
 
 **Undecided**:  = "undecided"
 
-*Defined in [api.ts:417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L417)*
+*Defined in [api.ts:378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L378)*
 
 ___
 

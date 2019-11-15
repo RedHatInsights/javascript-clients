@@ -34,6 +34,7 @@ HostackApi - object-oriented interface
 * [hostackDelete](hostackapi.md#hostackdelete)
 * [hostackList](hostackapi.md#hostacklist)
 * [hostackRead](hostackapi.md#hostackread)
+* [hostackUpdate](hostackapi.md#hostackupdate)
 
 ---
 
@@ -103,11 +104,13 @@ ___
 
 ###  hostackCreate
 
-▸ **hostackCreate**(hostAck: *[HostAck](../interfaces/hostack.md)*, options?: *`any`*): `AxiosPromise`<[HostAck](../interfaces/hostack.md)>
+▸ **hostackCreate**(hostAckInput: *[HostAckInput](../interfaces/hostackinput.md)*, options?: *`any`*): `AxiosPromise`<[HostAck](../interfaces/hostack.md)>
 
-*Defined in [api.ts:1944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1944)*
+*Defined in [api.ts:2315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2315)*
 
-Add an acknowledgement for a rule, by rule ID, system, and account, and return the new hostack. If there's already an acknowledgement of this rule by this account for a system, then return that.
+Return the new hostack. If there's already an acknowledgement of this rule by this account for a system, then return that. This does not take an 'id' number.
+
+*__summary__*: Add an acknowledgement for a rule, by rule ID, system, and account.
 
 *__throws__*: {RequiredError}
 
@@ -117,7 +120,7 @@ Add an acknowledgement for a rule, by rule ID, system, and account, and return t
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| hostAck | [HostAck](../interfaces/hostack.md) |  \- |
+| hostAckInput | [HostAckInput](../interfaces/hostackinput.md) |  \- |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[HostAck](../interfaces/hostack.md)>
@@ -129,9 +132,11 @@ ___
 
 ▸ **hostackDelete**(id: *`number`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1955)*
+*Defined in [api.ts:2327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2327)*
 
-Delete an acknowledgement for a rule, for a system, for an account, by its ID.
+Takes the hostack ID (given in the hostack list) as an identifier.
+
+*__summary__*: Delete an acknowledgement for a rule, for a system, for an account, by its ID.
 
 *__throws__*: {RequiredError}
 
@@ -153,9 +158,11 @@ ___
 
 ▸ **hostackList**(limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse2002](../interfaces/inlineresponse2002.md)>
 
-*Defined in [api.ts:1967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1967)*
+*Defined in [api.ts:2340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2340)*
 
-List host acks from this account for a system where the rule is active
+Hostacks are retrieved, edited and deleted by the 'id' field.
+
+*__summary__*: List host acks from this account for a system where the rule is active.
 
 *__throws__*: {RequiredError}
 
@@ -178,7 +185,7 @@ ___
 
 ▸ **hostackRead**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[HostAck](../interfaces/hostack.md)>
 
-*Defined in [api.ts:1979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1979)*
+*Defined in [api.ts:2352](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2352)*
 
 This view handles listing, retrieving, creating and deleting hostacks.
 
@@ -196,6 +203,33 @@ This view handles listing, retrieving, creating and deleting hostacks.
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[HostAck](../interfaces/hostack.md)>
+
+___
+<a id="hostackupdate"></a>
+
+###  hostackUpdate
+
+▸ **hostackUpdate**(id: *`number`*, hostAckJustification: *[HostAckJustification](../interfaces/hostackjustification.md)*, options?: *`any`*): `AxiosPromise`<[HostAckJustification](../interfaces/hostackjustification.md)>
+
+*Defined in [api.ts:2365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2365)*
+
+The justification is taken from the request body. The created\_by field is taken from the username in the x-rh-identity field, and the updated\_at field is set to the current time.
+
+*__summary__*: Update the justification for this host acknowledgement.
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: HostackApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| id | `number` |  A unique integer value identifying this host ack. |
+| hostAckJustification | [HostAckJustification](../interfaces/hostackjustification.md) |  \- |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[HostAckJustification](../interfaces/hostackjustification.md)>
 
 ___
 
