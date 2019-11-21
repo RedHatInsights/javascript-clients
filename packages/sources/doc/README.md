@@ -175,7 +175,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2849)*
+*Defined in [api.ts:2921](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2921)*
 
 DefaultApi - factory interface
 
@@ -196,7 +196,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2345)*
+*Defined in [api.ts:2405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2405)*
 
 DefaultApi - functional programming interface
 

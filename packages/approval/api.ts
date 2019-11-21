@@ -1733,15 +1733,18 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * Return all approval workflows in ascending sequence order
+         * Depends on the query parameters, either return all workflows in ascending sequence order when no parameters are provided; or return the workflows linking to the resource object whose app_name, object_type and object_id are specified by query parameters
          * @summary Return all approval workflows, only available for admin
+         * @param {string} [appName] Name of the application
+         * @param {string} [objectId] Id of the resource object
+         * @param {string} [objectType] Type of the resource object
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflows(limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+        listWorkflows(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
             const localVarPath = `/workflows`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1756,6 +1759,18 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (appName !== undefined) {
+                localVarQueryParameter['app_name'] = appName;
+            }
+
+            if (objectId !== undefined) {
+                localVarQueryParameter['object_id'] = objectId;
+            }
+
+            if (objectType !== undefined) {
+                localVarQueryParameter['object_type'] = objectType;
             }
 
             if (limit !== undefined) {
@@ -1835,48 +1850,6 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * Get all workflows linked to a resource object.
-         * @summary Get all workflows linked to a resource object.
-         * @param {ResourceObject} resourceObject Resource object used to resolve workflows.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        resolveWorkflows(resourceObject: ResourceObject, options: any = {}): RequestArgs {
-            // verify required parameter 'resourceObject' is not null or undefined
-            if (resourceObject === null || resourceObject === undefined) {
-                throw new RequiredError('resourceObject','Required parameter resourceObject was null or undefined when calling resolveWorkflows.');
-            }
-            const localVarPath = `/workflows/resolve`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"ResourceObject" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(resourceObject || {}) : (resourceObject || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Return an approval workflow by given id
          * @summary Return an approval workflow by given id, only available for admin
          * @param {string} id Query by id
@@ -1909,48 +1882,6 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Break all links between a resource object and its assigned workflows
-         * @summary Break all links between a resource object and its assigned workflows
-         * @param {ResourceObject} resourceObject Parameters needed to remove a link
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        unlinkAll(resourceObject: ResourceObject, options: any = {}): RequestArgs {
-            // verify required parameter 'resourceObject' is not null or undefined
-            if (resourceObject === null || resourceObject === undefined) {
-                throw new RequiredError('resourceObject','Required parameter resourceObject was null or undefined when calling unlinkAll.');
-            }
-            const localVarPath = `/workflows/unlink`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"ResourceObject" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(resourceObject || {}) : (resourceObject || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -2107,16 +2038,19 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Return all approval workflows in ascending sequence order
+         * Depends on the query parameters, either return all workflows in ascending sequence order when no parameters are provided; or return the workflows linking to the resource object whose app_name, object_type and object_id are specified by query parameters
          * @summary Return all approval workflows, only available for admin
+         * @param {string} [appName] Name of the application
+         * @param {string} [objectId] Id of the resource object
+         * @param {string} [objectType] Type of the resource object
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflows(limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowCollection> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).listWorkflows(limit, offset, filter, options);
+        listWorkflows(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowCollection> {
+            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).listWorkflows(appName, objectId, objectType, limit, offset, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2140,20 +2074,6 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Get all workflows linked to a resource object.
-         * @summary Get all workflows linked to a resource object.
-         * @param {ResourceObject} resourceObject Resource object used to resolve workflows.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        resolveWorkflows(resourceObject: ResourceObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Workflow>> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).resolveWorkflows(resourceObject, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Return an approval workflow by given id
          * @summary Return an approval workflow by given id, only available for admin
          * @param {string} id Query by id
@@ -2162,20 +2082,6 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          */
         showWorkflow(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Workflow> {
             const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).showWorkflow(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Break all links between a resource object and its assigned workflows
-         * @summary Break all links between a resource object and its assigned workflows
-         * @param {ResourceObject} resourceObject Parameters needed to remove a link
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        unlinkAll(resourceObject: ResourceObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).unlinkAll(resourceObject, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2253,16 +2159,19 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
             return WorkflowApiFp(configuration).linkWorkflow(id, resourceObject, options)(axios, basePath);
         },
         /**
-         * Return all approval workflows in ascending sequence order
+         * Depends on the query parameters, either return all workflows in ascending sequence order when no parameters are provided; or return the workflows linking to the resource object whose app_name, object_type and object_id are specified by query parameters
          * @summary Return all approval workflows, only available for admin
+         * @param {string} [appName] Name of the application
+         * @param {string} [objectId] Id of the resource object
+         * @param {string} [objectType] Type of the resource object
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
          * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflows(limit?: number, offset?: number, filter?: any, options?: any) {
-            return WorkflowApiFp(configuration).listWorkflows(limit, offset, filter, options)(axios, basePath);
+        listWorkflows(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: any, options?: any) {
+            return WorkflowApiFp(configuration).listWorkflows(appName, objectId, objectType, limit, offset, filter, options)(axios, basePath);
         },
         /**
          * Return an array of workflows by given template id
@@ -2278,16 +2187,6 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
             return WorkflowApiFp(configuration).listWorkflowsByTemplate(templateId, limit, offset, filter, options)(axios, basePath);
         },
         /**
-         * Get all workflows linked to a resource object.
-         * @summary Get all workflows linked to a resource object.
-         * @param {ResourceObject} resourceObject Resource object used to resolve workflows.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        resolveWorkflows(resourceObject: ResourceObject, options?: any) {
-            return WorkflowApiFp(configuration).resolveWorkflows(resourceObject, options)(axios, basePath);
-        },
-        /**
          * Return an approval workflow by given id
          * @summary Return an approval workflow by given id, only available for admin
          * @param {string} id Query by id
@@ -2296,16 +2195,6 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          */
         showWorkflow(id: string, options?: any) {
             return WorkflowApiFp(configuration).showWorkflow(id, options)(axios, basePath);
-        },
-        /**
-         * Break all links between a resource object and its assigned workflows
-         * @summary Break all links between a resource object and its assigned workflows
-         * @param {ResourceObject} resourceObject Parameters needed to remove a link
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        unlinkAll(resourceObject: ResourceObject, options?: any) {
-            return WorkflowApiFp(configuration).unlinkAll(resourceObject, options)(axios, basePath);
         },
         /**
          * Break the link between a resource object and selected workflow
@@ -2378,8 +2267,11 @@ export class WorkflowApi extends BaseAPI {
     }
 
     /**
-     * Return all approval workflows in ascending sequence order
+     * Depends on the query parameters, either return all workflows in ascending sequence order when no parameters are provided; or return the workflows linking to the resource object whose app_name, object_type and object_id are specified by query parameters
      * @summary Return all approval workflows, only available for admin
+     * @param {string} [appName] Name of the application
+     * @param {string} [objectId] Id of the resource object
+     * @param {string} [objectType] Type of the resource object
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
      * @param {any} [filter] Filter for querying collections.
@@ -2387,8 +2279,8 @@ export class WorkflowApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WorkflowApi
      */
-    public listWorkflows(limit?: number, offset?: number, filter?: any, options?: any) {
-        return WorkflowApiFp(this.configuration).listWorkflows(limit, offset, filter, options)(this.axios, this.basePath);
+    public listWorkflows(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: any, options?: any) {
+        return WorkflowApiFp(this.configuration).listWorkflows(appName, objectId, objectType, limit, offset, filter, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2407,18 +2299,6 @@ export class WorkflowApi extends BaseAPI {
     }
 
     /**
-     * Get all workflows linked to a resource object.
-     * @summary Get all workflows linked to a resource object.
-     * @param {ResourceObject} resourceObject Resource object used to resolve workflows.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof WorkflowApi
-     */
-    public resolveWorkflows(resourceObject: ResourceObject, options?: any) {
-        return WorkflowApiFp(this.configuration).resolveWorkflows(resourceObject, options)(this.axios, this.basePath);
-    }
-
-    /**
      * Return an approval workflow by given id
      * @summary Return an approval workflow by given id, only available for admin
      * @param {string} id Query by id
@@ -2428,18 +2308,6 @@ export class WorkflowApi extends BaseAPI {
      */
     public showWorkflow(id: string, options?: any) {
         return WorkflowApiFp(this.configuration).showWorkflow(id, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Break all links between a resource object and its assigned workflows
-     * @summary Break all links between a resource object and its assigned workflows
-     * @param {ResourceObject} resourceObject Parameters needed to remove a link
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof WorkflowApi
-     */
-    public unlinkAll(resourceObject: ResourceObject, options?: any) {
-        return WorkflowApiFp(this.configuration).unlinkAll(resourceObject, options)(this.axios, this.basePath);
     }
 
     /**

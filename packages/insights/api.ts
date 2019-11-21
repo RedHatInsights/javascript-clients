@@ -2369,6 +2369,98 @@ export class HostackApi extends BaseAPI {
 }
 
 /**
+ * ResolutionRiskApi - axios parameter creator
+ * @export
+ */
+export const ResolutionRiskApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * List all total risk values.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resolutionRiskList(options: any = {}): RequestArgs {
+            const localVarPath = `/resolution_risk/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ResolutionRiskApi - functional programming interface
+ * @export
+ */
+export const ResolutionRiskApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * List all total risk values.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resolutionRiskList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = ResolutionRiskApiAxiosParamCreator(configuration).resolutionRiskList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * ResolutionRiskApi - factory interface
+ * @export
+ */
+export const ResolutionRiskApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * List all total risk values.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resolutionRiskList(options?: any) {
+            return ResolutionRiskApiFp(configuration).resolutionRiskList(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * ResolutionRiskApi - object-oriented interface
+ * @export
+ * @class ResolutionRiskApi
+ * @extends {BaseAPI}
+ */
+export class ResolutionRiskApi extends BaseAPI {
+    /**
+     * List all total risk values.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ResolutionRiskApi
+     */
+    public resolutionRiskList(options?: any) {
+        return ResolutionRiskApiFp(this.configuration).resolutionRiskList(options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
  * RuleApi - axios parameter creator
  * @export
  */
@@ -4291,6 +4383,98 @@ export class TopicApi extends BaseAPI {
      */
     public topicTagsRead(slug: string, options?: any) {
         return TopicApiFp(this.configuration).topicTagsRead(slug, options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
+ * TotalRiskApi - axios parameter creator
+ * @export
+ */
+export const TotalRiskApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * List all total risk values.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        totalRiskList(options: any = {}): RequestArgs {
+            const localVarPath = `/total_risk/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * TotalRiskApi - functional programming interface
+ * @export
+ */
+export const TotalRiskApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * List all total risk values.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        totalRiskList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = TotalRiskApiAxiosParamCreator(configuration).totalRiskList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * TotalRiskApi - factory interface
+ * @export
+ */
+export const TotalRiskApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * List all total risk values.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        totalRiskList(options?: any) {
+            return TotalRiskApiFp(configuration).totalRiskList(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * TotalRiskApi - object-oriented interface
+ * @export
+ * @class TotalRiskApi
+ * @extends {BaseAPI}
+ */
+export class TotalRiskApi extends BaseAPI {
+    /**
+     * List all total risk values.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TotalRiskApi
+     */
+    public totalRiskList(options?: any) {
+        return TotalRiskApiFp(this.configuration).totalRiskList(options)(this.axios, this.basePath);
     }
 
 }

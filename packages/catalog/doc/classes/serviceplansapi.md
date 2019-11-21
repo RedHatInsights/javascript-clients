@@ -106,7 +106,7 @@ ___
 
 ▸ **createServicePlan**(importServicePlan?: *[ImportServicePlan](../interfaces/importserviceplan.md)*, options?: *`any`*): `AxiosPromise`<[ServicePlan](../interfaces/serviceplan.md)[]>
 
-*Defined in [api.ts:6024](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6024)*
+*Defined in [api.ts:6108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6108)*
 
 Returns the new Service Plan
 
@@ -130,9 +130,9 @@ ___
 
 ###  patchServicePlanModified
 
-▸ **patchServicePlanModified**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[DataDrivenFormSchema](../interfaces/datadrivenformschema.md)>
+▸ **patchServicePlanModified**(id: *`string`*, patchModifiedServicePlan?: *[PatchModifiedServicePlan](../interfaces/patchmodifiedserviceplan.md)*, options?: *`any`*): `AxiosPromise`<[DataDrivenFormSchema](../interfaces/datadrivenformschema.md)>
 
-*Defined in [api.ts:6036](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6036)*
+*Defined in [api.ts:6121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6121)*
 
 *__summary__*: Patch Service Plan Modified Schema
 
@@ -145,6 +145,7 @@ ___
 | Name | Type | Description |
 | ------ | ------ | ------ |
 | id | `string` |  ID of the resource |
+| `Optional` patchModifiedServicePlan | [PatchModifiedServicePlan](../interfaces/patchmodifiedserviceplan.md) |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[DataDrivenFormSchema](../interfaces/datadrivenformschema.md)>
@@ -156,7 +157,7 @@ ___
 
 ▸ **showServicePlan**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ServicePlan](../interfaces/serviceplan.md)>
 
-*Defined in [api.ts:6048](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6048)*
+*Defined in [api.ts:6133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6133)*
 
 Returns the specified Service Plan
 
@@ -182,7 +183,7 @@ ___
 
 ▸ **showServicePlanBase**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[DataDrivenFormSchema](../interfaces/datadrivenformschema.md)>
 
-*Defined in [api.ts:6060](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6060)*
+*Defined in [api.ts:6145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6145)*
 
 Returns the specified Service Plan's base schema
 
@@ -208,7 +209,7 @@ ___
 
 ▸ **showServicePlanModified**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[DataDrivenFormSchema](../interfaces/datadrivenformschema.md)>
 
-*Defined in [api.ts:6072](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6072)*
+*Defined in [api.ts:6157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6157)*
 
 Returns the specified Service Plan's modified schema
 

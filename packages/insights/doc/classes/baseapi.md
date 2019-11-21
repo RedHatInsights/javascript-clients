@@ -18,6 +18,8 @@
 
 ↳  [HostackApi](hostackapi.md)
 
+↳  [ResolutionRiskApi](resolutionriskapi.md)
+
 ↳  [RuleApi](ruleapi.md)
 
 ↳  [RulecategoryApi](rulecategoryapi.md)
@@ -29,6 +31,8 @@
 ↳  [SystemtypeApi](systemtypeapi.md)
 
 ↳  [TopicApi](topicapi.md)
+
+↳  [TotalRiskApi](totalriskapi.md)
 
 ## Index
 

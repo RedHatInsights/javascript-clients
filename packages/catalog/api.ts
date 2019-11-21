@@ -636,6 +636,20 @@ export interface OrdersCollection {
 /**
  *
  * @export
+ * @interface PatchModifiedServicePlan
+ */
+export interface PatchModifiedServicePlan {
+    /**
+     * the new modified schema for the service plan
+     * @type {any}
+     * @memberof PatchModifiedServicePlan
+     */
+    modified?: any;
+}
+
+/**
+ *
+ * @export
  * @interface Portfolio
  */
 export interface Portfolio {
@@ -663,12 +677,6 @@ export interface Portfolio {
      * @memberof Portfolio
      */
     enabled?: boolean;
-    /**
-     *
-     * @type {string}
-     * @memberof Portfolio
-     */
-    imageUrl?: string;
     /**
      *
      * @type {string}
@@ -979,17 +987,11 @@ export interface ServicePlan {
      */
     description?: string;
     /**
-     * The base schema imported from Topology
+     * JSON schema for the object.
      * @type {any}
      * @memberof ServicePlan
      */
-    base?: any;
-    /**
-     * The modified schema for Catalog
-     * @type {any}
-     * @memberof ServicePlan
-     */
-    modified?: any;
+    createJsonSchema?: any;
     /**
      * The reference ID of the Portfolio Item
      * @type {string}
@@ -2242,6 +2244,45 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
+         * Get a specific order based on the order ID
+         * @summary Get a specific order
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showOrder(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling showOrder.');
+            }
+            const localVarPath = `/orders/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets an order item associated with an order.
          * @summary Gets an individual order item from a given order
          * @param {string} orderId The Order ID
@@ -2439,6 +2480,20 @@ export const OrderApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Get a specific order based on the order ID
+         * @summary Get a specific order
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showOrder(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Order> {
+            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).showOrder(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Gets an order item associated with an order.
          * @summary Gets an individual order item from a given order
          * @param {string} orderId The Order ID
@@ -2551,6 +2606,16 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          */
         restoreOrder(id: string, restoreKey: RestoreKey, options?: any) {
             return OrderApiFp(configuration).restoreOrder(id, restoreKey, options)(axios, basePath);
+        },
+        /**
+         * Get a specific order based on the order ID
+         * @summary Get a specific order
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showOrder(id: string, options?: any) {
+            return OrderApiFp(configuration).showOrder(id, options)(axios, basePath);
         },
         /**
          * Gets an order item associated with an order.
@@ -2671,6 +2736,18 @@ export class OrderApi extends BaseAPI {
      */
     public restoreOrder(id: string, restoreKey: RestoreKey, options?: any) {
         return OrderApiFp(this.configuration).restoreOrder(id, restoreKey, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Get a specific order based on the order ID
+     * @summary Get a specific order
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OrderApi
+     */
+    public showOrder(id: string, options?: any) {
+        return OrderApiFp(this.configuration).showOrder(id, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3268,8 +3345,8 @@ export class OrderItemApi extends BaseAPI {
 export const PortfolioApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Adds a single tag to Portfolio object
-         * @summary Add Tag for Portfolio
+         * Adds a single tag to a Portfolio Item object
+         * @summary Add Tag for Portfolio Item
          * @param {string} id ID of the resource
          * @param {TagItem} tagItem
          * @param {*} [options] Override http request option.
@@ -4006,8 +4083,8 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
 export const PortfolioApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Adds a single tag to Portfolio object
-         * @summary Add Tag for Portfolio
+         * Adds a single tag to a Portfolio Item object
+         * @summary Add Tag for Portfolio Item
          * @param {string} id ID of the resource
          * @param {TagItem} tagItem
          * @param {*} [options] Override http request option.
@@ -4254,8 +4331,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
 export const PortfolioApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Adds a single tag to Portfolio object
-         * @summary Add Tag for Portfolio
+         * Adds a single tag to a Portfolio Item object
+         * @summary Add Tag for Portfolio Item
          * @param {string} id ID of the resource
          * @param {TagItem} tagItem
          * @param {*} [options] Override http request option.
@@ -4439,8 +4516,8 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
  */
 export class PortfolioApi extends BaseAPI {
     /**
-     * Adds a single tag to Portfolio object
-     * @summary Add Tag for Portfolio
+     * Adds a single tag to a Portfolio Item object
+     * @summary Add Tag for Portfolio Item
      * @param {string} id ID of the resource
      * @param {TagItem} tagItem
      * @param {*} [options] Override http request option.
@@ -5713,10 +5790,11 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
          *
          * @summary Patch Service Plan Modified Schema
          * @param {string} id ID of the resource
+         * @param {PatchModifiedServicePlan} [patchModifiedServicePlan]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        patchServicePlanModified(id: string, options: any = {}): RequestArgs {
+        patchServicePlanModified(id: string, patchModifiedServicePlan?: PatchModifiedServicePlan, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling patchServicePlanModified.');
@@ -5738,10 +5816,14 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
                 localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
             }
 
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PatchModifiedServicePlan" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(patchModifiedServicePlan || {}) : (patchModifiedServicePlan || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -5892,11 +5974,12 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
          *
          * @summary Patch Service Plan Modified Schema
          * @param {string} id ID of the resource
+         * @param {PatchModifiedServicePlan} [patchModifiedServicePlan]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        patchServicePlanModified(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DataDrivenFormSchema> {
-            const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).patchServicePlanModified(id, options);
+        patchServicePlanModified(id: string, patchModifiedServicePlan?: PatchModifiedServicePlan, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DataDrivenFormSchema> {
+            const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).patchServicePlanModified(id, patchModifiedServicePlan, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -5967,11 +6050,12 @@ export const ServicePlansApiFactory = function (configuration?: Configuration, b
          *
          * @summary Patch Service Plan Modified Schema
          * @param {string} id ID of the resource
+         * @param {PatchModifiedServicePlan} [patchModifiedServicePlan]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        patchServicePlanModified(id: string, options?: any) {
-            return ServicePlansApiFp(configuration).patchServicePlanModified(id, options)(axios, basePath);
+        patchServicePlanModified(id: string, patchModifiedServicePlan?: PatchModifiedServicePlan, options?: any) {
+            return ServicePlansApiFp(configuration).patchServicePlanModified(id, patchModifiedServicePlan, options)(axios, basePath);
         },
         /**
          * Returns the specified Service Plan
@@ -6029,12 +6113,13 @@ export class ServicePlansApi extends BaseAPI {
      *
      * @summary Patch Service Plan Modified Schema
      * @param {string} id ID of the resource
+     * @param {PatchModifiedServicePlan} [patchModifiedServicePlan]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ServicePlansApi
      */
-    public patchServicePlanModified(id: string, options?: any) {
-        return ServicePlansApiFp(this.configuration).patchServicePlanModified(id, options)(this.axios, this.basePath);
+    public patchServicePlanModified(id: string, patchModifiedServicePlan?: PatchModifiedServicePlan, options?: any) {
+        return ServicePlansApiFp(this.configuration).patchServicePlanModified(id, patchModifiedServicePlan, options)(this.axios, this.basePath);
     }
 
     /**
