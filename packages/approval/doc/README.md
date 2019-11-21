@@ -425,7 +425,7 @@ ___
 
 ▸ **WorkflowApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2221)*
+*Defined in [api.ts:2127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2127)*
 
 WorkflowApi - factory interface
 
@@ -446,7 +446,7 @@ ___
 
 ▸ **WorkflowApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2063)*
+*Defined in [api.ts:1994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1994)*
 
 WorkflowApi - functional programming interface
 
