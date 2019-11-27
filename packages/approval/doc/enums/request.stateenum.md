@@ -11,10 +11,11 @@
 ### Enumeration members
 
 * [Canceled](request.stateenum.md#canceled)
-* [Finished](request.stateenum.md#finished)
+* [Completed](request.stateenum.md#completed)
 * [Notified](request.stateenum.md#notified)
 * [Pending](request.stateenum.md#pending)
 * [Skipped](request.stateenum.md#skipped)
+* [Started](request.stateenum.md#started)
 
 ---
 
@@ -26,16 +27,16 @@
 
 **Canceled**:  = "canceled"
 
-*Defined in [api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L367)*
+*Defined in [api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L379)*
 
 ___
-<a id="finished"></a>
+<a id="completed"></a>
 
-###  Finished
+###  Completed
 
-**Finished**:  = "finished"
+**Completed**:  = "completed"
 
-*Defined in [api.ts:371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L371)*
+*Defined in [api.ts:380](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L380)*
 
 ___
 <a id="notified"></a>
@@ -44,7 +45,7 @@ ___
 
 **Notified**:  = "notified"
 
-*Defined in [api.ts:370](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L370)*
+*Defined in [api.ts:381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L381)*
 
 ___
 <a id="pending"></a>
@@ -53,7 +54,7 @@ ___
 
 **Pending**:  = "pending"
 
-*Defined in [api.ts:368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L368)*
+*Defined in [api.ts:382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L382)*
 
 ___
 <a id="skipped"></a>
@@ -62,7 +63,16 @@ ___
 
 **Skipped**:  = "skipped"
 
-*Defined in [api.ts:369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L369)*
+*Defined in [api.ts:383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L383)*
+
+___
+<a id="started"></a>
+
+###  Started
+
+**Started**:  = "started"
+
+*Defined in [api.ts:384](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L384)*
 
 ___
 

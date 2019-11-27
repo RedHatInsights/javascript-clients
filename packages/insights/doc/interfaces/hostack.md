@@ -82,7 +82,7 @@ ___
 ___
 <a id="rule"></a>
 
-### `<Optional>` rule
+###  rule
 
 **● rule**: *`string`*
 

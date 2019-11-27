@@ -30,7 +30,7 @@ tag details
 
 **● name**: *`string`*
 
-*Defined in [api.ts:486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L486)*
+*Defined in [api.ts:499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L499)*
 
 *__type__*: {string}
 
@@ -43,7 +43,7 @@ ___
 
 **● namespace**: *`string`*
 
-*Defined in [api.ts:480](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L480)*
+*Defined in [api.ts:493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L493)*
 
 *__type__*: {string}
 
@@ -56,7 +56,7 @@ ___
 
 **● value**: *`string`*
 
-*Defined in [api.ts:492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L492)*
+*Defined in [api.ts:505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L505)*
 
 *__type__*: {string}
 

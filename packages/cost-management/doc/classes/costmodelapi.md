@@ -106,7 +106,7 @@ ___
 
 ▸ **createCostModel**(costModel: *[CostModel](../interfaces/costmodel.md)*, options?: *`any`*): `AxiosPromise`<[CostModelOut](../interfaces/costmodelout.md)>
 
-*Defined in [api.ts:3787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3787)*
+*Defined in [api.ts:4178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4178)*
 
 *__summary__*: Create a new cost model.
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **deleteCostModel**(costModelUuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:3799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3799)*
+*Defined in [api.ts:4190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4190)*
 
 *__summary__*: Delete a Cost Model
 
@@ -154,7 +154,7 @@ ___
 
 ▸ **getCostModel**(costModelUuid: *`string`*, options?: *`any`*): `AxiosPromise`<[CostModelOut](../interfaces/costmodelout.md)>
 
-*Defined in [api.ts:3811](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3811)*
+*Defined in [api.ts:4202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4202)*
 
 *__summary__*: Get a Cost Model.
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **listCostModels**(offset?: *`number`*, limit?: *`number`*, providerUuid?: *`string`*, sourceType?: *`string`*, name?: *`string`*, options?: *`any`*): `AxiosPromise`<[CostModelPagination](../interfaces/costmodelpagination.md)>
 
-*Defined in [api.ts:3827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3827)*
+*Defined in [api.ts:4218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4218)*
 
 *__summary__*: List the cost models
 
@@ -206,7 +206,7 @@ ___
 
 ▸ **updateCostModel**(costModelUuid: *`string`*, costModel: *[CostModel](../interfaces/costmodel.md)*, options?: *`any`*): `AxiosPromise`<[CostModelOut](../interfaces/costmodelout.md)>
 
-*Defined in [api.ts:3840](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3840)*
+*Defined in [api.ts:4231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4231)*
 
 *__summary__*: Update a Cost Model
 

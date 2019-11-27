@@ -104,7 +104,7 @@ ___
 
 ▸ **createAction**(requestId: *`string`*, action: *[Action](../modules/action.md)*, options?: *`any`*): `AxiosPromise`<[Action](../modules/action.md)>
 
-*Defined in [api.ts:887](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L887)*
+*Defined in [api.ts:900](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L900)*
 
 Add an action to a given request, available for admin/approver/requester
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **listActionsByRequest**(requestId: *`string`*, options?: *`any`*): `AxiosPromise`<[ActionCollection](../interfaces/actioncollection.md)>
 
-*Defined in [api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L899)*
+*Defined in [api.ts:912](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L912)*
 
 Return actions in a given request, available for admin/approver
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **showAction**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Action](../modules/action.md)>
 
-*Defined in [api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L911)*
+*Defined in [api.ts:924](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L924)*
 
 Return an user action by id, available to all
 

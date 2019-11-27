@@ -26,7 +26,7 @@
 
 **● credentials**: *`any`*
 
-*Defined in [api.ts:2329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2329)*
+*Defined in [api.ts:2720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2720)*
 
 *__type__*: {any}
 

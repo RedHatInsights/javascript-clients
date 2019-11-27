@@ -105,7 +105,7 @@ ___
 
 ▸ **createRequest**(requestIn: *[RequestIn](../interfaces/requestin.md)*, options?: *`any`*): `AxiosPromise`<[Request](../modules/request.md)>
 
-*Defined in [api.ts:1348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1348)*
+*Defined in [api.ts:1361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1361)*
 
 Add an approval request by given parameters, available to anyone
 
@@ -131,11 +131,11 @@ ___
 
 ▸ **listRequests**(xRhPersona?: *"approval/admin" \| "approval/approver" \| "approval/requester"*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
 
-*Defined in [api.ts:1363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1363)*
+*Defined in [api.ts:1376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1376)*
 
-Return an array of requests. The result depends on the x-rh-persona header
+The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
 
-*__summary__*: Return an array of approval requests, available to anyone
+*__summary__*: Return an array of requester made approval requests, available to anyone
 
 *__throws__*: {RequiredError}
 
@@ -160,11 +160,11 @@ ___
 
 ▸ **listRequestsByRequest**(requestId: *`string`*, options?: *`any`*): `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
 
-*Defined in [api.ts:1375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1375)*
+*Defined in [api.ts:1388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1388)*
 
-Return an array of child request by given request id, available for admin/requester
+Return an array of child requests of a given request id, available for admin/requester
 
-*__summary__*: Return an array of request children by given request id
+*__summary__*: Return an array of child requests of a given request id
 
 *__throws__*: {RequiredError}
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **showRequest**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Request](../modules/request.md)>
 
-*Defined in [api.ts:1387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1387)*
+*Defined in [api.ts:1400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1400)*
 
 Return an approval request by given id, available to anyone who can access the request
 
