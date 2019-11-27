@@ -269,7 +269,7 @@ export interface GraphqlOut {
 }
 
 /**
- * Approval request. It may have child requests. Only a leaf node request can have workflow_id and actions
+ * Approval request. It may have child requests. Only a leaf node request can have workflow_id
  * @export
  * @interface Request
  */
@@ -281,7 +281,7 @@ export interface Request {
      */
     id?: string;
     /**
-     * The state of the request. Possible value: canceled, pending, skipped, notified, or finished
+     * The state of the request. Possible value: canceled, completed, notified, skipped, or started
      * @type {string}
      * @memberof Request
      */
@@ -305,17 +305,17 @@ export interface Request {
      */
     workflowId?: string;
     /**
-     * Timestamp of creation
+     * Timestamp of notification sent to approvers
      * @type {Date}
      * @memberof Request
      */
-    createdAt?: Date;
+    notifiedAt?: Date;
     /**
-     * Timestamp of last update
+     * Timestamp of finishing (skipped, canceled, or completed)
      * @type {Date}
      * @memberof Request
      */
-    updatedAt?: Date;
+    finishedAt?: Date;
     /**
      * Number of child requests
      * @type {number}
@@ -352,6 +352,18 @@ export interface Request {
      * @memberof Request
      */
     description?: string;
+    /**
+     * Name of approver group(s) assigned to approve this request
+     * @type {string}
+     * @memberof Request
+     */
+    groupName?: string;
+    /**
+     * Parent request id
+     * @type {string}
+     * @memberof Request
+     */
+    parentId?: string;
 }
 
 /**
@@ -365,10 +377,11 @@ export namespace Request {
      */
     export enum StateEnum {
         Canceled = 'canceled',
+        Completed = 'completed',
+        Notified = 'notified',
         Pending = 'pending',
         Skipped = 'skipped',
-        Notified = 'notified',
-        Finished = 'finished'
+        Started = 'started'
     }
     /**
      * @export
@@ -1077,8 +1090,8 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Return an array of requests. The result depends on the x-rh-persona header
-         * @summary Return an array of approval requests, available to anyone
+         * The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
+         * @summary Return an array of requester made approval requests, available to anyone
          * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Current login user&#39;s persona
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
@@ -1130,8 +1143,8 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Return an array of child request by given request id, available for admin/requester
-         * @summary Return an array of request children by given request id
+         * Return an array of child requests of a given request id, available for admin/requester
+         * @summary Return an array of child requests of a given request id
          * @param {string} requestId Id of request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1231,8 +1244,8 @@ export const RequestApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Return an array of requests. The result depends on the x-rh-persona header
-         * @summary Return an array of approval requests, available to anyone
+         * The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
+         * @summary Return an array of requester made approval requests, available to anyone
          * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Current login user&#39;s persona
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
@@ -1248,8 +1261,8 @@ export const RequestApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Return an array of child request by given request id, available for admin/requester
-         * @summary Return an array of request children by given request id
+         * Return an array of child requests of a given request id, available for admin/requester
+         * @summary Return an array of child requests of a given request id
          * @param {string} requestId Id of request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1295,8 +1308,8 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
             return RequestApiFp(configuration).createRequest(requestIn, options)(axios, basePath);
         },
         /**
-         * Return an array of requests. The result depends on the x-rh-persona header
-         * @summary Return an array of approval requests, available to anyone
+         * The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
+         * @summary Return an array of requester made approval requests, available to anyone
          * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Current login user&#39;s persona
          * @param {number} [limit] How many items to return at one time (max 1000)
          * @param {number} [offset] Starting Offset
@@ -1308,8 +1321,8 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
             return RequestApiFp(configuration).listRequests(xRhPersona, limit, offset, filter, options)(axios, basePath);
         },
         /**
-         * Return an array of child request by given request id, available for admin/requester
-         * @summary Return an array of request children by given request id
+         * Return an array of child requests of a given request id, available for admin/requester
+         * @summary Return an array of child requests of a given request id
          * @param {string} requestId Id of request
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1350,8 +1363,8 @@ export class RequestApi extends BaseAPI {
     }
 
     /**
-     * Return an array of requests. The result depends on the x-rh-persona header
-     * @summary Return an array of approval requests, available to anyone
+     * The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
+     * @summary Return an array of requester made approval requests, available to anyone
      * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Current login user&#39;s persona
      * @param {number} [limit] How many items to return at one time (max 1000)
      * @param {number} [offset] Starting Offset
@@ -1365,8 +1378,8 @@ export class RequestApi extends BaseAPI {
     }
 
     /**
-     * Return an array of child request by given request id, available for admin/requester
-     * @summary Return an array of request children by given request id
+     * Return an array of child requests of a given request id, available for admin/requester
+     * @summary Return an array of child requests of a given request id
      * @param {string} requestId Id of request
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

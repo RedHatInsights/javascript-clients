@@ -1895,6 +1895,397 @@ export interface ReportOpenShiftAWSStorageInventory {
 /**
  *
  * @export
+ * @interface ReportOpenShiftAzureFilter
+ */
+export interface ReportOpenShiftAzureFilter {
+    /**
+     * Limits the data points returns and aggregates remaining data.
+     * @type {number}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    limit?: number;
+    /**
+     * Offsets the data points returned when using limit.
+     * @type {number}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    offset?: number;
+    /**
+     *
+     * @type {ReportResolution}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    resolution?: ReportResolution;
+    /**
+     *
+     * @type {ReportTimeScopeValue}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    timeScopeValue?: ReportTimeScopeValue;
+    /**
+     *
+     * @type {ReportTimeScopeUnits}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    timeScopeUnits?: ReportTimeScopeUnits;
+    /**
+     *
+     * @type {Array<ReportResourceScope>}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    resourceScope?: Array<ReportResourceScope>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    subscriptionGuid?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    serviceName?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    resourceLocation?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    instanceType?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    tag?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    project?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    cluster?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureFilter
+     */
+    node?: Array<string>;
+}
+
+/**
+ * The grouping to apply to the report. No grouping by default. When grouping by account the account_alias will be provided if avaiable.
+ * @export
+ * @interface ReportOpenShiftAzureGrouping
+ */
+export interface ReportOpenShiftAzureGrouping {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureGrouping
+     */
+    subscriptionGuid?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureGrouping
+     */
+    serviceName?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureGrouping
+     */
+    resourceLocation?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureGrouping
+     */
+    instanceType?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureGrouping
+     */
+    tag?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureGrouping
+     */
+    cluster?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureGrouping
+     */
+    project?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ReportOpenShiftAzureGrouping
+     */
+    node?: Array<string>;
+}
+
+/**
+ *
+ * @export
+ * @interface ReportOpenShiftAzureInstanceInventory
+ */
+export interface ReportOpenShiftAzureInstanceInventory {
+    /**
+     *
+     * @type {ReportPaginationMeta}
+     * @memberof ReportOpenShiftAzureInstanceInventory
+     */
+    meta?: ReportPaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof ReportOpenShiftAzureInstanceInventory
+     */
+    links?: PaginationLinks;
+    /**
+     *
+     * @type {ReportOpenShiftAzureGrouping}
+     * @memberof ReportOpenShiftAzureInstanceInventory
+     */
+    groupBy?: ReportOpenShiftAzureGrouping;
+    /**
+     *
+     * @type {ReportOpenShiftAzureOrdering}
+     * @memberof ReportOpenShiftAzureInstanceInventory
+     */
+    orderBy?: ReportOpenShiftAzureOrdering;
+    /**
+     *
+     * @type {ReportOpenShiftAzureFilter}
+     * @memberof ReportOpenShiftAzureInstanceInventory
+     */
+    filter?: ReportOpenShiftAzureFilter;
+    /**
+     *
+     * @type {Array<any>}
+     * @memberof ReportOpenShiftAzureInstanceInventory
+     */
+    data: Array<any>;
+}
+
+/**
+ * The ordering to apply to the report. Default is ascending order for the data.
+ * @export
+ * @interface ReportOpenShiftAzureOrdering
+ */
+export interface ReportOpenShiftAzureOrdering {
+    /**
+     *
+     * @type {string}
+     * @memberof ReportOpenShiftAzureOrdering
+     */
+    cost?: ReportOpenShiftAzureOrdering.CostEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportOpenShiftAzureOrdering
+     */
+    usage?: ReportOpenShiftAzureOrdering.UsageEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportOpenShiftAzureOrdering
+     */
+    delta?: ReportOpenShiftAzureOrdering.DeltaEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportOpenShiftAzureOrdering
+     */
+    subscriptionGuid?: ReportOpenShiftAzureOrdering.SubscriptionGuidEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportOpenShiftAzureOrdering
+     */
+    resourceLocation?: ReportOpenShiftAzureOrdering.ResourceLocationEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportOpenShiftAzureOrdering
+     */
+    serviceName?: ReportOpenShiftAzureOrdering.ServiceNameEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportOpenShiftAzureOrdering
+     */
+    instanceType?: ReportOpenShiftAzureOrdering.InstanceTypeEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportOpenShiftAzureOrdering
+     */
+    cluster?: ReportOpenShiftAzureOrdering.ClusterEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportOpenShiftAzureOrdering
+     */
+    project?: ReportOpenShiftAzureOrdering.ProjectEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportOpenShiftAzureOrdering
+     */
+    node?: ReportOpenShiftAzureOrdering.NodeEnum;
+}
+
+/**
+ * @export
+ * @namespace ReportOpenShiftAzureOrdering
+ */
+export namespace ReportOpenShiftAzureOrdering {
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum CostEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum UsageEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum DeltaEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum SubscriptionGuidEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum ResourceLocationEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum ServiceNameEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum InstanceTypeEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum ClusterEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum ProjectEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum NodeEnum {
+        Asc = 'asc',
+        Desc = 'desc'
+    }
+}
+
+/**
+ *
+ * @export
+ * @interface ReportOpenShiftAzureStorageInventory
+ */
+export interface ReportOpenShiftAzureStorageInventory {
+    /**
+     *
+     * @type {ReportPaginationMeta}
+     * @memberof ReportOpenShiftAzureStorageInventory
+     */
+    meta?: ReportPaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof ReportOpenShiftAzureStorageInventory
+     */
+    links?: PaginationLinks;
+    /**
+     *
+     * @type {ReportOpenShiftAzureGrouping}
+     * @memberof ReportOpenShiftAzureStorageInventory
+     */
+    groupBy?: ReportOpenShiftAzureGrouping;
+    /**
+     *
+     * @type {ReportOpenShiftAzureOrdering}
+     * @memberof ReportOpenShiftAzureStorageInventory
+     */
+    orderBy?: ReportOpenShiftAzureOrdering;
+    /**
+     *
+     * @type {ReportOpenShiftAzureFilter}
+     * @memberof ReportOpenShiftAzureStorageInventory
+     */
+    filter?: ReportOpenShiftAzureFilter;
+    /**
+     *
+     * @type {Array<any>}
+     * @memberof ReportOpenShiftAzureStorageInventory
+     */
+    data: Array<any>;
+}
+
+/**
+ *
+ * @export
  * @interface ReportOpenShiftCpu
  */
 export interface ReportOpenShiftCpu {
@@ -4407,6 +4798,195 @@ export const OpenShiftReportApiAxiosParamCreator = function (configuration?: Con
         },
         /**
          *
+         * @summary Query to obtain OpenShift on Azure cost reports
+         * @param {string} [delta] Toggle to include delta values in report.
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenShiftAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options: any = {}): RequestArgs {
+            const localVarPath = `/reports/openshift/infrastructures/azure/costs/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (delta !== undefined) {
+                localVarQueryParameter['delta'] = delta;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (groupBy !== undefined) {
+                localVarQueryParameter['group_by'] = groupBy;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @summary Query to obtain OpenShift on Azure instance data
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {string} [units] The units used to report data.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenShiftAzureInventoryInstanceReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options: any = {}): RequestArgs {
+            const localVarPath = `/reports/openshift/infrastructures/azure/instance-types/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (groupBy !== undefined) {
+                localVarQueryParameter['group_by'] = groupBy;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (units !== undefined) {
+                localVarQueryParameter['units'] = units;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @summary Query to obtain OpenShift on Azure storage data
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {string} [units] The units used to report data.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenShiftAzureInventoryStorageReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options: any = {}): RequestArgs {
+            const localVarPath = `/reports/openshift/infrastructures/azure/storage/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (groupBy !== undefined) {
+                localVarQueryParameter['group_by'] = groupBy;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (units !== undefined) {
+                localVarQueryParameter['units'] = units;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
          * @summary Query to obtain OpenShift compute usage information
          * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
          * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
@@ -4710,6 +5290,63 @@ export const OpenShiftReportApiFp = function(configuration?: Configuration) {
         },
         /**
          *
+         * @summary Query to obtain OpenShift on Azure cost reports
+         * @param {string} [delta] Toggle to include delta values in report.
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenShiftAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportCosts> {
+            const localVarAxiosArgs = OpenShiftReportApiAxiosParamCreator(configuration).getOpenShiftAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
+         * @summary Query to obtain OpenShift on Azure instance data
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {string} [units] The units used to report data.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenShiftAzureInventoryInstanceReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportOpenShiftAzureInstanceInventory> {
+            const localVarAxiosArgs = OpenShiftReportApiAxiosParamCreator(configuration).getOpenShiftAzureInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
+         * @summary Query to obtain OpenShift on Azure storage data
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {string} [units] The units used to report data.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenShiftAzureInventoryStorageReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportOpenShiftAzureStorageInventory> {
+            const localVarAxiosArgs = OpenShiftReportApiAxiosParamCreator(configuration).getOpenShiftAzureInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
          * @summary Query to obtain OpenShift compute usage information
          * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
          * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
@@ -4837,6 +5474,51 @@ export const OpenShiftReportApiFactory = function (configuration?: Configuration
         },
         /**
          *
+         * @summary Query to obtain OpenShift on Azure cost reports
+         * @param {string} [delta] Toggle to include delta values in report.
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenShiftAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
+            return OpenShiftReportApiFp(configuration).getOpenShiftAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
+        },
+        /**
+         *
+         * @summary Query to obtain OpenShift on Azure instance data
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {string} [units] The units used to report data.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenShiftAzureInventoryInstanceReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
+            return OpenShiftReportApiFp(configuration).getOpenShiftAzureInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
+        },
+        /**
+         *
+         * @summary Query to obtain OpenShift on Azure storage data
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+         * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+         * @param {string} [units] The units used to report data.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenShiftAzureInventoryStorageReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
+            return OpenShiftReportApiFp(configuration).getOpenShiftAzureInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
+        },
+        /**
+         *
          * @summary Query to obtain OpenShift compute usage information
          * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
          * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
@@ -4951,6 +5633,57 @@ export class OpenShiftReportApi extends BaseAPI {
      */
     public getOpenShiftAWSInventoryStorageReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
         return OpenShiftReportApiFp(this.configuration).getOpenShiftAWSInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary Query to obtain OpenShift on Azure cost reports
+     * @param {string} [delta] Toggle to include delta values in report.
+     * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+     * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+     * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OpenShiftReportApi
+     */
+    public getOpenShiftAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
+        return OpenShiftReportApiFp(this.configuration).getOpenShiftAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary Query to obtain OpenShift on Azure instance data
+     * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+     * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+     * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+     * @param {string} [units] The units used to report data.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OpenShiftReportApi
+     */
+    public getOpenShiftAzureInventoryInstanceReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
+        return OpenShiftReportApiFp(this.configuration).getOpenShiftAzureInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary Query to obtain OpenShift on Azure storage data
+     * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+     * @param {any} [groupBy] The grouping to apply to the report as a URL encoded dictionary.
+     * @param {any} [orderBy] The ordering to apply to the report as a URL encoded dictionary.
+     * @param {string} [units] The units used to report data.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OpenShiftReportApi
+     */
+    public getOpenShiftAzureInventoryStorageReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
+        return OpenShiftReportApiFp(this.configuration).getOpenShiftAzureInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**

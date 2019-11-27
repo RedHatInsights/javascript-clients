@@ -217,6 +217,18 @@ export interface CreateHostIn {
      * @memberof CreateHostIn
      */
     systemProfile?: SystemProfileIn;
+    /**
+     * Timestamp from which the host is considered stale.
+     * @type {Date}
+     * @memberof CreateHostIn
+     */
+    staleTimestamp?: Date;
+    /**
+     * Reporting source of the host. Used when updating the stale_timestamp.
+     * @type {string}
+     * @memberof CreateHostIn
+     */
+    reporter?: string;
 }
 
 /**
@@ -327,6 +339,30 @@ export interface CreateHostOut {
      * @memberof CreateHostOut
      */
     tags?: Array<StructuredTag>;
+    /**
+     * Timestamp from which the host is considered stale.
+     * @type {Date}
+     * @memberof CreateHostOut
+     */
+    staleTimestamp?: Date | null;
+    /**
+     * Timestamp from which the host is considered too stale to be listed without an explicit toggle.
+     * @type {Date}
+     * @memberof CreateHostOut
+     */
+    staleWarningTimestamp?: Date | null;
+    /**
+     * Timestamp from which the host is considered deleted.
+     * @type {Date}
+     * @memberof CreateHostOut
+     */
+    culledTimestamp?: Date | null;
+    /**
+     * Reporting source of the host. Used when updating the stale_timestamp.
+     * @type {string}
+     * @memberof CreateHostOut
+     */
+    reporter?: string | null;
 }
 
 /**
@@ -515,6 +551,30 @@ export interface HostOut {
      * @memberof HostOut
      */
     tags?: Array<StructuredTag>;
+    /**
+     * Timestamp from which the host is considered stale.
+     * @type {Date}
+     * @memberof HostOut
+     */
+    staleTimestamp?: Date | null;
+    /**
+     * Timestamp from which the host is considered too stale to be listed without an explicit toggle.
+     * @type {Date}
+     * @memberof HostOut
+     */
+    staleWarningTimestamp?: Date | null;
+    /**
+     * Timestamp from which the host is considered deleted.
+     * @type {Date}
+     * @memberof HostOut
+     */
+    culledTimestamp?: Date | null;
+    /**
+     * Reporting source of the host. Used when updating the stale_timestamp.
+     * @type {string}
+     * @memberof HostOut
+     */
+    reporter?: string | null;
 }
 
 /**
@@ -682,7 +742,7 @@ export interface StructuredTag {
      * @type {string}
      * @memberof StructuredTag
      */
-    namespace?: string;
+    namespace?: string | null;
     /**
      *
      * @type {string}
@@ -1143,10 +1203,11 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): RequestArgs {
+        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, options: any = {}): RequestArgs {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostById.');
@@ -1190,6 +1251,10 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['order_how'] = orderHow;
             }
 
+            if (staleness) {
+                localVarQueryParameter['staleness'] = staleness;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1213,10 +1278,11 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): RequestArgs {
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, options: any = {}): RequestArgs {
             const localVarPath = `/hosts`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1273,6 +1339,10 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 
             if (orderHow !== undefined) {
                 localVarQueryParameter['order_how'] = orderHow;
+            }
+
+            if (staleness) {
+                localVarQueryParameter['staleness'] = staleness;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1697,11 +1767,12 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options);
+        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, staleness, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1720,11 +1791,12 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, tags, branchId, perPage, page, orderBy, orderHow, options);
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, tags, branchId, perPage, page, orderBy, orderHow, staleness, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1874,11 +1946,12 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
-            return HostsApiFp(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options)(axios, basePath);
+        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, options?: any) {
+            return HostsApiFp(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, staleness, options)(axios, basePath);
         },
         /**
          * Read the entire list of all hosts available to the account.
@@ -1893,11 +1966,12 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
-            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, tags, branchId, perPage, page, orderBy, orderHow, options)(axios, basePath);
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, options?: any) {
+            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, tags, branchId, perPage, page, orderBy, orderHow, staleness, options)(axios, basePath);
         },
         /**
          * Find one or more hosts by their ID and return the id and system profile
@@ -2024,12 +2098,13 @@ export class HostsApi extends BaseAPI {
      * @param {number} [page] A page number of the items to return.
      * @param {'display_name' | 'updated'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+     * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options)(this.axios, this.basePath);
+    public apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, staleness, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2045,12 +2120,13 @@ export class HostsApi extends BaseAPI {
      * @param {number} [page] A page number of the items to return.
      * @param {'display_name' | 'updated'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+     * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, tags, branchId, perPage, page, orderBy, orderHow, options)(this.axios, this.basePath);
+    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, tags, branchId, perPage, page, orderBy, orderHow, staleness, options)(this.axios, this.basePath);
     }
 
     /**

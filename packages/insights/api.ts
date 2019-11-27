@@ -172,7 +172,7 @@ export interface HostAck {
      * @type {string}
      * @memberof HostAck
      */
-    rule?: string;
+    rule: string;
     /**
      *
      * @type {string}
@@ -203,32 +203,6 @@ export interface HostAck {
      * @memberof HostAck
      */
     updatedAt?: Date;
-}
-
-/**
- *
- * @export
- * @interface HostAckInput
- */
-export interface HostAckInput {
-    /**
-     *
-     * @type {string}
-     * @memberof HostAckInput
-     */
-    systemUuid: string;
-    /**
-     *
-     * @type {string}
-     * @memberof HostAckInput
-     */
-    ruleId: string;
-    /**
-     *
-     * @type {string}
-     * @memberof HostAckInput
-     */
-    justification: string;
 }
 
 /**
@@ -864,32 +838,6 @@ export interface RuleSet {
 /**
  *
  * @export
- * @interface RulesStats
- */
-export interface RulesStats {
-    /**
-     *
-     * @type {number}
-     * @memberof RulesStats
-     */
-    total: number;
-    /**
-     *
-     * @type {{ [key: string]: number; }}
-     * @memberof RulesStats
-     */
-    totalRisk: { [key: string]: number; };
-    /**
-     *
-     * @type {{ [key: string]: number; }}
-     * @memberof RulesStats
-     */
-    category: { [key: string]: number; };
-}
-
-/**
- *
- * @export
  * @interface StatTimeSeries
  */
 export interface StatTimeSeries {
@@ -905,6 +853,32 @@ export interface StatTimeSeries {
      * @memberof StatTimeSeries
      */
     count: number;
+}
+
+/**
+ *
+ * @export
+ * @interface Stats
+ */
+export interface Stats {
+    /**
+     *
+     * @type {number}
+     * @memberof Stats
+     */
+    total: number;
+    /**
+     *
+     * @type {{ [key: string]: number; }}
+     * @memberof Stats
+     */
+    totalRisk: { [key: string]: number; };
+    /**
+     *
+     * @type {{ [key: string]: number; }}
+     * @memberof Stats
+     */
+    category: { [key: string]: number; };
 }
 
 /**
@@ -982,26 +956,6 @@ export interface SystemsForRule {
 /**
  *
  * @export
- * @interface SystemsStats
- */
-export interface SystemsStats {
-    /**
-     *
-     * @type {{ [key: string]: number; }}
-     * @memberof SystemsStats
-     */
-    totalRisk: { [key: string]: number; };
-    /**
-     *
-     * @type {{ [key: string]: number; }}
-     * @memberof SystemsStats
-     */
-    category: { [key: string]: number; };
-}
-
-/**
- *
- * @export
  * @interface Tag
  */
 export interface Tag {
@@ -1067,6 +1021,20 @@ export interface TopicWithRules {
      * @memberof TopicWithRules
      */
     impactedSystemsCount?: number;
+}
+
+/**
+ *
+ * @export
+ * @interface WeeklyReportSubscription
+ */
+export interface WeeklyReportSubscription {
+    /**
+     *
+     * @type {boolean}
+     * @memberof WeeklyReportSubscription
+     */
+    isSubscribed: boolean;
 }
 
 
@@ -1974,14 +1942,14 @@ export const HostackApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Return the new hostack.  If there's already an acknowledgement of this rule by this account for a system, then return that.  This does not take an 'id' number.
          * @summary Add an acknowledgement for a rule, by rule ID, system, and account.
-         * @param {HostAckInput} hostAckInput
+         * @param {HostAck} hostAck
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackCreate(hostAckInput: HostAckInput, options: any = {}): RequestArgs {
-            // verify required parameter 'hostAckInput' is not null or undefined
-            if (hostAckInput === null || hostAckInput === undefined) {
-                throw new RequiredError('hostAckInput','Required parameter hostAckInput was null or undefined when calling hostackCreate.');
+        hostackCreate(hostAck: HostAck, options: any = {}): RequestArgs {
+            // verify required parameter 'hostAck' is not null or undefined
+            if (hostAck === null || hostAck === undefined) {
+                throw new RequiredError('hostAck','Required parameter hostAck was null or undefined when calling hostackCreate.');
             }
             const localVarPath = `/hostack/`;
             const localVarUrlObj = url.parse(localVarPath, true);
@@ -1999,8 +1967,8 @@ export const HostackApiAxiosParamCreator = function (configuration?: Configurati
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"HostAckInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(hostAckInput || {}) : (hostAckInput || "");
+            const needsSerialization = (<any>"HostAck" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(hostAck || {}) : (hostAck || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -2164,12 +2132,12 @@ export const HostackApiFp = function(configuration?: Configuration) {
         /**
          * Return the new hostack.  If there's already an acknowledgement of this rule by this account for a system, then return that.  This does not take an 'id' number.
          * @summary Add an acknowledgement for a rule, by rule ID, system, and account.
-         * @param {HostAckInput} hostAckInput
+         * @param {HostAck} hostAck
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackCreate(hostAckInput: HostAckInput, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostAck> {
-            const localVarAxiosArgs = HostackApiAxiosParamCreator(configuration).hostackCreate(hostAckInput, options);
+        hostackCreate(hostAck: HostAck, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostAck> {
+            const localVarAxiosArgs = HostackApiAxiosParamCreator(configuration).hostackCreate(hostAck, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2245,12 +2213,12 @@ export const HostackApiFactory = function (configuration?: Configuration, basePa
         /**
          * Return the new hostack.  If there's already an acknowledgement of this rule by this account for a system, then return that.  This does not take an 'id' number.
          * @summary Add an acknowledgement for a rule, by rule ID, system, and account.
-         * @param {HostAckInput} hostAckInput
+         * @param {HostAck} hostAck
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackCreate(hostAckInput: HostAckInput, options?: any) {
-            return HostackApiFp(configuration).hostackCreate(hostAckInput, options)(axios, basePath);
+        hostackCreate(hostAck: HostAck, options?: any) {
+            return HostackApiFp(configuration).hostackCreate(hostAck, options)(axios, basePath);
         },
         /**
          * Takes the hostack ID (given in the hostack list) as an identifier.
@@ -2307,13 +2275,13 @@ export class HostackApi extends BaseAPI {
     /**
      * Return the new hostack.  If there's already an acknowledgement of this rule by this account for a system, then return that.  This does not take an 'id' number.
      * @summary Add an acknowledgement for a rule, by rule ID, system, and account.
-     * @param {HostAckInput} hostAckInput
+     * @param {HostAck} hostAck
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostackApi
      */
-    public hostackCreate(hostAckInput: HostAckInput, options?: any) {
-        return HostackApiFp(this.configuration).hostackCreate(hostAckInput, options)(this.axios, this.basePath);
+    public hostackCreate(hostAck: HostAck, options?: any) {
+        return HostackApiFp(this.configuration).hostackCreate(hostAck, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3266,7 +3234,7 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsReports(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RulesStats> {
+        statsReports(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats> {
             const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsReports(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -3278,7 +3246,7 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsRules(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RulesStats> {
+        statsRules(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats> {
             const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsRules(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -3305,7 +3273,7 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsSystems(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsStats> {
+        statsSystems(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats> {
             const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsSystems(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -4475,6 +4443,166 @@ export class TotalRiskApi extends BaseAPI {
      */
     public totalRiskList(options?: any) {
         return TotalRiskApiFp(this.configuration).totalRiskList(options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
+ * WeeklyreportsubscriptionApi - axios parameter creator
+ * @export
+ */
+export const WeeklyreportsubscriptionApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Set the subscription status of the current user to the supplied `is_subscribed` value.
+         * @param {WeeklyReportSubscription} weeklyReportSubscription
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionCreate(weeklyReportSubscription: WeeklyReportSubscription, options: any = {}): RequestArgs {
+            // verify required parameter 'weeklyReportSubscription' is not null or undefined
+            if (weeklyReportSubscription === null || weeklyReportSubscription === undefined) {
+                throw new RequiredError('weeklyReportSubscription','Required parameter weeklyReportSubscription was null or undefined when calling weeklyreportsubscriptionCreate.');
+            }
+            const localVarPath = `/weeklyreportsubscription/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"WeeklyReportSubscription" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(weeklyReportSubscription || {}) : (weeklyReportSubscription || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Show the user's current subscription status.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionList(options: any = {}): RequestArgs {
+            const localVarPath = `/weeklyreportsubscription/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * WeeklyreportsubscriptionApi - functional programming interface
+ * @export
+ */
+export const WeeklyreportsubscriptionApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Set the subscription status of the current user to the supplied `is_subscribed` value.
+         * @param {WeeklyReportSubscription} weeklyReportSubscription
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionCreate(weeklyReportSubscription: WeeklyReportSubscription, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WeeklyReportSubscription> {
+            const localVarAxiosArgs = WeeklyreportsubscriptionApiAxiosParamCreator(configuration).weeklyreportsubscriptionCreate(weeklyReportSubscription, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Show the user's current subscription status.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WeeklyReportSubscription> {
+            const localVarAxiosArgs = WeeklyreportsubscriptionApiAxiosParamCreator(configuration).weeklyreportsubscriptionList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * WeeklyreportsubscriptionApi - factory interface
+ * @export
+ */
+export const WeeklyreportsubscriptionApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Set the subscription status of the current user to the supplied `is_subscribed` value.
+         * @param {WeeklyReportSubscription} weeklyReportSubscription
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionCreate(weeklyReportSubscription: WeeklyReportSubscription, options?: any) {
+            return WeeklyreportsubscriptionApiFp(configuration).weeklyreportsubscriptionCreate(weeklyReportSubscription, options)(axios, basePath);
+        },
+        /**
+         * Show the user's current subscription status.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionList(options?: any) {
+            return WeeklyreportsubscriptionApiFp(configuration).weeklyreportsubscriptionList(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * WeeklyreportsubscriptionApi - object-oriented interface
+ * @export
+ * @class WeeklyreportsubscriptionApi
+ * @extends {BaseAPI}
+ */
+export class WeeklyreportsubscriptionApi extends BaseAPI {
+    /**
+     * Set the subscription status of the current user to the supplied `is_subscribed` value.
+     * @param {WeeklyReportSubscription} weeklyReportSubscription
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WeeklyreportsubscriptionApi
+     */
+    public weeklyreportsubscriptionCreate(weeklyReportSubscription: WeeklyReportSubscription, options?: any) {
+        return WeeklyreportsubscriptionApiFp(this.configuration).weeklyreportsubscriptionCreate(weeklyReportSubscription, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Show the user's current subscription status.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WeeklyreportsubscriptionApi
+     */
+    public weeklyreportsubscriptionList(options?: any) {
+        return WeeklyreportsubscriptionApiFp(this.configuration).weeklyreportsubscriptionList(options)(this.axios, this.basePath);
     }
 
 }

@@ -34,6 +34,8 @@
 
 ↳  [TotalRiskApi](totalriskapi.md)
 
+↳  [WeeklyreportsubscriptionApi](weeklyreportsubscriptionapi.md)
+
 ## Index
 
 ### Constructors

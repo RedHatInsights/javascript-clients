@@ -28,7 +28,7 @@
 
 **● resolution**: *[ReportResolution](../enums/reportresolution.md)*
 
-*Defined in [api.ts:2487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2487)*
+*Defined in [api.ts:2878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2878)*
 
 *__type__*: {ReportResolution}
 
@@ -41,7 +41,7 @@ ___
 
 **● timeScopeUnits**: *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
 
-*Defined in [api.ts:2499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2499)*
+*Defined in [api.ts:2890](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2890)*
 
 *__type__*: {ReportTimeScopeUnits}
 
@@ -54,7 +54,7 @@ ___
 
 **● timeScopeValue**: *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
 
-*Defined in [api.ts:2493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2493)*
+*Defined in [api.ts:2884](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2884)*
 
 *__type__*: {ReportTimeScopeValue}
 

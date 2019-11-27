@@ -28,7 +28,7 @@
 
 **● key**: *`string`*
 
-*Defined in [api.ts:691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L691)*
+*Defined in [api.ts:751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L751)*
 
 *__type__*: {string}
 
@@ -39,9 +39,9 @@ ___
 
 ### `<Optional>` namespace
 
-**● namespace**: *`string`*
+**● namespace**: *`string` \| `null`*
 
-*Defined in [api.ts:685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L685)*
+*Defined in [api.ts:745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L745)*
 
 *__type__*: {string}
 
@@ -54,7 +54,7 @@ ___
 
 **● value**: *`string` \| `null`*
 
-*Defined in [api.ts:697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L697)*
+*Defined in [api.ts:757](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L757)*
 
 *__type__*: {string}
 

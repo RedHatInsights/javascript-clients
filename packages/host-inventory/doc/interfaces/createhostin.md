@@ -26,8 +26,10 @@ Data of a single host belonging to an account. Represents the hosts without its 
 * [insightsId](createhostin.md#insightsid)
 * [ipAddresses](createhostin.md#ipaddresses)
 * [macAddresses](createhostin.md#macaddresses)
+* [reporter](createhostin.md#reporter)
 * [rhelMachineId](createhostin.md#rhelmachineid)
 * [satelliteId](createhostin.md#satelliteid)
+* [staleTimestamp](createhostin.md#staletimestamp)
 * [subscriptionManagerId](createhostin.md#subscriptionmanagerid)
 * [systemProfile](createhostin.md#systemprofile)
 
@@ -185,6 +187,21 @@ Host’s network interfaces MAC addresses. This field is considered to be a cano
 *__memberof__*: CreateHostIn
 
 ___
+<a id="reporter"></a>
+
+### `<Optional>` reporter
+
+**● reporter**: *`string`*
+
+*Defined in [api.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L231)*
+
+Reporting source of the host. Used when updating the stale\_timestamp.
+
+*__type__*: {string}
+
+*__memberof__*: CreateHostIn
+
+___
 <a id="rhelmachineid"></a>
 
 ### `<Optional>` rhelMachineId
@@ -211,6 +228,21 @@ ___
 A Red Hat Satellite ID of a RHEL host. This field is considered to be a canonical fact.
 
 *__type__*: {string}
+
+*__memberof__*: CreateHostIn
+
+___
+<a id="staletimestamp"></a>
+
+### `<Optional>` staleTimestamp
+
+**● staleTimestamp**: *`Date`*
+
+*Defined in [api.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L225)*
+
+Timestamp from which the host is considered stale.
+
+*__type__*: {Date}
 
 *__memberof__*: CreateHostIn
 

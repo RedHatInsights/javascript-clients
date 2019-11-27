@@ -61,6 +61,7 @@ API documentation
 * [ReportCostsOpenShiftOrdering](modules/reportcostsopenshiftordering.md)
 * [ReportInventoryOpenShiftOrdering](modules/reportinventoryopenshiftordering.md)
 * [ReportOpenShiftAWSOrdering](modules/reportopenshiftawsordering.md)
+* [ReportOpenShiftAzureOrdering](modules/reportopenshiftazureordering.md)
 * [ReportOrdering](modules/reportordering.md)
 
 ### Enumerations
@@ -128,6 +129,10 @@ API documentation
 * [ReportOpenShiftAWSGrouping](interfaces/reportopenshiftawsgrouping.md)
 * [ReportOpenShiftAWSInstanceInventory](interfaces/reportopenshiftawsinstanceinventory.md)
 * [ReportOpenShiftAWSStorageInventory](interfaces/reportopenshiftawsstorageinventory.md)
+* [ReportOpenShiftAzureFilter](interfaces/reportopenshiftazurefilter.md)
+* [ReportOpenShiftAzureGrouping](interfaces/reportopenshiftazuregrouping.md)
+* [ReportOpenShiftAzureInstanceInventory](interfaces/reportopenshiftazureinstanceinventory.md)
+* [ReportOpenShiftAzureStorageInventory](interfaces/reportopenshiftazurestorageinventory.md)
 * [ReportOpenShiftCpu](interfaces/reportopenshiftcpu.md)
 * [ReportOpenShiftFilter](interfaces/reportopenshiftfilter.md)
 * [ReportOpenShiftGrouping](interfaces/reportopenshiftgrouping.md)
@@ -220,7 +225,7 @@ ___
 
 ▸ **AWSReportApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2643)*
+*Defined in [api.ts:3034](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3034)*
 
 AWSReportApi - axios parameter creator
 
@@ -239,7 +244,7 @@ ___
 
 ▸ **AWSReportApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2907](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2907)*
+*Defined in [api.ts:3298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3298)*
 
 AWSReportApi - factory interface
 
@@ -260,7 +265,7 @@ ___
 
 ▸ **AWSReportApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2841](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2841)*
+*Defined in [api.ts:3232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3232)*
 
 AWSReportApi - functional programming interface
 
@@ -279,7 +284,7 @@ ___
 
 ▸ **AzureReportApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3021](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3021)*
+*Defined in [api.ts:3412](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3412)*
 
 AzureReportApi - axios parameter creator
 
@@ -298,7 +303,7 @@ ___
 
 ▸ **AzureReportApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:3285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3285)*
+*Defined in [api.ts:3676](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3676)*
 
 AzureReportApi - factory interface
 
@@ -319,7 +324,7 @@ ___
 
 ▸ **AzureReportApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3219)*
+*Defined in [api.ts:3610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3610)*
 
 AzureReportApi - functional programming interface
 
@@ -338,7 +343,7 @@ ___
 
 ▸ **CostModelApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3399)*
+*Defined in [api.ts:3790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3790)*
 
 CostModelApi - axios parameter creator
 
@@ -357,7 +362,7 @@ ___
 
 ▸ **CostModelApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:3712](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3712)*
+*Defined in [api.ts:4103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4103)*
 
 CostModelApi - factory interface
 
@@ -378,7 +383,7 @@ ___
 
 ▸ **CostModelApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3628](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3628)*
+*Defined in [api.ts:4019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4019)*
 
 CostModelApi - functional programming interface
 
@@ -397,7 +402,7 @@ ___
 
 ▸ **DataExportRequestApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3850](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3850)*
+*Defined in [api.ts:4241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4241)*
 
 DataExportRequestApi - axios parameter creator
 
@@ -416,7 +421,7 @@ ___
 
 ▸ **DataExportRequestApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:4035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4035)*
+*Defined in [api.ts:4426](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4426)*
 
 DataExportRequestApi - factory interface
 
@@ -437,7 +442,7 @@ ___
 
 ▸ **DataExportRequestApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3983)*
+*Defined in [api.ts:4374](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4374)*
 
 DataExportRequestApi - functional programming interface
 
@@ -456,7 +461,7 @@ ___
 
 ▸ **MetricsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:4121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4121)*
+*Defined in [api.ts:4512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4512)*
 
 MetricsApi - axios parameter creator
 
@@ -475,7 +480,7 @@ ___
 
 ▸ **MetricsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:4179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4179)*
+*Defined in [api.ts:4570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4570)*
 
 MetricsApi - factory interface
 
@@ -496,7 +501,7 @@ ___
 
 ▸ **MetricsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:4157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4157)*
+*Defined in [api.ts:4548](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4548)*
 
 MetricsApi - functional programming interface
 
@@ -515,7 +520,7 @@ ___
 
 ▸ **OpenShiftReportApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:4217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4217)*
+*Defined in [api.ts:4608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4608)*
 
 OpenShiftReportApi - axios parameter creator
 
@@ -534,7 +539,7 @@ ___
 
 ▸ **OpenShiftReportApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:4791](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4791)*
+*Defined in [api.ts:5428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5428)*
 
 OpenShiftReportApi - factory interface
 
@@ -555,7 +560,7 @@ ___
 
 ▸ **OpenShiftReportApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:4652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4652)*
+*Defined in [api.ts:5232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5232)*
 
 OpenShiftReportApi - functional programming interface
 
@@ -574,7 +579,7 @@ ___
 
 ▸ **ProviderApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5027)*
+*Defined in [api.ts:5760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5760)*
 
 ProviderApi - axios parameter creator
 
@@ -593,7 +598,7 @@ ___
 
 ▸ **ProviderApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:5277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5277)*
+*Defined in [api.ts:6010](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6010)*
 
 ProviderApi - factory interface
 
@@ -614,7 +619,7 @@ ___
 
 ▸ **ProviderApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5209)*
+*Defined in [api.ts:5942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5942)*
 
 ProviderApi - functional programming interface
 
@@ -633,7 +638,7 @@ ___
 
 ▸ **SourcesAuthenticationApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5389)*
+*Defined in [api.ts:6122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6122)*
 
 SourcesAuthenticationApi - axios parameter creator
 
@@ -652,7 +657,7 @@ ___
 
 ▸ **SourcesAuthenticationApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:5463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5463)*
+*Defined in [api.ts:6196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6196)*
 
 SourcesAuthenticationApi - factory interface
 
@@ -673,7 +678,7 @@ ___
 
 ▸ **SourcesAuthenticationApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5440)*
+*Defined in [api.ts:6173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6173)*
 
 SourcesAuthenticationApi - functional programming interface
 
@@ -692,7 +697,7 @@ ___
 
 ▸ **SourcesBillingSourceApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5503)*
+*Defined in [api.ts:6236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6236)*
 
 SourcesBillingSourceApi - axios parameter creator
 
@@ -711,7 +716,7 @@ ___
 
 ▸ **SourcesBillingSourceApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:5577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5577)*
+*Defined in [api.ts:6310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6310)*
 
 SourcesBillingSourceApi - factory interface
 
@@ -732,7 +737,7 @@ ___
 
 ▸ **SourcesBillingSourceApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5554)*
+*Defined in [api.ts:6287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6287)*
 
 SourcesBillingSourceApi - functional programming interface
 
@@ -751,7 +756,7 @@ ___
 
 ▸ **StatusApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5617)*
+*Defined in [api.ts:6350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6350)*
 
 StatusApi - axios parameter creator
 
@@ -770,7 +775,7 @@ ___
 
 ▸ **StatusApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:5675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5675)*
+*Defined in [api.ts:6408](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6408)*
 
 StatusApi - factory interface
 
@@ -791,7 +796,7 @@ ___
 
 ▸ **StatusApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5653)*
+*Defined in [api.ts:6386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6386)*
 
 StatusApi - functional programming interface
 
@@ -810,7 +815,7 @@ ___
 
 ▸ **TagsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5713](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5713)*
+*Defined in [api.ts:6446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6446)*
 
 TagsApi - axios parameter creator
 
@@ -829,7 +834,7 @@ ___
 
 ▸ **TagsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:6011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6011)*
+*Defined in [api.ts:6744](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6744)*
 
 TagsApi - factory interface
 
@@ -850,7 +855,7 @@ ___
 
 ▸ **TagsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5934)*
+*Defined in [api.ts:6667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6667)*
 
 TagsApi - functional programming interface
 
@@ -869,7 +874,7 @@ ___
 
 ▸ **UserPreferenceApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6141)*
+*Defined in [api.ts:6874](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6874)*
 
 UserPreferenceApi - axios parameter creator
 
@@ -888,7 +893,7 @@ ___
 
 ▸ **UserPreferenceApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:6442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6442)*
+*Defined in [api.ts:7175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7175)*
 
 UserPreferenceApi - factory interface
 
@@ -909,7 +914,7 @@ ___
 
 ▸ **UserPreferenceApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6361)*
+*Defined in [api.ts:7094](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7094)*
 
 UserPreferenceApi - functional programming interface
 
