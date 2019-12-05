@@ -27,7 +27,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:357](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L357)*
+*Defined in [api.ts:447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L447)*
 
 *__type__*: {string}
 
@@ -40,7 +40,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:351](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L351)*
+*Defined in [api.ts:441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L441)*
 
 *__type__*: {string}
 

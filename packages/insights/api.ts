@@ -781,6 +781,12 @@ export interface RuleForAccount {
      * @memberof RuleForAccount
      */
     totalRisk?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleForAccount
+     */
+    hostsAckedCount?: number;
 }
 
 /**
@@ -956,69 +962,49 @@ export interface SystemsForRule {
 /**
  *
  * @export
- * @interface Tag
+ * @interface Topic
  */
-export interface Tag {
+export interface Topic {
     /**
      *
      * @type {string}
-     * @memberof Tag
-     */
-    name: string;
-}
-
-/**
- *
- * @export
- * @interface TopicWithRules
- */
-export interface TopicWithRules {
-    /**
-     *
-     * @type {string}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
     name: string;
     /**
      * Rule topic slug
      * @type {string}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
     slug: string;
     /**
      *
      * @type {string}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
     description: string;
     /**
      *
      * @type {string}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
-    tags?: string;
+    tag: string;
     /**
      *
      * @type {boolean}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
     featured?: boolean;
     /**
      *
-     * @type {Array<string>}
-     * @memberof TopicWithRules
-     */
-    rules?: Array<string>;
-    /**
-     *
      * @type {boolean}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
     enabled?: boolean;
     /**
      *
      * @type {number}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
     impactedSystemsCount?: number;
 }
@@ -2013,10 +1999,11 @@ export const HostackApiAxiosParamCreator = function (configuration?: Configurati
          * @summary List host acks from this account for a system where the rule is active.
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackList(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        hostackList(limit?: number, offset?: number, ruleId?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/hostack/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -2033,6 +2020,10 @@ export const HostackApiAxiosParamCreator = function (configuration?: Configurati
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (ruleId) {
+                localVarQueryParameter['rule_id'] = ruleId.join(COLLECTION_FORMATS["csv"]);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -2162,11 +2153,12 @@ export const HostackApiFp = function(configuration?: Configuration) {
          * @summary List host acks from this account for a system where the rule is active.
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackList(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002> {
-            const localVarAxiosArgs = HostackApiAxiosParamCreator(configuration).hostackList(limit, offset, options);
+        hostackList(limit?: number, offset?: number, ruleId?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002> {
+            const localVarAxiosArgs = HostackApiAxiosParamCreator(configuration).hostackList(limit, offset, ruleId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2235,11 +2227,12 @@ export const HostackApiFactory = function (configuration?: Configuration, basePa
          * @summary List host acks from this account for a system where the rule is active.
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackList(limit?: number, offset?: number, options?: any) {
-            return HostackApiFp(configuration).hostackList(limit, offset, options)(axios, basePath);
+        hostackList(limit?: number, offset?: number, ruleId?: Array<string>, options?: any) {
+            return HostackApiFp(configuration).hostackList(limit, offset, ruleId, options)(axios, basePath);
         },
         /**
          * This view handles listing, retrieving, creating and deleting hostacks.
@@ -2301,12 +2294,13 @@ export class HostackApi extends BaseAPI {
      * @summary List host acks from this account for a system where the rule is active.
      * @param {number} [limit] Number of results to return per page.
      * @param {number} [offset] The initial index from which to return the results.
+     * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostackApi
      */
-    public hostackList(limit?: number, offset?: number, options?: any) {
-        return HostackApiFp(this.configuration).hostackList(limit, offset, options)(this.axios, this.basePath);
+    public hostackList(limit?: number, offset?: number, ruleId?: Array<string>, options?: any) {
+        return HostackApiFp(this.configuration).hostackList(limit, offset, ruleId, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3949,7 +3943,8 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Rules have topics, set by Insights administrators.  This is a view of the topics available, along with the rules and systems to which they apply.
+         * This also lists the topic's impacted systems count.
+         * @summary Retrieve a single topic by slug.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3981,51 +3976,17 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * This will be deleted in the future.
-         * @summary View, add to or delete from the rules in this topic
+         * Lists the available rules that have this tag.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicRulesRead(slug: string, options: any = {}): RequestArgs {
+        topicRulesWithTag(slug: string, options: any = {}): RequestArgs {
             // verify required parameter 'slug' is not null or undefined
             if (slug === null || slug === undefined) {
-                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicRulesRead.');
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicRulesWithTag.');
             }
-            const localVarPath = `/topic/{slug}/rules/`
-                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Some of these may also be in the given topic - can we show that?  This will be deprecated at some point because we only care about the tag link.
-         * @summary Lists the available rules that share a tag with this topic.
-         * @param {string} slug Rule topic slug
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicRulesWithTags(slug: string, options: any = {}): RequestArgs {
-            // verify required parameter 'slug' is not null or undefined
-            if (slug === null || slug === undefined) {
-                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicRulesWithTags.');
-            }
-            const localVarPath = `/topic/{slug}/rules_with_tags/`
+            const localVarPath = `/topic/{slug}/rules_with_tag/`
                 .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -4079,39 +4040,6 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
                 options: localVarRequestOptions,
             };
         },
-        /**
-         * This is the main way of linking rules to a topic.
-         * @summary View, add to or delete from the tags in a topic.
-         * @param {string} slug Rule topic slug
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicTagsRead(slug: string, options: any = {}): RequestArgs {
-            // verify required parameter 'slug' is not null or undefined
-            if (slug === null || slug === undefined) {
-                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicTagsRead.');
-            }
-            const localVarPath = `/topic/{slug}/tags/`
-                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
     }
 };
 
@@ -4128,7 +4056,7 @@ export const TopicApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicList(showDisabled?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<TopicWithRules>> {
+        topicList(showDisabled?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Topic>> {
             const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicList(showDisabled, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -4136,12 +4064,13 @@ export const TopicApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Rules have topics, set by Insights administrators.  This is a view of the topics available, along with the rules and systems to which they apply.
+         * This also lists the topic's impacted systems count.
+         * @summary Retrieve a single topic by slug.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicRead(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TopicWithRules> {
+        topicRead(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Topic> {
             const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicRead(slug, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -4149,28 +4078,13 @@ export const TopicApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * This will be deleted in the future.
-         * @summary View, add to or delete from the rules in this topic
+         * Lists the available rules that have this tag.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicRulesRead(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Rule>> {
-            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicRulesRead(slug, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Some of these may also be in the given topic - can we show that?  This will be deprecated at some point because we only care about the tag link.
-         * @summary Lists the available rules that share a tag with this topic.
-         * @param {string} slug Rule topic slug
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicRulesWithTags(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Rule>> {
-            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicRulesWithTags(slug, options);
+        topicRulesWithTag(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Rule>> {
+            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicRulesWithTag(slug, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4185,20 +4099,6 @@ export const TopicApiFp = function(configuration?: Configuration) {
          */
         topicSystems(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule> {
             const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicSystems(slug, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * This is the main way of linking rules to a topic.
-         * @summary View, add to or delete from the tags in a topic.
-         * @param {string} slug Rule topic slug
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicTagsRead(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Tag>> {
-            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicTagsRead(slug, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4224,7 +4124,8 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
             return TopicApiFp(configuration).topicList(showDisabled, options)(axios, basePath);
         },
         /**
-         * Rules have topics, set by Insights administrators.  This is a view of the topics available, along with the rules and systems to which they apply.
+         * This also lists the topic's impacted systems count.
+         * @summary Retrieve a single topic by slug.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4233,24 +4134,13 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
             return TopicApiFp(configuration).topicRead(slug, options)(axios, basePath);
         },
         /**
-         * This will be deleted in the future.
-         * @summary View, add to or delete from the rules in this topic
+         * Lists the available rules that have this tag.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicRulesRead(slug: string, options?: any) {
-            return TopicApiFp(configuration).topicRulesRead(slug, options)(axios, basePath);
-        },
-        /**
-         * Some of these may also be in the given topic - can we show that?  This will be deprecated at some point because we only care about the tag link.
-         * @summary Lists the available rules that share a tag with this topic.
-         * @param {string} slug Rule topic slug
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicRulesWithTags(slug: string, options?: any) {
-            return TopicApiFp(configuration).topicRulesWithTags(slug, options)(axios, basePath);
+        topicRulesWithTag(slug: string, options?: any) {
+            return TopicApiFp(configuration).topicRulesWithTag(slug, options)(axios, basePath);
         },
         /**
          * Systems are just listed by their UUID.
@@ -4261,16 +4151,6 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
          */
         topicSystems(slug: string, options?: any) {
             return TopicApiFp(configuration).topicSystems(slug, options)(axios, basePath);
-        },
-        /**
-         * This is the main way of linking rules to a topic.
-         * @summary View, add to or delete from the tags in a topic.
-         * @param {string} slug Rule topic slug
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicTagsRead(slug: string, options?: any) {
-            return TopicApiFp(configuration).topicTagsRead(slug, options)(axios, basePath);
         },
     };
 };
@@ -4295,7 +4175,8 @@ export class TopicApi extends BaseAPI {
     }
 
     /**
-     * Rules have topics, set by Insights administrators.  This is a view of the topics available, along with the rules and systems to which they apply.
+     * This also lists the topic's impacted systems count.
+     * @summary Retrieve a single topic by slug.
      * @param {string} slug Rule topic slug
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4306,27 +4187,14 @@ export class TopicApi extends BaseAPI {
     }
 
     /**
-     * This will be deleted in the future.
-     * @summary View, add to or delete from the rules in this topic
+     * Lists the available rules that have this tag.
      * @param {string} slug Rule topic slug
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TopicApi
      */
-    public topicRulesRead(slug: string, options?: any) {
-        return TopicApiFp(this.configuration).topicRulesRead(slug, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Some of these may also be in the given topic - can we show that?  This will be deprecated at some point because we only care about the tag link.
-     * @summary Lists the available rules that share a tag with this topic.
-     * @param {string} slug Rule topic slug
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TopicApi
-     */
-    public topicRulesWithTags(slug: string, options?: any) {
-        return TopicApiFp(this.configuration).topicRulesWithTags(slug, options)(this.axios, this.basePath);
+    public topicRulesWithTag(slug: string, options?: any) {
+        return TopicApiFp(this.configuration).topicRulesWithTag(slug, options)(this.axios, this.basePath);
     }
 
     /**
@@ -4339,18 +4207,6 @@ export class TopicApi extends BaseAPI {
      */
     public topicSystems(slug: string, options?: any) {
         return TopicApiFp(this.configuration).topicSystems(slug, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * This is the main way of linking rules to a topic.
-     * @summary View, add to or delete from the tags in a topic.
-     * @param {string} slug Rule topic slug
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TopicApi
-     */
-    public topicTagsRead(slug: string, options?: any) {
-        return TopicApiFp(this.configuration).topicTagsRead(slug, options)(this.axios, this.basePath);
     }
 
 }

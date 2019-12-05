@@ -216,6 +216,46 @@ export interface GroupPrincipalIn {
 /**
  *
  * @export
+ * @interface GroupRoleIn
+ */
+export interface GroupRoleIn {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof GroupRoleIn
+     */
+    roles: Array<string>;
+}
+
+/**
+ *
+ * @export
+ * @interface GroupRolesPagination
+ */
+export interface GroupRolesPagination {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof GroupRolesPagination
+     */
+    meta?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof GroupRolesPagination
+     */
+    links?: PaginationLinks;
+    /**
+     *
+     * @type {Array<Role>}
+     * @memberof GroupRolesPagination
+     */
+    data: Array<Role>;
+}
+
+/**
+ *
+ * @export
  * @interface GroupWithPrincipals
  */
 export interface GroupWithPrincipals {
@@ -255,6 +295,56 @@ export interface GroupWithPrincipals {
      * @memberof GroupWithPrincipals
      */
     principals: Array<Principal>;
+}
+
+/**
+ *
+ * @export
+ * @interface GroupWithPrincipalsAndRoles
+ */
+export interface GroupWithPrincipalsAndRoles {
+    /**
+     *
+     * @type {string}
+     * @memberof GroupWithPrincipalsAndRoles
+     */
+    name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof GroupWithPrincipalsAndRoles
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof GroupWithPrincipalsAndRoles
+     */
+    uuid: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof GroupWithPrincipalsAndRoles
+     */
+    created: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof GroupWithPrincipalsAndRoles
+     */
+    modified: Date;
+    /**
+     *
+     * @type {Array<Principal>}
+     * @memberof GroupWithPrincipalsAndRoles
+     */
+    principals: Array<Principal>;
+    /**
+     *
+     * @type {Array<Role>}
+     * @memberof GroupWithPrincipalsAndRoles
+     */
+    roles: Array<Role>;
 }
 
 /**
@@ -1057,6 +1147,54 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          *
+         * @summary Add a role to a group in the tenant
+         * @param {string} uuid ID of group to update
+         * @param {GroupRoleIn} groupRoleIn Role to add to a group
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        addRoleToGroup(uuid: string, groupRoleIn: GroupRoleIn, options: any = {}): RequestArgs {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling addRoleToGroup.');
+            }
+            // verify required parameter 'groupRoleIn' is not null or undefined
+            if (groupRoleIn === null || groupRoleIn === undefined) {
+                throw new RequiredError('groupRoleIn','Required parameter groupRoleIn was null or undefined when calling addRoleToGroup.');
+            }
+            const localVarPath = `/groups/{uuid}/roles/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"GroupRoleIn" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(groupRoleIn || {}) : (groupRoleIn || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
          * @summary Create a group in a tenant
          * @param {Group} group Group to create in tenant
          * @param {*} [options] Override http request option.
@@ -1186,6 +1324,54 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          *
+         * @summary Remove a role from a group in the tenant
+         * @param {string} uuid ID of group to update
+         * @param {string} roles A comma separated list of role UUIDs for roles to remove from the group
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteRoleFromGroup(uuid: string, roles: string, options: any = {}): RequestArgs {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling deleteRoleFromGroup.');
+            }
+            // verify required parameter 'roles' is not null or undefined
+            if (roles === null || roles === undefined) {
+                throw new RequiredError('roles','Required parameter roles was null or undefined when calling deleteRoleFromGroup.');
+            }
+            const localVarPath = `/groups/{uuid}/roles/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'DELETE' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (roles !== undefined) {
+                localVarQueryParameter['roles'] = roles;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
          * @summary Get a group in the tenant
          * @param {string} uuid ID of group to get
          * @param {*} [options] Override http request option.
@@ -1288,6 +1474,55 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          *
+         * @summary List the roles for a group in the tenant
+         * @param {string} uuid ID of group
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listRolesForGroup(uuid: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling listRolesForGroup.');
+            }
+            const localVarPath = `/groups/{uuid}/roles/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
          * @summary Udate a group in the tenant
          * @param {string} uuid ID of group to update
          * @param {Group} group Group to update in tenant
@@ -1351,8 +1586,23 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addPrincipalToGroup(uuid: string, groupPrincipalIn: GroupPrincipalIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupWithPrincipals> {
+        addPrincipalToGroup(uuid: string, groupPrincipalIn: GroupPrincipalIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupWithPrincipalsAndRoles> {
             const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).addPrincipalToGroup(uuid, groupPrincipalIn, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
+         * @summary Add a role to a group in the tenant
+         * @param {string} uuid ID of group to update
+         * @param {GroupRoleIn} groupRoleIn Role to add to a group
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        addRoleToGroup(uuid: string, groupRoleIn: GroupRoleIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupWithPrincipalsAndRoles> {
+            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).addRoleToGroup(uuid, groupRoleIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1403,12 +1653,27 @@ export const GroupApiFp = function(configuration?: Configuration) {
         },
         /**
          *
+         * @summary Remove a role from a group in the tenant
+         * @param {string} uuid ID of group to update
+         * @param {string} roles A comma separated list of role UUIDs for roles to remove from the group
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteRoleFromGroup(uuid: string, roles: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).deleteRoleFromGroup(uuid, roles, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
          * @summary Get a group in the tenant
          * @param {string} uuid ID of group to get
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getGroup(uuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupWithPrincipals> {
+        getGroup(uuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupWithPrincipalsAndRoles> {
             const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).getGroup(uuid, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1429,6 +1694,22 @@ export const GroupApiFp = function(configuration?: Configuration) {
          */
         listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, orderBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupPagination> {
             const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listGroups(limit, offset, name, scope, username, orderBy, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
+         * @summary List the roles for a group in the tenant
+         * @param {string} uuid ID of group
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listRolesForGroup(uuid: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination> {
+            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1471,6 +1752,17 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          *
+         * @summary Add a role to a group in the tenant
+         * @param {string} uuid ID of group to update
+         * @param {GroupRoleIn} groupRoleIn Role to add to a group
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        addRoleToGroup(uuid: string, groupRoleIn: GroupRoleIn, options?: any) {
+            return GroupApiFp(configuration).addRoleToGroup(uuid, groupRoleIn, options)(axios, basePath);
+        },
+        /**
+         *
          * @summary Create a group in a tenant
          * @param {Group} group Group to create in tenant
          * @param {*} [options] Override http request option.
@@ -1502,6 +1794,17 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          *
+         * @summary Remove a role from a group in the tenant
+         * @param {string} uuid ID of group to update
+         * @param {string} roles A comma separated list of role UUIDs for roles to remove from the group
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteRoleFromGroup(uuid: string, roles: string, options?: any) {
+            return GroupApiFp(configuration).deleteRoleFromGroup(uuid, roles, options)(axios, basePath);
+        },
+        /**
+         *
          * @summary Get a group in the tenant
          * @param {string} uuid ID of group to get
          * @param {*} [options] Override http request option.
@@ -1524,6 +1827,18 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          */
         listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, orderBy?: string, options?: any) {
             return GroupApiFp(configuration).listGroups(limit, offset, name, scope, username, orderBy, options)(axios, basePath);
+        },
+        /**
+         *
+         * @summary List the roles for a group in the tenant
+         * @param {string} uuid ID of group
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listRolesForGroup(uuid: string, limit?: number, offset?: number, options?: any) {
+            return GroupApiFp(configuration).listRolesForGroup(uuid, limit, offset, options)(axios, basePath);
         },
         /**
          *
@@ -1557,6 +1872,19 @@ export class GroupApi extends BaseAPI {
      */
     public addPrincipalToGroup(uuid: string, groupPrincipalIn: GroupPrincipalIn, options?: any) {
         return GroupApiFp(this.configuration).addPrincipalToGroup(uuid, groupPrincipalIn, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary Add a role to a group in the tenant
+     * @param {string} uuid ID of group to update
+     * @param {GroupRoleIn} groupRoleIn Role to add to a group
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GroupApi
+     */
+    public addRoleToGroup(uuid: string, groupRoleIn: GroupRoleIn, options?: any) {
+        return GroupApiFp(this.configuration).addRoleToGroup(uuid, groupRoleIn, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1598,6 +1926,19 @@ export class GroupApi extends BaseAPI {
 
     /**
      *
+     * @summary Remove a role from a group in the tenant
+     * @param {string} uuid ID of group to update
+     * @param {string} roles A comma separated list of role UUIDs for roles to remove from the group
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GroupApi
+     */
+    public deleteRoleFromGroup(uuid: string, roles: string, options?: any) {
+        return GroupApiFp(this.configuration).deleteRoleFromGroup(uuid, roles, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
      * @summary Get a group in the tenant
      * @param {string} uuid ID of group to get
      * @param {*} [options] Override http request option.
@@ -1623,6 +1964,20 @@ export class GroupApi extends BaseAPI {
      */
     public listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, orderBy?: string, options?: any) {
         return GroupApiFp(this.configuration).listGroups(limit, offset, name, scope, username, orderBy, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary List the roles for a group in the tenant
+     * @param {string} uuid ID of group
+     * @param {number} [limit] Parameter for selecting the amount of data returned.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GroupApi
+     */
+    public listRolesForGroup(uuid: string, limit?: number, offset?: number, options?: any) {
+        return GroupApiFp(this.configuration).listRolesForGroup(uuid, limit, offset, options)(this.axios, this.basePath);
     }
 
     /**

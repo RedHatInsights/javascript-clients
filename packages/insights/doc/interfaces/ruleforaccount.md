@@ -20,6 +20,7 @@
 * [deletedAt](ruleforaccount.md#deletedat)
 * [description](ruleforaccount.md#description)
 * [generic](ruleforaccount.md#generic)
+* [hostsAckedCount](ruleforaccount.md#hostsackedcount)
 * [impact](ruleforaccount.md#impact)
 * [impactedSystemsCount](ruleforaccount.md#impactedsystemscount)
 * [likelihood](ruleforaccount.md#likelihood)
@@ -116,6 +117,19 @@ ___
 *Defined in [api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L747)*
 
 *__type__*: {string}
+
+*__memberof__*: RuleForAccount
+
+___
+<a id="hostsackedcount"></a>
+
+### `<Optional>` hostsAckedCount
+
+**● hostsAckedCount**: *`number`*
+
+*Defined in [api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L789)*
+
+*__type__*: {number}
 
 *__memberof__*: RuleForAccount
 
