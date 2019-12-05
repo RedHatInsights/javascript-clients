@@ -109,7 +109,7 @@ ___
 
 ▸ **statsHitsSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
 
-*Defined in [api.ts:3417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3417)*
+*Defined in [api.ts:3411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3411)*
 
 Simple time series of day and number of hits (per system-rule tuple) per day.
 
@@ -135,7 +135,7 @@ ___
 
 ▸ **statsList**(options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:3427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3427)*
+*Defined in [api.ts:3421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3421)*
 
 Provide a simple list of URLs contained here. Copied sort-of from the APIRootView's `get` method.
 
@@ -158,7 +158,7 @@ ___
 
 ▸ **statsReports**(options?: *`any`*): `AxiosPromise`<[Stats](../interfaces/stats.md)>
 
-*Defined in [api.ts:3437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3437)*
+*Defined in [api.ts:3431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3431)*
 
 View the statistics for this account.
 
@@ -181,7 +181,7 @@ ___
 
 ▸ **statsRules**(options?: *`any`*): `AxiosPromise`<[Stats](../interfaces/stats.md)>
 
-*Defined in [api.ts:3447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3447)*
+*Defined in [api.ts:3441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3441)*
 
 View the statistics for this account.
 
@@ -204,7 +204,7 @@ ___
 
 ▸ **statsRulesHitSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
 
-*Defined in [api.ts:3460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3460)*
+*Defined in [api.ts:3454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3454)*
 
 Simple time series of day and number of systems impacted by any rule
 
@@ -230,7 +230,7 @@ ___
 
 ▸ **statsSystems**(options?: *`any`*): `AxiosPromise`<[Stats](../interfaces/stats.md)>
 
-*Defined in [api.ts:3470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3470)*
+*Defined in [api.ts:3464](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3464)*
 
 View the statistics for this account.
 
@@ -253,7 +253,7 @@ ___
 
 ▸ **statsSystemsImpactedSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
 
-*Defined in [api.ts:3483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3483)*
+*Defined in [api.ts:3477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3477)*
 
 Simple time series of day and number of systems impacted by any rule
 
@@ -279,7 +279,7 @@ ___
 
 ▸ **statsSystemsReportingSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
 
-*Defined in [api.ts:3496](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3496)*
+*Defined in [api.ts:3490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3490)*
 
 Simple time series of day and number of systems having uploaded that day.
 

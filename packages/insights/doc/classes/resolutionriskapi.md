@@ -102,7 +102,7 @@ ___
 
 ▸ **resolutionRiskList**(options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2425)*
+*Defined in [api.ts:2419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2419)*
 
 List all total risk values.
 

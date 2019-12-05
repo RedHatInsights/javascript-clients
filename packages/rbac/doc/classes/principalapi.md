@@ -102,7 +102,7 @@ ___
 
 ▸ **listPrincipals**(limit?: *`number`*, offset?: *`number`*, usernames?: *`string`*, options?: *`any`*): `AxiosPromise`<[PrincipalPagination](../interfaces/principalpagination.md)>
 
-*Defined in [api.ts:2236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2236)*
+*Defined in [api.ts:2591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2591)*
 
 *__summary__*: List the principals for a tenant
 

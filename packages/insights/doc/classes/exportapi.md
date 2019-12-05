@@ -104,7 +104,7 @@ ___
 
 ▸ **exportHitsList**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
 
-*Defined in [api.ts:1898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1898)*
+*Defined in [api.ts:1884](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1884)*
 
 Get each host and all rules currently affecting it. This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store). We also only present active, non-acked (on an account AND host level) rules.
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **exportListCsv**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1914](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1914)*
+*Defined in [api.ts:1900](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1900)*
 
 Export the hosts and rules listing as CSV or JSON
 
@@ -162,7 +162,7 @@ ___
 
 ▸ **exportListJson**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
 
-*Defined in [api.ts:1930](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1930)*
+*Defined in [api.ts:1916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1916)*
 
 Export the hosts and rules listing as CSV or JSON
 
