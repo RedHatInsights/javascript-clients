@@ -32,7 +32,7 @@
 
 **● comments**: *`string`*
 
-*Defined in [api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L119)*
+*Defined in [api.ts:119](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L119)*
 
 Comments for action
 
@@ -47,7 +47,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L89)*
+*Defined in [api.ts:89](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L89)*
 
 Timestamp of creation
 
@@ -62,7 +62,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L83)*
+*Defined in [api.ts:83](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L83)*
 
 *__type__*: {string}
 
@@ -75,7 +75,7 @@ ___
 
 **● operation**: *[OperationEnum](../enums/action.operationenum.md)*
 
-*Defined in [api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L113)*
+*Defined in [api.ts:113](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L113)*
 
 Types of action, may be one of the value (approve, cancel, deny, notify, memo, or skip). The request will be updated according to the operation.
 
@@ -90,7 +90,7 @@ ___
 
 **● processedBy**: *`string`*
 
-*Defined in [api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L107)*
+*Defined in [api.ts:107](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L107)*
 
 The person who performs the action
 
@@ -105,7 +105,7 @@ ___
 
 **● requestId**: *`string`*
 
-*Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L101)*
+*Defined in [api.ts:101](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L101)*
 
 Associated request id
 
@@ -120,7 +120,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L95)*
+*Defined in [api.ts:95](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L95)*
 
 Timestamp of update
 

@@ -46,7 +46,7 @@ SystemApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -81,7 +81,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -92,7 +92,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **systemList**(limit?: *`number`*, offset?: *`number`*, sort?: *"hits" \| "last_seen" \| "display_name" \| "-hits" \| "-last_seen" \| "-display_name"*, displayName?: *`string`*, options?: *`any`*): `AxiosPromise`<[InlineResponse2004](../interfaces/inlineresponse2004.md)>
 
-*Defined in [api.ts:3722](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3722)*
+*Defined in [api.ts:3722](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L3722)*
 
 Returns systems with their hit count and last upload time.
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **systemRead**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[System](../interfaces/system.md)>
 
-*Defined in [api.ts:3733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3733)*
+*Defined in [api.ts:3733](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L3733)*
 
 List systems, or retrieve a system by UUID.
 
@@ -155,7 +155,7 @@ ___
 
 ▸ **systemReports**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:3744](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3744)*
+*Defined in [api.ts:3744](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L3744)*
 
 Returns the list of latest reports for an Inventory Host ID that: \* are in the user's account \* have an active, not-deleted rule \* where the rule has not been acked by this account If the host ID is not found, return an empty list.
 

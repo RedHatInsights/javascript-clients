@@ -48,7 +48,7 @@ RoleApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
 
 **Parameters:**
 
@@ -72,7 +72,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -83,7 +83,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -94,7 +94,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 ▸ **createRoles**(roleIn: *[RoleIn](../interfaces/rolein.md)*, options?: *`any`*): `AxiosPromise`<[RoleWithAccess](../interfaces/rolewithaccess.md)>
 
-*Defined in [api.ts:2995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2995)*
+*Defined in [api.ts:2995](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L2995)*
 
 *__summary__*: Create a roles for a tenant
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **deleteRole**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:3007](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3007)*
+*Defined in [api.ts:3007](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L3007)*
 
 *__summary__*: Delete a role in the tenant
 
@@ -154,7 +154,7 @@ ___
 
 ▸ **getRole**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[RoleWithAccess](../interfaces/rolewithaccess.md)>
 
-*Defined in [api.ts:3019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3019)*
+*Defined in [api.ts:3019](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L3019)*
 
 *__summary__*: Get a role in the tenant
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **listRoles**(limit?: *`number`*, offset?: *`number`*, name?: *`string`*, scope?: *"account" \| "principal"*, orderBy?: *`string`*, options?: *`any`*): `AxiosPromise`<[RolePagination](../interfaces/rolepagination.md)>
 
-*Defined in [api.ts:3035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3035)*
+*Defined in [api.ts:3035](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L3035)*
 
 *__summary__*: List the roles for a tenant
 
@@ -206,7 +206,7 @@ ___
 
 ▸ **updateRole**(uuid: *`string`*, roleWithAccess: *[RoleWithAccess](../interfaces/rolewithaccess.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:3048](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3048)*
+*Defined in [api.ts:3048](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L3048)*
 
 *__summary__*: Update a Role in the tenant
 

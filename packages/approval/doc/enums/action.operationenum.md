@@ -27,7 +27,7 @@
 
 **Approve**:  = "approve"
 
-*Defined in [api.ts:132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L132)*
+*Defined in [api.ts:132](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L132)*
 
 ___
 <a id="cancel"></a>
@@ -36,7 +36,7 @@ ___
 
 **Cancel**:  = "cancel"
 
-*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L133)*
+*Defined in [api.ts:133](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L133)*
 
 ___
 <a id="deny"></a>
@@ -45,7 +45,7 @@ ___
 
 **Deny**:  = "deny"
 
-*Defined in [api.ts:134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L134)*
+*Defined in [api.ts:134](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L134)*
 
 ___
 <a id="memo"></a>
@@ -54,7 +54,7 @@ ___
 
 **Memo**:  = "memo"
 
-*Defined in [api.ts:136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L136)*
+*Defined in [api.ts:136](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L136)*
 
 ___
 <a id="notify"></a>
@@ -63,7 +63,7 @@ ___
 
 **Notify**:  = "notify"
 
-*Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L135)*
+*Defined in [api.ts:135](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L135)*
 
 ___
 <a id="skip"></a>
@@ -72,7 +72,7 @@ ___
 
 **Skip**:  = "skip"
 
-*Defined in [api.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L137)*
+*Defined in [api.ts:137](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L137)*
 
 ___
 

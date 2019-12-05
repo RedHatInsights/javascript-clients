@@ -31,7 +31,7 @@
 
 **● apiVersion**: *`number`*
 
-*Defined in [api.ts:888](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L888)*
+*Defined in [api.ts:888](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L888)*
 
 *__type__*: {number}
 
@@ -44,7 +44,7 @@ ___
 
 **● commit**: *`string`*
 
-*Defined in [api.ts:894](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L894)*
+*Defined in [api.ts:894](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L894)*
 
 *__type__*: {string}
 
@@ -57,7 +57,7 @@ ___
 
 **● modules**: *`any`*
 
-*Defined in [api.ts:918](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L918)*
+*Defined in [api.ts:918](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L918)*
 
 *__type__*: {any}
 
@@ -70,7 +70,7 @@ ___
 
 **● platformInfo**: *`any`*
 
-*Defined in [api.ts:906](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L906)*
+*Defined in [api.ts:906](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L906)*
 
 *__type__*: {any}
 
@@ -83,7 +83,7 @@ ___
 
 **● pythonVersion**: *`string`*
 
-*Defined in [api.ts:912](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L912)*
+*Defined in [api.ts:912](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L912)*
 
 *__type__*: {string}
 
@@ -96,7 +96,7 @@ ___
 
 **● serverAddress**: *`string`*
 
-*Defined in [api.ts:900](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L900)*
+*Defined in [api.ts:900](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L900)*
 
 *__type__*: {string}
 

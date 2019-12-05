@@ -35,7 +35,7 @@
 
 **● active**: *`boolean`*
 
-*Defined in [api.ts:806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L806)*
+*Defined in [api.ts:806](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L806)*
 
 Flag to indicate when the provider is configured correctly
 
@@ -50,7 +50,7 @@ ___
 
 **● authentication**: *[ProviderAuthenticationOut](providerauthenticationout.md)*
 
-*Defined in [api.ts:770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L770)*
+*Defined in [api.ts:770](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L770)*
 
 *__type__*: {ProviderAuthenticationOut}
 
@@ -63,7 +63,7 @@ ___
 
 **● billingSource**: *[ProviderBillingSourceOut](providerbillingsourceout.md)*
 
-*Defined in [api.ts:776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L776)*
+*Defined in [api.ts:776](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L776)*
 
 *__type__*: {ProviderBillingSourceOut}
 
@@ -76,7 +76,7 @@ ___
 
 **● createdBy**: *[UserOut](userout.md)*
 
-*Defined in [api.ts:788](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L788)*
+*Defined in [api.ts:788](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L788)*
 
 *__type__*: {UserOut}
 
@@ -89,7 +89,7 @@ ___
 
 **● customer**: *[CustomerOut](customerout.md)*
 
-*Defined in [api.ts:782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L782)*
+*Defined in [api.ts:782](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L782)*
 
 *__type__*: {CustomerOut}
 
@@ -102,7 +102,7 @@ ___
 
 **● infrastructure**: *`string`*
 
-*Defined in [api.ts:800](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L800)*
+*Defined in [api.ts:800](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L800)*
 
 OpenShift foundational infrastructure type.
 
@@ -117,7 +117,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:752](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L752)*
+*Defined in [api.ts:752](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L752)*
 
 *__type__*: {string}
 
@@ -130,7 +130,7 @@ ___
 
 **● stats**: *`any`*
 
-*Defined in [api.ts:794](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L794)*
+*Defined in [api.ts:794](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L794)*
 
 Dictionary key is the start of a billing month. Value is report processing statistics.
 
@@ -145,7 +145,7 @@ ___
 
 **● type**: *`string`*
 
-*Defined in [api.ts:758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L758)*
+*Defined in [api.ts:758](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L758)*
 
 *__type__*: {string}
 
@@ -158,7 +158,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L764)*
+*Defined in [api.ts:764](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L764)*
 
 *__type__*: {string}
 

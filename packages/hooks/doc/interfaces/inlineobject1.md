@@ -26,7 +26,7 @@
 
 **● endpoint**: *[EndpointsEndpoint](endpointsendpoint.md)*
 
-*Defined in [api.ts:634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L634)*
+*Defined in [api.ts:634](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L634)*
 
 *__type__*: {EndpointsEndpoint}
 

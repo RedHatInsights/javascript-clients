@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[Cluster](cluster.md)>*
 
-*Defined in [api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L283)*
+*Defined in [api.ts:283](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L283)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L277)*
+*Defined in [api.ts:277](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L277)*
 
 *__type__*: {CollectionLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L271)*
+*Defined in [api.ts:271](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L271)*
 
 *__type__*: {CollectionMetadata}
 

@@ -48,7 +48,7 @@ CostModelApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 **Parameters:**
 
@@ -72,7 +72,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -83,7 +83,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -94,7 +94,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 ▸ **createCostModel**(costModel: *[CostModel](../interfaces/costmodel.md)*, options?: *`any`*): `AxiosPromise`<[CostModelOut](../interfaces/costmodelout.md)>
 
-*Defined in [api.ts:4178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4178)*
+*Defined in [api.ts:4178](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L4178)*
 
 *__summary__*: Create a new cost model.
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **deleteCostModel**(costModelUuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:4190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4190)*
+*Defined in [api.ts:4190](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L4190)*
 
 *__summary__*: Delete a Cost Model
 
@@ -154,7 +154,7 @@ ___
 
 ▸ **getCostModel**(costModelUuid: *`string`*, options?: *`any`*): `AxiosPromise`<[CostModelOut](../interfaces/costmodelout.md)>
 
-*Defined in [api.ts:4202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4202)*
+*Defined in [api.ts:4202](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L4202)*
 
 *__summary__*: Get a Cost Model.
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **listCostModels**(offset?: *`number`*, limit?: *`number`*, providerUuid?: *`string`*, sourceType?: *`string`*, name?: *`string`*, options?: *`any`*): `AxiosPromise`<[CostModelPagination](../interfaces/costmodelpagination.md)>
 
-*Defined in [api.ts:4218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4218)*
+*Defined in [api.ts:4218](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L4218)*
 
 *__summary__*: List the cost models
 
@@ -206,7 +206,7 @@ ___
 
 ▸ **updateCostModel**(costModelUuid: *`string`*, costModel: *[CostModel](../interfaces/costmodel.md)*, options?: *`any`*): `AxiosPromise`<[CostModelOut](../interfaces/costmodelout.md)>
 
-*Defined in [api.ts:4231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4231)*
+*Defined in [api.ts:4231](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L4231)*
 
 *__summary__*: Update a Cost Model
 

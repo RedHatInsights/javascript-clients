@@ -26,7 +26,7 @@
 
 **● schema**: *`any`*
 
-*Defined in [api.ts:290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L290)*
+*Defined in [api.ts:290](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L290)*
 
 *__type__*: {any}
 

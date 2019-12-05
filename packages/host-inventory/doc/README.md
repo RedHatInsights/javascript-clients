@@ -142,7 +142,7 @@ API documentation
 
 **● BASE_PATH**: *`string`* =  "http://localhost".replace(/\/+$/, "")
 
-*Defined in [api.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L20)*
+*Defined in [api.ts:20](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L20)*
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 ▸ **HostsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1099)*
+*Defined in [api.ts:1099](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L1099)*
 
 HostsApi - axios parameter creator
 
@@ -173,7 +173,7 @@ ___
 
 ▸ **HostsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1917)*
+*Defined in [api.ts:1917](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L1917)*
 
 HostsApi - factory interface
 
@@ -194,7 +194,7 @@ ___
 
 ▸ **HostsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1730](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1730)*
+*Defined in [api.ts:1730](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L1730)*
 
 HostsApi - functional programming interface
 
@@ -216,7 +216,7 @@ ___
 
 **COLLECTION_FORMATS**: *`object`*
 
-*Defined in [api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L26)*
+*Defined in [api.ts:26](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L26)*
 
 *__export__*: 
 
@@ -226,7 +226,7 @@ ___
 
 **● csv**: *`string`* = ","
 
-*Defined in [api.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L27)*
+*Defined in [api.ts:27](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L27)*
 
 ___
 <a id="collection_formats.pipes"></a>
@@ -235,7 +235,7 @@ ___
 
 **● pipes**: *`string`* = "|"
 
-*Defined in [api.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L30)*
+*Defined in [api.ts:30](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L30)*
 
 ___
 <a id="collection_formats.ssv"></a>
@@ -244,7 +244,7 @@ ___
 
 **● ssv**: *`string`* = " "
 
-*Defined in [api.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L28)*
+*Defined in [api.ts:28](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L28)*
 
 ___
 <a id="collection_formats.tsv"></a>
@@ -253,7 +253,7 @@ ___
 
 **● tsv**: *`string`* = "	"
 
-*Defined in [api.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L29)*
+*Defined in [api.ts:29](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L29)*
 
 ___
 

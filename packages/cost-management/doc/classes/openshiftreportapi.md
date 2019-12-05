@@ -53,7 +53,7 @@ OpenShiftReportApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 **Parameters:**
 
@@ -77,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -88,7 +88,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -99,7 +99,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **getOpenShiftAWSCostReports**(delta?: *`string`*, filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportCosts](../interfaces/reportcosts.md)>
 
-*Defined in [api.ts:5600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5600)*
+*Defined in [api.ts:5600](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L5600)*
 
 *__summary__*: Query to obtain OpenShift on AWS cost reports
 
@@ -140,7 +140,7 @@ ___
 
 ▸ **getOpenShiftAWSInventoryInstanceReport**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportOpenShiftAWSInstanceInventory](../interfaces/reportopenshiftawsinstanceinventory.md)>
 
-*Defined in [api.ts:5617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5617)*
+*Defined in [api.ts:5617](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L5617)*
 
 *__summary__*: Query to obtain OpenShift on AWS instance data
 
@@ -169,7 +169,7 @@ ___
 
 ▸ **getOpenShiftAWSInventoryStorageReport**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportOpenShiftAWSStorageInventory](../interfaces/reportopenshiftawsstorageinventory.md)>
 
-*Defined in [api.ts:5634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5634)*
+*Defined in [api.ts:5634](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L5634)*
 
 *__summary__*: Query to obtain OpenShift on AWS storage data
 
@@ -198,7 +198,7 @@ ___
 
 ▸ **getOpenShiftAzureCostReports**(delta?: *`string`*, filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportCosts](../interfaces/reportcosts.md)>
 
-*Defined in [api.ts:5651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5651)*
+*Defined in [api.ts:5651](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L5651)*
 
 *__summary__*: Query to obtain OpenShift on Azure cost reports
 
@@ -227,7 +227,7 @@ ___
 
 ▸ **getOpenShiftAzureInventoryInstanceReport**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportOpenShiftAzureInstanceInventory](../interfaces/reportopenshiftazureinstanceinventory.md)>
 
-*Defined in [api.ts:5668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5668)*
+*Defined in [api.ts:5668](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L5668)*
 
 *__summary__*: Query to obtain OpenShift on Azure instance data
 
@@ -256,7 +256,7 @@ ___
 
 ▸ **getOpenShiftAzureInventoryStorageReport**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportOpenShiftAzureStorageInventory](../interfaces/reportopenshiftazurestorageinventory.md)>
 
-*Defined in [api.ts:5685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5685)*
+*Defined in [api.ts:5685](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L5685)*
 
 *__summary__*: Query to obtain OpenShift on Azure storage data
 
@@ -285,7 +285,7 @@ ___
 
 ▸ **getOpenShiftComputeReports**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportOpenShiftCpu](../interfaces/reportopenshiftcpu.md)>
 
-*Defined in [api.ts:5701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5701)*
+*Defined in [api.ts:5701](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L5701)*
 
 *__summary__*: Query to obtain OpenShift compute usage information
 
@@ -313,7 +313,7 @@ ___
 
 ▸ **getOpenShiftCostReports**(delta?: *`string`*, filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportCost](../interfaces/reportcost.md)>
 
-*Defined in [api.ts:5718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5718)*
+*Defined in [api.ts:5718](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L5718)*
 
 *__summary__*: Query to obtain cost reports
 
@@ -342,7 +342,7 @@ ___
 
 ▸ **getOpenShiftMemoryReports**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportOpenShiftMemory](../interfaces/reportopenshiftmemory.md)>
 
-*Defined in [api.ts:5734](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5734)*
+*Defined in [api.ts:5734](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L5734)*
 
 *__summary__*: Query to obtain OpenShift memory usage information
 
@@ -370,7 +370,7 @@ ___
 
 ▸ **getOpenShiftVolumeReports**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportOpenShiftVolume](../interfaces/reportopenshiftvolume.md)>
 
-*Defined in [api.ts:5750](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5750)*
+*Defined in [api.ts:5750](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L5750)*
 
 *__summary__*: Query to obtain OpenShift volume usage information
 

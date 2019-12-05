@@ -49,7 +49,7 @@
 
 **● active**: *`boolean`*
 
-*Defined in [api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L687)*
+*Defined in [api.ts:687](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L687)*
 
 *__type__*: {boolean}
 
@@ -62,7 +62,7 @@ ___
 
 **● category**: *[RuleCategory](rulecategory.md)*
 
-*Defined in [api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L693)*
+*Defined in [api.ts:693](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L693)*
 
 *__type__*: {RuleCategory}
 
@@ -75,7 +75,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L657)*
+*Defined in [api.ts:657](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L657)*
 
 *__type__*: {Date}
 
@@ -88,7 +88,7 @@ ___
 
 **● deletedAt**: *`Date`*
 
-*Defined in [api.ts:669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L669)*
+*Defined in [api.ts:669](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L669)*
 
 *__type__*: {Date}
 
@@ -101,7 +101,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L681)*
+*Defined in [api.ts:681](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L681)*
 
 *__type__*: {string}
 
@@ -114,7 +114,7 @@ ___
 
 **● generic**: *`string`*
 
-*Defined in [api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L747)*
+*Defined in [api.ts:747](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L747)*
 
 *__type__*: {string}
 
@@ -127,7 +127,7 @@ ___
 
 **● hostsAckedCount**: *`number`*
 
-*Defined in [api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L789)*
+*Defined in [api.ts:789](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L789)*
 
 *__type__*: {number}
 
@@ -140,7 +140,7 @@ ___
 
 **● impact**: *[RuleImpact](ruleimpact.md)*
 
-*Defined in [api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L699)*
+*Defined in [api.ts:699](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L699)*
 
 *__type__*: {RuleImpact}
 
@@ -153,7 +153,7 @@ ___
 
 **● impactedSystemsCount**: *`number`*
 
-*Defined in [api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L765)*
+*Defined in [api.ts:765](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L765)*
 
 *__type__*: {number}
 
@@ -166,7 +166,7 @@ ___
 
 **● likelihood**: *`number`*
 
-*Defined in [api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L705)*
+*Defined in [api.ts:705](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L705)*
 
 *__type__*: {number}
 
@@ -179,7 +179,7 @@ ___
 
 **● moreInfo**: *`string`*
 
-*Defined in [api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L759)*
+*Defined in [api.ts:759](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L759)*
 
 *__type__*: {string}
 
@@ -192,7 +192,7 @@ ___
 
 **● nodeId**: *`string`*
 
-*Defined in [api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L711)*
+*Defined in [api.ts:711](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L711)*
 
 *__type__*: {string}
 
@@ -205,7 +205,7 @@ ___
 
 **● playbookCount**: *`number`*
 
-*Defined in [api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L723)*
+*Defined in [api.ts:723](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L723)*
 
 *__type__*: {number}
 
@@ -218,7 +218,7 @@ ___
 
 **● publishDate**: *`Date` \| `null`*
 
-*Defined in [api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L735)*
+*Defined in [api.ts:735](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L735)*
 
 *__type__*: {Date}
 
@@ -231,7 +231,7 @@ ___
 
 **● reason**: *`string`*
 
-*Defined in [api.ts:753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L753)*
+*Defined in [api.ts:753](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L753)*
 
 *__type__*: {string}
 
@@ -244,7 +244,7 @@ ___
 
 **● rebootRequired**: *`boolean`*
 
-*Defined in [api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L729)*
+*Defined in [api.ts:729](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L729)*
 
 *__type__*: {boolean}
 
@@ -257,7 +257,7 @@ ___
 
 **● reportsShown**: *`boolean`*
 
-*Defined in [api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L771)*
+*Defined in [api.ts:771](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L771)*
 
 *__type__*: {boolean}
 
@@ -270,7 +270,7 @@ ___
 
 **● resolutionSet**: *`Array`<[Resolution](resolution.md)>*
 
-*Defined in [api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L777)*
+*Defined in [api.ts:777](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L777)*
 
 *__type__*: {Array}
 
@@ -283,7 +283,7 @@ ___
 
 **● ruleId**: *`string`*
 
-*Defined in [api.ts:651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L651)*
+*Defined in [api.ts:651](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L651)*
 
 Rule ID from Insights
 
@@ -298,7 +298,7 @@ ___
 
 **● ruleset**: *[RuleSet](ruleset.md)*
 
-*Defined in [api.ts:675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L675)*
+*Defined in [api.ts:675](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L675)*
 
 *__type__*: {RuleSet}
 
@@ -311,7 +311,7 @@ ___
 
 **● summary**: *`string`*
 
-*Defined in [api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L741)*
+*Defined in [api.ts:741](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L741)*
 
 *__type__*: {string}
 
@@ -324,7 +324,7 @@ ___
 
 **● tags**: *`string`*
 
-*Defined in [api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L717)*
+*Defined in [api.ts:717](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L717)*
 
 *__type__*: {string}
 
@@ -337,7 +337,7 @@ ___
 
 **● totalRisk**: *`number`*
 
-*Defined in [api.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L783)*
+*Defined in [api.ts:783](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L783)*
 
 *__type__*: {number}
 
@@ -350,7 +350,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L663)*
+*Defined in [api.ts:663](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L663)*
 
 *__type__*: {Date}
 

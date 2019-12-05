@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<`any`>*
 
-*Defined in [api.ts:2664](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2664)*
+*Defined in [api.ts:2664](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2664)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:2658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2658)*
+*Defined in [api.ts:2658](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2658)*
 
 *__type__*: {PaginationLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[ReportPaginationMeta](reportpaginationmeta.md)*
 
-*Defined in [api.ts:2652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2652)*
+*Defined in [api.ts:2652](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2652)*
 
 *__type__*: {ReportPaginationMeta}
 

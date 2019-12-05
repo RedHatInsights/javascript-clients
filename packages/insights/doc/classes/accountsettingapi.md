@@ -45,7 +45,7 @@ AccountSettingApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
 **Parameters:**
 
@@ -69,7 +69,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -80,7 +80,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -91,7 +91,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 ▸ **accountSettingCreate**(accountSetting: *[AccountSetting](../interfaces/accountsetting.md)*, options?: *`any`*): `AxiosPromise`<[AccountSetting](../interfaces/accountsetting.md)>
 
-*Defined in [api.ts:1171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1171)*
+*Defined in [api.ts:1171](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L1171)*
 
 Update this account's settings, and return the updated settings.
 
@@ -127,7 +127,7 @@ ___
 
 ▸ **accountSettingList**(options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1181)*
+*Defined in [api.ts:1181](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L1181)*
 
 Show this account's settings, or the defaults.
 

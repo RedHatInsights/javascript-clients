@@ -49,7 +49,7 @@ EndpointsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L49)*
 
 **Parameters:**
 
@@ -73,7 +73,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -84,7 +84,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -95,7 +95,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L49)*
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 ▸ **endpointsCreate**(X_RH_IDENTITY: *`string`*, inlineObject1: *[InlineObject1](../interfaces/inlineobject1.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse201](../interfaces/inlineresponse201.md)>
 
-*Defined in [api.ts:1742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1742)*
+*Defined in [api.ts:1742](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1742)*
 
 Creates an endpoint
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **endpointsDestroy**(X_RH_IDENTITY: *`string`*, id: *`number`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1754)*
+*Defined in [api.ts:1754](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1754)*
 
 *__throws__*: {RequiredError}
 
@@ -155,7 +155,7 @@ ___
 
 ▸ **endpointsIndex**(X_RH_IDENTITY: *`string`*, order?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse2003](../interfaces/inlineresponse2003.md)>
 
-*Defined in [api.ts:1768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1768)*
+*Defined in [api.ts:1768](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1768)*
 
 List all endpoints
 
@@ -182,7 +182,7 @@ ___
 
 ▸ **endpointsShow**(X_RH_IDENTITY: *`string`*, id: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse201](../interfaces/inlineresponse201.md)>
 
-*Defined in [api.ts:1780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1780)*
+*Defined in [api.ts:1780](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1780)*
 
 Shows the requested endpoint
 
@@ -207,7 +207,7 @@ ___
 
 ▸ **endpointsTest**(X_RH_IDENTITY: *`string`*, id: *`number`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1792](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1792)*
+*Defined in [api.ts:1792](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1792)*
 
 Send a test message to the endpoint
 
@@ -232,7 +232,7 @@ ___
 
 ▸ **endpointsUpdate**(X_RH_IDENTITY: *`string`*, id: *`number`*, inlineObject2: *[InlineObject2](../interfaces/inlineobject2.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse201](../interfaces/inlineresponse201.md)>
 
-*Defined in [api.ts:1805](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1805)*
+*Defined in [api.ts:1805](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1805)*
 
 Updates the requested endpoint
 

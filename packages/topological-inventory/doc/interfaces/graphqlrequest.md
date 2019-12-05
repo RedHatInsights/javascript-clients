@@ -28,7 +28,7 @@
 
 **● operationName**: *`string`*
 
-*Defined in [api.ts:1469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1469)*
+*Defined in [api.ts:1469](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1469)*
 
 If the Query contains several named operations, the operationName controls which one should be executed
 
@@ -43,7 +43,7 @@ ___
 
 **● query**: *`string`*
 
-*Defined in [api.ts:1463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1463)*
+*Defined in [api.ts:1463](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1463)*
 
 The GraphQL query
 
@@ -58,7 +58,7 @@ ___
 
 **● variables**: *`any` \| `null`*
 
-*Defined in [api.ts:1475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1475)*
+*Defined in [api.ts:1475](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1475)*
 
 Optional Query variables
 

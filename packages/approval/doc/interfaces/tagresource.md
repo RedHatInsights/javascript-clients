@@ -30,7 +30,7 @@ Resource with tags
 
 **● appName**: *`string`*
 
-*Defined in [api.ts:519](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L519)*
+*Defined in [api.ts:519](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L519)*
 
 *__type__*: {string}
 
@@ -43,7 +43,7 @@ ___
 
 **● objectType**: *`string`*
 
-*Defined in [api.ts:525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L525)*
+*Defined in [api.ts:525](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L525)*
 
 *__type__*: {string}
 
@@ -56,7 +56,7 @@ ___
 
 **● tags**: *`Array`<[Tag](tag.md)>*
 
-*Defined in [api.ts:531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L531)*
+*Defined in [api.ts:531](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L531)*
 
 *__type__*: {Array}
 

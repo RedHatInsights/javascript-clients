@@ -28,7 +28,7 @@
 
 **ApprovalPending**:  = "Approval Pending"
 
-*Defined in [api.ts:575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L575)*
+*Defined in [api.ts:575](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L575)*
 
 ___
 <a id="approved"></a>
@@ -37,7 +37,7 @@ ___
 
 **Approved**:  = "Approved"
 
-*Defined in [api.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L579)*
+*Defined in [api.ts:579](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L579)*
 
 ___
 <a id="completed"></a>
@@ -46,7 +46,7 @@ ___
 
 **Completed**:  = "Completed"
 
-*Defined in [api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L578)*
+*Defined in [api.ts:578](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L578)*
 
 ___
 <a id="created"></a>
@@ -55,7 +55,7 @@ ___
 
 **Created**:  = "Created"
 
-*Defined in [api.ts:574](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L574)*
+*Defined in [api.ts:574](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L574)*
 
 ___
 <a id="denied"></a>
@@ -64,7 +64,7 @@ ___
 
 **Denied**:  = "Denied"
 
-*Defined in [api.ts:580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L580)*
+*Defined in [api.ts:580](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L580)*
 
 ___
 <a id="failed"></a>
@@ -73,7 +73,7 @@ ___
 
 **Failed**:  = "Failed"
 
-*Defined in [api.ts:577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L577)*
+*Defined in [api.ts:577](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L577)*
 
 ___
 <a id="ordered"></a>
@@ -82,7 +82,7 @@ ___
 
 **Ordered**:  = "Ordered"
 
-*Defined in [api.ts:576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L576)*
+*Defined in [api.ts:576](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L576)*
 
 ___
 

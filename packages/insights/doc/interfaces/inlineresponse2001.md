@@ -34,7 +34,7 @@
 
 **● hostname**: *`string`*
 
-*Defined in [api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L265)*
+*Defined in [api.ts:265](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L265)*
 
 *__type__*: {string}
 
@@ -47,7 +47,7 @@ ___
 
 **● lastSeen**: *`string`*
 
-*Defined in [api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L277)*
+*Defined in [api.ts:277](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L277)*
 
 *__type__*: {string}
 
@@ -60,7 +60,7 @@ ___
 
 **● likelihood**: *`number`*
 
-*Defined in [api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L301)*
+*Defined in [api.ts:301](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L301)*
 
 *__type__*: {number}
 
@@ -73,7 +73,7 @@ ___
 
 **● publishDate**: *`string`*
 
-*Defined in [api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L307)*
+*Defined in [api.ts:307](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L307)*
 
 *__type__*: {string}
 
@@ -86,7 +86,7 @@ ___
 
 **● resultsUrl**: *`string`*
 
-*Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L313)*
+*Defined in [api.ts:313](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L313)*
 
 *__type__*: {string}
 
@@ -99,7 +99,7 @@ ___
 
 **● solutionUrl**: *`string`*
 
-*Defined in [api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L289)*
+*Defined in [api.ts:289](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L289)*
 
 *__type__*: {string}
 
@@ -112,7 +112,7 @@ ___
 
 **● title**: *`string`*
 
-*Defined in [api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L283)*
+*Defined in [api.ts:283](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L283)*
 
 *__type__*: {string}
 
@@ -125,7 +125,7 @@ ___
 
 **● totalRisk**: *`number`*
 
-*Defined in [api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L295)*
+*Defined in [api.ts:295](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L295)*
 
 *__type__*: {number}
 
@@ -138,7 +138,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L271)*
+*Defined in [api.ts:271](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L271)*
 
 *__type__*: {string}
 

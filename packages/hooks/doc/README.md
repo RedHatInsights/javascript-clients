@@ -174,7 +174,7 @@ API documentation
 
 **● BASE_PATH**: *`string`* =  "http://localhost".replace(/\/+$/, "")
 
-*Defined in [api.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L20)*
+*Defined in [api.ts:20](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L20)*
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **AppRegistrationApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1002](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1002)*
+*Defined in [api.ts:1002](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1002)*
 
 AppRegistrationApi - axios parameter creator
 
@@ -205,7 +205,7 @@ ___
 
 ▸ **AppRegistrationApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1068)*
+*Defined in [api.ts:1068](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1068)*
 
 AppRegistrationApi - factory interface
 
@@ -226,7 +226,7 @@ ___
 
 ▸ **AppRegistrationApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1046](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1046)*
+*Defined in [api.ts:1046](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1046)*
 
 AppRegistrationApi - functional programming interface
 
@@ -245,7 +245,7 @@ ___
 
 ▸ **AppsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1106)*
+*Defined in [api.ts:1106](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1106)*
 
 AppsApi - axios parameter creator
 
@@ -264,7 +264,7 @@ ___
 
 ▸ **AppsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1227)*
+*Defined in [api.ts:1227](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1227)*
 
 AppsApi - factory interface
 
@@ -285,7 +285,7 @@ ___
 
 ▸ **AppsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1191)*
+*Defined in [api.ts:1191](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1191)*
 
 AppsApi - functional programming interface
 
@@ -304,7 +304,7 @@ ___
 
 ▸ **EndpointsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1287)*
+*Defined in [api.ts:1287](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1287)*
 
 EndpointsApi - axios parameter creator
 
@@ -323,7 +323,7 @@ ___
 
 ▸ **EndpointsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1659)*
+*Defined in [api.ts:1659](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1659)*
 
 EndpointsApi - factory interface
 
@@ -344,7 +344,7 @@ ___
 
 ▸ **EndpointsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1563)*
+*Defined in [api.ts:1563](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1563)*
 
 EndpointsApi - functional programming interface
 
@@ -363,7 +363,7 @@ ___
 
 ▸ **FiltersApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1815)*
+*Defined in [api.ts:1815](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1815)*
 
 FiltersApi - axios parameter creator
 
@@ -382,7 +382,7 @@ ___
 
 ▸ **FiltersApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1888](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1888)*
+*Defined in [api.ts:1888](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1888)*
 
 FiltersApi - factory interface
 
@@ -403,7 +403,7 @@ ___
 
 ▸ **FiltersApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1865](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1865)*
+*Defined in [api.ts:1865](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L1865)*
 
 FiltersApi - functional programming interface
 
@@ -425,7 +425,7 @@ ___
 
 **COLLECTION_FORMATS**: *`object`*
 
-*Defined in [api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L26)*
+*Defined in [api.ts:26](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L26)*
 
 *__export__*: 
 
@@ -435,7 +435,7 @@ ___
 
 **● csv**: *`string`* = ","
 
-*Defined in [api.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L27)*
+*Defined in [api.ts:27](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L27)*
 
 ___
 <a id="collection_formats.pipes"></a>
@@ -444,7 +444,7 @@ ___
 
 **● pipes**: *`string`* = "|"
 
-*Defined in [api.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L30)*
+*Defined in [api.ts:30](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L30)*
 
 ___
 <a id="collection_formats.ssv"></a>
@@ -453,7 +453,7 @@ ___
 
 **● ssv**: *`string`* = " "
 
-*Defined in [api.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L28)*
+*Defined in [api.ts:28](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L28)*
 
 ___
 <a id="collection_formats.tsv"></a>
@@ -462,7 +462,7 @@ ___
 
 **● tsv**: *`string`* = "	"
 
-*Defined in [api.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L29)*
+*Defined in [api.ts:29](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L29)*
 
 ___
 

@@ -27,7 +27,7 @@
 
 **● created**: *`Date`*
 
-*Defined in [api.ts:932](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L932)*
+*Defined in [api.ts:932](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L932)*
 
 *__type__*: {Date}
 
@@ -40,7 +40,7 @@ ___
 
 **● modified**: *`Date`*
 
-*Defined in [api.ts:938](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L938)*
+*Defined in [api.ts:938](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L938)*
 
 *__type__*: {Date}
 

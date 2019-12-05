@@ -27,7 +27,7 @@
 
 **● links**: *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L367)*
+*Defined in [api.ts:367](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L367)*
 
 *__type__*: {PaginationLinks}
 
@@ -40,7 +40,7 @@ ___
 
 **● meta**: *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L361)*
+*Defined in [api.ts:361](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L361)*
 
 *__type__*: {PaginationMeta}
 

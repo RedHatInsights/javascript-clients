@@ -26,7 +26,7 @@
 
 **● errors**: *`Array`<[ErrorNotFoundErrors](errornotfounderrors.md)>*
 
-*Defined in [api.ts:1317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1317)*
+*Defined in [api.ts:1317](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1317)*
 
 *__type__*: {Array}
 

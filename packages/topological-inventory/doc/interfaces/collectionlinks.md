@@ -29,7 +29,7 @@
 
 **● first**: *`string`*
 
-*Defined in [api.ts:297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L297)*
+*Defined in [api.ts:297](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L297)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● last**: *`string`*
 
-*Defined in [api.ts:303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L303)*
+*Defined in [api.ts:303](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L303)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● next**: *`string`*
 
-*Defined in [api.ts:309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L309)*
+*Defined in [api.ts:309](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L309)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● prev**: *`string`*
 
-*Defined in [api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L315)*
+*Defined in [api.ts:315](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L315)*
 
 *__type__*: {string}
 

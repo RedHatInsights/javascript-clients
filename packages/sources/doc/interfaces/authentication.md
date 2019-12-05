@@ -38,7 +38,7 @@
 
 **● authtype**: *`string`*
 
-*Defined in [api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L247)*
+*Defined in [api.ts:247](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L247)*
 
 *__type__*: {string}
 
@@ -51,7 +51,7 @@ ___
 
 **● availabilityStatus**: *`string`*
 
-*Defined in [api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L253)*
+*Defined in [api.ts:253](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L253)*
 
 *__type__*: {string}
 
@@ -64,7 +64,7 @@ ___
 
 **● availabilityStatusError**: *`string`*
 
-*Defined in [api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L259)*
+*Defined in [api.ts:259](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L259)*
 
 *__type__*: {string}
 
@@ -77,7 +77,7 @@ ___
 
 **● extra**: *[AuthenticationExtra](authenticationextra.md)*
 
-*Defined in [api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L265)*
+*Defined in [api.ts:265](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L265)*
 
 *__type__*: {AuthenticationExtra}
 
@@ -90,7 +90,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L271)*
+*Defined in [api.ts:271](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L271)*
 
 ID of the resource
 
@@ -105,7 +105,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L277)*
+*Defined in [api.ts:277](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L277)*
 
 *__type__*: {string}
 
@@ -118,7 +118,7 @@ ___
 
 **● password**: *`string`*
 
-*Defined in [api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L283)*
+*Defined in [api.ts:283](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L283)*
 
 *__type__*: {string}
 
@@ -131,7 +131,7 @@ ___
 
 **● resourceId**: *`string`*
 
-*Defined in [api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L289)*
+*Defined in [api.ts:289](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L289)*
 
 ID of the resource
 
@@ -146,7 +146,7 @@ ___
 
 **● resourceType**: *`string`*
 
-*Defined in [api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L295)*
+*Defined in [api.ts:295](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L295)*
 
 *__type__*: {string}
 
@@ -159,7 +159,7 @@ ___
 
 **● status**: *`string`*
 
-*Defined in [api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L301)*
+*Defined in [api.ts:301](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L301)*
 
 *__type__*: {string}
 
@@ -172,7 +172,7 @@ ___
 
 **● statusDetails**: *`string`*
 
-*Defined in [api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L307)*
+*Defined in [api.ts:307](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L307)*
 
 *__type__*: {string}
 
@@ -185,7 +185,7 @@ ___
 
 **● tenant**: *`string`*
 
-*Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L313)*
+*Defined in [api.ts:313](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L313)*
 
 *__type__*: {string}
 
@@ -198,7 +198,7 @@ ___
 
 **● username**: *`string`*
 
-*Defined in [api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L319)*
+*Defined in [api.ts:319](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L319)*
 
 *__type__*: {string}
 

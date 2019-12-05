@@ -26,7 +26,7 @@
 
 **● tenantId**: *`string`*
 
-*Defined in [api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L347)*
+*Defined in [api.ts:347](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L347)*
 
 *__type__*: {string}
 

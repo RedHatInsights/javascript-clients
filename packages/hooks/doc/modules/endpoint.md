@@ -28,7 +28,7 @@
 
 **● attributes**: *[EndpointAttributes](endpointattributes.md)*
 
-*Defined in [api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L241)*
+*Defined in [api.ts:241](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L241)*
 
 *__type__*: {EndpointAttributes}
 
@@ -41,7 +41,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L229)*
+*Defined in [api.ts:229](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L229)*
 
 Identifier of the endpoint
 
@@ -56,7 +56,7 @@ ___
 
 **● type**: *[TypeEnum](../enums/endpoint.typeenum.md)*
 
-*Defined in [api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L235)*
+*Defined in [api.ts:235](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L235)*
 
 Type of the returned record
 

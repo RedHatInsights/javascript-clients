@@ -26,7 +26,7 @@
 
 **● errors**: *`Array`<[ErrorsErrors](errorserrors.md)>*
 
-*Defined in [api.ts:450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L450)*
+*Defined in [api.ts:450](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L450)*
 
 *__type__*: {Array}
 

@@ -36,7 +36,7 @@
 
 **● availabilityStatus**: *`string`*
 
-*Defined in [api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L655)*
+*Defined in [api.ts:655](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L655)*
 
 *__type__*: {string}
 
@@ -49,7 +49,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L661)*
+*Defined in [api.ts:661](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L661)*
 
 *__type__*: {Date}
 
@@ -62,7 +62,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L667)*
+*Defined in [api.ts:667](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L667)*
 
 ID of the resource
 
@@ -77,7 +77,7 @@ ___
 
 **● imported**: *`string`*
 
-*Defined in [api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L673)*
+*Defined in [api.ts:673](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L673)*
 
 *__type__*: {string}
 
@@ -90,7 +90,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L679)*
+*Defined in [api.ts:679](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L679)*
 
 *__type__*: {string}
 
@@ -103,7 +103,7 @@ ___
 
 **● sourceRef**: *`string`*
 
-*Defined in [api.ts:685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L685)*
+*Defined in [api.ts:685](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L685)*
 
 *__type__*: {string}
 
@@ -116,7 +116,7 @@ ___
 
 **● sourceTypeId**: *`string`*
 
-*Defined in [api.ts:691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L691)*
+*Defined in [api.ts:691](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L691)*
 
 ID of the resource
 
@@ -131,7 +131,7 @@ ___
 
 **● tenant**: *`string`*
 
-*Defined in [api.ts:697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L697)*
+*Defined in [api.ts:697](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L697)*
 
 *__type__*: {string}
 
@@ -144,7 +144,7 @@ ___
 
 **● uid**: *`string`*
 
-*Defined in [api.ts:703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L703)*
+*Defined in [api.ts:703](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L703)*
 
 *__type__*: {string}
 
@@ -157,7 +157,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L709)*
+*Defined in [api.ts:709](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L709)*
 
 *__type__*: {Date}
 
@@ -170,7 +170,7 @@ ___
 
 **● version**: *`string`*
 
-*Defined in [api.ts:715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L715)*
+*Defined in [api.ts:715](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L715)*
 
 *__type__*: {string}
 

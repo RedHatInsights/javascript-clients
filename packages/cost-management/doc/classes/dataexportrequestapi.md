@@ -46,7 +46,7 @@ DataExportRequestApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -81,7 +81,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -92,7 +92,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **createDataExportRequest**(dataExportRequest: *[DataExportRequest](../interfaces/dataexportrequest.md)*, options?: *`any`*): `AxiosPromise`<[DataExportRequestOut](../modules/dataexportrequestout.md)>
 
-*Defined in [api.ts:4477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4477)*
+*Defined in [api.ts:4477](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L4477)*
 
 *__summary__*: Create a data export request
 
@@ -128,7 +128,7 @@ ___
 
 ▸ **listDataExportRequests**(offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[DataExportRequestPagination](../interfaces/dataexportrequestpagination.md)>
 
-*Defined in [api.ts:4490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4490)*
+*Defined in [api.ts:4490](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L4490)*
 
 *__summary__*: List the data export requests
 
@@ -153,7 +153,7 @@ ___
 
 ▸ **retrieveDataExportRequest**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[DataExportRequestOut](../modules/dataexportrequestout.md)>
 
-*Defined in [api.ts:4502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4502)*
+*Defined in [api.ts:4502](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L4502)*
 
 *__summary__*: Get a data export request
 

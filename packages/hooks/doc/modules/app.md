@@ -29,7 +29,7 @@
 
 **● attributes**: *[AppAttributes](../interfaces/appattributes.md)*
 
-*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L95)*
+*Defined in [api.ts:95](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L95)*
 
 *__type__*: {AppAttributes}
 
@@ -42,7 +42,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L83)*
+*Defined in [api.ts:83](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L83)*
 
 Identifier of the application
 
@@ -57,7 +57,7 @@ ___
 
 **● relationships**: *[AppRelationships](../interfaces/apprelationships.md)*
 
-*Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L101)*
+*Defined in [api.ts:101](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L101)*
 
 *__type__*: {AppRelationships}
 
@@ -70,7 +70,7 @@ ___
 
 **● type**: *[TypeEnum](../enums/app.typeenum.md)*
 
-*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L89)*
+*Defined in [api.ts:89](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L89)*
 
 Type of the returned record
 

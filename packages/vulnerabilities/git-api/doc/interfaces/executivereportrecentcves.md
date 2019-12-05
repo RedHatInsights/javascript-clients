@@ -30,7 +30,7 @@ Number of recently published CVEs identified on managed systems
 
 **● last30days**: *`number`*
 
-*Defined in [git-api/api.ts:503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L503)*
+*Defined in [git-api/api.ts:503](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L503)*
 
 Number of CVEs identified on managed systems published in last 30 days.
 
@@ -45,7 +45,7 @@ ___
 
 **● last7days**: *`number`*
 
-*Defined in [git-api/api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L497)*
+*Defined in [git-api/api.ts:497](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L497)*
 
 Number of CVEs identified on managed systems published in last 7 days.
 
@@ -60,7 +60,7 @@ ___
 
 **● last90days**: *`number`*
 
-*Defined in [git-api/api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L509)*
+*Defined in [git-api/api.ts:509](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L509)*
 
 Number of CVEs identified on managed systems published in last 90 days.
 

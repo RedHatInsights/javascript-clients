@@ -31,7 +31,7 @@ The grouping to apply to the report. No grouping by default.
 
 **● cluster**: *`Array`<`string`>*
 
-*Defined in [api.ts:2403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2403)*
+*Defined in [api.ts:2403](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2403)*
 
 *__type__*: {Array}
 
@@ -44,7 +44,7 @@ ___
 
 **● node**: *`Array`<`string`>*
 
-*Defined in [api.ts:2415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2415)*
+*Defined in [api.ts:2415](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2415)*
 
 *__type__*: {Array}
 
@@ -57,7 +57,7 @@ ___
 
 **● project**: *`Array`<`string`>*
 
-*Defined in [api.ts:2409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2409)*
+*Defined in [api.ts:2409](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2409)*
 
 *__type__*: {Array}
 
@@ -70,7 +70,7 @@ ___
 
 **● tag**: *`Array`<`string`>*
 
-*Defined in [api.ts:2421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2421)*
+*Defined in [api.ts:2421](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2421)*
 
 *__type__*: {Array}
 

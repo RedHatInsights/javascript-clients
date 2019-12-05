@@ -29,7 +29,7 @@
 
 **● first**: *`string`*
 
-*Defined in [api.ts:178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L178)*
+*Defined in [api.ts:178](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L178)*
 
 The link to fetch the first group of items in the result set
 
@@ -44,7 +44,7 @@ ___
 
 **● last**: *`string`*
 
-*Defined in [api.ts:184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L184)*
+*Defined in [api.ts:184](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L184)*
 
 The link to fetch the last group of items in the result set
 
@@ -59,7 +59,7 @@ ___
 
 **● next**: *`string`*
 
-*Defined in [api.ts:196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L196)*
+*Defined in [api.ts:196](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L196)*
 
 The link to fetch the next group of items in the result set
 
@@ -74,7 +74,7 @@ ___
 
 **● prev**: *`string`*
 
-*Defined in [api.ts:190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L190)*
+*Defined in [api.ts:190](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L190)*
 
 The link to fetch the previous group of items in the result set
 

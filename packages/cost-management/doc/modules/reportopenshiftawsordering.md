@@ -42,7 +42,7 @@
 
 **● accountAlias**: *[AccountAliasEnum](../enums/reportopenshiftawsordering.accountaliasenum.md)*
 
-*Defined in [api.ts:1739](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1739)*
+*Defined in [api.ts:1739](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1739)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● cluster**: *[ClusterEnum](../enums/reportopenshiftawsordering.clusterenum.md)*
 
-*Defined in [api.ts:1757](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1757)*
+*Defined in [api.ts:1757](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1757)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● cost**: *[CostEnum](../enums/reportopenshiftawsordering.costenum.md)*
 
-*Defined in [api.ts:1721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1721)*
+*Defined in [api.ts:1721](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1721)*
 
 *__type__*: {string}
 
@@ -81,7 +81,7 @@ ___
 
 **● delta**: *[DeltaEnum](../enums/reportopenshiftawsordering.deltaenum.md)*
 
-*Defined in [api.ts:1733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1733)*
+*Defined in [api.ts:1733](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1733)*
 
 *__type__*: {string}
 
@@ -94,7 +94,7 @@ ___
 
 **● node**: *[NodeEnum](../enums/reportopenshiftawsordering.nodeenum.md)*
 
-*Defined in [api.ts:1769](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1769)*
+*Defined in [api.ts:1769](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1769)*
 
 *__type__*: {string}
 
@@ -107,7 +107,7 @@ ___
 
 **● project**: *[ProjectEnum](../enums/reportopenshiftawsordering.projectenum.md)*
 
-*Defined in [api.ts:1763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1763)*
+*Defined in [api.ts:1763](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1763)*
 
 *__type__*: {string}
 
@@ -120,7 +120,7 @@ ___
 
 **● region**: *[RegionEnum](../enums/reportopenshiftawsordering.regionenum.md)*
 
-*Defined in [api.ts:1745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1745)*
+*Defined in [api.ts:1745](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1745)*
 
 *__type__*: {string}
 
@@ -133,7 +133,7 @@ ___
 
 **● service**: *[ServiceEnum](../enums/reportopenshiftawsordering.serviceenum.md)*
 
-*Defined in [api.ts:1751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1751)*
+*Defined in [api.ts:1751](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1751)*
 
 *__type__*: {string}
 
@@ -146,7 +146,7 @@ ___
 
 **● usage**: *[UsageEnum](../enums/reportopenshiftawsordering.usageenum.md)*
 
-*Defined in [api.ts:1727](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1727)*
+*Defined in [api.ts:1727](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1727)*
 
 *__type__*: {string}
 

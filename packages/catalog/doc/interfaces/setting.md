@@ -27,7 +27,7 @@
 
 **● name**: *`string`*
 
-*Defined in [api.ts:1020](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1020)*
+*Defined in [api.ts:1020](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L1020)*
 
 *__type__*: {string}
 
@@ -40,7 +40,7 @@ ___
 
 **● value**: *`string`*
 
-*Defined in [api.ts:1026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1026)*
+*Defined in [api.ts:1026](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L1026)*
 
 *__type__*: {string}
 
