@@ -161,7 +161,7 @@ API documentation
 
 **● BASE_PATH**: *`string`* =  "http://localhost".replace(/\/+$/, "")
 
-*Defined in [api.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L20)*
+*Defined in [api.ts:20](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L20)*
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1261)*
+*Defined in [api.ts:1261](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1261)*
 
 DefaultApi - axios parameter creator
 
@@ -192,7 +192,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2437)*
+*Defined in [api.ts:2437](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2437)*
 
 DefaultApi - factory interface
 
@@ -213,7 +213,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2177)*
+*Defined in [api.ts:2177](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2177)*
 
 DefaultApi - functional programming interface
 
@@ -232,7 +232,7 @@ ___
 
 ▸ **InternalApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2867)*
+*Defined in [api.ts:2867](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2867)*
 
 InternalApi - axios parameter creator
 
@@ -251,7 +251,7 @@ ___
 
 ▸ **InternalApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:3136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3136)*
+*Defined in [api.ts:3136](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3136)*
 
 InternalApi - factory interface
 
@@ -272,7 +272,7 @@ ___
 
 ▸ **InternalApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3070)*
+*Defined in [api.ts:3070](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3070)*
 
 InternalApi - functional programming interface
 
@@ -294,7 +294,7 @@ ___
 
 **COLLECTION_FORMATS**: *`object`*
 
-*Defined in [api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L26)*
+*Defined in [api.ts:26](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L26)*
 
 *__export__*: 
 
@@ -304,7 +304,7 @@ ___
 
 **● csv**: *`string`* = ","
 
-*Defined in [api.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L27)*
+*Defined in [api.ts:27](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L27)*
 
 ___
 <a id="collection_formats.pipes"></a>
@@ -313,7 +313,7 @@ ___
 
 **● pipes**: *`string`* = "|"
 
-*Defined in [api.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L30)*
+*Defined in [api.ts:30](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L30)*
 
 ___
 <a id="collection_formats.ssv"></a>
@@ -322,7 +322,7 @@ ___
 
 **● ssv**: *`string`* = " "
 
-*Defined in [api.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L28)*
+*Defined in [api.ts:28](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L28)*
 
 ___
 <a id="collection_formats.tsv"></a>
@@ -331,7 +331,7 @@ ___
 
 **● tsv**: *`string`* = "	"
 
-*Defined in [api.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L29)*
+*Defined in [api.ts:29](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L29)*
 
 ___
 

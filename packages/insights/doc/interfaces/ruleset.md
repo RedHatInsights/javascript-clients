@@ -29,7 +29,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:823](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L823)*
+*Defined in [api.ts:823](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L823)*
 
 *__type__*: {Date}
 
@@ -42,7 +42,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:841](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L841)*
+*Defined in [api.ts:841](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L841)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● ruleSource**: *`string`*
 
-*Defined in [api.ts:835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L835)*
+*Defined in [api.ts:835](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L835)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L829)*
+*Defined in [api.ts:829](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L829)*
 
 *__type__*: {Date}
 

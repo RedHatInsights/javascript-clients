@@ -28,7 +28,7 @@
 
 **● content**: *`any`*
 
-*Defined in [api.ts:250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L250)*
+*Defined in [api.ts:250](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L250)*
 
 The binary image contents
 
@@ -43,7 +43,7 @@ ___
 
 **● portfolioId**: *`string`*
 
-*Defined in [api.ts:256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L256)*
+*Defined in [api.ts:256](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L256)*
 
 The Portfolio this Icon belongs to
 
@@ -58,7 +58,7 @@ ___
 
 **● portfolioItemId**: *`string`*
 
-*Defined in [api.ts:262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L262)*
+*Defined in [api.ts:262](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L262)*
 
 The Portfolio Item this Icon belongs to
 

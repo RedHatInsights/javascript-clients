@@ -48,7 +48,7 @@ HostackApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
 **Parameters:**
 
@@ -72,7 +72,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -83,7 +83,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -94,7 +94,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 ▸ **hostackCreate**(hostAck: *[HostAck](../interfaces/hostack.md)*, options?: *`any`*): `AxiosPromise`<[HostAck](../interfaces/hostack.md)>
 
-*Defined in [api.ts:2276](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2276)*
+*Defined in [api.ts:2276](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L2276)*
 
 Return the new hostack. If there's already an acknowledgement of this rule by this account for a system, then return that. This does not take an 'id' number.
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **hostackDelete**(id: *`number`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2288)*
+*Defined in [api.ts:2288](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L2288)*
 
 Takes the hostack ID (given in the hostack list) as an identifier.
 
@@ -158,7 +158,7 @@ ___
 
 ▸ **hostackList**(limit?: *`number`*, offset?: *`number`*, ruleId?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2002](../interfaces/inlineresponse2002.md)>
 
-*Defined in [api.ts:2302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2302)*
+*Defined in [api.ts:2302](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L2302)*
 
 Hostacks are retrieved, edited and deleted by the 'id' field.
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **hostackRead**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[HostAck](../interfaces/hostack.md)>
 
-*Defined in [api.ts:2314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2314)*
+*Defined in [api.ts:2314](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L2314)*
 
 This view handles listing, retrieving, creating and deleting hostacks.
 
@@ -212,7 +212,7 @@ ___
 
 ▸ **hostackUpdate**(id: *`number`*, hostAckJustification: *[HostAckJustification](../interfaces/hostackjustification.md)*, options?: *`any`*): `AxiosPromise`<[HostAckJustification](../interfaces/hostackjustification.md)>
 
-*Defined in [api.ts:2327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2327)*
+*Defined in [api.ts:2327](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L2327)*
 
 The justification is taken from the request body. The created\_by field is taken from the username in the x-rh-identity field, and the updated\_at field is set to the current time.
 

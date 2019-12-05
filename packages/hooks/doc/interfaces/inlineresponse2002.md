@@ -27,7 +27,7 @@
 
 **● data**: *[App](../modules/app.md)*
 
-*Defined in [api.ts:696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L696)*
+*Defined in [api.ts:696](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L696)*
 
 *__type__*: {App}
 
@@ -40,7 +40,7 @@ ___
 
 **● included**: *`Array`<`Object`>*
 
-*Defined in [api.ts:702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L702)*
+*Defined in [api.ts:702](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L702)*
 
 *__type__*: {Array}
 

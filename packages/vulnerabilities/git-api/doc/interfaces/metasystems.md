@@ -35,7 +35,7 @@
 
 **● dataFormat**: *`string`*
 
-*Defined in [git-api/api.ts:993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L993)*
+*Defined in [git-api/api.ts:993](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L993)*
 
 Format of the output data, either JSON (default) or CSV.
 
@@ -50,7 +50,7 @@ ___
 
 **● filter**: *`string` \| `null`*
 
-*Defined in [git-api/api.ts:945](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L945)*
+*Defined in [git-api/api.ts:945](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L945)*
 
 Full text filter
 
@@ -65,7 +65,7 @@ ___
 
 **● limit**: *`number`*
 
-*Defined in [git-api/api.ts:951](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L951)*
+*Defined in [git-api/api.ts:951](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L951)*
 
 Maximum number of paginated results.
 
@@ -80,7 +80,7 @@ ___
 
 **● offset**: *`number`*
 
-*Defined in [git-api/api.ts:957](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L957)*
+*Defined in [git-api/api.ts:957](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L957)*
 
 First record of paginated response.
 
@@ -95,7 +95,7 @@ ___
 
 **● optOut**: *`boolean` \| `null`*
 
-*Defined in [git-api/api.ts:999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L999)*
+*Defined in [git-api/api.ts:999](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L999)*
 
 Whether the filter to show opted out systems is active or not. If not set, defaults to hiding opted out systems.
 
@@ -110,7 +110,7 @@ ___
 
 **● page**: *`number`*
 
-*Defined in [git-api/api.ts:963](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L963)*
+*Defined in [git-api/api.ts:963](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L963)*
 
 Page number of paginated response.
 
@@ -125,7 +125,7 @@ ___
 
 **● pageSize**: *`number`*
 
-*Defined in [git-api/api.ts:969](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L969)*
+*Defined in [git-api/api.ts:969](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L969)*
 
 Number of records per page of paginated response.
 
@@ -140,7 +140,7 @@ ___
 
 **● pages**: *`number`*
 
-*Defined in [git-api/api.ts:975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L975)*
+*Defined in [git-api/api.ts:975](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L975)*
 
 Total number of pages of paginated response.
 
@@ -155,7 +155,7 @@ ___
 
 **● sort**: *`string` \| `null`*
 
-*Defined in [git-api/api.ts:981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L981)*
+*Defined in [git-api/api.ts:981](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L981)*
 
 Sorting filter.
 
@@ -170,7 +170,7 @@ ___
 
 **● totalItems**: *`number`*
 
-*Defined in [git-api/api.ts:987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L987)*
+*Defined in [git-api/api.ts:987](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L987)*
 
 Total number of records.
 

@@ -27,7 +27,7 @@
 
 **● id**: *`number`*
 
-*Defined in [api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L143)*
+*Defined in [api.ts:143](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L143)*
 
 Internal business\_risk\_id.
 
@@ -42,7 +42,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L149)*
+*Defined in [api.ts:149](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L149)*
 
 Represenation of internal business\_risk\_id.
 

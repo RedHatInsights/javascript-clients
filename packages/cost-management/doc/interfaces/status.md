@@ -32,7 +32,7 @@
 
 **● apiVersion**: *`number`*
 
-*Defined in [api.ts:2808](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2808)*
+*Defined in [api.ts:2808](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2808)*
 
 *__type__*: {number}
 
@@ -45,7 +45,7 @@ ___
 
 **● commit**: *`string`*
 
-*Defined in [api.ts:2814](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2814)*
+*Defined in [api.ts:2814](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2814)*
 
 *__type__*: {string}
 
@@ -58,7 +58,7 @@ ___
 
 **● modules**: *`any`*
 
-*Defined in [api.ts:2844](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2844)*
+*Defined in [api.ts:2844](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2844)*
 
 *__type__*: {any}
 
@@ -71,7 +71,7 @@ ___
 
 **● platformInfo**: *`any`*
 
-*Defined in [api.ts:2832](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2832)*
+*Defined in [api.ts:2832](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2832)*
 
 *__type__*: {any}
 
@@ -84,7 +84,7 @@ ___
 
 **● pythonVersion**: *`string`*
 
-*Defined in [api.ts:2838](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2838)*
+*Defined in [api.ts:2838](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2838)*
 
 *__type__*: {string}
 
@@ -97,7 +97,7 @@ ___
 
 **● rbacCacheTtl**: *`number`*
 
-*Defined in [api.ts:2826](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2826)*
+*Defined in [api.ts:2826](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2826)*
 
 *__type__*: {number}
 
@@ -110,7 +110,7 @@ ___
 
 **● serverAddress**: *`string`*
 
-*Defined in [api.ts:2820](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2820)*
+*Defined in [api.ts:2820](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2820)*
 
 *__type__*: {string}
 

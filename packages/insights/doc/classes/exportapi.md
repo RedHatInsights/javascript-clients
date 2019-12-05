@@ -46,7 +46,7 @@ ExportApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -81,7 +81,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -92,7 +92,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **exportHitsList**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
 
-*Defined in [api.ts:1884](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1884)*
+*Defined in [api.ts:1884](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L1884)*
 
 Get each host and all rules currently affecting it. This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store). We also only present active, non-acked (on an account AND host level) rules.
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **exportListCsv**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1900](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1900)*
+*Defined in [api.ts:1900](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L1900)*
 
 Export the hosts and rules listing as CSV or JSON
 
@@ -162,7 +162,7 @@ ___
 
 ▸ **exportListJson**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
 
-*Defined in [api.ts:1916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1916)*
+*Defined in [api.ts:1916](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L1916)*
 
 Export the hosts and rules listing as CSV or JSON
 

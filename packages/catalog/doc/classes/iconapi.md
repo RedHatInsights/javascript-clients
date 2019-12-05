@@ -48,7 +48,7 @@ IconApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
 
 **Parameters:**
 
@@ -72,7 +72,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -83,7 +83,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -94,7 +94,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 ▸ **createIcon**(content?: *`any`*, portfolioId?: *`string`*, portfolioItemId?: *`string`*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
 
-*Defined in [api.ts:1876](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1876)*
+*Defined in [api.ts:1876](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L1876)*
 
 Creates an Icon from the specified parameters
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **destroyIcon**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1888](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1888)*
+*Defined in [api.ts:1888](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L1888)*
 
 Deletes the icon based on the icon ID passed
 
@@ -160,7 +160,7 @@ ___
 
 ▸ **getIcon**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
 
-*Defined in [api.ts:1900](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1900)*
+*Defined in [api.ts:1900](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L1900)*
 
 Fetch an Icon by ID
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **showIconData**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1912](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1912)*
+*Defined in [api.ts:1912](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L1912)*
 
 Fetch the specified portfolio item's icon image.
 
@@ -212,7 +212,7 @@ ___
 
 ▸ **updateIcon**(id: *`string`*, icon: *[Icon](../interfaces/icon.md)*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
 
-*Defined in [api.ts:1925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1925)*
+*Defined in [api.ts:1925](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L1925)*
 
 Edits Icon specified by the given ID.
 

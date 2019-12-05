@@ -35,7 +35,7 @@ The grouping to apply to the report. No grouping by default. When grouping by ac
 
 **● cluster**: *`Array`<`string`>*
 
-*Defined in [api.ts:2028](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2028)*
+*Defined in [api.ts:2028](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2028)*
 
 *__type__*: {Array}
 
@@ -48,7 +48,7 @@ ___
 
 **● instanceType**: *`Array`<`string`>*
 
-*Defined in [api.ts:2016](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2016)*
+*Defined in [api.ts:2016](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2016)*
 
 *__type__*: {Array}
 
@@ -61,7 +61,7 @@ ___
 
 **● node**: *`Array`<`string`>*
 
-*Defined in [api.ts:2040](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2040)*
+*Defined in [api.ts:2040](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2040)*
 
 *__type__*: {Array}
 
@@ -74,7 +74,7 @@ ___
 
 **● project**: *`Array`<`string`>*
 
-*Defined in [api.ts:2034](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2034)*
+*Defined in [api.ts:2034](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2034)*
 
 *__type__*: {Array}
 
@@ -87,7 +87,7 @@ ___
 
 **● resourceLocation**: *`Array`<`string`>*
 
-*Defined in [api.ts:2010](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2010)*
+*Defined in [api.ts:2010](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2010)*
 
 *__type__*: {Array}
 
@@ -100,7 +100,7 @@ ___
 
 **● serviceName**: *`Array`<`string`>*
 
-*Defined in [api.ts:2004](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2004)*
+*Defined in [api.ts:2004](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2004)*
 
 *__type__*: {Array}
 
@@ -113,7 +113,7 @@ ___
 
 **● subscriptionGuid**: *`Array`<`string`>*
 
-*Defined in [api.ts:1998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1998)*
+*Defined in [api.ts:1998](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1998)*
 
 *__type__*: {Array}
 
@@ -126,7 +126,7 @@ ___
 
 **● tag**: *`Array`<`string`>*
 
-*Defined in [api.ts:2022](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2022)*
+*Defined in [api.ts:2022](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2022)*
 
 *__type__*: {Array}
 

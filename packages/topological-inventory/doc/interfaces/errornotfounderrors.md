@@ -27,7 +27,7 @@
 
 **● detail**: *`string`*
 
-*Defined in [api.ts:1337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1337)*
+*Defined in [api.ts:1337](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1337)*
 
 *__type__*: {string}
 
@@ -40,7 +40,7 @@ ___
 
 **● status**: *`number`*
 
-*Defined in [api.ts:1331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1331)*
+*Defined in [api.ts:1331](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1331)*
 
 *__type__*: {number}
 

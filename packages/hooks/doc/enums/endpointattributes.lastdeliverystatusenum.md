@@ -23,7 +23,7 @@
 
 **Failure**:  = "failure"
 
-*Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L313)*
+*Defined in [api.ts:313](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L313)*
 
 ___
 <a id="success"></a>
@@ -32,7 +32,7 @@ ___
 
 **Success**:  = "success"
 
-*Defined in [api.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L312)*
+*Defined in [api.ts:312](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L312)*
 
 ___
 

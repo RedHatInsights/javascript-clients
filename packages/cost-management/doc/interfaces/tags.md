@@ -27,7 +27,7 @@
 
 **● data**: *`Array`<`any`>*
 
-*Defined in [api.ts:2864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2864)*
+*Defined in [api.ts:2864](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2864)*
 
 *__type__*: {Array}
 
@@ -40,7 +40,7 @@ ___
 
 **● filter**: *[TagsFilter](tagsfilter.md)*
 
-*Defined in [api.ts:2858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2858)*
+*Defined in [api.ts:2858](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2858)*
 
 *__type__*: {TagsFilter}
 

@@ -26,7 +26,7 @@
 
 **● errors**: *`Array`<`any`>*
 
-*Defined in [api.ts:548](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L548)*
+*Defined in [api.ts:548](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L548)*
 
 *__type__*: {Array}
 

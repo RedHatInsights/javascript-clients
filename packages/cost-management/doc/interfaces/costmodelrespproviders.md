@@ -27,7 +27,7 @@
 
 **● name**: *`string`*
 
-*Defined in [api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L259)*
+*Defined in [api.ts:259](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L259)*
 
 *__type__*: {string}
 
@@ -40,7 +40,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L253)*
+*Defined in [api.ts:253](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L253)*
 
 *__type__*: {string}
 

@@ -30,7 +30,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L115)*
+*Defined in [api.ts:115](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L115)*
 
 *__type__*: {Date}
 
@@ -43,7 +43,7 @@ ___
 
 **● createdBy**: *`string`*
 
-*Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L109)*
+*Defined in [api.ts:109](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L109)*
 
 The user who created the ack
 
@@ -58,7 +58,7 @@ ___
 
 **● justification**: *`string`*
 
-*Defined in [api.ts:103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L103)*
+*Defined in [api.ts:103](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L103)*
 
 The reason the rule was acked
 
@@ -73,7 +73,7 @@ ___
 
 **● rule**: *`string`*
 
-*Defined in [api.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L97)*
+*Defined in [api.ts:97](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L97)*
 
 *__type__*: {string}
 
@@ -86,7 +86,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L121)*
+*Defined in [api.ts:121](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L121)*
 
 *__type__*: {Date}
 

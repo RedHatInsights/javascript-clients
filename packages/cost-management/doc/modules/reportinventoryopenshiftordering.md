@@ -38,7 +38,7 @@
 
 **● cluster**: *[ClusterEnum](../enums/reportinventoryopenshiftordering.clusterenum.md)*
 
-*Defined in [api.ts:1404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1404)*
+*Defined in [api.ts:1404](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1404)*
 
 *__type__*: {string}
 
@@ -51,7 +51,7 @@ ___
 
 **● cost**: *[CostEnum](../enums/reportinventoryopenshiftordering.costenum.md)*
 
-*Defined in [api.ts:1434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1434)*
+*Defined in [api.ts:1434](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1434)*
 
 *__type__*: {string}
 
@@ -64,7 +64,7 @@ ___
 
 **● limit**: *[LimitEnum](../enums/reportinventoryopenshiftordering.limitenum.md)*
 
-*Defined in [api.ts:1440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1440)*
+*Defined in [api.ts:1440](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1440)*
 
 *__type__*: {string}
 
@@ -77,7 +77,7 @@ ___
 
 **● node**: *[NodeEnum](../enums/reportinventoryopenshiftordering.nodeenum.md)*
 
-*Defined in [api.ts:1416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1416)*
+*Defined in [api.ts:1416](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1416)*
 
 *__type__*: {string}
 
@@ -90,7 +90,7 @@ ___
 
 **● project**: *[ProjectEnum](../enums/reportinventoryopenshiftordering.projectenum.md)*
 
-*Defined in [api.ts:1410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1410)*
+*Defined in [api.ts:1410](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1410)*
 
 *__type__*: {string}
 
@@ -103,7 +103,7 @@ ___
 
 **● request**: *[RequestEnum](../enums/reportinventoryopenshiftordering.requestenum.md)*
 
-*Defined in [api.ts:1428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1428)*
+*Defined in [api.ts:1428](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1428)*
 
 *__type__*: {string}
 
@@ -116,7 +116,7 @@ ___
 
 **● usage**: *[UsageEnum](../enums/reportinventoryopenshiftordering.usageenum.md)*
 
-*Defined in [api.ts:1422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1422)*
+*Defined in [api.ts:1422](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L1422)*
 
 *__type__*: {string}
 

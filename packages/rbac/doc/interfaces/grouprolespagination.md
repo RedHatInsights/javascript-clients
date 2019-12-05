@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[Role](role.md)>*
 
-*Defined in [api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L253)*
+*Defined in [api.ts:253](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L253)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L247)*
+*Defined in [api.ts:247](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L247)*
 
 *__type__*: {PaginationLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L241)*
+*Defined in [api.ts:241](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L241)*
 
 *__type__*: {PaginationMeta}
 

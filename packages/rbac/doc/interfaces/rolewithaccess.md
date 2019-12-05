@@ -31,7 +31,7 @@
 
 **● access**: *`Array`<[Access](access.md)>*
 
-*Defined in [api.ts:874](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L874)*
+*Defined in [api.ts:874](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L874)*
 
 *__type__*: {Array}
 
@@ -44,7 +44,7 @@ ___
 
 **● created**: *`Date`*
 
-*Defined in [api.ts:862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L862)*
+*Defined in [api.ts:862](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L862)*
 
 *__type__*: {Date}
 
@@ -57,7 +57,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:850](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L850)*
+*Defined in [api.ts:850](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L850)*
 
 *__type__*: {string}
 
@@ -70,7 +70,7 @@ ___
 
 **● modified**: *`Date`*
 
-*Defined in [api.ts:868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L868)*
+*Defined in [api.ts:868](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L868)*
 
 *__type__*: {Date}
 
@@ -83,7 +83,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:844](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L844)*
+*Defined in [api.ts:844](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L844)*
 
 *__type__*: {string}
 
@@ -96,7 +96,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L856)*
+*Defined in [api.ts:856](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L856)*
 
 *__type__*: {string}
 

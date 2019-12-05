@@ -30,7 +30,7 @@ Number of CVEs discovered on the managed systems, divided into buckets based on 
 
 **● _0to39**: *`number`*
 
-*Defined in [git-api/api.ts:471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L471)*
+*Defined in [git-api/api.ts:471](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L471)*
 
 Number of CVEs with CVSS score lower than 4.
 
@@ -45,7 +45,7 @@ ___
 
 **● _4to79**: *`number`*
 
-*Defined in [git-api/api.ts:477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L477)*
+*Defined in [git-api/api.ts:477](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L477)*
 
 Number of CVEs with CVSS score higher or equal to 4 and lower then 8.
 
@@ -60,7 +60,7 @@ ___
 
 **● _8to10**: *`number`*
 
-*Defined in [git-api/api.ts:483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L483)*
+*Defined in [git-api/api.ts:483](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L483)*
 
 Number of CVEs with CVSS score higher or equal to 8.
 

@@ -27,7 +27,7 @@
 
 **● detail**: *`string`*
 
-*Defined in [api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L595)*
+*Defined in [api.ts:595](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L595)*
 
 *__type__*: {string}
 
@@ -40,7 +40,7 @@ ___
 
 **● status**: *`number`*
 
-*Defined in [api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L589)*
+*Defined in [api.ts:589](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L589)*
 
 *__type__*: {number}
 

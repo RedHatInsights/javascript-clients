@@ -26,7 +26,7 @@
 
 **● data**: *[InlineResponse2004Data](../modules/inlineresponse2004data.md)*
 
-*Defined in [api.ts:742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L742)*
+*Defined in [api.ts:742](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L742)*
 
 *__type__*: {InlineResponse2004Data}
 

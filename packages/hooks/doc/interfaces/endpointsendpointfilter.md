@@ -28,7 +28,7 @@
 
 **● appIds**: *`Array`<`string`>*
 
-*Defined in [api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L360)*
+*Defined in [api.ts:360](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L360)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● eventTypeIds**: *`Array`<`string`>*
 
-*Defined in [api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L366)*
+*Defined in [api.ts:366](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L366)*
 
 *__type__*: {Array}
 
@@ -54,7 +54,7 @@ ___
 
 **● levelIds**: *`Array`<`string`>*
 
-*Defined in [api.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L372)*
+*Defined in [api.ts:372](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L372)*
 
 *__type__*: {Array}
 

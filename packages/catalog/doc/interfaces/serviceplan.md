@@ -30,7 +30,7 @@
 
 **● createJsonSchema**: *`any`*
 
-*Defined in [api.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L994)*
+*Defined in [api.ts:994](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L994)*
 
 JSON schema for the object.
 
@@ -45,7 +45,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L988)*
+*Defined in [api.ts:988](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L988)*
 
 The service plan description.
 
@@ -60,7 +60,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:1006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1006)*
+*Defined in [api.ts:1006](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L1006)*
 
 The unique identifier for this service plan.
 
@@ -75,7 +75,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L982)*
+*Defined in [api.ts:982](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L982)*
 
 The name of the service plan.
 
@@ -90,7 +90,7 @@ ___
 
 **● portfolioItemId**: *`string`*
 
-*Defined in [api.ts:1000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1000)*
+*Defined in [api.ts:1000](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L1000)*
 
 The reference ID of the Portfolio Item
 

@@ -28,7 +28,7 @@
 
 **● operationName**: *`string`*
 
-*Defined in [api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L310)*
+*Defined in [api.ts:310](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L310)*
 
 If the Query contains several named operations, the operationName controls which one should be executed
 
@@ -43,7 +43,7 @@ ___
 
 **● query**: *`string`*
 
-*Defined in [api.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L304)*
+*Defined in [api.ts:304](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L304)*
 
 The GraphQL query
 
@@ -58,7 +58,7 @@ ___
 
 **● variables**: *`any` \| `null`*
 
-*Defined in [api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L316)*
+*Defined in [api.ts:316](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L316)*
 
 Optional Query variables
 

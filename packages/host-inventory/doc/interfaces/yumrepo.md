@@ -31,7 +31,7 @@ Representation of one yum repository
 
 **● baseurl**: *`string`*
 
-*Defined in [api.ts:1091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1091)*
+*Defined in [api.ts:1091](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L1091)*
 
 *__type__*: {string}
 
@@ -44,7 +44,7 @@ ___
 
 **● enabled**: *`boolean`*
 
-*Defined in [api.ts:1085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1085)*
+*Defined in [api.ts:1085](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L1085)*
 
 *__type__*: {boolean}
 
@@ -57,7 +57,7 @@ ___
 
 **● gpgcheck**: *`boolean`*
 
-*Defined in [api.ts:1079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1079)*
+*Defined in [api.ts:1079](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L1079)*
 
 *__type__*: {boolean}
 
@@ -70,7 +70,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1073)*
+*Defined in [api.ts:1073](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L1073)*
 
 *__type__*: {string}
 

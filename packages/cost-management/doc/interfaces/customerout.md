@@ -28,7 +28,7 @@
 
 **● accountId**: *`string`*
 
-*Defined in [api.ts:287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L287)*
+*Defined in [api.ts:287](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L287)*
 
 *__type__*: {string}
 
@@ -41,7 +41,7 @@ ___
 
 **● dateCreated**: *`Date`*
 
-*Defined in [api.ts:299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L299)*
+*Defined in [api.ts:299](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L299)*
 
 *__type__*: {Date}
 
@@ -54,7 +54,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L293)*
+*Defined in [api.ts:293](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L293)*
 
 *__type__*: {string}
 

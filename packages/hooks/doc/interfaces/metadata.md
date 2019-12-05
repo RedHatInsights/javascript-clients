@@ -28,7 +28,7 @@
 
 **● limit**: *`number`*
 
-*Defined in [api.ts:954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L954)*
+*Defined in [api.ts:954](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L954)*
 
 The maximum number of records to return.
 
@@ -43,7 +43,7 @@ ___
 
 **● offset**: *`number`*
 
-*Defined in [api.ts:960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L960)*
+*Defined in [api.ts:960](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L960)*
 
 The number of records to skip before returning.
 
@@ -58,7 +58,7 @@ ___
 
 **● total**: *`number`*
 
-*Defined in [api.ts:948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L948)*
+*Defined in [api.ts:948](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L948)*
 
 The total number of available records.
 

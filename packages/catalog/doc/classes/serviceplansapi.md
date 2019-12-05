@@ -48,7 +48,7 @@ ServicePlansApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
 
 **Parameters:**
 
@@ -72,7 +72,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -83,7 +83,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -94,7 +94,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 ▸ **createServicePlan**(importServicePlan?: *[ImportServicePlan](../interfaces/importserviceplan.md)*, options?: *`any`*): `AxiosPromise`<[ServicePlan](../interfaces/serviceplan.md)[]>
 
-*Defined in [api.ts:6108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6108)*
+*Defined in [api.ts:6108](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L6108)*
 
 Returns the new Service Plan
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **patchServicePlanModified**(id: *`string`*, patchModifiedServicePlan?: *[PatchModifiedServicePlan](../interfaces/patchmodifiedserviceplan.md)*, options?: *`any`*): `AxiosPromise`<[DataDrivenFormSchema](../interfaces/datadrivenformschema.md)>
 
-*Defined in [api.ts:6121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6121)*
+*Defined in [api.ts:6121](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L6121)*
 
 *__summary__*: Patch Service Plan Modified Schema
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **showServicePlan**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ServicePlan](../interfaces/serviceplan.md)>
 
-*Defined in [api.ts:6133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6133)*
+*Defined in [api.ts:6133](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L6133)*
 
 Returns the specified Service Plan
 
@@ -183,7 +183,7 @@ ___
 
 ▸ **showServicePlanBase**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[DataDrivenFormSchema](../interfaces/datadrivenformschema.md)>
 
-*Defined in [api.ts:6145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6145)*
+*Defined in [api.ts:6145](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L6145)*
 
 Returns the specified Service Plan's base schema
 
@@ -209,7 +209,7 @@ ___
 
 ▸ **showServicePlanModified**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[DataDrivenFormSchema](../interfaces/datadrivenformschema.md)>
 
-*Defined in [api.ts:6157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6157)*
+*Defined in [api.ts:6157](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L6157)*
 
 Returns the specified Service Plan's modified schema
 

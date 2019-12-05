@@ -27,7 +27,7 @@
 
 **● impact**: *`number`*
 
-*Defined in [api.ts:809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L809)*
+*Defined in [api.ts:809](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L809)*
 
 *__type__*: {number}
 
@@ -40,7 +40,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L803)*
+*Defined in [api.ts:803](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L803)*
 
 *__type__*: {string}
 
