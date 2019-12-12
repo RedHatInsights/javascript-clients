@@ -44,7 +44,7 @@
 
 **● cluster**: *[ClusterEnum](../enums/reportopenshiftazureordering.clusterenum.md)*
 
-*Defined in [api.ts:2140](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2140)*
+*Defined in [api.ts:2204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2204)*
 
 *__type__*: {string}
 
@@ -57,7 +57,7 @@ ___
 
 **● cost**: *[CostEnum](../enums/reportopenshiftazureordering.costenum.md)*
 
-*Defined in [api.ts:2098](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2098)*
+*Defined in [api.ts:2162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2162)*
 
 *__type__*: {string}
 
@@ -70,7 +70,7 @@ ___
 
 **● delta**: *[DeltaEnum](../enums/reportopenshiftazureordering.deltaenum.md)*
 
-*Defined in [api.ts:2110](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2110)*
+*Defined in [api.ts:2174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2174)*
 
 *__type__*: {string}
 
@@ -83,7 +83,7 @@ ___
 
 **● instanceType**: *[InstanceTypeEnum](../enums/reportopenshiftazureordering.instancetypeenum.md)*
 
-*Defined in [api.ts:2134](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2134)*
+*Defined in [api.ts:2198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2198)*
 
 *__type__*: {string}
 
@@ -96,7 +96,7 @@ ___
 
 **● node**: *[NodeEnum](../enums/reportopenshiftazureordering.nodeenum.md)*
 
-*Defined in [api.ts:2152](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2152)*
+*Defined in [api.ts:2216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2216)*
 
 *__type__*: {string}
 
@@ -109,7 +109,7 @@ ___
 
 **● project**: *[ProjectEnum](../enums/reportopenshiftazureordering.projectenum.md)*
 
-*Defined in [api.ts:2146](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2146)*
+*Defined in [api.ts:2210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2210)*
 
 *__type__*: {string}
 
@@ -122,7 +122,7 @@ ___
 
 **● resourceLocation**: *[ResourceLocationEnum](../enums/reportopenshiftazureordering.resourcelocationenum.md)*
 
-*Defined in [api.ts:2122](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2122)*
+*Defined in [api.ts:2186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2186)*
 
 *__type__*: {string}
 
@@ -135,7 +135,7 @@ ___
 
 **● serviceName**: *[ServiceNameEnum](../enums/reportopenshiftazureordering.servicenameenum.md)*
 
-*Defined in [api.ts:2128](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2128)*
+*Defined in [api.ts:2192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2192)*
 
 *__type__*: {string}
 
@@ -148,7 +148,7 @@ ___
 
 **● subscriptionGuid**: *[SubscriptionGuidEnum](../enums/reportopenshiftazureordering.subscriptionguidenum.md)*
 
-*Defined in [api.ts:2116](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2116)*
+*Defined in [api.ts:2180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2180)*
 
 *__type__*: {string}
 
@@ -161,7 +161,7 @@ ___
 
 **● usage**: *[UsageEnum](../enums/reportopenshiftazureordering.usageenum.md)*
 
-*Defined in [api.ts:2104](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2104)*
+*Defined in [api.ts:2168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2168)*
 
 *__type__*: {string}
 

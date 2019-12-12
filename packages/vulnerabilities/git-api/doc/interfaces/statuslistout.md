@@ -27,7 +27,7 @@
 
 **● data**: *`Array`<[StatusListOutData](statuslistoutdata.md)>*
 
-*Defined in [git-api/api.ts:1169](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1169)*
+*Defined in [git-api/api.ts:1169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1169)*
 
 List of available status/status\_id pairs.
 
@@ -42,7 +42,7 @@ ___
 
 **● meta**: *[StatusListOutMeta](statuslistoutmeta.md)*
 
-*Defined in [git-api/api.ts:1175](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1175)*
+*Defined in [git-api/api.ts:1175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1175)*
 
 *__type__*: {StatusListOutMeta}
 

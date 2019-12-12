@@ -36,7 +36,7 @@
 
 **● accountAlias**: *[AccountAliasEnum](../enums/reportordering.accountaliasenum.md)*
 
-*Defined in [api.ts:2505](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2505)*
+*Defined in [api.ts:2569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2569)*
 
 *__type__*: {string}
 
@@ -49,7 +49,7 @@ ___
 
 **● cost**: *[CostEnum](../enums/reportordering.costenum.md)*
 
-*Defined in [api.ts:2487](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2487)*
+*Defined in [api.ts:2551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2551)*
 
 *__type__*: {string}
 
@@ -62,7 +62,7 @@ ___
 
 **● delta**: *[DeltaEnum](../enums/reportordering.deltaenum.md)*
 
-*Defined in [api.ts:2499](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2499)*
+*Defined in [api.ts:2563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2563)*
 
 *__type__*: {string}
 
@@ -75,7 +75,7 @@ ___
 
 **● region**: *[RegionEnum](../enums/reportordering.regionenum.md)*
 
-*Defined in [api.ts:2511](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2511)*
+*Defined in [api.ts:2575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2575)*
 
 *__type__*: {string}
 
@@ -88,7 +88,7 @@ ___
 
 **● service**: *[ServiceEnum](../enums/reportordering.serviceenum.md)*
 
-*Defined in [api.ts:2517](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2517)*
+*Defined in [api.ts:2581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2581)*
 
 *__type__*: {string}
 
@@ -101,7 +101,7 @@ ___
 
 **● usage**: *[UsageEnum](../enums/reportordering.usageenum.md)*
 
-*Defined in [api.ts:2493](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2493)*
+*Defined in [api.ts:2557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2557)*
 
 *__type__*: {string}
 

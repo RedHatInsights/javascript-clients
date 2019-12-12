@@ -47,7 +47,7 @@ RequestApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L49)*
 
 **Parameters:**
 
@@ -71,7 +71,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -82,7 +82,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -93,7 +93,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L49)*
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 ▸ **createRequest**(requestIn: *[RequestIn](../interfaces/requestin.md)*, options?: *`any`*): `AxiosPromise`<[Request](../modules/request.md)>
 
-*Defined in [api.ts:1361](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L1361)*
+*Defined in [api.ts:1361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1361)*
 
 Add an approval request by given parameters, available to anyone
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **listRequests**(xRhPersona?: *"approval/admin" \| "approval/approver" \| "approval/requester"*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
 
-*Defined in [api.ts:1376](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L1376)*
+*Defined in [api.ts:1376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1376)*
 
 The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
 
@@ -160,7 +160,7 @@ ___
 
 ▸ **listRequestsByRequest**(requestId: *`string`*, options?: *`any`*): `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
 
-*Defined in [api.ts:1388](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L1388)*
+*Defined in [api.ts:1388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1388)*
 
 Return an array of child requests of a given request id, available for admin/requester
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **showRequest**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Request](../modules/request.md)>
 
-*Defined in [api.ts:1400](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L1400)*
+*Defined in [api.ts:1400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1400)*
 
 Return an approval request by given id, available to anyone who can access the request
 

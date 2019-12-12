@@ -28,7 +28,7 @@
 
 **● cve**: *[CveOrList](cveorlist.md)*
 
-*Defined in [api.ts:373](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L373)*
+*Defined in [api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L373)*
 
 *__type__*: {CveOrList}
 
@@ -41,7 +41,7 @@ ___
 
 **● statusId**: *`number`*
 
-*Defined in [api.ts:379](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L379)*
+*Defined in [api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L379)*
 
 Status ID to be set, obtained by GET method.
 
@@ -56,7 +56,7 @@ ___
 
 **● statusText**: *`string` \| `null`*
 
-*Defined in [api.ts:385](https://github.com/karelhala/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L385)*
+*Defined in [api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L385)*
 
 Complementary text to the status.
 

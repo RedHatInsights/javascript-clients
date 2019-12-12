@@ -28,7 +28,7 @@
 
 **● firstName**: *`string`*
 
-*Defined in [api.ts:716](https://github.com/karelhala/javascript-clients/blob/master/packages/remediations/api.ts#L716)*
+*Defined in [api.ts:716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L716)*
 
 *__type__*: {string}
 
@@ -41,7 +41,7 @@ ___
 
 **● lastName**: *`string`*
 
-*Defined in [api.ts:722](https://github.com/karelhala/javascript-clients/blob/master/packages/remediations/api.ts#L722)*
+*Defined in [api.ts:722](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L722)*
 
 *__type__*: {string}
 
@@ -54,7 +54,7 @@ ___
 
 **● username**: *`string`*
 
-*Defined in [api.ts:710](https://github.com/karelhala/javascript-clients/blob/master/packages/remediations/api.ts#L710)*
+*Defined in [api.ts:710](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L710)*
 
 *__type__*: {string}
 

@@ -247,10 +247,10 @@ export interface GroupRolesPagination {
     links?: PaginationLinks;
     /**
      *
-     * @type {Array<Role>}
+     * @type {Array<RoleOut>}
      * @memberof GroupRolesPagination
      */
-    data: Array<Role>;
+    data: Array<RoleOut>;
 }
 
 /**
@@ -341,10 +341,10 @@ export interface GroupWithPrincipalsAndRoles {
     principals: Array<Principal>;
     /**
      *
-     * @type {Array<Role>}
+     * @type {Array<RoleOut>}
      * @memberof GroupWithPrincipalsAndRoles
      */
-    roles: Array<Role>;
+    roles: Array<RoleOut>;
 }
 
 /**
@@ -802,6 +802,30 @@ export interface RoleOut {
      * @memberof RoleOut
      */
     modified: Date;
+    /**
+     *
+     * @type {number}
+     * @memberof RoleOut
+     */
+    policyCount?: number;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof RoleOut
+     */
+    applications?: Array<string>;
+    /**
+     *
+     * @type {boolean}
+     * @memberof RoleOut
+     */
+    system?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof RoleOut
+     */
+    platformDefault?: boolean;
 }
 
 /**
@@ -866,6 +890,30 @@ export interface RoleWithAccess {
      * @memberof RoleWithAccess
      */
     modified: Date;
+    /**
+     *
+     * @type {number}
+     * @memberof RoleWithAccess
+     */
+    policyCount?: number;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof RoleWithAccess
+     */
+    applications?: Array<string>;
+    /**
+     *
+     * @type {boolean}
+     * @memberof RoleWithAccess
+     */
+    system?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof RoleWithAccess
+     */
+    platformDefault?: boolean;
     /**
      *
      * @type {Array<Access>}

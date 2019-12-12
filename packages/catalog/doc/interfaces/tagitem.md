@@ -28,7 +28,7 @@
 
 **● name**: *`string`*
 
-*Defined in [api.ts:1164](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L1164)*
+*Defined in [api.ts:1164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1164)*
 
 *__type__*: {string}
 
@@ -41,7 +41,7 @@ ___
 
 **● namespace**: *`string`*
 
-*Defined in [api.ts:1170](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L1170)*
+*Defined in [api.ts:1170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1170)*
 
 *__type__*: {string}
 
@@ -54,7 +54,7 @@ ___
 
 **● value**: *`string`*
 
-*Defined in [api.ts:1176](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L1176)*
+*Defined in [api.ts:1176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1176)*
 
 *__type__*: {string}
 

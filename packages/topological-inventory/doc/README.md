@@ -203,7 +203,7 @@ API documentation
 
 **● BASE_PATH**: *`string`* =  "https://cloud.redhat.com//api/topological-inventory/v1.0".replace(/\/+$/, "")
 
-*Defined in [api.ts:20](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20)*
+*Defined in [api.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20)*
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:4269](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4269)*
+*Defined in [api.ts:4269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4269)*
 
 DefaultApi - axios parameter creator
 
@@ -234,7 +234,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:16761](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L16761)*
+*Defined in [api.ts:16761](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L16761)*
 
 DefaultApi - factory interface
 
@@ -255,7 +255,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:13756](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L13756)*
+*Defined in [api.ts:13756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L13756)*
 
 DefaultApi - functional programming interface
 
@@ -277,7 +277,7 @@ ___
 
 **COLLECTION_FORMATS**: *`object`*
 
-*Defined in [api.ts:26](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L26)*
+*Defined in [api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L26)*
 
 *__export__*: 
 
@@ -287,7 +287,7 @@ ___
 
 **● csv**: *`string`* = ","
 
-*Defined in [api.ts:27](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L27)*
+*Defined in [api.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L27)*
 
 ___
 <a id="collection_formats.pipes"></a>
@@ -296,7 +296,7 @@ ___
 
 **● pipes**: *`string`* = "|"
 
-*Defined in [api.ts:30](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L30)*
+*Defined in [api.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L30)*
 
 ___
 <a id="collection_formats.ssv"></a>
@@ -305,7 +305,7 @@ ___
 
 **● ssv**: *`string`* = " "
 
-*Defined in [api.ts:28](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L28)*
+*Defined in [api.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L28)*
 
 ___
 <a id="collection_formats.tsv"></a>
@@ -314,7 +314,7 @@ ___
 
 **● tsv**: *`string`* = "	"
 
-*Defined in [api.ts:29](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L29)*
+*Defined in [api.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L29)*
 
 ___
 

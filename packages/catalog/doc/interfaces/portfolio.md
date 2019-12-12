@@ -33,7 +33,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:697](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L697)*
+*Defined in [api.ts:697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L697)*
 
 *__type__*: {Date}
 
@@ -46,7 +46,7 @@ ___
 
 **● description**: *`string` \| `null`*
 
-*Defined in [api.ts:673](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L673)*
+*Defined in [api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L673)*
 
 *__type__*: {string}
 
@@ -59,7 +59,7 @@ ___
 
 **● enabled**: *`boolean`*
 
-*Defined in [api.ts:679](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L679)*
+*Defined in [api.ts:679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L679)*
 
 *__type__*: {boolean}
 
@@ -72,7 +72,7 @@ ___
 
 **● iconId**: *`string`*
 
-*Defined in [api.ts:691](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L691)*
+*Defined in [api.ts:691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L691)*
 
 The Portfolio Icon ID
 
@@ -87,7 +87,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:661](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L661)*
+*Defined in [api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L661)*
 
 *__type__*: {string}
 
@@ -100,7 +100,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:667](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L667)*
+*Defined in [api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L667)*
 
 *__type__*: {string}
 
@@ -113,7 +113,7 @@ ___
 
 **● owner**: *`string`*
 
-*Defined in [api.ts:685](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L685)*
+*Defined in [api.ts:685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L685)*
 
 *__type__*: {string}
 
@@ -126,7 +126,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:703](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L703)*
+*Defined in [api.ts:703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L703)*
 
 *__type__*: {Date}
 

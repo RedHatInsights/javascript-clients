@@ -41,7 +41,7 @@
 
 **● decision**: *[DecisionEnum](../enums/request.decisionenum.md)*
 
-*Defined in [api.ts:294](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L294)*
+*Defined in [api.ts:294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L294)*
 
 Approval decision. Possible value: undecided, approved, canceled, or denied
 
@@ -56,7 +56,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:354](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L354)*
+*Defined in [api.ts:354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L354)*
 
 Request description
 
@@ -71,7 +71,7 @@ ___
 
 **● finishedAt**: *`Date`*
 
-*Defined in [api.ts:318](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L318)*
+*Defined in [api.ts:318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L318)*
 
 Timestamp of finishing (skipped, canceled, or completed)
 
@@ -86,7 +86,7 @@ ___
 
 **● groupName**: *`string`*
 
-*Defined in [api.ts:360](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L360)*
+*Defined in [api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L360)*
 
 Name of approver group(s) assigned to approve this request
 
@@ -101,7 +101,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:282](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L282)*
+*Defined in [api.ts:282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L282)*
 
 *__type__*: {string}
 
@@ -114,7 +114,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:348](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L348)*
+*Defined in [api.ts:348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L348)*
 
 Request name
 
@@ -129,7 +129,7 @@ ___
 
 **● notifiedAt**: *`Date`*
 
-*Defined in [api.ts:312](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L312)*
+*Defined in [api.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L312)*
 
 Timestamp of notification sent to approvers
 
@@ -144,7 +144,7 @@ ___
 
 **● numberOfChildren**: *`number`*
 
-*Defined in [api.ts:324](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L324)*
+*Defined in [api.ts:324](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L324)*
 
 Number of child requests
 
@@ -159,7 +159,7 @@ ___
 
 **● numberOfFinishedChildren**: *`number`*
 
-*Defined in [api.ts:330](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L330)*
+*Defined in [api.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L330)*
 
 Number of finished child requests
 
@@ -174,7 +174,7 @@ ___
 
 **● owner**: *`string`*
 
-*Defined in [api.ts:336](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L336)*
+*Defined in [api.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L336)*
 
 Requester's id
 
@@ -189,7 +189,7 @@ ___
 
 **● parentId**: *`string`*
 
-*Defined in [api.ts:366](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L366)*
+*Defined in [api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L366)*
 
 Parent request id
 
@@ -204,7 +204,7 @@ ___
 
 **● reason**: *`string`*
 
-*Defined in [api.ts:300](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L300)*
+*Defined in [api.ts:300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L300)*
 
 Reason for the decision. Optional. Present normally when the decision is denied
 
@@ -219,7 +219,7 @@ ___
 
 **● requesterName**: *`string`*
 
-*Defined in [api.ts:342](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L342)*
+*Defined in [api.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L342)*
 
 Requester's full name
 
@@ -234,7 +234,7 @@ ___
 
 **● state**: *[StateEnum](../enums/request.stateenum.md)*
 
-*Defined in [api.ts:288](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L288)*
+*Defined in [api.ts:288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L288)*
 
 The state of the request. Possible value: canceled, completed, notified, skipped, or started
 
@@ -249,7 +249,7 @@ ___
 
 **● workflowId**: *`string`*
 
-*Defined in [api.ts:306](https://github.com/karelhala/javascript-clients/blob/master/packages/approval/api.ts#L306)*
+*Defined in [api.ts:306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L306)*
 
 Associate workflow id. Available only if the request is a leaf node
 

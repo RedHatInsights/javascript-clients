@@ -27,7 +27,7 @@
 
 **● name**: *`string`*
 
-*Defined in [api.ts:483](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L483)*
+*Defined in [api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L543)*
 
 *__type__*: {string}
 
@@ -40,7 +40,7 @@ ___
 
 **● risk**: *`number`*
 
-*Defined in [api.ts:489](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L489)*
+*Defined in [api.ts:549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L549)*
 
 *__type__*: {number}
 

@@ -34,6 +34,7 @@ ProviderApi - object-oriented interface
 * [deleteProvider](providerapi.md#deleteprovider)
 * [getProvider](providerapi.md#getprovider)
 * [listProviders](providerapi.md#listproviders)
+* [updateProvider](providerapi.md#updateprovider)
 
 ---
 
@@ -47,7 +48,7 @@ ProviderApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 **Parameters:**
 
@@ -71,7 +72,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -82,7 +83,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -93,7 +94,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
 ___
 
@@ -105,7 +106,7 @@ ___
 
 ▸ **createProvider**(providerIn: *[ProviderIn](../interfaces/providerin.md)*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
-*Defined in [api.ts:6073](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L6073)*
+*Defined in [api.ts:6313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6313)*
 
 *__summary__*: Create a provider
 
@@ -129,7 +130,7 @@ ___
 
 ▸ **deleteProvider**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:6085](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L6085)*
+*Defined in [api.ts:6325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6325)*
 
 *__summary__*: Delete a provider
 
@@ -153,7 +154,7 @@ ___
 
 ▸ **getProvider**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
-*Defined in [api.ts:6097](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L6097)*
+*Defined in [api.ts:6337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6337)*
 
 *__summary__*: Get a provider
 
@@ -177,7 +178,7 @@ ___
 
 ▸ **listProviders**(type?: *`string`*, name?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ProviderPagination](../interfaces/providerpagination.md)>
 
-*Defined in [api.ts:6112](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L6112)*
+*Defined in [api.ts:6352](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6352)*
 
 *__summary__*: List the providers
 
@@ -196,6 +197,31 @@ ___
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ProviderPagination](../interfaces/providerpagination.md)>
+
+___
+<a id="updateprovider"></a>
+
+###  updateProvider
+
+▸ **updateProvider**(uuid: *`string`*, providerIn: *[ProviderIn](../interfaces/providerin.md)*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
+
+*Defined in [api.ts:6365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6365)*
+
+*__summary__*: Update a provider
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: ProviderApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| uuid | `string` |  ID of provider to update |
+| providerIn | [ProviderIn](../interfaces/providerin.md) |  \- |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
 ___
 

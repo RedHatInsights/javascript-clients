@@ -28,7 +28,7 @@
 
 **● id**: *`Object`*
 
-*Defined in [api.ts:183](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L183)*
+*Defined in [api.ts:183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L183)*
 
 *__type__*: {Object}
 
@@ -41,7 +41,7 @@ ___
 
 **● levels**: *[AppsRegisterEventTypesLevels](appsregistereventtypeslevels.md)*
 
-*Defined in [api.ts:195](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L195)*
+*Defined in [api.ts:195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L195)*
 
 *__type__*: {AppsRegisterEventTypesLevels}
 
@@ -54,7 +54,7 @@ ___
 
 **● title**: *`string`*
 
-*Defined in [api.ts:189](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L189)*
+*Defined in [api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L189)*
 
 *__type__*: {string}
 

@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[PolicyExtended](policyextended.md)>*
 
-*Defined in [api.ts:555](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L555)*
+*Defined in [api.ts:555](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L555)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:549](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L549)*
+*Defined in [api.ts:549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L549)*
 
 *__type__*: {PaginationLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [api.ts:543](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L543)*
+*Defined in [api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L543)*
 
 *__type__*: {PaginationMeta}
 

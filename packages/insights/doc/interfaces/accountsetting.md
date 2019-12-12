@@ -26,7 +26,7 @@
 
 **● showSatelliteHosts**: *`boolean`*
 
-*Defined in [api.ts:83](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L83)*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L83)*
 
 *__type__*: {boolean}
 

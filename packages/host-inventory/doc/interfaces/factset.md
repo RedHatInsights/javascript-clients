@@ -29,7 +29,7 @@ A set of string facts belonging to a single namespace.
 
 **● facts**: *`any`*
 
-*Defined in [api.ts:443](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L443)*
+*Defined in [api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L469)*
 
 The facts themselves.
 
@@ -44,7 +44,7 @@ ___
 
 **● namespace**: *`string`*
 
-*Defined in [api.ts:437](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L437)*
+*Defined in [api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L463)*
 
 A namespace the facts belong to.
 

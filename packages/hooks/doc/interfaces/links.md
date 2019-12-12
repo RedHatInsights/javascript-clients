@@ -29,7 +29,7 @@
 
 **● first**: *`string`*
 
-*Defined in [api.ts:916](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L916)*
+*Defined in [api.ts:916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L916)*
 
 Link to the first page of records
 
@@ -44,7 +44,7 @@ ___
 
 **● last**: *`string`*
 
-*Defined in [api.ts:922](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L922)*
+*Defined in [api.ts:922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L922)*
 
 Link to the last page of records
 
@@ -59,7 +59,7 @@ ___
 
 **● next**: *`string`*
 
-*Defined in [api.ts:934](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L934)*
+*Defined in [api.ts:934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L934)*
 
 Link to next page of records, if such page exists
 
@@ -74,7 +74,7 @@ ___
 
 **● previous**: *`string`*
 
-*Defined in [api.ts:928](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L928)*
+*Defined in [api.ts:928](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L928)*
 
 Link to previous page of records, if such page exists
 

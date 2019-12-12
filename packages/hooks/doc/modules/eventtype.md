@@ -29,7 +29,7 @@
 
 **● attributes**: *[EventTypeAttributes](../interfaces/eventtypeattributes.md)*
 
-*Defined in [api.ts:546](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L546)*
+*Defined in [api.ts:546](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L546)*
 
 *__type__*: {EventTypeAttributes}
 
@@ -42,7 +42,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:534](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L534)*
+*Defined in [api.ts:534](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L534)*
 
 Identifier of the event type
 
@@ -57,7 +57,7 @@ ___
 
 **● relationships**: *[EventTypeRelationships](../interfaces/eventtyperelationships.md)*
 
-*Defined in [api.ts:552](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L552)*
+*Defined in [api.ts:552](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L552)*
 
 *__type__*: {EventTypeRelationships}
 
@@ -70,7 +70,7 @@ ___
 
 **● type**: *[TypeEnum](../enums/eventtype.typeenum.md)*
 
-*Defined in [api.ts:540](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L540)*
+*Defined in [api.ts:540](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L540)*
 
 Type of the returned record
 

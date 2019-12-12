@@ -47,7 +47,7 @@ TagsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
 
 **Parameters:**
 
@@ -71,7 +71,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -82,7 +82,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -93,7 +93,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 ▸ **listTagPortfolioItems**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[PortfolioItemsCollection](../interfaces/portfolioitemscollection.md)>
 
-*Defined in [api.ts:6899](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L6899)*
+*Defined in [api.ts:6974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6974)*
 
 Returns an array of Portfolio Item objects
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **listTagPortfolios**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[PortfoliosCollection](../interfaces/portfolioscollection.md)>
 
-*Defined in [api.ts:6914](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L6914)*
+*Defined in [api.ts:6989](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6989)*
 
 Returns an array of Portfolio objects
 
@@ -163,7 +163,7 @@ ___
 
 ▸ **listTags**(options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:6925](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L6925)*
+*Defined in [api.ts:7000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7000)*
 
 List Tags
 
@@ -188,7 +188,7 @@ ___
 
 ▸ **showTag**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Tag](../interfaces/tag.md)>
 
-*Defined in [api.ts:6937](https://github.com/karelhala/javascript-clients/blob/master/packages/catalog/api.ts#L6937)*
+*Defined in [api.ts:7012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7012)*
 
 Show a specific Tag
 

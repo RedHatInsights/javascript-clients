@@ -26,7 +26,7 @@
 
 **● title**: *`string`*
 
-*Defined in [api.ts:902](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L902)*
+*Defined in [api.ts:902](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L902)*
 
 Title of the level, shown to the user when configuring filters
 

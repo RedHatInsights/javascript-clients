@@ -27,7 +27,7 @@
 
 **● id**: *`Object`*
 
-*Defined in [api.ts:209](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L209)*
+*Defined in [api.ts:209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L209)*
 
 *__type__*: {Object}
 
@@ -40,7 +40,7 @@ ___
 
 **● title**: *`string`*
 
-*Defined in [api.ts:215](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L215)*
+*Defined in [api.ts:215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L215)*
 
 *__type__*: {string}
 

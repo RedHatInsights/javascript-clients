@@ -27,7 +27,7 @@
 
 **● justification**: *`string`*
 
-*Defined in [api.ts:141](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L141)*
+*Defined in [api.ts:141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L141)*
 
 *__type__*: {string}
 
@@ -40,7 +40,7 @@ ___
 
 **● ruleId**: *`string`*
 
-*Defined in [api.ts:135](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L135)*
+*Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L135)*
 
 *__type__*: {string}
 

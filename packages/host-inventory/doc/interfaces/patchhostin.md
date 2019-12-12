@@ -29,7 +29,7 @@ Data of a single host to be updated.
 
 **● ansibleHost**: *`string`*
 
-*Defined in [api.ts:725](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L725)*
+*Defined in [api.ts:751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L751)*
 
 The ansible host name for remediations
 
@@ -44,7 +44,7 @@ ___
 
 **● displayName**: *`string`*
 
-*Defined in [api.ts:731](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L731)*
+*Defined in [api.ts:757](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L757)*
 
 A host’s human-readable display name, e.g. in a form of a domain name.
 

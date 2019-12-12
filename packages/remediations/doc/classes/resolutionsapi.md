@@ -45,7 +45,7 @@ ResolutionsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/remediations/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L49)*
 
 **Parameters:**
 
@@ -69,7 +69,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/remediations/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -80,7 +80,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/remediations/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -91,7 +91,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/remediations/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L49)*
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 ▸ **getResolutionsForIssue**(issue: *`string`*, options?: *`any`*): `AxiosPromise`<[Resolutions](../interfaces/resolutions.md)>
 
-*Defined in [api.ts:1857](https://github.com/karelhala/javascript-clients/blob/master/packages/remediations/api.ts#L1857)*
+*Defined in [api.ts:1857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1857)*
 
 Provides information about resolutions available for the given issue
 
@@ -129,7 +129,7 @@ ___
 
 ▸ **getResolutionsForIssues**(resolutionsBatchInput: *[ResolutionsBatchInput](../interfaces/resolutionsbatchinput.md)*, options?: *`any`*): `AxiosPromise`<`object`>
 
-*Defined in [api.ts:1869](https://github.com/karelhala/javascript-clients/blob/master/packages/remediations/api.ts#L1869)*
+*Defined in [api.ts:1869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1869)*
 
 Provides information about resolutions available for the given issues
 

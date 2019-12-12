@@ -18,11 +18,15 @@
 
 ↳  [HostackApi](hostackapi.md)
 
+↳  [RatingApi](ratingapi.md)
+
 ↳  [ResolutionRiskApi](resolutionriskapi.md)
 
 ↳  [RuleApi](ruleapi.md)
 
 ↳  [RulecategoryApi](rulecategoryapi.md)
+
+↳  [SettingsApi](settingsapi.md)
 
 ↳  [StatsApi](statsapi.md)
 
@@ -58,7 +62,7 @@
 
 ⊕ **new BaseAPI**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [BaseAPI](baseapi.md)
 
-*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
 **Parameters:**
 
@@ -80,7 +84,7 @@ ___
 
 **● axios**: *`AxiosInstance`*
 
-*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -89,7 +93,7 @@ ___
 
 **● basePath**: *`string`*
 
-*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -98,7 +102,7 @@ ___
 
 **● configuration**: *[Configuration](configuration.md) \| `undefined`*
 
-*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
 ___
 

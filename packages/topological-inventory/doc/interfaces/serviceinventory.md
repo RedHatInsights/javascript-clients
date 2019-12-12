@@ -37,7 +37,7 @@
 
 **● archivedAt**: *`Date`*
 
-*Defined in [api.ts:2641](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2641)*
+*Defined in [api.ts:2641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2641)*
 
 *__type__*: {Date}
 
@@ -50,7 +50,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:2647](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2647)*
+*Defined in [api.ts:2647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2647)*
 
 *__type__*: {Date}
 
@@ -63,7 +63,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:2653](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2653)*
+*Defined in [api.ts:2653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2653)*
 
 *__type__*: {string}
 
@@ -76,7 +76,7 @@ ___
 
 **● extra**: *`any`*
 
-*Defined in [api.ts:2659](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2659)*
+*Defined in [api.ts:2659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2659)*
 
 *__type__*: {any}
 
@@ -89,7 +89,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:2665](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2665)*
+*Defined in [api.ts:2665](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2665)*
 
 ID of the resource
 
@@ -104,7 +104,7 @@ ___
 
 **● lastSeenAt**: *`Date`*
 
-*Defined in [api.ts:2671](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2671)*
+*Defined in [api.ts:2671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2671)*
 
 *__type__*: {Date}
 
@@ -117,7 +117,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:2677](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2677)*
+*Defined in [api.ts:2677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2677)*
 
 *__type__*: {string}
 
@@ -130,7 +130,7 @@ ___
 
 **● sourceCreatedAt**: *`Date`*
 
-*Defined in [api.ts:2683](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2683)*
+*Defined in [api.ts:2683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2683)*
 
 *__type__*: {Date}
 
@@ -143,7 +143,7 @@ ___
 
 **● sourceId**: *`string`*
 
-*Defined in [api.ts:2689](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2689)*
+*Defined in [api.ts:2689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2689)*
 
 ID of the resource
 
@@ -158,7 +158,7 @@ ___
 
 **● sourceRef**: *`string`*
 
-*Defined in [api.ts:2695](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2695)*
+*Defined in [api.ts:2695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2695)*
 
 *__type__*: {string}
 
@@ -171,7 +171,7 @@ ___
 
 **● sourceUpdatedAt**: *`Date`*
 
-*Defined in [api.ts:2701](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2701)*
+*Defined in [api.ts:2701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2701)*
 
 *__type__*: {Date}
 
@@ -184,7 +184,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:2707](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2707)*
+*Defined in [api.ts:2707](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2707)*
 
 *__type__*: {Date}
 
