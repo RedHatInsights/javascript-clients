@@ -133,6 +133,12 @@ export interface Application {
 export interface ApplicationType {
     /**
      *
+     * @type {string}
+     * @memberof ApplicationType
+     */
+    availabilityCheckUrl?: string;
+    /**
+     *
      * @type {Date}
      * @memberof ApplicationType
      */
@@ -856,6 +862,45 @@ export interface Tenant {
  */
 export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * Checks Availability of a Source
+         * @summary Checks Availability of a Source
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        checkAvailabilitySource(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling checkAvailabilitySource.');
+            }
+            const localVarPath = `/sources/{id}/check_availability`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * Creates a Application object
          * @summary Create a new Application
@@ -2405,6 +2450,20 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 export const DefaultApiFp = function(configuration?: Configuration) {
     return {
         /**
+         * Checks Availability of a Source
+         * @summary Checks Availability of a Source
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        checkAvailabilitySource(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).checkAvailabilitySource(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Creates a Application object
          * @summary Create a new Application
          * @param {Application} application Application attributes to create
@@ -2921,6 +2980,16 @@ export const DefaultApiFp = function(configuration?: Configuration) {
 export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
+         * Checks Availability of a Source
+         * @summary Checks Availability of a Source
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        checkAvailabilitySource(id: string, options?: any) {
+            return DefaultApiFp(configuration).checkAvailabilitySource(id, options)(axios, basePath);
+        },
+        /**
          * Creates a Application object
          * @summary Create a new Application
          * @param {Application} application Application attributes to create
@@ -3305,6 +3374,18 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
  * @extends {BaseAPI}
  */
 export class DefaultApi extends BaseAPI {
+    /**
+     * Checks Availability of a Source
+     * @summary Checks Availability of a Source
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public checkAvailabilitySource(id: string, options?: any) {
+        return DefaultApiFp(this.configuration).checkAvailabilitySource(id, options)(this.axios, this.basePath);
+    }
+
     /**
      * Creates a Application object
      * @summary Create a new Application

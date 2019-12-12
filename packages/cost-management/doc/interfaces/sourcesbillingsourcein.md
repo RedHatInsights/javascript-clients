@@ -26,7 +26,7 @@
 
 **● billingSource**: *`any`*
 
-*Defined in [api.ts:2383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2383)*
+*Defined in [api.ts:2838](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2838)*
 
 *__type__*: {any}
 

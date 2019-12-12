@@ -584,7 +584,7 @@ ___
 
 ▸ **ServicePlansApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:6037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6037)*
+*Defined in [api.ts:6090](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6090)*
 
 ServicePlansApi - factory interface
 
@@ -605,7 +605,7 @@ ___
 
 ▸ **ServicePlansApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5957](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5957)*
+*Defined in [api.ts:5996](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5996)*
 
 ServicePlansApi - functional programming interface
 
@@ -624,7 +624,7 @@ ___
 
 ▸ **SettingsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6167)*
+*Defined in [api.ts:6242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6242)*
 
 SettingsApi - axios parameter creator
 
@@ -643,7 +643,7 @@ ___
 
 ▸ **SettingsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:6446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6446)*
+*Defined in [api.ts:6521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6521)*
 
 SettingsApi - factory interface
 
@@ -664,7 +664,7 @@ ___
 
 ▸ **SettingsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6368)*
+*Defined in [api.ts:6443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6443)*
 
 SettingsApi - functional programming interface
 
@@ -683,7 +683,7 @@ ___
 
 ▸ **TagsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6572)*
+*Defined in [api.ts:6647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6647)*
 
 TagsApi - axios parameter creator
 
@@ -702,7 +702,7 @@ ___
 
 ▸ **TagsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:6831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6831)*
+*Defined in [api.ts:6906](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6906)*
 
 TagsApi - factory interface
 
@@ -723,7 +723,7 @@ ___
 
 ▸ **TagsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6761](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6761)*
+*Defined in [api.ts:6836](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6836)*
 
 TagsApi - functional programming interface
 
@@ -742,7 +742,7 @@ ___
 
 ▸ **TenantApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6947](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6947)*
+*Defined in [api.ts:7022](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7022)*
 
 TenantApi - axios parameter creator
 
@@ -761,7 +761,7 @@ ___
 
 ▸ **TenantApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:7117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7117)*
+*Defined in [api.ts:7192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7192)*
 
 TenantApi - factory interface
 
@@ -782,7 +782,7 @@ ___
 
 ▸ **TenantApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:7067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7067)*
+*Defined in [api.ts:7142](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7142)*
 
 TenantApi - functional programming interface
 

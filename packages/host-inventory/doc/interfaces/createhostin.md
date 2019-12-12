@@ -26,10 +26,13 @@ Data of a single host belonging to an account. Represents the hosts without its 
 * [insightsId](createhostin.md#insightsid)
 * [ipAddresses](createhostin.md#ipaddresses)
 * [macAddresses](createhostin.md#macaddresses)
+* [reporter](createhostin.md#reporter)
 * [rhelMachineId](createhostin.md#rhelmachineid)
 * [satelliteId](createhostin.md#satelliteid)
+* [staleTimestamp](createhostin.md#staletimestamp)
 * [subscriptionManagerId](createhostin.md#subscriptionmanagerid)
 * [systemProfile](createhostin.md#systemprofile)
+* [tags](createhostin.md#tags)
 
 ---
 
@@ -185,6 +188,21 @@ Host’s network interfaces MAC addresses. This field is considered to be a cano
 *__memberof__*: CreateHostIn
 
 ___
+<a id="reporter"></a>
+
+### `<Optional>` reporter
+
+**● reporter**: *`string`*
+
+*Defined in [api.ts:237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L237)*
+
+Reporting source of the host. Used when updating the stale\_timestamp.
+
+*__type__*: {string}
+
+*__memberof__*: CreateHostIn
+
+___
 <a id="rhelmachineid"></a>
 
 ### `<Optional>` rhelMachineId
@@ -215,6 +233,21 @@ A Red Hat Satellite ID of a RHEL host. This field is considered to be a canonica
 *__memberof__*: CreateHostIn
 
 ___
+<a id="staletimestamp"></a>
+
+### `<Optional>` staleTimestamp
+
+**● staleTimestamp**: *`Date`*
+
+*Defined in [api.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L231)*
+
+Timestamp from which the host is considered stale.
+
+*__type__*: {Date}
+
+*__memberof__*: CreateHostIn
+
+___
 <a id="subscriptionmanagerid"></a>
 
 ### `<Optional>` subscriptionManagerId
@@ -236,9 +269,24 @@ ___
 
 **● systemProfile**: *[SystemProfileIn](systemprofilein.md)*
 
-*Defined in [api.ts:219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L219)*
+*Defined in [api.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L225)*
 
 *__type__*: {SystemProfileIn}
+
+*__memberof__*: CreateHostIn
+
+___
+<a id="tags"></a>
+
+### `<Optional>` tags
+
+**● tags**: *`Array`<[StructuredTag](structuredtag.md)>*
+
+*Defined in [api.ts:219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L219)*
+
+The tags on a host
+
+*__type__*: {Array}
 
 *__memberof__*: CreateHostIn
 

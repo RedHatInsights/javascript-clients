@@ -14,23 +14,40 @@
 
 ### Properties
 
+* [applications](roleout.md#applications)
 * [created](roleout.md#created)
 * [description](roleout.md#description)
 * [modified](roleout.md#modified)
 * [name](roleout.md#name)
+* [platformDefault](roleout.md#platformdefault)
+* [policyCount](roleout.md#policycount)
+* [system](roleout.md#system)
 * [uuid](roleout.md#uuid)
 
 ---
 
 ## Properties
 
+<a id="applications"></a>
+
+### `<Optional>` applications
+
+**● applications**: *`Array`<`string`>*
+
+*Defined in [api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L816)*
+
+*__type__*: {Array}
+
+*__memberof__*: RoleOut
+
+___
 <a id="created"></a>
 
 ###  created
 
 **● created**: *`Date`*
 
-*Defined in [api.ts:708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L708)*
+*Defined in [api.ts:798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L798)*
 
 *__type__*: {Date}
 
@@ -43,7 +60,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L696)*
+*Defined in [api.ts:786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L786)*
 
 *__type__*: {string}
 
@@ -56,7 +73,7 @@ ___
 
 **● modified**: *`Date`*
 
-*Defined in [api.ts:714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L714)*
+*Defined in [api.ts:804](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L804)*
 
 *__type__*: {Date}
 
@@ -69,9 +86,48 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:690](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L690)*
+*Defined in [api.ts:780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L780)*
 
 *__type__*: {string}
+
+*__memberof__*: RoleOut
+
+___
+<a id="platformdefault"></a>
+
+### `<Optional>` platformDefault
+
+**● platformDefault**: *`boolean`*
+
+*Defined in [api.ts:828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L828)*
+
+*__type__*: {boolean}
+
+*__memberof__*: RoleOut
+
+___
+<a id="policycount"></a>
+
+### `<Optional>` policyCount
+
+**● policyCount**: *`number`*
+
+*Defined in [api.ts:810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L810)*
+
+*__type__*: {number}
+
+*__memberof__*: RoleOut
+
+___
+<a id="system"></a>
+
+### `<Optional>` system
+
+**● system**: *`boolean`*
+
+*Defined in [api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L822)*
+
+*__type__*: {boolean}
 
 *__memberof__*: RoleOut
 
@@ -82,7 +138,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L702)*
+*Defined in [api.ts:792](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L792)*
 
 *__type__*: {string}
 

@@ -106,7 +106,7 @@ ___
 
 ▸ **ackCreate**(ackInput: *[AckInput](../interfaces/ackinput.md)*, options?: *`any`*): `AxiosPromise`<[Ack](../interfaces/ack.md)>
 
-*Defined in [api.ts:1567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1567)*
+*Defined in [api.ts:1715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1715)*
 
 Add an acknowledgement for a rule, by rule ID, and return the new ack. If there's already an acknowledgement of this rule by this account, then return that.
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **ackDelete**(ruleId: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1578)*
+*Defined in [api.ts:1726](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1726)*
 
 Delete an acknowledgement for a rule, by its rule ID.
 
@@ -154,7 +154,7 @@ ___
 
 ▸ **ackList**(limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
 
-*Defined in [api.ts:1590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1590)*
+*Defined in [api.ts:1738](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1738)*
 
 List acks from this account where the rule is active
 
@@ -179,7 +179,7 @@ ___
 
 ▸ **ackRead**(ruleId: *`string`*, options?: *`any`*): `AxiosPromise`<[Ack](../interfaces/ack.md)>
 
-*Defined in [api.ts:1602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1602)*
+*Defined in [api.ts:1750](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1750)*
 
 This view handles listing, retrieving, creating and deleting acks. Acks are created and deleted by Insights rule ID, not by their own ack ID.
 
@@ -205,7 +205,7 @@ ___
 
 ▸ **ackUpdate**(ruleId: *`string`*, ackJustification: *[AckJustification](../interfaces/ackjustification.md)*, options?: *`any`*): `AxiosPromise`<[Ack](../interfaces/ack.md)>
 
-*Defined in [api.ts:1614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1614)*
+*Defined in [api.ts:1762](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1762)*
 
 Update an acknowledgement for a rule, by rule ID, and return the updated ack.
 

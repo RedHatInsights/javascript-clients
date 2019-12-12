@@ -14,6 +14,8 @@
 
 ↳  [AzureReportApi](azurereportapi.md)
 
+↳  [CloudAccountsApi](cloudaccountsapi.md)
+
 ↳  [CostModelApi](costmodelapi.md)
 
 ↳  [DataExportRequestApi](dataexportrequestapi.md)

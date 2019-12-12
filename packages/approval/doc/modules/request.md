@@ -15,39 +15,26 @@
 
 ### Properties
 
-* [createdAt](request.md#createdat)
 * [decision](request.md#decision)
 * [description](request.md#description)
+* [finishedAt](request.md#finishedat)
+* [groupName](request.md#groupname)
 * [id](request.md#id)
 * [name](request.md#name)
+* [notifiedAt](request.md#notifiedat)
 * [numberOfChildren](request.md#numberofchildren)
 * [numberOfFinishedChildren](request.md#numberoffinishedchildren)
 * [owner](request.md#owner)
+* [parentId](request.md#parentid)
 * [reason](request.md#reason)
 * [requesterName](request.md#requestername)
 * [state](request.md#state)
-* [updatedAt](request.md#updatedat)
 * [workflowId](request.md#workflowid)
 
 ---
 
 ## Properties
 
-<a id="createdat"></a>
-
-### `<Optional>` createdAt
-
-**● createdAt**: *`Date`*
-
-*Defined in [api.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L312)*
-
-Timestamp of creation
-
-*__type__*: {Date}
-
-*__memberof__*: Request
-
-___
 <a id="decision"></a>
 
 ### `<Optional>` decision
@@ -78,6 +65,36 @@ Request description
 *__memberof__*: Request
 
 ___
+<a id="finishedat"></a>
+
+### `<Optional>` finishedAt
+
+**● finishedAt**: *`Date`*
+
+*Defined in [api.ts:318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L318)*
+
+Timestamp of finishing (skipped, canceled, or completed)
+
+*__type__*: {Date}
+
+*__memberof__*: Request
+
+___
+<a id="groupname"></a>
+
+### `<Optional>` groupName
+
+**● groupName**: *`string`*
+
+*Defined in [api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L360)*
+
+Name of approver group(s) assigned to approve this request
+
+*__type__*: {string}
+
+*__memberof__*: Request
+
+___
 <a id="id"></a>
 
 ### `<Optional>` id
@@ -102,6 +119,21 @@ ___
 Request name
 
 *__type__*: {string}
+
+*__memberof__*: Request
+
+___
+<a id="notifiedat"></a>
+
+### `<Optional>` notifiedAt
+
+**● notifiedAt**: *`Date`*
+
+*Defined in [api.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L312)*
+
+Timestamp of notification sent to approvers
+
+*__type__*: {Date}
 
 *__memberof__*: Request
 
@@ -151,6 +183,21 @@ Requester's id
 *__memberof__*: Request
 
 ___
+<a id="parentid"></a>
+
+### `<Optional>` parentId
+
+**● parentId**: *`string`*
+
+*Defined in [api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L366)*
+
+Parent request id
+
+*__type__*: {string}
+
+*__memberof__*: Request
+
+___
 <a id="reason"></a>
 
 ### `<Optional>` reason
@@ -189,24 +236,9 @@ ___
 
 *Defined in [api.ts:288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L288)*
 
-The state of the request. Possible value: canceled, pending, skipped, notified, or finished
+The state of the request. Possible value: canceled, completed, notified, skipped, or started
 
 *__type__*: {string}
-
-*__memberof__*: Request
-
-___
-<a id="updatedat"></a>
-
-### `<Optional>` updatedAt
-
-**● updatedAt**: *`Date`*
-
-*Defined in [api.ts:318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L318)*
-
-Timestamp of last update
-
-*__type__*: {Date}
 
 *__memberof__*: Request
 

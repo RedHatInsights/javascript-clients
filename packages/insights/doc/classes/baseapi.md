@@ -18,11 +18,15 @@
 
 ↳  [HostackApi](hostackapi.md)
 
+↳  [RatingApi](ratingapi.md)
+
 ↳  [ResolutionRiskApi](resolutionriskapi.md)
 
 ↳  [RuleApi](ruleapi.md)
 
 ↳  [RulecategoryApi](rulecategoryapi.md)
+
+↳  [SettingsApi](settingsapi.md)
 
 ↳  [StatsApi](statsapi.md)
 
@@ -33,6 +37,8 @@
 ↳  [TopicApi](topicapi.md)
 
 ↳  [TotalRiskApi](totalriskapi.md)
+
+↳  [WeeklyreportsubscriptionApi](weeklyreportsubscriptionapi.md)
 
 ## Index
 

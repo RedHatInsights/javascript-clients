@@ -172,7 +172,7 @@ export interface HostAck {
      * @type {string}
      * @memberof HostAck
      */
-    rule?: string;
+    rule: string;
     /**
      *
      * @type {string}
@@ -203,32 +203,6 @@ export interface HostAck {
      * @memberof HostAck
      */
     updatedAt?: Date;
-}
-
-/**
- *
- * @export
- * @interface HostAckInput
- */
-export interface HostAckInput {
-    /**
-     *
-     * @type {string}
-     * @memberof HostAckInput
-     */
-    systemUuid: string;
-    /**
-     *
-     * @type {string}
-     * @memberof HostAckInput
-     */
-    ruleId: string;
-    /**
-     *
-     * @type {string}
-     * @memberof HostAckInput
-     */
-    justification: string;
 }
 
 /**
@@ -385,10 +359,10 @@ export interface InlineResponse2003 {
     links?: InlineResponse200Links;
     /**
      *
-     * @type {Array<RuleForAccount>}
+     * @type {Array<RuleRating>}
      * @memberof InlineResponse2003
      */
-    data: Array<RuleForAccount>;
+    data: Array<RuleRating>;
 }
 
 /**
@@ -411,8 +385,34 @@ export interface InlineResponse2004 {
     links?: InlineResponse200Links;
     /**
      *
-     * @type {Array<System>}
+     * @type {Array<RuleForAccount>}
      * @memberof InlineResponse2004
+     */
+    data: Array<RuleForAccount>;
+}
+
+/**
+ *
+ * @export
+ * @interface InlineResponse2005
+ */
+export interface InlineResponse2005 {
+    /**
+     *
+     * @type {InlineResponse200Meta}
+     * @memberof InlineResponse2005
+     */
+    meta?: InlineResponse200Meta;
+    /**
+     *
+     * @type {InlineResponse200Links}
+     * @memberof InlineResponse2005
+     */
+    links?: InlineResponse200Links;
+    /**
+     *
+     * @type {Array<System>}
+     * @memberof InlineResponse2005
      */
     data: Array<System>;
 }
@@ -461,6 +461,40 @@ export interface InlineResponse200Meta {
      * @memberof InlineResponse200Meta
      */
     count: number;
+}
+
+/**
+ *
+ * @export
+ * @interface MultiHostAck
+ */
+export interface MultiHostAck {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof MultiHostAck
+     */
+    systems: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof MultiHostAck
+     */
+    justification: string;
+}
+
+/**
+ *
+ * @export
+ * @interface MultiHostUnAck
+ */
+export interface MultiHostUnAck {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof MultiHostUnAck
+     */
+    systems: Array<string>;
 }
 
 /**
@@ -807,6 +841,32 @@ export interface RuleForAccount {
      * @memberof RuleForAccount
      */
     totalRisk?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleForAccount
+     */
+    hostsAckedCount?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleForAccount
+     */
+    rating?: number;
+}
+
+/**
+ *
+ * @export
+ * @interface RuleHostAckResponse
+ */
+export interface RuleHostAckResponse {
+    /**
+     *
+     * @type {number}
+     * @memberof RuleHostAckResponse
+     */
+    count: number;
 }
 
 /**
@@ -827,6 +887,42 @@ export interface RuleImpact {
      * @memberof RuleImpact
      */
     impact?: number;
+}
+
+/**
+ *
+ * @export
+ * @interface RuleRating
+ */
+export interface RuleRating {
+    /**
+     *
+     * @type {string}
+     * @memberof RuleRating
+     */
+    rule: string;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleRating
+     */
+    rating: RuleRating.RatingEnum;
+}
+
+/**
+ * @export
+ * @namespace RuleRating
+ */
+export namespace RuleRating {
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum RatingEnum {
+        NUMBER_MINUS_1 = -1,
+        NUMBER_0 = 0,
+        NUMBER_1 = 1
+    }
 }
 
 /**
@@ -864,27 +960,79 @@ export interface RuleSet {
 /**
  *
  * @export
- * @interface RulesStats
+ * @interface SettingDDF
  */
-export interface RulesStats {
+export interface SettingDDF {
     /**
      *
-     * @type {number}
-     * @memberof RulesStats
+     * @type {string}
+     * @memberof SettingDDF
      */
-    total: number;
+    name: string;
     /**
      *
-     * @type {{ [key: string]: number; }}
-     * @memberof RulesStats
+     * @type {string}
+     * @memberof SettingDDF
      */
-    totalRisk: { [key: string]: number; };
+    label: string;
     /**
      *
-     * @type {{ [key: string]: number; }}
-     * @memberof RulesStats
+     * @type {string}
+     * @memberof SettingDDF
      */
-    category: { [key: string]: number; };
+    helpText: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SettingDDF
+     */
+    component: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SettingDDF
+     */
+    isRequired: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SettingDDF
+     */
+    initialValue: boolean;
+}
+
+/**
+ *
+ * @export
+ * @interface SettingsDDF
+ */
+export interface SettingsDDF {
+    /**
+     *
+     * @type {Array<SettingDDF>}
+     * @memberof SettingsDDF
+     */
+    fields: Array<SettingDDF>;
+}
+
+/**
+ *
+ * @export
+ * @interface SettingsInput
+ */
+export interface SettingsInput {
+    /**
+     *
+     * @type {boolean}
+     * @memberof SettingsInput
+     */
+    showSatelliteHosts: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SettingsInput
+     */
+    isSubscribed: boolean;
 }
 
 /**
@@ -905,6 +1053,32 @@ export interface StatTimeSeries {
      * @memberof StatTimeSeries
      */
     count: number;
+}
+
+/**
+ *
+ * @export
+ * @interface Stats
+ */
+export interface Stats {
+    /**
+     *
+     * @type {number}
+     * @memberof Stats
+     */
+    total: number;
+    /**
+     *
+     * @type {{ [key: string]: number; }}
+     * @memberof Stats
+     */
+    totalRisk: { [key: string]: number; };
+    /**
+     *
+     * @type {{ [key: string]: number; }}
+     * @memberof Stats
+     */
+    category: { [key: string]: number; };
 }
 
 /**
@@ -982,91 +1156,65 @@ export interface SystemsForRule {
 /**
  *
  * @export
- * @interface SystemsStats
+ * @interface Topic
  */
-export interface SystemsStats {
-    /**
-     *
-     * @type {{ [key: string]: number; }}
-     * @memberof SystemsStats
-     */
-    totalRisk: { [key: string]: number; };
-    /**
-     *
-     * @type {{ [key: string]: number; }}
-     * @memberof SystemsStats
-     */
-    category: { [key: string]: number; };
-}
-
-/**
- *
- * @export
- * @interface Tag
- */
-export interface Tag {
+export interface Topic {
     /**
      *
      * @type {string}
-     * @memberof Tag
-     */
-    name: string;
-}
-
-/**
- *
- * @export
- * @interface TopicWithRules
- */
-export interface TopicWithRules {
-    /**
-     *
-     * @type {string}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
     name: string;
     /**
      * Rule topic slug
      * @type {string}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
     slug: string;
     /**
      *
      * @type {string}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
     description: string;
     /**
      *
      * @type {string}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
-    tags?: string;
+    tag: string;
     /**
      *
      * @type {boolean}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
     featured?: boolean;
     /**
      *
-     * @type {Array<string>}
-     * @memberof TopicWithRules
-     */
-    rules?: Array<string>;
-    /**
-     *
      * @type {boolean}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
     enabled?: boolean;
     /**
      *
      * @type {number}
-     * @memberof TopicWithRules
+     * @memberof Topic
      */
     impactedSystemsCount?: number;
+}
+
+/**
+ *
+ * @export
+ * @interface WeeklyReportSubscription
+ */
+export interface WeeklyReportSubscription {
+    /**
+     *
+     * @type {boolean}
+     * @memberof WeeklyReportSubscription
+     */
+    isSubscribed: boolean;
 }
 
 
@@ -1974,14 +2122,14 @@ export const HostackApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Return the new hostack.  If there's already an acknowledgement of this rule by this account for a system, then return that.  This does not take an 'id' number.
          * @summary Add an acknowledgement for a rule, by rule ID, system, and account.
-         * @param {HostAckInput} hostAckInput
+         * @param {HostAck} hostAck
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackCreate(hostAckInput: HostAckInput, options: any = {}): RequestArgs {
-            // verify required parameter 'hostAckInput' is not null or undefined
-            if (hostAckInput === null || hostAckInput === undefined) {
-                throw new RequiredError('hostAckInput','Required parameter hostAckInput was null or undefined when calling hostackCreate.');
+        hostackCreate(hostAck: HostAck, options: any = {}): RequestArgs {
+            // verify required parameter 'hostAck' is not null or undefined
+            if (hostAck === null || hostAck === undefined) {
+                throw new RequiredError('hostAck','Required parameter hostAck was null or undefined when calling hostackCreate.');
             }
             const localVarPath = `/hostack/`;
             const localVarUrlObj = url.parse(localVarPath, true);
@@ -1999,8 +2147,8 @@ export const HostackApiAxiosParamCreator = function (configuration?: Configurati
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"HostAckInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(hostAckInput || {}) : (hostAckInput || "");
+            const needsSerialization = (<any>"HostAck" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(hostAck || {}) : (hostAck || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -2045,10 +2193,11 @@ export const HostackApiAxiosParamCreator = function (configuration?: Configurati
          * @summary List host acks from this account for a system where the rule is active.
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackList(limit?: number, offset?: number, options: any = {}): RequestArgs {
+        hostackList(limit?: number, offset?: number, ruleId?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/hostack/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -2065,6 +2214,10 @@ export const HostackApiAxiosParamCreator = function (configuration?: Configurati
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (ruleId) {
+                localVarQueryParameter['rule_id'] = ruleId.join(COLLECTION_FORMATS["csv"]);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -2164,12 +2317,12 @@ export const HostackApiFp = function(configuration?: Configuration) {
         /**
          * Return the new hostack.  If there's already an acknowledgement of this rule by this account for a system, then return that.  This does not take an 'id' number.
          * @summary Add an acknowledgement for a rule, by rule ID, system, and account.
-         * @param {HostAckInput} hostAckInput
+         * @param {HostAck} hostAck
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackCreate(hostAckInput: HostAckInput, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostAck> {
-            const localVarAxiosArgs = HostackApiAxiosParamCreator(configuration).hostackCreate(hostAckInput, options);
+        hostackCreate(hostAck: HostAck, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostAck> {
+            const localVarAxiosArgs = HostackApiAxiosParamCreator(configuration).hostackCreate(hostAck, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2194,11 +2347,12 @@ export const HostackApiFp = function(configuration?: Configuration) {
          * @summary List host acks from this account for a system where the rule is active.
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackList(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002> {
-            const localVarAxiosArgs = HostackApiAxiosParamCreator(configuration).hostackList(limit, offset, options);
+        hostackList(limit?: number, offset?: number, ruleId?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002> {
+            const localVarAxiosArgs = HostackApiAxiosParamCreator(configuration).hostackList(limit, offset, ruleId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2245,12 +2399,12 @@ export const HostackApiFactory = function (configuration?: Configuration, basePa
         /**
          * Return the new hostack.  If there's already an acknowledgement of this rule by this account for a system, then return that.  This does not take an 'id' number.
          * @summary Add an acknowledgement for a rule, by rule ID, system, and account.
-         * @param {HostAckInput} hostAckInput
+         * @param {HostAck} hostAck
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackCreate(hostAckInput: HostAckInput, options?: any) {
-            return HostackApiFp(configuration).hostackCreate(hostAckInput, options)(axios, basePath);
+        hostackCreate(hostAck: HostAck, options?: any) {
+            return HostackApiFp(configuration).hostackCreate(hostAck, options)(axios, basePath);
         },
         /**
          * Takes the hostack ID (given in the hostack list) as an identifier.
@@ -2267,11 +2421,12 @@ export const HostackApiFactory = function (configuration?: Configuration, basePa
          * @summary List host acks from this account for a system where the rule is active.
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackList(limit?: number, offset?: number, options?: any) {
-            return HostackApiFp(configuration).hostackList(limit, offset, options)(axios, basePath);
+        hostackList(limit?: number, offset?: number, ruleId?: Array<string>, options?: any) {
+            return HostackApiFp(configuration).hostackList(limit, offset, ruleId, options)(axios, basePath);
         },
         /**
          * This view handles listing, retrieving, creating and deleting hostacks.
@@ -2307,13 +2462,13 @@ export class HostackApi extends BaseAPI {
     /**
      * Return the new hostack.  If there's already an acknowledgement of this rule by this account for a system, then return that.  This does not take an 'id' number.
      * @summary Add an acknowledgement for a rule, by rule ID, system, and account.
-     * @param {HostAckInput} hostAckInput
+     * @param {HostAck} hostAck
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostackApi
      */
-    public hostackCreate(hostAckInput: HostAckInput, options?: any) {
-        return HostackApiFp(this.configuration).hostackCreate(hostAckInput, options)(this.axios, this.basePath);
+    public hostackCreate(hostAck: HostAck, options?: any) {
+        return HostackApiFp(this.configuration).hostackCreate(hostAck, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2333,12 +2488,13 @@ export class HostackApi extends BaseAPI {
      * @summary List host acks from this account for a system where the rule is active.
      * @param {number} [limit] Number of results to return per page.
      * @param {number} [offset] The initial index from which to return the results.
+     * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostackApi
      */
-    public hostackList(limit?: number, offset?: number, options?: any) {
-        return HostackApiFp(this.configuration).hostackList(limit, offset, options)(this.axios, this.basePath);
+    public hostackList(limit?: number, offset?: number, ruleId?: Array<string>, options?: any) {
+        return HostackApiFp(this.configuration).hostackList(limit, offset, ruleId, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2364,6 +2520,255 @@ export class HostackApi extends BaseAPI {
      */
     public hostackUpdate(id: number, hostAckJustification: HostAckJustification, options?: any) {
         return HostackApiFp(this.configuration).hostackUpdate(id, hostAckJustification, options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
+ * RatingApi - axios parameter creator
+ * @export
+ */
+export const RatingApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
+         * @summary Add or update a rating for a rule, by rule ID.
+         * @param {RuleRating} ruleRating
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingCreate(ruleRating: RuleRating, options: any = {}): RequestArgs {
+            // verify required parameter 'ruleRating' is not null or undefined
+            if (ruleRating === null || ruleRating === undefined) {
+                throw new RequiredError('ruleRating','Required parameter ruleRating was null or undefined when calling ratingCreate.');
+            }
+            const localVarPath = `/rating/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"RuleRating" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(ruleRating || {}) : (ruleRating || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Only the current user's ratings are listed here.
+         * @summary List all rules rated by the current user
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingList(limit?: number, offset?: number, options: any = {}): RequestArgs {
+            const localVarPath = `/rating/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Rules can be rated +1, 0 or -1; the rating is stored per (user, rule) unique pair.  Rule ratings are edited simply by POSTing a new rating, which overwrites any previous rating by that user for that rule.
+         * @param {string} rule Insights Rule ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingRead(rule: string, options: any = {}): RequestArgs {
+            // verify required parameter 'rule' is not null or undefined
+            if (rule === null || rule === undefined) {
+                throw new RequiredError('rule','Required parameter rule was null or undefined when calling ratingRead.');
+            }
+            const localVarPath = `/rating/{rule}/`
+                .replace(`{${"rule"}}`, encodeURIComponent(String(rule)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * RatingApi - functional programming interface
+ * @export
+ */
+export const RatingApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
+         * @summary Add or update a rating for a rule, by rule ID.
+         * @param {RuleRating} ruleRating
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingCreate(ruleRating: RuleRating, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleRating> {
+            const localVarAxiosArgs = RatingApiAxiosParamCreator(configuration).ratingCreate(ruleRating, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Only the current user's ratings are listed here.
+         * @summary List all rules rated by the current user
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingList(limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2003> {
+            const localVarAxiosArgs = RatingApiAxiosParamCreator(configuration).ratingList(limit, offset, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Rules can be rated +1, 0 or -1; the rating is stored per (user, rule) unique pair.  Rule ratings are edited simply by POSTing a new rating, which overwrites any previous rating by that user for that rule.
+         * @param {string} rule Insights Rule ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingRead(rule: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleRating> {
+            const localVarAxiosArgs = RatingApiAxiosParamCreator(configuration).ratingRead(rule, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * RatingApi - factory interface
+ * @export
+ */
+export const RatingApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
+         * @summary Add or update a rating for a rule, by rule ID.
+         * @param {RuleRating} ruleRating
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingCreate(ruleRating: RuleRating, options?: any) {
+            return RatingApiFp(configuration).ratingCreate(ruleRating, options)(axios, basePath);
+        },
+        /**
+         * Only the current user's ratings are listed here.
+         * @summary List all rules rated by the current user
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingList(limit?: number, offset?: number, options?: any) {
+            return RatingApiFp(configuration).ratingList(limit, offset, options)(axios, basePath);
+        },
+        /**
+         * Rules can be rated +1, 0 or -1; the rating is stored per (user, rule) unique pair.  Rule ratings are edited simply by POSTing a new rating, which overwrites any previous rating by that user for that rule.
+         * @param {string} rule Insights Rule ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingRead(rule: string, options?: any) {
+            return RatingApiFp(configuration).ratingRead(rule, options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * RatingApi - object-oriented interface
+ * @export
+ * @class RatingApi
+ * @extends {BaseAPI}
+ */
+export class RatingApi extends BaseAPI {
+    /**
+     * Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
+     * @summary Add or update a rating for a rule, by rule ID.
+     * @param {RuleRating} ruleRating
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RatingApi
+     */
+    public ratingCreate(ruleRating: RuleRating, options?: any) {
+        return RatingApiFp(this.configuration).ratingCreate(ruleRating, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Only the current user's ratings are listed here.
+     * @summary List all rules rated by the current user
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RatingApi
+     */
+    public ratingList(limit?: number, offset?: number, options?: any) {
+        return RatingApiFp(this.configuration).ratingList(limit, offset, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Rules can be rated +1, 0 or -1; the rating is stored per (user, rule) unique pair.  Rule ratings are edited simply by POSTing a new rating, which overwrites any previous rating by that user for that rule.
+     * @param {string} rule Insights Rule ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RatingApi
+     */
+    public ratingRead(rule: string, options?: any) {
+        return RatingApiFp(this.configuration).ratingRead(rule, options)(this.axios, this.basePath);
     }
 
 }
@@ -2467,7 +2872,50 @@ export class ResolutionRiskApi extends BaseAPI {
 export const RuleApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * List all active rules for this account.  If 'acked' is False or not given, then only rules that are not acked will be shown.  If acked is set and 'true' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+         * Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements will be returned.  Account-wide acks are unaffected.
+         * @summary Add acknowledgements for one or more hosts to this rule.
+         * @param {string} ruleId Rule ID from Insights
+         * @param {MultiHostAck} multiHostAck
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleAckHosts(ruleId: string, multiHostAck: MultiHostAck, options: any = {}): RequestArgs {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleAckHosts.');
+            }
+            // verify required parameter 'multiHostAck' is not null or undefined
+            if (multiHostAck === null || multiHostAck === undefined) {
+                throw new RequiredError('multiHostAck','Required parameter multiHostAck was null or undefined when calling ruleAckHosts.');
+            }
+            const localVarPath = `/rule/{rule_id}/ack_hosts/`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"MultiHostAck" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(multiHostAck || {}) : (multiHostAck || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * If 'acked' is False or not given, then only rules that are not acked will be shown.  If acked is set and 'true' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+         * @summary List all active rules for this account.
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
@@ -2563,7 +3011,8 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
             };
         },
         /**
-         * Retrieve a single rule and its associated details.
+         * This includes the account-relevant details such as number of impacted systems and host acknowledgements.
+         * @summary Retrieve a single rule and its associated details.
          * @param {string} ruleId Rule ID from Insights
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2595,7 +3044,8 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
             };
         },
         /**
-         * List all systems affected by this rule.
+         * Systems are simply listed by UUID.
+         * @summary List all systems affected by this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2626,6 +3076,48 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements will be returned.  Account-wide acks are unaffected.
+         * @summary Delete acknowledgements for one or more hosts to this rule.
+         * @param {string} ruleId Rule ID from Insights
+         * @param {MultiHostUnAck} multiHostUnAck
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleUnackHosts(ruleId: string, multiHostUnAck: MultiHostUnAck, options: any = {}): RequestArgs {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleUnackHosts.');
+            }
+            // verify required parameter 'multiHostUnAck' is not null or undefined
+            if (multiHostUnAck === null || multiHostUnAck === undefined) {
+                throw new RequiredError('multiHostUnAck','Required parameter multiHostUnAck was null or undefined when calling ruleUnackHosts.');
+            }
+            const localVarPath = `/rule/{rule_id}/unack_hosts/`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"MultiHostUnAck" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(multiHostUnAck || {}) : (multiHostUnAck || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -2636,7 +3128,23 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
 export const RuleApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * List all active rules for this account.  If 'acked' is False or not given, then only rules that are not acked will be shown.  If acked is set and 'true' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+         * Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements will be returned.  Account-wide acks are unaffected.
+         * @summary Add acknowledgements for one or more hosts to this rule.
+         * @param {string} ruleId Rule ID from Insights
+         * @param {MultiHostAck} multiHostAck
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleAckHosts(ruleId: string, multiHostAck: MultiHostAck, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleHostAckResponse> {
+            const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleAckHosts(ruleId, multiHostAck, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * If 'acked' is False or not given, then only rules that are not acked will be shown.  If acked is set and 'true' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+         * @summary List all active rules for this account.
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
@@ -2654,7 +3162,7 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2003> {
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004> {
             const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleList(limit, offset, category, hasTag, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -2662,7 +3170,8 @@ export const RuleApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Retrieve a single rule and its associated details.
+         * This includes the account-relevant details such as number of impacted systems and host acknowledgements.
+         * @summary Retrieve a single rule and its associated details.
          * @param {string} ruleId Rule ID from Insights
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2675,13 +3184,29 @@ export const RuleApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * List all systems affected by this rule.
+         * Systems are simply listed by UUID.
+         * @summary List all systems affected by this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         ruleSystems(ruleId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule> {
             const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleSystems(ruleId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements will be returned.  Account-wide acks are unaffected.
+         * @summary Delete acknowledgements for one or more hosts to this rule.
+         * @param {string} ruleId Rule ID from Insights
+         * @param {MultiHostUnAck} multiHostUnAck
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleUnackHosts(ruleId: string, multiHostUnAck: MultiHostUnAck, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleHostAckResponse> {
+            const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleUnackHosts(ruleId, multiHostUnAck, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2697,7 +3222,19 @@ export const RuleApiFp = function(configuration?: Configuration) {
 export const RuleApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * List all active rules for this account.  If 'acked' is False or not given, then only rules that are not acked will be shown.  If acked is set and 'true' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+         * Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements will be returned.  Account-wide acks are unaffected.
+         * @summary Add acknowledgements for one or more hosts to this rule.
+         * @param {string} ruleId Rule ID from Insights
+         * @param {MultiHostAck} multiHostAck
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleAckHosts(ruleId: string, multiHostAck: MultiHostAck, options?: any) {
+            return RuleApiFp(configuration).ruleAckHosts(ruleId, multiHostAck, options)(axios, basePath);
+        },
+        /**
+         * If 'acked' is False or not given, then only rules that are not acked will be shown.  If acked is set and 'true' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+         * @summary List all active rules for this account.
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
@@ -2719,7 +3256,8 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
             return RuleApiFp(configuration).ruleList(limit, offset, category, hasTag, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, options)(axios, basePath);
         },
         /**
-         * Retrieve a single rule and its associated details.
+         * This includes the account-relevant details such as number of impacted systems and host acknowledgements.
+         * @summary Retrieve a single rule and its associated details.
          * @param {string} ruleId Rule ID from Insights
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2728,13 +3266,25 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
             return RuleApiFp(configuration).ruleRead(ruleId, options)(axios, basePath);
         },
         /**
-         * List all systems affected by this rule.
+         * Systems are simply listed by UUID.
+         * @summary List all systems affected by this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         ruleSystems(ruleId: string, options?: any) {
             return RuleApiFp(configuration).ruleSystems(ruleId, options)(axios, basePath);
+        },
+        /**
+         * Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements will be returned.  Account-wide acks are unaffected.
+         * @summary Delete acknowledgements for one or more hosts to this rule.
+         * @param {string} ruleId Rule ID from Insights
+         * @param {MultiHostUnAck} multiHostUnAck
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleUnackHosts(ruleId: string, multiHostUnAck: MultiHostUnAck, options?: any) {
+            return RuleApiFp(configuration).ruleUnackHosts(ruleId, multiHostUnAck, options)(axios, basePath);
         },
     };
 };
@@ -2747,7 +3297,21 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
  */
 export class RuleApi extends BaseAPI {
     /**
-     * List all active rules for this account.  If 'acked' is False or not given, then only rules that are not acked will be shown.  If acked is set and 'true' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+     * Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements will be returned.  Account-wide acks are unaffected.
+     * @summary Add acknowledgements for one or more hosts to this rule.
+     * @param {string} ruleId Rule ID from Insights
+     * @param {MultiHostAck} multiHostAck
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RuleApi
+     */
+    public ruleAckHosts(ruleId: string, multiHostAck: MultiHostAck, options?: any) {
+        return RuleApiFp(this.configuration).ruleAckHosts(ruleId, multiHostAck, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * If 'acked' is False or not given, then only rules that are not acked will be shown.  If acked is set and 'true' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+     * @summary List all active rules for this account.
      * @param {number} [limit] Number of results to return per page.
      * @param {number} [offset] The initial index from which to return the results.
      * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
@@ -2771,7 +3335,8 @@ export class RuleApi extends BaseAPI {
     }
 
     /**
-     * Retrieve a single rule and its associated details.
+     * This includes the account-relevant details such as number of impacted systems and host acknowledgements.
+     * @summary Retrieve a single rule and its associated details.
      * @param {string} ruleId Rule ID from Insights
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2782,7 +3347,8 @@ export class RuleApi extends BaseAPI {
     }
 
     /**
-     * List all systems affected by this rule.
+     * Systems are simply listed by UUID.
+     * @summary List all systems affected by this rule.
      * @param {string} ruleId Rule ID from Insights
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2790,6 +3356,19 @@ export class RuleApi extends BaseAPI {
      */
     public ruleSystems(ruleId: string, options?: any) {
         return RuleApiFp(this.configuration).ruleSystems(ruleId, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements will be returned.  Account-wide acks are unaffected.
+     * @summary Delete acknowledgements for one or more hosts to this rule.
+     * @param {string} ruleId Rule ID from Insights
+     * @param {MultiHostUnAck} multiHostUnAck
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RuleApi
+     */
+    public ruleUnackHosts(ruleId: string, multiHostUnAck: MultiHostUnAck, options?: any) {
+        return RuleApiFp(this.configuration).ruleUnackHosts(ruleId, multiHostUnAck, options)(this.axios, this.basePath);
     }
 
 }
@@ -2947,6 +3526,170 @@ export class RulecategoryApi extends BaseAPI {
      */
     public rulecategoryRead(id: number, options?: any) {
         return RulecategoryApiFp(this.configuration).rulecategoryRead(id, options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
+ * SettingsApi - axios parameter creator
+ * @export
+ */
+export const SettingsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * The current account settings will be updated, or one will be created, with the
+         * @summary Accept the settings as input, and adjust the actual models accordingly.
+         * @param {SettingsInput} settingsInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        settingsCreate(settingsInput: SettingsInput, options: any = {}): RequestArgs {
+            // verify required parameter 'settingsInput' is not null or undefined
+            if (settingsInput === null || settingsInput === undefined) {
+                throw new RequiredError('settingsInput','Required parameter settingsInput was null or undefined when calling settingsCreate.');
+            }
+            const localVarPath = `/settings/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"SettingsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(settingsInput || {}) : (settingsInput || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Describe the settings we have in a Data-Driven Forms way.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        settingsList(options: any = {}): RequestArgs {
+            const localVarPath = `/settings/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * SettingsApi - functional programming interface
+ * @export
+ */
+export const SettingsApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * The current account settings will be updated, or one will be created, with the
+         * @summary Accept the settings as input, and adjust the actual models accordingly.
+         * @param {SettingsInput} settingsInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        settingsCreate(settingsInput: SettingsInput, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SettingsInput> {
+            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).settingsCreate(settingsInput, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Describe the settings we have in a Data-Driven Forms way.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        settingsList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SettingsDDF>> {
+            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).settingsList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * SettingsApi - factory interface
+ * @export
+ */
+export const SettingsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * The current account settings will be updated, or one will be created, with the
+         * @summary Accept the settings as input, and adjust the actual models accordingly.
+         * @param {SettingsInput} settingsInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        settingsCreate(settingsInput: SettingsInput, options?: any) {
+            return SettingsApiFp(configuration).settingsCreate(settingsInput, options)(axios, basePath);
+        },
+        /**
+         * Describe the settings we have in a Data-Driven Forms way.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        settingsList(options?: any) {
+            return SettingsApiFp(configuration).settingsList(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * SettingsApi - object-oriented interface
+ * @export
+ * @class SettingsApi
+ * @extends {BaseAPI}
+ */
+export class SettingsApi extends BaseAPI {
+    /**
+     * The current account settings will be updated, or one will be created, with the
+     * @summary Accept the settings as input, and adjust the actual models accordingly.
+     * @param {SettingsInput} settingsInput
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SettingsApi
+     */
+    public settingsCreate(settingsInput: SettingsInput, options?: any) {
+        return SettingsApiFp(this.configuration).settingsCreate(settingsInput, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Describe the settings we have in a Data-Driven Forms way.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SettingsApi
+     */
+    public settingsList(options?: any) {
+        return SettingsApiFp(this.configuration).settingsList(options)(this.axios, this.basePath);
     }
 
 }
@@ -3266,7 +4009,7 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsReports(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RulesStats> {
+        statsReports(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats> {
             const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsReports(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -3278,7 +4021,7 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsRules(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RulesStats> {
+        statsRules(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats> {
             const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsRules(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -3305,7 +4048,7 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsSystems(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsStats> {
+        statsSystems(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats> {
             const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsSystems(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -3665,7 +4408,7 @@ export const SystemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemList(limit?: number, offset?: number, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', displayName?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004> {
+        systemList(limit?: number, offset?: number, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', displayName?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2005> {
             const localVarAxiosArgs = SystemApiAxiosParamCreator(configuration).systemList(limit, offset, sort, displayName, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -3981,7 +4724,8 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Rules have topics, set by Insights administrators.  This is a view of the topics available, along with the rules and systems to which they apply.
+         * This also lists the topic's impacted systems count.
+         * @summary Retrieve a single topic by slug.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4013,51 +4757,17 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * This will be deleted in the future.
-         * @summary View, add to or delete from the rules in this topic
+         * Lists the available rules that have this tag.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicRulesRead(slug: string, options: any = {}): RequestArgs {
+        topicRulesWithTag(slug: string, options: any = {}): RequestArgs {
             // verify required parameter 'slug' is not null or undefined
             if (slug === null || slug === undefined) {
-                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicRulesRead.');
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicRulesWithTag.');
             }
-            const localVarPath = `/topic/{slug}/rules/`
-                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Some of these may also be in the given topic - can we show that?  This will be deprecated at some point because we only care about the tag link.
-         * @summary Lists the available rules that share a tag with this topic.
-         * @param {string} slug Rule topic slug
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicRulesWithTags(slug: string, options: any = {}): RequestArgs {
-            // verify required parameter 'slug' is not null or undefined
-            if (slug === null || slug === undefined) {
-                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicRulesWithTags.');
-            }
-            const localVarPath = `/topic/{slug}/rules_with_tags/`
+            const localVarPath = `/topic/{slug}/rules_with_tag/`
                 .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -4111,39 +4821,6 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
                 options: localVarRequestOptions,
             };
         },
-        /**
-         * This is the main way of linking rules to a topic.
-         * @summary View, add to or delete from the tags in a topic.
-         * @param {string} slug Rule topic slug
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicTagsRead(slug: string, options: any = {}): RequestArgs {
-            // verify required parameter 'slug' is not null or undefined
-            if (slug === null || slug === undefined) {
-                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicTagsRead.');
-            }
-            const localVarPath = `/topic/{slug}/tags/`
-                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
     }
 };
 
@@ -4160,7 +4837,7 @@ export const TopicApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicList(showDisabled?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<TopicWithRules>> {
+        topicList(showDisabled?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Topic>> {
             const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicList(showDisabled, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -4168,12 +4845,13 @@ export const TopicApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Rules have topics, set by Insights administrators.  This is a view of the topics available, along with the rules and systems to which they apply.
+         * This also lists the topic's impacted systems count.
+         * @summary Retrieve a single topic by slug.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicRead(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TopicWithRules> {
+        topicRead(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Topic> {
             const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicRead(slug, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -4181,28 +4859,13 @@ export const TopicApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * This will be deleted in the future.
-         * @summary View, add to or delete from the rules in this topic
+         * Lists the available rules that have this tag.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicRulesRead(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Rule>> {
-            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicRulesRead(slug, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Some of these may also be in the given topic - can we show that?  This will be deprecated at some point because we only care about the tag link.
-         * @summary Lists the available rules that share a tag with this topic.
-         * @param {string} slug Rule topic slug
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicRulesWithTags(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Rule>> {
-            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicRulesWithTags(slug, options);
+        topicRulesWithTag(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Rule>> {
+            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicRulesWithTag(slug, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4217,20 +4880,6 @@ export const TopicApiFp = function(configuration?: Configuration) {
          */
         topicSystems(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule> {
             const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicSystems(slug, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * This is the main way of linking rules to a topic.
-         * @summary View, add to or delete from the tags in a topic.
-         * @param {string} slug Rule topic slug
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicTagsRead(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Tag>> {
-            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicTagsRead(slug, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4256,7 +4905,8 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
             return TopicApiFp(configuration).topicList(showDisabled, options)(axios, basePath);
         },
         /**
-         * Rules have topics, set by Insights administrators.  This is a view of the topics available, along with the rules and systems to which they apply.
+         * This also lists the topic's impacted systems count.
+         * @summary Retrieve a single topic by slug.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4265,24 +4915,13 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
             return TopicApiFp(configuration).topicRead(slug, options)(axios, basePath);
         },
         /**
-         * This will be deleted in the future.
-         * @summary View, add to or delete from the rules in this topic
+         * Lists the available rules that have this tag.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicRulesRead(slug: string, options?: any) {
-            return TopicApiFp(configuration).topicRulesRead(slug, options)(axios, basePath);
-        },
-        /**
-         * Some of these may also be in the given topic - can we show that?  This will be deprecated at some point because we only care about the tag link.
-         * @summary Lists the available rules that share a tag with this topic.
-         * @param {string} slug Rule topic slug
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicRulesWithTags(slug: string, options?: any) {
-            return TopicApiFp(configuration).topicRulesWithTags(slug, options)(axios, basePath);
+        topicRulesWithTag(slug: string, options?: any) {
+            return TopicApiFp(configuration).topicRulesWithTag(slug, options)(axios, basePath);
         },
         /**
          * Systems are just listed by their UUID.
@@ -4293,16 +4932,6 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
          */
         topicSystems(slug: string, options?: any) {
             return TopicApiFp(configuration).topicSystems(slug, options)(axios, basePath);
-        },
-        /**
-         * This is the main way of linking rules to a topic.
-         * @summary View, add to or delete from the tags in a topic.
-         * @param {string} slug Rule topic slug
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicTagsRead(slug: string, options?: any) {
-            return TopicApiFp(configuration).topicTagsRead(slug, options)(axios, basePath);
         },
     };
 };
@@ -4327,7 +4956,8 @@ export class TopicApi extends BaseAPI {
     }
 
     /**
-     * Rules have topics, set by Insights administrators.  This is a view of the topics available, along with the rules and systems to which they apply.
+     * This also lists the topic's impacted systems count.
+     * @summary Retrieve a single topic by slug.
      * @param {string} slug Rule topic slug
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4338,27 +4968,14 @@ export class TopicApi extends BaseAPI {
     }
 
     /**
-     * This will be deleted in the future.
-     * @summary View, add to or delete from the rules in this topic
+     * Lists the available rules that have this tag.
      * @param {string} slug Rule topic slug
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TopicApi
      */
-    public topicRulesRead(slug: string, options?: any) {
-        return TopicApiFp(this.configuration).topicRulesRead(slug, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Some of these may also be in the given topic - can we show that?  This will be deprecated at some point because we only care about the tag link.
-     * @summary Lists the available rules that share a tag with this topic.
-     * @param {string} slug Rule topic slug
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TopicApi
-     */
-    public topicRulesWithTags(slug: string, options?: any) {
-        return TopicApiFp(this.configuration).topicRulesWithTags(slug, options)(this.axios, this.basePath);
+    public topicRulesWithTag(slug: string, options?: any) {
+        return TopicApiFp(this.configuration).topicRulesWithTag(slug, options)(this.axios, this.basePath);
     }
 
     /**
@@ -4371,18 +4988,6 @@ export class TopicApi extends BaseAPI {
      */
     public topicSystems(slug: string, options?: any) {
         return TopicApiFp(this.configuration).topicSystems(slug, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * This is the main way of linking rules to a topic.
-     * @summary View, add to or delete from the tags in a topic.
-     * @param {string} slug Rule topic slug
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TopicApi
-     */
-    public topicTagsRead(slug: string, options?: any) {
-        return TopicApiFp(this.configuration).topicTagsRead(slug, options)(this.axios, this.basePath);
     }
 
 }
@@ -4475,6 +5080,166 @@ export class TotalRiskApi extends BaseAPI {
      */
     public totalRiskList(options?: any) {
         return TotalRiskApiFp(this.configuration).totalRiskList(options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
+ * WeeklyreportsubscriptionApi - axios parameter creator
+ * @export
+ */
+export const WeeklyreportsubscriptionApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Set the subscription status of the current user to the supplied `is_subscribed` value.
+         * @param {WeeklyReportSubscription} weeklyReportSubscription
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionCreate(weeklyReportSubscription: WeeklyReportSubscription, options: any = {}): RequestArgs {
+            // verify required parameter 'weeklyReportSubscription' is not null or undefined
+            if (weeklyReportSubscription === null || weeklyReportSubscription === undefined) {
+                throw new RequiredError('weeklyReportSubscription','Required parameter weeklyReportSubscription was null or undefined when calling weeklyreportsubscriptionCreate.');
+            }
+            const localVarPath = `/weeklyreportsubscription/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"WeeklyReportSubscription" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(weeklyReportSubscription || {}) : (weeklyReportSubscription || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Show the user's current subscription status.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionList(options: any = {}): RequestArgs {
+            const localVarPath = `/weeklyreportsubscription/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * WeeklyreportsubscriptionApi - functional programming interface
+ * @export
+ */
+export const WeeklyreportsubscriptionApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Set the subscription status of the current user to the supplied `is_subscribed` value.
+         * @param {WeeklyReportSubscription} weeklyReportSubscription
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionCreate(weeklyReportSubscription: WeeklyReportSubscription, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WeeklyReportSubscription> {
+            const localVarAxiosArgs = WeeklyreportsubscriptionApiAxiosParamCreator(configuration).weeklyreportsubscriptionCreate(weeklyReportSubscription, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Show the user's current subscription status.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WeeklyReportSubscription> {
+            const localVarAxiosArgs = WeeklyreportsubscriptionApiAxiosParamCreator(configuration).weeklyreportsubscriptionList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * WeeklyreportsubscriptionApi - factory interface
+ * @export
+ */
+export const WeeklyreportsubscriptionApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Set the subscription status of the current user to the supplied `is_subscribed` value.
+         * @param {WeeklyReportSubscription} weeklyReportSubscription
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionCreate(weeklyReportSubscription: WeeklyReportSubscription, options?: any) {
+            return WeeklyreportsubscriptionApiFp(configuration).weeklyreportsubscriptionCreate(weeklyReportSubscription, options)(axios, basePath);
+        },
+        /**
+         * Show the user's current subscription status.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionList(options?: any) {
+            return WeeklyreportsubscriptionApiFp(configuration).weeklyreportsubscriptionList(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * WeeklyreportsubscriptionApi - object-oriented interface
+ * @export
+ * @class WeeklyreportsubscriptionApi
+ * @extends {BaseAPI}
+ */
+export class WeeklyreportsubscriptionApi extends BaseAPI {
+    /**
+     * Set the subscription status of the current user to the supplied `is_subscribed` value.
+     * @param {WeeklyReportSubscription} weeklyReportSubscription
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WeeklyreportsubscriptionApi
+     */
+    public weeklyreportsubscriptionCreate(weeklyReportSubscription: WeeklyReportSubscription, options?: any) {
+        return WeeklyreportsubscriptionApiFp(this.configuration).weeklyreportsubscriptionCreate(weeklyReportSubscription, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Show the user's current subscription status.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WeeklyreportsubscriptionApi
+     */
+    public weeklyreportsubscriptionList(options?: any) {
+        return WeeklyreportsubscriptionApiFp(this.configuration).weeklyreportsubscriptionList(options)(this.axios, this.basePath);
     }
 
 }

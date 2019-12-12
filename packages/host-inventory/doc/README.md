@@ -103,6 +103,7 @@ API documentation
 * [CreateHostOut](interfaces/createhostout.md)
 * [DiskDevice](interfaces/diskdevice.md)
 * [DiskDeviceOptions](interfaces/diskdeviceoptions.md)
+* [DnfModule](interfaces/dnfmodule.md)
 * [FactSet](interfaces/factset.md)
 * [HostOut](interfaces/hostout.md)
 * [HostQueryOutput](interfaces/hostqueryoutput.md)
@@ -154,7 +155,7 @@ ___
 
 ▸ **HostsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1039)*
+*Defined in [api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1137)*
 
 HostsApi - axios parameter creator
 
@@ -173,7 +174,7 @@ ___
 
 ▸ **HostsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1845)*
+*Defined in [api.ts:1949](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1949)*
 
 HostsApi - factory interface
 
@@ -194,7 +195,7 @@ ___
 
 ▸ **HostsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1660](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1660)*
+*Defined in [api.ts:1763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1763)*
 
 HostsApi - functional programming interface
 

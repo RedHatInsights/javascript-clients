@@ -31,7 +31,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L89)*
+*Defined in [api.ts:147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L147)*
 
 *__type__*: {string}
 
@@ -44,7 +44,7 @@ ___
 
 **● markup**: *[Markup](../modules/markup.md)*
 
-*Defined in [api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L113)*
+*Defined in [api.ts:171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L171)*
 
 *__type__*: {Markup}
 
@@ -57,7 +57,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L83)*
+*Defined in [api.ts:141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L141)*
 
 *__type__*: {string}
 
@@ -70,7 +70,7 @@ ___
 
 **● providerUuids**: *`Array`<`string`>*
 
-*Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L101)*
+*Defined in [api.ts:159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L159)*
 
 *__type__*: {Array}
 
@@ -83,7 +83,7 @@ ___
 
 **● rates**: *`Array`<[Rate](rate.md)>*
 
-*Defined in [api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L107)*
+*Defined in [api.ts:165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L165)*
 
 *__type__*: {Array}
 
@@ -96,7 +96,7 @@ ___
 
 **● sourceType**: *`string`*
 
-*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L95)*
+*Defined in [api.ts:153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L153)*
 
 *__type__*: {string}
 

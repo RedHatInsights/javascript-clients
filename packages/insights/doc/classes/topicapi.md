@@ -32,10 +32,8 @@ TopicApi - object-oriented interface
 
 * [topicList](topicapi.md#topiclist)
 * [topicRead](topicapi.md#topicread)
-* [topicRulesRead](topicapi.md#topicrulesread)
-* [topicRulesWithTags](topicapi.md#topicruleswithtags)
+* [topicRulesWithTag](topicapi.md#topicruleswithtag)
 * [topicSystems](topicapi.md#topicsystems)
-* [topicTagsRead](topicapi.md#topictagsread)
 
 ---
 
@@ -105,9 +103,9 @@ ___
 
 ###  topicList
 
-▸ **topicList**(showDisabled?: *`boolean`*, options?: *`any`*): `AxiosPromise`<[TopicWithRules](../interfaces/topicwithrules.md)[]>
+▸ **topicList**(showDisabled?: *`boolean`*, options?: *`any`*): `AxiosPromise`<[Topic](../interfaces/topic.md)[]>
 
-*Defined in [api.ts:4325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4325)*
+*Defined in [api.ts:4954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4954)*
 
 Normally this only shows enabled topics, but if the 'show\_disabled' parameter is set to True then this will show disabled topics as well.
 
@@ -124,44 +122,20 @@ Normally this only shows enabled topics, but if the 'show\_disabled' parameter i
 | `Optional` showDisabled | `boolean` |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[TopicWithRules](../interfaces/topicwithrules.md)[]>
+**Returns:** `AxiosPromise`<[Topic](../interfaces/topic.md)[]>
 
 ___
 <a id="topicread"></a>
 
 ###  topicRead
 
-▸ **topicRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[TopicWithRules](../interfaces/topicwithrules.md)>
+▸ **topicRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Topic](../interfaces/topic.md)>
 
-*Defined in [api.ts:4336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4336)*
+*Defined in [api.ts:4966](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4966)*
 
-Rules have topics, set by Insights administrators. This is a view of the topics available, along with the rules and systems to which they apply.
+This also lists the topic's impacted systems count.
 
-*__throws__*: {RequiredError}
-
-*__memberof__*: TopicApi
-
-**Parameters:**
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| slug | `string` |  Rule topic slug |
-| `Optional` options | `any` |
-
-**Returns:** `AxiosPromise`<[TopicWithRules](../interfaces/topicwithrules.md)>
-
-___
-<a id="topicrulesread"></a>
-
-###  topicRulesRead
-
-▸ **topicRulesRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
-
-*Defined in [api.ts:4348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4348)*
-
-This will be deleted in the future.
-
-*__summary__*: View, add to or delete from the rules in this topic
+*__summary__*: Retrieve a single topic by slug.
 
 *__throws__*: {RequiredError}
 
@@ -174,20 +148,18 @@ This will be deleted in the future.
 | slug | `string` |  Rule topic slug |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
+**Returns:** `AxiosPromise`<[Topic](../interfaces/topic.md)>
 
 ___
-<a id="topicruleswithtags"></a>
+<a id="topicruleswithtag"></a>
 
-###  topicRulesWithTags
+###  topicRulesWithTag
 
-▸ **topicRulesWithTags**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
+▸ **topicRulesWithTag**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
 
-*Defined in [api.ts:4360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4360)*
+*Defined in [api.ts:4977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4977)*
 
-Some of these may also be in the given topic - can we show that? This will be deprecated at some point because we only care about the tag link.
-
-*__summary__*: Lists the available rules that share a tag with this topic.
+Lists the available rules that have this tag.
 
 *__throws__*: {RequiredError}
 
@@ -209,7 +181,7 @@ ___
 
 ▸ **topicSystems**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
 
-*Defined in [api.ts:4372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4372)*
+*Defined in [api.ts:4989](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4989)*
 
 Systems are just listed by their UUID.
 
@@ -227,32 +199,6 @@ Systems are just listed by their UUID.
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
-
-___
-<a id="topictagsread"></a>
-
-###  topicTagsRead
-
-▸ **topicTagsRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Tag](../interfaces/tag.md)[]>
-
-*Defined in [api.ts:4384](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4384)*
-
-This is the main way of linking rules to a topic.
-
-*__summary__*: View, add to or delete from the tags in a topic.
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: TopicApi
-
-**Parameters:**
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| slug | `string` |  Rule topic slug |
-| `Optional` options | `any` |
-
-**Returns:** `AxiosPromise`<[Tag](../interfaces/tag.md)[]>
 
 ___
 

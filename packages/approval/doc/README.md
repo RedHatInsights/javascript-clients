@@ -170,7 +170,7 @@ ___
 
 ▸ **ActionApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L648)*
+*Defined in [api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L661)*
 
 ActionApi - axios parameter creator
 
@@ -189,7 +189,7 @@ ___
 
 ▸ **ActionApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L835)*
+*Defined in [api.ts:848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L848)*
 
 ActionApi - factory interface
 
@@ -210,7 +210,7 @@ ___
 
 ▸ **ActionApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L783)*
+*Defined in [api.ts:796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L796)*
 
 ActionApi - functional programming interface
 
@@ -229,7 +229,7 @@ ___
 
 ▸ **GraphqlApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:921](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L921)*
+*Defined in [api.ts:934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L934)*
 
 GraphqlApi - axios parameter creator
 
@@ -248,7 +248,7 @@ ___
 
 ▸ **GraphqlApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L995)*
+*Defined in [api.ts:1008](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1008)*
 
 GraphqlApi - factory interface
 
@@ -269,7 +269,7 @@ ___
 
 ▸ **GraphqlApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L972)*
+*Defined in [api.ts:985](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L985)*
 
 GraphqlApi - functional programming interface
 
@@ -288,7 +288,7 @@ ___
 
 ▸ **RequestApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1035)*
+*Defined in [api.ts:1048](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1048)*
 
 RequestApi - axios parameter creator
 
@@ -307,7 +307,7 @@ ___
 
 ▸ **RequestApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1285)*
+*Defined in [api.ts:1298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1298)*
 
 RequestApi - factory interface
 
@@ -328,7 +328,7 @@ ___
 
 ▸ **RequestApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1217)*
+*Defined in [api.ts:1230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1230)*
 
 RequestApi - functional programming interface
 
@@ -347,7 +347,7 @@ ___
 
 ▸ **TemplateApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1397)*
+*Defined in [api.ts:1410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1410)*
 
 TemplateApi - axios parameter creator
 
@@ -366,7 +366,7 @@ ___
 
 ▸ **TemplateApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1532)*
+*Defined in [api.ts:1545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1545)*
 
 TemplateApi - factory interface
 
@@ -387,7 +387,7 @@ ___
 
 ▸ **TemplateApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1493)*
+*Defined in [api.ts:1506](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1506)*
 
 TemplateApi - functional programming interface
 
@@ -406,7 +406,7 @@ ___
 
 ▸ **WorkflowApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1598](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1598)*
+*Defined in [api.ts:1611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1611)*
 
 WorkflowApi - axios parameter creator
 
@@ -425,7 +425,7 @@ ___
 
 ▸ **WorkflowApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2127)*
+*Defined in [api.ts:2140](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2140)*
 
 WorkflowApi - factory interface
 
@@ -446,7 +446,7 @@ ___
 
 ▸ **WorkflowApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1994)*
+*Defined in [api.ts:2007](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2007)*
 
 WorkflowApi - functional programming interface
 

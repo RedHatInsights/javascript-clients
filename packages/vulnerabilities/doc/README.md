@@ -111,6 +111,10 @@ API documentation
 * [CveStatusIn](interfaces/cvestatusin.md)
 * [Errors](interfaces/errors.md)
 * [ErrorsErrors](interfaces/errorserrors.md)
+* [ExecutiveReport](interfaces/executivereport.md)
+* [ExecutiveReportCvesBySeverity](interfaces/executivereportcvesbyseverity.md)
+* [ExecutiveReportRecentCves](interfaces/executivereportrecentcves.md)
+* [ExecutiveReportTopCves](interfaces/executivereporttopcves.md)
 * [InventoryIdOrList](interfaces/inventoryidorlist.md)
 * [Links](interfaces/links.md)
 * [Meta](interfaces/meta.md)
@@ -173,7 +177,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1261)*
+*Defined in [api.ts:1389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1389)*
 
 DefaultApi - axios parameter creator
 
@@ -192,7 +196,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2437)*
+*Defined in [api.ts:2619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2619)*
 
 DefaultApi - factory interface
 
@@ -213,7 +217,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2177)*
+*Defined in [api.ts:2346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2346)*
 
 DefaultApi - functional programming interface
 
@@ -232,7 +236,7 @@ ___
 
 ▸ **InternalApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2867)*
+*Defined in [api.ts:3069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3069)*
 
 InternalApi - axios parameter creator
 
@@ -251,7 +255,7 @@ ___
 
 ▸ **InternalApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:3136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3136)*
+*Defined in [api.ts:3338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3338)*
 
 InternalApi - factory interface
 
@@ -272,7 +276,7 @@ ___
 
 ▸ **InternalApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3070)*
+*Defined in [api.ts:3272](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3272)*
 
 InternalApi - functional programming interface
 

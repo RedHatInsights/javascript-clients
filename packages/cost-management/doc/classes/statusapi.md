@@ -102,7 +102,7 @@ ___
 
 ▸ **getStatus**(options?: *`any`*): `AxiosPromise`<[Status](../interfaces/status.md)>
 
-*Defined in [api.ts:5703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5703)*
+*Defined in [api.ts:6689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6689)*
 
 *__summary__*: Obtain server status
 

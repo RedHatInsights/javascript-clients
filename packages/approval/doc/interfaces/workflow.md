@@ -33,7 +33,7 @@ The workflow to process approval requests. Each workflow is linked to multiple g
 
 **● description**: *`string` \| `null`*
 
-*Defined in [api.ts:602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L602)*
+*Defined in [api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L615)*
 
 *__type__*: {string}
 
@@ -46,7 +46,7 @@ ___
 
 **● groupRefs**: *`Array`<`string`>*
 
-*Defined in [api.ts:614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L614)*
+*Defined in [api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L627)*
 
 Group reference ids associated with workflow
 
@@ -61,7 +61,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L584)*
+*Defined in [api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L597)*
 
 *__type__*: {string}
 
@@ -74,7 +74,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L596)*
+*Defined in [api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L609)*
 
 *__type__*: {string}
 
@@ -87,7 +87,7 @@ ___
 
 **● sequence**: *`number`*
 
-*Defined in [api.ts:608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L608)*
+*Defined in [api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L621)*
 
 an indicator of the execution order for selected workflows
 
@@ -102,7 +102,7 @@ ___
 
 **● templateId**: *`string`*
 
-*Defined in [api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L590)*
+*Defined in [api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L603)*
 
 Associated template id
 

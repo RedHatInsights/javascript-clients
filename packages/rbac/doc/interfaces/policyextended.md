@@ -32,7 +32,7 @@
 
 **● created**: *`Date`*
 
-*Defined in [api.ts:389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L389)*
+*Defined in [api.ts:479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L479)*
 
 *__type__*: {Date}
 
@@ -45,7 +45,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:377](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L377)*
+*Defined in [api.ts:467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L467)*
 
 *__type__*: {string}
 
@@ -58,7 +58,7 @@ ___
 
 **● group**: *[GroupOut](groupout.md)*
 
-*Defined in [api.ts:401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L401)*
+*Defined in [api.ts:491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L491)*
 
 *__type__*: {GroupOut}
 
@@ -71,7 +71,7 @@ ___
 
 **● modified**: *`Date`*
 
-*Defined in [api.ts:395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L395)*
+*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L485)*
 
 *__type__*: {Date}
 
@@ -84,7 +84,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L371)*
+*Defined in [api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L461)*
 
 *__type__*: {string}
 
@@ -97,7 +97,7 @@ ___
 
 **● roles**: *`Array`<[RoleOut](roleout.md)>*
 
-*Defined in [api.ts:407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L407)*
+*Defined in [api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L497)*
 
 *__type__*: {Array}
 
@@ -110,7 +110,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L383)*
+*Defined in [api.ts:473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L473)*
 
 *__type__*: {string}
 

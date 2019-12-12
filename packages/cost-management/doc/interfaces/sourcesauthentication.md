@@ -27,7 +27,7 @@
 
 **● credentials**: *[SourcesAuthenticationIn](sourcesauthenticationin.md)*
 
-*Defined in [api.ts:2315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2315)*
+*Defined in [api.ts:2770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2770)*
 
 *__type__*: {SourcesAuthenticationIn}
 
@@ -40,7 +40,7 @@ ___
 
 **● sourceId**: *`number`*
 
-*Defined in [api.ts:2309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2309)*
+*Defined in [api.ts:2764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2764)*
 
 *__type__*: {number}
 

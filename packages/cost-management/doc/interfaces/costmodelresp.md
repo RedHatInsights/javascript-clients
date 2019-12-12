@@ -30,7 +30,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L221)*
+*Defined in [api.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L279)*
 
 *__type__*: {string}
 
@@ -43,7 +43,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L215)*
+*Defined in [api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L273)*
 
 *__type__*: {string}
 
@@ -56,7 +56,7 @@ ___
 
 **● providers**: *`Array`<[CostModelRespProviders](costmodelrespproviders.md)>*
 
-*Defined in [api.ts:233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L233)*
+*Defined in [api.ts:291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L291)*
 
 *__type__*: {Array}
 
@@ -69,7 +69,7 @@ ___
 
 **● rates**: *`Array`<[Rate](rate.md)>*
 
-*Defined in [api.ts:239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L239)*
+*Defined in [api.ts:297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L297)*
 
 *__type__*: {Array}
 
@@ -82,7 +82,7 @@ ___
 
 **● sourceType**: *`string`*
 
-*Defined in [api.ts:227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L227)*
+*Defined in [api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L285)*
 
 *__type__*: {string}
 

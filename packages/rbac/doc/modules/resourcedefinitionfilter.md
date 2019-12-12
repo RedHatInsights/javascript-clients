@@ -28,7 +28,7 @@
 
 **● key**: *`string`*
 
-*Defined in [api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L603)*
+*Defined in [api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L693)*
 
 *__type__*: {string}
 
@@ -41,7 +41,7 @@ ___
 
 **● operation**: *[OperationEnum](../enums/resourcedefinitionfilter.operationenum.md)*
 
-*Defined in [api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L609)*
+*Defined in [api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L699)*
 
 *__type__*: {string}
 
@@ -54,7 +54,7 @@ ___
 
 **● value**: *`string`*
 
-*Defined in [api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L615)*
+*Defined in [api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L705)*
 
 *__type__*: {string}
 

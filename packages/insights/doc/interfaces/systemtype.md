@@ -28,7 +28,7 @@
 
 **● id**: *`number`*
 
-*Defined in [api.ts:953](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L953)*
+*Defined in [api.ts:1127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1127)*
 
 *__type__*: {number}
 
@@ -41,7 +41,7 @@ ___
 
 **● productCode**: *`string`*
 
-*Defined in [api.ts:965](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L965)*
+*Defined in [api.ts:1139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1139)*
 
 *__type__*: {string}
 
@@ -54,7 +54,7 @@ ___
 
 **● role**: *`string`*
 
-*Defined in [api.ts:959](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L959)*
+*Defined in [api.ts:1133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1133)*
 
 *__type__*: {string}
 
