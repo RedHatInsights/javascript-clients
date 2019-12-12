@@ -28,7 +28,7 @@
 
 **● details**: *`object`*
 
-*Defined in [api.ts:95](https://github.com/karelhala/javascript-clients/blob/master/packages/remediations/api.ts#L95)*
+*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L95)*
 
 *__type__*: {{ \[key: string\]: any; }}
 
@@ -45,7 +45,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:83](https://github.com/karelhala/javascript-clients/blob/master/packages/remediations/api.ts#L83)*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L83)*
 
 *__type__*: {string}
 
@@ -58,7 +58,7 @@ ___
 
 **● insightsId**: *`string`*
 
-*Defined in [api.ts:89](https://github.com/karelhala/javascript-clients/blob/master/packages/remediations/api.ts#L89)*
+*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L89)*
 
 *__type__*: {string}
 

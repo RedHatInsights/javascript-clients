@@ -32,7 +32,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:199](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L199)*
+*Defined in [api.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L199)*
 
 *__type__*: {Date}
 
@@ -45,7 +45,7 @@ ___
 
 **● createdBy**: *`string`*
 
-*Defined in [api.ts:193](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L193)*
+*Defined in [api.ts:193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L193)*
 
 The username that created this acknowledgement
 
@@ -60,7 +60,7 @@ ___
 
 **● id**: *`number`*
 
-*Defined in [api.ts:169](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L169)*
+*Defined in [api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L169)*
 
 *__type__*: {number}
 
@@ -73,7 +73,7 @@ ___
 
 **● justification**: *`string`*
 
-*Defined in [api.ts:187](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L187)*
+*Defined in [api.ts:187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L187)*
 
 *__type__*: {string}
 
@@ -86,7 +86,7 @@ ___
 
 **● rule**: *`string`*
 
-*Defined in [api.ts:175](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L175)*
+*Defined in [api.ts:175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L175)*
 
 *__type__*: {string}
 
@@ -99,7 +99,7 @@ ___
 
 **● systemUuid**: *`string`*
 
-*Defined in [api.ts:181](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L181)*
+*Defined in [api.ts:181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L181)*
 
 *__type__*: {string}
 
@@ -112,7 +112,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:205](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L205)*
+*Defined in [api.ts:205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L205)*
 
 *__type__*: {Date}
 

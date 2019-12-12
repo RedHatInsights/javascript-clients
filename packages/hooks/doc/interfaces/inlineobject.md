@@ -27,7 +27,7 @@
 
 **● application**: *[AppsRegisterApplication](appsregisterapplication.md)*
 
-*Defined in [api.ts:614](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L614)*
+*Defined in [api.ts:614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L614)*
 
 *__type__*: {AppsRegisterApplication}
 
@@ -40,7 +40,7 @@ ___
 
 **● eventTypes**: *[AppsRegisterEventTypes](appsregistereventtypes.md)*
 
-*Defined in [api.ts:620](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L620)*
+*Defined in [api.ts:620](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L620)*
 
 *__type__*: {AppsRegisterEventTypes}
 

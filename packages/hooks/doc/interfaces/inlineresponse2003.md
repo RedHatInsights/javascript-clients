@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[Endpoint](../modules/endpoint.md)>*
 
-*Defined in [api.ts:716](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L716)*
+*Defined in [api.ts:716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L716)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[Links](links.md)*
 
-*Defined in [api.ts:728](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L728)*
+*Defined in [api.ts:728](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L728)*
 
 *__type__*: {Links}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[Metadata](metadata.md)*
 
-*Defined in [api.ts:722](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L722)*
+*Defined in [api.ts:722](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L722)*
 
 *__type__*: {Metadata}
 

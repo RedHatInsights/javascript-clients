@@ -14,6 +14,7 @@
 
 ### Properties
 
+* [availabilityCheckUrl](applicationtype.md#availabilitycheckurl)
 * [createdAt](applicationtype.md#createdat)
 * [dependentApplications](applicationtype.md#dependentapplications)
 * [displayName](applicationtype.md#displayname)
@@ -27,13 +28,26 @@
 
 ## Properties
 
+<a id="availabilitycheckurl"></a>
+
+### `<Optional>` availabilityCheckUrl
+
+**● availabilityCheckUrl**: *`string`*
+
+*Defined in [api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L139)*
+
+*__type__*: {string}
+
+*__memberof__*: ApplicationType
+
+___
 <a id="createdat"></a>
 
 ### `<Optional>` createdAt
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:139](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L139)*
+*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L145)*
 
 *__type__*: {Date}
 
@@ -46,7 +60,7 @@ ___
 
 **● dependentApplications**: *`any`*
 
-*Defined in [api.ts:145](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L145)*
+*Defined in [api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L151)*
 
 *__type__*: {any}
 
@@ -59,7 +73,7 @@ ___
 
 **● displayName**: *`string`*
 
-*Defined in [api.ts:151](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L151)*
+*Defined in [api.ts:157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L157)*
 
 *__type__*: {string}
 
@@ -72,7 +86,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:157](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L157)*
+*Defined in [api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L163)*
 
 ID of the resource
 
@@ -87,7 +101,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:163](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L163)*
+*Defined in [api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L169)*
 
 *__type__*: {string}
 
@@ -100,7 +114,7 @@ ___
 
 **● supportedAuthenticationTypes**: *`any`*
 
-*Defined in [api.ts:169](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L169)*
+*Defined in [api.ts:175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L175)*
 
 *__type__*: {any}
 
@@ -113,7 +127,7 @@ ___
 
 **● supportedSourceTypes**: *`any`*
 
-*Defined in [api.ts:175](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L175)*
+*Defined in [api.ts:181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L181)*
 
 *__type__*: {any}
 
@@ -126,7 +140,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:181](https://github.com/karelhala/javascript-clients/blob/master/packages/sources/api.ts#L181)*
+*Defined in [api.ts:187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L187)*
 
 *__type__*: {Date}
 

@@ -5831,6 +5831,45 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
+         * Resets the Service Plan's Modified schema
+         * @summary Reset Service Plan Modified schema
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resetServicePlanModified(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling resetServicePlanModified.');
+            }
+            const localVarPath = `/service_plans/{id}/reset`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns the specified Service Plan
          * @summary Show Service Plan
          * @param {string} id ID of the resource
@@ -5986,6 +6025,20 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Resets the Service Plan's Modified schema
+         * @summary Reset Service Plan Modified schema
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resetServicePlanModified(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).resetServicePlanModified(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns the specified Service Plan
          * @summary Show Service Plan
          * @param {string} id ID of the resource
@@ -6058,6 +6111,16 @@ export const ServicePlansApiFactory = function (configuration?: Configuration, b
             return ServicePlansApiFp(configuration).patchServicePlanModified(id, patchModifiedServicePlan, options)(axios, basePath);
         },
         /**
+         * Resets the Service Plan's Modified schema
+         * @summary Reset Service Plan Modified schema
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resetServicePlanModified(id: string, options?: any) {
+            return ServicePlansApiFp(configuration).resetServicePlanModified(id, options)(axios, basePath);
+        },
+        /**
          * Returns the specified Service Plan
          * @summary Show Service Plan
          * @param {string} id ID of the resource
@@ -6120,6 +6183,18 @@ export class ServicePlansApi extends BaseAPI {
      */
     public patchServicePlanModified(id: string, patchModifiedServicePlan?: PatchModifiedServicePlan, options?: any) {
         return ServicePlansApiFp(this.configuration).patchServicePlanModified(id, patchModifiedServicePlan, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Resets the Service Plan's Modified schema
+     * @summary Reset Service Plan Modified schema
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ServicePlansApi
+     */
+    public resetServicePlanModified(id: string, options?: any) {
+        return ServicePlansApiFp(this.configuration).resetServicePlanModified(id, options)(this.axios, this.basePath);
     }
 
     /**

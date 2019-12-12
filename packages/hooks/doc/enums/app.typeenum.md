@@ -22,7 +22,7 @@
 
 **App**:  = "app"
 
-*Defined in [api.ts:114](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L114)*
+*Defined in [api.ts:114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L114)*
 
 ___
 

@@ -27,7 +27,7 @@
 
 **● credentials**: *`any`*
 
-*Defined in [api.ts:2734](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2734)*
+*Defined in [api.ts:2798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2798)*
 
 *__type__*: {any}
 
@@ -40,7 +40,7 @@ ___
 
 **● uuid**: *`number`*
 
-*Defined in [api.ts:2740](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2740)*
+*Defined in [api.ts:2804](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2804)*
 
 *__type__*: {number}
 

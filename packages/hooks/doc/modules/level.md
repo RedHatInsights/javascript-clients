@@ -28,7 +28,7 @@
 
 **● attributes**: *[LevelAttributes](../interfaces/levelattributes.md)*
 
-*Defined in [api.ts:874](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L874)*
+*Defined in [api.ts:874](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L874)*
 
 *__type__*: {LevelAttributes}
 
@@ -41,7 +41,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:862](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L862)*
+*Defined in [api.ts:862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L862)*
 
 Identifier of the level record
 
@@ -56,7 +56,7 @@ ___
 
 **● type**: *[TypeEnum](../enums/level.typeenum.md)*
 
-*Defined in [api.ts:868](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L868)*
+*Defined in [api.ts:868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L868)*
 
 Type of the returned record
 

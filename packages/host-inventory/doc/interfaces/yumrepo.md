@@ -19,6 +19,7 @@ Representation of one yum repository
 * [baseurl](yumrepo.md#baseurl)
 * [enabled](yumrepo.md#enabled)
 * [gpgcheck](yumrepo.md#gpgcheck)
+* [id](yumrepo.md#id)
 * [name](yumrepo.md#name)
 
 ---
@@ -31,7 +32,7 @@ Representation of one yum repository
 
 **● baseurl**: *`string`*
 
-*Defined in [api.ts:1091](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L1091)*
+*Defined in [api.ts:1129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1129)*
 
 *__type__*: {string}
 
@@ -44,7 +45,7 @@ ___
 
 **● enabled**: *`boolean`*
 
-*Defined in [api.ts:1085](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L1085)*
+*Defined in [api.ts:1123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1123)*
 
 *__type__*: {boolean}
 
@@ -57,9 +58,22 @@ ___
 
 **● gpgcheck**: *`boolean`*
 
-*Defined in [api.ts:1079](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L1079)*
+*Defined in [api.ts:1117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1117)*
 
 *__type__*: {boolean}
+
+*__memberof__*: YumRepo
+
+___
+<a id="id"></a>
+
+### `<Optional>` id
+
+**● id**: *`string`*
+
+*Defined in [api.ts:1105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1105)*
+
+*__type__*: {string}
 
 *__memberof__*: YumRepo
 
@@ -70,7 +84,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:1073](https://github.com/karelhala/javascript-clients/blob/master/packages/host-inventory/api.ts#L1073)*
+*Defined in [api.ts:1111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1111)*
 
 *__type__*: {string}
 

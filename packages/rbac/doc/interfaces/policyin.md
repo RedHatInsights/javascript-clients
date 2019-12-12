@@ -29,7 +29,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:517](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L517)*
+*Defined in [api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L517)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● group**: *`string`*
 
-*Defined in [api.ts:523](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L523)*
+*Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L523)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:511](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L511)*
+*Defined in [api.ts:511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L511)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● roles**: *`Array`<`string`>*
 
-*Defined in [api.ts:529](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L529)*
+*Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L529)*
 
 *__type__*: {Array}
 

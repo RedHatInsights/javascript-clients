@@ -26,7 +26,7 @@
 
 **● justification**: *`string`*
 
-*Defined in [api.ts:155](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L155)*
+*Defined in [api.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L155)*
 
 The reason the rule was acked
 

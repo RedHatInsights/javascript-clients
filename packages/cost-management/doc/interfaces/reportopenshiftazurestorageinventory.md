@@ -31,7 +31,7 @@
 
 **● data**: *`Array`<`any`>*
 
-*Defined in [api.ts:2283](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2283)*
+*Defined in [api.ts:2347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2347)*
 
 *__type__*: {Array}
 
@@ -44,7 +44,7 @@ ___
 
 **● filter**: *[ReportOpenShiftAzureFilter](reportopenshiftazurefilter.md)*
 
-*Defined in [api.ts:2277](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2277)*
+*Defined in [api.ts:2341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2341)*
 
 *__type__*: {ReportOpenShiftAzureFilter}
 
@@ -57,7 +57,7 @@ ___
 
 **● groupBy**: *[ReportOpenShiftAzureGrouping](reportopenshiftazuregrouping.md)*
 
-*Defined in [api.ts:2265](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2265)*
+*Defined in [api.ts:2329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2329)*
 
 *__type__*: {ReportOpenShiftAzureGrouping}
 
@@ -70,7 +70,7 @@ ___
 
 **● links**: *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:2259](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2259)*
+*Defined in [api.ts:2323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2323)*
 
 *__type__*: {PaginationLinks}
 
@@ -83,7 +83,7 @@ ___
 
 **● meta**: *[ReportPaginationMeta](reportpaginationmeta.md)*
 
-*Defined in [api.ts:2253](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2253)*
+*Defined in [api.ts:2317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2317)*
 
 *__type__*: {ReportPaginationMeta}
 
@@ -96,7 +96,7 @@ ___
 
 **● orderBy**: *[ReportOpenShiftAzureOrdering](../modules/reportopenshiftazureordering.md)*
 
-*Defined in [api.ts:2271](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2271)*
+*Defined in [api.ts:2335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2335)*
 
 *__type__*: {ReportOpenShiftAzureOrdering}
 

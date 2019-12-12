@@ -26,7 +26,7 @@
 
 **● count**: *`number`*
 
-*Defined in [api.ts:594](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L594)*
+*Defined in [api.ts:652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L652)*
 
 *__type__*: {number}
 

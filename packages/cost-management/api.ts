@@ -72,6 +72,64 @@ export class RequiredError extends Error {
 /**
  *
  * @export
+ * @interface CloudAccountOut
+ */
+export interface CloudAccountOut {
+    /**
+     *
+     * @type {string}
+     * @memberof CloudAccountOut
+     */
+    name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CloudAccountOut
+     */
+    value: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CloudAccountOut
+     */
+    description?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof CloudAccountOut
+     */
+    updatedTimestamp?: Date;
+}
+
+/**
+ *
+ * @export
+ * @interface CloudAccountPagination
+ */
+export interface CloudAccountPagination {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof CloudAccountPagination
+     */
+    meta?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof CloudAccountPagination
+     */
+    links?: PaginationLinks;
+    /**
+     *
+     * @type {Array<CloudAccountOut>}
+     * @memberof CloudAccountPagination
+     */
+    data: Array<CloudAccountOut>;
+}
+
+/**
+ *
+ * @export
  * @interface CostModel
  */
 export interface CostModel {
@@ -804,6 +862,12 @@ export interface ProviderOut {
      * @memberof ProviderOut
      */
     active?: boolean;
+    /**
+     * List of cost model name and UUIDs associated with this provider.
+     * @type {Array<any>}
+     * @memberof ProviderOut
+     */
+    costModels?: Array<any>;
 }
 
 /**
@@ -3784,6 +3848,108 @@ export class AzureReportApi extends BaseAPI {
 }
 
 /**
+ * CloudAccountsApi - axios parameter creator
+ * @export
+ */
+export const CloudAccountsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Obtain defined cloud accounts
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getCloudAccounts(options: any = {}): RequestArgs {
+            const localVarPath = `/cloud-accounts/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * CloudAccountsApi - functional programming interface
+ * @export
+ */
+export const CloudAccountsApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Obtain defined cloud accounts
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getCloudAccounts(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<CloudAccountPagination> {
+            const localVarAxiosArgs = CloudAccountsApiAxiosParamCreator(configuration).getCloudAccounts(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * CloudAccountsApi - factory interface
+ * @export
+ */
+export const CloudAccountsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         *
+         * @summary Obtain defined cloud accounts
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getCloudAccounts(options?: any) {
+            return CloudAccountsApiFp(configuration).getCloudAccounts(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * CloudAccountsApi - object-oriented interface
+ * @export
+ * @class CloudAccountsApi
+ * @extends {BaseAPI}
+ */
+export class CloudAccountsApi extends BaseAPI {
+    /**
+     *
+     * @summary Obtain defined cloud accounts
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CloudAccountsApi
+     */
+    public getCloudAccounts(options?: any) {
+        return CloudAccountsApiFp(this.configuration).getCloudAccounts(options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
  * CostModelApi - axios parameter creator
  * @export
  */
@@ -5932,6 +6098,54 @@ export const ProviderApiAxiosParamCreator = function (configuration?: Configurat
                 options: localVarRequestOptions,
             };
         },
+        /**
+         *
+         * @summary Update a provider
+         * @param {string} uuid ID of provider to update
+         * @param {ProviderIn} providerIn
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateProvider(uuid: string, providerIn: ProviderIn, options: any = {}): RequestArgs {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling updateProvider.');
+            }
+            // verify required parameter 'providerIn' is not null or undefined
+            if (providerIn === null || providerIn === undefined) {
+                throw new RequiredError('providerIn','Required parameter providerIn was null or undefined when calling updateProvider.');
+            }
+            const localVarPath = `/providers/{uuid}/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'PUT' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"ProviderIn" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(providerIn || {}) : (providerIn || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -6000,6 +6214,21 @@ export const ProviderApiFp = function(configuration?: Configuration) {
                 return axios.request(axiosRequestArgs);
             };
         },
+        /**
+         *
+         * @summary Update a provider
+         * @param {string} uuid ID of provider to update
+         * @param {ProviderIn} providerIn
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateProvider(uuid: string, providerIn: ProviderIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProviderOut> {
+            const localVarAxiosArgs = ProviderApiAxiosParamCreator(configuration).updateProvider(uuid, providerIn, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
     }
 };
 
@@ -6051,6 +6280,17 @@ export const ProviderApiFactory = function (configuration?: Configuration, baseP
          */
         listProviders(type?: string, name?: string, offset?: number, limit?: number, options?: any) {
             return ProviderApiFp(configuration).listProviders(type, name, offset, limit, options)(axios, basePath);
+        },
+        /**
+         *
+         * @summary Update a provider
+         * @param {string} uuid ID of provider to update
+         * @param {ProviderIn} providerIn
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateProvider(uuid: string, providerIn: ProviderIn, options?: any) {
+            return ProviderApiFp(configuration).updateProvider(uuid, providerIn, options)(axios, basePath);
         },
     };
 };
@@ -6111,6 +6351,19 @@ export class ProviderApi extends BaseAPI {
      */
     public listProviders(type?: string, name?: string, offset?: number, limit?: number, options?: any) {
         return ProviderApiFp(this.configuration).listProviders(type, name, offset, limit, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary Update a provider
+     * @param {string} uuid ID of provider to update
+     * @param {ProviderIn} providerIn
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProviderApi
+     */
+    public updateProvider(uuid: string, providerIn: ProviderIn, options?: any) {
+        return ProviderApiFp(this.configuration).updateProvider(uuid, providerIn, options)(this.axios, this.basePath);
     }
 
 }

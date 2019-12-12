@@ -27,7 +27,7 @@
 
 **● id**: *`number`*
 
-*Defined in [api.ts:631](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L631)*
+*Defined in [api.ts:691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L691)*
 
 *__type__*: {number}
 
@@ -40,7 +40,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:637](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L637)*
+*Defined in [api.ts:697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L697)*
 
 *__type__*: {string}
 

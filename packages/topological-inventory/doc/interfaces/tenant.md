@@ -29,7 +29,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:3783](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3783)*
+*Defined in [api.ts:3783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3783)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● externalTenant**: *`string`*
 
-*Defined in [api.ts:3789](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3789)*
+*Defined in [api.ts:3789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3789)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:3771](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3771)*
+*Defined in [api.ts:3771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3771)*
 
 ID of the resource
 
@@ -70,7 +70,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:3777](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3777)*
+*Defined in [api.ts:3777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3777)*
 
 *__type__*: {string}
 

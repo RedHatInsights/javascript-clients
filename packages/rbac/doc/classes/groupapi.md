@@ -53,7 +53,7 @@ GroupApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
 
 **Parameters:**
 
@@ -77,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
 
-*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
 
 ___
 <a id="basepath"></a>
@@ -88,7 +88,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
 
-*Defined in [api.ts:51](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
 
 ___
 <a id="configuration"></a>
@@ -99,7 +99,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
 
-*Defined in [api.ts:49](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
+*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **addPrincipalToGroup**(uuid: *`string`*, groupPrincipalIn: *[GroupPrincipalIn](../interfaces/groupprincipalin.md)*, options?: *`any`*): `AxiosPromise`<[GroupWithPrincipalsAndRoles](../interfaces/groupwithprincipalsandroles.md)>
 
-*Defined in [api.ts:1873](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L1873)*
+*Defined in [api.ts:1921](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1921)*
 
 *__summary__*: Add a principal to a group in the tenant
 
@@ -136,7 +136,7 @@ ___
 
 ▸ **addRoleToGroup**(uuid: *`string`*, groupRoleIn: *[GroupRoleIn](../interfaces/grouprolein.md)*, options?: *`any`*): `AxiosPromise`<[GroupWithPrincipalsAndRoles](../interfaces/groupwithprincipalsandroles.md)>
 
-*Defined in [api.ts:1886](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L1886)*
+*Defined in [api.ts:1934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1934)*
 
 *__summary__*: Add a role to a group in the tenant
 
@@ -161,7 +161,7 @@ ___
 
 ▸ **createGroup**(group: *[Group](../interfaces/group.md)*, options?: *`any`*): `AxiosPromise`<[GroupOut](../interfaces/groupout.md)>
 
-*Defined in [api.ts:1898](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L1898)*
+*Defined in [api.ts:1946](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1946)*
 
 *__summary__*: Create a group in a tenant
 
@@ -185,7 +185,7 @@ ___
 
 ▸ **deleteGroup**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1910](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L1910)*
+*Defined in [api.ts:1958](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1958)*
 
 *__summary__*: Delete a group in the tenant
 
@@ -209,7 +209,7 @@ ___
 
 ▸ **deletePrincipalFromGroup**(uuid: *`string`*, usernames: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1923](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L1923)*
+*Defined in [api.ts:1971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1971)*
 
 *__summary__*: Remove a principal from a group in the tenant
 
@@ -234,7 +234,7 @@ ___
 
 ▸ **deleteRoleFromGroup**(uuid: *`string`*, roles: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1936](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L1936)*
+*Defined in [api.ts:1984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1984)*
 
 *__summary__*: Remove a role from a group in the tenant
 
@@ -259,7 +259,7 @@ ___
 
 ▸ **getGroup**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[GroupWithPrincipalsAndRoles](../interfaces/groupwithprincipalsandroles.md)>
 
-*Defined in [api.ts:1948](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L1948)*
+*Defined in [api.ts:1996](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1996)*
 
 *__summary__*: Get a group in the tenant
 
@@ -283,7 +283,7 @@ ___
 
 ▸ **listGroups**(limit?: *`number`*, offset?: *`number`*, name?: *`string`*, scope?: *"account" \| "principal"*, username?: *`string`*, orderBy?: *`string`*, options?: *`any`*): `AxiosPromise`<[GroupPagination](../interfaces/grouppagination.md)>
 
-*Defined in [api.ts:1965](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L1965)*
+*Defined in [api.ts:2013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2013)*
 
 *__summary__*: List the groups for a tenant
 
@@ -312,7 +312,7 @@ ___
 
 ▸ **listRolesForGroup**(uuid: *`string`*, limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[GroupRolesPagination](../interfaces/grouprolespagination.md)>
 
-*Defined in [api.ts:1979](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L1979)*
+*Defined in [api.ts:2027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2027)*
 
 *__summary__*: List the roles for a group in the tenant
 
@@ -338,7 +338,7 @@ ___
 
 ▸ **updateGroup**(uuid: *`string`*, group: *[Group](../interfaces/group.md)*, options?: *`any`*): `AxiosPromise`<[GroupOut](../interfaces/groupout.md)>
 
-*Defined in [api.ts:1992](https://github.com/karelhala/javascript-clients/blob/master/packages/rbac/api.ts#L1992)*
+*Defined in [api.ts:2040](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2040)*
 
 *__summary__*: Udate a group in the tenant
 

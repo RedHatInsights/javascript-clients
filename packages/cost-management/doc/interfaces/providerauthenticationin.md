@@ -27,7 +27,7 @@
 
 **● credentials**: *`any`*
 
-*Defined in [api.ts:634](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L634)*
+*Defined in [api.ts:692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L692)*
 
 *__type__*: {any}
 
@@ -40,7 +40,7 @@ ___
 
 **● providerResourceName**: *`string`*
 
-*Defined in [api.ts:628](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L628)*
+*Defined in [api.ts:686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L686)*
 
 *__type__*: {string}
 

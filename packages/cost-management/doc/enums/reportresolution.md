@@ -25,7 +25,7 @@ The resolution to apply to the report. Default resolution is daily.
 
 **Daily**:  = "daily"
 
-*Defined in [api.ts:2625](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2625)*
+*Defined in [api.ts:2689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2689)*
 
 ___
 <a id="monthly"></a>
@@ -34,7 +34,7 @@ ___
 
 **Monthly**:  = "monthly"
 
-*Defined in [api.ts:2626](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L2626)*
+*Defined in [api.ts:2690](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2690)*
 
 ___
 

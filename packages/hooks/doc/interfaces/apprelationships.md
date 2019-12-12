@@ -26,7 +26,7 @@
 
 **● eventTypes**: *[Relationships](relationships.md)*
 
-*Defined in [api.ts:149](https://github.com/karelhala/javascript-clients/blob/master/packages/hooks/api.ts#L149)*
+*Defined in [api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L149)*
 
 *__type__*: {Relationships}
 

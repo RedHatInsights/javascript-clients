@@ -26,7 +26,7 @@
 
 **● serviceParameters**: *`any`*
 
-*Defined in [api.ts:83](https://github.com/karelhala/javascript-clients/blob/master/packages/topological-inventory/api.ts#L83)*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L83)*
 
 The provider specific parameters needed to compute list of used service inventories
 

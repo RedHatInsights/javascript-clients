@@ -29,7 +29,7 @@
 
 **● authentication**: *[ProviderAuthenticationIn](providerauthenticationin.md)*
 
-*Defined in [api.ts:732](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L732)*
+*Defined in [api.ts:790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L790)*
 
 *__type__*: {ProviderAuthenticationIn}
 
@@ -42,7 +42,7 @@ ___
 
 **● billingSource**: *[ProviderBillingSourceIn](providerbillingsourcein.md)*
 
-*Defined in [api.ts:738](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L738)*
+*Defined in [api.ts:796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L796)*
 
 *__type__*: {ProviderBillingSourceIn}
 
@@ -55,7 +55,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:720](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L720)*
+*Defined in [api.ts:778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L778)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● type**: *`string`*
 
-*Defined in [api.ts:726](https://github.com/karelhala/javascript-clients/blob/master/packages/cost-management/api.ts#L726)*
+*Defined in [api.ts:784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L784)*
 
 *__type__*: {string}
 

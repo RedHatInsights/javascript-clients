@@ -29,7 +29,7 @@
 
 **● displayName**: *`string` \| `null`*
 
-*Defined in [api.ts:913](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L913)*
+*Defined in [api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1107)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● hits**: *`number`*
 
-*Defined in [api.ts:901](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L901)*
+*Defined in [api.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1095)*
 
 *__type__*: {number}
 
@@ -55,7 +55,7 @@ ___
 
 **● lastSeen**: *`Date`*
 
-*Defined in [api.ts:919](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L919)*
+*Defined in [api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1113)*
 
 *__type__*: {Date}
 
@@ -68,7 +68,7 @@ ___
 
 **● systemUuid**: *`string`*
 
-*Defined in [api.ts:907](https://github.com/karelhala/javascript-clients/blob/master/packages/insights/api.ts#L907)*
+*Defined in [api.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1101)*
 
 *__type__*: {string}
 
