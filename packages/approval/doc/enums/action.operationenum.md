@@ -16,6 +16,7 @@
 * [Memo](action.operationenum.md#memo)
 * [Notify](action.operationenum.md#notify)
 * [Skip](action.operationenum.md#skip)
+* [Start](action.operationenum.md#start)
 
 ---
 
@@ -27,7 +28,7 @@
 
 **Approve**:  = "approve"
 
-*Defined in [api.ts:132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L132)*
+*Defined in [api.ts:126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L126)*
 
 ___
 <a id="cancel"></a>
@@ -36,7 +37,7 @@ ___
 
 **Cancel**:  = "cancel"
 
-*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L133)*
+*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L127)*
 
 ___
 <a id="deny"></a>
@@ -45,7 +46,7 @@ ___
 
 **Deny**:  = "deny"
 
-*Defined in [api.ts:134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L134)*
+*Defined in [api.ts:128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L128)*
 
 ___
 <a id="memo"></a>
@@ -54,7 +55,7 @@ ___
 
 **Memo**:  = "memo"
 
-*Defined in [api.ts:136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L136)*
+*Defined in [api.ts:130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L130)*
 
 ___
 <a id="notify"></a>
@@ -63,7 +64,7 @@ ___
 
 **Notify**:  = "notify"
 
-*Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L135)*
+*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L129)*
 
 ___
 <a id="skip"></a>
@@ -72,7 +73,16 @@ ___
 
 **Skip**:  = "skip"
 
-*Defined in [api.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L137)*
+*Defined in [api.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L131)*
+
+___
+<a id="start"></a>
+
+###  Start
+
+**Start**:  = "start"
+
+*Defined in [api.ts:132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L132)*
 
 ___
 

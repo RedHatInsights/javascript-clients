@@ -12,6 +12,8 @@
 
 ↳  [HostsApi](hostsapi.md)
 
+↳  [TagsApi](tagsapi.md)
+
 ## Index
 
 ### Constructors

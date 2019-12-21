@@ -133,12 +133,6 @@ export interface Application {
 export interface ApplicationType {
     /**
      *
-     * @type {string}
-     * @memberof ApplicationType
-     */
-    availabilityCheckUrl?: string;
-    /**
-     *
      * @type {Date}
      * @memberof ApplicationType
      */

@@ -29,7 +29,7 @@ The tenant settings and schema
 
 **● current**: *`any`*
 
-*Defined in [api.ts:1236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1236)*
+*Defined in [api.ts:1224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1224)*
 
 The current settings for this tenant
 
@@ -44,7 +44,7 @@ ___
 
 **● schema**: *`any`*
 
-*Defined in [api.ts:1242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1242)*
+*Defined in [api.ts:1230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1230)*
 
 JSON Schema for the Tenant Settings
 

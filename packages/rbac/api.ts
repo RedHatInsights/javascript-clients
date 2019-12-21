@@ -118,6 +118,20 @@ export interface AccessPagination {
 /**
  *
  * @export
+ * @interface Error403
+ */
+export interface Error403 {
+    /**
+     *
+     * @type {Array<any>}
+     * @memberof Error403
+     */
+    errors: Array<any>;
+}
+
+/**
+ *
+ * @export
  * @interface Group
  */
 export interface Group {
@@ -171,6 +185,30 @@ export interface GroupOut {
      * @memberof GroupOut
      */
     modified: Date;
+    /**
+     *
+     * @type {number}
+     * @memberof GroupOut
+     */
+    principalCount?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GroupOut
+     */
+    roleCount?: number;
+    /**
+     *
+     * @type {boolean}
+     * @memberof GroupOut
+     */
+    system?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof GroupOut
+     */
+    platformDefault?: boolean;
 }
 
 /**
@@ -345,6 +383,20 @@ export interface GroupWithPrincipalsAndRoles {
      * @memberof GroupWithPrincipalsAndRoles
      */
     roles: Array<RoleOut>;
+}
+
+/**
+ *
+ * @export
+ * @interface InlineResponse200
+ */
+export interface InlineResponse200 {
+    /**
+     *
+     * @type {Array<RoleOut>}
+     * @memberof InlineResponse200
+     */
+    data: Array<RoleOut>;
 }
 
 /**
@@ -1009,9 +1061,9 @@ export const AccessApiAxiosParamCreator = function (configuration?: Configuratio
     return {
         /**
          *
-         * @summary Get the permitted access for a principal in the tenant
+         * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
          * @param {string} application The application name to obtain access for the principal
-         * @param {string} [username] Unique username of the principal to obtain access for
+         * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
@@ -1075,9 +1127,9 @@ export const AccessApiFp = function(configuration?: Configuration) {
     return {
         /**
          *
-         * @summary Get the permitted access for a principal in the tenant
+         * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
          * @param {string} application The application name to obtain access for the principal
-         * @param {string} [username] Unique username of the principal to obtain access for
+         * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
@@ -1101,9 +1153,9 @@ export const AccessApiFactory = function (configuration?: Configuration, basePat
     return {
         /**
          *
-         * @summary Get the permitted access for a principal in the tenant
+         * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
          * @param {string} application The application name to obtain access for the principal
-         * @param {string} [username] Unique username of the principal to obtain access for
+         * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
@@ -1124,9 +1176,9 @@ export const AccessApiFactory = function (configuration?: Configuration, basePat
 export class AccessApi extends BaseAPI {
     /**
      *
-     * @summary Get the permitted access for a principal in the tenant
+     * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
      * @param {string} application The application name to obtain access for the principal
-     * @param {string} [username] Unique username of the principal to obtain access for
+     * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {*} [options] Override http request option.
@@ -1524,12 +1576,13 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          *
          * @summary List the roles for a group in the tenant
          * @param {string} uuid ID of group
+         * @param {boolean} [exclude] If this is set to true, the result would be roles excluding the ones in the group
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listRolesForGroup(uuid: string, exclude?: boolean, limit?: number, offset?: number, options: any = {}): RequestArgs {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling listRolesForGroup.');
@@ -1549,6 +1602,10 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (exclude !== undefined) {
+                localVarQueryParameter['exclude'] = exclude;
             }
 
             if (limit !== undefined) {
@@ -1649,7 +1706,7 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addRoleToGroup(uuid: string, groupRoleIn: GroupRoleIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupWithPrincipalsAndRoles> {
+        addRoleToGroup(uuid: string, groupRoleIn: GroupRoleIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
             const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).addRoleToGroup(uuid, groupRoleIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -1751,13 +1808,14 @@ export const GroupApiFp = function(configuration?: Configuration) {
          *
          * @summary List the roles for a group in the tenant
          * @param {string} uuid ID of group
+         * @param {boolean} [exclude] If this is set to true, the result would be roles excluding the ones in the group
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, limit, offset, options);
+        listRolesForGroup(uuid: string, exclude?: boolean, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination> {
+            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1880,13 +1938,14 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          *
          * @summary List the roles for a group in the tenant
          * @param {string} uuid ID of group
+         * @param {boolean} [exclude] If this is set to true, the result would be roles excluding the ones in the group
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, limit?: number, offset?: number, options?: any) {
-            return GroupApiFp(configuration).listRolesForGroup(uuid, limit, offset, options)(axios, basePath);
+        listRolesForGroup(uuid: string, exclude?: boolean, limit?: number, offset?: number, options?: any) {
+            return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, limit, offset, options)(axios, basePath);
         },
         /**
          *
@@ -2018,14 +2077,15 @@ export class GroupApi extends BaseAPI {
      *
      * @summary List the roles for a group in the tenant
      * @param {string} uuid ID of group
+     * @param {boolean} [exclude] If this is set to true, the result would be roles excluding the ones in the group
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public listRolesForGroup(uuid: string, limit?: number, offset?: number, options?: any) {
-        return GroupApiFp(this.configuration).listRolesForGroup(uuid, limit, offset, options)(this.axios, this.basePath);
+    public listRolesForGroup(uuid: string, exclude?: boolean, limit?: number, offset?: number, options?: any) {
+        return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, limit, offset, options)(this.axios, this.basePath);
     }
 
     /**

@@ -27,7 +27,7 @@
 
 **● billingSource**: *`any`*
 
-*Defined in [api.ts:2852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2852)*
+*Defined in [api.ts:2980](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2980)*
 
 *__type__*: {any}
 
@@ -40,7 +40,7 @@ ___
 
 **● uuid**: *`number`*
 
-*Defined in [api.ts:2858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2858)*
+*Defined in [api.ts:2986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2986)*
 
 *__type__*: {number}
 

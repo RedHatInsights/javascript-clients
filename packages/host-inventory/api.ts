@@ -70,6 +70,64 @@ export class RequiredError extends Error {
 }
 
 /**
+ * Information about a host tag
+ * @export
+ * @interface ActiveTag
+ */
+export interface ActiveTag {
+    /**
+     *
+     * @type {StructuredTag}
+     * @memberof ActiveTag
+     */
+    tag: StructuredTag;
+    /**
+     * The number of hosts with the given tag. If the value is null this indicates that the count is unknown.
+     * @type {number}
+     * @memberof ActiveTag
+     */
+    count: number | null;
+}
+
+/**
+ *
+ * @export
+ * @interface ActiveTags
+ */
+export interface ActiveTags {
+    /**
+     * Total number of items
+     * @type {number}
+     * @memberof ActiveTags
+     */
+    total: number;
+    /**
+     * The number of items on the current page
+     * @type {number}
+     * @memberof ActiveTags
+     */
+    count: number;
+    /**
+     * The page number
+     * @type {number}
+     * @memberof ActiveTags
+     */
+    page: number;
+    /**
+     * The number of items to return per page
+     * @type {number}
+     * @memberof ActiveTags
+     */
+    perPage: number;
+    /**
+     *
+     * @type {Array<ActiveTag>}
+     * @memberof ActiveTags
+     */
+    results: Array<ActiveTag>;
+}
+
+/**
  *
  * @export
  * @interface BulkHostOut
@@ -1305,17 +1363,17 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [fqdn] Filter by a host&#39;s FQDN
          * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
          * @param {string} [insightsId] Search for a host by insights_id
-         * @param {Array<string>} [tags] search for a host by the tags on the system
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
+         * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, options: any = {}): RequestArgs {
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/hosts`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1350,10 +1408,6 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['insights_id'] = insightsId;
             }
 
-            if (tags) {
-                localVarQueryParameter['tags'] = tags;
-            }
-
             if (branchId !== undefined) {
                 localVarQueryParameter['branch_id'] = branchId;
             }
@@ -1376,6 +1430,10 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 
             if (staleness) {
                 localVarQueryParameter['staleness'] = staleness;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1817,18 +1875,18 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {string} [fqdn] Filter by a host&#39;s FQDN
          * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
          * @param {string} [insightsId] Search for a host by insights_id
-         * @param {Array<string>} [tags] search for a host by the tags on the system
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
+         * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, tags, branchId, perPage, page, orderBy, orderHow, staleness, options);
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1991,18 +2049,18 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [fqdn] Filter by a host&#39;s FQDN
          * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
          * @param {string} [insightsId] Search for a host by insights_id
-         * @param {Array<string>} [tags] search for a host by the tags on the system
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
+         * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, options?: any) {
-            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, tags, branchId, perPage, page, orderBy, orderHow, staleness, options)(axios, basePath);
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, options?: any) {
+            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, options)(axios, basePath);
         },
         /**
          * Find one or more hosts by their ID and return the id and system profile
@@ -2144,19 +2202,19 @@ export class HostsApi extends BaseAPI {
      * @param {string} [fqdn] Filter by a host&#39;s FQDN
      * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
      * @param {string} [insightsId] Search for a host by insights_id
-     * @param {Array<string>} [tags] search for a host by the tags on the system
      * @param {string} [branchId] Filter by branch_id
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
      * @param {'display_name' | 'updated'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
+     * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, tags?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, tags, branchId, perPage, page, orderBy, orderHow, staleness, options)(this.axios, this.basePath);
+    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2250,6 +2308,166 @@ export class HostsApi extends BaseAPI {
      */
     public apiHostReplaceFacts(hostIdList: Array<string>, namespace: string, body: any, branchId?: string, options?: any) {
         return HostsApiFp(this.configuration).apiHostReplaceFacts(hostIdList, namespace, body, branchId, options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
+ * TagsApi - axios parameter creator
+ * @export
+ */
+export const TagsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Get the active host tags for a given account
+         * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
+         * @param {'tag' | 'count'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering. Default to ASC
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
+         * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, options: any = {}): RequestArgs {
+            const localVarPath = `/tags`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("x-rh-identity")
+					: configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (orderHow !== undefined) {
+                localVarQueryParameter['order_how'] = orderHow;
+            }
+
+            if (perPage !== undefined) {
+                localVarQueryParameter['per_page'] = perPage;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (staleness) {
+                localVarQueryParameter['staleness'] = staleness;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * TagsApi - functional programming interface
+ * @export
+ */
+export const TagsApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Get the active host tags for a given account
+         * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
+         * @param {'tag' | 'count'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering. Default to ASC
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
+         * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActiveTags> {
+            const localVarAxiosArgs = TagsApiAxiosParamCreator(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * TagsApi - factory interface
+ * @export
+ */
+export const TagsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         *
+         * @summary Get the active host tags for a given account
+         * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
+         * @param {'tag' | 'count'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering. Default to ASC
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
+         * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, options?: any) {
+            return TagsApiFp(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * TagsApi - object-oriented interface
+ * @export
+ * @class TagsApi
+ * @extends {BaseAPI}
+ */
+export class TagsApi extends BaseAPI {
+    /**
+     *
+     * @summary Get the active host tags for a given account
+     * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
+     * @param {'tag' | 'count'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering. Default to ASC
+     * @param {number} [perPage] A number of items to return per page.
+     * @param {number} [page] A page number of the items to return.
+     * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
+     * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TagsApi
+     */
+    public apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, options?: any) {
+        return TagsApiFp(this.configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, options)(this.axios, this.basePath);
     }
 
 }

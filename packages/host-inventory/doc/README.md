@@ -93,9 +93,12 @@ API documentation
 * [Configuration](classes/configuration.md)
 * [HostsApi](classes/hostsapi.md)
 * [RequiredError](classes/requirederror.md)
+* [TagsApi](classes/tagsapi.md)
 
 ### Interfaces
 
+* [ActiveTag](interfaces/activetag.md)
+* [ActiveTags](interfaces/activetags.md)
 * [BulkHostOut](interfaces/bulkhostout.md)
 * [BulkHostOutDetails](interfaces/bulkhostoutdetails.md)
 * [ConfigurationParameters](interfaces/configurationparameters.md)
@@ -128,6 +131,9 @@ API documentation
 * [HostsApiAxiosParamCreator](#hostsapiaxiosparamcreator)
 * [HostsApiFactory](#hostsapifactory)
 * [HostsApiFp](#hostsapifp)
+* [TagsApiAxiosParamCreator](#tagsapiaxiosparamcreator)
+* [TagsApiFactory](#tagsapifactory)
+* [TagsApiFp](#tagsapifp)
 
 ### Object literals
 
@@ -155,7 +161,7 @@ ___
 
 ▸ **HostsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1137)*
+*Defined in [api.ts:1195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1195)*
 
 HostsApi - axios parameter creator
 
@@ -174,7 +180,7 @@ ___
 
 ▸ **HostsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1949](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1949)*
+*Defined in [api.ts:2007](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2007)*
 
 HostsApi - factory interface
 
@@ -195,9 +201,68 @@ ___
 
 ▸ **HostsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1763)*
+*Defined in [api.ts:1821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1821)*
 
 HostsApi - functional programming interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
+<a id="tagsapiaxiosparamcreator"></a>
+
+### `<Const>` TagsApiAxiosParamCreator
+
+▸ **TagsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:2319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2319)*
+
+TagsApi - axios parameter creator
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
+<a id="tagsapifactory"></a>
+
+### `<Const>` TagsApiFactory
+
+▸ **TagsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
+
+*Defined in [api.ts:2427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2427)*
+
+TagsApi - factory interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+| `Optional` basePath | `string` |
+| `Optional` axios | `AxiosInstance` |
+
+**Returns:** `object`
+
+___
+<a id="tagsapifp"></a>
+
+### `<Const>` TagsApiFp
+
+▸ **TagsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:2398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2398)*
+
+TagsApi - functional programming interface
 
 **Parameters:**
 

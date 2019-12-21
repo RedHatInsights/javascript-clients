@@ -8,13 +8,13 @@
     "bootstrap": "lerna exec npm install",
     "release": "semantic-release",
     "clear-packages": "lerna exec rm -- -rf node_modules; rm -rf node_modules",
-    "prepare": "npm run bootstrap && npm run build && npm run generate",
+    "prepare": "npm run bootstrap && npm run generate && npm run build",
     "audit": "lerna exec npm audit",
     "test": "echo \"Error: no test specified\" && exit 0",
     "generate": "npm run generate:prod && npm run doc",
     "doc": "lerna run doc",
     "build": "lerna run build",
-    "generate:prod": "lerna run generate:prod"
+    "generate:prod": "lerna run generate:prod --ignore=@redhat-cloud-services/notifications-client"
   },
   "repository": {
     "type": "git",

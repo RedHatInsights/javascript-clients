@@ -26,7 +26,7 @@
 
 **● errors**: *`Array`<[ErrorNotFoundErrors](errornotfounderrors.md)>*
 
-*Defined in [api.ts:581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L581)*
+*Defined in [api.ts:575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L575)*
 
 *__type__*: {Array}
 

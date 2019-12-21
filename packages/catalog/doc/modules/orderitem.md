@@ -176,9 +176,9 @@ Stores the Portfolio Item ID.
 ___
 <a id="providercontrolparameters"></a>
 
-###  providerControlParameters
+### `<Optional>` providerControlParameters
 
-**● providerControlParameters**: *`any`*
+**● providerControlParameters**: *`any` \| `null`*
 
 *Defined in [api.ts:495](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L495)*
 
@@ -191,9 +191,9 @@ The provider specific parameters needed to provision this service. This might in
 ___
 <a id="serviceparameters"></a>
 
-###  serviceParameters
+### `<Optional>` serviceParameters
 
-**● serviceParameters**: *`any`*
+**● serviceParameters**: *`any` \| `null`*
 
 *Defined in [api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L489)*
 
@@ -204,9 +204,9 @@ ___
 ___
 <a id="serviceplanref"></a>
 
-###  servicePlanRef
+### `<Optional>` servicePlanRef
 
-**● servicePlanRef**: *`string`*
+**● servicePlanRef**: *`string` \| `null`*
 
 *Defined in [api.ts:501](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L501)*
 

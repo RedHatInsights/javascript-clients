@@ -106,7 +106,7 @@ ___
 
 ▸ **createUserPreference**(userPreference: *[UserPreference](../interfaces/userpreference.md)*, options?: *`any`*): `AxiosPromise`<[UserPreferenceOut](../interfaces/userpreferenceout.md)>
 
-*Defined in [api.ts:7500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7500)*
+*Defined in [api.ts:7988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7988)*
 
 *__summary__*: Create a user preference
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **deleteUserPreference**(prefUuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:7512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7512)*
+*Defined in [api.ts:8000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L8000)*
 
 *__summary__*: Delete a user preference
 
@@ -154,7 +154,7 @@ ___
 
 ▸ **getUserPreference**(prefUuid: *`string`*, options?: *`any`*): `AxiosPromise`<[UserPreferenceOut](../interfaces/userpreferenceout.md)>
 
-*Defined in [api.ts:7524](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7524)*
+*Defined in [api.ts:8012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L8012)*
 
 *__summary__*: Get a user preference
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **listUserPreferences**(offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[UserPreferencePagination](../interfaces/userpreferencepagination.md)>
 
-*Defined in [api.ts:7537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7537)*
+*Defined in [api.ts:8025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L8025)*
 
 *__summary__*: List the user's preferences
 
@@ -203,7 +203,7 @@ ___
 
 ▸ **updateUserPreference**(prefUuid: *`string`*, userPreference: *[UserPreference](../interfaces/userpreference.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:7550](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7550)*
+*Defined in [api.ts:8038](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L8038)*
 
 *__summary__*: Update a user preference
 

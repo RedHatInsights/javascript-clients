@@ -26,6 +26,8 @@
 
 ↳  [ProviderApi](providerapi.md)
 
+↳  [SourcesApi](sourcesapi.md)
+
 ↳  [SourcesAuthenticationApi](sourcesauthenticationapi.md)
 
 ↳  [SourcesBillingSourceApi](sourcesbillingsourceapi.md)

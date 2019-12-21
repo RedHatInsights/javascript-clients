@@ -88,12 +88,6 @@ export interface Action {
      */
     createdAt?: Date;
     /**
-     * Timestamp of update
-     * @type {Date}
-     * @memberof Action
-     */
-    updatedAt?: Date;
-    /**
      * Associated request id
      * @type {string}
      * @memberof Action
@@ -106,7 +100,7 @@ export interface Action {
      */
     processedBy?: string;
     /**
-     * Types of action, may be one of the value (approve, cancel, deny, notify, memo, or skip). The request will be updated according to the operation.
+     * Types of action, may be one of the value (approve, cancel, deny, notify, memo, skip, or start). The request state will be updated according to the operation.
      * @type {string}
      * @memberof Action
      */
@@ -116,7 +110,7 @@ export interface Action {
      * @type {string}
      * @memberof Action
      */
-    comments?: string;
+    comments?: string | null;
 }
 
 /**
@@ -134,7 +128,8 @@ export namespace Action {
         Deny = 'deny',
         Notify = 'notify',
         Memo = 'memo',
-        Skip = 'skip'
+        Skip = 'skip',
+        Start = 'start'
     }
 }
 
@@ -297,25 +292,31 @@ export interface Request {
      * @type {string}
      * @memberof Request
      */
-    reason?: string;
+    reason?: string | null;
     /**
      * Associate workflow id. Available only if the request is a leaf node
      * @type {string}
      * @memberof Request
      */
-    workflowId?: string;
+    workflowId?: string | null;
+    /**
+     * Timestamp of creation
+     * @type {Date}
+     * @memberof Request
+     */
+    createdAt?: Date;
     /**
      * Timestamp of notification sent to approvers
      * @type {Date}
      * @memberof Request
      */
-    notifiedAt?: Date;
+    notifiedAt?: Date | null;
     /**
      * Timestamp of finishing (skipped, canceled, or completed)
      * @type {Date}
      * @memberof Request
      */
-    finishedAt?: Date;
+    finishedAt?: Date | null;
     /**
      * Number of child requests
      * @type {number}
@@ -490,19 +491,7 @@ export interface Tag {
      * @type {string}
      * @memberof Tag
      */
-    namespace: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Tag
-     */
-    name: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Tag
-     */
-    value?: string;
+    tag?: string;
 }
 
 /**
@@ -661,7 +650,7 @@ export interface WorkflowCollection {
 export const ActionApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Add an action to a given request, available for admin/approver/requester
+         * Add an action to a given request, available for admin/approver/requester. Applicable operation types are based on request current state.
          * @summary Add an action to a given request
          * @param {string} requestId Id of request
          * @param {Action} action Action object that will be added
@@ -796,7 +785,7 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
 export const ActionApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Add an action to a given request, available for admin/approver/requester
+         * Add an action to a given request, available for admin/approver/requester. Applicable operation types are based on request current state.
          * @summary Add an action to a given request
          * @param {string} requestId Id of request
          * @param {Action} action Action object that will be added
@@ -848,7 +837,7 @@ export const ActionApiFp = function(configuration?: Configuration) {
 export const ActionApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Add an action to a given request, available for admin/approver/requester
+         * Add an action to a given request, available for admin/approver/requester. Applicable operation types are based on request current state.
          * @summary Add an action to a given request
          * @param {string} requestId Id of request
          * @param {Action} action Action object that will be added
@@ -889,7 +878,7 @@ export const ActionApiFactory = function (configuration?: Configuration, basePat
  */
 export class ActionApi extends BaseAPI {
     /**
-     * Add an action to a given request, available for admin/approver/requester
+     * Add an action to a given request, available for admin/approver/requester. Applicable operation types are based on request current state.
      * @summary Add an action to a given request
      * @param {string} requestId Id of request
      * @param {Action} action Action object that will be added
@@ -1143,13 +1132,14 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Return an array of child requests of a given request id, available for admin/requester
+         * Return an array of child requests of a given request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
          * @summary Return an array of child requests of a given request id
          * @param {string} requestId Id of request
+         * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Current login user&#39;s persona
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequestsByRequest(requestId: string, options: any = {}): RequestArgs {
+        listRequestsByRequest(requestId: string, xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', options: any = {}): RequestArgs {
             // verify required parameter 'requestId' is not null or undefined
             if (requestId === null || requestId === undefined) {
                 throw new RequiredError('requestId','Required parameter requestId was null or undefined when calling listRequestsByRequest.');
@@ -1169,6 +1159,10 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (xRhPersona !== undefined && xRhPersona !== null) {
+                localVarHeaderParameter['x-rh-persona'] = String(xRhPersona);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1195,6 +1189,45 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/requests/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Return request content of a given request id, available to all
+         * @summary Return request content of a given request id
+         * @param {string} requestId Id of request
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showRequestContent(requestId: string, options: any = {}): RequestArgs {
+            // verify required parameter 'requestId' is not null or undefined
+            if (requestId === null || requestId === undefined) {
+                throw new RequiredError('requestId','Required parameter requestId was null or undefined when calling showRequestContent.');
+            }
+            const localVarPath = `/requests/{request_id}/content`
+                .replace(`{${"request_id"}}`, encodeURIComponent(String(requestId)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -1261,14 +1294,15 @@ export const RequestApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Return an array of child requests of a given request id, available for admin/requester
+         * Return an array of child requests of a given request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
          * @summary Return an array of child requests of a given request id
          * @param {string} requestId Id of request
+         * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Current login user&#39;s persona
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequestsByRequest(requestId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestCollection> {
-            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequestsByRequest(requestId, options);
+        listRequestsByRequest(requestId: string, xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestCollection> {
+            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequestsByRequest(requestId, xRhPersona, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1283,6 +1317,20 @@ export const RequestApiFp = function(configuration?: Configuration) {
          */
         showRequest(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Request> {
             const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).showRequest(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Return request content of a given request id, available to all
+         * @summary Return request content of a given request id
+         * @param {string} requestId Id of request
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showRequestContent(requestId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
+            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).showRequestContent(requestId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1321,14 +1369,15 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
             return RequestApiFp(configuration).listRequests(xRhPersona, limit, offset, filter, options)(axios, basePath);
         },
         /**
-         * Return an array of child requests of a given request id, available for admin/requester
+         * Return an array of child requests of a given request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
          * @summary Return an array of child requests of a given request id
          * @param {string} requestId Id of request
+         * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Current login user&#39;s persona
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequestsByRequest(requestId: string, options?: any) {
-            return RequestApiFp(configuration).listRequestsByRequest(requestId, options)(axios, basePath);
+        listRequestsByRequest(requestId: string, xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', options?: any) {
+            return RequestApiFp(configuration).listRequestsByRequest(requestId, xRhPersona, options)(axios, basePath);
         },
         /**
          * Return an approval request by given id, available to anyone who can access the request
@@ -1339,6 +1388,16 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
          */
         showRequest(id: string, options?: any) {
             return RequestApiFp(configuration).showRequest(id, options)(axios, basePath);
+        },
+        /**
+         * Return request content of a given request id, available to all
+         * @summary Return request content of a given request id
+         * @param {string} requestId Id of request
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showRequestContent(requestId: string, options?: any) {
+            return RequestApiFp(configuration).showRequestContent(requestId, options)(axios, basePath);
         },
     };
 };
@@ -1378,15 +1437,16 @@ export class RequestApi extends BaseAPI {
     }
 
     /**
-     * Return an array of child requests of a given request id, available for admin/requester
+     * Return an array of child requests of a given request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
      * @summary Return an array of child requests of a given request id
      * @param {string} requestId Id of request
+     * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Current login user&#39;s persona
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RequestApi
      */
-    public listRequestsByRequest(requestId: string, options?: any) {
-        return RequestApiFp(this.configuration).listRequestsByRequest(requestId, options)(this.axios, this.basePath);
+    public listRequestsByRequest(requestId: string, xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', options?: any) {
+        return RequestApiFp(this.configuration).listRequestsByRequest(requestId, xRhPersona, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1399,6 +1459,18 @@ export class RequestApi extends BaseAPI {
      */
     public showRequest(id: string, options?: any) {
         return RequestApiFp(this.configuration).showRequest(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Return request content of a given request id, available to all
+     * @summary Return request content of a given request id
+     * @param {string} requestId Id of request
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestApi
+     */
+    public showRequestContent(requestId: string, options?: any) {
+        return RequestApiFp(this.configuration).showRequestContent(requestId, options)(this.axios, this.basePath);
     }
 
 }

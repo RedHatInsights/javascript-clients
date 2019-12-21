@@ -20,7 +20,6 @@
 * [operation](action.md#operation)
 * [processedBy](action.md#processedby)
 * [requestId](action.md#requestid)
-* [updatedAt](action.md#updatedat)
 
 ---
 
@@ -30,9 +29,9 @@
 
 ### `<Optional>` comments
 
-**● comments**: *`string`*
+**● comments**: *`string` \| `null`*
 
-*Defined in [api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L119)*
+*Defined in [api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L113)*
 
 Comments for action
 
@@ -75,9 +74,9 @@ ___
 
 **● operation**: *[OperationEnum](../enums/action.operationenum.md)*
 
-*Defined in [api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L113)*
+*Defined in [api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L107)*
 
-Types of action, may be one of the value (approve, cancel, deny, notify, memo, or skip). The request will be updated according to the operation.
+Types of action, may be one of the value (approve, cancel, deny, notify, memo, skip, or start). The request state will be updated according to the operation.
 
 *__type__*: {string}
 
@@ -90,7 +89,7 @@ ___
 
 **● processedBy**: *`string`*
 
-*Defined in [api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L107)*
+*Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L101)*
 
 The person who performs the action
 
@@ -105,26 +104,11 @@ ___
 
 **● requestId**: *`string`*
 
-*Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L101)*
+*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L95)*
 
 Associated request id
 
 *__type__*: {string}
-
-*__memberof__*: Action
-
-___
-<a id="updatedat"></a>
-
-### `<Optional>` updatedAt
-
-**● updatedAt**: *`Date`*
-
-*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L95)*
-
-Timestamp of update
-
-*__type__*: {Date}
 
 *__memberof__*: Action
 

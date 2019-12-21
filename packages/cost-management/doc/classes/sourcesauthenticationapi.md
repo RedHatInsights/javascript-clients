@@ -102,7 +102,7 @@ ___
 
 ▸ **createAuthentication**(sourcesAuthentication: *[SourcesAuthentication](../interfaces/sourcesauthentication.md)*, options?: *`any`*): `AxiosPromise`<[SourcesAuthenticationOut](../interfaces/sourcesauthenticationout.md)>
 
-*Defined in [api.ts:6479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6479)*
+*Defined in [api.ts:6869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6869)*
 
 *__summary__*: Create an authentication entry for a Platform-Source.
 
