@@ -14,47 +14,19 @@
 
 ### Properties
 
-* [name](tagitem.md#name)
-* [namespace](tagitem.md#namespace)
-* [value](tagitem.md#value)
+* [tag](tagitem.md#tag)
 
 ---
 
 ## Properties
 
-<a id="name"></a>
+<a id="tag"></a>
 
-### `<Optional>` name
+### `<Optional>` tag
 
-**● name**: *`string`*
+**● tag**: *`string`*
 
 *Defined in [api.ts:1164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1164)*
-
-*__type__*: {string}
-
-*__memberof__*: TagItem
-
-___
-<a id="namespace"></a>
-
-### `<Optional>` namespace
-
-**● namespace**: *`string`*
-
-*Defined in [api.ts:1170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1170)*
-
-*__type__*: {string}
-
-*__memberof__*: TagItem
-
-___
-<a id="value"></a>
-
-### `<Optional>` value
-
-**● value**: *`string`*
-
-*Defined in [api.ts:1176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1176)*
 
 *__type__*: {string}
 

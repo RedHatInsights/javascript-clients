@@ -106,7 +106,7 @@ ___
 
 ▸ **createProvider**(providerIn: *[ProviderIn](../interfaces/providerin.md)*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
-*Defined in [api.ts:6313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6313)*
+*Defined in [api.ts:6457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6457)*
 
 *__summary__*: Create a provider
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **deleteProvider**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:6325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6325)*
+*Defined in [api.ts:6469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6469)*
 
 *__summary__*: Delete a provider
 
@@ -154,7 +154,7 @@ ___
 
 ▸ **getProvider**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
-*Defined in [api.ts:6337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6337)*
+*Defined in [api.ts:6481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6481)*
 
 *__summary__*: Get a provider
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **listProviders**(type?: *`string`*, name?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ProviderPagination](../interfaces/providerpagination.md)>
 
-*Defined in [api.ts:6352](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6352)*
+*Defined in [api.ts:6496](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6496)*
 
 *__summary__*: List the providers
 
@@ -205,7 +205,7 @@ ___
 
 ▸ **updateProvider**(uuid: *`string`*, providerIn: *[ProviderIn](../interfaces/providerin.md)*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
-*Defined in [api.ts:6365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6365)*
+*Defined in [api.ts:6509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6509)*
 
 *__summary__*: Update a provider
 

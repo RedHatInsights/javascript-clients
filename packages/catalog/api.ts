@@ -486,19 +486,19 @@ export interface OrderItem {
      * @type {any}
      * @memberof OrderItem
      */
-    serviceParameters: any;
+    serviceParameters?: any | null;
     /**
      * The provider specific parameters needed to provision this service. This might include namespaces, special keys.
      * @type {any}
      * @memberof OrderItem
      */
-    providerControlParameters: any;
+    providerControlParameters?: any | null;
     /**
      * Stores the service plan ref from the Topology Service.
      * @type {string}
      * @memberof OrderItem
      */
-    servicePlanRef: string;
+    servicePlanRef?: string | null;
     /**
      * Stores the Portfolio Item ID.
      * @type {string}
@@ -1062,10 +1062,10 @@ export namespace ShareInfo {
      * @enum {string}
      */
     export enum PermissionsEnum {
-        Read = 'catalog:portfolios:read',
-        Update = 'catalog:portfolios:update',
-        Delete = 'catalog:portfolios:delete',
-        Order = 'catalog:portfolios:order'
+        Read = 'read',
+        Update = 'update',
+        Delete = 'delete',
+        Order = 'order'
     }
 }
 
@@ -1076,7 +1076,7 @@ export namespace ShareInfo {
  */
 export interface SharePolicy {
     /**
-     * The permissions to apply for this share. Each permission comprises of 3 parts catalog:portfolios:verb separated by :. The valid verbs are read, update, delete and order
+     * The permissions to apply for this share. The valid values are read, update, delete and order
      * @type {Array<string>}
      * @memberof SharePolicy
      */
@@ -1099,10 +1099,10 @@ export namespace SharePolicy {
      * @enum {string}
      */
     export enum PermissionsEnum {
-        Read = 'catalog:portfolios:read',
-        Update = 'catalog:portfolios:update',
-        Delete = 'catalog:portfolios:delete',
-        Order = 'catalog:portfolios:order'
+        Read = 'read',
+        Update = 'update',
+        Delete = 'delete',
+        Order = 'order'
     }
 }
 
@@ -1161,19 +1161,7 @@ export interface TagItem {
      * @type {string}
      * @memberof TagItem
      */
-    name?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof TagItem
-     */
-    namespace?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof TagItem
-     */
-    value?: string;
+    tag?: string;
 }
 
 /**
@@ -1298,10 +1286,10 @@ export namespace UnsharePolicy {
      * @enum {string}
      */
     export enum PermissionsEnum {
-        Read = 'catalog:portfolios:read',
-        Update = 'catalog:portfolios:update',
-        Delete = 'catalog:portfolios:delete',
-        Order = 'catalog:portfolios:order'
+        Read = 'read',
+        Update = 'update',
+        Delete = 'delete',
+        Order = 'order'
     }
 }
 
@@ -3345,54 +3333,6 @@ export class OrderItemApi extends BaseAPI {
 export const PortfolioApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Adds a single tag to a Portfolio Item object
-         * @summary Add Tag for Portfolio Item
-         * @param {string} id ID of the resource
-         * @param {TagItem} tagItem
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        addPortfolioItemTag(id: string, tagItem: TagItem, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling addPortfolioItemTag.');
-            }
-            // verify required parameter 'tagItem' is not null or undefined
-            if (tagItem === null || tagItem === undefined) {
-                throw new RequiredError('tagItem','Required parameter tagItem was null or undefined when calling addPortfolioItemTag.');
-            }
-            const localVarPath = `/portfolio_items/{id}/tags`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication BasicAuth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"TagItem" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(tagItem || {}) : (tagItem || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Adds a new portfolio item to an existing portfolio.
          * @summary Add a portfolio item to a portfolio
          * @param {string} portfolioId The Portfolio ID
@@ -3444,11 +3384,11 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * Adds a single tag to Portfolio object
          * @summary Add Tag for Portfolio
          * @param {string} id ID of the resource
-         * @param {TagItem} tagItem
+         * @param {Array<TagItem>} tagItem
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addPortfolioTag(id: string, tagItem: TagItem, options: any = {}): RequestArgs {
+        addPortfolioTag(id: string, tagItem: Array<TagItem>, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling addPortfolioTag.');
@@ -3457,7 +3397,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             if (tagItem === null || tagItem === undefined) {
                 throw new RequiredError('tagItem','Required parameter tagItem was null or undefined when calling addPortfolioTag.');
             }
-            const localVarPath = `/portfolios/{id}/tags`
+            const localVarPath = `/portfolios/{id}/tag`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -3480,7 +3420,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"TagItem" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            const needsSerialization = (<any>"Array&lt;TagItem&gt;" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.data =  needsSerialization ? JSON.stringify(tagItem || {}) : (tagItem || "");
 
             return {
@@ -3758,6 +3698,54 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Remove Tags from Portfolio
+         * @summary Remove Tags from Portfolio
+         * @param {string} id ID of the resource
+         * @param {Array<TagItem>} tagItem
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        removePortfolioTags(id: string, tagItem: Array<TagItem>, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling removePortfolioTags.');
+            }
+            // verify required parameter 'tagItem' is not null or undefined
+            if (tagItem === null || tagItem === undefined) {
+                throw new RequiredError('tagItem','Required parameter tagItem was null or undefined when calling removePortfolioTags.');
+            }
+            const localVarPath = `/portfolios/{id}/untag`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"Array&lt;TagItem&gt;" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(tagItem || {}) : (tagItem || "");
 
             return {
                 url: url.format(localVarUrlObj),
@@ -4083,21 +4071,6 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
 export const PortfolioApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Adds a single tag to a Portfolio Item object
-         * @summary Add Tag for Portfolio Item
-         * @param {string} id ID of the resource
-         * @param {TagItem} tagItem
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        addPortfolioItemTag(id: string, tagItem: TagItem, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tag> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).addPortfolioItemTag(id, tagItem, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Adds a new portfolio item to an existing portfolio.
          * @summary Add a portfolio item to a portfolio
          * @param {string} portfolioId The Portfolio ID
@@ -4116,11 +4089,11 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * Adds a single tag to Portfolio object
          * @summary Add Tag for Portfolio
          * @param {string} id ID of the resource
-         * @param {TagItem} tagItem
+         * @param {Array<TagItem>} tagItem
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addPortfolioTag(id: string, tagItem: TagItem, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tag> {
+        addPortfolioTag(id: string, tagItem: Array<TagItem>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<TagItem>> {
             const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).addPortfolioTag(id, tagItem, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -4214,6 +4187,21 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          */
         postCopyPortfolio(portfolioId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio> {
             const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).postCopyPortfolio(portfolioId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Remove Tags from Portfolio
+         * @summary Remove Tags from Portfolio
+         * @param {string} id ID of the resource
+         * @param {Array<TagItem>} tagItem
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        removePortfolioTags(id: string, tagItem: Array<TagItem>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).removePortfolioTags(id, tagItem, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4331,17 +4319,6 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
 export const PortfolioApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Adds a single tag to a Portfolio Item object
-         * @summary Add Tag for Portfolio Item
-         * @param {string} id ID of the resource
-         * @param {TagItem} tagItem
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        addPortfolioItemTag(id: string, tagItem: TagItem, options?: any) {
-            return PortfolioApiFp(configuration).addPortfolioItemTag(id, tagItem, options)(axios, basePath);
-        },
-        /**
          * Adds a new portfolio item to an existing portfolio.
          * @summary Add a portfolio item to a portfolio
          * @param {string} portfolioId The Portfolio ID
@@ -4356,11 +4333,11 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * Adds a single tag to Portfolio object
          * @summary Add Tag for Portfolio
          * @param {string} id ID of the resource
-         * @param {TagItem} tagItem
+         * @param {Array<TagItem>} tagItem
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addPortfolioTag(id: string, tagItem: TagItem, options?: any) {
+        addPortfolioTag(id: string, tagItem: Array<TagItem>, options?: any) {
             return PortfolioApiFp(configuration).addPortfolioTag(id, tagItem, options)(axios, basePath);
         },
         /**
@@ -4430,6 +4407,17 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          */
         postCopyPortfolio(portfolioId: string, options?: any) {
             return PortfolioApiFp(configuration).postCopyPortfolio(portfolioId, options)(axios, basePath);
+        },
+        /**
+         * Remove Tags from Portfolio
+         * @summary Remove Tags from Portfolio
+         * @param {string} id ID of the resource
+         * @param {Array<TagItem>} tagItem
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        removePortfolioTags(id: string, tagItem: Array<TagItem>, options?: any) {
+            return PortfolioApiFp(configuration).removePortfolioTags(id, tagItem, options)(axios, basePath);
         },
         /**
          * Fetch share information about a portfolio
@@ -4516,19 +4504,6 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
  */
 export class PortfolioApi extends BaseAPI {
     /**
-     * Adds a single tag to a Portfolio Item object
-     * @summary Add Tag for Portfolio Item
-     * @param {string} id ID of the resource
-     * @param {TagItem} tagItem
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PortfolioApi
-     */
-    public addPortfolioItemTag(id: string, tagItem: TagItem, options?: any) {
-        return PortfolioApiFp(this.configuration).addPortfolioItemTag(id, tagItem, options)(this.axios, this.basePath);
-    }
-
-    /**
      * Adds a new portfolio item to an existing portfolio.
      * @summary Add a portfolio item to a portfolio
      * @param {string} portfolioId The Portfolio ID
@@ -4545,12 +4520,12 @@ export class PortfolioApi extends BaseAPI {
      * Adds a single tag to Portfolio object
      * @summary Add Tag for Portfolio
      * @param {string} id ID of the resource
-     * @param {TagItem} tagItem
+     * @param {Array<TagItem>} tagItem
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioApi
      */
-    public addPortfolioTag(id: string, tagItem: TagItem, options?: any) {
+    public addPortfolioTag(id: string, tagItem: Array<TagItem>, options?: any) {
         return PortfolioApiFp(this.configuration).addPortfolioTag(id, tagItem, options)(this.axios, this.basePath);
     }
 
@@ -4632,6 +4607,19 @@ export class PortfolioApi extends BaseAPI {
      */
     public postCopyPortfolio(portfolioId: string, options?: any) {
         return PortfolioApiFp(this.configuration).postCopyPortfolio(portfolioId, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Remove Tags from Portfolio
+     * @summary Remove Tags from Portfolio
+     * @param {string} id ID of the resource
+     * @param {Array<TagItem>} tagItem
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PortfolioApi
+     */
+    public removePortfolioTags(id: string, tagItem: Array<TagItem>, options?: any) {
+        return PortfolioApiFp(this.configuration).removePortfolioTags(id, tagItem, options)(this.axios, this.basePath);
     }
 
     /**
@@ -4730,6 +4718,54 @@ export class PortfolioApi extends BaseAPI {
  */
 export const PortfolioItemApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * Adds a single tag to a Portfolio Item object
+         * @summary Add Tag for Portfolio Item
+         * @param {string} id ID of the resource
+         * @param {Array<TagItem>} tagItem
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        addPortfolioItemTag(id: string, tagItem: Array<TagItem>, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling addPortfolioItemTag.');
+            }
+            // verify required parameter 'tagItem' is not null or undefined
+            if (tagItem === null || tagItem === undefined) {
+                throw new RequiredError('tagItem','Required parameter tagItem was null or undefined when calling addPortfolioItemTag.');
+            }
+            const localVarPath = `/portfolio_items/{id}/tag`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"Array&lt;TagItem&gt;" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(tagItem || {}) : (tagItem || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * Adds a name and description for a portfolio item and returns the newly created portfolio item.
          * @summary Add a new portfolio item
@@ -5080,6 +5116,54 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
+         * Remove Tags from Portfolio Item
+         * @summary Remove Tags from Portfolio Item
+         * @param {string} id ID of the resource
+         * @param {Array<TagItem>} tagItem
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        removePortfolioItemTags(id: string, tagItem: Array<TagItem>, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling removePortfolioItemTags.');
+            }
+            // verify required parameter 'tagItem' is not null or undefined
+            if (tagItem === null || tagItem === undefined) {
+                throw new RequiredError('tagItem','Required parameter tagItem was null or undefined when calling removePortfolioItemTags.');
+            }
+            const localVarPath = `/portfolio_items/{id}/untag`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"Array&lt;TagItem&gt;" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(tagItem || {}) : (tagItem || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets a specific portfolio item based on the portfolio item ID passed
          * @summary Gets a specific portfolio item
          * @param {string} id ID of the resource
@@ -5263,6 +5347,21 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
 export const PortfolioItemApiFp = function(configuration?: Configuration) {
     return {
         /**
+         * Adds a single tag to a Portfolio Item object
+         * @summary Add Tag for Portfolio Item
+         * @param {string} id ID of the resource
+         * @param {Array<TagItem>} tagItem
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        addPortfolioItemTag(id: string, tagItem: Array<TagItem>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<TagItem>> {
+            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).addPortfolioItemTag(id, tagItem, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Adds a name and description for a portfolio item and returns the newly created portfolio item.
          * @summary Add a new portfolio item
          * @param {CreatePortfolioItem} createPortfolioItem
@@ -5382,6 +5481,21 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Remove Tags from Portfolio Item
+         * @summary Remove Tags from Portfolio Item
+         * @param {string} id ID of the resource
+         * @param {Array<TagItem>} tagItem
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        removePortfolioItemTags(id: string, tagItem: Array<TagItem>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).removePortfolioItemTags(id, tagItem, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Gets a specific portfolio item based on the portfolio item ID passed
          * @summary Gets a specific portfolio item
          * @param {string} id ID of the resource
@@ -5448,6 +5562,17 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
  */
 export const PortfolioItemApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
+        /**
+         * Adds a single tag to a Portfolio Item object
+         * @summary Add Tag for Portfolio Item
+         * @param {string} id ID of the resource
+         * @param {Array<TagItem>} tagItem
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        addPortfolioItemTag(id: string, tagItem: Array<TagItem>, options?: any) {
+            return PortfolioItemApiFp(configuration).addPortfolioItemTag(id, tagItem, options)(axios, basePath);
+        },
         /**
          * Adds a name and description for a portfolio item and returns the newly created portfolio item.
          * @summary Add a new portfolio item
@@ -5536,6 +5661,17 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
             return PortfolioItemApiFp(configuration).postCopyPortfolioItem(portfolioItemId, copyPortfolioItem, options)(axios, basePath);
         },
         /**
+         * Remove Tags from Portfolio Item
+         * @summary Remove Tags from Portfolio Item
+         * @param {string} id ID of the resource
+         * @param {Array<TagItem>} tagItem
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        removePortfolioItemTags(id: string, tagItem: Array<TagItem>, options?: any) {
+            return PortfolioItemApiFp(configuration).removePortfolioItemTags(id, tagItem, options)(axios, basePath);
+        },
+        /**
          * Gets a specific portfolio item based on the portfolio item ID passed
          * @summary Gets a specific portfolio item
          * @param {string} id ID of the resource
@@ -5587,6 +5723,19 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
  * @extends {BaseAPI}
  */
 export class PortfolioItemApi extends BaseAPI {
+    /**
+     * Adds a single tag to a Portfolio Item object
+     * @summary Add Tag for Portfolio Item
+     * @param {string} id ID of the resource
+     * @param {Array<TagItem>} tagItem
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PortfolioItemApi
+     */
+    public addPortfolioItemTag(id: string, tagItem: Array<TagItem>, options?: any) {
+        return PortfolioItemApiFp(this.configuration).addPortfolioItemTag(id, tagItem, options)(this.axios, this.basePath);
+    }
+
     /**
      * Adds a name and description for a portfolio item and returns the newly created portfolio item.
      * @summary Add a new portfolio item
@@ -5688,6 +5837,19 @@ export class PortfolioItemApi extends BaseAPI {
      */
     public postCopyPortfolioItem(portfolioItemId: string, copyPortfolioItem?: CopyPortfolioItem, options?: any) {
         return PortfolioItemApiFp(this.configuration).postCopyPortfolioItem(portfolioItemId, copyPortfolioItem, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Remove Tags from Portfolio Item
+     * @summary Remove Tags from Portfolio Item
+     * @param {string} id ID of the resource
+     * @param {Array<TagItem>} tagItem
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PortfolioItemApi
+     */
+    public removePortfolioItemTags(id: string, tagItem: Array<TagItem>, options?: any) {
+        return PortfolioItemApiFp(this.configuration).removePortfolioItemTags(id, tagItem, options)(this.axios, this.basePath);
     }
 
     /**

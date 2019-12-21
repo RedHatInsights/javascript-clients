@@ -32,7 +32,7 @@ Representation of one yum repository
 
 **● baseurl**: *`string`*
 
-*Defined in [api.ts:1129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1129)*
+*Defined in [api.ts:1187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1187)*
 
 *__type__*: {string}
 
@@ -45,7 +45,7 @@ ___
 
 **● enabled**: *`boolean`*
 
-*Defined in [api.ts:1123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1123)*
+*Defined in [api.ts:1181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1181)*
 
 *__type__*: {boolean}
 
@@ -58,7 +58,7 @@ ___
 
 **● gpgcheck**: *`boolean`*
 
-*Defined in [api.ts:1117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1117)*
+*Defined in [api.ts:1175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1175)*
 
 *__type__*: {boolean}
 
@@ -71,7 +71,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:1105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1105)*
+*Defined in [api.ts:1163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1163)*
 
 *__type__*: {string}
 
@@ -84,7 +84,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:1111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1111)*
+*Defined in [api.ts:1169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1169)*
 
 *__type__*: {string}
 

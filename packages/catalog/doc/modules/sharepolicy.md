@@ -44,7 +44,7 @@ ___
 
 *Defined in [api.ts:1083](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1083)*
 
-The permissions to apply for this share. Each permission comprises of 3 parts catalog:portfolios:verb separated by :. The valid verbs are read, update, delete and order
+The permissions to apply for this share. The valid values are read, update, delete and order
 
 *__type__*: {Array}
 

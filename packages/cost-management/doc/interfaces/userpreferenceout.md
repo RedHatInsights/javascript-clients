@@ -30,7 +30,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:3052](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3052)*
+*Defined in [api.ts:3180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3180)*
 
 *__type__*: {string}
 
@@ -43,7 +43,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:3040](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3040)*
+*Defined in [api.ts:3168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3168)*
 
 *__type__*: {string}
 
@@ -56,7 +56,7 @@ ___
 
 **● preference**: *`any`*
 
-*Defined in [api.ts:3046](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3046)*
+*Defined in [api.ts:3174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3174)*
 
 *__type__*: {any}
 
@@ -69,7 +69,7 @@ ___
 
 **● user**: *[UserOut](userout.md)*
 
-*Defined in [api.ts:3064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3064)*
+*Defined in [api.ts:3192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3192)*
 
 *__type__*: {UserOut}
 
@@ -82,7 +82,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:3058](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3058)*
+*Defined in [api.ts:3186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3186)*
 
 *__type__*: {string}
 

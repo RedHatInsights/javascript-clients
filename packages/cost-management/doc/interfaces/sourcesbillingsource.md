@@ -27,7 +27,7 @@
 
 **● billingSource**: *[SourcesBillingSourceIn](sourcesbillingsourcein.md)*
 
-*Defined in [api.ts:2824](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2824)*
+*Defined in [api.ts:2952](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2952)*
 
 *__type__*: {SourcesBillingSourceIn}
 
@@ -40,7 +40,7 @@ ___
 
 **● sourceId**: *`number`*
 
-*Defined in [api.ts:2818](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2818)*
+*Defined in [api.ts:2946](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2946)*
 
 *__type__*: {number}
 

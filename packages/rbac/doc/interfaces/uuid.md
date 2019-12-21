@@ -26,7 +26,7 @@
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:1000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1000)*
+*Defined in [api.ts:1052](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1052)*
 
 *__type__*: {string}
 

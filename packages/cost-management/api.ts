@@ -2753,6 +2753,134 @@ export enum ReportTimeScopeValue {
 /**
  *
  * @export
+ * @interface Source
+ */
+export interface Source {
+    /**
+     *
+     * @type {number}
+     * @memberof Source
+     */
+    sourceId: number;
+    /**
+     *
+     * @type {string}
+     * @memberof Source
+     */
+    sourceType: string;
+}
+
+/**
+ *
+ * @export
+ * @interface SourceIn
+ */
+export interface SourceIn {
+    /**
+     *
+     * @type {number}
+     * @memberof SourceIn
+     */
+    sourceId: number;
+    /**
+     *
+     * @type {string}
+     * @memberof SourceIn
+     */
+    sourceType: string;
+    /**
+     * Dictionary containing resource name.
+     * @type {any}
+     * @memberof SourceIn
+     */
+    authentication: any;
+    /**
+     * Dictionary containing billing source.
+     * @type {any}
+     * @memberof SourceIn
+     */
+    billingSource: any;
+}
+
+/**
+ *
+ * @export
+ * @interface SourceOut
+ */
+export interface SourceOut {
+    /**
+     *
+     * @type {number}
+     * @memberof SourceOut
+     */
+    sourceId: number;
+    /**
+     *
+     * @type {string}
+     * @memberof SourceOut
+     */
+    sourceType: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SourceOut
+     */
+    name: string;
+    /**
+     * Dictionary containing resource name.
+     * @type {any}
+     * @memberof SourceOut
+     */
+    authentication: any;
+    /**
+     * Dictionary containing billing source.
+     * @type {any}
+     * @memberof SourceOut
+     */
+    billingSource: any;
+    /**
+     *
+     * @type {string}
+     * @memberof SourceOut
+     */
+    kokuUuid?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SourceOut
+     */
+    sourceUuid: string;
+}
+
+/**
+ *
+ * @export
+ * @interface SourcePagination
+ */
+export interface SourcePagination {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof SourcePagination
+     */
+    meta?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof SourcePagination
+     */
+    links?: PaginationLinks;
+    /**
+     *
+     * @type {Array<SourceOut>}
+     * @memberof SourcePagination
+     */
+    data: Array<SourceOut>;
+}
+
+/**
+ *
+ * @export
  * @interface SourcesAuthentication
  */
 export interface SourcesAuthentication {
@@ -4083,10 +4211,12 @@ export const CostModelApiAxiosParamCreator = function (configuration?: Configura
          * @param {string} [providerUuid] Filter response on provider uuid.
          * @param {string} [sourceType] Filter response on provider source type.
          * @param {string} [name] Filter response on cost model name.
+         * @param {string} [description] Filter response on cost model description.
+         * @param {'name' | '-name' | 'source_type' | '-source_type' | 'updated_timestamp' | '-updated_timestamp'} [ordering] Order response on cost model by allowed fields.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listCostModels(offset?: number, limit?: number, providerUuid?: string, sourceType?: string, name?: string, options: any = {}): RequestArgs {
+        listCostModels(offset?: number, limit?: number, providerUuid?: string, sourceType?: string, name?: string, description?: string, ordering?: 'name' | '-name' | 'source_type' | '-source_type' | 'updated_timestamp' | '-updated_timestamp', options: any = {}): RequestArgs {
             const localVarPath = `/costmodels/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -4115,6 +4245,14 @@ export const CostModelApiAxiosParamCreator = function (configuration?: Configura
 
             if (name !== undefined) {
                 localVarQueryParameter['name'] = name;
+            }
+
+            if (description !== undefined) {
+                localVarQueryParameter['description'] = description;
+            }
+
+            if (ordering !== undefined) {
+                localVarQueryParameter['ordering'] = ordering;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -4234,11 +4372,13 @@ export const CostModelApiFp = function(configuration?: Configuration) {
          * @param {string} [providerUuid] Filter response on provider uuid.
          * @param {string} [sourceType] Filter response on provider source type.
          * @param {string} [name] Filter response on cost model name.
+         * @param {string} [description] Filter response on cost model description.
+         * @param {'name' | '-name' | 'source_type' | '-source_type' | 'updated_timestamp' | '-updated_timestamp'} [ordering] Order response on cost model by allowed fields.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listCostModels(offset?: number, limit?: number, providerUuid?: string, sourceType?: string, name?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<CostModelPagination> {
-            const localVarAxiosArgs = CostModelApiAxiosParamCreator(configuration).listCostModels(offset, limit, providerUuid, sourceType, name, options);
+        listCostModels(offset?: number, limit?: number, providerUuid?: string, sourceType?: string, name?: string, description?: string, ordering?: 'name' | '-name' | 'source_type' | '-source_type' | 'updated_timestamp' | '-updated_timestamp', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<CostModelPagination> {
+            const localVarAxiosArgs = CostModelApiAxiosParamCreator(configuration).listCostModels(offset, limit, providerUuid, sourceType, name, description, ordering, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4306,11 +4446,13 @@ export const CostModelApiFactory = function (configuration?: Configuration, base
          * @param {string} [providerUuid] Filter response on provider uuid.
          * @param {string} [sourceType] Filter response on provider source type.
          * @param {string} [name] Filter response on cost model name.
+         * @param {string} [description] Filter response on cost model description.
+         * @param {'name' | '-name' | 'source_type' | '-source_type' | 'updated_timestamp' | '-updated_timestamp'} [ordering] Order response on cost model by allowed fields.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listCostModels(offset?: number, limit?: number, providerUuid?: string, sourceType?: string, name?: string, options?: any) {
-            return CostModelApiFp(configuration).listCostModels(offset, limit, providerUuid, sourceType, name, options)(axios, basePath);
+        listCostModels(offset?: number, limit?: number, providerUuid?: string, sourceType?: string, name?: string, description?: string, ordering?: 'name' | '-name' | 'source_type' | '-source_type' | 'updated_timestamp' | '-updated_timestamp', options?: any) {
+            return CostModelApiFp(configuration).listCostModels(offset, limit, providerUuid, sourceType, name, description, ordering, options)(axios, basePath);
         },
         /**
          *
@@ -4377,12 +4519,14 @@ export class CostModelApi extends BaseAPI {
      * @param {string} [providerUuid] Filter response on provider uuid.
      * @param {string} [sourceType] Filter response on provider source type.
      * @param {string} [name] Filter response on cost model name.
+     * @param {string} [description] Filter response on cost model description.
+     * @param {'name' | '-name' | 'source_type' | '-source_type' | 'updated_timestamp' | '-updated_timestamp'} [ordering] Order response on cost model by allowed fields.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CostModelApi
      */
-    public listCostModels(offset?: number, limit?: number, providerUuid?: string, sourceType?: string, name?: string, options?: any) {
-        return CostModelApiFp(this.configuration).listCostModels(offset, limit, providerUuid, sourceType, name, options)(this.axios, this.basePath);
+    public listCostModels(offset?: number, limit?: number, providerUuid?: string, sourceType?: string, name?: string, description?: string, ordering?: 'name' | '-name' | 'source_type' | '-source_type' | 'updated_timestamp' | '-updated_timestamp', options?: any) {
+        return CostModelApiFp(this.configuration).listCostModels(offset, limit, providerUuid, sourceType, name, description, ordering, options)(this.axios, this.basePath);
     }
 
     /**
@@ -6369,6 +6513,252 @@ export class ProviderApi extends BaseAPI {
 }
 
 /**
+ * SourcesApi - axios parameter creator
+ * @export
+ */
+export const SourcesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Get a source
+         * @param {number} sourceId ID of source to get
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getSource(sourceId: number, options: any = {}): RequestArgs {
+            // verify required parameter 'sourceId' is not null or undefined
+            if (sourceId === null || sourceId === undefined) {
+                throw new RequiredError('sourceId','Required parameter sourceId was null or undefined when calling getSource.');
+            }
+            const localVarPath = `/sources/{source_id}/`
+                .replace(`{${"source_id"}}`, encodeURIComponent(String(sourceId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @summary List the sources
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSources(options: any = {}): RequestArgs {
+            const localVarPath = `/sources/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @summary Update a source
+         * @param {number} sourceId ID of source to update
+         * @param {SourceIn} sourceIn
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateSource(sourceId: number, sourceIn: SourceIn, options: any = {}): RequestArgs {
+            // verify required parameter 'sourceId' is not null or undefined
+            if (sourceId === null || sourceId === undefined) {
+                throw new RequiredError('sourceId','Required parameter sourceId was null or undefined when calling updateSource.');
+            }
+            // verify required parameter 'sourceIn' is not null or undefined
+            if (sourceIn === null || sourceIn === undefined) {
+                throw new RequiredError('sourceIn','Required parameter sourceIn was null or undefined when calling updateSource.');
+            }
+            const localVarPath = `/sources/{source_id}/`
+                .replace(`{${"source_id"}}`, encodeURIComponent(String(sourceId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'PATCH' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"SourceIn" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(sourceIn || {}) : (sourceIn || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * SourcesApi - functional programming interface
+ * @export
+ */
+export const SourcesApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Get a source
+         * @param {number} sourceId ID of source to get
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getSource(sourceId: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceOut> {
+            const localVarAxiosArgs = SourcesApiAxiosParamCreator(configuration).getSource(sourceId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
+         * @summary List the sources
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSources(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcePagination> {
+            const localVarAxiosArgs = SourcesApiAxiosParamCreator(configuration).listSources(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
+         * @summary Update a source
+         * @param {number} sourceId ID of source to update
+         * @param {SourceIn} sourceIn
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateSource(sourceId: number, sourceIn: SourceIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceOut> {
+            const localVarAxiosArgs = SourcesApiAxiosParamCreator(configuration).updateSource(sourceId, sourceIn, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * SourcesApi - factory interface
+ * @export
+ */
+export const SourcesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         *
+         * @summary Get a source
+         * @param {number} sourceId ID of source to get
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getSource(sourceId: number, options?: any) {
+            return SourcesApiFp(configuration).getSource(sourceId, options)(axios, basePath);
+        },
+        /**
+         *
+         * @summary List the sources
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSources(options?: any) {
+            return SourcesApiFp(configuration).listSources(options)(axios, basePath);
+        },
+        /**
+         *
+         * @summary Update a source
+         * @param {number} sourceId ID of source to update
+         * @param {SourceIn} sourceIn
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateSource(sourceId: number, sourceIn: SourceIn, options?: any) {
+            return SourcesApiFp(configuration).updateSource(sourceId, sourceIn, options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * SourcesApi - object-oriented interface
+ * @export
+ * @class SourcesApi
+ * @extends {BaseAPI}
+ */
+export class SourcesApi extends BaseAPI {
+    /**
+     *
+     * @summary Get a source
+     * @param {number} sourceId ID of source to get
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SourcesApi
+     */
+    public getSource(sourceId: number, options?: any) {
+        return SourcesApiFp(this.configuration).getSource(sourceId, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary List the sources
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SourcesApi
+     */
+    public listSources(options?: any) {
+        return SourcesApiFp(this.configuration).listSources(options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary Update a source
+     * @param {number} sourceId ID of source to update
+     * @param {SourceIn} sourceIn
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SourcesApi
+     */
+    public updateSource(sourceId: number, sourceIn: SourceIn, options?: any) {
+        return SourcesApiFp(this.configuration).updateSource(sourceId, sourceIn, options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
  * SourcesAuthenticationApi - axios parameter creator
  * @export
  */
@@ -6859,6 +7249,59 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
         },
         /**
          *
+         * @summary Query to obtain OpenShift-on-Azure tags
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {boolean} [keyOnly] Flag to indicate whether or not only the tag key values will be returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenShiftAzureTagData(filter?: any, keyOnly?: boolean, offset?: number, limit?: number, options: any = {}): RequestArgs {
+            const localVarPath = `/tags/openshift/infrastructures/azure/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (keyOnly !== undefined) {
+                localVarQueryParameter['key_only'] = keyOnly;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
          * @summary Query to obtain OpenShift tags
          * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
          * @param {boolean} [keyOnly] Flag to indicate whether or not only the tag key values will be returned.
@@ -6972,6 +7415,23 @@ export const TagsApiFp = function(configuration?: Configuration) {
         },
         /**
          *
+         * @summary Query to obtain OpenShift-on-Azure tags
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {boolean} [keyOnly] Flag to indicate whether or not only the tag key values will be returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenShiftAzureTagData(filter?: any, keyOnly?: boolean, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tags> {
+            const localVarAxiosArgs = TagsApiAxiosParamCreator(configuration).getOpenShiftAzureTagData(filter, keyOnly, offset, limit, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
          * @summary Query to obtain OpenShift tags
          * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
          * @param {boolean} [keyOnly] Flag to indicate whether or not only the tag key values will be returned.
@@ -7034,6 +7494,19 @@ export const TagsApiFactory = function (configuration?: Configuration, basePath?
          */
         getOpenShiftAWSTagData(filter?: any, keyOnly?: boolean, offset?: number, limit?: number, options?: any) {
             return TagsApiFp(configuration).getOpenShiftAWSTagData(filter, keyOnly, offset, limit, options)(axios, basePath);
+        },
+        /**
+         *
+         * @summary Query to obtain OpenShift-on-Azure tags
+         * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+         * @param {boolean} [keyOnly] Flag to indicate whether or not only the tag key values will be returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenShiftAzureTagData(filter?: any, keyOnly?: boolean, offset?: number, limit?: number, options?: any) {
+            return TagsApiFp(configuration).getOpenShiftAzureTagData(filter, keyOnly, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -7101,6 +7574,21 @@ export class TagsApi extends BaseAPI {
      */
     public getOpenShiftAWSTagData(filter?: any, keyOnly?: boolean, offset?: number, limit?: number, options?: any) {
         return TagsApiFp(this.configuration).getOpenShiftAWSTagData(filter, keyOnly, offset, limit, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary Query to obtain OpenShift-on-Azure tags
+     * @param {any} [filter] The filter to apply to the report as a URL encoded dictionary.
+     * @param {boolean} [keyOnly] Flag to indicate whether or not only the tag key values will be returned.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TagsApi
+     */
+    public getOpenShiftAzureTagData(filter?: any, keyOnly?: boolean, offset?: number, limit?: number, options?: any) {
+        return TagsApiFp(this.configuration).getOpenShiftAzureTagData(filter, keyOnly, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**

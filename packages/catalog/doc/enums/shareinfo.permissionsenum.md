@@ -23,7 +23,7 @@
 
 ###  Delete
 
-**Delete**:  = "catalog:portfolios:delete"
+**Delete**:  = "delete"
 
 *Defined in [api.ts:1067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1067)*
 
@@ -32,7 +32,7 @@ ___
 
 ###  Order
 
-**Order**:  = "catalog:portfolios:order"
+**Order**:  = "order"
 
 *Defined in [api.ts:1068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1068)*
 
@@ -41,7 +41,7 @@ ___
 
 ###  Read
 
-**Read**:  = "catalog:portfolios:read"
+**Read**:  = "read"
 
 *Defined in [api.ts:1065](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1065)*
 
@@ -50,7 +50,7 @@ ___
 
 ###  Update
 
-**Update**:  = "catalog:portfolios:update"
+**Update**:  = "update"
 
 *Defined in [api.ts:1066](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1066)*
 

@@ -28,7 +28,7 @@
 
 **● access**: *`Array`<[Access](access.md)>*
 
-*Defined in [api.ts:766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L766)*
+*Defined in [api.ts:818](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L818)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L760)*
+*Defined in [api.ts:812](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L812)*
 
 *__type__*: {string}
 
@@ -54,7 +54,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L754)*
+*Defined in [api.ts:806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L806)*
 
 *__type__*: {string}
 

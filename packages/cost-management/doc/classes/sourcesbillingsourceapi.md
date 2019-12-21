@@ -102,7 +102,7 @@ ___
 
 ▸ **createBillingSource**(sourcesBillingSource: *[SourcesBillingSource](../interfaces/sourcesbillingsource.md)*, options?: *`any`*): `AxiosPromise`<[SourcesBillingSourceOut](../interfaces/sourcesbillingsourceout.md)>
 
-*Defined in [api.ts:6593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6593)*
+*Defined in [api.ts:6983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6983)*
 
 *__summary__*: Create a billing source for a Platform-Source.
 

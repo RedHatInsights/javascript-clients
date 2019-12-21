@@ -30,7 +30,7 @@
 
 **● email**: *`string`*
 
-*Defined in [api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L621)*
+*Defined in [api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L673)*
 
 *__type__*: {string}
 
@@ -43,7 +43,7 @@ ___
 
 **● firstName**: *`string`*
 
-*Defined in [api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L627)*
+*Defined in [api.ts:679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L679)*
 
 *__type__*: {string}
 
@@ -56,7 +56,7 @@ ___
 
 **● lastName**: *`string`*
 
-*Defined in [api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L633)*
+*Defined in [api.ts:685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L685)*
 
 *__type__*: {string}
 
@@ -69,7 +69,7 @@ ___
 
 **● username**: *`string`*
 
-*Defined in [api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L615)*
+*Defined in [api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L667)*
 
 *__type__*: {string}
 
@@ -82,7 +82,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L639)*
+*Defined in [api.ts:691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L691)*
 
 *__type__*: {string}
 

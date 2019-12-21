@@ -16,47 +16,19 @@ tag details
 
 ### Properties
 
-* [name](tag.md#name)
-* [namespace](tag.md#namespace)
-* [value](tag.md#value)
+* [tag](tag.md#tag-1)
 
 ---
 
 ## Properties
 
-<a id="name"></a>
+<a id="tag-1"></a>
 
-###  name
+### `<Optional>` tag
 
-**● name**: *`string`*
+**● tag**: *`string`*
 
-*Defined in [api.ts:499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L499)*
-
-*__type__*: {string}
-
-*__memberof__*: Tag
-
-___
-<a id="namespace"></a>
-
-###  namespace
-
-**● namespace**: *`string`*
-
-*Defined in [api.ts:493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L493)*
-
-*__type__*: {string}
-
-*__memberof__*: Tag
-
-___
-<a id="value"></a>
-
-### `<Optional>` value
-
-**● value**: *`string`*
-
-*Defined in [api.ts:505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L505)*
+*Defined in [api.ts:494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L494)*
 
 *__type__*: {string}
 
