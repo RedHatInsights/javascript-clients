@@ -103,7 +103,7 @@ ___
 
 ▸ **settingsCreate**(settingsInput: *[SettingsInput](../interfaces/settingsinput.md)*, options?: *`any`*): `AxiosPromise`<[SettingsInput](../interfaces/settingsinput.md)>
 
-*Defined in [api.ts:3681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3681)*
+*Defined in [api.ts:3687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3687)*
 
 The current account settings will be updated, or one will be created, with the
 
@@ -129,7 +129,7 @@ ___
 
 ▸ **settingsList**(options?: *`any`*): `AxiosPromise`<[SettingsDDF](../interfaces/settingsddf.md)[]>
 
-*Defined in [api.ts:3691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3691)*
+*Defined in [api.ts:3697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3697)*
 
 Describe the settings we have in a Data-Driven Forms way.
 

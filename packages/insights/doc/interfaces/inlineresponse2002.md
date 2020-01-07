@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[HostAck](hostack.md)>*
 
-*Defined in [api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L339)*
+*Defined in [api.ts:345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L345)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[InlineResponse200Links](inlineresponse200links.md)*
 
-*Defined in [api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L333)*
+*Defined in [api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L339)*
 
 *__type__*: {InlineResponse200Links}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[InlineResponse200Meta](inlineresponse200meta.md)*
 
-*Defined in [api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L327)*
+*Defined in [api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L333)*
 
 *__type__*: {InlineResponse200Meta}
 

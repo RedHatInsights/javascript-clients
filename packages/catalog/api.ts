@@ -279,20 +279,6 @@ export interface CreatePortfolioItem {
 /**
  *
  * @export
- * @interface DataDrivenFormSchema
- */
-export interface DataDrivenFormSchema {
-    /**
-     *
-     * @type {any}
-     * @memberof DataDrivenFormSchema
-     */
-    schema?: any;
-}
-
-/**
- *
- * @export
  * @interface GraphQLRequest
  */
 export interface GraphQLRequest {
@@ -6179,7 +6165,7 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        patchServicePlanModified(id: string, patchModifiedServicePlan?: PatchModifiedServicePlan, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DataDrivenFormSchema> {
+        patchServicePlanModified(id: string, patchModifiedServicePlan?: PatchModifiedServicePlan, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).patchServicePlanModified(id, patchModifiedServicePlan, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -6221,7 +6207,7 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServicePlanBase(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DataDrivenFormSchema> {
+        showServicePlanBase(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlan> {
             const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).showServicePlanBase(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -6235,7 +6221,7 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServicePlanModified(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DataDrivenFormSchema> {
+        showServicePlanModified(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlan> {
             const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).showServicePlanModified(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})

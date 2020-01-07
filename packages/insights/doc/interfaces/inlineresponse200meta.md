@@ -26,7 +26,7 @@
 
 **● count**: *`number`*
 
-*Defined in [api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L463)*
+*Defined in [api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L469)*
 
 *__type__*: {number}
 

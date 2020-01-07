@@ -106,7 +106,7 @@ ___
 
 ▸ **hostackCreate**(hostAck: *[HostAck](../interfaces/hostack.md)*, options?: *`any`*): `AxiosPromise`<[HostAck](../interfaces/hostack.md)>
 
-*Defined in [api.ts:2470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2470)*
+*Defined in [api.ts:2476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2476)*
 
 Return the new hostack. If there's already an acknowledgement of this rule by this account for a system, then return that. This does not take an 'id' number.
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **hostackDelete**(id: *`number`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2482)*
+*Defined in [api.ts:2488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2488)*
 
 Takes the hostack ID (given in the hostack list) as an identifier.
 
@@ -158,7 +158,7 @@ ___
 
 ▸ **hostackList**(limit?: *`number`*, offset?: *`number`*, ruleId?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2002](../interfaces/inlineresponse2002.md)>
 
-*Defined in [api.ts:2496](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2496)*
+*Defined in [api.ts:2502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2502)*
 
 Hostacks are retrieved, edited and deleted by the 'id' field.
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **hostackRead**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[HostAck](../interfaces/hostack.md)>
 
-*Defined in [api.ts:2508](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2508)*
+*Defined in [api.ts:2514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2514)*
 
 This view handles listing, retrieving, creating and deleting hostacks.
 
@@ -212,7 +212,7 @@ ___
 
 ▸ **hostackUpdate**(id: *`number`*, hostAckJustification: *[HostAckJustification](../interfaces/hostackjustification.md)*, options?: *`any`*): `AxiosPromise`<[HostAckJustification](../interfaces/hostackjustification.md)>
 
-*Defined in [api.ts:2521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2521)*
+*Defined in [api.ts:2527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2527)*
 
 The justification is taken from the request body. The created\_by field is taken from the username in the x-rh-identity field, and the updated\_at field is set to the current time.
 

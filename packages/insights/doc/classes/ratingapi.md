@@ -104,7 +104,7 @@ ___
 
 ▸ **ratingCreate**(ruleRating: *[RuleRating](../modules/rulerating.md)*, options?: *`any`*): `AxiosPromise`<[RuleRating](../modules/rulerating.md)>
 
-*Defined in [api.ts:2746](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2746)*
+*Defined in [api.ts:2752](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2752)*
 
 Return the new rating. Any previous rating for this rule by this user is amended to the current value. This does not attempt to delete a rating by this user of this rule if the rating is zero.
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **ratingList**(limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse2003](../interfaces/inlineresponse2003.md)>
 
-*Defined in [api.ts:2759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2759)*
+*Defined in [api.ts:2765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2765)*
 
 Only the current user's ratings are listed here.
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **ratingRead**(rule: *`string`*, options?: *`any`*): `AxiosPromise`<[RuleRating](../modules/rulerating.md)>
 
-*Defined in [api.ts:2770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2770)*
+*Defined in [api.ts:2776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2776)*
 
 Rules can be rated +1, 0 or -1; the rating is stored per (user, rule) unique pair. Rule ratings are edited simply by POSTing a new rating, which overwrites any previous rating by that user for that rule.
 

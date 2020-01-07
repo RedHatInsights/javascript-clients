@@ -27,7 +27,7 @@
 
 **● id**: *`number`*
 
-*Defined in [api.ts:219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L219)*
+*Defined in [api.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L225)*
 
 *__type__*: {number}
 
@@ -40,7 +40,7 @@ ___
 
 **● justification**: *`string`*
 
-*Defined in [api.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L225)*
+*Defined in [api.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L231)*
 
 *__type__*: {string}
 

@@ -16,6 +16,7 @@
 
 * [createdAt](hostack.md#createdat)
 * [createdBy](hostack.md#createdby)
+* [displayName](hostack.md#displayname)
 * [id](hostack.md#id)
 * [justification](hostack.md#justification)
 * [rule](hostack.md#rule)
@@ -48,6 +49,19 @@ ___
 *Defined in [api.ts:193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L193)*
 
 The username that created this acknowledgement
+
+*__type__*: {string}
+
+*__memberof__*: HostAck
+
+___
+<a id="displayname"></a>
+
+### `<Optional>` displayName
+
+**● displayName**: *`string`*
+
+*Defined in [api.ts:211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L211)*
 
 *__type__*: {string}
 

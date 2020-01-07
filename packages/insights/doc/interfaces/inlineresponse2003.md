@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[RuleRating](../modules/rulerating.md)>*
 
-*Defined in [api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L365)*
+*Defined in [api.ts:371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L371)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[InlineResponse200Links](inlineresponse200links.md)*
 
-*Defined in [api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L359)*
+*Defined in [api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L365)*
 
 *__type__*: {InlineResponse200Links}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[InlineResponse200Meta](inlineresponse200meta.md)*
 
-*Defined in [api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L353)*
+*Defined in [api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L359)*
 
 *__type__*: {InlineResponse200Meta}
 

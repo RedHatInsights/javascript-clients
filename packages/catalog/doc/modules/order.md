@@ -32,7 +32,7 @@
 
 **● completedAt**: *`Date`*
 
-*Defined in [api.ts:438](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L438)*
+*Defined in [api.ts:424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L424)*
 
 *__type__*: {Date}
 
@@ -45,7 +45,7 @@ ___
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:426](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L426)*
+*Defined in [api.ts:412](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L412)*
 
 *__type__*: {Date}
 
@@ -58,7 +58,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:408](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L408)*
+*Defined in [api.ts:394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L394)*
 
 *__type__*: {string}
 
@@ -71,7 +71,7 @@ ___
 
 **● orderRequestSentAt**: *`Date` \| `null`*
 
-*Defined in [api.ts:432](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L432)*
+*Defined in [api.ts:418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L418)*
 
 The time at which the order request was sent to the Topology Service
 
@@ -86,7 +86,7 @@ ___
 
 **● owner**: *`string`*
 
-*Defined in [api.ts:444](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L444)*
+*Defined in [api.ts:430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L430)*
 
 *__type__*: {string}
 
@@ -99,7 +99,7 @@ ___
 
 **● state**: *[StateEnum](../enums/order.stateenum.md)*
 
-*Defined in [api.ts:420](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L420)*
+*Defined in [api.ts:406](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L406)*
 
 Current State of the order.
 
@@ -114,7 +114,7 @@ ___
 
 **● userId**: *`string`*
 
-*Defined in [api.ts:414](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L414)*
+*Defined in [api.ts:400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L400)*
 
 *__type__*: {string}
 

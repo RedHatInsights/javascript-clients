@@ -26,7 +26,7 @@
 
 **● isSubscribed**: *`boolean`*
 
-*Defined in [api.ts:1217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1217)*
+*Defined in [api.ts:1223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1223)*
 
 *__type__*: {boolean}
 
