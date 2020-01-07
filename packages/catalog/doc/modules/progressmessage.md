@@ -29,7 +29,7 @@
 
 **● level**: *[LevelEnum](../enums/progressmessage.levelenum.md)*
 
-*Defined in [api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L899)*
+*Defined in [api.ts:885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L885)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● message**: *`string`*
 
-*Defined in [api.ts:905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L905)*
+*Defined in [api.ts:891](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L891)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● orderItemId**: *`string`*
 
-*Defined in [api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L911)*
+*Defined in [api.ts:897](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L897)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● receivedAt**: *`Date`*
 
-*Defined in [api.ts:893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L893)*
+*Defined in [api.ts:879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L879)*
 
 *__type__*: {Date}
 

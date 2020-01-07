@@ -27,7 +27,7 @@
 
 **● justification**: *`string`*
 
-*Defined in [api.ts:483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L483)*
+*Defined in [api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L489)*
 
 *__type__*: {string}
 
@@ -40,7 +40,7 @@ ___
 
 **● systems**: *`Array`<`string`>*
 
-*Defined in [api.ts:477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L477)*
+*Defined in [api.ts:483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L483)*
 
 *__type__*: {Array}
 

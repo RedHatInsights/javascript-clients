@@ -24,7 +24,7 @@
 
 **NUMBER_0**:  = 0
 
-*Defined in [api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L923)*
+*Defined in [api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L929)*
 
 ___
 <a id="number_1"></a>
@@ -33,7 +33,7 @@ ___
 
 **NUMBER_1**:  = 1
 
-*Defined in [api.ts:924](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L924)*
+*Defined in [api.ts:930](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L930)*
 
 ___
 <a id="number_minus_1"></a>
@@ -42,7 +42,7 @@ ___
 
 **NUMBER_MINUS_1**:  =  -1
 
-*Defined in [api.ts:922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L922)*
+*Defined in [api.ts:928](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L928)*
 
 ___
 

@@ -31,7 +31,7 @@
 
 **● id**: *`string`*
 
-*Defined in [api.ts:350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L350)*
+*Defined in [api.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L336)*
 
 The unique identifier for this Service Offering Icon
 
@@ -46,7 +46,7 @@ ___
 
 **● imageId**: *`string`*
 
-*Defined in [api.ts:356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L356)*
+*Defined in [api.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L342)*
 
 The Image reference containing the binary image data for this icon
 
@@ -61,7 +61,7 @@ ___
 
 **● portfolioId**: *`string`*
 
-*Defined in [api.ts:374](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L374)*
+*Defined in [api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L360)*
 
 The portfolio this icon belongs to.
 
@@ -76,7 +76,7 @@ ___
 
 **● portfolioItemId**: *`string`*
 
-*Defined in [api.ts:380](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L380)*
+*Defined in [api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L366)*
 
 The portfolio\_item this icon belongs to.
 
@@ -91,7 +91,7 @@ ___
 
 **● sourceId**: *`string`*
 
-*Defined in [api.ts:368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L368)*
+*Defined in [api.ts:354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L354)*
 
 The source ID for this icon
 
@@ -106,7 +106,7 @@ ___
 
 **● sourceRef**: *`string`*
 
-*Defined in [api.ts:362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L362)*
+*Defined in [api.ts:348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L348)*
 
 Stores the Source Ref for this icon
 

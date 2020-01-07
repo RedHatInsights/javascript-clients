@@ -27,7 +27,7 @@
 
 **● checkedDay**: *`Date`*
 
-*Defined in [api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1049)*
+*Defined in [api.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1055)*
 
 *__type__*: {Date}
 
@@ -40,7 +40,7 @@ ___
 
 **● count**: *`number`*
 
-*Defined in [api.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1055)*
+*Defined in [api.ts:1061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1061)*
 
 *__type__*: {number}
 

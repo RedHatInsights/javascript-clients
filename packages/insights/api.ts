@@ -203,6 +203,12 @@ export interface HostAck {
      * @memberof HostAck
      */
     updatedAt?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof HostAck
+     */
+    displayName?: string;
 }
 
 /**

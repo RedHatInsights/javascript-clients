@@ -29,7 +29,7 @@
 
 **● first**: *`string` \| `null`*
 
-*Defined in [api.ts:431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L431)*
+*Defined in [api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L437)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● last**: *`string` \| `null`*
 
-*Defined in [api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L449)*
+*Defined in [api.ts:455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L455)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● next**: *`string` \| `null`*
 
-*Defined in [api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L443)*
+*Defined in [api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L449)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● previous**: *`string` \| `null`*
 
-*Defined in [api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L437)*
+*Defined in [api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L443)*
 
 *__type__*: {string}
 

@@ -31,7 +31,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:1126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1126)*
+*Defined in [api.ts:1112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1112)*
 
 *__type__*: {Date}
 
@@ -44,7 +44,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:1132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1132)*
+*Defined in [api.ts:1118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1118)*
 
 *__type__*: {string}
 
@@ -57,7 +57,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:1120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1120)*
+*Defined in [api.ts:1106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1106)*
 
 *__type__*: {string}
 
@@ -70,7 +70,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1138)*
+*Defined in [api.ts:1124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1124)*
 
 *__type__*: {string}
 
@@ -83,7 +83,7 @@ ___
 
 **● namespace**: *`string`*
 
-*Defined in [api.ts:1144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1144)*
+*Defined in [api.ts:1130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1130)*
 
 *__type__*: {string}
 
@@ -96,7 +96,7 @@ ___
 
 **● value**: *`string`*
 
-*Defined in [api.ts:1150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1150)*
+*Defined in [api.ts:1136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1136)*
 
 *__type__*: {string}
 
