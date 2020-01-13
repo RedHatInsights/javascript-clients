@@ -480,12 +480,6 @@ export interface OrderItem {
      */
     providerControlParameters?: any | null;
     /**
-     * Stores the service plan ref from the Topology Service.
-     * @type {string}
-     * @memberof OrderItem
-     */
-    servicePlanRef?: string | null;
-    /**
      * Stores the Portfolio Item ID.
      * @type {string}
      * @memberof OrderItem
@@ -1121,19 +1115,7 @@ export interface Tag {
      * @type {string}
      * @memberof Tag
      */
-    name?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Tag
-     */
-    namespace?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Tag
-     */
-    value?: string;
+    tag?: string;
 }
 
 /**
@@ -6798,13 +6780,10 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
          * Returns an array of Portfolio Item objects
          * @summary List Portfolio Items for Tag
          * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagPortfolioItems(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+        listTagPortfolioItems(id: string, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagPortfolioItems.');
@@ -6826,18 +6805,6 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
                 localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
             }
 
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6852,13 +6819,10 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
          * Returns an array of Portfolio objects
          * @summary List Portfolios for Tag
          * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagPortfolios(id: string, limit?: number, offset?: number, filter?: any, options: any = {}): RequestArgs {
+        listTagPortfolios(id: string, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagPortfolios.');
@@ -6878,18 +6842,6 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -6987,14 +6939,11 @@ export const TagsApiFp = function(configuration?: Configuration) {
          * Returns an array of Portfolio Item objects
          * @summary List Portfolio Items for Tag
          * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagPortfolioItems(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItemsCollection> {
-            const localVarAxiosArgs = TagsApiAxiosParamCreator(configuration).listTagPortfolioItems(id, limit, offset, filter, options);
+        listTagPortfolioItems(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItemsCollection> {
+            const localVarAxiosArgs = TagsApiAxiosParamCreator(configuration).listTagPortfolioItems(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -7004,14 +6953,11 @@ export const TagsApiFp = function(configuration?: Configuration) {
          * Returns an array of Portfolio objects
          * @summary List Portfolios for Tag
          * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagPortfolios(id: string, limit?: number, offset?: number, filter?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfoliosCollection> {
-            const localVarAxiosArgs = TagsApiAxiosParamCreator(configuration).listTagPortfolios(id, limit, offset, filter, options);
+        listTagPortfolios(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfoliosCollection> {
+            const localVarAxiosArgs = TagsApiAxiosParamCreator(configuration).listTagPortfolios(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -7057,27 +7003,21 @@ export const TagsApiFactory = function (configuration?: Configuration, basePath?
          * Returns an array of Portfolio Item objects
          * @summary List Portfolio Items for Tag
          * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagPortfolioItems(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-            return TagsApiFp(configuration).listTagPortfolioItems(id, limit, offset, filter, options)(axios, basePath);
+        listTagPortfolioItems(id: string, options?: any) {
+            return TagsApiFp(configuration).listTagPortfolioItems(id, options)(axios, basePath);
         },
         /**
          * Returns an array of Portfolio objects
          * @summary List Portfolios for Tag
          * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {any} [filter] Filter for querying collections.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagPortfolios(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-            return TagsApiFp(configuration).listTagPortfolios(id, limit, offset, filter, options)(axios, basePath);
+        listTagPortfolios(id: string, options?: any) {
+            return TagsApiFp(configuration).listTagPortfolios(id, options)(axios, basePath);
         },
         /**
          * List Tags
@@ -7112,30 +7052,24 @@ export class TagsApi extends BaseAPI {
      * Returns an array of Portfolio Item objects
      * @summary List Portfolio Items for Tag
      * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TagsApi
      */
-    public listTagPortfolioItems(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-        return TagsApiFp(this.configuration).listTagPortfolioItems(id, limit, offset, filter, options)(this.axios, this.basePath);
+    public listTagPortfolioItems(id: string, options?: any) {
+        return TagsApiFp(this.configuration).listTagPortfolioItems(id, options)(this.axios, this.basePath);
     }
 
     /**
      * Returns an array of Portfolio objects
      * @summary List Portfolios for Tag
      * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {any} [filter] Filter for querying collections.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TagsApi
      */
-    public listTagPortfolios(id: string, limit?: number, offset?: number, filter?: any, options?: any) {
-        return TagsApiFp(this.configuration).listTagPortfolios(id, limit, offset, filter, options)(this.axios, this.basePath);
+    public listTagPortfolios(id: string, options?: any) {
+        return TagsApiFp(this.configuration).listTagPortfolios(id, options)(this.axios, this.basePath);
     }
 
     /**

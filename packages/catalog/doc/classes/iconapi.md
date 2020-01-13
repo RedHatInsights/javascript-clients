@@ -106,7 +106,7 @@ ___
 
 ▸ **createIcon**(content?: *`any`*, portfolioId?: *`string`*, portfolioItemId?: *`string`*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
 
-*Defined in [api.ts:1850](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1850)*
+*Defined in [api.ts:1832](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1832)*
 
 Creates an Icon from the specified parameters
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **destroyIcon**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1862)*
+*Defined in [api.ts:1844](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1844)*
 
 Deletes the icon based on the icon ID passed
 
@@ -160,7 +160,7 @@ ___
 
 ▸ **getIcon**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
 
-*Defined in [api.ts:1874](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1874)*
+*Defined in [api.ts:1856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1856)*
 
 Fetch an Icon by ID
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **showIconData**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1886)*
+*Defined in [api.ts:1868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1868)*
 
 Fetch the specified portfolio item's icon image.
 
@@ -212,7 +212,7 @@ ___
 
 ▸ **updateIcon**(id: *`string`*, icon: *[Icon](../interfaces/icon.md)*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
 
-*Defined in [api.ts:1899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1899)*
+*Defined in [api.ts:1881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1881)*
 
 Edits Icon specified by the given ID.
 

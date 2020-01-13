@@ -164,54 +164,6 @@ export interface PlaybookDefinitionIssues {
 /**
  *
  * @export
- * @interface RemediationConnectionStatus
- */
-export interface RemediationConnectionStatus {
-    /**
-     *
-     * @type {string}
-     * @memberof RemediationConnectionStatus
-     */
-    executorType: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RemediationConnectionStatus
-     */
-    executorName: string;
-    /**
-     *
-     * @type {number}
-     * @memberof RemediationConnectionStatus
-     */
-    systemCount: number;
-    /**
-     *
-     * @type {string}
-     * @memberof RemediationConnectionStatus
-     */
-    connectionStatus: RemediationConnectionStatus.ConnectionStatusEnum;
-}
-
-/**
- * @export
- * @namespace RemediationConnectionStatus
- */
-export namespace RemediationConnectionStatus {
-    /**
-     * @export
-     * @enum {string}
-     */
-    export enum ConnectionStatusEnum {
-        Connected = 'connected',
-        Disconnected = 'disconnected',
-        NotConfigured = 'not_configured'
-    }
-}
-
-/**
- *
- * @export
  * @interface RemediationCreated
  */
 export interface RemediationCreated {
@@ -1185,39 +1137,6 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Get satellite connection status for a given host
-         * @summary Pre-flight check
-         * @param {string} id Remediation identifier
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getRemediationConnectionStatus(id: string, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getRemediationConnectionStatus.');
-            }
-            const localVarPath = `/remediations/{id}/connection_status`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Provides Ansible Playbook
          * @summary Get Remediation Playbook
          * @param {string} id Remediation identifier
@@ -1475,20 +1394,6 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Get satellite connection status for a given host
-         * @summary Pre-flight check
-         * @param {string} id Remediation identifier
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getRemediationConnectionStatus(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RemediationConnectionStatus>> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getRemediationConnectionStatus(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Provides Ansible Playbook
          * @summary Get Remediation Playbook
          * @param {string} id Remediation identifier
@@ -1614,16 +1519,6 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).getRemediation(id, options)(axios, basePath);
         },
         /**
-         * Get satellite connection status for a given host
-         * @summary Pre-flight check
-         * @param {string} id Remediation identifier
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getRemediationConnectionStatus(id: string, options?: any) {
-            return RemediationsApiFp(configuration).getRemediationConnectionStatus(id, options)(axios, basePath);
-        },
-        /**
          * Provides Ansible Playbook
          * @summary Get Remediation Playbook
          * @param {string} id Remediation identifier
@@ -1741,18 +1636,6 @@ export class RemediationsApi extends BaseAPI {
      */
     public getRemediation(id: string, options?: any) {
         return RemediationsApiFp(this.configuration).getRemediation(id, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Get satellite connection status for a given host
-     * @summary Pre-flight check
-     * @param {string} id Remediation identifier
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof RemediationsApi
-     */
-    public getRemediationConnectionStatus(id: string, options?: any) {
-        return RemediationsApiFp(this.configuration).getRemediationConnectionStatus(id, options)(this.axios, this.basePath);
     }
 
     /**

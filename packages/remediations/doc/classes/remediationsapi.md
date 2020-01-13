@@ -35,7 +35,6 @@ RemediationsApi - object-oriented interface
 * [deleteRemediationIssue](remediationsapi.md#deleteremediationissue)
 * [deleteRemediationIssueSystem](remediationsapi.md#deleteremediationissuesystem)
 * [getRemediation](remediationsapi.md#getremediation)
-* [getRemediationConnectionStatus](remediationsapi.md#getremediationconnectionstatus)
 * [getRemediationPlaybook](remediationsapi.md#getremediationplaybook)
 * [getRemediations](remediationsapi.md#getremediations)
 * [updateRemediation](remediationsapi.md#updateremediation)
@@ -111,7 +110,7 @@ ___
 
 ▸ **createRemediation**(remediationInput: *[RemediationInput](../interfaces/remediationinput.md)*, options?: *`any`*): `AxiosPromise`<[RemediationCreated](../interfaces/remediationcreated.md)>
 
-*Defined in [api.ts:1691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1691)*
+*Defined in [api.ts:1586](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1586)*
 
 Creates a new Remediation based on given information
 
@@ -137,7 +136,7 @@ ___
 
 ▸ **deleteRemediation**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1703)*
+*Defined in [api.ts:1598](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1598)*
 
 Removes the given Remediation
 
@@ -163,7 +162,7 @@ ___
 
 ▸ **deleteRemediationIssue**(id: *`string`*, issue: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1716)*
+*Defined in [api.ts:1611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1611)*
 
 Removes the given Issue from the Remediation
 
@@ -190,7 +189,7 @@ ___
 
 ▸ **deleteRemediationIssueSystem**(id: *`string`*, issue: *`string`*, system: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1730](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1730)*
+*Defined in [api.ts:1625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1625)*
 
 Removes the given System from the Issue Remediation
 
@@ -218,7 +217,7 @@ ___
 
 ▸ **getRemediation**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[RemediationDetails](../interfaces/remediationdetails.md)>
 
-*Defined in [api.ts:1742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1742)*
+*Defined in [api.ts:1637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1637)*
 
 Provides information about the given Remediation
 
@@ -238,39 +237,13 @@ Provides information about the given Remediation
 **Returns:** `AxiosPromise`<[RemediationDetails](../interfaces/remediationdetails.md)>
 
 ___
-<a id="getremediationconnectionstatus"></a>
-
-###  getRemediationConnectionStatus
-
-▸ **getRemediationConnectionStatus**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[RemediationConnectionStatus](../modules/remediationconnectionstatus.md)[]>
-
-*Defined in [api.ts:1754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1754)*
-
-Get satellite connection status for a given host
-
-*__summary__*: Pre-flight check
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: RemediationsApi
-
-**Parameters:**
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  Remediation identifier |
-| `Optional` options | `any` |
-
-**Returns:** `AxiosPromise`<[RemediationConnectionStatus](../modules/remediationconnectionstatus.md)[]>
-
-___
 <a id="getremediationplaybook"></a>
 
 ###  getRemediationPlaybook
 
 ▸ **getRemediationPlaybook**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`string`>
 
-*Defined in [api.ts:1766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1766)*
+*Defined in [api.ts:1649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1649)*
 
 Provides Ansible Playbook
 
@@ -296,7 +269,7 @@ ___
 
 ▸ **getRemediations**(sort?: *"updated_at" \| "-updated_at" \| "name" \| "-name" \| "system_count" \| "-system_count" \| "issue_count" \| "-issue_count"*, filter?: *`string`*, limit?: *`number`*, offset?: *`number`*, system?: *`string`*, options?: *`any`*): `AxiosPromise`<[RemediationList](../interfaces/remediationlist.md)>
 
-*Defined in [api.ts:1782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1782)*
+*Defined in [api.ts:1665](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1665)*
 
 Provides information about Remediations
 
@@ -326,7 +299,7 @@ ___
 
 ▸ **updateRemediation**(id: *`string`*, remediationInput: *[RemediationInput](../interfaces/remediationinput.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1795)*
+*Defined in [api.ts:1678](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1678)*
 
 Updates the given Remediation
 
@@ -353,7 +326,7 @@ ___
 
 ▸ **updateRemediationIssue**(id: *`string`*, issue: *`string`*, remediationIssueIn: *[RemediationIssueIn](../interfaces/remediationissuein.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:1809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1809)*
+*Defined in [api.ts:1692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1692)*
 
 Updates the given Remediation Issue
 

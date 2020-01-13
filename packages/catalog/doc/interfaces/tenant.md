@@ -27,7 +27,7 @@
 
 **● externalTenant**: *`string`*
 
-*Defined in [api.ts:1190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1190)*
+*Defined in [api.ts:1172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1172)*
 
 The Request account number
 
@@ -42,7 +42,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:1196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1196)*
+*Defined in [api.ts:1178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1178)*
 
 The internal tenant id
 
