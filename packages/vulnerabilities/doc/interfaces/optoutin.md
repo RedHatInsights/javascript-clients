@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [OptOutIn](../interfaces/optoutin.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [OptOutIn](../interfaces/optoutin.md)
 
 # Interface: OptOutIn
 
@@ -29,10 +29,6 @@
 
 *Defined in [api.ts:1117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1117)*
 
-*__type__*: {InventoryIdOrList}
-
-*__memberof__*: OptOutIn
-
 ___
 <a id="optout"></a>
 
@@ -41,12 +37,6 @@ ___
 **● optOut**: *`boolean`*
 
 *Defined in [api.ts:1123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1123)*
-
-Opt out setting to be set.
-
-*__type__*: {boolean}
-
-*__memberof__*: OptOutIn
 
 ___
 

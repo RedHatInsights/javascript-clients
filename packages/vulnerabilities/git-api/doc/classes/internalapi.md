@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [InternalApi](../classes/internalapi.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [InternalApi](../classes/internalapi.md)
 
 # Class: InternalApi
 
@@ -43,7 +43,7 @@ InternalApi - object-oriented interface
 
 ###  constructor
 
-⊕ **new InternalApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [InternalApi](internalapi.md)
+⊕ **new InternalApi**(configuration: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [InternalApi](internalapi.md)
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -103,17 +103,9 @@ ___
 
 ###  refreshAccount
 
-▸ **refreshAccount**(accountId: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **refreshAccount**(accountId: *`string`*, options: *`any`*): `AxiosPromise`<`Response`>
 
 *Defined in [git-api/api.ts:3399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3399)*
-
-Refresh cached counts for given account ID. Admin interface, available only to internal users.
-
-*__summary__*: Refresh cached counts for given account ID.
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: InternalApi
 
 **Parameters:**
 
@@ -129,17 +121,9 @@ ___
 
 ###  refreshAccountCve
 
-▸ **refreshAccountCve**(accountId: *`string`*, cveId: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **refreshAccountCve**(accountId: *`string`*, cveId: *`string`*, options: *`any`*): `AxiosPromise`<`Response`>
 
 *Defined in [git-api/api.ts:3412](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3412)*
-
-Refresh cached counts for given account ID and CVE. Admin interface, available only to internal users.
-
-*__summary__*: Refresh cached counts for given account ID and CVE.
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: InternalApi
 
 **Parameters:**
 
@@ -156,17 +140,9 @@ ___
 
 ###  refreshCve
 
-▸ **refreshCve**(cveId: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **refreshCve**(cveId: *`string`*, options: *`any`*): `AxiosPromise`<`Response`>
 
 *Defined in [git-api/api.ts:3424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3424)*
-
-Refresh cached counts for given CVE. Admin interface, available only to internal users.
-
-*__summary__*: Refresh cached counts for given CVE.
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: InternalApi
 
 **Parameters:**
 
@@ -182,17 +158,9 @@ ___
 
 ###  refreshSystem
 
-▸ **refreshSystem**(inventoryId: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **refreshSystem**(inventoryId: *`string`*, options: *`any`*): `AxiosPromise`<`Response`>
 
 *Defined in [git-api/api.ts:3436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3436)*
-
-Refresh cached counts for given inventory ID. Admin interface, available only to internal users.
-
-*__summary__*: Refresh cached counts for given inventory ID.
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: InternalApi
 
 **Parameters:**
 

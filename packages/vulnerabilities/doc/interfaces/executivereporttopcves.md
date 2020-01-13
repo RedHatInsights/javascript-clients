@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [ExecutiveReportTopCves](../interfaces/executivereporttopcves.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [ExecutiveReportTopCves](../interfaces/executivereporttopcves.md)
 
 # Interface: ExecutiveReportTopCves
 
@@ -32,12 +32,6 @@
 
 *Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L529)*
 
-String representation of cvss2 score of the CVE.
-
-*__type__*: {string}
-
-*__memberof__*: ExecutiveReportTopCves
-
 ___
 <a id="cvss3score"></a>
 
@@ -46,12 +40,6 @@ ___
 **● cvss3Score**: *`string` \| `null`*
 
 *Defined in [api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L535)*
-
-String representation of cvss3 score of the CVE.
-
-*__type__*: {string}
-
-*__memberof__*: ExecutiveReportTopCves
 
 ___
 <a id="description"></a>
@@ -62,12 +50,6 @@ ___
 
 *Defined in [api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L541)*
 
-Description of the CVE.
-
-*__type__*: {string}
-
-*__memberof__*: ExecutiveReportTopCves
-
 ___
 <a id="synopsis"></a>
 
@@ -77,12 +59,6 @@ ___
 
 *Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L523)*
 
-CVE synopsis
-
-*__type__*: {string}
-
-*__memberof__*: ExecutiveReportTopCves
-
 ___
 <a id="systemsaffected"></a>
 
@@ -91,12 +67,6 @@ ___
 **● systemsAffected**: *`number`*
 
 *Defined in [api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L547)*
-
-Systems affected by the CVE.
-
-*__type__*: {number}
-
-*__memberof__*: ExecutiveReportTopCves
 
 ___
 

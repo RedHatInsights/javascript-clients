@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [ExecutiveReportCvesBySeverity](../interfaces/executivereportcvesbyseverity.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [ExecutiveReportCvesBySeverity](../interfaces/executivereportcvesbyseverity.md)
 
 # Interface: ExecutiveReportCvesBySeverity
 
@@ -32,12 +32,6 @@ Number of CVEs discovered on the managed systems, divided into buckets based on 
 
 *Defined in [git-api/api.ts:471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L471)*
 
-Number of CVEs with CVSS score lower than 4.
-
-*__type__*: {number}
-
-*__memberof__*: ExecutiveReportCvesBySeverity
-
 ___
 <a id="_4to79"></a>
 
@@ -47,12 +41,6 @@ ___
 
 *Defined in [git-api/api.ts:477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L477)*
 
-Number of CVEs with CVSS score higher or equal to 4 and lower then 8.
-
-*__type__*: {number}
-
-*__memberof__*: ExecutiveReportCvesBySeverity
-
 ___
 <a id="_8to10"></a>
 
@@ -61,12 +49,6 @@ ___
 **● _8to10**: *`number`*
 
 *Defined in [git-api/api.ts:483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L483)*
-
-Number of CVEs with CVSS score higher or equal to 8.
-
-*__type__*: {number}
-
-*__memberof__*: ExecutiveReportCvesBySeverity
 
 ___
 

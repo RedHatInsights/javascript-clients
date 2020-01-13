@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [SystemListOut](../interfaces/systemlistout.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [SystemListOut](../interfaces/systemlistout.md)
 
 # Interface: SystemListOut
 
@@ -30,10 +30,6 @@
 
 *Defined in [git-api/api.ts:1323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1323)*
 
-*__type__*: {Object}
-
-*__memberof__*: SystemListOut
-
 ___
 <a id="links"></a>
 
@@ -43,10 +39,6 @@ ___
 
 *Defined in [git-api/api.ts:1329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1329)*
 
-*__type__*: {Links}
-
-*__memberof__*: SystemListOut
-
 ___
 <a id="meta"></a>
 
@@ -55,10 +47,6 @@ ___
 **● meta**: *[MetaSystems](metasystems.md)*
 
 *Defined in [git-api/api.ts:1335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1335)*
-
-*__type__*: {MetaSystems}
-
-*__memberof__*: SystemListOut
 
 ___
 

@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [ErrorsErrors](../interfaces/errorserrors.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [ErrorsErrors](../interfaces/errorserrors.md)
 
 # Interface: ErrorsErrors
 
@@ -29,12 +29,6 @@
 
 *Defined in [git-api/api.ts:413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L413)*
 
-Error detail.
-
-*__type__*: {string}
-
-*__memberof__*: ErrorsErrors
-
 ___
 <a id="status"></a>
 
@@ -43,12 +37,6 @@ ___
 **● status**: *`string`*
 
 *Defined in [git-api/api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L419)*
-
-String representation of HTTP status code.
-
-*__type__*: {string}
-
-*__memberof__*: ErrorsErrors
 
 ___
 

@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [BusinessRiskListOut](../interfaces/businessrisklistout.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [BusinessRiskListOut](../interfaces/businessrisklistout.md)
 
 # Interface: BusinessRiskListOut
 
@@ -29,12 +29,6 @@
 
 *Defined in [git-api/api.ts:123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L123)*
 
-List of available business risk/business\_risk\_id pairs.
-
-*__type__*: {Array}
-
-*__memberof__*: BusinessRiskListOut
-
 ___
 <a id="meta"></a>
 
@@ -43,10 +37,6 @@ ___
 **● meta**: *[BusinessRiskListOutMeta](businessrisklistoutmeta.md)*
 
 *Defined in [git-api/api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L129)*
-
-*__type__*: {BusinessRiskListOutMeta}
-
-*__memberof__*: BusinessRiskListOut
 
 ___
 

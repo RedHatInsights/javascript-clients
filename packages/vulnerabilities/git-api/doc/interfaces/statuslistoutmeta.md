@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [StatusListOutMeta](../interfaces/statuslistoutmeta.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [StatusListOutMeta](../interfaces/statuslistoutmeta.md)
 
 # Interface: StatusListOutMeta
 
@@ -27,12 +27,6 @@
 **● totalItems**: *`number`*
 
 *Defined in [git-api/api.ts:1209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1209)*
-
-Total number of available status/status\_id pairs.
-
-*__type__*: {number}
-
-*__memberof__*: StatusListOutMeta
 
 ___
 

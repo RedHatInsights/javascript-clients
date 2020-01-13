@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [StatusIn](../interfaces/statusin.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [StatusIn](../interfaces/statusin.md)
 
 # Interface: StatusIn
 
@@ -31,10 +31,6 @@
 
 *Defined in [api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1143)*
 
-*__type__*: {CveOrList}
-
-*__memberof__*: StatusIn
-
 ___
 <a id="inventoryid"></a>
 
@@ -43,10 +39,6 @@ ___
 **● inventoryId**: *[InventoryIdOrList](inventoryidorlist.md)*
 
 *Defined in [api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1137)*
-
-*__type__*: {InventoryIdOrList}
-
-*__memberof__*: StatusIn
 
 ___
 <a id="statusid"></a>
@@ -57,12 +49,6 @@ ___
 
 *Defined in [api.ts:1149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1149)*
 
-Status ID to be set, obtained by GET method. If not specified, global CVE status is set.
-
-*__type__*: {number}
-
-*__memberof__*: StatusIn
-
 ___
 <a id="statustext"></a>
 
@@ -71,12 +57,6 @@ ___
 **● statusText**: *`string` \| `null`*
 
 *Defined in [api.ts:1155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1155)*
-
-Complementary text to the status.
-
-*__type__*: {string}
-
-*__memberof__*: StatusIn
 
 ___
 

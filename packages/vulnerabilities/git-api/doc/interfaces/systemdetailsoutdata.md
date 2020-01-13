@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [SystemDetailsOutData](../interfaces/systemdetailsoutdata.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [SystemDetailsOutData](../interfaces/systemdetailsoutdata.md)
 
 # Interface: SystemDetailsOutData
 
@@ -30,12 +30,6 @@
 
 *Defined in [git-api/api.ts:1297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1297)*
 
-Date of last evaluation.
-
-*__type__*: {string}
-
-*__memberof__*: SystemDetailsOutData
-
 ___
 <a id="lastupload"></a>
 
@@ -45,12 +39,6 @@ ___
 
 *Defined in [git-api/api.ts:1309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1309)*
 
-Date of the latest upload of archive.
-
-*__type__*: {string}
-
-*__memberof__*: SystemDetailsOutData
-
 ___
 <a id="optout"></a>
 
@@ -59,12 +47,6 @@ ___
 **● optOut**: *`boolean`*
 
 *Defined in [git-api/api.ts:1303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1303)*
-
-System opt out status.
-
-*__type__*: {boolean}
-
-*__memberof__*: SystemDetailsOutData
 
 ___
 

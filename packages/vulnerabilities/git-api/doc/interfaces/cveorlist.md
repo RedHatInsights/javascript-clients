@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [CveOrList](../interfaces/cveorlist.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [CveOrList](../interfaces/cveorlist.md)
 
 # Interface: CveOrList
 

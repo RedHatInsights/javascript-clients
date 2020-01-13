@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [ConfigurationParameters](../interfaces/configurationparameters.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [ConfigurationParameters](../interfaces/configurationparameters.md)
 
 # Interface: ConfigurationParameters
 

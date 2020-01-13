@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [Meta](../interfaces/meta.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [Meta](../interfaces/meta.md)
 
 # Interface: Meta
 
@@ -36,12 +36,6 @@
 
 *Defined in [git-api/api.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L649)*
 
-Format of the output data, either JSON (default) or CSV.
-
-*__type__*: {string}
-
-*__memberof__*: Meta
-
 ___
 <a id="filter"></a>
 
@@ -50,12 +44,6 @@ ___
 **● filter**: *`string` \| `null`*
 
 *Defined in [git-api/api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L601)*
-
-Full text filter
-
-*__type__*: {string}
-
-*__memberof__*: Meta
 
 ___
 <a id="limit"></a>
@@ -66,12 +54,6 @@ ___
 
 *Defined in [git-api/api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L607)*
 
-Maximum number of paginated results.
-
-*__type__*: {number}
-
-*__memberof__*: Meta
-
 ___
 <a id="offset"></a>
 
@@ -80,12 +62,6 @@ ___
 **● offset**: *`number`*
 
 *Defined in [git-api/api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L613)*
-
-First record of paginated response.
-
-*__type__*: {number}
-
-*__memberof__*: Meta
 
 ___
 <a id="page"></a>
@@ -96,12 +72,6 @@ ___
 
 *Defined in [git-api/api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L619)*
 
-Page number of paginated response.
-
-*__type__*: {number}
-
-*__memberof__*: Meta
-
 ___
 <a id="pagesize"></a>
 
@@ -110,12 +80,6 @@ ___
 **● pageSize**: *`number`*
 
 *Defined in [git-api/api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L625)*
-
-Number of records per page of paginated response.
-
-*__type__*: {number}
-
-*__memberof__*: Meta
 
 ___
 <a id="pages"></a>
@@ -126,12 +90,6 @@ ___
 
 *Defined in [git-api/api.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L631)*
 
-Total number of pages of paginated response.
-
-*__type__*: {number}
-
-*__memberof__*: Meta
-
 ___
 <a id="sort"></a>
 
@@ -141,12 +99,6 @@ ___
 
 *Defined in [git-api/api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L637)*
 
-Sorting filter.
-
-*__type__*: {string}
-
-*__memberof__*: Meta
-
 ___
 <a id="totalitems"></a>
 
@@ -155,12 +107,6 @@ ___
 **● totalItems**: *`number`*
 
 *Defined in [git-api/api.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L643)*
-
-Total number of records.
-
-*__type__*: {number}
-
-*__memberof__*: Meta
 
 ___
 

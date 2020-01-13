@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [MetaAffectedSystems](../interfaces/metaaffectedsystems.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [MetaAffectedSystems](../interfaces/metaaffectedsystems.md)
 
 # Interface: MetaAffectedSystems
 
@@ -37,12 +37,6 @@
 
 *Defined in [api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L711)*
 
-Format of the output data, either JSON (default) or CSV.
-
-*__type__*: {string}
-
-*__memberof__*: MetaAffectedSystems
-
 ___
 <a id="filter"></a>
 
@@ -51,12 +45,6 @@ ___
 **● filter**: *`string` \| `null`*
 
 *Defined in [api.ts:663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L663)*
-
-Full text filter
-
-*__type__*: {string}
-
-*__memberof__*: MetaAffectedSystems
 
 ___
 <a id="limit"></a>
@@ -67,12 +55,6 @@ ___
 
 *Defined in [api.ts:669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L669)*
 
-Maximum number of paginated results.
-
-*__type__*: {number}
-
-*__memberof__*: MetaAffectedSystems
-
 ___
 <a id="offset"></a>
 
@@ -81,12 +63,6 @@ ___
 **● offset**: *`number`*
 
 *Defined in [api.ts:675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L675)*
-
-First record of paginated response.
-
-*__type__*: {number}
-
-*__memberof__*: MetaAffectedSystems
 
 ___
 <a id="page"></a>
@@ -97,12 +73,6 @@ ___
 
 *Defined in [api.ts:681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L681)*
 
-Page number of paginated response.
-
-*__type__*: {number}
-
-*__memberof__*: MetaAffectedSystems
-
 ___
 <a id="pagesize"></a>
 
@@ -111,12 +81,6 @@ ___
 **● pageSize**: *`number`*
 
 *Defined in [api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L687)*
-
-Number of records per page of paginated response.
-
-*__type__*: {number}
-
-*__memberof__*: MetaAffectedSystems
 
 ___
 <a id="pages"></a>
@@ -127,12 +91,6 @@ ___
 
 *Defined in [api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L693)*
 
-Total number of pages of paginated response.
-
-*__type__*: {number}
-
-*__memberof__*: MetaAffectedSystems
-
 ___
 <a id="sort"></a>
 
@@ -141,12 +99,6 @@ ___
 **● sort**: *`string` \| `null`*
 
 *Defined in [api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L699)*
-
-Sorting filter.
-
-*__type__*: {string}
-
-*__memberof__*: MetaAffectedSystems
 
 ___
 <a id="statusid"></a>
@@ -157,12 +109,6 @@ ___
 
 *Defined in [api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L717)*
 
-Filer based on CVE status ID.
-
-*__type__*: {string}
-
-*__memberof__*: MetaAffectedSystems
-
 ___
 <a id="totalitems"></a>
 
@@ -171,12 +117,6 @@ ___
 **● totalItems**: *`number`*
 
 *Defined in [api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L705)*
-
-Total number of records.
-
-*__type__*: {number}
-
-*__memberof__*: MetaAffectedSystems
 
 ___
 

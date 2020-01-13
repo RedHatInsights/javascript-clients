@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [CveStatusIn](../interfaces/cvestatusin.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [CveStatusIn](../interfaces/cvestatusin.md)
 
 # Interface: CveStatusIn
 
@@ -30,10 +30,6 @@
 
 *Defined in [api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L373)*
 
-*__type__*: {CveOrList}
-
-*__memberof__*: CveStatusIn
-
 ___
 <a id="statusid"></a>
 
@@ -43,12 +39,6 @@ ___
 
 *Defined in [api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L379)*
 
-Status ID to be set, obtained by GET method.
-
-*__type__*: {number}
-
-*__memberof__*: CveStatusIn
-
 ___
 <a id="statustext"></a>
 
@@ -57,12 +47,6 @@ ___
 **● statusText**: *`string` \| `null`*
 
 *Defined in [api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L385)*
-
-Complementary text to the status.
-
-*__type__*: {string}
-
-*__memberof__*: CveStatusIn
 
 ___
 

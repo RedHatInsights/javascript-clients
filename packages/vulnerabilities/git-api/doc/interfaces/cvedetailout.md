@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [CveDetailOut](../interfaces/cvedetailout.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [CveDetailOut](../interfaces/cvedetailout.md)
 
 # Interface: CveDetailOut
 
@@ -27,10 +27,6 @@
 **● data**: *[CveDetailOutData](cvedetailoutdata.md)*
 
 *Defined in [git-api/api.ts:177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L177)*
-
-*__type__*: {CveDetailOutData}
-
-*__memberof__*: CveDetailOut
 
 ___
 

@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [Errors](../interfaces/errors.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [Errors](../interfaces/errors.md)
 
 # Interface: Errors
 
@@ -27,10 +27,6 @@
 **● errors**: *`Array`<[ErrorsErrors](errorserrors.md)>*
 
 *Defined in [api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L399)*
-
-*__type__*: {Array}
-
-*__memberof__*: Errors
 
 ___
 

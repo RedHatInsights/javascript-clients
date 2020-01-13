@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [StatusOutUpdated](../interfaces/statusoutupdated.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [StatusOutUpdated](../interfaces/statusoutupdated.md)
 
 # Interface: StatusOutUpdated
 
@@ -29,10 +29,6 @@
 
 *Defined in [api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1243)*
 
-*__type__*: {string}
-
-*__memberof__*: StatusOutUpdated
-
 ___
 <a id="inventoryid"></a>
 
@@ -41,10 +37,6 @@ ___
 **● inventoryId**: *`string`*
 
 *Defined in [api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1237)*
-
-*__type__*: {string}
-
-*__memberof__*: StatusOutUpdated
 
 ___
 

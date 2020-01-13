@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [RequiredError](../classes/requirederror.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [RequiredError](../classes/requirederror.md)
 
 # Class: RequiredError
 
@@ -36,7 +36,7 @@
 
 ###  constructor
 
-⊕ **new RequiredError**(field: *`string`*, msg?: *`string`*): [RequiredError](requirederror.md)
+⊕ **new RequiredError**(field: *`string`*, msg: *`string`*): [RequiredError](requirederror.md)
 
 *Defined in [api.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L66)*
 

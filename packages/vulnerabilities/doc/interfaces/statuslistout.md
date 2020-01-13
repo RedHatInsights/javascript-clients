@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [StatusListOut](../interfaces/statuslistout.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [StatusListOut](../interfaces/statuslistout.md)
 
 # Interface: StatusListOut
 
@@ -29,12 +29,6 @@
 
 *Defined in [api.ts:1169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1169)*
 
-List of available status/status\_id pairs.
-
-*__type__*: {Array}
-
-*__memberof__*: StatusListOut
-
 ___
 <a id="meta"></a>
 
@@ -43,10 +37,6 @@ ___
 **● meta**: *[StatusListOutMeta](statuslistoutmeta.md)*
 
 *Defined in [api.ts:1175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1175)*
-
-*__type__*: {StatusListOutMeta}
-
-*__memberof__*: StatusListOut
 
 ___
 

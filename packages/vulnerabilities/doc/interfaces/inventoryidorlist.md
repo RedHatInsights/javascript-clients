@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [InventoryIdOrList](../interfaces/inventoryidorlist.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [InventoryIdOrList](../interfaces/inventoryidorlist.md)
 
 # Interface: InventoryIdOrList
 

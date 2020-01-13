@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [CveRiskIn](../interfaces/cveriskin.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [CveRiskIn](../interfaces/cveriskin.md)
 
 # Interface: CveRiskIn
 
@@ -30,12 +30,6 @@
 
 *Defined in [api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L353)*
 
-Business risk ID to be set, obtained by GET method.
-
-*__type__*: {number}
-
-*__memberof__*: CveRiskIn
-
 ___
 <a id="businessrisktext"></a>
 
@@ -45,12 +39,6 @@ ___
 
 *Defined in [api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L359)*
 
-Complementary text to the business risk.
-
-*__type__*: {string}
-
-*__memberof__*: CveRiskIn
-
 ___
 <a id="cve"></a>
 
@@ -59,10 +47,6 @@ ___
 **● cve**: *[CveOrList](cveorlist.md)*
 
 *Defined in [api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L347)*
-
-*__type__*: {CveOrList}
-
-*__memberof__*: CveRiskIn
 
 ___
 

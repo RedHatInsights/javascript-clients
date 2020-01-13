@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [AffectedSystemsOut](../interfaces/affectedsystemsout.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [AffectedSystemsOut](../interfaces/affectedsystemsout.md)
 
 # Interface: AffectedSystemsOut
 
@@ -30,10 +30,6 @@
 
 *Defined in [git-api/api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L83)*
 
-*__type__*: {Object}
-
-*__memberof__*: AffectedSystemsOut
-
 ___
 <a id="links"></a>
 
@@ -43,10 +39,6 @@ ___
 
 *Defined in [git-api/api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L89)*
 
-*__type__*: {Links}
-
-*__memberof__*: AffectedSystemsOut
-
 ___
 <a id="meta"></a>
 
@@ -55,10 +47,6 @@ ___
 **● meta**: *[MetaAffectedSystems](metaaffectedsystems.md)*
 
 *Defined in [git-api/api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L95)*
-
-*__type__*: {MetaAffectedSystems}
-
-*__memberof__*: AffectedSystemsOut
 
 ___
 

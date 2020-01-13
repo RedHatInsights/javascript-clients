@@ -175,11 +175,9 @@ ___
 
 ### `<Const>` DefaultApiAxiosParamCreator
 
-▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+▸ **DefaultApiAxiosParamCreator**(configuration: *[Configuration](classes/configuration.md)*): `object`
 
 *Defined in [git-api/api.ts:1389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1389)*
-
-DefaultApi - axios parameter creator
 
 **Parameters:**
 
@@ -194,11 +192,9 @@ ___
 
 ### `<Const>` DefaultApiFactory
 
-▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
+▸ **DefaultApiFactory**(configuration: *[Configuration](classes/configuration.md)*, basePath: *`string`*, axios: *`AxiosInstance`*): `object`
 
 *Defined in [git-api/api.ts:2619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2619)*
-
-DefaultApi - factory interface
 
 **Parameters:**
 
@@ -215,11 +211,9 @@ ___
 
 ### `<Const>` DefaultApiFp
 
-▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+▸ **DefaultApiFp**(configuration: *[Configuration](classes/configuration.md)*): `object`
 
 *Defined in [git-api/api.ts:2346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2346)*
-
-DefaultApi - functional programming interface
 
 **Parameters:**
 
@@ -234,11 +228,9 @@ ___
 
 ### `<Const>` InternalApiAxiosParamCreator
 
-▸ **InternalApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+▸ **InternalApiAxiosParamCreator**(configuration: *[Configuration](classes/configuration.md)*): `object`
 
 *Defined in [git-api/api.ts:3069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3069)*
-
-InternalApi - axios parameter creator
 
 **Parameters:**
 
@@ -253,11 +245,9 @@ ___
 
 ### `<Const>` InternalApiFactory
 
-▸ **InternalApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
+▸ **InternalApiFactory**(configuration: *[Configuration](classes/configuration.md)*, basePath: *`string`*, axios: *`AxiosInstance`*): `object`
 
 *Defined in [git-api/api.ts:3338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3338)*
-
-InternalApi - factory interface
 
 **Parameters:**
 
@@ -274,11 +264,9 @@ ___
 
 ### `<Const>` InternalApiFp
 
-▸ **InternalApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+▸ **InternalApiFp**(configuration: *[Configuration](classes/configuration.md)*): `object`
 
 *Defined in [git-api/api.ts:3272](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3272)*
-
-InternalApi - functional programming interface
 
 **Parameters:**
 
@@ -299,8 +287,6 @@ ___
 **COLLECTION_FORMATS**: *`object`*
 
 *Defined in [git-api/api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L26)*
-
-*__export__*: 
 
 <a id="collection_formats.csv"></a>
 

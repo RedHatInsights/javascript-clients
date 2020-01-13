@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [Configuration](../classes/configuration.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [Configuration](../classes/configuration.md)
 
 # Class: Configuration
 
@@ -53,14 +53,6 @@ ___
 
 *Defined in [git-api/configuration.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/configuration.ts#L51)*
 
-parameter for oauth2 security
-
-*__param__*: security name
-
-*__param__*: oauth2 scope
-
-*__memberof__*: Configuration
-
 ___
 <a id="apikey"></a>
 
@@ -69,12 +61,6 @@ ___
 **● apiKey**: *`string` \| `function`*
 
 *Defined in [git-api/configuration.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/configuration.ts#L30)*
-
-parameter for apiKey security
-
-*__param__*: security name
-
-*__memberof__*: Configuration
 
 ___
 <a id="baseoptions"></a>
@@ -85,12 +71,6 @@ ___
 
 *Defined in [git-api/configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/configuration.ts#L65)*
 
-base options for axios calls
-
-*__type__*: {any}
-
-*__memberof__*: Configuration
-
 ___
 <a id="basepath"></a>
 
@@ -99,12 +79,6 @@ ___
 **● basePath**: *`string`*
 
 *Defined in [git-api/configuration.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/configuration.ts#L58)*
-
-override base path
-
-*__type__*: {string}
-
-*__memberof__*: Configuration
 
 ___
 <a id="password"></a>
@@ -115,12 +89,6 @@ ___
 
 *Defined in [git-api/configuration.ts:44](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/configuration.ts#L44)*
 
-parameter for basic security
-
-*__type__*: {string}
-
-*__memberof__*: Configuration
-
 ___
 <a id="username"></a>
 
@@ -129,12 +97,6 @@ ___
 **● username**: *`string`*
 
 *Defined in [git-api/configuration.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/configuration.ts#L37)*
-
-parameter for basic security
-
-*__type__*: {string}
-
-*__memberof__*: Configuration
 
 ___
 

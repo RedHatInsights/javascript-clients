@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [SystemCvesOut](../interfaces/systemcvesout.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [SystemCvesOut](../interfaces/systemcvesout.md)
 
 # Interface: SystemCvesOut
 
@@ -30,10 +30,6 @@
 
 *Defined in [api.ts:1257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1257)*
 
-*__type__*: {Object}
-
-*__memberof__*: SystemCvesOut
-
 ___
 <a id="links"></a>
 
@@ -43,10 +39,6 @@ ___
 
 *Defined in [api.ts:1263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1263)*
 
-*__type__*: {Links}
-
-*__memberof__*: SystemCvesOut
-
 ___
 <a id="meta"></a>
 
@@ -55,10 +47,6 @@ ___
 **● meta**: *[MetaCves](metacves.md)*
 
 *Defined in [api.ts:1269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1269)*
-
-*__type__*: {MetaCves}
-
-*__memberof__*: SystemCvesOut
 
 ___
 

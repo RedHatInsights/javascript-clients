@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [VersionOut](../interfaces/versionout.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [VersionOut](../interfaces/versionout.md)
 
 # Interface: VersionOut
 
@@ -29,12 +29,6 @@
 
 *Defined in [api.ts:1349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1349)*
 
-Version of application.
-
-*__type__*: {string}
-
-*__memberof__*: VersionOut
-
 ___
 <a id="databaseversion"></a>
 
@@ -43,12 +37,6 @@ ___
 **● databaseVersion**: *`Object`*
 
 *Defined in [api.ts:1355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1355)*
-
-Version of database schema.
-
-*__type__*: {Object}
-
-*__memberof__*: VersionOut
 
 ___
 

@@ -1,4 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [ExecutiveReportRecentCves](../interfaces/executivereportrecentcves.md)
+[@redhat-cloud-services/vulnerabilities-client - v0.0.1](../README.md) > [ExecutiveReportRecentCves](../interfaces/executivereportrecentcves.md)
 
 # Interface: ExecutiveReportRecentCves
 
@@ -32,12 +32,6 @@ Number of recently published CVEs identified on managed systems
 
 *Defined in [api.ts:503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L503)*
 
-Number of CVEs identified on managed systems published in last 30 days.
-
-*__type__*: {number}
-
-*__memberof__*: ExecutiveReportRecentCves
-
 ___
 <a id="last7days"></a>
 
@@ -47,12 +41,6 @@ ___
 
 *Defined in [api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L497)*
 
-Number of CVEs identified on managed systems published in last 7 days.
-
-*__type__*: {number}
-
-*__memberof__*: ExecutiveReportRecentCves
-
 ___
 <a id="last90days"></a>
 
@@ -61,12 +49,6 @@ ___
 **● last90days**: *`number`*
 
 *Defined in [api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L509)*
-
-Number of CVEs identified on managed systems published in last 90 days.
-
-*__type__*: {number}
-
-*__memberof__*: ExecutiveReportRecentCves
 
 ___
 
