@@ -17,9 +17,7 @@
 * [createdAt](tag.md#createdat)
 * [description](tag.md#description)
 * [id](tag.md#id)
-* [name](tag.md#name)
-* [namespace](tag.md#namespace)
-* [value](tag.md#value)
+* [tag](tag.md#tag-1)
 
 ---
 
@@ -31,7 +29,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:1112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1112)*
+*Defined in [api.ts:1106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1106)*
 
 *__type__*: {Date}
 
@@ -44,7 +42,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:1118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1118)*
+*Defined in [api.ts:1112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1112)*
 
 *__type__*: {string}
 
@@ -57,46 +55,20 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:1106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1106)*
+*Defined in [api.ts:1100](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1100)*
 
 *__type__*: {string}
 
 *__memberof__*: Tag
 
 ___
-<a id="name"></a>
+<a id="tag-1"></a>
 
-### `<Optional>` name
+### `<Optional>` tag
 
-**● name**: *`string`*
+**● tag**: *`string`*
 
-*Defined in [api.ts:1124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1124)*
-
-*__type__*: {string}
-
-*__memberof__*: Tag
-
-___
-<a id="namespace"></a>
-
-### `<Optional>` namespace
-
-**● namespace**: *`string`*
-
-*Defined in [api.ts:1130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1130)*
-
-*__type__*: {string}
-
-*__memberof__*: Tag
-
-___
-<a id="value"></a>
-
-### `<Optional>` value
-
-**● value**: *`string`*
-
-*Defined in [api.ts:1136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1136)*
+*Defined in [api.ts:1118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1118)*
 
 *__type__*: {string}
 
