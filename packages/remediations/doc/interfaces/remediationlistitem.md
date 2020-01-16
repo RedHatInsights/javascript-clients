@@ -34,7 +34,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L451)*
+*Defined in [api.ts:561](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L561)*
 
 *__type__*: {Date}
 
@@ -47,7 +47,7 @@ ___
 
 **● createdBy**: *[UserOut](userout.md)*
 
-*Defined in [api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L445)*
+*Defined in [api.ts:555](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L555)*
 
 *__type__*: {UserOut}
 
@@ -60,7 +60,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L433)*
+*Defined in [api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L543)*
 
 *__type__*: {string}
 
@@ -73,7 +73,7 @@ ___
 
 **● issueCount**: *`number`*
 
-*Defined in [api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L469)*
+*Defined in [api.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L579)*
 
 *__type__*: {number}
 
@@ -86,7 +86,7 @@ ___
 
 **● name**: *`string` \| `null`*
 
-*Defined in [api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L439)*
+*Defined in [api.ts:549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L549)*
 
 *__type__*: {string}
 
@@ -99,7 +99,7 @@ ___
 
 **● needsReboot**: *`boolean`*
 
-*Defined in [api.ts:481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L481)*
+*Defined in [api.ts:591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L591)*
 
 Indicates whether any of the issues contained in the remediation require system reboot
 
@@ -114,7 +114,7 @@ ___
 
 **● systemCount**: *`number`*
 
-*Defined in [api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L475)*
+*Defined in [api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L585)*
 
 *__type__*: {number}
 
@@ -127,7 +127,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L463)*
+*Defined in [api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L573)*
 
 *__type__*: {Date}
 
@@ -140,7 +140,7 @@ ___
 
 **● updatedBy**: *[UserOut](userout.md)*
 
-*Defined in [api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L457)*
+*Defined in [api.ts:567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L567)*
 
 *__type__*: {UserOut}
 

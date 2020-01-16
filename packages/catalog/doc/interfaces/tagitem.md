@@ -26,7 +26,7 @@
 
 **● tag**: *`string`*
 
-*Defined in [api.ts:1132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1132)*
+*Defined in [api.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1138)*
 
 *__type__*: {string}
 

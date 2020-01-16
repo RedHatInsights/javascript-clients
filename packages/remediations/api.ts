@@ -98,6 +98,20 @@ export interface Diagnosis {
 /**
  *
  * @export
+ * @interface ExecuteRemediation
+ */
+export interface ExecuteRemediation {
+    /**
+     *
+     * @type {string}
+     * @memberof ExecuteRemediation
+     */
+    id: string;
+}
+
+/**
+ *
+ * @export
  * @interface InlineResponse200
  */
 export interface InlineResponse200 {
@@ -113,6 +127,26 @@ export interface InlineResponse200 {
      * @memberof InlineResponse200
      */
     commit: string;
+}
+
+/**
+ *
+ * @export
+ * @interface Meta
+ */
+export interface Meta {
+    /**
+     * number of results returned
+     * @type {number}
+     * @memberof Meta
+     */
+    count: number;
+    /**
+     * total number of results matching the query
+     * @type {number}
+     * @memberof Meta
+     */
+    total: number;
 }
 
 /**
@@ -159,6 +193,82 @@ export interface PlaybookDefinitionIssues {
      * @memberof PlaybookDefinitionIssues
      */
     resolution?: string;
+}
+
+/**
+ *
+ * @export
+ * @interface PlaybookExecutorStatus
+ */
+export interface PlaybookExecutorStatus {
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookExecutorStatus
+     */
+    executorId: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookExecutorStatus
+     */
+    executorType: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookExecutorStatus
+     */
+    executorName: string | null;
+    /**
+     *
+     * @type {number}
+     * @memberof PlaybookExecutorStatus
+     */
+    systemCount: number;
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookExecutorStatus
+     */
+    connectionStatus: PlaybookExecutorStatus.ConnectionStatusEnum;
+}
+
+/**
+ * @export
+ * @namespace PlaybookExecutorStatus
+ */
+export namespace PlaybookExecutorStatus {
+    /**
+     * @export
+     * @enum {string}
+     */
+    export enum ConnectionStatusEnum {
+        Connected = 'connected',
+        Disconnected = 'disconnected',
+        NoExecutor = 'no_executor',
+        NoSource = 'no_source',
+        NoReceptor = 'no_receptor'
+    }
+}
+
+/**
+ *
+ * @export
+ * @interface RemediationConnectionStatus
+ */
+export interface RemediationConnectionStatus {
+    /**
+     *
+     * @type {Meta}
+     * @memberof RemediationConnectionStatus
+     */
+    meta: Meta;
+    /**
+     *
+     * @type {Array<PlaybookExecutorStatus>}
+     * @memberof RemediationConnectionStatus
+     */
+    data: Array<PlaybookExecutorStatus>;
 }
 
 /**
@@ -407,10 +517,10 @@ export interface RemediationList {
     data: Array<RemediationListItem>;
     /**
      *
-     * @type {RemediationListMeta}
+     * @type {Meta}
      * @memberof RemediationList
      */
-    meta: RemediationListMeta;
+    meta: Meta;
     /**
      *
      * @type {RemediationListLinks}
@@ -511,26 +621,6 @@ export interface RemediationListLinks {
      * @memberof RemediationListLinks
      */
     previous: string | null;
-}
-
-/**
- *
- * @export
- * @interface RemediationListMeta
- */
-export interface RemediationListMeta {
-    /**
-     * number of results returned
-     * @type {number}
-     * @memberof RemediationListMeta
-     */
-    count: number;
-    /**
-     * total number of results matching the query
-     * @type {number}
-     * @memberof RemediationListMeta
-     */
-    total: number;
 }
 
 /**
@@ -1137,6 +1227,39 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
+         * Get satellite connection status for a given host
+         * @summary Pre-flight check
+         * @param {string} id Remediation identifier
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getRemediationConnectionStatus(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling getRemediationConnectionStatus.');
+            }
+            const localVarPath = `/remediations/{id}/connection_status`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Provides Ansible Playbook
          * @summary Get Remediation Playbook
          * @param {string} id Remediation identifier
@@ -1210,6 +1333,39 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             if (system !== undefined) {
                 localVarQueryParameter['system'] = system;
             }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Execute remediation
+         * @summary Execute remediation
+         * @param {string} id Remediation identifier
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        runRemediation(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling runRemediation.');
+            }
+            const localVarPath = `/remediations/{id}/playbook_runs`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -1394,6 +1550,20 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Get satellite connection status for a given host
+         * @summary Pre-flight check
+         * @param {string} id Remediation identifier
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getRemediationConnectionStatus(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationConnectionStatus> {
+            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getRemediationConnectionStatus(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Provides Ansible Playbook
          * @summary Get Remediation Playbook
          * @param {string} id Remediation identifier
@@ -1420,6 +1590,20 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          */
         getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationList> {
             const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getRemediations(sort, filter, limit, offset, system, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Execute remediation
+         * @summary Execute remediation
+         * @param {string} id Remediation identifier
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        runRemediation(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExecuteRemediation> {
+            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).runRemediation(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1519,6 +1703,16 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).getRemediation(id, options)(axios, basePath);
         },
         /**
+         * Get satellite connection status for a given host
+         * @summary Pre-flight check
+         * @param {string} id Remediation identifier
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getRemediationConnectionStatus(id: string, options?: any) {
+            return RemediationsApiFp(configuration).getRemediationConnectionStatus(id, options)(axios, basePath);
+        },
+        /**
          * Provides Ansible Playbook
          * @summary Get Remediation Playbook
          * @param {string} id Remediation identifier
@@ -1541,6 +1735,16 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          */
         getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, options?: any) {
             return RemediationsApiFp(configuration).getRemediations(sort, filter, limit, offset, system, options)(axios, basePath);
+        },
+        /**
+         * Execute remediation
+         * @summary Execute remediation
+         * @param {string} id Remediation identifier
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        runRemediation(id: string, options?: any) {
+            return RemediationsApiFp(configuration).runRemediation(id, options)(axios, basePath);
         },
         /**
          * Updates the given Remediation
@@ -1639,6 +1843,18 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
+     * Get satellite connection status for a given host
+     * @summary Pre-flight check
+     * @param {string} id Remediation identifier
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RemediationsApi
+     */
+    public getRemediationConnectionStatus(id: string, options?: any) {
+        return RemediationsApiFp(this.configuration).getRemediationConnectionStatus(id, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Provides Ansible Playbook
      * @summary Get Remediation Playbook
      * @param {string} id Remediation identifier
@@ -1664,6 +1880,18 @@ export class RemediationsApi extends BaseAPI {
      */
     public getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, options?: any) {
         return RemediationsApiFp(this.configuration).getRemediations(sort, filter, limit, offset, system, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Execute remediation
+     * @summary Execute remediation
+     * @param {string} id Remediation identifier
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RemediationsApi
+     */
+    public runRemediation(id: string, options?: any) {
+        return RemediationsApiFp(this.configuration).runRemediation(id, options)(this.axios, this.basePath);
     }
 
     /**

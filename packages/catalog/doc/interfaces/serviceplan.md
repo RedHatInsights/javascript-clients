@@ -17,6 +17,7 @@
 * [createJsonSchema](serviceplan.md#createjsonschema)
 * [description](serviceplan.md#description)
 * [id](serviceplan.md#id)
+* [modified](serviceplan.md#modified)
 * [name](serviceplan.md#name)
 * [portfolioItemId](serviceplan.md#portfolioitemid)
 
@@ -65,6 +66,21 @@ ___
 The unique identifier for this service plan.
 
 *__type__*: {string}
+
+*__memberof__*: ServicePlan
+
+___
+<a id="modified"></a>
+
+### `<Optional>` modified
+
+**● modified**: *`boolean`*
+
+*Defined in [api.ts:992](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L992)*
+
+Whether or not the ServicePlan has a modified create\_json\_schema property
+
+*__type__*: {boolean}
 
 *__memberof__*: ServicePlan
 

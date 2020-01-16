@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[RemediationListItem](remediationlistitem.md)>*
 
-*Defined in [api.ts:407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L407)*
+*Defined in [api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L517)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[RemediationListLinks](remediationlistlinks.md)*
 
-*Defined in [api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L419)*
+*Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L529)*
 
 *__type__*: {RemediationListLinks}
 
@@ -52,11 +52,11 @@ ___
 
 ###  meta
 
-**● meta**: *[RemediationListMeta](remediationlistmeta.md)*
+**● meta**: *[Meta](meta.md)*
 
-*Defined in [api.ts:413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L413)*
+*Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L523)*
 
-*__type__*: {RemediationListMeta}
+*__type__*: {Meta}
 
 *__memberof__*: RemediationList
 
