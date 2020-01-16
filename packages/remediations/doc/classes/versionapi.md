@@ -102,7 +102,7 @@ ___
 
 ▸ **getVersion**(options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
 
-*Defined in [api.ts:1965](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1965)*
+*Defined in [api.ts:2193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2193)*
 
 Provides information about the version of the service
 

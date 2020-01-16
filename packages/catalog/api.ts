@@ -984,6 +984,12 @@ export interface ServicePlan {
      * @memberof ServicePlan
      */
     id?: string;
+    /**
+     * Whether or not the ServicePlan has a modified create_json_schema property
+     * @type {boolean}
+     * @memberof ServicePlan
+     */
+    modified?: boolean;
 }
 
 /**
@@ -1725,7 +1731,7 @@ export const IconApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showIconData(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+        showIconData(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = IconApiAxiosParamCreator(configuration).showIconData(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -4225,7 +4231,7 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioIcon(portfolioId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+        showPortfolioIcon(portfolioId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).showPortfolioIcon(portfolioId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -5484,7 +5490,7 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioItemIcon(portfolioItemId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+        showPortfolioItemIcon(portfolioItemId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).showPortfolioItemIcon(portfolioItemId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})

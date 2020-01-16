@@ -38,6 +38,8 @@
 
 ↳  [TotalRiskApi](totalriskapi.md)
 
+↳  [UsageApi](usageapi.md)
+
 ↳  [WeeklyreportsubscriptionApi](weeklyreportsubscriptionapi.md)
 
 ## Index

@@ -210,7 +210,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1269)*
+*Defined in [api.ts:1275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1275)*
 
 DefaultApi - axios parameter creator
 
@@ -229,7 +229,7 @@ ___
 
 ▸ **DefaultApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1389)*
+*Defined in [api.ts:1395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1395)*
 
 DefaultApi - factory interface
 
@@ -250,7 +250,7 @@ ___
 
 ▸ **DefaultApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1353)*
+*Defined in [api.ts:1359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1359)*
 
 DefaultApi - functional programming interface
 
@@ -269,7 +269,7 @@ ___
 
 ▸ **IconApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1449)*
+*Defined in [api.ts:1455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1455)*
 
 IconApi - axios parameter creator
 
@@ -288,7 +288,7 @@ ___
 
 ▸ **IconApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:1757](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1757)*
+*Defined in [api.ts:1763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1763)*
 
 IconApi - factory interface
 
@@ -309,7 +309,7 @@ ___
 
 ▸ **IconApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1675)*
+*Defined in [api.ts:1681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1681)*
 
 IconApi - functional programming interface
 
@@ -328,7 +328,7 @@ ___
 
 ▸ **OrderApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:1891](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1891)*
+*Defined in [api.ts:1897](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1897)*
 
 OrderApi - axios parameter creator
 
@@ -347,7 +347,7 @@ ___
 
 ▸ **OrderApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:2488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2488)*
+*Defined in [api.ts:2494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2494)*
 
 OrderApi - factory interface
 
@@ -368,7 +368,7 @@ ___
 
 ▸ **OrderApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2332](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2332)*
+*Defined in [api.ts:2338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2338)*
 
 OrderApi - functional programming interface
 
@@ -387,7 +387,7 @@ ___
 
 ▸ **OrderItemApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:2740](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2740)*
+*Defined in [api.ts:2746](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2746)*
 
 OrderItemApi - axios parameter creator
 
@@ -406,7 +406,7 @@ ___
 
 ▸ **OrderItemApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:3133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3133)*
+*Defined in [api.ts:3139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3139)*
 
 OrderItemApi - factory interface
 
@@ -427,7 +427,7 @@ ___
 
 ▸ **OrderItemApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3031)*
+*Defined in [api.ts:3037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3037)*
 
 OrderItemApi - functional programming interface
 
@@ -446,7 +446,7 @@ ___
 
 ▸ **PortfolioApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:3301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3301)*
+*Defined in [api.ts:3307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3307)*
 
 PortfolioApi - axios parameter creator
 
@@ -465,7 +465,7 @@ ___
 
 ▸ **PortfolioApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:4287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4287)*
+*Defined in [api.ts:4293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4293)*
 
 PortfolioApi - factory interface
 
@@ -486,7 +486,7 @@ ___
 
 ▸ **PortfolioApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:4039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4039)*
+*Defined in [api.ts:4045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4045)*
 
 PortfolioApi - functional programming interface
 
@@ -505,7 +505,7 @@ ___
 
 ▸ **PortfolioItemApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:4687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4687)*
+*Defined in [api.ts:4693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4693)*
 
 PortfolioItemApi - axios parameter creator
 
@@ -524,7 +524,7 @@ ___
 
 ▸ **PortfolioItemApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:5531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5531)*
+*Defined in [api.ts:5537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5537)*
 
 PortfolioItemApi - factory interface
 
@@ -545,7 +545,7 @@ ___
 
 ▸ **PortfolioItemApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5315)*
+*Defined in [api.ts:5321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5321)*
 
 PortfolioItemApi - functional programming interface
 
@@ -564,7 +564,7 @@ ___
 
 ▸ **ServicePlansApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5879)*
+*Defined in [api.ts:5885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5885)*
 
 ServicePlansApi - axios parameter creator
 
@@ -583,7 +583,7 @@ ___
 
 ▸ **ServicePlansApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:6220](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6220)*
+*Defined in [api.ts:6226](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6226)*
 
 ServicePlansApi - factory interface
 
@@ -604,7 +604,7 @@ ___
 
 ▸ **ServicePlansApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6126)*
+*Defined in [api.ts:6132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6132)*
 
 ServicePlansApi - functional programming interface
 
@@ -623,7 +623,7 @@ ___
 
 ▸ **SettingsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6372)*
+*Defined in [api.ts:6378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6378)*
 
 SettingsApi - axios parameter creator
 
@@ -642,7 +642,7 @@ ___
 
 ▸ **SettingsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:6651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6651)*
+*Defined in [api.ts:6657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6657)*
 
 SettingsApi - factory interface
 
@@ -663,7 +663,7 @@ ___
 
 ▸ **SettingsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6573)*
+*Defined in [api.ts:6579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6579)*
 
 SettingsApi - functional programming interface
 
@@ -682,7 +682,7 @@ ___
 
 ▸ **TagsApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6777)*
+*Defined in [api.ts:6783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6783)*
 
 TagsApi - axios parameter creator
 
@@ -701,7 +701,7 @@ ___
 
 ▸ **TagsApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:7000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7000)*
+*Defined in [api.ts:7006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7006)*
 
 TagsApi - factory interface
 
@@ -722,7 +722,7 @@ ___
 
 ▸ **TagsApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:6936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6936)*
+*Defined in [api.ts:6942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6942)*
 
 TagsApi - functional programming interface
 
@@ -741,7 +741,7 @@ ___
 
 ▸ **TenantApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:7104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7104)*
+*Defined in [api.ts:7110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7110)*
 
 TenantApi - axios parameter creator
 
@@ -760,7 +760,7 @@ ___
 
 ▸ **TenantApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:7274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7274)*
+*Defined in [api.ts:7280](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7280)*
 
 TenantApi - factory interface
 
@@ -781,7 +781,7 @@ ___
 
 ▸ **TenantApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:7224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7224)*
+*Defined in [api.ts:7230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7230)*
 
 TenantApi - functional programming interface
 
