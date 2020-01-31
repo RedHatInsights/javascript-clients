@@ -31,7 +31,7 @@
 
 **● createJsonSchema**: *`any`*
 
-*Defined in [api.ts:974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L974)*
+*Defined in [api.ts:966](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L966)*
 
 JSON schema for the object.
 
@@ -46,7 +46,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L968)*
+*Defined in [api.ts:960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L960)*
 
 The service plan description.
 
@@ -61,7 +61,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L986)*
+*Defined in [api.ts:978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L978)*
 
 The unique identifier for this service plan.
 
@@ -76,7 +76,7 @@ ___
 
 **● modified**: *`boolean`*
 
-*Defined in [api.ts:992](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L992)*
+*Defined in [api.ts:984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L984)*
 
 Whether or not the ServicePlan has a modified create\_json\_schema property
 
@@ -91,7 +91,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L962)*
+*Defined in [api.ts:954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L954)*
 
 The name of the service plan.
 
@@ -106,7 +106,7 @@ ___
 
 **● portfolioItemId**: *`string`*
 
-*Defined in [api.ts:980](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L980)*
+*Defined in [api.ts:972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L972)*
 
 The reference ID of the Portfolio Item
 

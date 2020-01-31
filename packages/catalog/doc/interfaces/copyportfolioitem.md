@@ -27,7 +27,7 @@
 
 **● portfolioId**: *`string`*
 
-*Defined in [api.ts:230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L230)*
+*Defined in [api.ts:216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L216)*
 
 The portfolio to place the new copy of the Portfolio Item in
 
@@ -42,7 +42,7 @@ ___
 
 **● portfolioItemName**: *`string`*
 
-*Defined in [api.ts:236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L236)*
+*Defined in [api.ts:222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L222)*
 
 The name of the copied portfolio item
 

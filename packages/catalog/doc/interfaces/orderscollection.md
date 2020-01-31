@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[Order](../modules/order.md)>*
 
-*Defined in [api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L613)*
+*Defined in [api.ts:605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L605)*
 
 *__type__*: {Array}
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L607)*
+*Defined in [api.ts:599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L599)*
 
 *__type__*: {CollectionLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L601)*
+*Defined in [api.ts:593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L593)*
 
 *__type__*: {CollectionMetadata}
 
