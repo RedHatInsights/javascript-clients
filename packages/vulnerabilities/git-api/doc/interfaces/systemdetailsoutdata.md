@@ -17,6 +17,7 @@
 * [lastEvaluation](systemdetailsoutdata.md#lastevaluation)
 * [lastUpload](systemdetailsoutdata.md#lastupload)
 * [optOut](systemdetailsoutdata.md#optout)
+* [stale](systemdetailsoutdata.md#stale)
 
 ---
 
@@ -61,6 +62,21 @@ ___
 *Defined in [git-api/api.ts:1303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1303)*
 
 System opt out status.
+
+*__type__*: {boolean}
+
+*__memberof__*: SystemDetailsOutData
+
+___
+<a id="stale"></a>
+
+### `<Optional>` stale
+
+**● stale**: *`boolean`*
+
+*Defined in [git-api/api.ts:1315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1315)*
+
+System stale status.
 
 *__type__*: {boolean}
 

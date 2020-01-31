@@ -26,7 +26,7 @@
 
 **● modified**: *`any`*
 
-*Defined in [api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L627)*
+*Defined in [api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L619)*
 
 the new modified schema for the service plan
 
