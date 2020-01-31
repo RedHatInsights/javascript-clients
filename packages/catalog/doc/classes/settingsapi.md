@@ -106,7 +106,7 @@ ___
 
 ▸ **createSetting**(setting: *[Setting](../interfaces/setting.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:6720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6720)*
+*Defined in [api.ts:6599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6599)*
 
 Create Tenant Setting
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **destroySetting**(name: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:6732](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6732)*
+*Defined in [api.ts:6611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6611)*
 
 Delete a Tenant Setting
 
@@ -158,7 +158,7 @@ ___
 
 ▸ **listSettings**(options?: *`any`*): `AxiosPromise`<[TenantSettings](../interfaces/tenantsettings.md)>
 
-*Defined in [api.ts:6743](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6743)*
+*Defined in [api.ts:6622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6622)*
 
 List Tenant Settings
 
@@ -183,7 +183,7 @@ ___
 
 ▸ **showSetting**(name: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:6755](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6755)*
+*Defined in [api.ts:6634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6634)*
 
 Get a specific Tenant Setting
 
@@ -209,7 +209,7 @@ ___
 
 ▸ **updateSetting**(name: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:6767](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6767)*
+*Defined in [api.ts:6646](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6646)*
 
 Update a Tenant Setting
 

@@ -26,7 +26,7 @@
 
 **● issues**: *`Array`<`string`>*
 
-*Defined in [api.ts:638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L638)*
+*Defined in [api.ts:728](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L728)*
 
 *__type__*: {Array}
 

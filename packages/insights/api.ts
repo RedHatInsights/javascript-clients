@@ -5091,6 +5091,98 @@ export class TotalRiskApi extends BaseAPI {
 }
 
 /**
+ * UsageApi - axios parameter creator
+ * @export
+ */
+export const UsageApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns the amount of unique rule hits within an account over the specified time range.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        usageList(options: any = {}): RequestArgs {
+            const localVarPath = `/usage/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * UsageApi - functional programming interface
+ * @export
+ */
+export const UsageApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Returns the amount of unique rule hits within an account over the specified time range.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        usageList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = UsageApiAxiosParamCreator(configuration).usageList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * UsageApi - factory interface
+ * @export
+ */
+export const UsageApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Returns the amount of unique rule hits within an account over the specified time range.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        usageList(options?: any) {
+            return UsageApiFp(configuration).usageList(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * UsageApi - object-oriented interface
+ * @export
+ * @class UsageApi
+ * @extends {BaseAPI}
+ */
+export class UsageApi extends BaseAPI {
+    /**
+     * Returns the amount of unique rule hits within an account over the specified time range.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UsageApi
+     */
+    public usageList(options?: any) {
+        return UsageApiFp(this.configuration).usageList(options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
  * WeeklyreportsubscriptionApi - axios parameter creator
  * @export
  */

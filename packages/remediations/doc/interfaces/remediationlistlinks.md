@@ -29,7 +29,7 @@
 
 **● first**: *`string`*
 
-*Defined in [api.ts:495](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L495)*
+*Defined in [api.ts:605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L605)*
 
 relative link to the first page of the query results
 
@@ -44,7 +44,7 @@ ___
 
 **● last**: *`string`*
 
-*Defined in [api.ts:501](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L501)*
+*Defined in [api.ts:611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L611)*
 
 relative link to the last page of the query results
 
@@ -59,7 +59,7 @@ ___
 
 **● next**: *`string` \| `null`*
 
-*Defined in [api.ts:507](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L507)*
+*Defined in [api.ts:617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L617)*
 
 relative link to the next page of the query results (or null if this is the last page)
 
@@ -74,7 +74,7 @@ ___
 
 **● previous**: *`string` \| `null`*
 
-*Defined in [api.ts:513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L513)*
+*Defined in [api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L623)*
 
 relative link to the previous page of the query results (or null if this is the first page)
 

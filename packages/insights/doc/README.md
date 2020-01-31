@@ -110,6 +110,7 @@ API documentation
 * [SystemtypeApi](classes/systemtypeapi.md)
 * [TopicApi](classes/topicapi.md)
 * [TotalRiskApi](classes/totalriskapi.md)
+* [UsageApi](classes/usageapi.md)
 * [WeeklyreportsubscriptionApi](classes/weeklyreportsubscriptionapi.md)
 
 ### Interfaces
@@ -199,6 +200,9 @@ API documentation
 * [TotalRiskApiAxiosParamCreator](#totalriskapiaxiosparamcreator)
 * [TotalRiskApiFactory](#totalriskapifactory)
 * [TotalRiskApiFp](#totalriskapifp)
+* [UsageApiAxiosParamCreator](#usageapiaxiosparamcreator)
+* [UsageApiFactory](#usageapifactory)
+* [UsageApiFp](#usageapifp)
 * [WeeklyreportsubscriptionApiAxiosParamCreator](#weeklyreportsubscriptionapiaxiosparamcreator)
 * [WeeklyreportsubscriptionApiFactory](#weeklyreportsubscriptionapifactory)
 * [WeeklyreportsubscriptionApiFp](#weeklyreportsubscriptionapifp)
@@ -1049,13 +1053,72 @@ TotalRiskApi - functional programming interface
 **Returns:** `object`
 
 ___
+<a id="usageapiaxiosparamcreator"></a>
+
+### `<Const>` UsageApiAxiosParamCreator
+
+▸ **UsageApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:5097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5097)*
+
+UsageApi - axios parameter creator
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
+<a id="usageapifactory"></a>
+
+### `<Const>` UsageApiFactory
+
+▸ **UsageApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
+
+*Defined in [api.ts:5153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5153)*
+
+UsageApi - factory interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+| `Optional` basePath | `string` |
+| `Optional` axios | `AxiosInstance` |
+
+**Returns:** `object`
+
+___
+<a id="usageapifp"></a>
+
+### `<Const>` UsageApiFp
+
+▸ **UsageApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
+
+*Defined in [api.ts:5132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5132)*
+
+UsageApi - functional programming interface
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` configuration | [Configuration](classes/configuration.md) |
+
+**Returns:** `object`
+
+___
 <a id="weeklyreportsubscriptionapiaxiosparamcreator"></a>
 
 ### `<Const>` WeeklyreportsubscriptionApiAxiosParamCreator
 
 ▸ **WeeklyreportsubscriptionApiAxiosParamCreator**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5097)*
+*Defined in [api.ts:5189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5189)*
 
 WeeklyreportsubscriptionApi - axios parameter creator
 
@@ -1074,7 +1137,7 @@ ___
 
 ▸ **WeeklyreportsubscriptionApiFactory**(configuration?: *[Configuration](classes/configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): `object`
 
-*Defined in [api.ts:5201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5201)*
+*Defined in [api.ts:5293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5293)*
 
 WeeklyreportsubscriptionApi - factory interface
 
@@ -1095,7 +1158,7 @@ ___
 
 ▸ **WeeklyreportsubscriptionApiFp**(configuration?: *[Configuration](classes/configuration.md)*): `object`
 
-*Defined in [api.ts:5167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5167)*
+*Defined in [api.ts:5259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5259)*
 
 WeeklyreportsubscriptionApi - functional programming interface
 

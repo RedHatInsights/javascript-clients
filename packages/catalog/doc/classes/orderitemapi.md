@@ -107,7 +107,7 @@ ___
 
 ▸ **destroyOrderItem**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[RestoreKey](../interfaces/restorekey.md)>
 
-*Defined in [api.ts:3222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3222)*
+*Defined in [api.ts:3188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3188)*
 
 Deletes the order item based on order item ID passed
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **listApprovalRequests**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ApprovalRequestsCollection](../interfaces/approvalrequestscollection.md)>
 
-*Defined in [api.ts:3237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3237)*
+*Defined in [api.ts:3203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3203)*
 
 Gets a list of approval request associated with an order item. As the item is being approved one can check the status of the approvals.
 
@@ -162,7 +162,7 @@ ___
 
 ▸ **listOrderItems**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[OrderItemsCollection](../interfaces/orderitemscollection.md)>
 
-*Defined in [api.ts:3251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3251)*
+*Defined in [api.ts:3217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3217)*
 
 Gets a list of order items.
 
@@ -190,7 +190,7 @@ ___
 
 ▸ **listProgressMessages**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ProgressMessagesCollection](../interfaces/progressmessagescollection.md)>
 
-*Defined in [api.ts:3266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3266)*
+*Defined in [api.ts:3232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3232)*
 
 Gets a list of progress messages associated with an order item. As the item is being processed the provider can update the progress messages.
 
@@ -219,7 +219,7 @@ ___
 
 ▸ **restoreOrderItem**(id: *`string`*, restoreKey: *[RestoreKey](../interfaces/restorekey.md)*, options?: *`any`*): `AxiosPromise`<[OrderItem](../modules/orderitem.md)>
 
-*Defined in [api.ts:3279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3279)*
+*Defined in [api.ts:3245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3245)*
 
 Restores the order item specified by the order item ID.
 
@@ -246,7 +246,7 @@ ___
 
 ▸ **showOrderItem**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[OrderItem](../modules/orderitem.md)>
 
-*Defined in [api.ts:3291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3291)*
+*Defined in [api.ts:3257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3257)*
 
 Gets a specific order item based on the order item ID passed
 

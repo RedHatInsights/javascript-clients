@@ -30,10 +30,7 @@ TagsApi - object-oriented interface
 
 ### Methods
 
-* [listTagPortfolioItems](tagsapi.md#listtagportfolioitems)
-* [listTagPortfolios](tagsapi.md#listtagportfolios)
 * [listTags](tagsapi.md#listtags)
-* [showTag](tagsapi.md#showtag)
 
 ---
 
@@ -99,65 +96,13 @@ ___
 
 ## Methods
 
-<a id="listtagportfolioitems"></a>
-
-###  listTagPortfolioItems
-
-▸ **listTagPortfolioItems**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[PortfolioItemsCollection](../interfaces/portfolioitemscollection.md)>
-
-*Defined in [api.ts:7059](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7059)*
-
-Returns an array of Portfolio Item objects
-
-*__summary__*: List Portfolio Items for Tag
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: TagsApi
-
-**Parameters:**
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
-
-**Returns:** `AxiosPromise`<[PortfolioItemsCollection](../interfaces/portfolioitemscollection.md)>
-
-___
-<a id="listtagportfolios"></a>
-
-###  listTagPortfolios
-
-▸ **listTagPortfolios**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[PortfoliosCollection](../interfaces/portfolioscollection.md)>
-
-*Defined in [api.ts:7071](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7071)*
-
-Returns an array of Portfolio objects
-
-*__summary__*: List Portfolios for Tag
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: TagsApi
-
-**Parameters:**
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
-
-**Returns:** `AxiosPromise`<[PortfoliosCollection](../interfaces/portfolioscollection.md)>
-
-___
 <a id="listtags"></a>
 
 ###  listTags
 
 ▸ **listTags**(options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
 
-*Defined in [api.ts:7082](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7082)*
+*Defined in [api.ts:6748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6748)*
 
 List Tags
 
@@ -174,32 +119,6 @@ List Tags
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
-
-___
-<a id="showtag"></a>
-
-###  showTag
-
-▸ **showTag**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Tag](../interfaces/tag.md)>
-
-*Defined in [api.ts:7094](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7094)*
-
-Show a specific Tag
-
-*__summary__*: Show Tag
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: TagsApi
-
-**Parameters:**
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
-
-**Returns:** `AxiosPromise`<[Tag](../interfaces/tag.md)>
 
 ___
 

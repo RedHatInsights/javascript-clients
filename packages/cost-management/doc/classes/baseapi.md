@@ -28,10 +28,6 @@
 
 ↳  [SourcesApi](sourcesapi.md)
 
-↳  [SourcesAuthenticationApi](sourcesauthenticationapi.md)
-
-↳  [SourcesBillingSourceApi](sourcesbillingsourceapi.md)
-
 ↳  [StatusApi](statusapi.md)
 
 ↳  [TagsApi](tagsapi.md)

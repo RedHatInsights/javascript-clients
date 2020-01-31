@@ -27,7 +27,7 @@
 
 **● email**: *`string`*
 
-*Defined in [api.ts:3102](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3102)*
+*Defined in [api.ts:2994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2994)*
 
 *__type__*: {string}
 
@@ -40,7 +40,7 @@ ___
 
 **● username**: *`string`*
 
-*Defined in [api.ts:3096](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3096)*
+*Defined in [api.ts:2988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2988)*
 
 *__type__*: {string}
 

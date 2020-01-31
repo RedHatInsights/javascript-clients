@@ -104,7 +104,7 @@ ___
 
 ▸ **listTenants**(options?: *`any`*): `AxiosPromise`<[TenantsCollection](../interfaces/tenantscollection.md)>
 
-*Defined in [api.ts:7322](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7322)*
+*Defined in [api.ts:6976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6976)*
 
 Get a list of tenants.
 
@@ -129,7 +129,7 @@ ___
 
 ▸ **showTenant**(tenantId: *`string`*, options?: *`any`*): `AxiosPromise`<[Tenant](../interfaces/tenant.md)>
 
-*Defined in [api.ts:7334](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7334)*
+*Defined in [api.ts:6988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6988)*
 
 Gets the tenant specified by the tenant id.
 
@@ -155,7 +155,7 @@ ___
 
 ▸ **tenantSeed**(tenantId: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:7346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7346)*
+*Defined in [api.ts:7000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7000)*
 
 Run a task to seed the Tenant Groups required for an org admin to onboard additional users.
 

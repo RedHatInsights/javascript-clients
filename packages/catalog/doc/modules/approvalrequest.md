@@ -31,7 +31,7 @@
 
 **● approvalRequestRef**: *`string`*
 
-*Defined in [api.ts:103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L103)*
+*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L89)*
 
 The id of the approval submitted to approval-api
 
@@ -46,7 +46,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L97)*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L83)*
 
 The unique identifier for this approval request.
 
@@ -61,7 +61,7 @@ ___
 
 **● orderItemId**: *`string`*
 
-*Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L109)*
+*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L95)*
 
 The Order Item which the approval request belongs to
 
@@ -76,7 +76,7 @@ ___
 
 **● reason**: *`string`*
 
-*Defined in [api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L115)*
+*Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L101)*
 
 The reason for the current state.
 
@@ -91,7 +91,7 @@ ___
 
 **● requestCompletedAt**: *`Date`*
 
-*Defined in [api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L121)*
+*Defined in [api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L107)*
 
 *__type__*: {Date}
 
@@ -104,7 +104,7 @@ ___
 
 **● state**: *[StateEnum](../enums/approvalrequest.stateenum.md)*
 
-*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L127)*
+*Defined in [api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L113)*
 
 The state of the approval request (approved, denied, undecided, canceled)
 
