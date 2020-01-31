@@ -2881,114 +2881,6 @@ export interface SourcePagination {
 /**
  *
  * @export
- * @interface SourcesAuthentication
- */
-export interface SourcesAuthentication {
-    /**
-     *
-     * @type {number}
-     * @memberof SourcesAuthentication
-     */
-    sourceId: number;
-    /**
-     *
-     * @type {SourcesAuthenticationIn}
-     * @memberof SourcesAuthentication
-     */
-    credentials: SourcesAuthenticationIn;
-}
-
-/**
- *
- * @export
- * @interface SourcesAuthenticationIn
- */
-export interface SourcesAuthenticationIn {
-    /**
-     *
-     * @type {any}
-     * @memberof SourcesAuthenticationIn
-     */
-    credentials?: any;
-}
-
-/**
- *
- * @export
- * @interface SourcesAuthenticationOut
- */
-export interface SourcesAuthenticationOut {
-    /**
-     *
-     * @type {any}
-     * @memberof SourcesAuthenticationOut
-     */
-    credentials?: any;
-    /**
-     *
-     * @type {number}
-     * @memberof SourcesAuthenticationOut
-     */
-    uuid?: number;
-}
-
-/**
- *
- * @export
- * @interface SourcesBillingSource
- */
-export interface SourcesBillingSource {
-    /**
-     *
-     * @type {number}
-     * @memberof SourcesBillingSource
-     */
-    sourceId: number;
-    /**
-     *
-     * @type {SourcesBillingSourceIn}
-     * @memberof SourcesBillingSource
-     */
-    billingSource: SourcesBillingSourceIn;
-}
-
-/**
- *
- * @export
- * @interface SourcesBillingSourceIn
- */
-export interface SourcesBillingSourceIn {
-    /**
-     *
-     * @type {any}
-     * @memberof SourcesBillingSourceIn
-     */
-    billingSource?: any;
-}
-
-/**
- *
- * @export
- * @interface SourcesBillingSourceOut
- */
-export interface SourcesBillingSourceOut {
-    /**
-     *
-     * @type {any}
-     * @memberof SourcesBillingSourceOut
-     */
-    billingSource?: any;
-    /**
-     *
-     * @type {number}
-     * @memberof SourcesBillingSourceOut
-     */
-    uuid?: number;
-}
-
-/**
- *
- * @export
  * @interface Status
  */
 export interface Status {
@@ -6154,10 +6046,11 @@ export const ProviderApiAxiosParamCreator = function (configuration?: Configurat
          *
          * @summary Get a provider
          * @param {string} uuid ID of provider to get
+         * @param {'true' | 'false'} [stats] Include provider status
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getProvider(uuid: string, options: any = {}): RequestArgs {
+        getProvider(uuid: string, stats?: 'true' | 'false', options: any = {}): RequestArgs {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getProvider.');
@@ -6179,6 +6072,10 @@ export const ProviderApiAxiosParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
             }
 
+            if (stats !== undefined) {
+                localVarQueryParameter['stats'] = stats;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6194,12 +6091,13 @@ export const ProviderApiAxiosParamCreator = function (configuration?: Configurat
          * @summary List the providers
          * @param {string} [type] The type of provider to filter for.
          * @param {string} [name] The name of the provider to filter for.
+         * @param {'true' | 'false'} [stats] Include provider status
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {number} [limit] Parameter for selecting the amount of data in a returned.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listProviders(type?: string, name?: string, offset?: number, limit?: number, options: any = {}): RequestArgs {
+        listProviders(type?: string, name?: string, stats?: 'true' | 'false', offset?: number, limit?: number, options: any = {}): RequestArgs {
             const localVarPath = `/providers/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -6222,6 +6120,10 @@ export const ProviderApiAxiosParamCreator = function (configuration?: Configurat
 
             if (name !== undefined) {
                 localVarQueryParameter['name'] = name;
+            }
+
+            if (stats !== undefined) {
+                localVarQueryParameter['stats'] = stats;
             }
 
             if (offset !== undefined) {
@@ -6331,11 +6233,12 @@ export const ProviderApiFp = function(configuration?: Configuration) {
          *
          * @summary Get a provider
          * @param {string} uuid ID of provider to get
+         * @param {'true' | 'false'} [stats] Include provider status
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getProvider(uuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProviderOut> {
-            const localVarAxiosArgs = ProviderApiAxiosParamCreator(configuration).getProvider(uuid, options);
+        getProvider(uuid: string, stats?: 'true' | 'false', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProviderOut> {
+            const localVarAxiosArgs = ProviderApiAxiosParamCreator(configuration).getProvider(uuid, stats, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -6346,13 +6249,14 @@ export const ProviderApiFp = function(configuration?: Configuration) {
          * @summary List the providers
          * @param {string} [type] The type of provider to filter for.
          * @param {string} [name] The name of the provider to filter for.
+         * @param {'true' | 'false'} [stats] Include provider status
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {number} [limit] Parameter for selecting the amount of data in a returned.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listProviders(type?: string, name?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProviderPagination> {
-            const localVarAxiosArgs = ProviderApiAxiosParamCreator(configuration).listProviders(type, name, offset, limit, options);
+        listProviders(type?: string, name?: string, stats?: 'true' | 'false', offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProviderPagination> {
+            const localVarAxiosArgs = ProviderApiAxiosParamCreator(configuration).listProviders(type, name, stats, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -6406,24 +6310,26 @@ export const ProviderApiFactory = function (configuration?: Configuration, baseP
          *
          * @summary Get a provider
          * @param {string} uuid ID of provider to get
+         * @param {'true' | 'false'} [stats] Include provider status
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getProvider(uuid: string, options?: any) {
-            return ProviderApiFp(configuration).getProvider(uuid, options)(axios, basePath);
+        getProvider(uuid: string, stats?: 'true' | 'false', options?: any) {
+            return ProviderApiFp(configuration).getProvider(uuid, stats, options)(axios, basePath);
         },
         /**
          *
          * @summary List the providers
          * @param {string} [type] The type of provider to filter for.
          * @param {string} [name] The name of the provider to filter for.
+         * @param {'true' | 'false'} [stats] Include provider status
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {number} [limit] Parameter for selecting the amount of data in a returned.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listProviders(type?: string, name?: string, offset?: number, limit?: number, options?: any) {
-            return ProviderApiFp(configuration).listProviders(type, name, offset, limit, options)(axios, basePath);
+        listProviders(type?: string, name?: string, stats?: 'true' | 'false', offset?: number, limit?: number, options?: any) {
+            return ProviderApiFp(configuration).listProviders(type, name, stats, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -6474,12 +6380,13 @@ export class ProviderApi extends BaseAPI {
      *
      * @summary Get a provider
      * @param {string} uuid ID of provider to get
+     * @param {'true' | 'false'} [stats] Include provider status
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProviderApi
      */
-    public getProvider(uuid: string, options?: any) {
-        return ProviderApiFp(this.configuration).getProvider(uuid, options)(this.axios, this.basePath);
+    public getProvider(uuid: string, stats?: 'true' | 'false', options?: any) {
+        return ProviderApiFp(this.configuration).getProvider(uuid, stats, options)(this.axios, this.basePath);
     }
 
     /**
@@ -6487,14 +6394,15 @@ export class ProviderApi extends BaseAPI {
      * @summary List the providers
      * @param {string} [type] The type of provider to filter for.
      * @param {string} [name] The name of the provider to filter for.
+     * @param {'true' | 'false'} [stats] Include provider status
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProviderApi
      */
-    public listProviders(type?: string, name?: string, offset?: number, limit?: number, options?: any) {
-        return ProviderApiFp(this.configuration).listProviders(type, name, offset, limit, options)(this.axios, this.basePath);
+    public listProviders(type?: string, name?: string, stats?: 'true' | 'false', offset?: number, limit?: number, options?: any) {
+        return ProviderApiFp(this.configuration).listProviders(type, name, stats, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -6754,234 +6662,6 @@ export class SourcesApi extends BaseAPI {
      */
     public updateSource(sourceId: number, sourceIn: SourceIn, options?: any) {
         return SourcesApiFp(this.configuration).updateSource(sourceId, sourceIn, options)(this.axios, this.basePath);
-    }
-
-}
-
-/**
- * SourcesAuthenticationApi - axios parameter creator
- * @export
- */
-export const SourcesAuthenticationApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @summary Create an authentication entry for a Platform-Source.
-         * @param {SourcesAuthentication} sourcesAuthentication
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createAuthentication(sourcesAuthentication: SourcesAuthentication, options: any = {}): RequestArgs {
-            // verify required parameter 'sourcesAuthentication' is not null or undefined
-            if (sourcesAuthentication === null || sourcesAuthentication === undefined) {
-                throw new RequiredError('sourcesAuthentication','Required parameter sourcesAuthentication was null or undefined when calling createAuthentication.');
-            }
-            const localVarPath = `/sources/authentication/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"SourcesAuthentication" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(sourcesAuthentication || {}) : (sourcesAuthentication || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * SourcesAuthenticationApi - functional programming interface
- * @export
- */
-export const SourcesAuthenticationApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @summary Create an authentication entry for a Platform-Source.
-         * @param {SourcesAuthentication} sourcesAuthentication
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createAuthentication(sourcesAuthentication: SourcesAuthentication, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesAuthenticationOut> {
-            const localVarAxiosArgs = SourcesAuthenticationApiAxiosParamCreator(configuration).createAuthentication(sourcesAuthentication, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * SourcesAuthenticationApi - factory interface
- * @export
- */
-export const SourcesAuthenticationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         *
-         * @summary Create an authentication entry for a Platform-Source.
-         * @param {SourcesAuthentication} sourcesAuthentication
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createAuthentication(sourcesAuthentication: SourcesAuthentication, options?: any) {
-            return SourcesAuthenticationApiFp(configuration).createAuthentication(sourcesAuthentication, options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * SourcesAuthenticationApi - object-oriented interface
- * @export
- * @class SourcesAuthenticationApi
- * @extends {BaseAPI}
- */
-export class SourcesAuthenticationApi extends BaseAPI {
-    /**
-     *
-     * @summary Create an authentication entry for a Platform-Source.
-     * @param {SourcesAuthentication} sourcesAuthentication
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof SourcesAuthenticationApi
-     */
-    public createAuthentication(sourcesAuthentication: SourcesAuthentication, options?: any) {
-        return SourcesAuthenticationApiFp(this.configuration).createAuthentication(sourcesAuthentication, options)(this.axios, this.basePath);
-    }
-
-}
-
-/**
- * SourcesBillingSourceApi - axios parameter creator
- * @export
- */
-export const SourcesBillingSourceApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @summary Create a billing source for a Platform-Source.
-         * @param {SourcesBillingSource} sourcesBillingSource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createBillingSource(sourcesBillingSource: SourcesBillingSource, options: any = {}): RequestArgs {
-            // verify required parameter 'sourcesBillingSource' is not null or undefined
-            if (sourcesBillingSource === null || sourcesBillingSource === undefined) {
-                throw new RequiredError('sourcesBillingSource','Required parameter sourcesBillingSource was null or undefined when calling createBillingSource.');
-            }
-            const localVarPath = `/sources/billing_source/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"SourcesBillingSource" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(sourcesBillingSource || {}) : (sourcesBillingSource || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * SourcesBillingSourceApi - functional programming interface
- * @export
- */
-export const SourcesBillingSourceApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @summary Create a billing source for a Platform-Source.
-         * @param {SourcesBillingSource} sourcesBillingSource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createBillingSource(sourcesBillingSource: SourcesBillingSource, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesBillingSourceOut> {
-            const localVarAxiosArgs = SourcesBillingSourceApiAxiosParamCreator(configuration).createBillingSource(sourcesBillingSource, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * SourcesBillingSourceApi - factory interface
- * @export
- */
-export const SourcesBillingSourceApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         *
-         * @summary Create a billing source for a Platform-Source.
-         * @param {SourcesBillingSource} sourcesBillingSource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createBillingSource(sourcesBillingSource: SourcesBillingSource, options?: any) {
-            return SourcesBillingSourceApiFp(configuration).createBillingSource(sourcesBillingSource, options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * SourcesBillingSourceApi - object-oriented interface
- * @export
- * @class SourcesBillingSourceApi
- * @extends {BaseAPI}
- */
-export class SourcesBillingSourceApi extends BaseAPI {
-    /**
-     *
-     * @summary Create a billing source for a Platform-Source.
-     * @param {SourcesBillingSource} sourcesBillingSource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof SourcesBillingSourceApi
-     */
-    public createBillingSource(sourcesBillingSource: SourcesBillingSource, options?: any) {
-        return SourcesBillingSourceApiFp(this.configuration).createBillingSource(sourcesBillingSource, options)(this.axios, this.basePath);
     }
 
 }

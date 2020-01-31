@@ -106,7 +106,7 @@ ___
 
 ▸ **createProvider**(providerIn: *[ProviderIn](../interfaces/providerin.md)*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
-*Defined in [api.ts:6457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6457)*
+*Defined in [api.ts:6363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6363)*
 
 *__summary__*: Create a provider
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **deleteProvider**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:6469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6469)*
+*Defined in [api.ts:6375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6375)*
 
 *__summary__*: Delete a provider
 
@@ -152,9 +152,9 @@ ___
 
 ###  getProvider
 
-▸ **getProvider**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
+▸ **getProvider**(uuid: *`string`*, stats?: *"true" \| "false"*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
-*Defined in [api.ts:6481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6481)*
+*Defined in [api.ts:6388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6388)*
 
 *__summary__*: Get a provider
 
@@ -167,6 +167,7 @@ ___
 | Name | Type | Description |
 | ------ | ------ | ------ |
 | uuid | `string` |  ID of provider to get |
+| `Optional` stats | "true" \| "false" |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
@@ -176,9 +177,9 @@ ___
 
 ###  listProviders
 
-▸ **listProviders**(type?: *`string`*, name?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ProviderPagination](../interfaces/providerpagination.md)>
+▸ **listProviders**(type?: *`string`*, name?: *`string`*, stats?: *"true" \| "false"*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ProviderPagination](../interfaces/providerpagination.md)>
 
-*Defined in [api.ts:6496](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6496)*
+*Defined in [api.ts:6404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6404)*
 
 *__summary__*: List the providers
 
@@ -192,6 +193,7 @@ ___
 | ------ | ------ |
 | `Optional` type | `string` |
 | `Optional` name | `string` |
+| `Optional` stats | "true" \| "false" |
 | `Optional` offset | `number` |
 | `Optional` limit | `number` |
 | `Optional` options | `any` |
@@ -205,7 +207,7 @@ ___
 
 ▸ **updateProvider**(uuid: *`string`*, providerIn: *[ProviderIn](../interfaces/providerin.md)*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
-*Defined in [api.ts:6509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6509)*
+*Defined in [api.ts:6417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6417)*
 
 *__summary__*: Update a provider
 

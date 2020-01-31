@@ -104,7 +104,7 @@ ___
 
 ▸ **getAzureCostReports**(delta?: *`string`*, filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportCost](../interfaces/reportcost.md)>
 
-*Defined in [api.ts:3938](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3938)*
+*Defined in [api.ts:3830](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3830)*
 
 *__summary__*: Query to obtain cost reports
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **getAzureInstanceReports**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportInstanceInventory](../interfaces/reportinstanceinventory.md)>
 
-*Defined in [api.ts:3955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3955)*
+*Defined in [api.ts:3847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3847)*
 
 *__summary__*: Query to obtain Azure instance type data
 
@@ -162,7 +162,7 @@ ___
 
 ▸ **getAzureStorageReports**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportStorageInventory](../interfaces/reportstorageinventory.md)>
 
-*Defined in [api.ts:3972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3972)*
+*Defined in [api.ts:3864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3864)*
 
 *__summary__*: Query to obtain AWS storage data
 

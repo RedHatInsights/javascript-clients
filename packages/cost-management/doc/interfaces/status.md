@@ -32,7 +32,7 @@
 
 **● apiVersion**: *`number`*
 
-*Defined in [api.ts:3000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3000)*
+*Defined in [api.ts:2892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2892)*
 
 *__type__*: {number}
 
@@ -45,7 +45,7 @@ ___
 
 **● commit**: *`string`*
 
-*Defined in [api.ts:3006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3006)*
+*Defined in [api.ts:2898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2898)*
 
 *__type__*: {string}
 
@@ -58,7 +58,7 @@ ___
 
 **● modules**: *`any`*
 
-*Defined in [api.ts:3036](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3036)*
+*Defined in [api.ts:2928](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2928)*
 
 *__type__*: {any}
 
@@ -71,7 +71,7 @@ ___
 
 **● platformInfo**: *`any`*
 
-*Defined in [api.ts:3024](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3024)*
+*Defined in [api.ts:2916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2916)*
 
 *__type__*: {any}
 
@@ -84,7 +84,7 @@ ___
 
 **● pythonVersion**: *`string`*
 
-*Defined in [api.ts:3030](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3030)*
+*Defined in [api.ts:2922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2922)*
 
 *__type__*: {string}
 
@@ -97,7 +97,7 @@ ___
 
 **● rbacCacheTtl**: *`number`*
 
-*Defined in [api.ts:3018](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3018)*
+*Defined in [api.ts:2910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2910)*
 
 *__type__*: {number}
 
@@ -110,7 +110,7 @@ ___
 
 **● serverAddress**: *`string`*
 
-*Defined in [api.ts:3012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3012)*
+*Defined in [api.ts:2904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2904)*
 
 *__type__*: {string}
 
