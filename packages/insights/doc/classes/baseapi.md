@@ -18,6 +18,8 @@
 
 ↳  [HostackApi](hostackapi.md)
 
+↳  [KcsApi](kcsapi.md)
+
 ↳  [RatingApi](ratingapi.md)
 
 ↳  [ResolutionRiskApi](resolutionriskapi.md)
@@ -33,6 +35,8 @@
 ↳  [SystemApi](systemapi.md)
 
 ↳  [SystemtypeApi](systemtypeapi.md)
+
+↳  [TagApi](tagapi.md)
 
 ↳  [TopicApi](topicapi.md)
 

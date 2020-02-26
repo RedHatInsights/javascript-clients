@@ -76,7 +76,7 @@ ___
 
 *Defined in [api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L107)*
 
-Types of action, may be one of the value (approve, cancel, deny, notify, memo, skip, or start). The request state will be updated according to the operation.
+Types of action, may be one of the value (approve, cancel, deny, error, notify, memo, skip, or start). The request state will be updated according to the operation.
 
 *__type__*: {string}
 

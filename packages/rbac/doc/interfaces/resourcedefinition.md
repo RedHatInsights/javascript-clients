@@ -26,7 +26,7 @@
 
 **● attributeFilter**: *[ResourceDefinitionFilter](../modules/resourcedefinitionfilter.md)*
 
-*Defined in [api.ts:731](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L731)*
+*Defined in [api.ts:745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L745)*
 
 *__type__*: {ResourceDefinitionFilter}
 

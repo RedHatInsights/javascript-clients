@@ -464,23 +464,83 @@ export interface ExecutiveReport {
  */
 export interface ExecutiveReportCvesBySeverity {
     /**
-     * Number of CVEs with CVSS score lower than 4.
-     * @type {number}
+     *
+     * @type {any}
      * @memberof ExecutiveReportCvesBySeverity
      */
-    _0to39: number;
+    _0to39: any;
+    /**
+     *
+     * @type {any}
+     * @memberof ExecutiveReportCvesBySeverity
+     */
+    _4to79: any;
+    /**
+     *
+     * @type {ExecutiveReportCvesBySeverity8to10}
+     * @memberof ExecutiveReportCvesBySeverity
+     */
+    _8to10: ExecutiveReportCvesBySeverity8to10;
+}
+
+/**
+ *
+ * @export
+ * @interface ExecutiveReportCvesBySeverity0to39
+ */
+export interface ExecutiveReportCvesBySeverity0to39 {
+    /**
+     * Number of CVEs with CVSS score lower than 4.
+     * @type {number}
+     * @memberof ExecutiveReportCvesBySeverity0to39
+     */
+    count: number;
+    /**
+     * Percentage of CVEs with CVSS score lower than 4.
+     * @type {number}
+     * @memberof ExecutiveReportCvesBySeverity0to39
+     */
+    percentage: number;
+}
+
+/**
+ *
+ * @export
+ * @interface ExecutiveReportCvesBySeverity4to79
+ */
+export interface ExecutiveReportCvesBySeverity4to79 {
     /**
      * Number of CVEs with CVSS score higher or equal to 4 and lower then 8.
      * @type {number}
-     * @memberof ExecutiveReportCvesBySeverity
+     * @memberof ExecutiveReportCvesBySeverity4to79
      */
-    _4to79: number;
+    count: number;
+    /**
+     * Percentage of CVEs with CVSS score higher or equal to 4 and lower then 8.
+     * @type {number}
+     * @memberof ExecutiveReportCvesBySeverity4to79
+     */
+    percentage: number;
+}
+
+/**
+ *
+ * @export
+ * @interface ExecutiveReportCvesBySeverity8to10
+ */
+export interface ExecutiveReportCvesBySeverity8to10 {
     /**
      * Number of CVEs with CVSS score higher or equal to 8.
      * @type {number}
-     * @memberof ExecutiveReportCvesBySeverity
+     * @memberof ExecutiveReportCvesBySeverity8to10
      */
-    _8to10: number;
+    count: number;
+    /**
+     * Percentage of CVEs with CVSS score higher or equal to 8.
+     * @type {number}
+     * @memberof ExecutiveReportCvesBySeverity8to10
+     */
+    percentage: number;
 }
 
 /**

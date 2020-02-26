@@ -104,9 +104,9 @@ ___
 
 ▸ **createAction**(requestId: *`string`*, action: *[Action](../modules/action.md)*, options?: *`any`*): `AxiosPromise`<[Action](../modules/action.md)>
 
-*Defined in [api.ts:889](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L889)*
+*Defined in [api.ts:892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L892)*
 
-Add an action to a given request, available for admin/approver/requester. Applicable operation types are based on request current state.
+Add an action to a given request. Admin can do approve, deny, memo, and cancel operations; approver can do approve, deny and memo operations; while requester can do only cancel operation.
 
 *__summary__*: Add an action to a given request
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **listActionsByRequest**(requestId: *`string`*, options?: *`any`*): `AxiosPromise`<[ActionCollection](../interfaces/actioncollection.md)>
 
-*Defined in [api.ts:901](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L901)*
+*Defined in [api.ts:904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L904)*
 
 Return actions in a given request, available for admin/approver
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **showAction**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Action](../modules/action.md)>
 
-*Defined in [api.ts:913](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L913)*
+*Defined in [api.ts:916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L916)*
 
 Return an user action by id, available to all
 

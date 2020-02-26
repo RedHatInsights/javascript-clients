@@ -28,7 +28,7 @@ tag details
 
 **● tag**: *`string`*
 
-*Defined in [api.ts:494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L494)*
+*Defined in [api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L497)*
 
 *__type__*: {string}
 

@@ -109,7 +109,7 @@ ___
 
 ▸ **addWorkflowToTemplate**(templateId: *`string`*, workflow: *[Workflow](../interfaces/workflow.md)*, options?: *`any`*): `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
 
-*Defined in [api.ts:2325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2325)*
+*Defined in [api.ts:2328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2328)*
 
 Add a workflow by given template id
 
@@ -136,7 +136,7 @@ ___
 
 ▸ **destroyWorkflow**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2337)*
+*Defined in [api.ts:2340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2340)*
 
 Delete approval workflow by given id
 
@@ -162,7 +162,7 @@ ___
 
 ▸ **linkWorkflow**(id: *`string`*, resourceObject: *[ResourceObject](../interfaces/resourceobject.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2350)*
+*Defined in [api.ts:2353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2353)*
 
 Link a resource object to a given workflow
 
@@ -189,7 +189,7 @@ ___
 
 ▸ **listWorkflows**(appName?: *`string`*, objectId?: *`string`*, objectType?: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[WorkflowCollection](../interfaces/workflowcollection.md)>
 
-*Defined in [api.ts:2367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2367)*
+*Defined in [api.ts:2370](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2370)*
 
 Depends on the query parameters, either return all workflows in ascending sequence order when no parameters are provided; or return the workflows linking to the resource object whose app\_name, object\_type and object\_id are specified by query parameters
 
@@ -220,7 +220,7 @@ ___
 
 ▸ **listWorkflowsByTemplate**(templateId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[WorkflowCollection](../interfaces/workflowcollection.md)>
 
-*Defined in [api.ts:2382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2382)*
+*Defined in [api.ts:2385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2385)*
 
 Return an array of workflows by given template id
 
@@ -249,7 +249,7 @@ ___
 
 ▸ **showWorkflow**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
 
-*Defined in [api.ts:2394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2394)*
+*Defined in [api.ts:2397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2397)*
 
 Return an approval workflow by given id
 
@@ -275,7 +275,7 @@ ___
 
 ▸ **unlinkWorkflow**(id: *`string`*, resourceObject: *[ResourceObject](../interfaces/resourceobject.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2407)*
+*Defined in [api.ts:2410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2410)*
 
 Break the link between a resource object and selected workflow
 
@@ -302,7 +302,7 @@ ___
 
 ▸ **updateWorkflow**(id: *`string`*, workflow: *[Workflow](../interfaces/workflow.md)*, options?: *`any`*): `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
 
-*Defined in [api.ts:2420](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2420)*
+*Defined in [api.ts:2423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2423)*
 
 Update an approval workflow by given id
 

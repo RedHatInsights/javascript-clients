@@ -114,7 +114,7 @@ ___
 
 *Defined in [api.ts:1790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1790)*
 
-Creates a new Remediation based on given information
+Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
 
 *__summary__*: Create Remediation
 
@@ -140,7 +140,7 @@ ___
 
 *Defined in [api.ts:1802](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1802)*
 
-Removes the given Remediation
+Removes the given Remediation, RBAC permission {remediations:remediation:write}
 
 *__summary__*: Remove Remediation
 
@@ -166,7 +166,7 @@ ___
 
 *Defined in [api.ts:1815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1815)*
 
-Removes the given Issue from the Remediation
+Removes the given Issue from the Remediation, RBAC permission {remediations:remediation:write}
 
 *__summary__*: Remove Remediation Issue
 
@@ -193,7 +193,7 @@ ___
 
 *Defined in [api.ts:1829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1829)*
 
-Removes the given System from the Issue Remediation
+Removes the given System from the Issue Remediation, RBAC permission {remediations:remediation:write}
 
 *__summary__*: Remove Remediation Issue System
 
@@ -221,7 +221,7 @@ ___
 
 *Defined in [api.ts:1841](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1841)*
 
-Provides information about the given Remediation
+Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
 
 *__summary__*: Get Remediation
 
@@ -247,7 +247,7 @@ ___
 
 *Defined in [api.ts:1853](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1853)*
 
-Get satellite connection status for a given host
+Get satellite connection status for a given host, RBAC permission {remediations:remediation:execute}
 
 *__summary__*: Pre-flight check
 
@@ -273,7 +273,7 @@ ___
 
 *Defined in [api.ts:1865](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1865)*
 
-Provides Ansible Playbook
+Provides Ansible Playbook, RBAC permission {remediations:remediation:read}
 
 *__summary__*: Get Remediation Playbook
 
@@ -299,7 +299,7 @@ ___
 
 *Defined in [api.ts:1881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1881)*
 
-Provides information about Remediations
+Provides information about Remediations, RBAC permission {remediations:remediation:read}
 
 *__summary__*: List Remediations
 
@@ -329,7 +329,7 @@ ___
 
 *Defined in [api.ts:1893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1893)*
 
-Execute remediation
+Execute remediation, RBAC permission {remediations:remediation:execute}
 
 *__summary__*: Execute remediation
 
@@ -355,7 +355,7 @@ ___
 
 *Defined in [api.ts:1906](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1906)*
 
-Updates the given Remediation
+Updates the given Remediation, RBAC permission {remediations:remediation:write}
 
 *__summary__*: Update Remediation
 
@@ -382,7 +382,7 @@ ___
 
 *Defined in [api.ts:1920](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1920)*
 
-Updates the given Remediation Issue
+Updates the given Remediation Issue, RBAC permission {remediations:remediation:write}
 
 *__summary__*: Update Remediation Issue
 

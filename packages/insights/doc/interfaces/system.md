@@ -25,11 +25,11 @@
 
 <a id="displayname"></a>
 
-### `<Optional>` displayName
+###  displayName
 
-**● displayName**: *`string` \| `null`*
+**● displayName**: *`string`*
 
-*Defined in [api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1113)*
+*Defined in [api.ts:1165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1165)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● hits**: *`number`*
 
-*Defined in [api.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1101)*
+*Defined in [api.ts:1153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1153)*
 
 *__type__*: {number}
 
@@ -55,7 +55,7 @@ ___
 
 **● lastSeen**: *`Date`*
 
-*Defined in [api.ts:1119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1119)*
+*Defined in [api.ts:1171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1171)*
 
 *__type__*: {Date}
 
@@ -64,11 +64,11 @@ ___
 ___
 <a id="systemuuid"></a>
 
-### `<Optional>` systemUuid
+###  systemUuid
 
 **● systemUuid**: *`string`*
 
-*Defined in [api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1107)*
+*Defined in [api.ts:1159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1159)*
 
 *__type__*: {string}
 

@@ -29,7 +29,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L569)*
+*Defined in [api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L583)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● group**: *`string`*
 
-*Defined in [api.ts:575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L575)*
+*Defined in [api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L589)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L563)*
+*Defined in [api.ts:577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L577)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● roles**: *`Array`<`string`>*
 
-*Defined in [api.ts:581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L581)*
+*Defined in [api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L595)*
 
 *__type__*: {Array}
 

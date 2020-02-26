@@ -102,7 +102,7 @@ ___
 
 ▸ **usageList**(options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:5179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5179)*
+*Defined in [api.ts:5638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5638)*
 
 Returns the amount of unique rule hits within an account over the specified time range.
 

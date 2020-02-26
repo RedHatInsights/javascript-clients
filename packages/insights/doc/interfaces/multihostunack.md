@@ -26,7 +26,7 @@
 
 **● systems**: *`Array`<`string`>*
 
-*Defined in [api.ts:503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L503)*
+*Defined in [api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L543)*
 
 *__type__*: {Array}
 

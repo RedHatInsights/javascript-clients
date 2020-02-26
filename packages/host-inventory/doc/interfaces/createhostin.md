@@ -190,7 +190,7 @@ Host’s network interfaces MAC addresses. This field is considered to be a cano
 ___
 <a id="reporter"></a>
 
-### `<Optional>` reporter
+###  reporter
 
 **● reporter**: *`string`*
 
@@ -235,7 +235,7 @@ A Red Hat Satellite ID of a RHEL host. This field is considered to be a canonica
 ___
 <a id="staletimestamp"></a>
 
-### `<Optional>` staleTimestamp
+###  staleTimestamp
 
 **● staleTimestamp**: *`Date`*
 

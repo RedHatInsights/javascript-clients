@@ -106,7 +106,7 @@ ___
 
 ▸ **getAWSTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:7225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7225)*
+*Defined in [api.ts:7233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7233)*
 
 *__summary__*: Query to obtain AWS tags
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **getAzureTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:7240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7240)*
+*Defined in [api.ts:7248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7248)*
 
 *__summary__*: Query to obtain AWS tags
 
@@ -160,7 +160,7 @@ ___
 
 ▸ **getOpenShiftAWSTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:7255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7255)*
+*Defined in [api.ts:7263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7263)*
 
 *__summary__*: Query to obtain OpenShift-on-AWS tags
 
@@ -187,7 +187,7 @@ ___
 
 ▸ **getOpenShiftAzureTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:7270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7270)*
+*Defined in [api.ts:7278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7278)*
 
 *__summary__*: Query to obtain OpenShift-on-Azure tags
 
@@ -214,7 +214,7 @@ ___
 
 ▸ **getOpenShiftTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
 
-*Defined in [api.ts:7285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7285)*
+*Defined in [api.ts:7293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7293)*
 
 *__summary__*: Query to obtain OpenShift tags
 

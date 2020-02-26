@@ -106,7 +106,7 @@ ___
 
 ▸ **createRequest**(requestIn: *[RequestIn](../interfaces/requestin.md)*, options?: *`any`*): `AxiosPromise`<[Request](../modules/request.md)>
 
-*Defined in [api.ts:1420](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1420)*
+*Defined in [api.ts:1423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1423)*
 
 Add an approval request by given parameters, available to anyone
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **listRequests**(xRhPersona?: *"approval/admin" \| "approval/approver" \| "approval/requester"*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
 
-*Defined in [api.ts:1435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1435)*
+*Defined in [api.ts:1438](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1438)*
 
 The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
 
@@ -161,7 +161,7 @@ ___
 
 ▸ **listRequestsByRequest**(requestId: *`string`*, xRhPersona?: *"approval/admin" \| "approval/approver" \| "approval/requester"*, options?: *`any`*): `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
 
-*Defined in [api.ts:1448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1448)*
+*Defined in [api.ts:1451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1451)*
 
 Return an array of child requests of a given request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
 
@@ -188,7 +188,7 @@ ___
 
 ▸ **showRequest**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Request](../modules/request.md)>
 
-*Defined in [api.ts:1460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1460)*
+*Defined in [api.ts:1463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1463)*
 
 Return an approval request by given id, available to anyone who can access the request
 
@@ -214,7 +214,7 @@ ___
 
 ▸ **showRequestContent**(requestId: *`string`*, options?: *`any`*): `AxiosPromise`<`any`>
 
-*Defined in [api.ts:1472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1472)*
+*Defined in [api.ts:1475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1475)*
 
 Return request content of a given request id, available to all
 

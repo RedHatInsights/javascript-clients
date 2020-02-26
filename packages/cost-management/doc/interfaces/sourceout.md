@@ -28,7 +28,7 @@
 
 <a id="authentication"></a>
 
-###  authentication
+### `<Optional>` authentication
 
 **● authentication**: *`any`*
 
@@ -43,7 +43,7 @@ Dictionary containing resource name.
 ___
 <a id="billingsource"></a>
 
-###  billingSource
+### `<Optional>` billingSource
 
 **● billingSource**: *`any`*
 
@@ -71,7 +71,7 @@ ___
 ___
 <a id="name"></a>
 
-###  name
+### `<Optional>` name
 
 **● name**: *`string`*
 
@@ -110,7 +110,7 @@ ___
 ___
 <a id="sourceuuid"></a>
 
-###  sourceUuid
+### `<Optional>` sourceUuid
 
 **● sourceUuid**: *`string`*
 

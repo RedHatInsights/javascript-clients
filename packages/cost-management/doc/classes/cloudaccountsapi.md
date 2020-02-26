@@ -102,7 +102,7 @@ ___
 
 ▸ **getCloudAccounts**(options?: *`any`*): `AxiosPromise`<[CloudAccountPagination](../interfaces/cloudaccountpagination.md)>
 
-*Defined in [api.ts:3966](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3966)*
+*Defined in [api.ts:3974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3974)*
 
 *__summary__*: Obtain defined cloud accounts
 
