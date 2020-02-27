@@ -286,13 +286,13 @@ export interface CreateHostIn {
      * @type {Date}
      * @memberof CreateHostIn
      */
-    staleTimestamp?: Date;
+    staleTimestamp: Date;
     /**
      * Reporting source of the host. Used when updating the stale_timestamp.
      * @type {string}
      * @memberof CreateHostIn
      */
-    reporter?: string;
+    reporter: string;
 }
 
 /**
@@ -1581,10 +1581,11 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): RequestArgs {
+        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options: any = {}): RequestArgs {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostTags.');
@@ -1622,6 +1623,10 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 
             if (orderHow !== undefined) {
                 localVarQueryParameter['order_how'] = orderHow;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1937,11 +1942,12 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsOut> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, options);
+        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsOut> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2099,11 +2105,12 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
-            return HostsApiFp(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, options)(axios, basePath);
+        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options?: any) {
+            return HostsApiFp(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options)(axios, basePath);
         },
         /**
          * Merge one or multiple hosts facts under a namespace.
@@ -2258,12 +2265,13 @@ export class HostsApi extends BaseAPI {
      * @param {number} [page] A page number of the items to return.
      * @param {'display_name' | 'updated'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+     * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, options)(this.axios, this.basePath);
+    public apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options)(this.axios, this.basePath);
     }
 
     /**

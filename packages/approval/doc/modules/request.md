@@ -42,7 +42,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L307)*
+*Defined in [api.ts:308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L308)*
 
 Timestamp of creation
 
@@ -57,9 +57,9 @@ ___
 
 **● decision**: *[DecisionEnum](../enums/request.decisionenum.md)*
 
-*Defined in [api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L289)*
+*Defined in [api.ts:290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L290)*
 
-Approval decision. Possible value: undecided, approved, canceled, or denied
+Approval decision. Possible value: undecided, approved, canceled, denied, or error
 
 *__type__*: {string}
 
@@ -72,7 +72,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L355)*
+*Defined in [api.ts:356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L356)*
 
 Request description
 
@@ -87,7 +87,7 @@ ___
 
 **● finishedAt**: *`Date` \| `null`*
 
-*Defined in [api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L319)*
+*Defined in [api.ts:320](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L320)*
 
 Timestamp of finishing (skipped, canceled, or completed)
 
@@ -102,7 +102,7 @@ ___
 
 **● groupName**: *`string`*
 
-*Defined in [api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L361)*
+*Defined in [api.ts:362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L362)*
 
 Name of approver group(s) assigned to approve this request
 
@@ -117,7 +117,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L277)*
+*Defined in [api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L278)*
 
 *__type__*: {string}
 
@@ -130,7 +130,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L349)*
+*Defined in [api.ts:350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L350)*
 
 Request name
 
@@ -145,7 +145,7 @@ ___
 
 **● notifiedAt**: *`Date` \| `null`*
 
-*Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L313)*
+*Defined in [api.ts:314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L314)*
 
 Timestamp of notification sent to approvers
 
@@ -160,7 +160,7 @@ ___
 
 **● numberOfChildren**: *`number`*
 
-*Defined in [api.ts:325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L325)*
+*Defined in [api.ts:326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L326)*
 
 Number of child requests
 
@@ -175,7 +175,7 @@ ___
 
 **● numberOfFinishedChildren**: *`number`*
 
-*Defined in [api.ts:331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L331)*
+*Defined in [api.ts:332](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L332)*
 
 Number of finished child requests
 
@@ -190,7 +190,7 @@ ___
 
 **● owner**: *`string`*
 
-*Defined in [api.ts:337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L337)*
+*Defined in [api.ts:338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L338)*
 
 Requester's id
 
@@ -205,7 +205,7 @@ ___
 
 **● parentId**: *`string`*
 
-*Defined in [api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L367)*
+*Defined in [api.ts:368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L368)*
 
 Parent request id
 
@@ -220,7 +220,7 @@ ___
 
 **● reason**: *`string` \| `null`*
 
-*Defined in [api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L295)*
+*Defined in [api.ts:296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L296)*
 
 Reason for the decision. Optional. Present normally when the decision is denied
 
@@ -235,7 +235,7 @@ ___
 
 **● requesterName**: *`string`*
 
-*Defined in [api.ts:343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L343)*
+*Defined in [api.ts:344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L344)*
 
 Requester's full name
 
@@ -250,9 +250,9 @@ ___
 
 **● state**: *[StateEnum](../enums/request.stateenum.md)*
 
-*Defined in [api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L283)*
+*Defined in [api.ts:284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L284)*
 
-The state of the request. Possible value: canceled, completed, notified, skipped, or started
+The state of the request. Possible value: canceled, completed, failed, notified, skipped, or started
 
 *__type__*: {string}
 
@@ -265,7 +265,7 @@ ___
 
 **● workflowId**: *`string` \| `null`*
 
-*Defined in [api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L301)*
+*Defined in [api.ts:302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L302)*
 
 Associate workflow id. Available only if the request is a leaf node
 

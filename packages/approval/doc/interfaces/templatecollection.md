@@ -28,7 +28,7 @@
 
 **● data**: *`Array`<[Template](template.md)>*
 
-*Defined in [api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L572)*
+*Defined in [api.ts:575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L575)*
 
 *__type__*: {Array
 
@@ -41,7 +41,7 @@ ___
 
 **● links**: *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L566)*
+*Defined in [api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L569)*
 
 *__type__*: {CollectionLinks}
 
@@ -54,7 +54,7 @@ ___
 
 **● meta**: *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:560](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L560)*
+*Defined in [api.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L563)*
 
 *__type__*: {CollectionMetadata}
 

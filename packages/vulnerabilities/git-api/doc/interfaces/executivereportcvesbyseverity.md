@@ -28,13 +28,11 @@ Number of CVEs discovered on the managed systems, divided into buckets based on 
 
 ###  _0to39
 
-**● _0to39**: *`number`*
+**● _0to39**: *`any`*
 
 *Defined in [git-api/api.ts:471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L471)*
 
-Number of CVEs with CVSS score lower than 4.
-
-*__type__*: {number}
+*__type__*: {any}
 
 *__memberof__*: ExecutiveReportCvesBySeverity
 
@@ -43,13 +41,11 @@ ___
 
 ###  _4to79
 
-**● _4to79**: *`number`*
+**● _4to79**: *`any`*
 
 *Defined in [git-api/api.ts:477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L477)*
 
-Number of CVEs with CVSS score higher or equal to 4 and lower then 8.
-
-*__type__*: {number}
+*__type__*: {any}
 
 *__memberof__*: ExecutiveReportCvesBySeverity
 
@@ -58,13 +54,11 @@ ___
 
 ###  _8to10
 
-**● _8to10**: *`number`*
+**● _8to10**: *[ExecutiveReportCvesBySeverity8to10](executivereportcvesbyseverity8to10.md)*
 
 *Defined in [git-api/api.ts:483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L483)*
 
-Number of CVEs with CVSS score higher or equal to 8.
-
-*__type__*: {number}
+*__type__*: {ExecutiveReportCvesBySeverity8to10}
 
 *__memberof__*: ExecutiveReportCvesBySeverity
 

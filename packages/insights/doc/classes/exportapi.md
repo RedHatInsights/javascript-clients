@@ -102,9 +102,9 @@ ___
 
 ###  exportHitsList
 
-▸ **exportHitsList**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
+▸ **exportHitsList**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
 
-*Defined in [api.ts:2084](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2084)*
+*Defined in [api.ts:2172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2172)*
 
 Get each host and all rules currently affecting it. This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store). We also only present active, non-acked (on an account AND host level) rules.
 
@@ -122,6 +122,7 @@ Get each host and all rules currently affecting it. This will eventually require
 | `Optional` resRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
 | `Optional` text | `string` |
 | `Optional` totalRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
+| `Optional` tags | `Array`<`string`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
@@ -131,9 +132,9 @@ ___
 
 ###  exportListCsv
 
-▸ **exportListCsv**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **exportListCsv**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:2100](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2100)*
+*Defined in [api.ts:2189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2189)*
 
 Export the hosts and rules listing as CSV or JSON
 
@@ -151,6 +152,7 @@ Export the hosts and rules listing as CSV or JSON
 | `Optional` resRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
 | `Optional` text | `string` |
 | `Optional` totalRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
+| `Optional` tags | `Array`<`string`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<`Response`>
@@ -160,9 +162,9 @@ ___
 
 ###  exportListJson
 
-▸ **exportListJson**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
+▸ **exportListJson**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
 
-*Defined in [api.ts:2116](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2116)*
+*Defined in [api.ts:2206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2206)*
 
 Export the hosts and rules listing as CSV or JSON
 
@@ -180,6 +182,7 @@ Export the hosts and rules listing as CSV or JSON
 | `Optional` resRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
 | `Optional` text | `string` |
 | `Optional` totalRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
+| `Optional` tags | `Array`<`string`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>

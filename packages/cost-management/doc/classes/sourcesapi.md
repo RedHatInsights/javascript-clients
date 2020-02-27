@@ -104,7 +104,7 @@ ___
 
 ▸ **getSource**(sourceId: *`number`*, options?: *`any`*): `AxiosPromise`<[SourceOut](../interfaces/sourceout.md)>
 
-*Defined in [api.ts:6639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6639)*
+*Defined in [api.ts:6647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6647)*
 
 *__summary__*: Get a source
 
@@ -128,7 +128,7 @@ ___
 
 ▸ **listSources**(options?: *`any`*): `AxiosPromise`<[SourcePagination](../interfaces/sourcepagination.md)>
 
-*Defined in [api.ts:6650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6650)*
+*Defined in [api.ts:6658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6658)*
 
 *__summary__*: List the sources
 
@@ -151,7 +151,7 @@ ___
 
 ▸ **updateSource**(sourceId: *`number`*, sourceIn: *[SourceIn](../interfaces/sourcein.md)*, options?: *`any`*): `AxiosPromise`<[SourceOut](../interfaces/sourceout.md)>
 
-*Defined in [api.ts:6663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6663)*
+*Defined in [api.ts:6671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6671)*
 
 *__summary__*: Update a source
 

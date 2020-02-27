@@ -104,7 +104,7 @@ ___
 
 ▸ **getAWSCostReports**(delta?: *`string`*, filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportCost](../interfaces/reportcost.md)>
 
-*Defined in [api.ts:3452](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3452)*
+*Defined in [api.ts:3459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3459)*
 
 *__summary__*: Query to obtain cost reports
 
@@ -131,9 +131,9 @@ ___
 
 ###  getAWSInstanceReports
 
-▸ **getAWSInstanceReports**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportInstanceInventory](../interfaces/reportinstanceinventory.md)>
+▸ **getAWSInstanceReports**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, computeCount?: *`boolean`*, options?: *`any`*): `AxiosPromise`<[ReportInstanceInventory](../interfaces/reportinstanceinventory.md)>
 
-*Defined in [api.ts:3469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3469)*
+*Defined in [api.ts:3477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3477)*
 
 *__summary__*: Query to obtain AWS instance type data
 
@@ -151,6 +151,7 @@ ___
 | `Optional` units | `string` |
 | `Optional` offset | `number` |
 | `Optional` limit | `number` |
+| `Optional` computeCount | `boolean` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ReportInstanceInventory](../interfaces/reportinstanceinventory.md)>
@@ -162,7 +163,7 @@ ___
 
 ▸ **getAWSStorageReports**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportStorageInventory](../interfaces/reportstorageinventory.md)>
 
-*Defined in [api.ts:3486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3486)*
+*Defined in [api.ts:3494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3494)*
 
 *__summary__*: Query to obtain AWS storage data
 

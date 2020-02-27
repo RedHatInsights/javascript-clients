@@ -32,7 +32,7 @@
 
 **● description**: *`string`*
 
-*Defined in [api.ts:1185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1185)*
+*Defined in [api.ts:1251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1251)*
 
 *__type__*: {string}
 
@@ -45,7 +45,7 @@ ___
 
 **● enabled**: *`boolean`*
 
-*Defined in [api.ts:1203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1203)*
+*Defined in [api.ts:1269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1269)*
 
 *__type__*: {boolean}
 
@@ -58,7 +58,7 @@ ___
 
 **● featured**: *`boolean`*
 
-*Defined in [api.ts:1197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1197)*
+*Defined in [api.ts:1263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1263)*
 
 *__type__*: {boolean}
 
@@ -71,7 +71,7 @@ ___
 
 **● impactedSystemsCount**: *`number`*
 
-*Defined in [api.ts:1209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1209)*
+*Defined in [api.ts:1275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1275)*
 
 *__type__*: {number}
 
@@ -84,7 +84,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:1173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1173)*
+*Defined in [api.ts:1239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1239)*
 
 *__type__*: {string}
 
@@ -97,7 +97,7 @@ ___
 
 **● slug**: *`string`*
 
-*Defined in [api.ts:1179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1179)*
+*Defined in [api.ts:1245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1245)*
 
 Rule topic slug
 
@@ -112,7 +112,7 @@ ___
 
 **● tag**: *`string`*
 
-*Defined in [api.ts:1191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1191)*
+*Defined in [api.ts:1257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1257)*
 
 *__type__*: {string}
 

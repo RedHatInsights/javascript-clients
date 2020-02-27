@@ -104,7 +104,7 @@ ___
 
 ▸ **createDataExportRequest**(dataExportRequest: *[DataExportRequest](../interfaces/dataexportrequest.md)*, options?: *`any`*): `AxiosPromise`<[DataExportRequestOut](../modules/dataexportrequestout.md)>
 
-*Defined in [api.ts:4679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4679)*
+*Defined in [api.ts:4687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4687)*
 
 *__summary__*: Create a data export request
 
@@ -128,7 +128,7 @@ ___
 
 ▸ **listDataExportRequests**(offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[DataExportRequestPagination](../interfaces/dataexportrequestpagination.md)>
 
-*Defined in [api.ts:4692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4692)*
+*Defined in [api.ts:4700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4700)*
 
 *__summary__*: List the data export requests
 
@@ -153,7 +153,7 @@ ___
 
 ▸ **retrieveDataExportRequest**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[DataExportRequestOut](../modules/dataexportrequestout.md)>
 
-*Defined in [api.ts:4704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4704)*
+*Defined in [api.ts:4712](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4712)*
 
 *__summary__*: Get a data export request
 

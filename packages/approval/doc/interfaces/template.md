@@ -30,7 +30,7 @@ The template to categorize workflows.
 
 **● description**: *`string`*
 
-*Defined in [api.ts:546](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L546)*
+*Defined in [api.ts:549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L549)*
 
 *__type__*: {string}
 
@@ -43,7 +43,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:534](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L534)*
+*Defined in [api.ts:537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L537)*
 
 *__type__*: {string}
 
@@ -56,7 +56,7 @@ ___
 
 **● title**: *`string`*
 
-*Defined in [api.ts:540](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L540)*
+*Defined in [api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L543)*
 
 *__type__*: {string}
 

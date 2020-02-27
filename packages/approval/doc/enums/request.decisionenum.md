@@ -13,6 +13,7 @@
 * [Approved](request.decisionenum.md#approved)
 * [Canceled](request.decisionenum.md#canceled)
 * [Denied](request.decisionenum.md#denied)
+* [Error](request.decisionenum.md#error)
 * [Undecided](request.decisionenum.md#undecided)
 
 ---
@@ -25,7 +26,7 @@
 
 **Approved**:  = "approved"
 
-*Defined in [api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L393)*
+*Defined in [api.ts:395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L395)*
 
 ___
 <a id="canceled"></a>
@@ -34,7 +35,7 @@ ___
 
 **Canceled**:  = "canceled"
 
-*Defined in [api.ts:394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L394)*
+*Defined in [api.ts:396](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L396)*
 
 ___
 <a id="denied"></a>
@@ -43,7 +44,16 @@ ___
 
 **Denied**:  = "denied"
 
-*Defined in [api.ts:395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L395)*
+*Defined in [api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L397)*
+
+___
+<a id="error"></a>
+
+###  Error
+
+**Error**:  = "error"
+
+*Defined in [api.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L398)*
 
 ___
 <a id="undecided"></a>
@@ -52,7 +62,7 @@ ___
 
 **Undecided**:  = "undecided"
 
-*Defined in [api.ts:392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L392)*
+*Defined in [api.ts:394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L394)*
 
 ___
 

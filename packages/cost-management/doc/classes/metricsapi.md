@@ -102,7 +102,7 @@ ___
 
 ▸ **getMetrics**(options?: *`any`*): `AxiosPromise`<[Metrics](../interfaces/metrics.md)>
 
-*Defined in [api.ts:4800](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4800)*
+*Defined in [api.ts:4808](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4808)*
 
 *__summary__*: Obtain Metrics
 

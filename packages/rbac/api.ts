@@ -402,6 +402,20 @@ export interface InlineResponse200 {
 /**
  *
  * @export
+ * @interface InlineResponse2001
+ */
+export interface InlineResponse2001 {
+    /**
+     *
+     * @type {Array<AccessPagination>}
+     * @memberof InlineResponse2001
+     */
+    data: Array<AccessPagination>;
+}
+
+/**
+ *
+ * @export
  * @interface ListPagination
  */
 export interface ListPagination {
@@ -862,6 +876,12 @@ export interface RoleOut {
     policyCount?: number;
     /**
      *
+     * @type {number}
+     * @memberof RoleOut
+     */
+    accessCount?: number;
+    /**
+     *
      * @type {Array<string>}
      * @memberof RoleOut
      */
@@ -948,6 +968,12 @@ export interface RoleWithAccess {
      * @memberof RoleWithAccess
      */
     policyCount?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RoleWithAccess
+     */
+    accessCount?: number;
     /**
      *
      * @type {Array<string>}
@@ -1511,6 +1537,50 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          *
+         * @summary Get a list of principals from a group in the tenant
+         * @param {string} uuid ID of group from which to get principals
+         * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPrincipalsFromGroup(uuid: string, principalUsername?: string, options: any = {}): RequestArgs {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getPrincipalsFromGroup.');
+            }
+            const localVarPath = `/groups/{uuid}/principals/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (principalUsername !== undefined) {
+                localVarQueryParameter['principal_username'] = principalUsername;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
          * @summary List the groups for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -1577,12 +1647,14 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @summary List the roles for a group in the tenant
          * @param {string} uuid ID of group
          * @param {boolean} [exclude] If this is set to true, the result would be roles excluding the ones in the group
+         * @param {string} [roleName] Parameter for filtering group roles by role &#x60;name&#x60; using string contains search.
+         * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling listRolesForGroup.');
@@ -1606,6 +1678,14 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
 
             if (exclude !== undefined) {
                 localVarQueryParameter['exclude'] = exclude;
+            }
+
+            if (roleName !== undefined) {
+                localVarQueryParameter['role_name'] = roleName;
+            }
+
+            if (roleDescription !== undefined) {
+                localVarQueryParameter['role_description'] = roleDescription;
             }
 
             if (limit !== undefined) {
@@ -1787,6 +1867,21 @@ export const GroupApiFp = function(configuration?: Configuration) {
         },
         /**
          *
+         * @summary Get a list of principals from a group in the tenant
+         * @param {string} uuid ID of group from which to get principals
+         * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPrincipalsFromGroup(uuid: string, principalUsername?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
+            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).getPrincipalsFromGroup(uuid, principalUsername, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
          * @summary List the groups for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -1809,13 +1904,15 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @summary List the roles for a group in the tenant
          * @param {string} uuid ID of group
          * @param {boolean} [exclude] If this is set to true, the result would be roles excluding the ones in the group
+         * @param {string} [roleName] Parameter for filtering group roles by role &#x60;name&#x60; using string contains search.
+         * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, limit, offset, options);
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination> {
+            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1921,6 +2018,17 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          *
+         * @summary Get a list of principals from a group in the tenant
+         * @param {string} uuid ID of group from which to get principals
+         * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPrincipalsFromGroup(uuid: string, principalUsername?: string, options?: any) {
+            return GroupApiFp(configuration).getPrincipalsFromGroup(uuid, principalUsername, options)(axios, basePath);
+        },
+        /**
+         *
          * @summary List the groups for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -1939,13 +2047,15 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @summary List the roles for a group in the tenant
          * @param {string} uuid ID of group
          * @param {boolean} [exclude] If this is set to true, the result would be roles excluding the ones in the group
+         * @param {string} [roleName] Parameter for filtering group roles by role &#x60;name&#x60; using string contains search.
+         * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, limit?: number, offset?: number, options?: any) {
-            return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, limit, offset, options)(axios, basePath);
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, options?: any) {
+            return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, options)(axios, basePath);
         },
         /**
          *
@@ -2058,6 +2168,19 @@ export class GroupApi extends BaseAPI {
 
     /**
      *
+     * @summary Get a list of principals from a group in the tenant
+     * @param {string} uuid ID of group from which to get principals
+     * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GroupApi
+     */
+    public getPrincipalsFromGroup(uuid: string, principalUsername?: string, options?: any) {
+        return GroupApiFp(this.configuration).getPrincipalsFromGroup(uuid, principalUsername, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
      * @summary List the groups for a tenant
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
@@ -2078,14 +2201,16 @@ export class GroupApi extends BaseAPI {
      * @summary List the roles for a group in the tenant
      * @param {string} uuid ID of group
      * @param {boolean} [exclude] If this is set to true, the result would be roles excluding the ones in the group
+     * @param {string} [roleName] Parameter for filtering group roles by role &#x60;name&#x60; using string contains search.
+     * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public listRolesForGroup(uuid: string, exclude?: boolean, limit?: number, offset?: number, options?: any) {
-        return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, limit, offset, options)(this.axios, this.basePath);
+    public listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, options?: any) {
+        return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2830,6 +2955,55 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
         },
         /**
          *
+         * @summary Get access for a role in the tenant
+         * @param {string} uuid ID of the role
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getRoleAccess(uuid: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getRoleAccess.');
+            }
+            const localVarPath = `/roles/{uuid}/access/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
          * @summary List the roles for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -2987,6 +3161,22 @@ export const RoleApiFp = function(configuration?: Configuration) {
         },
         /**
          *
+         * @summary Get access for a role in the tenant
+         * @param {string} uuid ID of the role
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getRoleAccess(uuid: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2001> {
+            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).getRoleAccess(uuid, limit, offset, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
          * @summary List the roles for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -3059,6 +3249,18 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
         },
         /**
          *
+         * @summary Get access for a role in the tenant
+         * @param {string} uuid ID of the role
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getRoleAccess(uuid: string, limit?: number, offset?: number, options?: any) {
+            return RoleApiFp(configuration).getRoleAccess(uuid, limit, offset, options)(axios, basePath);
+        },
+        /**
+         *
          * @summary List the roles for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -3126,6 +3328,20 @@ export class RoleApi extends BaseAPI {
      */
     public getRole(uuid: string, options?: any) {
         return RoleApiFp(this.configuration).getRole(uuid, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary Get access for a role in the tenant
+     * @param {string} uuid ID of the role
+     * @param {number} [limit] Parameter for selecting the amount of data returned.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RoleApi
+     */
+    public getRoleAccess(uuid: string, limit?: number, offset?: number, options?: any) {
+        return RoleApiFp(this.configuration).getRoleAccess(uuid, limit, offset, options)(this.axios, this.basePath);
     }
 
     /**
