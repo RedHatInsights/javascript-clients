@@ -100,7 +100,7 @@ export interface Action {
      */
     processedBy?: string;
     /**
-     * Types of action, may be one of the value (approve, cancel, deny, notify, memo, skip, or start). The request state will be updated according to the operation.
+     * Types of action, may be one of the value (approve, cancel, deny, error, notify, memo, skip, or start). The request state will be updated according to the operation.
      * @type {string}
      * @memberof Action
      */
@@ -126,6 +126,7 @@ export namespace Action {
         Approve = 'approve',
         Cancel = 'cancel',
         Deny = 'deny',
+        Error = 'error',
         Notify = 'notify',
         Memo = 'memo',
         Skip = 'skip',
@@ -276,13 +277,13 @@ export interface Request {
      */
     id?: string;
     /**
-     * The state of the request. Possible value: canceled, completed, notified, skipped, or started
+     * The state of the request. Possible value: canceled, completed, failed, notified, skipped, or started
      * @type {string}
      * @memberof Request
      */
     state?: Request.StateEnum;
     /**
-     * Approval decision. Possible value: undecided, approved, canceled, or denied
+     * Approval decision. Possible value: undecided, approved, canceled, denied, or error
      * @type {string}
      * @memberof Request
      */
@@ -379,6 +380,7 @@ export namespace Request {
     export enum StateEnum {
         Canceled = 'canceled',
         Completed = 'completed',
+        Failed = 'failed',
         Notified = 'notified',
         Pending = 'pending',
         Skipped = 'skipped',
@@ -392,7 +394,8 @@ export namespace Request {
         Undecided = 'undecided',
         Approved = 'approved',
         Canceled = 'canceled',
-        Denied = 'denied'
+        Denied = 'denied',
+        Error = 'error'
     }
 }
 
@@ -650,7 +653,7 @@ export interface WorkflowCollection {
 export const ActionApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Add an action to a given request, available for admin/approver/requester. Applicable operation types are based on request current state.
+         * Add an action to a given request. Admin can do approve, deny, memo, and cancel operations; approver can do approve, deny and memo operations; while requester can do only cancel operation.
          * @summary Add an action to a given request
          * @param {string} requestId Id of request
          * @param {Action} action Action object that will be added
@@ -785,7 +788,7 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
 export const ActionApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Add an action to a given request, available for admin/approver/requester. Applicable operation types are based on request current state.
+         * Add an action to a given request. Admin can do approve, deny, memo, and cancel operations; approver can do approve, deny and memo operations; while requester can do only cancel operation.
          * @summary Add an action to a given request
          * @param {string} requestId Id of request
          * @param {Action} action Action object that will be added
@@ -837,7 +840,7 @@ export const ActionApiFp = function(configuration?: Configuration) {
 export const ActionApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Add an action to a given request, available for admin/approver/requester. Applicable operation types are based on request current state.
+         * Add an action to a given request. Admin can do approve, deny, memo, and cancel operations; approver can do approve, deny and memo operations; while requester can do only cancel operation.
          * @summary Add an action to a given request
          * @param {string} requestId Id of request
          * @param {Action} action Action object that will be added
@@ -878,7 +881,7 @@ export const ActionApiFactory = function (configuration?: Configuration, basePat
  */
 export class ActionApi extends BaseAPI {
     /**
-     * Add an action to a given request, available for admin/approver/requester. Applicable operation types are based on request current state.
+     * Add an action to a given request. Admin can do approve, deny, memo, and cancel operations; approver can do approve, deny and memo operations; while requester can do only cancel operation.
      * @summary Add an action to a given request
      * @param {string} requestId Id of request
      * @param {Action} action Action object that will be added

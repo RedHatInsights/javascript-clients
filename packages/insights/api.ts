@@ -472,6 +472,46 @@ export interface InlineResponse200Meta {
 /**
  *
  * @export
+ * @interface Kcs
+ */
+export interface Kcs {
+    /**
+     * Rule URL on C.R.C.
+     * @type {string}
+     * @memberof Kcs
+     */
+    ruleUrl: string;
+    /**
+     * KCS solution number
+     * @type {string}
+     * @memberof Kcs
+     */
+    nodeId: string;
+}
+
+/**
+ *
+ * @export
+ * @interface MultiAckResponse
+ */
+export interface MultiAckResponse {
+    /**
+     *
+     * @type {number}
+     * @memberof MultiAckResponse
+     */
+    count: number;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof MultiAckResponse
+     */
+    hostIds: Array<string>;
+}
+
+/**
+ *
+ * @export
  * @interface MultiHostAck
  */
 export interface MultiHostAck {
@@ -501,6 +541,32 @@ export interface MultiHostUnAck {
      * @memberof MultiHostUnAck
      */
     systems: Array<string>;
+}
+
+/**
+ *
+ * @export
+ * @interface Report
+ */
+export interface Report {
+    /**
+     *
+     * @type {Rule}
+     * @memberof Report
+     */
+    rule?: Rule;
+    /**
+     *
+     * @type {any}
+     * @memberof Report
+     */
+    details: any;
+    /**
+     *
+     * @type {Resolution}
+     * @memberof Report
+     */
+    resolution?: Resolution;
 }
 
 /**
@@ -622,7 +688,7 @@ export interface Rule {
      */
     likelihood?: number;
     /**
-     *
+     * KCS solution number
      * @type {string}
      * @memberof Rule
      */
@@ -770,7 +836,7 @@ export interface RuleForAccount {
      */
     likelihood?: number;
     /**
-     *
+     * KCS solution number
      * @type {string}
      * @memberof RuleForAccount
      */
@@ -859,20 +925,6 @@ export interface RuleForAccount {
      * @memberof RuleForAccount
      */
     rating?: number;
-}
-
-/**
- *
- * @export
- * @interface RuleHostAckResponse
- */
-export interface RuleHostAckResponse {
-    /**
-     *
-     * @type {number}
-     * @memberof RuleHostAckResponse
-     */
-    count: number;
 }
 
 /**
@@ -1104,13 +1156,13 @@ export interface System {
      * @type {string}
      * @memberof System
      */
-    systemUuid?: string;
+    systemUuid: string;
     /**
      *
      * @type {string}
      * @memberof System
      */
-    displayName?: string | null;
+    displayName: string;
     /**
      *
      * @type {Date}
@@ -1157,6 +1209,20 @@ export interface SystemsForRule {
      * @memberof SystemsForRule
      */
     hostIds: Array<string>;
+}
+
+/**
+ *
+ * @export
+ * @interface TagList
+ */
+export interface TagList {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof TagList
+     */
+    tags: Array<string>;
 }
 
 /**
@@ -1785,10 +1851,11 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
          * @param {string} [text] Display rules with this text in their text fields
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportHitsList(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options: any = {}): RequestArgs {
+        exportHitsList(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/export/hits/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1823,6 +1890,10 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarQueryParameter['total_risk'] = totalRisk.join(COLLECTION_FORMATS["csv"]);
             }
 
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1841,10 +1912,11 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
          * @param {string} [text] Display rules with this text in their text fields
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportListCsv(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options: any = {}): RequestArgs {
+        exportListCsv(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/export/hits.csv`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1879,6 +1951,10 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarQueryParameter['total_risk'] = totalRisk.join(COLLECTION_FORMATS["csv"]);
             }
 
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1897,10 +1973,11 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
          * @param {string} [text] Display rules with this text in their text fields
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportListJson(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options: any = {}): RequestArgs {
+        exportListJson(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/export/hits.json`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1935,6 +2012,10 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarQueryParameter['total_risk'] = totalRisk.join(COLLECTION_FORMATS["csv"]);
             }
 
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1962,11 +2043,12 @@ export const ExportApiFp = function(configuration?: Configuration) {
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
          * @param {string} [text] Display rules with this text in their text fields
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportHitsList(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse2001>> {
-            const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportHitsList(category, impact, likelihood, resRisk, text, totalRisk, options);
+        exportHitsList(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse2001>> {
+            const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportHitsList(category, impact, likelihood, resRisk, text, totalRisk, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1980,11 +2062,12 @@ export const ExportApiFp = function(configuration?: Configuration) {
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
          * @param {string} [text] Display rules with this text in their text fields
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportListCsv(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportListCsv(category, impact, likelihood, resRisk, text, totalRisk, options);
+        exportListCsv(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+            const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportListCsv(category, impact, likelihood, resRisk, text, totalRisk, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1998,11 +2081,12 @@ export const ExportApiFp = function(configuration?: Configuration) {
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
          * @param {string} [text] Display rules with this text in their text fields
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportListJson(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse2001>> {
-            const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportListJson(category, impact, likelihood, resRisk, text, totalRisk, options);
+        exportListJson(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse2001>> {
+            const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportListJson(category, impact, likelihood, resRisk, text, totalRisk, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2025,11 +2109,12 @@ export const ExportApiFactory = function (configuration?: Configuration, basePat
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
          * @param {string} [text] Display rules with this text in their text fields
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportHitsList(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
-            return ExportApiFp(configuration).exportHitsList(category, impact, likelihood, resRisk, text, totalRisk, options)(axios, basePath);
+        exportHitsList(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options?: any) {
+            return ExportApiFp(configuration).exportHitsList(category, impact, likelihood, resRisk, text, totalRisk, tags, options)(axios, basePath);
         },
         /**
          * Export the hosts and rules listing as CSV or JSON
@@ -2039,11 +2124,12 @@ export const ExportApiFactory = function (configuration?: Configuration, basePat
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
          * @param {string} [text] Display rules with this text in their text fields
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportListCsv(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
-            return ExportApiFp(configuration).exportListCsv(category, impact, likelihood, resRisk, text, totalRisk, options)(axios, basePath);
+        exportListCsv(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options?: any) {
+            return ExportApiFp(configuration).exportListCsv(category, impact, likelihood, resRisk, text, totalRisk, tags, options)(axios, basePath);
         },
         /**
          * Export the hosts and rules listing as CSV or JSON
@@ -2053,11 +2139,12 @@ export const ExportApiFactory = function (configuration?: Configuration, basePat
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
          * @param {string} [text] Display rules with this text in their text fields
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportListJson(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
-            return ExportApiFp(configuration).exportListJson(category, impact, likelihood, resRisk, text, totalRisk, options)(axios, basePath);
+        exportListJson(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options?: any) {
+            return ExportApiFp(configuration).exportListJson(category, impact, likelihood, resRisk, text, totalRisk, tags, options)(axios, basePath);
         },
     };
 };
@@ -2077,12 +2164,13 @@ export class ExportApi extends BaseAPI {
      * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
      * @param {string} [text] Display rules with this text in their text fields
      * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExportApi
      */
-    public exportHitsList(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
-        return ExportApiFp(this.configuration).exportHitsList(category, impact, likelihood, resRisk, text, totalRisk, options)(this.axios, this.basePath);
+    public exportHitsList(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options?: any) {
+        return ExportApiFp(this.configuration).exportHitsList(category, impact, likelihood, resRisk, text, totalRisk, tags, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2093,12 +2181,13 @@ export class ExportApi extends BaseAPI {
      * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
      * @param {string} [text] Display rules with this text in their text fields
      * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExportApi
      */
-    public exportListCsv(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
-        return ExportApiFp(this.configuration).exportListCsv(category, impact, likelihood, resRisk, text, totalRisk, options)(this.axios, this.basePath);
+    public exportListCsv(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options?: any) {
+        return ExportApiFp(this.configuration).exportListCsv(category, impact, likelihood, resRisk, text, totalRisk, tags, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2109,12 +2198,13 @@ export class ExportApi extends BaseAPI {
      * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
      * @param {string} [text] Display rules with this text in their text fields
      * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExportApi
      */
-    public exportListJson(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
-        return ExportApiFp(this.configuration).exportListJson(category, impact, likelihood, resRisk, text, totalRisk, options)(this.axios, this.basePath);
+    public exportListJson(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options?: any) {
+        return ExportApiFp(this.configuration).exportListJson(category, impact, likelihood, resRisk, text, totalRisk, tags, options)(this.axios, this.basePath);
     }
 
 }
@@ -2200,10 +2290,11 @@ export const HostackApiAxiosParamCreator = function (configuration?: Configurati
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackList(limit?: number, offset?: number, ruleId?: Array<string>, options: any = {}): RequestArgs {
+        hostackList(limit?: number, offset?: number, ruleId?: Array<string>, tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/hostack/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -2224,6 +2315,10 @@ export const HostackApiAxiosParamCreator = function (configuration?: Configurati
 
             if (ruleId) {
                 localVarQueryParameter['rule_id'] = ruleId.join(COLLECTION_FORMATS["csv"]);
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -2354,11 +2449,12 @@ export const HostackApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackList(limit?: number, offset?: number, ruleId?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002> {
-            const localVarAxiosArgs = HostackApiAxiosParamCreator(configuration).hostackList(limit, offset, ruleId, options);
+        hostackList(limit?: number, offset?: number, ruleId?: Array<string>, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002> {
+            const localVarAxiosArgs = HostackApiAxiosParamCreator(configuration).hostackList(limit, offset, ruleId, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2428,11 +2524,12 @@ export const HostackApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hostackList(limit?: number, offset?: number, ruleId?: Array<string>, options?: any) {
-            return HostackApiFp(configuration).hostackList(limit, offset, ruleId, options)(axios, basePath);
+        hostackList(limit?: number, offset?: number, ruleId?: Array<string>, tags?: Array<string>, options?: any) {
+            return HostackApiFp(configuration).hostackList(limit, offset, ruleId, tags, options)(axios, basePath);
         },
         /**
          * This view handles listing, retrieving, creating and deleting hostacks.
@@ -2495,12 +2592,13 @@ export class HostackApi extends BaseAPI {
      * @param {number} [limit] Number of results to return per page.
      * @param {number} [offset] The initial index from which to return the results.
      * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostackApi
      */
-    public hostackList(limit?: number, offset?: number, ruleId?: Array<string>, options?: any) {
-        return HostackApiFp(this.configuration).hostackList(limit, offset, ruleId, options)(this.axios, this.basePath);
+    public hostackList(limit?: number, offset?: number, ruleId?: Array<string>, tags?: Array<string>, options?: any) {
+        return HostackApiFp(this.configuration).hostackList(limit, offset, ruleId, tags, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2526,6 +2624,163 @@ export class HostackApi extends BaseAPI {
      */
     public hostackUpdate(id: number, hostAckJustification: HostAckJustification, options?: any) {
         return HostackApiFp(this.configuration).hostackUpdate(id, hostAckJustification, options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
+ * KcsApi - axios parameter creator
+ * @export
+ */
+export const KcsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Looks for all active rules with KCS solutions Returns a list of dicts of the C.R.C rule URL and its KCS solution number
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        kcsList(options: any = {}): RequestArgs {
+            const localVarPath = `/kcs/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets active rule(s) for a particular KCS solution (node_id) Returns a list of C.R.C rule url(s) for that KCS solution
+         * @param {string} nodeId KCS solution number
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        kcsRead(nodeId: string, options: any = {}): RequestArgs {
+            // verify required parameter 'nodeId' is not null or undefined
+            if (nodeId === null || nodeId === undefined) {
+                throw new RequiredError('nodeId','Required parameter nodeId was null or undefined when calling kcsRead.');
+            }
+            const localVarPath = `/kcs/{node_id}/`
+                .replace(`{${"node_id"}}`, encodeURIComponent(String(nodeId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * KcsApi - functional programming interface
+ * @export
+ */
+export const KcsApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Looks for all active rules with KCS solutions Returns a list of dicts of the C.R.C rule URL and its KCS solution number
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        kcsList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Kcs>> {
+            const localVarAxiosArgs = KcsApiAxiosParamCreator(configuration).kcsList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Gets active rule(s) for a particular KCS solution (node_id) Returns a list of C.R.C rule url(s) for that KCS solution
+         * @param {string} nodeId KCS solution number
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        kcsRead(nodeId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>> {
+            const localVarAxiosArgs = KcsApiAxiosParamCreator(configuration).kcsRead(nodeId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * KcsApi - factory interface
+ * @export
+ */
+export const KcsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Looks for all active rules with KCS solutions Returns a list of dicts of the C.R.C rule URL and its KCS solution number
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        kcsList(options?: any) {
+            return KcsApiFp(configuration).kcsList(options)(axios, basePath);
+        },
+        /**
+         * Gets active rule(s) for a particular KCS solution (node_id) Returns a list of C.R.C rule url(s) for that KCS solution
+         * @param {string} nodeId KCS solution number
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        kcsRead(nodeId: string, options?: any) {
+            return KcsApiFp(configuration).kcsRead(nodeId, options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * KcsApi - object-oriented interface
+ * @export
+ * @class KcsApi
+ * @extends {BaseAPI}
+ */
+export class KcsApi extends BaseAPI {
+    /**
+     * Looks for all active rules with KCS solutions Returns a list of dicts of the C.R.C rule URL and its KCS solution number
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KcsApi
+     */
+    public kcsList(options?: any) {
+        return KcsApiFp(this.configuration).kcsList(options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Gets active rule(s) for a particular KCS solution (node_id) Returns a list of C.R.C rule url(s) for that KCS solution
+     * @param {string} nodeId KCS solution number
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KcsApi
+     */
+    public kcsRead(nodeId: string, options?: any) {
+        return KcsApiFp(this.configuration).kcsRead(nodeId, options)(this.axios, this.basePath);
     }
 
 }
@@ -2878,7 +3133,7 @@ export class ResolutionRiskApi extends BaseAPI {
 export const RuleApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements will be returned.  Account-wide acks are unaffected.
+         * Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
          * @summary Add acknowledgements for one or more hosts to this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {MultiHostAck} multiHostAck
@@ -2926,6 +3181,7 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<string>} [hasTag] Display rules that have (one or more) tags
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {boolean} [impacting] Display only rules that are impacting systems currently
          * @param {boolean} [incident] Display only rules that cause an incident
@@ -2936,10 +3192,11 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {string} [text] Display rules with this text in their text fields
          * @param {string} [topic] Display rules in this topic (slug)
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options: any = {}): RequestArgs {
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options: any = {}): RequestArgs {
             const localVarPath = `/rule/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -2964,6 +3221,10 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (hasTag) {
                 localVarQueryParameter['has_tag'] = hasTag.join(COLLECTION_FORMATS["csv"]);
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
             }
 
             if (impact) {
@@ -3006,6 +3267,10 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter['total_risk'] = totalRisk.join(COLLECTION_FORMATS["csv"]);
             }
 
+            if (hasPlaybook !== undefined) {
+                localVarQueryParameter['has_playbook'] = hasPlaybook;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -3020,10 +3285,11 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
          * This includes the account-relevant details such as number of impacted systems and host acknowledgements.
          * @summary Retrieve a single rule and its associated details.
          * @param {string} ruleId Rule ID from Insights
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleRead(ruleId: string, options: any = {}): RequestArgs {
+        ruleRead(ruleId: string, tags?: Array<string>, options: any = {}): RequestArgs {
             // verify required parameter 'ruleId' is not null or undefined
             if (ruleId === null || ruleId === undefined) {
                 throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleRead.');
@@ -3039,6 +3305,10 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -3053,10 +3323,11 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
          * Systems are simply listed by UUID.
          * @summary List all systems affected by this rule.
          * @param {string} ruleId Rule ID from Insights
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystems(ruleId: string, options: any = {}): RequestArgs {
+        ruleSystems(ruleId: string, tags?: Array<string>, options: any = {}): RequestArgs {
             // verify required parameter 'ruleId' is not null or undefined
             if (ruleId === null || ruleId === undefined) {
                 throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleSystems.');
@@ -3072,6 +3343,10 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -3083,7 +3358,7 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
             };
         },
         /**
-         * Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements will be returned.  Account-wide acks are unaffected.
+         * Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
          * @summary Delete acknowledgements for one or more hosts to this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {MultiHostUnAck} multiHostUnAck
@@ -3134,14 +3409,14 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
 export const RuleApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements will be returned.  Account-wide acks are unaffected.
+         * Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
          * @summary Add acknowledgements for one or more hosts to this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {MultiHostAck} multiHostAck
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleAckHosts(ruleId: string, multiHostAck: MultiHostAck, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleHostAckResponse> {
+        ruleAckHosts(ruleId: string, multiHostAck: MultiHostAck, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<MultiAckResponse> {
             const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleAckHosts(ruleId, multiHostAck, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -3155,6 +3430,7 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<string>} [hasTag] Display rules that have (one or more) tags
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {boolean} [impacting] Display only rules that are impacting systems currently
          * @param {boolean} [incident] Display only rules that cause an incident
@@ -3165,11 +3441,12 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * @param {string} [text] Display rules with this text in their text fields
          * @param {string} [topic] Display rules in this topic (slug)
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004> {
-            const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleList(limit, offset, category, hasTag, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, options);
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004> {
+            const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleList(limit, offset, category, hasTag, tags, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, hasPlaybook, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -3179,11 +3456,12 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * This includes the account-relevant details such as number of impacted systems and host acknowledgements.
          * @summary Retrieve a single rule and its associated details.
          * @param {string} ruleId Rule ID from Insights
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleRead(ruleId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleForAccount> {
-            const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleRead(ruleId, options);
+        ruleRead(ruleId: string, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleForAccount> {
+            const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleRead(ruleId, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -3193,25 +3471,26 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * Systems are simply listed by UUID.
          * @summary List all systems affected by this rule.
          * @param {string} ruleId Rule ID from Insights
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystems(ruleId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule> {
-            const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleSystems(ruleId, options);
+        ruleSystems(ruleId: string, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule> {
+            const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleSystems(ruleId, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements will be returned.  Account-wide acks are unaffected.
+         * Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
          * @summary Delete acknowledgements for one or more hosts to this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {MultiHostUnAck} multiHostUnAck
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleUnackHosts(ruleId: string, multiHostUnAck: MultiHostUnAck, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleHostAckResponse> {
+        ruleUnackHosts(ruleId: string, multiHostUnAck: MultiHostUnAck, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<MultiAckResponse> {
             const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleUnackHosts(ruleId, multiHostUnAck, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -3228,7 +3507,7 @@ export const RuleApiFp = function(configuration?: Configuration) {
 export const RuleApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements will be returned.  Account-wide acks are unaffected.
+         * Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
          * @summary Add acknowledgements for one or more hosts to this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {MultiHostAck} multiHostAck
@@ -3245,6 +3524,7 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<string>} [hasTag] Display rules that have (one or more) tags
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {boolean} [impacting] Display only rules that are impacting systems currently
          * @param {boolean} [incident] Display only rules that cause an incident
@@ -3255,34 +3535,37 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
          * @param {string} [text] Display rules with this text in their text fields
          * @param {string} [topic] Display rules in this topic (slug)
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
-            return RuleApiFp(configuration).ruleList(limit, offset, category, hasTag, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, options)(axios, basePath);
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any) {
+            return RuleApiFp(configuration).ruleList(limit, offset, category, hasTag, tags, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, hasPlaybook, options)(axios, basePath);
         },
         /**
          * This includes the account-relevant details such as number of impacted systems and host acknowledgements.
          * @summary Retrieve a single rule and its associated details.
          * @param {string} ruleId Rule ID from Insights
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleRead(ruleId: string, options?: any) {
-            return RuleApiFp(configuration).ruleRead(ruleId, options)(axios, basePath);
+        ruleRead(ruleId: string, tags?: Array<string>, options?: any) {
+            return RuleApiFp(configuration).ruleRead(ruleId, tags, options)(axios, basePath);
         },
         /**
          * Systems are simply listed by UUID.
          * @summary List all systems affected by this rule.
          * @param {string} ruleId Rule ID from Insights
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystems(ruleId: string, options?: any) {
-            return RuleApiFp(configuration).ruleSystems(ruleId, options)(axios, basePath);
+        ruleSystems(ruleId: string, tags?: Array<string>, options?: any) {
+            return RuleApiFp(configuration).ruleSystems(ruleId, tags, options)(axios, basePath);
         },
         /**
-         * Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements will be returned.  Account-wide acks are unaffected.
+         * Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
          * @summary Delete acknowledgements for one or more hosts to this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {MultiHostUnAck} multiHostUnAck
@@ -3303,7 +3586,7 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
  */
 export class RuleApi extends BaseAPI {
     /**
-     * Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements will be returned.  Account-wide acks are unaffected.
+     * Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
      * @summary Add acknowledgements for one or more hosts to this rule.
      * @param {string} ruleId Rule ID from Insights
      * @param {MultiHostAck} multiHostAck
@@ -3322,6 +3605,7 @@ export class RuleApi extends BaseAPI {
      * @param {number} [offset] The initial index from which to return the results.
      * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
      * @param {Array<string>} [hasTag] Display rules that have (one or more) tags
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
      * @param {boolean} [impacting] Display only rules that are impacting systems currently
      * @param {boolean} [incident] Display only rules that cause an incident
@@ -3332,40 +3616,43 @@ export class RuleApi extends BaseAPI {
      * @param {string} [text] Display rules with this text in their text fields
      * @param {string} [topic] Display rules in this topic (slug)
      * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+     * @param {boolean} [hasPlaybook] Display rules that have a playbook
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RuleApi
      */
-    public ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
-        return RuleApiFp(this.configuration).ruleList(limit, offset, category, hasTag, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, options)(this.axios, this.basePath);
+    public ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any) {
+        return RuleApiFp(this.configuration).ruleList(limit, offset, category, hasTag, tags, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, hasPlaybook, options)(this.axios, this.basePath);
     }
 
     /**
      * This includes the account-relevant details such as number of impacted systems and host acknowledgements.
      * @summary Retrieve a single rule and its associated details.
      * @param {string} ruleId Rule ID from Insights
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RuleApi
      */
-    public ruleRead(ruleId: string, options?: any) {
-        return RuleApiFp(this.configuration).ruleRead(ruleId, options)(this.axios, this.basePath);
+    public ruleRead(ruleId: string, tags?: Array<string>, options?: any) {
+        return RuleApiFp(this.configuration).ruleRead(ruleId, tags, options)(this.axios, this.basePath);
     }
 
     /**
      * Systems are simply listed by UUID.
      * @summary List all systems affected by this rule.
      * @param {string} ruleId Rule ID from Insights
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RuleApi
      */
-    public ruleSystems(ruleId: string, options?: any) {
-        return RuleApiFp(this.configuration).ruleSystems(ruleId, options)(this.axios, this.basePath);
+    public ruleSystems(ruleId: string, tags?: Array<string>, options?: any) {
+        return RuleApiFp(this.configuration).ruleSystems(ruleId, tags, options)(this.axios, this.basePath);
     }
 
     /**
-     * Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements will be returned.  Account-wide acks are unaffected.
+     * Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
      * @summary Delete acknowledgements for one or more hosts to this rule.
      * @param {string} ruleId Rule ID from Insights
      * @param {MultiHostUnAck} multiHostUnAck
@@ -3711,10 +3998,11 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsHitsSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options: any = {}): RequestArgs {
+        statsHitsSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/stats/hits_series/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -3735,6 +4023,10 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
 
             if (grain !== undefined) {
                 localVarQueryParameter['grain'] = grain;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -3775,10 +4067,11 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * View the statistics for this account.
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsReports(options: any = {}): RequestArgs {
+        statsReports(tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/stats/reports/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -3788,6 +4081,10 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
+            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -3801,10 +4098,11 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * View the statistics for this account.
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsRules(options: any = {}): RequestArgs {
+        statsRules(tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/stats/rules/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -3814,6 +4112,10 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
+            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -3830,10 +4132,11 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsRulesHitSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options: any = {}): RequestArgs {
+        statsRulesHitSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/stats/rules_hit_series/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -3856,6 +4159,10 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['grain'] = grain;
             }
 
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -3868,10 +4175,11 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * View the statistics for this account.
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsSystems(options: any = {}): RequestArgs {
+        statsSystems(tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/stats/systems/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -3881,6 +4189,10 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
+            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -3897,10 +4209,11 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsSystemsImpactedSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options: any = {}): RequestArgs {
+        statsSystemsImpactedSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/stats/systems_impacted_series/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -3923,6 +4236,10 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['grain'] = grain;
             }
 
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -3938,10 +4255,11 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsSystemsReportingSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options: any = {}): RequestArgs {
+        statsSystemsReportingSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/stats/systems_reporting_series/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -3962,6 +4280,10 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
 
             if (grain !== undefined) {
                 localVarQueryParameter['grain'] = grain;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -3988,11 +4310,12 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsHitsSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StatTimeSeries>> {
-            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsHitsSeries(start, end, grain, options);
+        statsHitsSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StatTimeSeries>> {
+            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsHitsSeries(start, end, grain, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4012,11 +4335,12 @@ export const StatsApiFp = function(configuration?: Configuration) {
         },
         /**
          * View the statistics for this account.
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsReports(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats> {
-            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsReports(options);
+        statsReports(tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats> {
+            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsReports(tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4024,11 +4348,12 @@ export const StatsApiFp = function(configuration?: Configuration) {
         },
         /**
          * View the statistics for this account.
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsRules(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats> {
-            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsRules(options);
+        statsRules(tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats> {
+            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsRules(tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4039,11 +4364,12 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsRulesHitSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StatTimeSeries>> {
-            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsRulesHitSeries(start, end, grain, options);
+        statsRulesHitSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StatTimeSeries>> {
+            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsRulesHitSeries(start, end, grain, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4051,11 +4377,12 @@ export const StatsApiFp = function(configuration?: Configuration) {
         },
         /**
          * View the statistics for this account.
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsSystems(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats> {
-            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsSystems(options);
+        statsSystems(tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats> {
+            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsSystems(tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4066,11 +4393,12 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsSystemsImpactedSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StatTimeSeries>> {
-            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsSystemsImpactedSeries(start, end, grain, options);
+        statsSystemsImpactedSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StatTimeSeries>> {
+            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsSystemsImpactedSeries(start, end, grain, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4081,11 +4409,12 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsSystemsReportingSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StatTimeSeries>> {
-            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsSystemsReportingSeries(start, end, grain, options);
+        statsSystemsReportingSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StatTimeSeries>> {
+            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsSystemsReportingSeries(start, end, grain, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4105,11 +4434,12 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsHitsSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options?: any) {
-            return StatsApiFp(configuration).statsHitsSeries(start, end, grain, options)(axios, basePath);
+        statsHitsSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
+            return StatsApiFp(configuration).statsHitsSeries(start, end, grain, tags, options)(axios, basePath);
         },
         /**
          * Provide a simple list of URLs contained here.  Copied sort-of from the APIRootView's `get` method.
@@ -4121,60 +4451,66 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * View the statistics for this account.
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsReports(options?: any) {
-            return StatsApiFp(configuration).statsReports(options)(axios, basePath);
+        statsReports(tags?: Array<string>, options?: any) {
+            return StatsApiFp(configuration).statsReports(tags, options)(axios, basePath);
         },
         /**
          * View the statistics for this account.
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsRules(options?: any) {
-            return StatsApiFp(configuration).statsRules(options)(axios, basePath);
+        statsRules(tags?: Array<string>, options?: any) {
+            return StatsApiFp(configuration).statsRules(tags, options)(axios, basePath);
         },
         /**
          * Simple time series of day and number of systems impacted by any rule
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsRulesHitSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options?: any) {
-            return StatsApiFp(configuration).statsRulesHitSeries(start, end, grain, options)(axios, basePath);
+        statsRulesHitSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
+            return StatsApiFp(configuration).statsRulesHitSeries(start, end, grain, tags, options)(axios, basePath);
         },
         /**
          * View the statistics for this account.
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsSystems(options?: any) {
-            return StatsApiFp(configuration).statsSystems(options)(axios, basePath);
+        statsSystems(tags?: Array<string>, options?: any) {
+            return StatsApiFp(configuration).statsSystems(tags, options)(axios, basePath);
         },
         /**
          * Simple time series of day and number of systems impacted by any rule
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsSystemsImpactedSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options?: any) {
-            return StatsApiFp(configuration).statsSystemsImpactedSeries(start, end, grain, options)(axios, basePath);
+        statsSystemsImpactedSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
+            return StatsApiFp(configuration).statsSystemsImpactedSeries(start, end, grain, tags, options)(axios, basePath);
         },
         /**
          * Simple time series of day and number of systems having uploaded that day.
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statsSystemsReportingSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options?: any) {
-            return StatsApiFp(configuration).statsSystemsReportingSeries(start, end, grain, options)(axios, basePath);
+        statsSystemsReportingSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
+            return StatsApiFp(configuration).statsSystemsReportingSeries(start, end, grain, tags, options)(axios, basePath);
         },
     };
 };
@@ -4191,12 +4527,13 @@ export class StatsApi extends BaseAPI {
      * @param {string} [start] Start date for statistics range
      * @param {string} [end] End date for statistics range
      * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StatsApi
      */
-    public statsHitsSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options?: any) {
-        return StatsApiFp(this.configuration).statsHitsSeries(start, end, grain, options)(this.axios, this.basePath);
+    public statsHitsSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
+        return StatsApiFp(this.configuration).statsHitsSeries(start, end, grain, tags, options)(this.axios, this.basePath);
     }
 
     /**
@@ -4211,22 +4548,24 @@ export class StatsApi extends BaseAPI {
 
     /**
      * View the statistics for this account.
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StatsApi
      */
-    public statsReports(options?: any) {
-        return StatsApiFp(this.configuration).statsReports(options)(this.axios, this.basePath);
+    public statsReports(tags?: Array<string>, options?: any) {
+        return StatsApiFp(this.configuration).statsReports(tags, options)(this.axios, this.basePath);
     }
 
     /**
      * View the statistics for this account.
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StatsApi
      */
-    public statsRules(options?: any) {
-        return StatsApiFp(this.configuration).statsRules(options)(this.axios, this.basePath);
+    public statsRules(tags?: Array<string>, options?: any) {
+        return StatsApiFp(this.configuration).statsRules(tags, options)(this.axios, this.basePath);
     }
 
     /**
@@ -4234,22 +4573,24 @@ export class StatsApi extends BaseAPI {
      * @param {string} [start] Start date for statistics range
      * @param {string} [end] End date for statistics range
      * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StatsApi
      */
-    public statsRulesHitSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options?: any) {
-        return StatsApiFp(this.configuration).statsRulesHitSeries(start, end, grain, options)(this.axios, this.basePath);
+    public statsRulesHitSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
+        return StatsApiFp(this.configuration).statsRulesHitSeries(start, end, grain, tags, options)(this.axios, this.basePath);
     }
 
     /**
      * View the statistics for this account.
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StatsApi
      */
-    public statsSystems(options?: any) {
-        return StatsApiFp(this.configuration).statsSystems(options)(this.axios, this.basePath);
+    public statsSystems(tags?: Array<string>, options?: any) {
+        return StatsApiFp(this.configuration).statsSystems(tags, options)(this.axios, this.basePath);
     }
 
     /**
@@ -4257,12 +4598,13 @@ export class StatsApi extends BaseAPI {
      * @param {string} [start] Start date for statistics range
      * @param {string} [end] End date for statistics range
      * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StatsApi
      */
-    public statsSystemsImpactedSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options?: any) {
-        return StatsApiFp(this.configuration).statsSystemsImpactedSeries(start, end, grain, options)(this.axios, this.basePath);
+    public statsSystemsImpactedSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
+        return StatsApiFp(this.configuration).statsSystemsImpactedSeries(start, end, grain, tags, options)(this.axios, this.basePath);
     }
 
     /**
@@ -4270,12 +4612,13 @@ export class StatsApi extends BaseAPI {
      * @param {string} [start] Start date for statistics range
      * @param {string} [end] End date for statistics range
      * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StatsApi
      */
-    public statsSystemsReportingSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', options?: any) {
-        return StatsApiFp(this.configuration).statsSystemsReportingSeries(start, end, grain, options)(this.axios, this.basePath);
+    public statsSystemsReportingSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
+        return StatsApiFp(this.configuration).statsSystemsReportingSeries(start, end, grain, tags, options)(this.axios, this.basePath);
     }
 
 }
@@ -4292,10 +4635,11 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {number} [offset] The initial index from which to return the results.
          * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
          * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemList(limit?: number, offset?: number, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', displayName?: string, options: any = {}): RequestArgs {
+        systemList(limit?: number, offset?: number, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', displayName?: string, tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/system/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -4320,6 +4664,10 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
 
             if (displayName !== undefined) {
                 localVarQueryParameter['display_name'] = displayName;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -4411,11 +4759,12 @@ export const SystemApiFp = function(configuration?: Configuration) {
          * @param {number} [offset] The initial index from which to return the results.
          * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
          * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemList(limit?: number, offset?: number, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', displayName?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2005> {
-            const localVarAxiosArgs = SystemApiAxiosParamCreator(configuration).systemList(limit, offset, sort, displayName, options);
+        systemList(limit?: number, offset?: number, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', displayName?: string, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2005> {
+            const localVarAxiosArgs = SystemApiAxiosParamCreator(configuration).systemList(limit, offset, sort, displayName, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4440,7 +4789,7 @@ export const SystemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemReports(uuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
+        systemReports(uuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Report>> {
             const localVarAxiosArgs = SystemApiAxiosParamCreator(configuration).systemReports(uuid, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -4462,11 +4811,12 @@ export const SystemApiFactory = function (configuration?: Configuration, basePat
          * @param {number} [offset] The initial index from which to return the results.
          * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
          * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemList(limit?: number, offset?: number, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', displayName?: string, options?: any) {
-            return SystemApiFp(configuration).systemList(limit, offset, sort, displayName, options)(axios, basePath);
+        systemList(limit?: number, offset?: number, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', displayName?: string, tags?: Array<string>, options?: any) {
+            return SystemApiFp(configuration).systemList(limit, offset, sort, displayName, tags, options)(axios, basePath);
         },
         /**
          * List systems, or retrieve a system by UUID.
@@ -4502,12 +4852,13 @@ export class SystemApi extends BaseAPI {
      * @param {number} [offset] The initial index from which to return the results.
      * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
      * @param {string} [displayName] Display systems with this text in their display_name
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemApi
      */
-    public systemList(limit?: number, offset?: number, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', displayName?: string, options?: any) {
-        return SystemApiFp(this.configuration).systemList(limit, offset, sort, displayName, options)(this.axios, this.basePath);
+    public systemList(limit?: number, offset?: number, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', displayName?: string, tags?: Array<string>, options?: any) {
+        return SystemApiFp(this.configuration).systemList(limit, offset, sort, displayName, tags, options)(this.axios, this.basePath);
     }
 
     /**
@@ -4692,6 +5043,98 @@ export class SystemtypeApi extends BaseAPI {
 }
 
 /**
+ * TagApi - axios parameter creator
+ * @export
+ */
+export const TagApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns all host tags
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tagList(options: any = {}): RequestArgs {
+            const localVarPath = `/tag/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * TagApi - functional programming interface
+ * @export
+ */
+export const TagApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Returns all host tags
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tagList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagList> {
+            const localVarAxiosArgs = TagApiAxiosParamCreator(configuration).tagList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * TagApi - factory interface
+ * @export
+ */
+export const TagApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Returns all host tags
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tagList(options?: any) {
+            return TagApiFp(configuration).tagList(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * TagApi - object-oriented interface
+ * @export
+ * @class TagApi
+ * @extends {BaseAPI}
+ */
+export class TagApi extends BaseAPI {
+    /**
+     * Returns all host tags
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TagApi
+     */
+    public tagList(options?: any) {
+        return TagApiFp(this.configuration).tagList(options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
  * TopicApi - axios parameter creator
  * @export
  */
@@ -4701,10 +5144,11 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
          * Normally this only shows enabled topics, but if the 'show_disabled' parameter is set to True then this will show disabled topics as well.
          * @summary List the rule topics and their impacted systems counts.
          * @param {boolean} [showDisabled] Display topics that are disabled as well as enabled
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicList(showDisabled?: boolean, options: any = {}): RequestArgs {
+        topicList(showDisabled?: boolean, tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/topic/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -4717,6 +5161,10 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
 
             if (showDisabled !== undefined) {
                 localVarQueryParameter['show_disabled'] = showDisabled;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -4798,10 +5246,11 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
          * Systems are just listed by their UUID.
          * @summary List all systems affected by this rule topic.
          * @param {string} slug Rule topic slug
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicSystems(slug: string, options: any = {}): RequestArgs {
+        topicSystems(slug: string, tags?: Array<string>, options: any = {}): RequestArgs {
             // verify required parameter 'slug' is not null or undefined
             if (slug === null || slug === undefined) {
                 throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicSystems.');
@@ -4816,6 +5265,10 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
+            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -4840,11 +5293,12 @@ export const TopicApiFp = function(configuration?: Configuration) {
          * Normally this only shows enabled topics, but if the 'show_disabled' parameter is set to True then this will show disabled topics as well.
          * @summary List the rule topics and their impacted systems counts.
          * @param {boolean} [showDisabled] Display topics that are disabled as well as enabled
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicList(showDisabled?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Topic>> {
-            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicList(showDisabled, options);
+        topicList(showDisabled?: boolean, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Topic>> {
+            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicList(showDisabled, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4881,11 +5335,12 @@ export const TopicApiFp = function(configuration?: Configuration) {
          * Systems are just listed by their UUID.
          * @summary List all systems affected by this rule topic.
          * @param {string} slug Rule topic slug
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicSystems(slug: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule> {
-            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicSystems(slug, options);
+        topicSystems(slug: string, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule> {
+            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicSystems(slug, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4904,11 +5359,12 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
          * Normally this only shows enabled topics, but if the 'show_disabled' parameter is set to True then this will show disabled topics as well.
          * @summary List the rule topics and their impacted systems counts.
          * @param {boolean} [showDisabled] Display topics that are disabled as well as enabled
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicList(showDisabled?: boolean, options?: any) {
-            return TopicApiFp(configuration).topicList(showDisabled, options)(axios, basePath);
+        topicList(showDisabled?: boolean, tags?: Array<string>, options?: any) {
+            return TopicApiFp(configuration).topicList(showDisabled, tags, options)(axios, basePath);
         },
         /**
          * This also lists the topic's impacted systems count.
@@ -4933,11 +5389,12 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
          * Systems are just listed by their UUID.
          * @summary List all systems affected by this rule topic.
          * @param {string} slug Rule topic slug
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicSystems(slug: string, options?: any) {
-            return TopicApiFp(configuration).topicSystems(slug, options)(axios, basePath);
+        topicSystems(slug: string, tags?: Array<string>, options?: any) {
+            return TopicApiFp(configuration).topicSystems(slug, tags, options)(axios, basePath);
         },
     };
 };
@@ -4953,12 +5410,13 @@ export class TopicApi extends BaseAPI {
      * Normally this only shows enabled topics, but if the 'show_disabled' parameter is set to True then this will show disabled topics as well.
      * @summary List the rule topics and their impacted systems counts.
      * @param {boolean} [showDisabled] Display topics that are disabled as well as enabled
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TopicApi
      */
-    public topicList(showDisabled?: boolean, options?: any) {
-        return TopicApiFp(this.configuration).topicList(showDisabled, options)(this.axios, this.basePath);
+    public topicList(showDisabled?: boolean, tags?: Array<string>, options?: any) {
+        return TopicApiFp(this.configuration).topicList(showDisabled, tags, options)(this.axios, this.basePath);
     }
 
     /**
@@ -4988,12 +5446,13 @@ export class TopicApi extends BaseAPI {
      * Systems are just listed by their UUID.
      * @summary List all systems affected by this rule topic.
      * @param {string} slug Rule topic slug
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TopicApi
      */
-    public topicSystems(slug: string, options?: any) {
-        return TopicApiFp(this.configuration).topicSystems(slug, options)(this.axios, this.basePath);
+    public topicSystems(slug: string, tags?: Array<string>, options?: any) {
+        return TopicApiFp(this.configuration).topicSystems(slug, tags, options)(this.axios, this.basePath);
     }
 
 }

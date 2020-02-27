@@ -1041,7 +1041,7 @@ export class GeneratorApi extends BaseAPI {
 export const RemediationsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Creates a new Remediation based on given information
+         * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
          * @summary Create Remediation
          * @param {RemediationInput} remediationInput
          * @param {*} [options] Override http request option.
@@ -1077,7 +1077,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Removes the given Remediation
+         * Removes the given Remediation, RBAC permission {remediations:remediation:write}
          * @summary Remove Remediation
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1110,7 +1110,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Removes the given Issue from the Remediation
+         * Removes the given Issue from the Remediation, RBAC permission {remediations:remediation:write}
          * @summary Remove Remediation Issue
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
@@ -1149,7 +1149,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Removes the given System from the Issue Remediation
+         * Removes the given System from the Issue Remediation, RBAC permission {remediations:remediation:write}
          * @summary Remove Remediation Issue System
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
@@ -1194,7 +1194,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Provides information about the given Remediation
+         * Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
          * @summary Get Remediation
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1227,7 +1227,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Get satellite connection status for a given host
+         * Get satellite connection status for a given host, RBAC permission {remediations:remediation:execute}
          * @summary Pre-flight check
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1260,7 +1260,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Provides Ansible Playbook
+         * Provides Ansible Playbook, RBAC permission {remediations:remediation:read}
          * @summary Get Remediation Playbook
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1293,7 +1293,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Provides information about Remediations
+         * Provides information about Remediations, RBAC permission {remediations:remediation:read}
          * @summary List Remediations
          * @param {'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count'} [sort] Sort order
          * @param {string} [filter] Remediation name filter. If specified only remediations whose name matches the given string will be returned.
@@ -1345,7 +1345,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Execute remediation
+         * Execute remediation, RBAC permission {remediations:remediation:execute}
          * @summary Execute remediation
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1378,7 +1378,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Updates the given Remediation
+         * Updates the given Remediation, RBAC permission {remediations:remediation:write}
          * @summary Update Remediation
          * @param {string} id Remediation identifier
          * @param {RemediationInput} remediationInput
@@ -1420,7 +1420,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Updates the given Remediation Issue
+         * Updates the given Remediation Issue, RBAC permission {remediations:remediation:write}
          * @summary Update Remediation Issue
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
@@ -1477,7 +1477,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
 export const RemediationsApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Creates a new Remediation based on given information
+         * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
          * @summary Create Remediation
          * @param {RemediationInput} remediationInput
          * @param {*} [options] Override http request option.
@@ -1491,7 +1491,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Removes the given Remediation
+         * Removes the given Remediation, RBAC permission {remediations:remediation:write}
          * @summary Remove Remediation
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1505,7 +1505,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Removes the given Issue from the Remediation
+         * Removes the given Issue from the Remediation, RBAC permission {remediations:remediation:write}
          * @summary Remove Remediation Issue
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
@@ -1520,7 +1520,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Removes the given System from the Issue Remediation
+         * Removes the given System from the Issue Remediation, RBAC permission {remediations:remediation:write}
          * @summary Remove Remediation Issue System
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
@@ -1536,7 +1536,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Provides information about the given Remediation
+         * Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
          * @summary Get Remediation
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1550,7 +1550,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Get satellite connection status for a given host
+         * Get satellite connection status for a given host, RBAC permission {remediations:remediation:execute}
          * @summary Pre-flight check
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1564,7 +1564,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Provides Ansible Playbook
+         * Provides Ansible Playbook, RBAC permission {remediations:remediation:read}
          * @summary Get Remediation Playbook
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1578,7 +1578,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Provides information about Remediations
+         * Provides information about Remediations, RBAC permission {remediations:remediation:read}
          * @summary List Remediations
          * @param {'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count'} [sort] Sort order
          * @param {string} [filter] Remediation name filter. If specified only remediations whose name matches the given string will be returned.
@@ -1596,7 +1596,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Execute remediation
+         * Execute remediation, RBAC permission {remediations:remediation:execute}
          * @summary Execute remediation
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1610,7 +1610,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Updates the given Remediation
+         * Updates the given Remediation, RBAC permission {remediations:remediation:write}
          * @summary Update Remediation
          * @param {string} id Remediation identifier
          * @param {RemediationInput} remediationInput
@@ -1625,7 +1625,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Updates the given Remediation Issue
+         * Updates the given Remediation Issue, RBAC permission {remediations:remediation:write}
          * @summary Update Remediation Issue
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
@@ -1650,7 +1650,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
 export const RemediationsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Creates a new Remediation based on given information
+         * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
          * @summary Create Remediation
          * @param {RemediationInput} remediationInput
          * @param {*} [options] Override http request option.
@@ -1660,7 +1660,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).createRemediation(remediationInput, options)(axios, basePath);
         },
         /**
-         * Removes the given Remediation
+         * Removes the given Remediation, RBAC permission {remediations:remediation:write}
          * @summary Remove Remediation
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1670,7 +1670,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).deleteRemediation(id, options)(axios, basePath);
         },
         /**
-         * Removes the given Issue from the Remediation
+         * Removes the given Issue from the Remediation, RBAC permission {remediations:remediation:write}
          * @summary Remove Remediation Issue
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
@@ -1681,7 +1681,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).deleteRemediationIssue(id, issue, options)(axios, basePath);
         },
         /**
-         * Removes the given System from the Issue Remediation
+         * Removes the given System from the Issue Remediation, RBAC permission {remediations:remediation:write}
          * @summary Remove Remediation Issue System
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
@@ -1693,7 +1693,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).deleteRemediationIssueSystem(id, issue, system, options)(axios, basePath);
         },
         /**
-         * Provides information about the given Remediation
+         * Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
          * @summary Get Remediation
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1703,7 +1703,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).getRemediation(id, options)(axios, basePath);
         },
         /**
-         * Get satellite connection status for a given host
+         * Get satellite connection status for a given host, RBAC permission {remediations:remediation:execute}
          * @summary Pre-flight check
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1713,7 +1713,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).getRemediationConnectionStatus(id, options)(axios, basePath);
         },
         /**
-         * Provides Ansible Playbook
+         * Provides Ansible Playbook, RBAC permission {remediations:remediation:read}
          * @summary Get Remediation Playbook
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1723,7 +1723,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).getRemediationPlaybook(id, options)(axios, basePath);
         },
         /**
-         * Provides information about Remediations
+         * Provides information about Remediations, RBAC permission {remediations:remediation:read}
          * @summary List Remediations
          * @param {'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count'} [sort] Sort order
          * @param {string} [filter] Remediation name filter. If specified only remediations whose name matches the given string will be returned.
@@ -1737,7 +1737,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).getRemediations(sort, filter, limit, offset, system, options)(axios, basePath);
         },
         /**
-         * Execute remediation
+         * Execute remediation, RBAC permission {remediations:remediation:execute}
          * @summary Execute remediation
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -1747,7 +1747,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).runRemediation(id, options)(axios, basePath);
         },
         /**
-         * Updates the given Remediation
+         * Updates the given Remediation, RBAC permission {remediations:remediation:write}
          * @summary Update Remediation
          * @param {string} id Remediation identifier
          * @param {RemediationInput} remediationInput
@@ -1758,7 +1758,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).updateRemediation(id, remediationInput, options)(axios, basePath);
         },
         /**
-         * Updates the given Remediation Issue
+         * Updates the given Remediation Issue, RBAC permission {remediations:remediation:write}
          * @summary Update Remediation Issue
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
@@ -1780,7 +1780,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
  */
 export class RemediationsApi extends BaseAPI {
     /**
-     * Creates a new Remediation based on given information
+     * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
      * @summary Create Remediation
      * @param {RemediationInput} remediationInput
      * @param {*} [options] Override http request option.
@@ -1792,7 +1792,7 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
-     * Removes the given Remediation
+     * Removes the given Remediation, RBAC permission {remediations:remediation:write}
      * @summary Remove Remediation
      * @param {string} id Remediation identifier
      * @param {*} [options] Override http request option.
@@ -1804,7 +1804,7 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
-     * Removes the given Issue from the Remediation
+     * Removes the given Issue from the Remediation, RBAC permission {remediations:remediation:write}
      * @summary Remove Remediation Issue
      * @param {string} id Remediation identifier
      * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
@@ -1817,7 +1817,7 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
-     * Removes the given System from the Issue Remediation
+     * Removes the given System from the Issue Remediation, RBAC permission {remediations:remediation:write}
      * @summary Remove Remediation Issue System
      * @param {string} id Remediation identifier
      * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
@@ -1831,7 +1831,7 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
-     * Provides information about the given Remediation
+     * Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
      * @summary Get Remediation
      * @param {string} id Remediation identifier
      * @param {*} [options] Override http request option.
@@ -1843,7 +1843,7 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
-     * Get satellite connection status for a given host
+     * Get satellite connection status for a given host, RBAC permission {remediations:remediation:execute}
      * @summary Pre-flight check
      * @param {string} id Remediation identifier
      * @param {*} [options] Override http request option.
@@ -1855,7 +1855,7 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
-     * Provides Ansible Playbook
+     * Provides Ansible Playbook, RBAC permission {remediations:remediation:read}
      * @summary Get Remediation Playbook
      * @param {string} id Remediation identifier
      * @param {*} [options] Override http request option.
@@ -1867,7 +1867,7 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
-     * Provides information about Remediations
+     * Provides information about Remediations, RBAC permission {remediations:remediation:read}
      * @summary List Remediations
      * @param {'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count'} [sort] Sort order
      * @param {string} [filter] Remediation name filter. If specified only remediations whose name matches the given string will be returned.
@@ -1883,7 +1883,7 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
-     * Execute remediation
+     * Execute remediation, RBAC permission {remediations:remediation:execute}
      * @summary Execute remediation
      * @param {string} id Remediation identifier
      * @param {*} [options] Override http request option.
@@ -1895,7 +1895,7 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
-     * Updates the given Remediation
+     * Updates the given Remediation, RBAC permission {remediations:remediation:write}
      * @summary Update Remediation
      * @param {string} id Remediation identifier
      * @param {RemediationInput} remediationInput
@@ -1908,7 +1908,7 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
-     * Updates the given Remediation Issue
+     * Updates the given Remediation Issue, RBAC permission {remediations:remediation:write}
      * @summary Update Remediation Issue
      * @param {string} id Remediation identifier
      * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)

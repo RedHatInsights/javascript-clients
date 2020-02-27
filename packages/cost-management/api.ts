@@ -2825,19 +2825,19 @@ export interface SourceOut {
      * @type {string}
      * @memberof SourceOut
      */
-    name: string;
+    name?: string;
     /**
      * Dictionary containing resource name.
      * @type {any}
      * @memberof SourceOut
      */
-    authentication: any;
+    authentication?: any;
     /**
      * Dictionary containing billing source.
      * @type {any}
      * @memberof SourceOut
      */
-    billingSource: any;
+    billingSource?: any;
     /**
      *
      * @type {string}
@@ -2849,7 +2849,7 @@ export interface SourceOut {
      * @type {string}
      * @memberof SourceOut
      */
-    sourceUuid: string;
+    sourceUuid?: string;
 }
 
 /**
@@ -3189,10 +3189,11 @@ export const AWSReportApiAxiosParamCreator = function (configuration?: Configura
          * @param {string} [units] The units used to report data.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {boolean} [computeCount] Toggle to include count values in report.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAWSInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options: any = {}): RequestArgs {
+        getAWSInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, computeCount?: boolean, options: any = {}): RequestArgs {
             const localVarPath = `/reports/aws/instance-types/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -3231,6 +3232,10 @@ export const AWSReportApiAxiosParamCreator = function (configuration?: Configura
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
+            }
+
+            if (computeCount !== undefined) {
+                localVarQueryParameter['compute_count'] = computeCount;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -3343,11 +3348,12 @@ export const AWSReportApiFp = function(configuration?: Configuration) {
          * @param {string} [units] The units used to report data.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {boolean} [computeCount] Toggle to include count values in report.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAWSInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportInstanceInventory> {
-            const localVarAxiosArgs = AWSReportApiAxiosParamCreator(configuration).getAWSInstanceReports(filter, groupBy, orderBy, units, offset, limit, options);
+        getAWSInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, computeCount?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportInstanceInventory> {
+            const localVarAxiosArgs = AWSReportApiAxiosParamCreator(configuration).getAWSInstanceReports(filter, groupBy, orderBy, units, offset, limit, computeCount, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -3405,11 +3411,12 @@ export const AWSReportApiFactory = function (configuration?: Configuration, base
          * @param {string} [units] The units used to report data.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {boolean} [computeCount] Toggle to include count values in report.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAWSInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-            return AWSReportApiFp(configuration).getAWSInstanceReports(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
+        getAWSInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, computeCount?: boolean, options?: any) {
+            return AWSReportApiFp(configuration).getAWSInstanceReports(filter, groupBy, orderBy, units, offset, limit, computeCount, options)(axios, basePath);
         },
         /**
          *
@@ -3462,12 +3469,13 @@ export class AWSReportApi extends BaseAPI {
      * @param {string} [units] The units used to report data.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+     * @param {boolean} [computeCount] Toggle to include count values in report.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AWSReportApi
      */
-    public getAWSInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-        return AWSReportApiFp(this.configuration).getAWSInstanceReports(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
+    public getAWSInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, computeCount?: boolean, options?: any) {
+        return AWSReportApiFp(this.configuration).getAWSInstanceReports(filter, groupBy, orderBy, units, offset, limit, computeCount, options)(this.axios, this.basePath);
     }
 
     /**
