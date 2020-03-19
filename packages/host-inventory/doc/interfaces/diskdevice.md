@@ -1,100 +1,89 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [DiskDevice](../interfaces/diskdevice.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [DiskDevice](diskdevice.md)
 
 # Interface: DiskDevice
 
 Representation of one mounted device
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: DiskDevice
+**`interface`** DiskDevice
 
 ## Hierarchy
 
-**DiskDevice**
+* **DiskDevice**
 
 ## Index
 
 ### Properties
 
-* [device](diskdevice.md#device)
-* [label](diskdevice.md#label)
-* [mountPoint](diskdevice.md#mountpoint)
-* [options](diskdevice.md#options)
-* [type](diskdevice.md#type)
-
----
+* [device](diskdevice.md#optional-device)
+* [label](diskdevice.md#optional-label)
+* [mountPoint](diskdevice.md#optional-mountpoint)
+* [options](diskdevice.md#optional-options)
+* [type](diskdevice.md#optional-type)
 
 ## Properties
 
-<a id="device"></a>
+### `Optional` device
 
-### `<Optional>` device
-
-**● device**: *`string`*
+• **device**? : *string*
 
 *Defined in [api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L443)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: DiskDevice
+**`memberof`** DiskDevice
 
 ___
-<a id="label"></a>
 
-### `<Optional>` label
+### `Optional` label
 
-**● label**: *`string`*
+• **label**? : *string*
 
 *Defined in [api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L449)*
 
 user-defined mount label
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: DiskDevice
+**`memberof`** DiskDevice
 
 ___
-<a id="mountpoint"></a>
 
-### `<Optional>` mountPoint
+### `Optional` mountPoint
 
-**● mountPoint**: *`string`*
+• **mountPoint**? : *string*
 
 *Defined in [api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L461)*
 
 mount point
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: DiskDevice
+**`memberof`** DiskDevice
 
 ___
-<a id="options"></a>
 
-### `<Optional>` options
+### `Optional` options
 
-**● options**: *[DiskDeviceOptions](diskdeviceoptions.md)*
+• **options**? : *[DiskDeviceOptions](diskdeviceoptions.md)*
 
 *Defined in [api.ts:455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L455)*
 
-*__type__*: {DiskDeviceOptions}
+**`type`** {DiskDeviceOptions}
 
-*__memberof__*: DiskDevice
+**`memberof`** DiskDevice
 
 ___
-<a id="type"></a>
 
-### `<Optional>` type
+### `Optional` type
 
-**● type**: *`string`*
+• **type**? : *string*
 
 *Defined in [api.ts:467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L467)*
 
 mount type
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: DiskDevice
-
-___
-
+**`memberof`** DiskDevice

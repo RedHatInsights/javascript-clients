@@ -1,56 +1,48 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [TenantSettings](../interfaces/tenantsettings.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [TenantSettings](tenantsettings.md)
 
 # Interface: TenantSettings
 
 The tenant settings and schema
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: TenantSettings
+**`interface`** TenantSettings
 
 ## Hierarchy
 
-**TenantSettings**
+* **TenantSettings**
 
 ## Index
 
 ### Properties
 
-* [current](tenantsettings.md#current)
-* [schema](tenantsettings.md#schema)
-
----
+* [current](tenantsettings.md#optional-current)
+* [schema](tenantsettings.md#optional-schema)
 
 ## Properties
 
-<a id="current"></a>
+### `Optional` current
 
-### `<Optional>` current
-
-**● current**: *`any`*
+• **current**? : *any*
 
 *Defined in [api.ts:1158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1158)*
 
 The current settings for this tenant
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: TenantSettings
+**`memberof`** TenantSettings
 
 ___
-<a id="schema"></a>
 
-### `<Optional>` schema
+### `Optional` schema
 
-**● schema**: *`any`*
+• **schema**? : *any*
 
 *Defined in [api.ts:1164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1164)*
 
 JSON Schema for the Tenant Settings
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: TenantSettings
-
-___
-
+**`memberof`** TenantSettings

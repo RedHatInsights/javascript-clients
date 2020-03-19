@@ -1,14 +1,14 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [ResolutionsBatchInput](../interfaces/resolutionsbatchinput.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [ResolutionsBatchInput](resolutionsbatchinput.md)
 
 # Interface: ResolutionsBatchInput
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ResolutionsBatchInput
+**`interface`** ResolutionsBatchInput
 
 ## Hierarchy
 
-**ResolutionsBatchInput**
+* **ResolutionsBatchInput**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [issues](resolutionsbatchinput.md#issues)
 
----
-
 ## Properties
-
-<a id="issues"></a>
 
 ###  issues
 
-**● issues**: *`Array`<`string`>*
+• **issues**: *Array‹string›*
 
-*Defined in [api.ts:728](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L728)*
+*Defined in [api.ts:1053](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1053)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: ResolutionsBatchInput
-
-___
-
+**`memberof`** ResolutionsBatchInput

@@ -1,20 +1,20 @@
-[@redhat-cloud-services/insights-client](../README.md) > [TagApi](../classes/tagapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [TagApi](tagapi.md)
 
 # Class: TagApi
 
 TagApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: TagApi
+**`class`** TagApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ TagApi**
+  ↳ **TagApi**
 
 ## Index
 
@@ -24,23 +24,19 @@ TagApi - object-oriented interface
 
 ### Properties
 
-* [axios](tagapi.md#axios)
-* [basePath](tagapi.md#basepath)
-* [configuration](tagapi.md#configuration)
+* [axios](tagapi.md#protected-axios)
+* [basePath](tagapi.md#protected-basepath)
+* [configuration](tagapi.md#protected-configuration)
 
 ### Methods
 
 * [tagList](tagapi.md#taglist)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new TagApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [TagApi](tagapi.md)
+\+ **new TagApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[TagApi](tagapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,75 +44,64 @@ TagApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [TagApi](tagapi.md)
-
-___
+**Returns:** *[TagApi](tagapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="taglist"></a>
 
 ###  tagList
 
-▸ **tagList**(options?: *`any`*): `AxiosPromise`<[TagList](../interfaces/taglist.md)>
+▸ **tagList**(`options?`: any): *AxiosPromise‹[TagList](../interfaces/taglist.md)›*
 
-*Defined in [api.ts:5131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5131)*
+*Defined in [api.ts:5345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5345)*
 
-Returns all host tags
+Tags are ordered by namespace, key and value and are given in encoded fromat.
 
-*__throws__*: {RequiredError}
+**`summary`** List all available host tags
 
-*__memberof__*: TagApi
+**`throws`** {RequiredError}
+
+**`memberof`** TagApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[TagList](../interfaces/taglist.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[TagList](../interfaces/taglist.md)›*

@@ -1,280 +1,256 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [Host](../interfaces/host.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [Host](host.md)
 
 # Interface: Host
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Host
+**`interface`** Host
 
 ## Hierarchy
 
-**Host**
+* **Host**
 
 ## Index
 
 ### Properties
 
-* [archivedAt](host.md#archivedat)
-* [clusterId](host.md#clusterid)
-* [cpus](host.md#cpus)
-* [createdAt](host.md#createdat)
-* [description](host.md#description)
-* [extra](host.md#extra)
-* [hostname](host.md#hostname)
-* [id](host.md#id)
-* [lastSeenAt](host.md#lastseenat)
-* [memory](host.md#memory)
-* [name](host.md#name)
-* [powerState](host.md#powerstate)
-* [sourceCreatedAt](host.md#sourcecreatedat)
-* [sourceDeletedAt](host.md#sourcedeletedat)
-* [sourceId](host.md#sourceid)
-* [sourceRef](host.md#sourceref)
-* [uidEms](host.md#uidems)
-* [updatedAt](host.md#updatedat)
-
----
+* [archivedAt](host.md#optional-archivedat)
+* [clusterId](host.md#optional-clusterid)
+* [cpus](host.md#optional-cpus)
+* [createdAt](host.md#optional-createdat)
+* [description](host.md#optional-description)
+* [extra](host.md#optional-extra)
+* [hostname](host.md#optional-hostname)
+* [id](host.md#optional-id)
+* [lastSeenAt](host.md#optional-lastseenat)
+* [memory](host.md#optional-memory)
+* [name](host.md#optional-name)
+* [powerState](host.md#optional-powerstate)
+* [sourceCreatedAt](host.md#optional-sourcecreatedat)
+* [sourceDeletedAt](host.md#optional-sourcedeletedat)
+* [sourceId](host.md#optional-sourceid)
+* [sourceRef](host.md#optional-sourceref)
+* [uidEms](host.md#optional-uidems)
+* [updatedAt](host.md#optional-updatedat)
 
 ## Properties
 
-<a id="archivedat"></a>
+### `Optional` archivedAt
 
-### `<Optional>` archivedAt
-
-**● archivedAt**: *`Date`*
+• **archivedAt**? : *Date*
 
 *Defined in [api.ts:1509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1509)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="clusterid"></a>
 
-### `<Optional>` clusterId
+### `Optional` clusterId
 
-**● clusterId**: *`string`*
+• **clusterId**? : *string*
 
 *Defined in [api.ts:1515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1515)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="cpus"></a>
 
-### `<Optional>` cpus
+### `Optional` cpus
 
-**● cpus**: *`number`*
+• **cpus**? : *number*
 
 *Defined in [api.ts:1521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1521)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:1527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1527)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="description"></a>
 
-### `<Optional>` description
+### `Optional` description
 
-**● description**: *`string`*
+• **description**? : *string*
 
 *Defined in [api.ts:1533](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1533)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="extra"></a>
 
-### `<Optional>` extra
+### `Optional` extra
 
-**● extra**: *`any`*
+• **extra**? : *any*
 
 *Defined in [api.ts:1539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1539)*
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="hostname"></a>
 
-### `<Optional>` hostname
+### `Optional` hostname
 
-**● hostname**: *`string`*
+• **hostname**? : *string*
 
 *Defined in [api.ts:1545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1545)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:1551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1551)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="lastseenat"></a>
 
-### `<Optional>` lastSeenAt
+### `Optional` lastSeenAt
 
-**● lastSeenAt**: *`Date`*
+• **lastSeenAt**? : *Date*
 
 *Defined in [api.ts:1557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1557)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="memory"></a>
 
-### `<Optional>` memory
+### `Optional` memory
 
-**● memory**: *`number`*
+• **memory**? : *number*
 
 *Defined in [api.ts:1563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1563)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:1569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1569)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="powerstate"></a>
 
-### `<Optional>` powerState
+### `Optional` powerState
 
-**● powerState**: *`string`*
+• **powerState**? : *string*
 
 *Defined in [api.ts:1575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1575)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="sourcecreatedat"></a>
 
-### `<Optional>` sourceCreatedAt
+### `Optional` sourceCreatedAt
 
-**● sourceCreatedAt**: *`Date`*
+• **sourceCreatedAt**? : *Date*
 
 *Defined in [api.ts:1581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1581)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="sourcedeletedat"></a>
 
-### `<Optional>` sourceDeletedAt
+### `Optional` sourceDeletedAt
 
-**● sourceDeletedAt**: *`Date`*
+• **sourceDeletedAt**? : *Date*
 
 *Defined in [api.ts:1587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1587)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="sourceid"></a>
 
-### `<Optional>` sourceId
+### `Optional` sourceId
 
-**● sourceId**: *`string`*
+• **sourceId**? : *string*
 
 *Defined in [api.ts:1593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1593)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="sourceref"></a>
 
-### `<Optional>` sourceRef
+### `Optional` sourceRef
 
-**● sourceRef**: *`string`*
+• **sourceRef**? : *string*
 
 *Defined in [api.ts:1599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1599)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="uidems"></a>
 
-### `<Optional>` uidEms
+### `Optional` uidEms
 
-**● uidEms**: *`string`*
+• **uidEms**? : *string*
 
 *Defined in [api.ts:1605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1605)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Host
+**`memberof`** Host
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:1611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1611)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Host
-
-___
-
+**`memberof`** Host

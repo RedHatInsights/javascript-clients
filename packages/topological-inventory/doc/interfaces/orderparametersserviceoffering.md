@@ -1,70 +1,61 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [OrderParametersServiceOffering](../interfaces/orderparametersserviceoffering.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [OrderParametersServiceOffering](orderparametersserviceoffering.md)
 
 # Interface: OrderParametersServiceOffering
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: OrderParametersServiceOffering
+**`interface`** OrderParametersServiceOffering
 
 ## Hierarchy
 
-**OrderParametersServiceOffering**
+* **OrderParametersServiceOffering**
 
 ## Index
 
 ### Properties
 
-* [providerControlParameters](orderparametersserviceoffering.md#providercontrolparameters)
-* [serviceParameters](orderparametersserviceoffering.md#serviceparameters)
-* [servicePlanId](orderparametersserviceoffering.md#serviceplanid)
-
----
+* [providerControlParameters](orderparametersserviceoffering.md#optional-providercontrolparameters)
+* [serviceParameters](orderparametersserviceoffering.md#optional-serviceparameters)
+* [servicePlanId](orderparametersserviceoffering.md#optional-serviceplanid)
 
 ## Properties
 
-<a id="providercontrolparameters"></a>
+### `Optional` providerControlParameters
 
-### `<Optional>` providerControlParameters
-
-**● providerControlParameters**: *`any`*
+• **providerControlParameters**? : *any*
 
 *Defined in [api.ts:2185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2185)*
 
 The provider specific parameters needed to provision this service. This might include namespaces, special keys
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: OrderParametersServiceOffering
+**`memberof`** OrderParametersServiceOffering
 
 ___
-<a id="serviceparameters"></a>
 
-### `<Optional>` serviceParameters
+### `Optional` serviceParameters
 
-**● serviceParameters**: *`any`*
+• **serviceParameters**? : *any*
 
 *Defined in [api.ts:2179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2179)*
 
 JSON object with provisioning parameters
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: OrderParametersServiceOffering
+**`memberof`** OrderParametersServiceOffering
 
 ___
-<a id="serviceplanid"></a>
 
-### `<Optional>` servicePlanId
+### `Optional` servicePlanId
 
-**● servicePlanId**: *`string`*
+• **servicePlanId**? : *string*
 
 *Defined in [api.ts:2191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2191)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: OrderParametersServiceOffering
-
-___
-
+**`memberof`** OrderParametersServiceOffering

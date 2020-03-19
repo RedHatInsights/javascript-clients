@@ -1,80 +1,70 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportOpenShiftGrouping](../interfaces/reportopenshiftgrouping.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportOpenShiftGrouping](reportopenshiftgrouping.md)
 
 # Interface: ReportOpenShiftGrouping
 
 The grouping to apply to the report. No grouping by default.
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportOpenShiftGrouping
+**`interface`** ReportOpenShiftGrouping
 
 ## Hierarchy
 
-**ReportOpenShiftGrouping**
+* **ReportOpenShiftGrouping**
 
 ## Index
 
 ### Properties
 
-* [cluster](reportopenshiftgrouping.md#cluster)
-* [node](reportopenshiftgrouping.md#node)
-* [project](reportopenshiftgrouping.md#project)
-* [tag](reportopenshiftgrouping.md#tag)
-
----
+* [cluster](reportopenshiftgrouping.md#optional-cluster)
+* [node](reportopenshiftgrouping.md#optional-node)
+* [project](reportopenshiftgrouping.md#optional-project)
+* [tag](reportopenshiftgrouping.md#optional-tag)
 
 ## Properties
 
-<a id="cluster"></a>
+### `Optional` cluster
 
-### `<Optional>` cluster
+• **cluster**? : *Array‹string›*
 
-**● cluster**: *`Array`<`string`>*
+*Defined in [api.ts:2292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2292)*
 
-*Defined in [api.ts:2467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2467)*
+**`type`** {Array<string>}
 
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftGrouping
-
-___
-<a id="node"></a>
-
-### `<Optional>` node
-
-**● node**: *`Array`<`string`>*
-
-*Defined in [api.ts:2479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2479)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftGrouping
-
-___
-<a id="project"></a>
-
-### `<Optional>` project
-
-**● project**: *`Array`<`string`>*
-
-*Defined in [api.ts:2473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2473)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftGrouping
-
-___
-<a id="tag"></a>
-
-### `<Optional>` tag
-
-**● tag**: *`Array`<`string`>*
-
-*Defined in [api.ts:2485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2485)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftGrouping
+**`memberof`** ReportOpenShiftGrouping
 
 ___
 
+### `Optional` node
+
+• **node**? : *Array‹string›*
+
+*Defined in [api.ts:2304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2304)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftGrouping
+
+___
+
+### `Optional` project
+
+• **project**? : *Array‹string›*
+
+*Defined in [api.ts:2298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2298)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftGrouping
+
+___
+
+### `Optional` tag
+
+• **tag**? : *Array‹string›*
+
+*Defined in [api.ts:2310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2310)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftGrouping

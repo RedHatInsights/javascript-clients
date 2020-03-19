@@ -1,36 +1,29 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [PortfolioItemNextName](../interfaces/portfolioitemnextname.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [PortfolioItemNextName](portfolioitemnextname.md)
 
 # Interface: PortfolioItemNextName
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: PortfolioItemNextName
+**`interface`** PortfolioItemNextName
 
 ## Hierarchy
 
-**PortfolioItemNextName**
+* **PortfolioItemNextName**
 
 ## Index
 
 ### Properties
 
-* [nextName](portfolioitemnextname.md#nextname)
-
----
+* [nextName](portfolioitemnextname.md#optional-nextname)
 
 ## Properties
 
-<a id="nextname"></a>
+### `Optional` nextName
 
-### `<Optional>` nextName
-
-**● nextName**: *`string`*
+• **nextName**? : *string*
 
 *Defined in [api.ts:799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L799)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: PortfolioItemNextName
-
-___
-
+**`memberof`** PortfolioItemNextName

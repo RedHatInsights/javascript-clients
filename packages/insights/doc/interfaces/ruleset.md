@@ -1,78 +1,68 @@
-[@redhat-cloud-services/insights-client](../README.md) > [RuleSet](../interfaces/ruleset.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [RuleSet](ruleset.md)
 
 # Interface: RuleSet
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RuleSet
+**`interface`** RuleSet
 
 ## Hierarchy
 
-**RuleSet**
+* **RuleSet**
 
 ## Index
 
 ### Properties
 
-* [createdAt](ruleset.md#createdat)
+* [createdAt](ruleset.md#optional-createdat)
 * [description](ruleset.md#description)
 * [ruleSource](ruleset.md#rulesource)
-* [updatedAt](ruleset.md#updatedat)
-
----
+* [updatedAt](ruleset.md#optional-updatedat)
 
 ## Properties
 
-<a id="createdat"></a>
+### `Optional` createdAt
 
-### `<Optional>` createdAt
-
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:997](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L997)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: RuleSet
+**`memberof`** RuleSet
 
 ___
-<a id="description"></a>
 
 ###  description
 
-**● description**: *`string`*
+• **description**: *string*
 
 *Defined in [api.ts:1015](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1015)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RuleSet
+**`memberof`** RuleSet
 
 ___
-<a id="rulesource"></a>
 
 ###  ruleSource
 
-**● ruleSource**: *`string`*
+• **ruleSource**: *string*
 
 *Defined in [api.ts:1009](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1009)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RuleSet
+**`memberof`** RuleSet
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:1003](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1003)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: RuleSet
-
-___
-
+**`memberof`** RuleSet

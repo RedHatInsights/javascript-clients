@@ -1,20 +1,20 @@
-[@redhat-cloud-services/insights-client](../README.md) > [RuleApi](../classes/ruleapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [RuleApi](ruleapi.md)
 
 # Class: RuleApi
 
 RuleApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: RuleApi
+**`class`** RuleApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ RuleApi**
+  ↳ **RuleApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ RuleApi - object-oriented interface
 
 ### Properties
 
-* [axios](ruleapi.md#axios)
-* [basePath](ruleapi.md#basepath)
-* [configuration](ruleapi.md#configuration)
+* [axios](ruleapi.md#protected-axios)
+* [basePath](ruleapi.md#protected-basepath)
+* [configuration](ruleapi.md#protected-configuration)
 
 ### Methods
 
@@ -36,15 +36,11 @@ RuleApi - object-oriented interface
 * [ruleSystems](ruleapi.md#rulesystems)
 * [ruleUnackHosts](ruleapi.md#ruleunackhosts)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new RuleApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [RuleApi](ruleapi.md)
+\+ **new RuleApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[RuleApi](ruleapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -52,201 +48,184 @@ RuleApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [RuleApi](ruleapi.md)
-
-___
+**Returns:** *[RuleApi](ruleapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="ruleackhosts"></a>
 
 ###  ruleAckHosts
 
-▸ **ruleAckHosts**(ruleId: *`string`*, multiHostAck: *[MultiHostAck](../interfaces/multihostack.md)*, options?: *`any`*): `AxiosPromise`<[MultiAckResponse](../interfaces/multiackresponse.md)>
+▸ **ruleAckHosts**(`ruleId`: string, `multiHostAck`: [MultiHostAck](../interfaces/multihostack.md), `options?`: any): *AxiosPromise‹[MultiAckResponse](../interfaces/multiackresponse.md)›*
 
-*Defined in [api.ts:3597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3597)*
+*Defined in [api.ts:3675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3675)*
 
-Host acknowledgements will be added to this rule in this account for the system UUIDs supplied. The justification supplied will be given for all host acks created. Any existing host acknowledgements for a host on this rule will be updated. The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned. Account-wide acks are unaffected.
+Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
 
-*__summary__*: Add acknowledgements for one or more hosts to this rule.
+**`summary`** Add acknowledgements for one or more hosts to this rule.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: RuleApi
+**`memberof`** RuleApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| ruleId | `string` |  Rule ID from Insights |
-| multiHostAck | [MultiHostAck](../interfaces/multihostack.md) |  \- |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`ruleId` | string | Rule ID from Insights |
+`multiHostAck` | [MultiHostAck](../interfaces/multihostack.md) | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[MultiAckResponse](../interfaces/multiackresponse.md)>
+**Returns:** *AxiosPromise‹[MultiAckResponse](../interfaces/multiackresponse.md)›*
 
 ___
-<a id="rulelist"></a>
 
 ###  ruleList
 
-▸ **ruleList**(limit?: *`number`*, offset?: *`number`*, category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, hasTag?: *`Array`<`string`>*, tags?: *`Array`<`string`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impacting?: *`boolean`*, incident?: *`boolean`*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, reportsShown?: *`boolean`*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, sort?: *"category" \| "description" \| "impact" \| "impacted_count" \| "likelihood" \| "playbook_count" \| "publish_date" \| "rule_id" \| "total_risk" \| "resolution_risk" \| "-category" \| "-description" \| "-impact" \| "-impacted_count" \| "-likelihood" \| "-playbook_count" \| "-publish_date" \| "-rule_id" \| "-total_risk" \| "-resolution_risk"*, text?: *`string`*, topic?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, hasPlaybook?: *`boolean`*, options?: *`any`*): `AxiosPromise`<[InlineResponse2004](../interfaces/inlineresponse2004.md)>
+▸ **ruleList**(`limit?`: number, `offset?`: number, `category?`: Array‹1 | 2 | 3 | 4›, `hasTag?`: Array‹string›, `tags?`: Array‹string›, `impact?`: Array‹1 | 2 | 3 | 4›, `impacting?`: boolean, `incident?`: boolean, `likelihood?`: Array‹1 | 2 | 3 | 4›, `reportsShown?`: boolean, `resRisk?`: Array‹1 | 2 | 3 | 4›, `sort?`: "category" | "description" | "impact" | "impacted_count" | "likelihood" | "playbook_count" | "publish_date" | "rule_id" | "total_risk" | "resolution_risk" | "-category" | "-description" | "-impact" | "-impacted_count" | "-likelihood" | "-playbook_count" | "-publish_date" | "-rule_id" | "-total_risk" | "-resolution_risk", `text?`: string, `topic?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `hasPlaybook?`: boolean, `options?`: any): *AxiosPromise‹[InlineResponse2004](../interfaces/inlineresponse2004.md)›*
 
-*Defined in [api.ts:3624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3624)*
+*Defined in [api.ts:3702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3702)*
 
-If 'acked' is False or not given, then only rules that are not acked will be shown. If acked is set and 'true' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+If 'acked' is False or not given, then only rules that are not acked will be shown.  If acked is set and 'true' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
 
-*__summary__*: List all active rules for this account.
+**`summary`** List all active rules for this account.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: RuleApi
+**`memberof`** RuleApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` category | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` hasTag | `Array`<`string`> |
-| `Optional` tags | `Array`<`string`> |
-| `Optional` impact | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` impacting | `boolean` |
-| `Optional` incident | `boolean` |
-| `Optional` likelihood | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` reportsShown | `boolean` |
-| `Optional` resRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` sort | "category" \| "description" \| "impact" \| "impacted_count" \| "likelihood" \| "playbook_count" \| "publish_date" \| "rule_id" \| "total_risk" \| "resolution_risk" \| "-category" \| "-description" \| "-impact" \| "-impacted_count" \| "-likelihood" \| "-playbook_count" \| "-publish_date" \| "-rule_id" \| "-total_risk" \| "-resolution_risk" |
-| `Optional` text | `string` |
-| `Optional` topic | `string` |
-| `Optional` totalRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` hasPlaybook | `boolean` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`limit?` | number |
+`offset?` | number |
+`category?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`hasTag?` | Array‹string› |
+`tags?` | Array‹string› |
+`impact?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`impacting?` | boolean |
+`incident?` | boolean |
+`likelihood?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`reportsShown?` | boolean |
+`resRisk?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`sort?` | "category" &#124; "description" &#124; "impact" &#124; "impacted_count" &#124; "likelihood" &#124; "playbook_count" &#124; "publish_date" &#124; "rule_id" &#124; "total_risk" &#124; "resolution_risk" &#124; "-category" &#124; "-description" &#124; "-impact" &#124; "-impacted_count" &#124; "-likelihood" &#124; "-playbook_count" &#124; "-publish_date" &#124; "-rule_id" &#124; "-total_risk" &#124; "-resolution_risk" |
+`text?` | string |
+`topic?` | string |
+`totalRisk?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`hasPlaybook?` | boolean |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[InlineResponse2004](../interfaces/inlineresponse2004.md)>
+**Returns:** *AxiosPromise‹[InlineResponse2004](../interfaces/inlineresponse2004.md)›*
 
 ___
-<a id="ruleread"></a>
 
 ###  ruleRead
 
-▸ **ruleRead**(ruleId: *`string`*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[RuleForAccount](../interfaces/ruleforaccount.md)>
+▸ **ruleRead**(`ruleId`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[RuleForAccount](../interfaces/ruleforaccount.md)›*
 
-*Defined in [api.ts:3637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3637)*
+*Defined in [api.ts:3715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3715)*
 
 This includes the account-relevant details such as number of impacted systems and host acknowledgements.
 
-*__summary__*: Retrieve a single rule and its associated details.
+**`summary`** Retrieve a single rule and its associated details.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: RuleApi
+**`memberof`** RuleApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| ruleId | `string` |  Rule ID from Insights |
-| `Optional` tags | `Array`<`string`> |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`ruleId` | string | Rule ID from Insights |
+`tags?` | Array‹string› | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[RuleForAccount](../interfaces/ruleforaccount.md)>
+**Returns:** *AxiosPromise‹[RuleForAccount](../interfaces/ruleforaccount.md)›*
 
 ___
-<a id="rulesystems"></a>
 
 ###  ruleSystems
 
-▸ **ruleSystems**(ruleId: *`string`*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
+▸ **ruleSystems**(`ruleId`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[SystemsForRule](../interfaces/systemsforrule.md)›*
 
-*Defined in [api.ts:3650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3650)*
+*Defined in [api.ts:3728](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3728)*
 
-Systems are simply listed by UUID.
+All systems owned by the user's account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
 
-*__summary__*: List all systems affected by this rule.
+**`summary`** List all systems affected by this rule.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: RuleApi
+**`memberof`** RuleApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| ruleId | `string` |  Rule ID from Insights |
-| `Optional` tags | `Array`<`string`> |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`ruleId` | string | Rule ID from Insights |
+`tags?` | Array‹string› | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
+**Returns:** *AxiosPromise‹[SystemsForRule](../interfaces/systemsforrule.md)›*
 
 ___
-<a id="ruleunackhosts"></a>
 
 ###  ruleUnackHosts
 
-▸ **ruleUnackHosts**(ruleId: *`string`*, multiHostUnAck: *[MultiHostUnAck](../interfaces/multihostunack.md)*, options?: *`any`*): `AxiosPromise`<[MultiAckResponse](../interfaces/multiackresponse.md)>
+▸ **ruleUnackHosts**(`ruleId`: string, `multiHostUnAck`: [MultiHostUnAck](../interfaces/multihostunack.md), `options?`: any): *AxiosPromise‹[MultiAckResponse](../interfaces/multiackresponse.md)›*
 
-*Defined in [api.ts:3663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3663)*
+*Defined in [api.ts:3741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3741)*
 
-Any host acknowledgements for this rule in this account for the given system are deleted. Hosts that do not have an acknowledgement for this rule in this account are ignored. The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned. Account-wide acks are unaffected.
+Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
 
-*__summary__*: Delete acknowledgements for one or more hosts to this rule.
+**`summary`** Delete acknowledgements for one or more hosts to this rule.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: RuleApi
+**`memberof`** RuleApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| ruleId | `string` |  Rule ID from Insights |
-| multiHostUnAck | [MultiHostUnAck](../interfaces/multihostunack.md) |  \- |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`ruleId` | string | Rule ID from Insights |
+`multiHostUnAck` | [MultiHostUnAck](../interfaces/multihostunack.md) | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[MultiAckResponse](../interfaces/multiackresponse.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[MultiAckResponse](../interfaces/multiackresponse.md)›*

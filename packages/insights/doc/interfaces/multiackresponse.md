@@ -1,14 +1,14 @@
-[@redhat-cloud-services/insights-client](../README.md) > [MultiAckResponse](../interfaces/multiackresponse.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [MultiAckResponse](multiackresponse.md)
 
 # Interface: MultiAckResponse
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: MultiAckResponse
+**`interface`** MultiAckResponse
 
 ## Hierarchy
 
-**MultiAckResponse**
+* **MultiAckResponse**
 
 ## Index
 
@@ -17,34 +17,26 @@
 * [count](multiackresponse.md#count)
 * [hostIds](multiackresponse.md#hostids)
 
----
-
 ## Properties
-
-<a id="count"></a>
 
 ###  count
 
-**● count**: *`number`*
+• **count**: *number*
 
 *Defined in [api.ts:503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L503)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: MultiAckResponse
+**`memberof`** MultiAckResponse
 
 ___
-<a id="hostids"></a>
 
 ###  hostIds
 
-**● hostIds**: *`Array`<`string`>*
+• **hostIds**: *Array‹string›*
 
 *Defined in [api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L509)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: MultiAckResponse
-
-___
-
+**`memberof`** MultiAckResponse

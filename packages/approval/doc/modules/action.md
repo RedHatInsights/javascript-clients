@@ -1,10 +1,10 @@
-[@redhat-cloud-services/approval-client](../README.md) > [Action](../modules/action.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [Action](action.md)
 
 # Module: Action
 
-*__export__*: 
+**`export`** 
 
-*__namespace__*: Action
+**`namespace`** Action
 
 ## Index
 
@@ -14,103 +14,91 @@
 
 ### Properties
 
-* [comments](action.md#comments)
-* [createdAt](action.md#createdat)
-* [id](action.md#id)
-* [operation](action.md#operation)
-* [processedBy](action.md#processedby)
-* [requestId](action.md#requestid)
-
----
+* [comments](action.md#optional-comments)
+* [createdAt](action.md#optional-createdat)
+* [id](action.md#optional-id)
+* [operation](action.md#optional-operation)
+* [processedBy](action.md#optional-processedby)
+* [requestId](action.md#optional-requestid)
 
 ## Properties
 
-<a id="comments"></a>
+### `Optional` comments
 
-### `<Optional>` comments
-
-**● comments**: *`string` \| `null`*
+• **comments**? : *string | null*
 
 *Defined in [api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L113)*
 
 Comments for action
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Action
+**`memberof`** Action
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L89)*
 
 Timestamp of creation
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Action
+**`memberof`** Action
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L83)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Action
+**`memberof`** Action
 
 ___
-<a id="operation"></a>
 
-### `<Optional>` operation
+### `Optional` operation
 
-**● operation**: *[OperationEnum](../enums/action.operationenum.md)*
+• **operation**? : *[OperationEnum](../enums/action.operationenum.md)*
 
 *Defined in [api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L107)*
 
-Types of action, may be one of the value (approve, cancel, deny, error, notify, memo, skip, or start). The request state will be updated according to the operation.
+Types of action, may be one of the value (approve, cancel, deny, notify, memo, skip, or start). The request state will be updated according to the operation.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Action
+**`memberof`** Action
 
 ___
-<a id="processedby"></a>
 
-### `<Optional>` processedBy
+### `Optional` processedBy
 
-**● processedBy**: *`string`*
+• **processedBy**? : *string*
 
 *Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L101)*
 
 The person who performs the action
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Action
+**`memberof`** Action
 
 ___
-<a id="requestid"></a>
 
-### `<Optional>` requestId
+### `Optional` requestId
 
-**● requestId**: *`string`*
+• **requestId**? : *string*
 
 *Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L95)*
 
 Associated request id
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Action
-
-___
-
+**`memberof`** Action

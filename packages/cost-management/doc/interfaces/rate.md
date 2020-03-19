@@ -1,64 +1,55 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [Rate](../interfaces/rate.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [Rate](rate.md)
 
 # Interface: Rate
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Rate
+**`interface`** Rate
 
 ## Hierarchy
 
-**Rate**
+* **Rate**
 
 ## Index
 
 ### Properties
 
 * [metric](rate.md#metric)
-* [tieredRates](rate.md#tieredrates)
-* [uuid](rate.md#uuid)
-
----
+* [tieredRates](rate.md#optional-tieredrates)
+* [uuid](rate.md#optional-uuid)
 
 ## Properties
 
-<a id="metric"></a>
-
 ###  metric
 
-**● metric**: *`any`*
+• **metric**: *any*
 
-*Defined in [api.ts:916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L916)*
+*Defined in [api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L741)*
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: Rate
-
-___
-<a id="tieredrates"></a>
-
-### `<Optional>` tieredRates
-
-**● tieredRates**: *`Array`<`any`>*
-
-*Defined in [api.ts:922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L922)*
-
-*__type__*: {Array}
-
-*__memberof__*: Rate
-
-___
-<a id="uuid"></a>
-
-### `<Optional>` uuid
-
-**● uuid**: *`string`*
-
-*Defined in [api.ts:910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L910)*
-
-*__type__*: {string}
-
-*__memberof__*: Rate
+**`memberof`** Rate
 
 ___
 
+### `Optional` tieredRates
+
+• **tieredRates**? : *Array‹any›*
+
+*Defined in [api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L747)*
+
+**`type`** {Array<any>}
+
+**`memberof`** Rate
+
+___
+
+### `Optional` uuid
+
+• **uuid**? : *string*
+
+*Defined in [api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L735)*
+
+**`type`** {string}
+
+**`memberof`** Rate

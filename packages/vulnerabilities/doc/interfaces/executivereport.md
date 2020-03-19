@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [ExecutiveReport](../interfaces/executivereport.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [ExecutiveReport](executivereport.md)
 
 # Interface: ExecutiveReport
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ExecutiveReport
+**`interface`** ExecutiveReport
 
 ## Hierarchy
 
-**ExecutiveReport**
+* **ExecutiveReport**
 
 ## Index
 
@@ -18,79 +18,68 @@
 * [cvesTotal](executivereport.md#cvestotal)
 * [recentCves](executivereport.md#recentcves)
 * [systemCount](executivereport.md#systemcount)
-* [topCves](executivereport.md#topcves)
-
----
+* [topCves](executivereport.md#optional-topcves)
 
 ## Properties
 
-<a id="cvesbyseverity"></a>
-
 ###  cvesBySeverity
 
-**● cvesBySeverity**: *[ExecutiveReportCvesBySeverity](executivereportcvesbyseverity.md)*
+• **cvesBySeverity**: *[ExecutiveReportCvesBySeverity](executivereportcvesbyseverity.md)*
 
 *Defined in [api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L445)*
 
-*__type__*: {ExecutiveReportCvesBySeverity}
+**`type`** {ExecutiveReportCvesBySeverity}
 
-*__memberof__*: ExecutiveReport
+**`memberof`** ExecutiveReport
 
 ___
-<a id="cvestotal"></a>
 
 ###  cvesTotal
 
-**● cvesTotal**: *`number`*
+• **cvesTotal**: *number*
 
 *Defined in [api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L439)*
 
 Number of unique CVEs discovered on the managed systems.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ExecutiveReport
+**`memberof`** ExecutiveReport
 
 ___
-<a id="recentcves"></a>
 
 ###  recentCves
 
-**● recentCves**: *[ExecutiveReportRecentCves](executivereportrecentcves.md)*
+• **recentCves**: *[ExecutiveReportRecentCves](executivereportrecentcves.md)*
 
 *Defined in [api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L451)*
 
-*__type__*: {ExecutiveReportRecentCves}
+**`type`** {ExecutiveReportRecentCves}
 
-*__memberof__*: ExecutiveReport
+**`memberof`** ExecutiveReport
 
 ___
-<a id="systemcount"></a>
 
 ###  systemCount
 
-**● systemCount**: *`number`*
+• **systemCount**: *number*
 
 *Defined in [api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L433)*
 
 Total number of systems managed by vulnerability application.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ExecutiveReport
+**`memberof`** ExecutiveReport
 
 ___
-<a id="topcves"></a>
 
-### `<Optional>` topCves
+### `Optional` topCves
 
-**● topCves**: *`Array`<[ExecutiveReportTopCves](executivereporttopcves.md)>*
+• **topCves**? : *Array‹[ExecutiveReportTopCves](executivereporttopcves.md)›*
 
 *Defined in [api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L457)*
 
-*__type__*: {Array}
+**`type`** {Array<ExecutiveReportTopCves>}
 
-*__memberof__*: ExecutiveReport
-
-___
-
+**`memberof`** ExecutiveReport

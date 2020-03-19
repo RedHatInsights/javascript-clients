@@ -1096,6 +1096,26 @@ export interface SettingsInput {
 /**
  *
  * @export
+ * @interface StaleSystemStats
+ */
+export interface StaleSystemStats {
+    /**
+     *
+     * @type {number}
+     * @memberof StaleSystemStats
+     */
+    staleCount: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StaleSystemStats
+     */
+    warnCount: number;
+}
+
+/**
+ *
+ * @export
  * @interface StatTimeSeries
  */
 export interface StatTimeSeries {
@@ -1169,6 +1189,12 @@ export interface System {
      * @memberof System
      */
     lastSeen?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof System
+     */
+    staleAt?: Date;
 }
 
 /**
@@ -1297,7 +1323,8 @@ export interface WeeklyReportSubscription {
 export const AccountSettingApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Update this account's settings, and return the updated settings.
+         * A new object will be created, even if the default settings are supplied.
+         * @summary Update this account's settings, and return the updated settings.
          * @param {AccountSetting} accountSetting
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1332,7 +1359,8 @@ export const AccountSettingApiAxiosParamCreator = function (configuration?: Conf
             };
         },
         /**
-         * Show this account's settings, or the defaults.
+         * This will not create a new account settings object if none exists.
+         * @summary Show this account's settings, or the defaults.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1367,7 +1395,8 @@ export const AccountSettingApiAxiosParamCreator = function (configuration?: Conf
 export const AccountSettingApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Update this account's settings, and return the updated settings.
+         * A new object will be created, even if the default settings are supplied.
+         * @summary Update this account's settings, and return the updated settings.
          * @param {AccountSetting} accountSetting
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1380,7 +1409,8 @@ export const AccountSettingApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Show this account's settings, or the defaults.
+         * This will not create a new account settings object if none exists.
+         * @summary Show this account's settings, or the defaults.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1401,7 +1431,8 @@ export const AccountSettingApiFp = function(configuration?: Configuration) {
 export const AccountSettingApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Update this account's settings, and return the updated settings.
+         * A new object will be created, even if the default settings are supplied.
+         * @summary Update this account's settings, and return the updated settings.
          * @param {AccountSetting} accountSetting
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1410,7 +1441,8 @@ export const AccountSettingApiFactory = function (configuration?: Configuration,
             return AccountSettingApiFp(configuration).accountSettingCreate(accountSetting, options)(axios, basePath);
         },
         /**
-         * Show this account's settings, or the defaults.
+         * This will not create a new account settings object if none exists.
+         * @summary Show this account's settings, or the defaults.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1428,7 +1460,8 @@ export const AccountSettingApiFactory = function (configuration?: Configuration,
  */
 export class AccountSettingApi extends BaseAPI {
     /**
-     * Update this account's settings, and return the updated settings.
+     * A new object will be created, even if the default settings are supplied.
+     * @summary Update this account's settings, and return the updated settings.
      * @param {AccountSetting} accountSetting
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1439,7 +1472,8 @@ export class AccountSettingApi extends BaseAPI {
     }
 
     /**
-     * Show this account's settings, or the defaults.
+     * This will not create a new account settings object if none exists.
+     * @summary Show this account's settings, or the defaults.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountSettingApi
@@ -1457,7 +1491,8 @@ export class AccountSettingApi extends BaseAPI {
 export const AckApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Add an acknowledgement for a rule, by rule ID, and return the new ack.  If there's already an acknowledgement of this rule by this account, then return that.
+         * If there's already an acknowledgement of this rule by this account, then return that.  Otherwise, a new ack is created.
+         * @summary Add an acknowledgement for a rule, by rule ID.
          * @param {AckInput} ackInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1492,7 +1527,8 @@ export const AckApiAxiosParamCreator = function (configuration?: Configuration) 
             };
         },
         /**
-         * Delete an acknowledgement for a rule, by its rule ID.
+         * If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.
+         * @summary Delete an acknowledgement for a rule, by its rule ID.
          * @param {string} ruleId Rule ID defined by Insights ruleset
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1524,7 +1560,8 @@ export const AckApiAxiosParamCreator = function (configuration?: Configuration) 
             };
         },
         /**
-         * List acks from this account where the rule is active
+         * Will return an empty list if this account has no acks.
+         * @summary List acks from this account where the rule is active
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {*} [options] Override http request option.
@@ -1593,7 +1630,8 @@ export const AckApiAxiosParamCreator = function (configuration?: Configuration) 
             };
         },
         /**
-         * Update an acknowledgement for a rule, by rule ID, and return the updated ack.
+         * A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.
+         * @summary Update an acknowledgement for a rule, by rule ID.
          * @param {string} ruleId Rule ID defined by Insights ruleset
          * @param {AckJustification} ackJustification
          * @param {*} [options] Override http request option.
@@ -1643,7 +1681,8 @@ export const AckApiAxiosParamCreator = function (configuration?: Configuration) 
 export const AckApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Add an acknowledgement for a rule, by rule ID, and return the new ack.  If there's already an acknowledgement of this rule by this account, then return that.
+         * If there's already an acknowledgement of this rule by this account, then return that.  Otherwise, a new ack is created.
+         * @summary Add an acknowledgement for a rule, by rule ID.
          * @param {AckInput} ackInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1656,7 +1695,8 @@ export const AckApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Delete an acknowledgement for a rule, by its rule ID.
+         * If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.
+         * @summary Delete an acknowledgement for a rule, by its rule ID.
          * @param {string} ruleId Rule ID defined by Insights ruleset
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1669,7 +1709,8 @@ export const AckApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * List acks from this account where the rule is active
+         * Will return an empty list if this account has no acks.
+         * @summary List acks from this account where the rule is active
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {*} [options] Override http request option.
@@ -1697,7 +1738,8 @@ export const AckApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Update an acknowledgement for a rule, by rule ID, and return the updated ack.
+         * A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.
+         * @summary Update an acknowledgement for a rule, by rule ID.
          * @param {string} ruleId Rule ID defined by Insights ruleset
          * @param {AckJustification} ackJustification
          * @param {*} [options] Override http request option.
@@ -1720,7 +1762,8 @@ export const AckApiFp = function(configuration?: Configuration) {
 export const AckApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Add an acknowledgement for a rule, by rule ID, and return the new ack.  If there's already an acknowledgement of this rule by this account, then return that.
+         * If there's already an acknowledgement of this rule by this account, then return that.  Otherwise, a new ack is created.
+         * @summary Add an acknowledgement for a rule, by rule ID.
          * @param {AckInput} ackInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1729,7 +1772,8 @@ export const AckApiFactory = function (configuration?: Configuration, basePath?:
             return AckApiFp(configuration).ackCreate(ackInput, options)(axios, basePath);
         },
         /**
-         * Delete an acknowledgement for a rule, by its rule ID.
+         * If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.
+         * @summary Delete an acknowledgement for a rule, by its rule ID.
          * @param {string} ruleId Rule ID defined by Insights ruleset
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1738,7 +1782,8 @@ export const AckApiFactory = function (configuration?: Configuration, basePath?:
             return AckApiFp(configuration).ackDelete(ruleId, options)(axios, basePath);
         },
         /**
-         * List acks from this account where the rule is active
+         * Will return an empty list if this account has no acks.
+         * @summary List acks from this account where the rule is active
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {*} [options] Override http request option.
@@ -1758,7 +1803,8 @@ export const AckApiFactory = function (configuration?: Configuration, basePath?:
             return AckApiFp(configuration).ackRead(ruleId, options)(axios, basePath);
         },
         /**
-         * Update an acknowledgement for a rule, by rule ID, and return the updated ack.
+         * A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.
+         * @summary Update an acknowledgement for a rule, by rule ID.
          * @param {string} ruleId Rule ID defined by Insights ruleset
          * @param {AckJustification} ackJustification
          * @param {*} [options] Override http request option.
@@ -1778,7 +1824,8 @@ export const AckApiFactory = function (configuration?: Configuration, basePath?:
  */
 export class AckApi extends BaseAPI {
     /**
-     * Add an acknowledgement for a rule, by rule ID, and return the new ack.  If there's already an acknowledgement of this rule by this account, then return that.
+     * If there's already an acknowledgement of this rule by this account, then return that.  Otherwise, a new ack is created.
+     * @summary Add an acknowledgement for a rule, by rule ID.
      * @param {AckInput} ackInput
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1789,7 +1836,8 @@ export class AckApi extends BaseAPI {
     }
 
     /**
-     * Delete an acknowledgement for a rule, by its rule ID.
+     * If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.
+     * @summary Delete an acknowledgement for a rule, by its rule ID.
      * @param {string} ruleId Rule ID defined by Insights ruleset
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1800,7 +1848,8 @@ export class AckApi extends BaseAPI {
     }
 
     /**
-     * List acks from this account where the rule is active
+     * Will return an empty list if this account has no acks.
+     * @summary List acks from this account where the rule is active
      * @param {number} [limit] Number of results to return per page.
      * @param {number} [offset] The initial index from which to return the results.
      * @param {*} [options] Override http request option.
@@ -1824,7 +1873,8 @@ export class AckApi extends BaseAPI {
     }
 
     /**
-     * Update an acknowledgement for a rule, by rule ID, and return the updated ack.
+     * A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.
+     * @summary Update an acknowledgement for a rule, by rule ID.
      * @param {string} ruleId Rule ID defined by Insights ruleset
      * @param {AckJustification} ackJustification
      * @param {*} [options] Override http request option.
@@ -1844,7 +1894,8 @@ export class AckApi extends BaseAPI {
 export const ExportApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Get each host and all rules currently affecting it.  This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store).  We also only present active, non-acked (on an account AND host level) rules.
+         * We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
+         * @summary Get each host and all rules currently affecting it.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -1905,7 +1956,8 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Export the hosts and rules listing as CSV or JSON
+         * The accepted content type is not required.
+         * @summary Supply the hits list in CSV format.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -1966,7 +2018,8 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Export the hosts and rules listing as CSV or JSON
+         * The accepted content type is not required.
+         * @summary Supply the hits list in JSON format.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2036,7 +2089,8 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
 export const ExportApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Get each host and all rules currently affecting it.  This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store).  We also only present active, non-acked (on an account AND host level) rules.
+         * We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
+         * @summary Get each host and all rules currently affecting it.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2055,7 +2109,8 @@ export const ExportApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Export the hosts and rules listing as CSV or JSON
+         * The accepted content type is not required.
+         * @summary Supply the hits list in CSV format.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2074,7 +2129,8 @@ export const ExportApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Export the hosts and rules listing as CSV or JSON
+         * The accepted content type is not required.
+         * @summary Supply the hits list in JSON format.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2102,7 +2158,8 @@ export const ExportApiFp = function(configuration?: Configuration) {
 export const ExportApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Get each host and all rules currently affecting it.  This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store).  We also only present active, non-acked (on an account AND host level) rules.
+         * We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
+         * @summary Get each host and all rules currently affecting it.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2117,7 +2174,8 @@ export const ExportApiFactory = function (configuration?: Configuration, basePat
             return ExportApiFp(configuration).exportHitsList(category, impact, likelihood, resRisk, text, totalRisk, tags, options)(axios, basePath);
         },
         /**
-         * Export the hosts and rules listing as CSV or JSON
+         * The accepted content type is not required.
+         * @summary Supply the hits list in CSV format.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2132,7 +2190,8 @@ export const ExportApiFactory = function (configuration?: Configuration, basePat
             return ExportApiFp(configuration).exportListCsv(category, impact, likelihood, resRisk, text, totalRisk, tags, options)(axios, basePath);
         },
         /**
-         * Export the hosts and rules listing as CSV or JSON
+         * The accepted content type is not required.
+         * @summary Supply the hits list in JSON format.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2157,7 +2216,8 @@ export const ExportApiFactory = function (configuration?: Configuration, basePat
  */
 export class ExportApi extends BaseAPI {
     /**
-     * Get each host and all rules currently affecting it.  This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store).  We also only present active, non-acked (on an account AND host level) rules.
+     * We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
+     * @summary Get each host and all rules currently affecting it.
      * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
      * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
      * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2174,7 +2234,8 @@ export class ExportApi extends BaseAPI {
     }
 
     /**
-     * Export the hosts and rules listing as CSV or JSON
+     * The accepted content type is not required.
+     * @summary Supply the hits list in CSV format.
      * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
      * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
      * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2191,7 +2252,8 @@ export class ExportApi extends BaseAPI {
     }
 
     /**
-     * Export the hosts and rules listing as CSV or JSON
+     * The accepted content type is not required.
+     * @summary Supply the hits list in JSON format.
      * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
      * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
      * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2635,7 +2697,8 @@ export class HostackApi extends BaseAPI {
 export const KcsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Looks for all active rules with KCS solutions Returns a list of dicts of the C.R.C rule URL and its KCS solution number
+         * Returns a list of dicts of the C.R.C rule URL and its KCS solution number
+         * @summary Looks for all active rules with KCS solutions
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2661,7 +2724,8 @@ export const KcsApiAxiosParamCreator = function (configuration?: Configuration) 
             };
         },
         /**
-         * Gets active rule(s) for a particular KCS solution (node_id) Returns a list of C.R.C rule url(s) for that KCS solution
+         * Returns a list of C.R.C rule url(s) for that KCS solution
+         * @summary Gets active rule(s) for a particular KCS solution (node_id)
          * @param {string} nodeId KCS solution number
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2702,7 +2766,8 @@ export const KcsApiAxiosParamCreator = function (configuration?: Configuration) 
 export const KcsApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Looks for all active rules with KCS solutions Returns a list of dicts of the C.R.C rule URL and its KCS solution number
+         * Returns a list of dicts of the C.R.C rule URL and its KCS solution number
+         * @summary Looks for all active rules with KCS solutions
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2714,7 +2779,8 @@ export const KcsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Gets active rule(s) for a particular KCS solution (node_id) Returns a list of C.R.C rule url(s) for that KCS solution
+         * Returns a list of C.R.C rule url(s) for that KCS solution
+         * @summary Gets active rule(s) for a particular KCS solution (node_id)
          * @param {string} nodeId KCS solution number
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2736,7 +2802,8 @@ export const KcsApiFp = function(configuration?: Configuration) {
 export const KcsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Looks for all active rules with KCS solutions Returns a list of dicts of the C.R.C rule URL and its KCS solution number
+         * Returns a list of dicts of the C.R.C rule URL and its KCS solution number
+         * @summary Looks for all active rules with KCS solutions
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2744,7 +2811,8 @@ export const KcsApiFactory = function (configuration?: Configuration, basePath?:
             return KcsApiFp(configuration).kcsList(options)(axios, basePath);
         },
         /**
-         * Gets active rule(s) for a particular KCS solution (node_id) Returns a list of C.R.C rule url(s) for that KCS solution
+         * Returns a list of C.R.C rule url(s) for that KCS solution
+         * @summary Gets active rule(s) for a particular KCS solution (node_id)
          * @param {string} nodeId KCS solution number
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2763,7 +2831,8 @@ export const KcsApiFactory = function (configuration?: Configuration, basePath?:
  */
 export class KcsApi extends BaseAPI {
     /**
-     * Looks for all active rules with KCS solutions Returns a list of dicts of the C.R.C rule URL and its KCS solution number
+     * Returns a list of dicts of the C.R.C rule URL and its KCS solution number
+     * @summary Looks for all active rules with KCS solutions
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KcsApi
@@ -2773,7 +2842,8 @@ export class KcsApi extends BaseAPI {
     }
 
     /**
-     * Gets active rule(s) for a particular KCS solution (node_id) Returns a list of C.R.C rule url(s) for that KCS solution
+     * Returns a list of C.R.C rule url(s) for that KCS solution
+     * @summary Gets active rule(s) for a particular KCS solution (node_id)
      * @param {string} nodeId KCS solution number
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2865,7 +2935,8 @@ export const RatingApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Rules can be rated +1, 0 or -1; the rating is stored per (user, rule) unique pair.  Rule ratings are edited simply by POSTing a new rating, which overwrites any previous rating by that user for that rule.
+         * Retrieve the ratings for a single rule, by Insights Rule ID
+         * @summary Retrieve the ratings for a single rule
          * @param {string} rule Insights Rule ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2935,7 +3006,8 @@ export const RatingApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Rules can be rated +1, 0 or -1; the rating is stored per (user, rule) unique pair.  Rule ratings are edited simply by POSTing a new rating, which overwrites any previous rating by that user for that rule.
+         * Retrieve the ratings for a single rule, by Insights Rule ID
+         * @summary Retrieve the ratings for a single rule
          * @param {string} rule Insights Rule ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2978,7 +3050,8 @@ export const RatingApiFactory = function (configuration?: Configuration, basePat
             return RatingApiFp(configuration).ratingList(limit, offset, options)(axios, basePath);
         },
         /**
-         * Rules can be rated +1, 0 or -1; the rating is stored per (user, rule) unique pair.  Rule ratings are edited simply by POSTing a new rating, which overwrites any previous rating by that user for that rule.
+         * Retrieve the ratings for a single rule, by Insights Rule ID
+         * @summary Retrieve the ratings for a single rule
          * @param {string} rule Insights Rule ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3022,7 +3095,8 @@ export class RatingApi extends BaseAPI {
     }
 
     /**
-     * Rules can be rated +1, 0 or -1; the rating is stored per (user, rule) unique pair.  Rule ratings are edited simply by POSTing a new rating, which overwrites any previous rating by that user for that rule.
+     * Retrieve the ratings for a single rule, by Insights Rule ID
+     * @summary Retrieve the ratings for a single rule
      * @param {string} rule Insights Rule ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3041,7 +3115,8 @@ export class RatingApi extends BaseAPI {
 export const ResolutionRiskApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * List all total risk values.
+         * Risks are listed in increasing order of severity.
+         * @summary List all total risk values.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3076,7 +3151,8 @@ export const ResolutionRiskApiAxiosParamCreator = function (configuration?: Conf
 export const ResolutionRiskApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * List all total risk values.
+         * Risks are listed in increasing order of severity.
+         * @summary List all total risk values.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3097,7 +3173,8 @@ export const ResolutionRiskApiFp = function(configuration?: Configuration) {
 export const ResolutionRiskApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * List all total risk values.
+         * Risks are listed in increasing order of severity.
+         * @summary List all total risk values.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3115,7 +3192,8 @@ export const ResolutionRiskApiFactory = function (configuration?: Configuration,
  */
 export class ResolutionRiskApi extends BaseAPI {
     /**
-     * List all total risk values.
+     * Risks are listed in increasing order of severity.
+     * @summary List all total risk values.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResolutionRiskApi
@@ -3320,7 +3398,7 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
             };
         },
         /**
-         * Systems are simply listed by UUID.
+         * All systems owned by the user's account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
          * @summary List all systems affected by this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
@@ -3468,7 +3546,7 @@ export const RuleApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Systems are simply listed by UUID.
+         * All systems owned by the user's account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
          * @summary List all systems affected by this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
@@ -3554,7 +3632,7 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
             return RuleApiFp(configuration).ruleRead(ruleId, tags, options)(axios, basePath);
         },
         /**
-         * Systems are simply listed by UUID.
+         * All systems owned by the user's account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
          * @summary List all systems affected by this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
@@ -3639,7 +3717,7 @@ export class RuleApi extends BaseAPI {
     }
 
     /**
-     * Systems are simply listed by UUID.
+     * All systems owned by the user's account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
      * @summary List all systems affected by this rule.
      * @param {string} ruleId Rule ID from Insights
      * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
@@ -3673,7 +3751,8 @@ export class RuleApi extends BaseAPI {
 export const RulecategoryApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Rules are divided into categories, the usual being Availability, Stability, Security and Performance
+         * Categories are listed in decreasing order of importance.
+         * @summary Rules are divided into categories, the usual being Availability, Stability, Security and Performance.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3699,7 +3778,8 @@ export const RulecategoryApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Rules are divided into categories, the usual being Availability, Stability, Security and Performance
+         * Categories are listed in decreasing order of importance.
+         * @summary Rules are divided into categories, the usual being Availability, Stability, Security and Performance.
          * @param {number} id A unique integer value identifying this rule category.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3740,7 +3820,8 @@ export const RulecategoryApiAxiosParamCreator = function (configuration?: Config
 export const RulecategoryApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Rules are divided into categories, the usual being Availability, Stability, Security and Performance
+         * Categories are listed in decreasing order of importance.
+         * @summary Rules are divided into categories, the usual being Availability, Stability, Security and Performance.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3752,7 +3833,8 @@ export const RulecategoryApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Rules are divided into categories, the usual being Availability, Stability, Security and Performance
+         * Categories are listed in decreasing order of importance.
+         * @summary Rules are divided into categories, the usual being Availability, Stability, Security and Performance.
          * @param {number} id A unique integer value identifying this rule category.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3774,7 +3856,8 @@ export const RulecategoryApiFp = function(configuration?: Configuration) {
 export const RulecategoryApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Rules are divided into categories, the usual being Availability, Stability, Security and Performance
+         * Categories are listed in decreasing order of importance.
+         * @summary Rules are divided into categories, the usual being Availability, Stability, Security and Performance.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3782,7 +3865,8 @@ export const RulecategoryApiFactory = function (configuration?: Configuration, b
             return RulecategoryApiFp(configuration).rulecategoryList(options)(axios, basePath);
         },
         /**
-         * Rules are divided into categories, the usual being Availability, Stability, Security and Performance
+         * Categories are listed in decreasing order of importance.
+         * @summary Rules are divided into categories, the usual being Availability, Stability, Security and Performance.
          * @param {number} id A unique integer value identifying this rule category.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3801,7 +3885,8 @@ export const RulecategoryApiFactory = function (configuration?: Configuration, b
  */
 export class RulecategoryApi extends BaseAPI {
     /**
-     * Rules are divided into categories, the usual being Availability, Stability, Security and Performance
+     * Categories are listed in decreasing order of importance.
+     * @summary Rules are divided into categories, the usual being Availability, Stability, Security and Performance.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RulecategoryApi
@@ -3811,7 +3896,8 @@ export class RulecategoryApi extends BaseAPI {
     }
 
     /**
-     * Rules are divided into categories, the usual being Availability, Stability, Security and Performance
+     * Categories are listed in decreasing order of importance.
+     * @summary Rules are divided into categories, the usual being Availability, Stability, Security and Performance.
      * @param {number} id A unique integer value identifying this rule category.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3866,7 +3952,8 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * Describe the settings we have in a Data-Driven Forms way.
+         * This simply compiles the 'show_satellite_hosts' account-wide setting and the weekly report 'is_subscribed' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+         * @summary Describe the settings we have in a Data-Driven Forms way.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3915,7 +4002,8 @@ export const SettingsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Describe the settings we have in a Data-Driven Forms way.
+         * This simply compiles the 'show_satellite_hosts' account-wide setting and the weekly report 'is_subscribed' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+         * @summary Describe the settings we have in a Data-Driven Forms way.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3946,7 +4034,8 @@ export const SettingsApiFactory = function (configuration?: Configuration, baseP
             return SettingsApiFp(configuration).settingsCreate(settingsInput, options)(axios, basePath);
         },
         /**
-         * Describe the settings we have in a Data-Driven Forms way.
+         * This simply compiles the 'show_satellite_hosts' account-wide setting and the weekly report 'is_subscribed' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+         * @summary Describe the settings we have in a Data-Driven Forms way.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3976,7 +4065,8 @@ export class SettingsApi extends BaseAPI {
     }
 
     /**
-     * Describe the settings we have in a Data-Driven Forms way.
+     * This simply compiles the 'show_satellite_hosts' account-wide setting and the weekly report 'is_subscribed' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+     * @summary Describe the settings we have in a Data-Driven Forms way.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SettingsApi
@@ -3994,7 +4084,8 @@ export class SettingsApi extends BaseAPI {
 export const StatsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Simple time series of day and number of hits (per system-rule tuple) per day.
+         * A 'hit' is a unique system-rule pair - a rule impacting one system.
+         * @summary Simple time series of day and number of hits per day.
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4040,7 +4131,8 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Provide a simple list of URLs contained here.  Copied sort-of from the APIRootView's `get` method.
+         * Copied sort-of from the APIRootView's `get` method.
+         * @summary Provide a simple list of URLs contained here.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4066,7 +4158,8 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * View the statistics for this account.
+         * Only current reports are considered.
+         * @summary Show statistics of reports impacting across categories and risks.
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4097,7 +4190,8 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * View the statistics for this account.
+         * Only current reports are considered.
+         * @summary Show statistics of rule usage across categories and risks.
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4128,7 +4222,8 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Simple time series of day and number of systems impacted by any rule
+         * If one rule is impacting four systems, this is counted once.
+         * @summary Simple time series of day and number of rules impacting systems.
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4174,7 +4269,40 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * View the statistics for this account.
+         * For historic reasons, 'stale' refers to hosts that are being warned of being stale, and 'stale_warn' refers to hosts that are being hidden from display.
+         * @summary Show statistics of stale warning and hidden systems.
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsStaleHosts(tags?: Array<string>, options: any = {}): RequestArgs {
+            const localVarPath = `/stats/stale_hosts/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Only current reports are considered.
+         * @summary Show statistics of systems being impacted across categories and risks.
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4205,7 +4333,8 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Simple time series of day and number of systems impacted by any rule
+         * Systems with no reports of rules impacting them are ignored.
+         * @summary Simple time series of day and number of systems impacted by any rule.
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4251,7 +4380,8 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Simple time series of day and number of systems having uploaded that day.
+         * Systems with no reports of rules impacting them are still considered.
+         * @summary Simple time series of day and number of systems having uploaded that day.
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4306,7 +4436,8 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
 export const StatsApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Simple time series of day and number of hits (per system-rule tuple) per day.
+         * A 'hit' is a unique system-rule pair - a rule impacting one system.
+         * @summary Simple time series of day and number of hits per day.
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4322,7 +4453,8 @@ export const StatsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Provide a simple list of URLs contained here.  Copied sort-of from the APIRootView's `get` method.
+         * Copied sort-of from the APIRootView's `get` method.
+         * @summary Provide a simple list of URLs contained here.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4334,7 +4466,8 @@ export const StatsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * View the statistics for this account.
+         * Only current reports are considered.
+         * @summary Show statistics of reports impacting across categories and risks.
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4347,7 +4480,8 @@ export const StatsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * View the statistics for this account.
+         * Only current reports are considered.
+         * @summary Show statistics of rule usage across categories and risks.
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4360,7 +4494,8 @@ export const StatsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Simple time series of day and number of systems impacted by any rule
+         * If one rule is impacting four systems, this is counted once.
+         * @summary Simple time series of day and number of rules impacting systems.
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4376,7 +4511,22 @@ export const StatsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * View the statistics for this account.
+         * For historic reasons, 'stale' refers to hosts that are being warned of being stale, and 'stale_warn' refers to hosts that are being hidden from display.
+         * @summary Show statistics of stale warning and hidden systems.
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsStaleHosts(tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StaleSystemStats> {
+            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsStaleHosts(tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Only current reports are considered.
+         * @summary Show statistics of systems being impacted across categories and risks.
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4389,7 +4539,8 @@ export const StatsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Simple time series of day and number of systems impacted by any rule
+         * Systems with no reports of rules impacting them are ignored.
+         * @summary Simple time series of day and number of systems impacted by any rule.
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4405,7 +4556,8 @@ export const StatsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Simple time series of day and number of systems having uploaded that day.
+         * Systems with no reports of rules impacting them are still considered.
+         * @summary Simple time series of day and number of systems having uploaded that day.
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4430,7 +4582,8 @@ export const StatsApiFp = function(configuration?: Configuration) {
 export const StatsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Simple time series of day and number of hits (per system-rule tuple) per day.
+         * A 'hit' is a unique system-rule pair - a rule impacting one system.
+         * @summary Simple time series of day and number of hits per day.
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4442,7 +4595,8 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
             return StatsApiFp(configuration).statsHitsSeries(start, end, grain, tags, options)(axios, basePath);
         },
         /**
-         * Provide a simple list of URLs contained here.  Copied sort-of from the APIRootView's `get` method.
+         * Copied sort-of from the APIRootView's `get` method.
+         * @summary Provide a simple list of URLs contained here.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4450,7 +4604,8 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
             return StatsApiFp(configuration).statsList(options)(axios, basePath);
         },
         /**
-         * View the statistics for this account.
+         * Only current reports are considered.
+         * @summary Show statistics of reports impacting across categories and risks.
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4459,7 +4614,8 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
             return StatsApiFp(configuration).statsReports(tags, options)(axios, basePath);
         },
         /**
-         * View the statistics for this account.
+         * Only current reports are considered.
+         * @summary Show statistics of rule usage across categories and risks.
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4468,7 +4624,8 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
             return StatsApiFp(configuration).statsRules(tags, options)(axios, basePath);
         },
         /**
-         * Simple time series of day and number of systems impacted by any rule
+         * If one rule is impacting four systems, this is counted once.
+         * @summary Simple time series of day and number of rules impacting systems.
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4480,7 +4637,18 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
             return StatsApiFp(configuration).statsRulesHitSeries(start, end, grain, tags, options)(axios, basePath);
         },
         /**
-         * View the statistics for this account.
+         * For historic reasons, 'stale' refers to hosts that are being warned of being stale, and 'stale_warn' refers to hosts that are being hidden from display.
+         * @summary Show statistics of stale warning and hidden systems.
+         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsStaleHosts(tags?: Array<string>, options?: any) {
+            return StatsApiFp(configuration).statsStaleHosts(tags, options)(axios, basePath);
+        },
+        /**
+         * Only current reports are considered.
+         * @summary Show statistics of systems being impacted across categories and risks.
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4489,7 +4657,8 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
             return StatsApiFp(configuration).statsSystems(tags, options)(axios, basePath);
         },
         /**
-         * Simple time series of day and number of systems impacted by any rule
+         * Systems with no reports of rules impacting them are ignored.
+         * @summary Simple time series of day and number of systems impacted by any rule.
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4501,7 +4670,8 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
             return StatsApiFp(configuration).statsSystemsImpactedSeries(start, end, grain, tags, options)(axios, basePath);
         },
         /**
-         * Simple time series of day and number of systems having uploaded that day.
+         * Systems with no reports of rules impacting them are still considered.
+         * @summary Simple time series of day and number of systems having uploaded that day.
          * @param {string} [start] Start date for statistics range
          * @param {string} [end] End date for statistics range
          * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4523,7 +4693,8 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
  */
 export class StatsApi extends BaseAPI {
     /**
-     * Simple time series of day and number of hits (per system-rule tuple) per day.
+     * A 'hit' is a unique system-rule pair - a rule impacting one system.
+     * @summary Simple time series of day and number of hits per day.
      * @param {string} [start] Start date for statistics range
      * @param {string} [end] End date for statistics range
      * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4537,7 +4708,8 @@ export class StatsApi extends BaseAPI {
     }
 
     /**
-     * Provide a simple list of URLs contained here.  Copied sort-of from the APIRootView's `get` method.
+     * Copied sort-of from the APIRootView's `get` method.
+     * @summary Provide a simple list of URLs contained here.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StatsApi
@@ -4547,7 +4719,8 @@ export class StatsApi extends BaseAPI {
     }
 
     /**
-     * View the statistics for this account.
+     * Only current reports are considered.
+     * @summary Show statistics of reports impacting across categories and risks.
      * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4558,7 +4731,8 @@ export class StatsApi extends BaseAPI {
     }
 
     /**
-     * View the statistics for this account.
+     * Only current reports are considered.
+     * @summary Show statistics of rule usage across categories and risks.
      * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4569,7 +4743,8 @@ export class StatsApi extends BaseAPI {
     }
 
     /**
-     * Simple time series of day and number of systems impacted by any rule
+     * If one rule is impacting four systems, this is counted once.
+     * @summary Simple time series of day and number of rules impacting systems.
      * @param {string} [start] Start date for statistics range
      * @param {string} [end] End date for statistics range
      * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4583,7 +4758,20 @@ export class StatsApi extends BaseAPI {
     }
 
     /**
-     * View the statistics for this account.
+     * For historic reasons, 'stale' refers to hosts that are being warned of being stale, and 'stale_warn' refers to hosts that are being hidden from display.
+     * @summary Show statistics of stale warning and hidden systems.
+     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StatsApi
+     */
+    public statsStaleHosts(tags?: Array<string>, options?: any) {
+        return StatsApiFp(this.configuration).statsStaleHosts(tags, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Only current reports are considered.
+     * @summary Show statistics of systems being impacted across categories and risks.
      * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4594,7 +4782,8 @@ export class StatsApi extends BaseAPI {
     }
 
     /**
-     * Simple time series of day and number of systems impacted by any rule
+     * Systems with no reports of rules impacting them are ignored.
+     * @summary Simple time series of day and number of systems impacted by any rule.
      * @param {string} [start] Start date for statistics range
      * @param {string} [end] End date for statistics range
      * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4608,7 +4797,8 @@ export class StatsApi extends BaseAPI {
     }
 
     /**
-     * Simple time series of day and number of systems having uploaded that day.
+     * Systems with no reports of rules impacting them are still considered.
+     * @summary Simple time series of day and number of systems having uploaded that day.
      * @param {string} [start] Start date for statistics range
      * @param {string} [end] End date for statistics range
      * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
@@ -4630,7 +4820,8 @@ export class StatsApi extends BaseAPI {
 export const SystemApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Returns systems with their hit count and last upload time.
+         * Results can be sorted and systems can be filtered by display name.
+         * @summary Returns systems with their hit count and last upload time.
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
@@ -4681,7 +4872,8 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * List systems, or retrieve a system by UUID.
+         * Retrieve the reports for a single system by Insights Inventory UUID
+         * @summary Retrieve the reports for a single system
          * @param {string} uuid The system&#39;s Host ID in the Inventory
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4713,7 +4905,8 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Returns the list of latest reports for an Inventory Host ID that:  * are in the user's account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
+         * Returns reports that: * are in the user's account * have an active, not-deleted rule * where the rule has not been acked by this account If the host ID is not found, return an empty list.
+         * @summary Returns the list of latest reports for an Inventory Host ID.
          * @param {string} uuid The system&#39;s Host ID in the Inventory
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4754,7 +4947,8 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
 export const SystemApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Returns systems with their hit count and last upload time.
+         * Results can be sorted and systems can be filtered by display name.
+         * @summary Returns systems with their hit count and last upload time.
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
@@ -4771,7 +4965,8 @@ export const SystemApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * List systems, or retrieve a system by UUID.
+         * Retrieve the reports for a single system by Insights Inventory UUID
+         * @summary Retrieve the reports for a single system
          * @param {string} uuid The system&#39;s Host ID in the Inventory
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4784,7 +4979,8 @@ export const SystemApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns the list of latest reports for an Inventory Host ID that:  * are in the user's account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
+         * Returns reports that: * are in the user's account * have an active, not-deleted rule * where the rule has not been acked by this account If the host ID is not found, return an empty list.
+         * @summary Returns the list of latest reports for an Inventory Host ID.
          * @param {string} uuid The system&#39;s Host ID in the Inventory
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4806,7 +5002,8 @@ export const SystemApiFp = function(configuration?: Configuration) {
 export const SystemApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Returns systems with their hit count and last upload time.
+         * Results can be sorted and systems can be filtered by display name.
+         * @summary Returns systems with their hit count and last upload time.
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
@@ -4819,7 +5016,8 @@ export const SystemApiFactory = function (configuration?: Configuration, basePat
             return SystemApiFp(configuration).systemList(limit, offset, sort, displayName, tags, options)(axios, basePath);
         },
         /**
-         * List systems, or retrieve a system by UUID.
+         * Retrieve the reports for a single system by Insights Inventory UUID
+         * @summary Retrieve the reports for a single system
          * @param {string} uuid The system&#39;s Host ID in the Inventory
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4828,7 +5026,8 @@ export const SystemApiFactory = function (configuration?: Configuration, basePat
             return SystemApiFp(configuration).systemRead(uuid, options)(axios, basePath);
         },
         /**
-         * Returns the list of latest reports for an Inventory Host ID that:  * are in the user's account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
+         * Returns reports that: * are in the user's account * have an active, not-deleted rule * where the rule has not been acked by this account If the host ID is not found, return an empty list.
+         * @summary Returns the list of latest reports for an Inventory Host ID.
          * @param {string} uuid The system&#39;s Host ID in the Inventory
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4847,7 +5046,8 @@ export const SystemApiFactory = function (configuration?: Configuration, basePat
  */
 export class SystemApi extends BaseAPI {
     /**
-     * Returns systems with their hit count and last upload time.
+     * Results can be sorted and systems can be filtered by display name.
+     * @summary Returns systems with their hit count and last upload time.
      * @param {number} [limit] Number of results to return per page.
      * @param {number} [offset] The initial index from which to return the results.
      * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
@@ -4862,7 +5062,8 @@ export class SystemApi extends BaseAPI {
     }
 
     /**
-     * List systems, or retrieve a system by UUID.
+     * Retrieve the reports for a single system by Insights Inventory UUID
+     * @summary Retrieve the reports for a single system
      * @param {string} uuid The system&#39;s Host ID in the Inventory
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4873,7 +5074,8 @@ export class SystemApi extends BaseAPI {
     }
 
     /**
-     * Returns the list of latest reports for an Inventory Host ID that:  * are in the user's account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
+     * Returns reports that: * are in the user's account * have an active, not-deleted rule * where the rule has not been acked by this account If the host ID is not found, return an empty list.
+     * @summary Returns the list of latest reports for an Inventory Host ID.
      * @param {string} uuid The system&#39;s Host ID in the Inventory
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4892,7 +5094,8 @@ export class SystemApi extends BaseAPI {
 export const SystemtypeApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * List all system types
+         * List all system types by role and product code
+         * @summary List all system types
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4918,7 +5121,8 @@ export const SystemtypeApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Display a single system type
+         * Retrieve details of a single system type
+         * @summary Retrieve a system type
          * @param {number} id A unique integer value identifying this system type.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4959,7 +5163,8 @@ export const SystemtypeApiAxiosParamCreator = function (configuration?: Configur
 export const SystemtypeApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * List all system types
+         * List all system types by role and product code
+         * @summary List all system types
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4971,7 +5176,8 @@ export const SystemtypeApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Display a single system type
+         * Retrieve details of a single system type
+         * @summary Retrieve a system type
          * @param {number} id A unique integer value identifying this system type.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4993,7 +5199,8 @@ export const SystemtypeApiFp = function(configuration?: Configuration) {
 export const SystemtypeApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * List all system types
+         * List all system types by role and product code
+         * @summary List all system types
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5001,7 +5208,8 @@ export const SystemtypeApiFactory = function (configuration?: Configuration, bas
             return SystemtypeApiFp(configuration).systemtypeList(options)(axios, basePath);
         },
         /**
-         * Display a single system type
+         * Retrieve details of a single system type
+         * @summary Retrieve a system type
          * @param {number} id A unique integer value identifying this system type.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -5020,7 +5228,8 @@ export const SystemtypeApiFactory = function (configuration?: Configuration, bas
  */
 export class SystemtypeApi extends BaseAPI {
     /**
-     * List all system types
+     * List all system types by role and product code
+     * @summary List all system types
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemtypeApi
@@ -5030,7 +5239,8 @@ export class SystemtypeApi extends BaseAPI {
     }
 
     /**
-     * Display a single system type
+     * Retrieve details of a single system type
+     * @summary Retrieve a system type
      * @param {number} id A unique integer value identifying this system type.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5049,7 +5259,8 @@ export class SystemtypeApi extends BaseAPI {
 export const TagApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Returns all host tags
+         * Tags are ordered by namespace, key and value and are given in encoded fromat.
+         * @summary List all available host tags
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5084,7 +5295,8 @@ export const TagApiAxiosParamCreator = function (configuration?: Configuration) 
 export const TagApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Returns all host tags
+         * Tags are ordered by namespace, key and value and are given in encoded fromat.
+         * @summary List all available host tags
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5105,7 +5317,8 @@ export const TagApiFp = function(configuration?: Configuration) {
 export const TagApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Returns all host tags
+         * Tags are ordered by namespace, key and value and are given in encoded fromat.
+         * @summary List all available host tags
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5123,7 +5336,8 @@ export const TagApiFactory = function (configuration?: Configuration, basePath?:
  */
 export class TagApi extends BaseAPI {
     /**
-     * Returns all host tags
+     * Tags are ordered by namespace, key and value and are given in encoded fromat.
+     * @summary List all available host tags
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TagApi
@@ -5211,7 +5425,8 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Lists the available rules that have this tag.
+         * This shows the rule information for rules with this tag.
+         * @summary Lists the available rules that have this tag.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -5319,7 +5534,8 @@ export const TopicApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Lists the available rules that have this tag.
+         * This shows the rule information for rules with this tag.
+         * @summary Lists the available rules that have this tag.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -5377,7 +5593,8 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
             return TopicApiFp(configuration).topicRead(slug, options)(axios, basePath);
         },
         /**
-         * Lists the available rules that have this tag.
+         * This shows the rule information for rules with this tag.
+         * @summary Lists the available rules that have this tag.
          * @param {string} slug Rule topic slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -5432,7 +5649,8 @@ export class TopicApi extends BaseAPI {
     }
 
     /**
-     * Lists the available rules that have this tag.
+     * This shows the rule information for rules with this tag.
+     * @summary Lists the available rules that have this tag.
      * @param {string} slug Rule topic slug
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5464,7 +5682,8 @@ export class TopicApi extends BaseAPI {
 export const TotalRiskApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * List all total risk values.
+         * Total risk values are listed in increasing order of severity.
+         * @summary List all total risk values.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5499,7 +5718,8 @@ export const TotalRiskApiAxiosParamCreator = function (configuration?: Configura
 export const TotalRiskApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * List all total risk values.
+         * Total risk values are listed in increasing order of severity.
+         * @summary List all total risk values.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5520,7 +5740,8 @@ export const TotalRiskApiFp = function(configuration?: Configuration) {
 export const TotalRiskApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * List all total risk values.
+         * Total risk values are listed in increasing order of severity.
+         * @summary List all total risk values.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5538,7 +5759,8 @@ export const TotalRiskApiFactory = function (configuration?: Configuration, base
  */
 export class TotalRiskApi extends BaseAPI {
     /**
-     * List all total risk values.
+     * Total risk values are listed in increasing order of severity.
+     * @summary List all total risk values.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TotalRiskApi
@@ -5556,7 +5778,8 @@ export class TotalRiskApi extends BaseAPI {
 export const UsageApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Returns the amount of unique rule hits within an account over the specified time range.
+         * This uses a HashLogLog structure to record number of hits, and this is therefore an approximation.
+         * @summary List the unique rule hits for this account over the given time range
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5591,7 +5814,8 @@ export const UsageApiAxiosParamCreator = function (configuration?: Configuration
 export const UsageApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Returns the amount of unique rule hits within an account over the specified time range.
+         * This uses a HashLogLog structure to record number of hits, and this is therefore an approximation.
+         * @summary List the unique rule hits for this account over the given time range
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5612,7 +5836,8 @@ export const UsageApiFp = function(configuration?: Configuration) {
 export const UsageApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Returns the amount of unique rule hits within an account over the specified time range.
+         * This uses a HashLogLog structure to record number of hits, and this is therefore an approximation.
+         * @summary List the unique rule hits for this account over the given time range
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5630,7 +5855,8 @@ export const UsageApiFactory = function (configuration?: Configuration, basePath
  */
 export class UsageApi extends BaseAPI {
     /**
-     * Returns the amount of unique rule hits within an account over the specified time range.
+     * This uses a HashLogLog structure to record number of hits, and this is therefore an approximation.
+     * @summary List the unique rule hits for this account over the given time range
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsageApi
@@ -5648,7 +5874,8 @@ export class UsageApi extends BaseAPI {
 export const WeeklyreportsubscriptionApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Set the subscription status of the current user to the supplied `is_subscribed` value.
+         * If 'is_subscribed' is true, a subscription is added if it doesn't already exist.  If it is false, the subscription is removed if it exists.
+         * @summary Set the subscription status of the current user to the supplied `is_subscribed` value.
          * @param {WeeklyReportSubscription} weeklyReportSubscription
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -5683,7 +5910,8 @@ export const WeeklyreportsubscriptionApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Show the user's current subscription status.
+         * This shows the presence of a weekly report subscription by the user in this account.
+         * @summary Show the user's current subscription status.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5718,7 +5946,8 @@ export const WeeklyreportsubscriptionApiAxiosParamCreator = function (configurat
 export const WeeklyreportsubscriptionApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Set the subscription status of the current user to the supplied `is_subscribed` value.
+         * If 'is_subscribed' is true, a subscription is added if it doesn't already exist.  If it is false, the subscription is removed if it exists.
+         * @summary Set the subscription status of the current user to the supplied `is_subscribed` value.
          * @param {WeeklyReportSubscription} weeklyReportSubscription
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -5731,7 +5960,8 @@ export const WeeklyreportsubscriptionApiFp = function(configuration?: Configurat
             };
         },
         /**
-         * Show the user's current subscription status.
+         * This shows the presence of a weekly report subscription by the user in this account.
+         * @summary Show the user's current subscription status.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5752,7 +5982,8 @@ export const WeeklyreportsubscriptionApiFp = function(configuration?: Configurat
 export const WeeklyreportsubscriptionApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Set the subscription status of the current user to the supplied `is_subscribed` value.
+         * If 'is_subscribed' is true, a subscription is added if it doesn't already exist.  If it is false, the subscription is removed if it exists.
+         * @summary Set the subscription status of the current user to the supplied `is_subscribed` value.
          * @param {WeeklyReportSubscription} weeklyReportSubscription
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -5761,7 +5992,8 @@ export const WeeklyreportsubscriptionApiFactory = function (configuration?: Conf
             return WeeklyreportsubscriptionApiFp(configuration).weeklyreportsubscriptionCreate(weeklyReportSubscription, options)(axios, basePath);
         },
         /**
-         * Show the user's current subscription status.
+         * This shows the presence of a weekly report subscription by the user in this account.
+         * @summary Show the user's current subscription status.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5779,7 +6011,8 @@ export const WeeklyreportsubscriptionApiFactory = function (configuration?: Conf
  */
 export class WeeklyreportsubscriptionApi extends BaseAPI {
     /**
-     * Set the subscription status of the current user to the supplied `is_subscribed` value.
+     * If 'is_subscribed' is true, a subscription is added if it doesn't already exist.  If it is false, the subscription is removed if it exists.
+     * @summary Set the subscription status of the current user to the supplied `is_subscribed` value.
      * @param {WeeklyReportSubscription} weeklyReportSubscription
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5790,7 +6023,8 @@ export class WeeklyreportsubscriptionApi extends BaseAPI {
     }
 
     /**
-     * Show the user's current subscription status.
+     * This shows the presence of a weekly report subscription by the user in this account.
+     * @summary Show the user's current subscription status.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WeeklyreportsubscriptionApi

@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [ExecutiveReportTopCves](../interfaces/executivereporttopcves.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [ExecutiveReportTopCves](executivereporttopcves.md)
 
 # Interface: ExecutiveReportTopCves
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ExecutiveReportTopCves
+**`interface`** ExecutiveReportTopCves
 
 ## Hierarchy
 
-**ExecutiveReportTopCves**
+* **ExecutiveReportTopCves**
 
 ## Index
 
@@ -20,83 +20,72 @@
 * [synopsis](executivereporttopcves.md#synopsis)
 * [systemsAffected](executivereporttopcves.md#systemsaffected)
 
----
-
 ## Properties
-
-<a id="cvss2score"></a>
 
 ###  cvss2Score
 
-**● cvss2Score**: *`string` \| `null`*
+• **cvss2Score**: *string | null*
 
-*Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L529)*
+*Defined in [api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L589)*
 
 String representation of cvss2 score of the CVE.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ExecutiveReportTopCves
+**`memberof`** ExecutiveReportTopCves
 
 ___
-<a id="cvss3score"></a>
 
 ###  cvss3Score
 
-**● cvss3Score**: *`string` \| `null`*
+• **cvss3Score**: *string | null*
 
-*Defined in [api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L535)*
+*Defined in [api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L595)*
 
 String representation of cvss3 score of the CVE.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ExecutiveReportTopCves
+**`memberof`** ExecutiveReportTopCves
 
 ___
-<a id="description"></a>
 
 ###  description
 
-**● description**: *`string`*
+• **description**: *string*
 
-*Defined in [api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L541)*
+*Defined in [api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L601)*
 
 Description of the CVE.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ExecutiveReportTopCves
+**`memberof`** ExecutiveReportTopCves
 
 ___
-<a id="synopsis"></a>
 
 ###  synopsis
 
-**● synopsis**: *`string`*
+• **synopsis**: *string*
 
-*Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L523)*
+*Defined in [api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L583)*
 
 CVE synopsis
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ExecutiveReportTopCves
+**`memberof`** ExecutiveReportTopCves
 
 ___
-<a id="systemsaffected"></a>
 
 ###  systemsAffected
 
-**● systemsAffected**: *`number`*
+• **systemsAffected**: *number*
 
-*Defined in [api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L547)*
+*Defined in [api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L607)*
 
 Systems affected by the CVE.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ExecutiveReportTopCves
-
-___
-
+**`memberof`** ExecutiveReportTopCves

@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [OrchestrationStacksCollection](orchestrationstackscollection.md)
 
 # Interface: OrchestrationStacksCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: OrchestrationStacksCollection
+**`interface`** OrchestrationStacksCollection
 
 ## Hierarchy
 
-**OrchestrationStacksCollection**
+* **OrchestrationStacksCollection**
 
 ## Index
 
 ### Properties
 
-* [data](orchestrationstackscollection.md#data)
-* [links](orchestrationstackscollection.md#links)
-* [meta](orchestrationstackscollection.md#meta)
-
----
+* [data](orchestrationstackscollection.md#optional-data)
+* [links](orchestrationstackscollection.md#optional-links)
+* [meta](orchestrationstackscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[OrchestrationStack](orchestrationstack.md)>*
+• **data**? : *Array‹[OrchestrationStack](orchestrationstack.md)›*
 
 *Defined in [api.ts:2165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2165)*
 
-*__type__*: {Array}
+**`type`** {Array<OrchestrationStack>}
 
-*__memberof__*: OrchestrationStacksCollection
+**`memberof`** OrchestrationStacksCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:2159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2159)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: OrchestrationStacksCollection
+**`memberof`** OrchestrationStacksCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:2153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2153)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: OrchestrationStacksCollection
-
-___
-
+**`memberof`** OrchestrationStacksCollection

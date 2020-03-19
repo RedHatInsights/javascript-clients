@@ -1,68 +1,59 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [CveStatusIn](../interfaces/cvestatusin.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [CveStatusIn](cvestatusin.md)
 
 # Interface: CveStatusIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CveStatusIn
+**`interface`** CveStatusIn
 
 ## Hierarchy
 
-**CveStatusIn**
+* **CveStatusIn**
 
 ## Index
 
 ### Properties
 
 * [cve](cvestatusin.md#cve)
-* [statusId](cvestatusin.md#statusid)
-* [statusText](cvestatusin.md#statustext)
-
----
+* [statusId](cvestatusin.md#optional-statusid)
+* [statusText](cvestatusin.md#optional-statustext)
 
 ## Properties
 
-<a id="cve"></a>
-
 ###  cve
 
-**● cve**: *[CveOrList](cveorlist.md)*
-
-*Defined in [git-api/api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L373)*
-
-*__type__*: {CveOrList}
-
-*__memberof__*: CveStatusIn
-
-___
-<a id="statusid"></a>
-
-### `<Optional>` statusId
-
-**● statusId**: *`number`*
+• **cve**: *[CveOrList](cveorlist.md)*
 
 *Defined in [git-api/api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L379)*
 
-Status ID to be set, obtained by GET method.
+**`type`** {CveOrList}
 
-*__type__*: {number}
-
-*__memberof__*: CveStatusIn
+**`memberof`** CveStatusIn
 
 ___
-<a id="statustext"></a>
 
-### `<Optional>` statusText
+### `Optional` statusId
 
-**● statusText**: *`string` \| `null`*
+• **statusId**? : *number*
 
 *Defined in [git-api/api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L385)*
 
-Complementary text to the status.
+Status ID to be set, obtained by GET method.
 
-*__type__*: {string}
+**`type`** {number}
 
-*__memberof__*: CveStatusIn
+**`memberof`** CveStatusIn
 
 ___
 
+### `Optional` statusText
+
+• **statusText**? : *string | null*
+
+*Defined in [git-api/api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L391)*
+
+Complementary text to the status.
+
+**`type`** {string}
+
+**`memberof`** CveStatusIn

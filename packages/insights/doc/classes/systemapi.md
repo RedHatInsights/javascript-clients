@@ -1,20 +1,20 @@
-[@redhat-cloud-services/insights-client](../README.md) > [SystemApi](../classes/systemapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [SystemApi](systemapi.md)
 
 # Class: SystemApi
 
 SystemApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: SystemApi
+**`class`** SystemApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ SystemApi**
+  ↳ **SystemApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ SystemApi - object-oriented interface
 
 ### Properties
 
-* [axios](systemapi.md#axios)
-* [basePath](systemapi.md#basepath)
-* [configuration](systemapi.md#configuration)
+* [axios](systemapi.md#protected-axios)
+* [basePath](systemapi.md#protected-basepath)
+* [configuration](systemapi.md#protected-configuration)
 
 ### Methods
 
@@ -34,15 +34,11 @@ SystemApi - object-oriented interface
 * [systemRead](systemapi.md#systemread)
 * [systemReports](systemapi.md#systemreports)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new SystemApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [SystemApi](systemapi.md)
+\+ **new SystemApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[SystemApi](systemapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -50,128 +46,119 @@ SystemApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [SystemApi](systemapi.md)
-
-___
+**Returns:** *[SystemApi](systemapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="systemlist"></a>
 
 ###  systemList
 
-▸ **systemList**(limit?: *`number`*, offset?: *`number`*, sort?: *"hits" \| "last_seen" \| "display_name" \| "-hits" \| "-last_seen" \| "-display_name"*, displayName?: *`string`*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2005](../interfaces/inlineresponse2005.md)>
+▸ **systemList**(`limit?`: number, `offset?`: number, `sort?`: "hits" | "last_seen" | "display_name" | "-hits" | "-last_seen" | "-display_name", `displayName?`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2005](../interfaces/inlineresponse2005.md)›*
 
-*Defined in [api.ts:4860](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4860)*
+*Defined in [api.ts:5060](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5060)*
 
-Returns systems with their hit count and last upload time.
+Results can be sorted and systems can be filtered by display name.
 
-*__throws__*: {RequiredError}
+**`summary`** Returns systems with their hit count and last upload time.
 
-*__memberof__*: SystemApi
+**`throws`** {RequiredError}
+
+**`memberof`** SystemApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` sort | "hits" \| "last_seen" \| "display_name" \| "-hits" \| "-last_seen" \| "-display_name" |
-| `Optional` displayName | `string` |
-| `Optional` tags | `Array`<`string`> |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`limit?` | number |
+`offset?` | number |
+`sort?` | "hits" &#124; "last_seen" &#124; "display_name" &#124; "-hits" &#124; "-last_seen" &#124; "-display_name" |
+`displayName?` | string |
+`tags?` | Array‹string› |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[InlineResponse2005](../interfaces/inlineresponse2005.md)>
+**Returns:** *AxiosPromise‹[InlineResponse2005](../interfaces/inlineresponse2005.md)›*
 
 ___
-<a id="systemread"></a>
 
 ###  systemRead
 
-▸ **systemRead**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[System](../interfaces/system.md)>
+▸ **systemRead**(`uuid`: string, `options?`: any): *AxiosPromise‹[System](../interfaces/system.md)›*
 
-*Defined in [api.ts:4871](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4871)*
+*Defined in [api.ts:5072](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5072)*
 
-List systems, or retrieve a system by UUID.
+Retrieve the reports for a single system by Insights Inventory UUID
 
-*__throws__*: {RequiredError}
+**`summary`** Retrieve the reports for a single system
 
-*__memberof__*: SystemApi
+**`throws`** {RequiredError}
+
+**`memberof`** SystemApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| uuid | `string` |  The system&#39;s Host ID in the Inventory |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`uuid` | string | The system&#39;s Host ID in the Inventory |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[System](../interfaces/system.md)>
+**Returns:** *AxiosPromise‹[System](../interfaces/system.md)›*
 
 ___
-<a id="systemreports"></a>
 
 ###  systemReports
 
-▸ **systemReports**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[Report](../interfaces/report.md)[]>
+▸ **systemReports**(`uuid`: string, `options?`: any): *AxiosPromise‹[Report](../interfaces/report.md)[]›*
 
-*Defined in [api.ts:4882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4882)*
+*Defined in [api.ts:5084](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5084)*
 
-Returns the list of latest reports for an Inventory Host ID that: \* are in the user's account \* have an active, not-deleted rule \* where the rule has not been acked by this account If the host ID is not found, return an empty list.
+Returns reports that: * are in the user's account * have an active, not-deleted rule * where the rule has not been acked by this account If the host ID is not found, return an empty list.
 
-*__throws__*: {RequiredError}
+**`summary`** Returns the list of latest reports for an Inventory Host ID.
 
-*__memberof__*: SystemApi
+**`throws`** {RequiredError}
+
+**`memberof`** SystemApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| uuid | `string` |  The system&#39;s Host ID in the Inventory |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`uuid` | string | The system&#39;s Host ID in the Inventory |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Report](../interfaces/report.md)[]>
-
-___
-
+**Returns:** *AxiosPromise‹[Report](../interfaces/report.md)[]›*

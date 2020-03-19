@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [SubnetsCollection](../interfaces/subnetscollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [SubnetsCollection](subnetscollection.md)
 
 # Interface: SubnetsCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SubnetsCollection
+**`interface`** SubnetsCollection
 
 ## Hierarchy
 
-**SubnetsCollection**
+* **SubnetsCollection**
 
 ## Index
 
 ### Properties
 
-* [data](subnetscollection.md#data)
-* [links](subnetscollection.md#links)
-* [meta](subnetscollection.md#meta)
-
----
+* [data](subnetscollection.md#optional-data)
+* [links](subnetscollection.md#optional-links)
+* [meta](subnetscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[Subnet](subnet.md)>*
+• **data**? : *Array‹[Subnet](subnet.md)›*
 
 *Defined in [api.ts:3491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3491)*
 
-*__type__*: {Array}
+**`type`** {Array<Subnet>}
 
-*__memberof__*: SubnetsCollection
+**`memberof`** SubnetsCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:3485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3485)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: SubnetsCollection
+**`memberof`** SubnetsCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:3479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3479)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: SubnetsCollection
-
-___
-
+**`memberof`** SubnetsCollection

@@ -1,14 +1,14 @@
-[@redhat-cloud-services/insights-client](../README.md) > [SettingDDF](../interfaces/settingddf.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [SettingDDF](settingddf.md)
 
 # Interface: SettingDDF
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SettingDDF
+**`interface`** SettingDDF
 
 ## Hierarchy
 
-**SettingDDF**
+* **SettingDDF**
 
 ## Index
 
@@ -21,86 +21,74 @@
 * [label](settingddf.md#label)
 * [name](settingddf.md#name)
 
----
-
 ## Properties
-
-<a id="component"></a>
 
 ###  component
 
-**● component**: *`string`*
+• **component**: *string*
 
 *Defined in [api.ts:1047](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1047)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SettingDDF
+**`memberof`** SettingDDF
 
 ___
-<a id="helptext"></a>
 
 ###  helpText
 
-**● helpText**: *`string`*
+• **helpText**: *string*
 
 *Defined in [api.ts:1041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1041)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SettingDDF
+**`memberof`** SettingDDF
 
 ___
-<a id="initialvalue"></a>
 
 ###  initialValue
 
-**● initialValue**: *`boolean`*
+• **initialValue**: *boolean*
 
 *Defined in [api.ts:1059](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1059)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: SettingDDF
+**`memberof`** SettingDDF
 
 ___
-<a id="isrequired"></a>
 
 ###  isRequired
 
-**● isRequired**: *`boolean`*
+• **isRequired**: *boolean*
 
 *Defined in [api.ts:1053](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1053)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: SettingDDF
+**`memberof`** SettingDDF
 
 ___
-<a id="label"></a>
 
 ###  label
 
-**● label**: *`string`*
+• **label**: *string*
 
 *Defined in [api.ts:1035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1035)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SettingDDF
+**`memberof`** SettingDDF
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
 *Defined in [api.ts:1029](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1029)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SettingDDF
-
-___
-
+**`memberof`** SettingDDF

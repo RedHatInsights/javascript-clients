@@ -1,50 +1,30 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [AppsRegisterApplication](../interfaces/appsregisterapplication.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [AppsRegisterApplication](appsregisterapplication.md)
 
 # Interface: AppsRegisterApplication
 
-*__export__*: 
-
-*__interface__*: AppsRegisterApplication
-
 ## Hierarchy
 
-**AppsRegisterApplication**
+* **AppsRegisterApplication**
 
 ## Index
 
 ### Properties
 
-* [name](appsregisterapplication.md#name)
-* [title](appsregisterapplication.md#title)
-
----
+* [name](appsregisterapplication.md#optional-name)
+* [title](appsregisterapplication.md#optional-title)
 
 ## Properties
 
-<a id="name"></a>
+### `Optional` name
 
-### `<Optional>` name
-
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L163)*
 
-*__type__*: {string}
-
-*__memberof__*: AppsRegisterApplication
-
 ___
-<a id="title"></a>
 
-### `<Optional>` title
+### `Optional` title
 
-**● title**: *`string`*
+• **title**? : *string*
 
 *Defined in [api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L169)*
-
-*__type__*: {string}
-
-*__memberof__*: AppsRegisterApplication
-
-___
-

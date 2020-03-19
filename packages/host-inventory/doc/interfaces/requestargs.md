@@ -1,14 +1,14 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [RequestArgs](../interfaces/requestargs.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [RequestArgs](requestargs.md)
 
 # Interface: RequestArgs
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RequestArgs
+**`interface`** RequestArgs
 
 ## Hierarchy
 
-**RequestArgs**
+* **RequestArgs**
 
 ## Index
 
@@ -17,26 +17,18 @@
 * [options](requestargs.md#options)
 * [url](requestargs.md#url)
 
----
-
 ## Properties
-
-<a id="options"></a>
 
 ###  options
 
-**● options**: *`any`*
+• **options**: *any*
 
 *Defined in [api.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L40)*
 
 ___
-<a id="url"></a>
 
 ###  url
 
-**● url**: *`string`*
+• **url**: *string*
 
 *Defined in [api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L39)*
-
-___
-

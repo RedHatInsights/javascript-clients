@@ -1,14 +1,14 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [PrincipalIn](../interfaces/principalin.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [PrincipalIn](principalin.md)
 
 # Interface: PrincipalIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: PrincipalIn
+**`interface`** PrincipalIn
 
 ## Hierarchy
 
-**PrincipalIn**
+* **PrincipalIn**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [username](principalin.md#username)
 
----
-
 ## Properties
-
-<a id="username"></a>
 
 ###  username
 
-**● username**: *`string`*
+• **username**: *string*
 
-*Defined in [api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L667)*
+*Defined in [api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L673)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: PrincipalIn
-
-___
-
+**`memberof`** PrincipalIn

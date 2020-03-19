@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [Meta](../interfaces/meta.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [Meta](meta.md)
 
 # Interface: Meta
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Meta
+**`interface`** Meta
 
 ## Hierarchy
 
-**Meta**
+* **Meta**
 
 ## Index
 
@@ -24,143 +24,128 @@
 * [sort](meta.md#sort)
 * [totalItems](meta.md#totalitems)
 
----
-
 ## Properties
-
-<a id="dataformat"></a>
 
 ###  dataFormat
 
-**● dataFormat**: *`string`*
+• **dataFormat**: *string*
 
-*Defined in [api.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L649)*
+*Defined in [api.ts:709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L709)*
 
 Format of the output data, either JSON (default) or CSV.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="filter"></a>
 
 ###  filter
 
-**● filter**: *`string` \| `null`*
+• **filter**: *string | null*
 
-*Defined in [api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L601)*
+*Defined in [api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L661)*
 
 Full text filter
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="limit"></a>
 
 ###  limit
 
-**● limit**: *`number`*
+• **limit**: *number*
 
-*Defined in [api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L607)*
+*Defined in [api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L667)*
 
 Maximum number of paginated results.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="offset"></a>
 
 ###  offset
 
-**● offset**: *`number`*
+• **offset**: *number*
 
-*Defined in [api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L613)*
+*Defined in [api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L673)*
 
 First record of paginated response.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="page"></a>
 
 ###  page
 
-**● page**: *`number`*
+• **page**: *number*
 
-*Defined in [api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L619)*
+*Defined in [api.ts:679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L679)*
 
 Page number of paginated response.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="pagesize"></a>
 
 ###  pageSize
 
-**● pageSize**: *`number`*
+• **pageSize**: *number*
 
-*Defined in [api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L625)*
+*Defined in [api.ts:685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L685)*
 
 Number of records per page of paginated response.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="pages"></a>
 
 ###  pages
 
-**● pages**: *`number`*
+• **pages**: *number*
 
-*Defined in [api.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L631)*
+*Defined in [api.ts:691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L691)*
 
 Total number of pages of paginated response.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="sort"></a>
 
 ###  sort
 
-**● sort**: *`string` \| `null`*
+• **sort**: *string | null*
 
-*Defined in [api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L637)*
+*Defined in [api.ts:697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L697)*
 
 Sorting filter.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="totalitems"></a>
 
 ###  totalItems
 
-**● totalItems**: *`number`*
+• **totalItems**: *number*
 
-*Defined in [api.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L643)*
+*Defined in [api.ts:703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L703)*
 
 Total number of records.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Meta
-
-___
-
+**`memberof`** Meta

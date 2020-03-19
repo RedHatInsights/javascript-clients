@@ -1,36 +1,29 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [ErrorNotFound](../interfaces/errornotfound.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [ErrorNotFound](errornotfound.md)
 
 # Interface: ErrorNotFound
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ErrorNotFound
+**`interface`** ErrorNotFound
 
 ## Hierarchy
 
-**ErrorNotFound**
+* **ErrorNotFound**
 
 ## Index
 
 ### Properties
 
-* [errors](errornotfound.md#errors)
-
----
+* [errors](errornotfound.md#optional-errors)
 
 ## Properties
 
-<a id="errors"></a>
+### `Optional` errors
 
-### `<Optional>` errors
-
-**● errors**: *`Array`<[ErrorNotFoundErrors](errornotfounderrors.md)>*
+• **errors**? : *Array‹[ErrorNotFoundErrors](errornotfounderrors.md)›*
 
 *Defined in [api.ts:1317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1317)*
 
-*__type__*: {Array}
+**`type`** {Array<ErrorNotFoundErrors>}
 
-*__memberof__*: ErrorNotFound
-
-___
-
+**`memberof`** ErrorNotFound

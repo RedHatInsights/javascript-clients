@@ -1,20 +1,20 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [SourcesApi](../classes/sourcesapi.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [SourcesApi](sourcesapi.md)
 
 # Class: SourcesApi
 
 SourcesApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: SourcesApi
+**`class`** SourcesApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ SourcesApi**
+  ↳ **SourcesApi**
 
 ## Index
 
@@ -24,25 +24,22 @@ SourcesApi - object-oriented interface
 
 ### Properties
 
-* [axios](sourcesapi.md#axios)
-* [basePath](sourcesapi.md#basepath)
-* [configuration](sourcesapi.md#configuration)
+* [axios](sourcesapi.md#protected-axios)
+* [basePath](sourcesapi.md#protected-basepath)
+* [configuration](sourcesapi.md#protected-configuration)
 
 ### Methods
 
 * [getSource](sourcesapi.md#getsource)
+* [getSourceStats](sourcesapi.md#getsourcestats)
 * [listSources](sourcesapi.md#listsources)
 * [updateSource](sourcesapi.md#updatesource)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new SourcesApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [SourcesApi](sourcesapi.md)
+\+ **new SourcesApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[SourcesApi](sourcesapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -50,124 +47,136 @@ SourcesApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [SourcesApi](sourcesapi.md)
-
-___
+**Returns:** *[SourcesApi](sourcesapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="getsource"></a>
 
 ###  getSource
 
-▸ **getSource**(sourceId: *`number`*, options?: *`any`*): `AxiosPromise`<[SourceOut](../interfaces/sourceout.md)>
+▸ **getSource**(`sourceId`: number, `options?`: any): *AxiosPromise‹[SourceOut](../interfaces/sourceout.md)›*
 
-*Defined in [api.ts:6647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6647)*
+*Defined in [api.ts:6106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6106)*
 
-*__summary__*: Get a source
+**`summary`** Get a source
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: SourcesApi
+**`memberof`** SourcesApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| sourceId | `number` |  ID of source to get |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`sourceId` | number | ID of source to get |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[SourceOut](../interfaces/sourceout.md)>
+**Returns:** *AxiosPromise‹[SourceOut](../interfaces/sourceout.md)›*
 
 ___
-<a id="listsources"></a>
+
+###  getSourceStats
+
+▸ **getSourceStats**(`sourceId`: number, `options?`: any): *AxiosPromise‹any›*
+
+*Defined in [api.ts:6118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6118)*
+
+**`summary`** Get a source statistics
+
+**`throws`** {RequiredError}
+
+**`memberof`** SourcesApi
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`sourceId` | number | ID of source to get |
+`options?` | any | - |
+
+**Returns:** *AxiosPromise‹any›*
+
+___
 
 ###  listSources
 
-▸ **listSources**(options?: *`any`*): `AxiosPromise`<[SourcePagination](../interfaces/sourcepagination.md)>
+▸ **listSources**(`type?`: string, `name?`: string, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[SourcePagination](../interfaces/sourcepagination.md)›*
 
-*Defined in [api.ts:6658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6658)*
+*Defined in [api.ts:6133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6133)*
 
-*__summary__*: List the sources
+**`summary`** List the sources
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: SourcesApi
+**`memberof`** SourcesApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`type?` | string |
+`name?` | string |
+`offset?` | number |
+`limit?` | number |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[SourcePagination](../interfaces/sourcepagination.md)>
+**Returns:** *AxiosPromise‹[SourcePagination](../interfaces/sourcepagination.md)›*
 
 ___
-<a id="updatesource"></a>
 
 ###  updateSource
 
-▸ **updateSource**(sourceId: *`number`*, sourceIn: *[SourceIn](../interfaces/sourcein.md)*, options?: *`any`*): `AxiosPromise`<[SourceOut](../interfaces/sourceout.md)>
+▸ **updateSource**(`sourceId`: number, `sourceIn`: [SourceIn](../interfaces/sourcein.md), `options?`: any): *AxiosPromise‹[SourceOut](../interfaces/sourceout.md)›*
 
-*Defined in [api.ts:6671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6671)*
+*Defined in [api.ts:6146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6146)*
 
-*__summary__*: Update a source
+**`summary`** Update a source
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: SourcesApi
+**`memberof`** SourcesApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| sourceId | `number` |  ID of source to update |
-| sourceIn | [SourceIn](../interfaces/sourcein.md) |  \- |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`sourceId` | number | ID of source to update |
+`sourceIn` | [SourceIn](../interfaces/sourcein.md) | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[SourceOut](../interfaces/sourceout.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[SourceOut](../interfaces/sourceout.md)›*

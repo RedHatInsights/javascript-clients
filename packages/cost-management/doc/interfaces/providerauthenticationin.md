@@ -1,50 +1,42 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ProviderAuthenticationIn](../interfaces/providerauthenticationin.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ProviderAuthenticationIn](providerauthenticationin.md)
 
 # Interface: ProviderAuthenticationIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ProviderAuthenticationIn
+**`interface`** ProviderAuthenticationIn
 
 ## Hierarchy
 
-**ProviderAuthenticationIn**
+* **ProviderAuthenticationIn**
 
 ## Index
 
 ### Properties
 
-* [credentials](providerauthenticationin.md#credentials)
-* [providerResourceName](providerauthenticationin.md#providerresourcename)
-
----
+* [credentials](providerauthenticationin.md#optional-credentials)
+* [providerResourceName](providerauthenticationin.md#optional-providerresourcename)
 
 ## Properties
 
-<a id="credentials"></a>
+### `Optional` credentials
 
-### `<Optional>` credentials
+• **credentials**? : *any*
 
-**● credentials**: *`any`*
+*Defined in [api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L517)*
 
-*Defined in [api.ts:692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L692)*
+**`type`** {any}
 
-*__type__*: {any}
-
-*__memberof__*: ProviderAuthenticationIn
-
-___
-<a id="providerresourcename"></a>
-
-### `<Optional>` providerResourceName
-
-**● providerResourceName**: *`string`*
-
-*Defined in [api.ts:686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L686)*
-
-*__type__*: {string}
-
-*__memberof__*: ProviderAuthenticationIn
+**`memberof`** ProviderAuthenticationIn
 
 ___
 
+### `Optional` providerResourceName
+
+• **providerResourceName**? : *string*
+
+*Defined in [api.ts:511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L511)*
+
+**`type`** {string}
+
+**`memberof`** ProviderAuthenticationIn

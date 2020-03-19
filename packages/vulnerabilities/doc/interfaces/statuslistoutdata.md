@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [StatusListOutData](../interfaces/statuslistoutdata.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [StatusListOutData](statuslistoutdata.md)
 
 # Interface: StatusListOutData
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: StatusListOutData
+**`interface`** StatusListOutData
 
 ## Hierarchy
 
-**StatusListOutData**
+* **StatusListOutData**
 
 ## Index
 
@@ -17,38 +17,30 @@
 * [id](statuslistoutdata.md#id)
 * [name](statuslistoutdata.md#name)
 
----
-
 ## Properties
-
-<a id="id"></a>
 
 ###  id
 
-**● id**: *`number`*
+• **id**: *number*
 
-*Defined in [api.ts:1189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1189)*
+*Defined in [api.ts:1249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1249)*
 
-Internal status\_id.
+Internal status_id.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: StatusListOutData
+**`memberof`** StatusListOutData
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Defined in [api.ts:1195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1195)*
+*Defined in [api.ts:1255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1255)*
 
-Represenation of internal status\_id.
+Represenation of internal status_id.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: StatusListOutData
-
-___
-
+**`memberof`** StatusListOutData

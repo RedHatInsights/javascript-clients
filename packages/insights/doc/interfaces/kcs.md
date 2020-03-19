@@ -1,14 +1,14 @@
-[@redhat-cloud-services/insights-client](../README.md) > [Kcs](../interfaces/kcs.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [Kcs](kcs.md)
 
 # Interface: Kcs
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Kcs
+**`interface`** Kcs
 
 ## Hierarchy
 
-**Kcs**
+* **Kcs**
 
 ## Index
 
@@ -17,38 +17,30 @@
 * [nodeId](kcs.md#nodeid)
 * [ruleUrl](kcs.md#ruleurl)
 
----
-
 ## Properties
-
-<a id="nodeid"></a>
 
 ###  nodeId
 
-**● nodeId**: *`string`*
+• **nodeId**: *string*
 
 *Defined in [api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L489)*
 
 KCS solution number
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Kcs
+**`memberof`** Kcs
 
 ___
-<a id="ruleurl"></a>
 
 ###  ruleUrl
 
-**● ruleUrl**: *`string`*
+• **ruleUrl**: *string*
 
 *Defined in [api.ts:483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L483)*
 
 Rule URL on C.R.C.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Kcs
-
-___
-
+**`memberof`** Kcs

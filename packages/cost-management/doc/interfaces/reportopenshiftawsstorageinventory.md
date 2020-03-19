@@ -1,106 +1,94 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportOpenShiftAWSStorageInventory](../interfaces/reportopenshiftawsstorageinventory.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportOpenShiftAWSStorageInventory](reportopenshiftawsstorageinventory.md)
 
 # Interface: ReportOpenShiftAWSStorageInventory
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportOpenShiftAWSStorageInventory
+**`interface`** ReportOpenShiftAWSStorageInventory
 
 ## Hierarchy
 
-**ReportOpenShiftAWSStorageInventory**
+* **ReportOpenShiftAWSStorageInventory**
 
 ## Index
 
 ### Properties
 
 * [data](reportopenshiftawsstorageinventory.md#data)
-* [filter](reportopenshiftawsstorageinventory.md#filter)
-* [groupBy](reportopenshiftawsstorageinventory.md#groupby)
-* [links](reportopenshiftawsstorageinventory.md#links)
-* [meta](reportopenshiftawsstorageinventory.md#meta)
-* [orderBy](reportopenshiftawsstorageinventory.md#orderby)
-
----
+* [filter](reportopenshiftawsstorageinventory.md#optional-filter)
+* [groupBy](reportopenshiftawsstorageinventory.md#optional-groupby)
+* [links](reportopenshiftawsstorageinventory.md#optional-links)
+* [meta](reportopenshiftawsstorageinventory.md#optional-meta)
+* [orderBy](reportopenshiftawsstorageinventory.md#optional-orderby)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<`any`>*
+• **data**: *Array‹any›*
 
-*Defined in [api.ts:1956](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1956)*
+*Defined in [api.ts:1781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1781)*
 
-*__type__*: {Array}
+**`type`** {Array<any>}
 
-*__memberof__*: ReportOpenShiftAWSStorageInventory
-
-___
-<a id="filter"></a>
-
-### `<Optional>` filter
-
-**● filter**: *[ReportOpenShiftAWSFilter](reportopenshiftawsfilter.md)*
-
-*Defined in [api.ts:1950](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1950)*
-
-*__type__*: {ReportOpenShiftAWSFilter}
-
-*__memberof__*: ReportOpenShiftAWSStorageInventory
-
-___
-<a id="groupby"></a>
-
-### `<Optional>` groupBy
-
-**● groupBy**: *[ReportOpenShiftAWSGrouping](reportopenshiftawsgrouping.md)*
-
-*Defined in [api.ts:1938](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1938)*
-
-*__type__*: {ReportOpenShiftAWSGrouping}
-
-*__memberof__*: ReportOpenShiftAWSStorageInventory
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[PaginationLinks](paginationlinks.md)*
-
-*Defined in [api.ts:1932](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1932)*
-
-*__type__*: {PaginationLinks}
-
-*__memberof__*: ReportOpenShiftAWSStorageInventory
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[ReportPaginationMeta](reportpaginationmeta.md)*
-
-*Defined in [api.ts:1926](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1926)*
-
-*__type__*: {ReportPaginationMeta}
-
-*__memberof__*: ReportOpenShiftAWSStorageInventory
-
-___
-<a id="orderby"></a>
-
-### `<Optional>` orderBy
-
-**● orderBy**: *[ReportOpenShiftAWSOrdering](../modules/reportopenshiftawsordering.md)*
-
-*Defined in [api.ts:1944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1944)*
-
-*__type__*: {ReportOpenShiftAWSOrdering}
-
-*__memberof__*: ReportOpenShiftAWSStorageInventory
+**`memberof`** ReportOpenShiftAWSStorageInventory
 
 ___
 
+### `Optional` filter
+
+• **filter**? : *[ReportOpenShiftAWSFilter](reportopenshiftawsfilter.md)*
+
+*Defined in [api.ts:1775](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1775)*
+
+**`type`** {ReportOpenShiftAWSFilter}
+
+**`memberof`** ReportOpenShiftAWSStorageInventory
+
+___
+
+### `Optional` groupBy
+
+• **groupBy**? : *[ReportOpenShiftAWSGrouping](reportopenshiftawsgrouping.md)*
+
+*Defined in [api.ts:1763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1763)*
+
+**`type`** {ReportOpenShiftAWSGrouping}
+
+**`memberof`** ReportOpenShiftAWSStorageInventory
+
+___
+
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
+
+*Defined in [api.ts:1757](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1757)*
+
+**`type`** {PaginationLinks}
+
+**`memberof`** ReportOpenShiftAWSStorageInventory
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[ReportPaginationMeta](reportpaginationmeta.md)*
+
+*Defined in [api.ts:1751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1751)*
+
+**`type`** {ReportPaginationMeta}
+
+**`memberof`** ReportOpenShiftAWSStorageInventory
+
+___
+
+### `Optional` orderBy
+
+• **orderBy**? : *[ReportOpenShiftAWSOrdering](../modules/reportopenshiftawsordering.md)*
+
+*Defined in [api.ts:1769](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1769)*
+
+**`type`** {ReportOpenShiftAWSOrdering}
+
+**`memberof`** ReportOpenShiftAWSStorageInventory

@@ -1,78 +1,81 @@
-[@redhat-cloud-services/insights-client](../README.md) > [System](../interfaces/system.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [System](system.md)
 
 # Interface: System
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: System
+**`interface`** System
 
 ## Hierarchy
 
-**System**
+* **System**
 
 ## Index
 
 ### Properties
 
 * [displayName](system.md#displayname)
-* [hits](system.md#hits)
-* [lastSeen](system.md#lastseen)
+* [hits](system.md#optional-hits)
+* [lastSeen](system.md#optional-lastseen)
+* [staleAt](system.md#optional-staleat)
 * [systemUuid](system.md#systemuuid)
-
----
 
 ## Properties
 
-<a id="displayname"></a>
-
 ###  displayName
 
-**● displayName**: *`string`*
+• **displayName**: *string*
 
-*Defined in [api.ts:1165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1165)*
+*Defined in [api.ts:1185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1185)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: System
-
-___
-<a id="hits"></a>
-
-### `<Optional>` hits
-
-**● hits**: *`number`*
-
-*Defined in [api.ts:1153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1153)*
-
-*__type__*: {number}
-
-*__memberof__*: System
+**`memberof`** System
 
 ___
-<a id="lastseen"></a>
 
-### `<Optional>` lastSeen
+### `Optional` hits
 
-**● lastSeen**: *`Date`*
+• **hits**? : *number*
 
-*Defined in [api.ts:1171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1171)*
+*Defined in [api.ts:1173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1173)*
 
-*__type__*: {Date}
+**`type`** {number}
 
-*__memberof__*: System
+**`memberof`** System
 
 ___
-<a id="systemuuid"></a>
+
+### `Optional` lastSeen
+
+• **lastSeen**? : *Date*
+
+*Defined in [api.ts:1191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1191)*
+
+**`type`** {Date}
+
+**`memberof`** System
+
+___
+
+### `Optional` staleAt
+
+• **staleAt**? : *Date*
+
+*Defined in [api.ts:1197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1197)*
+
+**`type`** {Date}
+
+**`memberof`** System
+
+___
 
 ###  systemUuid
 
-**● systemUuid**: *`string`*
+• **systemUuid**: *string*
 
-*Defined in [api.ts:1159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1159)*
+*Defined in [api.ts:1179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1179)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: System
-
-___
-
+**`memberof`** System

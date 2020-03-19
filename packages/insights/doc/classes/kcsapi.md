@@ -1,20 +1,20 @@
-[@redhat-cloud-services/insights-client](../README.md) > [KcsApi](../classes/kcsapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [KcsApi](kcsapi.md)
 
 # Class: KcsApi
 
 KcsApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: KcsApi
+**`class`** KcsApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ KcsApi**
+  ↳ **KcsApi**
 
 ## Index
 
@@ -24,24 +24,20 @@ KcsApi - object-oriented interface
 
 ### Properties
 
-* [axios](kcsapi.md#axios)
-* [basePath](kcsapi.md#basepath)
-* [configuration](kcsapi.md#configuration)
+* [axios](kcsapi.md#protected-axios)
+* [basePath](kcsapi.md#protected-basepath)
+* [configuration](kcsapi.md#protected-configuration)
 
 ### Methods
 
 * [kcsList](kcsapi.md#kcslist)
 * [kcsRead](kcsapi.md#kcsread)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new KcsApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [KcsApi](kcsapi.md)
+\+ **new KcsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[KcsApi](kcsapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -49,99 +45,89 @@ KcsApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [KcsApi](kcsapi.md)
-
-___
+**Returns:** *[KcsApi](kcsapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="kcslist"></a>
 
 ###  kcsList
 
-▸ **kcsList**(options?: *`any`*): `AxiosPromise`<[Kcs](../interfaces/kcs.md)[]>
+▸ **kcsList**(`options?`: any): *AxiosPromise‹[Kcs](../interfaces/kcs.md)[]›*
 
-*Defined in [api.ts:2771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2771)*
+*Defined in [api.ts:2840](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2840)*
 
-Looks for all active rules with KCS solutions Returns a list of dicts of the C.R.C rule URL and its KCS solution number
+Returns a list of dicts of the C.R.C rule URL and its KCS solution number
 
-*__throws__*: {RequiredError}
+**`summary`** Looks for all active rules with KCS solutions
 
-*__memberof__*: KcsApi
+**`throws`** {RequiredError}
+
+**`memberof`** KcsApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[Kcs](../interfaces/kcs.md)[]>
+**Returns:** *AxiosPromise‹[Kcs](../interfaces/kcs.md)[]›*
 
 ___
-<a id="kcsread"></a>
 
 ###  kcsRead
 
-▸ **kcsRead**(nodeId: *`string`*, options?: *`any`*): `AxiosPromise`<`string`[]>
+▸ **kcsRead**(`nodeId`: string, `options?`: any): *AxiosPromise‹string[]›*
 
-*Defined in [api.ts:2782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2782)*
+*Defined in [api.ts:2852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2852)*
 
-Gets active rule(s) for a particular KCS solution (node\_id) Returns a list of C.R.C rule url(s) for that KCS solution
+Returns a list of C.R.C rule url(s) for that KCS solution
 
-*__throws__*: {RequiredError}
+**`summary`** Gets active rule(s) for a particular KCS solution (node_id)
 
-*__memberof__*: KcsApi
+**`throws`** {RequiredError}
+
+**`memberof`** KcsApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| nodeId | `string` |  KCS solution number |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`nodeId` | string | KCS solution number |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`string`[]>
-
-___
-
+**Returns:** *AxiosPromise‹string[]›*

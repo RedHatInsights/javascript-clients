@@ -1,16 +1,16 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [ExecutiveReportCvesBySeverity](../interfaces/executivereportcvesbyseverity.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [ExecutiveReportCvesBySeverity](executivereportcvesbyseverity.md)
 
 # Interface: ExecutiveReportCvesBySeverity
 
 Number of CVEs discovered on the managed systems, divided into buckets based on their CVSSv3 score (CVSSv2 is used when CVSSv3 is not available).
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ExecutiveReportCvesBySeverity
+**`interface`** ExecutiveReportCvesBySeverity
 
 ## Hierarchy
 
-**ExecutiveReportCvesBySeverity**
+* **ExecutiveReportCvesBySeverity**
 
 ## Index
 
@@ -20,47 +20,38 @@ Number of CVEs discovered on the managed systems, divided into buckets based on 
 * [_4to79](executivereportcvesbyseverity.md#_4to79)
 * [_8to10](executivereportcvesbyseverity.md#_8to10)
 
----
-
 ## Properties
-
-<a id="_0to39"></a>
 
 ###  _0to39
 
-**● _0to39**: *`any`*
-
-*Defined in [git-api/api.ts:471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L471)*
-
-*__type__*: {any}
-
-*__memberof__*: ExecutiveReportCvesBySeverity
-
-___
-<a id="_4to79"></a>
-
-###  _4to79
-
-**● _4to79**: *`any`*
+• **_0to39**: *any*
 
 *Defined in [git-api/api.ts:477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L477)*
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: ExecutiveReportCvesBySeverity
+**`memberof`** ExecutiveReportCvesBySeverity
 
 ___
-<a id="_8to10"></a>
 
-###  _8to10
+###  _4to79
 
-**● _8to10**: *[ExecutiveReportCvesBySeverity8to10](executivereportcvesbyseverity8to10.md)*
+• **_4to79**: *any*
 
 *Defined in [git-api/api.ts:483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L483)*
 
-*__type__*: {ExecutiveReportCvesBySeverity8to10}
+**`type`** {any}
 
-*__memberof__*: ExecutiveReportCvesBySeverity
+**`memberof`** ExecutiveReportCvesBySeverity
 
 ___
 
+###  _8to10
+
+• **_8to10**: *[ExecutiveReportCvesBySeverity8to10](executivereportcvesbyseverity8to10.md)*
+
+*Defined in [git-api/api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L489)*
+
+**`type`** {ExecutiveReportCvesBySeverity8to10}
+
+**`memberof`** ExecutiveReportCvesBySeverity

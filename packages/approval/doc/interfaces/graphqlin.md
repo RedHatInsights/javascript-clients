@@ -1,70 +1,61 @@
-[@redhat-cloud-services/approval-client](../README.md) > [GraphqlIn](../interfaces/graphqlin.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [GraphqlIn](graphqlin.md)
 
 # Interface: GraphqlIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: GraphqlIn
+**`interface`** GraphqlIn
 
 ## Hierarchy
 
-**GraphqlIn**
+* **GraphqlIn**
 
 ## Index
 
 ### Properties
 
-* [operationName](graphqlin.md#operationname)
+* [operationName](graphqlin.md#optional-operationname)
 * [query](graphqlin.md#query)
-* [variables](graphqlin.md#variables)
-
----
+* [variables](graphqlin.md#optional-variables)
 
 ## Properties
 
-<a id="operationname"></a>
+### `Optional` operationName
 
-### `<Optional>` operationName
+• **operationName**? : *string*
 
-**● operationName**: *`string`*
-
-*Defined in [api.ts:238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L238)*
+*Defined in [api.ts:237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L237)*
 
 If the Query contains several named operations, the operationName controls which one should be executed
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: GraphqlIn
+**`memberof`** GraphqlIn
 
 ___
-<a id="query"></a>
 
 ###  query
 
-**● query**: *`string`*
+• **query**: *string*
 
-*Defined in [api.ts:232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L232)*
+*Defined in [api.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L231)*
 
 The GraphQL query
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: GraphqlIn
+**`memberof`** GraphqlIn
 
 ___
-<a id="variables"></a>
 
-### `<Optional>` variables
+### `Optional` variables
 
-**● variables**: *`any` \| `null`*
+• **variables**? : *any | null*
 
-*Defined in [api.ts:244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L244)*
+*Defined in [api.ts:243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L243)*
 
 Optional Query variables
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: GraphqlIn
-
-___
-
+**`memberof`** GraphqlIn

@@ -1,70 +1,61 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [BulkHostOut](../interfaces/bulkhostout.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [BulkHostOut](bulkhostout.md)
 
 # Interface: BulkHostOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: BulkHostOut
+**`interface`** BulkHostOut
 
 ## Hierarchy
 
-**BulkHostOut**
+* **BulkHostOut**
 
 ## Index
 
 ### Properties
 
-* [data](bulkhostout.md#data)
-* [errors](bulkhostout.md#errors)
-* [total](bulkhostout.md#total)
-
----
+* [data](bulkhostout.md#optional-data)
+* [errors](bulkhostout.md#optional-errors)
+* [total](bulkhostout.md#optional-total)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[BulkHostOutDetails](bulkhostoutdetails.md)>*
+• **data**? : *Array‹[BulkHostOutDetails](bulkhostoutdetails.md)›*
 
 *Defined in [api.ts:153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L153)*
 
 List of hosts that were created, updated or failed to be processed.
 
-*__type__*: {Array}
+**`type`** {Array<BulkHostOutDetails>}
 
-*__memberof__*: BulkHostOut
+**`memberof`** BulkHostOut
 
 ___
-<a id="errors"></a>
 
-### `<Optional>` errors
+### `Optional` errors
 
-**● errors**: *`number`*
+• **errors**? : *number*
 
 *Defined in [api.ts:147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L147)*
 
-Number of items in the "data" list that contain errors.
+Number of items in the \"data\" list that contain errors.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: BulkHostOut
+**`memberof`** BulkHostOut
 
 ___
-<a id="total"></a>
 
-### `<Optional>` total
+### `Optional` total
 
-**● total**: *`number`*
+• **total**? : *number*
 
 *Defined in [api.ts:141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L141)*
 
-Total number of items in the "data" list.
+Total number of items in the \"data\" list.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: BulkHostOut
-
-___
-
+**`memberof`** BulkHostOut

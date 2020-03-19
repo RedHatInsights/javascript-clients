@@ -1,64 +1,55 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [PolicyPagination](../interfaces/policypagination.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [PolicyPagination](policypagination.md)
 
 # Interface: PolicyPagination
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: PolicyPagination
+**`interface`** PolicyPagination
 
 ## Hierarchy
 
-**PolicyPagination**
+* **PolicyPagination**
 
 ## Index
 
 ### Properties
 
 * [data](policypagination.md#data)
-* [links](policypagination.md#links)
-* [meta](policypagination.md#meta)
-
----
+* [links](policypagination.md#optional-links)
+* [meta](policypagination.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<[PolicyExtended](policyextended.md)>*
+• **data**: *Array‹[PolicyExtended](policyextended.md)›*
+
+*Defined in [api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L627)*
+
+**`type`** {Array<PolicyExtended>}
+
+**`memberof`** PolicyPagination
+
+___
+
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
 
 *Defined in [api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L621)*
 
-*__type__*: {Array}
+**`type`** {PaginationLinks}
 
-*__memberof__*: PolicyPagination
+**`memberof`** PolicyPagination
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` meta
 
-**● links**: *[PaginationLinks](paginationlinks.md)*
+• **meta**? : *[PaginationMeta](paginationmeta.md)*
 
 *Defined in [api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L615)*
 
-*__type__*: {PaginationLinks}
+**`type`** {PaginationMeta}
 
-*__memberof__*: PolicyPagination
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[PaginationMeta](paginationmeta.md)*
-
-*Defined in [api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L609)*
-
-*__type__*: {PaginationMeta}
-
-*__memberof__*: PolicyPagination
-
-___
-
+**`memberof`** PolicyPagination

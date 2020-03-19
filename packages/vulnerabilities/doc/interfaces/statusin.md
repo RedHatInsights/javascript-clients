@@ -1,82 +1,72 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [StatusIn](../interfaces/statusin.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [StatusIn](statusin.md)
 
 # Interface: StatusIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: StatusIn
+**`interface`** StatusIn
 
 ## Hierarchy
 
-**StatusIn**
+* **StatusIn**
 
 ## Index
 
 ### Properties
 
 * [cve](statusin.md#cve)
-* [inventoryId](statusin.md#inventoryid)
-* [statusId](statusin.md#statusid)
-* [statusText](statusin.md#statustext)
-
----
+* [inventoryId](statusin.md#optional-inventoryid)
+* [statusId](statusin.md#optional-statusid)
+* [statusText](statusin.md#optional-statustext)
 
 ## Properties
 
-<a id="cve"></a>
-
 ###  cve
 
-**● cve**: *[CveOrList](cveorlist.md)*
+• **cve**: *[CveOrList](cveorlist.md)*
 
-*Defined in [api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1143)*
+*Defined in [api.ts:1203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1203)*
 
-*__type__*: {CveOrList}
+**`type`** {CveOrList}
 
-*__memberof__*: StatusIn
-
-___
-<a id="inventoryid"></a>
-
-### `<Optional>` inventoryId
-
-**● inventoryId**: *[InventoryIdOrList](inventoryidorlist.md)*
-
-*Defined in [api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1137)*
-
-*__type__*: {InventoryIdOrList}
-
-*__memberof__*: StatusIn
+**`memberof`** StatusIn
 
 ___
-<a id="statusid"></a>
 
-### `<Optional>` statusId
+### `Optional` inventoryId
 
-**● statusId**: *`number`*
+• **inventoryId**? : *[InventoryIdOrList](inventoryidorlist.md)*
 
-*Defined in [api.ts:1149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1149)*
+*Defined in [api.ts:1197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1197)*
+
+**`type`** {InventoryIdOrList}
+
+**`memberof`** StatusIn
+
+___
+
+### `Optional` statusId
+
+• **statusId**? : *number*
+
+*Defined in [api.ts:1209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1209)*
 
 Status ID to be set, obtained by GET method. If not specified, global CVE status is set.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: StatusIn
+**`memberof`** StatusIn
 
 ___
-<a id="statustext"></a>
 
-### `<Optional>` statusText
+### `Optional` statusText
 
-**● statusText**: *`string` \| `null`*
+• **statusText**? : *string | null*
 
-*Defined in [api.ts:1155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1155)*
+*Defined in [api.ts:1215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1215)*
 
 Complementary text to the status.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: StatusIn
-
-___
-
+**`memberof`** StatusIn

@@ -1,14 +1,14 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [SystemOut](../interfaces/systemout.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [SystemOut](systemout.md)
 
 # Interface: SystemOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SystemOut
+**`interface`** SystemOut
 
 ## Hierarchy
 
-**SystemOut**
+* **SystemOut**
 
 ## Index
 
@@ -18,47 +18,38 @@
 * [hostname](systemout.md#hostname)
 * [id](systemout.md#id)
 
----
-
 ## Properties
-
-<a id="displayname"></a>
 
 ###  displayName
 
-**● displayName**: *`string` \| `null`*
+• **displayName**: *string | null*
 
-*Defined in [api.ts:786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L786)*
+*Defined in [api.ts:1111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1111)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemOut
+**`memberof`** SystemOut
 
 ___
-<a id="hostname"></a>
 
 ###  hostname
 
-**● hostname**: *`string` \| `null`*
+• **hostname**: *string | null*
 
-*Defined in [api.ts:780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L780)*
+*Defined in [api.ts:1105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1105)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemOut
+**`memberof`** SystemOut
 
 ___
-<a id="id"></a>
 
 ###  id
 
-**● id**: *`string`*
+• **id**: *string*
 
-*Defined in [api.ts:774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L774)*
+*Defined in [api.ts:1099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1099)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemOut
-
-___
-
+**`memberof`** SystemOut

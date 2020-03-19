@@ -1,78 +1,68 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [PaginationLinks](../interfaces/paginationlinks.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [PaginationLinks](paginationlinks.md)
 
 # Interface: PaginationLinks
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: PaginationLinks
+**`interface`** PaginationLinks
 
 ## Hierarchy
 
-**PaginationLinks**
+* **PaginationLinks**
 
 ## Index
 
 ### Properties
 
-* [first](paginationlinks.md#first)
-* [last](paginationlinks.md#last)
-* [next](paginationlinks.md#next)
-* [previous](paginationlinks.md#previous)
-
----
+* [first](paginationlinks.md#optional-first)
+* [last](paginationlinks.md#optional-last)
+* [next](paginationlinks.md#optional-next)
+* [previous](paginationlinks.md#optional-previous)
 
 ## Properties
 
-<a id="first"></a>
+### `Optional` first
 
-### `<Optional>` first
-
-**● first**: *`string`*
-
-*Defined in [api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L461)*
-
-*__type__*: {string}
-
-*__memberof__*: PaginationLinks
-
-___
-<a id="last"></a>
-
-### `<Optional>` last
-
-**● last**: *`string`*
-
-*Defined in [api.ts:479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L479)*
-
-*__type__*: {string}
-
-*__memberof__*: PaginationLinks
-
-___
-<a id="next"></a>
-
-### `<Optional>` next
-
-**● next**: *`string`*
-
-*Defined in [api.ts:473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L473)*
-
-*__type__*: {string}
-
-*__memberof__*: PaginationLinks
-
-___
-<a id="previous"></a>
-
-### `<Optional>` previous
-
-**● previous**: *`string`*
+• **first**? : *string*
 
 *Defined in [api.ts:467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L467)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: PaginationLinks
+**`memberof`** PaginationLinks
 
 ___
 
+### `Optional` last
+
+• **last**? : *string*
+
+*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L485)*
+
+**`type`** {string}
+
+**`memberof`** PaginationLinks
+
+___
+
+### `Optional` next
+
+• **next**? : *string*
+
+*Defined in [api.ts:479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L479)*
+
+**`type`** {string}
+
+**`memberof`** PaginationLinks
+
+___
+
+### `Optional` previous
+
+• **previous**? : *string*
+
+*Defined in [api.ts:473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L473)*
+
+**`type`** {string}
+
+**`memberof`** PaginationLinks

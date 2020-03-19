@@ -1,124 +1,143 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [SourceOut](../interfaces/sourceout.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [SourceOut](sourceout.md)
 
 # Interface: SourceOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SourceOut
+**`interface`** SourceOut
 
 ## Hierarchy
 
-**SourceOut**
+* **SourceOut**
 
 ## Index
 
 ### Properties
 
-* [authentication](sourceout.md#authentication)
-* [billingSource](sourceout.md#billingsource)
-* [kokuUuid](sourceout.md#kokuuuid)
-* [name](sourceout.md#name)
-* [sourceId](sourceout.md#sourceid)
+* [authentication](sourceout.md#optional-authentication)
+* [billingSource](sourceout.md#optional-billingsource)
+* [costModels](sourceout.md#optional-costmodels)
+* [id](sourceout.md#id)
+* [infrastructure](sourceout.md#optional-infrastructure)
+* [name](sourceout.md#optional-name)
+* [providerLinked](sourceout.md#optional-providerlinked)
 * [sourceType](sourceout.md#sourcetype)
-* [sourceUuid](sourceout.md#sourceuuid)
-
----
+* [uuid](sourceout.md#optional-uuid)
 
 ## Properties
 
-<a id="authentication"></a>
+### `Optional` authentication
 
-### `<Optional>` authentication
+• **authentication**? : *any*
 
-**● authentication**: *`any`*
-
-*Defined in [api.ts:2834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2834)*
+*Defined in [api.ts:2665](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2665)*
 
 Dictionary containing resource name.
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: SourceOut
+**`memberof`** SourceOut
 
 ___
-<a id="billingsource"></a>
 
-### `<Optional>` billingSource
+### `Optional` billingSource
 
-**● billingSource**: *`any`*
+• **billingSource**? : *any*
 
-*Defined in [api.ts:2840](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2840)*
+*Defined in [api.ts:2671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2671)*
 
 Dictionary containing billing source.
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: SourceOut
-
-___
-<a id="kokuuuid"></a>
-
-### `<Optional>` kokuUuid
-
-**● kokuUuid**: *`string`*
-
-*Defined in [api.ts:2846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2846)*
-
-*__type__*: {string}
-
-*__memberof__*: SourceOut
+**`memberof`** SourceOut
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` costModels
 
-**● name**: *`string`*
+• **costModels**? : *Array‹any›*
 
-*Defined in [api.ts:2828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2828)*
+*Defined in [api.ts:2689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2689)*
 
-*__type__*: {string}
+List of cost model name and UUIDs associated with this provider.
 
-*__memberof__*: SourceOut
+**`type`** {Array<any>}
 
-___
-<a id="sourceid"></a>
-
-###  sourceId
-
-**● sourceId**: *`number`*
-
-*Defined in [api.ts:2816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2816)*
-
-*__type__*: {number}
-
-*__memberof__*: SourceOut
+**`memberof`** SourceOut
 
 ___
-<a id="sourcetype"></a>
+
+###  id
+
+• **id**: *number*
+
+*Defined in [api.ts:2641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2641)*
+
+**`type`** {number}
+
+**`memberof`** SourceOut
+
+___
+
+### `Optional` infrastructure
+
+• **infrastructure**? : *string*
+
+*Defined in [api.ts:2683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2683)*
+
+OpenShift foundational infrastructure type.
+
+**`type`** {string}
+
+**`memberof`** SourceOut
+
+___
+
+### `Optional` name
+
+• **name**? : *string*
+
+*Defined in [api.ts:2659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2659)*
+
+**`type`** {string}
+
+**`memberof`** SourceOut
+
+___
+
+### `Optional` providerLinked
+
+• **providerLinked**? : *boolean*
+
+*Defined in [api.ts:2677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2677)*
+
+Flag to indicate if provider is linked to source.
+
+**`type`** {boolean}
+
+**`memberof`** SourceOut
+
+___
 
 ###  sourceType
 
-**● sourceType**: *`string`*
+• **sourceType**: *string*
 
-*Defined in [api.ts:2822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2822)*
+*Defined in [api.ts:2647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2647)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SourceOut
-
-___
-<a id="sourceuuid"></a>
-
-### `<Optional>` sourceUuid
-
-**● sourceUuid**: *`string`*
-
-*Defined in [api.ts:2852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2852)*
-
-*__type__*: {string}
-
-*__memberof__*: SourceOut
+**`memberof`** SourceOut
 
 ___
 
+### `Optional` uuid
+
+• **uuid**? : *string*
+
+*Defined in [api.ts:2653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2653)*
+
+**`type`** {string}
+
+**`memberof`** SourceOut

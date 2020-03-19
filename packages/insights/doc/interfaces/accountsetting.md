@@ -1,36 +1,29 @@
-[@redhat-cloud-services/insights-client](../README.md) > [AccountSetting](../interfaces/accountsetting.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [AccountSetting](accountsetting.md)
 
 # Interface: AccountSetting
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: AccountSetting
+**`interface`** AccountSetting
 
 ## Hierarchy
 
-**AccountSetting**
+* **AccountSetting**
 
 ## Index
 
 ### Properties
 
-* [showSatelliteHosts](accountsetting.md#showsatellitehosts)
-
----
+* [showSatelliteHosts](accountsetting.md#optional-showsatellitehosts)
 
 ## Properties
 
-<a id="showsatellitehosts"></a>
+### `Optional` showSatelliteHosts
 
-### `<Optional>` showSatelliteHosts
-
-**● showSatelliteHosts**: *`boolean`*
+• **showSatelliteHosts**? : *boolean*
 
 *Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L83)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: AccountSetting
-
-___
-
+**`memberof`** AccountSetting

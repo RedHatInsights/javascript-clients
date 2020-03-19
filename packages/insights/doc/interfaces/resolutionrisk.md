@@ -1,50 +1,42 @@
-[@redhat-cloud-services/insights-client](../README.md) > [ResolutionRisk](../interfaces/resolutionrisk.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [ResolutionRisk](resolutionrisk.md)
 
 # Interface: ResolutionRisk
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ResolutionRisk
+**`interface`** ResolutionRisk
 
 ## Hierarchy
 
-**ResolutionRisk**
+* **ResolutionRisk**
 
 ## Index
 
 ### Properties
 
-* [name](resolutionrisk.md#name)
-* [risk](resolutionrisk.md#risk)
-
----
+* [name](resolutionrisk.md#optional-name)
+* [risk](resolutionrisk.md#optional-risk)
 
 ## Properties
 
-<a id="name"></a>
+### `Optional` name
 
-### `<Optional>` name
-
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L615)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ResolutionRisk
+**`memberof`** ResolutionRisk
 
 ___
-<a id="risk"></a>
 
-### `<Optional>` risk
+### `Optional` risk
 
-**● risk**: *`number`*
+• **risk**? : *number*
 
 *Defined in [api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L621)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ResolutionRisk
-
-___
-
+**`memberof`** ResolutionRisk

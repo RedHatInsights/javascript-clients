@@ -1,50 +1,42 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [RemediationInputAdd](../interfaces/remediationinputadd.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [RemediationInputAdd](remediationinputadd.md)
 
 # Interface: RemediationInputAdd
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RemediationInputAdd
+**`interface`** RemediationInputAdd
 
 ## Hierarchy
 
-**RemediationInputAdd**
+* **RemediationInputAdd**
 
 ## Index
 
 ### Properties
 
 * [issues](remediationinputadd.md#issues)
-* [systems](remediationinputadd.md#systems)
-
----
+* [systems](remediationinputadd.md#optional-systems)
 
 ## Properties
 
-<a id="issues"></a>
-
 ###  issues
 
-**● issues**: *`Array`<[RemediationInputAddIssues](remediationinputaddissues.md)>*
+• **issues**: *Array‹[RemediationInputAddIssues](remediationinputaddissues.md)›*
 
-*Defined in [api.ts:387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L387)*
+*Defined in [api.ts:712](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L712)*
 
-*__type__*: {Array}
+**`type`** {Array<RemediationInputAddIssues>}
 
-*__memberof__*: RemediationInputAdd
-
-___
-<a id="systems"></a>
-
-### `<Optional>` systems
-
-**● systems**: *`Array`<`string`>*
-
-*Defined in [api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L393)*
-
-*__type__*: {Array}
-
-*__memberof__*: RemediationInputAdd
+**`memberof`** RemediationInputAdd
 
 ___
 
+### `Optional` systems
+
+• **systems**? : *Array‹string›*
+
+*Defined in [api.ts:718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L718)*
+
+**`type`** {Array<string>}
+
+**`memberof`** RemediationInputAdd

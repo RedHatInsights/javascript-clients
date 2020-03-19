@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [AffectedSystemsOut](../interfaces/affectedsystemsout.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [AffectedSystemsOut](affectedsystemsout.md)
 
 # Interface: AffectedSystemsOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: AffectedSystemsOut
+**`interface`** AffectedSystemsOut
 
 ## Hierarchy
 
-**AffectedSystemsOut**
+* **AffectedSystemsOut**
 
 ## Index
 
@@ -18,47 +18,38 @@
 * [links](affectedsystemsout.md#links)
 * [meta](affectedsystemsout.md#meta)
 
----
-
 ## Properties
-
-<a id="data"></a>
 
 ###  data
 
-**● data**: *`Object`*
+• **data**: *Object*
 
 *Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L83)*
 
-*__type__*: {Object}
+**`type`** {Object}
 
-*__memberof__*: AffectedSystemsOut
+**`memberof`** AffectedSystemsOut
 
 ___
-<a id="links"></a>
 
 ###  links
 
-**● links**: *[Links](links.md)*
+• **links**: *[Links](links.md)*
 
 *Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L89)*
 
-*__type__*: {Links}
+**`type`** {Links}
 
-*__memberof__*: AffectedSystemsOut
+**`memberof`** AffectedSystemsOut
 
 ___
-<a id="meta"></a>
 
 ###  meta
 
-**● meta**: *[MetaAffectedSystems](metaaffectedsystems.md)*
+• **meta**: *[MetaAffectedSystems](metaaffectedsystems.md)*
 
 *Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L95)*
 
-*__type__*: {MetaAffectedSystems}
+**`type`** {MetaAffectedSystems}
 
-*__memberof__*: AffectedSystemsOut
-
-___
-
+**`memberof`** AffectedSystemsOut

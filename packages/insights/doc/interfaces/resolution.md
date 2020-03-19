@@ -1,78 +1,68 @@
-[@redhat-cloud-services/insights-client](../README.md) > [Resolution](../interfaces/resolution.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [Resolution](resolution.md)
 
 # Interface: Resolution
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Resolution
+**`interface`** Resolution
 
 ## Hierarchy
 
-**Resolution**
+* **Resolution**
 
 ## Index
 
 ### Properties
 
-* [hasPlaybook](resolution.md#hasplaybook)
-* [resolution](resolution.md#resolution-1)
-* [resolutionRisk](resolution.md#resolutionrisk)
+* [hasPlaybook](resolution.md#optional-hasplaybook)
+* [resolution](resolution.md#resolution)
+* [resolutionRisk](resolution.md#optional-resolutionrisk)
 * [systemType](resolution.md#systemtype)
-
----
 
 ## Properties
 
-<a id="hasplaybook"></a>
+### `Optional` hasPlaybook
 
-### `<Optional>` hasPlaybook
-
-**● hasPlaybook**: *`boolean`*
+• **hasPlaybook**? : *boolean*
 
 *Defined in [api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L601)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: Resolution
+**`memberof`** Resolution
 
 ___
-<a id="resolution-1"></a>
 
 ###  resolution
 
-**● resolution**: *`string`*
+• **resolution**: *string*
 
 *Defined in [api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L589)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Resolution
+**`memberof`** Resolution
 
 ___
-<a id="resolutionrisk"></a>
 
-### `<Optional>` resolutionRisk
+### `Optional` resolutionRisk
 
-**● resolutionRisk**: *[ResolutionRisk](resolutionrisk.md)*
+• **resolutionRisk**? : *[ResolutionRisk](resolutionrisk.md)*
 
 *Defined in [api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L595)*
 
-*__type__*: {ResolutionRisk}
+**`type`** {ResolutionRisk}
 
-*__memberof__*: Resolution
+**`memberof`** Resolution
 
 ___
-<a id="systemtype"></a>
 
 ###  systemType
 
-**● systemType**: *`number`*
+• **systemType**: *number*
 
 *Defined in [api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L583)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Resolution
-
-___
-
+**`memberof`** Resolution

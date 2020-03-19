@@ -1,78 +1,68 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [CollectionLinks](../interfaces/collectionlinks.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [CollectionLinks](collectionlinks.md)
 
 # Interface: CollectionLinks
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CollectionLinks
+**`interface`** CollectionLinks
 
 ## Hierarchy
 
-**CollectionLinks**
+* **CollectionLinks**
 
 ## Index
 
 ### Properties
 
-* [first](collectionlinks.md#first)
-* [last](collectionlinks.md#last)
-* [next](collectionlinks.md#next)
-* [prev](collectionlinks.md#prev)
-
----
+* [first](collectionlinks.md#optional-first)
+* [last](collectionlinks.md#optional-last)
+* [next](collectionlinks.md#optional-next)
+* [prev](collectionlinks.md#optional-prev)
 
 ## Properties
 
-<a id="first"></a>
+### `Optional` first
 
-### `<Optional>` first
-
-**● first**: *`string`*
+• **first**? : *string*
 
 *Defined in [api.ts:297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L297)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CollectionLinks
+**`memberof`** CollectionLinks
 
 ___
-<a id="last"></a>
 
-### `<Optional>` last
+### `Optional` last
 
-**● last**: *`string`*
+• **last**? : *string*
 
 *Defined in [api.ts:303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L303)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CollectionLinks
+**`memberof`** CollectionLinks
 
 ___
-<a id="next"></a>
 
-### `<Optional>` next
+### `Optional` next
 
-**● next**: *`string`*
+• **next**? : *string*
 
 *Defined in [api.ts:309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L309)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CollectionLinks
+**`memberof`** CollectionLinks
 
 ___
-<a id="prev"></a>
 
-### `<Optional>` prev
+### `Optional` prev
 
-**● prev**: *`string`*
+• **prev**? : *string*
 
 *Defined in [api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L315)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CollectionLinks
-
-___
-
+**`memberof`** CollectionLinks

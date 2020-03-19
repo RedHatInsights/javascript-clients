@@ -1,36 +1,29 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [CveDetailOut](../interfaces/cvedetailout.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [CveDetailOut](cvedetailout.md)
 
 # Interface: CveDetailOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CveDetailOut
+**`interface`** CveDetailOut
 
 ## Hierarchy
 
-**CveDetailOut**
+* **CveDetailOut**
 
 ## Index
 
 ### Properties
 
-* [data](cvedetailout.md#data)
-
----
+* [data](cvedetailout.md#optional-data)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *[CveDetailOutData](cvedetailoutdata.md)*
+• **data**? : *[CveDetailOutData](cvedetailoutdata.md)*
 
 *Defined in [api.ts:177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L177)*
 
-*__type__*: {CveDetailOutData}
+**`type`** {CveDetailOutData}
 
-*__memberof__*: CveDetailOut
-
-___
-
+**`memberof`** CveDetailOut

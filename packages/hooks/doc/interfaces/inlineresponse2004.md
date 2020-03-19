@@ -1,36 +1,21 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [InlineResponse2004](../interfaces/inlineresponse2004.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [InlineResponse2004](inlineresponse2004.md)
 
 # Interface: InlineResponse2004
 
-*__export__*: 
-
-*__interface__*: InlineResponse2004
-
 ## Hierarchy
 
-**InlineResponse2004**
+* **InlineResponse2004**
 
 ## Index
 
 ### Properties
 
-* [data](inlineresponse2004.md#data)
-
----
+* [data](inlineresponse2004.md#optional-data)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *[InlineResponse2004Data](../modules/inlineresponse2004data.md)*
+• **data**? : *[InlineResponse2004Data](../modules/inlineresponse2004data.md)*
 
 *Defined in [api.ts:742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L742)*
-
-*__type__*: {InlineResponse2004Data}
-
-*__memberof__*: InlineResponse2004
-
-___
-

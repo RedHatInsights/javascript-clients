@@ -1,64 +1,55 @@
-[@redhat-cloud-services/insights-client](../README.md) > [InlineResponse2002](../interfaces/inlineresponse2002.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [InlineResponse2002](inlineresponse2002.md)
 
 # Interface: InlineResponse2002
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: InlineResponse2002
+**`interface`** InlineResponse2002
 
 ## Hierarchy
 
-**InlineResponse2002**
+* **InlineResponse2002**
 
 ## Index
 
 ### Properties
 
 * [data](inlineresponse2002.md#data)
-* [links](inlineresponse2002.md#links)
-* [meta](inlineresponse2002.md#meta)
-
----
+* [links](inlineresponse2002.md#optional-links)
+* [meta](inlineresponse2002.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<[HostAck](hostack.md)>*
+• **data**: *Array‹[HostAck](hostack.md)›*
 
 *Defined in [api.ts:345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L345)*
 
-*__type__*: {Array}
+**`type`** {Array<HostAck>}
 
-*__memberof__*: InlineResponse2002
+**`memberof`** InlineResponse2002
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[InlineResponse200Links](inlineresponse200links.md)*
+• **links**? : *[InlineResponse200Links](inlineresponse200links.md)*
 
 *Defined in [api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L339)*
 
-*__type__*: {InlineResponse200Links}
+**`type`** {InlineResponse200Links}
 
-*__memberof__*: InlineResponse2002
+**`memberof`** InlineResponse2002
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[InlineResponse200Meta](inlineresponse200meta.md)*
+• **meta**? : *[InlineResponse200Meta](inlineresponse200meta.md)*
 
 *Defined in [api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L333)*
 
-*__type__*: {InlineResponse200Meta}
+**`type`** {InlineResponse200Meta}
 
-*__memberof__*: InlineResponse2002
-
-___
-
+**`memberof`** InlineResponse2002

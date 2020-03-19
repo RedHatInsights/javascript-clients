@@ -1,64 +1,55 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ProviderBillingSourceOut](../interfaces/providerbillingsourceout.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ProviderBillingSourceOut](providerbillingsourceout.md)
 
 # Interface: ProviderBillingSourceOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ProviderBillingSourceOut
+**`interface`** ProviderBillingSourceOut
 
 ## Hierarchy
 
-**ProviderBillingSourceOut**
+* **ProviderBillingSourceOut**
 
 ## Index
 
 ### Properties
 
-* [bucket](providerbillingsourceout.md#bucket)
-* [dataSource](providerbillingsourceout.md#datasource)
+* [bucket](providerbillingsourceout.md#optional-bucket)
+* [dataSource](providerbillingsourceout.md#optional-datasource)
 * [uuid](providerbillingsourceout.md#uuid)
-
----
 
 ## Properties
 
-<a id="bucket"></a>
+### `Optional` bucket
 
-### `<Optional>` bucket
+• **bucket**? : *string*
 
-**● bucket**: *`string`*
+*Defined in [api.ts:577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L577)*
 
-*Defined in [api.ts:752](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L752)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: ProviderBillingSourceOut
+**`memberof`** ProviderBillingSourceOut
 
 ___
-<a id="datasource"></a>
 
-### `<Optional>` dataSource
+### `Optional` dataSource
 
-**● dataSource**: *`any`*
+• **dataSource**? : *any*
 
-*Defined in [api.ts:758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L758)*
+*Defined in [api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L583)*
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: ProviderBillingSourceOut
+**`memberof`** ProviderBillingSourceOut
 
 ___
-<a id="uuid"></a>
 
 ###  uuid
 
-**● uuid**: *`string`*
+• **uuid**: *string*
 
-*Defined in [api.ts:764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L764)*
+*Defined in [api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L589)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ProviderBillingSourceOut
-
-___
-
+**`memberof`** ProviderBillingSourceOut

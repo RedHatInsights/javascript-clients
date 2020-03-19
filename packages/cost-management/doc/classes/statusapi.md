@@ -1,20 +1,20 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [StatusApi](../classes/statusapi.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [StatusApi](statusapi.md)
 
 # Class: StatusApi
 
 StatusApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: StatusApi
+**`class`** StatusApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ StatusApi**
+  ↳ **StatusApi**
 
 ## Index
 
@@ -24,23 +24,19 @@ StatusApi - object-oriented interface
 
 ### Properties
 
-* [axios](statusapi.md#axios)
-* [basePath](statusapi.md#basepath)
-* [configuration](statusapi.md#configuration)
+* [axios](statusapi.md#protected-axios)
+* [basePath](statusapi.md#protected-basepath)
+* [configuration](statusapi.md#protected-configuration)
 
 ### Methods
 
 * [getStatus](statusapi.md#getstatus)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new StatusApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [StatusApi](statusapi.md)
+\+ **new StatusApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[StatusApi](statusapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,75 +44,62 @@ StatusApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [StatusApi](statusapi.md)
-
-___
+**Returns:** *[StatusApi](statusapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="getstatus"></a>
 
 ###  getStatus
 
-▸ **getStatus**(options?: *`any`*): `AxiosPromise`<[Status](../interfaces/status.md)>
+▸ **getStatus**(`options?`: any): *AxiosPromise‹[Status](../interfaces/status.md)›*
 
-*Defined in [api.ts:6767](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6767)*
+*Defined in [api.ts:6242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6242)*
 
-*__summary__*: Obtain server status
+**`summary`** Obtain server status
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: StatusApi
+**`memberof`** StatusApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[Status](../interfaces/status.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[Status](../interfaces/status.md)›*

@@ -1,208 +1,189 @@
-[@redhat-cloud-services/sources-client](../README.md) > [Authentication](../interfaces/authentication.md)
+[@redhat-cloud-services/sources-client](../README.md) › [Globals](../globals.md) › [Authentication](authentication.md)
 
 # Interface: Authentication
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Authentication
+**`interface`** Authentication
 
 ## Hierarchy
 
-**Authentication**
+* **Authentication**
 
 ## Index
 
 ### Properties
 
-* [authtype](authentication.md#authtype)
-* [availabilityStatus](authentication.md#availabilitystatus)
-* [availabilityStatusError](authentication.md#availabilitystatuserror)
-* [extra](authentication.md#extra)
-* [id](authentication.md#id)
-* [name](authentication.md#name)
-* [password](authentication.md#password)
-* [resourceId](authentication.md#resourceid)
-* [resourceType](authentication.md#resourcetype)
-* [status](authentication.md#status)
-* [statusDetails](authentication.md#statusdetails)
-* [tenant](authentication.md#tenant)
-* [username](authentication.md#username)
-
----
+* [authtype](authentication.md#optional-authtype)
+* [availabilityStatus](authentication.md#optional-availabilitystatus)
+* [availabilityStatusError](authentication.md#optional-availabilitystatuserror)
+* [extra](authentication.md#optional-extra)
+* [id](authentication.md#optional-id)
+* [name](authentication.md#optional-name)
+* [password](authentication.md#optional-password)
+* [resourceId](authentication.md#optional-resourceid)
+* [resourceType](authentication.md#optional-resourcetype)
+* [status](authentication.md#optional-status)
+* [statusDetails](authentication.md#optional-statusdetails)
+* [tenant](authentication.md#optional-tenant)
+* [username](authentication.md#optional-username)
 
 ## Properties
 
-<a id="authtype"></a>
+### `Optional` authtype
 
-### `<Optional>` authtype
-
-**● authtype**: *`string`*
+• **authtype**? : *string*
 
 *Defined in [api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L247)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Authentication
+**`memberof`** Authentication
 
 ___
-<a id="availabilitystatus"></a>
 
-### `<Optional>` availabilityStatus
+### `Optional` availabilityStatus
 
-**● availabilityStatus**: *`string`*
+• **availabilityStatus**? : *string*
 
 *Defined in [api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L253)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Authentication
+**`memberof`** Authentication
 
 ___
-<a id="availabilitystatuserror"></a>
 
-### `<Optional>` availabilityStatusError
+### `Optional` availabilityStatusError
 
-**● availabilityStatusError**: *`string`*
+• **availabilityStatusError**? : *string*
 
 *Defined in [api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L259)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Authentication
+**`memberof`** Authentication
 
 ___
-<a id="extra"></a>
 
-### `<Optional>` extra
+### `Optional` extra
 
-**● extra**: *[AuthenticationExtra](authenticationextra.md)*
+• **extra**? : *[AuthenticationExtra](authenticationextra.md)*
 
 *Defined in [api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L265)*
 
-*__type__*: {AuthenticationExtra}
+**`type`** {AuthenticationExtra}
 
-*__memberof__*: Authentication
+**`memberof`** Authentication
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L271)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Authentication
+**`memberof`** Authentication
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L277)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Authentication
+**`memberof`** Authentication
 
 ___
-<a id="password"></a>
 
-### `<Optional>` password
+### `Optional` password
 
-**● password**: *`string`*
+• **password**? : *string*
 
 *Defined in [api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L283)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Authentication
+**`memberof`** Authentication
 
 ___
-<a id="resourceid"></a>
 
-### `<Optional>` resourceId
+### `Optional` resourceId
 
-**● resourceId**: *`string`*
+• **resourceId**? : *string*
 
 *Defined in [api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L289)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Authentication
+**`memberof`** Authentication
 
 ___
-<a id="resourcetype"></a>
 
-### `<Optional>` resourceType
+### `Optional` resourceType
 
-**● resourceType**: *`string`*
+• **resourceType**? : *string*
 
 *Defined in [api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L295)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Authentication
+**`memberof`** Authentication
 
 ___
-<a id="status"></a>
 
-### `<Optional>` status
+### `Optional` status
 
-**● status**: *`string`*
+• **status**? : *string*
 
 *Defined in [api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L301)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Authentication
+**`memberof`** Authentication
 
 ___
-<a id="statusdetails"></a>
 
-### `<Optional>` statusDetails
+### `Optional` statusDetails
 
-**● statusDetails**: *`string`*
+• **statusDetails**? : *string*
 
 *Defined in [api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L307)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Authentication
+**`memberof`** Authentication
 
 ___
-<a id="tenant"></a>
 
-### `<Optional>` tenant
+### `Optional` tenant
 
-**● tenant**: *`string`*
+• **tenant**? : *string*
 
 *Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L313)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Authentication
+**`memberof`** Authentication
 
 ___
-<a id="username"></a>
 
-### `<Optional>` username
+### `Optional` username
 
-**● username**: *`string`*
+• **username**? : *string*
 
 *Defined in [api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L319)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Authentication
-
-___
-
+**`memberof`** Authentication

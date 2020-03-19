@@ -1,10 +1,6 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [InlineResponse2004Data](../modules/inlineresponse2004data.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [InlineResponse2004Data](inlineresponse2004data.md)
 
 # Module: InlineResponse2004Data
-
-*__export__*: 
-
-*__namespace__*: InlineResponse2004Data
 
 ## Index
 
@@ -14,65 +10,39 @@
 
 ### Properties
 
-* [attributes](inlineresponse2004data.md#attributes)
-* [id](inlineresponse2004data.md#id)
-* [relationships](inlineresponse2004data.md#relationships)
-* [type](inlineresponse2004data.md#type)
-
----
+* [attributes](inlineresponse2004data.md#optional-attributes)
+* [id](inlineresponse2004data.md#optional-id)
+* [relationships](inlineresponse2004data.md#optional-relationships)
+* [type](inlineresponse2004data.md#optional-type)
 
 ## Properties
 
-<a id="attributes"></a>
+### `Optional` attributes
 
-### `<Optional>` attributes
-
-**● attributes**: *[InlineResponse2004DataAttributes](../interfaces/inlineresponse2004dataattributes.md)*
+• **attributes**? : *[InlineResponse2004DataAttributes](../interfaces/inlineresponse2004dataattributes.md)*
 
 *Defined in [api.ts:768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L768)*
 
-*__type__*: {InlineResponse2004DataAttributes}
-
-*__memberof__*: InlineResponse2004Data
-
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L756)*
 
-*__type__*: {string}
-
-*__memberof__*: InlineResponse2004Data
-
 ___
-<a id="relationships"></a>
 
-### `<Optional>` relationships
+### `Optional` relationships
 
-**● relationships**: *[InlineResponse2004DataRelationships](../interfaces/inlineresponse2004datarelationships.md)*
+• **relationships**? : *[InlineResponse2004DataRelationships](../interfaces/inlineresponse2004datarelationships.md)*
 
 *Defined in [api.ts:774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L774)*
 
-*__type__*: {InlineResponse2004DataRelationships}
-
-*__memberof__*: InlineResponse2004Data
-
 ___
-<a id="type"></a>
 
-### `<Optional>` type
+### `Optional` type
 
-**● type**: *[TypeEnum](../enums/inlineresponse2004data.typeenum.md)*
+• **type**? : *[TypeEnum](../enums/inlineresponse2004data.typeenum.md)*
 
 *Defined in [api.ts:762](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L762)*
-
-*__type__*: {string}
-
-*__memberof__*: InlineResponse2004Data
-
-___
-

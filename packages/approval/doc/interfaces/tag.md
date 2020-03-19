@@ -1,38 +1,31 @@
-[@redhat-cloud-services/approval-client](../README.md) > [Tag](../interfaces/tag.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [Tag](tag.md)
 
 # Interface: Tag
 
 tag details
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Tag
+**`interface`** Tag
 
 ## Hierarchy
 
-**Tag**
+* **Tag**
 
 ## Index
 
 ### Properties
 
-* [tag](tag.md#tag-1)
-
----
+* [tag](tag.md#optional-tag)
 
 ## Properties
 
-<a id="tag-1"></a>
+### `Optional` tag
 
-### `<Optional>` tag
+• **tag**? : *string*
 
-**● tag**: *`string`*
+*Defined in [api.ts:494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L494)*
 
-*Defined in [api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L497)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: Tag
-
-___
-
+**`memberof`** Tag

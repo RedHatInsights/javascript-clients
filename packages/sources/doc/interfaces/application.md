@@ -1,140 +1,126 @@
-[@redhat-cloud-services/sources-client](../README.md) > [Application](../interfaces/application.md)
+[@redhat-cloud-services/sources-client](../README.md) › [Globals](../globals.md) › [Application](application.md)
 
 # Interface: Application
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Application
+**`interface`** Application
 
 ## Hierarchy
 
-**Application**
+* **Application**
 
 ## Index
 
 ### Properties
 
-* [applicationTypeId](application.md#applicationtypeid)
-* [availabilityStatus](application.md#availabilitystatus)
-* [availabilityStatusError](application.md#availabilitystatuserror)
-* [createdAt](application.md#createdat)
-* [id](application.md#id)
-* [sourceId](application.md#sourceid)
-* [tenant](application.md#tenant)
-* [updatedAt](application.md#updatedat)
-
----
+* [applicationTypeId](application.md#optional-applicationtypeid)
+* [availabilityStatus](application.md#optional-availabilitystatus)
+* [availabilityStatusError](application.md#optional-availabilitystatuserror)
+* [createdAt](application.md#optional-createdat)
+* [id](application.md#optional-id)
+* [sourceId](application.md#optional-sourceid)
+* [tenant](application.md#optional-tenant)
+* [updatedAt](application.md#optional-updatedat)
 
 ## Properties
 
-<a id="applicationtypeid"></a>
+### `Optional` applicationTypeId
 
-### `<Optional>` applicationTypeId
-
-**● applicationTypeId**: *`string`*
+• **applicationTypeId**? : *string*
 
 *Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L83)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Application
+**`memberof`** Application
 
 ___
-<a id="availabilitystatus"></a>
 
-### `<Optional>` availabilityStatus
+### `Optional` availabilityStatus
 
-**● availabilityStatus**: *`string`*
+• **availabilityStatus**? : *string*
 
 *Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L89)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Application
+**`memberof`** Application
 
 ___
-<a id="availabilitystatuserror"></a>
 
-### `<Optional>` availabilityStatusError
+### `Optional` availabilityStatusError
 
-**● availabilityStatusError**: *`string`*
+• **availabilityStatusError**? : *string*
 
 *Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L95)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Application
+**`memberof`** Application
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L101)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Application
+**`memberof`** Application
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L107)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Application
+**`memberof`** Application
 
 ___
-<a id="sourceid"></a>
 
-### `<Optional>` sourceId
+### `Optional` sourceId
 
-**● sourceId**: *`string`*
+• **sourceId**? : *string*
 
 *Defined in [api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L113)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Application
+**`memberof`** Application
 
 ___
-<a id="tenant"></a>
 
-### `<Optional>` tenant
+### `Optional` tenant
 
-**● tenant**: *`string`*
+• **tenant**? : *string*
 
 *Defined in [api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L119)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Application
+**`memberof`** Application
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L125)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Application
-
-___
-
+**`memberof`** Application

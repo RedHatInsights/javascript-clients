@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [ExecutiveReportCvesBySeverity8to10](../interfaces/executivereportcvesbyseverity8to10.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [ExecutiveReportCvesBySeverity8to10](executivereportcvesbyseverity8to10.md)
 
 # Interface: ExecutiveReportCvesBySeverity8to10
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ExecutiveReportCvesBySeverity8to10
+**`interface`** ExecutiveReportCvesBySeverity8to10
 
 ## Hierarchy
 
-**ExecutiveReportCvesBySeverity8to10**
+* **ExecutiveReportCvesBySeverity8to10**
 
 ## Index
 
@@ -17,38 +17,30 @@
 * [count](executivereportcvesbyseverity8to10.md#count)
 * [percentage](executivereportcvesbyseverity8to10.md#percentage)
 
----
-
 ## Properties
-
-<a id="count"></a>
 
 ###  count
 
-**● count**: *`number`*
-
-*Defined in [git-api/api.ts:537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L537)*
-
-Number of CVEs with CVSS score higher or equal to 8.
-
-*__type__*: {number}
-
-*__memberof__*: ExecutiveReportCvesBySeverity8to10
-
-___
-<a id="percentage"></a>
-
-###  percentage
-
-**● percentage**: *`number`*
+• **count**: *number*
 
 *Defined in [git-api/api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L543)*
 
-Percentage of CVEs with CVSS score higher or equal to 8.
+Number of CVEs with CVSS score higher or equal to 8.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ExecutiveReportCvesBySeverity8to10
+**`memberof`** ExecutiveReportCvesBySeverity8to10
 
 ___
 
+###  percentage
+
+• **percentage**: *number*
+
+*Defined in [git-api/api.ts:549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L549)*
+
+Percentage of CVEs with CVSS score higher or equal to 8.
+
+**`type`** {number}
+
+**`memberof`** ExecutiveReportCvesBySeverity8to10

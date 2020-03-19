@@ -1,50 +1,42 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [Group](../interfaces/group.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [Group](group.md)
 
 # Interface: Group
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Group
+**`interface`** Group
 
 ## Hierarchy
 
-**Group**
+* **Group**
 
 ## Index
 
 ### Properties
 
-* [description](group.md#description)
+* [description](group.md#optional-description)
 * [name](group.md#name)
-
----
 
 ## Properties
 
-<a id="description"></a>
+### `Optional` description
 
-### `<Optional>` description
+• **description**? : *string*
 
-**● description**: *`string`*
+*Defined in [api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L169)*
 
-*Defined in [api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L149)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: Group
+**`memberof`** Group
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Defined in [api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L143)*
+*Defined in [api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L163)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Group
-
-___
-
+**`memberof`** Group

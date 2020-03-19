@@ -1,10 +1,10 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [Markup](../modules/markup.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [Markup](markup.md)
 
 # Module: Markup
 
-*__export__*: 
+**`export`** 
 
-*__namespace__*: Markup
+**`namespace`** Markup
 
 ## Index
 
@@ -14,37 +14,29 @@
 
 ### Properties
 
-* [unit](markup.md#unit)
-* [value](markup.md#value)
-
----
+* [unit](markup.md#optional-unit)
+* [value](markup.md#optional-value)
 
 ## Properties
 
-<a id="unit"></a>
+### `Optional` unit
 
-### `<Optional>` unit
+• **unit**? : *[UnitEnum](../enums/markup.unitenum.md)*
 
-**● unit**: *[UnitEnum](../enums/markup.unitenum.md)*
+*Defined in [api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L339)*
 
-*Defined in [api.ts:514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L514)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: Markup
-
-___
-<a id="value"></a>
-
-### `<Optional>` value
-
-**● value**: *`number`*
-
-*Defined in [api.ts:508](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L508)*
-
-*__type__*: {number}
-
-*__memberof__*: Markup
+**`memberof`** Markup
 
 ___
 
+### `Optional` value
+
+• **value**? : *number*
+
+*Defined in [api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L333)*
+
+**`type`** {number}
+
+**`memberof`** Markup

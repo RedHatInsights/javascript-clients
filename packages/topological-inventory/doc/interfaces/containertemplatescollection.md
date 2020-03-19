@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [ContainerTemplatesCollection](containertemplatescollection.md)
 
 # Interface: ContainerTemplatesCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ContainerTemplatesCollection
+**`interface`** ContainerTemplatesCollection
 
 ## Hierarchy
 
-**ContainerTemplatesCollection**
+* **ContainerTemplatesCollection**
 
 ## Index
 
 ### Properties
 
-* [data](containertemplatescollection.md#data)
-* [links](containertemplatescollection.md#links)
-* [meta](containertemplatescollection.md#meta)
-
----
+* [data](containertemplatescollection.md#optional-data)
+* [links](containertemplatescollection.md#optional-links)
+* [meta](containertemplatescollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[ContainerTemplate](containertemplate.md)>*
+• **data**? : *Array‹[ContainerTemplate](containertemplate.md)›*
 
 *Defined in [api.ts:1147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1147)*
 
-*__type__*: {Array}
+**`type`** {Array<ContainerTemplate>}
 
-*__memberof__*: ContainerTemplatesCollection
+**`memberof`** ContainerTemplatesCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:1141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1141)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: ContainerTemplatesCollection
+**`memberof`** ContainerTemplatesCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:1135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1135)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: ContainerTemplatesCollection
-
-___
-
+**`memberof`** ContainerTemplatesCollection

@@ -1,10 +1,10 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [ResourceDefinitionFilter](../modules/resourcedefinitionfilter.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [ResourceDefinitionFilter](resourcedefinitionfilter.md)
 
 # Module: ResourceDefinitionFilter
 
-*__export__*: 
+**`export`** 
 
-*__namespace__*: ResourceDefinitionFilter
+**`namespace`** ResourceDefinitionFilter
 
 ## Index
 
@@ -18,47 +18,38 @@
 * [operation](resourcedefinitionfilter.md#operation)
 * [value](resourcedefinitionfilter.md#value)
 
----
-
 ## Properties
-
-<a id="key"></a>
 
 ###  key
 
-**● key**: *`string`*
-
-*Defined in [api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L759)*
-
-*__type__*: {string}
-
-*__memberof__*: ResourceDefinitionFilter
-
-___
-<a id="operation"></a>
-
-###  operation
-
-**● operation**: *[OperationEnum](../enums/resourcedefinitionfilter.operationenum.md)*
+• **key**: *string*
 
 *Defined in [api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L765)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ResourceDefinitionFilter
+**`memberof`** ResourceDefinitionFilter
 
 ___
-<a id="value"></a>
 
-###  value
+###  operation
 
-**● value**: *`string`*
+• **operation**: *[OperationEnum](../enums/resourcedefinitionfilter.operationenum.md)*
 
 *Defined in [api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L771)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ResourceDefinitionFilter
+**`memberof`** ResourceDefinitionFilter
 
 ___
 
+###  value
+
+• **value**: *string*
+
+*Defined in [api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L777)*
+
+**`type`** {string}
+
+**`memberof`** ResourceDefinitionFilter

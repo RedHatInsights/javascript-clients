@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [ContainerImagesCollection](../interfaces/containerimagescollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [ContainerImagesCollection](containerimagescollection.md)
 
 # Interface: ContainerImagesCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ContainerImagesCollection
+**`interface`** ContainerImagesCollection
 
 ## Hierarchy
 
-**ContainerImagesCollection**
+* **ContainerImagesCollection**
 
 ## Index
 
 ### Properties
 
-* [data](containerimagescollection.md#data)
-* [links](containerimagescollection.md#links)
-* [meta](containerimagescollection.md#meta)
-
----
+* [data](containerimagescollection.md#optional-data)
+* [links](containerimagescollection.md#optional-links)
+* [meta](containerimagescollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[ContainerImage](containerimage.md)>*
+• **data**? : *Array‹[ContainerImage](containerimage.md)›*
 
 *Defined in [api.ts:645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L645)*
 
-*__type__*: {Array}
+**`type`** {Array<ContainerImage>}
 
-*__memberof__*: ContainerImagesCollection
+**`memberof`** ContainerImagesCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L639)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: ContainerImagesCollection
+**`memberof`** ContainerImagesCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L633)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: ContainerImagesCollection
-
-___
-
+**`memberof`** ContainerImagesCollection

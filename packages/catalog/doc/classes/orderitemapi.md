@@ -1,20 +1,20 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [OrderItemApi](../classes/orderitemapi.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [OrderItemApi](orderitemapi.md)
 
 # Class: OrderItemApi
 
 OrderItemApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: OrderItemApi
+**`class`** OrderItemApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ OrderItemApi**
+  ↳ **OrderItemApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ OrderItemApi - object-oriented interface
 
 ### Properties
 
-* [axios](orderitemapi.md#axios)
-* [basePath](orderitemapi.md#basepath)
-* [configuration](orderitemapi.md#configuration)
+* [axios](orderitemapi.md#protected-axios)
+* [basePath](orderitemapi.md#protected-basepath)
+* [configuration](orderitemapi.md#protected-configuration)
 
 ### Methods
 
@@ -37,15 +37,11 @@ OrderItemApi - object-oriented interface
 * [restoreOrderItem](orderitemapi.md#restoreorderitem)
 * [showOrderItem](orderitemapi.md#showorderitem)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new OrderItemApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [OrderItemApi](orderitemapi.md)
+\+ **new OrderItemApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[OrderItemApi](orderitemapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -53,217 +49,199 @@ OrderItemApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [OrderItemApi](orderitemapi.md)
-
-___
+**Returns:** *[OrderItemApi](orderitemapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="destroyorderitem"></a>
 
 ###  destroyOrderItem
 
-▸ **destroyOrderItem**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[RestoreKey](../interfaces/restorekey.md)>
+▸ **destroyOrderItem**(`id`: string, `options?`: any): *AxiosPromise‹[RestoreKey](../interfaces/restorekey.md)›*
 
 *Defined in [api.ts:3188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3188)*
 
-Deletes the order item based on order item ID passed
+Deletes the order item  based on order item ID passed
 
-*__summary__*: Delete an existing OrderItem
+**`summary`** Delete an existing OrderItem
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: OrderItemApi
+**`memberof`** OrderItemApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[RestoreKey](../interfaces/restorekey.md)>
+**Returns:** *AxiosPromise‹[RestoreKey](../interfaces/restorekey.md)›*
 
 ___
-<a id="listapprovalrequests"></a>
 
 ###  listApprovalRequests
 
-▸ **listApprovalRequests**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ApprovalRequestsCollection](../interfaces/approvalrequestscollection.md)>
+▸ **listApprovalRequests**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[ApprovalRequestsCollection](../interfaces/approvalrequestscollection.md)›*
 
 *Defined in [api.ts:3203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3203)*
 
 Gets a list of approval request associated with an order item. As the item is being approved one can check the status of the approvals.
 
-*__summary__*: Gets a list of approval requests for an item
+**`summary`** Gets a list of approval requests for an item
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: OrderItemApi
+**`memberof`** OrderItemApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| orderItemId | `string` |  The Order Item ID |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`orderItemId` | string | The Order Item ID |
+`limit?` | number | - |
+`offset?` | number | - |
+`filter?` | any | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[ApprovalRequestsCollection](../interfaces/approvalrequestscollection.md)>
+**Returns:** *AxiosPromise‹[ApprovalRequestsCollection](../interfaces/approvalrequestscollection.md)›*
 
 ___
-<a id="listorderitems"></a>
 
 ###  listOrderItems
 
-▸ **listOrderItems**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[OrderItemsCollection](../interfaces/orderitemscollection.md)>
+▸ **listOrderItems**(`limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[OrderItemsCollection](../interfaces/orderitemscollection.md)›*
 
 *Defined in [api.ts:3217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3217)*
 
 Gets a list of order items.
 
-*__summary__*: List Order Items
+**`summary`** List Order Items
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: OrderItemApi
+**`memberof`** OrderItemApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`limit?` | number |
+`offset?` | number |
+`filter?` | any |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[OrderItemsCollection](../interfaces/orderitemscollection.md)>
+**Returns:** *AxiosPromise‹[OrderItemsCollection](../interfaces/orderitemscollection.md)›*
 
 ___
-<a id="listprogressmessages"></a>
 
 ###  listProgressMessages
 
-▸ **listProgressMessages**(orderItemId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[ProgressMessagesCollection](../interfaces/progressmessagescollection.md)>
+▸ **listProgressMessages**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[ProgressMessagesCollection](../interfaces/progressmessagescollection.md)›*
 
 *Defined in [api.ts:3232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3232)*
 
 Gets a list of progress messages associated with an order item. As the item is being processed the provider can update the progress messages.
 
-*__summary__*: Gets a list of progress messages in an item
+**`summary`** Gets a list of progress messages in an item
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: OrderItemApi
+**`memberof`** OrderItemApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| orderItemId | `string` |  The Order Item ID |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`orderItemId` | string | The Order Item ID |
+`limit?` | number | - |
+`offset?` | number | - |
+`filter?` | any | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[ProgressMessagesCollection](../interfaces/progressmessagescollection.md)>
+**Returns:** *AxiosPromise‹[ProgressMessagesCollection](../interfaces/progressmessagescollection.md)›*
 
 ___
-<a id="restoreorderitem"></a>
 
 ###  restoreOrderItem
 
-▸ **restoreOrderItem**(id: *`string`*, restoreKey: *[RestoreKey](../interfaces/restorekey.md)*, options?: *`any`*): `AxiosPromise`<[OrderItem](../modules/orderitem.md)>
+▸ **restoreOrderItem**(`id`: string, `restoreKey`: [RestoreKey](../interfaces/restorekey.md), `options?`: any): *AxiosPromise‹[OrderItem](../modules/orderitem.md)›*
 
 *Defined in [api.ts:3245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3245)*
 
 Restores the order item specified by the order item ID.
 
-*__summary__*: Restore specific Order item
+**`summary`** Restore specific Order item
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: OrderItemApi
+**`memberof`** OrderItemApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| restoreKey | [RestoreKey](../interfaces/restorekey.md) |  \- |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`restoreKey` | [RestoreKey](../interfaces/restorekey.md) | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[OrderItem](../modules/orderitem.md)>
+**Returns:** *AxiosPromise‹[OrderItem](../modules/orderitem.md)›*
 
 ___
-<a id="showorderitem"></a>
 
 ###  showOrderItem
 
-▸ **showOrderItem**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[OrderItem](../modules/orderitem.md)>
+▸ **showOrderItem**(`id`: string, `options?`: any): *AxiosPromise‹[OrderItem](../modules/orderitem.md)›*
 
 *Defined in [api.ts:3257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3257)*
 
 Gets a specific order item based on the order item ID passed
 
-*__summary__*: Gets a specific order item
+**`summary`** Gets a specific order item
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: OrderItemApi
+**`memberof`** OrderItemApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[OrderItem](../modules/orderitem.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[OrderItem](../modules/orderitem.md)›*

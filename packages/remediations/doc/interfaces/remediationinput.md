@@ -1,66 +1,57 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [RemediationInput](../interfaces/remediationinput.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [RemediationInput](remediationinput.md)
 
 # Interface: RemediationInput
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RemediationInput
+**`interface`** RemediationInput
 
 ## Hierarchy
 
-**RemediationInput**
+* **RemediationInput**
 
 ## Index
 
 ### Properties
 
-* [add](remediationinput.md#add)
-* [autoReboot](remediationinput.md#autoreboot)
-* [name](remediationinput.md#name)
-
----
+* [add](remediationinput.md#optional-add)
+* [autoReboot](remediationinput.md#optional-autoreboot)
+* [name](remediationinput.md#optional-name)
 
 ## Properties
 
-<a id="add"></a>
+### `Optional` add
 
-### `<Optional>` add
+• **add**? : *[RemediationInputAdd](remediationinputadd.md)*
 
-**● add**: *[RemediationInputAdd](remediationinputadd.md)*
+*Defined in [api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L698)*
 
-*Defined in [api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L373)*
+**`type`** {RemediationInputAdd}
 
-*__type__*: {RemediationInputAdd}
-
-*__memberof__*: RemediationInput
+**`memberof`** RemediationInput
 
 ___
-<a id="autoreboot"></a>
 
-### `<Optional>` autoReboot
+### `Optional` autoReboot
 
-**● autoReboot**: *`boolean`*
+• **autoReboot**? : *boolean*
 
-*Defined in [api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L367)*
+*Defined in [api.ts:692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L692)*
 
 Indicates whether systems that require reboot for the remediation to be properly applied should be rebooted automatically or not
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: RemediationInput
-
-___
-<a id="name"></a>
-
-### `<Optional>` name
-
-**● name**: *`string` \| `null`*
-
-*Defined in [api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L361)*
-
-*__type__*: {string}
-
-*__memberof__*: RemediationInput
+**`memberof`** RemediationInput
 
 ___
 
+### `Optional` name
+
+• **name**? : *string | null*
+
+*Defined in [api.ts:686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L686)*
+
+**`type`** {string}
+
+**`memberof`** RemediationInput

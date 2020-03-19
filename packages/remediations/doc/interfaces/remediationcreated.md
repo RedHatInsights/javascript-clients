@@ -1,14 +1,14 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [RemediationCreated](../interfaces/remediationcreated.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [RemediationCreated](remediationcreated.md)
 
 # Interface: RemediationCreated
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RemediationCreated
+**`interface`** RemediationCreated
 
 ## Hierarchy
 
-**RemediationCreated**
+* **RemediationCreated**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [id](remediationcreated.md#id)
 
----
-
 ## Properties
-
-<a id="id"></a>
 
 ###  id
 
-**● id**: *`string`*
+• **id**: *string*
 
-*Defined in [api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L285)*
+*Defined in [api.ts:610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L610)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RemediationCreated
-
-___
-
+**`memberof`** RemediationCreated

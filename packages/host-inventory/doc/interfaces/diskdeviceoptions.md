@@ -1,52 +1,44 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [DiskDeviceOptions](../interfaces/diskdeviceoptions.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [DiskDeviceOptions](diskdeviceoptions.md)
 
 # Interface: DiskDeviceOptions
 
 mount options
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: DiskDeviceOptions
+**`interface`** DiskDeviceOptions
 
 ## Hierarchy
 
-**DiskDeviceOptions**
+* **DiskDeviceOptions**
 
 ## Index
 
 ### Properties
 
-* [name](diskdeviceoptions.md#name)
-* [value](diskdeviceoptions.md#value)
-
----
+* [name](diskdeviceoptions.md#optional-name)
+* [value](diskdeviceoptions.md#optional-value)
 
 ## Properties
 
-<a id="name"></a>
+### `Optional` name
 
-### `<Optional>` name
-
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L481)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: DiskDeviceOptions
+**`memberof`** DiskDeviceOptions
 
 ___
-<a id="value"></a>
 
-### `<Optional>` value
+### `Optional` value
 
-**● value**: *`string`*
+• **value**? : *string*
 
 *Defined in [api.ts:487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L487)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: DiskDeviceOptions
-
-___
-
+**`memberof`** DiskDeviceOptions

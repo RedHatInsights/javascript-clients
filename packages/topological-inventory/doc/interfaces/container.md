@@ -1,196 +1,178 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [Container](../interfaces/container.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [Container](container.md)
 
 # Interface: Container
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Container
+**`interface`** Container
 
 ## Hierarchy
 
-**Container**
+* **Container**
 
 ## Index
 
 ### Properties
 
-* [archivedAt](container.md#archivedat)
-* [containerGroupId](container.md#containergroupid)
-* [containerImageId](container.md#containerimageid)
-* [cpuLimit](container.md#cpulimit)
-* [cpuRequest](container.md#cpurequest)
-* [createdAt](container.md#createdat)
-* [id](container.md#id)
-* [lastSeenAt](container.md#lastseenat)
-* [memoryLimit](container.md#memorylimit)
-* [memoryRequest](container.md#memoryrequest)
-* [name](container.md#name)
-* [updatedAt](container.md#updatedat)
-
----
+* [archivedAt](container.md#optional-archivedat)
+* [containerGroupId](container.md#optional-containergroupid)
+* [containerImageId](container.md#optional-containerimageid)
+* [cpuLimit](container.md#optional-cpulimit)
+* [cpuRequest](container.md#optional-cpurequest)
+* [createdAt](container.md#optional-createdat)
+* [id](container.md#optional-id)
+* [lastSeenAt](container.md#optional-lastseenat)
+* [memoryLimit](container.md#optional-memorylimit)
+* [memoryRequest](container.md#optional-memoryrequest)
+* [name](container.md#optional-name)
+* [updatedAt](container.md#optional-updatedat)
 
 ## Properties
 
-<a id="archivedat"></a>
+### `Optional` archivedAt
 
-### `<Optional>` archivedAt
-
-**● archivedAt**: *`Date`*
+• **archivedAt**? : *Date*
 
 *Defined in [api.ts:355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L355)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Container
+**`memberof`** Container
 
 ___
-<a id="containergroupid"></a>
 
-### `<Optional>` containerGroupId
+### `Optional` containerGroupId
 
-**● containerGroupId**: *`string`*
+• **containerGroupId**? : *string*
 
 *Defined in [api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L361)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Container
+**`memberof`** Container
 
 ___
-<a id="containerimageid"></a>
 
-### `<Optional>` containerImageId
+### `Optional` containerImageId
 
-**● containerImageId**: *`string`*
+• **containerImageId**? : *string*
 
 *Defined in [api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L367)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Container
+**`memberof`** Container
 
 ___
-<a id="cpulimit"></a>
 
-### `<Optional>` cpuLimit
+### `Optional` cpuLimit
 
-**● cpuLimit**: *`number`*
+• **cpuLimit**? : *number*
 
 *Defined in [api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L373)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Container
+**`memberof`** Container
 
 ___
-<a id="cpurequest"></a>
 
-### `<Optional>` cpuRequest
+### `Optional` cpuRequest
 
-**● cpuRequest**: *`number`*
+• **cpuRequest**? : *number*
 
 *Defined in [api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L379)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Container
+**`memberof`** Container
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L385)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Container
+**`memberof`** Container
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L391)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Container
+**`memberof`** Container
 
 ___
-<a id="lastseenat"></a>
 
-### `<Optional>` lastSeenAt
+### `Optional` lastSeenAt
 
-**● lastSeenAt**: *`Date`*
+• **lastSeenAt**? : *Date*
 
 *Defined in [api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L397)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Container
+**`memberof`** Container
 
 ___
-<a id="memorylimit"></a>
 
-### `<Optional>` memoryLimit
+### `Optional` memoryLimit
 
-**● memoryLimit**: *`number`*
+• **memoryLimit**? : *number*
 
 *Defined in [api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L403)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Container
+**`memberof`** Container
 
 ___
-<a id="memoryrequest"></a>
 
-### `<Optional>` memoryRequest
+### `Optional` memoryRequest
 
-**● memoryRequest**: *`number`*
+• **memoryRequest**? : *number*
 
 *Defined in [api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L409)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Container
+**`memberof`** Container
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L415)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Container
+**`memberof`** Container
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L421)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Container
-
-___
-
+**`memberof`** Container

@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [ClustersCollection](../interfaces/clusterscollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [ClustersCollection](clusterscollection.md)
 
 # Interface: ClustersCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ClustersCollection
+**`interface`** ClustersCollection
 
 ## Hierarchy
 
-**ClustersCollection**
+* **ClustersCollection**
 
 ## Index
 
 ### Properties
 
-* [data](clusterscollection.md#data)
-* [links](clusterscollection.md#links)
-* [meta](clusterscollection.md#meta)
-
----
+* [data](clusterscollection.md#optional-data)
+* [links](clusterscollection.md#optional-links)
+* [meta](clusterscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[Cluster](cluster.md)>*
+• **data**? : *Array‹[Cluster](cluster.md)›*
 
 *Defined in [api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L283)*
 
-*__type__*: {Array}
+**`type`** {Array<Cluster>}
 
-*__memberof__*: ClustersCollection
+**`memberof`** ClustersCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L277)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: ClustersCollection
+**`memberof`** ClustersCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L271)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: ClustersCollection
-
-___
-
+**`memberof`** ClustersCollection

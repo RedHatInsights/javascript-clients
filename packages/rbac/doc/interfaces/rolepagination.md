@@ -1,64 +1,55 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [RolePagination](../interfaces/rolepagination.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [RolePagination](rolepagination.md)
 
 # Interface: RolePagination
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RolePagination
+**`interface`** RolePagination
 
 ## Hierarchy
 
-**RolePagination**
+* **RolePagination**
 
 ## Index
 
 ### Properties
 
 * [data](rolepagination.md#data)
-* [links](rolepagination.md#links)
-* [meta](rolepagination.md#meta)
-
----
+* [links](rolepagination.md#optional-links)
+* [meta](rolepagination.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<[RoleOut](roleout.md)>*
+• **data**: *Array‹[RoleOut](roleout.md)›*
 
-*Defined in [api.ts:926](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L926)*
+*Defined in [api.ts:1012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1012)*
 
-*__type__*: {Array}
+**`type`** {Array<RoleOut>}
 
-*__memberof__*: RolePagination
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[PaginationLinks](paginationlinks.md)*
-
-*Defined in [api.ts:920](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L920)*
-
-*__type__*: {PaginationLinks}
-
-*__memberof__*: RolePagination
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[PaginationMeta](paginationmeta.md)*
-
-*Defined in [api.ts:914](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L914)*
-
-*__type__*: {PaginationMeta}
-
-*__memberof__*: RolePagination
+**`memberof`** RolePagination
 
 ___
 
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
+
+*Defined in [api.ts:1006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1006)*
+
+**`type`** {PaginationLinks}
+
+**`memberof`** RolePagination
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[PaginationMeta](paginationmeta.md)*
+
+*Defined in [api.ts:1000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1000)*
+
+**`type`** {PaginationMeta}
+
+**`memberof`** RolePagination

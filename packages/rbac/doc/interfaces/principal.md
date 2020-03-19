@@ -1,78 +1,68 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [Principal](../interfaces/principal.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [Principal](principal.md)
 
 # Interface: Principal
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Principal
+**`interface`** Principal
 
 ## Hierarchy
 
-**Principal**
+* **Principal**
 
 ## Index
 
 ### Properties
 
 * [email](principal.md#email)
-* [firstName](principal.md#firstname)
-* [lastName](principal.md#lastname)
+* [firstName](principal.md#optional-firstname)
+* [lastName](principal.md#optional-lastname)
 * [username](principal.md#username)
-
----
 
 ## Properties
 
-<a id="email"></a>
-
 ###  email
 
-**● email**: *`string`*
-
-*Defined in [api.ts:641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L641)*
-
-*__type__*: {string}
-
-*__memberof__*: Principal
-
-___
-<a id="firstname"></a>
-
-### `<Optional>` firstName
-
-**● firstName**: *`string`*
+• **email**: *string*
 
 *Defined in [api.ts:647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L647)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Principal
+**`memberof`** Principal
 
 ___
-<a id="lastname"></a>
 
-### `<Optional>` lastName
+### `Optional` firstName
 
-**● lastName**: *`string`*
+• **firstName**? : *string*
 
 *Defined in [api.ts:653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L653)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Principal
+**`memberof`** Principal
 
 ___
-<a id="username"></a>
+
+### `Optional` lastName
+
+• **lastName**? : *string*
+
+*Defined in [api.ts:659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L659)*
+
+**`type`** {string}
+
+**`memberof`** Principal
+
+___
 
 ###  username
 
-**● username**: *`string`*
+• **username**: *string*
 
-*Defined in [api.ts:635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L635)*
+*Defined in [api.ts:641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L641)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Principal
-
-___
-
+**`memberof`** Principal

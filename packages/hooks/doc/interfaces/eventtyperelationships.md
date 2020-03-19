@@ -1,36 +1,21 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [EventTypeRelationships](../interfaces/eventtyperelationships.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [EventTypeRelationships](eventtyperelationships.md)
 
 # Interface: EventTypeRelationships
 
-*__export__*: 
-
-*__interface__*: EventTypeRelationships
-
 ## Hierarchy
 
-**EventTypeRelationships**
+* **EventTypeRelationships**
 
 ## Index
 
 ### Properties
 
-* [levels](eventtyperelationships.md#levels)
-
----
+* [levels](eventtyperelationships.md#optional-levels)
 
 ## Properties
 
-<a id="levels"></a>
+### `Optional` levels
 
-### `<Optional>` levels
-
-**● levels**: *[Relationships](relationships.md)*
+• **levels**? : *[Relationships](relationships.md)*
 
 *Defined in [api.ts:600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L600)*
-
-*__type__*: {Relationships}
-
-*__memberof__*: EventTypeRelationships
-
-___
-

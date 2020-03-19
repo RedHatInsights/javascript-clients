@@ -1,64 +1,55 @@
-[@redhat-cloud-services/insights-client](../README.md) > [InlineResponse200](../interfaces/inlineresponse200.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [InlineResponse200](inlineresponse200.md)
 
 # Interface: InlineResponse200
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: InlineResponse200
+**`interface`** InlineResponse200
 
 ## Hierarchy
 
-**InlineResponse200**
+* **InlineResponse200**
 
 ## Index
 
 ### Properties
 
 * [data](inlineresponse200.md#data)
-* [links](inlineresponse200.md#links)
-* [meta](inlineresponse200.md#meta)
-
----
+* [links](inlineresponse200.md#optional-links)
+* [meta](inlineresponse200.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<[Ack](ack.md)>*
+• **data**: *Array‹[Ack](ack.md)›*
 
 *Defined in [api.ts:257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L257)*
 
-*__type__*: {Array}
+**`type`** {Array<Ack>}
 
-*__memberof__*: InlineResponse200
+**`memberof`** InlineResponse200
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[InlineResponse200Links](inlineresponse200links.md)*
+• **links**? : *[InlineResponse200Links](inlineresponse200links.md)*
 
 *Defined in [api.ts:251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L251)*
 
-*__type__*: {InlineResponse200Links}
+**`type`** {InlineResponse200Links}
 
-*__memberof__*: InlineResponse200
+**`memberof`** InlineResponse200
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[InlineResponse200Meta](inlineresponse200meta.md)*
+• **meta**? : *[InlineResponse200Meta](inlineresponse200meta.md)*
 
 *Defined in [api.ts:245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L245)*
 
-*__type__*: {InlineResponse200Meta}
+**`type`** {InlineResponse200Meta}
 
-*__memberof__*: InlineResponse200
-
-___
-
+**`memberof`** InlineResponse200

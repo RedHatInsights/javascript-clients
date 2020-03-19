@@ -1,50 +1,42 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [ListPagination](../interfaces/listpagination.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [ListPagination](listpagination.md)
 
 # Interface: ListPagination
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ListPagination
+**`interface`** ListPagination
 
 ## Hierarchy
 
-**ListPagination**
+* **ListPagination**
 
 ## Index
 
 ### Properties
 
-* [links](listpagination.md#links)
-* [meta](listpagination.md#meta)
-
----
+* [links](listpagination.md#optional-links)
+* [meta](listpagination.md#optional-meta)
 
 ## Properties
 
-<a id="links"></a>
+### `Optional` links
 
-### `<Optional>` links
+• **links**? : *[PaginationLinks](paginationlinks.md)*
 
-**● links**: *[PaginationLinks](paginationlinks.md)*
+*Defined in [api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L439)*
+
+**`type`** {PaginationLinks}
+
+**`memberof`** ListPagination
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[PaginationMeta](paginationmeta.md)*
 
 *Defined in [api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L433)*
 
-*__type__*: {PaginationLinks}
+**`type`** {PaginationMeta}
 
-*__memberof__*: ListPagination
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[PaginationMeta](paginationmeta.md)*
-
-*Defined in [api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L427)*
-
-*__type__*: {PaginationMeta}
-
-*__memberof__*: ListPagination
-
-___
-
+**`memberof`** ListPagination

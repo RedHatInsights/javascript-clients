@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [SystemListOut](../interfaces/systemlistout.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [SystemListOut](systemlistout.md)
 
 # Interface: SystemListOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SystemListOut
+**`interface`** SystemListOut
 
 ## Hierarchy
 
-**SystemListOut**
+* **SystemListOut**
 
 ## Index
 
@@ -18,47 +18,38 @@
 * [links](systemlistout.md#links)
 * [meta](systemlistout.md#meta)
 
----
-
 ## Properties
-
-<a id="data"></a>
 
 ###  data
 
-**● data**: *`Object`*
+• **data**: *Object*
 
-*Defined in [api.ts:1329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1329)*
+*Defined in [api.ts:1389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1389)*
 
-*__type__*: {Object}
+**`type`** {Object}
 
-*__memberof__*: SystemListOut
+**`memberof`** SystemListOut
 
 ___
-<a id="links"></a>
 
 ###  links
 
-**● links**: *[Links](links.md)*
+• **links**: *[Links](links.md)*
 
-*Defined in [api.ts:1335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1335)*
+*Defined in [api.ts:1395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1395)*
 
-*__type__*: {Links}
+**`type`** {Links}
 
-*__memberof__*: SystemListOut
+**`memberof`** SystemListOut
 
 ___
-<a id="meta"></a>
 
 ###  meta
 
-**● meta**: *[MetaSystems](metasystems.md)*
+• **meta**: *[MetaSystems](metasystems.md)*
 
-*Defined in [api.ts:1341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1341)*
+*Defined in [api.ts:1401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1401)*
 
-*__type__*: {MetaSystems}
+**`type`** {MetaSystems}
 
-*__memberof__*: SystemListOut
-
-___
-
+**`memberof`** SystemListOut

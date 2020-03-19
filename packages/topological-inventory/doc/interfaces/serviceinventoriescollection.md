@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [ServiceInventoriesCollection](serviceinventoriescollection.md)
 
 # Interface: ServiceInventoriesCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ServiceInventoriesCollection
+**`interface`** ServiceInventoriesCollection
 
 ## Hierarchy
 
-**ServiceInventoriesCollection**
+* **ServiceInventoriesCollection**
 
 ## Index
 
 ### Properties
 
-* [data](serviceinventoriescollection.md#data)
-* [links](serviceinventoriescollection.md#links)
-* [meta](serviceinventoriescollection.md#meta)
-
----
+* [data](serviceinventoriescollection.md#optional-data)
+* [links](serviceinventoriescollection.md#optional-links)
+* [meta](serviceinventoriescollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[ServiceInventory](serviceinventory.md)>*
+• **data**? : *Array‹[ServiceInventory](serviceinventory.md)›*
 
 *Defined in [api.ts:2627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2627)*
 
-*__type__*: {Array}
+**`type`** {Array<ServiceInventory>}
 
-*__memberof__*: ServiceInventoriesCollection
+**`memberof`** ServiceInventoriesCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:2621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2621)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: ServiceInventoriesCollection
+**`memberof`** ServiceInventoriesCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:2615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2615)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: ServiceInventoriesCollection
-
-___
-
+**`memberof`** ServiceInventoriesCollection

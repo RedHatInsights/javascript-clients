@@ -1,92 +1,81 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [PrincipalOut](../interfaces/principalout.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [PrincipalOut](principalout.md)
 
 # Interface: PrincipalOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: PrincipalOut
+**`interface`** PrincipalOut
 
 ## Hierarchy
 
-**PrincipalOut**
+* **PrincipalOut**
 
 ## Index
 
 ### Properties
 
 * [email](principalout.md#email)
-* [firstName](principalout.md#firstname)
-* [lastName](principalout.md#lastname)
+* [firstName](principalout.md#optional-firstname)
+* [lastName](principalout.md#optional-lastname)
 * [username](principalout.md#username)
 * [uuid](principalout.md#uuid)
 
----
-
 ## Properties
-
-<a id="email"></a>
 
 ###  email
 
-**● email**: *`string`*
-
-*Defined in [api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L687)*
-
-*__type__*: {string}
-
-*__memberof__*: PrincipalOut
-
-___
-<a id="firstname"></a>
-
-### `<Optional>` firstName
-
-**● firstName**: *`string`*
+• **email**: *string*
 
 *Defined in [api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L693)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: PrincipalOut
+**`memberof`** PrincipalOut
 
 ___
-<a id="lastname"></a>
 
-### `<Optional>` lastName
+### `Optional` firstName
 
-**● lastName**: *`string`*
+• **firstName**? : *string*
 
 *Defined in [api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L699)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: PrincipalOut
-
-___
-<a id="username"></a>
-
-###  username
-
-**● username**: *`string`*
-
-*Defined in [api.ts:681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L681)*
-
-*__type__*: {string}
-
-*__memberof__*: PrincipalOut
+**`memberof`** PrincipalOut
 
 ___
-<a id="uuid"></a>
 
-###  uuid
+### `Optional` lastName
 
-**● uuid**: *`string`*
+• **lastName**? : *string*
 
 *Defined in [api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L705)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: PrincipalOut
+**`memberof`** PrincipalOut
 
 ___
 
+###  username
+
+• **username**: *string*
+
+*Defined in [api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L687)*
+
+**`type`** {string}
+
+**`memberof`** PrincipalOut
+
+___
+
+###  uuid
+
+• **uuid**: *string*
+
+*Defined in [api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L711)*
+
+**`type`** {string}
+
+**`memberof`** PrincipalOut

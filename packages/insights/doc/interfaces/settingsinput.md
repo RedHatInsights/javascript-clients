@@ -1,14 +1,14 @@
-[@redhat-cloud-services/insights-client](../README.md) > [SettingsInput](../interfaces/settingsinput.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [SettingsInput](settingsinput.md)
 
 # Interface: SettingsInput
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SettingsInput
+**`interface`** SettingsInput
 
 ## Hierarchy
 
-**SettingsInput**
+* **SettingsInput**
 
 ## Index
 
@@ -17,34 +17,26 @@
 * [isSubscribed](settingsinput.md#issubscribed)
 * [showSatelliteHosts](settingsinput.md#showsatellitehosts)
 
----
-
 ## Properties
-
-<a id="issubscribed"></a>
 
 ###  isSubscribed
 
-**● isSubscribed**: *`boolean`*
+• **isSubscribed**: *boolean*
 
 *Defined in [api.ts:1093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1093)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: SettingsInput
+**`memberof`** SettingsInput
 
 ___
-<a id="showsatellitehosts"></a>
 
 ###  showSatelliteHosts
 
-**● showSatelliteHosts**: *`boolean`*
+• **showSatelliteHosts**: *boolean*
 
 *Defined in [api.ts:1087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1087)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: SettingsInput
-
-___
-
+**`memberof`** SettingsInput

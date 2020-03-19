@@ -1,14 +1,14 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [Error403](../interfaces/error403.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [Error403](error403.md)
 
 # Interface: Error403
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Error403
+**`interface`** Error403
 
 ## Hierarchy
 
-**Error403**
+* **Error403**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [errors](error403.md#errors)
 
----
-
 ## Properties
-
-<a id="errors"></a>
 
 ###  errors
 
-**● errors**: *`Array`<`any`>*
+• **errors**: *Array‹any›*
 
-*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L129)*
+*Defined in [api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L149)*
 
-*__type__*: {Array}
+**`type`** {Array<any>}
 
-*__memberof__*: Error403
-
-___
-
+**`memberof`** Error403

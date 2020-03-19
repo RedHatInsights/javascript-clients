@@ -1,64 +1,55 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [SourcePagination](../interfaces/sourcepagination.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [SourcePagination](sourcepagination.md)
 
 # Interface: SourcePagination
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SourcePagination
+**`interface`** SourcePagination
 
 ## Hierarchy
 
-**SourcePagination**
+* **SourcePagination**
 
 ## Index
 
 ### Properties
 
 * [data](sourcepagination.md#data)
-* [links](sourcepagination.md#links)
-* [meta](sourcepagination.md#meta)
-
----
+* [links](sourcepagination.md#optional-links)
+* [meta](sourcepagination.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<[SourceOut](sourceout.md)>*
+• **data**: *Array‹[SourceOut](sourceout.md)›*
 
-*Defined in [api.ts:2878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2878)*
+*Defined in [api.ts:2715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2715)*
 
-*__type__*: {Array}
+**`type`** {Array<SourceOut>}
 
-*__memberof__*: SourcePagination
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[PaginationLinks](paginationlinks.md)*
-
-*Defined in [api.ts:2872](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2872)*
-
-*__type__*: {PaginationLinks}
-
-*__memberof__*: SourcePagination
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[PaginationMeta](paginationmeta.md)*
-
-*Defined in [api.ts:2866](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2866)*
-
-*__type__*: {PaginationMeta}
-
-*__memberof__*: SourcePagination
+**`memberof`** SourcePagination
 
 ___
 
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
+
+*Defined in [api.ts:2709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2709)*
+
+**`type`** {PaginationLinks}
+
+**`memberof`** SourcePagination
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[PaginationMeta](paginationmeta.md)*
+
+*Defined in [api.ts:2703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2703)*
+
+**`type`** {PaginationMeta}
+
+**`memberof`** SourcePagination

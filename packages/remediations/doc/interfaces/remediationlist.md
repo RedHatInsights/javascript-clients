@@ -1,14 +1,14 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [RemediationList](../interfaces/remediationlist.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [RemediationList](remediationlist.md)
 
 # Interface: RemediationList
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RemediationList
+**`interface`** RemediationList
 
 ## Hierarchy
 
-**RemediationList**
+* **RemediationList**
 
 ## Index
 
@@ -18,47 +18,38 @@
 * [links](remediationlist.md#links)
 * [meta](remediationlist.md#meta)
 
----
-
 ## Properties
-
-<a id="data"></a>
 
 ###  data
 
-**● data**: *`Array`<[RemediationListItem](remediationlistitem.md)>*
+• **data**: *Array‹[RemediationListItem](remediationlistitem.md)›*
 
-*Defined in [api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L517)*
+*Defined in [api.ts:842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L842)*
 
-*__type__*: {Array}
+**`type`** {Array<RemediationListItem>}
 
-*__memberof__*: RemediationList
+**`memberof`** RemediationList
 
 ___
-<a id="links"></a>
 
 ###  links
 
-**● links**: *[RemediationListLinks](remediationlistlinks.md)*
+• **links**: *[RemediationListLinks](remediationlistlinks.md)*
 
-*Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L529)*
+*Defined in [api.ts:854](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L854)*
 
-*__type__*: {RemediationListLinks}
+**`type`** {RemediationListLinks}
 
-*__memberof__*: RemediationList
+**`memberof`** RemediationList
 
 ___
-<a id="meta"></a>
 
 ###  meta
 
-**● meta**: *[Meta](meta.md)*
+• **meta**: *[Meta](meta.md)*
 
-*Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L523)*
+*Defined in [api.ts:848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L848)*
 
-*__type__*: {Meta}
+**`type`** {Meta}
 
-*__memberof__*: RemediationList
-
-___
-
+**`memberof`** RemediationList

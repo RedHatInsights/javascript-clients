@@ -1,64 +1,55 @@
-[@redhat-cloud-services/approval-client](../README.md) > [RequestCollection](../interfaces/requestcollection.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [RequestCollection](requestcollection.md)
 
 # Interface: RequestCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RequestCollection
+**`interface`** RequestCollection
 
 ## Hierarchy
 
-**RequestCollection**
+* **RequestCollection**
 
 ## Index
 
 ### Properties
 
-* [data](requestcollection.md#data)
-* [links](requestcollection.md#links)
-* [meta](requestcollection.md#meta)
-
----
+* [data](requestcollection.md#optional-data)
+* [links](requestcollection.md#optional-links)
+* [meta](requestcollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
+• **data**? : *Array‹[Request](../modules/request.md)›*
 
-**● data**: *`Array`<[Request](../modules/request.md)>*
+*Defined in [api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L422)*
 
-*Defined in [api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L425)*
+**`type`** {Array<Request>}
 
-*__type__*: {Array}
-
-*__memberof__*: RequestCollection
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[CollectionLinks](collectionlinks.md)*
-
-*Defined in [api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L419)*
-
-*__type__*: {CollectionLinks}
-
-*__memberof__*: RequestCollection
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
-
-*Defined in [api.ts:413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L413)*
-
-*__type__*: {CollectionMetadata}
-
-*__memberof__*: RequestCollection
+**`memberof`** RequestCollection
 
 ___
 
+### `Optional` links
+
+• **links**? : *[CollectionLinks](collectionlinks.md)*
+
+*Defined in [api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L416)*
+
+**`type`** {CollectionLinks}
+
+**`memberof`** RequestCollection
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
+
+*Defined in [api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L410)*
+
+**`type`** {CollectionMetadata}
+
+**`memberof`** RequestCollection

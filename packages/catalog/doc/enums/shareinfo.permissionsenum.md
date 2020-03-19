@@ -1,10 +1,10 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [ShareInfo](../modules/shareinfo.md) > [PermissionsEnum](../enums/shareinfo.permissionsenum.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [ShareInfo](../modules/shareinfo.md) › [PermissionsEnum](shareinfo.permissionsenum.md)
 
 # Enumeration: PermissionsEnum
 
-*__export__*: 
+**`export`** 
 
-*__enum__*: {string}
+**`enum`** {string}
 
 ## Index
 
@@ -15,44 +15,34 @@
 * [Read](shareinfo.permissionsenum.md#read)
 * [Update](shareinfo.permissionsenum.md#update)
 
----
-
 ## Enumeration members
-
-<a id="delete"></a>
 
 ###  Delete
 
-**Delete**:  = "delete"
+• **Delete**: = "delete"
 
 *Defined in [api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1045)*
 
 ___
-<a id="order"></a>
 
 ###  Order
 
-**Order**:  = "order"
+• **Order**: = "order"
 
 *Defined in [api.ts:1046](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1046)*
 
 ___
-<a id="read"></a>
 
 ###  Read
 
-**Read**:  = "read"
+• **Read**: = "read"
 
 *Defined in [api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1043)*
 
 ___
-<a id="update"></a>
 
 ###  Update
 
-**Update**:  = "update"
+• **Update**: = "update"
 
 *Defined in [api.ts:1044](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1044)*
-
-___
-

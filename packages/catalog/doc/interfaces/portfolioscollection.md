@@ -1,64 +1,55 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [PortfoliosCollection](../interfaces/portfolioscollection.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [PortfoliosCollection](portfolioscollection.md)
 
 # Interface: PortfoliosCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: PortfoliosCollection
+**`interface`** PortfoliosCollection
 
 ## Hierarchy
 
-**PortfoliosCollection**
+* **PortfoliosCollection**
 
 ## Index
 
 ### Properties
 
-* [data](portfolioscollection.md#data)
-* [links](portfolioscollection.md#links)
-* [meta](portfolioscollection.md#meta)
-
----
+* [data](portfolioscollection.md#optional-data)
+* [links](portfolioscollection.md#optional-links)
+* [meta](portfolioscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[Portfolio](portfolio.md)>*
+• **data**? : *Array‹[Portfolio](portfolio.md)›*
 
 *Defined in [api.ts:851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L851)*
 
-*__type__*: {Array}
+**`type`** {Array<Portfolio>}
 
-*__memberof__*: PortfoliosCollection
+**`memberof`** PortfoliosCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L845)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: PortfoliosCollection
+**`memberof`** PortfoliosCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L839)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: PortfoliosCollection
-
-___
-
+**`memberof`** PortfoliosCollection

@@ -1,10 +1,10 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [Order](../modules/order.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [Order](order.md)
 
 # Module: Order
 
-*__export__*: 
+**`export`** 
 
-*__namespace__*: Order
+**`namespace`** Order
 
 ## Index
 
@@ -14,111 +14,98 @@
 
 ### Properties
 
-* [completedAt](order.md#completedat)
-* [createdAt](order.md#createdat)
-* [id](order.md#id)
-* [orderRequestSentAt](order.md#orderrequestsentat)
-* [owner](order.md#owner)
-* [state](order.md#state)
-* [userId](order.md#userid)
-
----
+* [completedAt](order.md#optional-completedat)
+* [createdAt](order.md#optional-createdat)
+* [id](order.md#optional-id)
+* [orderRequestSentAt](order.md#optional-orderrequestsentat)
+* [owner](order.md#optional-owner)
+* [state](order.md#optional-state)
+* [userId](order.md#optional-userid)
 
 ## Properties
 
-<a id="completedat"></a>
+### `Optional` completedAt
 
-### `<Optional>` completedAt
-
-**● completedAt**: *`Date`*
+• **completedAt**? : *Date*
 
 *Defined in [api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L416)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Order
+**`memberof`** Order
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L404)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Order
+**`memberof`** Order
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L386)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Order
+**`memberof`** Order
 
 ___
-<a id="orderrequestsentat"></a>
 
-### `<Optional>` orderRequestSentAt
+### `Optional` orderRequestSentAt
 
-**● orderRequestSentAt**: *`Date` \| `null`*
+• **orderRequestSentAt**? : *Date | null*
 
 *Defined in [api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L410)*
 
 The time at which the order request was sent to the Topology Service
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Order
+**`memberof`** Order
 
 ___
-<a id="owner"></a>
 
-### `<Optional>` owner
+### `Optional` owner
 
-**● owner**: *`string`*
+• **owner**? : *string*
 
 *Defined in [api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L422)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Order
+**`memberof`** Order
 
 ___
-<a id="state"></a>
 
-### `<Optional>` state
+### `Optional` state
 
-**● state**: *[StateEnum](../enums/order.stateenum.md)*
+• **state**? : *[StateEnum](../enums/order.stateenum.md)*
 
 *Defined in [api.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L398)*
 
 Current State of the order.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Order
+**`memberof`** Order
 
 ___
-<a id="userid"></a>
 
-### `<Optional>` userId
+### `Optional` userId
 
-**● userId**: *`string`*
+• **userId**? : *string*
 
 *Defined in [api.ts:392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L392)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Order
-
-___
-
+**`memberof`** Order

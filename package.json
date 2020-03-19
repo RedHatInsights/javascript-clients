@@ -40,7 +40,7 @@
     "lerna": "^3.18.4",
     "semantic-release": "^15.13.30",
     "typedoc": "^0.15.0",
-    "typedoc-plugin-markdown": "^1.1.27",
+    "typedoc-plugin-markdown": "^2.2.17",
     "typescript": "^3.5.3"
   },
   "release": {

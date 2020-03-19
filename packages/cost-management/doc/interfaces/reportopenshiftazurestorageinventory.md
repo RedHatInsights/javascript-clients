@@ -1,106 +1,94 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportOpenShiftAzureStorageInventory](../interfaces/reportopenshiftazurestorageinventory.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportOpenShiftAzureStorageInventory](reportopenshiftazurestorageinventory.md)
 
 # Interface: ReportOpenShiftAzureStorageInventory
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportOpenShiftAzureStorageInventory
+**`interface`** ReportOpenShiftAzureStorageInventory
 
 ## Hierarchy
 
-**ReportOpenShiftAzureStorageInventory**
+* **ReportOpenShiftAzureStorageInventory**
 
 ## Index
 
 ### Properties
 
 * [data](reportopenshiftazurestorageinventory.md#data)
-* [filter](reportopenshiftazurestorageinventory.md#filter)
-* [groupBy](reportopenshiftazurestorageinventory.md#groupby)
-* [links](reportopenshiftazurestorageinventory.md#links)
-* [meta](reportopenshiftazurestorageinventory.md#meta)
-* [orderBy](reportopenshiftazurestorageinventory.md#orderby)
-
----
+* [filter](reportopenshiftazurestorageinventory.md#optional-filter)
+* [groupBy](reportopenshiftazurestorageinventory.md#optional-groupby)
+* [links](reportopenshiftazurestorageinventory.md#optional-links)
+* [meta](reportopenshiftazurestorageinventory.md#optional-meta)
+* [orderBy](reportopenshiftazurestorageinventory.md#optional-orderby)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<`any`>*
+• **data**: *Array‹any›*
 
-*Defined in [api.ts:2347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2347)*
+*Defined in [api.ts:2172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2172)*
 
-*__type__*: {Array}
+**`type`** {Array<any>}
 
-*__memberof__*: ReportOpenShiftAzureStorageInventory
-
-___
-<a id="filter"></a>
-
-### `<Optional>` filter
-
-**● filter**: *[ReportOpenShiftAzureFilter](reportopenshiftazurefilter.md)*
-
-*Defined in [api.ts:2341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2341)*
-
-*__type__*: {ReportOpenShiftAzureFilter}
-
-*__memberof__*: ReportOpenShiftAzureStorageInventory
-
-___
-<a id="groupby"></a>
-
-### `<Optional>` groupBy
-
-**● groupBy**: *[ReportOpenShiftAzureGrouping](reportopenshiftazuregrouping.md)*
-
-*Defined in [api.ts:2329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2329)*
-
-*__type__*: {ReportOpenShiftAzureGrouping}
-
-*__memberof__*: ReportOpenShiftAzureStorageInventory
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[PaginationLinks](paginationlinks.md)*
-
-*Defined in [api.ts:2323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2323)*
-
-*__type__*: {PaginationLinks}
-
-*__memberof__*: ReportOpenShiftAzureStorageInventory
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[ReportPaginationMeta](reportpaginationmeta.md)*
-
-*Defined in [api.ts:2317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2317)*
-
-*__type__*: {ReportPaginationMeta}
-
-*__memberof__*: ReportOpenShiftAzureStorageInventory
-
-___
-<a id="orderby"></a>
-
-### `<Optional>` orderBy
-
-**● orderBy**: *[ReportOpenShiftAzureOrdering](../modules/reportopenshiftazureordering.md)*
-
-*Defined in [api.ts:2335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2335)*
-
-*__type__*: {ReportOpenShiftAzureOrdering}
-
-*__memberof__*: ReportOpenShiftAzureStorageInventory
+**`memberof`** ReportOpenShiftAzureStorageInventory
 
 ___
 
+### `Optional` filter
+
+• **filter**? : *[ReportOpenShiftAzureFilter](reportopenshiftazurefilter.md)*
+
+*Defined in [api.ts:2166](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2166)*
+
+**`type`** {ReportOpenShiftAzureFilter}
+
+**`memberof`** ReportOpenShiftAzureStorageInventory
+
+___
+
+### `Optional` groupBy
+
+• **groupBy**? : *[ReportOpenShiftAzureGrouping](reportopenshiftazuregrouping.md)*
+
+*Defined in [api.ts:2154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2154)*
+
+**`type`** {ReportOpenShiftAzureGrouping}
+
+**`memberof`** ReportOpenShiftAzureStorageInventory
+
+___
+
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
+
+*Defined in [api.ts:2148](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2148)*
+
+**`type`** {PaginationLinks}
+
+**`memberof`** ReportOpenShiftAzureStorageInventory
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[ReportPaginationMeta](reportpaginationmeta.md)*
+
+*Defined in [api.ts:2142](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2142)*
+
+**`type`** {ReportPaginationMeta}
+
+**`memberof`** ReportOpenShiftAzureStorageInventory
+
+___
+
+### `Optional` orderBy
+
+• **orderBy**? : *[ReportOpenShiftAzureOrdering](../modules/reportopenshiftazureordering.md)*
+
+*Defined in [api.ts:2160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2160)*
+
+**`type`** {ReportOpenShiftAzureOrdering}
+
+**`memberof`** ReportOpenShiftAzureStorageInventory

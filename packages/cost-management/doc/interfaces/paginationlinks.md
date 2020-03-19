@@ -1,78 +1,68 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [PaginationLinks](../interfaces/paginationlinks.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [PaginationLinks](paginationlinks.md)
 
 # Interface: PaginationLinks
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: PaginationLinks
+**`interface`** PaginationLinks
 
 ## Hierarchy
 
-**PaginationLinks**
+* **PaginationLinks**
 
 ## Index
 
 ### Properties
 
-* [first](paginationlinks.md#first)
-* [last](paginationlinks.md#last)
-* [next](paginationlinks.md#next)
-* [previous](paginationlinks.md#previous)
-
----
+* [first](paginationlinks.md#optional-first)
+* [last](paginationlinks.md#optional-last)
+* [next](paginationlinks.md#optional-next)
+* [previous](paginationlinks.md#optional-previous)
 
 ## Properties
 
-<a id="first"></a>
+### `Optional` first
 
-### `<Optional>` first
+• **first**? : *string*
 
-**● first**: *`string`*
+*Defined in [api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L445)*
 
-*Defined in [api.ts:620](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L620)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: PaginationLinks
-
-___
-<a id="last"></a>
-
-### `<Optional>` last
-
-**● last**: *`string`*
-
-*Defined in [api.ts:638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L638)*
-
-*__type__*: {string}
-
-*__memberof__*: PaginationLinks
-
-___
-<a id="next"></a>
-
-### `<Optional>` next
-
-**● next**: *`string`*
-
-*Defined in [api.ts:632](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L632)*
-
-*__type__*: {string}
-
-*__memberof__*: PaginationLinks
-
-___
-<a id="previous"></a>
-
-### `<Optional>` previous
-
-**● previous**: *`string`*
-
-*Defined in [api.ts:626](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L626)*
-
-*__type__*: {string}
-
-*__memberof__*: PaginationLinks
+**`memberof`** PaginationLinks
 
 ___
 
+### `Optional` last
+
+• **last**? : *string*
+
+*Defined in [api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L463)*
+
+**`type`** {string}
+
+**`memberof`** PaginationLinks
+
+___
+
+### `Optional` next
+
+• **next**? : *string*
+
+*Defined in [api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L457)*
+
+**`type`** {string}
+
+**`memberof`** PaginationLinks
+
+___
+
+### `Optional` previous
+
+• **previous**? : *string*
+
+*Defined in [api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L451)*
+
+**`type`** {string}
+
+**`memberof`** PaginationLinks

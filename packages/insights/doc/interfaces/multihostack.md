@@ -1,14 +1,14 @@
-[@redhat-cloud-services/insights-client](../README.md) > [MultiHostAck](../interfaces/multihostack.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [MultiHostAck](multihostack.md)
 
 # Interface: MultiHostAck
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: MultiHostAck
+**`interface`** MultiHostAck
 
 ## Hierarchy
 
-**MultiHostAck**
+* **MultiHostAck**
 
 ## Index
 
@@ -17,34 +17,26 @@
 * [justification](multihostack.md#justification)
 * [systems](multihostack.md#systems)
 
----
-
 ## Properties
-
-<a id="justification"></a>
 
 ###  justification
 
-**● justification**: *`string`*
+• **justification**: *string*
 
 *Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L529)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: MultiHostAck
+**`memberof`** MultiHostAck
 
 ___
-<a id="systems"></a>
 
 ###  systems
 
-**● systems**: *`Array`<`string`>*
+• **systems**: *Array‹string›*
 
 *Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L523)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: MultiHostAck
-
-___
-
+**`memberof`** MultiHostAck

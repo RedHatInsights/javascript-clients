@@ -1,36 +1,29 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [RestoreKey](../interfaces/restorekey.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [RestoreKey](restorekey.md)
 
 # Interface: RestoreKey
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RestoreKey
+**`interface`** RestoreKey
 
 ## Hierarchy
 
-**RestoreKey**
+* **RestoreKey**
 
 ## Index
 
 ### Properties
 
-* [restoreKey](restorekey.md#restorekey-1)
-
----
+* [restoreKey](restorekey.md#optional-restorekey)
 
 ## Properties
 
-<a id="restorekey-1"></a>
+### `Optional` restoreKey
 
-### `<Optional>` restoreKey
-
-**● restoreKey**: *`string`*
+• **restoreKey**? : *string*
 
 *Defined in [api.ts:940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L940)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RestoreKey
-
-___
-
+**`memberof`** RestoreKey

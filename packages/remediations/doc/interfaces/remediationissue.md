@@ -1,14 +1,14 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [RemediationIssue](../interfaces/remediationissue.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [RemediationIssue](remediationissue.md)
 
 # Interface: RemediationIssue
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RemediationIssue
+**`interface`** RemediationIssue
 
 ## Hierarchy
 
-**RemediationIssue**
+* **RemediationIssue**
 
 ## Index
 
@@ -17,78 +17,67 @@
 * [description](remediationissue.md#description)
 * [id](remediationissue.md#id)
 * [resolution](remediationissue.md#resolution)
-* [resolutionsAvailable](remediationissue.md#resolutionsavailable)
+* [resolutionsAvailable](remediationissue.md#optional-resolutionsavailable)
 * [systems](remediationissue.md#systems)
-
----
 
 ## Properties
 
-<a id="description"></a>
-
 ###  description
 
-**● description**: *`string`*
+• **description**: *string*
 
-*Defined in [api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L439)*
+*Defined in [api.ts:764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L764)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RemediationIssue
+**`memberof`** RemediationIssue
 
 ___
-<a id="id"></a>
 
 ###  id
 
-**● id**: *`string`*
+• **id**: *string*
 
-*Defined in [api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L433)*
+*Defined in [api.ts:758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L758)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RemediationIssue
+**`memberof`** RemediationIssue
 
 ___
-<a id="resolution"></a>
 
 ###  resolution
 
-**● resolution**: *[RemediationIssueResolution](remediationissueresolution.md)*
+• **resolution**: *[RemediationIssueResolution](remediationissueresolution.md)*
 
-*Defined in [api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L445)*
+*Defined in [api.ts:770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L770)*
 
-*__type__*: {RemediationIssueResolution}
+**`type`** {RemediationIssueResolution}
 
-*__memberof__*: RemediationIssue
+**`memberof`** RemediationIssue
 
 ___
-<a id="resolutionsavailable"></a>
 
-### `<Optional>` resolutionsAvailable
+### `Optional` resolutionsAvailable
 
-**● resolutionsAvailable**: *`number`*
+• **resolutionsAvailable**? : *number*
 
-*Defined in [api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L451)*
+*Defined in [api.ts:776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L776)*
 
 The total number of available resolutions for this issue
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: RemediationIssue
+**`memberof`** RemediationIssue
 
 ___
-<a id="systems"></a>
 
 ###  systems
 
-**● systems**: *`Array`<[SystemOut](systemout.md)>*
+• **systems**: *Array‹[SystemOut](systemout.md)›*
 
-*Defined in [api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L457)*
+*Defined in [api.ts:782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L782)*
 
-*__type__*: {Array}
+**`type`** {Array<SystemOut>}
 
-*__memberof__*: RemediationIssue
-
-___
-
+**`memberof`** RemediationIssue

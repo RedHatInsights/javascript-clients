@@ -1,64 +1,55 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportOpenShiftVolume](../interfaces/reportopenshiftvolume.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportOpenShiftVolume](reportopenshiftvolume.md)
 
 # Interface: ReportOpenShiftVolume
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportOpenShiftVolume
+**`interface`** ReportOpenShiftVolume
 
 ## Hierarchy
 
-**ReportOpenShiftVolume**
+* **ReportOpenShiftVolume**
 
 ## Index
 
 ### Properties
 
 * [data](reportopenshiftvolume.md#data)
-* [links](reportopenshiftvolume.md#links)
-* [meta](reportopenshiftvolume.md#meta)
-
----
+* [links](reportopenshiftvolume.md#optional-links)
+* [meta](reportopenshiftvolume.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<`any`>*
+• **data**: *Array‹any›*
 
-*Defined in [api.ts:2537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2537)*
+*Defined in [api.ts:2362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2362)*
 
-*__type__*: {Array}
+**`type`** {Array<any>}
 
-*__memberof__*: ReportOpenShiftVolume
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[PaginationLinks](paginationlinks.md)*
-
-*Defined in [api.ts:2531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2531)*
-
-*__type__*: {PaginationLinks}
-
-*__memberof__*: ReportOpenShiftVolume
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[ReportPaginationMeta](reportpaginationmeta.md)*
-
-*Defined in [api.ts:2525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2525)*
-
-*__type__*: {ReportPaginationMeta}
-
-*__memberof__*: ReportOpenShiftVolume
+**`memberof`** ReportOpenShiftVolume
 
 ___
 
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
+
+*Defined in [api.ts:2356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2356)*
+
+**`type`** {PaginationLinks}
+
+**`memberof`** ReportOpenShiftVolume
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[ReportPaginationMeta](reportpaginationmeta.md)*
+
+*Defined in [api.ts:2350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2350)*
+
+**`type`** {ReportPaginationMeta}
+
+**`memberof`** ReportOpenShiftVolume

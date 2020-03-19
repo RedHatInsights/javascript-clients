@@ -1,64 +1,39 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [EndpointsEndpointFilter](../interfaces/endpointsendpointfilter.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [EndpointsEndpointFilter](endpointsendpointfilter.md)
 
 # Interface: EndpointsEndpointFilter
 
-*__export__*: 
-
-*__interface__*: EndpointsEndpointFilter
-
 ## Hierarchy
 
-**EndpointsEndpointFilter**
+* **EndpointsEndpointFilter**
 
 ## Index
 
 ### Properties
 
-* [appIds](endpointsendpointfilter.md#appids)
-* [eventTypeIds](endpointsendpointfilter.md#eventtypeids)
-* [levelIds](endpointsendpointfilter.md#levelids)
-
----
+* [appIds](endpointsendpointfilter.md#optional-appids)
+* [eventTypeIds](endpointsendpointfilter.md#optional-eventtypeids)
+* [levelIds](endpointsendpointfilter.md#optional-levelids)
 
 ## Properties
 
-<a id="appids"></a>
+### `Optional` appIds
 
-### `<Optional>` appIds
-
-**● appIds**: *`Array`<`string`>*
+• **appIds**? : *Array‹string›*
 
 *Defined in [api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L360)*
 
-*__type__*: {Array}
-
-*__memberof__*: EndpointsEndpointFilter
-
 ___
-<a id="eventtypeids"></a>
 
-### `<Optional>` eventTypeIds
+### `Optional` eventTypeIds
 
-**● eventTypeIds**: *`Array`<`string`>*
+• **eventTypeIds**? : *Array‹string›*
 
 *Defined in [api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L366)*
 
-*__type__*: {Array}
-
-*__memberof__*: EndpointsEndpointFilter
-
 ___
-<a id="levelids"></a>
 
-### `<Optional>` levelIds
+### `Optional` levelIds
 
-**● levelIds**: *`Array`<`string`>*
+• **levelIds**? : *Array‹string›*
 
 *Defined in [api.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L372)*
-
-*__type__*: {Array}
-
-*__memberof__*: EndpointsEndpointFilter
-
-___
-

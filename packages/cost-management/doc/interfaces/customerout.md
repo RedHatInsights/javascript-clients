@@ -1,14 +1,14 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [CustomerOut](../interfaces/customerout.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [CustomerOut](customerout.md)
 
 # Interface: CustomerOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CustomerOut
+**`interface`** CustomerOut
 
 ## Hierarchy
 
-**CustomerOut**
+* **CustomerOut**
 
 ## Index
 
@@ -18,47 +18,38 @@
 * [dateCreated](customerout.md#datecreated)
 * [uuid](customerout.md#uuid)
 
----
-
 ## Properties
-
-<a id="accountid"></a>
 
 ###  accountId
 
-**● accountId**: *`string`*
+• **accountId**: *string*
 
-*Defined in [api.ts:345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L345)*
+*Defined in [api.ts:287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L287)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CustomerOut
+**`memberof`** CustomerOut
 
 ___
-<a id="datecreated"></a>
 
 ###  dateCreated
 
-**● dateCreated**: *`Date`*
+• **dateCreated**: *Date*
 
-*Defined in [api.ts:357](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L357)*
+*Defined in [api.ts:299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L299)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: CustomerOut
+**`memberof`** CustomerOut
 
 ___
-<a id="uuid"></a>
 
 ###  uuid
 
-**● uuid**: *`string`*
+• **uuid**: *string*
 
-*Defined in [api.ts:351](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L351)*
+*Defined in [api.ts:293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L293)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CustomerOut
-
-___
-
+**`memberof`** CustomerOut

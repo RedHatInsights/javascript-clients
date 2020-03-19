@@ -1,106 +1,95 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [TagsOut](../interfaces/tagsout.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [TagsOut](tagsout.md)
 
 # Interface: TagsOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: TagsOut
+**`interface`** TagsOut
 
 ## Hierarchy
 
-**TagsOut**
+* **TagsOut**
 
 ## Index
 
 ### Properties
 
-* [count](tagsout.md#count)
-* [page](tagsout.md#page)
-* [perPage](tagsout.md#perpage)
-* [results](tagsout.md#results)
-* [total](tagsout.md#total)
-
----
+* [count](tagsout.md#optional-count)
+* [page](tagsout.md#optional-page)
+* [perPage](tagsout.md#optional-perpage)
+* [results](tagsout.md#optional-results)
+* [total](tagsout.md#optional-total)
 
 ## Properties
 
-<a id="count"></a>
+### `Optional` count
 
-### `<Optional>` count
-
-**● count**: *`number`*
-
-*Defined in [api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1131)*
-
-A number of entries on the current page.
-
-*__type__*: {number}
-
-*__memberof__*: TagsOut
-
-___
-<a id="page"></a>
-
-### `<Optional>` page
-
-**● page**: *`number`*
+• **count**? : *number*
 
 *Defined in [api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1137)*
 
-A current page number.
+A number of entries on the current page.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: TagsOut
+**`memberof`** TagsOut
 
 ___
-<a id="perpage"></a>
 
-### `<Optional>` perPage
+### `Optional` page
 
-**● perPage**: *`number`*
+• **page**? : *number*
 
 *Defined in [api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1143)*
 
-A page size – a number of entries per single page.
+A current page number.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: TagsOut
+**`memberof`** TagsOut
 
 ___
-<a id="results"></a>
 
-### `<Optional>` results
+### `Optional` perPage
 
-**● results**: *`object`*
+• **perPage**? : *number*
 
 *Defined in [api.ts:1149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1149)*
 
+A page size – a number of entries per single page.
+
+**`type`** {number}
+
+**`memberof`** TagsOut
+
+___
+
+### `Optional` results
+
+• **results**? : *object*
+
+*Defined in [api.ts:1155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1155)*
+
 The list of tags on the systems
 
-*__type__*: {{ \[key: string\]: Array; }}
+**`type`** {{ [key: string]: Array<StructuredTag>; }}
 
-*__memberof__*: TagsOut
+**`memberof`** TagsOut
 
-#### Type declaration
+#### Type declaration:
 
-[key: `string`]: `Array`<[StructuredTag](structuredtag.md)>
-
-___
-<a id="total"></a>
-
-### `<Optional>` total
-
-**● total**: *`number`*
-
-*Defined in [api.ts:1125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1125)*
-
-Total number of items in the "data" list.
-
-*__type__*: {number}
-
-*__memberof__*: TagsOut
+* \[ **key**: *string*\]: Array‹[StructuredTag](structuredtag.md)›
 
 ___
 
+### `Optional` total
+
+• **total**? : *number*
+
+*Defined in [api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1131)*
+
+Total number of items in the \"data\" list.
+
+**`type`** {number}
+
+**`memberof`** TagsOut

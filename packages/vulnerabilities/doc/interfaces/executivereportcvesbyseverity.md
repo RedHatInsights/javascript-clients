@@ -1,16 +1,16 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [ExecutiveReportCvesBySeverity](../interfaces/executivereportcvesbyseverity.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [ExecutiveReportCvesBySeverity](executivereportcvesbyseverity.md)
 
 # Interface: ExecutiveReportCvesBySeverity
 
 Number of CVEs discovered on the managed systems, divided into buckets based on their CVSSv3 score (CVSSv2 is used when CVSSv3 is not available).
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ExecutiveReportCvesBySeverity
+**`interface`** ExecutiveReportCvesBySeverity
 
 ## Hierarchy
 
-**ExecutiveReportCvesBySeverity**
+* **ExecutiveReportCvesBySeverity**
 
 ## Index
 
@@ -20,53 +20,38 @@ Number of CVEs discovered on the managed systems, divided into buckets based on 
 * [_4to79](executivereportcvesbyseverity.md#_4to79)
 * [_8to10](executivereportcvesbyseverity.md#_8to10)
 
----
-
 ## Properties
-
-<a id="_0to39"></a>
 
 ###  _0to39
 
-**● _0to39**: *`number`*
+• **_0to39**: *any*
 
 *Defined in [api.ts:471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L471)*
 
-Number of CVEs with CVSS score lower than 4.
+**`type`** {any}
 
-*__type__*: {number}
-
-*__memberof__*: ExecutiveReportCvesBySeverity
+**`memberof`** ExecutiveReportCvesBySeverity
 
 ___
-<a id="_4to79"></a>
 
 ###  _4to79
 
-**● _4to79**: *`number`*
+• **_4to79**: *any*
 
 *Defined in [api.ts:477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L477)*
 
-Number of CVEs with CVSS score higher or equal to 4 and lower then 8.
+**`type`** {any}
 
-*__type__*: {number}
-
-*__memberof__*: ExecutiveReportCvesBySeverity
+**`memberof`** ExecutiveReportCvesBySeverity
 
 ___
-<a id="_8to10"></a>
 
 ###  _8to10
 
-**● _8to10**: *`number`*
+• **_8to10**: *[ExecutiveReportCvesBySeverity8to10](executivereportcvesbyseverity8to10.md)*
 
 *Defined in [api.ts:483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L483)*
 
-Number of CVEs with CVSS score higher or equal to 8.
+**`type`** {ExecutiveReportCvesBySeverity8to10}
 
-*__type__*: {number}
-
-*__memberof__*: ExecutiveReportCvesBySeverity
-
-___
-
+**`memberof`** ExecutiveReportCvesBySeverity

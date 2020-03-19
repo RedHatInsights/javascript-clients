@@ -1,14 +1,14 @@
-[@redhat-cloud-services/insights-client](../README.md) > [MultiHostUnAck](../interfaces/multihostunack.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [MultiHostUnAck](multihostunack.md)
 
 # Interface: MultiHostUnAck
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: MultiHostUnAck
+**`interface`** MultiHostUnAck
 
 ## Hierarchy
 
-**MultiHostUnAck**
+* **MultiHostUnAck**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [systems](multihostunack.md#systems)
 
----
-
 ## Properties
-
-<a id="systems"></a>
 
 ###  systems
 
-**● systems**: *`Array`<`string`>*
+• **systems**: *Array‹string›*
 
 *Defined in [api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L543)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: MultiHostUnAck
-
-___
-
+**`memberof`** MultiHostUnAck

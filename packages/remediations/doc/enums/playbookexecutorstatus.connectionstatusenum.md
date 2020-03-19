@@ -1,10 +1,10 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [PlaybookExecutorStatus](../modules/playbookexecutorstatus.md) > [ConnectionStatusEnum](../enums/playbookexecutorstatus.connectionstatusenum.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [PlaybookExecutorStatus](../modules/playbookexecutorstatus.md) › [ConnectionStatusEnum](playbookexecutorstatus.connectionstatusenum.md)
 
 # Enumeration: ConnectionStatusEnum
 
-*__export__*: 
+**`export`** 
 
-*__enum__*: {string}
+**`enum`** {string}
 
 ## Index
 
@@ -16,53 +16,42 @@
 * [NoReceptor](playbookexecutorstatus.connectionstatusenum.md#noreceptor)
 * [NoSource](playbookexecutorstatus.connectionstatusenum.md#nosource)
 
----
-
 ## Enumeration members
-
-<a id="connected"></a>
 
 ###  Connected
 
-**Connected**:  = "connected"
+• **Connected**: = "connected"
 
-*Defined in [api.ts:246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L246)*
+*Defined in [api.ts:296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L296)*
 
 ___
-<a id="disconnected"></a>
 
 ###  Disconnected
 
-**Disconnected**:  = "disconnected"
+• **Disconnected**: = "disconnected"
 
-*Defined in [api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L247)*
+*Defined in [api.ts:297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L297)*
 
 ___
-<a id="noexecutor"></a>
 
 ###  NoExecutor
 
-**NoExecutor**:  = "no_executor"
+• **NoExecutor**: = "no_executor"
 
-*Defined in [api.ts:248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L248)*
+*Defined in [api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L298)*
 
 ___
-<a id="noreceptor"></a>
 
 ###  NoReceptor
 
-**NoReceptor**:  = "no_receptor"
+• **NoReceptor**: = "no_receptor"
 
-*Defined in [api.ts:250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L250)*
+*Defined in [api.ts:300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L300)*
 
 ___
-<a id="nosource"></a>
 
 ###  NoSource
 
-**NoSource**:  = "no_source"
+• **NoSource**: = "no_source"
 
-*Defined in [api.ts:249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L249)*
-
-___
-
+*Defined in [api.ts:299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L299)*

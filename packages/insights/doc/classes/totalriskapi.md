@@ -1,20 +1,20 @@
-[@redhat-cloud-services/insights-client](../README.md) > [TotalRiskApi](../classes/totalriskapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [TotalRiskApi](totalriskapi.md)
 
 # Class: TotalRiskApi
 
 TotalRiskApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: TotalRiskApi
+**`class`** TotalRiskApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ TotalRiskApi**
+  ↳ **TotalRiskApi**
 
 ## Index
 
@@ -24,23 +24,19 @@ TotalRiskApi - object-oriented interface
 
 ### Properties
 
-* [axios](totalriskapi.md#axios)
-* [basePath](totalriskapi.md#basepath)
-* [configuration](totalriskapi.md#configuration)
+* [axios](totalriskapi.md#protected-axios)
+* [basePath](totalriskapi.md#protected-basepath)
+* [configuration](totalriskapi.md#protected-configuration)
 
 ### Methods
 
 * [totalRiskList](totalriskapi.md#totalrisklist)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new TotalRiskApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [TotalRiskApi](totalriskapi.md)
+\+ **new TotalRiskApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[TotalRiskApi](totalriskapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,75 +44,64 @@ TotalRiskApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [TotalRiskApi](totalriskapi.md)
-
-___
+**Returns:** *[TotalRiskApi](totalriskapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="totalrisklist"></a>
 
 ###  totalRiskList
 
-▸ **totalRiskList**(options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **totalRiskList**(`options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:5546](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5546)*
+*Defined in [api.ts:5768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5768)*
 
-List all total risk values.
+Total risk values are listed in increasing order of severity.
 
-*__throws__*: {RequiredError}
+**`summary`** List all total risk values.
 
-*__memberof__*: TotalRiskApi
+**`throws`** {RequiredError}
+
+**`memberof`** TotalRiskApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<`Response`>
-
-___
-
+**Returns:** *AxiosPromise‹Response›*

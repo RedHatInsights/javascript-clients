@@ -1,20 +1,20 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [AccessApi](../classes/accessapi.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [AccessApi](accessapi.md)
 
 # Class: AccessApi
 
 AccessApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: AccessApi
+**`class`** AccessApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ AccessApi**
+  ↳ **AccessApi**
 
 ## Index
 
@@ -24,23 +24,19 @@ AccessApi - object-oriented interface
 
 ### Properties
 
-* [axios](accessapi.md#axios)
-* [basePath](accessapi.md#basepath)
-* [configuration](accessapi.md#configuration)
+* [axios](accessapi.md#protected-axios)
+* [basePath](accessapi.md#protected-basepath)
+* [configuration](accessapi.md#protected-configuration)
 
 ### Methods
 
 * [getPrincipalAccess](accessapi.md#getprincipalaccess)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new AccessApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [AccessApi](accessapi.md)
+\+ **new AccessApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[AccessApi](accessapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,79 +44,66 @@ AccessApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [AccessApi](accessapi.md)
-
-___
+**Returns:** *[AccessApi](accessapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="getprincipalaccess"></a>
 
 ###  getPrincipalAccess
 
-▸ **getPrincipalAccess**(application: *`string`*, username?: *`string`*, limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[AccessPagination](../interfaces/accesspagination.md)>
+▸ **getPrincipalAccess**(`application`: string, `username?`: string, `limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[AccessPagination](../interfaces/accesspagination.md)›*
 
-*Defined in [api.ts:1214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1214)*
+*Defined in [api.ts:1326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1326)*
 
-*__summary__*: Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
+**`summary`** Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: AccessApi
+**`memberof`** AccessApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| application | `string` |  The application name to obtain access for the principal |
-| `Optional` username | `string` |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`application` | string | The application name to obtain access for the principal |
+`username?` | string | - |
+`limit?` | number | - |
+`offset?` | number | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[AccessPagination](../interfaces/accesspagination.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[AccessPagination](../interfaces/accesspagination.md)›*

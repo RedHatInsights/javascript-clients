@@ -1,50 +1,42 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [Policy](../interfaces/policy.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [Policy](policy.md)
 
 # Interface: Policy
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Policy
+**`interface`** Policy
 
 ## Hierarchy
 
-**Policy**
+* **Policy**
 
 ## Index
 
 ### Properties
 
-* [description](policy.md#description)
+* [description](policy.md#optional-description)
 * [name](policy.md#name)
-
----
 
 ## Properties
 
-<a id="description"></a>
+### `Optional` description
 
-### `<Optional>` description
+• **description**? : *string*
 
-**● description**: *`string`*
+*Defined in [api.ts:519](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L519)*
 
-*Defined in [api.ts:513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L513)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: Policy
+**`memberof`** Policy
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Defined in [api.ts:507](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L507)*
+*Defined in [api.ts:513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L513)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Policy
-
-___
-
+**`memberof`** Policy

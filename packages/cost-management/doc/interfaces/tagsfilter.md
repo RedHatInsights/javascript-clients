@@ -1,64 +1,55 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [TagsFilter](../interfaces/tagsfilter.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [TagsFilter](tagsfilter.md)
 
 # Interface: TagsFilter
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: TagsFilter
+**`interface`** TagsFilter
 
 ## Hierarchy
 
-**TagsFilter**
+* **TagsFilter**
 
 ## Index
 
 ### Properties
 
-* [resolution](tagsfilter.md#resolution)
-* [timeScopeUnits](tagsfilter.md#timescopeunits)
-* [timeScopeValue](tagsfilter.md#timescopevalue)
-
----
+* [resolution](tagsfilter.md#optional-resolution)
+* [timeScopeUnits](tagsfilter.md#optional-timescopeunits)
+* [timeScopeValue](tagsfilter.md#optional-timescopevalue)
 
 ## Properties
 
-<a id="resolution"></a>
+### `Optional` resolution
 
-### `<Optional>` resolution
+• **resolution**? : *[ReportResolution](../enums/reportresolution.md)*
 
-**● resolution**: *[ReportResolution](../enums/reportresolution.md)*
+*Defined in [api.ts:2799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2799)*
 
-*Defined in [api.ts:2962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2962)*
+**`type`** {ReportResolution}
 
-*__type__*: {ReportResolution}
-
-*__memberof__*: TagsFilter
-
-___
-<a id="timescopeunits"></a>
-
-### `<Optional>` timeScopeUnits
-
-**● timeScopeUnits**: *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
-
-*Defined in [api.ts:2974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2974)*
-
-*__type__*: {ReportTimeScopeUnits}
-
-*__memberof__*: TagsFilter
-
-___
-<a id="timescopevalue"></a>
-
-### `<Optional>` timeScopeValue
-
-**● timeScopeValue**: *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
-
-*Defined in [api.ts:2968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2968)*
-
-*__type__*: {ReportTimeScopeValue}
-
-*__memberof__*: TagsFilter
+**`memberof`** TagsFilter
 
 ___
 
+### `Optional` timeScopeUnits
+
+• **timeScopeUnits**? : *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
+
+*Defined in [api.ts:2811](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2811)*
+
+**`type`** {ReportTimeScopeUnits}
+
+**`memberof`** TagsFilter
+
+___
+
+### `Optional` timeScopeValue
+
+• **timeScopeValue**? : *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
+
+*Defined in [api.ts:2805](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2805)*
+
+**`type`** {ReportTimeScopeValue}
+
+**`memberof`** TagsFilter

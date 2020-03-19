@@ -1,14 +1,14 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [Customer](../interfaces/customer.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [Customer](customer.md)
 
 # Interface: Customer
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Customer
+**`interface`** Customer
 
 ## Hierarchy
 
-**Customer**
+* **Customer**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [accountId](customer.md#accountid)
 
----
-
 ## Properties
-
-<a id="accountid"></a>
 
 ###  accountId
 
-**● accountId**: *`string`*
+• **accountId**: *string*
 
-*Defined in [api.ts:331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L331)*
+*Defined in [api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L273)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Customer
-
-___
-
+**`memberof`** Customer

@@ -1,14 +1,14 @@
-[@redhat-cloud-services/insights-client](../README.md) > [SystemsForRule](../interfaces/systemsforrule.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [SystemsForRule](systemsforrule.md)
 
 # Interface: SystemsForRule
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SystemsForRule
+**`interface`** SystemsForRule
 
 ## Hierarchy
 
-**SystemsForRule**
+* **SystemsForRule**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [hostIds](systemsforrule.md#hostids)
 
----
-
 ## Properties
-
-<a id="hostids"></a>
 
 ###  hostIds
 
-**● hostIds**: *`Array`<`string`>*
+• **hostIds**: *Array‹string›*
 
-*Defined in [api.ts:1211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1211)*
+*Defined in [api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1237)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: SystemsForRule
-
-___
-
+**`memberof`** SystemsForRule

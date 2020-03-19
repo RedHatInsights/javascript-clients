@@ -1,184 +1,167 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ProviderOut](../interfaces/providerout.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ProviderOut](providerout.md)
 
 # Interface: ProviderOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ProviderOut
+**`interface`** ProviderOut
 
 ## Hierarchy
 
-**ProviderOut**
+* **ProviderOut**
 
 ## Index
 
 ### Properties
 
-* [active](providerout.md#active)
+* [active](providerout.md#optional-active)
 * [authentication](providerout.md#authentication)
 * [billingSource](providerout.md#billingsource)
-* [costModels](providerout.md#costmodels)
+* [costModels](providerout.md#optional-costmodels)
 * [createdBy](providerout.md#createdby)
 * [customer](providerout.md#customer)
-* [infrastructure](providerout.md#infrastructure)
+* [infrastructure](providerout.md#optional-infrastructure)
 * [name](providerout.md#name)
-* [stats](providerout.md#stats)
+* [stats](providerout.md#optional-stats)
 * [type](providerout.md#type)
 * [uuid](providerout.md#uuid)
 
----
-
 ## Properties
 
-<a id="active"></a>
+### `Optional` active
 
-### `<Optional>` active
+• **active**? : *boolean*
 
-**● active**: *`boolean`*
-
-*Defined in [api.ts:864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L864)*
+*Defined in [api.ts:689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L689)*
 
 Flag to indicate when the provider is configured correctly
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: ProviderOut
+**`memberof`** ProviderOut
 
 ___
-<a id="authentication"></a>
 
 ###  authentication
 
-**● authentication**: *[ProviderAuthenticationOut](providerauthenticationout.md)*
+• **authentication**: *[ProviderAuthenticationOut](providerauthenticationout.md)*
 
-*Defined in [api.ts:828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L828)*
+*Defined in [api.ts:653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L653)*
 
-*__type__*: {ProviderAuthenticationOut}
+**`type`** {ProviderAuthenticationOut}
 
-*__memberof__*: ProviderOut
+**`memberof`** ProviderOut
 
 ___
-<a id="billingsource"></a>
 
 ###  billingSource
 
-**● billingSource**: *[ProviderBillingSourceOut](providerbillingsourceout.md)*
+• **billingSource**: *[ProviderBillingSourceOut](providerbillingsourceout.md)*
 
-*Defined in [api.ts:834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L834)*
+*Defined in [api.ts:659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L659)*
 
-*__type__*: {ProviderBillingSourceOut}
+**`type`** {ProviderBillingSourceOut}
 
-*__memberof__*: ProviderOut
+**`memberof`** ProviderOut
 
 ___
-<a id="costmodels"></a>
 
-### `<Optional>` costModels
+### `Optional` costModels
 
-**● costModels**: *`Array`<`any`>*
+• **costModels**? : *Array‹any›*
 
-*Defined in [api.ts:870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L870)*
+*Defined in [api.ts:695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L695)*
 
 List of cost model name and UUIDs associated with this provider.
 
-*__type__*: {Array}
+**`type`** {Array<any>}
 
-*__memberof__*: ProviderOut
+**`memberof`** ProviderOut
 
 ___
-<a id="createdby"></a>
 
 ###  createdBy
 
-**● createdBy**: *[UserOut](userout.md)*
+• **createdBy**: *[UserOut](userout.md)*
 
-*Defined in [api.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L846)*
+*Defined in [api.ts:671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L671)*
 
-*__type__*: {UserOut}
+**`type`** {UserOut}
 
-*__memberof__*: ProviderOut
+**`memberof`** ProviderOut
 
 ___
-<a id="customer"></a>
 
 ###  customer
 
-**● customer**: *[CustomerOut](customerout.md)*
+• **customer**: *[CustomerOut](customerout.md)*
 
-*Defined in [api.ts:840](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L840)*
+*Defined in [api.ts:665](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L665)*
 
-*__type__*: {CustomerOut}
+**`type`** {CustomerOut}
 
-*__memberof__*: ProviderOut
+**`memberof`** ProviderOut
 
 ___
-<a id="infrastructure"></a>
 
-### `<Optional>` infrastructure
+### `Optional` infrastructure
 
-**● infrastructure**: *`string`*
+• **infrastructure**? : *string*
 
-*Defined in [api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L858)*
+*Defined in [api.ts:683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L683)*
 
 OpenShift foundational infrastructure type.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ProviderOut
+**`memberof`** ProviderOut
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Defined in [api.ts:810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L810)*
+*Defined in [api.ts:635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L635)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ProviderOut
-
-___
-<a id="stats"></a>
-
-### `<Optional>` stats
-
-**● stats**: *`any`*
-
-*Defined in [api.ts:852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L852)*
-
-Dictionary key is the start of a billing month. Value is report processing statistics.
-
-*__type__*: {any}
-
-*__memberof__*: ProviderOut
+**`memberof`** ProviderOut
 
 ___
-<a id="type"></a>
+
+### `Optional` stats
+
+• **stats**? : *any*
+
+*Defined in [api.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L677)*
+
+Dictionary key is the start of a billing month.  Value is report processing statistics.
+
+**`type`** {any}
+
+**`memberof`** ProviderOut
+
+___
 
 ###  type
 
-**● type**: *`string`*
+• **type**: *string*
 
-*Defined in [api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L816)*
+*Defined in [api.ts:641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L641)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ProviderOut
+**`memberof`** ProviderOut
 
 ___
-<a id="uuid"></a>
 
 ###  uuid
 
-**● uuid**: *`string`*
+• **uuid**: *string*
 
-*Defined in [api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L822)*
+*Defined in [api.ts:647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L647)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ProviderOut
-
-___
-
+**`memberof`** ProviderOut

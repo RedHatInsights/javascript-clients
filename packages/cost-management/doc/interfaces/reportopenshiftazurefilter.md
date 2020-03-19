@@ -1,222 +1,202 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportOpenShiftAzureFilter](../interfaces/reportopenshiftazurefilter.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportOpenShiftAzureFilter](reportopenshiftazurefilter.md)
 
 # Interface: ReportOpenShiftAzureFilter
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportOpenShiftAzureFilter
+**`interface`** ReportOpenShiftAzureFilter
 
 ## Hierarchy
 
-**ReportOpenShiftAzureFilter**
+* **ReportOpenShiftAzureFilter**
 
 ## Index
 
 ### Properties
 
-* [cluster](reportopenshiftazurefilter.md#cluster)
-* [instanceType](reportopenshiftazurefilter.md#instancetype)
-* [limit](reportopenshiftazurefilter.md#limit)
-* [node](reportopenshiftazurefilter.md#node)
-* [offset](reportopenshiftazurefilter.md#offset)
-* [project](reportopenshiftazurefilter.md#project)
-* [resolution](reportopenshiftazurefilter.md#resolution)
-* [resourceLocation](reportopenshiftazurefilter.md#resourcelocation)
-* [resourceScope](reportopenshiftazurefilter.md#resourcescope)
-* [serviceName](reportopenshiftazurefilter.md#servicename)
-* [subscriptionGuid](reportopenshiftazurefilter.md#subscriptionguid)
-* [tag](reportopenshiftazurefilter.md#tag)
-* [timeScopeUnits](reportopenshiftazurefilter.md#timescopeunits)
-* [timeScopeValue](reportopenshiftazurefilter.md#timescopevalue)
-
----
+* [cluster](reportopenshiftazurefilter.md#optional-cluster)
+* [instanceType](reportopenshiftazurefilter.md#optional-instancetype)
+* [limit](reportopenshiftazurefilter.md#optional-limit)
+* [node](reportopenshiftazurefilter.md#optional-node)
+* [offset](reportopenshiftazurefilter.md#optional-offset)
+* [project](reportopenshiftazurefilter.md#optional-project)
+* [resolution](reportopenshiftazurefilter.md#optional-resolution)
+* [resourceLocation](reportopenshiftazurefilter.md#optional-resourcelocation)
+* [resourceScope](reportopenshiftazurefilter.md#optional-resourcescope)
+* [serviceName](reportopenshiftazurefilter.md#optional-servicename)
+* [subscriptionGuid](reportopenshiftazurefilter.md#optional-subscriptionguid)
+* [tag](reportopenshiftazurefilter.md#optional-tag)
+* [timeScopeUnits](reportopenshiftazurefilter.md#optional-timescopeunits)
+* [timeScopeValue](reportopenshiftazurefilter.md#optional-timescopevalue)
 
 ## Properties
 
-<a id="cluster"></a>
+### `Optional` cluster
 
-### `<Optional>` cluster
+• **cluster**? : *Array‹string›*
 
-**● cluster**: *`Array`<`string`>*
+*Defined in [api.ts:1867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1867)*
 
-*Defined in [api.ts:2042](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2042)*
+**`type`** {Array<string>}
 
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureFilter
+**`memberof`** ReportOpenShiftAzureFilter
 
 ___
-<a id="instancetype"></a>
 
-### `<Optional>` instanceType
+### `Optional` instanceType
 
-**● instanceType**: *`Array`<`string`>*
+• **instanceType**? : *Array‹string›*
 
-*Defined in [api.ts:2024](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2024)*
+*Defined in [api.ts:1849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1849)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: ReportOpenShiftAzureFilter
+**`memberof`** ReportOpenShiftAzureFilter
 
 ___
-<a id="limit"></a>
 
-### `<Optional>` limit
+### `Optional` limit
 
-**● limit**: *`number`*
+• **limit**? : *number*
 
-*Defined in [api.ts:1970](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1970)*
+*Defined in [api.ts:1795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1795)*
 
 Limits the data points returns and aggregates remaining data.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ReportOpenShiftAzureFilter
-
-___
-<a id="node"></a>
-
-### `<Optional>` node
-
-**● node**: *`Array`<`string`>*
-
-*Defined in [api.ts:2048](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2048)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureFilter
+**`memberof`** ReportOpenShiftAzureFilter
 
 ___
-<a id="offset"></a>
 
-### `<Optional>` offset
+### `Optional` node
 
-**● offset**: *`number`*
+• **node**? : *Array‹string›*
 
-*Defined in [api.ts:1976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1976)*
+*Defined in [api.ts:1873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1873)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAzureFilter
+
+___
+
+### `Optional` offset
+
+• **offset**? : *number*
+
+*Defined in [api.ts:1801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1801)*
 
 Offsets the data points returned when using limit.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ReportOpenShiftAzureFilter
-
-___
-<a id="project"></a>
-
-### `<Optional>` project
-
-**● project**: *`Array`<`string`>*
-
-*Defined in [api.ts:2036](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2036)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureFilter
-
-___
-<a id="resolution"></a>
-
-### `<Optional>` resolution
-
-**● resolution**: *[ReportResolution](../enums/reportresolution.md)*
-
-*Defined in [api.ts:1982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1982)*
-
-*__type__*: {ReportResolution}
-
-*__memberof__*: ReportOpenShiftAzureFilter
-
-___
-<a id="resourcelocation"></a>
-
-### `<Optional>` resourceLocation
-
-**● resourceLocation**: *`Array`<`string`>*
-
-*Defined in [api.ts:2018](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2018)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureFilter
-
-___
-<a id="resourcescope"></a>
-
-### `<Optional>` resourceScope
-
-**● resourceScope**: *`Array`<[ReportResourceScope](../enums/reportresourcescope.md)>*
-
-*Defined in [api.ts:2000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2000)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureFilter
-
-___
-<a id="servicename"></a>
-
-### `<Optional>` serviceName
-
-**● serviceName**: *`Array`<`string`>*
-
-*Defined in [api.ts:2012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2012)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureFilter
-
-___
-<a id="subscriptionguid"></a>
-
-### `<Optional>` subscriptionGuid
-
-**● subscriptionGuid**: *`Array`<`string`>*
-
-*Defined in [api.ts:2006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2006)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureFilter
-
-___
-<a id="tag"></a>
-
-### `<Optional>` tag
-
-**● tag**: *`Array`<`string`>*
-
-*Defined in [api.ts:2030](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2030)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureFilter
-
-___
-<a id="timescopeunits"></a>
-
-### `<Optional>` timeScopeUnits
-
-**● timeScopeUnits**: *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
-
-*Defined in [api.ts:1994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1994)*
-
-*__type__*: {ReportTimeScopeUnits}
-
-*__memberof__*: ReportOpenShiftAzureFilter
-
-___
-<a id="timescopevalue"></a>
-
-### `<Optional>` timeScopeValue
-
-**● timeScopeValue**: *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
-
-*Defined in [api.ts:1988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1988)*
-
-*__type__*: {ReportTimeScopeValue}
-
-*__memberof__*: ReportOpenShiftAzureFilter
+**`memberof`** ReportOpenShiftAzureFilter
 
 ___
 
+### `Optional` project
+
+• **project**? : *Array‹string›*
+
+*Defined in [api.ts:1861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1861)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAzureFilter
+
+___
+
+### `Optional` resolution
+
+• **resolution**? : *[ReportResolution](../enums/reportresolution.md)*
+
+*Defined in [api.ts:1807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1807)*
+
+**`type`** {ReportResolution}
+
+**`memberof`** ReportOpenShiftAzureFilter
+
+___
+
+### `Optional` resourceLocation
+
+• **resourceLocation**? : *Array‹string›*
+
+*Defined in [api.ts:1843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1843)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAzureFilter
+
+___
+
+### `Optional` resourceScope
+
+• **resourceScope**? : *Array‹[ReportResourceScope](../enums/reportresourcescope.md)›*
+
+*Defined in [api.ts:1825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1825)*
+
+**`type`** {Array<ReportResourceScope>}
+
+**`memberof`** ReportOpenShiftAzureFilter
+
+___
+
+### `Optional` serviceName
+
+• **serviceName**? : *Array‹string›*
+
+*Defined in [api.ts:1837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1837)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAzureFilter
+
+___
+
+### `Optional` subscriptionGuid
+
+• **subscriptionGuid**? : *Array‹string›*
+
+*Defined in [api.ts:1831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1831)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAzureFilter
+
+___
+
+### `Optional` tag
+
+• **tag**? : *Array‹string›*
+
+*Defined in [api.ts:1855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1855)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAzureFilter
+
+___
+
+### `Optional` timeScopeUnits
+
+• **timeScopeUnits**? : *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
+
+*Defined in [api.ts:1819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1819)*
+
+**`type`** {ReportTimeScopeUnits}
+
+**`memberof`** ReportOpenShiftAzureFilter
+
+___
+
+### `Optional` timeScopeValue
+
+• **timeScopeValue**? : *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
+
+*Defined in [api.ts:1813](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1813)*
+
+**`type`** {ReportTimeScopeValue}
+
+**`memberof`** ReportOpenShiftAzureFilter

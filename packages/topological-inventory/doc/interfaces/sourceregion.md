@@ -1,152 +1,137 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [SourceRegion](../interfaces/sourceregion.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [SourceRegion](sourceregion.md)
 
 # Interface: SourceRegion
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SourceRegion
+**`interface`** SourceRegion
 
 ## Hierarchy
 
-**SourceRegion**
+* **SourceRegion**
 
 ## Index
 
 ### Properties
 
-* [archivedAt](sourceregion.md#archivedat)
-* [createdAt](sourceregion.md#createdat)
-* [endpoint](sourceregion.md#endpoint)
-* [id](sourceregion.md#id)
-* [lastSeenAt](sourceregion.md#lastseenat)
-* [name](sourceregion.md#name)
-* [sourceId](sourceregion.md#sourceid)
-* [sourceRef](sourceregion.md#sourceref)
-* [updatedAt](sourceregion.md#updatedat)
-
----
+* [archivedAt](sourceregion.md#optional-archivedat)
+* [createdAt](sourceregion.md#optional-createdat)
+* [endpoint](sourceregion.md#optional-endpoint)
+* [id](sourceregion.md#optional-id)
+* [lastSeenAt](sourceregion.md#optional-lastseenat)
+* [name](sourceregion.md#optional-name)
+* [sourceId](sourceregion.md#optional-sourceid)
+* [sourceRef](sourceregion.md#optional-sourceref)
+* [updatedAt](sourceregion.md#optional-updatedat)
 
 ## Properties
 
-<a id="archivedat"></a>
+### `Optional` archivedAt
 
-### `<Optional>` archivedAt
-
-**● archivedAt**: *`Date`*
+• **archivedAt**? : *Date*
 
 *Defined in [api.ts:3255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3255)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: SourceRegion
+**`memberof`** SourceRegion
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:3261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3261)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: SourceRegion
+**`memberof`** SourceRegion
 
 ___
-<a id="endpoint"></a>
 
-### `<Optional>` endpoint
+### `Optional` endpoint
 
-**● endpoint**: *`string`*
+• **endpoint**? : *string*
 
 *Defined in [api.ts:3267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3267)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SourceRegion
+**`memberof`** SourceRegion
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:3273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3273)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SourceRegion
+**`memberof`** SourceRegion
 
 ___
-<a id="lastseenat"></a>
 
-### `<Optional>` lastSeenAt
+### `Optional` lastSeenAt
 
-**● lastSeenAt**: *`Date`*
+• **lastSeenAt**? : *Date*
 
 *Defined in [api.ts:3279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3279)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: SourceRegion
+**`memberof`** SourceRegion
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:3285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3285)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SourceRegion
+**`memberof`** SourceRegion
 
 ___
-<a id="sourceid"></a>
 
-### `<Optional>` sourceId
+### `Optional` sourceId
 
-**● sourceId**: *`string`*
+• **sourceId**? : *string*
 
 *Defined in [api.ts:3291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3291)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SourceRegion
+**`memberof`** SourceRegion
 
 ___
-<a id="sourceref"></a>
 
-### `<Optional>` sourceRef
+### `Optional` sourceRef
 
-**● sourceRef**: *`string`*
+• **sourceRef**? : *string*
 
 *Defined in [api.ts:3297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3297)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SourceRegion
+**`memberof`** SourceRegion
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:3303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3303)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: SourceRegion
-
-___
-
+**`memberof`** SourceRegion

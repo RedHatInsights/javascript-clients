@@ -1,20 +1,20 @@
-[@redhat-cloud-services/approval-client](../README.md) > [RequestApi](../classes/requestapi.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [RequestApi](requestapi.md)
 
 # Class: RequestApi
 
 RequestApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: RequestApi
+**`class`** RequestApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ RequestApi**
+  ↳ **RequestApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ RequestApi - object-oriented interface
 
 ### Properties
 
-* [axios](requestapi.md#axios)
-* [basePath](requestapi.md#basepath)
-* [configuration](requestapi.md#configuration)
+* [axios](requestapi.md#protected-axios)
+* [basePath](requestapi.md#protected-basepath)
+* [configuration](requestapi.md#protected-configuration)
 
 ### Methods
 
@@ -36,15 +36,11 @@ RequestApi - object-oriented interface
 * [showRequest](requestapi.md#showrequest)
 * [showRequestContent](requestapi.md#showrequestcontent)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new RequestApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [RequestApi](requestapi.md)
+\+ **new RequestApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[RequestApi](requestapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -52,186 +48,169 @@ RequestApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [RequestApi](requestapi.md)
-
-___
+**Returns:** *[RequestApi](requestapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="createrequest"></a>
 
 ###  createRequest
 
-▸ **createRequest**(requestIn: *[RequestIn](../interfaces/requestin.md)*, options?: *`any`*): `AxiosPromise`<[Request](../modules/request.md)>
+▸ **createRequest**(`requestIn`: [RequestIn](../interfaces/requestin.md), `options?`: any): *AxiosPromise‹[Request](../modules/request.md)›*
 
-*Defined in [api.ts:1423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1423)*
+*Defined in [api.ts:1420](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1420)*
 
 Add an approval request by given parameters, available to anyone
 
-*__summary__*: Add an approval request by given parameters
+**`summary`** Add an approval request by given parameters
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: RequestApi
+**`memberof`** RequestApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| requestIn | [RequestIn](../interfaces/requestin.md) |  Parameters need to create a request |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`requestIn` | [RequestIn](../interfaces/requestin.md) | Parameters need to create a request |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Request](../modules/request.md)>
+**Returns:** *AxiosPromise‹[Request](../modules/request.md)›*
 
 ___
-<a id="listrequests"></a>
 
 ###  listRequests
 
-▸ **listRequests**(xRhPersona?: *"approval/admin" \| "approval/approver" \| "approval/requester"*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
+▸ **listRequests**(`xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
 
-*Defined in [api.ts:1438](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1438)*
+*Defined in [api.ts:1435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1435)*
 
 The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
 
-*__summary__*: Return an array of requester made approval requests, available to anyone
+**`summary`** Return an array of requester made approval requests, available to anyone
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: RequestApi
+**`memberof`** RequestApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` xRhPersona | "approval/admin" \| "approval/approver" \| "approval/requester" |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`xRhPersona?` | "approval/admin" &#124; "approval/approver" &#124; "approval/requester" |
+`limit?` | number |
+`offset?` | number |
+`filter?` | any |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
+**Returns:** *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
 
 ___
-<a id="listrequestsbyrequest"></a>
 
 ###  listRequestsByRequest
 
-▸ **listRequestsByRequest**(requestId: *`string`*, xRhPersona?: *"approval/admin" \| "approval/approver" \| "approval/requester"*, options?: *`any`*): `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
+▸ **listRequestsByRequest**(`requestId`: string, `xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `options?`: any): *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
 
-*Defined in [api.ts:1451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1451)*
+*Defined in [api.ts:1448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1448)*
 
 Return an array of child requests of a given request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
 
-*__summary__*: Return an array of child requests of a given request id
+**`summary`** Return an array of child requests of a given request id
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: RequestApi
+**`memberof`** RequestApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| requestId | `string` |  Id of request |
-| `Optional` xRhPersona | "approval/admin" \| "approval/approver" \| "approval/requester" |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`requestId` | string | Id of request |
+`xRhPersona?` | "approval/admin" &#124; "approval/approver" &#124; "approval/requester" | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[RequestCollection](../interfaces/requestcollection.md)>
+**Returns:** *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
 
 ___
-<a id="showrequest"></a>
 
 ###  showRequest
 
-▸ **showRequest**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Request](../modules/request.md)>
+▸ **showRequest**(`id`: string, `options?`: any): *AxiosPromise‹[Request](../modules/request.md)›*
 
-*Defined in [api.ts:1463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1463)*
+*Defined in [api.ts:1460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1460)*
 
 Return an approval request by given id, available to anyone who can access the request
 
-*__summary__*: Return an approval request by given id
+**`summary`** Return an approval request by given id
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: RequestApi
+**`memberof`** RequestApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  Query by id |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | Query by id |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Request](../modules/request.md)>
+**Returns:** *AxiosPromise‹[Request](../modules/request.md)›*
 
 ___
-<a id="showrequestcontent"></a>
 
 ###  showRequestContent
 
-▸ **showRequestContent**(requestId: *`string`*, options?: *`any`*): `AxiosPromise`<`any`>
+▸ **showRequestContent**(`requestId`: string, `options?`: any): *AxiosPromise‹any›*
 
-*Defined in [api.ts:1475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1475)*
+*Defined in [api.ts:1472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1472)*
 
 Return request content of a given request id, available to all
 
-*__summary__*: Return request content of a given request id
+**`summary`** Return request content of a given request id
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: RequestApi
+**`memberof`** RequestApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| requestId | `string` |  Id of request |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`requestId` | string | Id of request |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`any`>
-
-___
-
+**Returns:** *AxiosPromise‹any›*

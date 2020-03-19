@@ -1,10 +1,6 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [Level](../modules/level.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [Level](level.md)
 
 # Module: Level
-
-*__export__*: 
-
-*__namespace__*: Level
 
 ## Index
 
@@ -14,55 +10,30 @@
 
 ### Properties
 
-* [attributes](level.md#attributes)
-* [id](level.md#id)
-* [type](level.md#type)
-
----
+* [attributes](level.md#optional-attributes)
+* [id](level.md#optional-id)
+* [type](level.md#optional-type)
 
 ## Properties
 
-<a id="attributes"></a>
+### `Optional` attributes
 
-### `<Optional>` attributes
-
-**● attributes**: *[LevelAttributes](../interfaces/levelattributes.md)*
+• **attributes**? : *[LevelAttributes](../interfaces/levelattributes.md)*
 
 *Defined in [api.ts:874](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L874)*
 
-*__type__*: {LevelAttributes}
-
-*__memberof__*: Level
-
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L862)*
 
-Identifier of the level record
-
-*__type__*: {string}
-
-*__memberof__*: Level
-
 ___
-<a id="type"></a>
 
-### `<Optional>` type
+### `Optional` type
 
-**● type**: *[TypeEnum](../enums/level.typeenum.md)*
+• **type**? : *[TypeEnum](../enums/level.typeenum.md)*
 
 *Defined in [api.ts:868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L868)*
-
-Type of the returned record
-
-*__type__*: {string}
-
-*__memberof__*: Level
-
-___
-

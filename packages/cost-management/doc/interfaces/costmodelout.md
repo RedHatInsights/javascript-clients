@@ -1,148 +1,133 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [CostModelOut](../interfaces/costmodelout.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [CostModelOut](costmodelout.md)
 
 # Interface: CostModelOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CostModelOut
+**`interface`** CostModelOut
 
 ## Hierarchy
 
-**CostModelOut**
+* **CostModelOut**
 
 ## Index
 
 ### Properties
 
-* [createdTimestamp](costmodelout.md#createdtimestamp)
+* [createdTimestamp](costmodelout.md#optional-createdtimestamp)
 * [description](costmodelout.md#description)
-* [markup](costmodelout.md#markup)
+* [markup](costmodelout.md#optional-markup)
 * [name](costmodelout.md#name)
-* [providers](costmodelout.md#providers)
-* [rates](costmodelout.md#rates)
+* [providers](costmodelout.md#optional-providers)
+* [rates](costmodelout.md#optional-rates)
 * [sourceType](costmodelout.md#sourcetype)
-* [updatedTimestamp](costmodelout.md#updatedtimestamp)
-* [uuid](costmodelout.md#uuid)
-
----
+* [updatedTimestamp](costmodelout.md#optional-updatedtimestamp)
+* [uuid](costmodelout.md#optional-uuid)
 
 ## Properties
 
-<a id="createdtimestamp"></a>
+### `Optional` createdTimestamp
 
-### `<Optional>` createdTimestamp
+• **createdTimestamp**? : *Date*
 
-**● createdTimestamp**: *`Date`*
+*Defined in [api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L163)*
 
-*Defined in [api.ts:221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L221)*
+**`type`** {Date}
 
-*__type__*: {Date}
-
-*__memberof__*: CostModelOut
+**`memberof`** CostModelOut
 
 ___
-<a id="description"></a>
 
 ###  description
 
-**● description**: *`string`*
+• **description**: *string*
 
-*Defined in [api.ts:191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L191)*
+*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L133)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CostModelOut
-
-___
-<a id="markup"></a>
-
-### `<Optional>` markup
-
-**● markup**: *[Markup](../modules/markup.md)*
-
-*Defined in [api.ts:233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L233)*
-
-*__type__*: {Markup}
-
-*__memberof__*: CostModelOut
+**`memberof`** CostModelOut
 
 ___
-<a id="name"></a>
+
+### `Optional` markup
+
+• **markup**? : *[Markup](../modules/markup.md)*
+
+*Defined in [api.ts:175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L175)*
+
+**`type`** {Markup}
+
+**`memberof`** CostModelOut
+
+___
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Defined in [api.ts:185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L185)*
+*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L127)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CostModelOut
-
-___
-<a id="providers"></a>
-
-### `<Optional>` providers
-
-**● providers**: *`Array`<[CostModelRespProviders](costmodelrespproviders.md)>*
-
-*Defined in [api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L203)*
-
-*__type__*: {Array}
-
-*__memberof__*: CostModelOut
+**`memberof`** CostModelOut
 
 ___
-<a id="rates"></a>
 
-### `<Optional>` rates
+### `Optional` providers
 
-**● rates**: *`Array`<[Rate](rate.md)>*
+• **providers**? : *Array‹[CostModelRespProviders](costmodelrespproviders.md)›*
 
-*Defined in [api.ts:209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L209)*
+*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L145)*
 
-*__type__*: {Array}
+**`type`** {Array<CostModelRespProviders>}
 
-*__memberof__*: CostModelOut
+**`memberof`** CostModelOut
 
 ___
-<a id="sourcetype"></a>
+
+### `Optional` rates
+
+• **rates**? : *Array‹[Rate](rate.md)›*
+
+*Defined in [api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L151)*
+
+**`type`** {Array<Rate>}
+
+**`memberof`** CostModelOut
+
+___
 
 ###  sourceType
 
-**● sourceType**: *`string`*
+• **sourceType**: *string*
 
-*Defined in [api.ts:197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L197)*
+*Defined in [api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L139)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CostModelOut
-
-___
-<a id="updatedtimestamp"></a>
-
-### `<Optional>` updatedTimestamp
-
-**● updatedTimestamp**: *`Date`*
-
-*Defined in [api.ts:227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L227)*
-
-*__type__*: {Date}
-
-*__memberof__*: CostModelOut
-
-___
-<a id="uuid"></a>
-
-### `<Optional>` uuid
-
-**● uuid**: *`string`*
-
-*Defined in [api.ts:215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L215)*
-
-*__type__*: {string}
-
-*__memberof__*: CostModelOut
+**`memberof`** CostModelOut
 
 ___
 
+### `Optional` updatedTimestamp
+
+• **updatedTimestamp**? : *Date*
+
+*Defined in [api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L169)*
+
+**`type`** {Date}
+
+**`memberof`** CostModelOut
+
+___
+
+### `Optional` uuid
+
+• **uuid**? : *string*
+
+*Defined in [api.ts:157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L157)*
+
+**`type`** {string}
+
+**`memberof`** CostModelOut

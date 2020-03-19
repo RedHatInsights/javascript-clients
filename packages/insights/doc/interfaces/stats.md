@@ -1,14 +1,14 @@
-[@redhat-cloud-services/insights-client](../README.md) > [Stats](../interfaces/stats.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [Stats](stats.md)
 
 # Interface: Stats
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Stats
+**`interface`** Stats
 
 ## Hierarchy
 
-**Stats**
+* **Stats**
 
 ## Index
 
@@ -18,55 +18,46 @@
 * [total](stats.md#total)
 * [totalRisk](stats.md#totalrisk)
 
----
-
 ## Properties
-
-<a id="category"></a>
 
 ###  category
 
-**● category**: *`object`*
+• **category**: *object*
 
-*Defined in [api.ts:1139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1139)*
+*Defined in [api.ts:1159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1159)*
 
-*__type__*: {{ \[key: string\]: number; }}
+**`type`** {{ [key: string]: number; }}
 
-*__memberof__*: Stats
+**`memberof`** Stats
 
-#### Type declaration
+#### Type declaration:
 
-[key: `string`]: `number`
+* \[ **key**: *string*\]: number
 
 ___
-<a id="total"></a>
 
 ###  total
 
-**● total**: *`number`*
+• **total**: *number*
 
-*Defined in [api.ts:1127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1127)*
+*Defined in [api.ts:1147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1147)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Stats
+**`memberof`** Stats
 
 ___
-<a id="totalrisk"></a>
 
 ###  totalRisk
 
-**● totalRisk**: *`object`*
+• **totalRisk**: *object*
 
-*Defined in [api.ts:1133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1133)*
+*Defined in [api.ts:1153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1153)*
 
-*__type__*: {{ \[key: string\]: number; }}
+**`type`** {{ [key: string]: number; }}
 
-*__memberof__*: Stats
+**`memberof`** Stats
 
-#### Type declaration
+#### Type declaration:
 
-[key: `string`]: `number`
-
-___
-
+* \[ **key**: *string*\]: number

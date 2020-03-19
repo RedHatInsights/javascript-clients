@@ -1,36 +1,29 @@
-[@redhat-cloud-services/entitlements-client](../README.md) > [ServiceDetails](../interfaces/servicedetails.md)
+[@redhat-cloud-services/entitlements-client](../README.md) › [Globals](../globals.md) › [ServiceDetails](servicedetails.md)
 
 # Interface: ServiceDetails
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ServiceDetails
+**`interface`** ServiceDetails
 
 ## Hierarchy
 
-**ServiceDetails**
+* **ServiceDetails**
 
 ## Index
 
 ### Properties
 
-* [isEntitled](servicedetails.md#isentitled)
-
----
+* [isEntitled](servicedetails.md#optional-isentitled)
 
 ## Properties
 
-<a id="isentitled"></a>
+### `Optional` isEntitled
 
-### `<Optional>` isEntitled
-
-**● isEntitled**: *`boolean`*
+• **isEntitled**? : *boolean*
 
 *Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L83)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: ServiceDetails
-
-___
-
+**`memberof`** ServiceDetails

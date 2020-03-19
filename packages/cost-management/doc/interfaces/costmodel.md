@@ -1,106 +1,94 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [CostModel](../interfaces/costmodel.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [CostModel](costmodel.md)
 
 # Interface: CostModel
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CostModel
+**`interface`** CostModel
 
 ## Hierarchy
 
-**CostModel**
+* **CostModel**
 
 ## Index
 
 ### Properties
 
 * [description](costmodel.md#description)
-* [markup](costmodel.md#markup)
+* [markup](costmodel.md#optional-markup)
 * [name](costmodel.md#name)
-* [providerUuids](costmodel.md#provideruuids)
-* [rates](costmodel.md#rates)
+* [providerUuids](costmodel.md#optional-provideruuids)
+* [rates](costmodel.md#optional-rates)
 * [sourceType](costmodel.md#sourcetype)
-
----
 
 ## Properties
 
-<a id="description"></a>
-
 ###  description
 
-**● description**: *`string`*
+• **description**: *string*
 
-*Defined in [api.ts:147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L147)*
+*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L89)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CostModel
-
-___
-<a id="markup"></a>
-
-### `<Optional>` markup
-
-**● markup**: *[Markup](../modules/markup.md)*
-
-*Defined in [api.ts:171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L171)*
-
-*__type__*: {Markup}
-
-*__memberof__*: CostModel
+**`memberof`** CostModel
 
 ___
-<a id="name"></a>
+
+### `Optional` markup
+
+• **markup**? : *[Markup](../modules/markup.md)*
+
+*Defined in [api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L113)*
+
+**`type`** {Markup}
+
+**`memberof`** CostModel
+
+___
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Defined in [api.ts:141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L141)*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L83)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CostModel
-
-___
-<a id="provideruuids"></a>
-
-### `<Optional>` providerUuids
-
-**● providerUuids**: *`Array`<`string`>*
-
-*Defined in [api.ts:159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L159)*
-
-*__type__*: {Array}
-
-*__memberof__*: CostModel
+**`memberof`** CostModel
 
 ___
-<a id="rates"></a>
 
-### `<Optional>` rates
+### `Optional` providerUuids
 
-**● rates**: *`Array`<[Rate](rate.md)>*
+• **providerUuids**? : *Array‹string›*
 
-*Defined in [api.ts:165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L165)*
+*Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L101)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: CostModel
+**`memberof`** CostModel
 
 ___
-<a id="sourcetype"></a>
+
+### `Optional` rates
+
+• **rates**? : *Array‹[Rate](rate.md)›*
+
+*Defined in [api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L107)*
+
+**`type`** {Array<Rate>}
+
+**`memberof`** CostModel
+
+___
 
 ###  sourceType
 
-**● sourceType**: *`string`*
+• **sourceType**: *string*
 
-*Defined in [api.ts:153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L153)*
+*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L95)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CostModel
-
-___
-
+**`memberof`** CostModel

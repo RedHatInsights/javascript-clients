@@ -1,106 +1,94 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [Status](../interfaces/status.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [Status](status.md)
 
 # Interface: Status
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Status
+**`interface`** Status
 
 ## Hierarchy
 
-**Status**
+* **Status**
 
 ## Index
 
 ### Properties
 
 * [apiVersion](status.md#apiversion)
-* [commit](status.md#commit)
-* [modules](status.md#modules)
-* [platformInfo](status.md#platforminfo)
-* [pythonVersion](status.md#pythonversion)
-* [serverAddress](status.md#serveraddress)
-
----
+* [commit](status.md#optional-commit)
+* [modules](status.md#optional-modules)
+* [platformInfo](status.md#optional-platforminfo)
+* [pythonVersion](status.md#optional-pythonversion)
+* [serverAddress](status.md#optional-serveraddress)
 
 ## Properties
 
-<a id="apiversion"></a>
-
 ###  apiVersion
 
-**● apiVersion**: *`number`*
+• **apiVersion**: *number*
 
-*Defined in [api.ts:1014](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1014)*
+*Defined in [api.ts:1126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1126)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Status
-
-___
-<a id="commit"></a>
-
-### `<Optional>` commit
-
-**● commit**: *`string`*
-
-*Defined in [api.ts:1020](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1020)*
-
-*__type__*: {string}
-
-*__memberof__*: Status
-
-___
-<a id="modules"></a>
-
-### `<Optional>` modules
-
-**● modules**: *`any`*
-
-*Defined in [api.ts:1044](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1044)*
-
-*__type__*: {any}
-
-*__memberof__*: Status
-
-___
-<a id="platforminfo"></a>
-
-### `<Optional>` platformInfo
-
-**● platformInfo**: *`any`*
-
-*Defined in [api.ts:1032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1032)*
-
-*__type__*: {any}
-
-*__memberof__*: Status
-
-___
-<a id="pythonversion"></a>
-
-### `<Optional>` pythonVersion
-
-**● pythonVersion**: *`string`*
-
-*Defined in [api.ts:1038](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1038)*
-
-*__type__*: {string}
-
-*__memberof__*: Status
-
-___
-<a id="serveraddress"></a>
-
-### `<Optional>` serverAddress
-
-**● serverAddress**: *`string`*
-
-*Defined in [api.ts:1026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1026)*
-
-*__type__*: {string}
-
-*__memberof__*: Status
+**`memberof`** Status
 
 ___
 
+### `Optional` commit
+
+• **commit**? : *string*
+
+*Defined in [api.ts:1132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1132)*
+
+**`type`** {string}
+
+**`memberof`** Status
+
+___
+
+### `Optional` modules
+
+• **modules**? : *any*
+
+*Defined in [api.ts:1156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1156)*
+
+**`type`** {any}
+
+**`memberof`** Status
+
+___
+
+### `Optional` platformInfo
+
+• **platformInfo**? : *any*
+
+*Defined in [api.ts:1144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1144)*
+
+**`type`** {any}
+
+**`memberof`** Status
+
+___
+
+### `Optional` pythonVersion
+
+• **pythonVersion**? : *string*
+
+*Defined in [api.ts:1150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1150)*
+
+**`type`** {string}
+
+**`memberof`** Status
+
+___
+
+### `Optional` serverAddress
+
+• **serverAddress**? : *string*
+
+*Defined in [api.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1138)*
+
+**`type`** {string}
+
+**`memberof`** Status

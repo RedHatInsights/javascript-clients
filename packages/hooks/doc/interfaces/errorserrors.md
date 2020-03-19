@@ -1,120 +1,75 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [ErrorsErrors](../interfaces/errorserrors.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [ErrorsErrors](errorserrors.md)
 
 # Interface: ErrorsErrors
 
-*__export__*: 
-
-*__interface__*: ErrorsErrors
-
 ## Hierarchy
 
-**ErrorsErrors**
+* **ErrorsErrors**
 
 ## Index
 
 ### Properties
 
-* [code](errorserrors.md#code)
-* [detail](errorserrors.md#detail)
-* [id](errorserrors.md#id)
-* [meta](errorserrors.md#meta)
-* [source](errorserrors.md#source)
-* [status](errorserrors.md#status)
-* [title](errorserrors.md#title)
-
----
+* [code](errorserrors.md#optional-code)
+* [detail](errorserrors.md#optional-detail)
+* [id](errorserrors.md#optional-id)
+* [meta](errorserrors.md#optional-meta)
+* [source](errorserrors.md#optional-source)
+* [status](errorserrors.md#optional-status)
+* [title](errorserrors.md#optional-title)
 
 ## Properties
 
-<a id="code"></a>
+### `Optional` code
 
-### `<Optional>` code
-
-**● code**: *`string`*
+• **code**? : *string*
 
 *Defined in [api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L476)*
 
-*__type__*: {string}
-
-*__memberof__*: ErrorsErrors
-
 ___
-<a id="detail"></a>
 
-### `<Optional>` detail
+### `Optional` detail
 
-**● detail**: *`string`*
+• **detail**? : *string*
 
 *Defined in [api.ts:488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L488)*
 
-*__type__*: {string}
-
-*__memberof__*: ErrorsErrors
-
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:464](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L464)*
 
-*__type__*: {string}
-
-*__memberof__*: ErrorsErrors
-
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *`any`*
+• **meta**? : *any*
 
 *Defined in [api.ts:500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L500)*
 
-*__type__*: {any}
-
-*__memberof__*: ErrorsErrors
-
 ___
-<a id="source"></a>
 
-### `<Optional>` source
+### `Optional` source
 
-**● source**: *[ErrorsSource](errorssource.md)*
+• **source**? : *[ErrorsSource](errorssource.md)*
 
 *Defined in [api.ts:494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L494)*
 
-*__type__*: {ErrorsSource}
-
-*__memberof__*: ErrorsErrors
-
 ___
-<a id="status"></a>
 
-### `<Optional>` status
+### `Optional` status
 
-**● status**: *`string`*
+• **status**? : *string*
 
 *Defined in [api.ts:470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L470)*
 
-*__type__*: {string}
-
-*__memberof__*: ErrorsErrors
-
 ___
-<a id="title"></a>
 
-### `<Optional>` title
+### `Optional` title
 
-**● title**: *`string`*
+• **title**? : *string*
 
 *Defined in [api.ts:482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L482)*
-
-*__type__*: {string}
-
-*__memberof__*: ErrorsErrors
-
-___
-

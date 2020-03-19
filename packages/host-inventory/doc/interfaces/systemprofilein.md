@@ -1,458 +1,434 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [SystemProfileIn](../interfaces/systemprofilein.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [SystemProfileIn](systemprofilein.md)
 
 # Interface: SystemProfileIn
 
 Representation of the system profile fields
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SystemProfileIn
+**`interface`** SystemProfileIn
 
 ## Hierarchy
 
-**SystemProfileIn**
+* **SystemProfileIn**
 
 ## Index
 
 ### Properties
 
-* [arch](systemprofilein.md#arch)
-* [biosReleaseDate](systemprofilein.md#biosreleasedate)
-* [biosVendor](systemprofilein.md#biosvendor)
-* [biosVersion](systemprofilein.md#biosversion)
-* [cloudProvider](systemprofilein.md#cloudprovider)
-* [coresPerSocket](systemprofilein.md#corespersocket)
-* [cpuFlags](systemprofilein.md#cpuflags)
-* [diskDevices](systemprofilein.md#diskdevices)
-* [dnfModules](systemprofilein.md#dnfmodules)
-* [enabledServices](systemprofilein.md#enabledservices)
-* [infrastructureType](systemprofilein.md#infrastructuretype)
-* [infrastructureVendor](systemprofilein.md#infrastructurevendor)
-* [insightsClientVersion](systemprofilein.md#insightsclientversion)
-* [insightsEggVersion](systemprofilein.md#insightseggversion)
-* [installedPackages](systemprofilein.md#installedpackages)
-* [installedProducts](systemprofilein.md#installedproducts)
-* [installedServices](systemprofilein.md#installedservices)
-* [katelloAgentRunning](systemprofilein.md#katelloagentrunning)
-* [kernelModules](systemprofilein.md#kernelmodules)
-* [lastBootTime](systemprofilein.md#lastboottime)
-* [networkInterfaces](systemprofilein.md#networkinterfaces)
-* [numberOfCpus](systemprofilein.md#numberofcpus)
-* [numberOfSockets](systemprofilein.md#numberofsockets)
-* [osKernelVersion](systemprofilein.md#oskernelversion)
-* [osRelease](systemprofilein.md#osrelease)
-* [runningProcesses](systemprofilein.md#runningprocesses)
-* [satelliteManaged](systemprofilein.md#satellitemanaged)
-* [subscriptionAutoAttach](systemprofilein.md#subscriptionautoattach)
-* [subscriptionStatus](systemprofilein.md#subscriptionstatus)
-* [systemMemoryBytes](systemprofilein.md#systemmemorybytes)
-* [yumRepos](systemprofilein.md#yumrepos)
-
----
+* [arch](systemprofilein.md#optional-arch)
+* [biosReleaseDate](systemprofilein.md#optional-biosreleasedate)
+* [biosVendor](systemprofilein.md#optional-biosvendor)
+* [biosVersion](systemprofilein.md#optional-biosversion)
+* [capturedDate](systemprofilein.md#optional-captureddate)
+* [cloudProvider](systemprofilein.md#optional-cloudprovider)
+* [coresPerSocket](systemprofilein.md#optional-corespersocket)
+* [cpuFlags](systemprofilein.md#optional-cpuflags)
+* [diskDevices](systemprofilein.md#optional-diskdevices)
+* [dnfModules](systemprofilein.md#optional-dnfmodules)
+* [enabledServices](systemprofilein.md#optional-enabledservices)
+* [infrastructureType](systemprofilein.md#optional-infrastructuretype)
+* [infrastructureVendor](systemprofilein.md#optional-infrastructurevendor)
+* [insightsClientVersion](systemprofilein.md#optional-insightsclientversion)
+* [insightsEggVersion](systemprofilein.md#optional-insightseggversion)
+* [installedPackages](systemprofilein.md#optional-installedpackages)
+* [installedProducts](systemprofilein.md#optional-installedproducts)
+* [installedServices](systemprofilein.md#optional-installedservices)
+* [katelloAgentRunning](systemprofilein.md#optional-katelloagentrunning)
+* [kernelModules](systemprofilein.md#optional-kernelmodules)
+* [lastBootTime](systemprofilein.md#optional-lastboottime)
+* [networkInterfaces](systemprofilein.md#optional-networkinterfaces)
+* [numberOfCpus](systemprofilein.md#optional-numberofcpus)
+* [numberOfSockets](systemprofilein.md#optional-numberofsockets)
+* [osKernelVersion](systemprofilein.md#optional-oskernelversion)
+* [osRelease](systemprofilein.md#optional-osrelease)
+* [runningProcesses](systemprofilein.md#optional-runningprocesses)
+* [satelliteManaged](systemprofilein.md#optional-satellitemanaged)
+* [subscriptionAutoAttach](systemprofilein.md#optional-subscriptionautoattach)
+* [subscriptionStatus](systemprofilein.md#optional-subscriptionstatus)
+* [systemMemoryBytes](systemprofilein.md#optional-systemmemorybytes)
+* [yumRepos](systemprofilein.md#optional-yumrepos)
 
 ## Properties
 
-<a id="arch"></a>
+### `Optional` arch
 
-### `<Optional>` arch
-
-**● arch**: *`string`*
+• **arch**? : *string*
 
 *Defined in [api.ts:977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L977)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="biosreleasedate"></a>
 
-### `<Optional>` biosReleaseDate
+### `Optional` biosReleaseDate
 
-**● biosReleaseDate**: *`string`*
+• **biosReleaseDate**? : *string*
 
 *Defined in [api.ts:953](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L953)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="biosvendor"></a>
 
-### `<Optional>` biosVendor
+### `Optional` biosVendor
 
-**● biosVendor**: *`string`*
+• **biosVendor**? : *string*
 
 *Defined in [api.ts:941](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L941)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="biosversion"></a>
 
-### `<Optional>` biosVersion
+### `Optional` biosVersion
 
-**● biosVersion**: *`string`*
+• **biosVersion**? : *string*
 
 *Defined in [api.ts:947](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L947)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemProfileIn
-
-___
-<a id="cloudprovider"></a>
-
-### `<Optional>` cloudProvider
-
-**● cloudProvider**: *`string`*
-
-*Defined in [api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1025)*
-
-*__type__*: {string}
-
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="corespersocket"></a>
 
-### `<Optional>` coresPerSocket
+### `Optional` capturedDate
 
-**● coresPerSocket**: *`number`*
-
-*Defined in [api.ts:905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L905)*
-
-*__type__*: {number}
-
-*__memberof__*: SystemProfileIn
-
-___
-<a id="cpuflags"></a>
-
-### `<Optional>` cpuFlags
-
-**● cpuFlags**: *`Array`<`string`>*
-
-*Defined in [api.ts:959](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L959)*
-
-*__type__*: {Array}
-
-*__memberof__*: SystemProfileIn
-
-___
-<a id="diskdevices"></a>
-
-### `<Optional>` diskDevices
-
-**● diskDevices**: *`Array`<[DiskDevice](diskdevice.md)>*
-
-*Defined in [api.ts:935](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L935)*
-
-*__type__*: {Array}
-
-*__memberof__*: SystemProfileIn
-
-___
-<a id="dnfmodules"></a>
-
-### `<Optional>` dnfModules
-
-**● dnfModules**: *`Array`<[DnfModule](dnfmodule.md)>*
-
-*Defined in [api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1037)*
-
-*__type__*: {Array}
-
-*__memberof__*: SystemProfileIn
-
-___
-<a id="enabledservices"></a>
-
-### `<Optional>` enabledServices
-
-**● enabledServices**: *`Array`<`string`>*
-
-*Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1073)*
-
-*__type__*: {Array}
-
-*__memberof__*: SystemProfileIn
-
-___
-<a id="infrastructuretype"></a>
-
-### `<Optional>` infrastructureType
-
-**● infrastructureType**: *`string`*
-
-*Defined in [api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L917)*
-
-*__type__*: {string}
-
-*__memberof__*: SystemProfileIn
-
-___
-<a id="infrastructurevendor"></a>
-
-### `<Optional>` infrastructureVendor
-
-**● infrastructureVendor**: *`string`*
-
-*Defined in [api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L923)*
-
-*__type__*: {string}
-
-*__memberof__*: SystemProfileIn
-
-___
-<a id="insightsclientversion"></a>
-
-### `<Optional>` insightsClientVersion
-
-**● insightsClientVersion**: *`string`*
-
-*Defined in [api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1049)*
-
-*__type__*: {string}
-
-*__memberof__*: SystemProfileIn
-
-___
-<a id="insightseggversion"></a>
-
-### `<Optional>` insightsEggVersion
-
-**● insightsEggVersion**: *`string`*
-
-*Defined in [api.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1055)*
-
-*__type__*: {string}
-
-*__memberof__*: SystemProfileIn
-
-___
-<a id="installedpackages"></a>
-
-### `<Optional>` installedPackages
-
-**● installedPackages**: *`Array`<`string`>*
+• **capturedDate**? : *string*
 
 *Defined in [api.ts:1061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1061)*
 
-*__type__*: {Array}
+**`type`** {string}
 
-*__memberof__*: SystemProfileIn
-
-___
-<a id="installedproducts"></a>
-
-### `<Optional>` installedProducts
-
-**● installedProducts**: *`Array`<[InstalledProduct](installedproduct.md)>*
-
-*Defined in [api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1043)*
-
-*__type__*: {Array}
-
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="installedservices"></a>
 
-### `<Optional>` installedServices
+### `Optional` cloudProvider
 
-**● installedServices**: *`Array`<`string`>*
+• **cloudProvider**? : *string*
+
+*Defined in [api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1025)*
+
+**`type`** {string}
+
+**`memberof`** SystemProfileIn
+
+___
+
+### `Optional` coresPerSocket
+
+• **coresPerSocket**? : *number*
+
+*Defined in [api.ts:905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L905)*
+
+**`type`** {number}
+
+**`memberof`** SystemProfileIn
+
+___
+
+### `Optional` cpuFlags
+
+• **cpuFlags**? : *Array‹string›*
+
+*Defined in [api.ts:959](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L959)*
+
+**`type`** {Array<string>}
+
+**`memberof`** SystemProfileIn
+
+___
+
+### `Optional` diskDevices
+
+• **diskDevices**? : *Array‹[DiskDevice](diskdevice.md)›*
+
+*Defined in [api.ts:935](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L935)*
+
+**`type`** {Array<DiskDevice>}
+
+**`memberof`** SystemProfileIn
+
+___
+
+### `Optional` dnfModules
+
+• **dnfModules**? : *Array‹[DnfModule](dnfmodule.md)›*
+
+*Defined in [api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1037)*
+
+**`type`** {Array<DnfModule>}
+
+**`memberof`** SystemProfileIn
+
+___
+
+### `Optional` enabledServices
+
+• **enabledServices**? : *Array‹string›*
+
+*Defined in [api.ts:1079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1079)*
+
+**`type`** {Array<string>}
+
+**`memberof`** SystemProfileIn
+
+___
+
+### `Optional` infrastructureType
+
+• **infrastructureType**? : *string*
+
+*Defined in [api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L917)*
+
+**`type`** {string}
+
+**`memberof`** SystemProfileIn
+
+___
+
+### `Optional` infrastructureVendor
+
+• **infrastructureVendor**? : *string*
+
+*Defined in [api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L923)*
+
+**`type`** {string}
+
+**`memberof`** SystemProfileIn
+
+___
+
+### `Optional` insightsClientVersion
+
+• **insightsClientVersion**? : *string*
+
+*Defined in [api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1049)*
+
+**`type`** {string}
+
+**`memberof`** SystemProfileIn
+
+___
+
+### `Optional` insightsEggVersion
+
+• **insightsEggVersion**? : *string*
+
+*Defined in [api.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1055)*
+
+**`type`** {string}
+
+**`memberof`** SystemProfileIn
+
+___
+
+### `Optional` installedPackages
+
+• **installedPackages**? : *Array‹string›*
 
 *Defined in [api.ts:1067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1067)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="katelloagentrunning"></a>
 
-### `<Optional>` katelloAgentRunning
+### `Optional` installedProducts
 
-**● katelloAgentRunning**: *`boolean`*
+• **installedProducts**? : *Array‹[InstalledProduct](installedproduct.md)›*
+
+*Defined in [api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1043)*
+
+**`type`** {Array<InstalledProduct>}
+
+**`memberof`** SystemProfileIn
+
+___
+
+### `Optional` installedServices
+
+• **installedServices**? : *Array‹string›*
+
+*Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1073)*
+
+**`type`** {Array<string>}
+
+**`memberof`** SystemProfileIn
+
+___
+
+### `Optional` katelloAgentRunning
+
+• **katelloAgentRunning**? : *boolean*
 
 *Defined in [api.ts:1013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1013)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="kernelmodules"></a>
 
-### `<Optional>` kernelModules
+### `Optional` kernelModules
 
-**● kernelModules**: *`Array`<`string`>*
+• **kernelModules**? : *Array‹string›*
 
 *Defined in [api.ts:983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L983)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="lastboottime"></a>
 
-### `<Optional>` lastBootTime
+### `Optional` lastBootTime
 
-**● lastBootTime**: *`Date`*
+• **lastBootTime**? : *Date*
 
 *Defined in [api.ts:989](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L989)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="networkinterfaces"></a>
 
-### `<Optional>` networkInterfaces
+### `Optional` networkInterfaces
 
-**● networkInterfaces**: *`Array`<[NetworkInterface](networkinterface.md)>*
+• **networkInterfaces**? : *Array‹[NetworkInterface](networkinterface.md)›*
 
 *Defined in [api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L929)*
 
-*__type__*: {Array}
+**`type`** {Array<NetworkInterface>}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="numberofcpus"></a>
 
-### `<Optional>` numberOfCpus
+### `Optional` numberOfCpus
 
-**● numberOfCpus**: *`number`*
+• **numberOfCpus**? : *number*
 
 *Defined in [api.ts:893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L893)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="numberofsockets"></a>
 
-### `<Optional>` numberOfSockets
+### `Optional` numberOfSockets
 
-**● numberOfSockets**: *`number`*
+• **numberOfSockets**? : *number*
 
 *Defined in [api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L899)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="oskernelversion"></a>
 
-### `<Optional>` osKernelVersion
+### `Optional` osKernelVersion
 
-**● osKernelVersion**: *`string`*
+• **osKernelVersion**? : *string*
 
 *Defined in [api.ts:971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L971)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="osrelease"></a>
 
-### `<Optional>` osRelease
+### `Optional` osRelease
 
-**● osRelease**: *`string`*
+• **osRelease**? : *string*
 
 *Defined in [api.ts:965](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L965)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="runningprocesses"></a>
 
-### `<Optional>` runningProcesses
+### `Optional` runningProcesses
 
-**● runningProcesses**: *`Array`<`string`>*
+• **runningProcesses**? : *Array‹string›*
 
 *Defined in [api.ts:995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L995)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="satellitemanaged"></a>
 
-### `<Optional>` satelliteManaged
+### `Optional` satelliteManaged
 
-**● satelliteManaged**: *`boolean`*
+• **satelliteManaged**? : *boolean*
 
 *Defined in [api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1019)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="subscriptionautoattach"></a>
 
-### `<Optional>` subscriptionAutoAttach
+### `Optional` subscriptionAutoAttach
 
-**● subscriptionAutoAttach**: *`string`*
+• **subscriptionAutoAttach**? : *string*
 
 *Defined in [api.ts:1007](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1007)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="subscriptionstatus"></a>
 
-### `<Optional>` subscriptionStatus
+### `Optional` subscriptionStatus
 
-**● subscriptionStatus**: *`string`*
+• **subscriptionStatus**? : *string*
 
 *Defined in [api.ts:1001](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1001)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="systemmemorybytes"></a>
 
-### `<Optional>` systemMemoryBytes
+### `Optional` systemMemoryBytes
 
-**● systemMemoryBytes**: *`number`*
+• **systemMemoryBytes**? : *number*
 
 *Defined in [api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L911)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: SystemProfileIn
+**`memberof`** SystemProfileIn
 
 ___
-<a id="yumrepos"></a>
 
-### `<Optional>` yumRepos
+### `Optional` yumRepos
 
-**● yumRepos**: *`Array`<[YumRepo](yumrepo.md)>*
+• **yumRepos**? : *Array‹[YumRepo](yumrepo.md)›*
 
 *Defined in [api.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1031)*
 
-*__type__*: {Array}
+**`type`** {Array<YumRepo>}
 
-*__memberof__*: SystemProfileIn
-
-___
-
+**`memberof`** SystemProfileIn

@@ -1,10 +1,10 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportOpenShiftAzureOrdering](../modules/reportopenshiftazureordering.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportOpenShiftAzureOrdering](reportopenshiftazureordering.md)
 
 # Module: ReportOpenShiftAzureOrdering
 
-*__export__*: 
+**`export`** 
 
-*__namespace__*: ReportOpenShiftAzureOrdering
+**`namespace`** ReportOpenShiftAzureOrdering
 
 ## Index
 
@@ -23,149 +23,133 @@
 
 ### Properties
 
-* [cluster](reportopenshiftazureordering.md#cluster)
-* [cost](reportopenshiftazureordering.md#cost)
-* [delta](reportopenshiftazureordering.md#delta)
-* [instanceType](reportopenshiftazureordering.md#instancetype)
-* [node](reportopenshiftazureordering.md#node)
-* [project](reportopenshiftazureordering.md#project)
-* [resourceLocation](reportopenshiftazureordering.md#resourcelocation)
-* [serviceName](reportopenshiftazureordering.md#servicename)
-* [subscriptionGuid](reportopenshiftazureordering.md#subscriptionguid)
-* [usage](reportopenshiftazureordering.md#usage)
-
----
+* [cluster](reportopenshiftazureordering.md#optional-cluster)
+* [cost](reportopenshiftazureordering.md#optional-cost)
+* [delta](reportopenshiftazureordering.md#optional-delta)
+* [instanceType](reportopenshiftazureordering.md#optional-instancetype)
+* [node](reportopenshiftazureordering.md#optional-node)
+* [project](reportopenshiftazureordering.md#optional-project)
+* [resourceLocation](reportopenshiftazureordering.md#optional-resourcelocation)
+* [serviceName](reportopenshiftazureordering.md#optional-servicename)
+* [subscriptionGuid](reportopenshiftazureordering.md#optional-subscriptionguid)
+* [usage](reportopenshiftazureordering.md#optional-usage)
 
 ## Properties
 
-<a id="cluster"></a>
+### `Optional` cluster
 
-### `<Optional>` cluster
+• **cluster**? : *[ClusterEnum](../enums/reportopenshiftazureordering.clusterenum.md)*
 
-**● cluster**: *[ClusterEnum](../enums/reportopenshiftazureordering.clusterenum.md)*
+*Defined in [api.ts:2029](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2029)*
 
-*Defined in [api.ts:2204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2204)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: ReportOpenShiftAzureOrdering
-
-___
-<a id="cost"></a>
-
-### `<Optional>` cost
-
-**● cost**: *[CostEnum](../enums/reportopenshiftazureordering.costenum.md)*
-
-*Defined in [api.ts:2162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2162)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOpenShiftAzureOrdering
-
-___
-<a id="delta"></a>
-
-### `<Optional>` delta
-
-**● delta**: *[DeltaEnum](../enums/reportopenshiftazureordering.deltaenum.md)*
-
-*Defined in [api.ts:2174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2174)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOpenShiftAzureOrdering
-
-___
-<a id="instancetype"></a>
-
-### `<Optional>` instanceType
-
-**● instanceType**: *[InstanceTypeEnum](../enums/reportopenshiftazureordering.instancetypeenum.md)*
-
-*Defined in [api.ts:2198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2198)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOpenShiftAzureOrdering
-
-___
-<a id="node"></a>
-
-### `<Optional>` node
-
-**● node**: *[NodeEnum](../enums/reportopenshiftazureordering.nodeenum.md)*
-
-*Defined in [api.ts:2216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2216)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOpenShiftAzureOrdering
-
-___
-<a id="project"></a>
-
-### `<Optional>` project
-
-**● project**: *[ProjectEnum](../enums/reportopenshiftazureordering.projectenum.md)*
-
-*Defined in [api.ts:2210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2210)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOpenShiftAzureOrdering
-
-___
-<a id="resourcelocation"></a>
-
-### `<Optional>` resourceLocation
-
-**● resourceLocation**: *[ResourceLocationEnum](../enums/reportopenshiftazureordering.resourcelocationenum.md)*
-
-*Defined in [api.ts:2186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2186)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOpenShiftAzureOrdering
-
-___
-<a id="servicename"></a>
-
-### `<Optional>` serviceName
-
-**● serviceName**: *[ServiceNameEnum](../enums/reportopenshiftazureordering.servicenameenum.md)*
-
-*Defined in [api.ts:2192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2192)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOpenShiftAzureOrdering
-
-___
-<a id="subscriptionguid"></a>
-
-### `<Optional>` subscriptionGuid
-
-**● subscriptionGuid**: *[SubscriptionGuidEnum](../enums/reportopenshiftazureordering.subscriptionguidenum.md)*
-
-*Defined in [api.ts:2180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2180)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOpenShiftAzureOrdering
-
-___
-<a id="usage"></a>
-
-### `<Optional>` usage
-
-**● usage**: *[UsageEnum](../enums/reportopenshiftazureordering.usageenum.md)*
-
-*Defined in [api.ts:2168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2168)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOpenShiftAzureOrdering
+**`memberof`** ReportOpenShiftAzureOrdering
 
 ___
 
+### `Optional` cost
+
+• **cost**? : *[CostEnum](../enums/reportopenshiftazureordering.costenum.md)*
+
+*Defined in [api.ts:1987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1987)*
+
+**`type`** {string}
+
+**`memberof`** ReportOpenShiftAzureOrdering
+
+___
+
+### `Optional` delta
+
+• **delta**? : *[DeltaEnum](../enums/reportopenshiftazureordering.deltaenum.md)*
+
+*Defined in [api.ts:1999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1999)*
+
+**`type`** {string}
+
+**`memberof`** ReportOpenShiftAzureOrdering
+
+___
+
+### `Optional` instanceType
+
+• **instanceType**? : *[InstanceTypeEnum](../enums/reportopenshiftazureordering.instancetypeenum.md)*
+
+*Defined in [api.ts:2023](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2023)*
+
+**`type`** {string}
+
+**`memberof`** ReportOpenShiftAzureOrdering
+
+___
+
+### `Optional` node
+
+• **node**? : *[NodeEnum](../enums/reportopenshiftazureordering.nodeenum.md)*
+
+*Defined in [api.ts:2041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2041)*
+
+**`type`** {string}
+
+**`memberof`** ReportOpenShiftAzureOrdering
+
+___
+
+### `Optional` project
+
+• **project**? : *[ProjectEnum](../enums/reportopenshiftazureordering.projectenum.md)*
+
+*Defined in [api.ts:2035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2035)*
+
+**`type`** {string}
+
+**`memberof`** ReportOpenShiftAzureOrdering
+
+___
+
+### `Optional` resourceLocation
+
+• **resourceLocation**? : *[ResourceLocationEnum](../enums/reportopenshiftazureordering.resourcelocationenum.md)*
+
+*Defined in [api.ts:2011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2011)*
+
+**`type`** {string}
+
+**`memberof`** ReportOpenShiftAzureOrdering
+
+___
+
+### `Optional` serviceName
+
+• **serviceName**? : *[ServiceNameEnum](../enums/reportopenshiftazureordering.servicenameenum.md)*
+
+*Defined in [api.ts:2017](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2017)*
+
+**`type`** {string}
+
+**`memberof`** ReportOpenShiftAzureOrdering
+
+___
+
+### `Optional` subscriptionGuid
+
+• **subscriptionGuid**? : *[SubscriptionGuidEnum](../enums/reportopenshiftazureordering.subscriptionguidenum.md)*
+
+*Defined in [api.ts:2005](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2005)*
+
+**`type`** {string}
+
+**`memberof`** ReportOpenShiftAzureOrdering
+
+___
+
+### `Optional` usage
+
+• **usage**? : *[UsageEnum](../enums/reportopenshiftazureordering.usageenum.md)*
+
+*Defined in [api.ts:1993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1993)*
+
+**`type`** {string}
+
+**`memberof`** ReportOpenShiftAzureOrdering

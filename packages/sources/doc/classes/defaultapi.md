@@ -1,20 +1,20 @@
-[@redhat-cloud-services/sources-client](../README.md) > [DefaultApi](../classes/defaultapi.md)
+[@redhat-cloud-services/sources-client](../README.md) › [Globals](../globals.md) › [DefaultApi](defaultapi.md)
 
 # Class: DefaultApi
 
 DefaultApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: DefaultApi
+**`class`** DefaultApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ DefaultApi**
+  ↳ **DefaultApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ DefaultApi - object-oriented interface
 
 ### Properties
 
-* [axios](defaultapi.md#axios)
-* [basePath](defaultapi.md#basepath)
-* [configuration](defaultapi.md#configuration)
+* [axios](defaultapi.md#protected-axios)
+* [basePath](defaultapi.md#protected-basepath)
+* [configuration](defaultapi.md#protected-configuration)
 
 ### Methods
 
@@ -65,15 +65,11 @@ DefaultApi - object-oriented interface
 * [updateEndpoint](defaultapi.md#updateendpoint)
 * [updateSource](defaultapi.md#updatesource)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new DefaultApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [DefaultApi](defaultapi.md)
+\+ **new DefaultApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[DefaultApi](defaultapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -81,979 +77,933 @@ DefaultApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [DefaultApi](defaultapi.md)
-
-___
+**Returns:** *[DefaultApi](defaultapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="checkavailabilitysource"></a>
 
 ###  checkAvailabilitySource
 
-▸ **checkAvailabilitySource**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **checkAvailabilitySource**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
 
 *Defined in [api.ts:3379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3379)*
 
 Checks Availability of a Source
 
-*__summary__*: Checks Availability of a Source
+**`summary`** Checks Availability of a Source
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="createapplication"></a>
 
 ###  createApplication
 
-▸ **createApplication**(application: *[Application](../interfaces/application.md)*, options?: *`any`*): `AxiosPromise`<[Application](../interfaces/application.md)>
+▸ **createApplication**(`application`: [Application](../interfaces/application.md), `options?`: any): *AxiosPromise‹[Application](../interfaces/application.md)›*
 
 *Defined in [api.ts:3391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3391)*
 
 Creates a Application object
 
-*__summary__*: Create a new Application
+**`summary`** Create a new Application
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| application | [Application](../interfaces/application.md) |  Application attributes to create |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`application` | [Application](../interfaces/application.md) | Application attributes to create |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Application](../interfaces/application.md)>
+**Returns:** *AxiosPromise‹[Application](../interfaces/application.md)›*
 
 ___
-<a id="createauthentication"></a>
 
 ###  createAuthentication
 
-▸ **createAuthentication**(authentication: *[Authentication](../interfaces/authentication.md)*, options?: *`any`*): `AxiosPromise`<[Authentication](../interfaces/authentication.md)>
+▸ **createAuthentication**(`authentication`: [Authentication](../interfaces/authentication.md), `options?`: any): *AxiosPromise‹[Authentication](../interfaces/authentication.md)›*
 
 *Defined in [api.ts:3403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3403)*
 
 Creates a Authentication object
 
-*__summary__*: Create a new Authentication
+**`summary`** Create a new Authentication
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| authentication | [Authentication](../interfaces/authentication.md) |  Authentication attributes to create |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`authentication` | [Authentication](../interfaces/authentication.md) | Authentication attributes to create |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Authentication](../interfaces/authentication.md)>
+**Returns:** *AxiosPromise‹[Authentication](../interfaces/authentication.md)›*
 
 ___
-<a id="createendpoint"></a>
 
 ###  createEndpoint
 
-▸ **createEndpoint**(endpoint: *[Endpoint](../interfaces/endpoint.md)*, options?: *`any`*): `AxiosPromise`<[Endpoint](../interfaces/endpoint.md)>
+▸ **createEndpoint**(`endpoint`: [Endpoint](../interfaces/endpoint.md), `options?`: any): *AxiosPromise‹[Endpoint](../interfaces/endpoint.md)›*
 
 *Defined in [api.ts:3415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3415)*
 
 Creates a Endpoint object
 
-*__summary__*: Create a new Endpoint
+**`summary`** Create a new Endpoint
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| endpoint | [Endpoint](../interfaces/endpoint.md) |  Endpoint attributes to create |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`endpoint` | [Endpoint](../interfaces/endpoint.md) | Endpoint attributes to create |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Endpoint](../interfaces/endpoint.md)>
+**Returns:** *AxiosPromise‹[Endpoint](../interfaces/endpoint.md)›*
 
 ___
-<a id="createsource"></a>
 
 ###  createSource
 
-▸ **createSource**(source: *[Source](../interfaces/source.md)*, options?: *`any`*): `AxiosPromise`<[Source](../interfaces/source.md)>
+▸ **createSource**(`source`: [Source](../interfaces/source.md), `options?`: any): *AxiosPromise‹[Source](../interfaces/source.md)›*
 
 *Defined in [api.ts:3427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3427)*
 
 Creates a Source object
 
-*__summary__*: Create a new Source
+**`summary`** Create a new Source
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| source | [Source](../interfaces/source.md) |  Source attributes to create |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`source` | [Source](../interfaces/source.md) | Source attributes to create |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Source](../interfaces/source.md)>
+**Returns:** *AxiosPromise‹[Source](../interfaces/source.md)›*
 
 ___
-<a id="createsourcetype"></a>
 
 ###  createSourceType
 
-▸ **createSourceType**(sourceType: *[SourceType](../interfaces/sourcetype.md)*, options?: *`any`*): `AxiosPromise`<[SourceType](../interfaces/sourcetype.md)>
+▸ **createSourceType**(`sourceType`: [SourceType](../interfaces/sourcetype.md), `options?`: any): *AxiosPromise‹[SourceType](../interfaces/sourcetype.md)›*
 
 *Defined in [api.ts:3439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3439)*
 
 Creates a SourceType object
 
-*__summary__*: Create a new SourceType
+**`summary`** Create a new SourceType
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| sourceType | [SourceType](../interfaces/sourcetype.md) |  SourceType attributes to create |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`sourceType` | [SourceType](../interfaces/sourcetype.md) | SourceType attributes to create |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[SourceType](../interfaces/sourcetype.md)>
+**Returns:** *AxiosPromise‹[SourceType](../interfaces/sourcetype.md)›*
 
 ___
-<a id="deleteapplication"></a>
 
 ###  deleteApplication
 
-▸ **deleteApplication**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **deleteApplication**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
 
 *Defined in [api.ts:3451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3451)*
 
 Deletes a Application object
 
-*__summary__*: Delete an existing Application
+**`summary`** Delete an existing Application
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="deleteauthentication"></a>
 
 ###  deleteAuthentication
 
-▸ **deleteAuthentication**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **deleteAuthentication**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
 
 *Defined in [api.ts:3463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3463)*
 
 Deletes a Authentication object
 
-*__summary__*: Delete an existing Authentication
+**`summary`** Delete an existing Authentication
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="deleteendpoint"></a>
 
 ###  deleteEndpoint
 
-▸ **deleteEndpoint**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **deleteEndpoint**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
 
 *Defined in [api.ts:3475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3475)*
 
 Deletes a Endpoint object
 
-*__summary__*: Delete an existing Endpoint
+**`summary`** Delete an existing Endpoint
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="deletesource"></a>
 
 ###  deleteSource
 
-▸ **deleteSource**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **deleteSource**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
 
 *Defined in [api.ts:3487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3487)*
 
 Deletes a Source object
 
-*__summary__*: Delete an existing Source
+**`summary`** Delete an existing Source
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="getdocumentation"></a>
 
 ###  getDocumentation
 
-▸ **getDocumentation**(options?: *`any`*): `AxiosPromise`<`any`>
+▸ **getDocumentation**(`options?`: any): *AxiosPromise‹any›*
 
 *Defined in [api.ts:3498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3498)*
 
-*__summary__*: Return this API document in JSON format
+**`summary`** Return this API document in JSON format
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<`any`>
+**Returns:** *AxiosPromise‹any›*
 
 ___
-<a id="listapplicationtypesources"></a>
 
 ###  listApplicationTypeSources
 
-▸ **listApplicationTypeSources**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SourcesCollection](../interfaces/sourcescollection.md)>
+▸ **listApplicationTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
 
 *Defined in [api.ts:3514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3514)*
 
 Returns an array of Source objects
 
-*__summary__*: List Sources for ApplicationType
+**`summary`** List Sources for ApplicationType
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` sortBy | `Object` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`limit?` | number | - |
+`offset?` | number | - |
+`filter?` | any | - |
+`sortBy?` | Object | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[SourcesCollection](../interfaces/sourcescollection.md)>
+**Returns:** *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
 
 ___
-<a id="listapplicationtypes"></a>
 
 ###  listApplicationTypes
 
-▸ **listApplicationTypes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)>
+▸ **listApplicationTypes**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)›*
 
 *Defined in [api.ts:3529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3529)*
 
 Returns an array of ApplicationType objects
 
-*__summary__*: List ApplicationTypes
+**`summary`** List ApplicationTypes
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` sortBy | `Object` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`limit?` | number |
+`offset?` | number |
+`filter?` | any |
+`sortBy?` | Object |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)>
+**Returns:** *AxiosPromise‹[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)›*
 
 ___
-<a id="listapplications"></a>
 
 ###  listApplications
 
-▸ **listApplications**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ApplicationsCollection](../interfaces/applicationscollection.md)>
+▸ **listApplications**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[ApplicationsCollection](../interfaces/applicationscollection.md)›*
 
 *Defined in [api.ts:3544](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3544)*
 
 Returns an array of Application objects
 
-*__summary__*: List Applications
+**`summary`** List Applications
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` sortBy | `Object` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`limit?` | number |
+`offset?` | number |
+`filter?` | any |
+`sortBy?` | Object |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[ApplicationsCollection](../interfaces/applicationscollection.md)>
+**Returns:** *AxiosPromise‹[ApplicationsCollection](../interfaces/applicationscollection.md)›*
 
 ___
-<a id="listauthentications"></a>
 
 ###  listAuthentications
 
-▸ **listAuthentications**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[AuthenticationsCollection](../interfaces/authenticationscollection.md)>
+▸ **listAuthentications**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[AuthenticationsCollection](../interfaces/authenticationscollection.md)›*
 
 *Defined in [api.ts:3559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3559)*
 
 Returns an array of Authentication objects
 
-*__summary__*: List Authentications
+**`summary`** List Authentications
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` sortBy | `Object` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`limit?` | number |
+`offset?` | number |
+`filter?` | any |
+`sortBy?` | Object |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[AuthenticationsCollection](../interfaces/authenticationscollection.md)>
+**Returns:** *AxiosPromise‹[AuthenticationsCollection](../interfaces/authenticationscollection.md)›*
 
 ___
-<a id="listendpointauthentications"></a>
 
 ###  listEndpointAuthentications
 
-▸ **listEndpointAuthentications**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[AuthenticationsCollection](../interfaces/authenticationscollection.md)>
+▸ **listEndpointAuthentications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[AuthenticationsCollection](../interfaces/authenticationscollection.md)›*
 
 *Defined in [api.ts:3575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3575)*
 
 Returns an array of Authentication objects
 
-*__summary__*: List Authentications for Endpoint
+**`summary`** List Authentications for Endpoint
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` sortBy | `Object` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`limit?` | number | - |
+`offset?` | number | - |
+`filter?` | any | - |
+`sortBy?` | Object | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[AuthenticationsCollection](../interfaces/authenticationscollection.md)>
+**Returns:** *AxiosPromise‹[AuthenticationsCollection](../interfaces/authenticationscollection.md)›*
 
 ___
-<a id="listendpoints"></a>
 
 ###  listEndpoints
 
-▸ **listEndpoints**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[EndpointsCollection](../interfaces/endpointscollection.md)>
+▸ **listEndpoints**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[EndpointsCollection](../interfaces/endpointscollection.md)›*
 
 *Defined in [api.ts:3590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3590)*
 
 Returns an array of Endpoint objects
 
-*__summary__*: List Endpoints
+**`summary`** List Endpoints
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` sortBy | `Object` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`limit?` | number |
+`offset?` | number |
+`filter?` | any |
+`sortBy?` | Object |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[EndpointsCollection](../interfaces/endpointscollection.md)>
+**Returns:** *AxiosPromise‹[EndpointsCollection](../interfaces/endpointscollection.md)›*
 
 ___
-<a id="listsourceapplicationtypes"></a>
 
 ###  listSourceApplicationTypes
 
-▸ **listSourceApplicationTypes**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)>
+▸ **listSourceApplicationTypes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)›*
 
 *Defined in [api.ts:3606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3606)*
 
 Returns an array of ApplicationType objects
 
-*__summary__*: List ApplicationTypes for Source
+**`summary`** List ApplicationTypes for Source
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` sortBy | `Object` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`limit?` | number | - |
+`offset?` | number | - |
+`filter?` | any | - |
+`sortBy?` | Object | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)>
+**Returns:** *AxiosPromise‹[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)›*
 
 ___
-<a id="listsourceapplications"></a>
 
 ###  listSourceApplications
 
-▸ **listSourceApplications**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[ApplicationsCollection](../interfaces/applicationscollection.md)>
+▸ **listSourceApplications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[ApplicationsCollection](../interfaces/applicationscollection.md)›*
 
 *Defined in [api.ts:3622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3622)*
 
 Returns an array of Application objects
 
-*__summary__*: List Applications for Source
+**`summary`** List Applications for Source
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` sortBy | `Object` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`limit?` | number | - |
+`offset?` | number | - |
+`filter?` | any | - |
+`sortBy?` | Object | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[ApplicationsCollection](../interfaces/applicationscollection.md)>
+**Returns:** *AxiosPromise‹[ApplicationsCollection](../interfaces/applicationscollection.md)›*
 
 ___
-<a id="listsourceendpoints"></a>
 
 ###  listSourceEndpoints
 
-▸ **listSourceEndpoints**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[EndpointsCollection](../interfaces/endpointscollection.md)>
+▸ **listSourceEndpoints**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[EndpointsCollection](../interfaces/endpointscollection.md)›*
 
 *Defined in [api.ts:3638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3638)*
 
 Returns an array of Endpoint objects
 
-*__summary__*: List Endpoints for Source
+**`summary`** List Endpoints for Source
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` sortBy | `Object` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`limit?` | number | - |
+`offset?` | number | - |
+`filter?` | any | - |
+`sortBy?` | Object | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[EndpointsCollection](../interfaces/endpointscollection.md)>
+**Returns:** *AxiosPromise‹[EndpointsCollection](../interfaces/endpointscollection.md)›*
 
 ___
-<a id="listsourcetypesources"></a>
 
 ###  listSourceTypeSources
 
-▸ **listSourceTypeSources**(id: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SourcesCollection](../interfaces/sourcescollection.md)>
+▸ **listSourceTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
 
 *Defined in [api.ts:3654](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3654)*
 
 Returns an array of Source objects
 
-*__summary__*: List Sources for SourceType
+**`summary`** List Sources for SourceType
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` sortBy | `Object` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`limit?` | number | - |
+`offset?` | number | - |
+`filter?` | any | - |
+`sortBy?` | Object | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[SourcesCollection](../interfaces/sourcescollection.md)>
+**Returns:** *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
 
 ___
-<a id="listsourcetypes"></a>
 
 ###  listSourceTypes
 
-▸ **listSourceTypes**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SourceTypesCollection](../interfaces/sourcetypescollection.md)>
+▸ **listSourceTypes**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[SourceTypesCollection](../interfaces/sourcetypescollection.md)›*
 
 *Defined in [api.ts:3669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3669)*
 
 Returns an array of SourceType objects
 
-*__summary__*: List SourceTypes
+**`summary`** List SourceTypes
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` sortBy | `Object` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`limit?` | number |
+`offset?` | number |
+`filter?` | any |
+`sortBy?` | Object |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[SourceTypesCollection](../interfaces/sourcetypescollection.md)>
+**Returns:** *AxiosPromise‹[SourceTypesCollection](../interfaces/sourcetypescollection.md)›*
 
 ___
-<a id="listsources"></a>
 
 ###  listSources
 
-▸ **listSources**(limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, sortBy?: *`Object`*, options?: *`any`*): `AxiosPromise`<[SourcesCollection](../interfaces/sourcescollection.md)>
+▸ **listSources**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
 
 *Defined in [api.ts:3684](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3684)*
 
 Returns an array of Source objects
 
-*__summary__*: List Sources
+**`summary`** List Sources
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` sortBy | `Object` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`limit?` | number |
+`offset?` | number |
+`filter?` | any |
+`sortBy?` | Object |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[SourcesCollection](../interfaces/sourcescollection.md)>
+**Returns:** *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
 
 ___
-<a id="postgraphql"></a>
 
 ###  postGraphQL
 
-▸ **postGraphQL**(graphQLRequest: *[GraphQLRequest](../interfaces/graphqlrequest.md)*, options?: *`any`*): `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
+▸ **postGraphQL**(`graphQLRequest`: [GraphQLRequest](../interfaces/graphqlrequest.md), `options?`: any): *AxiosPromise‹[GraphQLResponse](../interfaces/graphqlresponse.md)›*
 
 *Defined in [api.ts:3696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3696)*
 
 Performs a GraphQL Query
 
-*__summary__*: Perform a GraphQL Query
+**`summary`** Perform a GraphQL Query
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| graphQLRequest | [GraphQLRequest](../interfaces/graphqlrequest.md) |  GraphQL Query Request |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`graphQLRequest` | [GraphQLRequest](../interfaces/graphqlrequest.md) | GraphQL Query Request |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
+**Returns:** *AxiosPromise‹[GraphQLResponse](../interfaces/graphqlresponse.md)›*
 
 ___
-<a id="showapplication"></a>
 
 ###  showApplication
 
-▸ **showApplication**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Application](../interfaces/application.md)>
+▸ **showApplication**(`id`: string, `options?`: any): *AxiosPromise‹[Application](../interfaces/application.md)›*
 
 *Defined in [api.ts:3708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3708)*
 
 Returns a Application object
 
-*__summary__*: Show an existing Application
+**`summary`** Show an existing Application
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Application](../interfaces/application.md)>
+**Returns:** *AxiosPromise‹[Application](../interfaces/application.md)›*
 
 ___
-<a id="showapplicationtype"></a>
 
 ###  showApplicationType
 
-▸ **showApplicationType**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ApplicationType](../interfaces/applicationtype.md)>
+▸ **showApplicationType**(`id`: string, `options?`: any): *AxiosPromise‹[ApplicationType](../interfaces/applicationtype.md)›*
 
 *Defined in [api.ts:3720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3720)*
 
 Returns a ApplicationType object
 
-*__summary__*: Show an existing ApplicationType
+**`summary`** Show an existing ApplicationType
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[ApplicationType](../interfaces/applicationtype.md)>
+**Returns:** *AxiosPromise‹[ApplicationType](../interfaces/applicationtype.md)›*
 
 ___
-<a id="showauthentication"></a>
 
 ###  showAuthentication
 
-▸ **showAuthentication**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Authentication](../interfaces/authentication.md)>
+▸ **showAuthentication**(`id`: string, `options?`: any): *AxiosPromise‹[Authentication](../interfaces/authentication.md)›*
 
 *Defined in [api.ts:3732](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3732)*
 
 Returns a Authentication object
 
-*__summary__*: Show an existing Authentication
+**`summary`** Show an existing Authentication
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Authentication](../interfaces/authentication.md)>
+**Returns:** *AxiosPromise‹[Authentication](../interfaces/authentication.md)›*
 
 ___
-<a id="showendpoint"></a>
 
 ###  showEndpoint
 
-▸ **showEndpoint**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Endpoint](../interfaces/endpoint.md)>
+▸ **showEndpoint**(`id`: string, `options?`: any): *AxiosPromise‹[Endpoint](../interfaces/endpoint.md)›*
 
 *Defined in [api.ts:3744](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3744)*
 
 Returns a Endpoint object
 
-*__summary__*: Show an existing Endpoint
+**`summary`** Show an existing Endpoint
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Endpoint](../interfaces/endpoint.md)>
+**Returns:** *AxiosPromise‹[Endpoint](../interfaces/endpoint.md)›*
 
 ___
-<a id="showsource"></a>
 
 ###  showSource
 
-▸ **showSource**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Source](../interfaces/source.md)>
+▸ **showSource**(`id`: string, `options?`: any): *AxiosPromise‹[Source](../interfaces/source.md)›*
 
 *Defined in [api.ts:3756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3756)*
 
 Returns a Source object
 
-*__summary__*: Show an existing Source
+**`summary`** Show an existing Source
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Source](../interfaces/source.md)>
+**Returns:** *AxiosPromise‹[Source](../interfaces/source.md)›*
 
 ___
-<a id="showsourcetype"></a>
 
 ###  showSourceType
 
-▸ **showSourceType**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[SourceType](../interfaces/sourcetype.md)>
+▸ **showSourceType**(`id`: string, `options?`: any): *AxiosPromise‹[SourceType](../interfaces/sourcetype.md)›*
 
 *Defined in [api.ts:3768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3768)*
 
 Returns a SourceType object
 
-*__summary__*: Show an existing SourceType
+**`summary`** Show an existing SourceType
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[SourceType](../interfaces/sourcetype.md)>
+**Returns:** *AxiosPromise‹[SourceType](../interfaces/sourcetype.md)›*
 
 ___
-<a id="updateapplication"></a>
 
 ###  updateApplication
 
-▸ **updateApplication**(id: *`string`*, application: *[Application](../interfaces/application.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **updateApplication**(`id`: string, `application`: [Application](../interfaces/application.md), `options?`: any): *AxiosPromise‹Response›*
 
 *Defined in [api.ts:3781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3781)*
 
 Updates a Application object
 
-*__summary__*: Update an existing Application
+**`summary`** Update an existing Application
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| application | [Application](../interfaces/application.md) |  Application attributes to update |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`application` | [Application](../interfaces/application.md) | Application attributes to update |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="updateauthentication"></a>
 
 ###  updateAuthentication
 
-▸ **updateAuthentication**(id: *`string`*, authentication: *[Authentication](../interfaces/authentication.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **updateAuthentication**(`id`: string, `authentication`: [Authentication](../interfaces/authentication.md), `options?`: any): *AxiosPromise‹Response›*
 
 *Defined in [api.ts:3794](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3794)*
 
 Updates a Authentication object
 
-*__summary__*: Update an existing Authentication
+**`summary`** Update an existing Authentication
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| authentication | [Authentication](../interfaces/authentication.md) |  Authentication attributes to update |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`authentication` | [Authentication](../interfaces/authentication.md) | Authentication attributes to update |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="updateendpoint"></a>
 
 ###  updateEndpoint
 
-▸ **updateEndpoint**(id: *`string`*, endpoint: *[Endpoint](../interfaces/endpoint.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **updateEndpoint**(`id`: string, `endpoint`: [Endpoint](../interfaces/endpoint.md), `options?`: any): *AxiosPromise‹Response›*
 
 *Defined in [api.ts:3807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3807)*
 
 Updates a Endpoint object
 
-*__summary__*: Update an existing Endpoint
+**`summary`** Update an existing Endpoint
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| endpoint | [Endpoint](../interfaces/endpoint.md) |  Endpoint attributes to update |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`endpoint` | [Endpoint](../interfaces/endpoint.md) | Endpoint attributes to update |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="updatesource"></a>
 
 ###  updateSource
 
-▸ **updateSource**(id: *`string`*, source: *[Source](../interfaces/source.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **updateSource**(`id`: string, `source`: [Source](../interfaces/source.md), `options?`: any): *AxiosPromise‹Response›*
 
 *Defined in [api.ts:3820](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3820)*
 
 Updates a Source object
 
-*__summary__*: Update an existing Source
+**`summary`** Update an existing Source
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| source | [Source](../interfaces/source.md) |  Source attributes to update |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`source` | [Source](../interfaces/source.md) | Source attributes to update |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
-
-___
-
+**Returns:** *AxiosPromise‹Response›*

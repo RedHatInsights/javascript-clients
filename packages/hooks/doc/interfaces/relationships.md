@@ -1,36 +1,21 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [Relationships](../interfaces/relationships.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [Relationships](relationships.md)
 
 # Interface: Relationships
 
-*__export__*: 
-
-*__interface__*: Relationships
-
 ## Hierarchy
 
-**Relationships**
+* **Relationships**
 
 ## Index
 
 ### Properties
 
-* [data](relationships.md#data)
-
----
+* [data](relationships.md#optional-data)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[Relationship](relationship.md)>*
+• **data**? : *Array‹[Relationship](relationship.md)›*
 
 *Defined in [api.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L994)*
-
-*__type__*: {Array}
-
-*__memberof__*: Relationships
-
-___
-

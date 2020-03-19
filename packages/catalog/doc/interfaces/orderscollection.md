@@ -1,64 +1,55 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [OrdersCollection](../interfaces/orderscollection.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [OrdersCollection](orderscollection.md)
 
 # Interface: OrdersCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: OrdersCollection
+**`interface`** OrdersCollection
 
 ## Hierarchy
 
-**OrdersCollection**
+* **OrdersCollection**
 
 ## Index
 
 ### Properties
 
-* [data](orderscollection.md#data)
-* [links](orderscollection.md#links)
-* [meta](orderscollection.md#meta)
-
----
+* [data](orderscollection.md#optional-data)
+* [links](orderscollection.md#optional-links)
+* [meta](orderscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[Order](../modules/order.md)>*
+• **data**? : *Array‹[Order](../modules/order.md)›*
 
 *Defined in [api.ts:605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L605)*
 
-*__type__*: {Array}
+**`type`** {Array<Order>}
 
-*__memberof__*: OrdersCollection
+**`memberof`** OrdersCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L599)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: OrdersCollection
+**`memberof`** OrdersCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L593)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: OrdersCollection
-
-___
-
+**`memberof`** OrdersCollection

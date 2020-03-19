@@ -1,16 +1,16 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [ExecutiveReportRecentCves](../interfaces/executivereportrecentcves.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [ExecutiveReportRecentCves](executivereportrecentcves.md)
 
 # Interface: ExecutiveReportRecentCves
 
 Number of recently published CVEs identified on managed systems
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ExecutiveReportRecentCves
+**`interface`** ExecutiveReportRecentCves
 
 ## Hierarchy
 
-**ExecutiveReportRecentCves**
+* **ExecutiveReportRecentCves**
 
 ## Index
 
@@ -20,53 +20,44 @@ Number of recently published CVEs identified on managed systems
 * [last7days](executivereportrecentcves.md#last7days)
 * [last90days](executivereportrecentcves.md#last90days)
 
----
-
 ## Properties
-
-<a id="last30days"></a>
 
 ###  last30days
 
-**● last30days**: *`number`*
+• **last30days**: *number*
 
-*Defined in [api.ts:503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L503)*
+*Defined in [api.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L563)*
 
 Number of CVEs identified on managed systems published in last 30 days.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ExecutiveReportRecentCves
+**`memberof`** ExecutiveReportRecentCves
 
 ___
-<a id="last7days"></a>
 
 ###  last7days
 
-**● last7days**: *`number`*
+• **last7days**: *number*
 
-*Defined in [api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L497)*
+*Defined in [api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L557)*
 
 Number of CVEs identified on managed systems published in last 7 days.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ExecutiveReportRecentCves
+**`memberof`** ExecutiveReportRecentCves
 
 ___
-<a id="last90days"></a>
 
 ###  last90days
 
-**● last90days**: *`number`*
+• **last90days**: *number*
 
-*Defined in [api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L509)*
+*Defined in [api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L569)*
 
 Number of CVEs identified on managed systems published in last 90 days.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ExecutiveReportRecentCves
-
-___
-
+**`memberof`** ExecutiveReportRecentCves

@@ -1,10 +1,10 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [Markup](../modules/markup.md) > [UnitEnum](../enums/markup.unitenum.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [Markup](../modules/markup.md) › [UnitEnum](markup.unitenum.md)
 
 # Enumeration: UnitEnum
 
-*__export__*: 
+**`export`** 
 
-*__enum__*: {string}
+**`enum`** {string}
 
 ## Index
 
@@ -12,17 +12,10 @@
 
 * [Percent](markup.unitenum.md#percent)
 
----
-
 ## Enumeration members
-
-<a id="percent"></a>
 
 ###  Percent
 
-**Percent**:  = "percent"
+• **Percent**: = "percent"
 
-*Defined in [api.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L527)*
-
-___
-
+*Defined in [api.ts:352](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L352)*

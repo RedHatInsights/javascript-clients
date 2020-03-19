@@ -1,20 +1,20 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [ServicePlansApi](../classes/serviceplansapi.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [ServicePlansApi](serviceplansapi.md)
 
 # Class: ServicePlansApi
 
 ServicePlansApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: ServicePlansApi
+**`class`** ServicePlansApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ ServicePlansApi**
+  ↳ **ServicePlansApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ ServicePlansApi - object-oriented interface
 
 ### Properties
 
-* [axios](serviceplansapi.md#axios)
-* [basePath](serviceplansapi.md#basepath)
-* [configuration](serviceplansapi.md#configuration)
+* [axios](serviceplansapi.md#protected-axios)
+* [basePath](serviceplansapi.md#protected-basepath)
+* [configuration](serviceplansapi.md#protected-configuration)
 
 ### Methods
 
@@ -37,15 +37,11 @@ ServicePlansApi - object-oriented interface
 * [showServicePlanBase](serviceplansapi.md#showserviceplanbase)
 * [showServicePlanModified](serviceplansapi.md#showserviceplanmodified)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new ServicePlansApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [ServicePlansApi](serviceplansapi.md)
+\+ **new ServicePlansApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[ServicePlansApi](serviceplansapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -53,207 +49,189 @@ ServicePlansApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [ServicePlansApi](serviceplansapi.md)
-
-___
+**Returns:** *[ServicePlansApi](serviceplansapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="createserviceplan"></a>
 
 ###  createServicePlan
 
-▸ **createServicePlan**(importServicePlan?: *[ImportServicePlan](../interfaces/importserviceplan.md)*, options?: *`any`*): `AxiosPromise`<[ServicePlan](../interfaces/serviceplan.md)[]>
+▸ **createServicePlan**(`importServicePlan?`: [ImportServicePlan](../interfaces/importserviceplan.md), `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)[]›*
 
 *Defined in [api.ts:6180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6180)*
 
 Returns the new Service Plan
 
-*__summary__*: Create Service Plan
+**`summary`** Create Service Plan
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: ServicePlansApi
+**`memberof`** ServicePlansApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` importServicePlan | [ImportServicePlan](../interfaces/importserviceplan.md) |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`importServicePlan?` | [ImportServicePlan](../interfaces/importserviceplan.md) |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[ServicePlan](../interfaces/serviceplan.md)[]>
+**Returns:** *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)[]›*
 
 ___
-<a id="patchserviceplanmodified"></a>
 
 ###  patchServicePlanModified
 
-▸ **patchServicePlanModified**(id: *`string`*, patchModifiedServicePlan?: *[PatchModifiedServicePlan](../interfaces/patchmodifiedserviceplan.md)*, options?: *`any`*): `AxiosPromise`<`any`>
+▸ **patchServicePlanModified**(`id`: string, `patchModifiedServicePlan?`: [PatchModifiedServicePlan](../interfaces/patchmodifiedserviceplan.md), `options?`: any): *AxiosPromise‹any›*
 
 *Defined in [api.ts:6193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6193)*
 
-*__summary__*: Patch Service Plan Modified Schema
+**`summary`** Patch Service Plan Modified Schema
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: ServicePlansApi
+**`memberof`** ServicePlansApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` patchModifiedServicePlan | [PatchModifiedServicePlan](../interfaces/patchmodifiedserviceplan.md) |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`patchModifiedServicePlan?` | [PatchModifiedServicePlan](../interfaces/patchmodifiedserviceplan.md) | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`any`>
+**Returns:** *AxiosPromise‹any›*
 
 ___
-<a id="resetserviceplanmodified"></a>
 
 ###  resetServicePlanModified
 
-▸ **resetServicePlanModified**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **resetServicePlanModified**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
 
 *Defined in [api.ts:6205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6205)*
 
 Resets the Service Plan's Modified schema
 
-*__summary__*: Reset Service Plan Modified schema
+**`summary`** Reset Service Plan Modified schema
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: ServicePlansApi
+**`memberof`** ServicePlansApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="showserviceplan"></a>
 
 ###  showServicePlan
 
-▸ **showServicePlan**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ServicePlan](../interfaces/serviceplan.md)>
+▸ **showServicePlan**(`id`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
 
 *Defined in [api.ts:6217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6217)*
 
 Returns the specified Service Plan
 
-*__summary__*: Show Service Plan
+**`summary`** Show Service Plan
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: ServicePlansApi
+**`memberof`** ServicePlansApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[ServicePlan](../interfaces/serviceplan.md)>
+**Returns:** *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
 
 ___
-<a id="showserviceplanbase"></a>
 
 ###  showServicePlanBase
 
-▸ **showServicePlanBase**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ServicePlan](../interfaces/serviceplan.md)>
+▸ **showServicePlanBase**(`id`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
 
 *Defined in [api.ts:6229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6229)*
 
 Returns the specified Service Plan's base schema
 
-*__summary__*: Show Service Plan Base Schema
+**`summary`** Show Service Plan Base Schema
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: ServicePlansApi
+**`memberof`** ServicePlansApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[ServicePlan](../interfaces/serviceplan.md)>
+**Returns:** *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
 
 ___
-<a id="showserviceplanmodified"></a>
 
 ###  showServicePlanModified
 
-▸ **showServicePlanModified**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[ServicePlan](../interfaces/serviceplan.md)>
+▸ **showServicePlanModified**(`id`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
 
 *Defined in [api.ts:6241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6241)*
 
 Returns the specified Service Plan's modified schema
 
-*__summary__*: Show Service Plan modified Schema
+**`summary`** Show Service Plan modified Schema
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: ServicePlansApi
+**`memberof`** ServicePlansApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[ServicePlan](../interfaces/serviceplan.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*

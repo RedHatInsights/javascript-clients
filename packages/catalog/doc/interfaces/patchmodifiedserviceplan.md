@@ -1,38 +1,31 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [PatchModifiedServicePlan](../interfaces/patchmodifiedserviceplan.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [PatchModifiedServicePlan](patchmodifiedserviceplan.md)
 
 # Interface: PatchModifiedServicePlan
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: PatchModifiedServicePlan
+**`interface`** PatchModifiedServicePlan
 
 ## Hierarchy
 
-**PatchModifiedServicePlan**
+* **PatchModifiedServicePlan**
 
 ## Index
 
 ### Properties
 
-* [modified](patchmodifiedserviceplan.md#modified)
-
----
+* [modified](patchmodifiedserviceplan.md#optional-modified)
 
 ## Properties
 
-<a id="modified"></a>
+### `Optional` modified
 
-### `<Optional>` modified
-
-**● modified**: *`any`*
+• **modified**? : *any*
 
 *Defined in [api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L619)*
 
 the new modified schema for the service plan
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: PatchModifiedServicePlan
-
-___
-
+**`memberof`** PatchModifiedServicePlan

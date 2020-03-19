@@ -1,50 +1,42 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [Tags](../interfaces/tags.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [Tags](tags.md)
 
 # Interface: Tags
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Tags
+**`interface`** Tags
 
 ## Hierarchy
 
-**Tags**
+* **Tags**
 
 ## Index
 
 ### Properties
 
-* [data](tags.md#data)
-* [filter](tags.md#filter)
-
----
+* [data](tags.md#optional-data)
+* [filter](tags.md#optional-filter)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
+• **data**? : *Array‹any›*
 
-**● data**: *`Array`<`any`>*
+*Defined in [api.ts:2785](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2785)*
 
-*Defined in [api.ts:2948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2948)*
+**`type`** {Array<any>}
 
-*__type__*: {Array}
-
-*__memberof__*: Tags
-
-___
-<a id="filter"></a>
-
-### `<Optional>` filter
-
-**● filter**: *[TagsFilter](tagsfilter.md)*
-
-*Defined in [api.ts:2942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2942)*
-
-*__type__*: {TagsFilter}
-
-*__memberof__*: Tags
+**`memberof`** Tags
 
 ___
 
+### `Optional` filter
+
+• **filter**? : *[TagsFilter](tagsfilter.md)*
+
+*Defined in [api.ts:2779](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2779)*
+
+**`type`** {TagsFilter}
+
+**`memberof`** Tags

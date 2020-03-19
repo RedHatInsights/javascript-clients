@@ -1,64 +1,55 @@
-[@redhat-cloud-services/sources-client](../README.md) > [Tenant](../interfaces/tenant.md)
+[@redhat-cloud-services/sources-client](../README.md) › [Globals](../globals.md) › [Tenant](tenant.md)
 
 # Interface: Tenant
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Tenant
+**`interface`** Tenant
 
 ## Hierarchy
 
-**Tenant**
+* **Tenant**
 
 ## Index
 
 ### Properties
 
-* [description](tenant.md#description)
-* [externalTenant](tenant.md#externaltenant)
-* [name](tenant.md#name)
-
----
+* [description](tenant.md#optional-description)
+* [externalTenant](tenant.md#optional-externaltenant)
+* [name](tenant.md#optional-name)
 
 ## Properties
 
-<a id="description"></a>
+### `Optional` description
 
-### `<Optional>` description
-
-**● description**: *`string`*
+• **description**? : *string*
 
 *Defined in [api.ts:843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L843)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Tenant
+**`memberof`** Tenant
 
 ___
-<a id="externaltenant"></a>
 
-### `<Optional>` externalTenant
+### `Optional` externalTenant
 
-**● externalTenant**: *`string`*
+• **externalTenant**? : *string*
 
 *Defined in [api.ts:849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L849)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Tenant
+**`memberof`** Tenant
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L837)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Tenant
-
-___
-
+**`memberof`** Tenant

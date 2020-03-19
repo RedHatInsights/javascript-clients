@@ -1,14 +1,14 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [UserOut](../interfaces/userout.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [UserOut](userout.md)
 
 # Interface: UserOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: UserOut
+**`interface`** UserOut
 
 ## Hierarchy
 
-**UserOut**
+* **UserOut**
 
 ## Index
 
@@ -18,47 +18,38 @@
 * [lastName](userout.md#lastname)
 * [username](userout.md#username)
 
----
-
 ## Properties
-
-<a id="firstname"></a>
 
 ###  firstName
 
-**● firstName**: *`string`*
+• **firstName**: *string*
 
-*Defined in [api.ts:806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L806)*
+*Defined in [api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1131)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: UserOut
+**`memberof`** UserOut
 
 ___
-<a id="lastname"></a>
 
 ###  lastName
 
-**● lastName**: *`string`*
+• **lastName**: *string*
 
-*Defined in [api.ts:812](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L812)*
+*Defined in [api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1137)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: UserOut
+**`memberof`** UserOut
 
 ___
-<a id="username"></a>
 
 ###  username
 
-**● username**: *`string`*
+• **username**: *string*
 
-*Defined in [api.ts:800](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L800)*
+*Defined in [api.ts:1125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1125)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: UserOut
-
-___
-
+**`memberof`** UserOut

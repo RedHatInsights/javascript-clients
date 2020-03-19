@@ -1,18 +1,18 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [BaseAPI](../classes/baseapi.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [BaseAPI](baseapi.md)
 
 # Class: BaseAPI
 
-*__export__*: 
+**`export`** 
 
-*__class__*: BaseAPI
+**`class`** BaseAPI
 
 ## Hierarchy
 
-**BaseAPI**
+* **BaseAPI**
 
-↳  [HostsApi](hostsapi.md)
+  ↳ [HostsApi](hostsapi.md)
 
-↳  [TagsApi](tagsapi.md)
+  ↳ [TagsApi](tagsapi.md)
 
 ## Index
 
@@ -22,61 +22,48 @@
 
 ### Properties
 
-* [axios](baseapi.md#axios)
-* [basePath](baseapi.md#basepath)
-* [configuration](baseapi.md#configuration)
-
----
+* [axios](baseapi.md#protected-axios)
+* [basePath](baseapi.md#protected-basepath)
+* [configuration](baseapi.md#protected-configuration)
 
 ## Constructors
 
-<a id="constructor"></a>
-
 ###  constructor
 
-⊕ **new BaseAPI**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [BaseAPI](baseapi.md)
+\+ **new BaseAPI**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[BaseAPI](baseapi.md)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L49)*
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [BaseAPI](baseapi.md)
-
-___
+**Returns:** *[BaseAPI](baseapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
-
-**● axios**: *`AxiosInstance`*
+• **axios**: *AxiosInstance*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L49)*
-
-___
-

@@ -100,7 +100,7 @@ export interface Action {
      */
     processedBy?: string;
     /**
-     * Types of action, may be one of the value (approve, cancel, deny, error, notify, memo, skip, or start). The request state will be updated according to the operation.
+     * Types of action, may be one of the value (approve, cancel, deny, notify, memo, skip, or start). The request state will be updated according to the operation.
      * @type {string}
      * @memberof Action
      */
@@ -126,7 +126,6 @@ export namespace Action {
         Approve = 'approve',
         Cancel = 'cancel',
         Deny = 'deny',
-        Error = 'error',
         Notify = 'notify',
         Memo = 'memo',
         Skip = 'skip',
@@ -277,13 +276,13 @@ export interface Request {
      */
     id?: string;
     /**
-     * The state of the request. Possible value: canceled, completed, failed, notified, skipped, or started
+     * The state of the request. Possible value: canceled, completed, notified, skipped, or started
      * @type {string}
      * @memberof Request
      */
     state?: Request.StateEnum;
     /**
-     * Approval decision. Possible value: undecided, approved, canceled, denied, or error
+     * Approval decision. Possible value: undecided, approved, canceled, or denied
      * @type {string}
      * @memberof Request
      */
@@ -380,7 +379,6 @@ export namespace Request {
     export enum StateEnum {
         Canceled = 'canceled',
         Completed = 'completed',
-        Failed = 'failed',
         Notified = 'notified',
         Pending = 'pending',
         Skipped = 'skipped',
@@ -394,8 +392,7 @@ export namespace Request {
         Undecided = 'undecided',
         Approved = 'approved',
         Canceled = 'canceled',
-        Denied = 'denied',
-        Error = 'error'
+        Denied = 'denied'
     }
 }
 

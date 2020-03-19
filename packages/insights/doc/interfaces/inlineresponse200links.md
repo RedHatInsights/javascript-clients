@@ -1,78 +1,68 @@
-[@redhat-cloud-services/insights-client](../README.md) > [InlineResponse200Links](../interfaces/inlineresponse200links.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [InlineResponse200Links](inlineresponse200links.md)
 
 # Interface: InlineResponse200Links
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: InlineResponse200Links
+**`interface`** InlineResponse200Links
 
 ## Hierarchy
 
-**InlineResponse200Links**
+* **InlineResponse200Links**
 
 ## Index
 
 ### Properties
 
-* [first](inlineresponse200links.md#first)
-* [last](inlineresponse200links.md#last)
-* [next](inlineresponse200links.md#next)
-* [previous](inlineresponse200links.md#previous)
-
----
+* [first](inlineresponse200links.md#optional-first)
+* [last](inlineresponse200links.md#optional-last)
+* [next](inlineresponse200links.md#optional-next)
+* [previous](inlineresponse200links.md#optional-previous)
 
 ## Properties
 
-<a id="first"></a>
+### `Optional` first
 
-### `<Optional>` first
-
-**● first**: *`string` \| `null`*
+• **first**? : *string | null*
 
 *Defined in [api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L437)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: InlineResponse200Links
+**`memberof`** InlineResponse200Links
 
 ___
-<a id="last"></a>
 
-### `<Optional>` last
+### `Optional` last
 
-**● last**: *`string` \| `null`*
+• **last**? : *string | null*
 
 *Defined in [api.ts:455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L455)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: InlineResponse200Links
+**`memberof`** InlineResponse200Links
 
 ___
-<a id="next"></a>
 
-### `<Optional>` next
+### `Optional` next
 
-**● next**: *`string` \| `null`*
+• **next**? : *string | null*
 
 *Defined in [api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L449)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: InlineResponse200Links
+**`memberof`** InlineResponse200Links
 
 ___
-<a id="previous"></a>
 
-### `<Optional>` previous
+### `Optional` previous
 
-**● previous**: *`string` \| `null`*
+• **previous**? : *string | null*
 
 *Defined in [api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L443)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: InlineResponse200Links
-
-___
-
+**`memberof`** InlineResponse200Links

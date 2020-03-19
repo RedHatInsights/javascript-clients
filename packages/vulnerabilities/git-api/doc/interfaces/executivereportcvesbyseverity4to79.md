@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [ExecutiveReportCvesBySeverity4to79](../interfaces/executivereportcvesbyseverity4to79.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [ExecutiveReportCvesBySeverity4to79](executivereportcvesbyseverity4to79.md)
 
 # Interface: ExecutiveReportCvesBySeverity4to79
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ExecutiveReportCvesBySeverity4to79
+**`interface`** ExecutiveReportCvesBySeverity4to79
 
 ## Hierarchy
 
-**ExecutiveReportCvesBySeverity4to79**
+* **ExecutiveReportCvesBySeverity4to79**
 
 ## Index
 
@@ -17,38 +17,30 @@
 * [count](executivereportcvesbyseverity4to79.md#count)
 * [percentage](executivereportcvesbyseverity4to79.md#percentage)
 
----
-
 ## Properties
-
-<a id="count"></a>
 
 ###  count
 
-**● count**: *`number`*
-
-*Defined in [git-api/api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L517)*
-
-Number of CVEs with CVSS score higher or equal to 4 and lower then 8.
-
-*__type__*: {number}
-
-*__memberof__*: ExecutiveReportCvesBySeverity4to79
-
-___
-<a id="percentage"></a>
-
-###  percentage
-
-**● percentage**: *`number`*
+• **count**: *number*
 
 *Defined in [git-api/api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L523)*
 
-Percentage of CVEs with CVSS score higher or equal to 4 and lower then 8.
+Number of CVEs with CVSS score higher or equal to 4 and lower then 8.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ExecutiveReportCvesBySeverity4to79
+**`memberof`** ExecutiveReportCvesBySeverity4to79
 
 ___
 
+###  percentage
+
+• **percentage**: *number*
+
+*Defined in [git-api/api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L529)*
+
+Percentage of CVEs with CVSS score higher or equal to 4 and lower then 8.
+
+**`type`** {number}
+
+**`memberof`** ExecutiveReportCvesBySeverity4to79

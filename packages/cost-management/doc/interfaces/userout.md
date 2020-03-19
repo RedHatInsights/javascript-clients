@@ -1,14 +1,14 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [UserOut](../interfaces/userout.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [UserOut](userout.md)
 
 # Interface: UserOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: UserOut
+**`interface`** UserOut
 
 ## Hierarchy
 
-**UserOut**
+* **UserOut**
 
 ## Index
 
@@ -18,47 +18,38 @@
 * [username](userout.md#username)
 * [uuid](userout.md#uuid)
 
----
-
 ## Properties
-
-<a id="email"></a>
 
 ###  email
 
-**● email**: *`string`*
+• **email**: *string*
 
-*Defined in [api.ts:3014](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3014)*
+*Defined in [api.ts:2851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2851)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: UserOut
+**`memberof`** UserOut
 
 ___
-<a id="username"></a>
 
 ###  username
 
-**● username**: *`string`*
+• **username**: *string*
 
-*Defined in [api.ts:3008](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3008)*
+*Defined in [api.ts:2845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2845)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: UserOut
+**`memberof`** UserOut
 
 ___
-<a id="uuid"></a>
 
 ###  uuid
 
-**● uuid**: *`string`*
+• **uuid**: *string*
 
-*Defined in [api.ts:3020](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3020)*
+*Defined in [api.ts:2857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2857)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: UserOut
-
-___
-
+**`memberof`** UserOut

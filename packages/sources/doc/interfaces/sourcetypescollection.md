@@ -1,64 +1,55 @@
-[@redhat-cloud-services/sources-client](../README.md) > [SourceTypesCollection](../interfaces/sourcetypescollection.md)
+[@redhat-cloud-services/sources-client](../README.md) › [Globals](../globals.md) › [SourceTypesCollection](sourcetypescollection.md)
 
 # Interface: SourceTypesCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SourceTypesCollection
+**`interface`** SourceTypesCollection
 
 ## Hierarchy
 
-**SourceTypesCollection**
+* **SourceTypesCollection**
 
 ## Index
 
 ### Properties
 
-* [data](sourcetypescollection.md#data)
-* [links](sourcetypescollection.md#links)
-* [meta](sourcetypescollection.md#meta)
-
----
+* [data](sourcetypescollection.md#optional-data)
+* [links](sourcetypescollection.md#optional-links)
+* [meta](sourcetypescollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[SourceType](sourcetype.md)>*
+• **data**? : *Array‹[SourceType](sourcetype.md)›*
 
 *Defined in [api.ts:797](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L797)*
 
-*__type__*: {Array}
+**`type`** {Array<SourceType>}
 
-*__memberof__*: SourceTypesCollection
+**`memberof`** SourceTypesCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:791](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L791)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: SourceTypesCollection
+**`memberof`** SourceTypesCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:785](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L785)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: SourceTypesCollection
-
-___
-
+**`memberof`** SourceTypesCollection

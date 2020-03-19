@@ -1,14 +1,14 @@
-[@redhat-cloud-services/insights-client](../README.md) > [StatTimeSeries](../interfaces/stattimeseries.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [StatTimeSeries](stattimeseries.md)
 
 # Interface: StatTimeSeries
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: StatTimeSeries
+**`interface`** StatTimeSeries
 
 ## Hierarchy
 
-**StatTimeSeries**
+* **StatTimeSeries**
 
 ## Index
 
@@ -17,34 +17,26 @@
 * [checkedDay](stattimeseries.md#checkedday)
 * [count](stattimeseries.md#count)
 
----
-
 ## Properties
-
-<a id="checkedday"></a>
 
 ###  checkedDay
 
-**● checkedDay**: *`Date`*
+• **checkedDay**: *Date*
 
-*Defined in [api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1107)*
+*Defined in [api.ts:1127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1127)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: StatTimeSeries
+**`memberof`** StatTimeSeries
 
 ___
-<a id="count"></a>
 
 ###  count
 
-**● count**: *`number`*
+• **count**: *number*
 
-*Defined in [api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1113)*
+*Defined in [api.ts:1133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1133)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: StatTimeSeries
-
-___
-
+**`memberof`** StatTimeSeries

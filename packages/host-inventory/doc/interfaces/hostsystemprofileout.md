@@ -1,52 +1,44 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [HostSystemProfileOut](../interfaces/hostsystemprofileout.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [HostSystemProfileOut](hostsystemprofileout.md)
 
 # Interface: HostSystemProfileOut
 
 Individual host record that contains only the host id and system profile
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: HostSystemProfileOut
+**`interface`** HostSystemProfileOut
 
 ## Hierarchy
 
-**HostSystemProfileOut**
+* **HostSystemProfileOut**
 
 ## Index
 
 ### Properties
 
-* [id](hostsystemprofileout.md#id)
-* [systemProfile](hostsystemprofileout.md#systemprofile)
-
----
+* [id](hostsystemprofileout.md#optional-id)
+* [systemProfile](hostsystemprofileout.md#optional-systemprofile)
 
 ## Properties
 
-<a id="id"></a>
+### `Optional` id
 
-### `<Optional>` id
-
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:713](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L713)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: HostSystemProfileOut
+**`memberof`** HostSystemProfileOut
 
 ___
-<a id="systemprofile"></a>
 
-### `<Optional>` systemProfile
+### `Optional` systemProfile
 
-**● systemProfile**: *[SystemProfileIn](systemprofilein.md)*
+• **systemProfile**? : *[SystemProfileIn](systemprofilein.md)*
 
 *Defined in [api.ts:719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L719)*
 
-*__type__*: {SystemProfileIn}
+**`type`** {SystemProfileIn}
 
-*__memberof__*: HostSystemProfileOut
-
-___
-
+**`memberof`** HostSystemProfileOut

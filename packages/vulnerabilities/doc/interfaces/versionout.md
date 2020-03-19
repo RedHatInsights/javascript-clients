@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [VersionOut](../interfaces/versionout.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [VersionOut](versionout.md)
 
 # Interface: VersionOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: VersionOut
+**`interface`** VersionOut
 
 ## Hierarchy
 
-**VersionOut**
+* **VersionOut**
 
 ## Index
 
@@ -17,38 +17,30 @@
 * [applicationVersion](versionout.md#applicationversion)
 * [databaseVersion](versionout.md#databaseversion)
 
----
-
 ## Properties
-
-<a id="applicationversion"></a>
 
 ###  applicationVersion
 
-**● applicationVersion**: *`string`*
+• **applicationVersion**: *string*
 
-*Defined in [api.ts:1355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1355)*
+*Defined in [api.ts:1415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1415)*
 
 Version of application.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: VersionOut
+**`memberof`** VersionOut
 
 ___
-<a id="databaseversion"></a>
 
 ###  databaseVersion
 
-**● databaseVersion**: *`Object`*
+• **databaseVersion**: *Object*
 
-*Defined in [api.ts:1361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1361)*
+*Defined in [api.ts:1421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1421)*
 
 Version of database schema.
 
-*__type__*: {Object}
+**`type`** {Object}
 
-*__memberof__*: VersionOut
-
-___
-
+**`memberof`** VersionOut

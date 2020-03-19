@@ -1,64 +1,55 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [CostModelPagination](../interfaces/costmodelpagination.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [CostModelPagination](costmodelpagination.md)
 
 # Interface: CostModelPagination
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CostModelPagination
+**`interface`** CostModelPagination
 
 ## Hierarchy
 
-**CostModelPagination**
+* **CostModelPagination**
 
 ## Index
 
 ### Properties
 
 * [data](costmodelpagination.md#data)
-* [links](costmodelpagination.md#links)
-* [meta](costmodelpagination.md#meta)
-
----
+* [links](costmodelpagination.md#optional-links)
+* [meta](costmodelpagination.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<[CostModelOut](costmodelout.md)>*
+• **data**: *Array‹[CostModelOut](costmodelout.md)›*
 
-*Defined in [api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L259)*
+*Defined in [api.ts:201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L201)*
 
-*__type__*: {Array}
+**`type`** {Array<CostModelOut>}
 
-*__memberof__*: CostModelPagination
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[PaginationLinks](paginationlinks.md)*
-
-*Defined in [api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L253)*
-
-*__type__*: {PaginationLinks}
-
-*__memberof__*: CostModelPagination
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[PaginationMeta](paginationmeta.md)*
-
-*Defined in [api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L247)*
-
-*__type__*: {PaginationMeta}
-
-*__memberof__*: CostModelPagination
+**`memberof`** CostModelPagination
 
 ___
 
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
+
+*Defined in [api.ts:195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L195)*
+
+**`type`** {PaginationLinks}
+
+**`memberof`** CostModelPagination
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[PaginationMeta](paginationmeta.md)*
+
+*Defined in [api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L189)*
+
+**`type`** {PaginationMeta}
+
+**`memberof`** CostModelPagination

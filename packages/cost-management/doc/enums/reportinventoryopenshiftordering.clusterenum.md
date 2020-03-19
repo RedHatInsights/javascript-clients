@@ -1,10 +1,10 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportInventoryOpenShiftOrdering](../modules/reportinventoryopenshiftordering.md) > [ClusterEnum](../enums/reportinventoryopenshiftordering.clusterenum.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportInventoryOpenShiftOrdering](../modules/reportinventoryopenshiftordering.md) › [ClusterEnum](reportinventoryopenshiftordering.clusterenum.md)
 
 # Enumeration: ClusterEnum
 
-*__export__*: 
+**`export`** 
 
-*__enum__*: {string}
+**`enum`** {string}
 
 ## Index
 
@@ -13,26 +13,18 @@
 * [Asc](reportinventoryopenshiftordering.clusterenum.md#asc)
 * [Desc](reportinventoryopenshiftordering.clusterenum.md#desc)
 
----
-
 ## Enumeration members
-
-<a id="asc"></a>
 
 ###  Asc
 
-**Asc**:  = "asc"
+• **Asc**: = "asc"
 
-*Defined in [api.ts:1517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1517)*
+*Defined in [api.ts:1342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1342)*
 
 ___
-<a id="desc"></a>
 
 ###  Desc
 
-**Desc**:  = "desc"
+• **Desc**: = "desc"
 
-*Defined in [api.ts:1518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1518)*
-
-___
-
+*Defined in [api.ts:1343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1343)*

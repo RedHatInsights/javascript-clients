@@ -1,16 +1,16 @@
-[@redhat-cloud-services/approval-client](../README.md) > [TagResource](../interfaces/tagresource.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [TagResource](tagresource.md)
 
 # Interface: TagResource
 
 Resource with tags
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: TagResource
+**`interface`** TagResource
 
 ## Hierarchy
 
-**TagResource**
+* **TagResource**
 
 ## Index
 
@@ -20,47 +20,38 @@ Resource with tags
 * [objectType](tagresource.md#objecttype)
 * [tags](tagresource.md#tags)
 
----
-
 ## Properties
-
-<a id="appname"></a>
 
 ###  appName
 
-**● appName**: *`string`*
+• **appName**: *string*
 
-*Defined in [api.ts:511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L511)*
+*Defined in [api.ts:508](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L508)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: TagResource
+**`memberof`** TagResource
 
 ___
-<a id="objecttype"></a>
 
 ###  objectType
 
-**● objectType**: *`string`*
+• **objectType**: *string*
 
-*Defined in [api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L517)*
+*Defined in [api.ts:514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L514)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: TagResource
+**`memberof`** TagResource
 
 ___
-<a id="tags"></a>
 
 ###  tags
 
-**● tags**: *`Array`<[Tag](tag.md)>*
+• **tags**: *Array‹[Tag](tag.md)›*
 
-*Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L523)*
+*Defined in [api.ts:520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L520)*
 
-*__type__*: {Array}
+**`type`** {Array<Tag>}
 
-*__memberof__*: TagResource
-
-___
-
+**`memberof`** TagResource

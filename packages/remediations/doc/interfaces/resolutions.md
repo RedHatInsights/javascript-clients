@@ -1,14 +1,14 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [Resolutions](../interfaces/resolutions.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [Resolutions](resolutions.md)
 
 # Interface: Resolutions
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Resolutions
+**`interface`** Resolutions
 
 ## Hierarchy
 
-**Resolutions**
+* **Resolutions**
 
 ## Index
 
@@ -16,49 +16,40 @@
 
 * [id](resolutions.md#id)
 * [resolutionRisk](resolutions.md#resolutionrisk)
-* [resolutions](resolutions.md#resolutions-1)
-
----
+* [resolutions](resolutions.md#resolutions)
 
 ## Properties
 
-<a id="id"></a>
-
 ###  id
 
-**● id**: *`string`*
+• **id**: *string*
 
-*Defined in [api.ts:702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L702)*
+*Defined in [api.ts:1027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1027)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Resolutions
+**`memberof`** Resolutions
 
 ___
-<a id="resolutionrisk"></a>
 
 ###  resolutionRisk
 
-**● resolutionRisk**: *[ResolutionRisk](../enums/resolutionrisk.md)*
+• **resolutionRisk**: *[ResolutionRisk](../enums/resolutionrisk.md)*
 
-*Defined in [api.ts:708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L708)*
+*Defined in [api.ts:1033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1033)*
 
-*__type__*: {ResolutionRisk}
+**`type`** {ResolutionRisk}
 
-*__memberof__*: Resolutions
+**`memberof`** Resolutions
 
 ___
-<a id="resolutions-1"></a>
 
 ###  resolutions
 
-**● resolutions**: *`Array`<[ResolutionsResolutions](resolutionsresolutions.md)>*
+• **resolutions**: *Array‹[ResolutionsResolutions](resolutionsresolutions.md)›*
 
-*Defined in [api.ts:714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L714)*
+*Defined in [api.ts:1039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1039)*
 
-*__type__*: {Array}
+**`type`** {Array<ResolutionsResolutions>}
 
-*__memberof__*: Resolutions
-
-___
-
+**`memberof`** Resolutions

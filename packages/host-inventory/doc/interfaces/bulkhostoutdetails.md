@@ -1,84 +1,74 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [BulkHostOutDetails](../interfaces/bulkhostoutdetails.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [BulkHostOutDetails](bulkhostoutdetails.md)
 
 # Interface: BulkHostOutDetails
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: BulkHostOutDetails
+**`interface`** BulkHostOutDetails
 
 ## Hierarchy
 
-**BulkHostOutDetails**
+* **BulkHostOutDetails**
 
 ## Index
 
 ### Properties
 
-* [detail](bulkhostoutdetails.md#detail)
-* [host](bulkhostoutdetails.md#host)
-* [status](bulkhostoutdetails.md#status)
-* [title](bulkhostoutdetails.md#title)
-
----
+* [detail](bulkhostoutdetails.md#optional-detail)
+* [host](bulkhostoutdetails.md#optional-host)
+* [status](bulkhostoutdetails.md#optional-status)
+* [title](bulkhostoutdetails.md#optional-title)
 
 ## Properties
 
-<a id="detail"></a>
+### `Optional` detail
 
-### `<Optional>` detail
-
-**● detail**: *`string`*
+• **detail**? : *string*
 
 *Defined in [api.ts:185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L185)*
 
 Details about why a host failed to be created or updated.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: BulkHostOutDetails
+**`memberof`** BulkHostOutDetails
 
 ___
-<a id="host"></a>
 
-### `<Optional>` host
+### `Optional` host
 
-**● host**: *[CreateHostOut](createhostout.md)*
+• **host**? : *[CreateHostOut](createhostout.md)*
 
 *Defined in [api.ts:173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L173)*
 
-*__type__*: {CreateHostOut}
+**`type`** {CreateHostOut}
 
-*__memberof__*: BulkHostOutDetails
+**`memberof`** BulkHostOutDetails
 
 ___
-<a id="status"></a>
 
-### `<Optional>` status
+### `Optional` status
 
-**● status**: *`number`*
+• **status**? : *number*
 
 *Defined in [api.ts:167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L167)*
 
 HTTP status code of the results of the host create/update process
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: BulkHostOutDetails
+**`memberof`** BulkHostOutDetails
 
 ___
-<a id="title"></a>
 
-### `<Optional>` title
+### `Optional` title
 
-**● title**: *`string`*
+• **title**? : *string*
 
 *Defined in [api.ts:179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L179)*
 
 Short description of why a host failed to be created or updated.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: BulkHostOutDetails
-
-___
-
+**`memberof`** BulkHostOutDetails

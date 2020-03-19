@@ -1,64 +1,55 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportOpenShiftMemory](../interfaces/reportopenshiftmemory.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportOpenShiftMemory](reportopenshiftmemory.md)
 
 # Interface: ReportOpenShiftMemory
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportOpenShiftMemory
+**`interface`** ReportOpenShiftMemory
 
 ## Hierarchy
 
-**ReportOpenShiftMemory**
+* **ReportOpenShiftMemory**
 
 ## Index
 
 ### Properties
 
 * [data](reportopenshiftmemory.md#data)
-* [links](reportopenshiftmemory.md#links)
-* [meta](reportopenshiftmemory.md#meta)
-
----
+* [links](reportopenshiftmemory.md#optional-links)
+* [meta](reportopenshiftmemory.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<`any`>*
+• **data**: *Array‹any›*
 
-*Defined in [api.ts:2511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2511)*
+*Defined in [api.ts:2336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2336)*
 
-*__type__*: {Array}
+**`type`** {Array<any>}
 
-*__memberof__*: ReportOpenShiftMemory
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[PaginationLinks](paginationlinks.md)*
-
-*Defined in [api.ts:2505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2505)*
-
-*__type__*: {PaginationLinks}
-
-*__memberof__*: ReportOpenShiftMemory
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[ReportPaginationMeta](reportpaginationmeta.md)*
-
-*Defined in [api.ts:2499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2499)*
-
-*__type__*: {ReportPaginationMeta}
-
-*__memberof__*: ReportOpenShiftMemory
+**`memberof`** ReportOpenShiftMemory
 
 ___
 
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
+
+*Defined in [api.ts:2330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2330)*
+
+**`type`** {PaginationLinks}
+
+**`memberof`** ReportOpenShiftMemory
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[ReportPaginationMeta](reportpaginationmeta.md)*
+
+*Defined in [api.ts:2324](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2324)*
+
+**`type`** {ReportPaginationMeta}
+
+**`memberof`** ReportOpenShiftMemory

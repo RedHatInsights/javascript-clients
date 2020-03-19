@@ -1,20 +1,20 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [PrincipalApi](../classes/principalapi.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [PrincipalApi](principalapi.md)
 
 # Class: PrincipalApi
 
 PrincipalApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: PrincipalApi
+**`class`** PrincipalApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ PrincipalApi**
+  ↳ **PrincipalApi**
 
 ## Index
 
@@ -24,23 +24,19 @@ PrincipalApi - object-oriented interface
 
 ### Properties
 
-* [axios](principalapi.md#axios)
-* [basePath](principalapi.md#basepath)
-* [configuration](principalapi.md#configuration)
+* [axios](principalapi.md#protected-axios)
+* [basePath](principalapi.md#protected-basepath)
+* [configuration](principalapi.md#protected-configuration)
 
 ### Methods
 
 * [listPrincipals](principalapi.md#listprincipals)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new PrincipalApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [PrincipalApi](principalapi.md)
+\+ **new PrincipalApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[PrincipalApi](principalapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,78 +44,66 @@ PrincipalApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [PrincipalApi](principalapi.md)
-
-___
+**Returns:** *[PrincipalApi](principalapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="listprincipals"></a>
 
 ###  listPrincipals
 
-▸ **listPrincipals**(limit?: *`number`*, offset?: *`number`*, usernames?: *`string`*, options?: *`any`*): `AxiosPromise`<[PrincipalPagination](../interfaces/principalpagination.md)>
+▸ **listPrincipals**(`limit?`: number, `offset?`: number, `usernames?`: string, `sortOrder?`: "asc" | "desc", `options?`: any): *AxiosPromise‹[PrincipalPagination](../interfaces/principalpagination.md)›*
 
-*Defined in [api.ts:2824](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2824)*
+*Defined in [api.ts:2968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2968)*
 
-*__summary__*: List the principals for a tenant
+**`summary`** List the principals for a tenant
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: PrincipalApi
+**`memberof`** PrincipalApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` usernames | `string` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`limit?` | number |
+`offset?` | number |
+`usernames?` | string |
+`sortOrder?` | "asc" &#124; "desc" |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[PrincipalPagination](../interfaces/principalpagination.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[PrincipalPagination](../interfaces/principalpagination.md)›*

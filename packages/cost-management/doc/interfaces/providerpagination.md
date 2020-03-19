@@ -1,64 +1,55 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ProviderPagination](../interfaces/providerpagination.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ProviderPagination](providerpagination.md)
 
 # Interface: ProviderPagination
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ProviderPagination
+**`interface`** ProviderPagination
 
 ## Hierarchy
 
-**ProviderPagination**
+* **ProviderPagination**
 
 ## Index
 
 ### Properties
 
 * [data](providerpagination.md#data)
-* [links](providerpagination.md#links)
-* [meta](providerpagination.md#meta)
-
----
+* [links](providerpagination.md#optional-links)
+* [meta](providerpagination.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<[ProviderOut](providerout.md)>*
+• **data**: *Array‹[ProviderOut](providerout.md)›*
 
-*Defined in [api.ts:896](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L896)*
+*Defined in [api.ts:721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L721)*
 
-*__type__*: {Array}
+**`type`** {Array<ProviderOut>}
 
-*__memberof__*: ProviderPagination
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[PaginationLinks](paginationlinks.md)*
-
-*Defined in [api.ts:890](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L890)*
-
-*__type__*: {PaginationLinks}
-
-*__memberof__*: ProviderPagination
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[PaginationMeta](paginationmeta.md)*
-
-*Defined in [api.ts:884](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L884)*
-
-*__type__*: {PaginationMeta}
-
-*__memberof__*: ProviderPagination
+**`memberof`** ProviderPagination
 
 ___
 
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
+
+*Defined in [api.ts:715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L715)*
+
+**`type`** {PaginationLinks}
+
+**`memberof`** ProviderPagination
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[PaginationMeta](paginationmeta.md)*
+
+*Defined in [api.ts:709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L709)*
+
+**`type`** {PaginationMeta}
+
+**`memberof`** ProviderPagination

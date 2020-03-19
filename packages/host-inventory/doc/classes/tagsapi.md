@@ -1,20 +1,20 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [TagsApi](../classes/tagsapi.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [TagsApi](tagsapi.md)
 
 # Class: TagsApi
 
 TagsApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: TagsApi
+**`class`** TagsApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ TagsApi**
+  ↳ **TagsApi**
 
 ## Index
 
@@ -24,23 +24,19 @@ TagsApi - object-oriented interface
 
 ### Properties
 
-* [axios](tagsapi.md#axios)
-* [basePath](tagsapi.md#basepath)
-* [configuration](tagsapi.md#configuration)
+* [axios](tagsapi.md#protected-axios)
+* [basePath](tagsapi.md#protected-basepath)
+* [configuration](tagsapi.md#protected-configuration)
 
 ### Methods
 
 * [apiTagGetTags](tagsapi.md#apitaggettags)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new TagsApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [TagsApi](tagsapi.md)
+\+ **new TagsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[TagsApi](tagsapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,82 +44,69 @@ TagsApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [TagsApi](tagsapi.md)
-
-___
+**Returns:** *[TagsApi](tagsapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="apitaggettags"></a>
 
 ###  apiTagGetTags
 
-▸ **apiTagGetTags**(tags?: *`Array`<`string`>*, orderBy?: *"tag" \| "count"*, orderHow?: *"ASC" \| "DESC"*, perPage?: *`number`*, page?: *`number`*, staleness?: *`Array`<"fresh" \| "stale" \| "stale_warning" \| "unknown">*, search?: *`string`*, options?: *`any`*): `AxiosPromise`<[ActiveTags](../interfaces/activetags.md)>
+▸ **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `options?`: any): *AxiosPromise‹[ActiveTags](../interfaces/activetags.md)›*
 
-*Defined in [api.ts:2477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2477)*
+*Defined in [api.ts:2491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2491)*
 
-*__summary__*: Get the active host tags for a given account
+**`summary`** Get the active host tags for a given account
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: TagsApi
+**`memberof`** TagsApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` tags | `Array`<`string`> |
-| `Optional` orderBy | "tag" \| "count" |
-| `Optional` orderHow | "ASC" \| "DESC" |
-| `Optional` perPage | `number` |
-| `Optional` page | `number` |
-| `Optional` staleness | `Array`<"fresh" \| "stale" \| "stale_warning" \| "unknown"> |
-| `Optional` search | `string` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`tags?` | Array‹string› |
+`orderBy?` | "tag" &#124; "count" |
+`orderHow?` | "ASC" &#124; "DESC" |
+`perPage?` | number |
+`page?` | number |
+`staleness?` | Array‹"fresh" &#124; "stale" &#124; "stale_warning" &#124; "unknown"› |
+`search?` | string |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[ActiveTags](../interfaces/activetags.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[ActiveTags](../interfaces/activetags.md)›*

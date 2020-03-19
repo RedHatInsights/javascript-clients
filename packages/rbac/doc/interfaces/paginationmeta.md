@@ -1,36 +1,29 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [PaginationMeta](../interfaces/paginationmeta.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [PaginationMeta](paginationmeta.md)
 
 # Interface: PaginationMeta
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: PaginationMeta
+**`interface`** PaginationMeta
 
 ## Hierarchy
 
-**PaginationMeta**
+* **PaginationMeta**
 
 ## Index
 
 ### Properties
 
-* [count](paginationmeta.md#count)
-
----
+* [count](paginationmeta.md#optional-count)
 
 ## Properties
 
-<a id="count"></a>
+### `Optional` count
 
-### `<Optional>` count
+• **count**? : *number*
 
-**● count**: *`number`*
+*Defined in [api.ts:499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L499)*
 
-*Defined in [api.ts:493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L493)*
+**`type`** {number}
 
-*__type__*: {number}
-
-*__memberof__*: PaginationMeta
-
-___
-
+**`memberof`** PaginationMeta

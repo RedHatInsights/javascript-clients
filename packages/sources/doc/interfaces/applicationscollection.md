@@ -1,64 +1,55 @@
-[@redhat-cloud-services/sources-client](../README.md) > [ApplicationsCollection](../interfaces/applicationscollection.md)
+[@redhat-cloud-services/sources-client](../README.md) › [Globals](../globals.md) › [ApplicationsCollection](applicationscollection.md)
 
 # Interface: ApplicationsCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ApplicationsCollection
+**`interface`** ApplicationsCollection
 
 ## Hierarchy
 
-**ApplicationsCollection**
+* **ApplicationsCollection**
 
 ## Index
 
 ### Properties
 
-* [data](applicationscollection.md#data)
-* [links](applicationscollection.md#links)
-* [meta](applicationscollection.md#meta)
-
----
+* [data](applicationscollection.md#optional-data)
+* [links](applicationscollection.md#optional-links)
+* [meta](applicationscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[Application](application.md)>*
+• **data**? : *Array‹[Application](application.md)›*
 
 *Defined in [api.ts:233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L233)*
 
-*__type__*: {Array}
+**`type`** {Array<Application>}
 
-*__memberof__*: ApplicationsCollection
+**`memberof`** ApplicationsCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L227)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: ApplicationsCollection
+**`memberof`** ApplicationsCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L221)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: ApplicationsCollection
-
-___
-
+**`memberof`** ApplicationsCollection

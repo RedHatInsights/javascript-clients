@@ -1,14 +1,14 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [ResourceDefinition](../interfaces/resourcedefinition.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [ResourceDefinition](resourcedefinition.md)
 
 # Interface: ResourceDefinition
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ResourceDefinition
+**`interface`** ResourceDefinition
 
 ## Hierarchy
 
-**ResourceDefinition**
+* **ResourceDefinition**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [attributeFilter](resourcedefinition.md#attributefilter)
 
----
-
 ## Properties
-
-<a id="attributefilter"></a>
 
 ###  attributeFilter
 
-**● attributeFilter**: *[ResourceDefinitionFilter](../modules/resourcedefinitionfilter.md)*
+• **attributeFilter**: *[ResourceDefinitionFilter](../modules/resourcedefinitionfilter.md)*
 
-*Defined in [api.ts:745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L745)*
+*Defined in [api.ts:751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L751)*
 
-*__type__*: {ResourceDefinitionFilter}
+**`type`** {ResourceDefinitionFilter}
 
-*__memberof__*: ResourceDefinition
-
-___
-
+**`memberof`** ResourceDefinition

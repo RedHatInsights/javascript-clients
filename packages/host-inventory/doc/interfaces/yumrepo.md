@@ -1,94 +1,83 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [YumRepo](../interfaces/yumrepo.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [YumRepo](yumrepo.md)
 
 # Interface: YumRepo
 
 Representation of one yum repository
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: YumRepo
+**`interface`** YumRepo
 
 ## Hierarchy
 
-**YumRepo**
+* **YumRepo**
 
 ## Index
 
 ### Properties
 
-* [baseurl](yumrepo.md#baseurl)
-* [enabled](yumrepo.md#enabled)
-* [gpgcheck](yumrepo.md#gpgcheck)
-* [id](yumrepo.md#id)
-* [name](yumrepo.md#name)
-
----
+* [baseurl](yumrepo.md#optional-baseurl)
+* [enabled](yumrepo.md#optional-enabled)
+* [gpgcheck](yumrepo.md#optional-gpgcheck)
+* [id](yumrepo.md#optional-id)
+* [name](yumrepo.md#optional-name)
 
 ## Properties
 
-<a id="baseurl"></a>
+### `Optional` baseurl
 
-### `<Optional>` baseurl
+• **baseurl**? : *string*
 
-**● baseurl**: *`string`*
+*Defined in [api.ts:1193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1193)*
+
+**`type`** {string}
+
+**`memberof`** YumRepo
+
+___
+
+### `Optional` enabled
+
+• **enabled**? : *boolean*
 
 *Defined in [api.ts:1187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1187)*
 
-*__type__*: {string}
+**`type`** {boolean}
 
-*__memberof__*: YumRepo
+**`memberof`** YumRepo
 
 ___
-<a id="enabled"></a>
 
-### `<Optional>` enabled
+### `Optional` gpgcheck
 
-**● enabled**: *`boolean`*
+• **gpgcheck**? : *boolean*
 
 *Defined in [api.ts:1181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1181)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: YumRepo
-
-___
-<a id="gpgcheck"></a>
-
-### `<Optional>` gpgcheck
-
-**● gpgcheck**: *`boolean`*
-
-*Defined in [api.ts:1175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1175)*
-
-*__type__*: {boolean}
-
-*__memberof__*: YumRepo
+**`memberof`** YumRepo
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
-
-*Defined in [api.ts:1163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1163)*
-
-*__type__*: {string}
-
-*__memberof__*: YumRepo
-
-___
-<a id="name"></a>
-
-### `<Optional>` name
-
-**● name**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:1169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1169)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: YumRepo
+**`memberof`** YumRepo
 
 ___
 
+### `Optional` name
+
+• **name**? : *string*
+
+*Defined in [api.ts:1175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1175)*
+
+**`type`** {string}
+
+**`memberof`** YumRepo

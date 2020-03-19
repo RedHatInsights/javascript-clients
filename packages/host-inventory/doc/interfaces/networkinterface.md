@@ -1,132 +1,119 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [NetworkInterface](../interfaces/networkinterface.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [NetworkInterface](networkinterface.md)
 
 # Interface: NetworkInterface
 
 Representation of one network interface
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: NetworkInterface
+**`interface`** NetworkInterface
 
 ## Hierarchy
 
-**NetworkInterface**
+* **NetworkInterface**
 
 ## Index
 
 ### Properties
 
-* [ipv4Addresses](networkinterface.md#ipv4addresses)
-* [ipv6Addresses](networkinterface.md#ipv6addresses)
-* [macAddress](networkinterface.md#macaddress)
-* [mtu](networkinterface.md#mtu)
-* [name](networkinterface.md#name)
-* [state](networkinterface.md#state)
-* [type](networkinterface.md#type)
-
----
+* [ipv4Addresses](networkinterface.md#optional-ipv4addresses)
+* [ipv6Addresses](networkinterface.md#optional-ipv6addresses)
+* [macAddress](networkinterface.md#optional-macaddress)
+* [mtu](networkinterface.md#optional-mtu)
+* [name](networkinterface.md#optional-name)
+* [state](networkinterface.md#optional-state)
+* [type](networkinterface.md#optional-type)
 
 ## Properties
 
-<a id="ipv4addresses"></a>
+### `Optional` ipv4Addresses
 
-### `<Optional>` ipv4Addresses
-
-**● ipv4Addresses**: *`Array`<`string`>*
+• **ipv4Addresses**? : *Array‹string›*
 
 *Defined in [api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L759)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: NetworkInterface
+**`memberof`** NetworkInterface
 
 ___
-<a id="ipv6addresses"></a>
 
-### `<Optional>` ipv6Addresses
+### `Optional` ipv6Addresses
 
-**● ipv6Addresses**: *`Array`<`string`>*
+• **ipv6Addresses**? : *Array‹string›*
 
 *Defined in [api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L765)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: NetworkInterface
+**`memberof`** NetworkInterface
 
 ___
-<a id="macaddress"></a>
 
-### `<Optional>` macAddress
+### `Optional` macAddress
 
-**● macAddress**: *`string`*
+• **macAddress**? : *string*
 
 *Defined in [api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L777)*
 
 MAC address (with or without colons)
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: NetworkInterface
+**`memberof`** NetworkInterface
 
 ___
-<a id="mtu"></a>
 
-### `<Optional>` mtu
+### `Optional` mtu
 
-**● mtu**: *`number`*
+• **mtu**? : *number*
 
 *Defined in [api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L771)*
 
 MTU
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: NetworkInterface
+**`memberof`** NetworkInterface
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L783)*
 
 name of interface
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: NetworkInterface
+**`memberof`** NetworkInterface
 
 ___
-<a id="state"></a>
 
-### `<Optional>` state
+### `Optional` state
 
-**● state**: *`string`*
+• **state**? : *string*
 
 *Defined in [api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L789)*
 
 interface state (UP, DOWN, UNKNOWN)
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: NetworkInterface
+**`memberof`** NetworkInterface
 
 ___
-<a id="type"></a>
 
-### `<Optional>` type
+### `Optional` type
 
-**● type**: *`string`*
+• **type**? : *string*
 
 *Defined in [api.ts:795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L795)*
 
 interface type (ether, loopback)
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: NetworkInterface
-
-___
-
+**`memberof`** NetworkInterface

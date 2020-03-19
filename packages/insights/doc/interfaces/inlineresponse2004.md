@@ -1,64 +1,55 @@
-[@redhat-cloud-services/insights-client](../README.md) > [InlineResponse2004](../interfaces/inlineresponse2004.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [InlineResponse2004](inlineresponse2004.md)
 
 # Interface: InlineResponse2004
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: InlineResponse2004
+**`interface`** InlineResponse2004
 
 ## Hierarchy
 
-**InlineResponse2004**
+* **InlineResponse2004**
 
 ## Index
 
 ### Properties
 
 * [data](inlineresponse2004.md#data)
-* [links](inlineresponse2004.md#links)
-* [meta](inlineresponse2004.md#meta)
-
----
+* [links](inlineresponse2004.md#optional-links)
+* [meta](inlineresponse2004.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<[RuleForAccount](ruleforaccount.md)>*
+• **data**: *Array‹[RuleForAccount](ruleforaccount.md)›*
 
 *Defined in [api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L397)*
 
-*__type__*: {Array}
+**`type`** {Array<RuleForAccount>}
 
-*__memberof__*: InlineResponse2004
+**`memberof`** InlineResponse2004
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[InlineResponse200Links](inlineresponse200links.md)*
+• **links**? : *[InlineResponse200Links](inlineresponse200links.md)*
 
 *Defined in [api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L391)*
 
-*__type__*: {InlineResponse200Links}
+**`type`** {InlineResponse200Links}
 
-*__memberof__*: InlineResponse2004
+**`memberof`** InlineResponse2004
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[InlineResponse200Meta](inlineresponse200meta.md)*
+• **meta**? : *[InlineResponse200Meta](inlineresponse200meta.md)*
 
 *Defined in [api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L385)*
 
-*__type__*: {InlineResponse200Meta}
+**`type`** {InlineResponse200Meta}
 
-*__memberof__*: InlineResponse2004
-
-___
-
+**`memberof`** InlineResponse2004

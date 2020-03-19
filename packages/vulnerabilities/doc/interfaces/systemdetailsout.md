@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [SystemDetailsOut](../interfaces/systemdetailsout.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [SystemDetailsOut](systemdetailsout.md)
 
 # Interface: SystemDetailsOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SystemDetailsOut
+**`interface`** SystemDetailsOut
 
 ## Hierarchy
 
-**SystemDetailsOut**
+* **SystemDetailsOut**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [data](systemdetailsout.md#data)
 
----
-
 ## Properties
-
-<a id="data"></a>
 
 ###  data
 
-**● data**: *[SystemDetailsOutData](systemdetailsoutdata.md)*
+• **data**: *[SystemDetailsOutData](systemdetailsoutdata.md)*
 
-*Defined in [api.ts:1283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1283)*
+*Defined in [api.ts:1343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1343)*
 
-*__type__*: {SystemDetailsOutData}
+**`type`** {SystemDetailsOutData}
 
-*__memberof__*: SystemDetailsOut
-
-___
-
+**`memberof`** SystemDetailsOut

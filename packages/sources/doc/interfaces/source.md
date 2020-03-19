@@ -1,180 +1,163 @@
-[@redhat-cloud-services/sources-client](../README.md) > [Source](../interfaces/source.md)
+[@redhat-cloud-services/sources-client](../README.md) › [Globals](../globals.md) › [Source](source.md)
 
 # Interface: Source
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Source
+**`interface`** Source
 
 ## Hierarchy
 
-**Source**
+* **Source**
 
 ## Index
 
 ### Properties
 
-* [availabilityStatus](source.md#availabilitystatus)
-* [createdAt](source.md#createdat)
-* [id](source.md#id)
-* [imported](source.md#imported)
-* [name](source.md#name)
-* [sourceRef](source.md#sourceref)
-* [sourceTypeId](source.md#sourcetypeid)
-* [tenant](source.md#tenant)
-* [uid](source.md#uid)
-* [updatedAt](source.md#updatedat)
-* [version](source.md#version)
-
----
+* [availabilityStatus](source.md#optional-availabilitystatus)
+* [createdAt](source.md#optional-createdat)
+* [id](source.md#optional-id)
+* [imported](source.md#optional-imported)
+* [name](source.md#optional-name)
+* [sourceRef](source.md#optional-sourceref)
+* [sourceTypeId](source.md#optional-sourcetypeid)
+* [tenant](source.md#optional-tenant)
+* [uid](source.md#optional-uid)
+* [updatedAt](source.md#optional-updatedat)
+* [version](source.md#optional-version)
 
 ## Properties
 
-<a id="availabilitystatus"></a>
+### `Optional` availabilityStatus
 
-### `<Optional>` availabilityStatus
-
-**● availabilityStatus**: *`string`*
+• **availabilityStatus**? : *string*
 
 *Defined in [api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L655)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Source
+**`memberof`** Source
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L661)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Source
+**`memberof`** Source
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L667)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Source
+**`memberof`** Source
 
 ___
-<a id="imported"></a>
 
-### `<Optional>` imported
+### `Optional` imported
 
-**● imported**: *`string`*
+• **imported**? : *string*
 
 *Defined in [api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L673)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Source
+**`memberof`** Source
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L679)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Source
+**`memberof`** Source
 
 ___
-<a id="sourceref"></a>
 
-### `<Optional>` sourceRef
+### `Optional` sourceRef
 
-**● sourceRef**: *`string`*
+• **sourceRef**? : *string*
 
 *Defined in [api.ts:685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L685)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Source
+**`memberof`** Source
 
 ___
-<a id="sourcetypeid"></a>
 
-### `<Optional>` sourceTypeId
+### `Optional` sourceTypeId
 
-**● sourceTypeId**: *`string`*
+• **sourceTypeId**? : *string*
 
 *Defined in [api.ts:691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L691)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Source
+**`memberof`** Source
 
 ___
-<a id="tenant"></a>
 
-### `<Optional>` tenant
+### `Optional` tenant
 
-**● tenant**: *`string`*
+• **tenant**? : *string*
 
 *Defined in [api.ts:697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L697)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Source
+**`memberof`** Source
 
 ___
-<a id="uid"></a>
 
-### `<Optional>` uid
+### `Optional` uid
 
-**● uid**: *`string`*
+• **uid**? : *string*
 
 *Defined in [api.ts:703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L703)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Source
+**`memberof`** Source
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L709)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Source
+**`memberof`** Source
 
 ___
-<a id="version"></a>
 
-### `<Optional>` version
+### `Optional` version
 
-**● version**: *`string`*
+• **version**? : *string*
 
 *Defined in [api.ts:715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L715)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Source
-
-___
-
+**`memberof`** Source

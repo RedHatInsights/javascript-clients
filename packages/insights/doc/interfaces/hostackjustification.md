@@ -1,50 +1,42 @@
-[@redhat-cloud-services/insights-client](../README.md) > [HostAckJustification](../interfaces/hostackjustification.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [HostAckJustification](hostackjustification.md)
 
 # Interface: HostAckJustification
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: HostAckJustification
+**`interface`** HostAckJustification
 
 ## Hierarchy
 
-**HostAckJustification**
+* **HostAckJustification**
 
 ## Index
 
 ### Properties
 
-* [id](hostackjustification.md#id)
-* [justification](hostackjustification.md#justification)
-
----
+* [id](hostackjustification.md#optional-id)
+* [justification](hostackjustification.md#optional-justification)
 
 ## Properties
 
-<a id="id"></a>
+### `Optional` id
 
-### `<Optional>` id
-
-**● id**: *`number`*
+• **id**? : *number*
 
 *Defined in [api.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L225)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: HostAckJustification
+**`memberof`** HostAckJustification
 
 ___
-<a id="justification"></a>
 
-### `<Optional>` justification
+### `Optional` justification
 
-**● justification**: *`string`*
+• **justification**? : *string*
 
 *Defined in [api.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L231)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: HostAckJustification
-
-___
-
+**`memberof`** HostAckJustification

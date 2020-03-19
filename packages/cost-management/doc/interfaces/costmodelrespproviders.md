@@ -1,50 +1,42 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [CostModelRespProviders](../interfaces/costmodelrespproviders.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [CostModelRespProviders](costmodelrespproviders.md)
 
 # Interface: CostModelRespProviders
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CostModelRespProviders
+**`interface`** CostModelRespProviders
 
 ## Hierarchy
 
-**CostModelRespProviders**
+* **CostModelRespProviders**
 
 ## Index
 
 ### Properties
 
-* [name](costmodelrespproviders.md#name)
-* [uuid](costmodelrespproviders.md#uuid)
-
----
+* [name](costmodelrespproviders.md#optional-name)
+* [uuid](costmodelrespproviders.md#optional-uuid)
 
 ## Properties
 
-<a id="name"></a>
+### `Optional` name
 
-### `<Optional>` name
+• **name**? : *string*
 
-**● name**: *`string`*
+*Defined in [api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L259)*
 
-*Defined in [api.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L317)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: CostModelRespProviders
-
-___
-<a id="uuid"></a>
-
-### `<Optional>` uuid
-
-**● uuid**: *`string`*
-
-*Defined in [api.ts:311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L311)*
-
-*__type__*: {string}
-
-*__memberof__*: CostModelRespProviders
+**`memberof`** CostModelRespProviders
 
 ___
 
+### `Optional` uuid
+
+• **uuid**? : *string*
+
+*Defined in [api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L253)*
+
+**`type`** {string}
+
+**`memberof`** CostModelRespProviders

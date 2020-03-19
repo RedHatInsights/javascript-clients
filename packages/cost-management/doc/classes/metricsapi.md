@@ -1,20 +1,20 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [MetricsApi](../classes/metricsapi.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [MetricsApi](metricsapi.md)
 
 # Class: MetricsApi
 
 MetricsApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: MetricsApi
+**`class`** MetricsApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ MetricsApi**
+  ↳ **MetricsApi**
 
 ## Index
 
@@ -24,23 +24,19 @@ MetricsApi - object-oriented interface
 
 ### Properties
 
-* [axios](metricsapi.md#axios)
-* [basePath](metricsapi.md#basepath)
-* [configuration](metricsapi.md#configuration)
+* [axios](metricsapi.md#protected-axios)
+* [basePath](metricsapi.md#protected-basepath)
+* [configuration](metricsapi.md#protected-configuration)
 
 ### Methods
 
 * [getMetrics](metricsapi.md#getmetrics)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new MetricsApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [MetricsApi](metricsapi.md)
+\+ **new MetricsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[MetricsApi](metricsapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,75 +44,62 @@ MetricsApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [MetricsApi](metricsapi.md)
-
-___
+**Returns:** *[MetricsApi](metricsapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="getmetrics"></a>
 
 ###  getMetrics
 
-▸ **getMetrics**(options?: *`any`*): `AxiosPromise`<[Metrics](../interfaces/metrics.md)>
+▸ **getMetrics**(`options?`: any): *AxiosPromise‹[Metrics](../interfaces/metrics.md)›*
 
-*Defined in [api.ts:4808](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4808)*
+*Defined in [api.ts:4182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4182)*
 
-*__summary__*: Obtain Metrics
+**`summary`** Obtain Metrics
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: MetricsApi
+**`memberof`** MetricsApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[Metrics](../interfaces/metrics.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[Metrics](../interfaces/metrics.md)›*

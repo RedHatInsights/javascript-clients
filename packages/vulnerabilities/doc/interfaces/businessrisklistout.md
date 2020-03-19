@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [BusinessRiskListOut](../interfaces/businessrisklistout.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [BusinessRiskListOut](businessrisklistout.md)
 
 # Interface: BusinessRiskListOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: BusinessRiskListOut
+**`interface`** BusinessRiskListOut
 
 ## Hierarchy
 
-**BusinessRiskListOut**
+* **BusinessRiskListOut**
 
 ## Index
 
@@ -17,36 +17,28 @@
 * [data](businessrisklistout.md#data)
 * [meta](businessrisklistout.md#meta)
 
----
-
 ## Properties
-
-<a id="data"></a>
 
 ###  data
 
-**● data**: *`Array`<[BusinessRiskListOutData](businessrisklistoutdata.md)>*
+• **data**: *Array‹[BusinessRiskListOutData](businessrisklistoutdata.md)›*
 
 *Defined in [api.ts:123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L123)*
 
-List of available business risk/business\_risk\_id pairs.
+List of available business risk/business_risk_id pairs.
 
-*__type__*: {Array}
+**`type`** {Array<BusinessRiskListOutData>}
 
-*__memberof__*: BusinessRiskListOut
+**`memberof`** BusinessRiskListOut
 
 ___
-<a id="meta"></a>
 
 ###  meta
 
-**● meta**: *[BusinessRiskListOutMeta](businessrisklistoutmeta.md)*
+• **meta**: *[BusinessRiskListOutMeta](businessrisklistoutmeta.md)*
 
 *Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L129)*
 
-*__type__*: {BusinessRiskListOutMeta}
+**`type`** {BusinessRiskListOutMeta}
 
-*__memberof__*: BusinessRiskListOut
-
-___
-
+**`memberof`** BusinessRiskListOut

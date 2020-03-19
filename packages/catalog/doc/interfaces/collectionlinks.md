@@ -1,86 +1,76 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [CollectionLinks](../interfaces/collectionlinks.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [CollectionLinks](collectionlinks.md)
 
 # Interface: CollectionLinks
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CollectionLinks
+**`interface`** CollectionLinks
 
 ## Hierarchy
 
-**CollectionLinks**
+* **CollectionLinks**
 
 ## Index
 
 ### Properties
 
-* [first](collectionlinks.md#first)
-* [last](collectionlinks.md#last)
-* [next](collectionlinks.md#next)
-* [prev](collectionlinks.md#prev)
-
----
+* [first](collectionlinks.md#optional-first)
+* [last](collectionlinks.md#optional-last)
+* [next](collectionlinks.md#optional-next)
+* [prev](collectionlinks.md#optional-prev)
 
 ## Properties
 
-<a id="first"></a>
+### `Optional` first
 
-### `<Optional>` first
-
-**● first**: *`string`*
+• **first**? : *string*
 
 *Defined in [api.ts:170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L170)*
 
 The link to fetch the first group of items in the result set
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CollectionLinks
+**`memberof`** CollectionLinks
 
 ___
-<a id="last"></a>
 
-### `<Optional>` last
+### `Optional` last
 
-**● last**: *`string`*
+• **last**? : *string*
 
 *Defined in [api.ts:176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L176)*
 
 The link to fetch the last group of items in the result set
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CollectionLinks
+**`memberof`** CollectionLinks
 
 ___
-<a id="next"></a>
 
-### `<Optional>` next
+### `Optional` next
 
-**● next**: *`string`*
+• **next**? : *string*
 
 *Defined in [api.ts:188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L188)*
 
 The link to fetch the next group of items in the result set
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CollectionLinks
+**`memberof`** CollectionLinks
 
 ___
-<a id="prev"></a>
 
-### `<Optional>` prev
+### `Optional` prev
 
-**● prev**: *`string`*
+• **prev**? : *string*
 
 *Defined in [api.ts:182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L182)*
 
 The link to fetch the previous group of items in the result set
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CollectionLinks
-
-___
-
+**`memberof`** CollectionLinks

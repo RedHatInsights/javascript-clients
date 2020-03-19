@@ -1,20 +1,20 @@
-[@redhat-cloud-services/insights-client](../README.md) > [ExportApi](../classes/exportapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [ExportApi](exportapi.md)
 
 # Class: ExportApi
 
 ExportApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: ExportApi
+**`class`** ExportApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ ExportApi**
+  ↳ **ExportApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ ExportApi - object-oriented interface
 
 ### Properties
 
-* [axios](exportapi.md#axios)
-* [basePath](exportapi.md#basepath)
-* [configuration](exportapi.md#configuration)
+* [axios](exportapi.md#protected-axios)
+* [basePath](exportapi.md#protected-basepath)
+* [configuration](exportapi.md#protected-configuration)
 
 ### Methods
 
@@ -34,15 +34,11 @@ ExportApi - object-oriented interface
 * [exportListCsv](exportapi.md#exportlistcsv)
 * [exportListJson](exportapi.md#exportlistjson)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new ExportApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [ExportApi](exportapi.md)
+\+ **new ExportApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[ExportApi](exportapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -50,142 +46,133 @@ ExportApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [ExportApi](exportapi.md)
-
-___
+**Returns:** *[ExportApi](exportapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="exporthitslist"></a>
 
 ###  exportHitsList
 
-▸ **exportHitsList**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
+▸ **exportHitsList**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)[]›*
 
-*Defined in [api.ts:2172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2172)*
+*Defined in [api.ts:2232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2232)*
 
-Get each host and all rules currently affecting it. This will eventually require a request to the Inventory service to list the host name and Insights UUID (as opposed to the Inventory UUID which we store). We also only present active, non-acked (on an account AND host level) rules.
+We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
 
-*__throws__*: {RequiredError}
+**`summary`** Get each host and all rules currently affecting it.
 
-*__memberof__*: ExportApi
+**`throws`** {RequiredError}
+
+**`memberof`** ExportApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` category | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` impact | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` likelihood | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` resRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` text | `string` |
-| `Optional` totalRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` tags | `Array`<`string`> |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`category?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`impact?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`likelihood?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`resRisk?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`text?` | string |
+`totalRisk?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`tags?` | Array‹string› |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
+**Returns:** *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)[]›*
 
 ___
-<a id="exportlistcsv"></a>
 
 ###  exportListCsv
 
-▸ **exportListCsv**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **exportListCsv**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:2189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2189)*
+*Defined in [api.ts:2250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2250)*
 
-Export the hosts and rules listing as CSV or JSON
+The accepted content type is not required.
 
-*__throws__*: {RequiredError}
+**`summary`** Supply the hits list in CSV format.
 
-*__memberof__*: ExportApi
+**`throws`** {RequiredError}
+
+**`memberof`** ExportApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` category | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` impact | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` likelihood | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` resRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` text | `string` |
-| `Optional` totalRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` tags | `Array`<`string`> |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`category?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`impact?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`likelihood?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`resRisk?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`text?` | string |
+`totalRisk?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`tags?` | Array‹string› |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="exportlistjson"></a>
 
 ###  exportListJson
 
-▸ **exportListJson**(category?: *`Array`<`1` \| `2` \| `3` \| `4`>*, impact?: *`Array`<`1` \| `2` \| `3` \| `4`>*, likelihood?: *`Array`<`1` \| `2` \| `3` \| `4`>*, resRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, text?: *`string`*, totalRisk?: *`Array`<`1` \| `2` \| `3` \| `4`>*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
+▸ **exportListJson**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)[]›*
 
-*Defined in [api.ts:2206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2206)*
+*Defined in [api.ts:2268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2268)*
 
-Export the hosts and rules listing as CSV or JSON
+The accepted content type is not required.
 
-*__throws__*: {RequiredError}
+**`summary`** Supply the hits list in JSON format.
 
-*__memberof__*: ExportApi
+**`throws`** {RequiredError}
+
+**`memberof`** ExportApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` category | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` impact | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` likelihood | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` resRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` text | `string` |
-| `Optional` totalRisk | `Array`<`1` \| `2` \| `3` \| `4`> |
-| `Optional` tags | `Array`<`string`> |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`category?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`impact?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`likelihood?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`resRisk?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`text?` | string |
+`totalRisk?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
+`tags?` | Array‹string› |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)[]>
-
-___
-
+**Returns:** *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)[]›*

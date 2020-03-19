@@ -1,66 +1,57 @@
-[@redhat-cloud-services/approval-client](../README.md) > [Template](../interfaces/template.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [Template](template.md)
 
 # Interface: Template
 
 The template to categorize workflows.
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Template
+**`interface`** Template
 
 ## Hierarchy
 
-**Template**
+* **Template**
 
 ## Index
 
 ### Properties
 
-* [description](template.md#description)
-* [id](template.md#id)
-* [title](template.md#title)
-
----
+* [description](template.md#optional-description)
+* [id](template.md#optional-id)
+* [title](template.md#optional-title)
 
 ## Properties
 
-<a id="description"></a>
+### `Optional` description
 
-### `<Optional>` description
+• **description**? : *string*
 
-**● description**: *`string`*
+*Defined in [api.ts:546](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L546)*
 
-*Defined in [api.ts:549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L549)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: Template
-
-___
-<a id="id"></a>
-
-### `<Optional>` id
-
-**● id**: *`string`*
-
-*Defined in [api.ts:537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L537)*
-
-*__type__*: {string}
-
-*__memberof__*: Template
-
-___
-<a id="title"></a>
-
-### `<Optional>` title
-
-**● title**: *`string`*
-
-*Defined in [api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L543)*
-
-*__type__*: {string}
-
-*__memberof__*: Template
+**`memberof`** Template
 
 ___
 
+### `Optional` id
+
+• **id**? : *string*
+
+*Defined in [api.ts:534](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L534)*
+
+**`type`** {string}
+
+**`memberof`** Template
+
+___
+
+### `Optional` title
+
+• **title**? : *string*
+
+*Defined in [api.ts:540](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L540)*
+
+**`type`** {string}
+
+**`memberof`** Template

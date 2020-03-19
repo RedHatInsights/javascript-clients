@@ -1,68 +1,59 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [CveRiskIn](../interfaces/cveriskin.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [CveRiskIn](cveriskin.md)
 
 # Interface: CveRiskIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CveRiskIn
+**`interface`** CveRiskIn
 
 ## Hierarchy
 
-**CveRiskIn**
+* **CveRiskIn**
 
 ## Index
 
 ### Properties
 
-* [businessRiskId](cveriskin.md#businessriskid)
-* [businessRiskText](cveriskin.md#businessrisktext)
+* [businessRiskId](cveriskin.md#optional-businessriskid)
+* [businessRiskText](cveriskin.md#optional-businessrisktext)
 * [cve](cveriskin.md#cve)
-
----
 
 ## Properties
 
-<a id="businessriskid"></a>
+### `Optional` businessRiskId
 
-### `<Optional>` businessRiskId
-
-**● businessRiskId**: *`number`*
-
-*Defined in [git-api/api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L353)*
-
-Business risk ID to be set, obtained by GET method.
-
-*__type__*: {number}
-
-*__memberof__*: CveRiskIn
-
-___
-<a id="businessrisktext"></a>
-
-### `<Optional>` businessRiskText
-
-**● businessRiskText**: *`string` \| `null`*
+• **businessRiskId**? : *number*
 
 *Defined in [git-api/api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L359)*
 
-Complementary text to the business risk.
+Business risk ID to be set, obtained by GET method.
 
-*__type__*: {string}
+**`type`** {number}
 
-*__memberof__*: CveRiskIn
+**`memberof`** CveRiskIn
 
 ___
-<a id="cve"></a>
+
+### `Optional` businessRiskText
+
+• **businessRiskText**? : *string | null*
+
+*Defined in [git-api/api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L365)*
+
+Complementary text to the business risk.
+
+**`type`** {string}
+
+**`memberof`** CveRiskIn
+
+___
 
 ###  cve
 
-**● cve**: *[CveOrList](cveorlist.md)*
+• **cve**: *[CveOrList](cveorlist.md)*
 
-*Defined in [git-api/api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L347)*
+*Defined in [git-api/api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L353)*
 
-*__type__*: {CveOrList}
+**`type`** {CveOrList}
 
-*__memberof__*: CveRiskIn
-
-___
-
+**`memberof`** CveRiskIn

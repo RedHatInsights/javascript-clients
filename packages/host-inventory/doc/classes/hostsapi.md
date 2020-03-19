@@ -1,20 +1,20 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [HostsApi](../classes/hostsapi.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [HostsApi](hostsapi.md)
 
 # Class: HostsApi
 
 HostsApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: HostsApi
+**`class`** HostsApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ HostsApi**
+  ↳ **HostsApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ HostsApi - object-oriented interface
 
 ### Properties
 
-* [axios](hostsapi.md#axios)
-* [basePath](hostsapi.md#basepath)
-* [configuration](hostsapi.md#configuration)
+* [axios](hostsapi.md#protected-axios)
+* [basePath](hostsapi.md#protected-basepath)
+* [configuration](hostsapi.md#protected-configuration)
 
 ### Methods
 
@@ -41,15 +41,11 @@ HostsApi - object-oriented interface
 * [apiHostPatchById](hostsapi.md#apihostpatchbyid)
 * [apiHostReplaceFacts](hostsapi.md#apihostreplacefacts)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new HostsApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [HostsApi](hostsapi.md)
+\+ **new HostsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[HostsApi](hostsapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -57,350 +53,329 @@ HostsApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [HostsApi](hostsapi.md)
-
-___
+**Returns:** *[HostsApi](hostsapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="apihostaddhostlist"></a>
 
 ###  apiHostAddHostList
 
-▸ **apiHostAddHostList**(createHostIn: *`Array`<[CreateHostIn](../interfaces/createhostin.md)>*, options?: *`any`*): `AxiosPromise`<[BulkHostOut](../interfaces/bulkhostout.md)>
-
-*Defined in [api.ts:2171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2171)*
-
-Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account.
-
-*__summary__*: Create/update multiple host and add them to the host list
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: HostsApi
-
-**Parameters:**
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| createHostIn | `Array`<[CreateHostIn](../interfaces/createhostin.md)> |  A list of host objects to be added to the host list |
-| `Optional` options | `any` |
-
-**Returns:** `AxiosPromise`<[BulkHostOut](../interfaces/bulkhostout.md)>
-
-___
-<a id="apihostdeletebyid"></a>
-
-###  apiHostDeleteById
-
-▸ **apiHostDeleteById**(hostIdList: *`Array`<`string`>*, branchId?: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **apiHostAddHostList**(`createHostIn`: Array‹[CreateHostIn](../interfaces/createhostin.md)›, `options?`: any): *AxiosPromise‹[BulkHostOut](../interfaces/bulkhostout.md)›*
 
 *Defined in [api.ts:2184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2184)*
 
-Delete hosts by IDs
+Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account.
 
-*__summary__*: Delete hosts by IDs
+**`summary`** Create/update multiple host and add them to the host list
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: HostsApi
+**`memberof`** HostsApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| hostIdList | `Array`<`string`> |  A comma separated list of host IDs. |
-| `Optional` branchId | `string` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`createHostIn` | Array‹[CreateHostIn](../interfaces/createhostin.md)› | A list of host objects to be added to the host list |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹[BulkHostOut](../interfaces/bulkhostout.md)›*
 
 ___
-<a id="apihostgethostbyid"></a>
+
+###  apiHostDeleteById
+
+▸ **apiHostDeleteById**(`hostIdList`: Array‹string›, `branchId?`: string, `options?`: any): *AxiosPromise‹Response›*
+
+*Defined in [api.ts:2197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2197)*
+
+Delete hosts by IDs
+
+**`summary`** Delete hosts by IDs
+
+**`throws`** {RequiredError}
+
+**`memberof`** HostsApi
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`hostIdList` | Array‹string› | A comma separated list of host IDs. |
+`branchId?` | string | - |
+`options?` | any | - |
+
+**Returns:** *AxiosPromise‹Response›*
+
+___
 
 ###  apiHostGetHostById
 
-▸ **apiHostGetHostById**(hostIdList: *`Array`<`string`>*, branchId?: *`string`*, perPage?: *`number`*, page?: *`number`*, orderBy?: *"display_name" \| "updated"*, orderHow?: *"ASC" \| "DESC"*, options?: *`any`*): `AxiosPromise`<[HostQueryOutput](../interfaces/hostqueryoutput.md)>
+▸ **apiHostGetHostById**(`hostIdList`: Array‹string›, `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `options?`: any): *AxiosPromise‹[HostQueryOutput](../interfaces/hostqueryoutput.md)›*
 
-*Defined in [api.ts:2201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2201)*
+*Defined in [api.ts:2214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2214)*
 
 Find one or more hosts by their ID.
 
-*__summary__*: Find hosts by their IDs
+**`summary`** Find hosts by their IDs
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: HostsApi
+**`memberof`** HostsApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| hostIdList | `Array`<`string`> |  A comma separated list of host IDs. |
-| `Optional` branchId | `string` |
-| `Optional` perPage | `number` |
-| `Optional` page | `number` |
-| `Optional` orderBy | "display_name" \| "updated" |
-| `Optional` orderHow | "ASC" \| "DESC" |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`hostIdList` | Array‹string› | A comma separated list of host IDs. |
+`branchId?` | string | - |
+`perPage?` | number | - |
+`page?` | number | - |
+`orderBy?` | "display_name" &#124; "updated" | - |
+`orderHow?` | "ASC" &#124; "DESC" | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[HostQueryOutput](../interfaces/hostqueryoutput.md)>
+**Returns:** *AxiosPromise‹[HostQueryOutput](../interfaces/hostqueryoutput.md)›*
 
 ___
-<a id="apihostgethostlist"></a>
 
 ###  apiHostGetHostList
 
-▸ **apiHostGetHostList**(displayName?: *`string`*, fqdn?: *`string`*, hostnameOrId?: *`string`*, insightsId?: *`string`*, branchId?: *`string`*, perPage?: *`number`*, page?: *`number`*, orderBy?: *"display_name" \| "updated"*, orderHow?: *"ASC" \| "DESC"*, staleness?: *`Array`<"fresh" \| "stale" \| "stale_warning" \| "unknown">*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[HostQueryOutput](../interfaces/hostqueryoutput.md)>
+▸ **apiHostGetHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `registeredWith?`: "insights", `options?`: any): *AxiosPromise‹[HostQueryOutput](../interfaces/hostqueryoutput.md)›*
 
-*Defined in [api.ts:2223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2223)*
+*Defined in [api.ts:2237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2237)*
 
 Read the entire list of all hosts available to the account.
 
-*__summary__*: Read the entire list of hosts
+**`summary`** Read the entire list of hosts
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: HostsApi
+**`memberof`** HostsApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` displayName | `string` |
-| `Optional` fqdn | `string` |
-| `Optional` hostnameOrId | `string` |
-| `Optional` insightsId | `string` |
-| `Optional` branchId | `string` |
-| `Optional` perPage | `number` |
-| `Optional` page | `number` |
-| `Optional` orderBy | "display_name" \| "updated" |
-| `Optional` orderHow | "ASC" \| "DESC" |
-| `Optional` staleness | `Array`<"fresh" \| "stale" \| "stale_warning" \| "unknown"> |
-| `Optional` tags | `Array`<`string`> |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`displayName?` | string |
+`fqdn?` | string |
+`hostnameOrId?` | string |
+`insightsId?` | string |
+`branchId?` | string |
+`perPage?` | number |
+`page?` | number |
+`orderBy?` | "display_name" &#124; "updated" |
+`orderHow?` | "ASC" &#124; "DESC" |
+`staleness?` | Array‹"fresh" &#124; "stale" &#124; "stale_warning" &#124; "unknown"› |
+`tags?` | Array‹string› |
+`registeredWith?` | "insights" |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[HostQueryOutput](../interfaces/hostqueryoutput.md)>
+**Returns:** *AxiosPromise‹[HostQueryOutput](../interfaces/hostqueryoutput.md)›*
 
 ___
-<a id="apihostgethostsystemprofilebyid"></a>
 
 ###  apiHostGetHostSystemProfileById
 
-▸ **apiHostGetHostSystemProfileById**(hostIdList: *`Array`<`string`>*, perPage?: *`number`*, page?: *`number`*, orderBy?: *"display_name" \| "updated"*, orderHow?: *"ASC" \| "DESC"*, branchId?: *`string`*, options?: *`any`*): `AxiosPromise`<[SystemProfileByHostOut](../interfaces/systemprofilebyhostout.md)>
+▸ **apiHostGetHostSystemProfileById**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `branchId?`: string, `options?`: any): *AxiosPromise‹[SystemProfileByHostOut](../interfaces/systemprofilebyhostout.md)›*
 
-*Defined in [api.ts:2240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2240)*
+*Defined in [api.ts:2254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2254)*
 
 Find one or more hosts by their ID and return the id and system profile
 
-*__summary__*: Return one or more hosts system profile
+**`summary`** Return one or more hosts system profile
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: HostsApi
+**`memberof`** HostsApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| hostIdList | `Array`<`string`> |  A comma separated list of host IDs. |
-| `Optional` perPage | `number` |
-| `Optional` page | `number` |
-| `Optional` orderBy | "display_name" \| "updated" |
-| `Optional` orderHow | "ASC" \| "DESC" |
-| `Optional` branchId | `string` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`hostIdList` | Array‹string› | A comma separated list of host IDs. |
+`perPage?` | number | - |
+`page?` | number | - |
+`orderBy?` | "display_name" &#124; "updated" | - |
+`orderHow?` | "ASC" &#124; "DESC" | - |
+`branchId?` | string | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[SystemProfileByHostOut](../interfaces/systemprofilebyhostout.md)>
+**Returns:** *AxiosPromise‹[SystemProfileByHostOut](../interfaces/systemprofilebyhostout.md)›*
 
 ___
-<a id="apihostgethosttagcount"></a>
 
 ###  apiHostGetHostTagCount
 
-▸ **apiHostGetHostTagCount**(hostIdList: *`Array`<`string`>*, perPage?: *`number`*, page?: *`number`*, orderBy?: *"display_name" \| "updated"*, orderHow?: *"ASC" \| "DESC"*, options?: *`any`*): `AxiosPromise`<[TagCountOut](../interfaces/tagcountout.md)>
+▸ **apiHostGetHostTagCount**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `options?`: any): *AxiosPromise‹[TagCountOut](../interfaces/tagcountout.md)›*
 
-*Defined in [api.ts:2256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2256)*
+*Defined in [api.ts:2270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2270)*
 
 Get the number of tags on a host
 
-*__summary__*: Get the number of tags on a host
+**`summary`** Get the number of tags on a host
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: HostsApi
+**`memberof`** HostsApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| hostIdList | `Array`<`string`> |  A comma separated list of host IDs. |
-| `Optional` perPage | `number` |
-| `Optional` page | `number` |
-| `Optional` orderBy | "display_name" \| "updated" |
-| `Optional` orderHow | "ASC" \| "DESC" |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`hostIdList` | Array‹string› | A comma separated list of host IDs. |
+`perPage?` | number | - |
+`page?` | number | - |
+`orderBy?` | "display_name" &#124; "updated" | - |
+`orderHow?` | "ASC" &#124; "DESC" | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[TagCountOut](../interfaces/tagcountout.md)>
+**Returns:** *AxiosPromise‹[TagCountOut](../interfaces/tagcountout.md)›*
 
 ___
-<a id="apihostgethosttags"></a>
 
 ###  apiHostGetHostTags
 
-▸ **apiHostGetHostTags**(hostIdList: *`Array`<`string`>*, perPage?: *`number`*, page?: *`number`*, orderBy?: *"display_name" \| "updated"*, orderHow?: *"ASC" \| "DESC"*, search?: *`string`*, options?: *`any`*): `AxiosPromise`<[TagsOut](../interfaces/tagsout.md)>
+▸ **apiHostGetHostTags**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `search?`: string, `options?`: any): *AxiosPromise‹[TagsOut](../interfaces/tagsout.md)›*
 
-*Defined in [api.ts:2273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2273)*
+*Defined in [api.ts:2287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2287)*
 
 Get the tags on a host
 
-*__summary__*: Get the tags on a host
+**`summary`** Get the tags on a host
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: HostsApi
+**`memberof`** HostsApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| hostIdList | `Array`<`string`> |  A comma separated list of host IDs. |
-| `Optional` perPage | `number` |
-| `Optional` page | `number` |
-| `Optional` orderBy | "display_name" \| "updated" |
-| `Optional` orderHow | "ASC" \| "DESC" |
-| `Optional` search | `string` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`hostIdList` | Array‹string› | A comma separated list of host IDs. |
+`perPage?` | number | - |
+`page?` | number | - |
+`orderBy?` | "display_name" &#124; "updated" | - |
+`orderHow?` | "ASC" &#124; "DESC" | - |
+`search?` | string | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[TagsOut](../interfaces/tagsout.md)>
+**Returns:** *AxiosPromise‹[TagsOut](../interfaces/tagsout.md)›*
 
 ___
-<a id="apihostmergefacts"></a>
 
 ###  apiHostMergeFacts
 
-▸ **apiHostMergeFacts**(hostIdList: *`Array`<`string`>*, namespace: *`string`*, body: *`any`*, branchId?: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
-
-*Defined in [api.ts:2288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2288)*
-
-Merge one or multiple hosts facts under a namespace.
-
-*__summary__*: Merge facts under a namespace
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: HostsApi
-
-**Parameters:**
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| hostIdList | `Array`<`string`> |  A comma separated list of host IDs. |
-| namespace | `string` |  A namespace of the merged facts. |
-| body | `any` |  A dictionary with the new facts to merge with the original ones. |
-| `Optional` branchId | `string` |
-| `Optional` options | `any` |
-
-**Returns:** `AxiosPromise`<`Response`>
-
-___
-<a id="apihostpatchbyid"></a>
-
-###  apiHostPatchById
-
-▸ **apiHostPatchById**(hostIdList: *`Array`<`string`>*, patchHostIn: *[PatchHostIn](../interfaces/patchhostin.md)*, branchId?: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **apiHostMergeFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: any, `branchId?`: string, `options?`: any): *AxiosPromise‹Response›*
 
 *Defined in [api.ts:2302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2302)*
 
-Update a host
+Merge one or multiple hosts facts under a namespace.
 
-*__summary__*: Update a host
+**`summary`** Merge facts under a namespace
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: HostsApi
+**`memberof`** HostsApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| hostIdList | `Array`<`string`> |  A comma separated list of host IDs. |
-| patchHostIn | [PatchHostIn](../interfaces/patchhostin.md) |  A group of fields to be updated on the host |
-| `Optional` branchId | `string` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`hostIdList` | Array‹string› | A comma separated list of host IDs. |
+`namespace` | string | A namespace of the merged facts. |
+`body` | any | A dictionary with the new facts to merge with the original ones. |
+`branchId?` | string | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="apihostreplacefacts"></a>
+
+###  apiHostPatchById
+
+▸ **apiHostPatchById**(`hostIdList`: Array‹string›, `patchHostIn`: [PatchHostIn](../interfaces/patchhostin.md), `branchId?`: string, `options?`: any): *AxiosPromise‹Response›*
+
+*Defined in [api.ts:2316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2316)*
+
+Update a host
+
+**`summary`** Update a host
+
+**`throws`** {RequiredError}
+
+**`memberof`** HostsApi
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`hostIdList` | Array‹string› | A comma separated list of host IDs. |
+`patchHostIn` | [PatchHostIn](../interfaces/patchhostin.md) | A group of fields to be updated on the host |
+`branchId?` | string | - |
+`options?` | any | - |
+
+**Returns:** *AxiosPromise‹Response›*
+
+___
 
 ###  apiHostReplaceFacts
 
-▸ **apiHostReplaceFacts**(hostIdList: *`Array`<`string`>*, namespace: *`string`*, body: *`any`*, branchId?: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **apiHostReplaceFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: any, `branchId?`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:2317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2317)*
+*Defined in [api.ts:2331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2331)*
 
 Replace facts under a namespace
 
-*__summary__*: Replace facts under a namespace
+**`summary`** Replace facts under a namespace
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: HostsApi
+**`memberof`** HostsApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| hostIdList | `Array`<`string`> |  A comma separated list of host IDs. |
-| namespace | `string` |  A namespace of the merged facts. |
-| body | `any` |  A dictionary with the new facts to replace the original ones. |
-| `Optional` branchId | `string` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`hostIdList` | Array‹string› | A comma separated list of host IDs. |
+`namespace` | string | A namespace of the merged facts. |
+`body` | any | A dictionary with the new facts to replace the original ones. |
+`branchId?` | string | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
-
-___
-
+**Returns:** *AxiosPromise‹Response›*

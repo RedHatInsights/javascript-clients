@@ -1,50 +1,42 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [Source](../interfaces/source.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [Source](source.md)
 
 # Interface: Source
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Source
+**`interface`** Source
 
 ## Hierarchy
 
-**Source**
+* **Source**
 
 ## Index
 
 ### Properties
 
-* [sourceId](source.md#sourceid)
+* [id](source.md#id)
 * [sourceType](source.md#sourcetype)
-
----
 
 ## Properties
 
-<a id="sourceid"></a>
+###  id
 
-###  sourceId
+• **id**: *number*
 
-**● sourceId**: *`number`*
+*Defined in [api.ts:2589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2589)*
 
-*Defined in [api.ts:2764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2764)*
+**`type`** {number}
 
-*__type__*: {number}
-
-*__memberof__*: Source
+**`memberof`** Source
 
 ___
-<a id="sourcetype"></a>
 
 ###  sourceType
 
-**● sourceType**: *`string`*
+• **sourceType**: *string*
 
-*Defined in [api.ts:2770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2770)*
+*Defined in [api.ts:2595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2595)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Source
-
-___
-
+**`memberof`** Source

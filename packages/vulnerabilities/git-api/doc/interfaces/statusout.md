@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [StatusOut](../interfaces/statusout.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [StatusOut](statusout.md)
 
 # Interface: StatusOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: StatusOut
+**`interface`** StatusOut
 
 ## Hierarchy
 
-**StatusOut**
+* **StatusOut**
 
 ## Index
 
@@ -16,23 +16,16 @@
 
 * [updated](statusout.md#updated)
 
----
-
 ## Properties
-
-<a id="updated"></a>
 
 ###  updated
 
-**● updated**: *`Array`<[StatusOutUpdated](statusoutupdated.md)>*
+• **updated**: *Array‹[StatusOutUpdated](statusoutupdated.md)›*
 
-*Defined in [git-api/api.ts:1283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1283)*
+*Defined in [git-api/api.ts:1289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1289)*
 
 List of updated objects/updated object IDs.
 
-*__type__*: {Array}
+**`type`** {Array<StatusOutUpdated>}
 
-*__memberof__*: StatusOut
-
-___
-
+**`memberof`** StatusOut
