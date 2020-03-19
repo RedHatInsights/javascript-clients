@@ -20,6 +20,7 @@ Representation of the system profile fields
 * [biosReleaseDate](systemprofilein.md#biosreleasedate)
 * [biosVendor](systemprofilein.md#biosvendor)
 * [biosVersion](systemprofilein.md#biosversion)
+* [capturedDate](systemprofilein.md#captureddate)
 * [cloudProvider](systemprofilein.md#cloudprovider)
 * [coresPerSocket](systemprofilein.md#corespersocket)
 * [cpuFlags](systemprofilein.md#cpuflags)
@@ -104,6 +105,19 @@ ___
 *__memberof__*: SystemProfileIn
 
 ___
+<a id="captureddate"></a>
+
+### `<Optional>` capturedDate
+
+**● capturedDate**: *`string`*
+
+*Defined in [api.ts:1061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1061)*
+
+*__type__*: {string}
+
+*__memberof__*: SystemProfileIn
+
+___
 <a id="cloudprovider"></a>
 
 ### `<Optional>` cloudProvider
@@ -175,7 +189,7 @@ ___
 
 **● enabledServices**: *`Array`<`string`>*
 
-*Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1073)*
+*Defined in [api.ts:1079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1079)*
 
 *__type__*: {Array}
 
@@ -240,7 +254,7 @@ ___
 
 **● installedPackages**: *`Array`<`string`>*
 
-*Defined in [api.ts:1061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1061)*
+*Defined in [api.ts:1067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1067)*
 
 *__type__*: {Array}
 
@@ -266,7 +280,7 @@ ___
 
 **● installedServices**: *`Array`<`string`>*
 
-*Defined in [api.ts:1067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1067)*
+*Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1073)*
 
 *__type__*: {Array}
 

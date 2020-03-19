@@ -27,7 +27,7 @@
 
 **● issues**: *`Array`<[RemediationInputAddIssues](remediationinputaddissues.md)>*
 
-*Defined in [api.ts:387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L387)*
+*Defined in [api.ts:712](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L712)*
 
 *__type__*: {Array}
 
@@ -40,7 +40,7 @@ ___
 
 **● systems**: *`Array`<`string`>*
 
-*Defined in [api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L393)*
+*Defined in [api.ts:718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L718)*
 
 *__type__*: {Array}
 

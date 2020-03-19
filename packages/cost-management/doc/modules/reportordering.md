@@ -36,7 +36,7 @@
 
 **● accountAlias**: *[AccountAliasEnum](../enums/reportordering.accountaliasenum.md)*
 
-*Defined in [api.ts:2569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2569)*
+*Defined in [api.ts:2394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2394)*
 
 *__type__*: {string}
 
@@ -49,7 +49,7 @@ ___
 
 **● cost**: *[CostEnum](../enums/reportordering.costenum.md)*
 
-*Defined in [api.ts:2551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2551)*
+*Defined in [api.ts:2376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2376)*
 
 *__type__*: {string}
 
@@ -62,7 +62,7 @@ ___
 
 **● delta**: *[DeltaEnum](../enums/reportordering.deltaenum.md)*
 
-*Defined in [api.ts:2563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2563)*
+*Defined in [api.ts:2388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2388)*
 
 *__type__*: {string}
 
@@ -75,7 +75,7 @@ ___
 
 **● region**: *[RegionEnum](../enums/reportordering.regionenum.md)*
 
-*Defined in [api.ts:2575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2575)*
+*Defined in [api.ts:2400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2400)*
 
 *__type__*: {string}
 
@@ -88,7 +88,7 @@ ___
 
 **● service**: *[ServiceEnum](../enums/reportordering.serviceenum.md)*
 
-*Defined in [api.ts:2581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2581)*
+*Defined in [api.ts:2406](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2406)*
 
 *__type__*: {string}
 
@@ -101,7 +101,7 @@ ___
 
 **● usage**: *[UsageEnum](../enums/reportordering.usageenum.md)*
 
-*Defined in [api.ts:2557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2557)*
+*Defined in [api.ts:2382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2382)*
 
 *__type__*: {string}
 

@@ -1,12 +1,12 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [CostModelApi](../classes/costmodelapi.md)
+[@redhat-cloud-services/cost-management-client](../README.md) > [CostModelsApi](../classes/costmodelsapi.md)
 
-# Class: CostModelApi
+# Class: CostModelsApi
 
-CostModelApi - object-oriented interface
+CostModelsApi - object-oriented interface
 
 *__export__*: 
 
-*__class__*: CostModelApi
+*__class__*: CostModelsApi
 
 *__extends__*: {BaseAPI}
 
@@ -14,27 +14,27 @@ CostModelApi - object-oriented interface
 
  [BaseAPI](baseapi.md)
 
-**↳ CostModelApi**
+**↳ CostModelsApi**
 
 ## Index
 
 ### Constructors
 
-* [constructor](costmodelapi.md#constructor)
+* [constructor](costmodelsapi.md#constructor)
 
 ### Properties
 
-* [axios](costmodelapi.md#axios)
-* [basePath](costmodelapi.md#basepath)
-* [configuration](costmodelapi.md#configuration)
+* [axios](costmodelsapi.md#axios)
+* [basePath](costmodelsapi.md#basepath)
+* [configuration](costmodelsapi.md#configuration)
 
 ### Methods
 
-* [createCostModel](costmodelapi.md#createcostmodel)
-* [deleteCostModel](costmodelapi.md#deletecostmodel)
-* [getCostModel](costmodelapi.md#getcostmodel)
-* [listCostModels](costmodelapi.md#listcostmodels)
-* [updateCostModel](costmodelapi.md#updatecostmodel)
+* [createCostModel](costmodelsapi.md#createcostmodel)
+* [deleteCostModel](costmodelsapi.md#deletecostmodel)
+* [getCostModel](costmodelsapi.md#getcostmodel)
+* [listCostModels](costmodelsapi.md#listcostmodels)
+* [updateCostModel](costmodelsapi.md#updatecostmodel)
 
 ---
 
@@ -44,7 +44,7 @@ CostModelApi - object-oriented interface
 
 ###  constructor
 
-⊕ **new CostModelApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [CostModelApi](costmodelapi.md)
+⊕ **new CostModelsApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [CostModelsApi](costmodelsapi.md)
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -58,7 +58,7 @@ CostModelApi - object-oriented interface
 | `Default value` basePath | `string` |  BASE_PATH |
 | `Default value` axios | `AxiosInstance` |  globalAxios |
 
-**Returns:** [CostModelApi](costmodelapi.md)
+**Returns:** [CostModelsApi](costmodelsapi.md)
 
 ___
 
@@ -106,13 +106,13 @@ ___
 
 ▸ **createCostModel**(costModel: *[CostModel](../interfaces/costmodel.md)*, options?: *`any`*): `AxiosPromise`<[CostModelOut](../interfaces/costmodelout.md)>
 
-*Defined in [api.ts:4378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4378)*
+*Defined in [api.ts:4031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4031)*
 
 *__summary__*: Create a new cost model.
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: CostModelApi
+*__memberof__*: CostModelsApi
 
 **Parameters:**
 
@@ -130,13 +130,13 @@ ___
 
 ▸ **deleteCostModel**(costModelUuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:4390](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4390)*
+*Defined in [api.ts:4043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4043)*
 
 *__summary__*: Delete a Cost Model
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: CostModelApi
+*__memberof__*: CostModelsApi
 
 **Parameters:**
 
@@ -154,13 +154,13 @@ ___
 
 ▸ **getCostModel**(costModelUuid: *`string`*, options?: *`any`*): `AxiosPromise`<[CostModelOut](../interfaces/costmodelout.md)>
 
-*Defined in [api.ts:4402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4402)*
+*Defined in [api.ts:4055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4055)*
 
 *__summary__*: Get a Cost Model.
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: CostModelApi
+*__memberof__*: CostModelsApi
 
 **Parameters:**
 
@@ -178,13 +178,13 @@ ___
 
 ▸ **listCostModels**(offset?: *`number`*, limit?: *`number`*, providerUuid?: *`string`*, sourceType?: *`string`*, name?: *`string`*, description?: *`string`*, ordering?: *"name" \| "-name" \| "source_type" \| "-source_type" \| "updated_timestamp" \| "-updated_timestamp"*, options?: *`any`*): `AxiosPromise`<[CostModelPagination](../interfaces/costmodelpagination.md)>
 
-*Defined in [api.ts:4420](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4420)*
+*Defined in [api.ts:4073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4073)*
 
 *__summary__*: List the cost models
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: CostModelApi
+*__memberof__*: CostModelsApi
 
 **Parameters:**
 
@@ -208,13 +208,13 @@ ___
 
 ▸ **updateCostModel**(costModelUuid: *`string`*, costModel: *[CostModel](../interfaces/costmodel.md)*, options?: *`any`*): `AxiosPromise`<[CostModelOut](../interfaces/costmodelout.md)>
 
-*Defined in [api.ts:4433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4433)*
+*Defined in [api.ts:4086](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4086)*
 
 *__summary__*: Update a Cost Model
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: CostModelApi
+*__memberof__*: CostModelsApi
 
 **Parameters:**
 

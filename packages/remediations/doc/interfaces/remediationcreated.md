@@ -26,7 +26,7 @@
 
 **● id**: *`string`*
 
-*Defined in [api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L285)*
+*Defined in [api.ts:610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L610)*
 
 *__type__*: {string}
 

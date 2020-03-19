@@ -39,7 +39,7 @@
 
 **● cluster**: *`Array`<`string`>*
 
-*Defined in [api.ts:2042](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2042)*
+*Defined in [api.ts:1867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1867)*
 
 *__type__*: {Array}
 
@@ -52,7 +52,7 @@ ___
 
 **● instanceType**: *`Array`<`string`>*
 
-*Defined in [api.ts:2024](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2024)*
+*Defined in [api.ts:1849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1849)*
 
 *__type__*: {Array}
 
@@ -65,7 +65,7 @@ ___
 
 **● limit**: *`number`*
 
-*Defined in [api.ts:1970](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1970)*
+*Defined in [api.ts:1795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1795)*
 
 Limits the data points returns and aggregates remaining data.
 
@@ -80,7 +80,7 @@ ___
 
 **● node**: *`Array`<`string`>*
 
-*Defined in [api.ts:2048](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2048)*
+*Defined in [api.ts:1873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1873)*
 
 *__type__*: {Array}
 
@@ -93,7 +93,7 @@ ___
 
 **● offset**: *`number`*
 
-*Defined in [api.ts:1976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1976)*
+*Defined in [api.ts:1801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1801)*
 
 Offsets the data points returned when using limit.
 
@@ -108,7 +108,7 @@ ___
 
 **● project**: *`Array`<`string`>*
 
-*Defined in [api.ts:2036](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2036)*
+*Defined in [api.ts:1861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1861)*
 
 *__type__*: {Array}
 
@@ -121,7 +121,7 @@ ___
 
 **● resolution**: *[ReportResolution](../enums/reportresolution.md)*
 
-*Defined in [api.ts:1982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1982)*
+*Defined in [api.ts:1807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1807)*
 
 *__type__*: {ReportResolution}
 
@@ -134,7 +134,7 @@ ___
 
 **● resourceLocation**: *`Array`<`string`>*
 
-*Defined in [api.ts:2018](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2018)*
+*Defined in [api.ts:1843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1843)*
 
 *__type__*: {Array}
 
@@ -147,7 +147,7 @@ ___
 
 **● resourceScope**: *`Array`<[ReportResourceScope](../enums/reportresourcescope.md)>*
 
-*Defined in [api.ts:2000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2000)*
+*Defined in [api.ts:1825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1825)*
 
 *__type__*: {Array}
 
@@ -160,7 +160,7 @@ ___
 
 **● serviceName**: *`Array`<`string`>*
 
-*Defined in [api.ts:2012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2012)*
+*Defined in [api.ts:1837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1837)*
 
 *__type__*: {Array}
 
@@ -173,7 +173,7 @@ ___
 
 **● subscriptionGuid**: *`Array`<`string`>*
 
-*Defined in [api.ts:2006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2006)*
+*Defined in [api.ts:1831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1831)*
 
 *__type__*: {Array}
 
@@ -186,7 +186,7 @@ ___
 
 **● tag**: *`Array`<`string`>*
 
-*Defined in [api.ts:2030](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2030)*
+*Defined in [api.ts:1855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1855)*
 
 *__type__*: {Array}
 
@@ -199,7 +199,7 @@ ___
 
 **● timeScopeUnits**: *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
 
-*Defined in [api.ts:1994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1994)*
+*Defined in [api.ts:1819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1819)*
 
 *__type__*: {ReportTimeScopeUnits}
 
@@ -212,7 +212,7 @@ ___
 
 **● timeScopeValue**: *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
 
-*Defined in [api.ts:1988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1988)*
+*Defined in [api.ts:1813](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1813)*
 
 *__type__*: {ReportTimeScopeValue}
 

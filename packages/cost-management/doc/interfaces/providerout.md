@@ -36,7 +36,7 @@
 
 **● active**: *`boolean`*
 
-*Defined in [api.ts:864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L864)*
+*Defined in [api.ts:689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L689)*
 
 Flag to indicate when the provider is configured correctly
 
@@ -51,7 +51,7 @@ ___
 
 **● authentication**: *[ProviderAuthenticationOut](providerauthenticationout.md)*
 
-*Defined in [api.ts:828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L828)*
+*Defined in [api.ts:653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L653)*
 
 *__type__*: {ProviderAuthenticationOut}
 
@@ -64,7 +64,7 @@ ___
 
 **● billingSource**: *[ProviderBillingSourceOut](providerbillingsourceout.md)*
 
-*Defined in [api.ts:834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L834)*
+*Defined in [api.ts:659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L659)*
 
 *__type__*: {ProviderBillingSourceOut}
 
@@ -77,7 +77,7 @@ ___
 
 **● costModels**: *`Array`<`any`>*
 
-*Defined in [api.ts:870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L870)*
+*Defined in [api.ts:695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L695)*
 
 List of cost model name and UUIDs associated with this provider.
 
@@ -92,7 +92,7 @@ ___
 
 **● createdBy**: *[UserOut](userout.md)*
 
-*Defined in [api.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L846)*
+*Defined in [api.ts:671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L671)*
 
 *__type__*: {UserOut}
 
@@ -105,7 +105,7 @@ ___
 
 **● customer**: *[CustomerOut](customerout.md)*
 
-*Defined in [api.ts:840](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L840)*
+*Defined in [api.ts:665](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L665)*
 
 *__type__*: {CustomerOut}
 
@@ -118,7 +118,7 @@ ___
 
 **● infrastructure**: *`string`*
 
-*Defined in [api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L858)*
+*Defined in [api.ts:683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L683)*
 
 OpenShift foundational infrastructure type.
 
@@ -133,7 +133,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L810)*
+*Defined in [api.ts:635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L635)*
 
 *__type__*: {string}
 
@@ -146,7 +146,7 @@ ___
 
 **● stats**: *`any`*
 
-*Defined in [api.ts:852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L852)*
+*Defined in [api.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L677)*
 
 Dictionary key is the start of a billing month. Value is report processing statistics.
 
@@ -161,7 +161,7 @@ ___
 
 **● type**: *`string`*
 
-*Defined in [api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L816)*
+*Defined in [api.ts:641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L641)*
 
 *__type__*: {string}
 
@@ -174,7 +174,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L822)*
+*Defined in [api.ts:647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L647)*
 
 *__type__*: {string}
 

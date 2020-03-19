@@ -32,7 +32,7 @@
 
 **● cluster**: *[ClusterEnum](../enums/reportcostsopenshiftordering.clusterenum.md)*
 
-*Defined in [api.ts:1233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1233)*
+*Defined in [api.ts:1058](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1058)*
 
 *__type__*: {string}
 
@@ -45,7 +45,7 @@ ___
 
 **● cost**: *[CostEnum](../enums/reportcostsopenshiftordering.costenum.md)*
 
-*Defined in [api.ts:1251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1251)*
+*Defined in [api.ts:1076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1076)*
 
 *__type__*: {string}
 
@@ -58,7 +58,7 @@ ___
 
 **● node**: *[NodeEnum](../enums/reportcostsopenshiftordering.nodeenum.md)*
 
-*Defined in [api.ts:1245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1245)*
+*Defined in [api.ts:1070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1070)*
 
 *__type__*: {string}
 
@@ -71,7 +71,7 @@ ___
 
 **● project**: *[ProjectEnum](../enums/reportcostsopenshiftordering.projectenum.md)*
 
-*Defined in [api.ts:1239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1239)*
+*Defined in [api.ts:1064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1064)*
 
 *__type__*: {string}
 

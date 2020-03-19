@@ -26,7 +26,7 @@
 
 **● errors**: *`Array`<`any`>*
 
-*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L129)*
+*Defined in [api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L149)*
 
 *__type__*: {Array}
 

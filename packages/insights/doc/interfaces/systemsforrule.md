@@ -26,7 +26,7 @@
 
 **● hostIds**: *`Array`<`string`>*
 
-*Defined in [api.ts:1159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1159)*
+*Defined in [api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1237)*
 
 *__type__*: {Array}
 

@@ -31,7 +31,7 @@
 
 **● data**: *`Array`<`any`>*
 
-*Defined in [api.ts:1771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1771)*
+*Defined in [api.ts:1596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1596)*
 
 *__type__*: {Array}
 
@@ -44,7 +44,7 @@ ___
 
 **● filter**: *[ReportOpenShiftAWSFilter](reportopenshiftawsfilter.md)*
 
-*Defined in [api.ts:1765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1765)*
+*Defined in [api.ts:1590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1590)*
 
 *__type__*: {ReportOpenShiftAWSFilter}
 
@@ -57,7 +57,7 @@ ___
 
 **● groupBy**: *[ReportOpenShiftAWSGrouping](reportopenshiftawsgrouping.md)*
 
-*Defined in [api.ts:1753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1753)*
+*Defined in [api.ts:1578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1578)*
 
 *__type__*: {ReportOpenShiftAWSGrouping}
 
@@ -70,7 +70,7 @@ ___
 
 **● links**: *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:1747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1747)*
+*Defined in [api.ts:1572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1572)*
 
 *__type__*: {PaginationLinks}
 
@@ -83,7 +83,7 @@ ___
 
 **● meta**: *[ReportPaginationMeta](reportpaginationmeta.md)*
 
-*Defined in [api.ts:1741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1741)*
+*Defined in [api.ts:1566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1566)*
 
 *__type__*: {ReportPaginationMeta}
 
@@ -96,7 +96,7 @@ ___
 
 **● orderBy**: *[ReportOpenShiftAWSOrdering](../modules/reportopenshiftawsordering.md)*
 
-*Defined in [api.ts:1759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1759)*
+*Defined in [api.ts:1584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1584)*
 
 *__type__*: {ReportOpenShiftAWSOrdering}
 

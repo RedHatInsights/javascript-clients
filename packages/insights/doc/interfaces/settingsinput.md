@@ -27,7 +27,7 @@
 
 **● isSubscribed**: *`boolean`*
 
-*Defined in [api.ts:1041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1041)*
+*Defined in [api.ts:1093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1093)*
 
 *__type__*: {boolean}
 
@@ -40,7 +40,7 @@ ___
 
 **● showSatelliteHosts**: *`boolean`*
 
-*Defined in [api.ts:1035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1035)*
+*Defined in [api.ts:1087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1087)*
 
 *__type__*: {boolean}
 

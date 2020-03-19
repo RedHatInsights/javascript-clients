@@ -26,7 +26,7 @@
 
 **● roles**: *`Array`<`string`>*
 
-*Defined in [api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L265)*
+*Defined in [api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L285)*
 
 *__type__*: {Array}
 

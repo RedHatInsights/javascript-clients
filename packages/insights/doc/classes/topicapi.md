@@ -103,9 +103,9 @@ ___
 
 ###  topicList
 
-▸ **topicList**(showDisabled?: *`boolean`*, options?: *`any`*): `AxiosPromise`<[Topic](../interfaces/topic.md)[]>
+▸ **topicList**(showDisabled?: *`boolean`*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[Topic](../interfaces/topic.md)[]>
 
-*Defined in [api.ts:4960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4960)*
+*Defined in [api.ts:5635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5635)*
 
 Normally this only shows enabled topics, but if the 'show\_disabled' parameter is set to True then this will show disabled topics as well.
 
@@ -120,6 +120,7 @@ Normally this only shows enabled topics, but if the 'show\_disabled' parameter i
 | Name | Type |
 | ------ | ------ |
 | `Optional` showDisabled | `boolean` |
+| `Optional` tags | `Array`<`string`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[Topic](../interfaces/topic.md)[]>
@@ -131,7 +132,7 @@ ___
 
 ▸ **topicRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Topic](../interfaces/topic.md)>
 
-*Defined in [api.ts:4972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4972)*
+*Defined in [api.ts:5647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5647)*
 
 This also lists the topic's impacted systems count.
 
@@ -157,9 +158,11 @@ ___
 
 ▸ **topicRulesWithTag**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
 
-*Defined in [api.ts:4983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4983)*
+*Defined in [api.ts:5659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5659)*
 
-Lists the available rules that have this tag.
+This shows the rule information for rules with this tag.
+
+*__summary__*: Lists the available rules that have this tag.
 
 *__throws__*: {RequiredError}
 
@@ -179,9 +182,9 @@ ___
 
 ###  topicSystems
 
-▸ **topicSystems**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
+▸ **topicSystems**(slug: *`string`*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
 
-*Defined in [api.ts:4995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4995)*
+*Defined in [api.ts:5672](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5672)*
 
 Systems are just listed by their UUID.
 
@@ -196,6 +199,7 @@ Systems are just listed by their UUID.
 | Name | Type | Description |
 | ------ | ------ | ------ |
 | slug | `string` |  Rule topic slug |
+| `Optional` tags | `Array`<`string`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>

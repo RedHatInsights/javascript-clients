@@ -26,6 +26,7 @@
 * [modifiedDate](cvedetailoutdataattributes.md#modifieddate)
 * [publicDate](cvedetailoutdataattributes.md#publicdate)
 * [redhatUrl](cvedetailoutdataattributes.md#redhaturl)
+* [rules](cvedetailoutdataattributes.md#rules)
 * [secondaryUrl](cvedetailoutdataattributes.md#secondaryurl)
 * [status](cvedetailoutdataattributes.md#status)
 * [statusId](cvedetailoutdataattributes.md#statusid)
@@ -218,13 +219,28 @@ Additional resource about the CVE, provided by Red Hat.
 *__memberof__*: CveDetailOutDataAttributes
 
 ___
+<a id="rules"></a>
+
+###  rules
+
+**● rules**: *`Array`<`string`>*
+
+*Defined in [git-api/api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L289)*
+
+ID(s) of associated security rule(s).
+
+*__type__*: {Array}
+
+*__memberof__*: CveDetailOutDataAttributes
+
+___
 <a id="secondaryurl"></a>
 
 ###  secondaryUrl
 
 **● secondaryUrl**: *`string` \| `null`*
 
-*Defined in [git-api/api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L289)*
+*Defined in [git-api/api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L295)*
 
 Additional resources about the CVE.
 
@@ -239,7 +255,7 @@ ___
 
 **● status**: *`string`*
 
-*Defined in [git-api/api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L295)*
+*Defined in [git-api/api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L301)*
 
 Status of the vulnerability.
 
@@ -254,7 +270,7 @@ ___
 
 **● statusId**: *`number`*
 
-*Defined in [git-api/api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L301)*
+*Defined in [git-api/api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L307)*
 
 Internal ID of the vulnerability status.
 
@@ -269,7 +285,7 @@ ___
 
 **● statusText**: *`string` \| `null`*
 
-*Defined in [git-api/api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L307)*
+*Defined in [git-api/api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L313)*
 
 Complementary text to the status.
 
@@ -284,7 +300,7 @@ ___
 
 **● synopsis**: *`string`*
 
-*Defined in [git-api/api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L313)*
+*Defined in [git-api/api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L319)*
 
 Synopsis of the CVE.
 
@@ -299,7 +315,7 @@ ___
 
 **● systemsStatusDetail**: *`any`*
 
-*Defined in [git-api/api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L319)*
+*Defined in [git-api/api.ts:325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L325)*
 
 Counts of systems with given status type.
 
@@ -314,7 +330,7 @@ ___
 
 **● systemsStatusDivergent**: *`number`*
 
-*Defined in [git-api/api.ts:325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L325)*
+*Defined in [git-api/api.ts:331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L331)*
 
 How many systems-CVE pairs have different status than CVE-level.
 

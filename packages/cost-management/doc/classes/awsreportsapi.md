@@ -1,12 +1,12 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [AWSReportApi](../classes/awsreportapi.md)
+[@redhat-cloud-services/cost-management-client](../README.md) > [AWSReportsApi](../classes/awsreportsapi.md)
 
-# Class: AWSReportApi
+# Class: AWSReportsApi
 
-AWSReportApi - object-oriented interface
+AWSReportsApi - object-oriented interface
 
 *__export__*: 
 
-*__class__*: AWSReportApi
+*__class__*: AWSReportsApi
 
 *__extends__*: {BaseAPI}
 
@@ -14,25 +14,25 @@ AWSReportApi - object-oriented interface
 
  [BaseAPI](baseapi.md)
 
-**↳ AWSReportApi**
+**↳ AWSReportsApi**
 
 ## Index
 
 ### Constructors
 
-* [constructor](awsreportapi.md#constructor)
+* [constructor](awsreportsapi.md#constructor)
 
 ### Properties
 
-* [axios](awsreportapi.md#axios)
-* [basePath](awsreportapi.md#basepath)
-* [configuration](awsreportapi.md#configuration)
+* [axios](awsreportsapi.md#axios)
+* [basePath](awsreportsapi.md#basepath)
+* [configuration](awsreportsapi.md#configuration)
 
 ### Methods
 
-* [getAWSCostReports](awsreportapi.md#getawscostreports)
-* [getAWSInstanceReports](awsreportapi.md#getawsinstancereports)
-* [getAWSStorageReports](awsreportapi.md#getawsstoragereports)
+* [getAWSCostReports](awsreportsapi.md#getawscostreports)
+* [getAWSInstanceReports](awsreportsapi.md#getawsinstancereports)
+* [getAWSStorageReports](awsreportsapi.md#getawsstoragereports)
 
 ---
 
@@ -42,7 +42,7 @@ AWSReportApi - object-oriented interface
 
 ###  constructor
 
-⊕ **new AWSReportApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [AWSReportApi](awsreportapi.md)
+⊕ **new AWSReportsApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [AWSReportsApi](awsreportsapi.md)
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -56,7 +56,7 @@ AWSReportApi - object-oriented interface
 | `Default value` basePath | `string` |  BASE_PATH |
 | `Default value` axios | `AxiosInstance` |  globalAxios |
 
-**Returns:** [AWSReportApi](awsreportapi.md)
+**Returns:** [AWSReportsApi](awsreportsapi.md)
 
 ___
 
@@ -104,13 +104,13 @@ ___
 
 ▸ **getAWSCostReports**(delta?: *`string`*, filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportCost](../interfaces/reportcost.md)>
 
-*Defined in [api.ts:3452](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3452)*
+*Defined in [api.ts:3206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3206)*
 
 *__summary__*: Query to obtain cost reports
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: AWSReportApi
+*__memberof__*: AWSReportsApi
 
 **Parameters:**
 
@@ -131,15 +131,15 @@ ___
 
 ###  getAWSInstanceReports
 
-▸ **getAWSInstanceReports**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportInstanceInventory](../interfaces/reportinstanceinventory.md)>
+▸ **getAWSInstanceReports**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, computeCount?: *`boolean`*, options?: *`any`*): `AxiosPromise`<[ReportInstanceInventory](../interfaces/reportinstanceinventory.md)>
 
-*Defined in [api.ts:3469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3469)*
+*Defined in [api.ts:3224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3224)*
 
 *__summary__*: Query to obtain AWS instance type data
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: AWSReportApi
+*__memberof__*: AWSReportsApi
 
 **Parameters:**
 
@@ -151,6 +151,7 @@ ___
 | `Optional` units | `string` |
 | `Optional` offset | `number` |
 | `Optional` limit | `number` |
+| `Optional` computeCount | `boolean` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[ReportInstanceInventory](../interfaces/reportinstanceinventory.md)>
@@ -162,13 +163,13 @@ ___
 
 ▸ **getAWSStorageReports**(filter?: *`any`*, groupBy?: *`any`*, orderBy?: *`any`*, units?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ReportStorageInventory](../interfaces/reportstorageinventory.md)>
 
-*Defined in [api.ts:3486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3486)*
+*Defined in [api.ts:3241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3241)*
 
 *__summary__*: Query to obtain AWS storage data
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: AWSReportApi
+*__memberof__*: AWSReportsApi
 
 **Parameters:**
 

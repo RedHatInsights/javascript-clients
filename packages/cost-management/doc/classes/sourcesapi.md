@@ -31,6 +31,7 @@ SourcesApi - object-oriented interface
 ### Methods
 
 * [getSource](sourcesapi.md#getsource)
+* [getSourceStats](sourcesapi.md#getsourcestats)
 * [listSources](sourcesapi.md#listsources)
 * [updateSource](sourcesapi.md#updatesource)
 
@@ -104,7 +105,7 @@ ___
 
 ▸ **getSource**(sourceId: *`number`*, options?: *`any`*): `AxiosPromise`<[SourceOut](../interfaces/sourceout.md)>
 
-*Defined in [api.ts:6639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6639)*
+*Defined in [api.ts:6106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6106)*
 
 *__summary__*: Get a source
 
@@ -122,13 +123,37 @@ ___
 **Returns:** `AxiosPromise`<[SourceOut](../interfaces/sourceout.md)>
 
 ___
+<a id="getsourcestats"></a>
+
+###  getSourceStats
+
+▸ **getSourceStats**(sourceId: *`number`*, options?: *`any`*): `AxiosPromise`<`any`>
+
+*Defined in [api.ts:6118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6118)*
+
+*__summary__*: Get a source statistics
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: SourcesApi
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| sourceId | `number` |  ID of source to get |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<`any`>
+
+___
 <a id="listsources"></a>
 
 ###  listSources
 
-▸ **listSources**(options?: *`any`*): `AxiosPromise`<[SourcePagination](../interfaces/sourcepagination.md)>
+▸ **listSources**(type?: *`string`*, name?: *`string`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[SourcePagination](../interfaces/sourcepagination.md)>
 
-*Defined in [api.ts:6650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6650)*
+*Defined in [api.ts:6133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6133)*
 
 *__summary__*: List the sources
 
@@ -140,6 +165,10 @@ ___
 
 | Name | Type |
 | ------ | ------ |
+| `Optional` type | `string` |
+| `Optional` name | `string` |
+| `Optional` offset | `number` |
+| `Optional` limit | `number` |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[SourcePagination](../interfaces/sourcepagination.md)>
@@ -151,7 +180,7 @@ ___
 
 ▸ **updateSource**(sourceId: *`number`*, sourceIn: *[SourceIn](../interfaces/sourcein.md)*, options?: *`any`*): `AxiosPromise`<[SourceOut](../interfaces/sourceout.md)>
 
-*Defined in [api.ts:6663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6663)*
+*Defined in [api.ts:6146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6146)*
 
 *__summary__*: Update a source
 

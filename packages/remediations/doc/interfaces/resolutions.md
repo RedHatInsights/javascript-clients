@@ -28,7 +28,7 @@
 
 **● id**: *`string`*
 
-*Defined in [api.ts:702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L702)*
+*Defined in [api.ts:1027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1027)*
 
 *__type__*: {string}
 
@@ -41,7 +41,7 @@ ___
 
 **● resolutionRisk**: *[ResolutionRisk](../enums/resolutionrisk.md)*
 
-*Defined in [api.ts:708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L708)*
+*Defined in [api.ts:1033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1033)*
 
 *__type__*: {ResolutionRisk}
 
@@ -54,7 +54,7 @@ ___
 
 **● resolutions**: *`Array`<[ResolutionsResolutions](resolutionsresolutions.md)>*
 
-*Defined in [api.ts:714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L714)*
+*Defined in [api.ts:1039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1039)*
 
 *__type__*: {Array}
 

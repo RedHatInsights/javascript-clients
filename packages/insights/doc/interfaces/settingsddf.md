@@ -26,7 +26,7 @@
 
 **● fields**: *`Array`<[SettingDDF](settingddf.md)>*
 
-*Defined in [api.ts:1021](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1021)*
+*Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1073)*
 
 *__type__*: {Array}
 

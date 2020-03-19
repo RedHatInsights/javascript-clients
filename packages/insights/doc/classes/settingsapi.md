@@ -103,7 +103,7 @@ ___
 
 ▸ **settingsCreate**(settingsInput: *[SettingsInput](../interfaces/settingsinput.md)*, options?: *`any`*): `AxiosPromise`<[SettingsInput](../interfaces/settingsinput.md)>
 
-*Defined in [api.ts:3687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3687)*
+*Defined in [api.ts:4063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4063)*
 
 The current account settings will be updated, or one will be created, with the
 
@@ -129,9 +129,11 @@ ___
 
 ▸ **settingsList**(options?: *`any`*): `AxiosPromise`<[SettingsDDF](../interfaces/settingsddf.md)[]>
 
-*Defined in [api.ts:3697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3697)*
+*Defined in [api.ts:4074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4074)*
 
-Describe the settings we have in a Data-Driven Forms way.
+This simply compiles the 'show\_satellite\_hosts' account-wide setting and the weekly report 'is\_subscribed' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+
+*__summary__*: Describe the settings we have in a Data-Driven Forms way.
 
 *__throws__*: {RequiredError}
 

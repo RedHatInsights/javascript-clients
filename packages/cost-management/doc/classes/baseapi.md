@@ -10,29 +10,23 @@
 
 **BaseAPI**
 
-↳  [AWSReportApi](awsreportapi.md)
+↳  [AWSReportsApi](awsreportsapi.md)
 
-↳  [AzureReportApi](azurereportapi.md)
+↳  [AzureReportsApi](azurereportsapi.md)
 
-↳  [CloudAccountsApi](cloudaccountsapi.md)
-
-↳  [CostModelApi](costmodelapi.md)
-
-↳  [DataExportRequestApi](dataexportrequestapi.md)
+↳  [CostModelsApi](costmodelsapi.md)
 
 ↳  [MetricsApi](metricsapi.md)
 
-↳  [OpenShiftReportApi](openshiftreportapi.md)
+↳  [OpenShiftReportsApi](openshiftreportsapi.md)
 
-↳  [ProviderApi](providerapi.md)
+↳  [ProvidersApi](providersapi.md)
 
 ↳  [SourcesApi](sourcesapi.md)
 
 ↳  [StatusApi](statusapi.md)
 
 ↳  [TagsApi](tagsapi.md)
-
-↳  [UserPreferenceApi](userpreferenceapi.md)
 
 ## Index
 

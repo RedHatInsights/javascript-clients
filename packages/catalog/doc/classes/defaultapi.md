@@ -101,7 +101,7 @@ ___
 
 ###  getDocumentation
 
-▸ **getDocumentation**(options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **getDocumentation**(options?: *`any`*): `AxiosPromise`<`any`>
 
 *Defined in [api.ts:1393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1393)*
 
@@ -117,7 +117,7 @@ ___
 | ------ | ------ |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** `AxiosPromise`<`any`>
 
 ___
 <a id="postgraphql"></a>

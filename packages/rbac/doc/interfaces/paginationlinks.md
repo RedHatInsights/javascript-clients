@@ -29,7 +29,7 @@
 
 **● first**: *`string`*
 
-*Defined in [api.ts:447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L447)*
+*Defined in [api.ts:467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L467)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● last**: *`string`*
 
-*Defined in [api.ts:465](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L465)*
+*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L485)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● next**: *`string`*
 
-*Defined in [api.ts:459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L459)*
+*Defined in [api.ts:479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L479)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● previous**: *`string`*
 
-*Defined in [api.ts:453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L453)*
+*Defined in [api.ts:473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L473)*
 
 *__type__*: {string}
 

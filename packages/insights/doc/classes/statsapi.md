@@ -35,6 +35,7 @@ StatsApi - object-oriented interface
 * [statsReports](statsapi.md#statsreports)
 * [statsRules](statsapi.md#statsrules)
 * [statsRulesHitSeries](statsapi.md#statsruleshitseries)
+* [statsStaleHosts](statsapi.md#statsstalehosts)
 * [statsSystems](statsapi.md#statssystems)
 * [statsSystemsImpactedSeries](statsapi.md#statssystemsimpactedseries)
 * [statsSystemsReportingSeries](statsapi.md#statssystemsreportingseries)
@@ -107,11 +108,13 @@ ___
 
 ###  statsHitsSeries
 
-▸ **statsHitsSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
+▸ **statsHitsSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
 
-*Defined in [api.ts:4198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4198)*
+*Defined in [api.ts:4706](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4706)*
 
-Simple time series of day and number of hits (per system-rule tuple) per day.
+A 'hit' is a unique system-rule pair - a rule impacting one system.
+
+*__summary__*: Simple time series of day and number of hits per day.
 
 *__throws__*: {RequiredError}
 
@@ -124,6 +127,7 @@ Simple time series of day and number of hits (per system-rule tuple) per day.
 | `Optional` start | `string` |
 | `Optional` end | `string` |
 | `Optional` grain | "ever" \| "year" \| "quarter" \| "month" \| "week" \| "day" |
+| `Optional` tags | `Array`<`string`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
@@ -135,9 +139,11 @@ ___
 
 ▸ **statsList**(options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:4208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4208)*
+*Defined in [api.ts:4717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4717)*
 
-Provide a simple list of URLs contained here. Copied sort-of from the APIRootView's `get` method.
+Copied sort-of from the APIRootView's `get` method.
+
+*__summary__*: Provide a simple list of URLs contained here.
 
 *__throws__*: {RequiredError}
 
@@ -156,11 +162,13 @@ ___
 
 ###  statsReports
 
-▸ **statsReports**(options?: *`any`*): `AxiosPromise`<[Stats](../interfaces/stats.md)>
+▸ **statsReports**(tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[Stats](../interfaces/stats.md)>
 
-*Defined in [api.ts:4218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4218)*
+*Defined in [api.ts:4729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4729)*
 
-View the statistics for this account.
+Only current reports are considered.
+
+*__summary__*: Show statistics of reports impacting across categories and risks.
 
 *__throws__*: {RequiredError}
 
@@ -170,6 +178,7 @@ View the statistics for this account.
 
 | Name | Type |
 | ------ | ------ |
+| `Optional` tags | `Array`<`string`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[Stats](../interfaces/stats.md)>
@@ -179,11 +188,13 @@ ___
 
 ###  statsRules
 
-▸ **statsRules**(options?: *`any`*): `AxiosPromise`<[Stats](../interfaces/stats.md)>
+▸ **statsRules**(tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[Stats](../interfaces/stats.md)>
 
-*Defined in [api.ts:4228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4228)*
+*Defined in [api.ts:4741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4741)*
 
-View the statistics for this account.
+Only current reports are considered.
+
+*__summary__*: Show statistics of rule usage across categories and risks.
 
 *__throws__*: {RequiredError}
 
@@ -193,6 +204,7 @@ View the statistics for this account.
 
 | Name | Type |
 | ------ | ------ |
+| `Optional` tags | `Array`<`string`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[Stats](../interfaces/stats.md)>
@@ -202,11 +214,13 @@ ___
 
 ###  statsRulesHitSeries
 
-▸ **statsRulesHitSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
+▸ **statsRulesHitSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
 
-*Defined in [api.ts:4241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4241)*
+*Defined in [api.ts:4756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4756)*
 
-Simple time series of day and number of systems impacted by any rule
+If one rule is impacting four systems, this is counted once.
+
+*__summary__*: Simple time series of day and number of rules impacting systems.
 
 *__throws__*: {RequiredError}
 
@@ -219,20 +233,23 @@ Simple time series of day and number of systems impacted by any rule
 | `Optional` start | `string` |
 | `Optional` end | `string` |
 | `Optional` grain | "ever" \| "year" \| "quarter" \| "month" \| "week" \| "day" |
+| `Optional` tags | `Array`<`string`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
 
 ___
-<a id="statssystems"></a>
+<a id="statsstalehosts"></a>
 
-###  statsSystems
+###  statsStaleHosts
 
-▸ **statsSystems**(options?: *`any`*): `AxiosPromise`<[Stats](../interfaces/stats.md)>
+▸ **statsStaleHosts**(tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[StaleSystemStats](../interfaces/stalesystemstats.md)>
 
-*Defined in [api.ts:4251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4251)*
+*Defined in [api.ts:4768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4768)*
 
-View the statistics for this account.
+For historic reasons, 'stale' refers to hosts that are being warned of being stale, and 'stale\_warn' refers to hosts that are being hidden from display.
+
+*__summary__*: Show statistics of stale warning and hidden systems.
 
 *__throws__*: {RequiredError}
 
@@ -242,6 +259,33 @@ View the statistics for this account.
 
 | Name | Type |
 | ------ | ------ |
+| `Optional` tags | `Array`<`string`> |
+| `Optional` options | `any` |
+
+**Returns:** `AxiosPromise`<[StaleSystemStats](../interfaces/stalesystemstats.md)>
+
+___
+<a id="statssystems"></a>
+
+###  statsSystems
+
+▸ **statsSystems**(tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[Stats](../interfaces/stats.md)>
+
+*Defined in [api.ts:4780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4780)*
+
+Only current reports are considered.
+
+*__summary__*: Show statistics of systems being impacted across categories and risks.
+
+*__throws__*: {RequiredError}
+
+*__memberof__*: StatsApi
+
+**Parameters:**
+
+| Name | Type |
+| ------ | ------ |
+| `Optional` tags | `Array`<`string`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[Stats](../interfaces/stats.md)>
@@ -251,11 +295,13 @@ ___
 
 ###  statsSystemsImpactedSeries
 
-▸ **statsSystemsImpactedSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
+▸ **statsSystemsImpactedSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
 
-*Defined in [api.ts:4264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4264)*
+*Defined in [api.ts:4795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4795)*
 
-Simple time series of day and number of systems impacted by any rule
+Systems with no reports of rules impacting them are ignored.
+
+*__summary__*: Simple time series of day and number of systems impacted by any rule.
 
 *__throws__*: {RequiredError}
 
@@ -268,6 +314,7 @@ Simple time series of day and number of systems impacted by any rule
 | `Optional` start | `string` |
 | `Optional` end | `string` |
 | `Optional` grain | "ever" \| "year" \| "quarter" \| "month" \| "week" \| "day" |
+| `Optional` tags | `Array`<`string`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
@@ -277,11 +324,13 @@ ___
 
 ###  statsSystemsReportingSeries
 
-▸ **statsSystemsReportingSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
+▸ **statsSystemsReportingSeries**(start?: *`string`*, end?: *`string`*, grain?: *"ever" \| "year" \| "quarter" \| "month" \| "week" \| "day"*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>
 
-*Defined in [api.ts:4277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4277)*
+*Defined in [api.ts:4810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4810)*
 
-Simple time series of day and number of systems having uploaded that day.
+Systems with no reports of rules impacting them are still considered.
+
+*__summary__*: Simple time series of day and number of systems having uploaded that day.
 
 *__throws__*: {RequiredError}
 
@@ -294,6 +343,7 @@ Simple time series of day and number of systems having uploaded that day.
 | `Optional` start | `string` |
 | `Optional` end | `string` |
 | `Optional` grain | "ever" \| "year" \| "quarter" \| "month" \| "week" \| "day" |
+| `Optional` tags | `Array`<`string`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[StatTimeSeries](../interfaces/stattimeseries.md)[]>

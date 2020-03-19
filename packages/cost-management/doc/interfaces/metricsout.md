@@ -30,7 +30,7 @@
 
 **● labelMeasurement**: *`string`*
 
-*Defined in [api.ts:586](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L586)*
+*Defined in [api.ts:411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L411)*
 
 *__type__*: {string}
 
@@ -43,7 +43,7 @@ ___
 
 **● labelMeasurementUnit**: *`string`*
 
-*Defined in [api.ts:592](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L592)*
+*Defined in [api.ts:417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L417)*
 
 *__type__*: {string}
 
@@ -56,7 +56,7 @@ ___
 
 **● labelMetric**: *`string`*
 
-*Defined in [api.ts:580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L580)*
+*Defined in [api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L405)*
 
 *__type__*: {string}
 
@@ -69,7 +69,7 @@ ___
 
 **● metric**: *`string`*
 
-*Defined in [api.ts:574](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L574)*
+*Defined in [api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L399)*
 
 *__type__*: {string}
 
@@ -82,7 +82,7 @@ ___
 
 **● sourceType**: *`string`*
 
-*Defined in [api.ts:568](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L568)*
+*Defined in [api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L393)*
 
 *__type__*: {string}
 

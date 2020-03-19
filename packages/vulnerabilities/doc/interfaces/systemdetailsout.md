@@ -26,7 +26,7 @@
 
 **● data**: *[SystemDetailsOutData](systemdetailsoutdata.md)*
 
-*Defined in [api.ts:1283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1283)*
+*Defined in [api.ts:1343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1343)*
 
 *__type__*: {SystemDetailsOutData}
 

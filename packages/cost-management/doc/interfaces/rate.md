@@ -28,7 +28,7 @@
 
 **● metric**: *`any`*
 
-*Defined in [api.ts:916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L916)*
+*Defined in [api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L741)*
 
 *__type__*: {any}
 
@@ -41,7 +41,7 @@ ___
 
 **● tieredRates**: *`Array`<`any`>*
 
-*Defined in [api.ts:922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L922)*
+*Defined in [api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L747)*
 
 *__type__*: {Array}
 
@@ -54,7 +54,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L910)*
+*Defined in [api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L735)*
 
 *__type__*: {string}
 

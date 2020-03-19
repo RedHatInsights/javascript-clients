@@ -30,7 +30,7 @@
 
 **● cvesBySeverity**: *[ExecutiveReportCvesBySeverity](executivereportcvesbyseverity.md)*
 
-*Defined in [git-api/api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L445)*
+*Defined in [git-api/api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L451)*
 
 *__type__*: {ExecutiveReportCvesBySeverity}
 
@@ -43,7 +43,7 @@ ___
 
 **● cvesTotal**: *`number`*
 
-*Defined in [git-api/api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L439)*
+*Defined in [git-api/api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L445)*
 
 Number of unique CVEs discovered on the managed systems.
 
@@ -58,7 +58,7 @@ ___
 
 **● recentCves**: *[ExecutiveReportRecentCves](executivereportrecentcves.md)*
 
-*Defined in [git-api/api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L451)*
+*Defined in [git-api/api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L457)*
 
 *__type__*: {ExecutiveReportRecentCves}
 
@@ -71,7 +71,7 @@ ___
 
 **● systemCount**: *`number`*
 
-*Defined in [git-api/api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L433)*
+*Defined in [git-api/api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L439)*
 
 Total number of systems managed by vulnerability application.
 
@@ -86,7 +86,7 @@ ___
 
 **● topCves**: *`Array`<[ExecutiveReportTopCves](executivereporttopcves.md)>*
 
-*Defined in [git-api/api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L457)*
+*Defined in [git-api/api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L463)*
 
 *__type__*: {Array}
 

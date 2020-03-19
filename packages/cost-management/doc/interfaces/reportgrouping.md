@@ -34,7 +34,7 @@ The grouping to apply to the report. No grouping by default. When grouping by ac
 
 **● account**: *`Array`<`string`>*
 
-*Defined in [api.ts:1392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1392)*
+*Defined in [api.ts:1217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1217)*
 
 *__type__*: {Array}
 
@@ -47,7 +47,7 @@ ___
 
 **● az**: *`Array`<`string`>*
 
-*Defined in [api.ts:1410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1410)*
+*Defined in [api.ts:1235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1235)*
 
 *__type__*: {Array}
 
@@ -60,7 +60,7 @@ ___
 
 **● instanceType**: *`Array`<`string`>*
 
-*Defined in [api.ts:1416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1416)*
+*Defined in [api.ts:1241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1241)*
 
 *__type__*: {Array}
 
@@ -73,7 +73,7 @@ ___
 
 **● region**: *`Array`<`string`>*
 
-*Defined in [api.ts:1404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1404)*
+*Defined in [api.ts:1229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1229)*
 
 *__type__*: {Array}
 
@@ -86,7 +86,7 @@ ___
 
 **● service**: *`Array`<`string`>*
 
-*Defined in [api.ts:1398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1398)*
+*Defined in [api.ts:1223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1223)*
 
 *__type__*: {Array}
 
@@ -99,7 +99,7 @@ ___
 
 **● storageType**: *`Array`<`string`>*
 
-*Defined in [api.ts:1422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1422)*
+*Defined in [api.ts:1247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1247)*
 
 *__type__*: {Array}
 
@@ -112,7 +112,7 @@ ___
 
 **● tag**: *`Array`<`string`>*
 
-*Defined in [api.ts:1428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1428)*
+*Defined in [api.ts:1253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1253)*
 
 *__type__*: {Array}
 

@@ -28,7 +28,7 @@
 
 **● displayName**: *`string` \| `null`*
 
-*Defined in [api.ts:786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L786)*
+*Defined in [api.ts:1111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1111)*
 
 *__type__*: {string}
 
@@ -41,7 +41,7 @@ ___
 
 **● hostname**: *`string` \| `null`*
 
-*Defined in [api.ts:780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L780)*
+*Defined in [api.ts:1105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1105)*
 
 *__type__*: {string}
 
@@ -54,7 +54,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [api.ts:774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L774)*
+*Defined in [api.ts:1099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1099)*
 
 *__type__*: {string}
 

@@ -126,7 +126,7 @@ export interface AdditionalGroup {
      * @type {string}
      * @memberof AdditionalGroup
      */
-    name: string;
+    name?: string;
     /**
      *
      * @type {string}
@@ -417,20 +417,6 @@ export interface InlineResponse200 {
      * @memberof InlineResponse200
      */
     data: Array<RoleOut>;
-}
-
-/**
- *
- * @export
- * @interface InlineResponse2001
- */
-export interface InlineResponse2001 {
-    /**
-     *
-     * @type {Array<AccessPagination>}
-     * @memberof InlineResponse2001
-     */
-    data: Array<AccessPagination>;
 }
 
 /**
@@ -994,10 +980,10 @@ export interface RoleOutDynamic {
     groupsInCount?: number;
     /**
      *
-     * @type {AdditionalGroup}
+     * @type {Array<AdditionalGroup>}
      * @memberof RoleOutDynamic
      */
-    groupsIn?: AdditionalGroup;
+    groupsIn?: Array<AdditionalGroup>;
 }
 
 /**
@@ -1713,11 +1699,14 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [username] A username for a principal to filter for groups
-         * @param {string} [orderBy] Parameter for ordering resource by value.
+         * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
+         * @param {Array<string>} [roleNames] List of role name to filter for groups. It is exact match but case-insensitive
+         * @param {'all' | 'any'} [roleDiscriminator] Discriminator that works with role_names to indicate matching all/any of the role names
+         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, orderBy?: string, options: any = {}): RequestArgs {
+        listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: string, options: any = {}): RequestArgs {
             const localVarPath = `/groups/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -1752,6 +1741,18 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
 
             if (username !== undefined) {
                 localVarQueryParameter['username'] = username;
+            }
+
+            if (uuid) {
+                localVarQueryParameter['uuid'] = uuid.join(COLLECTION_FORMATS["csv"]);
+            }
+
+            if (roleNames) {
+                localVarQueryParameter['role_names'] = roleNames.join(COLLECTION_FORMATS["csv"]);
+            }
+
+            if (roleDiscriminator !== undefined) {
+                localVarQueryParameter['role_discriminator'] = roleDiscriminator;
             }
 
             if (orderBy !== undefined) {
@@ -2014,12 +2015,15 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [username] A username for a principal to filter for groups
-         * @param {string} [orderBy] Parameter for ordering resource by value.
+         * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
+         * @param {Array<string>} [roleNames] List of role name to filter for groups. It is exact match but case-insensitive
+         * @param {'all' | 'any'} [roleDiscriminator] Discriminator that works with role_names to indicate matching all/any of the role names
+         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, orderBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupPagination> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listGroups(limit, offset, name, scope, username, orderBy, options);
+        listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupPagination> {
+            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listGroups(limit, offset, name, scope, username, uuid, roleNames, roleDiscriminator, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2161,12 +2165,15 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [username] A username for a principal to filter for groups
-         * @param {string} [orderBy] Parameter for ordering resource by value.
+         * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
+         * @param {Array<string>} [roleNames] List of role name to filter for groups. It is exact match but case-insensitive
+         * @param {'all' | 'any'} [roleDiscriminator] Discriminator that works with role_names to indicate matching all/any of the role names
+         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, orderBy?: string, options?: any) {
-            return GroupApiFp(configuration).listGroups(limit, offset, name, scope, username, orderBy, options)(axios, basePath);
+        listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: string, options?: any) {
+            return GroupApiFp(configuration).listGroups(limit, offset, name, scope, username, uuid, roleNames, roleDiscriminator, orderBy, options)(axios, basePath);
         },
         /**
          *
@@ -2313,13 +2320,16 @@ export class GroupApi extends BaseAPI {
      * @param {string} [name] Parameter for filtering resource by name using string contains search.
      * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
      * @param {string} [username] A username for a principal to filter for groups
-     * @param {string} [orderBy] Parameter for ordering resource by value.
+     * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
+     * @param {Array<string>} [roleNames] List of role name to filter for groups. It is exact match but case-insensitive
+     * @param {'all' | 'any'} [roleDiscriminator] Discriminator that works with role_names to indicate matching all/any of the role names
+     * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, orderBy?: string, options?: any) {
-        return GroupApiFp(this.configuration).listGroups(limit, offset, name, scope, username, orderBy, options)(this.axios, this.basePath);
+    public listGroups(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: string, options?: any) {
+        return GroupApiFp(this.configuration).listGroups(limit, offset, name, scope, username, uuid, roleNames, roleDiscriminator, orderBy, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2489,7 +2499,7 @@ export const PolicyApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
          * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
-         * @param {string} [orderBy] Parameter for ordering resource by value.
+         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2656,7 +2666,7 @@ export const PolicyApiFp = function(configuration?: Configuration) {
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
          * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
-         * @param {string} [orderBy] Parameter for ordering resource by value.
+         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2730,7 +2740,7 @@ export const PolicyApiFactory = function (configuration?: Configuration, basePat
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
          * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
-         * @param {string} [orderBy] Parameter for ordering resource by value.
+         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2803,7 +2813,7 @@ export class PolicyApi extends BaseAPI {
      * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
      * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
      * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
-     * @param {string} [orderBy] Parameter for ordering resource by value.
+     * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PolicyApi
@@ -2839,10 +2849,11 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [usernames] Usernames of principals to get
+         * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, options: any = {}): RequestArgs {
+        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', options: any = {}): RequestArgs {
             const localVarPath = `/principals/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -2871,6 +2882,10 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['usernames'] = usernames;
             }
 
+            if (sortOrder !== undefined) {
+                localVarQueryParameter['sort_order'] = sortOrder;
+            }
+
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2896,11 +2911,12 @@ export const PrincipalApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [usernames] Usernames of principals to get
+         * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
-            const localVarAxiosArgs = PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, usernames, options);
+        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
+            const localVarAxiosArgs = PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, usernames, sortOrder, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2921,11 +2937,12 @@ export const PrincipalApiFactory = function (configuration?: Configuration, base
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [usernames] Usernames of principals to get
+         * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, options?: any) {
-            return PrincipalApiFp(configuration).listPrincipals(limit, offset, usernames, options)(axios, basePath);
+        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', options?: any) {
+            return PrincipalApiFp(configuration).listPrincipals(limit, offset, usernames, sortOrder, options)(axios, basePath);
         },
     };
 };
@@ -2943,12 +2960,13 @@ export class PrincipalApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {string} [usernames] Usernames of principals to get
+     * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PrincipalApi
      */
-    public listPrincipals(limit?: number, offset?: number, usernames?: string, options?: any) {
-        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, usernames, options)(this.axios, this.basePath);
+    public listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', options?: any) {
+        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, usernames, sortOrder, options)(this.axios, this.basePath);
     }
 
 }
@@ -3135,12 +3153,13 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
-         * @param {string} [orderBy] Parameter for ordering resource by value.
+         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
+         * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, options: any = {}): RequestArgs {
+        listRoles(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, options: any = {}): RequestArgs {
             const localVarPath = `/roles/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -3179,6 +3198,10 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (addFields) {
                 localVarQueryParameter['add_fields'] = addFields.join(COLLECTION_FORMATS["csv"]);
+            }
+
+            if (username !== undefined) {
+                localVarQueryParameter['username'] = username;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -3299,7 +3322,7 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRoleAccess(uuid: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2001> {
+        getRoleAccess(uuid: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccessPagination> {
             const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).getRoleAccess(uuid, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
@@ -3313,13 +3336,14 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
-         * @param {string} [orderBy] Parameter for ordering resource by value.
+         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
+         * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic> {
-            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, scope, orderBy, addFields, options);
+        listRoles(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic> {
+            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, scope, orderBy, addFields, username, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -3398,13 +3422,14 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
-         * @param {string} [orderBy] Parameter for ordering resource by value.
+         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
+         * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, options?: any) {
-            return RoleApiFp(configuration).listRoles(limit, offset, name, scope, orderBy, addFields, options)(axios, basePath);
+        listRoles(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, options?: any) {
+            return RoleApiFp(configuration).listRoles(limit, offset, name, scope, orderBy, addFields, username, options)(axios, basePath);
         },
         /**
          *
@@ -3484,14 +3509,15 @@ export class RoleApi extends BaseAPI {
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {string} [name] Parameter for filtering resource by name using string contains search.
      * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
-     * @param {string} [orderBy] Parameter for ordering resource by value.
+     * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
      * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
+     * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public listRoles(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, options?: any) {
-        return RoleApiFp(this.configuration).listRoles(limit, offset, name, scope, orderBy, addFields, options)(this.axios, this.basePath);
+    public listRoles(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, options?: any) {
+        return RoleApiFp(this.configuration).listRoles(limit, offset, name, scope, orderBy, addFields, username, options)(this.axios, this.basePath);
     }
 
     /**

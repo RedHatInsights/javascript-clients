@@ -102,7 +102,7 @@ ___
 
 ▸ **generate**(playbookDefinition: *[PlaybookDefinition](../interfaces/playbookdefinition.md)*, options?: *`any`*): `AxiosPromise`<`string`>
 
-*Defined in [api.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1031)*
+*Defined in [api.ts:1356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1356)*
 
 Generates an Ansible Playbook based on input parameters
 

@@ -16,7 +16,7 @@
 
 * [authentication](sourcein.md#authentication)
 * [billingSource](sourcein.md#billingsource)
-* [sourceId](sourcein.md#sourceid)
+* [id](sourcein.md#id)
 * [sourceType](sourcein.md#sourcetype)
 
 ---
@@ -29,7 +29,7 @@
 
 **● authentication**: *`any`*
 
-*Defined in [api.ts:2796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2796)*
+*Defined in [api.ts:2621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2621)*
 
 Dictionary containing resource name.
 
@@ -44,7 +44,7 @@ ___
 
 **● billingSource**: *`any`*
 
-*Defined in [api.ts:2802](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2802)*
+*Defined in [api.ts:2627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2627)*
 
 Dictionary containing billing source.
 
@@ -53,13 +53,13 @@ Dictionary containing billing source.
 *__memberof__*: SourceIn
 
 ___
-<a id="sourceid"></a>
+<a id="id"></a>
 
-###  sourceId
+###  id
 
-**● sourceId**: *`number`*
+**● id**: *`number`*
 
-*Defined in [api.ts:2784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2784)*
+*Defined in [api.ts:2609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2609)*
 
 *__type__*: {number}
 
@@ -72,7 +72,7 @@ ___
 
 **● sourceType**: *`string`*
 
-*Defined in [api.ts:2790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2790)*
+*Defined in [api.ts:2615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2615)*
 
 *__type__*: {string}
 

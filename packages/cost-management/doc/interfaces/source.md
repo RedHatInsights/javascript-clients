@@ -14,20 +14,20 @@
 
 ### Properties
 
-* [sourceId](source.md#sourceid)
+* [id](source.md#id)
 * [sourceType](source.md#sourcetype)
 
 ---
 
 ## Properties
 
-<a id="sourceid"></a>
+<a id="id"></a>
 
-###  sourceId
+###  id
 
-**● sourceId**: *`number`*
+**● id**: *`number`*
 
-*Defined in [api.ts:2764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2764)*
+*Defined in [api.ts:2589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2589)*
 
 *__type__*: {number}
 
@@ -40,7 +40,7 @@ ___
 
 **● sourceType**: *`string`*
 
-*Defined in [api.ts:2770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2770)*
+*Defined in [api.ts:2595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2595)*
 
 *__type__*: {string}
 

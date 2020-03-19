@@ -72,64 +72,6 @@ export class RequiredError extends Error {
 /**
  *
  * @export
- * @interface CloudAccountOut
- */
-export interface CloudAccountOut {
-    /**
-     *
-     * @type {string}
-     * @memberof CloudAccountOut
-     */
-    name: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CloudAccountOut
-     */
-    value: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CloudAccountOut
-     */
-    description?: string;
-    /**
-     *
-     * @type {Date}
-     * @memberof CloudAccountOut
-     */
-    updatedTimestamp?: Date;
-}
-
-/**
- *
- * @export
- * @interface CloudAccountPagination
- */
-export interface CloudAccountPagination {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof CloudAccountPagination
-     */
-    meta?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof CloudAccountPagination
-     */
-    links?: PaginationLinks;
-    /**
-     *
-     * @type {Array<CloudAccountOut>}
-     * @memberof CloudAccountPagination
-     */
-    data: Array<CloudAccountOut>;
-}
-
-/**
- *
- * @export
  * @interface CostModel
  */
 export interface CostModel {
@@ -355,123 +297,6 @@ export interface CustomerOut {
      * @memberof CustomerOut
      */
     dateCreated: Date;
-}
-
-/**
- *
- * @export
- * @interface DataExportRequest
- */
-export interface DataExportRequest {
-    /**
-     *
-     * @type {string}
-     * @memberof DataExportRequest
-     */
-    startDate: string;
-    /**
-     *
-     * @type {string}
-     * @memberof DataExportRequest
-     */
-    endDate: string;
-    /**
-     *
-     * @type {string}
-     * @memberof DataExportRequest
-     */
-    bucketName: string;
-}
-
-/**
- *
- * @export
- * @interface DataExportRequestOut
- */
-export interface DataExportRequestOut {
-    /**
-     *
-     * @type {string}
-     * @memberof DataExportRequestOut
-     */
-    startDate: string;
-    /**
-     *
-     * @type {string}
-     * @memberof DataExportRequestOut
-     */
-    endDate: string;
-    /**
-     *
-     * @type {string}
-     * @memberof DataExportRequestOut
-     */
-    bucketName: string;
-    /**
-     *
-     * @type {string}
-     * @memberof DataExportRequestOut
-     */
-    uuid: string;
-    /**
-     *
-     * @type {Date}
-     * @memberof DataExportRequestOut
-     */
-    createdTimestamp?: Date;
-    /**
-     *
-     * @type {Date}
-     * @memberof DataExportRequestOut
-     */
-    updatedTimestamp?: Date;
-    /**
-     *
-     * @type {string}
-     * @memberof DataExportRequestOut
-     */
-    status?: DataExportRequestOut.StatusEnum;
-}
-
-/**
- * @export
- * @namespace DataExportRequestOut
- */
-export namespace DataExportRequestOut {
-    /**
-     * @export
-     * @enum {string}
-     */
-    export enum StatusEnum {
-        Pending = 'pending',
-        Complete = 'complete'
-    }
-}
-
-/**
- *
- * @export
- * @interface DataExportRequestPagination
- */
-export interface DataExportRequestPagination {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof DataExportRequestPagination
-     */
-    meta?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof DataExportRequestPagination
-     */
-    links?: PaginationLinks;
-    /**
-     *
-     * @type {Array<DataExportRequestOut>}
-     * @memberof DataExportRequestPagination
-     */
-    data: Array<DataExportRequestOut>;
 }
 
 /**
@@ -2761,7 +2586,7 @@ export interface Source {
      * @type {number}
      * @memberof Source
      */
-    sourceId: number;
+    id: number;
     /**
      *
      * @type {string}
@@ -2781,7 +2606,7 @@ export interface SourceIn {
      * @type {number}
      * @memberof SourceIn
      */
-    sourceId: number;
+    id: number;
     /**
      *
      * @type {string}
@@ -2813,13 +2638,19 @@ export interface SourceOut {
      * @type {number}
      * @memberof SourceOut
      */
-    sourceId: number;
+    id: number;
     /**
      *
      * @type {string}
      * @memberof SourceOut
      */
     sourceType: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SourceOut
+     */
+    uuid?: string;
     /**
      *
      * @type {string}
@@ -2839,17 +2670,23 @@ export interface SourceOut {
      */
     billingSource?: any;
     /**
-     *
-     * @type {string}
+     * Flag to indicate if provider is linked to source.
+     * @type {boolean}
      * @memberof SourceOut
      */
-    kokuUuid?: string;
+    providerLinked?: boolean;
     /**
-     *
+     * OpenShift foundational infrastructure type.
      * @type {string}
      * @memberof SourceOut
      */
-    sourceUuid?: string;
+    infrastructure?: string;
+    /**
+     * List of cost model name and UUIDs associated with this provider.
+     * @type {Array<any>}
+     * @memberof SourceOut
+     */
+    costModels?: Array<any>;
 }
 
 /**
@@ -3020,102 +2857,12 @@ export interface UserOut {
     uuid: string;
 }
 
-/**
- *
- * @export
- * @interface UserPreference
- */
-export interface UserPreference {
-    /**
-     *
-     * @type {string}
-     * @memberof UserPreference
-     */
-    name: string;
-    /**
-     *
-     * @type {any}
-     * @memberof UserPreference
-     */
-    preference: any;
-    /**
-     *
-     * @type {string}
-     * @memberof UserPreference
-     */
-    description?: string;
-}
 
 /**
- *
- * @export
- * @interface UserPreferenceOut
- */
-export interface UserPreferenceOut {
-    /**
-     *
-     * @type {string}
-     * @memberof UserPreferenceOut
-     */
-    name: string;
-    /**
-     *
-     * @type {any}
-     * @memberof UserPreferenceOut
-     */
-    preference: any;
-    /**
-     *
-     * @type {string}
-     * @memberof UserPreferenceOut
-     */
-    description?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof UserPreferenceOut
-     */
-    uuid: string;
-    /**
-     *
-     * @type {UserOut}
-     * @memberof UserPreferenceOut
-     */
-    user: UserOut;
-}
-
-/**
- *
- * @export
- * @interface UserPreferencePagination
- */
-export interface UserPreferencePagination {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof UserPreferencePagination
-     */
-    meta?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof UserPreferencePagination
-     */
-    links?: PaginationLinks;
-    /**
-     *
-     * @type {Array<UserPreferenceOut>}
-     * @memberof UserPreferencePagination
-     */
-    data: Array<UserPreferenceOut>;
-}
-
-
-/**
- * AWSReportApi - axios parameter creator
+ * AWSReportsApi - axios parameter creator
  * @export
  */
-export const AWSReportApiAxiosParamCreator = function (configuration?: Configuration) {
+export const AWSReportsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          *
@@ -3315,10 +3062,10 @@ export const AWSReportApiAxiosParamCreator = function (configuration?: Configura
 };
 
 /**
- * AWSReportApi - functional programming interface
+ * AWSReportsApi - functional programming interface
  * @export
  */
-export const AWSReportApiFp = function(configuration?: Configuration) {
+export const AWSReportsApiFp = function(configuration?: Configuration) {
     return {
         /**
          *
@@ -3333,7 +3080,7 @@ export const AWSReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getAWSCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportCost> {
-            const localVarAxiosArgs = AWSReportApiAxiosParamCreator(configuration).getAWSCostReports(delta, filter, groupBy, orderBy, offset, limit, options);
+            const localVarAxiosArgs = AWSReportsApiAxiosParamCreator(configuration).getAWSCostReports(delta, filter, groupBy, orderBy, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -3353,7 +3100,7 @@ export const AWSReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getAWSInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, computeCount?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportInstanceInventory> {
-            const localVarAxiosArgs = AWSReportApiAxiosParamCreator(configuration).getAWSInstanceReports(filter, groupBy, orderBy, units, offset, limit, computeCount, options);
+            const localVarAxiosArgs = AWSReportsApiAxiosParamCreator(configuration).getAWSInstanceReports(filter, groupBy, orderBy, units, offset, limit, computeCount, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -3372,7 +3119,7 @@ export const AWSReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getAWSStorageReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportStorageInventory> {
-            const localVarAxiosArgs = AWSReportApiAxiosParamCreator(configuration).getAWSStorageReports(filter, groupBy, orderBy, units, offset, limit, options);
+            const localVarAxiosArgs = AWSReportsApiAxiosParamCreator(configuration).getAWSStorageReports(filter, groupBy, orderBy, units, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -3382,10 +3129,10 @@ export const AWSReportApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * AWSReportApi - factory interface
+ * AWSReportsApi - factory interface
  * @export
  */
-export const AWSReportApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const AWSReportsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
          *
@@ -3400,7 +3147,7 @@ export const AWSReportApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         getAWSCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-            return AWSReportApiFp(configuration).getAWSCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
+            return AWSReportsApiFp(configuration).getAWSCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -3416,7 +3163,7 @@ export const AWSReportApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         getAWSInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, computeCount?: boolean, options?: any) {
-            return AWSReportApiFp(configuration).getAWSInstanceReports(filter, groupBy, orderBy, units, offset, limit, computeCount, options)(axios, basePath);
+            return AWSReportsApiFp(configuration).getAWSInstanceReports(filter, groupBy, orderBy, units, offset, limit, computeCount, options)(axios, basePath);
         },
         /**
          *
@@ -3431,18 +3178,18 @@ export const AWSReportApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         getAWSStorageReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-            return AWSReportApiFp(configuration).getAWSStorageReports(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
+            return AWSReportsApiFp(configuration).getAWSStorageReports(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
         },
     };
 };
 
 /**
- * AWSReportApi - object-oriented interface
+ * AWSReportsApi - object-oriented interface
  * @export
- * @class AWSReportApi
+ * @class AWSReportsApi
  * @extends {BaseAPI}
  */
-export class AWSReportApi extends BaseAPI {
+export class AWSReportsApi extends BaseAPI {
     /**
      *
      * @summary Query to obtain cost reports
@@ -3454,10 +3201,10 @@ export class AWSReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof AWSReportApi
+     * @memberof AWSReportsApi
      */
     public getAWSCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-        return AWSReportApiFp(this.configuration).getAWSCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
+        return AWSReportsApiFp(this.configuration).getAWSCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3472,10 +3219,10 @@ export class AWSReportApi extends BaseAPI {
      * @param {boolean} [computeCount] Toggle to include count values in report.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof AWSReportApi
+     * @memberof AWSReportsApi
      */
     public getAWSInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, computeCount?: boolean, options?: any) {
-        return AWSReportApiFp(this.configuration).getAWSInstanceReports(filter, groupBy, orderBy, units, offset, limit, computeCount, options)(this.axios, this.basePath);
+        return AWSReportsApiFp(this.configuration).getAWSInstanceReports(filter, groupBy, orderBy, units, offset, limit, computeCount, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3489,19 +3236,19 @@ export class AWSReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof AWSReportApi
+     * @memberof AWSReportsApi
      */
     public getAWSStorageReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-        return AWSReportApiFp(this.configuration).getAWSStorageReports(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
+        return AWSReportsApiFp(this.configuration).getAWSStorageReports(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
     }
 
 }
 
 /**
- * AzureReportApi - axios parameter creator
+ * AzureReportsApi - axios parameter creator
  * @export
  */
-export const AzureReportApiAxiosParamCreator = function (configuration?: Configuration) {
+export const AzureReportsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          *
@@ -3696,10 +3443,10 @@ export const AzureReportApiAxiosParamCreator = function (configuration?: Configu
 };
 
 /**
- * AzureReportApi - functional programming interface
+ * AzureReportsApi - functional programming interface
  * @export
  */
-export const AzureReportApiFp = function(configuration?: Configuration) {
+export const AzureReportsApiFp = function(configuration?: Configuration) {
     return {
         /**
          *
@@ -3714,7 +3461,7 @@ export const AzureReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportCost> {
-            const localVarAxiosArgs = AzureReportApiAxiosParamCreator(configuration).getAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options);
+            const localVarAxiosArgs = AzureReportsApiAxiosParamCreator(configuration).getAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -3733,7 +3480,7 @@ export const AzureReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getAzureInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportInstanceInventory> {
-            const localVarAxiosArgs = AzureReportApiAxiosParamCreator(configuration).getAzureInstanceReports(filter, groupBy, orderBy, units, offset, limit, options);
+            const localVarAxiosArgs = AzureReportsApiAxiosParamCreator(configuration).getAzureInstanceReports(filter, groupBy, orderBy, units, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -3752,7 +3499,7 @@ export const AzureReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getAzureStorageReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportStorageInventory> {
-            const localVarAxiosArgs = AzureReportApiAxiosParamCreator(configuration).getAzureStorageReports(filter, groupBy, orderBy, units, offset, limit, options);
+            const localVarAxiosArgs = AzureReportsApiAxiosParamCreator(configuration).getAzureStorageReports(filter, groupBy, orderBy, units, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -3762,10 +3509,10 @@ export const AzureReportApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * AzureReportApi - factory interface
+ * AzureReportsApi - factory interface
  * @export
  */
-export const AzureReportApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const AzureReportsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
          *
@@ -3780,7 +3527,7 @@ export const AzureReportApiFactory = function (configuration?: Configuration, ba
          * @throws {RequiredError}
          */
         getAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-            return AzureReportApiFp(configuration).getAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
+            return AzureReportsApiFp(configuration).getAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -3795,7 +3542,7 @@ export const AzureReportApiFactory = function (configuration?: Configuration, ba
          * @throws {RequiredError}
          */
         getAzureInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-            return AzureReportApiFp(configuration).getAzureInstanceReports(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
+            return AzureReportsApiFp(configuration).getAzureInstanceReports(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -3810,18 +3557,18 @@ export const AzureReportApiFactory = function (configuration?: Configuration, ba
          * @throws {RequiredError}
          */
         getAzureStorageReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-            return AzureReportApiFp(configuration).getAzureStorageReports(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
+            return AzureReportsApiFp(configuration).getAzureStorageReports(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
         },
     };
 };
 
 /**
- * AzureReportApi - object-oriented interface
+ * AzureReportsApi - object-oriented interface
  * @export
- * @class AzureReportApi
+ * @class AzureReportsApi
  * @extends {BaseAPI}
  */
-export class AzureReportApi extends BaseAPI {
+export class AzureReportsApi extends BaseAPI {
     /**
      *
      * @summary Query to obtain cost reports
@@ -3833,10 +3580,10 @@ export class AzureReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof AzureReportApi
+     * @memberof AzureReportsApi
      */
     public getAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-        return AzureReportApiFp(this.configuration).getAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
+        return AzureReportsApiFp(this.configuration).getAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3850,10 +3597,10 @@ export class AzureReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof AzureReportApi
+     * @memberof AzureReportsApi
      */
     public getAzureInstanceReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-        return AzureReportApiFp(this.configuration).getAzureInstanceReports(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
+        return AzureReportsApiFp(this.configuration).getAzureInstanceReports(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3867,121 +3614,19 @@ export class AzureReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof AzureReportApi
+     * @memberof AzureReportsApi
      */
     public getAzureStorageReports(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-        return AzureReportApiFp(this.configuration).getAzureStorageReports(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
+        return AzureReportsApiFp(this.configuration).getAzureStorageReports(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
     }
 
 }
 
 /**
- * CloudAccountsApi - axios parameter creator
+ * CostModelsApi - axios parameter creator
  * @export
  */
-export const CloudAccountsApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @summary Obtain defined cloud accounts
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getCloudAccounts(options: any = {}): RequestArgs {
-            const localVarPath = `/cloud-accounts/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * CloudAccountsApi - functional programming interface
- * @export
- */
-export const CloudAccountsApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @summary Obtain defined cloud accounts
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getCloudAccounts(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<CloudAccountPagination> {
-            const localVarAxiosArgs = CloudAccountsApiAxiosParamCreator(configuration).getCloudAccounts(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * CloudAccountsApi - factory interface
- * @export
- */
-export const CloudAccountsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         *
-         * @summary Obtain defined cloud accounts
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getCloudAccounts(options?: any) {
-            return CloudAccountsApiFp(configuration).getCloudAccounts(options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * CloudAccountsApi - object-oriented interface
- * @export
- * @class CloudAccountsApi
- * @extends {BaseAPI}
- */
-export class CloudAccountsApi extends BaseAPI {
-    /**
-     *
-     * @summary Obtain defined cloud accounts
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CloudAccountsApi
-     */
-    public getCloudAccounts(options?: any) {
-        return CloudAccountsApiFp(this.configuration).getCloudAccounts(options)(this.axios, this.basePath);
-    }
-
-}
-
-/**
- * CostModelApi - axios parameter creator
- * @export
- */
-export const CostModelApiAxiosParamCreator = function (configuration?: Configuration) {
+export const CostModelsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          *
@@ -4217,10 +3862,10 @@ export const CostModelApiAxiosParamCreator = function (configuration?: Configura
 };
 
 /**
- * CostModelApi - functional programming interface
+ * CostModelsApi - functional programming interface
  * @export
  */
-export const CostModelApiFp = function(configuration?: Configuration) {
+export const CostModelsApiFp = function(configuration?: Configuration) {
     return {
         /**
          *
@@ -4230,7 +3875,7 @@ export const CostModelApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         createCostModel(costModel: CostModel, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<CostModelOut> {
-            const localVarAxiosArgs = CostModelApiAxiosParamCreator(configuration).createCostModel(costModel, options);
+            const localVarAxiosArgs = CostModelsApiAxiosParamCreator(configuration).createCostModel(costModel, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4244,7 +3889,7 @@ export const CostModelApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         deleteCostModel(costModelUuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = CostModelApiAxiosParamCreator(configuration).deleteCostModel(costModelUuid, options);
+            const localVarAxiosArgs = CostModelsApiAxiosParamCreator(configuration).deleteCostModel(costModelUuid, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4258,7 +3903,7 @@ export const CostModelApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getCostModel(costModelUuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<CostModelOut> {
-            const localVarAxiosArgs = CostModelApiAxiosParamCreator(configuration).getCostModel(costModelUuid, options);
+            const localVarAxiosArgs = CostModelsApiAxiosParamCreator(configuration).getCostModel(costModelUuid, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4278,7 +3923,7 @@ export const CostModelApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         listCostModels(offset?: number, limit?: number, providerUuid?: string, sourceType?: string, name?: string, description?: string, ordering?: 'name' | '-name' | 'source_type' | '-source_type' | 'updated_timestamp' | '-updated_timestamp', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<CostModelPagination> {
-            const localVarAxiosArgs = CostModelApiAxiosParamCreator(configuration).listCostModels(offset, limit, providerUuid, sourceType, name, description, ordering, options);
+            const localVarAxiosArgs = CostModelsApiAxiosParamCreator(configuration).listCostModels(offset, limit, providerUuid, sourceType, name, description, ordering, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4293,7 +3938,7 @@ export const CostModelApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         updateCostModel(costModelUuid: string, costModel: CostModel, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<CostModelOut> {
-            const localVarAxiosArgs = CostModelApiAxiosParamCreator(configuration).updateCostModel(costModelUuid, costModel, options);
+            const localVarAxiosArgs = CostModelsApiAxiosParamCreator(configuration).updateCostModel(costModelUuid, costModel, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -4303,10 +3948,10 @@ export const CostModelApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * CostModelApi - factory interface
+ * CostModelsApi - factory interface
  * @export
  */
-export const CostModelApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const CostModelsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
          *
@@ -4316,7 +3961,7 @@ export const CostModelApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         createCostModel(costModel: CostModel, options?: any) {
-            return CostModelApiFp(configuration).createCostModel(costModel, options)(axios, basePath);
+            return CostModelsApiFp(configuration).createCostModel(costModel, options)(axios, basePath);
         },
         /**
          *
@@ -4326,7 +3971,7 @@ export const CostModelApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         deleteCostModel(costModelUuid: string, options?: any) {
-            return CostModelApiFp(configuration).deleteCostModel(costModelUuid, options)(axios, basePath);
+            return CostModelsApiFp(configuration).deleteCostModel(costModelUuid, options)(axios, basePath);
         },
         /**
          *
@@ -4336,7 +3981,7 @@ export const CostModelApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         getCostModel(costModelUuid: string, options?: any) {
-            return CostModelApiFp(configuration).getCostModel(costModelUuid, options)(axios, basePath);
+            return CostModelsApiFp(configuration).getCostModel(costModelUuid, options)(axios, basePath);
         },
         /**
          *
@@ -4352,7 +3997,7 @@ export const CostModelApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         listCostModels(offset?: number, limit?: number, providerUuid?: string, sourceType?: string, name?: string, description?: string, ordering?: 'name' | '-name' | 'source_type' | '-source_type' | 'updated_timestamp' | '-updated_timestamp', options?: any) {
-            return CostModelApiFp(configuration).listCostModels(offset, limit, providerUuid, sourceType, name, description, ordering, options)(axios, basePath);
+            return CostModelsApiFp(configuration).listCostModels(offset, limit, providerUuid, sourceType, name, description, ordering, options)(axios, basePath);
         },
         /**
          *
@@ -4363,28 +4008,28 @@ export const CostModelApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         updateCostModel(costModelUuid: string, costModel: CostModel, options?: any) {
-            return CostModelApiFp(configuration).updateCostModel(costModelUuid, costModel, options)(axios, basePath);
+            return CostModelsApiFp(configuration).updateCostModel(costModelUuid, costModel, options)(axios, basePath);
         },
     };
 };
 
 /**
- * CostModelApi - object-oriented interface
+ * CostModelsApi - object-oriented interface
  * @export
- * @class CostModelApi
+ * @class CostModelsApi
  * @extends {BaseAPI}
  */
-export class CostModelApi extends BaseAPI {
+export class CostModelsApi extends BaseAPI {
     /**
      *
      * @summary Create a new cost model.
      * @param {CostModel} costModel
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof CostModelApi
+     * @memberof CostModelsApi
      */
     public createCostModel(costModel: CostModel, options?: any) {
-        return CostModelApiFp(this.configuration).createCostModel(costModel, options)(this.axios, this.basePath);
+        return CostModelsApiFp(this.configuration).createCostModel(costModel, options)(this.axios, this.basePath);
     }
 
     /**
@@ -4393,10 +4038,10 @@ export class CostModelApi extends BaseAPI {
      * @param {string} costModelUuid UUID of Cost Model to get
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof CostModelApi
+     * @memberof CostModelsApi
      */
     public deleteCostModel(costModelUuid: string, options?: any) {
-        return CostModelApiFp(this.configuration).deleteCostModel(costModelUuid, options)(this.axios, this.basePath);
+        return CostModelsApiFp(this.configuration).deleteCostModel(costModelUuid, options)(this.axios, this.basePath);
     }
 
     /**
@@ -4405,10 +4050,10 @@ export class CostModelApi extends BaseAPI {
      * @param {string} costModelUuid UUID of Cost Model to get
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof CostModelApi
+     * @memberof CostModelsApi
      */
     public getCostModel(costModelUuid: string, options?: any) {
-        return CostModelApiFp(this.configuration).getCostModel(costModelUuid, options)(this.axios, this.basePath);
+        return CostModelsApiFp(this.configuration).getCostModel(costModelUuid, options)(this.axios, this.basePath);
     }
 
     /**
@@ -4423,10 +4068,10 @@ export class CostModelApi extends BaseAPI {
      * @param {'name' | '-name' | 'source_type' | '-source_type' | 'updated_timestamp' | '-updated_timestamp'} [ordering] Order response on cost model by allowed fields.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof CostModelApi
+     * @memberof CostModelsApi
      */
     public listCostModels(offset?: number, limit?: number, providerUuid?: string, sourceType?: string, name?: string, description?: string, ordering?: 'name' | '-name' | 'source_type' | '-source_type' | 'updated_timestamp' | '-updated_timestamp', options?: any) {
-        return CostModelApiFp(this.configuration).listCostModels(offset, limit, providerUuid, sourceType, name, description, ordering, options)(this.axios, this.basePath);
+        return CostModelsApiFp(this.configuration).listCostModels(offset, limit, providerUuid, sourceType, name, description, ordering, options)(this.axios, this.basePath);
     }
 
     /**
@@ -4436,281 +4081,10 @@ export class CostModelApi extends BaseAPI {
      * @param {CostModel} costModel Update to a Cost Model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof CostModelApi
+     * @memberof CostModelsApi
      */
     public updateCostModel(costModelUuid: string, costModel: CostModel, options?: any) {
-        return CostModelApiFp(this.configuration).updateCostModel(costModelUuid, costModel, options)(this.axios, this.basePath);
-    }
-
-}
-
-/**
- * DataExportRequestApi - axios parameter creator
- * @export
- */
-export const DataExportRequestApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @summary Create a data export request
-         * @param {DataExportRequest} dataExportRequest Data export request to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createDataExportRequest(dataExportRequest: DataExportRequest, options: any = {}): RequestArgs {
-            // verify required parameter 'dataExportRequest' is not null or undefined
-            if (dataExportRequest === null || dataExportRequest === undefined) {
-                throw new RequiredError('dataExportRequest','Required parameter dataExportRequest was null or undefined when calling createDataExportRequest.');
-            }
-            const localVarPath = `/dataexportrequests/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"DataExportRequest" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(dataExportRequest || {}) : (dataExportRequest || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @summary List the data export requests
-         * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listDataExportRequests(offset?: number, limit?: number, options: any = {}): RequestArgs {
-            const localVarPath = `/dataexportrequests/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @summary Get a data export request
-         * @param {string} uuid ID of data export request to get
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        retrieveDataExportRequest(uuid: string, options: any = {}): RequestArgs {
-            // verify required parameter 'uuid' is not null or undefined
-            if (uuid === null || uuid === undefined) {
-                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling retrieveDataExportRequest.');
-            }
-            const localVarPath = `/dataexportrequests/{uuid}/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * DataExportRequestApi - functional programming interface
- * @export
- */
-export const DataExportRequestApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @summary Create a data export request
-         * @param {DataExportRequest} dataExportRequest Data export request to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createDataExportRequest(dataExportRequest: DataExportRequest, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DataExportRequestOut> {
-            const localVarAxiosArgs = DataExportRequestApiAxiosParamCreator(configuration).createDataExportRequest(dataExportRequest, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         *
-         * @summary List the data export requests
-         * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listDataExportRequests(offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DataExportRequestPagination> {
-            const localVarAxiosArgs = DataExportRequestApiAxiosParamCreator(configuration).listDataExportRequests(offset, limit, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         *
-         * @summary Get a data export request
-         * @param {string} uuid ID of data export request to get
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        retrieveDataExportRequest(uuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DataExportRequestOut> {
-            const localVarAxiosArgs = DataExportRequestApiAxiosParamCreator(configuration).retrieveDataExportRequest(uuid, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * DataExportRequestApi - factory interface
- * @export
- */
-export const DataExportRequestApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         *
-         * @summary Create a data export request
-         * @param {DataExportRequest} dataExportRequest Data export request to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createDataExportRequest(dataExportRequest: DataExportRequest, options?: any) {
-            return DataExportRequestApiFp(configuration).createDataExportRequest(dataExportRequest, options)(axios, basePath);
-        },
-        /**
-         *
-         * @summary List the data export requests
-         * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listDataExportRequests(offset?: number, limit?: number, options?: any) {
-            return DataExportRequestApiFp(configuration).listDataExportRequests(offset, limit, options)(axios, basePath);
-        },
-        /**
-         *
-         * @summary Get a data export request
-         * @param {string} uuid ID of data export request to get
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        retrieveDataExportRequest(uuid: string, options?: any) {
-            return DataExportRequestApiFp(configuration).retrieveDataExportRequest(uuid, options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * DataExportRequestApi - object-oriented interface
- * @export
- * @class DataExportRequestApi
- * @extends {BaseAPI}
- */
-export class DataExportRequestApi extends BaseAPI {
-    /**
-     *
-     * @summary Create a data export request
-     * @param {DataExportRequest} dataExportRequest Data export request to create
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DataExportRequestApi
-     */
-    public createDataExportRequest(dataExportRequest: DataExportRequest, options?: any) {
-        return DataExportRequestApiFp(this.configuration).createDataExportRequest(dataExportRequest, options)(this.axios, this.basePath);
-    }
-
-    /**
-     *
-     * @summary List the data export requests
-     * @param {number} [offset] Parameter for selecting the offset of data.
-     * @param {number} [limit] Parameter for selecting the amount of data in a returned.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DataExportRequestApi
-     */
-    public listDataExportRequests(offset?: number, limit?: number, options?: any) {
-        return DataExportRequestApiFp(this.configuration).listDataExportRequests(offset, limit, options)(this.axios, this.basePath);
-    }
-
-    /**
-     *
-     * @summary Get a data export request
-     * @param {string} uuid ID of data export request to get
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DataExportRequestApi
-     */
-    public retrieveDataExportRequest(uuid: string, options?: any) {
-        return DataExportRequestApiFp(this.configuration).retrieveDataExportRequest(uuid, options)(this.axios, this.basePath);
+        return CostModelsApiFp(this.configuration).updateCostModel(costModelUuid, costModel, options)(this.axios, this.basePath);
     }
 
 }
@@ -4812,10 +4186,10 @@ export class MetricsApi extends BaseAPI {
 }
 
 /**
- * OpenShiftReportApi - axios parameter creator
+ * OpenShiftReportsApi - axios parameter creator
  * @export
  */
-export const OpenShiftReportApiAxiosParamCreator = function (configuration?: Configuration) {
+export const OpenShiftReportsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          *
@@ -5436,10 +4810,10 @@ export const OpenShiftReportApiAxiosParamCreator = function (configuration?: Con
 };
 
 /**
- * OpenShiftReportApi - functional programming interface
+ * OpenShiftReportsApi - functional programming interface
  * @export
  */
-export const OpenShiftReportApiFp = function(configuration?: Configuration) {
+export const OpenShiftReportsApiFp = function(configuration?: Configuration) {
     return {
         /**
          *
@@ -5454,7 +4828,7 @@ export const OpenShiftReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getOpenShiftAWSCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportCosts> {
-            const localVarAxiosArgs = OpenShiftReportApiAxiosParamCreator(configuration).getOpenShiftAWSCostReports(delta, filter, groupBy, orderBy, offset, limit, options);
+            const localVarAxiosArgs = OpenShiftReportsApiAxiosParamCreator(configuration).getOpenShiftAWSCostReports(delta, filter, groupBy, orderBy, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -5473,7 +4847,7 @@ export const OpenShiftReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getOpenShiftAWSInventoryInstanceReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportOpenShiftAWSInstanceInventory> {
-            const localVarAxiosArgs = OpenShiftReportApiAxiosParamCreator(configuration).getOpenShiftAWSInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options);
+            const localVarAxiosArgs = OpenShiftReportsApiAxiosParamCreator(configuration).getOpenShiftAWSInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -5492,7 +4866,7 @@ export const OpenShiftReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getOpenShiftAWSInventoryStorageReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportOpenShiftAWSStorageInventory> {
-            const localVarAxiosArgs = OpenShiftReportApiAxiosParamCreator(configuration).getOpenShiftAWSInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options);
+            const localVarAxiosArgs = OpenShiftReportsApiAxiosParamCreator(configuration).getOpenShiftAWSInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -5511,7 +4885,7 @@ export const OpenShiftReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getOpenShiftAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportCosts> {
-            const localVarAxiosArgs = OpenShiftReportApiAxiosParamCreator(configuration).getOpenShiftAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options);
+            const localVarAxiosArgs = OpenShiftReportsApiAxiosParamCreator(configuration).getOpenShiftAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -5530,7 +4904,7 @@ export const OpenShiftReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getOpenShiftAzureInventoryInstanceReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportOpenShiftAzureInstanceInventory> {
-            const localVarAxiosArgs = OpenShiftReportApiAxiosParamCreator(configuration).getOpenShiftAzureInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options);
+            const localVarAxiosArgs = OpenShiftReportsApiAxiosParamCreator(configuration).getOpenShiftAzureInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -5549,7 +4923,7 @@ export const OpenShiftReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getOpenShiftAzureInventoryStorageReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportOpenShiftAzureStorageInventory> {
-            const localVarAxiosArgs = OpenShiftReportApiAxiosParamCreator(configuration).getOpenShiftAzureInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options);
+            const localVarAxiosArgs = OpenShiftReportsApiAxiosParamCreator(configuration).getOpenShiftAzureInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -5567,7 +4941,7 @@ export const OpenShiftReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getOpenShiftComputeReports(filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportOpenShiftCpu> {
-            const localVarAxiosArgs = OpenShiftReportApiAxiosParamCreator(configuration).getOpenShiftComputeReports(filter, groupBy, orderBy, offset, limit, options);
+            const localVarAxiosArgs = OpenShiftReportsApiAxiosParamCreator(configuration).getOpenShiftComputeReports(filter, groupBy, orderBy, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -5586,7 +4960,7 @@ export const OpenShiftReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getOpenShiftCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportCost> {
-            const localVarAxiosArgs = OpenShiftReportApiAxiosParamCreator(configuration).getOpenShiftCostReports(delta, filter, groupBy, orderBy, offset, limit, options);
+            const localVarAxiosArgs = OpenShiftReportsApiAxiosParamCreator(configuration).getOpenShiftCostReports(delta, filter, groupBy, orderBy, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -5604,7 +4978,7 @@ export const OpenShiftReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getOpenShiftMemoryReports(filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportOpenShiftMemory> {
-            const localVarAxiosArgs = OpenShiftReportApiAxiosParamCreator(configuration).getOpenShiftMemoryReports(filter, groupBy, orderBy, offset, limit, options);
+            const localVarAxiosArgs = OpenShiftReportsApiAxiosParamCreator(configuration).getOpenShiftMemoryReports(filter, groupBy, orderBy, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -5622,7 +4996,7 @@ export const OpenShiftReportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getOpenShiftVolumeReports(filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportOpenShiftVolume> {
-            const localVarAxiosArgs = OpenShiftReportApiAxiosParamCreator(configuration).getOpenShiftVolumeReports(filter, groupBy, orderBy, offset, limit, options);
+            const localVarAxiosArgs = OpenShiftReportsApiAxiosParamCreator(configuration).getOpenShiftVolumeReports(filter, groupBy, orderBy, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -5632,10 +5006,10 @@ export const OpenShiftReportApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * OpenShiftReportApi - factory interface
+ * OpenShiftReportsApi - factory interface
  * @export
  */
-export const OpenShiftReportApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const OpenShiftReportsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
          *
@@ -5650,7 +5024,7 @@ export const OpenShiftReportApiFactory = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         getOpenShiftAWSCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-            return OpenShiftReportApiFp(configuration).getOpenShiftAWSCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
+            return OpenShiftReportsApiFp(configuration).getOpenShiftAWSCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -5665,7 +5039,7 @@ export const OpenShiftReportApiFactory = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         getOpenShiftAWSInventoryInstanceReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-            return OpenShiftReportApiFp(configuration).getOpenShiftAWSInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
+            return OpenShiftReportsApiFp(configuration).getOpenShiftAWSInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -5680,7 +5054,7 @@ export const OpenShiftReportApiFactory = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         getOpenShiftAWSInventoryStorageReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-            return OpenShiftReportApiFp(configuration).getOpenShiftAWSInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
+            return OpenShiftReportsApiFp(configuration).getOpenShiftAWSInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -5695,7 +5069,7 @@ export const OpenShiftReportApiFactory = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         getOpenShiftAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-            return OpenShiftReportApiFp(configuration).getOpenShiftAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
+            return OpenShiftReportsApiFp(configuration).getOpenShiftAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -5710,7 +5084,7 @@ export const OpenShiftReportApiFactory = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         getOpenShiftAzureInventoryInstanceReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-            return OpenShiftReportApiFp(configuration).getOpenShiftAzureInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
+            return OpenShiftReportsApiFp(configuration).getOpenShiftAzureInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -5725,7 +5099,7 @@ export const OpenShiftReportApiFactory = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         getOpenShiftAzureInventoryStorageReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-            return OpenShiftReportApiFp(configuration).getOpenShiftAzureInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
+            return OpenShiftReportsApiFp(configuration).getOpenShiftAzureInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -5739,7 +5113,7 @@ export const OpenShiftReportApiFactory = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         getOpenShiftComputeReports(filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-            return OpenShiftReportApiFp(configuration).getOpenShiftComputeReports(filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
+            return OpenShiftReportsApiFp(configuration).getOpenShiftComputeReports(filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -5754,7 +5128,7 @@ export const OpenShiftReportApiFactory = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         getOpenShiftCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-            return OpenShiftReportApiFp(configuration).getOpenShiftCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
+            return OpenShiftReportsApiFp(configuration).getOpenShiftCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -5768,7 +5142,7 @@ export const OpenShiftReportApiFactory = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         getOpenShiftMemoryReports(filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-            return OpenShiftReportApiFp(configuration).getOpenShiftMemoryReports(filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
+            return OpenShiftReportsApiFp(configuration).getOpenShiftMemoryReports(filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -5782,18 +5156,18 @@ export const OpenShiftReportApiFactory = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         getOpenShiftVolumeReports(filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-            return OpenShiftReportApiFp(configuration).getOpenShiftVolumeReports(filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
+            return OpenShiftReportsApiFp(configuration).getOpenShiftVolumeReports(filter, groupBy, orderBy, offset, limit, options)(axios, basePath);
         },
     };
 };
 
 /**
- * OpenShiftReportApi - object-oriented interface
+ * OpenShiftReportsApi - object-oriented interface
  * @export
- * @class OpenShiftReportApi
+ * @class OpenShiftReportsApi
  * @extends {BaseAPI}
  */
-export class OpenShiftReportApi extends BaseAPI {
+export class OpenShiftReportsApi extends BaseAPI {
     /**
      *
      * @summary Query to obtain OpenShift on AWS cost reports
@@ -5805,10 +5179,10 @@ export class OpenShiftReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof OpenShiftReportApi
+     * @memberof OpenShiftReportsApi
      */
     public getOpenShiftAWSCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-        return OpenShiftReportApiFp(this.configuration).getOpenShiftAWSCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
+        return OpenShiftReportsApiFp(this.configuration).getOpenShiftAWSCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5822,10 +5196,10 @@ export class OpenShiftReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof OpenShiftReportApi
+     * @memberof OpenShiftReportsApi
      */
     public getOpenShiftAWSInventoryInstanceReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-        return OpenShiftReportApiFp(this.configuration).getOpenShiftAWSInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
+        return OpenShiftReportsApiFp(this.configuration).getOpenShiftAWSInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5839,10 +5213,10 @@ export class OpenShiftReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof OpenShiftReportApi
+     * @memberof OpenShiftReportsApi
      */
     public getOpenShiftAWSInventoryStorageReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-        return OpenShiftReportApiFp(this.configuration).getOpenShiftAWSInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
+        return OpenShiftReportsApiFp(this.configuration).getOpenShiftAWSInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5856,10 +5230,10 @@ export class OpenShiftReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof OpenShiftReportApi
+     * @memberof OpenShiftReportsApi
      */
     public getOpenShiftAzureCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-        return OpenShiftReportApiFp(this.configuration).getOpenShiftAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
+        return OpenShiftReportsApiFp(this.configuration).getOpenShiftAzureCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5873,10 +5247,10 @@ export class OpenShiftReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof OpenShiftReportApi
+     * @memberof OpenShiftReportsApi
      */
     public getOpenShiftAzureInventoryInstanceReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-        return OpenShiftReportApiFp(this.configuration).getOpenShiftAzureInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
+        return OpenShiftReportsApiFp(this.configuration).getOpenShiftAzureInventoryInstanceReport(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5890,10 +5264,10 @@ export class OpenShiftReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof OpenShiftReportApi
+     * @memberof OpenShiftReportsApi
      */
     public getOpenShiftAzureInventoryStorageReport(filter?: any, groupBy?: any, orderBy?: any, units?: string, offset?: number, limit?: number, options?: any) {
-        return OpenShiftReportApiFp(this.configuration).getOpenShiftAzureInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
+        return OpenShiftReportsApiFp(this.configuration).getOpenShiftAzureInventoryStorageReport(filter, groupBy, orderBy, units, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5906,10 +5280,10 @@ export class OpenShiftReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof OpenShiftReportApi
+     * @memberof OpenShiftReportsApi
      */
     public getOpenShiftComputeReports(filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-        return OpenShiftReportApiFp(this.configuration).getOpenShiftComputeReports(filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
+        return OpenShiftReportsApiFp(this.configuration).getOpenShiftComputeReports(filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5923,10 +5297,10 @@ export class OpenShiftReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof OpenShiftReportApi
+     * @memberof OpenShiftReportsApi
      */
     public getOpenShiftCostReports(delta?: string, filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-        return OpenShiftReportApiFp(this.configuration).getOpenShiftCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
+        return OpenShiftReportsApiFp(this.configuration).getOpenShiftCostReports(delta, filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5939,10 +5313,10 @@ export class OpenShiftReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof OpenShiftReportApi
+     * @memberof OpenShiftReportsApi
      */
     public getOpenShiftMemoryReports(filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-        return OpenShiftReportApiFp(this.configuration).getOpenShiftMemoryReports(filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
+        return OpenShiftReportsApiFp(this.configuration).getOpenShiftMemoryReports(filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5955,19 +5329,19 @@ export class OpenShiftReportApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof OpenShiftReportApi
+     * @memberof OpenShiftReportsApi
      */
     public getOpenShiftVolumeReports(filter?: any, groupBy?: any, orderBy?: any, offset?: number, limit?: number, options?: any) {
-        return OpenShiftReportApiFp(this.configuration).getOpenShiftVolumeReports(filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
+        return OpenShiftReportsApiFp(this.configuration).getOpenShiftVolumeReports(filter, groupBy, orderBy, offset, limit, options)(this.axios, this.basePath);
     }
 
 }
 
 /**
- * ProviderApi - axios parameter creator
+ * ProvidersApi - axios parameter creator
  * @export
  */
-export const ProviderApiAxiosParamCreator = function (configuration?: Configuration) {
+export const ProvidersApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          *
@@ -6204,10 +5578,10 @@ export const ProviderApiAxiosParamCreator = function (configuration?: Configurat
 };
 
 /**
- * ProviderApi - functional programming interface
+ * ProvidersApi - functional programming interface
  * @export
  */
-export const ProviderApiFp = function(configuration?: Configuration) {
+export const ProvidersApiFp = function(configuration?: Configuration) {
     return {
         /**
          *
@@ -6217,7 +5591,7 @@ export const ProviderApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         createProvider(providerIn: ProviderIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProviderOut> {
-            const localVarAxiosArgs = ProviderApiAxiosParamCreator(configuration).createProvider(providerIn, options);
+            const localVarAxiosArgs = ProvidersApiAxiosParamCreator(configuration).createProvider(providerIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -6231,7 +5605,7 @@ export const ProviderApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         deleteProvider(uuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = ProviderApiAxiosParamCreator(configuration).deleteProvider(uuid, options);
+            const localVarAxiosArgs = ProvidersApiAxiosParamCreator(configuration).deleteProvider(uuid, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -6246,7 +5620,7 @@ export const ProviderApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         getProvider(uuid: string, stats?: 'true' | 'false', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProviderOut> {
-            const localVarAxiosArgs = ProviderApiAxiosParamCreator(configuration).getProvider(uuid, stats, options);
+            const localVarAxiosArgs = ProvidersApiAxiosParamCreator(configuration).getProvider(uuid, stats, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -6264,7 +5638,7 @@ export const ProviderApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         listProviders(type?: string, name?: string, stats?: 'true' | 'false', offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProviderPagination> {
-            const localVarAxiosArgs = ProviderApiAxiosParamCreator(configuration).listProviders(type, name, stats, offset, limit, options);
+            const localVarAxiosArgs = ProvidersApiAxiosParamCreator(configuration).listProviders(type, name, stats, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -6279,7 +5653,7 @@ export const ProviderApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         updateProvider(uuid: string, providerIn: ProviderIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProviderOut> {
-            const localVarAxiosArgs = ProviderApiAxiosParamCreator(configuration).updateProvider(uuid, providerIn, options);
+            const localVarAxiosArgs = ProvidersApiAxiosParamCreator(configuration).updateProvider(uuid, providerIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -6289,10 +5663,10 @@ export const ProviderApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * ProviderApi - factory interface
+ * ProvidersApi - factory interface
  * @export
  */
-export const ProviderApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const ProvidersApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
          *
@@ -6302,7 +5676,7 @@ export const ProviderApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         createProvider(providerIn: ProviderIn, options?: any) {
-            return ProviderApiFp(configuration).createProvider(providerIn, options)(axios, basePath);
+            return ProvidersApiFp(configuration).createProvider(providerIn, options)(axios, basePath);
         },
         /**
          *
@@ -6312,7 +5686,7 @@ export const ProviderApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         deleteProvider(uuid: string, options?: any) {
-            return ProviderApiFp(configuration).deleteProvider(uuid, options)(axios, basePath);
+            return ProvidersApiFp(configuration).deleteProvider(uuid, options)(axios, basePath);
         },
         /**
          *
@@ -6323,7 +5697,7 @@ export const ProviderApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         getProvider(uuid: string, stats?: 'true' | 'false', options?: any) {
-            return ProviderApiFp(configuration).getProvider(uuid, stats, options)(axios, basePath);
+            return ProvidersApiFp(configuration).getProvider(uuid, stats, options)(axios, basePath);
         },
         /**
          *
@@ -6337,7 +5711,7 @@ export const ProviderApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         listProviders(type?: string, name?: string, stats?: 'true' | 'false', offset?: number, limit?: number, options?: any) {
-            return ProviderApiFp(configuration).listProviders(type, name, stats, offset, limit, options)(axios, basePath);
+            return ProvidersApiFp(configuration).listProviders(type, name, stats, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -6348,28 +5722,28 @@ export const ProviderApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         updateProvider(uuid: string, providerIn: ProviderIn, options?: any) {
-            return ProviderApiFp(configuration).updateProvider(uuid, providerIn, options)(axios, basePath);
+            return ProvidersApiFp(configuration).updateProvider(uuid, providerIn, options)(axios, basePath);
         },
     };
 };
 
 /**
- * ProviderApi - object-oriented interface
+ * ProvidersApi - object-oriented interface
  * @export
- * @class ProviderApi
+ * @class ProvidersApi
  * @extends {BaseAPI}
  */
-export class ProviderApi extends BaseAPI {
+export class ProvidersApi extends BaseAPI {
     /**
      *
      * @summary Create a provider
      * @param {ProviderIn} providerIn Provider to add to a Customer
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ProviderApi
+     * @memberof ProvidersApi
      */
     public createProvider(providerIn: ProviderIn, options?: any) {
-        return ProviderApiFp(this.configuration).createProvider(providerIn, options)(this.axios, this.basePath);
+        return ProvidersApiFp(this.configuration).createProvider(providerIn, options)(this.axios, this.basePath);
     }
 
     /**
@@ -6378,10 +5752,10 @@ export class ProviderApi extends BaseAPI {
      * @param {string} uuid ID of provider to delete
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ProviderApi
+     * @memberof ProvidersApi
      */
     public deleteProvider(uuid: string, options?: any) {
-        return ProviderApiFp(this.configuration).deleteProvider(uuid, options)(this.axios, this.basePath);
+        return ProvidersApiFp(this.configuration).deleteProvider(uuid, options)(this.axios, this.basePath);
     }
 
     /**
@@ -6391,10 +5765,10 @@ export class ProviderApi extends BaseAPI {
      * @param {'true' | 'false'} [stats] Include provider status
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ProviderApi
+     * @memberof ProvidersApi
      */
     public getProvider(uuid: string, stats?: 'true' | 'false', options?: any) {
-        return ProviderApiFp(this.configuration).getProvider(uuid, stats, options)(this.axios, this.basePath);
+        return ProvidersApiFp(this.configuration).getProvider(uuid, stats, options)(this.axios, this.basePath);
     }
 
     /**
@@ -6407,10 +5781,10 @@ export class ProviderApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data in a returned.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ProviderApi
+     * @memberof ProvidersApi
      */
     public listProviders(type?: string, name?: string, stats?: 'true' | 'false', offset?: number, limit?: number, options?: any) {
-        return ProviderApiFp(this.configuration).listProviders(type, name, stats, offset, limit, options)(this.axios, this.basePath);
+        return ProvidersApiFp(this.configuration).listProviders(type, name, stats, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -6420,10 +5794,10 @@ export class ProviderApi extends BaseAPI {
      * @param {ProviderIn} providerIn
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ProviderApi
+     * @memberof ProvidersApi
      */
     public updateProvider(uuid: string, providerIn: ProviderIn, options?: any) {
-        return ProviderApiFp(this.configuration).updateProvider(uuid, providerIn, options)(this.axios, this.basePath);
+        return ProvidersApiFp(this.configuration).updateProvider(uuid, providerIn, options)(this.axios, this.basePath);
     }
 
 }
@@ -6469,11 +5843,48 @@ export const SourcesApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          *
-         * @summary List the sources
+         * @summary Get a source statistics
+         * @param {number} sourceId ID of source to get
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSources(options: any = {}): RequestArgs {
+        getSourceStats(sourceId: number, options: any = {}): RequestArgs {
+            // verify required parameter 'sourceId' is not null or undefined
+            if (sourceId === null || sourceId === undefined) {
+                throw new RequiredError('sourceId','Required parameter sourceId was null or undefined when calling getSourceStats.');
+            }
+            const localVarPath = `/sources/{source_id}/stats/`
+                .replace(`{${"source_id"}}`, encodeURIComponent(String(sourceId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @summary List the sources
+         * @param {string} [type] The type of source to filter for.
+         * @param {string} [name] The name of the source to filter for.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSources(type?: string, name?: string, offset?: number, limit?: number, options: any = {}): RequestArgs {
             const localVarPath = `/sources/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -6483,6 +5894,22 @@ export const SourcesApiAxiosParamCreator = function (configuration?: Configurati
             const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (type !== undefined) {
+                localVarQueryParameter['type'] = type;
+            }
+
+            if (name !== undefined) {
+                localVarQueryParameter['name'] = name;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -6561,12 +5988,30 @@ export const SourcesApiFp = function(configuration?: Configuration) {
         },
         /**
          *
-         * @summary List the sources
+         * @summary Get a source statistics
+         * @param {number} sourceId ID of source to get
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSources(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcePagination> {
-            const localVarAxiosArgs = SourcesApiAxiosParamCreator(configuration).listSources(options);
+        getSourceStats(sourceId: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
+            const localVarAxiosArgs = SourcesApiAxiosParamCreator(configuration).getSourceStats(sourceId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
+         * @summary List the sources
+         * @param {string} [type] The type of source to filter for.
+         * @param {string} [name] The name of the source to filter for.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSources(type?: string, name?: string, offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcePagination> {
+            const localVarAxiosArgs = SourcesApiAxiosParamCreator(configuration).listSources(type, name, offset, limit, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -6608,12 +6053,26 @@ export const SourcesApiFactory = function (configuration?: Configuration, basePa
         },
         /**
          *
-         * @summary List the sources
+         * @summary Get a source statistics
+         * @param {number} sourceId ID of source to get
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSources(options?: any) {
-            return SourcesApiFp(configuration).listSources(options)(axios, basePath);
+        getSourceStats(sourceId: number, options?: any) {
+            return SourcesApiFp(configuration).getSourceStats(sourceId, options)(axios, basePath);
+        },
+        /**
+         *
+         * @summary List the sources
+         * @param {string} [type] The type of source to filter for.
+         * @param {string} [name] The name of the source to filter for.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSources(type?: string, name?: string, offset?: number, limit?: number, options?: any) {
+            return SourcesApiFp(configuration).listSources(type, name, offset, limit, options)(axios, basePath);
         },
         /**
          *
@@ -6650,13 +6109,29 @@ export class SourcesApi extends BaseAPI {
 
     /**
      *
-     * @summary List the sources
+     * @summary Get a source statistics
+     * @param {number} sourceId ID of source to get
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SourcesApi
      */
-    public listSources(options?: any) {
-        return SourcesApiFp(this.configuration).listSources(options)(this.axios, this.basePath);
+    public getSourceStats(sourceId: number, options?: any) {
+        return SourcesApiFp(this.configuration).getSourceStats(sourceId, options)(this.axios, this.basePath);
+    }
+
+    /**
+     *
+     * @summary List the sources
+     * @param {string} [type] The type of source to filter for.
+     * @param {string} [name] The name of the source to filter for.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {number} [limit] Parameter for selecting the amount of data in a returned.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SourcesApi
+     */
+    public listSources(type?: string, name?: string, offset?: number, limit?: number, options?: any) {
+        return SourcesApiFp(this.configuration).listSources(type, name, offset, limit, options)(this.axios, this.basePath);
     }
 
     /**
@@ -7292,439 +6767,6 @@ export class TagsApi extends BaseAPI {
      */
     public getOpenShiftTagData(filter?: any, keyOnly?: boolean, offset?: number, limit?: number, options?: any) {
         return TagsApiFp(this.configuration).getOpenShiftTagData(filter, keyOnly, offset, limit, options)(this.axios, this.basePath);
-    }
-
-}
-
-/**
- * UserPreferenceApi - axios parameter creator
- * @export
- */
-export const UserPreferenceApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @summary Create a user preference
-         * @param {UserPreference} userPreference Preference to add to a Preference
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createUserPreference(userPreference: UserPreference, options: any = {}): RequestArgs {
-            // verify required parameter 'userPreference' is not null or undefined
-            if (userPreference === null || userPreference === undefined) {
-                throw new RequiredError('userPreference','Required parameter userPreference was null or undefined when calling createUserPreference.');
-            }
-            const localVarPath = `/preferences/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"UserPreference" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(userPreference || {}) : (userPreference || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @summary Delete a user preference
-         * @param {string} prefUuid ID of preference to get
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteUserPreference(prefUuid: string, options: any = {}): RequestArgs {
-            // verify required parameter 'prefUuid' is not null or undefined
-            if (prefUuid === null || prefUuid === undefined) {
-                throw new RequiredError('prefUuid','Required parameter prefUuid was null or undefined when calling deleteUserPreference.');
-            }
-            const localVarPath = `/preferences/{pref_uuid}/`
-                .replace(`{${"pref_uuid"}}`, encodeURIComponent(String(prefUuid)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'DELETE' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @summary Get a user preference
-         * @param {string} prefUuid ID of preference to get
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getUserPreference(prefUuid: string, options: any = {}): RequestArgs {
-            // verify required parameter 'prefUuid' is not null or undefined
-            if (prefUuid === null || prefUuid === undefined) {
-                throw new RequiredError('prefUuid','Required parameter prefUuid was null or undefined when calling getUserPreference.');
-            }
-            const localVarPath = `/preferences/{pref_uuid}/`
-                .replace(`{${"pref_uuid"}}`, encodeURIComponent(String(prefUuid)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @summary List the user's preferences
-         * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listUserPreferences(offset?: number, limit?: number, options: any = {}): RequestArgs {
-            const localVarPath = `/preferences/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @summary Update a user preference
-         * @param {string} prefUuid ID of preference to get
-         * @param {UserPreference} userPreference Update to a Preference
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateUserPreference(prefUuid: string, userPreference: UserPreference, options: any = {}): RequestArgs {
-            // verify required parameter 'prefUuid' is not null or undefined
-            if (prefUuid === null || prefUuid === undefined) {
-                throw new RequiredError('prefUuid','Required parameter prefUuid was null or undefined when calling updateUserPreference.');
-            }
-            // verify required parameter 'userPreference' is not null or undefined
-            if (userPreference === null || userPreference === undefined) {
-                throw new RequiredError('userPreference','Required parameter userPreference was null or undefined when calling updateUserPreference.');
-            }
-            const localVarPath = `/preferences/{pref_uuid}/`
-                .replace(`{${"pref_uuid"}}`, encodeURIComponent(String(prefUuid)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'PUT' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication basic_auth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarHeaderParameter["Authorization"] = "Basic " + btoa(configuration.username + ":" + configuration.password);
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"UserPreference" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(userPreference || {}) : (userPreference || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * UserPreferenceApi - functional programming interface
- * @export
- */
-export const UserPreferenceApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @summary Create a user preference
-         * @param {UserPreference} userPreference Preference to add to a Preference
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createUserPreference(userPreference: UserPreference, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserPreferenceOut> {
-            const localVarAxiosArgs = UserPreferenceApiAxiosParamCreator(configuration).createUserPreference(userPreference, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         *
-         * @summary Delete a user preference
-         * @param {string} prefUuid ID of preference to get
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteUserPreference(prefUuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = UserPreferenceApiAxiosParamCreator(configuration).deleteUserPreference(prefUuid, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         *
-         * @summary Get a user preference
-         * @param {string} prefUuid ID of preference to get
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getUserPreference(prefUuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserPreferenceOut> {
-            const localVarAxiosArgs = UserPreferenceApiAxiosParamCreator(configuration).getUserPreference(prefUuid, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         *
-         * @summary List the user's preferences
-         * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listUserPreferences(offset?: number, limit?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserPreferencePagination> {
-            const localVarAxiosArgs = UserPreferenceApiAxiosParamCreator(configuration).listUserPreferences(offset, limit, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         *
-         * @summary Update a user preference
-         * @param {string} prefUuid ID of preference to get
-         * @param {UserPreference} userPreference Update to a Preference
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateUserPreference(prefUuid: string, userPreference: UserPreference, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Response> {
-            const localVarAxiosArgs = UserPreferenceApiAxiosParamCreator(configuration).updateUserPreference(prefUuid, userPreference, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * UserPreferenceApi - factory interface
- * @export
- */
-export const UserPreferenceApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         *
-         * @summary Create a user preference
-         * @param {UserPreference} userPreference Preference to add to a Preference
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createUserPreference(userPreference: UserPreference, options?: any) {
-            return UserPreferenceApiFp(configuration).createUserPreference(userPreference, options)(axios, basePath);
-        },
-        /**
-         *
-         * @summary Delete a user preference
-         * @param {string} prefUuid ID of preference to get
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteUserPreference(prefUuid: string, options?: any) {
-            return UserPreferenceApiFp(configuration).deleteUserPreference(prefUuid, options)(axios, basePath);
-        },
-        /**
-         *
-         * @summary Get a user preference
-         * @param {string} prefUuid ID of preference to get
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getUserPreference(prefUuid: string, options?: any) {
-            return UserPreferenceApiFp(configuration).getUserPreference(prefUuid, options)(axios, basePath);
-        },
-        /**
-         *
-         * @summary List the user's preferences
-         * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {number} [limit] Parameter for selecting the amount of data in a returned.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listUserPreferences(offset?: number, limit?: number, options?: any) {
-            return UserPreferenceApiFp(configuration).listUserPreferences(offset, limit, options)(axios, basePath);
-        },
-        /**
-         *
-         * @summary Update a user preference
-         * @param {string} prefUuid ID of preference to get
-         * @param {UserPreference} userPreference Update to a Preference
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateUserPreference(prefUuid: string, userPreference: UserPreference, options?: any) {
-            return UserPreferenceApiFp(configuration).updateUserPreference(prefUuid, userPreference, options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * UserPreferenceApi - object-oriented interface
- * @export
- * @class UserPreferenceApi
- * @extends {BaseAPI}
- */
-export class UserPreferenceApi extends BaseAPI {
-    /**
-     *
-     * @summary Create a user preference
-     * @param {UserPreference} userPreference Preference to add to a Preference
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UserPreferenceApi
-     */
-    public createUserPreference(userPreference: UserPreference, options?: any) {
-        return UserPreferenceApiFp(this.configuration).createUserPreference(userPreference, options)(this.axios, this.basePath);
-    }
-
-    /**
-     *
-     * @summary Delete a user preference
-     * @param {string} prefUuid ID of preference to get
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UserPreferenceApi
-     */
-    public deleteUserPreference(prefUuid: string, options?: any) {
-        return UserPreferenceApiFp(this.configuration).deleteUserPreference(prefUuid, options)(this.axios, this.basePath);
-    }
-
-    /**
-     *
-     * @summary Get a user preference
-     * @param {string} prefUuid ID of preference to get
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UserPreferenceApi
-     */
-    public getUserPreference(prefUuid: string, options?: any) {
-        return UserPreferenceApiFp(this.configuration).getUserPreference(prefUuid, options)(this.axios, this.basePath);
-    }
-
-    /**
-     *
-     * @summary List the user's preferences
-     * @param {number} [offset] Parameter for selecting the offset of data.
-     * @param {number} [limit] Parameter for selecting the amount of data in a returned.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UserPreferenceApi
-     */
-    public listUserPreferences(offset?: number, limit?: number, options?: any) {
-        return UserPreferenceApiFp(this.configuration).listUserPreferences(offset, limit, options)(this.axios, this.basePath);
-    }
-
-    /**
-     *
-     * @summary Update a user preference
-     * @param {string} prefUuid ID of preference to get
-     * @param {UserPreference} userPreference Update to a Preference
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UserPreferenceApi
-     */
-    public updateUserPreference(prefUuid: string, userPreference: UserPreference, options?: any) {
-        return UserPreferenceApiFp(this.configuration).updateUserPreference(prefUuid, userPreference, options)(this.axios, this.basePath);
     }
 
 }

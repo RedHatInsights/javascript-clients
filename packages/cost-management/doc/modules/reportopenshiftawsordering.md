@@ -42,7 +42,7 @@
 
 **● accountAlias**: *[AccountAliasEnum](../enums/reportopenshiftawsordering.accountaliasenum.md)*
 
-*Defined in [api.ts:1803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1803)*
+*Defined in [api.ts:1628](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1628)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● cluster**: *[ClusterEnum](../enums/reportopenshiftawsordering.clusterenum.md)*
 
-*Defined in [api.ts:1821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1821)*
+*Defined in [api.ts:1646](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1646)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● cost**: *[CostEnum](../enums/reportopenshiftawsordering.costenum.md)*
 
-*Defined in [api.ts:1785](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1785)*
+*Defined in [api.ts:1610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1610)*
 
 *__type__*: {string}
 
@@ -81,7 +81,7 @@ ___
 
 **● delta**: *[DeltaEnum](../enums/reportopenshiftawsordering.deltaenum.md)*
 
-*Defined in [api.ts:1797](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1797)*
+*Defined in [api.ts:1622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1622)*
 
 *__type__*: {string}
 
@@ -94,7 +94,7 @@ ___
 
 **● node**: *[NodeEnum](../enums/reportopenshiftawsordering.nodeenum.md)*
 
-*Defined in [api.ts:1833](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1833)*
+*Defined in [api.ts:1658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1658)*
 
 *__type__*: {string}
 
@@ -107,7 +107,7 @@ ___
 
 **● project**: *[ProjectEnum](../enums/reportopenshiftawsordering.projectenum.md)*
 
-*Defined in [api.ts:1827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1827)*
+*Defined in [api.ts:1652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1652)*
 
 *__type__*: {string}
 
@@ -120,7 +120,7 @@ ___
 
 **● region**: *[RegionEnum](../enums/reportopenshiftawsordering.regionenum.md)*
 
-*Defined in [api.ts:1809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1809)*
+*Defined in [api.ts:1634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1634)*
 
 *__type__*: {string}
 
@@ -133,7 +133,7 @@ ___
 
 **● service**: *[ServiceEnum](../enums/reportopenshiftawsordering.serviceenum.md)*
 
-*Defined in [api.ts:1815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1815)*
+*Defined in [api.ts:1640](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1640)*
 
 *__type__*: {string}
 
@@ -146,7 +146,7 @@ ___
 
 **● usage**: *[UsageEnum](../enums/reportopenshiftawsordering.usageenum.md)*
 
-*Defined in [api.ts:1791](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1791)*
+*Defined in [api.ts:1616](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1616)*
 
 *__type__*: {string}
 

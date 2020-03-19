@@ -26,7 +26,7 @@
 
 **● errors**: *`Array`<[RequestErrorErrors](requesterrorerrors.md)>*
 
-*Defined in [api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L637)*
+*Defined in [api.ts:962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L962)*
 
 *__type__*: {Array}
 

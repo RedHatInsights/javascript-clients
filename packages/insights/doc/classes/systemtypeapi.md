@@ -103,9 +103,11 @@ ___
 
 ▸ **systemtypeList**(options?: *`any`*): `AxiosPromise`<[SystemType](../interfaces/systemtype.md)[]>
 
-*Defined in [api.ts:4677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4677)*
+*Defined in [api.ts:5237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5237)*
 
-List all system types
+List all system types by role and product code
+
+*__summary__*: List all system types
 
 *__throws__*: {RequiredError}
 
@@ -126,9 +128,11 @@ ___
 
 ▸ **systemtypeRead**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[SystemType](../interfaces/systemtype.md)>
 
-*Defined in [api.ts:4688](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4688)*
+*Defined in [api.ts:5249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5249)*
 
-Display a single system type
+Retrieve details of a single system type
+
+*__summary__*: Retrieve a system type
 
 *__throws__*: {RequiredError}
 

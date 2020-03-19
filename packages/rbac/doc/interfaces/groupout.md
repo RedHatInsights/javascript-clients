@@ -34,7 +34,7 @@
 
 **● created**: *`Date`*
 
-*Defined in [api.ts:181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L181)*
+*Defined in [api.ts:201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L201)*
 
 *__type__*: {Date}
 
@@ -47,7 +47,7 @@ ___
 
 **● description**: *`string`*
 
-*Defined in [api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L169)*
+*Defined in [api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L189)*
 
 *__type__*: {string}
 
@@ -60,7 +60,7 @@ ___
 
 **● modified**: *`Date`*
 
-*Defined in [api.ts:187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L187)*
+*Defined in [api.ts:207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L207)*
 
 *__type__*: {Date}
 
@@ -73,7 +73,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L163)*
+*Defined in [api.ts:183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L183)*
 
 *__type__*: {string}
 
@@ -86,7 +86,7 @@ ___
 
 **● platformDefault**: *`boolean`*
 
-*Defined in [api.ts:211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L211)*
+*Defined in [api.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L231)*
 
 *__type__*: {boolean}
 
@@ -99,7 +99,7 @@ ___
 
 **● principalCount**: *`number`*
 
-*Defined in [api.ts:193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L193)*
+*Defined in [api.ts:213](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L213)*
 
 *__type__*: {number}
 
@@ -112,7 +112,7 @@ ___
 
 **● roleCount**: *`number`*
 
-*Defined in [api.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L199)*
+*Defined in [api.ts:219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L219)*
 
 *__type__*: {number}
 
@@ -125,7 +125,7 @@ ___
 
 **● system**: *`boolean`*
 
-*Defined in [api.ts:205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L205)*
+*Defined in [api.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L225)*
 
 *__type__*: {boolean}
 
@@ -138,7 +138,7 @@ ___
 
 **● uuid**: *`string`*
 
-*Defined in [api.ts:175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L175)*
+*Defined in [api.ts:195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L195)*
 
 *__type__*: {string}
 

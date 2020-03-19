@@ -102,11 +102,13 @@ ___
 
 ###  systemList
 
-▸ **systemList**(limit?: *`number`*, offset?: *`number`*, sort?: *"hits" \| "last_seen" \| "display_name" \| "-hits" \| "-last_seen" \| "-display_name"*, displayName?: *`string`*, options?: *`any`*): `AxiosPromise`<[InlineResponse2005](../interfaces/inlineresponse2005.md)>
+▸ **systemList**(limit?: *`number`*, offset?: *`number`*, sort?: *"hits" \| "last_seen" \| "display_name" \| "-hits" \| "-last_seen" \| "-display_name"*, displayName?: *`string`*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2005](../interfaces/inlineresponse2005.md)>
 
-*Defined in [api.ts:4509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4509)*
+*Defined in [api.ts:5060](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5060)*
 
-Returns systems with their hit count and last upload time.
+Results can be sorted and systems can be filtered by display name.
+
+*__summary__*: Returns systems with their hit count and last upload time.
 
 *__throws__*: {RequiredError}
 
@@ -120,6 +122,7 @@ Returns systems with their hit count and last upload time.
 | `Optional` offset | `number` |
 | `Optional` sort | "hits" \| "last_seen" \| "display_name" \| "-hits" \| "-last_seen" \| "-display_name" |
 | `Optional` displayName | `string` |
+| `Optional` tags | `Array`<`string`> |
 | `Optional` options | `any` |
 
 **Returns:** `AxiosPromise`<[InlineResponse2005](../interfaces/inlineresponse2005.md)>
@@ -131,9 +134,11 @@ ___
 
 ▸ **systemRead**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[System](../interfaces/system.md)>
 
-*Defined in [api.ts:4520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4520)*
+*Defined in [api.ts:5072](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5072)*
 
-List systems, or retrieve a system by UUID.
+Retrieve the reports for a single system by Insights Inventory UUID
+
+*__summary__*: Retrieve the reports for a single system
 
 *__throws__*: {RequiredError}
 
@@ -153,11 +158,13 @@ ___
 
 ###  systemReports
 
-▸ **systemReports**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **systemReports**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<[Report](../interfaces/report.md)[]>
 
-*Defined in [api.ts:4531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4531)*
+*Defined in [api.ts:5084](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5084)*
 
-Returns the list of latest reports for an Inventory Host ID that: \* are in the user's account \* have an active, not-deleted rule \* where the rule has not been acked by this account If the host ID is not found, return an empty list.
+Returns reports that: \* are in the user's account \* have an active, not-deleted rule \* where the rule has not been acked by this account If the host ID is not found, return an empty list.
+
+*__summary__*: Returns the list of latest reports for an Inventory Host ID.
 
 *__throws__*: {RequiredError}
 
@@ -170,7 +177,7 @@ Returns the list of latest reports for an Inventory Host ID that: \* are in the 
 | uuid | `string` |  The system&#39;s Host ID in the Inventory |
 | `Optional` options | `any` |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** `AxiosPromise`<[Report](../interfaces/report.md)[]>
 
 ___
 

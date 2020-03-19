@@ -1,12 +1,12 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ProviderApi](../classes/providerapi.md)
+[@redhat-cloud-services/cost-management-client](../README.md) > [ProvidersApi](../classes/providersapi.md)
 
-# Class: ProviderApi
+# Class: ProvidersApi
 
-ProviderApi - object-oriented interface
+ProvidersApi - object-oriented interface
 
 *__export__*: 
 
-*__class__*: ProviderApi
+*__class__*: ProvidersApi
 
 *__extends__*: {BaseAPI}
 
@@ -14,27 +14,27 @@ ProviderApi - object-oriented interface
 
  [BaseAPI](baseapi.md)
 
-**↳ ProviderApi**
+**↳ ProvidersApi**
 
 ## Index
 
 ### Constructors
 
-* [constructor](providerapi.md#constructor)
+* [constructor](providersapi.md#constructor)
 
 ### Properties
 
-* [axios](providerapi.md#axios)
-* [basePath](providerapi.md#basepath)
-* [configuration](providerapi.md#configuration)
+* [axios](providersapi.md#axios)
+* [basePath](providersapi.md#basepath)
+* [configuration](providersapi.md#configuration)
 
 ### Methods
 
-* [createProvider](providerapi.md#createprovider)
-* [deleteProvider](providerapi.md#deleteprovider)
-* [getProvider](providerapi.md#getprovider)
-* [listProviders](providerapi.md#listproviders)
-* [updateProvider](providerapi.md#updateprovider)
+* [createProvider](providersapi.md#createprovider)
+* [deleteProvider](providersapi.md#deleteprovider)
+* [getProvider](providersapi.md#getprovider)
+* [listProviders](providersapi.md#listproviders)
+* [updateProvider](providersapi.md#updateprovider)
 
 ---
 
@@ -44,7 +44,7 @@ ProviderApi - object-oriented interface
 
 ###  constructor
 
-⊕ **new ProviderApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [ProviderApi](providerapi.md)
+⊕ **new ProvidersApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [ProvidersApi](providersapi.md)
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -58,7 +58,7 @@ ProviderApi - object-oriented interface
 | `Default value` basePath | `string` |  BASE_PATH |
 | `Default value` axios | `AxiosInstance` |  globalAxios |
 
-**Returns:** [ProviderApi](providerapi.md)
+**Returns:** [ProvidersApi](providersapi.md)
 
 ___
 
@@ -106,13 +106,13 @@ ___
 
 ▸ **createProvider**(providerIn: *[ProviderIn](../interfaces/providerin.md)*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
-*Defined in [api.ts:6363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6363)*
+*Defined in [api.ts:5745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5745)*
 
 *__summary__*: Create a provider
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: ProviderApi
+*__memberof__*: ProvidersApi
 
 **Parameters:**
 
@@ -130,13 +130,13 @@ ___
 
 ▸ **deleteProvider**(uuid: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
 
-*Defined in [api.ts:6375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6375)*
+*Defined in [api.ts:5757](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5757)*
 
 *__summary__*: Delete a provider
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: ProviderApi
+*__memberof__*: ProvidersApi
 
 **Parameters:**
 
@@ -154,13 +154,13 @@ ___
 
 ▸ **getProvider**(uuid: *`string`*, stats?: *"true" \| "false"*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
-*Defined in [api.ts:6388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6388)*
+*Defined in [api.ts:5770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5770)*
 
 *__summary__*: Get a provider
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: ProviderApi
+*__memberof__*: ProvidersApi
 
 **Parameters:**
 
@@ -179,13 +179,13 @@ ___
 
 ▸ **listProviders**(type?: *`string`*, name?: *`string`*, stats?: *"true" \| "false"*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[ProviderPagination](../interfaces/providerpagination.md)>
 
-*Defined in [api.ts:6404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6404)*
+*Defined in [api.ts:5786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5786)*
 
 *__summary__*: List the providers
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: ProviderApi
+*__memberof__*: ProvidersApi
 
 **Parameters:**
 
@@ -207,13 +207,13 @@ ___
 
 ▸ **updateProvider**(uuid: *`string`*, providerIn: *[ProviderIn](../interfaces/providerin.md)*, options?: *`any`*): `AxiosPromise`<[ProviderOut](../interfaces/providerout.md)>
 
-*Defined in [api.ts:6417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6417)*
+*Defined in [api.ts:5799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5799)*
 
 *__summary__*: Update a provider
 
 *__throws__*: {RequiredError}
 
-*__memberof__*: ProviderApi
+*__memberof__*: ProvidersApi
 
 **Parameters:**
 

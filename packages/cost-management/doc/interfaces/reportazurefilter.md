@@ -36,7 +36,7 @@
 
 **● instanceType**: *`Array`<`string`>*
 
-*Defined in [api.ts:1010](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1010)*
+*Defined in [api.ts:835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L835)*
 
 *__type__*: {Array}
 
@@ -49,7 +49,7 @@ ___
 
 **● limit**: *`number`*
 
-*Defined in [api.ts:956](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L956)*
+*Defined in [api.ts:781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L781)*
 
 Limits the data points returns and aggregates remaining data.
 
@@ -64,7 +64,7 @@ ___
 
 **● offset**: *`number`*
 
-*Defined in [api.ts:962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L962)*
+*Defined in [api.ts:787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L787)*
 
 Offsets the data points returned when using limit.
 
@@ -79,7 +79,7 @@ ___
 
 **● resolution**: *[ReportResolution](../enums/reportresolution.md)*
 
-*Defined in [api.ts:968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L968)*
+*Defined in [api.ts:793](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L793)*
 
 *__type__*: {ReportResolution}
 
@@ -92,7 +92,7 @@ ___
 
 **● resourceLocation**: *`Array`<`string`>*
 
-*Defined in [api.ts:1004](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1004)*
+*Defined in [api.ts:829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L829)*
 
 *__type__*: {Array}
 
@@ -105,7 +105,7 @@ ___
 
 **● resourceScope**: *`Array`<[ReportResourceScope](../enums/reportresourcescope.md)>*
 
-*Defined in [api.ts:986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L986)*
+*Defined in [api.ts:811](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L811)*
 
 *__type__*: {Array}
 
@@ -118,7 +118,7 @@ ___
 
 **● serviceName**: *`Array`<`string`>*
 
-*Defined in [api.ts:998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L998)*
+*Defined in [api.ts:823](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L823)*
 
 *__type__*: {Array}
 
@@ -131,7 +131,7 @@ ___
 
 **● subscriptionGuid**: *`Array`<`string`>*
 
-*Defined in [api.ts:992](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L992)*
+*Defined in [api.ts:817](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L817)*
 
 *__type__*: {Array}
 
@@ -144,7 +144,7 @@ ___
 
 **● tag**: *`Array`<`string`>*
 
-*Defined in [api.ts:1016](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1016)*
+*Defined in [api.ts:841](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L841)*
 
 *__type__*: {Array}
 
@@ -157,7 +157,7 @@ ___
 
 **● timeScopeUnits**: *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
 
-*Defined in [api.ts:980](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L980)*
+*Defined in [api.ts:805](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L805)*
 
 *__type__*: {ReportTimeScopeUnits}
 
@@ -170,7 +170,7 @@ ___
 
 **● timeScopeValue**: *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
 
-*Defined in [api.ts:974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L974)*
+*Defined in [api.ts:799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L799)*
 
 *__type__*: {ReportTimeScopeValue}
 

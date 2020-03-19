@@ -27,7 +27,7 @@
 
 **● data**: *`Array`<[PlaybookExecutorStatus](../modules/playbookexecutorstatus.md)>*
 
-*Defined in [api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L271)*
+*Defined in [api.ts:596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L596)*
 
 *__type__*: {Array}
 
@@ -40,7 +40,7 @@ ___
 
 **● meta**: *[Meta](meta.md)*
 
-*Defined in [api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L265)*
+*Defined in [api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L590)*
 
 *__type__*: {Meta}
 

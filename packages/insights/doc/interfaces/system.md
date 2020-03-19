@@ -17,6 +17,7 @@
 * [displayName](system.md#displayname)
 * [hits](system.md#hits)
 * [lastSeen](system.md#lastseen)
+* [staleAt](system.md#staleat)
 * [systemUuid](system.md#systemuuid)
 
 ---
@@ -25,11 +26,11 @@
 
 <a id="displayname"></a>
 
-### `<Optional>` displayName
+###  displayName
 
-**● displayName**: *`string` \| `null`*
+**● displayName**: *`string`*
 
-*Defined in [api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1113)*
+*Defined in [api.ts:1185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1185)*
 
 *__type__*: {string}
 
@@ -42,7 +43,7 @@ ___
 
 **● hits**: *`number`*
 
-*Defined in [api.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1101)*
+*Defined in [api.ts:1173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1173)*
 
 *__type__*: {number}
 
@@ -55,7 +56,20 @@ ___
 
 **● lastSeen**: *`Date`*
 
-*Defined in [api.ts:1119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1119)*
+*Defined in [api.ts:1191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1191)*
+
+*__type__*: {Date}
+
+*__memberof__*: System
+
+___
+<a id="staleat"></a>
+
+### `<Optional>` staleAt
+
+**● staleAt**: *`Date`*
+
+*Defined in [api.ts:1197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1197)*
 
 *__type__*: {Date}
 
@@ -64,11 +78,11 @@ ___
 ___
 <a id="systemuuid"></a>
 
-### `<Optional>` systemUuid
+###  systemUuid
 
 **● systemUuid**: *`string`*
 
-*Defined in [api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1107)*
+*Defined in [api.ts:1179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1179)*
 
 *__type__*: {string}
 

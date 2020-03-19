@@ -27,7 +27,7 @@ The resources scope to apply to the report. Default resource scope is null, mean
 
 **EBS**:  = "EBS"
 
-*Defined in [api.ts:2700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2700)*
+*Defined in [api.ts:2525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2525)*
 
 ___
 <a id="ec2"></a>
@@ -36,7 +36,7 @@ ___
 
 **EC2**:  = "EC2"
 
-*Defined in [api.ts:2699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2699)*
+*Defined in [api.ts:2524](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2524)*
 
 ___
 <a id="efs"></a>
@@ -45,7 +45,7 @@ ___
 
 **EFS**:  = "EFS"
 
-*Defined in [api.ts:2701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2701)*
+*Defined in [api.ts:2526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2526)*
 
 ___
 <a id="s3"></a>
@@ -54,7 +54,7 @@ ___
 
 **S3**:  = "S3"
 
-*Defined in [api.ts:2702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2702)*
+*Defined in [api.ts:2527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2527)*
 
 ___
 

@@ -29,7 +29,7 @@
 
 **● first**: *`string`*
 
-*Defined in [api.ts:620](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L620)*
+*Defined in [api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L445)*
 
 *__type__*: {string}
 
@@ -42,7 +42,7 @@ ___
 
 **● last**: *`string`*
 
-*Defined in [api.ts:638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L638)*
+*Defined in [api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L463)*
 
 *__type__*: {string}
 
@@ -55,7 +55,7 @@ ___
 
 **● next**: *`string`*
 
-*Defined in [api.ts:632](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L632)*
+*Defined in [api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L457)*
 
 *__type__*: {string}
 
@@ -68,7 +68,7 @@ ___
 
 **● previous**: *`string`*
 
-*Defined in [api.ts:626](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L626)*
+*Defined in [api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L451)*
 
 *__type__*: {string}
 
