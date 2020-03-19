@@ -1,92 +1,81 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [RequestErrorErrors](../interfaces/requesterrorerrors.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [RequestErrorErrors](requesterrorerrors.md)
 
 # Interface: RequestErrorErrors
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RequestErrorErrors
+**`interface`** RequestErrorErrors
 
 ## Hierarchy
 
-**RequestErrorErrors**
+* **RequestErrorErrors**
 
 ## Index
 
 ### Properties
 
 * [code](requesterrorerrors.md#code)
-* [details](requesterrorerrors.md#details)
+* [details](requesterrorerrors.md#optional-details)
 * [id](requesterrorerrors.md#id)
 * [status](requesterrorerrors.md#status)
 * [title](requesterrorerrors.md#title)
 
----
-
 ## Properties
-
-<a id="code"></a>
 
 ###  code
 
-**● code**: *`string`*
+• **code**: *string*
 
-*Defined in [api.ts:663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L663)*
+*Defined in [api.ts:988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L988)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RequestErrorErrors
-
-___
-<a id="details"></a>
-
-### `<Optional>` details
-
-**● details**: *`any`*
-
-*Defined in [api.ts:675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L675)*
-
-*__type__*: {any}
-
-*__memberof__*: RequestErrorErrors
+**`memberof`** RequestErrorErrors
 
 ___
-<a id="id"></a>
+
+### `Optional` details
+
+• **details**? : *any*
+
+*Defined in [api.ts:1000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1000)*
+
+**`type`** {any}
+
+**`memberof`** RequestErrorErrors
+
+___
 
 ###  id
 
-**● id**: *`string`*
+• **id**: *string*
 
-*Defined in [api.ts:651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L651)*
+*Defined in [api.ts:976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L976)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RequestErrorErrors
+**`memberof`** RequestErrorErrors
 
 ___
-<a id="status"></a>
 
 ###  status
 
-**● status**: *`number`*
+• **status**: *number*
 
-*Defined in [api.ts:657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L657)*
+*Defined in [api.ts:982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L982)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: RequestErrorErrors
+**`memberof`** RequestErrorErrors
 
 ___
-<a id="title"></a>
 
 ###  title
 
-**● title**: *`string`*
+• **title**: *string*
 
-*Defined in [api.ts:669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L669)*
+*Defined in [api.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L994)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RequestErrorErrors
-
-___
-
+**`memberof`** RequestErrorErrors

@@ -1,10 +1,6 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [Endpoint](../modules/endpoint.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [Endpoint](endpoint.md)
 
 # Module: Endpoint
-
-*__export__*: 
-
-*__namespace__*: Endpoint
 
 ## Index
 
@@ -14,55 +10,30 @@
 
 ### Properties
 
-* [attributes](endpoint.md#attributes)
-* [id](endpoint.md#id)
-* [type](endpoint.md#type)
-
----
+* [attributes](endpoint.md#optional-attributes)
+* [id](endpoint.md#optional-id)
+* [type](endpoint.md#optional-type)
 
 ## Properties
 
-<a id="attributes"></a>
+### `Optional` attributes
 
-### `<Optional>` attributes
-
-**● attributes**: *[EndpointAttributes](endpointattributes.md)*
+• **attributes**? : *[EndpointAttributes](endpointattributes.md)*
 
 *Defined in [api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L241)*
 
-*__type__*: {EndpointAttributes}
-
-*__memberof__*: Endpoint
-
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L229)*
 
-Identifier of the endpoint
-
-*__type__*: {string}
-
-*__memberof__*: Endpoint
-
 ___
-<a id="type"></a>
 
-### `<Optional>` type
+### `Optional` type
 
-**● type**: *[TypeEnum](../enums/endpoint.typeenum.md)*
+• **type**? : *[TypeEnum](../enums/endpoint.typeenum.md)*
 
 *Defined in [api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L235)*
-
-Type of the returned record
-
-*__type__*: {string}
-
-*__memberof__*: Endpoint
-
-___
-

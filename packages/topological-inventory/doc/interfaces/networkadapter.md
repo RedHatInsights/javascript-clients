@@ -1,258 +1,236 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [NetworkAdapter](../interfaces/networkadapter.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [NetworkAdapter](networkadapter.md)
 
 # Interface: NetworkAdapter
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: NetworkAdapter
+**`interface`** NetworkAdapter
 
 ## Hierarchy
 
-**NetworkAdapter**
+* **NetworkAdapter**
 
 ## Index
 
 ### Properties
 
-* [archivedAt](networkadapter.md#archivedat)
-* [createdAt](networkadapter.md#createdat)
-* [deviceId](networkadapter.md#deviceid)
-* [deviceType](networkadapter.md#devicetype)
-* [extra](networkadapter.md#extra)
-* [id](networkadapter.md#id)
-* [lastSeenAt](networkadapter.md#lastseenat)
-* [macAddress](networkadapter.md#macaddress)
-* [orchestrationStackId](networkadapter.md#orchestrationstackid)
-* [sourceCreatedAt](networkadapter.md#sourcecreatedat)
-* [sourceDeletedAt](networkadapter.md#sourcedeletedat)
-* [sourceId](networkadapter.md#sourceid)
-* [sourceRef](networkadapter.md#sourceref)
-* [sourceRegionId](networkadapter.md#sourceregionid)
-* [subscriptionId](networkadapter.md#subscriptionid)
-* [updatedAt](networkadapter.md#updatedat)
-
----
+* [archivedAt](networkadapter.md#optional-archivedat)
+* [createdAt](networkadapter.md#optional-createdat)
+* [deviceId](networkadapter.md#optional-deviceid)
+* [deviceType](networkadapter.md#optional-devicetype)
+* [extra](networkadapter.md#optional-extra)
+* [id](networkadapter.md#optional-id)
+* [lastSeenAt](networkadapter.md#optional-lastseenat)
+* [macAddress](networkadapter.md#optional-macaddress)
+* [orchestrationStackId](networkadapter.md#optional-orchestrationstackid)
+* [sourceCreatedAt](networkadapter.md#optional-sourcecreatedat)
+* [sourceDeletedAt](networkadapter.md#optional-sourcedeletedat)
+* [sourceId](networkadapter.md#optional-sourceid)
+* [sourceRef](networkadapter.md#optional-sourceref)
+* [sourceRegionId](networkadapter.md#optional-sourceregionid)
+* [subscriptionId](networkadapter.md#optional-subscriptionid)
+* [updatedAt](networkadapter.md#optional-updatedat)
 
 ## Properties
 
-<a id="archivedat"></a>
+### `Optional` archivedAt
 
-### `<Optional>` archivedAt
-
-**● archivedAt**: *`Date`*
+• **archivedAt**? : *Date*
 
 *Defined in [api.ts:1905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1905)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:1911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1911)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="deviceid"></a>
 
-### `<Optional>` deviceId
+### `Optional` deviceId
 
-**● deviceId**: *`string`*
+• **deviceId**? : *string*
 
 *Defined in [api.ts:1917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1917)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="devicetype"></a>
 
-### `<Optional>` deviceType
+### `Optional` deviceType
 
-**● deviceType**: *`string`*
+• **deviceType**? : *string*
 
 *Defined in [api.ts:1923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1923)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="extra"></a>
 
-### `<Optional>` extra
+### `Optional` extra
 
-**● extra**: *`any`*
+• **extra**? : *any*
 
 *Defined in [api.ts:1929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1929)*
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:1935](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1935)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="lastseenat"></a>
 
-### `<Optional>` lastSeenAt
+### `Optional` lastSeenAt
 
-**● lastSeenAt**: *`Date`*
+• **lastSeenAt**? : *Date*
 
 *Defined in [api.ts:1941](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1941)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="macaddress"></a>
 
-### `<Optional>` macAddress
+### `Optional` macAddress
 
-**● macAddress**: *`string`*
+• **macAddress**? : *string*
 
 *Defined in [api.ts:1947](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1947)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="orchestrationstackid"></a>
 
-### `<Optional>` orchestrationStackId
+### `Optional` orchestrationStackId
 
-**● orchestrationStackId**: *`string`*
+• **orchestrationStackId**? : *string*
 
 *Defined in [api.ts:1953](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1953)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="sourcecreatedat"></a>
 
-### `<Optional>` sourceCreatedAt
+### `Optional` sourceCreatedAt
 
-**● sourceCreatedAt**: *`Date`*
+• **sourceCreatedAt**? : *Date*
 
 *Defined in [api.ts:1959](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1959)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="sourcedeletedat"></a>
 
-### `<Optional>` sourceDeletedAt
+### `Optional` sourceDeletedAt
 
-**● sourceDeletedAt**: *`Date`*
+• **sourceDeletedAt**? : *Date*
 
 *Defined in [api.ts:1965](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1965)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="sourceid"></a>
 
-### `<Optional>` sourceId
+### `Optional` sourceId
 
-**● sourceId**: *`string`*
+• **sourceId**? : *string*
 
 *Defined in [api.ts:1971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1971)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="sourceref"></a>
 
-### `<Optional>` sourceRef
+### `Optional` sourceRef
 
-**● sourceRef**: *`string`*
+• **sourceRef**? : *string*
 
 *Defined in [api.ts:1977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1977)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="sourceregionid"></a>
 
-### `<Optional>` sourceRegionId
+### `Optional` sourceRegionId
 
-**● sourceRegionId**: *`string`*
+• **sourceRegionId**? : *string*
 
 *Defined in [api.ts:1983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1983)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="subscriptionid"></a>
 
-### `<Optional>` subscriptionId
+### `Optional` subscriptionId
 
-**● subscriptionId**: *`string`*
+• **subscriptionId**? : *string*
 
 *Defined in [api.ts:1989](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1989)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: NetworkAdapter
+**`memberof`** NetworkAdapter
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:1995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1995)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: NetworkAdapter
-
-___
-
+**`memberof`** NetworkAdapter

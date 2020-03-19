@@ -1,50 +1,42 @@
-[@redhat-cloud-services/insights-client](../README.md) > [AckInput](../interfaces/ackinput.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [AckInput](ackinput.md)
 
 # Interface: AckInput
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: AckInput
+**`interface`** AckInput
 
 ## Hierarchy
 
-**AckInput**
+* **AckInput**
 
 ## Index
 
 ### Properties
 
-* [justification](ackinput.md#justification)
+* [justification](ackinput.md#optional-justification)
 * [ruleId](ackinput.md#ruleid)
-
----
 
 ## Properties
 
-<a id="justification"></a>
+### `Optional` justification
 
-### `<Optional>` justification
-
-**● justification**: *`string`*
+• **justification**? : *string*
 
 *Defined in [api.ts:141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L141)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: AckInput
+**`memberof`** AckInput
 
 ___
-<a id="ruleid"></a>
 
 ###  ruleId
 
-**● ruleId**: *`string`*
+• **ruleId**: *string*
 
 *Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L135)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: AckInput
-
-___
-
+**`memberof`** AckInput

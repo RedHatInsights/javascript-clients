@@ -1,20 +1,20 @@
-[@redhat-cloud-services/entitlements-client](../README.md) > [ServicesApi](../classes/servicesapi.md)
+[@redhat-cloud-services/entitlements-client](../README.md) › [Globals](../globals.md) › [ServicesApi](servicesapi.md)
 
 # Class: ServicesApi
 
 ServicesApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: ServicesApi
+**`class`** ServicesApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ ServicesApi**
+  ↳ **ServicesApi**
 
 ## Index
 
@@ -24,23 +24,19 @@ ServicesApi - object-oriented interface
 
 ### Properties
 
-* [axios](servicesapi.md#axios)
-* [basePath](servicesapi.md#basepath)
-* [configuration](servicesapi.md#configuration)
+* [axios](servicesapi.md#protected-axios)
+* [basePath](servicesapi.md#protected-basepath)
+* [configuration](servicesapi.md#protected-configuration)
 
 ### Methods
 
 * [servicesGet](servicesapi.md#servicesget)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new ServicesApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [ServicesApi](servicesapi.md)
+\+ **new ServicesApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[ServicesApi](servicesapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,75 +44,62 @@ ServicesApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [ServicesApi](servicesapi.md)
-
-___
+**Returns:** *[ServicesApi](servicesapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="servicesget"></a>
 
 ###  servicesGet
 
-▸ **servicesGet**(options?: *`any`*): `AxiosPromise`<`object`>
+▸ **servicesGet**(`options?`: any): *AxiosPromise‹object›*
 
 *Defined in [api.ts:177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L177)*
 
-*__summary__*: get a list of services a user is entitled to
+**`summary`** get a list of services a user is entitled to
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: ServicesApi
+**`memberof`** ServicesApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<`object`>
-
-___
-
+**Returns:** *AxiosPromise‹object›*

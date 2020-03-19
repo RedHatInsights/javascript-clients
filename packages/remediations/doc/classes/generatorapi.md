@@ -1,20 +1,20 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [GeneratorApi](../classes/generatorapi.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [GeneratorApi](generatorapi.md)
 
 # Class: GeneratorApi
 
 GeneratorApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: GeneratorApi
+**`class`** GeneratorApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ GeneratorApi**
+  ↳ **GeneratorApi**
 
 ## Index
 
@@ -24,23 +24,19 @@ GeneratorApi - object-oriented interface
 
 ### Properties
 
-* [axios](generatorapi.md#axios)
-* [basePath](generatorapi.md#basepath)
-* [configuration](generatorapi.md#configuration)
+* [axios](generatorapi.md#protected-axios)
+* [basePath](generatorapi.md#protected-basepath)
+* [configuration](generatorapi.md#protected-configuration)
 
 ### Methods
 
 * [generate](generatorapi.md#generate)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new GeneratorApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [GeneratorApi](generatorapi.md)
+\+ **new GeneratorApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[GeneratorApi](generatorapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,78 +44,65 @@ GeneratorApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [GeneratorApi](generatorapi.md)
-
-___
+**Returns:** *[GeneratorApi](generatorapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="generate"></a>
 
 ###  generate
 
-▸ **generate**(playbookDefinition: *[PlaybookDefinition](../interfaces/playbookdefinition.md)*, options?: *`any`*): `AxiosPromise`<`string`>
+▸ **generate**(`playbookDefinition`: [PlaybookDefinition](../interfaces/playbookdefinition.md), `options?`: any): *AxiosPromise‹string›*
 
-*Defined in [api.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1031)*
+*Defined in [api.ts:1356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1356)*
 
 Generates an Ansible Playbook based on input parameters
 
-*__summary__*: Generate an Ansible Playbook
+**`summary`** Generate an Ansible Playbook
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: GeneratorApi
+**`memberof`** GeneratorApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| playbookDefinition | [PlaybookDefinition](../interfaces/playbookdefinition.md) |  \- |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`playbookDefinition` | [PlaybookDefinition](../interfaces/playbookdefinition.md) |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<`string`>
-
-___
-
+**Returns:** *AxiosPromise‹string›*

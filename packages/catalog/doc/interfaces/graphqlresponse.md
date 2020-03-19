@@ -1,54 +1,46 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [GraphQLResponse](../interfaces/graphqlresponse.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [GraphQLResponse](graphqlresponse.md)
 
 # Interface: GraphQLResponse
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: GraphQLResponse
+**`interface`** GraphQLResponse
 
 ## Hierarchy
 
-**GraphQLResponse**
+* **GraphQLResponse**
 
 ## Index
 
 ### Properties
 
-* [data](graphqlresponse.md#data)
-* [errors](graphqlresponse.md#errors)
-
----
+* [data](graphqlresponse.md#optional-data)
+* [errors](graphqlresponse.md#optional-errors)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`any`*
+• **data**? : *any*
 
 *Defined in [api.ts:308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L308)*
 
 Results from the GraphQL query
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: GraphQLResponse
+**`memberof`** GraphQLResponse
 
 ___
-<a id="errors"></a>
 
-### `<Optional>` errors
+### `Optional` errors
 
-**● errors**: *`Array`<`any`>*
+• **errors**? : *Array‹any›*
 
 *Defined in [api.ts:314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L314)*
 
 Errors resulting from the GraphQL query
 
-*__type__*: {Array}
+**`type`** {Array<any>}
 
-*__memberof__*: GraphQLResponse
-
-___
-
+**`memberof`** GraphQLResponse

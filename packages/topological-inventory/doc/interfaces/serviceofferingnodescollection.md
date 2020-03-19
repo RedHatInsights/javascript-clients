@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [ServiceOfferingNodesCollection](serviceofferingnodescollection.md)
 
 # Interface: ServiceOfferingNodesCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ServiceOfferingNodesCollection
+**`interface`** ServiceOfferingNodesCollection
 
 ## Hierarchy
 
-**ServiceOfferingNodesCollection**
+* **ServiceOfferingNodesCollection**
 
 ## Index
 
 ### Properties
 
-* [data](serviceofferingnodescollection.md#data)
-* [links](serviceofferingnodescollection.md#links)
-* [meta](serviceofferingnodescollection.md#meta)
-
----
+* [data](serviceofferingnodescollection.md#optional-data)
+* [links](serviceofferingnodescollection.md#optional-links)
+* [meta](serviceofferingnodescollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[ServiceOfferingNode](serviceofferingnode.md)>*
+• **data**? : *Array‹[ServiceOfferingNode](serviceofferingnode.md)›*
 
 *Defined in [api.ts:3035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3035)*
 
-*__type__*: {Array}
+**`type`** {Array<ServiceOfferingNode>}
 
-*__memberof__*: ServiceOfferingNodesCollection
+**`memberof`** ServiceOfferingNodesCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:3029](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3029)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: ServiceOfferingNodesCollection
+**`memberof`** ServiceOfferingNodesCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:3023](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3023)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: ServiceOfferingNodesCollection
-
-___
-
+**`memberof`** ServiceOfferingNodesCollection

@@ -1,14 +1,14 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [RequestError](../interfaces/requesterror.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [RequestError](requesterror.md)
 
 # Interface: RequestError
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RequestError
+**`interface`** RequestError
 
 ## Hierarchy
 
-**RequestError**
+* **RequestError**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [errors](requesterror.md#errors)
 
----
-
 ## Properties
-
-<a id="errors"></a>
 
 ###  errors
 
-**● errors**: *`Array`<[RequestErrorErrors](requesterrorerrors.md)>*
+• **errors**: *Array‹[RequestErrorErrors](requesterrorerrors.md)›*
 
-*Defined in [api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L637)*
+*Defined in [api.ts:962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L962)*
 
-*__type__*: {Array}
+**`type`** {Array<RequestErrorErrors>}
 
-*__memberof__*: RequestError
-
-___
-
+**`memberof`** RequestError

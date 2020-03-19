@@ -1,20 +1,20 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [InternalApi](../classes/internalapi.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [InternalApi](internalapi.md)
 
 # Class: InternalApi
 
 InternalApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: InternalApi
+**`class`** InternalApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ InternalApi**
+  ↳ **InternalApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ InternalApi - object-oriented interface
 
 ### Properties
 
-* [axios](internalapi.md#axios)
-* [basePath](internalapi.md#basepath)
-* [configuration](internalapi.md#configuration)
+* [axios](internalapi.md#protected-axios)
+* [basePath](internalapi.md#protected-basepath)
+* [configuration](internalapi.md#protected-configuration)
 
 ### Methods
 
@@ -35,15 +35,11 @@ InternalApi - object-oriented interface
 * [refreshCve](internalapi.md#refreshcve)
 * [refreshSystem](internalapi.md#refreshsystem)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new InternalApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [InternalApi](internalapi.md)
+\+ **new InternalApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[InternalApi](internalapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -51,157 +47,141 @@ InternalApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [InternalApi](internalapi.md)
-
-___
+**Returns:** *[InternalApi](internalapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="refreshaccount"></a>
 
 ###  refreshAccount
 
-▸ **refreshAccount**(accountId: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **refreshAccount**(`accountId`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:3429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3429)*
+*Defined in [api.ts:3489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3489)*
 
 Refresh cached counts for given account ID. Admin interface, available only to internal users.
 
-*__summary__*: Refresh cached counts for given account ID.
+**`summary`** Refresh cached counts for given account ID.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: InternalApi
+**`memberof`** InternalApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| accountId | `string` |  Account ID of user. |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`accountId` | string | Account ID of user. |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="refreshaccountcve"></a>
 
 ###  refreshAccountCve
 
-▸ **refreshAccountCve**(accountId: *`string`*, cveId: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **refreshAccountCve**(`accountId`: string, `cveId`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:3442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3442)*
+*Defined in [api.ts:3502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3502)*
 
 Refresh cached counts for given account ID and CVE. Admin interface, available only to internal users.
 
-*__summary__*: Refresh cached counts for given account ID and CVE.
+**`summary`** Refresh cached counts for given account ID and CVE.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: InternalApi
+**`memberof`** InternalApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| accountId | `string` |  Account ID of user. |
-| cveId | `string` |  CVE id. |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`accountId` | string | Account ID of user. |
+`cveId` | string | CVE id. |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="refreshcve"></a>
 
 ###  refreshCve
 
-▸ **refreshCve**(cveId: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **refreshCve**(`cveId`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:3454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3454)*
+*Defined in [api.ts:3514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3514)*
 
 Refresh cached counts for given CVE. Admin interface, available only to internal users.
 
-*__summary__*: Refresh cached counts for given CVE.
+**`summary`** Refresh cached counts for given CVE.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: InternalApi
+**`memberof`** InternalApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| cveId | `string` |  CVE id. |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`cveId` | string | CVE id. |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="refreshsystem"></a>
 
 ###  refreshSystem
 
-▸ **refreshSystem**(inventoryId: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **refreshSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:3466](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3466)*
+*Defined in [api.ts:3526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3526)*
 
 Refresh cached counts for given inventory ID. Admin interface, available only to internal users.
 
-*__summary__*: Refresh cached counts for given inventory ID.
+**`summary`** Refresh cached counts for given inventory ID.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: InternalApi
+**`memberof`** InternalApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| inventoryId | `string` |  Inventory ID. |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`inventoryId` | string | Inventory ID. |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
-
-___
-
+**Returns:** *AxiosPromise‹Response›*

@@ -1,64 +1,55 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [RemediationInputAddIssues](../interfaces/remediationinputaddissues.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [RemediationInputAddIssues](remediationinputaddissues.md)
 
 # Interface: RemediationInputAddIssues
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RemediationInputAddIssues
+**`interface`** RemediationInputAddIssues
 
 ## Hierarchy
 
-**RemediationInputAddIssues**
+* **RemediationInputAddIssues**
 
 ## Index
 
 ### Properties
 
 * [id](remediationinputaddissues.md#id)
-* [resolution](remediationinputaddissues.md#resolution)
-* [systems](remediationinputaddissues.md#systems)
-
----
+* [resolution](remediationinputaddissues.md#optional-resolution)
+* [systems](remediationinputaddissues.md#optional-systems)
 
 ## Properties
 
-<a id="id"></a>
-
 ###  id
 
-**● id**: *`string`*
+• **id**: *string*
 
-*Defined in [api.ts:407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L407)*
+*Defined in [api.ts:732](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L732)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RemediationInputAddIssues
-
-___
-<a id="resolution"></a>
-
-### `<Optional>` resolution
-
-**● resolution**: *`string`*
-
-*Defined in [api.ts:413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L413)*
-
-*__type__*: {string}
-
-*__memberof__*: RemediationInputAddIssues
-
-___
-<a id="systems"></a>
-
-### `<Optional>` systems
-
-**● systems**: *`Array`<`string`>*
-
-*Defined in [api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L419)*
-
-*__type__*: {Array}
-
-*__memberof__*: RemediationInputAddIssues
+**`memberof`** RemediationInputAddIssues
 
 ___
 
+### `Optional` resolution
+
+• **resolution**? : *string*
+
+*Defined in [api.ts:738](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L738)*
+
+**`type`** {string}
+
+**`memberof`** RemediationInputAddIssues
+
+___
+
+### `Optional` systems
+
+• **systems**? : *Array‹string›*
+
+*Defined in [api.ts:744](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L744)*
+
+**`type`** {Array<string>}
+
+**`memberof`** RemediationInputAddIssues

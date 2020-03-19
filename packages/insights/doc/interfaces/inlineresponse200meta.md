@@ -1,14 +1,14 @@
-[@redhat-cloud-services/insights-client](../README.md) > [InlineResponse200Meta](../interfaces/inlineresponse200meta.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [InlineResponse200Meta](inlineresponse200meta.md)
 
 # Interface: InlineResponse200Meta
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: InlineResponse200Meta
+**`interface`** InlineResponse200Meta
 
 ## Hierarchy
 
-**InlineResponse200Meta**
+* **InlineResponse200Meta**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [count](inlineresponse200meta.md#count)
 
----
-
 ## Properties
-
-<a id="count"></a>
 
 ###  count
 
-**● count**: *`number`*
+• **count**: *number*
 
 *Defined in [api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L469)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: InlineResponse200Meta
-
-___
-
+**`memberof`** InlineResponse200Meta

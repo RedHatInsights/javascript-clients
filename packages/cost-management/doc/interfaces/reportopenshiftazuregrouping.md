@@ -1,136 +1,122 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportOpenShiftAzureGrouping](../interfaces/reportopenshiftazuregrouping.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportOpenShiftAzureGrouping](reportopenshiftazuregrouping.md)
 
 # Interface: ReportOpenShiftAzureGrouping
 
-The grouping to apply to the report. No grouping by default. When grouping by account the account\_alias will be provided if avaiable.
+The grouping to apply to the report. No grouping by default. When grouping by account the account_alias will be provided if avaiable.
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportOpenShiftAzureGrouping
+**`interface`** ReportOpenShiftAzureGrouping
 
 ## Hierarchy
 
-**ReportOpenShiftAzureGrouping**
+* **ReportOpenShiftAzureGrouping**
 
 ## Index
 
 ### Properties
 
-* [cluster](reportopenshiftazuregrouping.md#cluster)
-* [instanceType](reportopenshiftazuregrouping.md#instancetype)
-* [node](reportopenshiftazuregrouping.md#node)
-* [project](reportopenshiftazuregrouping.md#project)
-* [resourceLocation](reportopenshiftazuregrouping.md#resourcelocation)
-* [serviceName](reportopenshiftazuregrouping.md#servicename)
-* [subscriptionGuid](reportopenshiftazuregrouping.md#subscriptionguid)
-* [tag](reportopenshiftazuregrouping.md#tag)
-
----
+* [cluster](reportopenshiftazuregrouping.md#optional-cluster)
+* [instanceType](reportopenshiftazuregrouping.md#optional-instancetype)
+* [node](reportopenshiftazuregrouping.md#optional-node)
+* [project](reportopenshiftazuregrouping.md#optional-project)
+* [resourceLocation](reportopenshiftazuregrouping.md#optional-resourcelocation)
+* [serviceName](reportopenshiftazuregrouping.md#optional-servicename)
+* [subscriptionGuid](reportopenshiftazuregrouping.md#optional-subscriptionguid)
+* [tag](reportopenshiftazuregrouping.md#optional-tag)
 
 ## Properties
 
-<a id="cluster"></a>
+### `Optional` cluster
 
-### `<Optional>` cluster
+• **cluster**? : *Array‹string›*
 
-**● cluster**: *`Array`<`string`>*
+*Defined in [api.ts:1917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1917)*
 
-*Defined in [api.ts:2092](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2092)*
+**`type`** {Array<string>}
 
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureGrouping
-
-___
-<a id="instancetype"></a>
-
-### `<Optional>` instanceType
-
-**● instanceType**: *`Array`<`string`>*
-
-*Defined in [api.ts:2080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2080)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureGrouping
-
-___
-<a id="node"></a>
-
-### `<Optional>` node
-
-**● node**: *`Array`<`string`>*
-
-*Defined in [api.ts:2104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2104)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureGrouping
-
-___
-<a id="project"></a>
-
-### `<Optional>` project
-
-**● project**: *`Array`<`string`>*
-
-*Defined in [api.ts:2098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2098)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureGrouping
-
-___
-<a id="resourcelocation"></a>
-
-### `<Optional>` resourceLocation
-
-**● resourceLocation**: *`Array`<`string`>*
-
-*Defined in [api.ts:2074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2074)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureGrouping
-
-___
-<a id="servicename"></a>
-
-### `<Optional>` serviceName
-
-**● serviceName**: *`Array`<`string`>*
-
-*Defined in [api.ts:2068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2068)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureGrouping
-
-___
-<a id="subscriptionguid"></a>
-
-### `<Optional>` subscriptionGuid
-
-**● subscriptionGuid**: *`Array`<`string`>*
-
-*Defined in [api.ts:2062](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2062)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureGrouping
-
-___
-<a id="tag"></a>
-
-### `<Optional>` tag
-
-**● tag**: *`Array`<`string`>*
-
-*Defined in [api.ts:2086](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2086)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAzureGrouping
+**`memberof`** ReportOpenShiftAzureGrouping
 
 ___
 
+### `Optional` instanceType
+
+• **instanceType**? : *Array‹string›*
+
+*Defined in [api.ts:1905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1905)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAzureGrouping
+
+___
+
+### `Optional` node
+
+• **node**? : *Array‹string›*
+
+*Defined in [api.ts:1929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1929)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAzureGrouping
+
+___
+
+### `Optional` project
+
+• **project**? : *Array‹string›*
+
+*Defined in [api.ts:1923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1923)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAzureGrouping
+
+___
+
+### `Optional` resourceLocation
+
+• **resourceLocation**? : *Array‹string›*
+
+*Defined in [api.ts:1899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1899)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAzureGrouping
+
+___
+
+### `Optional` serviceName
+
+• **serviceName**? : *Array‹string›*
+
+*Defined in [api.ts:1893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1893)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAzureGrouping
+
+___
+
+### `Optional` subscriptionGuid
+
+• **subscriptionGuid**? : *Array‹string›*
+
+*Defined in [api.ts:1887](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1887)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAzureGrouping
+
+___
+
+### `Optional` tag
+
+• **tag**? : *Array‹string›*
+
+*Defined in [api.ts:1911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1911)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAzureGrouping

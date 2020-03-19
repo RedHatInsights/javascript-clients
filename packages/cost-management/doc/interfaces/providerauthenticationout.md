@@ -1,64 +1,55 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ProviderAuthenticationOut](../interfaces/providerauthenticationout.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ProviderAuthenticationOut](providerauthenticationout.md)
 
 # Interface: ProviderAuthenticationOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ProviderAuthenticationOut
+**`interface`** ProviderAuthenticationOut
 
 ## Hierarchy
 
-**ProviderAuthenticationOut**
+* **ProviderAuthenticationOut**
 
 ## Index
 
 ### Properties
 
-* [credentials](providerauthenticationout.md#credentials)
-* [providerResourceName](providerauthenticationout.md#providerresourcename)
+* [credentials](providerauthenticationout.md#optional-credentials)
+* [providerResourceName](providerauthenticationout.md#optional-providerresourcename)
 * [uuid](providerauthenticationout.md#uuid)
-
----
 
 ## Properties
 
-<a id="credentials"></a>
+### `Optional` credentials
 
-### `<Optional>` credentials
+• **credentials**? : *any*
 
-**● credentials**: *`any`*
+*Defined in [api.ts:537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L537)*
 
-*Defined in [api.ts:712](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L712)*
+**`type`** {any}
 
-*__type__*: {any}
-
-*__memberof__*: ProviderAuthenticationOut
+**`memberof`** ProviderAuthenticationOut
 
 ___
-<a id="providerresourcename"></a>
 
-### `<Optional>` providerResourceName
+### `Optional` providerResourceName
 
-**● providerResourceName**: *`string`*
+• **providerResourceName**? : *string*
 
-*Defined in [api.ts:706](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L706)*
+*Defined in [api.ts:531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L531)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ProviderAuthenticationOut
+**`memberof`** ProviderAuthenticationOut
 
 ___
-<a id="uuid"></a>
 
 ###  uuid
 
-**● uuid**: *`string`*
+• **uuid**: *string*
 
-*Defined in [api.ts:718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L718)*
+*Defined in [api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L543)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ProviderAuthenticationOut
-
-___
-
+**`memberof`** ProviderAuthenticationOut

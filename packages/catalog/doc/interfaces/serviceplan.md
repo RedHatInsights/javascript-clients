@@ -1,118 +1,106 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [ServicePlan](../interfaces/serviceplan.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [ServicePlan](serviceplan.md)
 
 # Interface: ServicePlan
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ServicePlan
+**`interface`** ServicePlan
 
 ## Hierarchy
 
-**ServicePlan**
+* **ServicePlan**
 
 ## Index
 
 ### Properties
 
-* [createJsonSchema](serviceplan.md#createjsonschema)
-* [description](serviceplan.md#description)
-* [id](serviceplan.md#id)
-* [modified](serviceplan.md#modified)
-* [name](serviceplan.md#name)
-* [portfolioItemId](serviceplan.md#portfolioitemid)
-
----
+* [createJsonSchema](serviceplan.md#optional-createjsonschema)
+* [description](serviceplan.md#optional-description)
+* [id](serviceplan.md#optional-id)
+* [modified](serviceplan.md#optional-modified)
+* [name](serviceplan.md#optional-name)
+* [portfolioItemId](serviceplan.md#optional-portfolioitemid)
 
 ## Properties
 
-<a id="createjsonschema"></a>
+### `Optional` createJsonSchema
 
-### `<Optional>` createJsonSchema
-
-**● createJsonSchema**: *`any`*
+• **createJsonSchema**? : *any*
 
 *Defined in [api.ts:966](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L966)*
 
 JSON schema for the object.
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="description"></a>
 
-### `<Optional>` description
+### `Optional` description
 
-**● description**: *`string`*
+• **description**? : *string*
 
 *Defined in [api.ts:960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L960)*
 
 The service plan description.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L978)*
 
 The unique identifier for this service plan.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="modified"></a>
 
-### `<Optional>` modified
+### `Optional` modified
 
-**● modified**: *`boolean`*
+• **modified**? : *boolean*
 
 *Defined in [api.ts:984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L984)*
 
-Whether or not the ServicePlan has a modified create\_json\_schema property
+Whether or not the ServicePlan has a modified create_json_schema property
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L954)*
 
 The name of the service plan.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="portfolioitemid"></a>
 
-### `<Optional>` portfolioItemId
+### `Optional` portfolioItemId
 
-**● portfolioItemId**: *`string`*
+• **portfolioItemId**? : *string*
 
 *Defined in [api.ts:972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L972)*
 
 The reference ID of the Portfolio Item
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
-
-___
-
+**`memberof`** ServicePlan

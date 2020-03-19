@@ -1,38 +1,31 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [CollectionMetadata](../interfaces/collectionmetadata.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [CollectionMetadata](collectionmetadata.md)
 
 # Interface: CollectionMetadata
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CollectionMetadata
+**`interface`** CollectionMetadata
 
 ## Hierarchy
 
-**CollectionMetadata**
+* **CollectionMetadata**
 
 ## Index
 
 ### Properties
 
-* [count](collectionmetadata.md#count)
-
----
+* [count](collectionmetadata.md#optional-count)
 
 ## Properties
 
-<a id="count"></a>
+### `Optional` count
 
-### `<Optional>` count
-
-**● count**: *`number`*
+• **count**? : *number*
 
 *Defined in [api.ts:202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L202)*
 
 Total number of items in the result set, of which only a subset is returned, defined by the QueryLimit parameter.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: CollectionMetadata
-
-___
-
+**`memberof`** CollectionMetadata

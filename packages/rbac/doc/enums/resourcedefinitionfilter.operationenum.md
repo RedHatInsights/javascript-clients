@@ -1,10 +1,10 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [ResourceDefinitionFilter](../modules/resourcedefinitionfilter.md) > [OperationEnum](../enums/resourcedefinitionfilter.operationenum.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [ResourceDefinitionFilter](../modules/resourcedefinitionfilter.md) › [OperationEnum](resourcedefinitionfilter.operationenum.md)
 
 # Enumeration: OperationEnum
 
-*__export__*: 
+**`export`** 
 
-*__enum__*: {string}
+**`enum`** {string}
 
 ## Index
 
@@ -13,26 +13,18 @@
 * [Equal](resourcedefinitionfilter.operationenum.md#equal)
 * [In](resourcedefinitionfilter.operationenum.md#in)
 
----
-
 ## Enumeration members
-
-<a id="equal"></a>
 
 ###  Equal
 
-**Equal**:  = "equal"
+• **Equal**: = "equal"
 
-*Defined in [api.ts:784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L784)*
+*Defined in [api.ts:790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L790)*
 
 ___
-<a id="in"></a>
 
 ###  In
 
-**In**:  = "in"
+• **In**: = "in"
 
-*Defined in [api.ts:785](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L785)*
-
-___
-
+*Defined in [api.ts:791](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L791)*

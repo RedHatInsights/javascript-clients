@@ -1,70 +1,61 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [InstalledProduct](../interfaces/installedproduct.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [InstalledProduct](installedproduct.md)
 
 # Interface: InstalledProduct
 
 Representation of one installed product
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: InstalledProduct
+**`interface`** InstalledProduct
 
 ## Hierarchy
 
-**InstalledProduct**
+* **InstalledProduct**
 
 ## Index
 
 ### Properties
 
-* [id](installedproduct.md#id)
-* [name](installedproduct.md#name)
-* [status](installedproduct.md#status)
-
----
+* [id](installedproduct.md#optional-id)
+* [name](installedproduct.md#optional-name)
+* [status](installedproduct.md#optional-status)
 
 ## Properties
 
-<a id="id"></a>
+### `Optional` id
 
-### `<Optional>` id
-
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:739](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L739)*
 
 the product ID
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: InstalledProduct
+**`memberof`** InstalledProduct
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L733)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: InstalledProduct
+**`memberof`** InstalledProduct
 
 ___
-<a id="status"></a>
 
-### `<Optional>` status
+### `Optional` status
 
-**● status**: *`string`*
+• **status**? : *string*
 
 *Defined in [api.ts:745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L745)*
 
 subscription status for product
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: InstalledProduct
-
-___
-
+**`memberof`** InstalledProduct

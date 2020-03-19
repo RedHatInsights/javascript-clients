@@ -1,20 +1,20 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [TagsApi](../classes/tagsapi.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [TagsApi](tagsapi.md)
 
 # Class: TagsApi
 
 TagsApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: TagsApi
+**`class`** TagsApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ TagsApi**
+  ↳ **TagsApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ TagsApi - object-oriented interface
 
 ### Properties
 
-* [axios](tagsapi.md#axios)
-* [basePath](tagsapi.md#basepath)
-* [configuration](tagsapi.md#configuration)
+* [axios](tagsapi.md#protected-axios)
+* [basePath](tagsapi.md#protected-basepath)
+* [configuration](tagsapi.md#protected-configuration)
 
 ### Methods
 
@@ -36,15 +36,11 @@ TagsApi - object-oriented interface
 * [getOpenShiftAzureTagData](tagsapi.md#getopenshiftazuretagdata)
 * [getOpenShiftTagData](tagsapi.md#getopenshifttagdata)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new TagsApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [TagsApi](tagsapi.md)
+\+ **new TagsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[TagsApi](tagsapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -52,187 +48,170 @@ TagsApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [TagsApi](tagsapi.md)
-
-___
+**Returns:** *[TagsApi](tagsapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="getawstagdata"></a>
 
 ###  getAWSTagData
 
-▸ **getAWSTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
+▸ **getAWSTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[Tags](../interfaces/tags.md)›*
 
-*Defined in [api.ts:7233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7233)*
+*Defined in [api.ts:6708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6708)*
 
-*__summary__*: Query to obtain AWS tags
+**`summary`** Query to obtain AWS tags
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: TagsApi
+**`memberof`** TagsApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` filter | `any` |
-| `Optional` keyOnly | `boolean` |
-| `Optional` offset | `number` |
-| `Optional` limit | `number` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`filter?` | any |
+`keyOnly?` | boolean |
+`offset?` | number |
+`limit?` | number |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[Tags](../interfaces/tags.md)>
+**Returns:** *AxiosPromise‹[Tags](../interfaces/tags.md)›*
 
 ___
-<a id="getazuretagdata"></a>
 
 ###  getAzureTagData
 
-▸ **getAzureTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
+▸ **getAzureTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[Tags](../interfaces/tags.md)›*
 
-*Defined in [api.ts:7248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7248)*
+*Defined in [api.ts:6723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6723)*
 
-*__summary__*: Query to obtain AWS tags
+**`summary`** Query to obtain AWS tags
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: TagsApi
+**`memberof`** TagsApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` filter | `any` |
-| `Optional` keyOnly | `boolean` |
-| `Optional` offset | `number` |
-| `Optional` limit | `number` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`filter?` | any |
+`keyOnly?` | boolean |
+`offset?` | number |
+`limit?` | number |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[Tags](../interfaces/tags.md)>
+**Returns:** *AxiosPromise‹[Tags](../interfaces/tags.md)›*
 
 ___
-<a id="getopenshiftawstagdata"></a>
 
 ###  getOpenShiftAWSTagData
 
-▸ **getOpenShiftAWSTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
+▸ **getOpenShiftAWSTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[Tags](../interfaces/tags.md)›*
 
-*Defined in [api.ts:7263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7263)*
+*Defined in [api.ts:6738](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6738)*
 
-*__summary__*: Query to obtain OpenShift-on-AWS tags
+**`summary`** Query to obtain OpenShift-on-AWS tags
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: TagsApi
+**`memberof`** TagsApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` filter | `any` |
-| `Optional` keyOnly | `boolean` |
-| `Optional` offset | `number` |
-| `Optional` limit | `number` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`filter?` | any |
+`keyOnly?` | boolean |
+`offset?` | number |
+`limit?` | number |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[Tags](../interfaces/tags.md)>
+**Returns:** *AxiosPromise‹[Tags](../interfaces/tags.md)›*
 
 ___
-<a id="getopenshiftazuretagdata"></a>
 
 ###  getOpenShiftAzureTagData
 
-▸ **getOpenShiftAzureTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
+▸ **getOpenShiftAzureTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[Tags](../interfaces/tags.md)›*
 
-*Defined in [api.ts:7278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7278)*
+*Defined in [api.ts:6753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6753)*
 
-*__summary__*: Query to obtain OpenShift-on-Azure tags
+**`summary`** Query to obtain OpenShift-on-Azure tags
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: TagsApi
+**`memberof`** TagsApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` filter | `any` |
-| `Optional` keyOnly | `boolean` |
-| `Optional` offset | `number` |
-| `Optional` limit | `number` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`filter?` | any |
+`keyOnly?` | boolean |
+`offset?` | number |
+`limit?` | number |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[Tags](../interfaces/tags.md)>
+**Returns:** *AxiosPromise‹[Tags](../interfaces/tags.md)›*
 
 ___
-<a id="getopenshifttagdata"></a>
 
 ###  getOpenShiftTagData
 
-▸ **getOpenShiftTagData**(filter?: *`any`*, keyOnly?: *`boolean`*, offset?: *`number`*, limit?: *`number`*, options?: *`any`*): `AxiosPromise`<[Tags](../interfaces/tags.md)>
+▸ **getOpenShiftTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[Tags](../interfaces/tags.md)›*
 
-*Defined in [api.ts:7293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L7293)*
+*Defined in [api.ts:6768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6768)*
 
-*__summary__*: Query to obtain OpenShift tags
+**`summary`** Query to obtain OpenShift tags
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: TagsApi
+**`memberof`** TagsApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` filter | `any` |
-| `Optional` keyOnly | `boolean` |
-| `Optional` offset | `number` |
-| `Optional` limit | `number` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`filter?` | any |
+`keyOnly?` | boolean |
+`offset?` | number |
+`limit?` | number |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[Tags](../interfaces/tags.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[Tags](../interfaces/tags.md)›*

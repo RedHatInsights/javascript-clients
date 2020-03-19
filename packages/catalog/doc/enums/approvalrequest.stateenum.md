@@ -1,10 +1,10 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [ApprovalRequest](../modules/approvalrequest.md) > [StateEnum](../enums/approvalrequest.stateenum.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [ApprovalRequest](../modules/approvalrequest.md) › [StateEnum](approvalrequest.stateenum.md)
 
 # Enumeration: StateEnum
 
-*__export__*: 
+**`export`** 
 
-*__enum__*: {string}
+**`enum`** {string}
 
 ## Index
 
@@ -15,44 +15,34 @@
 * [Denied](approvalrequest.stateenum.md#denied)
 * [Undecided](approvalrequest.stateenum.md#undecided)
 
----
-
 ## Enumeration members
-
-<a id="approved"></a>
 
 ###  Approved
 
-**Approved**:  = "approved"
+• **Approved**: = "approved"
 
 *Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L127)*
 
 ___
-<a id="canceled"></a>
 
 ###  Canceled
 
-**Canceled**:  = "canceled"
+• **Canceled**: = "canceled"
 
 *Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L129)*
 
 ___
-<a id="denied"></a>
 
 ###  Denied
 
-**Denied**:  = "denied"
+• **Denied**: = "denied"
 
 *Defined in [api.ts:128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L128)*
 
 ___
-<a id="undecided"></a>
 
 ###  Undecided
 
-**Undecided**:  = "undecided"
+• **Undecided**: = "undecided"
 
 *Defined in [api.ts:126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L126)*
-
-___
-

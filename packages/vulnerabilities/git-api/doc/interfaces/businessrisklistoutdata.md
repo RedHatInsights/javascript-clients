@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [BusinessRiskListOutData](../interfaces/businessrisklistoutdata.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [BusinessRiskListOutData](businessrisklistoutdata.md)
 
 # Interface: BusinessRiskListOutData
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: BusinessRiskListOutData
+**`interface`** BusinessRiskListOutData
 
 ## Hierarchy
 
-**BusinessRiskListOutData**
+* **BusinessRiskListOutData**
 
 ## Index
 
@@ -17,38 +17,30 @@
 * [id](businessrisklistoutdata.md#id)
 * [name](businessrisklistoutdata.md#name)
 
----
-
 ## Properties
-
-<a id="id"></a>
 
 ###  id
 
-**● id**: *`number`*
+• **id**: *number*
 
 *Defined in [git-api/api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L143)*
 
-Internal business\_risk\_id.
+Internal business_risk_id.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: BusinessRiskListOutData
+**`memberof`** BusinessRiskListOutData
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
 *Defined in [git-api/api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L149)*
 
-Represenation of internal business\_risk\_id.
+Represenation of internal business_risk_id.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: BusinessRiskListOutData
-
-___
-
+**`memberof`** BusinessRiskListOutData

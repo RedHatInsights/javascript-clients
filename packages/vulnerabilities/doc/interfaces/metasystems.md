@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [MetaSystems](../interfaces/metasystems.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [MetaSystems](metasystems.md)
 
 # Interface: MetaSystems
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: MetaSystems
+**`interface`** MetaSystems
 
 ## Hierarchy
 
-**MetaSystems**
+* **MetaSystems**
 
 ## Index
 
@@ -25,158 +25,142 @@
 * [sort](metasystems.md#sort)
 * [totalItems](metasystems.md#totalitems)
 
----
-
 ## Properties
-
-<a id="dataformat"></a>
 
 ###  dataFormat
 
-**● dataFormat**: *`string`*
+• **dataFormat**: *string*
 
-*Defined in [api.ts:993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L993)*
+*Defined in [api.ts:1053](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1053)*
 
 Format of the output data, either JSON (default) or CSV.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: MetaSystems
+**`memberof`** MetaSystems
 
 ___
-<a id="filter"></a>
 
 ###  filter
 
-**● filter**: *`string` \| `null`*
+• **filter**: *string | null*
 
-*Defined in [api.ts:945](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L945)*
+*Defined in [api.ts:1005](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1005)*
 
 Full text filter
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: MetaSystems
+**`memberof`** MetaSystems
 
 ___
-<a id="limit"></a>
 
 ###  limit
 
-**● limit**: *`number`*
+• **limit**: *number*
 
-*Defined in [api.ts:951](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L951)*
+*Defined in [api.ts:1011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1011)*
 
 Maximum number of paginated results.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: MetaSystems
+**`memberof`** MetaSystems
 
 ___
-<a id="offset"></a>
 
 ###  offset
 
-**● offset**: *`number`*
+• **offset**: *number*
 
-*Defined in [api.ts:957](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L957)*
+*Defined in [api.ts:1017](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1017)*
 
 First record of paginated response.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: MetaSystems
+**`memberof`** MetaSystems
 
 ___
-<a id="optout"></a>
 
 ###  optOut
 
-**● optOut**: *`boolean` \| `null`*
+• **optOut**: *boolean | null*
 
-*Defined in [api.ts:999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L999)*
+*Defined in [api.ts:1059](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1059)*
 
 Whether the filter to show opted out systems is active or not. If not set, defaults to hiding opted out systems.
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: MetaSystems
+**`memberof`** MetaSystems
 
 ___
-<a id="page"></a>
 
 ###  page
 
-**● page**: *`number`*
+• **page**: *number*
 
-*Defined in [api.ts:963](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L963)*
+*Defined in [api.ts:1023](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1023)*
 
 Page number of paginated response.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: MetaSystems
+**`memberof`** MetaSystems
 
 ___
-<a id="pagesize"></a>
 
 ###  pageSize
 
-**● pageSize**: *`number`*
+• **pageSize**: *number*
 
-*Defined in [api.ts:969](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L969)*
+*Defined in [api.ts:1029](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1029)*
 
 Number of records per page of paginated response.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: MetaSystems
+**`memberof`** MetaSystems
 
 ___
-<a id="pages"></a>
 
 ###  pages
 
-**● pages**: *`number`*
+• **pages**: *number*
 
-*Defined in [api.ts:975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L975)*
+*Defined in [api.ts:1035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1035)*
 
 Total number of pages of paginated response.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: MetaSystems
+**`memberof`** MetaSystems
 
 ___
-<a id="sort"></a>
 
 ###  sort
 
-**● sort**: *`string` \| `null`*
+• **sort**: *string | null*
 
-*Defined in [api.ts:981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L981)*
+*Defined in [api.ts:1041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1041)*
 
 Sorting filter.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: MetaSystems
+**`memberof`** MetaSystems
 
 ___
-<a id="totalitems"></a>
 
 ###  totalItems
 
-**● totalItems**: *`number`*
+• **totalItems**: *number*
 
-*Defined in [api.ts:987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L987)*
+*Defined in [api.ts:1047](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1047)*
 
 Total number of records.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: MetaSystems
-
-___
-
+**`memberof`** MetaSystems

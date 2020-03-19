@@ -1,50 +1,42 @@
-[@redhat-cloud-services/insights-client](../README.md) > [RuleImpact](../interfaces/ruleimpact.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [RuleImpact](ruleimpact.md)
 
 # Interface: RuleImpact
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RuleImpact
+**`interface`** RuleImpact
 
 ## Hierarchy
 
-**RuleImpact**
+* **RuleImpact**
 
 ## Index
 
 ### Properties
 
-* [impact](ruleimpact.md#impact)
-* [name](ruleimpact.md#name)
-
----
+* [impact](ruleimpact.md#optional-impact)
+* [name](ruleimpact.md#optional-name)
 
 ## Properties
 
-<a id="impact"></a>
+### `Optional` impact
 
-### `<Optional>` impact
-
-**● impact**: *`number`*
+• **impact**? : *number*
 
 *Defined in [api.ts:947](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L947)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: RuleImpact
+**`memberof`** RuleImpact
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:941](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L941)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RuleImpact
-
-___
-
+**`memberof`** RuleImpact

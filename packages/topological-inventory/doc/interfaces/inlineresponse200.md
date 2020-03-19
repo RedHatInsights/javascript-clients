@@ -1,36 +1,29 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [InlineResponse200](../interfaces/inlineresponse200.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [InlineResponse200](inlineresponse200.md)
 
 # Interface: InlineResponse200
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: InlineResponse200
+**`interface`** InlineResponse200
 
 ## Hierarchy
 
-**InlineResponse200**
+* **InlineResponse200**
 
 ## Index
 
 ### Properties
 
-* [taskId](inlineresponse200.md#taskid)
-
----
+* [taskId](inlineresponse200.md#optional-taskid)
 
 ## Properties
 
-<a id="taskid"></a>
+### `Optional` taskId
 
-### `<Optional>` taskId
-
-**● taskId**: *`string`*
+• **taskId**? : *string*
 
 *Defined in [api.ts:1651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1651)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: InlineResponse200
-
-___
-
+**`memberof`** InlineResponse200

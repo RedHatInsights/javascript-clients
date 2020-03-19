@@ -1,64 +1,55 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [PlaybookDefinitionIssues](../interfaces/playbookdefinitionissues.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [PlaybookDefinitionIssues](playbookdefinitionissues.md)
 
 # Interface: PlaybookDefinitionIssues
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: PlaybookDefinitionIssues
+**`interface`** PlaybookDefinitionIssues
 
 ## Hierarchy
 
-**PlaybookDefinitionIssues**
+* **PlaybookDefinitionIssues**
 
 ## Index
 
 ### Properties
 
 * [id](playbookdefinitionissues.md#id)
-* [resolution](playbookdefinitionissues.md#resolution)
+* [resolution](playbookdefinitionissues.md#optional-resolution)
 * [systems](playbookdefinitionissues.md#systems)
-
----
 
 ## Properties
 
-<a id="id"></a>
-
 ###  id
 
-**● id**: *`string`*
+• **id**: *string*
 
 *Defined in [api.ts:183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L183)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: PlaybookDefinitionIssues
+**`memberof`** PlaybookDefinitionIssues
 
 ___
-<a id="resolution"></a>
 
-### `<Optional>` resolution
+### `Optional` resolution
 
-**● resolution**: *`string`*
+• **resolution**? : *string*
 
 *Defined in [api.ts:195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L195)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: PlaybookDefinitionIssues
+**`memberof`** PlaybookDefinitionIssues
 
 ___
-<a id="systems"></a>
 
 ###  systems
 
-**● systems**: *`Array`<`string`>*
+• **systems**: *Array‹string›*
 
 *Defined in [api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L189)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: PlaybookDefinitionIssues
-
-___
-
+**`memberof`** PlaybookDefinitionIssues

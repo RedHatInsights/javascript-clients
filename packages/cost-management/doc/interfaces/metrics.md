@@ -1,64 +1,55 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [Metrics](../interfaces/metrics.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [Metrics](metrics.md)
 
 # Interface: Metrics
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Metrics
+**`interface`** Metrics
 
 ## Hierarchy
 
-**Metrics**
+* **Metrics**
 
 ## Index
 
 ### Properties
 
 * [data](metrics.md#data)
-* [links](metrics.md#links)
-* [meta](metrics.md#meta)
-
----
+* [links](metrics.md#optional-links)
+* [meta](metrics.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<[MetricsOut](metricsout.md)>*
+• **data**: *Array‹[MetricsOut](metricsout.md)›*
 
-*Defined in [api.ts:554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L554)*
+*Defined in [api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L379)*
 
-*__type__*: {Array}
+**`type`** {Array<MetricsOut>}
 
-*__memberof__*: Metrics
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[PaginationLinks](paginationlinks.md)*
-
-*Defined in [api.ts:548](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L548)*
-
-*__type__*: {PaginationLinks}
-
-*__memberof__*: Metrics
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[PaginationMeta](paginationmeta.md)*
-
-*Defined in [api.ts:542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L542)*
-
-*__type__*: {PaginationMeta}
-
-*__memberof__*: Metrics
+**`memberof`** Metrics
 
 ___
 
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
+
+*Defined in [api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L373)*
+
+**`type`** {PaginationLinks}
+
+**`memberof`** Metrics
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[PaginationMeta](paginationmeta.md)*
+
+*Defined in [api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L367)*
+
+**`type`** {PaginationMeta}
+
+**`memberof`** Metrics

@@ -1,54 +1,46 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [OrderParametersServicePlan](../interfaces/orderparametersserviceplan.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [OrderParametersServicePlan](orderparametersserviceplan.md)
 
 # Interface: OrderParametersServicePlan
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: OrderParametersServicePlan
+**`interface`** OrderParametersServicePlan
 
 ## Hierarchy
 
-**OrderParametersServicePlan**
+* **OrderParametersServicePlan**
 
 ## Index
 
 ### Properties
 
-* [providerControlParameters](orderparametersserviceplan.md#providercontrolparameters)
-* [serviceParameters](orderparametersserviceplan.md#serviceparameters)
-
----
+* [providerControlParameters](orderparametersserviceplan.md#optional-providercontrolparameters)
+* [serviceParameters](orderparametersserviceplan.md#optional-serviceparameters)
 
 ## Properties
 
-<a id="providercontrolparameters"></a>
+### `Optional` providerControlParameters
 
-### `<Optional>` providerControlParameters
-
-**● providerControlParameters**: *`any`*
+• **providerControlParameters**? : *any*
 
 *Defined in [api.ts:2211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2211)*
 
 The provider specific parameters needed to provision this service. This might include namespaces, special keys
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: OrderParametersServicePlan
+**`memberof`** OrderParametersServicePlan
 
 ___
-<a id="serviceparameters"></a>
 
-### `<Optional>` serviceParameters
+### `Optional` serviceParameters
 
-**● serviceParameters**: *`any`*
+• **serviceParameters**? : *any*
 
 *Defined in [api.ts:2205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2205)*
 
 JSON object with provisioning parameters
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: OrderParametersServicePlan
-
-___
-
+**`memberof`** OrderParametersServicePlan

@@ -1,36 +1,29 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [Tag](../interfaces/tag.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [Tag](tag.md)
 
 # Interface: Tag
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Tag
+**`interface`** Tag
 
 ## Hierarchy
 
-**Tag**
+* **Tag**
 
 ## Index
 
 ### Properties
 
-* [tag](tag.md#tag-1)
-
----
+* [tag](tag.md#optional-tag)
 
 ## Properties
 
-<a id="tag-1"></a>
+### `Optional` tag
 
-### `<Optional>` tag
-
-**● tag**: *`string`*
+• **tag**? : *string*
 
 *Defined in [api.ts:1098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1098)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Tag
-
-___
-
+**`memberof`** Tag

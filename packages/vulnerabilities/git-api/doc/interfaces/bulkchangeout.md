@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [BulkChangeOut](../interfaces/bulkchangeout.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [BulkChangeOut](bulkchangeout.md)
 
 # Interface: BulkChangeOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: BulkChangeOut
+**`interface`** BulkChangeOut
 
 ## Hierarchy
 
-**BulkChangeOut**
+* **BulkChangeOut**
 
 ## Index
 
@@ -16,23 +16,16 @@
 
 * [updated](bulkchangeout.md#updated)
 
----
-
 ## Properties
-
-<a id="updated"></a>
 
 ###  updated
 
-**● updated**: *`Array`<`string`>*
+• **updated**: *Array‹string›*
 
 *Defined in [git-api/api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L109)*
 
 List of updated objects/updated object IDs.
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: BulkChangeOut
-
-___
-
+**`memberof`** BulkChangeOut

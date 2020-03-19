@@ -1,64 +1,55 @@
-[@redhat-cloud-services/insights-client](../README.md) > [Report](../interfaces/report.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [Report](report.md)
 
 # Interface: Report
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Report
+**`interface`** Report
 
 ## Hierarchy
 
-**Report**
+* **Report**
 
 ## Index
 
 ### Properties
 
 * [details](report.md#details)
-* [resolution](report.md#resolution)
-* [rule](report.md#rule)
-
----
+* [resolution](report.md#optional-resolution)
+* [rule](report.md#optional-rule)
 
 ## Properties
 
-<a id="details"></a>
-
 ###  details
 
-**● details**: *`any`*
+• **details**: *any*
 
 *Defined in [api.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L563)*
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: Report
+**`memberof`** Report
 
 ___
-<a id="resolution"></a>
 
-### `<Optional>` resolution
+### `Optional` resolution
 
-**● resolution**: *[Resolution](resolution.md)*
+• **resolution**? : *[Resolution](resolution.md)*
 
 *Defined in [api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L569)*
 
-*__type__*: {Resolution}
+**`type`** {Resolution}
 
-*__memberof__*: Report
+**`memberof`** Report
 
 ___
-<a id="rule"></a>
 
-### `<Optional>` rule
+### `Optional` rule
 
-**● rule**: *[Rule](rule.md)*
+• **rule**? : *[Rule](rule.md)*
 
 *Defined in [api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L557)*
 
-*__type__*: {Rule}
+**`type`** {Rule}
 
-*__memberof__*: Report
-
-___
-
+**`memberof`** Report

@@ -1,272 +1,249 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [Subnet](../interfaces/subnet.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [Subnet](subnet.md)
 
 # Interface: Subnet
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Subnet
+**`interface`** Subnet
 
 ## Hierarchy
 
-**Subnet**
+* **Subnet**
 
 ## Index
 
 ### Properties
 
-* [archivedAt](subnet.md#archivedat)
-* [cidr](subnet.md#cidr)
-* [createdAt](subnet.md#createdat)
-* [extra](subnet.md#extra)
-* [id](subnet.md#id)
-* [lastSeenAt](subnet.md#lastseenat)
-* [name](subnet.md#name)
-* [networkId](subnet.md#networkid)
-* [orchestrationStackId](subnet.md#orchestrationstackid)
-* [sourceCreatedAt](subnet.md#sourcecreatedat)
-* [sourceDeletedAt](subnet.md#sourcedeletedat)
-* [sourceId](subnet.md#sourceid)
-* [sourceRef](subnet.md#sourceref)
-* [sourceRegionId](subnet.md#sourceregionid)
-* [status](subnet.md#status)
-* [subscriptionId](subnet.md#subscriptionid)
-* [updatedAt](subnet.md#updatedat)
-
----
+* [archivedAt](subnet.md#optional-archivedat)
+* [cidr](subnet.md#optional-cidr)
+* [createdAt](subnet.md#optional-createdat)
+* [extra](subnet.md#optional-extra)
+* [id](subnet.md#optional-id)
+* [lastSeenAt](subnet.md#optional-lastseenat)
+* [name](subnet.md#optional-name)
+* [networkId](subnet.md#optional-networkid)
+* [orchestrationStackId](subnet.md#optional-orchestrationstackid)
+* [sourceCreatedAt](subnet.md#optional-sourcecreatedat)
+* [sourceDeletedAt](subnet.md#optional-sourcedeletedat)
+* [sourceId](subnet.md#optional-sourceid)
+* [sourceRef](subnet.md#optional-sourceref)
+* [sourceRegionId](subnet.md#optional-sourceregionid)
+* [status](subnet.md#optional-status)
+* [subscriptionId](subnet.md#optional-subscriptionid)
+* [updatedAt](subnet.md#optional-updatedat)
 
 ## Properties
 
-<a id="archivedat"></a>
+### `Optional` archivedAt
 
-### `<Optional>` archivedAt
-
-**● archivedAt**: *`Date`*
+• **archivedAt**? : *Date*
 
 *Defined in [api.ts:3369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3369)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="cidr"></a>
 
-### `<Optional>` cidr
+### `Optional` cidr
 
-**● cidr**: *`string`*
+• **cidr**? : *string*
 
 *Defined in [api.ts:3375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3375)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:3381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3381)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="extra"></a>
 
-### `<Optional>` extra
+### `Optional` extra
 
-**● extra**: *`any`*
+• **extra**? : *any*
 
 *Defined in [api.ts:3387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3387)*
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:3393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3393)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="lastseenat"></a>
 
-### `<Optional>` lastSeenAt
+### `Optional` lastSeenAt
 
-**● lastSeenAt**: *`Date`*
+• **lastSeenAt**? : *Date*
 
 *Defined in [api.ts:3399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3399)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:3405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3405)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="networkid"></a>
 
-### `<Optional>` networkId
+### `Optional` networkId
 
-**● networkId**: *`string`*
+• **networkId**? : *string*
 
 *Defined in [api.ts:3411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3411)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="orchestrationstackid"></a>
 
-### `<Optional>` orchestrationStackId
+### `Optional` orchestrationStackId
 
-**● orchestrationStackId**: *`string`*
+• **orchestrationStackId**? : *string*
 
 *Defined in [api.ts:3417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3417)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="sourcecreatedat"></a>
 
-### `<Optional>` sourceCreatedAt
+### `Optional` sourceCreatedAt
 
-**● sourceCreatedAt**: *`Date`*
+• **sourceCreatedAt**? : *Date*
 
 *Defined in [api.ts:3423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3423)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="sourcedeletedat"></a>
 
-### `<Optional>` sourceDeletedAt
+### `Optional` sourceDeletedAt
 
-**● sourceDeletedAt**: *`Date`*
+• **sourceDeletedAt**? : *Date*
 
 *Defined in [api.ts:3429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3429)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="sourceid"></a>
 
-### `<Optional>` sourceId
+### `Optional` sourceId
 
-**● sourceId**: *`string`*
+• **sourceId**? : *string*
 
 *Defined in [api.ts:3435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3435)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="sourceref"></a>
 
-### `<Optional>` sourceRef
+### `Optional` sourceRef
 
-**● sourceRef**: *`string`*
+• **sourceRef**? : *string*
 
 *Defined in [api.ts:3441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3441)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="sourceregionid"></a>
 
-### `<Optional>` sourceRegionId
+### `Optional` sourceRegionId
 
-**● sourceRegionId**: *`string`*
+• **sourceRegionId**? : *string*
 
 *Defined in [api.ts:3447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3447)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="status"></a>
 
-### `<Optional>` status
+### `Optional` status
 
-**● status**: *`string`*
+• **status**? : *string*
 
 *Defined in [api.ts:3453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3453)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="subscriptionid"></a>
 
-### `<Optional>` subscriptionId
+### `Optional` subscriptionId
 
-**● subscriptionId**: *`string`*
+• **subscriptionId**? : *string*
 
 *Defined in [api.ts:3459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3459)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Subnet
+**`memberof`** Subnet
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:3465](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3465)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Subnet
-
-___
-
+**`memberof`** Subnet

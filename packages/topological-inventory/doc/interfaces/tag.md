@@ -1,122 +1,109 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [Tag](../interfaces/tag.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [Tag](tag.md)
 
 # Interface: Tag
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Tag
+**`interface`** Tag
 
 ## Hierarchy
 
-**Tag**
+* **Tag**
 
 ## Index
 
 ### Properties
 
-* [createdAt](tag.md#createdat)
-* [description](tag.md#description)
-* [id](tag.md#id)
-* [lastSeenAt](tag.md#lastseenat)
-* [name](tag.md#name)
-* [namespace](tag.md#namespace)
-* [value](tag.md#value)
-
----
+* [createdAt](tag.md#optional-createdat)
+* [description](tag.md#optional-description)
+* [id](tag.md#optional-id)
+* [lastSeenAt](tag.md#optional-lastseenat)
+* [name](tag.md#optional-name)
+* [namespace](tag.md#optional-namespace)
+* [value](tag.md#optional-value)
 
 ## Properties
 
-<a id="createdat"></a>
+### `Optional` createdAt
 
-### `<Optional>` createdAt
-
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:3587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3587)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Tag
+**`memberof`** Tag
 
 ___
-<a id="description"></a>
 
-### `<Optional>` description
+### `Optional` description
 
-**● description**: *`string`*
+• **description**? : *string*
 
 *Defined in [api.ts:3593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3593)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Tag
+**`memberof`** Tag
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:3599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3599)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Tag
+**`memberof`** Tag
 
 ___
-<a id="lastseenat"></a>
 
-### `<Optional>` lastSeenAt
+### `Optional` lastSeenAt
 
-**● lastSeenAt**: *`Date`*
+• **lastSeenAt**? : *Date*
 
 *Defined in [api.ts:3605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3605)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Tag
+**`memberof`** Tag
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:3611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3611)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Tag
+**`memberof`** Tag
 
 ___
-<a id="namespace"></a>
 
-### `<Optional>` namespace
+### `Optional` namespace
 
-**● namespace**: *`string`*
+• **namespace**? : *string*
 
 *Defined in [api.ts:3617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3617)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Tag
+**`memberof`** Tag
 
 ___
-<a id="value"></a>
 
-### `<Optional>` value
+### `Optional` value
 
-**● value**: *`string`*
+• **value**? : *string*
 
 *Defined in [api.ts:3623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3623)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Tag
-
-___
-
+**`memberof`** Tag

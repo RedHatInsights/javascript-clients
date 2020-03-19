@@ -1,16 +1,11 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [InventoryIdOrList](../interfaces/inventoryidorlist.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [InventoryIdOrList](inventoryidorlist.md)
 
 # Interface: InventoryIdOrList
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: InventoryIdOrList
+**`interface`** InventoryIdOrList
 
 ## Hierarchy
 
-**InventoryIdOrList**
-
-## Index
-
----
-
+* **InventoryIdOrList**

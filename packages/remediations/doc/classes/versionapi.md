@@ -1,20 +1,20 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [VersionApi](../classes/versionapi.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [VersionApi](versionapi.md)
 
 # Class: VersionApi
 
 VersionApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: VersionApi
+**`class`** VersionApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ VersionApi**
+  ↳ **VersionApi**
 
 ## Index
 
@@ -24,23 +24,19 @@ VersionApi - object-oriented interface
 
 ### Properties
 
-* [axios](versionapi.md#axios)
-* [basePath](versionapi.md#basepath)
-* [configuration](versionapi.md#configuration)
+* [axios](versionapi.md#protected-axios)
+* [basePath](versionapi.md#protected-basepath)
+* [configuration](versionapi.md#protected-configuration)
 
 ### Methods
 
 * [getVersion](versionapi.md#getversion)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new VersionApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [VersionApi](versionapi.md)
+\+ **new VersionApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[VersionApi](versionapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,77 +44,64 @@ VersionApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [VersionApi](versionapi.md)
-
-___
+**Returns:** *[VersionApi](versionapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="getversion"></a>
 
 ###  getVersion
 
-▸ **getVersion**(options?: *`any`*): `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
+▸ **getVersion**(`options?`: any): *AxiosPromise‹[InlineResponse200](../interfaces/inlineresponse200.md)›*
 
-*Defined in [api.ts:2193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2193)*
+*Defined in [api.ts:2838](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2838)*
 
 Provides information about the version of the service
 
-*__summary__*: Get service version
+**`summary`** Get service version
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: VersionApi
+**`memberof`** VersionApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[InlineResponse200](../interfaces/inlineresponse200.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[InlineResponse200](../interfaces/inlineresponse200.md)›*

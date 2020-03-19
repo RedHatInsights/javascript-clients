@@ -1,64 +1,55 @@
-[@redhat-cloud-services/approval-client](../README.md) > [WorkflowCollection](../interfaces/workflowcollection.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [WorkflowCollection](workflowcollection.md)
 
 # Interface: WorkflowCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: WorkflowCollection
+**`interface`** WorkflowCollection
 
 ## Hierarchy
 
-**WorkflowCollection**
+* **WorkflowCollection**
 
 ## Index
 
 ### Properties
 
-* [data](workflowcollection.md#data)
-* [links](workflowcollection.md#links)
-* [meta](workflowcollection.md#meta)
-
----
+* [data](workflowcollection.md#optional-data)
+* [links](workflowcollection.md#optional-links)
+* [meta](workflowcollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
+• **data**? : *Array‹[Workflow](workflow.md)›*
 
-**● data**: *`Array`<[Workflow](workflow.md)>*
+*Defined in [api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L642)*
 
-*Defined in [api.ts:645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L645)*
+**`type`** {Array<Workflow>}
 
-*__type__*: {Array}
-
-*__memberof__*: WorkflowCollection
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[CollectionLinks](collectionlinks.md)*
-
-*Defined in [api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L639)*
-
-*__type__*: {CollectionLinks}
-
-*__memberof__*: WorkflowCollection
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
-
-*Defined in [api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L633)*
-
-*__type__*: {CollectionMetadata}
-
-*__memberof__*: WorkflowCollection
+**`memberof`** WorkflowCollection
 
 ___
 
+### `Optional` links
+
+• **links**? : *[CollectionLinks](collectionlinks.md)*
+
+*Defined in [api.ts:636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L636)*
+
+**`type`** {CollectionLinks}
+
+**`memberof`** WorkflowCollection
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
+
+*Defined in [api.ts:630](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L630)*
+
+**`type`** {CollectionMetadata}
+
+**`memberof`** WorkflowCollection

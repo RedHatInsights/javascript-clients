@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [VolumesCollection](../interfaces/volumescollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [VolumesCollection](volumescollection.md)
 
 # Interface: VolumesCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: VolumesCollection
+**`interface`** VolumesCollection
 
 ## Hierarchy
 
-**VolumesCollection**
+* **VolumesCollection**
 
 ## Index
 
 ### Properties
 
-* [data](volumescollection.md#data)
-* [links](volumescollection.md#links)
-* [meta](volumescollection.md#meta)
-
----
+* [data](volumescollection.md#optional-data)
+* [links](volumescollection.md#optional-links)
+* [meta](volumescollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[Volume](volume.md)>*
+• **data**? : *Array‹[Volume](volume.md)›*
 
 *Defined in [api.ts:4261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4261)*
 
-*__type__*: {Array}
+**`type`** {Array<Volume>}
 
-*__memberof__*: VolumesCollection
+**`memberof`** VolumesCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:4255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4255)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: VolumesCollection
+**`memberof`** VolumesCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:4249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4249)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: VolumesCollection
-
-___
-
+**`memberof`** VolumesCollection

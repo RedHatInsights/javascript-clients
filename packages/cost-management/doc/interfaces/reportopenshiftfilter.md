@@ -1,194 +1,176 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportOpenShiftFilter](../interfaces/reportopenshiftfilter.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportOpenShiftFilter](reportopenshiftfilter.md)
 
 # Interface: ReportOpenShiftFilter
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportOpenShiftFilter
+**`interface`** ReportOpenShiftFilter
 
 ## Hierarchy
 
-**ReportOpenShiftFilter**
+* **ReportOpenShiftFilter**
 
 ## Index
 
 ### Properties
 
-* [cluster](reportopenshiftfilter.md#cluster)
-* [infrastructures](reportopenshiftfilter.md#infrastructures)
-* [limit](reportopenshiftfilter.md#limit)
-* [node](reportopenshiftfilter.md#node)
-* [offset](reportopenshiftfilter.md#offset)
-* [pod](reportopenshiftfilter.md#pod)
-* [project](reportopenshiftfilter.md#project)
-* [resolution](reportopenshiftfilter.md#resolution)
-* [resourceScope](reportopenshiftfilter.md#resourcescope)
-* [tag](reportopenshiftfilter.md#tag)
-* [timeScopeUnits](reportopenshiftfilter.md#timescopeunits)
-* [timeScopeValue](reportopenshiftfilter.md#timescopevalue)
-
----
+* [cluster](reportopenshiftfilter.md#optional-cluster)
+* [infrastructures](reportopenshiftfilter.md#optional-infrastructures)
+* [limit](reportopenshiftfilter.md#optional-limit)
+* [node](reportopenshiftfilter.md#optional-node)
+* [offset](reportopenshiftfilter.md#optional-offset)
+* [pod](reportopenshiftfilter.md#optional-pod)
+* [project](reportopenshiftfilter.md#optional-project)
+* [resolution](reportopenshiftfilter.md#optional-resolution)
+* [resourceScope](reportopenshiftfilter.md#optional-resourcescope)
+* [tag](reportopenshiftfilter.md#optional-tag)
+* [timeScopeUnits](reportopenshiftfilter.md#optional-timescopeunits)
+* [timeScopeValue](reportopenshiftfilter.md#optional-timescopevalue)
 
 ## Properties
 
-<a id="cluster"></a>
+### `Optional` cluster
 
-### `<Optional>` cluster
+• **cluster**? : *Array‹string›*
 
-**● cluster**: *`Array`<`string`>*
+*Defined in [api.ts:2254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2254)*
 
-*Defined in [api.ts:2429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2429)*
+**`type`** {Array<string>}
 
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftFilter
+**`memberof`** ReportOpenShiftFilter
 
 ___
-<a id="infrastructures"></a>
 
-### `<Optional>` infrastructures
+### `Optional` infrastructures
 
-**● infrastructures**: *`Array`<`string`>*
+• **infrastructures**? : *Array‹string›*
 
-*Defined in [api.ts:2453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2453)*
+*Defined in [api.ts:2278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2278)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: ReportOpenShiftFilter
+**`memberof`** ReportOpenShiftFilter
 
 ___
-<a id="limit"></a>
 
-### `<Optional>` limit
+### `Optional` limit
 
-**● limit**: *`number`*
+• **limit**? : *number*
 
-*Defined in [api.ts:2387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2387)*
+*Defined in [api.ts:2212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2212)*
 
 Limits the data points returns and aggregates remaining data.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ReportOpenShiftFilter
-
-___
-<a id="node"></a>
-
-### `<Optional>` node
-
-**● node**: *`Array`<`string`>*
-
-*Defined in [api.ts:2441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2441)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftFilter
+**`memberof`** ReportOpenShiftFilter
 
 ___
-<a id="offset"></a>
 
-### `<Optional>` offset
+### `Optional` node
 
-**● offset**: *`number`*
+• **node**? : *Array‹string›*
 
-*Defined in [api.ts:2393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2393)*
+*Defined in [api.ts:2266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2266)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftFilter
+
+___
+
+### `Optional` offset
+
+• **offset**? : *number*
+
+*Defined in [api.ts:2218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2218)*
 
 Offsets the data points returned when using limit.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ReportOpenShiftFilter
-
-___
-<a id="pod"></a>
-
-### `<Optional>` pod
-
-**● pod**: *`Array`<`string`>*
-
-*Defined in [api.ts:2435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2435)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftFilter
-
-___
-<a id="project"></a>
-
-### `<Optional>` project
-
-**● project**: *`Array`<`string`>*
-
-*Defined in [api.ts:2423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2423)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftFilter
-
-___
-<a id="resolution"></a>
-
-### `<Optional>` resolution
-
-**● resolution**: *[ReportResolution](../enums/reportresolution.md)*
-
-*Defined in [api.ts:2399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2399)*
-
-*__type__*: {ReportResolution}
-
-*__memberof__*: ReportOpenShiftFilter
-
-___
-<a id="resourcescope"></a>
-
-### `<Optional>` resourceScope
-
-**● resourceScope**: *`Array`<[ReportResourceScope](../enums/reportresourcescope.md)>*
-
-*Defined in [api.ts:2417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2417)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftFilter
-
-___
-<a id="tag"></a>
-
-### `<Optional>` tag
-
-**● tag**: *`Array`<`string`>*
-
-*Defined in [api.ts:2447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2447)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftFilter
-
-___
-<a id="timescopeunits"></a>
-
-### `<Optional>` timeScopeUnits
-
-**● timeScopeUnits**: *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
-
-*Defined in [api.ts:2411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2411)*
-
-*__type__*: {ReportTimeScopeUnits}
-
-*__memberof__*: ReportOpenShiftFilter
-
-___
-<a id="timescopevalue"></a>
-
-### `<Optional>` timeScopeValue
-
-**● timeScopeValue**: *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
-
-*Defined in [api.ts:2405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2405)*
-
-*__type__*: {ReportTimeScopeValue}
-
-*__memberof__*: ReportOpenShiftFilter
+**`memberof`** ReportOpenShiftFilter
 
 ___
 
+### `Optional` pod
+
+• **pod**? : *Array‹string›*
+
+*Defined in [api.ts:2260](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2260)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftFilter
+
+___
+
+### `Optional` project
+
+• **project**? : *Array‹string›*
+
+*Defined in [api.ts:2248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2248)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftFilter
+
+___
+
+### `Optional` resolution
+
+• **resolution**? : *[ReportResolution](../enums/reportresolution.md)*
+
+*Defined in [api.ts:2224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2224)*
+
+**`type`** {ReportResolution}
+
+**`memberof`** ReportOpenShiftFilter
+
+___
+
+### `Optional` resourceScope
+
+• **resourceScope**? : *Array‹[ReportResourceScope](../enums/reportresourcescope.md)›*
+
+*Defined in [api.ts:2242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2242)*
+
+**`type`** {Array<ReportResourceScope>}
+
+**`memberof`** ReportOpenShiftFilter
+
+___
+
+### `Optional` tag
+
+• **tag**? : *Array‹string›*
+
+*Defined in [api.ts:2272](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2272)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftFilter
+
+___
+
+### `Optional` timeScopeUnits
+
+• **timeScopeUnits**? : *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
+
+*Defined in [api.ts:2236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2236)*
+
+**`type`** {ReportTimeScopeUnits}
+
+**`memberof`** ReportOpenShiftFilter
+
+___
+
+### `Optional` timeScopeValue
+
+• **timeScopeValue**? : *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
+
+*Defined in [api.ts:2230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2230)*
+
+**`type`** {ReportTimeScopeValue}
+
+**`memberof`** ReportOpenShiftFilter

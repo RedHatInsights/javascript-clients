@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [MetaCves](../interfaces/metacves.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [MetaCves](metacves.md)
 
 # Interface: MetaCves
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: MetaCves
+**`interface`** MetaCves
 
 ## Hierarchy
 
-**MetaCves**
+* **MetaCves**
 
 ## Index
 
@@ -31,248 +31,226 @@
 * [statusId](metacves.md#statusid)
 * [totalItems](metacves.md#totalitems)
 
----
-
 ## Properties
-
-<a id="businessriskid"></a>
 
 ###  businessRiskId
 
-**● businessRiskId**: *`string` \| `null`*
-
-*Defined in [git-api/api.ts:845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L845)*
-
-Filter based on business risk IDs.
-
-*__type__*: {string}
-
-*__memberof__*: MetaCves
-
-___
-<a id="cvssfrom"></a>
-
-###  cvssFrom
-
-**● cvssFrom**: *`number` \| `null`*
+• **businessRiskId**: *string | null*
 
 *Defined in [git-api/api.ts:851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L851)*
 
-Filter based on cvss score, starting from the value.
+Filter based on business risk IDs.
 
-*__type__*: {number}
+**`type`** {string}
 
-*__memberof__*: MetaCves
+**`memberof`** MetaCves
 
 ___
-<a id="cvssto"></a>
 
-###  cvssTo
+###  cvssFrom
 
-**● cvssTo**: *`number` \| `null`*
+• **cvssFrom**: *number | null*
 
 *Defined in [git-api/api.ts:857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L857)*
 
-Filter based on cvss score, up to the value.
+Filter based on cvss score, starting from the value.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: MetaCves
-
-___
-<a id="dataformat"></a>
-
-###  dataFormat
-
-**● dataFormat**: *`string`*
-
-*Defined in [git-api/api.ts:839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L839)*
-
-Format of the output data, either JSON (default) or CSV.
-
-*__type__*: {string}
-
-*__memberof__*: MetaCves
+**`memberof`** MetaCves
 
 ___
-<a id="filter"></a>
 
-###  filter
+###  cvssTo
 
-**● filter**: *`string` \| `null`*
-
-*Defined in [git-api/api.ts:791](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L791)*
-
-Full text filter
-
-*__type__*: {string}
-
-*__memberof__*: MetaCves
-
-___
-<a id="impact"></a>
-
-###  impact
-
-**● impact**: *`string` \| `null`*
-
-*Defined in [git-api/api.ts:875](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L875)*
-
-Filter based on impact IDs.
-
-*__type__*: {string}
-
-*__memberof__*: MetaCves
-
-___
-<a id="limit"></a>
-
-###  limit
-
-**● limit**: *`number`*
-
-*Defined in [git-api/api.ts:797](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L797)*
-
-Maximum number of paginated results.
-
-*__type__*: {number}
-
-*__memberof__*: MetaCves
-
-___
-<a id="offset"></a>
-
-###  offset
-
-**● offset**: *`number`*
-
-*Defined in [git-api/api.ts:803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L803)*
-
-First record of paginated response.
-
-*__type__*: {number}
-
-*__memberof__*: MetaCves
-
-___
-<a id="page"></a>
-
-###  page
-
-**● page**: *`number`*
-
-*Defined in [git-api/api.ts:809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L809)*
-
-Page number of paginated response.
-
-*__type__*: {number}
-
-*__memberof__*: MetaCves
-
-___
-<a id="pagesize"></a>
-
-###  pageSize
-
-**● pageSize**: *`number`*
-
-*Defined in [git-api/api.ts:815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L815)*
-
-Number of records per page of paginated response.
-
-*__type__*: {number}
-
-*__memberof__*: MetaCves
-
-___
-<a id="pages"></a>
-
-###  pages
-
-**● pages**: *`number`*
-
-*Defined in [git-api/api.ts:821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L821)*
-
-Total number of pages of paginated response.
-
-*__type__*: {number}
-
-*__memberof__*: MetaCves
-
-___
-<a id="publicfrom"></a>
-
-###  publicFrom
-
-**● publicFrom**: *`string` \| `null`*
+• **cvssTo**: *number | null*
 
 *Defined in [git-api/api.ts:863](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L863)*
 
-Filter CVEs based on their published date, starting from the date.
+Filter based on cvss score, up to the value.
 
-*__type__*: {string}
+**`type`** {number}
 
-*__memberof__*: MetaCves
-
-___
-<a id="publicto"></a>
-
-###  publicTo
-
-**● publicTo**: *`string` \| `null`*
-
-*Defined in [git-api/api.ts:869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L869)*
-
-Filter CVEs based on their published date, up to the date.
-
-*__type__*: {string}
-
-*__memberof__*: MetaCves
+**`memberof`** MetaCves
 
 ___
-<a id="sort"></a>
 
-###  sort
+###  dataFormat
 
-**● sort**: *`string` \| `null`*
+• **dataFormat**: *string*
 
-*Defined in [git-api/api.ts:827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L827)*
+*Defined in [git-api/api.ts:845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L845)*
 
-Sorting filter.
+Format of the output data, either JSON (default) or CSV.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: MetaCves
+**`memberof`** MetaCves
 
 ___
-<a id="statusid"></a>
 
-###  statusId
+###  filter
 
-**● statusId**: *`string` \| `null`*
+• **filter**: *string | null*
+
+*Defined in [git-api/api.ts:797](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L797)*
+
+Full text filter
+
+**`type`** {string}
+
+**`memberof`** MetaCves
+
+___
+
+###  impact
+
+• **impact**: *string | null*
 
 *Defined in [git-api/api.ts:881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L881)*
 
-Filer based on CVE status ID.
+Filter based on impact IDs.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: MetaCves
+**`memberof`** MetaCves
 
 ___
-<a id="totalitems"></a>
 
-###  totalItems
+###  limit
 
-**● totalItems**: *`number`*
+• **limit**: *number*
+
+*Defined in [git-api/api.ts:803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L803)*
+
+Maximum number of paginated results.
+
+**`type`** {number}
+
+**`memberof`** MetaCves
+
+___
+
+###  offset
+
+• **offset**: *number*
+
+*Defined in [git-api/api.ts:809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L809)*
+
+First record of paginated response.
+
+**`type`** {number}
+
+**`memberof`** MetaCves
+
+___
+
+###  page
+
+• **page**: *number*
+
+*Defined in [git-api/api.ts:815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L815)*
+
+Page number of paginated response.
+
+**`type`** {number}
+
+**`memberof`** MetaCves
+
+___
+
+###  pageSize
+
+• **pageSize**: *number*
+
+*Defined in [git-api/api.ts:821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L821)*
+
+Number of records per page of paginated response.
+
+**`type`** {number}
+
+**`memberof`** MetaCves
+
+___
+
+###  pages
+
+• **pages**: *number*
+
+*Defined in [git-api/api.ts:827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L827)*
+
+Total number of pages of paginated response.
+
+**`type`** {number}
+
+**`memberof`** MetaCves
+
+___
+
+###  publicFrom
+
+• **publicFrom**: *string | null*
+
+*Defined in [git-api/api.ts:869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L869)*
+
+Filter CVEs based on their published date, starting from the date.
+
+**`type`** {string}
+
+**`memberof`** MetaCves
+
+___
+
+###  publicTo
+
+• **publicTo**: *string | null*
+
+*Defined in [git-api/api.ts:875](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L875)*
+
+Filter CVEs based on their published date, up to the date.
+
+**`type`** {string}
+
+**`memberof`** MetaCves
+
+___
+
+###  sort
+
+• **sort**: *string | null*
 
 *Defined in [git-api/api.ts:833](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L833)*
 
-Total number of records.
+Sorting filter.
 
-*__type__*: {number}
+**`type`** {string}
 
-*__memberof__*: MetaCves
+**`memberof`** MetaCves
 
 ___
 
+###  statusId
+
+• **statusId**: *string | null*
+
+*Defined in [git-api/api.ts:887](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L887)*
+
+Filer based on CVE status ID.
+
+**`type`** {string}
+
+**`memberof`** MetaCves
+
+___
+
+###  totalItems
+
+• **totalItems**: *number*
+
+*Defined in [git-api/api.ts:839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L839)*
+
+Total number of records.
+
+**`type`** {number}
+
+**`memberof`** MetaCves

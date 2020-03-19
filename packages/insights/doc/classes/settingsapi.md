@@ -1,20 +1,20 @@
-[@redhat-cloud-services/insights-client](../README.md) > [SettingsApi](../classes/settingsapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [SettingsApi](settingsapi.md)
 
 # Class: SettingsApi
 
 SettingsApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: SettingsApi
+**`class`** SettingsApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ SettingsApi**
+  ↳ **SettingsApi**
 
 ## Index
 
@@ -24,24 +24,20 @@ SettingsApi - object-oriented interface
 
 ### Properties
 
-* [axios](settingsapi.md#axios)
-* [basePath](settingsapi.md#basepath)
-* [configuration](settingsapi.md#configuration)
+* [axios](settingsapi.md#protected-axios)
+* [basePath](settingsapi.md#protected-basepath)
+* [configuration](settingsapi.md#protected-configuration)
 
 ### Methods
 
 * [settingsCreate](settingsapi.md#settingscreate)
 * [settingsList](settingsapi.md#settingslist)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new SettingsApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [SettingsApi](settingsapi.md)
+\+ **new SettingsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[SettingsApi](settingsapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -49,101 +45,89 @@ SettingsApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [SettingsApi](settingsapi.md)
-
-___
+**Returns:** *[SettingsApi](settingsapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="settingscreate"></a>
 
 ###  settingsCreate
 
-▸ **settingsCreate**(settingsInput: *[SettingsInput](../interfaces/settingsinput.md)*, options?: *`any`*): `AxiosPromise`<[SettingsInput](../interfaces/settingsinput.md)>
+▸ **settingsCreate**(`settingsInput`: [SettingsInput](../interfaces/settingsinput.md), `options?`: any): *AxiosPromise‹[SettingsInput](../interfaces/settingsinput.md)›*
 
-*Defined in [api.ts:3974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3974)*
+*Defined in [api.ts:4063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4063)*
 
 The current account settings will be updated, or one will be created, with the
 
-*__summary__*: Accept the settings as input, and adjust the actual models accordingly.
+**`summary`** Accept the settings as input, and adjust the actual models accordingly.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: SettingsApi
+**`memberof`** SettingsApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| settingsInput | [SettingsInput](../interfaces/settingsinput.md) |  \- |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`settingsInput` | [SettingsInput](../interfaces/settingsinput.md) |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[SettingsInput](../interfaces/settingsinput.md)>
+**Returns:** *AxiosPromise‹[SettingsInput](../interfaces/settingsinput.md)›*
 
 ___
-<a id="settingslist"></a>
 
 ###  settingsList
 
-▸ **settingsList**(options?: *`any`*): `AxiosPromise`<[SettingsDDF](../interfaces/settingsddf.md)[]>
+▸ **settingsList**(`options?`: any): *AxiosPromise‹[SettingsDDF](../interfaces/settingsddf.md)[]›*
 
-*Defined in [api.ts:3984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3984)*
+*Defined in [api.ts:4074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4074)*
 
-Describe the settings we have in a Data-Driven Forms way.
+This simply compiles the 'show_satellite_hosts' account-wide setting and the weekly report 'is_subscribed' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
 
-*__throws__*: {RequiredError}
+**`summary`** Describe the settings we have in a Data-Driven Forms way.
 
-*__memberof__*: SettingsApi
+**`throws`** {RequiredError}
+
+**`memberof`** SettingsApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[SettingsDDF](../interfaces/settingsddf.md)[]>
-
-___
-
+**Returns:** *AxiosPromise‹[SettingsDDF](../interfaces/settingsddf.md)[]›*

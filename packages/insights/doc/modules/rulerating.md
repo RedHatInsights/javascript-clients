@@ -1,10 +1,10 @@
-[@redhat-cloud-services/insights-client](../README.md) > [RuleRating](../modules/rulerating.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [RuleRating](rulerating.md)
 
 # Module: RuleRating
 
-*__export__*: 
+**`export`** 
 
-*__namespace__*: RuleRating
+**`namespace`** RuleRating
 
 ## Index
 
@@ -17,34 +17,26 @@
 * [rating](rulerating.md#rating)
 * [rule](rulerating.md#rule)
 
----
-
 ## Properties
-
-<a id="rating"></a>
 
 ###  rating
 
-**● rating**: *[RatingEnum](../enums/rulerating.ratingenum.md)*
+• **rating**: *[RatingEnum](../enums/rulerating.ratingenum.md)*
 
 *Defined in [api.ts:967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L967)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: RuleRating
+**`memberof`** RuleRating
 
 ___
-<a id="rule"></a>
 
 ###  rule
 
-**● rule**: *`string`*
+• **rule**: *string*
 
 *Defined in [api.ts:961](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L961)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RuleRating
-
-___
-
+**`memberof`** RuleRating

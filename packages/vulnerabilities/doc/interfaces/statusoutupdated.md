@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [StatusOutUpdated](../interfaces/statusoutupdated.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [StatusOutUpdated](statusoutupdated.md)
 
 # Interface: StatusOutUpdated
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: StatusOutUpdated
+**`interface`** StatusOutUpdated
 
 ## Hierarchy
 
-**StatusOutUpdated**
+* **StatusOutUpdated**
 
 ## Index
 
@@ -17,34 +17,26 @@
 * [cve](statusoutupdated.md#cve)
 * [inventoryId](statusoutupdated.md#inventoryid)
 
----
-
 ## Properties
-
-<a id="cve"></a>
 
 ###  cve
 
-**● cve**: *`string`*
+• **cve**: *string*
 
-*Defined in [api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1243)*
+*Defined in [api.ts:1303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1303)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: StatusOutUpdated
+**`memberof`** StatusOutUpdated
 
 ___
-<a id="inventoryid"></a>
 
 ###  inventoryId
 
-**● inventoryId**: *`string`*
+• **inventoryId**: *string*
 
-*Defined in [api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1237)*
+*Defined in [api.ts:1297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1297)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: StatusOutUpdated
-
-___
-
+**`memberof`** StatusOutUpdated

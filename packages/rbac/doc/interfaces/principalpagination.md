@@ -1,64 +1,55 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [PrincipalPagination](../interfaces/principalpagination.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [PrincipalPagination](principalpagination.md)
 
 # Interface: PrincipalPagination
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: PrincipalPagination
+**`interface`** PrincipalPagination
 
 ## Hierarchy
 
-**PrincipalPagination**
+* **PrincipalPagination**
 
 ## Index
 
 ### Properties
 
 * [data](principalpagination.md#data)
-* [links](principalpagination.md#links)
-* [meta](principalpagination.md#meta)
-
----
+* [links](principalpagination.md#optional-links)
+* [meta](principalpagination.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<[Principal](principal.md)>*
+• **data**: *Array‹[Principal](principal.md)›*
+
+*Defined in [api.ts:737](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L737)*
+
+**`type`** {Array<Principal>}
+
+**`memberof`** PrincipalPagination
+
+___
+
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
 
 *Defined in [api.ts:731](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L731)*
 
-*__type__*: {Array}
+**`type`** {PaginationLinks}
 
-*__memberof__*: PrincipalPagination
+**`memberof`** PrincipalPagination
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` meta
 
-**● links**: *[PaginationLinks](paginationlinks.md)*
+• **meta**? : *[PaginationMeta](paginationmeta.md)*
 
 *Defined in [api.ts:725](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L725)*
 
-*__type__*: {PaginationLinks}
+**`type`** {PaginationMeta}
 
-*__memberof__*: PrincipalPagination
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[PaginationMeta](paginationmeta.md)*
-
-*Defined in [api.ts:719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L719)*
-
-*__type__*: {PaginationMeta}
-
-*__memberof__*: PrincipalPagination
-
-___
-
+**`memberof`** PrincipalPagination

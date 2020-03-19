@@ -1,36 +1,21 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [Errors](../interfaces/errors.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [Errors](errors.md)
 
 # Interface: Errors
 
-*__export__*: 
-
-*__interface__*: Errors
-
 ## Hierarchy
 
-**Errors**
+* **Errors**
 
 ## Index
 
 ### Properties
 
-* [errors](errors.md#errors-1)
-
----
+* [errors](errors.md#optional-errors)
 
 ## Properties
 
-<a id="errors-1"></a>
+### `Optional` errors
 
-### `<Optional>` errors
-
-**● errors**: *`Array`<[ErrorsErrors](errorserrors.md)>*
+• **errors**? : *Array‹[ErrorsErrors](errorserrors.md)›*
 
 *Defined in [api.ts:450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L450)*
-
-*__type__*: {Array}
-
-*__memberof__*: Errors
-
-___
-

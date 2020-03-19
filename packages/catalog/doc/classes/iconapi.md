@@ -1,20 +1,20 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [IconApi](../classes/iconapi.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [IconApi](iconapi.md)
 
 # Class: IconApi
 
 IconApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: IconApi
+**`class`** IconApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ IconApi**
+  ↳ **IconApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ IconApi - object-oriented interface
 
 ### Properties
 
-* [axios](iconapi.md#axios)
-* [basePath](iconapi.md#basepath)
-* [configuration](iconapi.md#configuration)
+* [axios](iconapi.md#protected-axios)
+* [basePath](iconapi.md#protected-basepath)
+* [configuration](iconapi.md#protected-configuration)
 
 ### Methods
 
@@ -36,15 +36,11 @@ IconApi - object-oriented interface
 * [showIconData](iconapi.md#showicondata)
 * [updateIcon](iconapi.md#updateicon)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new IconApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [IconApi](iconapi.md)
+\+ **new IconApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[IconApi](iconapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -52,185 +48,168 @@ IconApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [IconApi](iconapi.md)
-
-___
+**Returns:** *[IconApi](iconapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="createicon"></a>
 
 ###  createIcon
 
-▸ **createIcon**(content?: *`any`*, portfolioId?: *`string`*, portfolioItemId?: *`string`*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
+▸ **createIcon**(`content?`: any, `portfolioId?`: string, `portfolioItemId?`: string, `options?`: any): *AxiosPromise‹[Icon](../interfaces/icon.md)›*
 
 *Defined in [api.ts:1798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1798)*
 
 Creates an Icon from the specified parameters
 
-*__summary__*: Create an Icon
+**`summary`** Create an Icon
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: IconApi
+**`memberof`** IconApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` content | `any` |
-| `Optional` portfolioId | `string` |
-| `Optional` portfolioItemId | `string` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`content?` | any |
+`portfolioId?` | string |
+`portfolioItemId?` | string |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[Icon](../interfaces/icon.md)>
+**Returns:** *AxiosPromise‹[Icon](../interfaces/icon.md)›*
 
 ___
-<a id="destroyicon"></a>
 
 ###  destroyIcon
 
-▸ **destroyIcon**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **destroyIcon**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
 
 *Defined in [api.ts:1810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1810)*
 
 Deletes the icon based on the icon ID passed
 
-*__summary__*: Delete an existing Icon
+**`summary`** Delete an existing Icon
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: IconApi
+**`memberof`** IconApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="geticon"></a>
 
 ###  getIcon
 
-▸ **getIcon**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
+▸ **getIcon**(`id`: string, `options?`: any): *AxiosPromise‹[Icon](../interfaces/icon.md)›*
 
 *Defined in [api.ts:1822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1822)*
 
 Fetch an Icon by ID
 
-*__summary__*: Fetch an Icon by ID
+**`summary`** Fetch an Icon by ID
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: IconApi
+**`memberof`** IconApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Icon](../interfaces/icon.md)>
+**Returns:** *AxiosPromise‹[Icon](../interfaces/icon.md)›*
 
 ___
-<a id="showicondata"></a>
 
 ###  showIconData
 
-▸ **showIconData**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`any`>
+▸ **showIconData**(`id`: string, `options?`: any): *AxiosPromise‹any›*
 
 *Defined in [api.ts:1834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1834)*
 
 Fetch the specified portfolio item's icon image.
 
-*__summary__*: Fetches the specified icon's image
+**`summary`** Fetches the specified icon's image
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: IconApi
+**`memberof`** IconApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`any`>
+**Returns:** *AxiosPromise‹any›*
 
 ___
-<a id="updateicon"></a>
 
 ###  updateIcon
 
-▸ **updateIcon**(id: *`string`*, icon: *[Icon](../interfaces/icon.md)*, options?: *`any`*): `AxiosPromise`<[Icon](../interfaces/icon.md)>
+▸ **updateIcon**(`id`: string, `icon`: [Icon](../interfaces/icon.md), `options?`: any): *AxiosPromise‹[Icon](../interfaces/icon.md)›*
 
 *Defined in [api.ts:1847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1847)*
 
 Edits Icon specified by the given ID.
 
-*__summary__*: Edit an existing Icon
+**`summary`** Edit an existing Icon
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: IconApi
+**`memberof`** IconApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  ID of the resource |
-| icon | [Icon](../interfaces/icon.md) |  Parameters needed to update an Icon |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | ID of the resource |
+`icon` | [Icon](../interfaces/icon.md) | Parameters needed to update an Icon |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Icon](../interfaces/icon.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[Icon](../interfaces/icon.md)›*

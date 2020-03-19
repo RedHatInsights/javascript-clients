@@ -1,64 +1,55 @@
-[@redhat-cloud-services/sources-client](../README.md) > [CollectionMetadata](../interfaces/collectionmetadata.md)
+[@redhat-cloud-services/sources-client](../README.md) › [Globals](../globals.md) › [CollectionMetadata](collectionmetadata.md)
 
 # Interface: CollectionMetadata
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CollectionMetadata
+**`interface`** CollectionMetadata
 
 ## Hierarchy
 
-**CollectionMetadata**
+* **CollectionMetadata**
 
 ## Index
 
 ### Properties
 
-* [count](collectionmetadata.md#count)
-* [limit](collectionmetadata.md#limit)
-* [offset](collectionmetadata.md#offset)
-
----
+* [count](collectionmetadata.md#optional-count)
+* [limit](collectionmetadata.md#optional-limit)
+* [offset](collectionmetadata.md#optional-offset)
 
 ## Properties
 
-<a id="count"></a>
+### `Optional` count
 
-### `<Optional>` count
-
-**● count**: *`number`*
+• **count**? : *number*
 
 *Defined in [api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L419)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: CollectionMetadata
+**`memberof`** CollectionMetadata
 
 ___
-<a id="limit"></a>
 
-### `<Optional>` limit
+### `Optional` limit
 
-**● limit**: *`number`*
+• **limit**? : *number*
 
 *Defined in [api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L425)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: CollectionMetadata
+**`memberof`** CollectionMetadata
 
 ___
-<a id="offset"></a>
 
-### `<Optional>` offset
+### `Optional` offset
 
-**● offset**: *`number`*
+• **offset**? : *number*
 
 *Defined in [api.ts:431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L431)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: CollectionMetadata
-
-___
-
+**`memberof`** CollectionMetadata

@@ -1,10 +1,10 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportCostsOpenShiftOrdering](../modules/reportcostsopenshiftordering.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportCostsOpenShiftOrdering](reportcostsopenshiftordering.md)
 
 # Module: ReportCostsOpenShiftOrdering
 
-*__export__*: 
+**`export`** 
 
-*__namespace__*: ReportCostsOpenShiftOrdering
+**`namespace`** ReportCostsOpenShiftOrdering
 
 ## Index
 
@@ -17,65 +17,55 @@
 
 ### Properties
 
-* [cluster](reportcostsopenshiftordering.md#cluster)
-* [cost](reportcostsopenshiftordering.md#cost)
-* [node](reportcostsopenshiftordering.md#node)
-* [project](reportcostsopenshiftordering.md#project)
-
----
+* [cluster](reportcostsopenshiftordering.md#optional-cluster)
+* [cost](reportcostsopenshiftordering.md#optional-cost)
+* [node](reportcostsopenshiftordering.md#optional-node)
+* [project](reportcostsopenshiftordering.md#optional-project)
 
 ## Properties
 
-<a id="cluster"></a>
+### `Optional` cluster
 
-### `<Optional>` cluster
+• **cluster**? : *[ClusterEnum](../enums/reportcostsopenshiftordering.clusterenum.md)*
 
-**● cluster**: *[ClusterEnum](../enums/reportcostsopenshiftordering.clusterenum.md)*
+*Defined in [api.ts:1058](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1058)*
 
-*Defined in [api.ts:1233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1233)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: ReportCostsOpenShiftOrdering
-
-___
-<a id="cost"></a>
-
-### `<Optional>` cost
-
-**● cost**: *[CostEnum](../enums/reportcostsopenshiftordering.costenum.md)*
-
-*Defined in [api.ts:1251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1251)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportCostsOpenShiftOrdering
-
-___
-<a id="node"></a>
-
-### `<Optional>` node
-
-**● node**: *[NodeEnum](../enums/reportcostsopenshiftordering.nodeenum.md)*
-
-*Defined in [api.ts:1245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1245)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportCostsOpenShiftOrdering
-
-___
-<a id="project"></a>
-
-### `<Optional>` project
-
-**● project**: *[ProjectEnum](../enums/reportcostsopenshiftordering.projectenum.md)*
-
-*Defined in [api.ts:1239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1239)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportCostsOpenShiftOrdering
+**`memberof`** ReportCostsOpenShiftOrdering
 
 ___
 
+### `Optional` cost
+
+• **cost**? : *[CostEnum](../enums/reportcostsopenshiftordering.costenum.md)*
+
+*Defined in [api.ts:1076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1076)*
+
+**`type`** {string}
+
+**`memberof`** ReportCostsOpenShiftOrdering
+
+___
+
+### `Optional` node
+
+• **node**? : *[NodeEnum](../enums/reportcostsopenshiftordering.nodeenum.md)*
+
+*Defined in [api.ts:1070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1070)*
+
+**`type`** {string}
+
+**`memberof`** ReportCostsOpenShiftOrdering
+
+___
+
+### `Optional` project
+
+• **project**? : *[ProjectEnum](../enums/reportcostsopenshiftordering.projectenum.md)*
+
+*Defined in [api.ts:1064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1064)*
+
+**`type`** {string}
+
+**`memberof`** ReportCostsOpenShiftOrdering

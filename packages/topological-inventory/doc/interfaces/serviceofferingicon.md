@@ -1,126 +1,113 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [ServiceOfferingIcon](../interfaces/serviceofferingicon.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [ServiceOfferingIcon](serviceofferingicon.md)
 
 # Interface: ServiceOfferingIcon
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ServiceOfferingIcon
+**`interface`** ServiceOfferingIcon
 
 ## Hierarchy
 
-**ServiceOfferingIcon**
+* **ServiceOfferingIcon**
 
 ## Index
 
 ### Properties
 
-* [createdAt](serviceofferingicon.md#createdat)
-* [data](serviceofferingicon.md#data)
-* [id](serviceofferingicon.md#id)
-* [lastSeenAt](serviceofferingicon.md#lastseenat)
-* [sourceId](serviceofferingicon.md#sourceid)
-* [sourceRef](serviceofferingicon.md#sourceref)
-* [updatedAt](serviceofferingicon.md#updatedat)
-
----
+* [createdAt](serviceofferingicon.md#optional-createdat)
+* [data](serviceofferingicon.md#optional-data)
+* [id](serviceofferingicon.md#optional-id)
+* [lastSeenAt](serviceofferingicon.md#optional-lastseenat)
+* [sourceId](serviceofferingicon.md#optional-sourceid)
+* [sourceRef](serviceofferingicon.md#optional-sourceref)
+* [updatedAt](serviceofferingicon.md#optional-updatedat)
 
 ## Properties
 
-<a id="createdat"></a>
+### `Optional` createdAt
 
-### `<Optional>` createdAt
-
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:2855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2855)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServiceOfferingIcon
+**`memberof`** ServiceOfferingIcon
 
 ___
-<a id="data"></a>
 
-### `<Optional>` data
+### `Optional` data
 
-**● data**: *`string`*
+• **data**? : *string*
 
 *Defined in [api.ts:2861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2861)*
 
 Raw icon data
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServiceOfferingIcon
+**`memberof`** ServiceOfferingIcon
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:2867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2867)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServiceOfferingIcon
+**`memberof`** ServiceOfferingIcon
 
 ___
-<a id="lastseenat"></a>
 
-### `<Optional>` lastSeenAt
+### `Optional` lastSeenAt
 
-**● lastSeenAt**: *`Date`*
+• **lastSeenAt**? : *Date*
 
 *Defined in [api.ts:2873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2873)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServiceOfferingIcon
+**`memberof`** ServiceOfferingIcon
 
 ___
-<a id="sourceid"></a>
 
-### `<Optional>` sourceId
+### `Optional` sourceId
 
-**● sourceId**: *`string`*
+• **sourceId**? : *string*
 
 *Defined in [api.ts:2879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2879)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServiceOfferingIcon
+**`memberof`** ServiceOfferingIcon
 
 ___
-<a id="sourceref"></a>
 
-### `<Optional>` sourceRef
+### `Optional` sourceRef
 
-**● sourceRef**: *`string`*
+• **sourceRef**? : *string*
 
 *Defined in [api.ts:2885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2885)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServiceOfferingIcon
+**`memberof`** ServiceOfferingIcon
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:2891](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2891)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServiceOfferingIcon
-
-___
-
+**`memberof`** ServiceOfferingIcon

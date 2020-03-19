@@ -1,20 +1,20 @@
-[@redhat-cloud-services/approval-client](../README.md) > [WorkflowApi](../classes/workflowapi.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [WorkflowApi](workflowapi.md)
 
 # Class: WorkflowApi
 
 WorkflowApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: WorkflowApi
+**`class`** WorkflowApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ WorkflowApi**
+  ↳ **WorkflowApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ WorkflowApi - object-oriented interface
 
 ### Properties
 
-* [axios](workflowapi.md#axios)
-* [basePath](workflowapi.md#basepath)
-* [configuration](workflowapi.md#configuration)
+* [axios](workflowapi.md#protected-axios)
+* [basePath](workflowapi.md#protected-basepath)
+* [configuration](workflowapi.md#protected-configuration)
 
 ### Methods
 
@@ -39,15 +39,11 @@ WorkflowApi - object-oriented interface
 * [unlinkWorkflow](workflowapi.md#unlinkworkflow)
 * [updateWorkflow](workflowapi.md#updateworkflow)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new WorkflowApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [WorkflowApi](workflowapi.md)
+\+ **new WorkflowApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[WorkflowApi](workflowapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -55,272 +51,252 @@ WorkflowApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [WorkflowApi](workflowapi.md)
-
-___
+**Returns:** *[WorkflowApi](workflowapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="addworkflowtotemplate"></a>
 
 ###  addWorkflowToTemplate
 
-▸ **addWorkflowToTemplate**(templateId: *`string`*, workflow: *[Workflow](../interfaces/workflow.md)*, options?: *`any`*): `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
+▸ **addWorkflowToTemplate**(`templateId`: string, `workflow`: [Workflow](../interfaces/workflow.md), `options?`: any): *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
 
-*Defined in [api.ts:2328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2328)*
+*Defined in [api.ts:2325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2325)*
 
 Add a workflow by given template id
 
-*__summary__*: Add a workflow by given template id, only available for admin
+**`summary`** Add a workflow by given template id, only available for admin
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: WorkflowApi
+**`memberof`** WorkflowApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| templateId | `string` |  Id of template |
-| workflow | [Workflow](../interfaces/workflow.md) |  Parameters need to create workflow |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`templateId` | string | Id of template |
+`workflow` | [Workflow](../interfaces/workflow.md) | Parameters need to create workflow |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
+**Returns:** *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
 
 ___
-<a id="destroyworkflow"></a>
 
 ###  destroyWorkflow
 
-▸ **destroyWorkflow**(id: *`string`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **destroyWorkflow**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:2340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2340)*
+*Defined in [api.ts:2337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2337)*
 
 Delete approval workflow by given id
 
-*__summary__*: Delete approval workflow by given id, only available for admin
+**`summary`** Delete approval workflow by given id, only available for admin
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: WorkflowApi
+**`memberof`** WorkflowApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  Query by id |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | Query by id |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="linkworkflow"></a>
 
 ###  linkWorkflow
 
-▸ **linkWorkflow**(id: *`string`*, resourceObject: *[ResourceObject](../interfaces/resourceobject.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **linkWorkflow**(`id`: string, `resourceObject`: [ResourceObject](../interfaces/resourceobject.md), `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:2353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2353)*
+*Defined in [api.ts:2350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2350)*
 
 Link a resource object to a given workflow
 
-*__summary__*: Create a resource link to a given workflow
+**`summary`** Create a resource link to a given workflow
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: WorkflowApi
+**`memberof`** WorkflowApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  Query by id |
-| resourceObject | [ResourceObject](../interfaces/resourceobject.md) |  Parameters needed to create a link |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | Query by id |
+`resourceObject` | [ResourceObject](../interfaces/resourceobject.md) | Parameters needed to create a link |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="listworkflows"></a>
 
 ###  listWorkflows
 
-▸ **listWorkflows**(appName?: *`string`*, objectId?: *`string`*, objectType?: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[WorkflowCollection](../interfaces/workflowcollection.md)>
+▸ **listWorkflows**(`appName?`: string, `objectId?`: string, `objectType?`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[WorkflowCollection](../interfaces/workflowcollection.md)›*
 
-*Defined in [api.ts:2370](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2370)*
+*Defined in [api.ts:2367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2367)*
 
-Depends on the query parameters, either return all workflows in ascending sequence order when no parameters are provided; or return the workflows linking to the resource object whose app\_name, object\_type and object\_id are specified by query parameters
+Depends on the query parameters, either return all workflows in ascending sequence order when no parameters are provided; or return the workflows linking to the resource object whose app_name, object_type and object_id are specified by query parameters
 
-*__summary__*: Return all approval workflows, only available for admin
+**`summary`** Return all approval workflows, only available for admin
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: WorkflowApi
+**`memberof`** WorkflowApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` appName | `string` |
-| `Optional` objectId | `string` |
-| `Optional` objectType | `string` |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`appName?` | string |
+`objectId?` | string |
+`objectType?` | string |
+`limit?` | number |
+`offset?` | number |
+`filter?` | any |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[WorkflowCollection](../interfaces/workflowcollection.md)>
+**Returns:** *AxiosPromise‹[WorkflowCollection](../interfaces/workflowcollection.md)›*
 
 ___
-<a id="listworkflowsbytemplate"></a>
 
 ###  listWorkflowsByTemplate
 
-▸ **listWorkflowsByTemplate**(templateId: *`string`*, limit?: *`number`*, offset?: *`number`*, filter?: *`any`*, options?: *`any`*): `AxiosPromise`<[WorkflowCollection](../interfaces/workflowcollection.md)>
+▸ **listWorkflowsByTemplate**(`templateId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[WorkflowCollection](../interfaces/workflowcollection.md)›*
 
-*Defined in [api.ts:2385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2385)*
+*Defined in [api.ts:2382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2382)*
 
 Return an array of workflows by given template id
 
-*__summary__*: Return an array of workflows by given template id, only available for admin
+**`summary`** Return an array of workflows by given template id, only available for admin
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: WorkflowApi
+**`memberof`** WorkflowApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| templateId | `string` |  Id of template |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` filter | `any` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`templateId` | string | Id of template |
+`limit?` | number | - |
+`offset?` | number | - |
+`filter?` | any | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[WorkflowCollection](../interfaces/workflowcollection.md)>
+**Returns:** *AxiosPromise‹[WorkflowCollection](../interfaces/workflowcollection.md)›*
 
 ___
-<a id="showworkflow"></a>
 
 ###  showWorkflow
 
-▸ **showWorkflow**(id: *`string`*, options?: *`any`*): `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
+▸ **showWorkflow**(`id`: string, `options?`: any): *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
 
-*Defined in [api.ts:2397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2397)*
+*Defined in [api.ts:2394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2394)*
 
 Return an approval workflow by given id
 
-*__summary__*: Return an approval workflow by given id, only available for admin
+**`summary`** Return an approval workflow by given id, only available for admin
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: WorkflowApi
+**`memberof`** WorkflowApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  Query by id |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | Query by id |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
+**Returns:** *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
 
 ___
-<a id="unlinkworkflow"></a>
 
 ###  unlinkWorkflow
 
-▸ **unlinkWorkflow**(id: *`string`*, resourceObject: *[ResourceObject](../interfaces/resourceobject.md)*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **unlinkWorkflow**(`id`: string, `resourceObject`: [ResourceObject](../interfaces/resourceobject.md), `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:2410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2410)*
+*Defined in [api.ts:2407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2407)*
 
 Break the link between a resource object and selected workflow
 
-*__summary__*: Break the link between a resource object and selected workflow
+**`summary`** Break the link between a resource object and selected workflow
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: WorkflowApi
+**`memberof`** WorkflowApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  Query by id |
-| resourceObject | [ResourceObject](../interfaces/resourceobject.md) |  Parameters needed to remove a link |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | Query by id |
+`resourceObject` | [ResourceObject](../interfaces/resourceobject.md) | Parameters needed to remove a link |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="updateworkflow"></a>
 
 ###  updateWorkflow
 
-▸ **updateWorkflow**(id: *`string`*, workflow: *[Workflow](../interfaces/workflow.md)*, options?: *`any`*): `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
+▸ **updateWorkflow**(`id`: string, `workflow`: [Workflow](../interfaces/workflow.md), `options?`: any): *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
 
-*Defined in [api.ts:2423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2423)*
+*Defined in [api.ts:2420](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2420)*
 
 Update an approval workflow by given id
 
-*__summary__*: Update an approval workflow by given id, only available for admin
+**`summary`** Update an approval workflow by given id, only available for admin
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: WorkflowApi
+**`memberof`** WorkflowApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `string` |  Query by id |
-| workflow | [Workflow](../interfaces/workflow.md) |  Parameters need to update approval workflow |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | Query by id |
+`workflow` | [Workflow](../interfaces/workflow.md) | Parameters need to update approval workflow |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Workflow](../interfaces/workflow.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*

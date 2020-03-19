@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [StatusListOutMeta](../interfaces/statuslistoutmeta.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [StatusListOutMeta](statuslistoutmeta.md)
 
 # Interface: StatusListOutMeta
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: StatusListOutMeta
+**`interface`** StatusListOutMeta
 
 ## Hierarchy
 
-**StatusListOutMeta**
+* **StatusListOutMeta**
 
 ## Index
 
@@ -16,23 +16,16 @@
 
 * [totalItems](statuslistoutmeta.md#totalitems)
 
----
-
 ## Properties
-
-<a id="totalitems"></a>
 
 ###  totalItems
 
-**● totalItems**: *`number`*
+• **totalItems**: *number*
 
-*Defined in [api.ts:1209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1209)*
+*Defined in [api.ts:1269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1269)*
 
-Total number of available status/status\_id pairs.
+Total number of available status/status_id pairs.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: StatusListOutMeta
-
-___
-
+**`memberof`** StatusListOutMeta

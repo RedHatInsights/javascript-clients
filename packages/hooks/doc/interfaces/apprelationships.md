@@ -1,36 +1,21 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [AppRelationships](../interfaces/apprelationships.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [AppRelationships](apprelationships.md)
 
 # Interface: AppRelationships
 
-*__export__*: 
-
-*__interface__*: AppRelationships
-
 ## Hierarchy
 
-**AppRelationships**
+* **AppRelationships**
 
 ## Index
 
 ### Properties
 
-* [eventTypes](apprelationships.md#eventtypes)
-
----
+* [eventTypes](apprelationships.md#optional-eventtypes)
 
 ## Properties
 
-<a id="eventtypes"></a>
+### `Optional` eventTypes
 
-### `<Optional>` eventTypes
-
-**● eventTypes**: *[Relationships](relationships.md)*
+• **eventTypes**? : *[Relationships](relationships.md)*
 
 *Defined in [api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L149)*
-
-*__type__*: {Relationships}
-
-*__memberof__*: AppRelationships
-
-___
-

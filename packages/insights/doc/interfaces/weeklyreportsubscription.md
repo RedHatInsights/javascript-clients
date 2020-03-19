@@ -1,14 +1,14 @@
-[@redhat-cloud-services/insights-client](../README.md) > [WeeklyReportSubscription](../interfaces/weeklyreportsubscription.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [WeeklyReportSubscription](weeklyreportsubscription.md)
 
 # Interface: WeeklyReportSubscription
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: WeeklyReportSubscription
+**`interface`** WeeklyReportSubscription
 
 ## Hierarchy
 
-**WeeklyReportSubscription**
+* **WeeklyReportSubscription**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [isSubscribed](weeklyreportsubscription.md#issubscribed)
 
----
-
 ## Properties
-
-<a id="issubscribed"></a>
 
 ###  isSubscribed
 
-**● isSubscribed**: *`boolean`*
+• **isSubscribed**: *boolean*
 
-*Defined in [api.ts:1289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1289)*
+*Defined in [api.ts:1315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1315)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: WeeklyReportSubscription
-
-___
-
+**`memberof`** WeeklyReportSubscription

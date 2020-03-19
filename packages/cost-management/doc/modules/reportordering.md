@@ -1,10 +1,10 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportOrdering](../modules/reportordering.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportOrdering](reportordering.md)
 
 # Module: ReportOrdering
 
-*__export__*: 
+**`export`** 
 
-*__namespace__*: ReportOrdering
+**`namespace`** ReportOrdering
 
 ## Index
 
@@ -19,93 +19,81 @@
 
 ### Properties
 
-* [accountAlias](reportordering.md#accountalias)
-* [cost](reportordering.md#cost)
-* [delta](reportordering.md#delta)
-* [region](reportordering.md#region)
-* [service](reportordering.md#service)
-* [usage](reportordering.md#usage)
-
----
+* [accountAlias](reportordering.md#optional-accountalias)
+* [cost](reportordering.md#optional-cost)
+* [delta](reportordering.md#optional-delta)
+* [region](reportordering.md#optional-region)
+* [service](reportordering.md#optional-service)
+* [usage](reportordering.md#optional-usage)
 
 ## Properties
 
-<a id="accountalias"></a>
+### `Optional` accountAlias
 
-### `<Optional>` accountAlias
+• **accountAlias**? : *[AccountAliasEnum](../enums/reportordering.accountaliasenum.md)*
 
-**● accountAlias**: *[AccountAliasEnum](../enums/reportordering.accountaliasenum.md)*
+*Defined in [api.ts:2394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2394)*
 
-*Defined in [api.ts:2569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2569)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: ReportOrdering
-
-___
-<a id="cost"></a>
-
-### `<Optional>` cost
-
-**● cost**: *[CostEnum](../enums/reportordering.costenum.md)*
-
-*Defined in [api.ts:2551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2551)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOrdering
-
-___
-<a id="delta"></a>
-
-### `<Optional>` delta
-
-**● delta**: *[DeltaEnum](../enums/reportordering.deltaenum.md)*
-
-*Defined in [api.ts:2563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2563)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOrdering
-
-___
-<a id="region"></a>
-
-### `<Optional>` region
-
-**● region**: *[RegionEnum](../enums/reportordering.regionenum.md)*
-
-*Defined in [api.ts:2575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2575)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOrdering
-
-___
-<a id="service"></a>
-
-### `<Optional>` service
-
-**● service**: *[ServiceEnum](../enums/reportordering.serviceenum.md)*
-
-*Defined in [api.ts:2581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2581)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOrdering
-
-___
-<a id="usage"></a>
-
-### `<Optional>` usage
-
-**● usage**: *[UsageEnum](../enums/reportordering.usageenum.md)*
-
-*Defined in [api.ts:2557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2557)*
-
-*__type__*: {string}
-
-*__memberof__*: ReportOrdering
+**`memberof`** ReportOrdering
 
 ___
 
+### `Optional` cost
+
+• **cost**? : *[CostEnum](../enums/reportordering.costenum.md)*
+
+*Defined in [api.ts:2376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2376)*
+
+**`type`** {string}
+
+**`memberof`** ReportOrdering
+
+___
+
+### `Optional` delta
+
+• **delta**? : *[DeltaEnum](../enums/reportordering.deltaenum.md)*
+
+*Defined in [api.ts:2388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2388)*
+
+**`type`** {string}
+
+**`memberof`** ReportOrdering
+
+___
+
+### `Optional` region
+
+• **region**? : *[RegionEnum](../enums/reportordering.regionenum.md)*
+
+*Defined in [api.ts:2400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2400)*
+
+**`type`** {string}
+
+**`memberof`** ReportOrdering
+
+___
+
+### `Optional` service
+
+• **service**? : *[ServiceEnum](../enums/reportordering.serviceenum.md)*
+
+*Defined in [api.ts:2406](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2406)*
+
+**`type`** {string}
+
+**`memberof`** ReportOrdering
+
+___
+
+### `Optional` usage
+
+• **usage**? : *[UsageEnum](../enums/reportordering.usageenum.md)*
+
+*Defined in [api.ts:2382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2382)*
+
+**`type`** {string}
+
+**`memberof`** ReportOrdering

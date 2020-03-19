@@ -198,6 +198,56 @@ export interface PlaybookDefinitionIssues {
 /**
  *
  * @export
+ * @interface PlaybookExecutorDetails
+ */
+export interface PlaybookExecutorDetails {
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookExecutorDetails
+     */
+    executorId: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookExecutorDetails
+     */
+    executorName: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof PlaybookExecutorDetails
+     */
+    updatedAt: Date;
+    /**
+     * Playbook created for the playbook run executor.
+     * @type {string}
+     * @memberof PlaybookExecutorDetails
+     */
+    playbook: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookExecutorDetails
+     */
+    playbookRunId: string;
+    /**
+     *
+     * @type {number}
+     * @memberof PlaybookExecutorDetails
+     */
+    systemCount: number;
+    /**
+     *
+     * @type {PlaybookRunSystemStatus}
+     * @memberof PlaybookExecutorDetails
+     */
+    status: PlaybookRunSystemStatus;
+}
+
+/**
+ *
+ * @export
  * @interface PlaybookExecutorStatus
  */
 export interface PlaybookExecutorStatus {
@@ -249,6 +299,281 @@ export namespace PlaybookExecutorStatus {
         NoSource = 'no_source',
         NoReceptor = 'no_receptor'
     }
+}
+
+/**
+ *
+ * @export
+ * @interface PlaybookExecutors
+ */
+export interface PlaybookExecutors {
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookExecutors
+     */
+    executorId: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookExecutors
+     */
+    executorName: string;
+    /**
+     *
+     * @type {number}
+     * @memberof PlaybookExecutors
+     */
+    systemCount: number;
+}
+
+/**
+ *
+ * @export
+ * @interface PlaybookRunDetails
+ */
+export interface PlaybookRunDetails {
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookRunDetails
+     */
+    id: string;
+    /**
+     *
+     * @type {Array<PlaybookExecutors>}
+     * @memberof PlaybookRunDetails
+     */
+    executors: Array<PlaybookExecutors>;
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookRunDetails
+     */
+    remediationId: string;
+    /**
+     *
+     * @type {UserOut}
+     * @memberof PlaybookRunDetails
+     */
+    createdBy: UserOut;
+    /**
+     *
+     * @type {Date}
+     * @memberof PlaybookRunDetails
+     */
+    createdAt: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof PlaybookRunDetails
+     */
+    updatedAt: Date;
+    /**
+     *
+     * @type {PlaybookRunStatus}
+     * @memberof PlaybookRunDetails
+     */
+    status: PlaybookRunStatus;
+}
+
+/**
+ *
+ * @export
+ * @interface PlaybookRunExecutorDetails
+ */
+export interface PlaybookRunExecutorDetails {
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookRunExecutorDetails
+     */
+    id?: string;
+    /**
+     *
+     * @type {Array<PlaybookExecutorDetails>}
+     * @memberof PlaybookRunExecutorDetails
+     */
+    executors: Array<PlaybookExecutorDetails>;
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookRunExecutorDetails
+     */
+    remediationId: string;
+    /**
+     *
+     * @type {UserOut}
+     * @memberof PlaybookRunExecutorDetails
+     */
+    createdBy: UserOut;
+    /**
+     *
+     * @type {Date}
+     * @memberof PlaybookRunExecutorDetails
+     */
+    createdAt: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof PlaybookRunExecutorDetails
+     */
+    updatedAt: Date;
+    /**
+     *
+     * @type {PlaybookRunStatus}
+     * @memberof PlaybookRunExecutorDetails
+     */
+    status: PlaybookRunStatus;
+}
+
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export enum PlaybookRunStatus {
+    Pending = 'pending',
+    Acked = 'acked',
+    Running = 'running',
+    Success = 'success',
+    Failure = 'failure',
+    Canceled = 'canceled'
+}
+
+/**
+ *
+ * @export
+ * @interface PlaybookRunSystemDetails
+ */
+export interface PlaybookRunSystemDetails {
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookRunSystemDetails
+     */
+    systemId: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookRunSystemDetails
+     */
+    systemName: string;
+    /**
+     *
+     * @type {PlaybookRunSystemStatus}
+     * @memberof PlaybookRunSystemDetails
+     */
+    status: PlaybookRunSystemStatus;
+    /**
+     * Current formatted system log from playbook run system.
+     * @type {string}
+     * @memberof PlaybookRunSystemDetails
+     */
+    console: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookRunSystemDetails
+     */
+    playbookRunExecutorId: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof PlaybookRunSystemDetails
+     */
+    updatedAt: Date;
+}
+
+/**
+ *
+ * @export
+ * @interface PlaybookRunSystemList
+ */
+export interface PlaybookRunSystemList {
+    /**
+     *
+     * @type {Array<PlaybookRunSystems>}
+     * @memberof PlaybookRunSystemList
+     */
+    data: Array<PlaybookRunSystems>;
+    /**
+     *
+     * @type {Meta}
+     * @memberof PlaybookRunSystemList
+     */
+    meta: Meta;
+}
+
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export enum PlaybookRunSystemStatus {
+    Pending = 'pending',
+    Running = 'running',
+    Success = 'success',
+    Failure = 'failure',
+    Canceled = 'canceled'
+}
+
+/**
+ *
+ * @export
+ * @interface PlaybookRunSystems
+ */
+export interface PlaybookRunSystems {
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookRunSystems
+     */
+    systemId: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookRunSystems
+     */
+    systemName: string;
+    /**
+     *
+     * @type {PlaybookRunSystemStatus}
+     * @memberof PlaybookRunSystems
+     */
+    status: PlaybookRunSystemStatus;
+    /**
+     *
+     * @type {Date}
+     * @memberof PlaybookRunSystems
+     */
+    updatedAt: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof PlaybookRunSystems
+     */
+    playbookRunExecutorId: string;
+}
+
+/**
+ *
+ * @export
+ * @interface PlaybookRunsList
+ */
+export interface PlaybookRunsList {
+    /**
+     *
+     * @type {Array<PlaybookRunDetails>}
+     * @memberof PlaybookRunsList
+     */
+    data: Array<PlaybookRunDetails>;
+    /**
+     *
+     * @type {Meta}
+     * @memberof PlaybookRunsList
+     */
+    meta: Meta;
 }
 
 /**
@@ -1194,6 +1519,134 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
+         * Get details on execution of the rememdiation
+         * @summary Get details on execution of the rememdiation
+         * @param {string} id Remediation identifier
+         * @param {string} playbookRunId Playbook run identifier (UUID)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookRunDetails(id: string, playbookRunId: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling getPlaybookRunDetails.');
+            }
+            // verify required parameter 'playbookRunId' is not null or undefined
+            if (playbookRunId === null || playbookRunId === undefined) {
+                throw new RequiredError('playbookRunId','Required parameter playbookRunId was null or undefined when calling getPlaybookRunDetails.');
+            }
+            const localVarPath = `/remediations/{id}/playbook_runs/{playbook_run_id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+                .replace(`{${"playbook_run_id"}}`, encodeURIComponent(String(playbookRunId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get details and updated log of system being executed on in specific playbook run
+         * @summary Get details and updated log of system being executed on in specific playbook run
+         * @param {string} id Remediation identifier
+         * @param {string} playbookRunId Playbook run identifier (UUID)
+         * @param {string} system System identifier
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookRunSystemDetails(id: string, playbookRunId: string, system: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling getPlaybookRunSystemDetails.');
+            }
+            // verify required parameter 'playbookRunId' is not null or undefined
+            if (playbookRunId === null || playbookRunId === undefined) {
+                throw new RequiredError('playbookRunId','Required parameter playbookRunId was null or undefined when calling getPlaybookRunSystemDetails.');
+            }
+            // verify required parameter 'system' is not null or undefined
+            if (system === null || system === undefined) {
+                throw new RequiredError('system','Required parameter system was null or undefined when calling getPlaybookRunSystemDetails.');
+            }
+            const localVarPath = `/remediations/{id}/playbook_runs/{playbook_run_id}/systems/{system}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+                .replace(`{${"playbook_run_id"}}`, encodeURIComponent(String(playbookRunId)))
+                .replace(`{${"system"}}`, encodeURIComponent(String(system)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get details on systems being executed on in specific playbook run
+         * @summary Get details on systems being executed on in specific playbook run
+         * @param {string} id Remediation identifier
+         * @param {string} playbookRunId Playbook run identifier (UUID)
+         * @param {string} [executor] Playbook run executor identifier (UUID)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling getPlaybookRunSystems.');
+            }
+            // verify required parameter 'playbookRunId' is not null or undefined
+            if (playbookRunId === null || playbookRunId === undefined) {
+                throw new RequiredError('playbookRunId','Required parameter playbookRunId was null or undefined when calling getPlaybookRunSystems.');
+            }
+            const localVarPath = `/remediations/{id}/playbook_runs/{playbook_run_id}/systems`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+                .replace(`{${"playbook_run_id"}}`, encodeURIComponent(String(playbookRunId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (executor !== undefined) {
+                localVarQueryParameter['executor'] = executor;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
          * @summary Get Remediation
          * @param {string} id Remediation identifier
@@ -1333,6 +1786,39 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             if (system !== undefined) {
                 localVarQueryParameter['system'] = system;
             }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List of executions of this remediation
+         * @summary List of executions of this remediation
+         * @param {string} id Remediation identifier
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPlaybookRuns(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listPlaybookRuns.');
+            }
+            const localVarPath = `/remediations/{id}/playbook_runs`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -1536,6 +2022,53 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Get details on execution of the rememdiation
+         * @summary Get details on execution of the rememdiation
+         * @param {string} id Remediation identifier
+         * @param {string} playbookRunId Playbook run identifier (UUID)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookRunDetails(id: string, playbookRunId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunExecutorDetails> {
+            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getPlaybookRunDetails(id, playbookRunId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Get details and updated log of system being executed on in specific playbook run
+         * @summary Get details and updated log of system being executed on in specific playbook run
+         * @param {string} id Remediation identifier
+         * @param {string} playbookRunId Playbook run identifier (UUID)
+         * @param {string} system System identifier
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookRunSystemDetails(id: string, playbookRunId: string, system: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunSystemDetails> {
+            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getPlaybookRunSystemDetails(id, playbookRunId, system, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Get details on systems being executed on in specific playbook run
+         * @summary Get details on systems being executed on in specific playbook run
+         * @param {string} id Remediation identifier
+         * @param {string} playbookRunId Playbook run identifier (UUID)
+         * @param {string} [executor] Playbook run executor identifier (UUID)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunSystemList> {
+            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getPlaybookRunSystems(id, playbookRunId, executor, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
          * @summary Get Remediation
          * @param {string} id Remediation identifier
@@ -1590,6 +2123,20 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          */
         getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationList> {
             const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getRemediations(sort, filter, limit, offset, system, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List of executions of this remediation
+         * @summary List of executions of this remediation
+         * @param {string} id Remediation identifier
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPlaybookRuns(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunsList> {
+            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).listPlaybookRuns(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -1693,6 +2240,41 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).deleteRemediationIssueSystem(id, issue, system, options)(axios, basePath);
         },
         /**
+         * Get details on execution of the rememdiation
+         * @summary Get details on execution of the rememdiation
+         * @param {string} id Remediation identifier
+         * @param {string} playbookRunId Playbook run identifier (UUID)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookRunDetails(id: string, playbookRunId: string, options?: any) {
+            return RemediationsApiFp(configuration).getPlaybookRunDetails(id, playbookRunId, options)(axios, basePath);
+        },
+        /**
+         * Get details and updated log of system being executed on in specific playbook run
+         * @summary Get details and updated log of system being executed on in specific playbook run
+         * @param {string} id Remediation identifier
+         * @param {string} playbookRunId Playbook run identifier (UUID)
+         * @param {string} system System identifier
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookRunSystemDetails(id: string, playbookRunId: string, system: string, options?: any) {
+            return RemediationsApiFp(configuration).getPlaybookRunSystemDetails(id, playbookRunId, system, options)(axios, basePath);
+        },
+        /**
+         * Get details on systems being executed on in specific playbook run
+         * @summary Get details on systems being executed on in specific playbook run
+         * @param {string} id Remediation identifier
+         * @param {string} playbookRunId Playbook run identifier (UUID)
+         * @param {string} [executor] Playbook run executor identifier (UUID)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, options?: any) {
+            return RemediationsApiFp(configuration).getPlaybookRunSystems(id, playbookRunId, executor, options)(axios, basePath);
+        },
+        /**
          * Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
          * @summary Get Remediation
          * @param {string} id Remediation identifier
@@ -1735,6 +2317,16 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          */
         getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, options?: any) {
             return RemediationsApiFp(configuration).getRemediations(sort, filter, limit, offset, system, options)(axios, basePath);
+        },
+        /**
+         * List of executions of this remediation
+         * @summary List of executions of this remediation
+         * @param {string} id Remediation identifier
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPlaybookRuns(id: string, options?: any) {
+            return RemediationsApiFp(configuration).listPlaybookRuns(id, options)(axios, basePath);
         },
         /**
          * Execute remediation, RBAC permission {remediations:remediation:execute}
@@ -1831,6 +2423,47 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
+     * Get details on execution of the rememdiation
+     * @summary Get details on execution of the rememdiation
+     * @param {string} id Remediation identifier
+     * @param {string} playbookRunId Playbook run identifier (UUID)
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RemediationsApi
+     */
+    public getPlaybookRunDetails(id: string, playbookRunId: string, options?: any) {
+        return RemediationsApiFp(this.configuration).getPlaybookRunDetails(id, playbookRunId, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Get details and updated log of system being executed on in specific playbook run
+     * @summary Get details and updated log of system being executed on in specific playbook run
+     * @param {string} id Remediation identifier
+     * @param {string} playbookRunId Playbook run identifier (UUID)
+     * @param {string} system System identifier
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RemediationsApi
+     */
+    public getPlaybookRunSystemDetails(id: string, playbookRunId: string, system: string, options?: any) {
+        return RemediationsApiFp(this.configuration).getPlaybookRunSystemDetails(id, playbookRunId, system, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Get details on systems being executed on in specific playbook run
+     * @summary Get details on systems being executed on in specific playbook run
+     * @param {string} id Remediation identifier
+     * @param {string} playbookRunId Playbook run identifier (UUID)
+     * @param {string} [executor] Playbook run executor identifier (UUID)
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RemediationsApi
+     */
+    public getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, options?: any) {
+        return RemediationsApiFp(this.configuration).getPlaybookRunSystems(id, playbookRunId, executor, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
      * @summary Get Remediation
      * @param {string} id Remediation identifier
@@ -1880,6 +2513,18 @@ export class RemediationsApi extends BaseAPI {
      */
     public getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, options?: any) {
         return RemediationsApiFp(this.configuration).getRemediations(sort, filter, limit, offset, system, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * List of executions of this remediation
+     * @summary List of executions of this remediation
+     * @param {string} id Remediation identifier
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RemediationsApi
+     */
+    public listPlaybookRuns(id: string, options?: any) {
+        return RemediationsApiFp(this.configuration).listPlaybookRuns(id, options)(this.axios, this.basePath);
     }
 
     /**

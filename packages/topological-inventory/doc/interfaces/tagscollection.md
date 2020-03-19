@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [TagsCollection](../interfaces/tagscollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [TagsCollection](tagscollection.md)
 
 # Interface: TagsCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: TagsCollection
+**`interface`** TagsCollection
 
 ## Hierarchy
 
-**TagsCollection**
+* **TagsCollection**
 
 ## Index
 
 ### Properties
 
-* [data](tagscollection.md#data)
-* [links](tagscollection.md#links)
-* [meta](tagscollection.md#meta)
-
----
+* [data](tagscollection.md#optional-data)
+* [links](tagscollection.md#optional-links)
+* [meta](tagscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[Tag](tag.md)>*
+• **data**? : *Array‹[Tag](tag.md)›*
 
 *Defined in [api.ts:3675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3675)*
 
-*__type__*: {Array}
+**`type`** {Array<Tag>}
 
-*__memberof__*: TagsCollection
+**`memberof`** TagsCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:3669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3669)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: TagsCollection
+**`memberof`** TagsCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:3663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3663)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: TagsCollection
-
-___
-
+**`memberof`** TagsCollection

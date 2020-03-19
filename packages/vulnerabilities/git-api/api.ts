@@ -282,6 +282,12 @@ export interface CveDetailOutDataAttributes {
      */
     redhatUrl: string | null;
     /**
+     * ID(s) of associated security rule(s).
+     * @type {Array<string>}
+     * @memberof CveDetailOutDataAttributes
+     */
+    rules: Array<string>;
+    /**
      * Additional resources about the CVE.
      * @type {string}
      * @memberof CveDetailOutDataAttributes
@@ -1355,6 +1361,12 @@ export interface SystemDetailsOutData {
      * @memberof SystemDetailsOutData
      */
     lastEvaluation: string | null;
+    /**
+     * Date of last security rules evaluation.
+     * @type {string}
+     * @memberof SystemDetailsOutData
+     */
+    rulesEvaluation: string | null;
     /**
      * System opt out status.
      * @type {boolean}

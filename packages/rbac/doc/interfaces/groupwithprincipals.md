@@ -1,106 +1,94 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [GroupWithPrincipals](../interfaces/groupwithprincipals.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [GroupWithPrincipals](groupwithprincipals.md)
 
 # Interface: GroupWithPrincipals
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: GroupWithPrincipals
+**`interface`** GroupWithPrincipals
 
 ## Hierarchy
 
-**GroupWithPrincipals**
+* **GroupWithPrincipals**
 
 ## Index
 
 ### Properties
 
 * [created](groupwithprincipals.md#created)
-* [description](groupwithprincipals.md#description)
+* [description](groupwithprincipals.md#optional-description)
 * [modified](groupwithprincipals.md#modified)
 * [name](groupwithprincipals.md#name)
 * [principals](groupwithprincipals.md#principals)
 * [uuid](groupwithprincipals.md#uuid)
 
----
-
 ## Properties
-
-<a id="created"></a>
 
 ###  created
 
-**● created**: *`Date`*
+• **created**: *Date*
 
-*Defined in [api.ts:323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L323)*
+*Defined in [api.ts:343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L343)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: GroupWithPrincipals
-
-___
-<a id="description"></a>
-
-### `<Optional>` description
-
-**● description**: *`string`*
-
-*Defined in [api.ts:311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L311)*
-
-*__type__*: {string}
-
-*__memberof__*: GroupWithPrincipals
+**`memberof`** GroupWithPrincipals
 
 ___
-<a id="modified"></a>
+
+### `Optional` description
+
+• **description**? : *string*
+
+*Defined in [api.ts:331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L331)*
+
+**`type`** {string}
+
+**`memberof`** GroupWithPrincipals
+
+___
 
 ###  modified
 
-**● modified**: *`Date`*
+• **modified**: *Date*
 
-*Defined in [api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L329)*
+*Defined in [api.ts:349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L349)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: GroupWithPrincipals
+**`memberof`** GroupWithPrincipals
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Defined in [api.ts:305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L305)*
+*Defined in [api.ts:325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L325)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: GroupWithPrincipals
+**`memberof`** GroupWithPrincipals
 
 ___
-<a id="principals"></a>
 
 ###  principals
 
-**● principals**: *`Array`<[Principal](principal.md)>*
+• **principals**: *Array‹[Principal](principal.md)›*
 
-*Defined in [api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L335)*
+*Defined in [api.ts:355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L355)*
 
-*__type__*: {Array}
+**`type`** {Array<Principal>}
 
-*__memberof__*: GroupWithPrincipals
+**`memberof`** GroupWithPrincipals
 
 ___
-<a id="uuid"></a>
 
 ###  uuid
 
-**● uuid**: *`string`*
+• **uuid**: *string*
 
-*Defined in [api.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L317)*
+*Defined in [api.ts:337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L337)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: GroupWithPrincipals
-
-___
-
+**`memberof`** GroupWithPrincipals

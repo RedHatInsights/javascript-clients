@@ -1,14 +1,14 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [ActiveTags](../interfaces/activetags.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [ActiveTags](activetags.md)
 
 # Interface: ActiveTags
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ActiveTags
+**`interface`** ActiveTags
 
 ## Hierarchy
 
-**ActiveTags**
+* **ActiveTags**
 
 ## Index
 
@@ -20,81 +20,70 @@
 * [results](activetags.md#results)
 * [total](activetags.md#total)
 
----
-
 ## Properties
-
-<a id="count"></a>
 
 ###  count
 
-**● count**: *`number`*
+• **count**: *number*
 
 *Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L109)*
 
 The number of items on the current page
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ActiveTags
+**`memberof`** ActiveTags
 
 ___
-<a id="page"></a>
 
 ###  page
 
-**● page**: *`number`*
+• **page**: *number*
 
 *Defined in [api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L115)*
 
 The page number
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ActiveTags
+**`memberof`** ActiveTags
 
 ___
-<a id="perpage"></a>
 
 ###  perPage
 
-**● perPage**: *`number`*
+• **perPage**: *number*
 
 *Defined in [api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L121)*
 
 The number of items to return per page
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ActiveTags
+**`memberof`** ActiveTags
 
 ___
-<a id="results"></a>
 
 ###  results
 
-**● results**: *`Array`<[ActiveTag](activetag.md)>*
+• **results**: *Array‹[ActiveTag](activetag.md)›*
 
 *Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L127)*
 
-*__type__*: {Array}
+**`type`** {Array<ActiveTag>}
 
-*__memberof__*: ActiveTags
+**`memberof`** ActiveTags
 
 ___
-<a id="total"></a>
 
 ###  total
 
-**● total**: *`number`*
+• **total**: *number*
 
 *Defined in [api.ts:103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L103)*
 
 Total number of items
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ActiveTags
-
-___
-
+**`memberof`** ActiveTags

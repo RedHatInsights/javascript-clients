@@ -1,64 +1,55 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [AccessPagination](../interfaces/accesspagination.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [AccessPagination](accesspagination.md)
 
 # Interface: AccessPagination
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: AccessPagination
+**`interface`** AccessPagination
 
 ## Hierarchy
 
-**AccessPagination**
+* **AccessPagination**
 
 ## Index
 
 ### Properties
 
 * [data](accesspagination.md#data)
-* [links](accesspagination.md#links)
-* [meta](accesspagination.md#meta)
-
----
+* [links](accesspagination.md#optional-links)
+* [meta](accesspagination.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<[Access](access.md)>*
+• **data**: *Array‹[Access](access.md)›*
 
 *Defined in [api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L115)*
 
-*__type__*: {Array}
+**`type`** {Array<Access>}
 
-*__memberof__*: AccessPagination
+**`memberof`** AccessPagination
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[PaginationLinks](paginationlinks.md)*
+• **links**? : *[PaginationLinks](paginationlinks.md)*
 
 *Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L109)*
 
-*__type__*: {PaginationLinks}
+**`type`** {PaginationLinks}
 
-*__memberof__*: AccessPagination
+**`memberof`** AccessPagination
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[PaginationMeta](paginationmeta.md)*
+• **meta**? : *[PaginationMeta](paginationmeta.md)*
 
 *Defined in [api.ts:103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L103)*
 
-*__type__*: {PaginationMeta}
+**`type`** {PaginationMeta}
 
-*__memberof__*: AccessPagination
-
-___
-
+**`memberof`** AccessPagination

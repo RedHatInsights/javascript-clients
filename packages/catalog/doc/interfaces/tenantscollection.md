@@ -1,64 +1,55 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [TenantsCollection](../interfaces/tenantscollection.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [TenantsCollection](tenantscollection.md)
 
 # Interface: TenantsCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: TenantsCollection
+**`interface`** TenantsCollection
 
 ## Hierarchy
 
-**TenantsCollection**
+* **TenantsCollection**
 
 ## Index
 
 ### Properties
 
-* [data](tenantscollection.md#data)
-* [links](tenantscollection.md#links)
-* [meta](tenantscollection.md#meta)
-
----
+* [data](tenantscollection.md#optional-data)
+* [links](tenantscollection.md#optional-links)
+* [meta](tenantscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[Tenant](tenant.md)>*
+• **data**? : *Array‹[Tenant](tenant.md)›*
 
 *Defined in [api.ts:1190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1190)*
 
-*__type__*: {Array}
+**`type`** {Array<Tenant>}
 
-*__memberof__*: TenantsCollection
+**`memberof`** TenantsCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:1184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1184)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: TenantsCollection
+**`memberof`** TenantsCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:1178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1178)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: TenantsCollection
-
-___
-
+**`memberof`** TenantsCollection

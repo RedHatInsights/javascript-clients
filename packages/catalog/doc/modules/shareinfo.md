@@ -1,10 +1,10 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [ShareInfo](../modules/shareinfo.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [ShareInfo](shareinfo.md)
 
 # Module: ShareInfo
 
-*__export__*: 
+**`export`** 
 
-*__namespace__*: ShareInfo
+**`namespace`** ShareInfo
 
 ## Index
 
@@ -14,57 +14,48 @@
 
 ### Properties
 
-* [groupName](shareinfo.md#groupname)
-* [groupUuid](shareinfo.md#groupuuid)
-* [permissions](shareinfo.md#permissions)
-
----
+* [groupName](shareinfo.md#optional-groupname)
+* [groupUuid](shareinfo.md#optional-groupuuid)
+* [permissions](shareinfo.md#optional-permissions)
 
 ## Properties
 
-<a id="groupname"></a>
+### `Optional` groupName
 
-### `<Optional>` groupName
-
-**● groupName**: *`string`*
+• **groupName**? : *string*
 
 *Defined in [api.ts:1024](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1024)*
 
 The Group Name
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ShareInfo
+**`memberof`** ShareInfo
 
 ___
-<a id="groupuuid"></a>
 
-### `<Optional>` groupUuid
+### `Optional` groupUuid
 
-**● groupUuid**: *`string`*
+• **groupUuid**? : *string*
 
 *Defined in [api.ts:1018](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1018)*
 
 The Group UUID
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ShareInfo
+**`memberof`** ShareInfo
 
 ___
-<a id="permissions"></a>
 
-### `<Optional>` permissions
+### `Optional` permissions
 
-**● permissions**: *`Array`<[PermissionsEnum](../enums/shareinfo.permissionsenum.md)>*
+• **permissions**? : *Array‹[PermissionsEnum](../enums/shareinfo.permissionsenum.md)›*
 
 *Defined in [api.ts:1030](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1030)*
 
 One or more permissions currently applied to this group.
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: ShareInfo
-
-___
-
+**`memberof`** ShareInfo

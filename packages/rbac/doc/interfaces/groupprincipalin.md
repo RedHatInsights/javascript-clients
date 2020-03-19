@@ -1,14 +1,14 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [GroupPrincipalIn](../interfaces/groupprincipalin.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [GroupPrincipalIn](groupprincipalin.md)
 
 # Interface: GroupPrincipalIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: GroupPrincipalIn
+**`interface`** GroupPrincipalIn
 
 ## Hierarchy
 
-**GroupPrincipalIn**
+* **GroupPrincipalIn**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [principals](groupprincipalin.md#principals)
 
----
-
 ## Properties
-
-<a id="principals"></a>
 
 ###  principals
 
-**● principals**: *`Array`<[PrincipalIn](principalin.md)>*
+• **principals**: *Array‹[PrincipalIn](principalin.md)›*
 
-*Defined in [api.ts:251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L251)*
+*Defined in [api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L271)*
 
-*__type__*: {Array}
+**`type`** {Array<PrincipalIn>}
 
-*__memberof__*: GroupPrincipalIn
-
-___
-
+**`memberof`** GroupPrincipalIn

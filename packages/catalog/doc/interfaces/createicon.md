@@ -1,70 +1,61 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [CreateIcon](../interfaces/createicon.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [CreateIcon](createicon.md)
 
 # Interface: CreateIcon
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CreateIcon
+**`interface`** CreateIcon
 
 ## Hierarchy
 
-**CreateIcon**
+* **CreateIcon**
 
 ## Index
 
 ### Properties
 
-* [content](createicon.md#content)
-* [portfolioId](createicon.md#portfolioid)
-* [portfolioItemId](createicon.md#portfolioitemid)
-
----
+* [content](createicon.md#optional-content)
+* [portfolioId](createicon.md#optional-portfolioid)
+* [portfolioItemId](createicon.md#optional-portfolioitemid)
 
 ## Properties
 
-<a id="content"></a>
+### `Optional` content
 
-### `<Optional>` content
-
-**● content**: *`any`*
+• **content**? : *any*
 
 *Defined in [api.ts:236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L236)*
 
 The binary image contents, maximum size is 250KB
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: CreateIcon
+**`memberof`** CreateIcon
 
 ___
-<a id="portfolioid"></a>
 
-### `<Optional>` portfolioId
+### `Optional` portfolioId
 
-**● portfolioId**: *`string`*
+• **portfolioId**? : *string*
 
 *Defined in [api.ts:242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L242)*
 
 The Portfolio this Icon belongs to
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CreateIcon
+**`memberof`** CreateIcon
 
 ___
-<a id="portfolioitemid"></a>
 
-### `<Optional>` portfolioItemId
+### `Optional` portfolioItemId
 
-**● portfolioItemId**: *`string`*
+• **portfolioItemId**? : *string*
 
 *Defined in [api.ts:248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L248)*
 
 The Portfolio Item this Icon belongs to
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CreateIcon
-
-___
-
+**`memberof`** CreateIcon

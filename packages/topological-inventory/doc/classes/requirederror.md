@@ -1,18 +1,18 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [RequiredError](../classes/requirederror.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [RequiredError](requirederror.md)
 
 # Class: RequiredError
 
-*__export__*: 
+**`export`** 
 
-*__class__*: RequiredError
+**`class`** RequiredError
 
-*__extends__*: {Error}
+**`extends`** {Error}
 
 ## Hierarchy
 
- `Error`
+* Error
 
-**↳ RequiredError**
+  ↳ **RequiredError**
 
 ## Index
 
@@ -25,85 +25,70 @@
 * [field](requirederror.md#field)
 * [message](requirederror.md#message)
 * [name](requirederror.md#name)
-* [stack](requirederror.md#stack)
-* [Error](requirederror.md#error)
-
----
+* [stack](requirederror.md#optional-stack)
+* [Error](requirederror.md#static-error)
 
 ## Constructors
 
-<a id="constructor"></a>
-
 ###  constructor
 
-⊕ **new RequiredError**(field: *`string`*, msg?: *`string`*): [RequiredError](requirederror.md)
+\+ **new RequiredError**(`field`: string, `msg?`: string): *[RequiredError](requirederror.md)*
 
 *Defined in [api.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L66)*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| field | `string` |
-| `Optional` msg | `string` |
+Name | Type |
+------ | ------ |
+`field` | string |
+`msg?` | string |
 
-**Returns:** [RequiredError](requirederror.md)
-
-___
+**Returns:** *[RequiredError](requirederror.md)*
 
 ## Properties
 
-<a id="field"></a>
-
 ###  field
 
-**● field**: *`string`*
+• **field**: *string*
 
 *Defined in [api.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L67)*
 
 ___
-<a id="message"></a>
 
 ###  message
 
-**● message**: *`string`*
+• **message**: *string*
 
-*Inherited from Error.message*
+*Inherited from void*
 
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:974*
+Defined in node_modules/typescript/lib/lib.es5.d.ts:974
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *"RequiredError"* = "RequiredError"
+• **name**: *"RequiredError"* = "RequiredError"
 
-*Overrides Error.name*
+*Overrides void*
 
 *Defined in [api.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L66)*
 
 ___
-<a id="stack"></a>
 
-### `<Optional>` stack
+### `Optional` stack
 
-**● stack**: *`string`*
+• **stack**? : *string*
 
-*Inherited from Error.stack*
+*Inherited from void*
 
-*Overrides Error.stack*
+*Overrides void*
 
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:975*
-
-___
-<a id="error"></a>
-
-### `<Static>` Error
-
-**● Error**: *`ErrorConstructor`*
-
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:984*
+Defined in node_modules/typescript/lib/lib.es5.d.ts:975
 
 ___
 
+### `Static` Error
+
+▪ **Error**: *ErrorConstructor*
+
+Defined in node_modules/typescript/lib/lib.es5.d.ts:984

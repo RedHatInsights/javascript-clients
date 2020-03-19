@@ -1,14 +1,14 @@
-[@redhat-cloud-services/insights-client](../README.md) > [TagList](../interfaces/taglist.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [TagList](taglist.md)
 
 # Interface: TagList
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: TagList
+**`interface`** TagList
 
 ## Hierarchy
 
-**TagList**
+* **TagList**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [tags](taglist.md#tags)
 
----
-
 ## Properties
-
-<a id="tags"></a>
 
 ###  tags
 
-**● tags**: *`Array`<`string`>*
+• **tags**: *Array‹string›*
 
-*Defined in [api.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1225)*
+*Defined in [api.ts:1251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1251)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: TagList
-
-___
-
+**`memberof`** TagList

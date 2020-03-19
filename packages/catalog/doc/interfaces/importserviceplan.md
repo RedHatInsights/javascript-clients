@@ -1,38 +1,31 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [ImportServicePlan](../interfaces/importserviceplan.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [ImportServicePlan](importserviceplan.md)
 
 # Interface: ImportServicePlan
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ImportServicePlan
+**`interface`** ImportServicePlan
 
 ## Hierarchy
 
-**ImportServicePlan**
+* **ImportServicePlan**
 
 ## Index
 
 ### Properties
 
-* [portfolioItemId](importserviceplan.md#portfolioitemid)
-
----
+* [portfolioItemId](importserviceplan.md#optional-portfolioitemid)
 
 ## Properties
 
-<a id="portfolioitemid"></a>
+### `Optional` portfolioItemId
 
-### `<Optional>` portfolioItemId
-
-**● portfolioItemId**: *`string`*
+• **portfolioItemId**? : *string*
 
 *Defined in [api.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L372)*
 
 The Portfolio Item to import the service plans for.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ImportServicePlan
-
-___
-
+**`memberof`** ImportServicePlan

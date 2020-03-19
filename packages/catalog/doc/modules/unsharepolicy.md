@@ -1,10 +1,10 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [UnsharePolicy](../modules/unsharepolicy.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [UnsharePolicy](unsharepolicy.md)
 
 # Module: UnsharePolicy
 
-*__export__*: 
+**`export`** 
 
-*__namespace__*: UnsharePolicy
+**`namespace`** UnsharePolicy
 
 ## Index
 
@@ -14,41 +14,33 @@
 
 ### Properties
 
-* [groupUuids](unsharepolicy.md#groupuuids)
+* [groupUuids](unsharepolicy.md#optional-groupuuids)
 * [permissions](unsharepolicy.md#permissions)
-
----
 
 ## Properties
 
-<a id="groupuuids"></a>
+### `Optional` groupUuids
 
-### `<Optional>` groupUuids
-
-**● groupUuids**: *`Array`<`string`>*
+• **groupUuids**? : *Array‹string›*
 
 *Defined in [api.ts:1210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1210)*
 
 An array of group UUID's retrieved from the RBAC Service from which the permissions have to be removed. If group uuids are not specified we will unshare it from all groups.
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: UnsharePolicy
+**`memberof`** UnsharePolicy
 
 ___
-<a id="permissions"></a>
 
 ###  permissions
 
-**● permissions**: *`Array`<[PermissionsEnum](../enums/unsharepolicy.permissionsenum.md)>*
+• **permissions**: *Array‹[PermissionsEnum](../enums/unsharepolicy.permissionsenum.md)›*
 
 *Defined in [api.ts:1204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1204)*
 
 The permissions to remove for this resource.
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: UnsharePolicy
-
-___
-
+**`memberof`** UnsharePolicy

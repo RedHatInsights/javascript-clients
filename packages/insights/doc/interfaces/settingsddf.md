@@ -1,14 +1,14 @@
-[@redhat-cloud-services/insights-client](../README.md) > [SettingsDDF](../interfaces/settingsddf.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [SettingsDDF](settingsddf.md)
 
 # Interface: SettingsDDF
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SettingsDDF
+**`interface`** SettingsDDF
 
 ## Hierarchy
 
-**SettingsDDF**
+* **SettingsDDF**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [fields](settingsddf.md#fields)
 
----
-
 ## Properties
-
-<a id="fields"></a>
 
 ###  fields
 
-**● fields**: *`Array`<[SettingDDF](settingddf.md)>*
+• **fields**: *Array‹[SettingDDF](settingddf.md)›*
 
 *Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1073)*
 
-*__type__*: {Array}
+**`type`** {Array<SettingDDF>}
 
-*__memberof__*: SettingsDDF
-
-___
-
+**`memberof`** SettingsDDF

@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [ServicePlansCollection](../interfaces/serviceplanscollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [ServicePlansCollection](serviceplanscollection.md)
 
 # Interface: ServicePlansCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ServicePlansCollection
+**`interface`** ServicePlansCollection
 
 ## Hierarchy
 
-**ServicePlansCollection**
+* **ServicePlansCollection**
 
 ## Index
 
 ### Properties
 
-* [data](serviceplanscollection.md#data)
-* [links](serviceplanscollection.md#links)
-* [meta](serviceplanscollection.md#meta)
-
----
+* [data](serviceplanscollection.md#optional-data)
+* [links](serviceplanscollection.md#optional-links)
+* [meta](serviceplanscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[ServicePlan](serviceplan.md)>*
+• **data**? : *Array‹[ServicePlan](serviceplan.md)›*
 
 *Defined in [api.ts:3203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3203)*
 
-*__type__*: {Array}
+**`type`** {Array<ServicePlan>}
 
-*__memberof__*: ServicePlansCollection
+**`memberof`** ServicePlansCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:3197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3197)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: ServicePlansCollection
+**`memberof`** ServicePlansCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:3191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3191)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: ServicePlansCollection
-
-___
-
+**`memberof`** ServicePlansCollection

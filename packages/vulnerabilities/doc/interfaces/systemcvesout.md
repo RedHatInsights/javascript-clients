@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [SystemCvesOut](../interfaces/systemcvesout.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [SystemCvesOut](systemcvesout.md)
 
 # Interface: SystemCvesOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SystemCvesOut
+**`interface`** SystemCvesOut
 
 ## Hierarchy
 
-**SystemCvesOut**
+* **SystemCvesOut**
 
 ## Index
 
@@ -18,47 +18,38 @@
 * [links](systemcvesout.md#links)
 * [meta](systemcvesout.md#meta)
 
----
-
 ## Properties
-
-<a id="data"></a>
 
 ###  data
 
-**● data**: *`Object`*
+• **data**: *Object*
 
-*Defined in [api.ts:1257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1257)*
+*Defined in [api.ts:1317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1317)*
 
-*__type__*: {Object}
+**`type`** {Object}
 
-*__memberof__*: SystemCvesOut
+**`memberof`** SystemCvesOut
 
 ___
-<a id="links"></a>
 
 ###  links
 
-**● links**: *[Links](links.md)*
+• **links**: *[Links](links.md)*
 
-*Defined in [api.ts:1263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1263)*
+*Defined in [api.ts:1323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1323)*
 
-*__type__*: {Links}
+**`type`** {Links}
 
-*__memberof__*: SystemCvesOut
+**`memberof`** SystemCvesOut
 
 ___
-<a id="meta"></a>
 
 ###  meta
 
-**● meta**: *[MetaCves](metacves.md)*
+• **meta**: *[MetaCves](metacves.md)*
 
-*Defined in [api.ts:1269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1269)*
+*Defined in [api.ts:1329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1329)*
 
-*__type__*: {MetaCves}
+**`type`** {MetaCves}
 
-*__memberof__*: SystemCvesOut
-
-___
-
+**`memberof`** SystemCvesOut

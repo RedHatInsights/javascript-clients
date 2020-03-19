@@ -1,180 +1,163 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportAzureFilter](../interfaces/reportazurefilter.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportAzureFilter](reportazurefilter.md)
 
 # Interface: ReportAzureFilter
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportAzureFilter
+**`interface`** ReportAzureFilter
 
 ## Hierarchy
 
-**ReportAzureFilter**
+* **ReportAzureFilter**
 
 ## Index
 
 ### Properties
 
-* [instanceType](reportazurefilter.md#instancetype)
-* [limit](reportazurefilter.md#limit)
-* [offset](reportazurefilter.md#offset)
-* [resolution](reportazurefilter.md#resolution)
-* [resourceLocation](reportazurefilter.md#resourcelocation)
-* [resourceScope](reportazurefilter.md#resourcescope)
-* [serviceName](reportazurefilter.md#servicename)
-* [subscriptionGuid](reportazurefilter.md#subscriptionguid)
-* [tag](reportazurefilter.md#tag)
-* [timeScopeUnits](reportazurefilter.md#timescopeunits)
-* [timeScopeValue](reportazurefilter.md#timescopevalue)
-
----
+* [instanceType](reportazurefilter.md#optional-instancetype)
+* [limit](reportazurefilter.md#optional-limit)
+* [offset](reportazurefilter.md#optional-offset)
+* [resolution](reportazurefilter.md#optional-resolution)
+* [resourceLocation](reportazurefilter.md#optional-resourcelocation)
+* [resourceScope](reportazurefilter.md#optional-resourcescope)
+* [serviceName](reportazurefilter.md#optional-servicename)
+* [subscriptionGuid](reportazurefilter.md#optional-subscriptionguid)
+* [tag](reportazurefilter.md#optional-tag)
+* [timeScopeUnits](reportazurefilter.md#optional-timescopeunits)
+* [timeScopeValue](reportazurefilter.md#optional-timescopevalue)
 
 ## Properties
 
-<a id="instancetype"></a>
+### `Optional` instanceType
 
-### `<Optional>` instanceType
+• **instanceType**? : *Array‹string›*
 
-**● instanceType**: *`Array`<`string`>*
+*Defined in [api.ts:835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L835)*
 
-*Defined in [api.ts:1010](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1010)*
+**`type`** {Array<string>}
 
-*__type__*: {Array}
-
-*__memberof__*: ReportAzureFilter
+**`memberof`** ReportAzureFilter
 
 ___
-<a id="limit"></a>
 
-### `<Optional>` limit
+### `Optional` limit
 
-**● limit**: *`number`*
+• **limit**? : *number*
 
-*Defined in [api.ts:956](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L956)*
+*Defined in [api.ts:781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L781)*
 
 Limits the data points returns and aggregates remaining data.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ReportAzureFilter
+**`memberof`** ReportAzureFilter
 
 ___
-<a id="offset"></a>
 
-### `<Optional>` offset
+### `Optional` offset
 
-**● offset**: *`number`*
+• **offset**? : *number*
 
-*Defined in [api.ts:962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L962)*
+*Defined in [api.ts:787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L787)*
 
 Offsets the data points returned when using limit.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ReportAzureFilter
-
-___
-<a id="resolution"></a>
-
-### `<Optional>` resolution
-
-**● resolution**: *[ReportResolution](../enums/reportresolution.md)*
-
-*Defined in [api.ts:968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L968)*
-
-*__type__*: {ReportResolution}
-
-*__memberof__*: ReportAzureFilter
-
-___
-<a id="resourcelocation"></a>
-
-### `<Optional>` resourceLocation
-
-**● resourceLocation**: *`Array`<`string`>*
-
-*Defined in [api.ts:1004](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1004)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportAzureFilter
-
-___
-<a id="resourcescope"></a>
-
-### `<Optional>` resourceScope
-
-**● resourceScope**: *`Array`<[ReportResourceScope](../enums/reportresourcescope.md)>*
-
-*Defined in [api.ts:986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L986)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportAzureFilter
-
-___
-<a id="servicename"></a>
-
-### `<Optional>` serviceName
-
-**● serviceName**: *`Array`<`string`>*
-
-*Defined in [api.ts:998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L998)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportAzureFilter
-
-___
-<a id="subscriptionguid"></a>
-
-### `<Optional>` subscriptionGuid
-
-**● subscriptionGuid**: *`Array`<`string`>*
-
-*Defined in [api.ts:992](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L992)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportAzureFilter
-
-___
-<a id="tag"></a>
-
-### `<Optional>` tag
-
-**● tag**: *`Array`<`string`>*
-
-*Defined in [api.ts:1016](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1016)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportAzureFilter
-
-___
-<a id="timescopeunits"></a>
-
-### `<Optional>` timeScopeUnits
-
-**● timeScopeUnits**: *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
-
-*Defined in [api.ts:980](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L980)*
-
-*__type__*: {ReportTimeScopeUnits}
-
-*__memberof__*: ReportAzureFilter
-
-___
-<a id="timescopevalue"></a>
-
-### `<Optional>` timeScopeValue
-
-**● timeScopeValue**: *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
-
-*Defined in [api.ts:974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L974)*
-
-*__type__*: {ReportTimeScopeValue}
-
-*__memberof__*: ReportAzureFilter
+**`memberof`** ReportAzureFilter
 
 ___
 
+### `Optional` resolution
+
+• **resolution**? : *[ReportResolution](../enums/reportresolution.md)*
+
+*Defined in [api.ts:793](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L793)*
+
+**`type`** {ReportResolution}
+
+**`memberof`** ReportAzureFilter
+
+___
+
+### `Optional` resourceLocation
+
+• **resourceLocation**? : *Array‹string›*
+
+*Defined in [api.ts:829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L829)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportAzureFilter
+
+___
+
+### `Optional` resourceScope
+
+• **resourceScope**? : *Array‹[ReportResourceScope](../enums/reportresourcescope.md)›*
+
+*Defined in [api.ts:811](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L811)*
+
+**`type`** {Array<ReportResourceScope>}
+
+**`memberof`** ReportAzureFilter
+
+___
+
+### `Optional` serviceName
+
+• **serviceName**? : *Array‹string›*
+
+*Defined in [api.ts:823](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L823)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportAzureFilter
+
+___
+
+### `Optional` subscriptionGuid
+
+• **subscriptionGuid**? : *Array‹string›*
+
+*Defined in [api.ts:817](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L817)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportAzureFilter
+
+___
+
+### `Optional` tag
+
+• **tag**? : *Array‹string›*
+
+*Defined in [api.ts:841](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L841)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportAzureFilter
+
+___
+
+### `Optional` timeScopeUnits
+
+• **timeScopeUnits**? : *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
+
+*Defined in [api.ts:805](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L805)*
+
+**`type`** {ReportTimeScopeUnits}
+
+**`memberof`** ReportAzureFilter
+
+___
+
+### `Optional` timeScopeValue
+
+• **timeScopeValue**? : *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
+
+*Defined in [api.ts:799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L799)*
+
+**`type`** {ReportTimeScopeValue}
+
+**`memberof`** ReportAzureFilter

@@ -1,50 +1,30 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [AppsRegisterEventTypesLevels](../interfaces/appsregistereventtypeslevels.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [AppsRegisterEventTypesLevels](appsregistereventtypeslevels.md)
 
 # Interface: AppsRegisterEventTypesLevels
 
-*__export__*: 
-
-*__interface__*: AppsRegisterEventTypesLevels
-
 ## Hierarchy
 
-**AppsRegisterEventTypesLevels**
+* **AppsRegisterEventTypesLevels**
 
 ## Index
 
 ### Properties
 
-* [id](appsregistereventtypeslevels.md#id)
-* [title](appsregistereventtypeslevels.md#title)
-
----
+* [id](appsregistereventtypeslevels.md#optional-id)
+* [title](appsregistereventtypeslevels.md#optional-title)
 
 ## Properties
 
-<a id="id"></a>
+### `Optional` id
 
-### `<Optional>` id
-
-**● id**: *`Object`*
+• **id**? : *Object*
 
 *Defined in [api.ts:209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L209)*
 
-*__type__*: {Object}
-
-*__memberof__*: AppsRegisterEventTypesLevels
-
 ___
-<a id="title"></a>
 
-### `<Optional>` title
+### `Optional` title
 
-**● title**: *`string`*
+• **title**? : *string*
 
 *Defined in [api.ts:215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L215)*
-
-*__type__*: {string}
-
-*__memberof__*: AppsRegisterEventTypesLevels
-
-___
-

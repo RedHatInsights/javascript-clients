@@ -1,64 +1,55 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportStorageInventory](../interfaces/reportstorageinventory.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportStorageInventory](reportstorageinventory.md)
 
 # Interface: ReportStorageInventory
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportStorageInventory
+**`interface`** ReportStorageInventory
 
 ## Hierarchy
 
-**ReportStorageInventory**
+* **ReportStorageInventory**
 
 ## Index
 
 ### Properties
 
 * [data](reportstorageinventory.md#data)
-* [links](reportstorageinventory.md#links)
-* [meta](reportstorageinventory.md#meta)
-
----
+* [links](reportstorageinventory.md#optional-links)
+* [meta](reportstorageinventory.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<`any`>*
+• **data**: *Array‹any›*
 
-*Defined in [api.ts:2728](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2728)*
+*Defined in [api.ts:2553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2553)*
 
-*__type__*: {Array}
+**`type`** {Array<any>}
 
-*__memberof__*: ReportStorageInventory
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[PaginationLinks](paginationlinks.md)*
-
-*Defined in [api.ts:2722](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2722)*
-
-*__type__*: {PaginationLinks}
-
-*__memberof__*: ReportStorageInventory
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[ReportPaginationMeta](reportpaginationmeta.md)*
-
-*Defined in [api.ts:2716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2716)*
-
-*__type__*: {ReportPaginationMeta}
-
-*__memberof__*: ReportStorageInventory
+**`memberof`** ReportStorageInventory
 
 ___
 
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
+
+*Defined in [api.ts:2547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2547)*
+
+**`type`** {PaginationLinks}
+
+**`memberof`** ReportStorageInventory
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[ReportPaginationMeta](reportpaginationmeta.md)*
+
+*Defined in [api.ts:2541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2541)*
+
+**`type`** {ReportPaginationMeta}
+
+**`memberof`** ReportStorageInventory

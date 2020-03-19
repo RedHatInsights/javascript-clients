@@ -1,64 +1,55 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportCost](../interfaces/reportcost.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportCost](reportcost.md)
 
 # Interface: ReportCost
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportCost
+**`interface`** ReportCost
 
 ## Hierarchy
 
-**ReportCost**
+* **ReportCost**
 
 ## Index
 
 ### Properties
 
 * [data](reportcost.md#data)
-* [links](reportcost.md#links)
-* [meta](reportcost.md#meta)
-
----
+* [links](reportcost.md#optional-links)
+* [meta](reportcost.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<`any`>*
+• **data**: *Array‹any›*
 
-*Defined in [api.ts:1193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1193)*
+*Defined in [api.ts:1018](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1018)*
 
-*__type__*: {Array}
+**`type`** {Array<any>}
 
-*__memberof__*: ReportCost
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[PaginationLinks](paginationlinks.md)*
-
-*Defined in [api.ts:1187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1187)*
-
-*__type__*: {PaginationLinks}
-
-*__memberof__*: ReportCost
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[ReportPaginationMeta](reportpaginationmeta.md)*
-
-*Defined in [api.ts:1181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1181)*
-
-*__type__*: {ReportPaginationMeta}
-
-*__memberof__*: ReportCost
+**`memberof`** ReportCost
 
 ___
 
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
+
+*Defined in [api.ts:1012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1012)*
+
+**`type`** {PaginationLinks}
+
+**`memberof`** ReportCost
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[ReportPaginationMeta](reportpaginationmeta.md)*
+
+*Defined in [api.ts:1006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1006)*
+
+**`type`** {ReportPaginationMeta}
+
+**`memberof`** ReportCost

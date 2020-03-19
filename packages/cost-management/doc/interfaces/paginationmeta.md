@@ -1,36 +1,29 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [PaginationMeta](../interfaces/paginationmeta.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [PaginationMeta](paginationmeta.md)
 
 # Interface: PaginationMeta
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: PaginationMeta
+**`interface`** PaginationMeta
 
 ## Hierarchy
 
-**PaginationMeta**
+* **PaginationMeta**
 
 ## Index
 
 ### Properties
 
-* [count](paginationmeta.md#count)
-
----
+* [count](paginationmeta.md#optional-count)
 
 ## Properties
 
-<a id="count"></a>
+### `Optional` count
 
-### `<Optional>` count
+• **count**? : *number*
 
-**● count**: *`number`*
+*Defined in [api.ts:477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L477)*
 
-*Defined in [api.ts:652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L652)*
+**`type`** {number}
 
-*__type__*: {number}
-
-*__memberof__*: PaginationMeta
-
-___
-
+**`memberof`** PaginationMeta

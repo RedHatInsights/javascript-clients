@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [OptOutIn](../interfaces/optoutin.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [OptOutIn](optoutin.md)
 
 # Interface: OptOutIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: OptOutIn
+**`interface`** OptOutIn
 
 ## Hierarchy
 
-**OptOutIn**
+* **OptOutIn**
 
 ## Index
 
@@ -17,36 +17,28 @@
 * [inventoryId](optoutin.md#inventoryid)
 * [optOut](optoutin.md#optout)
 
----
-
 ## Properties
-
-<a id="inventoryid"></a>
 
 ###  inventoryId
 
-**● inventoryId**: *[InventoryIdOrList](inventoryidorlist.md)*
-
-*Defined in [git-api/api.ts:1177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1177)*
-
-*__type__*: {InventoryIdOrList}
-
-*__memberof__*: OptOutIn
-
-___
-<a id="optout"></a>
-
-###  optOut
-
-**● optOut**: *`boolean`*
+• **inventoryId**: *[InventoryIdOrList](inventoryidorlist.md)*
 
 *Defined in [git-api/api.ts:1183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1183)*
 
-Opt out setting to be set.
+**`type`** {InventoryIdOrList}
 
-*__type__*: {boolean}
-
-*__memberof__*: OptOutIn
+**`memberof`** OptOutIn
 
 ___
 
+###  optOut
+
+• **optOut**: *boolean*
+
+*Defined in [git-api/api.ts:1189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1189)*
+
+Opt out setting to be set.
+
+**`type`** {boolean}
+
+**`memberof`** OptOutIn

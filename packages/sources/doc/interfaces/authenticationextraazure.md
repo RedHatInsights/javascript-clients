@@ -1,36 +1,29 @@
-[@redhat-cloud-services/sources-client](../README.md) > [AuthenticationExtraAzure](../interfaces/authenticationextraazure.md)
+[@redhat-cloud-services/sources-client](../README.md) › [Globals](../globals.md) › [AuthenticationExtraAzure](authenticationextraazure.md)
 
 # Interface: AuthenticationExtraAzure
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: AuthenticationExtraAzure
+**`interface`** AuthenticationExtraAzure
 
 ## Hierarchy
 
-**AuthenticationExtraAzure**
+* **AuthenticationExtraAzure**
 
 ## Index
 
 ### Properties
 
-* [tenantId](authenticationextraazure.md#tenantid)
-
----
+* [tenantId](authenticationextraazure.md#optional-tenantid)
 
 ## Properties
 
-<a id="tenantid"></a>
+### `Optional` tenantId
 
-### `<Optional>` tenantId
-
-**● tenantId**: *`string`*
+• **tenantId**? : *string*
 
 *Defined in [api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L347)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: AuthenticationExtraAzure
-
-___
-
+**`memberof`** AuthenticationExtraAzure

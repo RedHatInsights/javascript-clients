@@ -1,10 +1,10 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [Configuration](../classes/configuration.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [Configuration](configuration.md)
 
 # Class: Configuration
 
 ## Hierarchy
 
-**Configuration**
+* **Configuration**
 
 ## Index
 
@@ -14,127 +14,111 @@
 
 ### Properties
 
-* [accessToken](configuration.md#accesstoken)
-* [apiKey](configuration.md#apikey)
-* [baseOptions](configuration.md#baseoptions)
-* [basePath](configuration.md#basepath)
-* [password](configuration.md#password)
-* [username](configuration.md#username)
-
----
+* [accessToken](configuration.md#optional-accesstoken)
+* [apiKey](configuration.md#optional-apikey)
+* [baseOptions](configuration.md#optional-baseoptions)
+* [basePath](configuration.md#optional-basepath)
+* [password](configuration.md#optional-password)
+* [username](configuration.md#optional-username)
 
 ## Constructors
 
-<a id="constructor"></a>
-
 ###  constructor
 
-⊕ **new Configuration**(param?: *[ConfigurationParameters](../interfaces/configurationparameters.md)*): [Configuration](configuration.md)
+\+ **new Configuration**(`param`: [ConfigurationParameters](../interfaces/configurationparameters.md)): *[Configuration](configuration.md)*
 
 *Defined in [configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/configuration.ts#L65)*
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Default value` param | [ConfigurationParameters](../interfaces/configurationparameters.md) |  {} |
+Name | Type | Default |
+------ | ------ | ------ |
+`param` | [ConfigurationParameters](../interfaces/configurationparameters.md) |  {} |
 
-**Returns:** [Configuration](configuration.md)
-
-___
+**Returns:** *[Configuration](configuration.md)*
 
 ## Properties
 
-<a id="accesstoken"></a>
+### `Optional` accessToken
 
-### `<Optional>` accessToken
-
-**● accessToken**: *`string` \| `function`*
+• **accessToken**? : *string | function*
 
 *Defined in [configuration.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/configuration.ts#L51)*
 
 parameter for oauth2 security
 
-*__param__*: security name
+**`param`** security name
 
-*__param__*: oauth2 scope
+**`param`** oauth2 scope
 
-*__memberof__*: Configuration
+**`memberof`** Configuration
 
 ___
-<a id="apikey"></a>
 
-### `<Optional>` apiKey
+### `Optional` apiKey
 
-**● apiKey**: *`string` \| `function`*
+• **apiKey**? : *string | function*
 
 *Defined in [configuration.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/configuration.ts#L30)*
 
 parameter for apiKey security
 
-*__param__*: security name
+**`param`** security name
 
-*__memberof__*: Configuration
+**`memberof`** Configuration
 
 ___
-<a id="baseoptions"></a>
 
-### `<Optional>` baseOptions
+### `Optional` baseOptions
 
-**● baseOptions**: *`any`*
+• **baseOptions**? : *any*
 
 *Defined in [configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/configuration.ts#L65)*
 
 base options for axios calls
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: Configuration
+**`memberof`** Configuration
 
 ___
-<a id="basepath"></a>
 
-### `<Optional>` basePath
+### `Optional` basePath
 
-**● basePath**: *`string`*
+• **basePath**? : *string*
 
 *Defined in [configuration.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/configuration.ts#L58)*
 
 override base path
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Configuration
+**`memberof`** Configuration
 
 ___
-<a id="password"></a>
 
-### `<Optional>` password
+### `Optional` password
 
-**● password**: *`string`*
+• **password**? : *string*
 
 *Defined in [configuration.ts:44](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/configuration.ts#L44)*
 
 parameter for basic security
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Configuration
+**`memberof`** Configuration
 
 ___
-<a id="username"></a>
 
-### `<Optional>` username
+### `Optional` username
 
-**● username**: *`string`*
+• **username**? : *string*
 
 *Defined in [configuration.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/configuration.ts#L37)*
 
 parameter for basic security
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Configuration
-
-___
-
+**`memberof`** Configuration

@@ -1,20 +1,20 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [TagsApi](../classes/tagsapi.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [TagsApi](tagsapi.md)
 
 # Class: TagsApi
 
 TagsApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: TagsApi
+**`class`** TagsApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ TagsApi**
+  ↳ **TagsApi**
 
 ## Index
 
@@ -24,23 +24,19 @@ TagsApi - object-oriented interface
 
 ### Properties
 
-* [axios](tagsapi.md#axios)
-* [basePath](tagsapi.md#basepath)
-* [configuration](tagsapi.md#configuration)
+* [axios](tagsapi.md#protected-axios)
+* [basePath](tagsapi.md#protected-basepath)
+* [configuration](tagsapi.md#protected-configuration)
 
 ### Methods
 
 * [listTags](tagsapi.md#listtags)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new TagsApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [TagsApi](tagsapi.md)
+\+ **new TagsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[TagsApi](tagsapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,77 +44,64 @@ TagsApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [TagsApi](tagsapi.md)
-
-___
+**Returns:** *[TagsApi](tagsapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="listtags"></a>
 
 ###  listTags
 
-▸ **listTags**(options?: *`any`*): `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
+▸ **listTags**(`options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
 
 *Defined in [api.ts:6748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6748)*
 
 List Tags
 
-*__summary__*: List Tags
+**`summary`** List Tags
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: TagsApi
+**`memberof`** TagsApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[TagsCollection](../interfaces/tagscollection.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*

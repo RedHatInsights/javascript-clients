@@ -1,14 +1,14 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [User](../interfaces/user.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [User](user.md)
 
 # Interface: User
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: User
+**`interface`** User
 
 ## Hierarchy
 
-**User**
+* **User**
 
 ## Index
 
@@ -17,34 +17,26 @@
 * [email](user.md#email)
 * [username](user.md#username)
 
----
-
 ## Properties
-
-<a id="email"></a>
 
 ###  email
 
-**● email**: *`string`*
+• **email**: *string*
 
-*Defined in [api.ts:2994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2994)*
+*Defined in [api.ts:2831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2831)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: User
+**`memberof`** User
 
 ___
-<a id="username"></a>
 
 ###  username
 
-**● username**: *`string`*
+• **username**: *string*
 
-*Defined in [api.ts:2988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2988)*
+*Defined in [api.ts:2825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2825)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: User
-
-___
-
+**`memberof`** User

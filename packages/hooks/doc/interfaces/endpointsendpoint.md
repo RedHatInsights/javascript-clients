@@ -1,78 +1,48 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [EndpointsEndpoint](../interfaces/endpointsendpoint.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [EndpointsEndpoint](endpointsendpoint.md)
 
 # Interface: EndpointsEndpoint
 
-*__export__*: 
-
-*__interface__*: EndpointsEndpoint
-
 ## Hierarchy
 
-**EndpointsEndpoint**
+* **EndpointsEndpoint**
 
 ## Index
 
 ### Properties
 
-* [filter](endpointsendpoint.md#filter)
-* [name](endpointsendpoint.md#name)
-* [type](endpointsendpoint.md#type)
-* [url](endpointsendpoint.md#url)
-
----
+* [filter](endpointsendpoint.md#optional-filter)
+* [name](endpointsendpoint.md#optional-name)
+* [type](endpointsendpoint.md#optional-type)
+* [url](endpointsendpoint.md#optional-url)
 
 ## Properties
 
-<a id="filter"></a>
+### `Optional` filter
 
-### `<Optional>` filter
-
-**● filter**: *[EndpointsEndpointFilter](endpointsendpointfilter.md)*
+• **filter**? : *[EndpointsEndpointFilter](endpointsendpointfilter.md)*
 
 *Defined in [api.ts:346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L346)*
 
-*__type__*: {EndpointsEndpointFilter}
-
-*__memberof__*: EndpointsEndpoint
-
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:334](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L334)*
 
-*__type__*: {string}
-
-*__memberof__*: EndpointsEndpoint
-
 ___
-<a id="type"></a>
 
-### `<Optional>` type
+### `Optional` type
 
-**● type**: *`string`*
+• **type**? : *string*
 
 *Defined in [api.ts:340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L340)*
 
-*__type__*: {string}
-
-*__memberof__*: EndpointsEndpoint
-
 ___
-<a id="url"></a>
 
-### `<Optional>` url
+### `Optional` url
 
-**● url**: *`string`*
+• **url**? : *string*
 
 *Defined in [api.ts:328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L328)*
-
-*__type__*: {string}
-
-*__memberof__*: EndpointsEndpoint
-
-___
-

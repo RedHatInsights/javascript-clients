@@ -1,166 +1,150 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [VolumeType](../interfaces/volumetype.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [VolumeType](volumetype.md)
 
 # Interface: VolumeType
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: VolumeType
+**`interface`** VolumeType
 
 ## Hierarchy
 
-**VolumeType**
+* **VolumeType**
 
 ## Index
 
 ### Properties
 
-* [archivedAt](volumetype.md#archivedat)
-* [createdAt](volumetype.md#createdat)
-* [description](volumetype.md#description)
-* [extra](volumetype.md#extra)
-* [id](volumetype.md#id)
-* [lastSeenAt](volumetype.md#lastseenat)
-* [name](volumetype.md#name)
-* [sourceId](volumetype.md#sourceid)
-* [sourceRef](volumetype.md#sourceref)
-* [updatedAt](volumetype.md#updatedat)
-
----
+* [archivedAt](volumetype.md#optional-archivedat)
+* [createdAt](volumetype.md#optional-createdat)
+* [description](volumetype.md#optional-description)
+* [extra](volumetype.md#optional-extra)
+* [id](volumetype.md#optional-id)
+* [lastSeenAt](volumetype.md#optional-lastseenat)
+* [name](volumetype.md#optional-name)
+* [sourceId](volumetype.md#optional-sourceid)
+* [sourceRef](volumetype.md#optional-sourceref)
+* [updatedAt](volumetype.md#optional-updatedat)
 
 ## Properties
 
-<a id="archivedat"></a>
+### `Optional` archivedAt
 
-### `<Optional>` archivedAt
-
-**● archivedAt**: *`Date`*
+• **archivedAt**? : *Date*
 
 *Defined in [api.ts:4155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4155)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: VolumeType
+**`memberof`** VolumeType
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:4161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4161)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: VolumeType
+**`memberof`** VolumeType
 
 ___
-<a id="description"></a>
 
-### `<Optional>` description
+### `Optional` description
 
-**● description**: *`string`*
+• **description**? : *string*
 
 *Defined in [api.ts:4167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4167)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: VolumeType
+**`memberof`** VolumeType
 
 ___
-<a id="extra"></a>
 
-### `<Optional>` extra
+### `Optional` extra
 
-**● extra**: *`any`*
+• **extra**? : *any*
 
 *Defined in [api.ts:4173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4173)*
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: VolumeType
+**`memberof`** VolumeType
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:4179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4179)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: VolumeType
+**`memberof`** VolumeType
 
 ___
-<a id="lastseenat"></a>
 
-### `<Optional>` lastSeenAt
+### `Optional` lastSeenAt
 
-**● lastSeenAt**: *`Date`*
+• **lastSeenAt**? : *Date*
 
 *Defined in [api.ts:4185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4185)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: VolumeType
+**`memberof`** VolumeType
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:4191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4191)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: VolumeType
+**`memberof`** VolumeType
 
 ___
-<a id="sourceid"></a>
 
-### `<Optional>` sourceId
+### `Optional` sourceId
 
-**● sourceId**: *`string`*
+• **sourceId**? : *string*
 
 *Defined in [api.ts:4197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4197)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: VolumeType
+**`memberof`** VolumeType
 
 ___
-<a id="sourceref"></a>
 
-### `<Optional>` sourceRef
+### `Optional` sourceRef
 
-**● sourceRef**: *`string`*
+• **sourceRef**? : *string*
 
 *Defined in [api.ts:4203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4203)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: VolumeType
+**`memberof`** VolumeType
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:4209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4209)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: VolumeType
-
-___
-
+**`memberof`** VolumeType

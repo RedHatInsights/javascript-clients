@@ -1,20 +1,12 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [AppRegistrationApi](../classes/appregistrationapi.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [AppRegistrationApi](appregistrationapi.md)
 
 # Class: AppRegistrationApi
 
-AppRegistrationApi - object-oriented interface
-
-*__export__*: 
-
-*__class__*: AppRegistrationApi
-
-*__extends__*: {BaseAPI}
-
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ AppRegistrationApi**
+  ↳ **AppRegistrationApi**
 
 ## Index
 
@@ -24,23 +16,19 @@ AppRegistrationApi - object-oriented interface
 
 ### Properties
 
-* [axios](appregistrationapi.md#axios)
-* [basePath](appregistrationapi.md#basepath)
-* [configuration](appregistrationapi.md#configuration)
+* [axios](appregistrationapi.md#protected-axios)
+* [basePath](appregistrationapi.md#protected-basepath)
+* [configuration](appregistrationapi.md#protected-configuration)
 
 ### Methods
 
 * [appRegistrationCreate](appregistrationapi.md#appregistrationcreate)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new AppRegistrationApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [AppRegistrationApi](appregistrationapi.md)
+\+ **new AppRegistrationApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[AppRegistrationApi](appregistrationapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,76 +36,57 @@ AppRegistrationApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [AppRegistrationApi](appregistrationapi.md)
-
-___
+**Returns:** *[AppRegistrationApi](appregistrationapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="appregistrationcreate"></a>
 
 ###  appRegistrationCreate
 
-▸ **appRegistrationCreate**(inlineObject: *[InlineObject](../interfaces/inlineobject.md)*, options?: *`any`*): `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)>
+▸ **appRegistrationCreate**(`inlineObject`: [InlineObject](../interfaces/inlineobject.md), `options?`: any): *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)›*
 
 *Defined in [api.ts:1096](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1096)*
 
-Register an application
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: AppRegistrationApi
-
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| inlineObject | [InlineObject](../interfaces/inlineobject.md) |  \- |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`inlineObject` | [InlineObject](../interfaces/inlineobject.md) |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[InlineResponse2001](../interfaces/inlineresponse2001.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)›*

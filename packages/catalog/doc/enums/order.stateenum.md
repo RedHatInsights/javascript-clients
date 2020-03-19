@@ -1,10 +1,10 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [Order](../modules/order.md) > [StateEnum](../enums/order.stateenum.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [Order](../modules/order.md) › [StateEnum](order.stateenum.md)
 
 # Enumeration: StateEnum
 
-*__export__*: 
+**`export`** 
 
-*__enum__*: {string}
+**`enum`** {string}
 
 ## Index
 
@@ -17,62 +17,50 @@
 * [Failed](order.stateenum.md#failed)
 * [Ordered](order.stateenum.md#ordered)
 
----
-
 ## Enumeration members
-
-<a id="approvalpending"></a>
 
 ###  ApprovalPending
 
-**ApprovalPending**:  = "Approval Pending"
+• **ApprovalPending**: = "Approval Pending"
 
 *Defined in [api.ts:436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L436)*
 
 ___
-<a id="canceled"></a>
 
 ###  Canceled
 
-**Canceled**:  = "Canceled"
+• **Canceled**: = "Canceled"
 
 *Defined in [api.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L440)*
 
 ___
-<a id="completed"></a>
 
 ###  Completed
 
-**Completed**:  = "Completed"
+• **Completed**: = "Completed"
 
 *Defined in [api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L439)*
 
 ___
-<a id="created"></a>
 
 ###  Created
 
-**Created**:  = "Created"
+• **Created**: = "Created"
 
 *Defined in [api.ts:435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L435)*
 
 ___
-<a id="failed"></a>
 
 ###  Failed
 
-**Failed**:  = "Failed"
+• **Failed**: = "Failed"
 
 *Defined in [api.ts:438](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L438)*
 
 ___
-<a id="ordered"></a>
 
 ###  Ordered
 
-**Ordered**:  = "Ordered"
+• **Ordered**: = "Ordered"
 
 *Defined in [api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L437)*
-
-___
-

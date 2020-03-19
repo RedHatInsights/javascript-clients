@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [StatusListOut](../interfaces/statuslistout.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [StatusListOut](statuslistout.md)
 
 # Interface: StatusListOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: StatusListOut
+**`interface`** StatusListOut
 
 ## Hierarchy
 
-**StatusListOut**
+* **StatusListOut**
 
 ## Index
 
@@ -17,36 +17,28 @@
 * [data](statuslistout.md#data)
 * [meta](statuslistout.md#meta)
 
----
-
 ## Properties
-
-<a id="data"></a>
 
 ###  data
 
-**● data**: *`Array`<[StatusListOutData](statuslistoutdata.md)>*
-
-*Defined in [git-api/api.ts:1229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1229)*
-
-List of available status/status\_id pairs.
-
-*__type__*: {Array}
-
-*__memberof__*: StatusListOut
-
-___
-<a id="meta"></a>
-
-###  meta
-
-**● meta**: *[StatusListOutMeta](statuslistoutmeta.md)*
+• **data**: *Array‹[StatusListOutData](statuslistoutdata.md)›*
 
 *Defined in [git-api/api.ts:1235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1235)*
 
-*__type__*: {StatusListOutMeta}
+List of available status/status_id pairs.
 
-*__memberof__*: StatusListOut
+**`type`** {Array<StatusListOutData>}
+
+**`memberof`** StatusListOut
 
 ___
 
+###  meta
+
+• **meta**: *[StatusListOutMeta](statuslistoutmeta.md)*
+
+*Defined in [git-api/api.ts:1241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1241)*
+
+**`type`** {StatusListOutMeta}
+
+**`memberof`** StatusListOut

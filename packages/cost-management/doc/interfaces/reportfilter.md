@@ -1,180 +1,163 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportFilter](../interfaces/reportfilter.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportFilter](reportfilter.md)
 
 # Interface: ReportFilter
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportFilter
+**`interface`** ReportFilter
 
 ## Hierarchy
 
-**ReportFilter**
+* **ReportFilter**
 
 ## Index
 
 ### Properties
 
-* [account](reportfilter.md#account)
-* [az](reportfilter.md#az)
-* [limit](reportfilter.md#limit)
-* [offset](reportfilter.md#offset)
-* [region](reportfilter.md#region)
-* [resolution](reportfilter.md#resolution)
-* [resourceScope](reportfilter.md#resourcescope)
-* [service](reportfilter.md#service)
-* [tag](reportfilter.md#tag)
-* [timeScopeUnits](reportfilter.md#timescopeunits)
-* [timeScopeValue](reportfilter.md#timescopevalue)
-
----
+* [account](reportfilter.md#optional-account)
+* [az](reportfilter.md#optional-az)
+* [limit](reportfilter.md#optional-limit)
+* [offset](reportfilter.md#optional-offset)
+* [region](reportfilter.md#optional-region)
+* [resolution](reportfilter.md#optional-resolution)
+* [resourceScope](reportfilter.md#optional-resourcescope)
+* [service](reportfilter.md#optional-service)
+* [tag](reportfilter.md#optional-tag)
+* [timeScopeUnits](reportfilter.md#optional-timescopeunits)
+* [timeScopeValue](reportfilter.md#optional-timescopevalue)
 
 ## Properties
 
-<a id="account"></a>
+### `Optional` account
 
-### `<Optional>` account
+• **account**? : *Array‹string›*
 
-**● account**: *`Array`<`string`>*
+*Defined in [api.ts:1179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1179)*
 
-*Defined in [api.ts:1354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1354)*
+**`type`** {Array<string>}
 
-*__type__*: {Array}
-
-*__memberof__*: ReportFilter
+**`memberof`** ReportFilter
 
 ___
-<a id="az"></a>
 
-### `<Optional>` az
+### `Optional` az
 
-**● az**: *`Array`<`string`>*
+• **az**? : *Array‹string›*
 
-*Defined in [api.ts:1372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1372)*
+*Defined in [api.ts:1197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1197)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: ReportFilter
+**`memberof`** ReportFilter
 
 ___
-<a id="limit"></a>
 
-### `<Optional>` limit
+### `Optional` limit
 
-**● limit**: *`number`*
+• **limit**? : *number*
 
-*Defined in [api.ts:1318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1318)*
+*Defined in [api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1143)*
 
 Limits the data points returns and aggregates remaining data.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ReportFilter
+**`memberof`** ReportFilter
 
 ___
-<a id="offset"></a>
 
-### `<Optional>` offset
+### `Optional` offset
 
-**● offset**: *`number`*
+• **offset**? : *number*
 
-*Defined in [api.ts:1324](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1324)*
+*Defined in [api.ts:1149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1149)*
 
 Offsets the data points returned when using limit.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: ReportFilter
-
-___
-<a id="region"></a>
-
-### `<Optional>` region
-
-**● region**: *`Array`<`string`>*
-
-*Defined in [api.ts:1366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1366)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportFilter
-
-___
-<a id="resolution"></a>
-
-### `<Optional>` resolution
-
-**● resolution**: *[ReportResolution](../enums/reportresolution.md)*
-
-*Defined in [api.ts:1330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1330)*
-
-*__type__*: {ReportResolution}
-
-*__memberof__*: ReportFilter
-
-___
-<a id="resourcescope"></a>
-
-### `<Optional>` resourceScope
-
-**● resourceScope**: *`Array`<[ReportResourceScope](../enums/reportresourcescope.md)>*
-
-*Defined in [api.ts:1348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1348)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportFilter
-
-___
-<a id="service"></a>
-
-### `<Optional>` service
-
-**● service**: *`Array`<`string`>*
-
-*Defined in [api.ts:1360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1360)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportFilter
-
-___
-<a id="tag"></a>
-
-### `<Optional>` tag
-
-**● tag**: *`Array`<`string`>*
-
-*Defined in [api.ts:1378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1378)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportFilter
-
-___
-<a id="timescopeunits"></a>
-
-### `<Optional>` timeScopeUnits
-
-**● timeScopeUnits**: *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
-
-*Defined in [api.ts:1342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1342)*
-
-*__type__*: {ReportTimeScopeUnits}
-
-*__memberof__*: ReportFilter
-
-___
-<a id="timescopevalue"></a>
-
-### `<Optional>` timeScopeValue
-
-**● timeScopeValue**: *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
-
-*Defined in [api.ts:1336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1336)*
-
-*__type__*: {ReportTimeScopeValue}
-
-*__memberof__*: ReportFilter
+**`memberof`** ReportFilter
 
 ___
 
+### `Optional` region
+
+• **region**? : *Array‹string›*
+
+*Defined in [api.ts:1191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1191)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportFilter
+
+___
+
+### `Optional` resolution
+
+• **resolution**? : *[ReportResolution](../enums/reportresolution.md)*
+
+*Defined in [api.ts:1155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1155)*
+
+**`type`** {ReportResolution}
+
+**`memberof`** ReportFilter
+
+___
+
+### `Optional` resourceScope
+
+• **resourceScope**? : *Array‹[ReportResourceScope](../enums/reportresourcescope.md)›*
+
+*Defined in [api.ts:1173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1173)*
+
+**`type`** {Array<ReportResourceScope>}
+
+**`memberof`** ReportFilter
+
+___
+
+### `Optional` service
+
+• **service**? : *Array‹string›*
+
+*Defined in [api.ts:1185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1185)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportFilter
+
+___
+
+### `Optional` tag
+
+• **tag**? : *Array‹string›*
+
+*Defined in [api.ts:1203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1203)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportFilter
+
+___
+
+### `Optional` timeScopeUnits
+
+• **timeScopeUnits**? : *[ReportTimeScopeUnits](../enums/reporttimescopeunits.md)*
+
+*Defined in [api.ts:1167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1167)*
+
+**`type`** {ReportTimeScopeUnits}
+
+**`memberof`** ReportFilter
+
+___
+
+### `Optional` timeScopeValue
+
+• **timeScopeValue**? : *[ReportTimeScopeValue](../enums/reporttimescopevalue.md)*
+
+*Defined in [api.ts:1161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1161)*
+
+**`type`** {ReportTimeScopeValue}
+
+**`memberof`** ReportFilter

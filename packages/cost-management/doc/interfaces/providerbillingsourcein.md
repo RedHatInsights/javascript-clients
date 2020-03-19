@@ -1,50 +1,42 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ProviderBillingSourceIn](../interfaces/providerbillingsourcein.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ProviderBillingSourceIn](providerbillingsourcein.md)
 
 # Interface: ProviderBillingSourceIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ProviderBillingSourceIn
+**`interface`** ProviderBillingSourceIn
 
 ## Hierarchy
 
-**ProviderBillingSourceIn**
+* **ProviderBillingSourceIn**
 
 ## Index
 
 ### Properties
 
-* [bucket](providerbillingsourcein.md#bucket)
-* [dataSource](providerbillingsourcein.md#datasource)
-
----
+* [bucket](providerbillingsourcein.md#optional-bucket)
+* [dataSource](providerbillingsourcein.md#optional-datasource)
 
 ## Properties
 
-<a id="bucket"></a>
+### `Optional` bucket
 
-### `<Optional>` bucket
+• **bucket**? : *string*
 
-**● bucket**: *`string`*
+*Defined in [api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L557)*
 
-*Defined in [api.ts:732](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L732)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: ProviderBillingSourceIn
-
-___
-<a id="datasource"></a>
-
-### `<Optional>` dataSource
-
-**● dataSource**: *`any`*
-
-*Defined in [api.ts:738](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L738)*
-
-*__type__*: {any}
-
-*__memberof__*: ProviderBillingSourceIn
+**`memberof`** ProviderBillingSourceIn
 
 ___
 
+### `Optional` dataSource
+
+• **dataSource**? : *any*
+
+*Defined in [api.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L563)*
+
+**`type`** {any}
+
+**`memberof`** ProviderBillingSourceIn

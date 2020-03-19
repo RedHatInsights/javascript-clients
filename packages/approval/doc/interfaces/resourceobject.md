@@ -1,16 +1,16 @@
-[@redhat-cloud-services/approval-client](../README.md) > [ResourceObject](../interfaces/resourceobject.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [ResourceObject](resourceobject.md)
 
 # Interface: ResourceObject
 
 Resource object definition
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ResourceObject
+**`interface`** ResourceObject
 
 ## Hierarchy
 
-**ResourceObject**
+* **ResourceObject**
 
 ## Index
 
@@ -20,53 +20,44 @@ Resource object definition
 * [objectId](resourceobject.md#objectid)
 * [objectType](resourceobject.md#objecttype)
 
----
-
 ## Properties
-
-<a id="appname"></a>
 
 ###  appName
 
-**● appName**: *`string`*
+• **appName**: *string*
 
-*Defined in [api.ts:477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L477)*
+*Defined in [api.ts:474](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L474)*
 
 Application name the object belongs to
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ResourceObject
+**`memberof`** ResourceObject
 
 ___
-<a id="objectid"></a>
 
 ###  objectId
 
-**● objectId**: *`string`*
+• **objectId**: *string*
 
-*Defined in [api.ts:483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L483)*
+*Defined in [api.ts:480](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L480)*
 
 Id of the object
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ResourceObject
+**`memberof`** ResourceObject
 
 ___
-<a id="objecttype"></a>
 
 ###  objectType
 
-**● objectType**: *`string`*
+• **objectType**: *string*
 
-*Defined in [api.ts:471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L471)*
+*Defined in [api.ts:468](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L468)*
 
 Object type
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ResourceObject
-
-___
-
+**`memberof`** ResourceObject

@@ -1,376 +1,345 @@
-[@redhat-cloud-services/insights-client](../README.md) > [RuleForAccount](../interfaces/ruleforaccount.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [RuleForAccount](ruleforaccount.md)
 
 # Interface: RuleForAccount
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RuleForAccount
+**`interface`** RuleForAccount
 
 ## Hierarchy
 
-**RuleForAccount**
+* **RuleForAccount**
 
 ## Index
 
 ### Properties
 
-* [active](ruleforaccount.md#active)
+* [active](ruleforaccount.md#optional-active)
 * [category](ruleforaccount.md#category)
-* [createdAt](ruleforaccount.md#createdat)
-* [deletedAt](ruleforaccount.md#deletedat)
+* [createdAt](ruleforaccount.md#optional-createdat)
+* [deletedAt](ruleforaccount.md#optional-deletedat)
 * [description](ruleforaccount.md#description)
 * [generic](ruleforaccount.md#generic)
-* [hostsAckedCount](ruleforaccount.md#hostsackedcount)
+* [hostsAckedCount](ruleforaccount.md#optional-hostsackedcount)
 * [impact](ruleforaccount.md#impact)
-* [impactedSystemsCount](ruleforaccount.md#impactedsystemscount)
-* [likelihood](ruleforaccount.md#likelihood)
-* [moreInfo](ruleforaccount.md#moreinfo)
-* [nodeId](ruleforaccount.md#nodeid)
-* [playbookCount](ruleforaccount.md#playbookcount)
-* [publishDate](ruleforaccount.md#publishdate)
-* [rating](ruleforaccount.md#rating)
+* [impactedSystemsCount](ruleforaccount.md#optional-impactedsystemscount)
+* [likelihood](ruleforaccount.md#optional-likelihood)
+* [moreInfo](ruleforaccount.md#optional-moreinfo)
+* [nodeId](ruleforaccount.md#optional-nodeid)
+* [playbookCount](ruleforaccount.md#optional-playbookcount)
+* [publishDate](ruleforaccount.md#optional-publishdate)
+* [rating](ruleforaccount.md#optional-rating)
 * [reason](ruleforaccount.md#reason)
-* [rebootRequired](ruleforaccount.md#rebootrequired)
-* [reportsShown](ruleforaccount.md#reportsshown)
+* [rebootRequired](ruleforaccount.md#optional-rebootrequired)
+* [reportsShown](ruleforaccount.md#optional-reportsshown)
 * [resolutionSet](ruleforaccount.md#resolutionset)
 * [ruleId](ruleforaccount.md#ruleid)
 * [ruleset](ruleforaccount.md#ruleset)
 * [summary](ruleforaccount.md#summary)
-* [tags](ruleforaccount.md#tags)
-* [totalRisk](ruleforaccount.md#totalrisk)
-* [updatedAt](ruleforaccount.md#updatedat)
-
----
+* [tags](ruleforaccount.md#optional-tags)
+* [totalRisk](ruleforaccount.md#optional-totalrisk)
+* [updatedAt](ruleforaccount.md#optional-updatedat)
 
 ## Properties
 
-<a id="active"></a>
+### `Optional` active
 
-### `<Optional>` active
-
-**● active**: *`boolean`*
+• **active**? : *boolean*
 
 *Defined in [api.ts:819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L819)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="category"></a>
 
 ###  category
 
-**● category**: *[RuleCategory](rulecategory.md)*
+• **category**: *[RuleCategory](rulecategory.md)*
 
 *Defined in [api.ts:825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L825)*
 
-*__type__*: {RuleCategory}
+**`type`** {RuleCategory}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L789)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="deletedat"></a>
 
-### `<Optional>` deletedAt
+### `Optional` deletedAt
 
-**● deletedAt**: *`Date`*
+• **deletedAt**? : *Date*
 
 *Defined in [api.ts:801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L801)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="description"></a>
 
 ###  description
 
-**● description**: *`string`*
+• **description**: *string*
 
 *Defined in [api.ts:813](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L813)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="generic"></a>
 
 ###  generic
 
-**● generic**: *`string`*
+• **generic**: *string*
 
 *Defined in [api.ts:879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L879)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="hostsackedcount"></a>
 
-### `<Optional>` hostsAckedCount
+### `Optional` hostsAckedCount
 
-**● hostsAckedCount**: *`number`*
+• **hostsAckedCount**? : *number*
 
 *Defined in [api.ts:921](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L921)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="impact"></a>
 
 ###  impact
 
-**● impact**: *[RuleImpact](ruleimpact.md)*
+• **impact**: *[RuleImpact](ruleimpact.md)*
 
 *Defined in [api.ts:831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L831)*
 
-*__type__*: {RuleImpact}
+**`type`** {RuleImpact}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="impactedsystemscount"></a>
 
-### `<Optional>` impactedSystemsCount
+### `Optional` impactedSystemsCount
 
-**● impactedSystemsCount**: *`number`*
+• **impactedSystemsCount**? : *number*
 
 *Defined in [api.ts:897](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L897)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="likelihood"></a>
 
-### `<Optional>` likelihood
+### `Optional` likelihood
 
-**● likelihood**: *`number`*
+• **likelihood**? : *number*
 
 *Defined in [api.ts:837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L837)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="moreinfo"></a>
 
-### `<Optional>` moreInfo
+### `Optional` moreInfo
 
-**● moreInfo**: *`string`*
+• **moreInfo**? : *string*
 
 *Defined in [api.ts:891](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L891)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="nodeid"></a>
 
-### `<Optional>` nodeId
+### `Optional` nodeId
 
-**● nodeId**: *`string`*
+• **nodeId**? : *string*
 
 *Defined in [api.ts:843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L843)*
 
 KCS solution number
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="playbookcount"></a>
 
-### `<Optional>` playbookCount
+### `Optional` playbookCount
 
-**● playbookCount**: *`number`*
+• **playbookCount**? : *number*
 
 *Defined in [api.ts:855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L855)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="publishdate"></a>
 
-### `<Optional>` publishDate
+### `Optional` publishDate
 
-**● publishDate**: *`Date` \| `null`*
+• **publishDate**? : *Date | null*
 
 *Defined in [api.ts:867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L867)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="rating"></a>
 
-### `<Optional>` rating
+### `Optional` rating
 
-**● rating**: *`number`*
+• **rating**? : *number*
 
 *Defined in [api.ts:927](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L927)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="reason"></a>
 
 ###  reason
 
-**● reason**: *`string`*
+• **reason**: *string*
 
 *Defined in [api.ts:885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L885)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="rebootrequired"></a>
 
-### `<Optional>` rebootRequired
+### `Optional` rebootRequired
 
-**● rebootRequired**: *`boolean`*
+• **rebootRequired**? : *boolean*
 
 *Defined in [api.ts:861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L861)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="reportsshown"></a>
 
-### `<Optional>` reportsShown
+### `Optional` reportsShown
 
-**● reportsShown**: *`boolean`*
+• **reportsShown**? : *boolean*
 
 *Defined in [api.ts:903](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L903)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="resolutionset"></a>
 
 ###  resolutionSet
 
-**● resolutionSet**: *`Array`<[Resolution](resolution.md)>*
+• **resolutionSet**: *Array‹[Resolution](resolution.md)›*
 
 *Defined in [api.ts:909](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L909)*
 
-*__type__*: {Array}
+**`type`** {Array<Resolution>}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="ruleid"></a>
 
 ###  ruleId
 
-**● ruleId**: *`string`*
+• **ruleId**: *string*
 
 *Defined in [api.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L783)*
 
 Rule ID from Insights
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="ruleset"></a>
 
 ###  ruleset
 
-**● ruleset**: *[RuleSet](ruleset.md)*
+• **ruleset**: *[RuleSet](ruleset.md)*
 
 *Defined in [api.ts:807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L807)*
 
-*__type__*: {RuleSet}
+**`type`** {RuleSet}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="summary"></a>
 
 ###  summary
 
-**● summary**: *`string`*
+• **summary**: *string*
 
 *Defined in [api.ts:873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L873)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="tags"></a>
 
-### `<Optional>` tags
+### `Optional` tags
 
-**● tags**: *`string`*
+• **tags**? : *string*
 
 *Defined in [api.ts:849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L849)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="totalrisk"></a>
 
-### `<Optional>` totalRisk
+### `Optional` totalRisk
 
-**● totalRisk**: *`number`*
+• **totalRisk**? : *number*
 
 *Defined in [api.ts:915](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L915)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: RuleForAccount
+**`memberof`** RuleForAccount
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L795)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: RuleForAccount
-
-___
-
+**`memberof`** RuleForAccount

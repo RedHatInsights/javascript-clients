@@ -1,10 +1,10 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [ApprovalRequest](../modules/approvalrequest.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [ApprovalRequest](approvalrequest.md)
 
 # Module: ApprovalRequest
 
-*__export__*: 
+**`export`** 
 
-*__namespace__*: ApprovalRequest
+**`namespace`** ApprovalRequest
 
 ## Index
 
@@ -14,103 +14,91 @@
 
 ### Properties
 
-* [approvalRequestRef](approvalrequest.md#approvalrequestref)
-* [id](approvalrequest.md#id)
-* [orderItemId](approvalrequest.md#orderitemid)
-* [reason](approvalrequest.md#reason)
-* [requestCompletedAt](approvalrequest.md#requestcompletedat)
-* [state](approvalrequest.md#state)
-
----
+* [approvalRequestRef](approvalrequest.md#optional-approvalrequestref)
+* [id](approvalrequest.md#optional-id)
+* [orderItemId](approvalrequest.md#optional-orderitemid)
+* [reason](approvalrequest.md#optional-reason)
+* [requestCompletedAt](approvalrequest.md#optional-requestcompletedat)
+* [state](approvalrequest.md#optional-state)
 
 ## Properties
 
-<a id="approvalrequestref"></a>
+### `Optional` approvalRequestRef
 
-### `<Optional>` approvalRequestRef
-
-**● approvalRequestRef**: *`string`*
+• **approvalRequestRef**? : *string*
 
 *Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L89)*
 
 The id of the approval submitted to approval-api
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ApprovalRequest
+**`memberof`** ApprovalRequest
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L83)*
 
 The unique identifier for this approval request.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ApprovalRequest
+**`memberof`** ApprovalRequest
 
 ___
-<a id="orderitemid"></a>
 
-### `<Optional>` orderItemId
+### `Optional` orderItemId
 
-**● orderItemId**: *`string`*
+• **orderItemId**? : *string*
 
 *Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L95)*
 
 The Order Item which the approval request belongs to
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ApprovalRequest
+**`memberof`** ApprovalRequest
 
 ___
-<a id="reason"></a>
 
-### `<Optional>` reason
+### `Optional` reason
 
-**● reason**: *`string`*
+• **reason**? : *string*
 
 *Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L101)*
 
 The reason for the current state.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ApprovalRequest
+**`memberof`** ApprovalRequest
 
 ___
-<a id="requestcompletedat"></a>
 
-### `<Optional>` requestCompletedAt
+### `Optional` requestCompletedAt
 
-**● requestCompletedAt**: *`Date`*
+• **requestCompletedAt**? : *Date*
 
 *Defined in [api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L107)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ApprovalRequest
+**`memberof`** ApprovalRequest
 
 ___
-<a id="state"></a>
 
-### `<Optional>` state
+### `Optional` state
 
-**● state**: *[StateEnum](../enums/approvalrequest.stateenum.md)*
+• **state**? : *[StateEnum](../enums/approvalrequest.stateenum.md)*
 
 *Defined in [api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L113)*
 
 The state of the approval request (approved, denied, undecided, canceled)
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ApprovalRequest
-
-___
-
+**`memberof`** ApprovalRequest

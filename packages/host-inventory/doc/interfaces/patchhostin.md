@@ -1,56 +1,48 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [PatchHostIn](../interfaces/patchhostin.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [PatchHostIn](patchhostin.md)
 
 # Interface: PatchHostIn
 
 Data of a single host to be updated.
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: PatchHostIn
+**`interface`** PatchHostIn
 
 ## Hierarchy
 
-**PatchHostIn**
+* **PatchHostIn**
 
 ## Index
 
 ### Properties
 
-* [ansibleHost](patchhostin.md#ansiblehost)
-* [displayName](patchhostin.md#displayname)
-
----
+* [ansibleHost](patchhostin.md#optional-ansiblehost)
+* [displayName](patchhostin.md#optional-displayname)
 
 ## Properties
 
-<a id="ansiblehost"></a>
+### `Optional` ansibleHost
 
-### `<Optional>` ansibleHost
-
-**● ansibleHost**: *`string`*
+• **ansibleHost**? : *string*
 
 *Defined in [api.ts:809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L809)*
 
 The ansible host name for remediations
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: PatchHostIn
+**`memberof`** PatchHostIn
 
 ___
-<a id="displayname"></a>
 
-### `<Optional>` displayName
+### `Optional` displayName
 
-**● displayName**: *`string`*
+• **displayName**? : *string*
 
 *Defined in [api.ts:815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L815)*
 
 A host’s human-readable display name, e.g. in a form of a domain name.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: PatchHostIn
-
-___
-
+**`memberof`** PatchHostIn

@@ -1,20 +1,20 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [ResolutionsApi](../classes/resolutionsapi.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [ResolutionsApi](resolutionsapi.md)
 
 # Class: ResolutionsApi
 
 ResolutionsApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: ResolutionsApi
+**`class`** ResolutionsApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ ResolutionsApi**
+  ↳ **ResolutionsApi**
 
 ## Index
 
@@ -24,24 +24,20 @@ ResolutionsApi - object-oriented interface
 
 ### Properties
 
-* [axios](resolutionsapi.md#axios)
-* [basePath](resolutionsapi.md#basepath)
-* [configuration](resolutionsapi.md#configuration)
+* [axios](resolutionsapi.md#protected-axios)
+* [basePath](resolutionsapi.md#protected-basepath)
+* [configuration](resolutionsapi.md#protected-configuration)
 
 ### Methods
 
 * [getResolutionsForIssue](resolutionsapi.md#getresolutionsforissue)
 * [getResolutionsForIssues](resolutionsapi.md#getresolutionsforissues)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new ResolutionsApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [ResolutionsApi](resolutionsapi.md)
+\+ **new ResolutionsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[ResolutionsApi](resolutionsapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -49,104 +45,90 @@ ResolutionsApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [ResolutionsApi](resolutionsapi.md)
-
-___
+**Returns:** *[ResolutionsApi](resolutionsapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="getresolutionsforissue"></a>
 
 ###  getResolutionsForIssue
 
-▸ **getResolutionsForIssue**(issue: *`string`*, options?: *`any`*): `AxiosPromise`<[Resolutions](../interfaces/resolutions.md)>
+▸ **getResolutionsForIssue**(`issue`: string, `options?`: any): *AxiosPromise‹[Resolutions](../interfaces/resolutions.md)›*
 
-*Defined in [api.ts:2085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2085)*
+*Defined in [api.ts:2730](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2730)*
 
 Provides information about resolutions available for the given issue
 
-*__summary__*: Resolution metadata
+**`summary`** Resolution metadata
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: ResolutionsApi
+**`memberof`** ResolutionsApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| issue | `string` |  Issue identifier (e.g. &#x60;advisor:CVE\_2017\_6074\_kernel\|KERNEL\_CVE\_2017\_6074&#x60;) |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`issue` | string | Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;) |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Resolutions](../interfaces/resolutions.md)>
+**Returns:** *AxiosPromise‹[Resolutions](../interfaces/resolutions.md)›*
 
 ___
-<a id="getresolutionsforissues"></a>
 
 ###  getResolutionsForIssues
 
-▸ **getResolutionsForIssues**(resolutionsBatchInput: *[ResolutionsBatchInput](../interfaces/resolutionsbatchinput.md)*, options?: *`any`*): `AxiosPromise`<`object`>
+▸ **getResolutionsForIssues**(`resolutionsBatchInput`: [ResolutionsBatchInput](../interfaces/resolutionsbatchinput.md), `options?`: any): *AxiosPromise‹object›*
 
-*Defined in [api.ts:2097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2097)*
+*Defined in [api.ts:2742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2742)*
 
 Provides information about resolutions available for the given issues
 
-*__summary__*: Resolution metadata (batch)
+**`summary`** Resolution metadata (batch)
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: ResolutionsApi
+**`memberof`** ResolutionsApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| resolutionsBatchInput | [ResolutionsBatchInput](../interfaces/resolutionsbatchinput.md) |  \- |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`resolutionsBatchInput` | [ResolutionsBatchInput](../interfaces/resolutionsbatchinput.md) |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<`object`>
-
-___
-
+**Returns:** *AxiosPromise‹object›*

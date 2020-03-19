@@ -1,194 +1,176 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [ContainerImage](../interfaces/containerimage.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [ContainerImage](containerimage.md)
 
 # Interface: ContainerImage
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ContainerImage
+**`interface`** ContainerImage
 
 ## Hierarchy
 
-**ContainerImage**
+* **ContainerImage**
 
 ## Index
 
 ### Properties
 
-* [archivedAt](containerimage.md#archivedat)
-* [createdAt](containerimage.md#createdat)
-* [id](containerimage.md#id)
-* [lastSeenAt](containerimage.md#lastseenat)
-* [name](containerimage.md#name)
-* [resourceVersion](containerimage.md#resourceversion)
-* [sourceCreatedAt](containerimage.md#sourcecreatedat)
-* [sourceDeletedAt](containerimage.md#sourcedeletedat)
-* [sourceId](containerimage.md#sourceid)
-* [sourceRef](containerimage.md#sourceref)
-* [tag](containerimage.md#tag)
-* [updatedAt](containerimage.md#updatedat)
-
----
+* [archivedAt](containerimage.md#optional-archivedat)
+* [createdAt](containerimage.md#optional-createdat)
+* [id](containerimage.md#optional-id)
+* [lastSeenAt](containerimage.md#optional-lastseenat)
+* [name](containerimage.md#optional-name)
+* [resourceVersion](containerimage.md#optional-resourceversion)
+* [sourceCreatedAt](containerimage.md#optional-sourcecreatedat)
+* [sourceDeletedAt](containerimage.md#optional-sourcedeletedat)
+* [sourceId](containerimage.md#optional-sourceid)
+* [sourceRef](containerimage.md#optional-sourceref)
+* [tag](containerimage.md#optional-tag)
+* [updatedAt](containerimage.md#optional-updatedat)
 
 ## Properties
 
-<a id="archivedat"></a>
+### `Optional` archivedAt
 
-### `<Optional>` archivedAt
-
-**● archivedAt**: *`Date`*
+• **archivedAt**? : *Date*
 
 *Defined in [api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L553)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ContainerImage
+**`memberof`** ContainerImage
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L559)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ContainerImage
+**`memberof`** ContainerImage
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L565)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ContainerImage
+**`memberof`** ContainerImage
 
 ___
-<a id="lastseenat"></a>
 
-### `<Optional>` lastSeenAt
+### `Optional` lastSeenAt
 
-**● lastSeenAt**: *`Date`*
+• **lastSeenAt**? : *Date*
 
 *Defined in [api.ts:571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L571)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ContainerImage
+**`memberof`** ContainerImage
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L577)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ContainerImage
+**`memberof`** ContainerImage
 
 ___
-<a id="resourceversion"></a>
 
-### `<Optional>` resourceVersion
+### `Optional` resourceVersion
 
-**● resourceVersion**: *`string`*
+• **resourceVersion**? : *string*
 
 *Defined in [api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L583)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ContainerImage
+**`memberof`** ContainerImage
 
 ___
-<a id="sourcecreatedat"></a>
 
-### `<Optional>` sourceCreatedAt
+### `Optional` sourceCreatedAt
 
-**● sourceCreatedAt**: *`Date`*
+• **sourceCreatedAt**? : *Date*
 
 *Defined in [api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L589)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ContainerImage
+**`memberof`** ContainerImage
 
 ___
-<a id="sourcedeletedat"></a>
 
-### `<Optional>` sourceDeletedAt
+### `Optional` sourceDeletedAt
 
-**● sourceDeletedAt**: *`Date`*
+• **sourceDeletedAt**? : *Date*
 
 *Defined in [api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L595)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ContainerImage
+**`memberof`** ContainerImage
 
 ___
-<a id="sourceid"></a>
 
-### `<Optional>` sourceId
+### `Optional` sourceId
 
-**● sourceId**: *`string`*
+• **sourceId**? : *string*
 
 *Defined in [api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L601)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ContainerImage
+**`memberof`** ContainerImage
 
 ___
-<a id="sourceref"></a>
 
-### `<Optional>` sourceRef
+### `Optional` sourceRef
 
-**● sourceRef**: *`string`*
+• **sourceRef**? : *string*
 
 *Defined in [api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L607)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ContainerImage
+**`memberof`** ContainerImage
 
 ___
-<a id="tag"></a>
 
-### `<Optional>` tag
+### `Optional` tag
 
-**● tag**: *`string`*
+• **tag**? : *string*
 
 *Defined in [api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L613)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ContainerImage
+**`memberof`** ContainerImage
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L619)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ContainerImage
-
-___
-
+**`memberof`** ContainerImage

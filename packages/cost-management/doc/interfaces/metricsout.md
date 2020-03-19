@@ -1,14 +1,14 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [MetricsOut](../interfaces/metricsout.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [MetricsOut](metricsout.md)
 
 # Interface: MetricsOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: MetricsOut
+**`interface`** MetricsOut
 
 ## Hierarchy
 
-**MetricsOut**
+* **MetricsOut**
 
 ## Index
 
@@ -20,73 +20,62 @@
 * [metric](metricsout.md#metric)
 * [sourceType](metricsout.md#sourcetype)
 
----
-
 ## Properties
-
-<a id="labelmeasurement"></a>
 
 ###  labelMeasurement
 
-**● labelMeasurement**: *`string`*
+• **labelMeasurement**: *string*
 
-*Defined in [api.ts:586](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L586)*
+*Defined in [api.ts:411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L411)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: MetricsOut
+**`memberof`** MetricsOut
 
 ___
-<a id="labelmeasurementunit"></a>
 
 ###  labelMeasurementUnit
 
-**● labelMeasurementUnit**: *`string`*
+• **labelMeasurementUnit**: *string*
 
-*Defined in [api.ts:592](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L592)*
+*Defined in [api.ts:417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L417)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: MetricsOut
+**`memberof`** MetricsOut
 
 ___
-<a id="labelmetric"></a>
 
 ###  labelMetric
 
-**● labelMetric**: *`string`*
+• **labelMetric**: *string*
 
-*Defined in [api.ts:580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L580)*
+*Defined in [api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L405)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: MetricsOut
+**`memberof`** MetricsOut
 
 ___
-<a id="metric"></a>
 
 ###  metric
 
-**● metric**: *`string`*
+• **metric**: *string*
 
-*Defined in [api.ts:574](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L574)*
+*Defined in [api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L399)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: MetricsOut
+**`memberof`** MetricsOut
 
 ___
-<a id="sourcetype"></a>
 
 ###  sourceType
 
-**● sourceType**: *`string`*
+• **sourceType**: *string*
 
-*Defined in [api.ts:568](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L568)*
+*Defined in [api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L393)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: MetricsOut
-
-___
-
+**`memberof`** MetricsOut

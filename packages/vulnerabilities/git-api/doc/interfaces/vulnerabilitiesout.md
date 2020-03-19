@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [VulnerabilitiesOut](../interfaces/vulnerabilitiesout.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [VulnerabilitiesOut](vulnerabilitiesout.md)
 
 # Interface: VulnerabilitiesOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: VulnerabilitiesOut
+**`interface`** VulnerabilitiesOut
 
 ## Hierarchy
 
-**VulnerabilitiesOut**
+* **VulnerabilitiesOut**
 
 ## Index
 
@@ -18,47 +18,38 @@
 * [links](vulnerabilitiesout.md#links)
 * [meta](vulnerabilitiesout.md#meta)
 
----
-
 ## Properties
-
-<a id="data"></a>
 
 ###  data
 
-**● data**: *`Object`*
-
-*Defined in [git-api/api.ts:1435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1435)*
-
-*__type__*: {Object}
-
-*__memberof__*: VulnerabilitiesOut
-
-___
-<a id="links"></a>
-
-###  links
-
-**● links**: *[Links](links.md)*
-
-*Defined in [git-api/api.ts:1441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1441)*
-
-*__type__*: {Links}
-
-*__memberof__*: VulnerabilitiesOut
-
-___
-<a id="meta"></a>
-
-###  meta
-
-**● meta**: *[MetaVulnerabilitiesOut](metavulnerabilitiesout.md)*
+• **data**: *Object*
 
 *Defined in [git-api/api.ts:1447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1447)*
 
-*__type__*: {MetaVulnerabilitiesOut}
+**`type`** {Object}
 
-*__memberof__*: VulnerabilitiesOut
+**`memberof`** VulnerabilitiesOut
 
 ___
 
+###  links
+
+• **links**: *[Links](links.md)*
+
+*Defined in [git-api/api.ts:1453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1453)*
+
+**`type`** {Links}
+
+**`memberof`** VulnerabilitiesOut
+
+___
+
+###  meta
+
+• **meta**: *[MetaVulnerabilitiesOut](metavulnerabilitiesout.md)*
+
+*Defined in [git-api/api.ts:1459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1459)*
+
+**`type`** {MetaVulnerabilitiesOut}
+
+**`memberof`** VulnerabilitiesOut

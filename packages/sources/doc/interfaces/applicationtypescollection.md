@@ -1,64 +1,55 @@
-[@redhat-cloud-services/sources-client](../README.md) > [ApplicationTypesCollection](../interfaces/applicationtypescollection.md)
+[@redhat-cloud-services/sources-client](../README.md) › [Globals](../globals.md) › [ApplicationTypesCollection](applicationtypescollection.md)
 
 # Interface: ApplicationTypesCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ApplicationTypesCollection
+**`interface`** ApplicationTypesCollection
 
 ## Hierarchy
 
-**ApplicationTypesCollection**
+* **ApplicationTypesCollection**
 
 ## Index
 
 ### Properties
 
-* [data](applicationtypescollection.md#data)
-* [links](applicationtypescollection.md#links)
-* [meta](applicationtypescollection.md#meta)
-
----
+* [data](applicationtypescollection.md#optional-data)
+* [links](applicationtypescollection.md#optional-links)
+* [meta](applicationtypescollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[ApplicationType](applicationtype.md)>*
+• **data**? : *Array‹[ApplicationType](applicationtype.md)›*
 
 *Defined in [api.ts:207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L207)*
 
-*__type__*: {Array}
+**`type`** {Array<ApplicationType>}
 
-*__memberof__*: ApplicationTypesCollection
+**`memberof`** ApplicationTypesCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L201)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: ApplicationTypesCollection
+**`memberof`** ApplicationTypesCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L195)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: ApplicationTypesCollection
-
-___
-
+**`memberof`** ApplicationTypesCollection

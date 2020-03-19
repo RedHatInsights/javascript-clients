@@ -1,64 +1,55 @@
-[@redhat-cloud-services/insights-client](../README.md) > [InlineResponse2003](../interfaces/inlineresponse2003.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [InlineResponse2003](inlineresponse2003.md)
 
 # Interface: InlineResponse2003
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: InlineResponse2003
+**`interface`** InlineResponse2003
 
 ## Hierarchy
 
-**InlineResponse2003**
+* **InlineResponse2003**
 
 ## Index
 
 ### Properties
 
 * [data](inlineresponse2003.md#data)
-* [links](inlineresponse2003.md#links)
-* [meta](inlineresponse2003.md#meta)
-
----
+* [links](inlineresponse2003.md#optional-links)
+* [meta](inlineresponse2003.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<[RuleRating](../modules/rulerating.md)>*
+• **data**: *Array‹[RuleRating](../modules/rulerating.md)›*
 
 *Defined in [api.ts:371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L371)*
 
-*__type__*: {Array}
+**`type`** {Array<RuleRating>}
 
-*__memberof__*: InlineResponse2003
+**`memberof`** InlineResponse2003
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[InlineResponse200Links](inlineresponse200links.md)*
+• **links**? : *[InlineResponse200Links](inlineresponse200links.md)*
 
 *Defined in [api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L365)*
 
-*__type__*: {InlineResponse200Links}
+**`type`** {InlineResponse200Links}
 
-*__memberof__*: InlineResponse2003
+**`memberof`** InlineResponse2003
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[InlineResponse200Meta](inlineresponse200meta.md)*
+• **meta**? : *[InlineResponse200Meta](inlineresponse200meta.md)*
 
 *Defined in [api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L359)*
 
-*__type__*: {InlineResponse200Meta}
+**`type`** {InlineResponse200Meta}
 
-*__memberof__*: InlineResponse2003
-
-___
-
+**`memberof`** InlineResponse2003

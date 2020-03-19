@@ -1,164 +1,148 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportOpenShiftAWSGrouping](../interfaces/reportopenshiftawsgrouping.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportOpenShiftAWSGrouping](reportopenshiftawsgrouping.md)
 
 # Interface: ReportOpenShiftAWSGrouping
 
-The grouping to apply to the report. No grouping by default. When grouping by account the account\_alias will be provided if avaiable.
+The grouping to apply to the report. No grouping by default. When grouping by account the account_alias will be provided if avaiable.
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportOpenShiftAWSGrouping
+**`interface`** ReportOpenShiftAWSGrouping
 
 ## Hierarchy
 
-**ReportOpenShiftAWSGrouping**
+* **ReportOpenShiftAWSGrouping**
 
 ## Index
 
 ### Properties
 
-* [account](reportopenshiftawsgrouping.md#account)
-* [az](reportopenshiftawsgrouping.md#az)
-* [cluster](reportopenshiftawsgrouping.md#cluster)
-* [instanceType](reportopenshiftawsgrouping.md#instancetype)
-* [node](reportopenshiftawsgrouping.md#node)
-* [project](reportopenshiftawsgrouping.md#project)
-* [region](reportopenshiftawsgrouping.md#region)
-* [service](reportopenshiftawsgrouping.md#service)
-* [storageType](reportopenshiftawsgrouping.md#storagetype)
-* [tag](reportopenshiftawsgrouping.md#tag)
-
----
+* [account](reportopenshiftawsgrouping.md#optional-account)
+* [az](reportopenshiftawsgrouping.md#optional-az)
+* [cluster](reportopenshiftawsgrouping.md#optional-cluster)
+* [instanceType](reportopenshiftawsgrouping.md#optional-instancetype)
+* [node](reportopenshiftawsgrouping.md#optional-node)
+* [project](reportopenshiftawsgrouping.md#optional-project)
+* [region](reportopenshiftawsgrouping.md#optional-region)
+* [service](reportopenshiftawsgrouping.md#optional-service)
+* [storageType](reportopenshiftawsgrouping.md#optional-storagetype)
+* [tag](reportopenshiftawsgrouping.md#optional-tag)
 
 ## Properties
 
-<a id="account"></a>
+### `Optional` account
 
-### `<Optional>` account
+• **account**? : *Array‹string›*
 
-**● account**: *`Array`<`string`>*
+*Defined in [api.ts:1498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1498)*
 
-*Defined in [api.ts:1673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1673)*
+**`type`** {Array<string>}
 
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAWSGrouping
-
-___
-<a id="az"></a>
-
-### `<Optional>` az
-
-**● az**: *`Array`<`string`>*
-
-*Defined in [api.ts:1691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1691)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAWSGrouping
-
-___
-<a id="cluster"></a>
-
-### `<Optional>` cluster
-
-**● cluster**: *`Array`<`string`>*
-
-*Defined in [api.ts:1715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1715)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAWSGrouping
-
-___
-<a id="instancetype"></a>
-
-### `<Optional>` instanceType
-
-**● instanceType**: *`Array`<`string`>*
-
-*Defined in [api.ts:1697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1697)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAWSGrouping
-
-___
-<a id="node"></a>
-
-### `<Optional>` node
-
-**● node**: *`Array`<`string`>*
-
-*Defined in [api.ts:1727](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1727)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAWSGrouping
-
-___
-<a id="project"></a>
-
-### `<Optional>` project
-
-**● project**: *`Array`<`string`>*
-
-*Defined in [api.ts:1721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1721)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAWSGrouping
-
-___
-<a id="region"></a>
-
-### `<Optional>` region
-
-**● region**: *`Array`<`string`>*
-
-*Defined in [api.ts:1685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1685)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAWSGrouping
-
-___
-<a id="service"></a>
-
-### `<Optional>` service
-
-**● service**: *`Array`<`string`>*
-
-*Defined in [api.ts:1679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1679)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAWSGrouping
-
-___
-<a id="storagetype"></a>
-
-### `<Optional>` storageType
-
-**● storageType**: *`Array`<`string`>*
-
-*Defined in [api.ts:1703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1703)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAWSGrouping
-
-___
-<a id="tag"></a>
-
-### `<Optional>` tag
-
-**● tag**: *`Array`<`string`>*
-
-*Defined in [api.ts:1709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1709)*
-
-*__type__*: {Array}
-
-*__memberof__*: ReportOpenShiftAWSGrouping
+**`memberof`** ReportOpenShiftAWSGrouping
 
 ___
 
+### `Optional` az
+
+• **az**? : *Array‹string›*
+
+*Defined in [api.ts:1516](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1516)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAWSGrouping
+
+___
+
+### `Optional` cluster
+
+• **cluster**? : *Array‹string›*
+
+*Defined in [api.ts:1540](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1540)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAWSGrouping
+
+___
+
+### `Optional` instanceType
+
+• **instanceType**? : *Array‹string›*
+
+*Defined in [api.ts:1522](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1522)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAWSGrouping
+
+___
+
+### `Optional` node
+
+• **node**? : *Array‹string›*
+
+*Defined in [api.ts:1552](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1552)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAWSGrouping
+
+___
+
+### `Optional` project
+
+• **project**? : *Array‹string›*
+
+*Defined in [api.ts:1546](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1546)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAWSGrouping
+
+___
+
+### `Optional` region
+
+• **region**? : *Array‹string›*
+
+*Defined in [api.ts:1510](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1510)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAWSGrouping
+
+___
+
+### `Optional` service
+
+• **service**? : *Array‹string›*
+
+*Defined in [api.ts:1504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1504)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAWSGrouping
+
+___
+
+### `Optional` storageType
+
+• **storageType**? : *Array‹string›*
+
+*Defined in [api.ts:1528](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1528)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAWSGrouping
+
+___
+
+### `Optional` tag
+
+• **tag**? : *Array‹string›*
+
+*Defined in [api.ts:1534](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1534)*
+
+**`type`** {Array<string>}
+
+**`memberof`** ReportOpenShiftAWSGrouping

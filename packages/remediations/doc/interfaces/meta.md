@@ -1,14 +1,14 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [Meta](../interfaces/meta.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [Meta](meta.md)
 
 # Interface: Meta
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Meta
+**`interface`** Meta
 
 ## Hierarchy
 
-**Meta**
+* **Meta**
 
 ## Index
 
@@ -17,38 +17,30 @@
 * [count](meta.md#count)
 * [total](meta.md#total)
 
----
-
 ## Properties
-
-<a id="count"></a>
 
 ###  count
 
-**● count**: *`number`*
+• **count**: *number*
 
 *Defined in [api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L143)*
 
 number of results returned
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="total"></a>
 
 ###  total
 
-**● total**: *`number`*
+• **total**: *number*
 
 *Defined in [api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L149)*
 
 total number of results matching the query
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Meta
-
-___
-
+**`memberof`** Meta

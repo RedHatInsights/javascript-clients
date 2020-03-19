@@ -1,12 +1,12 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportTimeScopeUnits](../enums/reporttimescopeunits.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportTimeScopeUnits](reporttimescopeunits.md)
 
 # Enumeration: ReportTimeScopeUnits
 
-The units to apply to the report. Default time\_scope\_units is day.
+The units to apply to the report. Default time_scope_units is day.
 
-*__export__*: 
+**`export`** 
 
-*__enum__*: {string}
+**`enum`** {string}
 
 ## Index
 
@@ -15,26 +15,18 @@ The units to apply to the report. Default time\_scope\_units is day.
 * [Day](reporttimescopeunits.md#day)
 * [Month](reporttimescopeunits.md#month)
 
----
-
 ## Enumeration members
-
-<a id="day"></a>
 
 ###  Day
 
-**Day**:  = "day"
+• **Day**: = "day"
 
-*Defined in [api.ts:2737](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2737)*
+*Defined in [api.ts:2562](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2562)*
 
 ___
-<a id="month"></a>
 
 ###  Month
 
-**Month**:  = "month"
+• **Month**: = "month"
 
-*Defined in [api.ts:2738](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2738)*
-
-___
-
+*Defined in [api.ts:2563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2563)*

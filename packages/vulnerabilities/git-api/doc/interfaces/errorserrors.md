@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [ErrorsErrors](../interfaces/errorserrors.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [ErrorsErrors](errorserrors.md)
 
 # Interface: ErrorsErrors
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ErrorsErrors
+**`interface`** ErrorsErrors
 
 ## Hierarchy
 
-**ErrorsErrors**
+* **ErrorsErrors**
 
 ## Index
 
@@ -17,38 +17,30 @@
 * [detail](errorserrors.md#detail)
 * [status](errorserrors.md#status)
 
----
-
 ## Properties
-
-<a id="detail"></a>
 
 ###  detail
 
-**● detail**: *`string`*
-
-*Defined in [git-api/api.ts:413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L413)*
-
-Error detail.
-
-*__type__*: {string}
-
-*__memberof__*: ErrorsErrors
-
-___
-<a id="status"></a>
-
-###  status
-
-**● status**: *`string`*
+• **detail**: *string*
 
 *Defined in [git-api/api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L419)*
 
-String representation of HTTP status code.
+Error detail.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ErrorsErrors
+**`memberof`** ErrorsErrors
 
 ___
 
+###  status
+
+• **status**: *string*
+
+*Defined in [git-api/api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L425)*
+
+String representation of HTTP status code.
+
+**`type`** {string}
+
+**`memberof`** ErrorsErrors

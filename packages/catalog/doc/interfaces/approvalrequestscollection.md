@@ -1,64 +1,55 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [ApprovalRequestsCollection](../interfaces/approvalrequestscollection.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [ApprovalRequestsCollection](approvalrequestscollection.md)
 
 # Interface: ApprovalRequestsCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ApprovalRequestsCollection
+**`interface`** ApprovalRequestsCollection
 
 ## Hierarchy
 
-**ApprovalRequestsCollection**
+* **ApprovalRequestsCollection**
 
 ## Index
 
 ### Properties
 
-* [data](approvalrequestscollection.md#data)
-* [links](approvalrequestscollection.md#links)
-* [meta](approvalrequestscollection.md#meta)
-
----
+* [data](approvalrequestscollection.md#optional-data)
+* [links](approvalrequestscollection.md#optional-links)
+* [meta](approvalrequestscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[ApprovalRequest](../modules/approvalrequest.md)>*
+• **data**? : *Array‹[ApprovalRequest](../modules/approvalrequest.md)›*
 
 *Defined in [api.ts:156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L156)*
 
-*__type__*: {Array}
+**`type`** {Array<ApprovalRequest>}
 
-*__memberof__*: ApprovalRequestsCollection
+**`memberof`** ApprovalRequestsCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L150)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: ApprovalRequestsCollection
+**`memberof`** ApprovalRequestsCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L144)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: ApprovalRequestsCollection
-
-___
-
+**`memberof`** ApprovalRequestsCollection

@@ -1,64 +1,55 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [StructuredTag](../interfaces/structuredtag.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [StructuredTag](structuredtag.md)
 
 # Interface: StructuredTag
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: StructuredTag
+**`interface`** StructuredTag
 
 ## Hierarchy
 
-**StructuredTag**
+* **StructuredTag**
 
 ## Index
 
 ### Properties
 
-* [key](structuredtag.md#key)
-* [namespace](structuredtag.md#namespace)
-* [value](structuredtag.md#value)
-
----
+* [key](structuredtag.md#optional-key)
+* [namespace](structuredtag.md#optional-namespace)
+* [value](structuredtag.md#optional-value)
 
 ## Properties
 
-<a id="key"></a>
+### `Optional` key
 
-### `<Optional>` key
-
-**● key**: *`string`*
+• **key**? : *string*
 
 *Defined in [api.ts:835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L835)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: StructuredTag
+**`memberof`** StructuredTag
 
 ___
-<a id="namespace"></a>
 
-### `<Optional>` namespace
+### `Optional` namespace
 
-**● namespace**: *`string` \| `null`*
+• **namespace**? : *string | null*
 
 *Defined in [api.ts:829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L829)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: StructuredTag
+**`memberof`** StructuredTag
 
 ___
-<a id="value"></a>
 
-### `<Optional>` value
+### `Optional` value
 
-**● value**: *`string` \| `null`*
+• **value**? : *string | null*
 
 *Defined in [api.ts:841](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L841)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: StructuredTag
-
-___
-
+**`memberof`** StructuredTag

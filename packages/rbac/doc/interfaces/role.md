@@ -1,50 +1,42 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [Role](../interfaces/role.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [Role](role.md)
 
 # Interface: Role
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Role
+**`interface`** Role
 
 ## Hierarchy
 
-**Role**
+* **Role**
 
 ## Index
 
 ### Properties
 
-* [description](role.md#description)
+* [description](role.md#optional-description)
 * [name](role.md#name)
-
----
 
 ## Properties
 
-<a id="description"></a>
+### `Optional` description
 
-### `<Optional>` description
+• **description**? : *string*
 
-**● description**: *`string`*
+*Defined in [api.ts:812](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L812)*
 
-*Defined in [api.ts:806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L806)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: Role
+**`memberof`** Role
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Defined in [api.ts:800](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L800)*
+*Defined in [api.ts:806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L806)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Role
-
-___
-
+**`memberof`** Role

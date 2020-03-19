@@ -1,64 +1,55 @@
-[@redhat-cloud-services/insights-client](../README.md) > [SystemType](../interfaces/systemtype.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [SystemType](systemtype.md)
 
 # Interface: SystemType
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SystemType
+**`interface`** SystemType
 
 ## Hierarchy
 
-**SystemType**
+* **SystemType**
 
 ## Index
 
 ### Properties
 
-* [id](systemtype.md#id)
+* [id](systemtype.md#optional-id)
 * [productCode](systemtype.md#productcode)
 * [role](systemtype.md#role)
 
----
-
 ## Properties
 
-<a id="id"></a>
+### `Optional` id
 
-### `<Optional>` id
+• **id**? : *number*
 
-**● id**: *`number`*
+*Defined in [api.ts:1211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1211)*
 
-*Defined in [api.ts:1185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1185)*
+**`type`** {number}
 
-*__type__*: {number}
-
-*__memberof__*: SystemType
+**`memberof`** SystemType
 
 ___
-<a id="productcode"></a>
 
 ###  productCode
 
-**● productCode**: *`string`*
+• **productCode**: *string*
 
-*Defined in [api.ts:1197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1197)*
+*Defined in [api.ts:1223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1223)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemType
+**`memberof`** SystemType
 
 ___
-<a id="role"></a>
 
 ###  role
 
-**● role**: *`string`*
+• **role**: *string*
 
-*Defined in [api.ts:1191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1191)*
+*Defined in [api.ts:1217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1217)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemType
-
-___
-
+**`memberof`** SystemType

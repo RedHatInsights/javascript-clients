@@ -1,78 +1,48 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [InlineResponse2004DataRelationships](../interfaces/inlineresponse2004datarelationships.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [InlineResponse2004DataRelationships](inlineresponse2004datarelationships.md)
 
 # Interface: InlineResponse2004DataRelationships
 
-*__export__*: 
-
-*__interface__*: InlineResponse2004DataRelationships
-
 ## Hierarchy
 
-**InlineResponse2004DataRelationships**
+* **InlineResponse2004DataRelationships**
 
 ## Index
 
 ### Properties
 
-* [apps](inlineresponse2004datarelationships.md#apps)
-* [endpoint](inlineresponse2004datarelationships.md#endpoint)
-* [eventTypes](inlineresponse2004datarelationships.md#eventtypes)
-* [levels](inlineresponse2004datarelationships.md#levels)
-
----
+* [apps](inlineresponse2004datarelationships.md#optional-apps)
+* [endpoint](inlineresponse2004datarelationships.md#optional-endpoint)
+* [eventTypes](inlineresponse2004datarelationships.md#optional-eventtypes)
+* [levels](inlineresponse2004datarelationships.md#optional-levels)
 
 ## Properties
 
-<a id="apps"></a>
+### `Optional` apps
 
-### `<Optional>` apps
-
-**● apps**: *[Relationships](relationships.md)*
+• **apps**? : *[Relationships](relationships.md)*
 
 *Defined in [api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L816)*
 
-*__type__*: {Relationships}
-
-*__memberof__*: InlineResponse2004DataRelationships
-
 ___
-<a id="endpoint"></a>
 
-### `<Optional>` endpoint
+### `Optional` endpoint
 
-**● endpoint**: *[Relationship](relationship.md)*
+• **endpoint**? : *[Relationship](relationship.md)*
 
 *Defined in [api.ts:834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L834)*
 
-*__type__*: {Relationship}
-
-*__memberof__*: InlineResponse2004DataRelationships
-
 ___
-<a id="eventtypes"></a>
 
-### `<Optional>` eventTypes
+### `Optional` eventTypes
 
-**● eventTypes**: *[Relationships](relationships.md)*
+• **eventTypes**? : *[Relationships](relationships.md)*
 
 *Defined in [api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L822)*
 
-*__type__*: {Relationships}
-
-*__memberof__*: InlineResponse2004DataRelationships
-
 ___
-<a id="levels"></a>
 
-### `<Optional>` levels
+### `Optional` levels
 
-**● levels**: *[Relationships](relationships.md)*
+• **levels**? : *[Relationships](relationships.md)*
 
 *Defined in [api.ts:828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L828)*
-
-*__type__*: {Relationships}
-
-*__memberof__*: InlineResponse2004DataRelationships
-
-___
-

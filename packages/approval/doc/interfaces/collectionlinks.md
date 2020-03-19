@@ -1,86 +1,76 @@
-[@redhat-cloud-services/approval-client](../README.md) > [CollectionLinks](../interfaces/collectionlinks.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [CollectionLinks](collectionlinks.md)
 
 # Interface: CollectionLinks
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CollectionLinks
+**`interface`** CollectionLinks
 
 ## Hierarchy
 
-**CollectionLinks**
+* **CollectionLinks**
 
 ## Index
 
 ### Properties
 
-* [first](collectionlinks.md#first)
-* [last](collectionlinks.md#last)
-* [next](collectionlinks.md#next)
-* [prev](collectionlinks.md#prev)
-
----
+* [first](collectionlinks.md#optional-first)
+* [last](collectionlinks.md#optional-last)
+* [next](collectionlinks.md#optional-next)
+* [prev](collectionlinks.md#optional-prev)
 
 ## Properties
 
-<a id="first"></a>
+### `Optional` first
 
-### `<Optional>` first
+• **first**? : *string*
 
-**● first**: *`string`*
-
-*Defined in [api.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L174)*
+*Defined in [api.ts:173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L173)*
 
 The link to fetch the first group of items in the result set
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CollectionLinks
+**`memberof`** CollectionLinks
 
 ___
-<a id="last"></a>
 
-### `<Optional>` last
+### `Optional` last
 
-**● last**: *`string`*
+• **last**? : *string*
 
-*Defined in [api.ts:180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L180)*
+*Defined in [api.ts:179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L179)*
 
 The link to fetch the last group of items in the result set
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CollectionLinks
+**`memberof`** CollectionLinks
 
 ___
-<a id="next"></a>
 
-### `<Optional>` next
+### `Optional` next
 
-**● next**: *`string`*
+• **next**? : *string*
 
-*Defined in [api.ts:192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L192)*
+*Defined in [api.ts:191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L191)*
 
 The link to fetch the next group of items in the result set
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CollectionLinks
+**`memberof`** CollectionLinks
 
 ___
-<a id="prev"></a>
 
-### `<Optional>` prev
+### `Optional` prev
 
-**● prev**: *`string`*
+• **prev**? : *string*
 
-*Defined in [api.ts:186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L186)*
+*Defined in [api.ts:185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L185)*
 
 The link to fetch the previous group of items in the result set
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CollectionLinks
-
-___
-
+**`memberof`** CollectionLinks

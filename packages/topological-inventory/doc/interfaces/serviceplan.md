@@ -1,286 +1,262 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [ServicePlan](../interfaces/serviceplan.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [ServicePlan](serviceplan.md)
 
 # Interface: ServicePlan
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ServicePlan
+**`interface`** ServicePlan
 
 ## Hierarchy
 
-**ServicePlan**
+* **ServicePlan**
 
 ## Index
 
 ### Properties
 
-* [archivedAt](serviceplan.md#archivedat)
-* [createJsonSchema](serviceplan.md#createjsonschema)
-* [createdAt](serviceplan.md#createdat)
-* [description](serviceplan.md#description)
-* [extra](serviceplan.md#extra)
-* [id](serviceplan.md#id)
-* [lastSeenAt](serviceplan.md#lastseenat)
-* [name](serviceplan.md#name)
-* [resourceVersion](serviceplan.md#resourceversion)
-* [serviceOfferingId](serviceplan.md#serviceofferingid)
-* [sourceCreatedAt](serviceplan.md#sourcecreatedat)
-* [sourceDeletedAt](serviceplan.md#sourcedeletedat)
-* [sourceId](serviceplan.md#sourceid)
-* [sourceRef](serviceplan.md#sourceref)
-* [sourceRegionId](serviceplan.md#sourceregionid)
-* [subscriptionId](serviceplan.md#subscriptionid)
-* [updateJsonSchema](serviceplan.md#updatejsonschema)
-* [updatedAt](serviceplan.md#updatedat)
-
----
+* [archivedAt](serviceplan.md#optional-archivedat)
+* [createJsonSchema](serviceplan.md#optional-createjsonschema)
+* [createdAt](serviceplan.md#optional-createdat)
+* [description](serviceplan.md#optional-description)
+* [extra](serviceplan.md#optional-extra)
+* [id](serviceplan.md#optional-id)
+* [lastSeenAt](serviceplan.md#optional-lastseenat)
+* [name](serviceplan.md#optional-name)
+* [resourceVersion](serviceplan.md#optional-resourceversion)
+* [serviceOfferingId](serviceplan.md#optional-serviceofferingid)
+* [sourceCreatedAt](serviceplan.md#optional-sourcecreatedat)
+* [sourceDeletedAt](serviceplan.md#optional-sourcedeletedat)
+* [sourceId](serviceplan.md#optional-sourceid)
+* [sourceRef](serviceplan.md#optional-sourceref)
+* [sourceRegionId](serviceplan.md#optional-sourceregionid)
+* [subscriptionId](serviceplan.md#optional-subscriptionid)
+* [updateJsonSchema](serviceplan.md#optional-updatejsonschema)
+* [updatedAt](serviceplan.md#optional-updatedat)
 
 ## Properties
 
-<a id="archivedat"></a>
+### `Optional` archivedAt
 
-### `<Optional>` archivedAt
-
-**● archivedAt**: *`Date`*
+• **archivedAt**? : *Date*
 
 *Defined in [api.ts:3075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3075)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="createjsonschema"></a>
 
-### `<Optional>` createJsonSchema
+### `Optional` createJsonSchema
 
-**● createJsonSchema**: *`any`*
+• **createJsonSchema**? : *any*
 
 *Defined in [api.ts:3081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3081)*
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:3087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3087)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="description"></a>
 
-### `<Optional>` description
+### `Optional` description
 
-**● description**: *`string`*
+• **description**? : *string*
 
 *Defined in [api.ts:3093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3093)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="extra"></a>
 
-### `<Optional>` extra
+### `Optional` extra
 
-**● extra**: *`any`*
+• **extra**? : *any*
 
 *Defined in [api.ts:3099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3099)*
 
 Extra information about this object in JSON format
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:3105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3105)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="lastseenat"></a>
 
-### `<Optional>` lastSeenAt
+### `Optional` lastSeenAt
 
-**● lastSeenAt**: *`Date`*
+• **lastSeenAt**? : *Date*
 
 *Defined in [api.ts:3111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3111)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:3117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3117)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="resourceversion"></a>
 
-### `<Optional>` resourceVersion
+### `Optional` resourceVersion
 
-**● resourceVersion**: *`string`*
+• **resourceVersion**? : *string*
 
 *Defined in [api.ts:3123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3123)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="serviceofferingid"></a>
 
-### `<Optional>` serviceOfferingId
+### `Optional` serviceOfferingId
 
-**● serviceOfferingId**: *`string`*
+• **serviceOfferingId**? : *string*
 
 *Defined in [api.ts:3129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3129)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="sourcecreatedat"></a>
 
-### `<Optional>` sourceCreatedAt
+### `Optional` sourceCreatedAt
 
-**● sourceCreatedAt**: *`Date`*
+• **sourceCreatedAt**? : *Date*
 
 *Defined in [api.ts:3135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3135)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="sourcedeletedat"></a>
 
-### `<Optional>` sourceDeletedAt
+### `Optional` sourceDeletedAt
 
-**● sourceDeletedAt**: *`Date`*
+• **sourceDeletedAt**? : *Date*
 
 *Defined in [api.ts:3141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3141)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="sourceid"></a>
 
-### `<Optional>` sourceId
+### `Optional` sourceId
 
-**● sourceId**: *`string`*
+• **sourceId**? : *string*
 
 *Defined in [api.ts:3147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3147)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="sourceref"></a>
 
-### `<Optional>` sourceRef
+### `Optional` sourceRef
 
-**● sourceRef**: *`string`*
+• **sourceRef**? : *string*
 
 *Defined in [api.ts:3153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3153)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="sourceregionid"></a>
 
-### `<Optional>` sourceRegionId
+### `Optional` sourceRegionId
 
-**● sourceRegionId**: *`string`*
+• **sourceRegionId**? : *string*
 
 *Defined in [api.ts:3159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3159)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="subscriptionid"></a>
 
-### `<Optional>` subscriptionId
+### `Optional` subscriptionId
 
-**● subscriptionId**: *`string`*
+• **subscriptionId**? : *string*
 
 *Defined in [api.ts:3165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3165)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="updatejsonschema"></a>
 
-### `<Optional>` updateJsonSchema
+### `Optional` updateJsonSchema
 
-**● updateJsonSchema**: *`string`*
+• **updateJsonSchema**? : *string*
 
 *Defined in [api.ts:3171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3171)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServicePlan
+**`memberof`** ServicePlan
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:3177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3177)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServicePlan
-
-___
-
+**`memberof`** ServicePlan

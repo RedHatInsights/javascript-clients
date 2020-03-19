@@ -1,54 +1,46 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [CopyPortfolioItem](../interfaces/copyportfolioitem.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [CopyPortfolioItem](copyportfolioitem.md)
 
 # Interface: CopyPortfolioItem
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CopyPortfolioItem
+**`interface`** CopyPortfolioItem
 
 ## Hierarchy
 
-**CopyPortfolioItem**
+* **CopyPortfolioItem**
 
 ## Index
 
 ### Properties
 
-* [portfolioId](copyportfolioitem.md#portfolioid)
-* [portfolioItemName](copyportfolioitem.md#portfolioitemname)
-
----
+* [portfolioId](copyportfolioitem.md#optional-portfolioid)
+* [portfolioItemName](copyportfolioitem.md#optional-portfolioitemname)
 
 ## Properties
 
-<a id="portfolioid"></a>
+### `Optional` portfolioId
 
-### `<Optional>` portfolioId
-
-**● portfolioId**: *`string`*
+• **portfolioId**? : *string*
 
 *Defined in [api.ts:216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L216)*
 
 The portfolio to place the new copy of the Portfolio Item in
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CopyPortfolioItem
+**`memberof`** CopyPortfolioItem
 
 ___
-<a id="portfolioitemname"></a>
 
-### `<Optional>` portfolioItemName
+### `Optional` portfolioItemName
 
-**● portfolioItemName**: *`string`*
+• **portfolioItemName**? : *string*
 
 *Defined in [api.ts:222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L222)*
 
 The name of the copied portfolio item
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CopyPortfolioItem
-
-___
-
+**`memberof`** CopyPortfolioItem

@@ -1,10 +1,10 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportOpenShiftAzureOrdering](../modules/reportopenshiftazureordering.md) > [ProjectEnum](../enums/reportopenshiftazureordering.projectenum.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportOpenShiftAzureOrdering](../modules/reportopenshiftazureordering.md) › [ProjectEnum](reportopenshiftazureordering.projectenum.md)
 
 # Enumeration: ProjectEnum
 
-*__export__*: 
+**`export`** 
 
-*__enum__*: {string}
+**`enum`** {string}
 
 ## Index
 
@@ -13,26 +13,18 @@
 * [Asc](reportopenshiftazureordering.projectenum.md#asc)
 * [Desc](reportopenshiftazureordering.projectenum.md#desc)
 
----
-
 ## Enumeration members
-
-<a id="asc"></a>
 
 ###  Asc
 
-**Asc**:  = "asc"
+• **Asc**: = "asc"
 
-*Defined in [api.ts:2293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2293)*
+*Defined in [api.ts:2118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2118)*
 
 ___
-<a id="desc"></a>
 
 ###  Desc
 
-**Desc**:  = "desc"
+• **Desc**: = "desc"
 
-*Defined in [api.ts:2294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2294)*
-
-___
-
+*Defined in [api.ts:2119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2119)*

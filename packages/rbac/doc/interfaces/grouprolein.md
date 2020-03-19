@@ -1,14 +1,14 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [GroupRoleIn](../interfaces/grouprolein.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [GroupRoleIn](grouprolein.md)
 
 # Interface: GroupRoleIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: GroupRoleIn
+**`interface`** GroupRoleIn
 
 ## Hierarchy
 
-**GroupRoleIn**
+* **GroupRoleIn**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [roles](grouprolein.md#roles)
 
----
-
 ## Properties
-
-<a id="roles"></a>
 
 ###  roles
 
-**● roles**: *`Array`<`string`>*
+• **roles**: *Array‹string›*
 
-*Defined in [api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L265)*
+*Defined in [api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L285)*
 
-*__type__*: {Array}
+**`type`** {Array<string>}
 
-*__memberof__*: GroupRoleIn
-
-___
-
+**`memberof`** GroupRoleIn

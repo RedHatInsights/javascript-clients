@@ -1,14 +1,14 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [RemediationConnectionStatus](../interfaces/remediationconnectionstatus.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [RemediationConnectionStatus](remediationconnectionstatus.md)
 
 # Interface: RemediationConnectionStatus
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RemediationConnectionStatus
+**`interface`** RemediationConnectionStatus
 
 ## Hierarchy
 
-**RemediationConnectionStatus**
+* **RemediationConnectionStatus**
 
 ## Index
 
@@ -17,34 +17,26 @@
 * [data](remediationconnectionstatus.md#data)
 * [meta](remediationconnectionstatus.md#meta)
 
----
-
 ## Properties
-
-<a id="data"></a>
 
 ###  data
 
-**● data**: *`Array`<[PlaybookExecutorStatus](../modules/playbookexecutorstatus.md)>*
+• **data**: *Array‹[PlaybookExecutorStatus](../modules/playbookexecutorstatus.md)›*
 
-*Defined in [api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L271)*
+*Defined in [api.ts:596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L596)*
 
-*__type__*: {Array}
+**`type`** {Array<PlaybookExecutorStatus>}
 
-*__memberof__*: RemediationConnectionStatus
+**`memberof`** RemediationConnectionStatus
 
 ___
-<a id="meta"></a>
 
 ###  meta
 
-**● meta**: *[Meta](meta.md)*
+• **meta**: *[Meta](meta.md)*
 
-*Defined in [api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L265)*
+*Defined in [api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L590)*
 
-*__type__*: {Meta}
+**`type`** {Meta}
 
-*__memberof__*: RemediationConnectionStatus
-
-___
-
+**`memberof`** RemediationConnectionStatus

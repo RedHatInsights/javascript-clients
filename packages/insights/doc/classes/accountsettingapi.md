@@ -1,20 +1,20 @@
-[@redhat-cloud-services/insights-client](../README.md) > [AccountSettingApi](../classes/accountsettingapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [AccountSettingApi](accountsettingapi.md)
 
 # Class: AccountSettingApi
 
 AccountSettingApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: AccountSettingApi
+**`class`** AccountSettingApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ AccountSettingApi**
+  ↳ **AccountSettingApi**
 
 ## Index
 
@@ -24,24 +24,20 @@ AccountSettingApi - object-oriented interface
 
 ### Properties
 
-* [axios](accountsettingapi.md#axios)
-* [basePath](accountsettingapi.md#basepath)
-* [configuration](accountsettingapi.md#configuration)
+* [axios](accountsettingapi.md#protected-axios)
+* [basePath](accountsettingapi.md#protected-basepath)
+* [configuration](accountsettingapi.md#protected-configuration)
 
 ### Methods
 
 * [accountSettingCreate](accountsettingapi.md#accountsettingcreate)
 * [accountSettingList](accountsettingapi.md#accountsettinglist)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new AccountSettingApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [AccountSettingApi](accountsettingapi.md)
+\+ **new AccountSettingApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[AccountSettingApi](accountsettingapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -49,99 +45,89 @@ AccountSettingApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [AccountSettingApi](accountsettingapi.md)
-
-___
+**Returns:** *[AccountSettingApi](accountsettingapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="accountsettingcreate"></a>
 
 ###  accountSettingCreate
 
-▸ **accountSettingCreate**(accountSetting: *[AccountSetting](../interfaces/accountsetting.md)*, options?: *`any`*): `AxiosPromise`<[AccountSetting](../interfaces/accountsetting.md)>
+▸ **accountSettingCreate**(`accountSetting`: [AccountSetting](../interfaces/accountsetting.md), `options?`: any): *AxiosPromise‹[AccountSetting](../interfaces/accountsetting.md)›*
 
-*Defined in [api.ts:1437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1437)*
+*Defined in [api.ts:1470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1470)*
 
-Update this account's settings, and return the updated settings.
+A new object will be created, even if the default settings are supplied.
 
-*__throws__*: {RequiredError}
+**`summary`** Update this account's settings, and return the updated settings.
 
-*__memberof__*: AccountSettingApi
+**`throws`** {RequiredError}
+
+**`memberof`** AccountSettingApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| accountSetting | [AccountSetting](../interfaces/accountsetting.md) |  \- |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`accountSetting` | [AccountSetting](../interfaces/accountsetting.md) |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[AccountSetting](../interfaces/accountsetting.md)>
+**Returns:** *AxiosPromise‹[AccountSetting](../interfaces/accountsetting.md)›*
 
 ___
-<a id="accountsettinglist"></a>
 
 ###  accountSettingList
 
-▸ **accountSettingList**(options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **accountSettingList**(`options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:1447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1447)*
+*Defined in [api.ts:1481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1481)*
 
-Show this account's settings, or the defaults.
+This will not create a new account settings object if none exists.
 
-*__throws__*: {RequiredError}
+**`summary`** Show this account's settings, or the defaults.
 
-*__memberof__*: AccountSettingApi
+**`throws`** {RequiredError}
+
+**`memberof`** AccountSettingApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<`Response`>
-
-___
-
+**Returns:** *AxiosPromise‹Response›*

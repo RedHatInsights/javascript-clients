@@ -1,64 +1,55 @@
-[@redhat-cloud-services/approval-client](../README.md) > [ActionCollection](../interfaces/actioncollection.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [ActionCollection](actioncollection.md)
 
 # Interface: ActionCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ActionCollection
+**`interface`** ActionCollection
 
 ## Hierarchy
 
-**ActionCollection**
+* **ActionCollection**
 
 ## Index
 
 ### Properties
 
-* [data](actioncollection.md#data)
-* [links](actioncollection.md#links)
-* [meta](actioncollection.md#meta)
-
----
+* [data](actioncollection.md#optional-data)
+* [links](actioncollection.md#optional-links)
+* [meta](actioncollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
+• **data**? : *Array‹[Action](../modules/action.md)›*
 
-**● data**: *`Array`<[Action](../modules/action.md)>*
+*Defined in [api.ts:159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L159)*
 
-*Defined in [api.ts:160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L160)*
+**`type`** {Array<Action>}
 
-*__type__*: {Array}
-
-*__memberof__*: ActionCollection
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[CollectionLinks](collectionlinks.md)*
-
-*Defined in [api.ts:154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L154)*
-
-*__type__*: {CollectionLinks}
-
-*__memberof__*: ActionCollection
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
-
-*Defined in [api.ts:148](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L148)*
-
-*__type__*: {CollectionMetadata}
-
-*__memberof__*: ActionCollection
+**`memberof`** ActionCollection
 
 ___
 
+### `Optional` links
+
+• **links**? : *[CollectionLinks](collectionlinks.md)*
+
+*Defined in [api.ts:153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L153)*
+
+**`type`** {CollectionLinks}
+
+**`memberof`** ActionCollection
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
+
+*Defined in [api.ts:147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L147)*
+
+**`type`** {CollectionMetadata}
+
+**`memberof`** ActionCollection

@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [VulnerabilitiesOut](../interfaces/vulnerabilitiesout.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [VulnerabilitiesOut](vulnerabilitiesout.md)
 
 # Interface: VulnerabilitiesOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: VulnerabilitiesOut
+**`interface`** VulnerabilitiesOut
 
 ## Hierarchy
 
-**VulnerabilitiesOut**
+* **VulnerabilitiesOut**
 
 ## Index
 
@@ -18,47 +18,38 @@
 * [links](vulnerabilitiesout.md#links)
 * [meta](vulnerabilitiesout.md#meta)
 
----
-
 ## Properties
-
-<a id="data"></a>
 
 ###  data
 
-**● data**: *`Object`*
+• **data**: *Object*
 
-*Defined in [api.ts:1375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1375)*
+*Defined in [api.ts:1435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1435)*
 
-*__type__*: {Object}
+**`type`** {Object}
 
-*__memberof__*: VulnerabilitiesOut
+**`memberof`** VulnerabilitiesOut
 
 ___
-<a id="links"></a>
 
 ###  links
 
-**● links**: *[Links](links.md)*
+• **links**: *[Links](links.md)*
 
-*Defined in [api.ts:1381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1381)*
+*Defined in [api.ts:1441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1441)*
 
-*__type__*: {Links}
+**`type`** {Links}
 
-*__memberof__*: VulnerabilitiesOut
+**`memberof`** VulnerabilitiesOut
 
 ___
-<a id="meta"></a>
 
 ###  meta
 
-**● meta**: *[MetaVulnerabilitiesOut](metavulnerabilitiesout.md)*
+• **meta**: *[MetaVulnerabilitiesOut](metavulnerabilitiesout.md)*
 
-*Defined in [api.ts:1387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1387)*
+*Defined in [api.ts:1447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1447)*
 
-*__type__*: {MetaVulnerabilitiesOut}
+**`type`** {MetaVulnerabilitiesOut}
 
-*__memberof__*: VulnerabilitiesOut
-
-___
-
+**`memberof`** VulnerabilitiesOut

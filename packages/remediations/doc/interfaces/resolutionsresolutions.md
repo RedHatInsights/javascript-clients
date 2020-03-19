@@ -1,14 +1,14 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [ResolutionsResolutions](../interfaces/resolutionsresolutions.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [ResolutionsResolutions](resolutionsresolutions.md)
 
 # Interface: ResolutionsResolutions
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ResolutionsResolutions
+**`interface`** ResolutionsResolutions
 
 ## Hierarchy
 
-**ResolutionsResolutions**
+* **ResolutionsResolutions**
 
 ## Index
 
@@ -19,62 +19,52 @@
 * [needsReboot](resolutionsresolutions.md#needsreboot)
 * [resolutionRisk](resolutionsresolutions.md#resolutionrisk)
 
----
-
 ## Properties
-
-<a id="description"></a>
 
 ###  description
 
-**● description**: *`string`*
+• **description**: *string*
 
-*Defined in [api.ts:748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L748)*
+*Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1073)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ResolutionsResolutions
+**`memberof`** ResolutionsResolutions
 
 ___
-<a id="id"></a>
 
 ###  id
 
-**● id**: *`string`*
+• **id**: *string*
 
-*Defined in [api.ts:742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L742)*
+*Defined in [api.ts:1067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1067)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ResolutionsResolutions
+**`memberof`** ResolutionsResolutions
 
 ___
-<a id="needsreboot"></a>
 
 ###  needsReboot
 
-**● needsReboot**: *`boolean`*
+• **needsReboot**: *boolean*
 
-*Defined in [api.ts:754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L754)*
+*Defined in [api.ts:1079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1079)*
 
 Indicates whether the given resolution involves system reboot
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: ResolutionsResolutions
+**`memberof`** ResolutionsResolutions
 
 ___
-<a id="resolutionrisk"></a>
 
 ###  resolutionRisk
 
-**● resolutionRisk**: *[ResolutionRisk](../enums/resolutionrisk.md)*
+• **resolutionRisk**: *[ResolutionRisk](../enums/resolutionrisk.md)*
 
-*Defined in [api.ts:760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L760)*
+*Defined in [api.ts:1085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1085)*
 
-*__type__*: {ResolutionRisk}
+**`type`** {ResolutionRisk}
 
-*__memberof__*: ResolutionsResolutions
-
-___
-
+**`memberof`** ResolutionsResolutions

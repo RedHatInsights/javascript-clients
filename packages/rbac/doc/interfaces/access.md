@@ -1,14 +1,14 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [Access](../interfaces/access.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [Access](access.md)
 
 # Interface: Access
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Access
+**`interface`** Access
 
 ## Hierarchy
 
-**Access**
+* **Access**
 
 ## Index
 
@@ -17,34 +17,26 @@
 * [permission](access.md#permission)
 * [resourceDefinitions](access.md#resourcedefinitions)
 
----
-
 ## Properties
-
-<a id="permission"></a>
 
 ###  permission
 
-**● permission**: *`string`*
+• **permission**: *string*
 
 *Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L83)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Access
+**`memberof`** Access
 
 ___
-<a id="resourcedefinitions"></a>
 
 ###  resourceDefinitions
 
-**● resourceDefinitions**: *`Array`<[ResourceDefinition](resourcedefinition.md)>*
+• **resourceDefinitions**: *Array‹[ResourceDefinition](resourcedefinition.md)›*
 
 *Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L89)*
 
-*__type__*: {Array}
+**`type`** {Array<ResourceDefinition>}
 
-*__memberof__*: Access
-
-___
-
+**`memberof`** Access

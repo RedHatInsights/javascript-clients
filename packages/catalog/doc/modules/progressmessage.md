@@ -1,10 +1,10 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [ProgressMessage](../modules/progressmessage.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [ProgressMessage](progressmessage.md)
 
 # Module: ProgressMessage
 
-*__export__*: 
+**`export`** 
 
-*__namespace__*: ProgressMessage
+**`namespace`** ProgressMessage
 
 ## Index
 
@@ -14,65 +14,55 @@
 
 ### Properties
 
-* [level](progressmessage.md#level)
-* [message](progressmessage.md#message)
-* [orderItemId](progressmessage.md#orderitemid)
-* [receivedAt](progressmessage.md#receivedat)
-
----
+* [level](progressmessage.md#optional-level)
+* [message](progressmessage.md#optional-message)
+* [orderItemId](progressmessage.md#optional-orderitemid)
+* [receivedAt](progressmessage.md#optional-receivedat)
 
 ## Properties
 
-<a id="level"></a>
+### `Optional` level
 
-### `<Optional>` level
-
-**● level**: *[LevelEnum](../enums/progressmessage.levelenum.md)*
+• **level**? : *[LevelEnum](../enums/progressmessage.levelenum.md)*
 
 *Defined in [api.ts:871](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L871)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ProgressMessage
+**`memberof`** ProgressMessage
 
 ___
-<a id="message"></a>
 
-### `<Optional>` message
+### `Optional` message
 
-**● message**: *`string`*
+• **message**? : *string*
 
 *Defined in [api.ts:877](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L877)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ProgressMessage
+**`memberof`** ProgressMessage
 
 ___
-<a id="orderitemid"></a>
 
-### `<Optional>` orderItemId
+### `Optional` orderItemId
 
-**● orderItemId**: *`string`*
+• **orderItemId**? : *string*
 
 *Defined in [api.ts:883](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L883)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ProgressMessage
+**`memberof`** ProgressMessage
 
 ___
-<a id="receivedat"></a>
 
-### `<Optional>` receivedAt
+### `Optional` receivedAt
 
-**● receivedAt**: *`Date`*
+• **receivedAt**? : *Date*
 
 *Defined in [api.ts:865](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L865)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ProgressMessage
-
-___
-
+**`memberof`** ProgressMessage

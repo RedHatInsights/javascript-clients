@@ -1,14 +1,14 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [RemediationIssueIn](../interfaces/remediationissuein.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [RemediationIssueIn](remediationissuein.md)
 
 # Interface: RemediationIssueIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RemediationIssueIn
+**`interface`** RemediationIssueIn
 
 ## Hierarchy
 
-**RemediationIssueIn**
+* **RemediationIssueIn**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [resolution](remediationissuein.md#resolution)
 
----
-
 ## Properties
-
-<a id="resolution"></a>
 
 ###  resolution
 
-**● resolution**: *`string`*
+• **resolution**: *string*
 
-*Defined in [api.ts:471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L471)*
+*Defined in [api.ts:796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L796)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RemediationIssueIn
-
-___
-
+**`memberof`** RemediationIssueIn

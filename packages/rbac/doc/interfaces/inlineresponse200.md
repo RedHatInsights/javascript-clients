@@ -1,14 +1,14 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [InlineResponse200](../interfaces/inlineresponse200.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [InlineResponse200](inlineresponse200.md)
 
 # Interface: InlineResponse200
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: InlineResponse200
+**`interface`** InlineResponse200
 
 ## Hierarchy
 
-**InlineResponse200**
+* **InlineResponse200**
 
 ## Index
 
@@ -16,21 +16,14 @@
 
 * [data](inlineresponse200.md#data)
 
----
-
 ## Properties
-
-<a id="data"></a>
 
 ###  data
 
-**● data**: *`Array`<[RoleOut](roleout.md)>*
+• **data**: *Array‹[RoleOut](roleout.md)›*
 
-*Defined in [api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L399)*
+*Defined in [api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L419)*
 
-*__type__*: {Array}
+**`type`** {Array<RoleOut>}
 
-*__memberof__*: InlineResponse200
-
-___
-
+**`memberof`** InlineResponse200

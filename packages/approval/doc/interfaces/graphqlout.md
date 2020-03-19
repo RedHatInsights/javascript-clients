@@ -1,54 +1,46 @@
-[@redhat-cloud-services/approval-client](../README.md) > [GraphqlOut](../interfaces/graphqlout.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [GraphqlOut](graphqlout.md)
 
 # Interface: GraphqlOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: GraphqlOut
+**`interface`** GraphqlOut
 
 ## Hierarchy
 
-**GraphqlOut**
+* **GraphqlOut**
 
 ## Index
 
 ### Properties
 
-* [data](graphqlout.md#data)
-* [errors](graphqlout.md#errors)
-
----
+* [data](graphqlout.md#optional-data)
+* [errors](graphqlout.md#optional-errors)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
+• **data**? : *any*
 
-**● data**: *`any`*
-
-*Defined in [api.ts:258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L258)*
+*Defined in [api.ts:257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L257)*
 
 Results from the GraphQL query
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: GraphqlOut
+**`memberof`** GraphqlOut
 
 ___
-<a id="errors"></a>
 
-### `<Optional>` errors
+### `Optional` errors
 
-**● errors**: *`Array`<`any`>*
+• **errors**? : *Array‹any›*
 
-*Defined in [api.ts:264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L264)*
+*Defined in [api.ts:263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L263)*
 
 Errors resulting from the GraphQL query
 
-*__type__*: {Array}
+**`type`** {Array<any>}
 
-*__memberof__*: GraphqlOut
-
-___
-
+**`memberof`** GraphqlOut

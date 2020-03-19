@@ -1,16 +1,16 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [FactSet](../interfaces/factset.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [FactSet](factset.md)
 
 # Interface: FactSet
 
 A set of string facts belonging to a single namespace.
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: FactSet
+**`interface`** FactSet
 
 ## Hierarchy
 
-**FactSet**
+* **FactSet**
 
 ## Index
 
@@ -19,38 +19,30 @@ A set of string facts belonging to a single namespace.
 * [facts](factset.md#facts)
 * [namespace](factset.md#namespace)
 
----
-
 ## Properties
-
-<a id="facts"></a>
 
 ###  facts
 
-**● facts**: *`any`*
+• **facts**: *any*
 
 *Defined in [api.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L527)*
 
 The facts themselves.
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: FactSet
+**`memberof`** FactSet
 
 ___
-<a id="namespace"></a>
 
 ###  namespace
 
-**● namespace**: *`string`*
+• **namespace**: *string*
 
 *Defined in [api.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L521)*
 
 A namespace the facts belong to.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: FactSet
-
-___
-
+**`memberof`** FactSet

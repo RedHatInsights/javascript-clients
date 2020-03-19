@@ -1,196 +1,178 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [ContainerTemplate](../interfaces/containertemplate.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [ContainerTemplate](containertemplate.md)
 
 # Interface: ContainerTemplate
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ContainerTemplate
+**`interface`** ContainerTemplate
 
 ## Hierarchy
 
-**ContainerTemplate**
+* **ContainerTemplate**
 
 ## Index
 
 ### Properties
 
-* [archivedAt](containertemplate.md#archivedat)
-* [containerProjectId](containertemplate.md#containerprojectid)
-* [createdAt](containertemplate.md#createdat)
-* [id](containertemplate.md#id)
-* [lastSeenAt](containertemplate.md#lastseenat)
-* [name](containertemplate.md#name)
-* [resourceVersion](containertemplate.md#resourceversion)
-* [sourceCreatedAt](containertemplate.md#sourcecreatedat)
-* [sourceDeletedAt](containertemplate.md#sourcedeletedat)
-* [sourceId](containertemplate.md#sourceid)
-* [sourceRef](containertemplate.md#sourceref)
-* [updatedAt](containertemplate.md#updatedat)
-
----
+* [archivedAt](containertemplate.md#optional-archivedat)
+* [containerProjectId](containertemplate.md#optional-containerprojectid)
+* [createdAt](containertemplate.md#optional-createdat)
+* [id](containertemplate.md#optional-id)
+* [lastSeenAt](containertemplate.md#optional-lastseenat)
+* [name](containertemplate.md#optional-name)
+* [resourceVersion](containertemplate.md#optional-resourceversion)
+* [sourceCreatedAt](containertemplate.md#optional-sourcecreatedat)
+* [sourceDeletedAt](containertemplate.md#optional-sourcedeletedat)
+* [sourceId](containertemplate.md#optional-sourceid)
+* [sourceRef](containertemplate.md#optional-sourceref)
+* [updatedAt](containertemplate.md#optional-updatedat)
 
 ## Properties
 
-<a id="archivedat"></a>
+### `Optional` archivedAt
 
-### `<Optional>` archivedAt
-
-**● archivedAt**: *`Date`*
+• **archivedAt**? : *Date*
 
 *Defined in [api.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1055)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ContainerTemplate
+**`memberof`** ContainerTemplate
 
 ___
-<a id="containerprojectid"></a>
 
-### `<Optional>` containerProjectId
+### `Optional` containerProjectId
 
-**● containerProjectId**: *`string`*
+• **containerProjectId**? : *string*
 
 *Defined in [api.ts:1061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1061)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ContainerTemplate
+**`memberof`** ContainerTemplate
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:1067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1067)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ContainerTemplate
+**`memberof`** ContainerTemplate
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1073)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ContainerTemplate
+**`memberof`** ContainerTemplate
 
 ___
-<a id="lastseenat"></a>
 
-### `<Optional>` lastSeenAt
+### `Optional` lastSeenAt
 
-**● lastSeenAt**: *`Date`*
+• **lastSeenAt**? : *Date*
 
 *Defined in [api.ts:1079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1079)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ContainerTemplate
+**`memberof`** ContainerTemplate
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:1085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1085)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ContainerTemplate
+**`memberof`** ContainerTemplate
 
 ___
-<a id="resourceversion"></a>
 
-### `<Optional>` resourceVersion
+### `Optional` resourceVersion
 
-**● resourceVersion**: *`string`*
+• **resourceVersion**? : *string*
 
 *Defined in [api.ts:1091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1091)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ContainerTemplate
+**`memberof`** ContainerTemplate
 
 ___
-<a id="sourcecreatedat"></a>
 
-### `<Optional>` sourceCreatedAt
+### `Optional` sourceCreatedAt
 
-**● sourceCreatedAt**: *`Date`*
+• **sourceCreatedAt**? : *Date*
 
 *Defined in [api.ts:1097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1097)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ContainerTemplate
+**`memberof`** ContainerTemplate
 
 ___
-<a id="sourcedeletedat"></a>
 
-### `<Optional>` sourceDeletedAt
+### `Optional` sourceDeletedAt
 
-**● sourceDeletedAt**: *`Date`*
+• **sourceDeletedAt**? : *Date*
 
 *Defined in [api.ts:1103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1103)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ContainerTemplate
+**`memberof`** ContainerTemplate
 
 ___
-<a id="sourceid"></a>
 
-### `<Optional>` sourceId
+### `Optional` sourceId
 
-**● sourceId**: *`string`*
+• **sourceId**? : *string*
 
 *Defined in [api.ts:1109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1109)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ContainerTemplate
+**`memberof`** ContainerTemplate
 
 ___
-<a id="sourceref"></a>
 
-### `<Optional>` sourceRef
+### `Optional` sourceRef
 
-**● sourceRef**: *`string`*
+• **sourceRef**? : *string*
 
 *Defined in [api.ts:1115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1115)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ContainerTemplate
+**`memberof`** ContainerTemplate
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:1121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1121)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ContainerTemplate
-
-___
-
+**`memberof`** ContainerTemplate

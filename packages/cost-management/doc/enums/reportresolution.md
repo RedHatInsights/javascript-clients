@@ -1,12 +1,12 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportResolution](../enums/reportresolution.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportResolution](reportresolution.md)
 
 # Enumeration: ReportResolution
 
 The resolution to apply to the report. Default resolution is daily.
 
-*__export__*: 
+**`export`** 
 
-*__enum__*: {string}
+**`enum`** {string}
 
 ## Index
 
@@ -15,26 +15,18 @@ The resolution to apply to the report. Default resolution is daily.
 * [Daily](reportresolution.md#daily)
 * [Monthly](reportresolution.md#monthly)
 
----
-
 ## Enumeration members
-
-<a id="daily"></a>
 
 ###  Daily
 
-**Daily**:  = "daily"
+• **Daily**: = "daily"
 
-*Defined in [api.ts:2689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2689)*
+*Defined in [api.ts:2514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2514)*
 
 ___
-<a id="monthly"></a>
 
 ###  Monthly
 
-**Monthly**:  = "monthly"
+• **Monthly**: = "monthly"
 
-*Defined in [api.ts:2690](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2690)*
-
-___
-
+*Defined in [api.ts:2515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2515)*

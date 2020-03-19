@@ -1,20 +1,20 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [DefaultApi](../classes/defaultapi.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [DefaultApi](defaultapi.md)
 
 # Class: DefaultApi
 
 DefaultApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: DefaultApi
+**`class`** DefaultApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ DefaultApi**
+  ↳ **DefaultApi**
 
 ## Index
 
@@ -24,24 +24,20 @@ DefaultApi - object-oriented interface
 
 ### Properties
 
-* [axios](defaultapi.md#axios)
-* [basePath](defaultapi.md#basepath)
-* [configuration](defaultapi.md#configuration)
+* [axios](defaultapi.md#protected-axios)
+* [basePath](defaultapi.md#protected-basepath)
+* [configuration](defaultapi.md#protected-configuration)
 
 ### Methods
 
 * [getDocumentation](defaultapi.md#getdocumentation)
 * [postGraphQL](defaultapi.md#postgraphql)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new DefaultApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [DefaultApi](defaultapi.md)
+\+ **new DefaultApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[DefaultApi](defaultapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -49,101 +45,87 @@ DefaultApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [DefaultApi](defaultapi.md)
-
-___
+**Returns:** *[DefaultApi](defaultapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="getdocumentation"></a>
 
 ###  getDocumentation
 
-▸ **getDocumentation**(options?: *`any`*): `AxiosPromise`<`any`>
+▸ **getDocumentation**(`options?`: any): *AxiosPromise‹any›*
 
 *Defined in [api.ts:1393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1393)*
 
-*__summary__*: Return this API document in JSON format
+**`summary`** Return this API document in JSON format
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<`any`>
+**Returns:** *AxiosPromise‹any›*
 
 ___
-<a id="postgraphql"></a>
 
 ###  postGraphQL
 
-▸ **postGraphQL**(graphQLRequest: *[GraphQLRequest](../interfaces/graphqlrequest.md)*, options?: *`any`*): `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
+▸ **postGraphQL**(`graphQLRequest`: [GraphQLRequest](../interfaces/graphqlrequest.md), `options?`: any): *AxiosPromise‹[GraphQLResponse](../interfaces/graphqlresponse.md)›*
 
 *Defined in [api.ts:1405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1405)*
 
 Performs a GraphQL Query
 
-*__summary__*: Perform a GraphQL Query
+**`summary`** Perform a GraphQL Query
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DefaultApi
+**`memberof`** DefaultApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| graphQLRequest | [GraphQLRequest](../interfaces/graphqlrequest.md) |  GraphQL Query Request |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`graphQLRequest` | [GraphQLRequest](../interfaces/graphqlrequest.md) | GraphQL Query Request |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[GraphQLResponse](../interfaces/graphqlresponse.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[GraphQLResponse](../interfaces/graphqlresponse.md)›*

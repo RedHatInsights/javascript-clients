@@ -1,54 +1,46 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [Tenant](../interfaces/tenant.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [Tenant](tenant.md)
 
 # Interface: Tenant
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Tenant
+**`interface`** Tenant
 
 ## Hierarchy
 
-**Tenant**
+* **Tenant**
 
 ## Index
 
 ### Properties
 
-* [externalTenant](tenant.md#externaltenant)
-* [id](tenant.md#id)
-
----
+* [externalTenant](tenant.md#optional-externaltenant)
+* [id](tenant.md#optional-id)
 
 ## Properties
 
-<a id="externaltenant"></a>
+### `Optional` externalTenant
 
-### `<Optional>` externalTenant
-
-**● externalTenant**: *`string`*
+• **externalTenant**? : *string*
 
 *Defined in [api.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1138)*
 
 The Request account number
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Tenant
+**`memberof`** Tenant
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:1144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1144)*
 
 The internal tenant id
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Tenant
-
-___
-
+**`memberof`** Tenant

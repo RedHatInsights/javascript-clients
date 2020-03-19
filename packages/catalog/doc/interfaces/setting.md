@@ -1,50 +1,42 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [Setting](../interfaces/setting.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [Setting](setting.md)
 
 # Interface: Setting
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Setting
+**`interface`** Setting
 
 ## Hierarchy
 
-**Setting**
+* **Setting**
 
 ## Index
 
 ### Properties
 
-* [name](setting.md#name)
-* [value](setting.md#value)
-
----
+* [name](setting.md#optional-name)
+* [value](setting.md#optional-value)
 
 ## Properties
 
-<a id="name"></a>
+### `Optional` name
 
-### `<Optional>` name
-
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L998)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Setting
+**`memberof`** Setting
 
 ___
-<a id="value"></a>
 
-### `<Optional>` value
+### `Optional` value
 
-**● value**: *`string`*
+• **value**? : *string*
 
 *Defined in [api.ts:1004](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1004)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Setting
-
-___
-
+**`memberof`** Setting

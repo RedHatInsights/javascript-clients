@@ -1,10 +1,6 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [Endpoint](../modules/endpoint.md) > [TypeEnum](../enums/endpoint.typeenum.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [Endpoint](../modules/endpoint.md) › [TypeEnum](endpoint.typeenum.md)
 
 # Enumeration: TypeEnum
-
-*__export__*: 
-
-*__enum__*: {string}
 
 ## Index
 
@@ -12,17 +8,10 @@
 
 * [Endpoint](endpoint.typeenum.md#endpoint)
 
----
-
 ## Enumeration members
-
-<a id="endpoint"></a>
 
 ###  Endpoint
 
-**Endpoint**:  = "endpoint"
+• **Endpoint**: = "endpoint"
 
 *Defined in [api.ts:254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L254)*
-
-___
-

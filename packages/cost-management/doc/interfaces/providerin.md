@@ -1,14 +1,14 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ProviderIn](../interfaces/providerin.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ProviderIn](providerin.md)
 
 # Interface: ProviderIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ProviderIn
+**`interface`** ProviderIn
 
 ## Hierarchy
 
-**ProviderIn**
+* **ProviderIn**
 
 ## Index
 
@@ -19,60 +19,50 @@
 * [name](providerin.md#name)
 * [type](providerin.md#type)
 
----
-
 ## Properties
-
-<a id="authentication"></a>
 
 ###  authentication
 
-**● authentication**: *[ProviderAuthenticationIn](providerauthenticationin.md)*
+• **authentication**: *[ProviderAuthenticationIn](providerauthenticationin.md)*
 
-*Defined in [api.ts:790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L790)*
+*Defined in [api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L615)*
 
-*__type__*: {ProviderAuthenticationIn}
+**`type`** {ProviderAuthenticationIn}
 
-*__memberof__*: ProviderIn
+**`memberof`** ProviderIn
 
 ___
-<a id="billingsource"></a>
 
 ###  billingSource
 
-**● billingSource**: *[ProviderBillingSourceIn](providerbillingsourcein.md)*
+• **billingSource**: *[ProviderBillingSourceIn](providerbillingsourcein.md)*
 
-*Defined in [api.ts:796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L796)*
+*Defined in [api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L621)*
 
-*__type__*: {ProviderBillingSourceIn}
+**`type`** {ProviderBillingSourceIn}
 
-*__memberof__*: ProviderIn
+**`memberof`** ProviderIn
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Defined in [api.ts:778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L778)*
+*Defined in [api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L603)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ProviderIn
+**`memberof`** ProviderIn
 
 ___
-<a id="type"></a>
 
 ###  type
 
-**● type**: *`string`*
+• **type**: *string*
 
-*Defined in [api.ts:784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L784)*
+*Defined in [api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L609)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ProviderIn
-
-___
-
+**`memberof`** ProviderIn

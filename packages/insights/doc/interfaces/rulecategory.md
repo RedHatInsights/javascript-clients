@@ -1,50 +1,42 @@
-[@redhat-cloud-services/insights-client](../README.md) > [RuleCategory](../interfaces/rulecategory.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [RuleCategory](rulecategory.md)
 
 # Interface: RuleCategory
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RuleCategory
+**`interface`** RuleCategory
 
 ## Hierarchy
 
-**RuleCategory**
+* **RuleCategory**
 
 ## Index
 
 ### Properties
 
-* [id](rulecategory.md#id)
+* [id](rulecategory.md#optional-id)
 * [name](rulecategory.md#name)
-
----
 
 ## Properties
 
-<a id="id"></a>
+### `Optional` id
 
-### `<Optional>` id
-
-**● id**: *`number`*
+• **id**? : *number*
 
 *Defined in [api.ts:763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L763)*
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: RuleCategory
+**`memberof`** RuleCategory
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
 *Defined in [api.ts:769](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L769)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RuleCategory
-
-___
-
+**`memberof`** RuleCategory

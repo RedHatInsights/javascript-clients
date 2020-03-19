@@ -1,194 +1,176 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [ServiceInventory](../interfaces/serviceinventory.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [ServiceInventory](serviceinventory.md)
 
 # Interface: ServiceInventory
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ServiceInventory
+**`interface`** ServiceInventory
 
 ## Hierarchy
 
-**ServiceInventory**
+* **ServiceInventory**
 
 ## Index
 
 ### Properties
 
-* [archivedAt](serviceinventory.md#archivedat)
-* [createdAt](serviceinventory.md#createdat)
-* [description](serviceinventory.md#description)
-* [extra](serviceinventory.md#extra)
-* [id](serviceinventory.md#id)
-* [lastSeenAt](serviceinventory.md#lastseenat)
-* [name](serviceinventory.md#name)
-* [sourceCreatedAt](serviceinventory.md#sourcecreatedat)
-* [sourceId](serviceinventory.md#sourceid)
-* [sourceRef](serviceinventory.md#sourceref)
-* [sourceUpdatedAt](serviceinventory.md#sourceupdatedat)
-* [updatedAt](serviceinventory.md#updatedat)
-
----
+* [archivedAt](serviceinventory.md#optional-archivedat)
+* [createdAt](serviceinventory.md#optional-createdat)
+* [description](serviceinventory.md#optional-description)
+* [extra](serviceinventory.md#optional-extra)
+* [id](serviceinventory.md#optional-id)
+* [lastSeenAt](serviceinventory.md#optional-lastseenat)
+* [name](serviceinventory.md#optional-name)
+* [sourceCreatedAt](serviceinventory.md#optional-sourcecreatedat)
+* [sourceId](serviceinventory.md#optional-sourceid)
+* [sourceRef](serviceinventory.md#optional-sourceref)
+* [sourceUpdatedAt](serviceinventory.md#optional-sourceupdatedat)
+* [updatedAt](serviceinventory.md#optional-updatedat)
 
 ## Properties
 
-<a id="archivedat"></a>
+### `Optional` archivedAt
 
-### `<Optional>` archivedAt
-
-**● archivedAt**: *`Date`*
+• **archivedAt**? : *Date*
 
 *Defined in [api.ts:2641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2641)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServiceInventory
+**`memberof`** ServiceInventory
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:2647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2647)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServiceInventory
+**`memberof`** ServiceInventory
 
 ___
-<a id="description"></a>
 
-### `<Optional>` description
+### `Optional` description
 
-**● description**: *`string`*
+• **description**? : *string*
 
 *Defined in [api.ts:2653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2653)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServiceInventory
+**`memberof`** ServiceInventory
 
 ___
-<a id="extra"></a>
 
-### `<Optional>` extra
+### `Optional` extra
 
-**● extra**: *`any`*
+• **extra**? : *any*
 
 *Defined in [api.ts:2659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2659)*
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: ServiceInventory
+**`memberof`** ServiceInventory
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:2665](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2665)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServiceInventory
+**`memberof`** ServiceInventory
 
 ___
-<a id="lastseenat"></a>
 
-### `<Optional>` lastSeenAt
+### `Optional` lastSeenAt
 
-**● lastSeenAt**: *`Date`*
+• **lastSeenAt**? : *Date*
 
 *Defined in [api.ts:2671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2671)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServiceInventory
+**`memberof`** ServiceInventory
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:2677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2677)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServiceInventory
+**`memberof`** ServiceInventory
 
 ___
-<a id="sourcecreatedat"></a>
 
-### `<Optional>` sourceCreatedAt
+### `Optional` sourceCreatedAt
 
-**● sourceCreatedAt**: *`Date`*
+• **sourceCreatedAt**? : *Date*
 
 *Defined in [api.ts:2683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2683)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServiceInventory
+**`memberof`** ServiceInventory
 
 ___
-<a id="sourceid"></a>
 
-### `<Optional>` sourceId
+### `Optional` sourceId
 
-**● sourceId**: *`string`*
+• **sourceId**? : *string*
 
 *Defined in [api.ts:2689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2689)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServiceInventory
+**`memberof`** ServiceInventory
 
 ___
-<a id="sourceref"></a>
 
-### `<Optional>` sourceRef
+### `Optional` sourceRef
 
-**● sourceRef**: *`string`*
+• **sourceRef**? : *string*
 
 *Defined in [api.ts:2695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2695)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ServiceInventory
+**`memberof`** ServiceInventory
 
 ___
-<a id="sourceupdatedat"></a>
 
-### `<Optional>` sourceUpdatedAt
+### `Optional` sourceUpdatedAt
 
-**● sourceUpdatedAt**: *`Date`*
+• **sourceUpdatedAt**? : *Date*
 
 *Defined in [api.ts:2701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2701)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServiceInventory
+**`memberof`** ServiceInventory
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:2707](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2707)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: ServiceInventory
-
-___
-
+**`memberof`** ServiceInventory

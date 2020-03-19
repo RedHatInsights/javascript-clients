@@ -1,10 +1,10 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportAzureOrdering](../modules/reportazureordering.md) > [CostEnum](../enums/reportazureordering.costenum.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportAzureOrdering](../modules/reportazureordering.md) › [CostEnum](reportazureordering.costenum.md)
 
 # Enumeration: CostEnum
 
-*__export__*: 
+**`export`** 
 
-*__enum__*: {string}
+**`enum`** {string}
 
 ## Index
 
@@ -13,26 +13,18 @@
 * [Asc](reportazureordering.costenum.md#asc)
 * [Desc](reportazureordering.costenum.md#desc)
 
----
-
 ## Enumeration members
-
-<a id="asc"></a>
 
 ###  Asc
 
-**Asc**:  = "asc"
+• **Asc**: = "asc"
 
-*Defined in [api.ts:1117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1117)*
+*Defined in [api.ts:942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L942)*
 
 ___
-<a id="desc"></a>
 
 ###  Desc
 
-**Desc**:  = "desc"
+• **Desc**: = "desc"
 
-*Defined in [api.ts:1118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1118)*
-
-___
-
+*Defined in [api.ts:943](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L943)*

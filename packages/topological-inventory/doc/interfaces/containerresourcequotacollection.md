@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [ContainerResourceQuotaCollection](containerresourcequotacollection.md)
 
 # Interface: ContainerResourceQuotaCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ContainerResourceQuotaCollection
+**`interface`** ContainerResourceQuotaCollection
 
 ## Hierarchy
 
-**ContainerResourceQuotaCollection**
+* **ContainerResourceQuotaCollection**
 
 ## Index
 
 ### Properties
 
-* [data](containerresourcequotacollection.md#data)
-* [links](containerresourcequotacollection.md#links)
-* [meta](containerresourcequotacollection.md#meta)
-
----
+* [data](containerresourcequotacollection.md#optional-data)
+* [links](containerresourcequotacollection.md#optional-links)
+* [meta](containerresourcequotacollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[ContainerResourceQuota](containerresourcequota.md)>*
+• **data**? : *Array‹[ContainerResourceQuota](containerresourcequota.md)›*
 
 *Defined in [api.ts:1041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1041)*
 
-*__type__*: {Array}
+**`type`** {Array<ContainerResourceQuota>}
 
-*__memberof__*: ContainerResourceQuotaCollection
+**`memberof`** ContainerResourceQuotaCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:1035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1035)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: ContainerResourceQuotaCollection
+**`memberof`** ContainerResourceQuotaCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:1029](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1029)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: ContainerResourceQuotaCollection
-
-___
-
+**`memberof`** ContainerResourceQuotaCollection

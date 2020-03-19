@@ -1,106 +1,95 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [TagCountOut](../interfaces/tagcountout.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [TagCountOut](tagcountout.md)
 
 # Interface: TagCountOut
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: TagCountOut
+**`interface`** TagCountOut
 
 ## Hierarchy
 
-**TagCountOut**
+* **TagCountOut**
 
 ## Index
 
 ### Properties
 
-* [count](tagcountout.md#count)
-* [page](tagcountout.md#page)
-* [perPage](tagcountout.md#perpage)
-* [results](tagcountout.md#results)
-* [total](tagcountout.md#total)
-
----
+* [count](tagcountout.md#optional-count)
+* [page](tagcountout.md#optional-page)
+* [perPage](tagcountout.md#optional-perpage)
+* [results](tagcountout.md#optional-results)
+* [total](tagcountout.md#optional-total)
 
 ## Properties
 
-<a id="count"></a>
+### `Optional` count
 
-### `<Optional>` count
-
-**● count**: *`number`*
-
-*Defined in [api.ts:1093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1093)*
-
-A number of entries on the current page.
-
-*__type__*: {number}
-
-*__memberof__*: TagCountOut
-
-___
-<a id="page"></a>
-
-### `<Optional>` page
-
-**● page**: *`number`*
+• **count**? : *number*
 
 *Defined in [api.ts:1099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1099)*
 
-A current page number.
+A number of entries on the current page.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: TagCountOut
+**`memberof`** TagCountOut
 
 ___
-<a id="perpage"></a>
 
-### `<Optional>` perPage
+### `Optional` page
 
-**● perPage**: *`number`*
+• **page**? : *number*
 
 *Defined in [api.ts:1105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1105)*
 
-A page size – a number of entries per single page.
+A current page number.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: TagCountOut
+**`memberof`** TagCountOut
 
 ___
-<a id="results"></a>
 
-### `<Optional>` results
+### `Optional` perPage
 
-**● results**: *`object`*
+• **perPage**? : *number*
 
 *Defined in [api.ts:1111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1111)*
 
+A page size – a number of entries per single page.
+
+**`type`** {number}
+
+**`memberof`** TagCountOut
+
+___
+
+### `Optional` results
+
+• **results**? : *object*
+
+*Defined in [api.ts:1117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1117)*
+
 The list of tags on the systems
 
-*__type__*: {{ \[key: string\]: number; }}
+**`type`** {{ [key: string]: number; }}
 
-*__memberof__*: TagCountOut
+**`memberof`** TagCountOut
 
-#### Type declaration
+#### Type declaration:
 
-[key: `string`]: `number`
-
-___
-<a id="total"></a>
-
-### `<Optional>` total
-
-**● total**: *`number`*
-
-*Defined in [api.ts:1087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1087)*
-
-Total number of items in the "data" list.
-
-*__type__*: {number}
-
-*__memberof__*: TagCountOut
+* \[ **key**: *string*\]: number
 
 ___
 
+### `Optional` total
+
+• **total**? : *number*
+
+*Defined in [api.ts:1093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1093)*
+
+Total number of items in the \"data\" list.
+
+**`type`** {number}
+
+**`memberof`** TagCountOut

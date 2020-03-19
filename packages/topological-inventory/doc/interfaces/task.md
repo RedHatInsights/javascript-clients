@@ -1,136 +1,122 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [Task](../interfaces/task.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [Task](task.md)
 
 # Interface: Task
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Task
+**`interface`** Task
 
 ## Hierarchy
 
-**Task**
+* **Task**
 
 ## Index
 
 ### Properties
 
-* [completedAt](task.md#completedat)
-* [context](task.md#context)
-* [createdAt](task.md#createdat)
-* [id](task.md#id)
-* [name](task.md#name)
-* [state](task.md#state)
-* [status](task.md#status)
-* [updatedAt](task.md#updatedat)
-
----
+* [completedAt](task.md#optional-completedat)
+* [context](task.md#optional-context)
+* [createdAt](task.md#optional-createdat)
+* [id](task.md#optional-id)
+* [name](task.md#optional-name)
+* [state](task.md#optional-state)
+* [status](task.md#optional-status)
+* [updatedAt](task.md#optional-updatedat)
 
 ## Properties
 
-<a id="completedat"></a>
+### `Optional` completedAt
 
-### `<Optional>` completedAt
-
-**● completedAt**: *`Date`*
+• **completedAt**? : *Date*
 
 *Defined in [api.ts:3689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3689)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Task
+**`memberof`** Task
 
 ___
-<a id="context"></a>
 
-### `<Optional>` context
+### `Optional` context
 
-**● context**: *`any`*
+• **context**? : *any*
 
 *Defined in [api.ts:3695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3695)*
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: Task
+**`memberof`** Task
 
 ___
-<a id="createdat"></a>
 
-### `<Optional>` createdAt
+### `Optional` createdAt
 
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:3701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3701)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Task
+**`memberof`** Task
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:3707](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3707)*
 
 ID of the resource
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Task
+**`memberof`** Task
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:3713](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3713)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Task
+**`memberof`** Task
 
 ___
-<a id="state"></a>
 
-### `<Optional>` state
+### `Optional` state
 
-**● state**: *`string`*
+• **state**? : *string*
 
 *Defined in [api.ts:3719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3719)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Task
+**`memberof`** Task
 
 ___
-<a id="status"></a>
 
-### `<Optional>` status
+### `Optional` status
 
-**● status**: *`string`*
+• **status**? : *string*
 
 *Defined in [api.ts:3725](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3725)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Task
+**`memberof`** Task
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:3731](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3731)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Task
-
-___
-
+**`memberof`** Task

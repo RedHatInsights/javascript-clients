@@ -1,64 +1,55 @@
-[@redhat-cloud-services/sources-client](../README.md) > [AuthenticationsCollection](../interfaces/authenticationscollection.md)
+[@redhat-cloud-services/sources-client](../README.md) › [Globals](../globals.md) › [AuthenticationsCollection](authenticationscollection.md)
 
 # Interface: AuthenticationsCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: AuthenticationsCollection
+**`interface`** AuthenticationsCollection
 
 ## Hierarchy
 
-**AuthenticationsCollection**
+* **AuthenticationsCollection**
 
 ## Index
 
 ### Properties
 
-* [data](authenticationscollection.md#data)
-* [links](authenticationscollection.md#links)
-* [meta](authenticationscollection.md#meta)
-
----
+* [data](authenticationscollection.md#optional-data)
+* [links](authenticationscollection.md#optional-links)
+* [meta](authenticationscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[Authentication](authentication.md)>*
+• **data**? : *Array‹[Authentication](authentication.md)›*
 
 *Defined in [api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L373)*
 
-*__type__*: {Array}
+**`type`** {Array<Authentication>}
 
-*__memberof__*: AuthenticationsCollection
+**`memberof`** AuthenticationsCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L367)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: AuthenticationsCollection
+**`memberof`** AuthenticationsCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L361)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: AuthenticationsCollection
-
-___
-
+**`memberof`** AuthenticationsCollection

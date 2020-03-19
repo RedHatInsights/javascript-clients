@@ -1,20 +1,20 @@
-[@redhat-cloud-services/insights-client](../README.md) > [TopicApi](../classes/topicapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [TopicApi](topicapi.md)
 
 # Class: TopicApi
 
 TopicApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: TopicApi
+**`class`** TopicApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ TopicApi**
+  ↳ **TopicApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ TopicApi - object-oriented interface
 
 ### Properties
 
-* [axios](topicapi.md#axios)
-* [basePath](topicapi.md#basepath)
-* [configuration](topicapi.md#configuration)
+* [axios](topicapi.md#protected-axios)
+* [basePath](topicapi.md#protected-basepath)
+* [configuration](topicapi.md#protected-configuration)
 
 ### Methods
 
@@ -35,15 +35,11 @@ TopicApi - object-oriented interface
 * [topicRulesWithTag](topicapi.md#topicruleswithtag)
 * [topicSystems](topicapi.md#topicsystems)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new TopicApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [TopicApi](topicapi.md)
+\+ **new TopicApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[TopicApi](topicapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -51,156 +47,142 @@ TopicApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [TopicApi](topicapi.md)
-
-___
+**Returns:** *[TopicApi](topicapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="topiclist"></a>
 
 ###  topicList
 
-▸ **topicList**(showDisabled?: *`boolean`*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[Topic](../interfaces/topic.md)[]>
+▸ **topicList**(`showDisabled?`: boolean, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[Topic](../interfaces/topic.md)[]›*
 
-*Defined in [api.ts:5418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5418)*
+*Defined in [api.ts:5635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5635)*
 
-Normally this only shows enabled topics, but if the 'show\_disabled' parameter is set to True then this will show disabled topics as well.
+Normally this only shows enabled topics, but if the 'show_disabled' parameter is set to True then this will show disabled topics as well.
 
-*__summary__*: List the rule topics and their impacted systems counts.
+**`summary`** List the rule topics and their impacted systems counts.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: TopicApi
+**`memberof`** TopicApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` showDisabled | `boolean` |
-| `Optional` tags | `Array`<`string`> |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`showDisabled?` | boolean |
+`tags?` | Array‹string› |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[Topic](../interfaces/topic.md)[]>
+**Returns:** *AxiosPromise‹[Topic](../interfaces/topic.md)[]›*
 
 ___
-<a id="topicread"></a>
 
 ###  topicRead
 
-▸ **topicRead**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Topic](../interfaces/topic.md)>
+▸ **topicRead**(`slug`: string, `options?`: any): *AxiosPromise‹[Topic](../interfaces/topic.md)›*
 
-*Defined in [api.ts:5430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5430)*
+*Defined in [api.ts:5647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5647)*
 
 This also lists the topic's impacted systems count.
 
-*__summary__*: Retrieve a single topic by slug.
+**`summary`** Retrieve a single topic by slug.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: TopicApi
+**`memberof`** TopicApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| slug | `string` |  Rule topic slug |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`slug` | string | Rule topic slug |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Topic](../interfaces/topic.md)>
+**Returns:** *AxiosPromise‹[Topic](../interfaces/topic.md)›*
 
 ___
-<a id="topicruleswithtag"></a>
 
 ###  topicRulesWithTag
 
-▸ **topicRulesWithTag**(slug: *`string`*, options?: *`any`*): `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
+▸ **topicRulesWithTag**(`slug`: string, `options?`: any): *AxiosPromise‹[Rule](../interfaces/rule.md)[]›*
 
-*Defined in [api.ts:5441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5441)*
+*Defined in [api.ts:5659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5659)*
 
-Lists the available rules that have this tag.
+This shows the rule information for rules with this tag.
 
-*__throws__*: {RequiredError}
+**`summary`** Lists the available rules that have this tag.
 
-*__memberof__*: TopicApi
+**`throws`** {RequiredError}
+
+**`memberof`** TopicApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| slug | `string` |  Rule topic slug |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`slug` | string | Rule topic slug |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Rule](../interfaces/rule.md)[]>
+**Returns:** *AxiosPromise‹[Rule](../interfaces/rule.md)[]›*
 
 ___
-<a id="topicsystems"></a>
 
 ###  topicSystems
 
-▸ **topicSystems**(slug: *`string`*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
+▸ **topicSystems**(`slug`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[SystemsForRule](../interfaces/systemsforrule.md)›*
 
-*Defined in [api.ts:5454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5454)*
+*Defined in [api.ts:5672](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5672)*
 
 Systems are just listed by their UUID.
 
-*__summary__*: List all systems affected by this rule topic.
+**`summary`** List all systems affected by this rule topic.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: TopicApi
+**`memberof`** TopicApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| slug | `string` |  Rule topic slug |
-| `Optional` tags | `Array`<`string`> |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`slug` | string | Rule topic slug |
+`tags?` | Array‹string› | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[SystemsForRule](../interfaces/systemsforrule.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[SystemsForRule](../interfaces/systemsforrule.md)›*

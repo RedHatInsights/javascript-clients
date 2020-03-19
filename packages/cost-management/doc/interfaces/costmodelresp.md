@@ -1,14 +1,14 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [CostModelResp](../interfaces/costmodelresp.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [CostModelResp](costmodelresp.md)
 
 # Interface: CostModelResp
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CostModelResp
+**`interface`** CostModelResp
 
 ## Hierarchy
 
-**CostModelResp**
+* **CostModelResp**
 
 ## Index
 
@@ -16,77 +16,66 @@
 
 * [description](costmodelresp.md#description)
 * [name](costmodelresp.md#name)
-* [providers](costmodelresp.md#providers)
-* [rates](costmodelresp.md#rates)
+* [providers](costmodelresp.md#optional-providers)
+* [rates](costmodelresp.md#optional-rates)
 * [sourceType](costmodelresp.md#sourcetype)
-
----
 
 ## Properties
 
-<a id="description"></a>
-
 ###  description
 
-**● description**: *`string`*
+• **description**: *string*
 
-*Defined in [api.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L279)*
+*Defined in [api.ts:221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L221)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CostModelResp
+**`memberof`** CostModelResp
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Defined in [api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L273)*
+*Defined in [api.ts:215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L215)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CostModelResp
-
-___
-<a id="providers"></a>
-
-### `<Optional>` providers
-
-**● providers**: *`Array`<[CostModelRespProviders](costmodelrespproviders.md)>*
-
-*Defined in [api.ts:291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L291)*
-
-*__type__*: {Array}
-
-*__memberof__*: CostModelResp
+**`memberof`** CostModelResp
 
 ___
-<a id="rates"></a>
 
-### `<Optional>` rates
+### `Optional` providers
 
-**● rates**: *`Array`<[Rate](rate.md)>*
+• **providers**? : *Array‹[CostModelRespProviders](costmodelrespproviders.md)›*
 
-*Defined in [api.ts:297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L297)*
+*Defined in [api.ts:233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L233)*
 
-*__type__*: {Array}
+**`type`** {Array<CostModelRespProviders>}
 
-*__memberof__*: CostModelResp
+**`memberof`** CostModelResp
 
 ___
-<a id="sourcetype"></a>
+
+### `Optional` rates
+
+• **rates**? : *Array‹[Rate](rate.md)›*
+
+*Defined in [api.ts:239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L239)*
+
+**`type`** {Array<Rate>}
+
+**`memberof`** CostModelResp
+
+___
 
 ###  sourceType
 
-**● sourceType**: *`string`*
+• **sourceType**: *string*
 
-*Defined in [api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L285)*
+*Defined in [api.ts:227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L227)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: CostModelResp
-
-___
-
+**`memberof`** CostModelResp

@@ -1,20 +1,20 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [DiagnosisApi](../classes/diagnosisapi.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [DiagnosisApi](diagnosisapi.md)
 
 # Class: DiagnosisApi
 
 DiagnosisApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: DiagnosisApi
+**`class`** DiagnosisApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ DiagnosisApi**
+  ↳ **DiagnosisApi**
 
 ## Index
 
@@ -24,23 +24,19 @@ DiagnosisApi - object-oriented interface
 
 ### Properties
 
-* [axios](diagnosisapi.md#axios)
-* [basePath](diagnosisapi.md#basepath)
-* [configuration](diagnosisapi.md#configuration)
+* [axios](diagnosisapi.md#protected-axios)
+* [basePath](diagnosisapi.md#protected-basepath)
+* [configuration](diagnosisapi.md#protected-configuration)
 
 ### Methods
 
 * [getDiagnosis](diagnosisapi.md#getdiagnosis)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new DiagnosisApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [DiagnosisApi](diagnosisapi.md)
+\+ **new DiagnosisApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[DiagnosisApi](diagnosisapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,79 +44,66 @@ DiagnosisApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [DiagnosisApi](diagnosisapi.md)
-
-___
+**Returns:** *[DiagnosisApi](diagnosisapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="getdiagnosis"></a>
 
 ###  getDiagnosis
 
-▸ **getDiagnosis**(system: *`string`*, remediation?: *`string`*, options?: *`any`*): `AxiosPromise`<[Diagnosis](../interfaces/diagnosis.md)>
+▸ **getDiagnosis**(`system`: string, `remediation?`: string, `options?`: any): *AxiosPromise‹[Diagnosis](../interfaces/diagnosis.md)›*
 
-*Defined in [api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L923)*
+*Defined in [api.ts:1248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1248)*
 
 Provides host-specific diagnosis information
 
-*__summary__*: host-specific diagnosis
+**`summary`** host-specific diagnosis
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: DiagnosisApi
+**`memberof`** DiagnosisApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| system | `string` |  System identifier |
-| `Optional` remediation | `string` |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`system` | string | System identifier |
+`remediation?` | string | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[Diagnosis](../interfaces/diagnosis.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[Diagnosis](../interfaces/diagnosis.md)›*

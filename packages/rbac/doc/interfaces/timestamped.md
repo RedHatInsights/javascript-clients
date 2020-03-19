@@ -1,14 +1,14 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [Timestamped](../interfaces/timestamped.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [Timestamped](timestamped.md)
 
 # Interface: Timestamped
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Timestamped
+**`interface`** Timestamped
 
 ## Hierarchy
 
-**Timestamped**
+* **Timestamped**
 
 ## Index
 
@@ -17,34 +17,26 @@
 * [created](timestamped.md#created)
 * [modified](timestamped.md#modified)
 
----
-
 ## Properties
-
-<a id="created"></a>
 
 ###  created
 
-**● created**: *`Date`*
+• **created**: *Date*
 
-*Defined in [api.ts:1058](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1058)*
+*Defined in [api.ts:1170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1170)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Timestamped
+**`memberof`** Timestamped
 
 ___
-<a id="modified"></a>
 
 ###  modified
 
-**● modified**: *`Date`*
+• **modified**: *Date*
 
-*Defined in [api.ts:1064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1064)*
+*Defined in [api.ts:1176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1176)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Timestamped
-
-___
-
+**`memberof`** Timestamped

@@ -1,38 +1,31 @@
-[@redhat-cloud-services/insights-client](../README.md) > [AckJustification](../interfaces/ackjustification.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [AckJustification](ackjustification.md)
 
 # Interface: AckJustification
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: AckJustification
+**`interface`** AckJustification
 
 ## Hierarchy
 
-**AckJustification**
+* **AckJustification**
 
 ## Index
 
 ### Properties
 
-* [justification](ackjustification.md#justification)
-
----
+* [justification](ackjustification.md#optional-justification)
 
 ## Properties
 
-<a id="justification"></a>
+### `Optional` justification
 
-### `<Optional>` justification
-
-**● justification**: *`string`*
+• **justification**? : *string*
 
 *Defined in [api.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L155)*
 
 The reason the rule was acked
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: AckJustification
-
-___
-
+**`memberof`** AckJustification

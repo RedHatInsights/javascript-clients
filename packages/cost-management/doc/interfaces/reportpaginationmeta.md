@@ -1,108 +1,96 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportPaginationMeta](../interfaces/reportpaginationmeta.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportPaginationMeta](reportpaginationmeta.md)
 
 # Interface: ReportPaginationMeta
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportPaginationMeta
+**`interface`** ReportPaginationMeta
 
 ## Hierarchy
 
-**ReportPaginationMeta**
+* **ReportPaginationMeta**
 
 ## Index
 
 ### Properties
 
-* [count](reportpaginationmeta.md#count)
-* [delta](reportpaginationmeta.md#delta)
-* [filter](reportpaginationmeta.md#filter)
-* [groupBy](reportpaginationmeta.md#groupby)
-* [orderBy](reportpaginationmeta.md#orderby)
-* [units](reportpaginationmeta.md#units)
-
----
+* [count](reportpaginationmeta.md#optional-count)
+* [delta](reportpaginationmeta.md#optional-delta)
+* [filter](reportpaginationmeta.md#optional-filter)
+* [groupBy](reportpaginationmeta.md#optional-groupby)
+* [orderBy](reportpaginationmeta.md#optional-orderby)
+* [units](reportpaginationmeta.md#optional-units)
 
 ## Properties
 
-<a id="count"></a>
+### `Optional` count
 
-### `<Optional>` count
+• **count**? : *number*
 
-**● count**: *`number`*
+*Defined in [api.ts:2475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2475)*
 
-*Defined in [api.ts:2650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2650)*
+**`type`** {number}
 
-*__type__*: {number}
-
-*__memberof__*: ReportPaginationMeta
+**`memberof`** ReportPaginationMeta
 
 ___
-<a id="delta"></a>
 
-### `<Optional>` delta
+### `Optional` delta
 
-**● delta**: *[ReportDelta](reportdelta.md)*
+• **delta**? : *[ReportDelta](reportdelta.md)*
 
-*Defined in [api.ts:2656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2656)*
+*Defined in [api.ts:2481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2481)*
 
-*__type__*: {ReportDelta}
+**`type`** {ReportDelta}
 
-*__memberof__*: ReportPaginationMeta
-
-___
-<a id="filter"></a>
-
-### `<Optional>` filter
-
-**● filter**: *`Object`*
-
-*Defined in [api.ts:2674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2674)*
-
-*__type__*: {Object}
-
-*__memberof__*: ReportPaginationMeta
+**`memberof`** ReportPaginationMeta
 
 ___
-<a id="groupby"></a>
 
-### `<Optional>` groupBy
+### `Optional` filter
 
-**● groupBy**: *`Object`*
+• **filter**? : *Object*
 
-*Defined in [api.ts:2662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2662)*
+*Defined in [api.ts:2499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2499)*
 
-*__type__*: {Object}
+**`type`** {Object}
 
-*__memberof__*: ReportPaginationMeta
-
-___
-<a id="orderby"></a>
-
-### `<Optional>` orderBy
-
-**● orderBy**: *`Object`*
-
-*Defined in [api.ts:2668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2668)*
-
-*__type__*: {Object}
-
-*__memberof__*: ReportPaginationMeta
+**`memberof`** ReportPaginationMeta
 
 ___
-<a id="units"></a>
 
-### `<Optional>` units
+### `Optional` groupBy
 
-**● units**: *`string`*
+• **groupBy**? : *Object*
 
-*Defined in [api.ts:2680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2680)*
+*Defined in [api.ts:2487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2487)*
+
+**`type`** {Object}
+
+**`memberof`** ReportPaginationMeta
+
+___
+
+### `Optional` orderBy
+
+• **orderBy**? : *Object*
+
+*Defined in [api.ts:2493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2493)*
+
+**`type`** {Object}
+
+**`memberof`** ReportPaginationMeta
+
+___
+
+### `Optional` units
+
+• **units**? : *string*
+
+*Defined in [api.ts:2505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2505)*
 
 The units for the output data.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: ReportPaginationMeta
-
-___
-
+**`memberof`** ReportPaginationMeta

@@ -1,36 +1,29 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [Errors](../interfaces/errors.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [Errors](errors.md)
 
 # Interface: Errors
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Errors
+**`interface`** Errors
 
 ## Hierarchy
 
-**Errors**
+* **Errors**
 
 ## Index
 
 ### Properties
 
-* [errors](errors.md#errors-1)
-
----
+* [errors](errors.md#errors)
 
 ## Properties
 
-<a id="errors-1"></a>
-
 ###  errors
 
-**● errors**: *`Array`<[ErrorsErrors](errorserrors.md)>*
+• **errors**: *Array‹[ErrorsErrors](errorserrors.md)›*
 
 *Defined in [api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L399)*
 
-*__type__*: {Array}
+**`type`** {Array<ErrorsErrors>}
 
-*__memberof__*: Errors
-
-___
-
+**`memberof`** Errors

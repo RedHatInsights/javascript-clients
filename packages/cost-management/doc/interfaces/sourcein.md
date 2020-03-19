@@ -1,14 +1,14 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [SourceIn](../interfaces/sourcein.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [SourceIn](sourcein.md)
 
 # Interface: SourceIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SourceIn
+**`interface`** SourceIn
 
 ## Hierarchy
 
-**SourceIn**
+* **SourceIn**
 
 ## Index
 
@@ -16,67 +16,57 @@
 
 * [authentication](sourcein.md#authentication)
 * [billingSource](sourcein.md#billingsource)
-* [sourceId](sourcein.md#sourceid)
+* [id](sourcein.md#id)
 * [sourceType](sourcein.md#sourcetype)
-
----
 
 ## Properties
 
-<a id="authentication"></a>
-
 ###  authentication
 
-**● authentication**: *`any`*
+• **authentication**: *any*
 
-*Defined in [api.ts:2796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2796)*
+*Defined in [api.ts:2621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2621)*
 
 Dictionary containing resource name.
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: SourceIn
+**`memberof`** SourceIn
 
 ___
-<a id="billingsource"></a>
 
 ###  billingSource
 
-**● billingSource**: *`any`*
+• **billingSource**: *any*
 
-*Defined in [api.ts:2802](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2802)*
+*Defined in [api.ts:2627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2627)*
 
 Dictionary containing billing source.
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: SourceIn
-
-___
-<a id="sourceid"></a>
-
-###  sourceId
-
-**● sourceId**: *`number`*
-
-*Defined in [api.ts:2784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2784)*
-
-*__type__*: {number}
-
-*__memberof__*: SourceIn
+**`memberof`** SourceIn
 
 ___
-<a id="sourcetype"></a>
+
+###  id
+
+• **id**: *number*
+
+*Defined in [api.ts:2609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2609)*
+
+**`type`** {number}
+
+**`memberof`** SourceIn
+
+___
 
 ###  sourceType
 
-**● sourceType**: *`string`*
+• **sourceType**: *string*
 
-*Defined in [api.ts:2790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2790)*
+*Defined in [api.ts:2615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2615)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SourceIn
-
-___
-
+**`memberof`** SourceIn

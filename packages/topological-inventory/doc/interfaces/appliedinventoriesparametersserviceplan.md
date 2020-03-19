@@ -1,38 +1,31 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [AppliedInventoriesParametersServicePlan](../interfaces/appliedinventoriesparametersserviceplan.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [AppliedInventoriesParametersServicePlan](appliedinventoriesparametersserviceplan.md)
 
 # Interface: AppliedInventoriesParametersServicePlan
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: AppliedInventoriesParametersServicePlan
+**`interface`** AppliedInventoriesParametersServicePlan
 
 ## Hierarchy
 
-**AppliedInventoriesParametersServicePlan**
+* **AppliedInventoriesParametersServicePlan**
 
 ## Index
 
 ### Properties
 
-* [serviceParameters](appliedinventoriesparametersserviceplan.md#serviceparameters)
-
----
+* [serviceParameters](appliedinventoriesparametersserviceplan.md#optional-serviceparameters)
 
 ## Properties
 
-<a id="serviceparameters"></a>
+### `Optional` serviceParameters
 
-### `<Optional>` serviceParameters
-
-**● serviceParameters**: *`any`*
+• **serviceParameters**? : *any*
 
 *Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L83)*
 
 The provider specific parameters needed to compute list of used service inventories
 
-*__type__*: {any}
+**`type`** {any}
 
-*__memberof__*: AppliedInventoriesParametersServicePlan
-
-___
-
+**`memberof`** AppliedInventoriesParametersServicePlan

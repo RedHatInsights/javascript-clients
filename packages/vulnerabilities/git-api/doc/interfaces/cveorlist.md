@@ -1,16 +1,11 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [CveOrList](../interfaces/cveorlist.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [CveOrList](cveorlist.md)
 
 # Interface: CveOrList
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CveOrList
+**`interface`** CveOrList
 
 ## Hierarchy
 
-**CveOrList**
-
-## Index
-
----
-
+* **CveOrList**

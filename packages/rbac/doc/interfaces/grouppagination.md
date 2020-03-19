@@ -1,64 +1,55 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [GroupPagination](../interfaces/grouppagination.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [GroupPagination](grouppagination.md)
 
 # Interface: GroupPagination
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: GroupPagination
+**`interface`** GroupPagination
 
 ## Hierarchy
 
-**GroupPagination**
+* **GroupPagination**
 
 ## Index
 
 ### Properties
 
 * [data](grouppagination.md#data)
-* [links](grouppagination.md#links)
-* [meta](grouppagination.md#meta)
-
----
+* [links](grouppagination.md#optional-links)
+* [meta](grouppagination.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
-
 ###  data
 
-**● data**: *`Array`<[GroupOut](groupout.md)>*
+• **data**: *Array‹[GroupOut](groupout.md)›*
 
-*Defined in [api.ts:237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L237)*
+*Defined in [api.ts:257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L257)*
 
-*__type__*: {Array}
+**`type`** {Array<GroupOut>}
 
-*__memberof__*: GroupPagination
-
-___
-<a id="links"></a>
-
-### `<Optional>` links
-
-**● links**: *[PaginationLinks](paginationlinks.md)*
-
-*Defined in [api.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L231)*
-
-*__type__*: {PaginationLinks}
-
-*__memberof__*: GroupPagination
-
-___
-<a id="meta"></a>
-
-### `<Optional>` meta
-
-**● meta**: *[PaginationMeta](paginationmeta.md)*
-
-*Defined in [api.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L225)*
-
-*__type__*: {PaginationMeta}
-
-*__memberof__*: GroupPagination
+**`memberof`** GroupPagination
 
 ___
 
+### `Optional` links
+
+• **links**? : *[PaginationLinks](paginationlinks.md)*
+
+*Defined in [api.ts:251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L251)*
+
+**`type`** {PaginationLinks}
+
+**`memberof`** GroupPagination
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[PaginationMeta](paginationmeta.md)*
+
+*Defined in [api.ts:245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L245)*
+
+**`type`** {PaginationMeta}
+
+**`memberof`** GroupPagination

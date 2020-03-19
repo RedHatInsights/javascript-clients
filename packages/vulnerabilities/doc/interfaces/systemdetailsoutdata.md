@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [SystemDetailsOutData](../interfaces/systemdetailsoutdata.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [SystemDetailsOutData](systemdetailsoutdata.md)
 
 # Interface: SystemDetailsOutData
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: SystemDetailsOutData
+**`interface`** SystemDetailsOutData
 
 ## Hierarchy
 
-**SystemDetailsOutData**
+* **SystemDetailsOutData**
 
 ## Index
 
@@ -17,70 +17,60 @@
 * [lastEvaluation](systemdetailsoutdata.md#lastevaluation)
 * [lastUpload](systemdetailsoutdata.md#lastupload)
 * [optOut](systemdetailsoutdata.md#optout)
-* [stale](systemdetailsoutdata.md#stale)
-
----
+* [stale](systemdetailsoutdata.md#optional-stale)
 
 ## Properties
 
-<a id="lastevaluation"></a>
-
 ###  lastEvaluation
 
-**● lastEvaluation**: *`string` \| `null`*
+• **lastEvaluation**: *string | null*
 
-*Defined in [api.ts:1297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1297)*
+*Defined in [api.ts:1357](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1357)*
 
 Date of last evaluation.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemDetailsOutData
+**`memberof`** SystemDetailsOutData
 
 ___
-<a id="lastupload"></a>
 
 ###  lastUpload
 
-**● lastUpload**: *`string` \| `null`*
+• **lastUpload**: *string | null*
 
-*Defined in [api.ts:1309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1309)*
+*Defined in [api.ts:1369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1369)*
 
 Date of the latest upload of archive.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: SystemDetailsOutData
+**`memberof`** SystemDetailsOutData
 
 ___
-<a id="optout"></a>
 
 ###  optOut
 
-**● optOut**: *`boolean`*
+• **optOut**: *boolean*
 
-*Defined in [api.ts:1303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1303)*
+*Defined in [api.ts:1363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1363)*
 
 System opt out status.
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: SystemDetailsOutData
+**`memberof`** SystemDetailsOutData
 
 ___
-<a id="stale"></a>
 
-### `<Optional>` stale
+### `Optional` stale
 
-**● stale**: *`boolean`*
+• **stale**? : *boolean*
 
-*Defined in [api.ts:1315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1315)*
+*Defined in [api.ts:1375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1375)*
 
 System stale status.
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: SystemDetailsOutData
-
-___
-
+**`memberof`** SystemDetailsOutData

@@ -1,10 +1,10 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportOpenShiftAWSOrdering](../modules/reportopenshiftawsordering.md) > [DeltaEnum](../enums/reportopenshiftawsordering.deltaenum.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportOpenShiftAWSOrdering](../modules/reportopenshiftawsordering.md) › [DeltaEnum](reportopenshiftawsordering.deltaenum.md)
 
 # Enumeration: DeltaEnum
 
-*__export__*: 
+**`export`** 
 
-*__enum__*: {string}
+**`enum`** {string}
 
 ## Index
 
@@ -13,26 +13,18 @@
 * [Asc](reportopenshiftawsordering.deltaenum.md#asc)
 * [Desc](reportopenshiftawsordering.deltaenum.md#desc)
 
----
-
 ## Enumeration members
-
-<a id="asc"></a>
 
 ###  Asc
 
-**Asc**:  = "asc"
+• **Asc**: = "asc"
 
-*Defined in [api.ts:1862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1862)*
+*Defined in [api.ts:1687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1687)*
 
 ___
-<a id="desc"></a>
 
 ###  Desc
 
-**Desc**:  = "desc"
+• **Desc**: = "desc"
 
-*Defined in [api.ts:1863](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1863)*
-
-___
-
+*Defined in [api.ts:1688](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1688)*

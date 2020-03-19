@@ -1,122 +1,109 @@
-[@redhat-cloud-services/insights-client](../README.md) > [Topic](../interfaces/topic.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [Topic](topic.md)
 
 # Interface: Topic
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Topic
+**`interface`** Topic
 
 ## Hierarchy
 
-**Topic**
+* **Topic**
 
 ## Index
 
 ### Properties
 
 * [description](topic.md#description)
-* [enabled](topic.md#enabled)
-* [featured](topic.md#featured)
-* [impactedSystemsCount](topic.md#impactedsystemscount)
+* [enabled](topic.md#optional-enabled)
+* [featured](topic.md#optional-featured)
+* [impactedSystemsCount](topic.md#optional-impactedsystemscount)
 * [name](topic.md#name)
 * [slug](topic.md#slug)
 * [tag](topic.md#tag)
 
----
-
 ## Properties
-
-<a id="description"></a>
 
 ###  description
 
-**● description**: *`string`*
+• **description**: *string*
 
-*Defined in [api.ts:1251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1251)*
+*Defined in [api.ts:1277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1277)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Topic
-
-___
-<a id="enabled"></a>
-
-### `<Optional>` enabled
-
-**● enabled**: *`boolean`*
-
-*Defined in [api.ts:1269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1269)*
-
-*__type__*: {boolean}
-
-*__memberof__*: Topic
+**`memberof`** Topic
 
 ___
-<a id="featured"></a>
 
-### `<Optional>` featured
+### `Optional` enabled
 
-**● featured**: *`boolean`*
+• **enabled**? : *boolean*
 
-*Defined in [api.ts:1263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1263)*
+*Defined in [api.ts:1295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1295)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: Topic
-
-___
-<a id="impactedsystemscount"></a>
-
-### `<Optional>` impactedSystemsCount
-
-**● impactedSystemsCount**: *`number`*
-
-*Defined in [api.ts:1275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1275)*
-
-*__type__*: {number}
-
-*__memberof__*: Topic
+**`memberof`** Topic
 
 ___
-<a id="name"></a>
+
+### `Optional` featured
+
+• **featured**? : *boolean*
+
+*Defined in [api.ts:1289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1289)*
+
+**`type`** {boolean}
+
+**`memberof`** Topic
+
+___
+
+### `Optional` impactedSystemsCount
+
+• **impactedSystemsCount**? : *number*
+
+*Defined in [api.ts:1301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1301)*
+
+**`type`** {number}
+
+**`memberof`** Topic
+
+___
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Defined in [api.ts:1239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1239)*
+*Defined in [api.ts:1265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1265)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Topic
+**`memberof`** Topic
 
 ___
-<a id="slug"></a>
 
 ###  slug
 
-**● slug**: *`string`*
+• **slug**: *string*
 
-*Defined in [api.ts:1245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1245)*
+*Defined in [api.ts:1271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1271)*
 
 Rule topic slug
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Topic
+**`memberof`** Topic
 
 ___
-<a id="tag"></a>
 
 ###  tag
 
-**● tag**: *`string`*
+• **tag**: *string*
 
-*Defined in [api.ts:1257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1257)*
+*Defined in [api.ts:1283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1283)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Topic
-
-___
-
+**`memberof`** Topic

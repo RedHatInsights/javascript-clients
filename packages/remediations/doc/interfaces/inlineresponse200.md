@@ -1,14 +1,14 @@
-[@redhat-cloud-services/remediations-client](../README.md) > [InlineResponse200](../interfaces/inlineresponse200.md)
+[@redhat-cloud-services/remediations-client](../README.md) › [Globals](../globals.md) › [InlineResponse200](inlineresponse200.md)
 
 # Interface: InlineResponse200
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: InlineResponse200
+**`interface`** InlineResponse200
 
 ## Hierarchy
 
-**InlineResponse200**
+* **InlineResponse200**
 
 ## Index
 
@@ -17,34 +17,26 @@
 * [commit](inlineresponse200.md#commit)
 * [version](inlineresponse200.md#version)
 
----
-
 ## Properties
-
-<a id="commit"></a>
 
 ###  commit
 
-**● commit**: *`string`*
+• **commit**: *string*
 
 *Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L129)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: InlineResponse200
+**`memberof`** InlineResponse200
 
 ___
-<a id="version"></a>
 
 ###  version
 
-**● version**: *`string`*
+• **version**: *string*
 
 *Defined in [api.ts:123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L123)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: InlineResponse200
-
-___
-
+**`memberof`** InlineResponse200

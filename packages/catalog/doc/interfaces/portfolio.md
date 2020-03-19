@@ -1,136 +1,122 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [Portfolio](../interfaces/portfolio.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [Portfolio](portfolio.md)
 
 # Interface: Portfolio
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Portfolio
+**`interface`** Portfolio
 
 ## Hierarchy
 
-**Portfolio**
+* **Portfolio**
 
 ## Index
 
 ### Properties
 
-* [createdAt](portfolio.md#createdat)
-* [description](portfolio.md#description)
-* [enabled](portfolio.md#enabled)
-* [iconId](portfolio.md#iconid)
-* [id](portfolio.md#id)
-* [name](portfolio.md#name)
-* [owner](portfolio.md#owner)
-* [updatedAt](portfolio.md#updatedat)
-
----
+* [createdAt](portfolio.md#optional-createdat)
+* [description](portfolio.md#optional-description)
+* [enabled](portfolio.md#optional-enabled)
+* [iconId](portfolio.md#optional-iconid)
+* [id](portfolio.md#optional-id)
+* [name](portfolio.md#optional-name)
+* [owner](portfolio.md#optional-owner)
+* [updatedAt](portfolio.md#optional-updatedat)
 
 ## Properties
 
-<a id="createdat"></a>
+### `Optional` createdAt
 
-### `<Optional>` createdAt
-
-**● createdAt**: *`Date`*
+• **createdAt**? : *Date*
 
 *Defined in [api.ts:669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L669)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Portfolio
+**`memberof`** Portfolio
 
 ___
-<a id="description"></a>
 
-### `<Optional>` description
+### `Optional` description
 
-**● description**: *`string` \| `null`*
+• **description**? : *string | null*
 
 *Defined in [api.ts:645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L645)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Portfolio
+**`memberof`** Portfolio
 
 ___
-<a id="enabled"></a>
 
-### `<Optional>` enabled
+### `Optional` enabled
 
-**● enabled**: *`boolean`*
+• **enabled**? : *boolean*
 
 *Defined in [api.ts:651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L651)*
 
-*__type__*: {boolean}
+**`type`** {boolean}
 
-*__memberof__*: Portfolio
+**`memberof`** Portfolio
 
 ___
-<a id="iconid"></a>
 
-### `<Optional>` iconId
+### `Optional` iconId
 
-**● iconId**: *`string`*
+• **iconId**? : *string*
 
 *Defined in [api.ts:663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L663)*
 
 The Portfolio Icon ID
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Portfolio
+**`memberof`** Portfolio
 
 ___
-<a id="id"></a>
 
-### `<Optional>` id
+### `Optional` id
 
-**● id**: *`string`*
+• **id**? : *string*
 
 *Defined in [api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L633)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Portfolio
+**`memberof`** Portfolio
 
 ___
-<a id="name"></a>
 
-### `<Optional>` name
+### `Optional` name
 
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L639)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Portfolio
+**`memberof`** Portfolio
 
 ___
-<a id="owner"></a>
 
-### `<Optional>` owner
+### `Optional` owner
 
-**● owner**: *`string`*
+• **owner**? : *string*
 
 *Defined in [api.ts:657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L657)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Portfolio
+**`memberof`** Portfolio
 
 ___
-<a id="updatedat"></a>
 
-### `<Optional>` updatedAt
+### `Optional` updatedAt
 
-**● updatedAt**: *`Date`*
+• **updatedAt**? : *Date*
 
 *Defined in [api.ts:675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L675)*
 
-*__type__*: {Date}
+**`type`** {Date}
 
-*__memberof__*: Portfolio
-
-___
-
+**`memberof`** Portfolio

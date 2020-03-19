@@ -1,70 +1,61 @@
-[@redhat-cloud-services/approval-client](../README.md) > [CollectionMetadata](../interfaces/collectionmetadata.md)
+[@redhat-cloud-services/approval-client](../README.md) › [Globals](../globals.md) › [CollectionMetadata](collectionmetadata.md)
 
 # Interface: CollectionMetadata
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: CollectionMetadata
+**`interface`** CollectionMetadata
 
 ## Hierarchy
 
-**CollectionMetadata**
+* **CollectionMetadata**
 
 ## Index
 
 ### Properties
 
-* [count](collectionmetadata.md#count)
-* [limit](collectionmetadata.md#limit)
-* [offset](collectionmetadata.md#offset)
-
----
+* [count](collectionmetadata.md#optional-count)
+* [limit](collectionmetadata.md#optional-limit)
+* [offset](collectionmetadata.md#optional-offset)
 
 ## Properties
 
-<a id="count"></a>
+### `Optional` count
 
-### `<Optional>` count
+• **count**? : *number*
 
-**● count**: *`number`*
-
-*Defined in [api.ts:206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L206)*
+*Defined in [api.ts:205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L205)*
 
 This is the total number of items in the result set, of which only a subset is returned defined by the QueryLimit parameter
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: CollectionMetadata
+**`memberof`** CollectionMetadata
 
 ___
-<a id="limit"></a>
 
-### `<Optional>` limit
+### `Optional` limit
 
-**● limit**: *`number`*
+• **limit**? : *number*
 
-*Defined in [api.ts:212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L212)*
+*Defined in [api.ts:211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L211)*
 
 This is the number of items each page can display
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: CollectionMetadata
+**`memberof`** CollectionMetadata
 
 ___
-<a id="offset"></a>
 
-### `<Optional>` offset
+### `Optional` offset
 
-**● offset**: *`number`*
+• **offset**? : *number*
 
-*Defined in [api.ts:218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L218)*
+*Defined in [api.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L217)*
 
 This is the offset from beginning of the result set
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: CollectionMetadata
-
-___
-
+**`memberof`** CollectionMetadata

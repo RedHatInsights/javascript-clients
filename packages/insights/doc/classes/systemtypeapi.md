@@ -1,20 +1,20 @@
-[@redhat-cloud-services/insights-client](../README.md) > [SystemtypeApi](../classes/systemtypeapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [SystemtypeApi](systemtypeapi.md)
 
 # Class: SystemtypeApi
 
 SystemtypeApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: SystemtypeApi
+**`class`** SystemtypeApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ SystemtypeApi**
+  ↳ **SystemtypeApi**
 
 ## Index
 
@@ -24,24 +24,20 @@ SystemtypeApi - object-oriented interface
 
 ### Properties
 
-* [axios](systemtypeapi.md#axios)
-* [basePath](systemtypeapi.md#basepath)
-* [configuration](systemtypeapi.md#configuration)
+* [axios](systemtypeapi.md#protected-axios)
+* [basePath](systemtypeapi.md#protected-basepath)
+* [configuration](systemtypeapi.md#protected-configuration)
 
 ### Methods
 
 * [systemtypeList](systemtypeapi.md#systemtypelist)
 * [systemtypeRead](systemtypeapi.md#systemtyperead)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new SystemtypeApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [SystemtypeApi](systemtypeapi.md)
+\+ **new SystemtypeApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[SystemtypeApi](systemtypeapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -49,99 +45,89 @@ SystemtypeApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [SystemtypeApi](systemtypeapi.md)
-
-___
+**Returns:** *[SystemtypeApi](systemtypeapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="systemtypelist"></a>
 
 ###  systemtypeList
 
-▸ **systemtypeList**(options?: *`any`*): `AxiosPromise`<[SystemType](../interfaces/systemtype.md)[]>
+▸ **systemtypeList**(`options?`: any): *AxiosPromise‹[SystemType](../interfaces/systemtype.md)[]›*
 
-*Defined in [api.ts:5028](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5028)*
+*Defined in [api.ts:5237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5237)*
 
-List all system types
+List all system types by role and product code
 
-*__throws__*: {RequiredError}
+**`summary`** List all system types
 
-*__memberof__*: SystemtypeApi
+**`throws`** {RequiredError}
+
+**`memberof`** SystemtypeApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[SystemType](../interfaces/systemtype.md)[]>
+**Returns:** *AxiosPromise‹[SystemType](../interfaces/systemtype.md)[]›*
 
 ___
-<a id="systemtyperead"></a>
 
 ###  systemtypeRead
 
-▸ **systemtypeRead**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[SystemType](../interfaces/systemtype.md)>
+▸ **systemtypeRead**(`id`: number, `options?`: any): *AxiosPromise‹[SystemType](../interfaces/systemtype.md)›*
 
-*Defined in [api.ts:5039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5039)*
+*Defined in [api.ts:5249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5249)*
 
-Display a single system type
+Retrieve details of a single system type
 
-*__throws__*: {RequiredError}
+**`summary`** Retrieve a system type
 
-*__memberof__*: SystemtypeApi
+**`throws`** {RequiredError}
+
+**`memberof`** SystemtypeApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `number` |  A unique integer value identifying this system type. |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | number | A unique integer value identifying this system type. |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[SystemType](../interfaces/systemtype.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[SystemType](../interfaces/systemtype.md)›*

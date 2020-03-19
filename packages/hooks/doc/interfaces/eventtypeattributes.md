@@ -1,54 +1,30 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [EventTypeAttributes](../interfaces/eventtypeattributes.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [EventTypeAttributes](eventtypeattributes.md)
 
 # Interface: EventTypeAttributes
 
-*__export__*: 
-
-*__interface__*: EventTypeAttributes
-
 ## Hierarchy
 
-**EventTypeAttributes**
+* **EventTypeAttributes**
 
 ## Index
 
 ### Properties
 
-* [name](eventtypeattributes.md#name)
-* [title](eventtypeattributes.md#title)
-
----
+* [name](eventtypeattributes.md#optional-name)
+* [title](eventtypeattributes.md#optional-title)
 
 ## Properties
 
-<a id="name"></a>
+### `Optional` name
 
-### `<Optional>` name
-
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L580)*
 
-Identifier of the event type, used to identify the event type in messages
-
-*__type__*: {string}
-
-*__memberof__*: EventTypeAttributes
-
 ___
-<a id="title"></a>
 
-### `<Optional>` title
+### `Optional` title
 
-**● title**: *`string`*
+• **title**? : *string*
 
 *Defined in [api.ts:586](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L586)*
-
-Human readable description of the event type, shown to the user when configuring filters
-
-*__type__*: {string}
-
-*__memberof__*: EventTypeAttributes
-
-___
-

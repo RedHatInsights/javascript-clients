@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [Links](../interfaces/links.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [Links](links.md)
 
 # Interface: Links
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Links
+**`interface`** Links
 
 ## Hierarchy
 
-**Links**
+* **Links**
 
 ## Index
 
@@ -19,68 +19,58 @@
 * [next](links.md#next)
 * [previous](links.md#previous)
 
----
-
 ## Properties
-
-<a id="first"></a>
 
 ###  first
 
-**● first**: *`string`*
+• **first**: *string*
 
-*Defined in [api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L569)*
+*Defined in [api.ts:629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L629)*
 
 Link to first page.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Links
+**`memberof`** Links
 
 ___
-<a id="last"></a>
 
 ###  last
 
-**● last**: *`string`*
+• **last**: *string*
 
-*Defined in [api.ts:575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L575)*
+*Defined in [api.ts:635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L635)*
 
 Link to last page.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Links
+**`memberof`** Links
 
 ___
-<a id="next"></a>
 
 ###  next
 
-**● next**: *`string` \| `null`*
+• **next**: *string | null*
 
-*Defined in [api.ts:581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L581)*
+*Defined in [api.ts:641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L641)*
 
 Link to next page.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Links
+**`memberof`** Links
 
 ___
-<a id="previous"></a>
 
 ###  previous
 
-**● previous**: *`string` \| `null`*
+• **previous**: *string | null*
 
-*Defined in [api.ts:587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L587)*
+*Defined in [api.ts:647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L647)*
 
 Link to next page.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Links
-
-___
-
+**`memberof`** Links

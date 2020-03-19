@@ -1,82 +1,72 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [StatusIn](../interfaces/statusin.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [StatusIn](statusin.md)
 
 # Interface: StatusIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: StatusIn
+**`interface`** StatusIn
 
 ## Hierarchy
 
-**StatusIn**
+* **StatusIn**
 
 ## Index
 
 ### Properties
 
 * [cve](statusin.md#cve)
-* [inventoryId](statusin.md#inventoryid)
-* [statusId](statusin.md#statusid)
-* [statusText](statusin.md#statustext)
-
----
+* [inventoryId](statusin.md#optional-inventoryid)
+* [statusId](statusin.md#optional-statusid)
+* [statusText](statusin.md#optional-statustext)
 
 ## Properties
 
-<a id="cve"></a>
-
 ###  cve
 
-**● cve**: *[CveOrList](cveorlist.md)*
-
-*Defined in [git-api/api.ts:1203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1203)*
-
-*__type__*: {CveOrList}
-
-*__memberof__*: StatusIn
-
-___
-<a id="inventoryid"></a>
-
-### `<Optional>` inventoryId
-
-**● inventoryId**: *[InventoryIdOrList](inventoryidorlist.md)*
-
-*Defined in [git-api/api.ts:1197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1197)*
-
-*__type__*: {InventoryIdOrList}
-
-*__memberof__*: StatusIn
-
-___
-<a id="statusid"></a>
-
-### `<Optional>` statusId
-
-**● statusId**: *`number`*
+• **cve**: *[CveOrList](cveorlist.md)*
 
 *Defined in [git-api/api.ts:1209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1209)*
 
-Status ID to be set, obtained by GET method. If not specified, global CVE status is set.
+**`type`** {CveOrList}
 
-*__type__*: {number}
-
-*__memberof__*: StatusIn
+**`memberof`** StatusIn
 
 ___
-<a id="statustext"></a>
 
-### `<Optional>` statusText
+### `Optional` inventoryId
 
-**● statusText**: *`string` \| `null`*
+• **inventoryId**? : *[InventoryIdOrList](inventoryidorlist.md)*
+
+*Defined in [git-api/api.ts:1203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1203)*
+
+**`type`** {InventoryIdOrList}
+
+**`memberof`** StatusIn
+
+___
+
+### `Optional` statusId
+
+• **statusId**? : *number*
 
 *Defined in [git-api/api.ts:1215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1215)*
 
-Complementary text to the status.
+Status ID to be set, obtained by GET method. If not specified, global CVE status is set.
 
-*__type__*: {string}
+**`type`** {number}
 
-*__memberof__*: StatusIn
+**`memberof`** StatusIn
 
 ___
 
+### `Optional` statusText
+
+• **statusText**? : *string | null*
+
+*Defined in [git-api/api.ts:1221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1221)*
+
+Complementary text to the status.
+
+**`type`** {string}
+
+**`memberof`** StatusIn

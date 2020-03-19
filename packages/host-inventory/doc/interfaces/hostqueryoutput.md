@@ -1,16 +1,16 @@
-[@redhat-cloud-services/host-inventory-client](../README.md) > [HostQueryOutput](../interfaces/hostqueryoutput.md)
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [HostQueryOutput](hostqueryoutput.md)
 
 # Interface: HostQueryOutput
 
 A paginated host search query result with host entries and their Inventory metadata.
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: HostQueryOutput
+**`interface`** HostQueryOutput
 
 ## Hierarchy
 
-**HostQueryOutput**
+* **HostQueryOutput**
 
 ## Index
 
@@ -22,83 +22,72 @@ A paginated host search query result with host entries and their Inventory metad
 * [results](hostqueryoutput.md#results)
 * [total](hostqueryoutput.md#total)
 
----
-
 ## Properties
-
-<a id="count"></a>
 
 ###  count
 
-**● count**: *`number`*
+• **count**: *number*
 
 *Defined in [api.ts:675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L675)*
 
 A number of entries on the current page.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: HostQueryOutput
+**`memberof`** HostQueryOutput
 
 ___
-<a id="page"></a>
 
 ###  page
 
-**● page**: *`number`*
+• **page**: *number*
 
 *Defined in [api.ts:681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L681)*
 
 A current page number.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: HostQueryOutput
+**`memberof`** HostQueryOutput
 
 ___
-<a id="perpage"></a>
 
 ###  perPage
 
-**● perPage**: *`number`*
+• **perPage**: *number*
 
 *Defined in [api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L687)*
 
 A page size – a number of entries per single page.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: HostQueryOutput
+**`memberof`** HostQueryOutput
 
 ___
-<a id="results"></a>
 
 ###  results
 
-**● results**: *`Array`<[HostOut](hostout.md)>*
+• **results**: *Array‹[HostOut](hostout.md)›*
 
 *Defined in [api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L699)*
 
 Actual host search query result entries.
 
-*__type__*: {Array}
+**`type`** {Array<HostOut>}
 
-*__memberof__*: HostQueryOutput
+**`memberof`** HostQueryOutput
 
 ___
-<a id="total"></a>
 
 ###  total
 
-**● total**: *`number`*
+• **total**: *number*
 
 *Defined in [api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L693)*
 
 A total count of the found entries.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: HostQueryOutput
-
-___
-
+**`memberof`** HostQueryOutput

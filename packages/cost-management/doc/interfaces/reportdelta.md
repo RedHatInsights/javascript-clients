@@ -1,38 +1,31 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [ReportDelta](../interfaces/reportdelta.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [ReportDelta](reportdelta.md)
 
 # Interface: ReportDelta
 
 Field to calculate delta values for in report.
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ReportDelta
+**`interface`** ReportDelta
 
 ## Hierarchy
 
-**ReportDelta**
+* **ReportDelta**
 
 ## Index
 
 ### Properties
 
-* [delta](reportdelta.md#delta)
-
----
+* [delta](reportdelta.md#optional-delta)
 
 ## Properties
 
-<a id="delta"></a>
+### `Optional` delta
 
-### `<Optional>` delta
+• **delta**? : *string*
 
-**● delta**: *`string`*
+*Defined in [api.ts:1129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1129)*
 
-*Defined in [api.ts:1304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1304)*
+**`type`** {string}
 
-*__type__*: {string}
-
-*__memberof__*: ReportDelta
-
-___
-
+**`memberof`** ReportDelta

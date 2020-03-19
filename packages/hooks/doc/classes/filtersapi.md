@@ -1,20 +1,12 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [FiltersApi](../classes/filtersapi.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [FiltersApi](filtersapi.md)
 
 # Class: FiltersApi
 
-FiltersApi - object-oriented interface
-
-*__export__*: 
-
-*__class__*: FiltersApi
-
-*__extends__*: {BaseAPI}
-
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ FiltersApi**
+  ↳ **FiltersApi**
 
 ## Index
 
@@ -24,23 +16,19 @@ FiltersApi - object-oriented interface
 
 ### Properties
 
-* [axios](filtersapi.md#axios)
-* [basePath](filtersapi.md#basepath)
-* [configuration](filtersapi.md#configuration)
+* [axios](filtersapi.md#protected-axios)
+* [basePath](filtersapi.md#protected-basepath)
+* [configuration](filtersapi.md#protected-configuration)
 
 ### Methods
 
 * [filtersShow](filtersapi.md#filtersshow)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new FiltersApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [FiltersApi](filtersapi.md)
+\+ **new FiltersApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[FiltersApi](filtersapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -48,77 +36,58 @@ FiltersApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [FiltersApi](filtersapi.md)
-
-___
+**Returns:** *[FiltersApi](filtersapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="filtersshow"></a>
 
 ###  filtersShow
 
-▸ **filtersShow**(X_RH_IDENTITY: *`string`*, endpointId: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse2004](../interfaces/inlineresponse2004.md)>
+▸ **filtersShow**(`X_RH_IDENTITY`: string, `endpointId`: number, `options?`: any): *AxiosPromise‹[InlineResponse2004](../interfaces/inlineresponse2004.md)›*
 
 *Defined in [api.ts:1918](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1918)*
 
-Show the filter of the endpoint
-
-*__throws__*: {RequiredError}
-
-*__memberof__*: FiltersApi
-
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| X_RH_IDENTITY | `string` |  \- |
-| endpointId | `number` |  \- |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`X_RH_IDENTITY` | string |
+`endpointId` | number |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[InlineResponse2004](../interfaces/inlineresponse2004.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[InlineResponse2004](../interfaces/inlineresponse2004.md)›*

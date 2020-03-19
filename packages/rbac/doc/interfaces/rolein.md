@@ -1,64 +1,55 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [RoleIn](../interfaces/rolein.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [RoleIn](rolein.md)
 
 # Interface: RoleIn
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: RoleIn
+**`interface`** RoleIn
 
 ## Hierarchy
 
-**RoleIn**
+* **RoleIn**
 
 ## Index
 
 ### Properties
 
 * [access](rolein.md#access)
-* [description](rolein.md#description)
+* [description](rolein.md#optional-description)
 * [name](rolein.md#name)
-
----
 
 ## Properties
 
-<a id="access"></a>
-
 ###  access
 
-**● access**: *`Array`<[Access](access.md)>*
+• **access**: *Array‹[Access](access.md)›*
+
+*Defined in [api.ts:838](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L838)*
+
+**`type`** {Array<Access>}
+
+**`memberof`** RoleIn
+
+___
+
+### `Optional` description
+
+• **description**? : *string*
 
 *Defined in [api.ts:832](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L832)*
 
-*__type__*: {Array}
+**`type`** {string}
 
-*__memberof__*: RoleIn
-
-___
-<a id="description"></a>
-
-### `<Optional>` description
-
-**● description**: *`string`*
-
-*Defined in [api.ts:826](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L826)*
-
-*__type__*: {string}
-
-*__memberof__*: RoleIn
+**`memberof`** RoleIn
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Defined in [api.ts:820](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L820)*
+*Defined in [api.ts:826](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L826)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: RoleIn
-
-___
-
+**`memberof`** RoleIn

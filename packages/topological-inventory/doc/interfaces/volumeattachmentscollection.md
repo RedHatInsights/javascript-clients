@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [VolumeAttachmentsCollection](volumeattachmentscollection.md)
 
 # Interface: VolumeAttachmentsCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: VolumeAttachmentsCollection
+**`interface`** VolumeAttachmentsCollection
 
 ## Hierarchy
 
-**VolumeAttachmentsCollection**
+* **VolumeAttachmentsCollection**
 
 ## Index
 
 ### Properties
 
-* [data](volumeattachmentscollection.md#data)
-* [links](volumeattachmentscollection.md#links)
-* [meta](volumeattachmentscollection.md#meta)
-
----
+* [data](volumeattachmentscollection.md#optional-data)
+* [links](volumeattachmentscollection.md#optional-links)
+* [meta](volumeattachmentscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[VolumeAttachment](volumeattachment.md)>*
+• **data**? : *Array‹[VolumeAttachment](volumeattachment.md)›*
 
 *Defined in [api.ts:4141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4141)*
 
-*__type__*: {Array}
+**`type`** {Array<VolumeAttachment>}
 
-*__memberof__*: VolumeAttachmentsCollection
+**`memberof`** VolumeAttachmentsCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:4135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4135)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: VolumeAttachmentsCollection
+**`memberof`** VolumeAttachmentsCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:4129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4129)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: VolumeAttachmentsCollection
-
-___
-
+**`memberof`** VolumeAttachmentsCollection

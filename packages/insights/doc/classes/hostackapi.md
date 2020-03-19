@@ -1,20 +1,20 @@
-[@redhat-cloud-services/insights-client](../README.md) > [HostackApi](../classes/hostackapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [HostackApi](hostackapi.md)
 
 # Class: HostackApi
 
 HostackApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: HostackApi
+**`class`** HostackApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ HostackApi**
+  ↳ **HostackApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ HostackApi - object-oriented interface
 
 ### Properties
 
-* [axios](hostackapi.md#axios)
-* [basePath](hostackapi.md#basepath)
-* [configuration](hostackapi.md#configuration)
+* [axios](hostackapi.md#protected-axios)
+* [basePath](hostackapi.md#protected-basepath)
+* [configuration](hostackapi.md#protected-configuration)
 
 ### Methods
 
@@ -36,15 +36,11 @@ HostackApi - object-oriented interface
 * [hostackRead](hostackapi.md#hostackread)
 * [hostackUpdate](hostackapi.md#hostackupdate)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new HostackApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [HostackApi](hostackapi.md)
+\+ **new HostackApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[HostackApi](hostackapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -52,186 +48,169 @@ HostackApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [HostackApi](hostackapi.md)
-
-___
+**Returns:** *[HostackApi](hostackapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="hostackcreate"></a>
 
 ###  hostackCreate
 
-▸ **hostackCreate**(hostAck: *[HostAck](../interfaces/hostack.md)*, options?: *`any`*): `AxiosPromise`<[HostAck](../interfaces/hostack.md)>
+▸ **hostackCreate**(`hostAck`: [HostAck](../interfaces/hostack.md), `options?`: any): *AxiosPromise‹[HostAck](../interfaces/hostack.md)›*
 
-*Defined in [api.ts:2573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2573)*
+*Defined in [api.ts:2635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2635)*
 
-Return the new hostack. If there's already an acknowledgement of this rule by this account for a system, then return that. This does not take an 'id' number.
+Return the new hostack.  If there's already an acknowledgement of this rule by this account for a system, then return that.  This does not take an 'id' number.
 
-*__summary__*: Add an acknowledgement for a rule, by rule ID, system, and account.
+**`summary`** Add an acknowledgement for a rule, by rule ID, system, and account.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: HostackApi
+**`memberof`** HostackApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| hostAck | [HostAck](../interfaces/hostack.md) |  \- |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`hostAck` | [HostAck](../interfaces/hostack.md) |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[HostAck](../interfaces/hostack.md)>
+**Returns:** *AxiosPromise‹[HostAck](../interfaces/hostack.md)›*
 
 ___
-<a id="hostackdelete"></a>
 
 ###  hostackDelete
 
-▸ **hostackDelete**(id: *`number`*, options?: *`any`*): `AxiosPromise`<`Response`>
+▸ **hostackDelete**(`id`: number, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:2585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2585)*
+*Defined in [api.ts:2647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2647)*
 
 Takes the hostack ID (given in the hostack list) as an identifier.
 
-*__summary__*: Delete an acknowledgement for a rule, for a system, for an account, by its ID.
+**`summary`** Delete an acknowledgement for a rule, for a system, for an account, by its ID.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: HostackApi
+**`memberof`** HostackApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `number` |  A unique integer value identifying this host ack. |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | number | A unique integer value identifying this host ack. |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<`Response`>
+**Returns:** *AxiosPromise‹Response›*
 
 ___
-<a id="hostacklist"></a>
 
 ###  hostackList
 
-▸ **hostackList**(limit?: *`number`*, offset?: *`number`*, ruleId?: *`Array`<`string`>*, tags?: *`Array`<`string`>*, options?: *`any`*): `AxiosPromise`<[InlineResponse2002](../interfaces/inlineresponse2002.md)>
+▸ **hostackList**(`limit?`: number, `offset?`: number, `ruleId?`: Array‹string›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2002](../interfaces/inlineresponse2002.md)›*
 
-*Defined in [api.ts:2600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2600)*
+*Defined in [api.ts:2662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2662)*
 
 Hostacks are retrieved, edited and deleted by the 'id' field.
 
-*__summary__*: List host acks from this account for a system where the rule is active.
+**`summary`** List host acks from this account for a system where the rule is active.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: HostackApi
+**`memberof`** HostackApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` ruleId | `Array`<`string`> |
-| `Optional` tags | `Array`<`string`> |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`limit?` | number |
+`offset?` | number |
+`ruleId?` | Array‹string› |
+`tags?` | Array‹string› |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[InlineResponse2002](../interfaces/inlineresponse2002.md)>
+**Returns:** *AxiosPromise‹[InlineResponse2002](../interfaces/inlineresponse2002.md)›*
 
 ___
-<a id="hostackread"></a>
 
 ###  hostackRead
 
-▸ **hostackRead**(id: *`number`*, options?: *`any`*): `AxiosPromise`<[HostAck](../interfaces/hostack.md)>
+▸ **hostackRead**(`id`: number, `options?`: any): *AxiosPromise‹[HostAck](../interfaces/hostack.md)›*
 
-*Defined in [api.ts:2612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2612)*
+*Defined in [api.ts:2674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2674)*
 
 This view handles listing, retrieving, creating and deleting hostacks.
 
-*__summary__*: HostAcks acknowledge (and therefore hide) a rule from view in an account for a specific system.
+**`summary`** HostAcks acknowledge (and therefore hide) a rule from view in an account for a specific system.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: HostackApi
+**`memberof`** HostackApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `number` |  A unique integer value identifying this host ack. |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | number | A unique integer value identifying this host ack. |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[HostAck](../interfaces/hostack.md)>
+**Returns:** *AxiosPromise‹[HostAck](../interfaces/hostack.md)›*
 
 ___
-<a id="hostackupdate"></a>
 
 ###  hostackUpdate
 
-▸ **hostackUpdate**(id: *`number`*, hostAckJustification: *[HostAckJustification](../interfaces/hostackjustification.md)*, options?: *`any`*): `AxiosPromise`<[HostAckJustification](../interfaces/hostackjustification.md)>
+▸ **hostackUpdate**(`id`: number, `hostAckJustification`: [HostAckJustification](../interfaces/hostackjustification.md), `options?`: any): *AxiosPromise‹[HostAckJustification](../interfaces/hostackjustification.md)›*
 
-*Defined in [api.ts:2625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2625)*
+*Defined in [api.ts:2687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2687)*
 
-The justification is taken from the request body. The created\_by field is taken from the username in the x-rh-identity field, and the updated\_at field is set to the current time.
+The justification is taken from the request body.  The created_by field is taken from the username in the x-rh-identity field, and the updated_at field is set to the current time.
 
-*__summary__*: Update the justification for this host acknowledgement.
+**`summary`** Update the justification for this host acknowledgement.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: HostackApi
+**`memberof`** HostackApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| id | `number` |  A unique integer value identifying this host ack. |
-| hostAckJustification | [HostAckJustification](../interfaces/hostackjustification.md) |  \- |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | number | A unique integer value identifying this host ack. |
+`hostAckJustification` | [HostAckJustification](../interfaces/hostackjustification.md) | - |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[HostAckJustification](../interfaces/hostackjustification.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[HostAckJustification](../interfaces/hostackjustification.md)›*

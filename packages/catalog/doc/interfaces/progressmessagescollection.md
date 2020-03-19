@@ -1,64 +1,55 @@
-[@redhat-cloud-services/catalog-client](../README.md) > [ProgressMessagesCollection](../interfaces/progressmessagescollection.md)
+[@redhat-cloud-services/catalog-client](../README.md) › [Globals](../globals.md) › [ProgressMessagesCollection](progressmessagescollection.md)
 
 # Interface: ProgressMessagesCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: ProgressMessagesCollection
+**`interface`** ProgressMessagesCollection
 
 ## Hierarchy
 
-**ProgressMessagesCollection**
+* **ProgressMessagesCollection**
 
 ## Index
 
 ### Properties
 
-* [data](progressmessagescollection.md#data)
-* [links](progressmessagescollection.md#links)
-* [meta](progressmessagescollection.md#meta)
-
----
+* [data](progressmessagescollection.md#optional-data)
+* [links](progressmessagescollection.md#optional-links)
+* [meta](progressmessagescollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[ProgressMessage](../modules/progressmessage.md)>*
+• **data**? : *Array‹[ProgressMessage](../modules/progressmessage.md)›*
 
 *Defined in [api.ts:926](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L926)*
 
-*__type__*: {Array}
+**`type`** {Array<ProgressMessage>}
 
-*__memberof__*: ProgressMessagesCollection
+**`memberof`** ProgressMessagesCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:920](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L920)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: ProgressMessagesCollection
+**`memberof`** ProgressMessagesCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:914](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L914)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: ProgressMessagesCollection
-
-___
-
+**`memberof`** ProgressMessagesCollection

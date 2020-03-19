@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [HostsCollection](../interfaces/hostscollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [HostsCollection](hostscollection.md)
 
 # Interface: HostsCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: HostsCollection
+**`interface`** HostsCollection
 
 ## Hierarchy
 
-**HostsCollection**
+* **HostsCollection**
 
 ## Index
 
 ### Properties
 
-* [data](hostscollection.md#data)
-* [links](hostscollection.md#links)
-* [meta](hostscollection.md#meta)
-
----
+* [data](hostscollection.md#optional-data)
+* [links](hostscollection.md#optional-links)
+* [meta](hostscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[Host](host.md)>*
+• **data**? : *Array‹[Host](host.md)›*
 
 *Defined in [api.ts:1637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1637)*
 
-*__type__*: {Array}
+**`type`** {Array<Host>}
 
-*__memberof__*: HostsCollection
+**`memberof`** HostsCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:1631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1631)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: HostsCollection
+**`memberof`** HostsCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:1625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1625)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: HostsCollection
-
-___
-
+**`memberof`** HostsCollection

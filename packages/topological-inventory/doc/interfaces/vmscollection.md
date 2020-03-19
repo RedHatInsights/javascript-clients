@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [VmsCollection](../interfaces/vmscollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [VmsCollection](vmscollection.md)
 
 # Interface: VmsCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: VmsCollection
+**`interface`** VmsCollection
 
 ## Hierarchy
 
-**VmsCollection**
+* **VmsCollection**
 
 ## Index
 
 ### Properties
 
-* [data](vmscollection.md#data)
-* [links](vmscollection.md#links)
-* [meta](vmscollection.md#meta)
-
----
+* [data](vmscollection.md#optional-data)
+* [links](vmscollection.md#optional-links)
+* [meta](vmscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[Vm](vm.md)>*
+• **data**? : *Array‹[Vm](vm.md)›*
 
 *Defined in [api.ts:3961](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3961)*
 
-*__type__*: {Array}
+**`type`** {Array<Vm>}
 
-*__memberof__*: VmsCollection
+**`memberof`** VmsCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:3955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3955)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: VmsCollection
+**`memberof`** VmsCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:3949](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3949)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: VmsCollection
-
-___
-
+**`memberof`** VmsCollection

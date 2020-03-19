@@ -1,14 +1,14 @@
-[@redhat-cloud-services/cost-management-client](../README.md) > [Provider](../interfaces/provider.md)
+[@redhat-cloud-services/cost-management-client](../README.md) › [Globals](../globals.md) › [Provider](provider.md)
 
 # Interface: Provider
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Provider
+**`interface`** Provider
 
 ## Hierarchy
 
-**Provider**
+* **Provider**
 
 ## Index
 
@@ -17,34 +17,26 @@
 * [name](provider.md#name)
 * [type](provider.md#type)
 
----
-
 ## Properties
-
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Defined in [api.ts:666](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L666)*
+*Defined in [api.ts:491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L491)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Provider
+**`memberof`** Provider
 
 ___
-<a id="type"></a>
 
 ###  type
 
-**● type**: *`string`*
+• **type**: *string*
 
-*Defined in [api.ts:672](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L672)*
+*Defined in [api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L497)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Provider
-
-___
-
+**`memberof`** Provider

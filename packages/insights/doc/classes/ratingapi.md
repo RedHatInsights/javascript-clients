@@ -1,20 +1,20 @@
-[@redhat-cloud-services/insights-client](../README.md) > [RatingApi](../classes/ratingapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [RatingApi](ratingapi.md)
 
 # Class: RatingApi
 
 RatingApi - object-oriented interface
 
-*__export__*: 
+**`export`** 
 
-*__class__*: RatingApi
+**`class`** RatingApi
 
-*__extends__*: {BaseAPI}
+**`extends`** {BaseAPI}
 
 ## Hierarchy
 
- [BaseAPI](baseapi.md)
+* [BaseAPI](baseapi.md)
 
-**↳ RatingApi**
+  ↳ **RatingApi**
 
 ## Index
 
@@ -24,9 +24,9 @@ RatingApi - object-oriented interface
 
 ### Properties
 
-* [axios](ratingapi.md#axios)
-* [basePath](ratingapi.md#basepath)
-* [configuration](ratingapi.md#configuration)
+* [axios](ratingapi.md#protected-axios)
+* [basePath](ratingapi.md#protected-basepath)
+* [configuration](ratingapi.md#protected-configuration)
 
 ### Methods
 
@@ -34,15 +34,11 @@ RatingApi - object-oriented interface
 * [ratingList](ratingapi.md#ratinglist)
 * [ratingRead](ratingapi.md#ratingread)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new RatingApi**(configuration?: *[Configuration](configuration.md)*, basePath?: *`string`*, axios?: *`AxiosInstance`*): [RatingApi](ratingapi.md)
+\+ **new RatingApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[RatingApi](ratingapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -50,129 +46,116 @@ RatingApi - object-oriented interface
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Optional` configuration | [Configuration](configuration.md) | - |
-| `Default value` basePath | `string` |  BASE_PATH |
-| `Default value` axios | `AxiosInstance` |  globalAxios |
+Name | Type | Default |
+------ | ------ | ------ |
+`configuration?` | [Configuration](configuration.md) | - |
+`basePath` | string |  BASE_PATH |
+`axios` | AxiosInstance |  globalAxios |
 
-**Returns:** [RatingApi](ratingapi.md)
-
-___
+**Returns:** *[RatingApi](ratingapi.md)*
 
 ## Properties
 
-<a id="axios"></a>
+### `Protected` axios
 
-### `<Protected>` axios
+• **axios**: *AxiosInstance*
 
-**● axios**: *`AxiosInstance`*
-
-*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#axios)*
+*Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="basepath"></a>
 
-### `<Protected>` basePath
+### `Protected` basePath
 
-**● basePath**: *`string`*
+• **basePath**: *string*
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#basepath)*
+*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
 *Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
 
 ___
-<a id="configuration"></a>
 
-### `<Protected>` configuration
+### `Protected` configuration
 
-**● configuration**: *[Configuration](configuration.md) \| `undefined`*
+• **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#configuration)*
+*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
 *Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
 
-___
-
 ## Methods
-
-<a id="ratingcreate"></a>
 
 ###  ratingCreate
 
-▸ **ratingCreate**(ruleRating: *[RuleRating](../modules/rulerating.md)*, options?: *`any`*): `AxiosPromise`<[RuleRating](../modules/rulerating.md)>
+▸ **ratingCreate**(`ruleRating`: [RuleRating](../modules/rulerating.md), `options?`: any): *AxiosPromise‹[RuleRating](../modules/rulerating.md)›*
 
-*Defined in [api.ts:3007](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3007)*
+*Defined in [api.ts:3080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3080)*
 
-Return the new rating. Any previous rating for this rule by this user is amended to the current value. This does not attempt to delete a rating by this user of this rule if the rating is zero.
+Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
 
-*__summary__*: Add or update a rating for a rule, by rule ID.
+**`summary`** Add or update a rating for a rule, by rule ID.
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: RatingApi
+**`memberof`** RatingApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| ruleRating | [RuleRating](../modules/rulerating.md) |  \- |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`ruleRating` | [RuleRating](../modules/rulerating.md) |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[RuleRating](../modules/rulerating.md)>
+**Returns:** *AxiosPromise‹[RuleRating](../modules/rulerating.md)›*
 
 ___
-<a id="ratinglist"></a>
 
 ###  ratingList
 
-▸ **ratingList**(limit?: *`number`*, offset?: *`number`*, options?: *`any`*): `AxiosPromise`<[InlineResponse2003](../interfaces/inlineresponse2003.md)>
+▸ **ratingList**(`limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[InlineResponse2003](../interfaces/inlineresponse2003.md)›*
 
-*Defined in [api.ts:3020](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3020)*
+*Defined in [api.ts:3093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3093)*
 
 Only the current user's ratings are listed here.
 
-*__summary__*: List all rules rated by the current user
+**`summary`** List all rules rated by the current user
 
-*__throws__*: {RequiredError}
+**`throws`** {RequiredError}
 
-*__memberof__*: RatingApi
+**`memberof`** RatingApi
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` limit | `number` |
-| `Optional` offset | `number` |
-| `Optional` options | `any` |
+Name | Type |
+------ | ------ |
+`limit?` | number |
+`offset?` | number |
+`options?` | any |
 
-**Returns:** `AxiosPromise`<[InlineResponse2003](../interfaces/inlineresponse2003.md)>
+**Returns:** *AxiosPromise‹[InlineResponse2003](../interfaces/inlineresponse2003.md)›*
 
 ___
-<a id="ratingread"></a>
 
 ###  ratingRead
 
-▸ **ratingRead**(rule: *`string`*, options?: *`any`*): `AxiosPromise`<[RuleRating](../modules/rulerating.md)>
+▸ **ratingRead**(`rule`: string, `options?`: any): *AxiosPromise‹[RuleRating](../modules/rulerating.md)›*
 
-*Defined in [api.ts:3031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3031)*
+*Defined in [api.ts:3105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3105)*
 
-Rules can be rated +1, 0 or -1; the rating is stored per (user, rule) unique pair. Rule ratings are edited simply by POSTing a new rating, which overwrites any previous rating by that user for that rule.
+Retrieve the ratings for a single rule, by Insights Rule ID
 
-*__throws__*: {RequiredError}
+**`summary`** Retrieve the ratings for a single rule
 
-*__memberof__*: RatingApi
+**`throws`** {RequiredError}
+
+**`memberof`** RatingApi
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| rule | `string` |  Insights Rule ID |
-| `Optional` options | `any` |
+Name | Type | Description |
+------ | ------ | ------ |
+`rule` | string | Insights Rule ID |
+`options?` | any | - |
 
-**Returns:** `AxiosPromise`<[RuleRating](../modules/rulerating.md)>
-
-___
-
+**Returns:** *AxiosPromise‹[RuleRating](../modules/rulerating.md)›*

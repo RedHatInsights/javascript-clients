@@ -1,36 +1,29 @@
-[@redhat-cloud-services/rbac-client](../README.md) > [UUID](../interfaces/uuid.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [UUID](uuid.md)
 
 # Interface: UUID
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: UUID
+**`interface`** UUID
 
 ## Hierarchy
 
-**UUID**
+* **UUID**
 
 ## Index
 
 ### Properties
 
-* [uuid](uuid.md#uuid-1)
-
----
+* [uuid](uuid.md#uuid)
 
 ## Properties
 
-<a id="uuid-1"></a>
-
 ###  uuid
 
-**● uuid**: *`string`*
+• **uuid**: *string*
 
-*Defined in [api.ts:1078](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1078)*
+*Defined in [api.ts:1190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1190)*
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: UUID
-
-___
-
+**`memberof`** UUID

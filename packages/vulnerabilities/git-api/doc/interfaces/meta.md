@@ -1,14 +1,14 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) > [Meta](../interfaces/meta.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [Meta](meta.md)
 
 # Interface: Meta
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: Meta
+**`interface`** Meta
 
 ## Hierarchy
 
-**Meta**
+* **Meta**
 
 ## Index
 
@@ -24,143 +24,128 @@
 * [sort](meta.md#sort)
 * [totalItems](meta.md#totalitems)
 
----
-
 ## Properties
-
-<a id="dataformat"></a>
 
 ###  dataFormat
 
-**● dataFormat**: *`string`*
+• **dataFormat**: *string*
 
-*Defined in [git-api/api.ts:709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L709)*
+*Defined in [git-api/api.ts:715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L715)*
 
 Format of the output data, either JSON (default) or CSV.
 
-*__type__*: {string}
+**`type`** {string}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="filter"></a>
 
 ###  filter
 
-**● filter**: *`string` \| `null`*
-
-*Defined in [git-api/api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L661)*
-
-Full text filter
-
-*__type__*: {string}
-
-*__memberof__*: Meta
-
-___
-<a id="limit"></a>
-
-###  limit
-
-**● limit**: *`number`*
+• **filter**: *string | null*
 
 *Defined in [git-api/api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L667)*
 
-Maximum number of paginated results.
+Full text filter
 
-*__type__*: {number}
+**`type`** {string}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="offset"></a>
 
-###  offset
+###  limit
 
-**● offset**: *`number`*
+• **limit**: *number*
 
 *Defined in [git-api/api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L673)*
 
-First record of paginated response.
+Maximum number of paginated results.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="page"></a>
 
-###  page
+###  offset
 
-**● page**: *`number`*
+• **offset**: *number*
 
 *Defined in [git-api/api.ts:679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L679)*
 
-Page number of paginated response.
+First record of paginated response.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="pagesize"></a>
 
-###  pageSize
+###  page
 
-**● pageSize**: *`number`*
+• **page**: *number*
 
 *Defined in [git-api/api.ts:685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L685)*
 
-Number of records per page of paginated response.
+Page number of paginated response.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="pages"></a>
 
-###  pages
+###  pageSize
 
-**● pages**: *`number`*
+• **pageSize**: *number*
 
 *Defined in [git-api/api.ts:691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L691)*
 
-Total number of pages of paginated response.
+Number of records per page of paginated response.
 
-*__type__*: {number}
+**`type`** {number}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="sort"></a>
 
-###  sort
+###  pages
 
-**● sort**: *`string` \| `null`*
+• **pages**: *number*
 
 *Defined in [git-api/api.ts:697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L697)*
 
-Sorting filter.
+Total number of pages of paginated response.
 
-*__type__*: {string}
+**`type`** {number}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
-<a id="totalitems"></a>
 
-###  totalItems
+###  sort
 
-**● totalItems**: *`number`*
+• **sort**: *string | null*
 
 *Defined in [git-api/api.ts:703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L703)*
 
-Total number of records.
+Sorting filter.
 
-*__type__*: {number}
+**`type`** {string}
 
-*__memberof__*: Meta
+**`memberof`** Meta
 
 ___
 
+###  totalItems
+
+• **totalItems**: *number*
+
+*Defined in [git-api/api.ts:709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L709)*
+
+Total number of records.
+
+**`type`** {number}
+
+**`memberof`** Meta

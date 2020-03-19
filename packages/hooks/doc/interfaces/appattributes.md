@@ -1,54 +1,30 @@
-[@redhat-cloud-services/notifications-client](../README.md) > [AppAttributes](../interfaces/appattributes.md)
+[@redhat-cloud-services/notifications-client](../README.md) › [Globals](../globals.md) › [AppAttributes](appattributes.md)
 
 # Interface: AppAttributes
 
-*__export__*: 
-
-*__interface__*: AppAttributes
-
 ## Hierarchy
 
-**AppAttributes**
+* **AppAttributes**
 
 ## Index
 
 ### Properties
 
-* [name](appattributes.md#name)
-* [title](appattributes.md#title)
-
----
+* [name](appattributes.md#optional-name)
+* [title](appattributes.md#optional-title)
 
 ## Properties
 
-<a id="name"></a>
+### `Optional` name
 
-### `<Optional>` name
-
-**● name**: *`string`*
+• **name**? : *string*
 
 *Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L129)*
 
-Name of the application, used to identify the sender in messages
-
-*__type__*: {string}
-
-*__memberof__*: AppAttributes
-
 ___
-<a id="title"></a>
 
-### `<Optional>` title
+### `Optional` title
 
-**● title**: *`string`*
+• **title**? : *string*
 
 *Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L135)*
-
-Title of the application, shown to the user when configuring filters
-
-*__type__*: {string}
-
-*__memberof__*: AppAttributes
-
-___
-

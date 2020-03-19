@@ -1,64 +1,55 @@
-[@redhat-cloud-services/topological-inventory-client](../README.md) > [NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)
+[@redhat-cloud-services/topological-inventory-client](../README.md) › [Globals](../globals.md) › [NetworkAdaptersCollection](networkadapterscollection.md)
 
 # Interface: NetworkAdaptersCollection
 
-*__export__*: 
+**`export`** 
 
-*__interface__*: NetworkAdaptersCollection
+**`interface`** NetworkAdaptersCollection
 
 ## Hierarchy
 
-**NetworkAdaptersCollection**
+* **NetworkAdaptersCollection**
 
 ## Index
 
 ### Properties
 
-* [data](networkadapterscollection.md#data)
-* [links](networkadapterscollection.md#links)
-* [meta](networkadapterscollection.md#meta)
-
----
+* [data](networkadapterscollection.md#optional-data)
+* [links](networkadapterscollection.md#optional-links)
+* [meta](networkadapterscollection.md#optional-meta)
 
 ## Properties
 
-<a id="data"></a>
+### `Optional` data
 
-### `<Optional>` data
-
-**● data**: *`Array`<[NetworkAdapter](networkadapter.md)>*
+• **data**? : *Array‹[NetworkAdapter](networkadapter.md)›*
 
 *Defined in [api.ts:2021](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2021)*
 
-*__type__*: {Array}
+**`type`** {Array<NetworkAdapter>}
 
-*__memberof__*: NetworkAdaptersCollection
+**`memberof`** NetworkAdaptersCollection
 
 ___
-<a id="links"></a>
 
-### `<Optional>` links
+### `Optional` links
 
-**● links**: *[CollectionLinks](collectionlinks.md)*
+• **links**? : *[CollectionLinks](collectionlinks.md)*
 
 *Defined in [api.ts:2015](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2015)*
 
-*__type__*: {CollectionLinks}
+**`type`** {CollectionLinks}
 
-*__memberof__*: NetworkAdaptersCollection
+**`memberof`** NetworkAdaptersCollection
 
 ___
-<a id="meta"></a>
 
-### `<Optional>` meta
+### `Optional` meta
 
-**● meta**: *[CollectionMetadata](collectionmetadata.md)*
+• **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
 *Defined in [api.ts:2009](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2009)*
 
-*__type__*: {CollectionMetadata}
+**`type`** {CollectionMetadata}
 
-*__memberof__*: NetworkAdaptersCollection
-
-___
-
+**`memberof`** NetworkAdaptersCollection
