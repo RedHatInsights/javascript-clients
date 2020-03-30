@@ -1608,10 +1608,12 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {string} id Remediation identifier
          * @param {string} playbookRunId Playbook run identifier (UUID)
          * @param {string} [executor] Playbook run executor identifier (UUID)
+         * @param {number} [limit] Maximum number of results to return
+         * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, options: any = {}): RequestArgs {
+        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling getPlaybookRunSystems.');
@@ -1634,6 +1636,14 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
 
             if (executor !== undefined) {
                 localVarQueryParameter['executor'] = executor;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -2058,11 +2068,13 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {string} id Remediation identifier
          * @param {string} playbookRunId Playbook run identifier (UUID)
          * @param {string} [executor] Playbook run executor identifier (UUID)
+         * @param {number} [limit] Maximum number of results to return
+         * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunSystemList> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getPlaybookRunSystems(id, playbookRunId, executor, options);
+        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunSystemList> {
+            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2268,11 +2280,13 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @param {string} id Remediation identifier
          * @param {string} playbookRunId Playbook run identifier (UUID)
          * @param {string} [executor] Playbook run executor identifier (UUID)
+         * @param {number} [limit] Maximum number of results to return
+         * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, options?: any) {
-            return RemediationsApiFp(configuration).getPlaybookRunSystems(id, playbookRunId, executor, options)(axios, basePath);
+        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, options?: any) {
+            return RemediationsApiFp(configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, options)(axios, basePath);
         },
         /**
          * Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
@@ -2455,12 +2469,14 @@ export class RemediationsApi extends BaseAPI {
      * @param {string} id Remediation identifier
      * @param {string} playbookRunId Playbook run identifier (UUID)
      * @param {string} [executor] Playbook run executor identifier (UUID)
+     * @param {number} [limit] Maximum number of results to return
+     * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi
      */
-    public getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, options?: any) {
-        return RemediationsApiFp(this.configuration).getPlaybookRunSystems(id, playbookRunId, executor, options)(this.axios, this.basePath);
+    public getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, options?: any) {
+        return RemediationsApiFp(this.configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, options)(this.axios, this.basePath);
     }
 
     /**

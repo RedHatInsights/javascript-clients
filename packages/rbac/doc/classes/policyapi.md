@@ -92,7 +92,7 @@ ___
 
 ▸ **createPolicies**(`policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
 
-*Defined in [api.ts:2779](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2779)*
+*Defined in [api.ts:2807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2807)*
 
 **`summary`** Create a policy in a tenant
 
@@ -115,7 +115,7 @@ ___
 
 ▸ **deletePolicy**(`uuid`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:2791](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2791)*
+*Defined in [api.ts:2819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2819)*
 
 **`summary`** Delete a policy in the tenant
 
@@ -138,7 +138,7 @@ ___
 
 ▸ **getPolicy**(`uuid`: string, `options?`: any): *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
 
-*Defined in [api.ts:2803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2803)*
+*Defined in [api.ts:2831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2831)*
 
 **`summary`** Get a policy in the tenant
 
@@ -161,7 +161,7 @@ ___
 
 ▸ **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: string, `options?`: any): *AxiosPromise‹[PolicyPagination](../interfaces/policypagination.md)›*
 
-*Defined in [api.ts:2821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2821)*
+*Defined in [api.ts:2849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2849)*
 
 **`summary`** List the policies in the tenant
 
@@ -190,7 +190,7 @@ ___
 
 ▸ **updatePolicy**(`uuid`: string, `policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
 
-*Defined in [api.ts:2834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2834)*
+*Defined in [api.ts:2862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2862)*
 
 **`summary`** Update a policy in the tenant
 

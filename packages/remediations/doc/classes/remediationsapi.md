@@ -102,7 +102,7 @@ ___
 
 ▸ **createRemediation**(`remediationInput`: [RemediationInput](../interfaces/remediationinput.md), `options?`: any): *AxiosPromise‹[RemediationCreated](../interfaces/remediationcreated.md)›*
 
-*Defined in [api.ts:2382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2382)*
+*Defined in [api.ts:2396](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2396)*
 
 Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
 
@@ -127,7 +127,7 @@ ___
 
 ▸ **deleteRemediation**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:2394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2394)*
+*Defined in [api.ts:2408](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2408)*
 
 Removes the given Remediation, RBAC permission {remediations:remediation:write}
 
@@ -152,7 +152,7 @@ ___
 
 ▸ **deleteRemediationIssue**(`id`: string, `issue`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:2407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2407)*
+*Defined in [api.ts:2421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2421)*
 
 Removes the given Issue from the Remediation, RBAC permission {remediations:remediation:write}
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **deleteRemediationIssueSystem**(`id`: string, `issue`: string, `system`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:2421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2421)*
+*Defined in [api.ts:2435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2435)*
 
 Removes the given System from the Issue Remediation, RBAC permission {remediations:remediation:write}
 
@@ -205,7 +205,7 @@ ___
 
 ▸ **getPlaybookRunDetails**(`id`: string, `playbookRunId`: string, `options?`: any): *AxiosPromise‹[PlaybookRunExecutorDetails](../interfaces/playbookrunexecutordetails.md)›*
 
-*Defined in [api.ts:2434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2434)*
+*Defined in [api.ts:2448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2448)*
 
 Get details on execution of the rememdiation
 
@@ -231,7 +231,7 @@ ___
 
 ▸ **getPlaybookRunSystemDetails**(`id`: string, `playbookRunId`: string, `system`: string, `options?`: any): *AxiosPromise‹[PlaybookRunSystemDetails](../interfaces/playbookrunsystemdetails.md)›*
 
-*Defined in [api.ts:2448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2448)*
+*Defined in [api.ts:2462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2462)*
 
 Get details and updated log of system being executed on in specific playbook run
 
@@ -256,9 +256,9 @@ ___
 
 ###  getPlaybookRunSystems
 
-▸ **getPlaybookRunSystems**(`id`: string, `playbookRunId`: string, `executor?`: string, `options?`: any): *AxiosPromise‹[PlaybookRunSystemList](../interfaces/playbookrunsystemlist.md)›*
+▸ **getPlaybookRunSystems**(`id`: string, `playbookRunId`: string, `executor?`: string, `limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[PlaybookRunSystemList](../interfaces/playbookrunsystemlist.md)›*
 
-*Defined in [api.ts:2462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2462)*
+*Defined in [api.ts:2478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2478)*
 
 Get details on systems being executed on in specific playbook run
 
@@ -275,6 +275,8 @@ Name | Type | Description |
 `id` | string | Remediation identifier |
 `playbookRunId` | string | Playbook run identifier (UUID) |
 `executor?` | string | - |
+`limit?` | number | - |
+`offset?` | number | - |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[PlaybookRunSystemList](../interfaces/playbookrunsystemlist.md)›*
@@ -285,7 +287,7 @@ ___
 
 ▸ **getRemediation**(`id`: string, `options?`: any): *AxiosPromise‹[RemediationDetails](../interfaces/remediationdetails.md)›*
 
-*Defined in [api.ts:2474](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2474)*
+*Defined in [api.ts:2490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2490)*
 
 Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
 
@@ -310,7 +312,7 @@ ___
 
 ▸ **getRemediationConnectionStatus**(`id`: string, `options?`: any): *AxiosPromise‹[RemediationConnectionStatus](../interfaces/remediationconnectionstatus.md)›*
 
-*Defined in [api.ts:2486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2486)*
+*Defined in [api.ts:2502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2502)*
 
 Get satellite connection status for a given host, RBAC permission {remediations:remediation:execute}
 
@@ -335,7 +337,7 @@ ___
 
 ▸ **getRemediationPlaybook**(`id`: string, `options?`: any): *AxiosPromise‹string›*
 
-*Defined in [api.ts:2498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2498)*
+*Defined in [api.ts:2514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2514)*
 
 Provides Ansible Playbook, RBAC permission {remediations:remediation:read}
 
@@ -360,7 +362,7 @@ ___
 
 ▸ **getRemediations**(`sort?`: "updated_at" | "-updated_at" | "name" | "-name" | "system_count" | "-system_count" | "issue_count" | "-issue_count", `filter?`: string, `limit?`: number, `offset?`: number, `system?`: string, `options?`: any): *AxiosPromise‹[RemediationList](../interfaces/remediationlist.md)›*
 
-*Defined in [api.ts:2514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2514)*
+*Defined in [api.ts:2530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2530)*
 
 Provides information about Remediations, RBAC permission {remediations:remediation:read}
 
@@ -389,7 +391,7 @@ ___
 
 ▸ **listPlaybookRuns**(`id`: string, `options?`: any): *AxiosPromise‹[PlaybookRunsList](../interfaces/playbookrunslist.md)›*
 
-*Defined in [api.ts:2526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2526)*
+*Defined in [api.ts:2542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2542)*
 
 List of executions of this remediation
 
@@ -414,7 +416,7 @@ ___
 
 ▸ **runRemediation**(`id`: string, `options?`: any): *AxiosPromise‹[ExecuteRemediation](../interfaces/executeremediation.md)›*
 
-*Defined in [api.ts:2538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2538)*
+*Defined in [api.ts:2554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2554)*
 
 Execute remediation, RBAC permission {remediations:remediation:execute}
 
@@ -439,7 +441,7 @@ ___
 
 ▸ **updateRemediation**(`id`: string, `remediationInput`: [RemediationInput](../interfaces/remediationinput.md), `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:2551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2551)*
+*Defined in [api.ts:2567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2567)*
 
 Updates the given Remediation, RBAC permission {remediations:remediation:write}
 
@@ -465,7 +467,7 @@ ___
 
 ▸ **updateRemediationIssue**(`id`: string, `issue`: string, `remediationIssueIn`: [RemediationIssueIn](../interfaces/remediationissuein.md), `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:2565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2565)*
+*Defined in [api.ts:2581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2581)*
 
 Updates the given Remediation Issue, RBAC permission {remediations:remediation:write}
 

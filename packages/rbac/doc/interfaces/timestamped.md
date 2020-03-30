@@ -23,7 +23,7 @@
 
 • **created**: *Date*
 
-*Defined in [api.ts:1170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1170)*
+*Defined in [api.ts:1182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1182)*
 
 **`type`** {Date}
 
@@ -35,7 +35,7 @@ ___
 
 • **modified**: *Date*
 
-*Defined in [api.ts:1176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1176)*
+*Defined in [api.ts:1188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1188)*
 
 **`type`** {Date}
 
