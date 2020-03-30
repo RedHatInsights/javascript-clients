@@ -88,7 +88,7 @@ ___
 
 ▸ **getPrincipalAccess**(`application`: string, `username?`: string, `limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[AccessPagination](../interfaces/accesspagination.md)›*
 
-*Defined in [api.ts:1326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1326)*
+*Defined in [api.ts:1338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1338)*
 
 **`summary`** Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
 

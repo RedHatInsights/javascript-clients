@@ -16,6 +16,7 @@
 
 * [email](principal.md#email)
 * [firstName](principal.md#optional-firstname)
+* [isActive](principal.md#optional-isactive)
 * [lastName](principal.md#optional-lastname)
 * [username](principal.md#username)
 
@@ -40,6 +41,18 @@ ___
 *Defined in [api.ts:653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L653)*
 
 **`type`** {string}
+
+**`memberof`** Principal
+
+___
+
+### `Optional` isActive
+
+• **isActive**? : *boolean*
+
+*Defined in [api.ts:665](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L665)*
+
+**`type`** {boolean}
 
 **`memberof`** Principal
 

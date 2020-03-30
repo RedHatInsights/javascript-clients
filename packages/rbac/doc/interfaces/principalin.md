@@ -22,7 +22,7 @@
 
 • **username**: *string*
 
-*Defined in [api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L673)*
+*Defined in [api.ts:679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L679)*
 
 **`type`** {string}
 

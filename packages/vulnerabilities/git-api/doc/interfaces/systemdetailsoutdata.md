@@ -26,7 +26,7 @@
 
 • **lastEvaluation**: *string | null*
 
-*Defined in [git-api/api.ts:1363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1363)*
+*Defined in [git-api/api.ts:1425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1425)*
 
 Date of last evaluation.
 
@@ -40,7 +40,7 @@ ___
 
 • **lastUpload**: *string | null*
 
-*Defined in [git-api/api.ts:1381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1381)*
+*Defined in [git-api/api.ts:1443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1443)*
 
 Date of the latest upload of archive.
 
@@ -54,7 +54,7 @@ ___
 
 • **optOut**: *boolean*
 
-*Defined in [git-api/api.ts:1375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1375)*
+*Defined in [git-api/api.ts:1437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1437)*
 
 System opt out status.
 
@@ -68,7 +68,7 @@ ___
 
 • **rulesEvaluation**: *string | null*
 
-*Defined in [git-api/api.ts:1369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1369)*
+*Defined in [git-api/api.ts:1431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1431)*
 
 Date of last security rules evaluation.
 
@@ -82,7 +82,7 @@ ___
 
 • **stale**? : *boolean*
 
-*Defined in [git-api/api.ts:1387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1387)*
+*Defined in [git-api/api.ts:1449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1449)*
 
 System stale status.
 

@@ -207,13 +207,11 @@ ___
 
 ###  rules
 
-• **rules**: *Array‹string›*
+• **rules**: *Array‹[InsightsRule](insightsrule.md)›*
 
 *Defined in [git-api/api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L289)*
 
-ID(s) of associated security rule(s).
-
-**`type`** {Array<string>}
+**`type`** {Array<InsightsRule>}
 
 **`memberof`** CveDetailOutDataAttributes
 

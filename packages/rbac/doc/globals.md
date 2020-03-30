@@ -104,7 +104,7 @@
 
 ▸ **AccessApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1198)*
+*Defined in [api.ts:1210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1210)*
 
 AccessApi - axios parameter creator
 
@@ -124,7 +124,7 @@ ___
 
 ▸ **AccessApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:1290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1290)*
+*Defined in [api.ts:1302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1302)*
 
 AccessApi - factory interface
 
@@ -146,7 +146,7 @@ ___
 
 ▸ **AccessApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1264)*
+*Defined in [api.ts:1276](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1276)*
 
 AccessApi - functional programming interface
 
@@ -168,7 +168,7 @@ ___
 
 ▸ **GroupApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1336)*
+*Defined in [api.ts:1348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1348)*
 
 GroupApi - axios parameter creator
 
@@ -194,11 +194,11 @@ Name | Type |
 
 * **getGroup**(`uuid`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **getPrincipalsFromGroup**(`uuid`: string, `principalUsername?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getPrincipalsFromGroup**(`uuid`: string, `principalUsername?`: string, `orderBy?`: "username", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **listGroups**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `username?`: string, `uuid?`: Array‹string›, `roleNames?`: Array‹string›, `roleDiscriminator?`: "all" | "any", `orderBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "name" | "modified" | "policyCount", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **updateGroup**(`uuid`: string, `group`: [Group](interfaces/group.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -208,7 +208,7 @@ ___
 
 ▸ **GroupApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2073)*
+*Defined in [api.ts:2097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2097)*
 
 GroupApi - factory interface
 
@@ -236,11 +236,11 @@ Name | Type |
 
 * **getGroup**(`uuid`: string, `options?`: any): *AxiosPromise‹[GroupWithPrincipalsAndRoles](interfaces/groupwithprincipalsandroles.md)›*
 
-* **getPrincipalsFromGroup**(`uuid`: string, `principalUsername?`: string, `options?`: any): *AxiosPromise‹[PrincipalPagination](interfaces/principalpagination.md)›*
+* **getPrincipalsFromGroup**(`uuid`: string, `principalUsername?`: string, `orderBy?`: "username", `options?`: any): *AxiosPromise‹[PrincipalPagination](interfaces/principalpagination.md)›*
 
 * **listGroups**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `username?`: string, `uuid?`: Array‹string›, `roleNames?`: Array‹string›, `roleDiscriminator?`: "all" | "any", `orderBy?`: string, `options?`: any): *AxiosPromise‹[GroupPagination](interfaces/grouppagination.md)›*
 
-* **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[GroupRolesPagination](interfaces/grouprolespagination.md)›*
+* **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "name" | "modified" | "policyCount", `options?`: any): *AxiosPromise‹[GroupRolesPagination](interfaces/grouprolespagination.md)›*
 
 * **updateGroup**(`uuid`: string, `group`: [Group](interfaces/group.md), `options?`: any): *AxiosPromise‹[GroupOut](interfaces/groupout.md)›*
 
@@ -250,7 +250,7 @@ ___
 
 ▸ **GroupApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1891](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1891)*
+*Defined in [api.ts:1913](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1913)*
 
 GroupApi - functional programming interface
 
@@ -290,7 +290,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[GroupWithPrincipalsAndRoles](interfaces/groupwithprincipalsandroles.md)›*
 
-* **getPrincipalsFromGroup**(`uuid`: string, `principalUsername?`: string, `options?`: any): *function*
+* **getPrincipalsFromGroup**(`uuid`: string, `principalUsername?`: string, `orderBy?`: "username", `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PrincipalPagination](interfaces/principalpagination.md)›*
 
@@ -298,7 +298,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[GroupPagination](interfaces/grouppagination.md)›*
 
-* **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `options?`: any): *function*
+* **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "name" | "modified" | "policyCount", `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[GroupRolesPagination](interfaces/grouprolespagination.md)›*
 
@@ -312,7 +312,7 @@ ___
 
 ▸ **PolicyApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2371)*
+*Defined in [api.ts:2399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2399)*
 
 PolicyApi - axios parameter creator
 
@@ -340,7 +340,7 @@ ___
 
 ▸ **PolicyApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2702)*
+*Defined in [api.ts:2730](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2730)*
 
 PolicyApi - factory interface
 
@@ -370,7 +370,7 @@ ___
 
 ▸ **PolicyApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2616](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2616)*
+*Defined in [api.ts:2644](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2644)*
 
 PolicyApi - functional programming interface
 
@@ -408,7 +408,7 @@ ___
 
 ▸ **PrincipalApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2844](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2844)*
+*Defined in [api.ts:2872](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2872)*
 
 PrincipalApi - axios parameter creator
 
@@ -428,7 +428,7 @@ ___
 
 ▸ **PrincipalApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2932](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2932)*
+*Defined in [api.ts:2960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2960)*
 
 PrincipalApi - factory interface
 
@@ -450,7 +450,7 @@ ___
 
 ▸ **PrincipalApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2906](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2906)*
+*Defined in [api.ts:2934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2934)*
 
 PrincipalApi - functional programming interface
 
@@ -472,7 +472,7 @@ ___
 
 ▸ **RoleApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2978)*
+*Defined in [api.ts:3006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3006)*
 
 RoleApi - axios parameter creator
 
@@ -502,7 +502,7 @@ ___
 
 ▸ **RoleApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3374](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3374)*
+*Defined in [api.ts:3402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3402)*
 
 RoleApi - factory interface
 
@@ -534,7 +534,7 @@ ___
 
 ▸ **RoleApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3272](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3272)*
+*Defined in [api.ts:3300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3300)*
 
 RoleApi - functional programming interface
 
@@ -576,7 +576,7 @@ ___
 
 ▸ **StatusApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3542)*
+*Defined in [api.ts:3570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3570)*
 
 StatusApi - axios parameter creator
 
@@ -596,7 +596,7 @@ ___
 
 ▸ **StatusApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3606)*
+*Defined in [api.ts:3634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3634)*
 
 StatusApi - factory interface
 
@@ -618,7 +618,7 @@ ___
 
 ▸ **StatusApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3584)*
+*Defined in [api.ts:3612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3612)*
 
 StatusApi - functional programming interface
 

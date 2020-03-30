@@ -16,6 +16,7 @@
 
 * [email](principalout.md#email)
 * [firstName](principalout.md#optional-firstname)
+* [isActive](principalout.md#optional-isactive)
 * [lastName](principalout.md#optional-lastname)
 * [username](principalout.md#username)
 * [uuid](principalout.md#uuid)
@@ -26,7 +27,7 @@
 
 • **email**: *string*
 
-*Defined in [api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L693)*
+*Defined in [api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L699)*
 
 **`type`** {string}
 
@@ -38,9 +39,21 @@ ___
 
 • **firstName**? : *string*
 
-*Defined in [api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L699)*
+*Defined in [api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L705)*
 
 **`type`** {string}
+
+**`memberof`** PrincipalOut
+
+___
+
+### `Optional` isActive
+
+• **isActive**? : *boolean*
+
+*Defined in [api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L717)*
+
+**`type`** {boolean}
 
 **`memberof`** PrincipalOut
 
@@ -50,7 +63,7 @@ ___
 
 • **lastName**? : *string*
 
-*Defined in [api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L705)*
+*Defined in [api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L711)*
 
 **`type`** {string}
 
@@ -62,7 +75,7 @@ ___
 
 • **username**: *string*
 
-*Defined in [api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L687)*
+*Defined in [api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L693)*
 
 **`type`** {string}
 
@@ -74,7 +87,7 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L711)*
+*Defined in [api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L723)*
 
 **`type`** {string}
 

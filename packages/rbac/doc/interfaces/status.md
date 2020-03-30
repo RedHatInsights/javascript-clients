@@ -27,7 +27,7 @@
 
 • **apiVersion**: *number*
 
-*Defined in [api.ts:1126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1126)*
+*Defined in [api.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1138)*
 
 **`type`** {number}
 
@@ -39,7 +39,7 @@ ___
 
 • **commit**? : *string*
 
-*Defined in [api.ts:1132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1132)*
+*Defined in [api.ts:1144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1144)*
 
 **`type`** {string}
 
@@ -51,7 +51,7 @@ ___
 
 • **modules**? : *any*
 
-*Defined in [api.ts:1156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1156)*
+*Defined in [api.ts:1168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1168)*
 
 **`type`** {any}
 
@@ -63,7 +63,7 @@ ___
 
 • **platformInfo**? : *any*
 
-*Defined in [api.ts:1144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1144)*
+*Defined in [api.ts:1156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1156)*
 
 **`type`** {any}
 
@@ -75,7 +75,7 @@ ___
 
 • **pythonVersion**? : *string*
 
-*Defined in [api.ts:1150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1150)*
+*Defined in [api.ts:1162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1162)*
 
 **`type`** {string}
 
@@ -87,7 +87,7 @@ ___
 
 • **serverAddress**? : *string*
 
-*Defined in [api.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1138)*
+*Defined in [api.ts:1150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1150)*
 
 **`type`** {string}
 

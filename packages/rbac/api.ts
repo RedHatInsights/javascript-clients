@@ -657,6 +657,12 @@ export interface Principal {
      * @memberof Principal
      */
     lastName?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Principal
+     */
+    isActive?: boolean;
 }
 
 /**
@@ -703,6 +709,12 @@ export interface PrincipalOut {
      * @memberof PrincipalOut
      */
     lastName?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof PrincipalOut
+     */
+    isActive?: boolean;
     /**
      *
      * @type {string}
@@ -1652,10 +1664,11 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @summary Get a list of principals from a group in the tenant
          * @param {string} uuid ID of group from which to get principals
          * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
+         * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup(uuid: string, principalUsername?: string, options: any = {}): RequestArgs {
+        getPrincipalsFromGroup(uuid: string, principalUsername?: string, orderBy?: 'username', options: any = {}): RequestArgs {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getPrincipalsFromGroup.');
@@ -1679,6 +1692,10 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
 
             if (principalUsername !== undefined) {
                 localVarQueryParameter['principal_username'] = principalUsername;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1778,10 +1795,11 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {'name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'modified' | 'policyCount', options: any = {}): RequestArgs {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling listRolesForGroup.');
@@ -1821,6 +1839,10 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1997,11 +2019,12 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @summary Get a list of principals from a group in the tenant
          * @param {string} uuid ID of group from which to get principals
          * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
+         * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup(uuid: string, principalUsername?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).getPrincipalsFromGroup(uuid, principalUsername, options);
+        getPrincipalsFromGroup(uuid: string, principalUsername?: string, orderBy?: 'username', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
+            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).getPrincipalsFromGroup(uuid, principalUsername, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2038,11 +2061,12 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {'name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, options);
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'modified' | 'policyCount', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination> {
+            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2151,11 +2175,12 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @summary Get a list of principals from a group in the tenant
          * @param {string} uuid ID of group from which to get principals
          * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
+         * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup(uuid: string, principalUsername?: string, options?: any) {
-            return GroupApiFp(configuration).getPrincipalsFromGroup(uuid, principalUsername, options)(axios, basePath);
+        getPrincipalsFromGroup(uuid: string, principalUsername?: string, orderBy?: 'username', options?: any) {
+            return GroupApiFp(configuration).getPrincipalsFromGroup(uuid, principalUsername, orderBy, options)(axios, basePath);
         },
         /**
          *
@@ -2184,11 +2209,12 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {'name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, options?: any) {
-            return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, options)(axios, basePath);
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'modified' | 'policyCount', options?: any) {
+            return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, orderBy, options)(axios, basePath);
         },
         /**
          *
@@ -2304,12 +2330,13 @@ export class GroupApi extends BaseAPI {
      * @summary Get a list of principals from a group in the tenant
      * @param {string} uuid ID of group from which to get principals
      * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
+     * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-username
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public getPrincipalsFromGroup(uuid: string, principalUsername?: string, options?: any) {
-        return GroupApiFp(this.configuration).getPrincipalsFromGroup(uuid, principalUsername, options)(this.axios, this.basePath);
+    public getPrincipalsFromGroup(uuid: string, principalUsername?: string, orderBy?: 'username', options?: any) {
+        return GroupApiFp(this.configuration).getPrincipalsFromGroup(uuid, principalUsername, orderBy, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2341,12 +2368,13 @@ export class GroupApi extends BaseAPI {
      * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {'name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply &#39;-&#39; before the param value, such as: ?order_by&#x3D;-name
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, options?: any) {
-        return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, options)(this.axios, this.basePath);
+    public listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'modified' | 'policyCount', options?: any) {
+        return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, orderBy, options)(this.axios, this.basePath);
     }
 
     /**

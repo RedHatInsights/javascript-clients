@@ -91,7 +91,7 @@ ___
 
 ▸ **refreshAccount**(`accountId`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [git-api/api.ts:3501](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3501)*
+*Defined in [git-api/api.ts:3595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3595)*
 
 Refresh cached counts for given account ID. Admin interface, available only to internal users.
 
@@ -116,7 +116,7 @@ ___
 
 ▸ **refreshAccountCve**(`accountId`: string, `cveId`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [git-api/api.ts:3514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3514)*
+*Defined in [git-api/api.ts:3608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3608)*
 
 Refresh cached counts for given account ID and CVE. Admin interface, available only to internal users.
 
@@ -142,7 +142,7 @@ ___
 
 ▸ **refreshCve**(`cveId`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [git-api/api.ts:3526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3526)*
+*Defined in [git-api/api.ts:3620](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3620)*
 
 Refresh cached counts for given CVE. Admin interface, available only to internal users.
 
@@ -167,7 +167,7 @@ ___
 
 ▸ **refreshSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [git-api/api.ts:3538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3538)*
+*Defined in [git-api/api.ts:3632](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3632)*
 
 Refresh cached counts for given inventory ID. Admin interface, available only to internal users.
 
