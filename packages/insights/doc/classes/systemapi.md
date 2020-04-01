@@ -90,7 +90,7 @@ ___
 
 ▸ **systemList**(`limit?`: number, `offset?`: number, `sort?`: "hits" | "last_seen" | "display_name" | "-hits" | "-last_seen" | "-display_name", `displayName?`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2005](../interfaces/inlineresponse2005.md)›*
 
-*Defined in [api.ts:5060](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5060)*
+*Defined in [api.ts:4686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4686)*
 
 Results can be sorted and systems can be filtered by display name.
 
@@ -119,7 +119,7 @@ ___
 
 ▸ **systemRead**(`uuid`: string, `options?`: any): *AxiosPromise‹[System](../interfaces/system.md)›*
 
-*Defined in [api.ts:5072](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5072)*
+*Defined in [api.ts:4698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4698)*
 
 Retrieve the reports for a single system by Insights Inventory UUID
 
@@ -144,7 +144,7 @@ ___
 
 ▸ **systemReports**(`uuid`: string, `options?`: any): *AxiosPromise‹[Report](../interfaces/report.md)[]›*
 
-*Defined in [api.ts:5084](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5084)*
+*Defined in [api.ts:4710](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4710)*
 
 Returns reports that: * are in the user's account * have an active, not-deleted rule * where the rule has not been acked by this account If the host ID is not found, return an empty list.
 

@@ -546,6 +546,20 @@ export interface MultiHostUnAck {
 /**
  *
  * @export
+ * @interface PreferencesInput
+ */
+export interface PreferencesInput {
+    /**
+     *
+     * @type {boolean}
+     * @memberof PreferencesInput
+     */
+    isSubscribed: boolean;
+}
+
+/**
+ *
+ * @export
  * @interface Report
  */
 export interface Report {
@@ -1116,26 +1130,6 @@ export interface StaleSystemStats {
 /**
  *
  * @export
- * @interface StatTimeSeries
- */
-export interface StatTimeSeries {
-    /**
-     *
-     * @type {Date}
-     * @memberof StatTimeSeries
-     */
-    checkedDay: Date;
-    /**
-     *
-     * @type {number}
-     * @memberof StatTimeSeries
-     */
-    count: number;
-}
-
-/**
- *
- * @export
  * @interface Stats
  */
 export interface Stats {
@@ -1194,7 +1188,7 @@ export interface System {
      * @type {Date}
      * @memberof System
      */
-    staleAt?: Date;
+    staleAt: Date;
 }
 
 /**
@@ -4084,53 +4078,6 @@ export class SettingsApi extends BaseAPI {
 export const StatsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * A 'hit' is a unique system-rule pair - a rule impacting one system.
-         * @summary Simple time series of day and number of hits per day.
-         * @param {string} [start] Start date for statistics range
-         * @param {string} [end] End date for statistics range
-         * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        statsHitsSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options: any = {}): RequestArgs {
-            const localVarPath = `/stats/hits_series/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (start !== undefined) {
-                localVarQueryParameter['start'] = (start as any).toISOString();
-            }
-
-            if (end !== undefined) {
-                localVarQueryParameter['end'] = (end as any).toISOString();
-            }
-
-            if (grain !== undefined) {
-                localVarQueryParameter['grain'] = grain;
-            }
-
-            if (tags) {
-                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Copied sort-of from the APIRootView's `get` method.
          * @summary Provide a simple list of URLs contained here.
          * @param {*} [options] Override http request option.
@@ -4222,53 +4169,6 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * If one rule is impacting four systems, this is counted once.
-         * @summary Simple time series of day and number of rules impacting systems.
-         * @param {string} [start] Start date for statistics range
-         * @param {string} [end] End date for statistics range
-         * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        statsRulesHitSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options: any = {}): RequestArgs {
-            const localVarPath = `/stats/rules_hit_series/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (start !== undefined) {
-                localVarQueryParameter['start'] = (start as any).toISOString();
-            }
-
-            if (end !== undefined) {
-                localVarQueryParameter['end'] = (end as any).toISOString();
-            }
-
-            if (grain !== undefined) {
-                localVarQueryParameter['grain'] = grain;
-            }
-
-            if (tags) {
-                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * For historic reasons, 'stale' refers to hosts that are being warned of being stale, and 'stale_warn' refers to hosts that are being hidden from display.
          * @summary Show statistics of stale warning and hidden systems.
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
@@ -4332,100 +4232,6 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
                 options: localVarRequestOptions,
             };
         },
-        /**
-         * Systems with no reports of rules impacting them are ignored.
-         * @summary Simple time series of day and number of systems impacted by any rule.
-         * @param {string} [start] Start date for statistics range
-         * @param {string} [end] End date for statistics range
-         * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        statsSystemsImpactedSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options: any = {}): RequestArgs {
-            const localVarPath = `/stats/systems_impacted_series/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (start !== undefined) {
-                localVarQueryParameter['start'] = (start as any).toISOString();
-            }
-
-            if (end !== undefined) {
-                localVarQueryParameter['end'] = (end as any).toISOString();
-            }
-
-            if (grain !== undefined) {
-                localVarQueryParameter['grain'] = grain;
-            }
-
-            if (tags) {
-                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Systems with no reports of rules impacting them are still considered.
-         * @summary Simple time series of day and number of systems having uploaded that day.
-         * @param {string} [start] Start date for statistics range
-         * @param {string} [end] End date for statistics range
-         * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        statsSystemsReportingSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options: any = {}): RequestArgs {
-            const localVarPath = `/stats/systems_reporting_series/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (start !== undefined) {
-                localVarQueryParameter['start'] = (start as any).toISOString();
-            }
-
-            if (end !== undefined) {
-                localVarQueryParameter['end'] = (end as any).toISOString();
-            }
-
-            if (grain !== undefined) {
-                localVarQueryParameter['grain'] = grain;
-            }
-
-            if (tags) {
-                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS["csv"]);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
     }
 };
 
@@ -4435,23 +4241,6 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
  */
 export const StatsApiFp = function(configuration?: Configuration) {
     return {
-        /**
-         * A 'hit' is a unique system-rule pair - a rule impacting one system.
-         * @summary Simple time series of day and number of hits per day.
-         * @param {string} [start] Start date for statistics range
-         * @param {string} [end] End date for statistics range
-         * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        statsHitsSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StatTimeSeries>> {
-            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsHitsSeries(start, end, grain, tags, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
         /**
          * Copied sort-of from the APIRootView's `get` method.
          * @summary Provide a simple list of URLs contained here.
@@ -4494,23 +4283,6 @@ export const StatsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * If one rule is impacting four systems, this is counted once.
-         * @summary Simple time series of day and number of rules impacting systems.
-         * @param {string} [start] Start date for statistics range
-         * @param {string} [end] End date for statistics range
-         * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        statsRulesHitSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StatTimeSeries>> {
-            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsRulesHitSeries(start, end, grain, tags, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * For historic reasons, 'stale' refers to hosts that are being warned of being stale, and 'stale_warn' refers to hosts that are being hidden from display.
          * @summary Show statistics of stale warning and hidden systems.
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
@@ -4538,40 +4310,6 @@ export const StatsApiFp = function(configuration?: Configuration) {
                 return axios.request(axiosRequestArgs);
             };
         },
-        /**
-         * Systems with no reports of rules impacting them are ignored.
-         * @summary Simple time series of day and number of systems impacted by any rule.
-         * @param {string} [start] Start date for statistics range
-         * @param {string} [end] End date for statistics range
-         * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        statsSystemsImpactedSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StatTimeSeries>> {
-            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsSystemsImpactedSeries(start, end, grain, tags, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Systems with no reports of rules impacting them are still considered.
-         * @summary Simple time series of day and number of systems having uploaded that day.
-         * @param {string} [start] Start date for statistics range
-         * @param {string} [end] End date for statistics range
-         * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        statsSystemsReportingSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StatTimeSeries>> {
-            const localVarAxiosArgs = StatsApiAxiosParamCreator(configuration).statsSystemsReportingSeries(start, end, grain, tags, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
-                return axios.request(axiosRequestArgs);
-            };
-        },
     }
 };
 
@@ -4581,19 +4319,6 @@ export const StatsApiFp = function(configuration?: Configuration) {
  */
 export const StatsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
-        /**
-         * A 'hit' is a unique system-rule pair - a rule impacting one system.
-         * @summary Simple time series of day and number of hits per day.
-         * @param {string} [start] Start date for statistics range
-         * @param {string} [end] End date for statistics range
-         * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        statsHitsSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
-            return StatsApiFp(configuration).statsHitsSeries(start, end, grain, tags, options)(axios, basePath);
-        },
         /**
          * Copied sort-of from the APIRootView's `get` method.
          * @summary Provide a simple list of URLs contained here.
@@ -4624,19 +4349,6 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
             return StatsApiFp(configuration).statsRules(tags, options)(axios, basePath);
         },
         /**
-         * If one rule is impacting four systems, this is counted once.
-         * @summary Simple time series of day and number of rules impacting systems.
-         * @param {string} [start] Start date for statistics range
-         * @param {string} [end] End date for statistics range
-         * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        statsRulesHitSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
-            return StatsApiFp(configuration).statsRulesHitSeries(start, end, grain, tags, options)(axios, basePath);
-        },
-        /**
          * For historic reasons, 'stale' refers to hosts that are being warned of being stale, and 'stale_warn' refers to hosts that are being hidden from display.
          * @summary Show statistics of stale warning and hidden systems.
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
@@ -4656,32 +4368,6 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
         statsSystems(tags?: Array<string>, options?: any) {
             return StatsApiFp(configuration).statsSystems(tags, options)(axios, basePath);
         },
-        /**
-         * Systems with no reports of rules impacting them are ignored.
-         * @summary Simple time series of day and number of systems impacted by any rule.
-         * @param {string} [start] Start date for statistics range
-         * @param {string} [end] End date for statistics range
-         * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        statsSystemsImpactedSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
-            return StatsApiFp(configuration).statsSystemsImpactedSeries(start, end, grain, tags, options)(axios, basePath);
-        },
-        /**
-         * Systems with no reports of rules impacting them are still considered.
-         * @summary Simple time series of day and number of systems having uploaded that day.
-         * @param {string} [start] Start date for statistics range
-         * @param {string} [end] End date for statistics range
-         * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-         * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        statsSystemsReportingSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
-            return StatsApiFp(configuration).statsSystemsReportingSeries(start, end, grain, tags, options)(axios, basePath);
-        },
     };
 };
 
@@ -4692,21 +4378,6 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
  * @extends {BaseAPI}
  */
 export class StatsApi extends BaseAPI {
-    /**
-     * A 'hit' is a unique system-rule pair - a rule impacting one system.
-     * @summary Simple time series of day and number of hits per day.
-     * @param {string} [start] Start date for statistics range
-     * @param {string} [end] End date for statistics range
-     * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StatsApi
-     */
-    public statsHitsSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
-        return StatsApiFp(this.configuration).statsHitsSeries(start, end, grain, tags, options)(this.axios, this.basePath);
-    }
-
     /**
      * Copied sort-of from the APIRootView's `get` method.
      * @summary Provide a simple list of URLs contained here.
@@ -4743,21 +4414,6 @@ export class StatsApi extends BaseAPI {
     }
 
     /**
-     * If one rule is impacting four systems, this is counted once.
-     * @summary Simple time series of day and number of rules impacting systems.
-     * @param {string} [start] Start date for statistics range
-     * @param {string} [end] End date for statistics range
-     * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StatsApi
-     */
-    public statsRulesHitSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
-        return StatsApiFp(this.configuration).statsRulesHitSeries(start, end, grain, tags, options)(this.axios, this.basePath);
-    }
-
-    /**
      * For historic reasons, 'stale' refers to hosts that are being warned of being stale, and 'stale_warn' refers to hosts that are being hidden from display.
      * @summary Show statistics of stale warning and hidden systems.
      * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
@@ -4779,36 +4435,6 @@ export class StatsApi extends BaseAPI {
      */
     public statsSystems(tags?: Array<string>, options?: any) {
         return StatsApiFp(this.configuration).statsSystems(tags, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Systems with no reports of rules impacting them are ignored.
-     * @summary Simple time series of day and number of systems impacted by any rule.
-     * @param {string} [start] Start date for statistics range
-     * @param {string} [end] End date for statistics range
-     * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StatsApi
-     */
-    public statsSystemsImpactedSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
-        return StatsApiFp(this.configuration).statsSystemsImpactedSeries(start, end, grain, tags, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Systems with no reports of rules impacting them are still considered.
-     * @summary Simple time series of day and number of systems having uploaded that day.
-     * @param {string} [start] Start date for statistics range
-     * @param {string} [end] End date for statistics range
-     * @param {'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day'} [grain] Granularity for date queries
-     * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms &#39;key&#39;, &#39;key&#x3D;value&#39;, &#39;namespace/key&#39; or &#39;namespace/key&#x3D;value&#39;.  Omitting a part, or supplying &#39;*&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StatsApi
-     */
-    public statsSystemsReportingSeries(start?: string, end?: string, grain?: 'ever' | 'year' | 'quarter' | 'month' | 'week' | 'day', tags?: Array<string>, options?: any) {
-        return StatsApiFp(this.configuration).statsSystemsReportingSeries(start, end, grain, tags, options)(this.axios, this.basePath);
     }
 
 }
@@ -5863,6 +5489,174 @@ export class UsageApi extends BaseAPI {
      */
     public usageList(options?: any) {
         return UsageApiFp(this.configuration).usageList(options)(this.axios, this.basePath);
+    }
+
+}
+
+/**
+ * UserPreferencesApi - axios parameter creator
+ * @export
+ */
+export const UserPreferencesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * The current account settings will be updated, or one will be created, with the
+         * @summary Accept the settings as input, and adjust the actual models accordingly.
+         * @param {PreferencesInput} preferencesInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        userPreferencesCreate(preferencesInput: PreferencesInput, options: any = {}): RequestArgs {
+            // verify required parameter 'preferencesInput' is not null or undefined
+            if (preferencesInput === null || preferencesInput === undefined) {
+                throw new RequiredError('preferencesInput','Required parameter preferencesInput was null or undefined when calling userPreferencesCreate.');
+            }
+            const localVarPath = `/user-preferences/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PreferencesInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(preferencesInput || {}) : (preferencesInput || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * This simply compiles the 'show_satellite_hosts' account-wide setting and the weekly report 'is_subscribed' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+         * @summary Describe the settings we have in a Data-Driven Forms way.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        userPreferencesList(options: any = {}): RequestArgs {
+            const localVarPath = `/user-preferences/`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * UserPreferencesApi - functional programming interface
+ * @export
+ */
+export const UserPreferencesApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * The current account settings will be updated, or one will be created, with the
+         * @summary Accept the settings as input, and adjust the actual models accordingly.
+         * @param {PreferencesInput} preferencesInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        userPreferencesCreate(preferencesInput: PreferencesInput, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PreferencesInput> {
+            const localVarAxiosArgs = UserPreferencesApiAxiosParamCreator(configuration).userPreferencesCreate(preferencesInput, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * This simply compiles the 'show_satellite_hosts' account-wide setting and the weekly report 'is_subscribed' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+         * @summary Describe the settings we have in a Data-Driven Forms way.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        userPreferencesList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SettingsDDF>> {
+            const localVarAxiosArgs = UserPreferencesApiAxiosParamCreator(configuration).userPreferencesList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * UserPreferencesApi - factory interface
+ * @export
+ */
+export const UserPreferencesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * The current account settings will be updated, or one will be created, with the
+         * @summary Accept the settings as input, and adjust the actual models accordingly.
+         * @param {PreferencesInput} preferencesInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        userPreferencesCreate(preferencesInput: PreferencesInput, options?: any) {
+            return UserPreferencesApiFp(configuration).userPreferencesCreate(preferencesInput, options)(axios, basePath);
+        },
+        /**
+         * This simply compiles the 'show_satellite_hosts' account-wide setting and the weekly report 'is_subscribed' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+         * @summary Describe the settings we have in a Data-Driven Forms way.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        userPreferencesList(options?: any) {
+            return UserPreferencesApiFp(configuration).userPreferencesList(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * UserPreferencesApi - object-oriented interface
+ * @export
+ * @class UserPreferencesApi
+ * @extends {BaseAPI}
+ */
+export class UserPreferencesApi extends BaseAPI {
+    /**
+     * The current account settings will be updated, or one will be created, with the
+     * @summary Accept the settings as input, and adjust the actual models accordingly.
+     * @param {PreferencesInput} preferencesInput
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserPreferencesApi
+     */
+    public userPreferencesCreate(preferencesInput: PreferencesInput, options?: any) {
+        return UserPreferencesApiFp(this.configuration).userPreferencesCreate(preferencesInput, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * This simply compiles the 'show_satellite_hosts' account-wide setting and the weekly report 'is_subscribed' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+     * @summary Describe the settings we have in a Data-Driven Forms way.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserPreferencesApi
+     */
+    public userPreferencesList(options?: any) {
+        return UserPreferencesApiFp(this.configuration).userPreferencesList(options)(this.axios, this.basePath);
     }
 
 }

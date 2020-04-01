@@ -1,12 +1,12 @@
-[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [SettingsApi](settingsapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [UserPreferencesApi](userpreferencesapi.md)
 
-# Class: SettingsApi
+# Class: UserPreferencesApi
 
-SettingsApi - object-oriented interface
+UserPreferencesApi - object-oriented interface
 
 **`export`** 
 
-**`class`** SettingsApi
+**`class`** UserPreferencesApi
 
 **`extends`** {BaseAPI}
 
@@ -14,30 +14,30 @@ SettingsApi - object-oriented interface
 
 * [BaseAPI](baseapi.md)
 
-  ↳ **SettingsApi**
+  ↳ **UserPreferencesApi**
 
 ## Index
 
 ### Constructors
 
-* [constructor](settingsapi.md#constructor)
+* [constructor](userpreferencesapi.md#constructor)
 
 ### Properties
 
-* [axios](settingsapi.md#protected-axios)
-* [basePath](settingsapi.md#protected-basepath)
-* [configuration](settingsapi.md#protected-configuration)
+* [axios](userpreferencesapi.md#protected-axios)
+* [basePath](userpreferencesapi.md#protected-basepath)
+* [configuration](userpreferencesapi.md#protected-configuration)
 
 ### Methods
 
-* [settingsCreate](settingsapi.md#settingscreate)
-* [settingsList](settingsapi.md#settingslist)
+* [userPreferencesCreate](userpreferencesapi.md#userpreferencescreate)
+* [userPreferencesList](userpreferencesapi.md#userpreferenceslist)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new SettingsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[SettingsApi](settingsapi.md)*
+\+ **new UserPreferencesApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[UserPreferencesApi](userpreferencesapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -51,7 +51,7 @@ Name | Type | Default |
 `basePath` | string |  BASE_PATH |
 `axios` | AxiosInstance |  globalAxios |
 
-**Returns:** *[SettingsApi](settingsapi.md)*
+**Returns:** *[UserPreferencesApi](userpreferencesapi.md)*
 
 ## Properties
 
@@ -85,11 +85,11 @@ ___
 
 ## Methods
 
-###  settingsCreate
+###  userPreferencesCreate
 
-▸ **settingsCreate**(`settingsInput`: [SettingsInput](../interfaces/settingsinput.md), `options?`: any): *AxiosPromise‹[SettingsInput](../interfaces/settingsinput.md)›*
+▸ **userPreferencesCreate**(`preferencesInput`: [PreferencesInput](../interfaces/preferencesinput.md), `options?`: any): *AxiosPromise‹[PreferencesInput](../interfaces/preferencesinput.md)›*
 
-*Defined in [api.ts:4057](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4057)*
+*Defined in [api.ts:5647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5647)*
 
 The current account settings will be updated, or one will be created, with the
 
@@ -97,24 +97,24 @@ The current account settings will be updated, or one will be created, with the
 
 **`throws`** {RequiredError}
 
-**`memberof`** SettingsApi
+**`memberof`** UserPreferencesApi
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`settingsInput` | [SettingsInput](../interfaces/settingsinput.md) |
+`preferencesInput` | [PreferencesInput](../interfaces/preferencesinput.md) |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[SettingsInput](../interfaces/settingsinput.md)›*
+**Returns:** *AxiosPromise‹[PreferencesInput](../interfaces/preferencesinput.md)›*
 
 ___
 
-###  settingsList
+###  userPreferencesList
 
-▸ **settingsList**(`options?`: any): *AxiosPromise‹[SettingsDDF](../interfaces/settingsddf.md)[]›*
+▸ **userPreferencesList**(`options?`: any): *AxiosPromise‹[SettingsDDF](../interfaces/settingsddf.md)[]›*
 
-*Defined in [api.ts:4068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4068)*
+*Defined in [api.ts:5658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5658)*
 
 This simply compiles the 'show_satellite_hosts' account-wide setting and the weekly report 'is_subscribed' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
 
@@ -122,7 +122,7 @@ This simply compiles the 'show_satellite_hosts' account-wide setting and the wee
 
 **`throws`** {RequiredError}
 
-**`memberof`** SettingsApi
+**`memberof`** UserPreferencesApi
 
 **Parameters:**
 

@@ -44,6 +44,8 @@
 
   ↳ [UsageApi](usageapi.md)
 
+  ↳ [UserPreferencesApi](userpreferencesapi.md)
+
   ↳ [WeeklyreportsubscriptionApi](weeklyreportsubscriptionapi.md)
 
 ## Index

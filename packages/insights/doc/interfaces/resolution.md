@@ -25,7 +25,7 @@
 
 • **hasPlaybook**? : *boolean*
 
-*Defined in [api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L601)*
+*Defined in [api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L615)*
 
 **`type`** {boolean}
 
@@ -37,7 +37,7 @@ ___
 
 • **resolution**: *string*
 
-*Defined in [api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L589)*
+*Defined in [api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L603)*
 
 **`type`** {string}
 
@@ -49,7 +49,7 @@ ___
 
 • **resolutionRisk**? : *[ResolutionRisk](resolutionrisk.md)*
 
-*Defined in [api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L595)*
+*Defined in [api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L609)*
 
 **`type`** {ResolutionRisk}
 
@@ -61,7 +61,7 @@ ___
 
 • **systemType**: *number*
 
-*Defined in [api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L583)*
+*Defined in [api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L597)*
 
 **`type`** {number}
 

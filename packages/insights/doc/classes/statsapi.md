@@ -30,15 +30,11 @@ StatsApi - object-oriented interface
 
 ### Methods
 
-* [statsHitsSeries](statsapi.md#statshitsseries)
 * [statsList](statsapi.md#statslist)
 * [statsReports](statsapi.md#statsreports)
 * [statsRules](statsapi.md#statsrules)
-* [statsRulesHitSeries](statsapi.md#statsruleshitseries)
 * [statsStaleHosts](statsapi.md#statsstalehosts)
 * [statsSystems](statsapi.md#statssystems)
-* [statsSystemsImpactedSeries](statsapi.md#statssystemsimpactedseries)
-* [statsSystemsReportingSeries](statsapi.md#statssystemsreportingseries)
 
 ## Constructors
 
@@ -92,39 +88,11 @@ ___
 
 ## Methods
 
-###  statsHitsSeries
-
-▸ **statsHitsSeries**(`start?`: string, `end?`: string, `grain?`: "ever" | "year" | "quarter" | "month" | "week" | "day", `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[StatTimeSeries](../interfaces/stattimeseries.md)[]›*
-
-*Defined in [api.ts:4706](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4706)*
-
-A 'hit' is a unique system-rule pair - a rule impacting one system.
-
-**`summary`** Simple time series of day and number of hits per day.
-
-**`throws`** {RequiredError}
-
-**`memberof`** StatsApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`start?` | string |
-`end?` | string |
-`grain?` | "ever" &#124; "year" &#124; "quarter" &#124; "month" &#124; "week" &#124; "day" |
-`tags?` | Array‹string› |
-`options?` | any |
-
-**Returns:** *AxiosPromise‹[StatTimeSeries](../interfaces/stattimeseries.md)[]›*
-
-___
-
 ###  statsList
 
 ▸ **statsList**(`options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:4717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4717)*
+*Defined in [api.ts:4388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4388)*
 
 Copied sort-of from the APIRootView's `get` method.
 
@@ -148,7 +116,7 @@ ___
 
 ▸ **statsReports**(`tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[Stats](../interfaces/stats.md)›*
 
-*Defined in [api.ts:4729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4729)*
+*Defined in [api.ts:4400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4400)*
 
 Only current reports are considered.
 
@@ -173,7 +141,7 @@ ___
 
 ▸ **statsRules**(`tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[Stats](../interfaces/stats.md)›*
 
-*Defined in [api.ts:4741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4741)*
+*Defined in [api.ts:4412](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4412)*
 
 Only current reports are considered.
 
@@ -194,39 +162,11 @@ Name | Type |
 
 ___
 
-###  statsRulesHitSeries
-
-▸ **statsRulesHitSeries**(`start?`: string, `end?`: string, `grain?`: "ever" | "year" | "quarter" | "month" | "week" | "day", `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[StatTimeSeries](../interfaces/stattimeseries.md)[]›*
-
-*Defined in [api.ts:4756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4756)*
-
-If one rule is impacting four systems, this is counted once.
-
-**`summary`** Simple time series of day and number of rules impacting systems.
-
-**`throws`** {RequiredError}
-
-**`memberof`** StatsApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`start?` | string |
-`end?` | string |
-`grain?` | "ever" &#124; "year" &#124; "quarter" &#124; "month" &#124; "week" &#124; "day" |
-`tags?` | Array‹string› |
-`options?` | any |
-
-**Returns:** *AxiosPromise‹[StatTimeSeries](../interfaces/stattimeseries.md)[]›*
-
-___
-
 ###  statsStaleHosts
 
 ▸ **statsStaleHosts**(`tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[StaleSystemStats](../interfaces/stalesystemstats.md)›*
 
-*Defined in [api.ts:4768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4768)*
+*Defined in [api.ts:4424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4424)*
 
 For historic reasons, 'stale' refers to hosts that are being warned of being stale, and 'stale_warn' refers to hosts that are being hidden from display.
 
@@ -251,7 +191,7 @@ ___
 
 ▸ **statsSystems**(`tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[Stats](../interfaces/stats.md)›*
 
-*Defined in [api.ts:4780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4780)*
+*Defined in [api.ts:4436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4436)*
 
 Only current reports are considered.
 
@@ -269,59 +209,3 @@ Name | Type |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[Stats](../interfaces/stats.md)›*
-
-___
-
-###  statsSystemsImpactedSeries
-
-▸ **statsSystemsImpactedSeries**(`start?`: string, `end?`: string, `grain?`: "ever" | "year" | "quarter" | "month" | "week" | "day", `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[StatTimeSeries](../interfaces/stattimeseries.md)[]›*
-
-*Defined in [api.ts:4795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4795)*
-
-Systems with no reports of rules impacting them are ignored.
-
-**`summary`** Simple time series of day and number of systems impacted by any rule.
-
-**`throws`** {RequiredError}
-
-**`memberof`** StatsApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`start?` | string |
-`end?` | string |
-`grain?` | "ever" &#124; "year" &#124; "quarter" &#124; "month" &#124; "week" &#124; "day" |
-`tags?` | Array‹string› |
-`options?` | any |
-
-**Returns:** *AxiosPromise‹[StatTimeSeries](../interfaces/stattimeseries.md)[]›*
-
-___
-
-###  statsSystemsReportingSeries
-
-▸ **statsSystemsReportingSeries**(`start?`: string, `end?`: string, `grain?`: "ever" | "year" | "quarter" | "month" | "week" | "day", `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[StatTimeSeries](../interfaces/stattimeseries.md)[]›*
-
-*Defined in [api.ts:4810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4810)*
-
-Systems with no reports of rules impacting them are still considered.
-
-**`summary`** Simple time series of day and number of systems having uploaded that day.
-
-**`throws`** {RequiredError}
-
-**`memberof`** StatsApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`start?` | string |
-`end?` | string |
-`grain?` | "ever" &#124; "year" &#124; "quarter" &#124; "month" &#124; "week" &#124; "day" |
-`tags?` | Array‹string› |
-`options?` | any |
-
-**Returns:** *AxiosPromise‹[StatTimeSeries](../interfaces/stattimeseries.md)[]›*

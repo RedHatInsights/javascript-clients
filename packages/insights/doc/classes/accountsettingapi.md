@@ -89,7 +89,7 @@ ___
 
 ▸ **accountSettingCreate**(`accountSetting`: [AccountSetting](../interfaces/accountsetting.md), `options?`: any): *AxiosPromise‹[AccountSetting](../interfaces/accountsetting.md)›*
 
-*Defined in [api.ts:1470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1470)*
+*Defined in [api.ts:1464](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1464)*
 
 A new object will be created, even if the default settings are supplied.
 
@@ -114,7 +114,7 @@ ___
 
 ▸ **accountSettingList**(`options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:1481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1481)*
+*Defined in [api.ts:1475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1475)*
 
 This will not create a new account settings object if none exists.
 

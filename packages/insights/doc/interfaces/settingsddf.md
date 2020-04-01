@@ -22,7 +22,7 @@
 
 • **fields**: *Array‹[SettingDDF](settingddf.md)›*
 
-*Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1073)*
+*Defined in [api.ts:1087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1087)*
 
 **`type`** {Array<SettingDDF>}
 
