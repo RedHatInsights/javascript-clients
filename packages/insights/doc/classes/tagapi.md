@@ -88,7 +88,7 @@ ___
 
 ▸ **tagList**(`options?`: any): *AxiosPromise‹[TagList](../interfaces/taglist.md)›*
 
-*Defined in [api.ts:5345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5345)*
+*Defined in [api.ts:4971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4971)*
 
 Tags are ordered by namespace, key and value and are given in encoded fromat.
 

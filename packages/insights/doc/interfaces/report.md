@@ -24,7 +24,7 @@
 
 • **details**: *any*
 
-*Defined in [api.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L563)*
+*Defined in [api.ts:577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L577)*
 
 **`type`** {any}
 
@@ -36,7 +36,7 @@ ___
 
 • **resolution**? : *[Resolution](resolution.md)*
 
-*Defined in [api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L569)*
+*Defined in [api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L583)*
 
 **`type`** {Resolution}
 
@@ -48,7 +48,7 @@ ___
 
 • **rule**? : *[Rule](rule.md)*
 
-*Defined in [api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L557)*
+*Defined in [api.ts:571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L571)*
 
 **`type`** {Rule}
 

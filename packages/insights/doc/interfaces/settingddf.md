@@ -27,7 +27,7 @@
 
 • **component**: *string*
 
-*Defined in [api.ts:1047](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1047)*
+*Defined in [api.ts:1061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1061)*
 
 **`type`** {string}
 
@@ -39,7 +39,7 @@ ___
 
 • **helpText**: *string*
 
-*Defined in [api.ts:1041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1041)*
+*Defined in [api.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1055)*
 
 **`type`** {string}
 
@@ -51,7 +51,7 @@ ___
 
 • **initialValue**: *boolean*
 
-*Defined in [api.ts:1059](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1059)*
+*Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1073)*
 
 **`type`** {boolean}
 
@@ -63,7 +63,7 @@ ___
 
 • **isRequired**: *boolean*
 
-*Defined in [api.ts:1053](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1053)*
+*Defined in [api.ts:1067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1067)*
 
 **`type`** {boolean}
 
@@ -75,7 +75,7 @@ ___
 
 • **label**: *string*
 
-*Defined in [api.ts:1035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1035)*
+*Defined in [api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1049)*
 
 **`type`** {string}
 
@@ -87,7 +87,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:1029](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1029)*
+*Defined in [api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1043)*
 
 **`type`** {string}
 

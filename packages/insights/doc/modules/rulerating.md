@@ -23,7 +23,7 @@
 
 • **rating**: *[RatingEnum](../enums/rulerating.ratingenum.md)*
 
-*Defined in [api.ts:967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L967)*
+*Defined in [api.ts:981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L981)*
 
 **`type`** {number}
 
@@ -35,7 +35,7 @@ ___
 
 • **rule**: *string*
 
-*Defined in [api.ts:961](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L961)*
+*Defined in [api.ts:975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L975)*
 
 **`type`** {string}
 

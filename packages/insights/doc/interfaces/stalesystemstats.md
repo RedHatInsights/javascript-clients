@@ -23,7 +23,7 @@
 
 • **staleCount**: *number*
 
-*Defined in [api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1107)*
+*Defined in [api.ts:1121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1121)*
 
 **`type`** {number}
 
@@ -35,7 +35,7 @@ ___
 
 • **warnCount**: *number*
 
-*Defined in [api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1113)*
+*Defined in [api.ts:1127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1127)*
 
 **`type`** {number}
 

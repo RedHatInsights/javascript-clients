@@ -92,7 +92,7 @@ ___
 
 ▸ **ruleAckHosts**(`ruleId`: string, `multiHostAck`: [MultiHostAck](../interfaces/multihostack.md), `options?`: any): *AxiosPromise‹[MultiAckResponse](../interfaces/multiackresponse.md)›*
 
-*Defined in [api.ts:3675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3675)*
+*Defined in [api.ts:3669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3669)*
 
 Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
 
@@ -118,7 +118,7 @@ ___
 
 ▸ **ruleList**(`limit?`: number, `offset?`: number, `category?`: Array‹1 | 2 | 3 | 4›, `hasTag?`: Array‹string›, `tags?`: Array‹string›, `impact?`: Array‹1 | 2 | 3 | 4›, `impacting?`: boolean, `incident?`: boolean, `likelihood?`: Array‹1 | 2 | 3 | 4›, `reportsShown?`: boolean, `resRisk?`: Array‹1 | 2 | 3 | 4›, `sort?`: "category" | "description" | "impact" | "impacted_count" | "likelihood" | "playbook_count" | "publish_date" | "rule_id" | "total_risk" | "resolution_risk" | "-category" | "-description" | "-impact" | "-impacted_count" | "-likelihood" | "-playbook_count" | "-publish_date" | "-rule_id" | "-total_risk" | "-resolution_risk", `text?`: string, `topic?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `hasPlaybook?`: boolean, `options?`: any): *AxiosPromise‹[InlineResponse2004](../interfaces/inlineresponse2004.md)›*
 
-*Defined in [api.ts:3702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3702)*
+*Defined in [api.ts:3696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3696)*
 
 If 'acked' is False or not given, then only rules that are not acked will be shown.  If acked is set and 'true' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
 
@@ -158,7 +158,7 @@ ___
 
 ▸ **ruleRead**(`ruleId`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[RuleForAccount](../interfaces/ruleforaccount.md)›*
 
-*Defined in [api.ts:3715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3715)*
+*Defined in [api.ts:3709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3709)*
 
 This includes the account-relevant details such as number of impacted systems and host acknowledgements.
 
@@ -184,7 +184,7 @@ ___
 
 ▸ **ruleSystems**(`ruleId`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[SystemsForRule](../interfaces/systemsforrule.md)›*
 
-*Defined in [api.ts:3728](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3728)*
+*Defined in [api.ts:3722](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3722)*
 
 All systems owned by the user's account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
 
@@ -210,7 +210,7 @@ ___
 
 ▸ **ruleUnackHosts**(`ruleId`: string, `multiHostUnAck`: [MultiHostUnAck](../interfaces/multihostunack.md), `options?`: any): *AxiosPromise‹[MultiAckResponse](../interfaces/multiackresponse.md)›*
 
-*Defined in [api.ts:3741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3741)*
+*Defined in [api.ts:3735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3735)*
 
 Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
 

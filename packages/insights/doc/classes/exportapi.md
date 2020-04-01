@@ -90,7 +90,7 @@ ___
 
 ▸ **exportHitsList**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)[]›*
 
-*Defined in [api.ts:2232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2232)*
+*Defined in [api.ts:2226](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2226)*
 
 We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
 
@@ -121,7 +121,7 @@ ___
 
 ▸ **exportListCsv**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:2250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2250)*
+*Defined in [api.ts:2244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2244)*
 
 The accepted content type is not required.
 
@@ -152,7 +152,7 @@ ___
 
 ▸ **exportListJson**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)[]›*
 
-*Defined in [api.ts:2268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2268)*
+*Defined in [api.ts:2262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2262)*
 
 The accepted content type is not required.
 
