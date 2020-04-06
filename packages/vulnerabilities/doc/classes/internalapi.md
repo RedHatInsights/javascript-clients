@@ -91,7 +91,7 @@ ___
 
 ▸ **refreshAccount**(`accountId`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:3489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3489)*
+*Defined in [api.ts:3587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3587)*
 
 Refresh cached counts for given account ID. Admin interface, available only to internal users.
 
@@ -116,7 +116,7 @@ ___
 
 ▸ **refreshAccountCve**(`accountId`: string, `cveId`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:3502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3502)*
+*Defined in [api.ts:3600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3600)*
 
 Refresh cached counts for given account ID and CVE. Admin interface, available only to internal users.
 
@@ -142,7 +142,7 @@ ___
 
 ▸ **refreshCve**(`cveId`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:3514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3514)*
+*Defined in [api.ts:3612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3612)*
 
 Refresh cached counts for given CVE. Admin interface, available only to internal users.
 
@@ -167,7 +167,7 @@ ___
 
 ▸ **refreshSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹Response›*
 
-*Defined in [api.ts:3526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3526)*
+*Defined in [api.ts:3624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3624)*
 
 Refresh cached counts for given inventory ID. Admin interface, available only to internal users.
 

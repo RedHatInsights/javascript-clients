@@ -23,7 +23,7 @@
 
 • **count**: *number*
 
-*Defined in [api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L143)*
+*Defined in [api.ts:181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L181)*
 
 number of results returned
 
@@ -37,7 +37,7 @@ ___
 
 • **total**: *number*
 
-*Defined in [api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L149)*
+*Defined in [api.ts:187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L187)*
 
 total number of results matching the query
 

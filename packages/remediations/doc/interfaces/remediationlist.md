@@ -24,7 +24,7 @@
 
 • **data**: *Array‹[RemediationListItem](remediationlistitem.md)›*
 
-*Defined in [api.ts:842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L842)*
+*Defined in [api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L911)*
 
 **`type`** {Array<RemediationListItem>}
 
@@ -36,7 +36,7 @@ ___
 
 • **links**: *[RemediationListLinks](remediationlistlinks.md)*
 
-*Defined in [api.ts:854](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L854)*
+*Defined in [api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L923)*
 
 **`type`** {RemediationListLinks}
 
@@ -48,7 +48,7 @@ ___
 
 • **meta**: *[Meta](meta.md)*
 
-*Defined in [api.ts:848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L848)*
+*Defined in [api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L917)*
 
 **`type`** {Meta}
 

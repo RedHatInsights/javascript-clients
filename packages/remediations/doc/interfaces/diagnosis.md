@@ -24,7 +24,7 @@
 
 • **details**: *object*
 
-*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L95)*
+*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L133)*
 
 **`type`** {{ [key: string]: any; }}
 
@@ -40,7 +40,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L83)*
+*Defined in [api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L121)*
 
 **`type`** {string}
 
@@ -52,7 +52,7 @@ ___
 
 • **insightsId**: *string*
 
-*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L89)*
+*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L127)*
 
 **`type`** {string}
 

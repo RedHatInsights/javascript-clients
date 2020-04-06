@@ -22,7 +22,7 @@
 
 • **resolution**: *string*
 
-*Defined in [api.ts:796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L796)*
+*Defined in [api.ts:865](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L865)*
 
 **`type`** {string}
 

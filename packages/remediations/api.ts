@@ -72,6 +72,44 @@ export class RequiredError extends Error {
 /**
  *
  * @export
+ * @interface Counts
+ */
+export interface Counts {
+    /**
+     *
+     * @type {number}
+     * @memberof Counts
+     */
+    pending: number;
+    /**
+     *
+     * @type {number}
+     * @memberof Counts
+     */
+    running: number;
+    /**
+     *
+     * @type {number}
+     * @memberof Counts
+     */
+    success: number;
+    /**
+     *
+     * @type {number}
+     * @memberof Counts
+     */
+    failure: number;
+    /**
+     *
+     * @type {number}
+     * @memberof Counts
+     */
+    canceled: number;
+}
+
+/**
+ *
+ * @export
  * @interface Diagnosis
  */
 export interface Diagnosis {
@@ -239,10 +277,16 @@ export interface PlaybookExecutorDetails {
     systemCount: number;
     /**
      *
-     * @type {PlaybookRunSystemStatus}
+     * @type {Counts}
      * @memberof PlaybookExecutorDetails
      */
-    status: PlaybookRunSystemStatus;
+    counts?: Counts;
+    /**
+     *
+     * @type {PlaybookRunExecutorStatus}
+     * @memberof PlaybookExecutorDetails
+     */
+    status: PlaybookRunExecutorStatus;
 }
 
 /**
@@ -321,10 +365,22 @@ export interface PlaybookExecutors {
     executorName: string;
     /**
      *
+     * @type {PlaybookRunExecutorStatus}
+     * @memberof PlaybookExecutors
+     */
+    status: PlaybookRunExecutorStatus;
+    /**
+     *
      * @type {number}
      * @memberof PlaybookExecutors
      */
     systemCount: number;
+    /**
+     *
+     * @type {Counts}
+     * @memberof PlaybookExecutors
+     */
+    counts: Counts;
 }
 
 /**
@@ -432,9 +488,22 @@ export interface PlaybookRunExecutorDetails {
  * @export
  * @enum {string}
  */
-export enum PlaybookRunStatus {
+export enum PlaybookRunExecutorStatus {
     Pending = 'pending',
     Acked = 'acked',
+    Running = 'running',
+    Success = 'success',
+    Failure = 'failure',
+    Canceled = 'canceled'
+}
+
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export enum PlaybookRunStatus {
+    Pending = 'pending',
     Running = 'running',
     Success = 'success',
     Failure = 'failure',
@@ -537,7 +606,7 @@ export interface PlaybookRunSystems {
      */
     systemName: string;
     /**
-     *
+     *packages/vulnerabilities/apiSpec.json
      * @type {PlaybookRunSystemStatus}
      * @memberof PlaybookRunSystems
      */
@@ -1366,6 +1435,45 @@ export class GeneratorApi extends BaseAPI {
 export const RemediationsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
+         * Cancel execution of the remediation
+         * @summary Cancel execution of the remediation
+         * @param {string} id Remediation identifier
+         * @param {string} playbookRunId Playbook run identifier (UUID)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        cancelPlaybookRuns(id: string, playbookRunId: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling cancelPlaybookRuns.');
+            }
+            // verify required parameter 'playbookRunId' is not null or undefined
+            if (playbookRunId === null || playbookRunId === undefined) {
+                throw new RequiredError('playbookRunId','Required parameter playbookRunId was null or undefined when calling cancelPlaybookRuns.');
+            }
+            const localVarPath = `/remediations/{id}/playbook_runs/{playbook_run_id}/cancel`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+                .replace(`{${"playbook_run_id"}}`, encodeURIComponent(String(playbookRunId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, baseOptions, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
          * @summary Create Remediation
          * @param {RemediationInput} remediationInput
@@ -1519,8 +1627,8 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Get details on execution of the rememdiation
-         * @summary Get details on execution of the rememdiation
+         * Get details on execution of the remediation
+         * @summary Get details on execution of the remediation
          * @param {string} id Remediation identifier
          * @param {string} playbookRunId Playbook run identifier (UUID)
          * @param {*} [options] Override http request option.
@@ -1611,10 +1719,11 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {number} [limit] Maximum number of results to return
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
          * @param {string} [ansibleHost] System Name (STRING)
+         * @param {'system_name' | '-system_name'} [sort] Playbook run systems sort order by ASC or DESC
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, options: any = {}): RequestArgs {
+        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, sort?: 'system_name' | '-system_name', options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling getPlaybookRunSystems.');
@@ -1649,6 +1758,10 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
 
             if (ansibleHost !== undefined) {
                 localVarQueryParameter['ansible_host'] = ansibleHost;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1818,10 +1931,11 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {string} id Remediation identifier
          * @param {number} [limit] Maximum number of results to return
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
+         * @param {'updated_at' | '-updated_at'} [sort] Sort Order for Playbook Run
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPlaybookRuns(id: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        listPlaybookRuns(id: string, limit?: number, offset?: number, sort?: 'updated_at' | '-updated_at', options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listPlaybookRuns.');
@@ -1843,6 +1957,10 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -1988,6 +2106,21 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
 export const RemediationsApiFp = function(configuration?: Configuration) {
     return {
         /**
+         * Cancel execution of the remediation
+         * @summary Cancel execution of the remediation
+         * @param {string} id Remediation identifier
+         * @param {string} playbookRunId Playbook run identifier (UUID)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        cancelPlaybookRuns(id: string, playbookRunId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
+            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).cancelPlaybookRuns(id, playbookRunId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
          * @summary Create Remediation
          * @param {RemediationInput} remediationInput
@@ -2047,8 +2180,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Get details on execution of the rememdiation
-         * @summary Get details on execution of the rememdiation
+         * Get details on execution of the remediation
+         * @summary Get details on execution of the remediation
          * @param {string} id Remediation identifier
          * @param {string} playbookRunId Playbook run identifier (UUID)
          * @param {*} [options] Override http request option.
@@ -2086,11 +2219,12 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Maximum number of results to return
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
          * @param {string} [ansibleHost] System Name (STRING)
+         * @param {'system_name' | '-system_name'} [sort] Playbook run systems sort order by ASC or DESC
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunSystemList> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, ansibleHost, options);
+        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, sort?: 'system_name' | '-system_name', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunSystemList> {
+            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, ansibleHost, sort, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2162,11 +2296,12 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {string} id Remediation identifier
          * @param {number} [limit] Maximum number of results to return
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
+         * @param {'updated_at' | '-updated_at'} [sort] Sort Order for Playbook Run
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPlaybookRuns(id: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunsList> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).listPlaybookRuns(id, limit, offset, options);
+        listPlaybookRuns(id: string, limit?: number, offset?: number, sort?: 'updated_at' | '-updated_at', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunsList> {
+            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).listPlaybookRuns(id, limit, offset, sort, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = Object.assign(localVarAxiosArgs.options, {url: basePath + localVarAxiosArgs.url})
                 return axios.request(axiosRequestArgs);
@@ -2227,6 +2362,17 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
 export const RemediationsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
+         * Cancel execution of the remediation
+         * @summary Cancel execution of the remediation
+         * @param {string} id Remediation identifier
+         * @param {string} playbookRunId Playbook run identifier (UUID)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        cancelPlaybookRuns(id: string, playbookRunId: string, options?: any) {
+            return RemediationsApiFp(configuration).cancelPlaybookRuns(id, playbookRunId, options)(axios, basePath);
+        },
+        /**
          * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
          * @summary Create Remediation
          * @param {RemediationInput} remediationInput
@@ -2270,8 +2416,8 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).deleteRemediationIssueSystem(id, issue, system, options)(axios, basePath);
         },
         /**
-         * Get details on execution of the rememdiation
-         * @summary Get details on execution of the rememdiation
+         * Get details on execution of the remediation
+         * @summary Get details on execution of the remediation
          * @param {string} id Remediation identifier
          * @param {string} playbookRunId Playbook run identifier (UUID)
          * @param {*} [options] Override http request option.
@@ -2301,11 +2447,12 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @param {number} [limit] Maximum number of results to return
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
          * @param {string} [ansibleHost] System Name (STRING)
+         * @param {'system_name' | '-system_name'} [sort] Playbook run systems sort order by ASC or DESC
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, options?: any) {
-            return RemediationsApiFp(configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, ansibleHost, options)(axios, basePath);
+        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, sort?: 'system_name' | '-system_name', options?: any) {
+            return RemediationsApiFp(configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, ansibleHost, sort, options)(axios, basePath);
         },
         /**
          * Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
@@ -2357,11 +2504,12 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @param {string} id Remediation identifier
          * @param {number} [limit] Maximum number of results to return
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
+         * @param {'updated_at' | '-updated_at'} [sort] Sort Order for Playbook Run
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPlaybookRuns(id: string, limit?: number, offset?: number, options?: any) {
-            return RemediationsApiFp(configuration).listPlaybookRuns(id, limit, offset, options)(axios, basePath);
+        listPlaybookRuns(id: string, limit?: number, offset?: number, sort?: 'updated_at' | '-updated_at', options?: any) {
+            return RemediationsApiFp(configuration).listPlaybookRuns(id, limit, offset, sort, options)(axios, basePath);
         },
         /**
          * Execute remediation, RBAC permission {remediations:remediation:execute}
@@ -2406,6 +2554,19 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
  * @extends {BaseAPI}
  */
 export class RemediationsApi extends BaseAPI {
+    /**
+     * Cancel execution of the remediation
+     * @summary Cancel execution of the remediation
+     * @param {string} id Remediation identifier
+     * @param {string} playbookRunId Playbook run identifier (UUID)
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RemediationsApi
+     */
+    public cancelPlaybookRuns(id: string, playbookRunId: string, options?: any) {
+        return RemediationsApiFp(this.configuration).cancelPlaybookRuns(id, playbookRunId, options)(this.axios, this.basePath);
+    }
+
     /**
      * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
      * @summary Create Remediation
@@ -2458,8 +2619,8 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
-     * Get details on execution of the rememdiation
-     * @summary Get details on execution of the rememdiation
+     * Get details on execution of the remediation
+     * @summary Get details on execution of the remediation
      * @param {string} id Remediation identifier
      * @param {string} playbookRunId Playbook run identifier (UUID)
      * @param {*} [options] Override http request option.
@@ -2493,12 +2654,13 @@ export class RemediationsApi extends BaseAPI {
      * @param {number} [limit] Maximum number of results to return
      * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
      * @param {string} [ansibleHost] System Name (STRING)
+     * @param {'system_name' | '-system_name'} [sort] Playbook run systems sort order by ASC or DESC
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi
      */
-    public getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, options?: any) {
-        return RemediationsApiFp(this.configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, ansibleHost, options)(this.axios, this.basePath);
+    public getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, sort?: 'system_name' | '-system_name', options?: any) {
+        return RemediationsApiFp(this.configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, ansibleHost, sort, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2559,12 +2721,13 @@ export class RemediationsApi extends BaseAPI {
      * @param {string} id Remediation identifier
      * @param {number} [limit] Maximum number of results to return
      * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
+     * @param {'updated_at' | '-updated_at'} [sort] Sort Order for Playbook Run
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi
      */
-    public listPlaybookRuns(id: string, limit?: number, offset?: number, options?: any) {
-        return RemediationsApiFp(this.configuration).listPlaybookRuns(id, limit, offset, options)(this.axios, this.basePath);
+    public listPlaybookRuns(id: string, limit?: number, offset?: number, sort?: 'updated_at' | '-updated_at', options?: any) {
+        return RemediationsApiFp(this.configuration).listPlaybookRuns(id, limit, offset, sort, options)(this.axios, this.basePath);
     }
 
     /**

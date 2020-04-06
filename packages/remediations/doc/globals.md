@@ -10,6 +10,7 @@
 
 ### Enumerations
 
+* [PlaybookRunExecutorStatus](enums/playbookrunexecutorstatus.md)
 * [PlaybookRunStatus](enums/playbookrunstatus.md)
 * [PlaybookRunSystemStatus](enums/playbookrunsystemstatus.md)
 * [ResolutionRisk](enums/resolutionrisk.md)
@@ -28,6 +29,7 @@
 ### Interfaces
 
 * [ConfigurationParameters](interfaces/configurationparameters.md)
+* [Counts](interfaces/counts.md)
 * [Diagnosis](interfaces/diagnosis.md)
 * [ExecuteRemediation](interfaces/executeremediation.md)
 * [InlineResponse200](interfaces/inlineresponse200.md)
@@ -113,7 +115,7 @@ ___
 
 ▸ **DiagnosisApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1145)*
+*Defined in [api.ts:1214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1214)*
 
 DiagnosisApi - axios parameter creator
 
@@ -133,7 +135,7 @@ ___
 
 ▸ **DiagnosisApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:1216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1216)*
+*Defined in [api.ts:1285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1285)*
 
 DiagnosisApi - factory interface
 
@@ -155,7 +157,7 @@ ___
 
 ▸ **DiagnosisApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1192)*
+*Defined in [api.ts:1261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1261)*
 
 DiagnosisApi - functional programming interface
 
@@ -177,7 +179,7 @@ ___
 
 ▸ **GeneratorApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1258)*
+*Defined in [api.ts:1327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1327)*
 
 GeneratorApi - axios parameter creator
 
@@ -197,7 +199,7 @@ ___
 
 ▸ **GeneratorApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:1326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1326)*
+*Defined in [api.ts:1395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1395)*
 
 GeneratorApi - factory interface
 
@@ -219,7 +221,7 @@ ___
 
 ▸ **GeneratorApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1303)*
+*Defined in [api.ts:1372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1372)*
 
 GeneratorApi - functional programming interface
 
@@ -241,7 +243,7 @@ ___
 
 ▸ **RemediationsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1366)*
+*Defined in [api.ts:1435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1435)*
 
 RemediationsApi - axios parameter creator
 
@@ -252,6 +254,8 @@ Name | Type |
 `configuration?` | [Configuration](classes/configuration.md) |
 
 **Returns:** *object*
+
+* **cancelPlaybookRuns**(`id`: string, `playbookRunId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **createRemediation**(`remediationInput`: [RemediationInput](interfaces/remediationinput.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -265,7 +269,7 @@ Name | Type |
 
 * **getPlaybookRunSystemDetails**(`id`: string, `playbookRunId`: string, `system`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **getPlaybookRunSystems**(`id`: string, `playbookRunId`: string, `executor?`: string, `limit?`: number, `offset?`: number, `ansibleHost?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getPlaybookRunSystems**(`id`: string, `playbookRunId`: string, `executor?`: string, `limit?`: number, `offset?`: number, `ansibleHost?`: string, `sort?`: "system_name" | "-system_name", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **getRemediation**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -275,7 +279,7 @@ Name | Type |
 
 * **getRemediations**(`sort?`: "updated_at" | "-updated_at" | "name" | "-name" | "system_count" | "-system_count" | "issue_count" | "-issue_count", `filter?`: string, `limit?`: number, `offset?`: number, `system?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listPlaybookRuns**(`id`: string, `limit?`: number, `offset?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listPlaybookRuns**(`id`: string, `limit?`: number, `offset?`: number, `sort?`: "updated_at" | "-updated_at", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **runRemediation**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -289,7 +293,7 @@ ___
 
 ▸ **RemediationsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2227)*
+*Defined in [api.ts:2362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2362)*
 
 RemediationsApi - factory interface
 
@@ -303,6 +307,8 @@ Name | Type |
 
 **Returns:** *object*
 
+* **cancelPlaybookRuns**(`id`: string, `playbookRunId`: string, `options?`: any): *AxiosPromise‹any›*
+
 * **createRemediation**(`remediationInput`: [RemediationInput](interfaces/remediationinput.md), `options?`: any): *AxiosPromise‹[RemediationCreated](interfaces/remediationcreated.md)›*
 
 * **deleteRemediation**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
@@ -315,7 +321,7 @@ Name | Type |
 
 * **getPlaybookRunSystemDetails**(`id`: string, `playbookRunId`: string, `system`: string, `options?`: any): *AxiosPromise‹[PlaybookRunSystemDetails](interfaces/playbookrunsystemdetails.md)›*
 
-* **getPlaybookRunSystems**(`id`: string, `playbookRunId`: string, `executor?`: string, `limit?`: number, `offset?`: number, `ansibleHost?`: string, `options?`: any): *AxiosPromise‹[PlaybookRunSystemList](interfaces/playbookrunsystemlist.md)›*
+* **getPlaybookRunSystems**(`id`: string, `playbookRunId`: string, `executor?`: string, `limit?`: number, `offset?`: number, `ansibleHost?`: string, `sort?`: "system_name" | "-system_name", `options?`: any): *AxiosPromise‹[PlaybookRunSystemList](interfaces/playbookrunsystemlist.md)›*
 
 * **getRemediation**(`id`: string, `options?`: any): *AxiosPromise‹[RemediationDetails](interfaces/remediationdetails.md)›*
 
@@ -325,7 +331,7 @@ Name | Type |
 
 * **getRemediations**(`sort?`: "updated_at" | "-updated_at" | "name" | "-name" | "system_count" | "-system_count" | "issue_count" | "-issue_count", `filter?`: string, `limit?`: number, `offset?`: number, `system?`: string, `options?`: any): *AxiosPromise‹[RemediationList](interfaces/remediationlist.md)›*
 
-* **listPlaybookRuns**(`id`: string, `limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[PlaybookRunsList](interfaces/playbookrunslist.md)›*
+* **listPlaybookRuns**(`id`: string, `limit?`: number, `offset?`: number, `sort?`: "updated_at" | "-updated_at", `options?`: any): *AxiosPromise‹[PlaybookRunsList](interfaces/playbookrunslist.md)›*
 
 * **runRemediation**(`id`: string, `options?`: any): *AxiosPromise‹[ExecuteRemediation](interfaces/executeremediation.md)›*
 
@@ -339,7 +345,7 @@ ___
 
 ▸ **RemediationsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1988)*
+*Defined in [api.ts:2106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2106)*
 
 RemediationsApi - functional programming interface
 
@@ -350,6 +356,10 @@ Name | Type |
 `configuration?` | [Configuration](classes/configuration.md) |
 
 **Returns:** *object*
+
+* **cancelPlaybookRuns**(`id`: string, `playbookRunId`: string, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹any›*
 
 * **createRemediation**(`remediationInput`: [RemediationInput](interfaces/remediationinput.md), `options?`: any): *function*
 
@@ -375,7 +385,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PlaybookRunSystemDetails](interfaces/playbookrunsystemdetails.md)›*
 
-* **getPlaybookRunSystems**(`id`: string, `playbookRunId`: string, `executor?`: string, `limit?`: number, `offset?`: number, `ansibleHost?`: string, `options?`: any): *function*
+* **getPlaybookRunSystems**(`id`: string, `playbookRunId`: string, `executor?`: string, `limit?`: number, `offset?`: number, `ansibleHost?`: string, `sort?`: "system_name" | "-system_name", `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PlaybookRunSystemList](interfaces/playbookrunsystemlist.md)›*
 
@@ -395,7 +405,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RemediationList](interfaces/remediationlist.md)›*
 
-* **listPlaybookRuns**(`id`: string, `limit?`: number, `offset?`: number, `options?`: any): *function*
+* **listPlaybookRuns**(`id`: string, `limit?`: number, `offset?`: number, `sort?`: "updated_at" | "-updated_at", `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PlaybookRunsList](interfaces/playbookrunslist.md)›*
 
@@ -417,7 +427,7 @@ ___
 
 ▸ **ResolutionsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2615)*
+*Defined in [api.ts:2778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2778)*
 
 ResolutionsApi - axios parameter creator
 
@@ -439,7 +449,7 @@ ___
 
 ▸ **ResolutionsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2730](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2730)*
+*Defined in [api.ts:2893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2893)*
 
 ResolutionsApi - factory interface
 
@@ -463,7 +473,7 @@ ___
 
 ▸ **ResolutionsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2693)*
+*Defined in [api.ts:2856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2856)*
 
 ResolutionsApi - functional programming interface
 
@@ -489,7 +499,7 @@ ___
 
 ▸ **VersionApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2792](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2792)*
+*Defined in [api.ts:2955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2955)*
 
 VersionApi - axios parameter creator
 
@@ -509,7 +519,7 @@ ___
 
 ▸ **VersionApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2850](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2850)*
+*Defined in [api.ts:3013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3013)*
 
 VersionApi - factory interface
 
@@ -531,7 +541,7 @@ ___
 
 ▸ **VersionApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2828)*
+*Defined in [api.ts:2991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2991)*
 
 VersionApi - functional programming interface
 

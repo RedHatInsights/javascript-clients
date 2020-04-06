@@ -22,7 +22,7 @@
 
 • **issues**: *Array‹string›*
 
-*Defined in [api.ts:1053](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1053)*
+*Defined in [api.ts:1122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1122)*
 
 **`type`** {Array<string>}
 

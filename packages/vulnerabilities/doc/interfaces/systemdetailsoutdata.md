@@ -17,6 +17,7 @@
 * [lastEvaluation](systemdetailsoutdata.md#lastevaluation)
 * [lastUpload](systemdetailsoutdata.md#lastupload)
 * [optOut](systemdetailsoutdata.md#optout)
+* [rulesEvaluation](systemdetailsoutdata.md#rulesevaluation)
 * [stale](systemdetailsoutdata.md#optional-stale)
 
 ## Properties
@@ -25,7 +26,7 @@
 
 • **lastEvaluation**: *string | null*
 
-*Defined in [api.ts:1357](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1357)*
+*Defined in [api.ts:1425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1425)*
 
 Date of last evaluation.
 
@@ -39,7 +40,7 @@ ___
 
 • **lastUpload**: *string | null*
 
-*Defined in [api.ts:1369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1369)*
+*Defined in [api.ts:1443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1443)*
 
 Date of the latest upload of archive.
 
@@ -53,7 +54,7 @@ ___
 
 • **optOut**: *boolean*
 
-*Defined in [api.ts:1363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1363)*
+*Defined in [api.ts:1437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1437)*
 
 System opt out status.
 
@@ -63,11 +64,25 @@ System opt out status.
 
 ___
 
+###  rulesEvaluation
+
+• **rulesEvaluation**: *string | null*
+
+*Defined in [api.ts:1431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1431)*
+
+Date of last security rules evaluation.
+
+**`type`** {string}
+
+**`memberof`** SystemDetailsOutData
+
+___
+
 ### `Optional` stale
 
 • **stale**? : *boolean*
 
-*Defined in [api.ts:1375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1375)*
+*Defined in [api.ts:1449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1449)*
 
 System stale status.
 

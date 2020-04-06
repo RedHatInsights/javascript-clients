@@ -22,7 +22,7 @@
 
 • **errors**: *Array‹[ErrorsErrors](errorserrors.md)›*
 
-*Defined in [api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L399)*
+*Defined in [api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L405)*
 
 **`type`** {Array<ErrorsErrors>}
 

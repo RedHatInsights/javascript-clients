@@ -26,7 +26,7 @@
 
 • **cvss2Score**: *string | null*
 
-*Defined in [api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L589)*
+*Defined in [api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L595)*
 
 String representation of cvss2 score of the CVE.
 
@@ -40,7 +40,7 @@ ___
 
 • **cvss3Score**: *string | null*
 
-*Defined in [api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L595)*
+*Defined in [api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L601)*
 
 String representation of cvss3 score of the CVE.
 
@@ -54,7 +54,7 @@ ___
 
 • **description**: *string*
 
-*Defined in [api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L601)*
+*Defined in [api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L607)*
 
 Description of the CVE.
 
@@ -68,7 +68,7 @@ ___
 
 • **synopsis**: *string*
 
-*Defined in [api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L583)*
+*Defined in [api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L589)*
 
 CVE synopsis
 
@@ -82,7 +82,7 @@ ___
 
 • **systemsAffected**: *number*
 
-*Defined in [api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L607)*
+*Defined in [api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L613)*
 
 Systems affected by the CVE.
 

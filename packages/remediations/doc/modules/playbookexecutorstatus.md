@@ -26,7 +26,7 @@
 
 • **connectionStatus**: *[ConnectionStatusEnum](../enums/playbookexecutorstatus.connectionstatusenum.md)*
 
-*Defined in [api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L283)*
+*Defined in [api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L327)*
 
 **`type`** {string}
 
@@ -38,7 +38,7 @@ ___
 
 • **executorId**: *string | null*
 
-*Defined in [api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L259)*
+*Defined in [api.ts:303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L303)*
 
 **`type`** {string}
 
@@ -50,7 +50,7 @@ ___
 
 • **executorName**: *string | null*
 
-*Defined in [api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L271)*
+*Defined in [api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L315)*
 
 **`type`** {string}
 
@@ -62,7 +62,7 @@ ___
 
 • **executorType**: *string | null*
 
-*Defined in [api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L265)*
+*Defined in [api.ts:309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L309)*
 
 **`type`** {string}
 
@@ -74,7 +74,7 @@ ___
 
 • **systemCount**: *number*
 
-*Defined in [api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L277)*
+*Defined in [api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L321)*
 
 **`type`** {number}
 

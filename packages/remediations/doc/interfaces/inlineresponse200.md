@@ -23,7 +23,7 @@
 
 • **commit**: *string*
 
-*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L129)*
+*Defined in [api.ts:167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L167)*
 
 **`type`** {string}
 
@@ -35,7 +35,7 @@ ___
 
 • **version**: *string*
 
-*Defined in [api.ts:123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L123)*
+*Defined in [api.ts:161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L161)*
 
 **`type`** {string}
 

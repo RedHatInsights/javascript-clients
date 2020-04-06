@@ -22,7 +22,7 @@
 
 • **NUMBER_1**: = 1
 
-*Defined in [api.ts:1010](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1010)*
+*Defined in [api.ts:1079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1079)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **NUMBER_2**: = 2
 
-*Defined in [api.ts:1011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1011)*
+*Defined in [api.ts:1080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1080)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **NUMBER_3**: = 3
 
-*Defined in [api.ts:1012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1012)*
+*Defined in [api.ts:1081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1081)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **NUMBER_4**: = 4
 
-*Defined in [api.ts:1013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1013)*
+*Defined in [api.ts:1082](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1082)*
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **NUMBER_MINUS_1**: =  -1
 
-*Defined in [api.ts:1009](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1009)*
+*Defined in [api.ts:1078](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1078)*

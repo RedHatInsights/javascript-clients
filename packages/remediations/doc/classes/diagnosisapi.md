@@ -88,7 +88,7 @@ ___
 
 ▸ **getDiagnosis**(`system`: string, `remediation?`: string, `options?`: any): *AxiosPromise‹[Diagnosis](../interfaces/diagnosis.md)›*
 
-*Defined in [api.ts:1248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1248)*
+*Defined in [api.ts:1317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1317)*
 
 Provides host-specific diagnosis information
 

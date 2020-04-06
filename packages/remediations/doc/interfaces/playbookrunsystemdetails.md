@@ -27,7 +27,7 @@
 
 • **console**: *string*
 
-*Defined in [api.ts:473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L473)*
+*Defined in [api.ts:542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L542)*
 
 Current formatted system log from playbook run system.
 
@@ -41,7 +41,7 @@ ___
 
 • **playbookRunExecutorId**: *string*
 
-*Defined in [api.ts:479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L479)*
+*Defined in [api.ts:548](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L548)*
 
 **`type`** {string}
 
@@ -53,7 +53,7 @@ ___
 
 • **status**: *[PlaybookRunSystemStatus](../enums/playbookrunsystemstatus.md)*
 
-*Defined in [api.ts:467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L467)*
+*Defined in [api.ts:536](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L536)*
 
 **`type`** {PlaybookRunSystemStatus}
 
@@ -65,7 +65,7 @@ ___
 
 • **systemId**: *string*
 
-*Defined in [api.ts:455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L455)*
+*Defined in [api.ts:524](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L524)*
 
 **`type`** {string}
 
@@ -77,7 +77,7 @@ ___
 
 • **systemName**: *string*
 
-*Defined in [api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L461)*
+*Defined in [api.ts:530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L530)*
 
 **`type`** {string}
 
@@ -89,7 +89,7 @@ ___
 
 • **updatedAt**: *Date*
 
-*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L485)*
+*Defined in [api.ts:554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L554)*
 
 **`type`** {Date}
 

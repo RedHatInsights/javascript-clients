@@ -22,7 +22,7 @@
 
 • **id**: *string*
 
-*Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L109)*
+*Defined in [api.ts:147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L147)*
 
 **`type`** {string}
 

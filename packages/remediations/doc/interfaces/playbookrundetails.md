@@ -28,7 +28,7 @@
 
 • **createdAt**: *Date*
 
-*Defined in [api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L365)*
+*Defined in [api.ts:421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L421)*
 
 **`type`** {Date}
 
@@ -40,7 +40,7 @@ ___
 
 • **createdBy**: *[UserOut](userout.md)*
 
-*Defined in [api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L359)*
+*Defined in [api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L415)*
 
 **`type`** {UserOut}
 
@@ -52,7 +52,7 @@ ___
 
 • **executors**: *Array‹[PlaybookExecutors](playbookexecutors.md)›*
 
-*Defined in [api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L347)*
+*Defined in [api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L403)*
 
 **`type`** {Array<PlaybookExecutors>}
 
@@ -64,7 +64,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L341)*
+*Defined in [api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L397)*
 
 **`type`** {string}
 
@@ -76,7 +76,7 @@ ___
 
 • **remediationId**: *string*
 
-*Defined in [api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L353)*
+*Defined in [api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L409)*
 
 **`type`** {string}
 
@@ -88,7 +88,7 @@ ___
 
 • **status**: *[PlaybookRunStatus](../enums/playbookrunstatus.md)*
 
-*Defined in [api.ts:377](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L377)*
+*Defined in [api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L433)*
 
 **`type`** {PlaybookRunStatus}
 
@@ -100,7 +100,7 @@ ___
 
 • **updatedAt**: *Date*
 
-*Defined in [api.ts:371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L371)*
+*Defined in [api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L427)*
 
 **`type`** {Date}
 
