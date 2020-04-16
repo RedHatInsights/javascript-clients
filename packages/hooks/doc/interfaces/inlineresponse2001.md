@@ -2,6 +2,10 @@
 
 # Interface: InlineResponse2001
 
+**`export`** 
+
+**`interface`** InlineResponse2001
+
 ## Hierarchy
 
 * **InlineResponse2001**
@@ -16,6 +20,8 @@
 
 ### `Optional` data
 
-• **data**? : *[App](../modules/app.md)*
+• **data**? : *[App](app.md)*
 
-*Defined in [api.ts:682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L682)*
+*Defined in [packages/hooks/api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L590)*
+
+**`memberof`** InlineResponse2001

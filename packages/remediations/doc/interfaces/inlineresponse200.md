@@ -23,9 +23,7 @@
 
 • **commit**: *string*
 
-*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L129)*
-
-**`type`** {string}
+*Defined in [api.ts:114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L114)*
 
 **`memberof`** InlineResponse200
 
@@ -35,8 +33,6 @@ ___
 
 • **version**: *string*
 
-*Defined in [api.ts:123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L123)*
-
-**`type`** {string}
+*Defined in [api.ts:108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L108)*
 
 **`memberof`** InlineResponse200

@@ -18,4 +18,4 @@
 
 • **Percent**: = "percent"
 
-*Defined in [api.ts:352](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L352)*
+*Defined in [api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L366)*

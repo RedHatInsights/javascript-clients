@@ -12,20 +12,24 @@
 
 * [CostEnum](../enums/reportazureordering.costenum.md)
 * [DeltaEnum](../enums/reportazureordering.deltaenum.md)
+* [InfrastructureEnum](../enums/reportazureordering.infrastructureenum.md)
 * [InstanceTypeEnum](../enums/reportazureordering.instancetypeenum.md)
 * [ResourceLocationEnum](../enums/reportazureordering.resourcelocationenum.md)
 * [ServiceNameEnum](../enums/reportazureordering.servicenameenum.md)
 * [SubscriptionGuidEnum](../enums/reportazureordering.subscriptionguidenum.md)
+* [SupplementaryEnum](../enums/reportazureordering.supplementaryenum.md)
 * [UsageEnum](../enums/reportazureordering.usageenum.md)
 
 ### Properties
 
 * [cost](reportazureordering.md#optional-cost)
 * [delta](reportazureordering.md#optional-delta)
+* [infrastructure](reportazureordering.md#optional-infrastructure)
 * [instanceType](reportazureordering.md#optional-instancetype)
 * [resourceLocation](reportazureordering.md#optional-resourcelocation)
 * [serviceName](reportazureordering.md#optional-servicename)
 * [subscriptionGuid](reportazureordering.md#optional-subscriptionguid)
+* [supplementary](reportazureordering.md#optional-supplementary)
 * [usage](reportazureordering.md#optional-usage)
 
 ## Properties
@@ -34,7 +38,7 @@
 
 • **cost**? : *[CostEnum](../enums/reportazureordering.costenum.md)*
 
-*Defined in [api.ts:893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L893)*
+*Defined in [api.ts:702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L702)*
 
 **`type`** {string}
 
@@ -46,7 +50,19 @@ ___
 
 • **delta**? : *[DeltaEnum](../enums/reportazureordering.deltaenum.md)*
 
-*Defined in [api.ts:905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L905)*
+*Defined in [api.ts:714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L714)*
+
+**`type`** {string}
+
+**`memberof`** ReportAzureOrdering
+
+___
+
+### `Optional` infrastructure
+
+• **infrastructure**? : *[InfrastructureEnum](../enums/reportazureordering.infrastructureenum.md)*
+
+*Defined in [api.ts:690](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L690)*
 
 **`type`** {string}
 
@@ -58,7 +74,7 @@ ___
 
 • **instanceType**? : *[InstanceTypeEnum](../enums/reportazureordering.instancetypeenum.md)*
 
-*Defined in [api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L929)*
+*Defined in [api.ts:738](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L738)*
 
 **`type`** {string}
 
@@ -70,7 +86,7 @@ ___
 
 • **resourceLocation**? : *[ResourceLocationEnum](../enums/reportazureordering.resourcelocationenum.md)*
 
-*Defined in [api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L917)*
+*Defined in [api.ts:726](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L726)*
 
 **`type`** {string}
 
@@ -82,7 +98,7 @@ ___
 
 • **serviceName**? : *[ServiceNameEnum](../enums/reportazureordering.servicenameenum.md)*
 
-*Defined in [api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L923)*
+*Defined in [api.ts:732](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L732)*
 
 **`type`** {string}
 
@@ -94,7 +110,19 @@ ___
 
 • **subscriptionGuid**? : *[SubscriptionGuidEnum](../enums/reportazureordering.subscriptionguidenum.md)*
 
-*Defined in [api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L911)*
+*Defined in [api.ts:720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L720)*
+
+**`type`** {string}
+
+**`memberof`** ReportAzureOrdering
+
+___
+
+### `Optional` supplementary
+
+• **supplementary**? : *[SupplementaryEnum](../enums/reportazureordering.supplementaryenum.md)*
+
+*Defined in [api.ts:696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L696)*
 
 **`type`** {string}
 
@@ -106,7 +134,7 @@ ___
 
 • **usage**? : *[UsageEnum](../enums/reportazureordering.usageenum.md)*
 
-*Defined in [api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L899)*
+*Defined in [api.ts:708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L708)*
 
 **`type`** {string}
 

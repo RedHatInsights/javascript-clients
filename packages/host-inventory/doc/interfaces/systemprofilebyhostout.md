@@ -18,7 +18,7 @@ Structure of the output of the host system profile query
 
 * [count](systemprofilebyhostout.md#count)
 * [page](systemprofilebyhostout.md#page)
-* [perPage](systemprofilebyhostout.md#perpage)
+* [per_page](systemprofilebyhostout.md#per_page)
 * [results](systemprofilebyhostout.md#results)
 * [total](systemprofilebyhostout.md#total)
 
@@ -28,11 +28,9 @@ Structure of the output of the host system profile query
 
 • **count**: *number*
 
-*Defined in [api.ts:855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L855)*
+*Defined in [packages/host-inventory/api.ts:681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L681)*
 
 A number of entries on the current page.
-
-**`type`** {number}
 
 **`memberof`** SystemProfileByHostOut
 
@@ -42,25 +40,21 @@ ___
 
 • **page**: *number*
 
-*Defined in [api.ts:861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L861)*
+*Defined in [packages/host-inventory/api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L687)*
 
 A current page number.
-
-**`type`** {number}
 
 **`memberof`** SystemProfileByHostOut
 
 ___
 
-###  perPage
+###  per_page
 
-• **perPage**: *number*
+• **per_page**: *number*
 
-*Defined in [api.ts:867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L867)*
+*Defined in [packages/host-inventory/api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L693)*
 
 A page size – a number of entries per single page.
-
-**`type`** {number}
 
 **`memberof`** SystemProfileByHostOut
 
@@ -70,11 +64,9 @@ ___
 
 • **results**: *Array‹[HostSystemProfileOut](hostsystemprofileout.md)›*
 
-*Defined in [api.ts:879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L879)*
+*Defined in [packages/host-inventory/api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L705)*
 
 Actual host search query result entries.
-
-**`type`** {Array<HostSystemProfileOut>}
 
 **`memberof`** SystemProfileByHostOut
 
@@ -84,10 +76,8 @@ ___
 
 • **total**: *number*
 
-*Defined in [api.ts:873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L873)*
+*Defined in [packages/host-inventory/api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L699)*
 
 A total count of the found entries.
-
-**`type`** {number}
 
 **`memberof`** SystemProfileByHostOut

@@ -17,11 +17,11 @@ The workflow to process approval requests. Each workflow is linked to multiple g
 ### Properties
 
 * [description](workflow.md#optional-description)
-* [groupRefs](workflow.md#optional-grouprefs)
+* [group_refs](workflow.md#optional-group_refs)
 * [id](workflow.md#optional-id)
 * [name](workflow.md#optional-name)
 * [sequence](workflow.md#optional-sequence)
-* [templateId](workflow.md#optional-templateid)
+* [template_id](workflow.md#optional-template_id)
 
 ## Properties
 
@@ -29,23 +29,19 @@ The workflow to process approval requests. Each workflow is linked to multiple g
 
 • **description**? : *string | null*
 
-*Defined in [api.ts:604](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L604)*
-
-**`type`** {string}
+*Defined in [packages/approval/api.ts:530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L530)*
 
 **`memberof`** Workflow
 
 ___
 
-### `Optional` groupRefs
+### `Optional` group_refs
 
-• **groupRefs**? : *Array‹string›*
+• **group_refs**? : *Array‹string›*
 
-*Defined in [api.ts:616](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L616)*
+*Defined in [packages/approval/api.ts:542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L542)*
 
 Group reference ids associated with workflow
-
-**`type`** {Array<string>}
 
 **`memberof`** Workflow
 
@@ -55,9 +51,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:586](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L586)*
-
-**`type`** {string}
+*Defined in [packages/approval/api.ts:512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L512)*
 
 **`memberof`** Workflow
 
@@ -67,9 +61,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:598](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L598)*
-
-**`type`** {string}
+*Defined in [packages/approval/api.ts:524](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L524)*
 
 **`memberof`** Workflow
 
@@ -79,24 +71,20 @@ ___
 
 • **sequence**? : *number*
 
-*Defined in [api.ts:610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L610)*
+*Defined in [packages/approval/api.ts:536](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L536)*
 
 an indicator of the execution order for selected workflows
-
-**`type`** {number}
 
 **`memberof`** Workflow
 
 ___
 
-### `Optional` templateId
+### `Optional` template_id
 
-• **templateId**? : *string*
+• **template_id**? : *string*
 
-*Defined in [api.ts:592](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L592)*
+*Defined in [packages/approval/api.ts:518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L518)*
 
 Associated template id
-
-**`type`** {string}
 
 **`memberof`** Workflow

@@ -14,23 +14,21 @@
 
 ### Properties
 
-* [createdAt](serviceofferingicon.md#optional-createdat)
+* [created_at](serviceofferingicon.md#optional-created_at)
 * [data](serviceofferingicon.md#optional-data)
 * [id](serviceofferingicon.md#optional-id)
-* [lastSeenAt](serviceofferingicon.md#optional-lastseenat)
-* [sourceId](serviceofferingicon.md#optional-sourceid)
-* [sourceRef](serviceofferingicon.md#optional-sourceref)
-* [updatedAt](serviceofferingicon.md#optional-updatedat)
+* [last_seen_at](serviceofferingicon.md#optional-last_seen_at)
+* [source_id](serviceofferingicon.md#optional-source_id)
+* [source_ref](serviceofferingicon.md#optional-source_ref)
+* [updated_at](serviceofferingicon.md#optional-updated_at)
 
 ## Properties
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:2855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2855)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:2754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2754)*
 
 **`memberof`** ServiceOfferingIcon
 
@@ -40,11 +38,9 @@ ___
 
 • **data**? : *string*
 
-*Defined in [api.ts:2861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2861)*
+*Defined in [packages/topological-inventory/api.ts:2760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2760)*
 
 Raw icon data
-
-**`type`** {string}
 
 **`memberof`** ServiceOfferingIcon
 
@@ -54,60 +50,50 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:2867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2867)*
+*Defined in [packages/topological-inventory/api.ts:2766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2766)*
 
 ID of the resource
 
-**`type`** {string}
+**`memberof`** ServiceOfferingIcon
+
+___
+
+### `Optional` last_seen_at
+
+• **last_seen_at**? : *string*
+
+*Defined in [packages/topological-inventory/api.ts:2772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2772)*
 
 **`memberof`** ServiceOfferingIcon
 
 ___
 
-### `Optional` lastSeenAt
+### `Optional` source_id
 
-• **lastSeenAt**? : *Date*
+• **source_id**? : *string*
 
-*Defined in [api.ts:2873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2873)*
-
-**`type`** {Date}
-
-**`memberof`** ServiceOfferingIcon
-
-___
-
-### `Optional` sourceId
-
-• **sourceId**? : *string*
-
-*Defined in [api.ts:2879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2879)*
+*Defined in [packages/topological-inventory/api.ts:2778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2778)*
 
 ID of the resource
 
-**`type`** {string}
+**`memberof`** ServiceOfferingIcon
+
+___
+
+### `Optional` source_ref
+
+• **source_ref**? : *string*
+
+*Defined in [packages/topological-inventory/api.ts:2784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2784)*
 
 **`memberof`** ServiceOfferingIcon
 
 ___
 
-### `Optional` sourceRef
+### `Optional` updated_at
 
-• **sourceRef**? : *string*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:2885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2885)*
-
-**`type`** {string}
-
-**`memberof`** ServiceOfferingIcon
-
-___
-
-### `Optional` updatedAt
-
-• **updatedAt**? : *Date*
-
-*Defined in [api.ts:2891](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2891)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:2790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2790)*
 
 **`memberof`** ServiceOfferingIcon

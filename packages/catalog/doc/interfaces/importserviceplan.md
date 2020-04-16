@@ -14,18 +14,16 @@
 
 ### Properties
 
-* [portfolioItemId](importserviceplan.md#optional-portfolioitemid)
+* [portfolio_item_id](importserviceplan.md#optional-portfolio_item_id)
 
 ## Properties
 
-### `Optional` portfolioItemId
+### `Optional` portfolio_item_id
 
-• **portfolioItemId**? : *string*
+• **portfolio_item_id**? : *string*
 
-*Defined in [api.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L372)*
+*Defined in [packages/catalog/api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L307)*
 
 The Portfolio Item to import the service plans for.
-
-**`type`** {string}
 
 **`memberof`** ImportServicePlan

@@ -6,10 +6,6 @@ ActionApi - object-oriented interface
 
 **`export`** 
 
-**`class`** ActionApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -42,15 +38,15 @@ ActionApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L49)*
+Defined in packages/approval/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[ActionApi](actionapi.md)*
 
@@ -62,7 +58,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
+Defined in packages/approval/base.ts:51
 
 ___
 
@@ -72,7 +68,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
+Defined in packages/approval/base.ts:51
 
 ___
 
@@ -82,15 +78,15 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L49)*
+Defined in packages/approval/base.ts:49
 
 ## Methods
 
 ###  createAction
 
-▸ **createAction**(`requestId`: string, `action`: [Action](../modules/action.md), `options?`: any): *AxiosPromise‹[Action](../modules/action.md)›*
+▸ **createAction**(`requestId`: string, `action`: [Action](../interfaces/action.md), `options?`: any): *AxiosPromise‹[Action](../interfaces/action.md)›*
 
-*Defined in [api.ts:889](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L889)*
+*Defined in [packages/approval/api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L822)*
 
 Add an action to a given request. Admin can do approve, deny, memo, and cancel operations; approver can do approve, deny and memo operations; while requester can do only cancel operation.
 
@@ -105,10 +101,10 @@ Add an action to a given request. Admin can do approve, deny, memo, and cancel o
 Name | Type | Description |
 ------ | ------ | ------ |
 `requestId` | string | Id of request |
-`action` | [Action](../modules/action.md) | Action object that will be added |
+`action` | [Action](../interfaces/action.md) | Action object that will be added |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Action](../modules/action.md)›*
+**Returns:** *AxiosPromise‹[Action](../interfaces/action.md)›*
 
 ___
 
@@ -116,7 +112,7 @@ ___
 
 ▸ **listActionsByRequest**(`requestId`: string, `options?`: any): *AxiosPromise‹[ActionCollection](../interfaces/actioncollection.md)›*
 
-*Defined in [api.ts:901](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L901)*
+*Defined in [packages/approval/api.ts:834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L834)*
 
 Return actions in a given request, available for admin/approver
 
@@ -139,9 +135,9 @@ ___
 
 ###  showAction
 
-▸ **showAction**(`id`: string, `options?`: any): *AxiosPromise‹[Action](../modules/action.md)›*
+▸ **showAction**(`id`: string, `options?`: any): *AxiosPromise‹[Action](../interfaces/action.md)›*
 
-*Defined in [api.ts:913](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L913)*
+*Defined in [packages/approval/api.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L846)*
 
 Return an user action by id, available to all
 
@@ -158,4 +154,4 @@ Name | Type | Description |
 `id` | string | Query by id |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Action](../modules/action.md)›*
+**Returns:** *AxiosPromise‹[Action](../interfaces/action.md)›*

@@ -8,7 +8,9 @@
 
 ## Hierarchy
 
-* **PrincipalPagination**
+* [ListPagination](listpagination.md)
+
+  ↳ **PrincipalPagination**
 
 ## Index
 
@@ -24,9 +26,7 @@
 
 • **data**: *Array‹[Principal](principal.md)›*
 
-*Defined in [api.ts:749](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L749)*
-
-**`type`** {Array<Principal>}
+*Defined in [packages/rbac/api.ts:724](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L724)*
 
 **`memberof`** PrincipalPagination
 
@@ -36,11 +36,11 @@ ___
 
 • **links**? : *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:743](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L743)*
+*Inherited from [AccessPagination](accesspagination.md).[links](accesspagination.md#optional-links)*
 
-**`type`** {PaginationLinks}
+*Defined in [packages/rbac/api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L410)*
 
-**`memberof`** PrincipalPagination
+**`memberof`** ListPagination
 
 ___
 
@@ -48,8 +48,8 @@ ___
 
 • **meta**? : *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [api.ts:737](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L737)*
+*Inherited from [AccessPagination](accesspagination.md).[meta](accesspagination.md#optional-meta)*
 
-**`type`** {PaginationMeta}
+*Defined in [packages/rbac/api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L404)*
 
-**`memberof`** PrincipalPagination
+**`memberof`** ListPagination

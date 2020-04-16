@@ -14,37 +14,33 @@
 
 ### Properties
 
-* [createdAt](remediationlistitem.md#createdat)
-* [createdBy](remediationlistitem.md#createdby)
+* [created_at](remediationlistitem.md#created_at)
+* [created_by](remediationlistitem.md#created_by)
 * [id](remediationlistitem.md#id)
-* [issueCount](remediationlistitem.md#issuecount)
+* [issue_count](remediationlistitem.md#issue_count)
 * [name](remediationlistitem.md#name)
-* [needsReboot](remediationlistitem.md#needsreboot)
-* [systemCount](remediationlistitem.md#systemcount)
-* [updatedAt](remediationlistitem.md#updatedat)
-* [updatedBy](remediationlistitem.md#updatedby)
+* [needs_reboot](remediationlistitem.md#needs_reboot)
+* [system_count](remediationlistitem.md#system_count)
+* [updated_at](remediationlistitem.md#updated_at)
+* [updated_by](remediationlistitem.md#updated_by)
 
 ## Properties
 
-###  createdAt
+###  created_at
 
-• **createdAt**: *Date*
+• **created_at**: *string*
 
-*Defined in [api.ts:886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L886)*
-
-**`type`** {Date}
+*Defined in [api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L899)*
 
 **`memberof`** RemediationListItem
 
 ___
 
-###  createdBy
+###  created_by
 
-• **createdBy**: *[UserOut](userout.md)*
+• **created_by**: *[UserOut](userout.md)*
 
-*Defined in [api.ts:880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L880)*
-
-**`type`** {UserOut}
+*Defined in [api.ts:893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L893)*
 
 **`memberof`** RemediationListItem
 
@@ -54,21 +50,17 @@ ___
 
 • **id**: *string*
 
-*Defined in [api.ts:868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L868)*
-
-**`type`** {string}
+*Defined in [api.ts:881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L881)*
 
 **`memberof`** RemediationListItem
 
 ___
 
-###  issueCount
+###  issue_count
 
-• **issueCount**: *number*
+• **issue_count**: *number*
 
-*Defined in [api.ts:904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L904)*
-
-**`type`** {number}
+*Defined in [api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L917)*
 
 **`memberof`** RemediationListItem
 
@@ -78,58 +70,48 @@ ___
 
 • **name**: *string | null*
 
-*Defined in [api.ts:874](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L874)*
-
-**`type`** {string}
+*Defined in [api.ts:887](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L887)*
 
 **`memberof`** RemediationListItem
 
 ___
 
-###  needsReboot
+###  needs_reboot
 
-• **needsReboot**: *boolean*
+• **needs_reboot**: *boolean*
 
-*Defined in [api.ts:916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L916)*
+*Defined in [api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L929)*
 
 Indicates whether any of the issues contained in the remediation require system reboot
 
-**`type`** {boolean}
+**`memberof`** RemediationListItem
+
+___
+
+###  system_count
+
+• **system_count**: *number*
+
+*Defined in [api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L923)*
 
 **`memberof`** RemediationListItem
 
 ___
 
-###  systemCount
+###  updated_at
 
-• **systemCount**: *number*
+• **updated_at**: *string*
 
-*Defined in [api.ts:910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L910)*
-
-**`type`** {number}
+*Defined in [api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L911)*
 
 **`memberof`** RemediationListItem
 
 ___
 
-###  updatedAt
+###  updated_by
 
-• **updatedAt**: *Date*
+• **updated_by**: *[UserOut](userout.md)*
 
-*Defined in [api.ts:898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L898)*
-
-**`type`** {Date}
-
-**`memberof`** RemediationListItem
-
-___
-
-###  updatedBy
-
-• **updatedBy**: *[UserOut](userout.md)*
-
-*Defined in [api.ts:892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L892)*
-
-**`type`** {UserOut}
+*Defined in [api.ts:905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L905)*
 
 **`memberof`** RemediationListItem

@@ -21,13 +21,11 @@
 
 ### `Optional` data
 
-• **data**? : *any*
+• **data**? : *object*
 
-*Defined in [api.ts:257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L257)*
+*Defined in [packages/approval/api.ts:197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L197)*
 
 Results from the GraphQL query
-
-**`type`** {any}
 
 **`memberof`** GraphqlOut
 
@@ -35,12 +33,10 @@ ___
 
 ### `Optional` errors
 
-• **errors**? : *Array‹any›*
+• **errors**? : *Array‹object›*
 
-*Defined in [api.ts:263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L263)*
+*Defined in [packages/approval/api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L203)*
 
 Errors resulting from the GraphQL query
-
-**`type`** {Array<any>}
 
 **`memberof`** GraphqlOut

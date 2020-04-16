@@ -23,9 +23,7 @@
 
 • **impact**? : *number*
 
-*Defined in [api.ts:961](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L961)*
-
-**`type`** {number}
+*Defined in [packages/insights/api.ts:886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L886)*
 
 **`memberof`** RuleImpact
 
@@ -35,8 +33,6 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L955)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L880)*
 
 **`memberof`** RuleImpact

@@ -27,13 +27,13 @@
 
 \+ **new Configuration**(`param`: [ConfigurationParameters](../interfaces/configurationparameters.md)): *[Configuration](configuration.md)*
 
-*Defined in [configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L65)*
+*Defined in [packages/hooks/configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L65)*
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
-`param` | [ConfigurationParameters](../interfaces/configurationparameters.md) |  {} |
+`param` | [ConfigurationParameters](../interfaces/configurationparameters.md) | {} |
 
 **Returns:** *[Configuration](configuration.md)*
 
@@ -43,7 +43,15 @@ Name | Type | Default |
 
 • **accessToken**? : *string | function*
 
-*Defined in [configuration.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L51)*
+*Defined in [packages/hooks/configuration.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L51)*
+
+parameter for oauth2 security
+
+**`param`** security name
+
+**`param`** oauth2 scope
+
+**`memberof`** Configuration
 
 ___
 
@@ -51,7 +59,13 @@ ___
 
 • **apiKey**? : *string | function*
 
-*Defined in [configuration.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L30)*
+*Defined in [packages/hooks/configuration.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L30)*
+
+parameter for apiKey security
+
+**`param`** security name
+
+**`memberof`** Configuration
 
 ___
 
@@ -59,7 +73,11 @@ ___
 
 • **baseOptions**? : *any*
 
-*Defined in [configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L65)*
+*Defined in [packages/hooks/configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L65)*
+
+base options for axios calls
+
+**`memberof`** Configuration
 
 ___
 
@@ -67,7 +85,11 @@ ___
 
 • **basePath**? : *string*
 
-*Defined in [configuration.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L58)*
+*Defined in [packages/hooks/configuration.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L58)*
+
+override base path
+
+**`memberof`** Configuration
 
 ___
 
@@ -75,7 +97,11 @@ ___
 
 • **password**? : *string*
 
-*Defined in [configuration.ts:44](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L44)*
+*Defined in [packages/hooks/configuration.ts:44](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L44)*
+
+parameter for basic security
+
+**`memberof`** Configuration
 
 ___
 
@@ -83,4 +109,8 @@ ___
 
 • **username**? : *string*
 
-*Defined in [configuration.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L37)*
+*Defined in [packages/hooks/configuration.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/configuration.ts#L37)*
+
+parameter for basic security
+
+**`memberof`** Configuration

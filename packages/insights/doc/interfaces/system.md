@@ -14,21 +14,19 @@
 
 ### Properties
 
-* [displayName](system.md#displayname)
+* [display_name](system.md#display_name)
 * [hits](system.md#optional-hits)
-* [lastSeen](system.md#optional-lastseen)
-* [staleAt](system.md#staleat)
-* [systemUuid](system.md#systemuuid)
+* [last_seen](system.md#optional-last_seen)
+* [stale_at](system.md#stale_at)
+* [system_uuid](system.md#system_uuid)
 
 ## Properties
 
-###  displayName
+###  display_name
 
-• **displayName**: *string*
+• **display_name**: *string*
 
-*Defined in [api.ts:1179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1179)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:1103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1103)*
 
 **`memberof`** System
 
@@ -38,44 +36,36 @@ ___
 
 • **hits**? : *number*
 
-*Defined in [api.ts:1167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1167)*
-
-**`type`** {number}
+*Defined in [packages/insights/api.ts:1091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1091)*
 
 **`memberof`** System
 
 ___
 
-### `Optional` lastSeen
+### `Optional` last_seen
 
-• **lastSeen**? : *Date*
+• **last_seen**? : *string*
 
-*Defined in [api.ts:1185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1185)*
-
-**`type`** {Date}
+*Defined in [packages/insights/api.ts:1109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1109)*
 
 **`memberof`** System
 
 ___
 
-###  staleAt
+###  stale_at
 
-• **staleAt**: *Date*
+• **stale_at**: *string*
 
-*Defined in [api.ts:1191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1191)*
-
-**`type`** {Date}
+*Defined in [packages/insights/api.ts:1115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1115)*
 
 **`memberof`** System
 
 ___
 
-###  systemUuid
+###  system_uuid
 
-• **systemUuid**: *string*
+• **system_uuid**: *string*
 
-*Defined in [api.ts:1173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1173)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:1097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1097)*
 
 **`memberof`** System

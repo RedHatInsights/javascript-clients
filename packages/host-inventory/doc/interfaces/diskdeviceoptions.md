@@ -25,9 +25,7 @@ mount options
 
 • **name**? : *string*
 
-*Defined in [api.ts:481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L481)*
-
-**`type`** {string}
+*Defined in [packages/host-inventory/api.ts:424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L424)*
 
 **`memberof`** DiskDeviceOptions
 
@@ -37,8 +35,6 @@ ___
 
 • **value**? : *string*
 
-*Defined in [api.ts:487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L487)*
-
-**`type`** {string}
+*Defined in [packages/host-inventory/api.ts:430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L430)*
 
 **`memberof`** DiskDeviceOptions

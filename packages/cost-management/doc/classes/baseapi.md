@@ -20,7 +20,7 @@
 
   ↳ [OpenShiftReportsApi](openshiftreportsapi.md)
 
-  ↳ [ProvidersApi](providersapi.md)
+  ↳ [SettingsApi](settingsapi.md)
 
   ↳ [SourcesApi](sourcesapi.md)
 

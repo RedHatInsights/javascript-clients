@@ -22,7 +22,7 @@
 
 • **errors**: *Array‹any›*
 
-*Defined in [api.ts:431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L431)*
+*Defined in [api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L451)*
 
 **`type`** {Array<any>}
 

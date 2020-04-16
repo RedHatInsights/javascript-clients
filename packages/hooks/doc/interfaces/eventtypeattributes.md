@@ -2,6 +2,10 @@
 
 # Interface: EventTypeAttributes
 
+**`export`** 
+
+**`interface`** EventTypeAttributes
+
 ## Hierarchy
 
 * **EventTypeAttributes**
@@ -19,7 +23,11 @@
 
 • **name**? : *string*
 
-*Defined in [api.ts:580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L580)*
+*Defined in [packages/hooks/api.ts:494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L494)*
+
+Identifier of the event type, used to identify the event type in messages
+
+**`memberof`** EventTypeAttributes
 
 ___
 
@@ -27,4 +35,8 @@ ___
 
 • **title**? : *string*
 
-*Defined in [api.ts:586](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L586)*
+*Defined in [packages/hooks/api.ts:500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L500)*
+
+Human readable description of the event type, shown to the user when configuring filters
+
+**`memberof`** EventTypeAttributes

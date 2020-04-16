@@ -14,22 +14,20 @@
 
 ### Properties
 
-* [apiVersion](status.md#apiversion)
+* [api_version](status.md#api_version)
 * [commit](status.md#optional-commit)
 * [modules](status.md#optional-modules)
-* [platformInfo](status.md#optional-platforminfo)
-* [pythonVersion](status.md#optional-pythonversion)
-* [serverAddress](status.md#optional-serveraddress)
+* [platform_info](status.md#optional-platform_info)
+* [python_version](status.md#optional-python_version)
+* [server_address](status.md#optional-server_address)
 
 ## Properties
 
-###  apiVersion
+###  api_version
 
-• **apiVersion**: *number*
+• **api_version**: *number*
 
-*Defined in [api.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1138)*
-
-**`type`** {number}
+*Defined in [packages/rbac/api.ts:1162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1162)*
 
 **`memberof`** Status
 
@@ -39,9 +37,7 @@ ___
 
 • **commit**? : *string*
 
-*Defined in [api.ts:1144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1144)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:1168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1168)*
 
 **`memberof`** Status
 
@@ -49,46 +45,38 @@ ___
 
 ### `Optional` modules
 
-• **modules**? : *any*
+• **modules**? : *object*
 
-*Defined in [api.ts:1168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1168)*
-
-**`type`** {any}
+*Defined in [packages/rbac/api.ts:1192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1192)*
 
 **`memberof`** Status
 
 ___
 
-### `Optional` platformInfo
+### `Optional` platform_info
 
-• **platformInfo**? : *any*
+• **platform_info**? : *object*
 
-*Defined in [api.ts:1156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1156)*
-
-**`type`** {any}
+*Defined in [packages/rbac/api.ts:1180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1180)*
 
 **`memberof`** Status
 
 ___
 
-### `Optional` pythonVersion
+### `Optional` python_version
 
-• **pythonVersion**? : *string*
+• **python_version**? : *string*
 
-*Defined in [api.ts:1162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1162)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:1186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1186)*
 
 **`memberof`** Status
 
 ___
 
-### `Optional` serverAddress
+### `Optional` server_address
 
-• **serverAddress**? : *string*
+• **server_address**? : *string*
 
-*Defined in [api.ts:1150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1150)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:1174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1174)*
 
 **`memberof`** Status

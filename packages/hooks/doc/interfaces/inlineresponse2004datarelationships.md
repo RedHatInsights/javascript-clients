@@ -2,6 +2,10 @@
 
 # Interface: InlineResponse2004DataRelationships
 
+**`export`** 
+
+**`interface`** InlineResponse2004DataRelationships
+
 ## Hierarchy
 
 * **InlineResponse2004DataRelationships**
@@ -12,7 +16,7 @@
 
 * [apps](inlineresponse2004datarelationships.md#optional-apps)
 * [endpoint](inlineresponse2004datarelationships.md#optional-endpoint)
-* [eventTypes](inlineresponse2004datarelationships.md#optional-eventtypes)
+* [event_types](inlineresponse2004datarelationships.md#optional-event_types)
 * [levels](inlineresponse2004datarelationships.md#optional-levels)
 
 ## Properties
@@ -21,7 +25,9 @@
 
 • **apps**? : *[Relationships](relationships.md)*
 
-*Defined in [api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L816)*
+*Defined in [packages/hooks/api.ts:713](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L713)*
+
+**`memberof`** InlineResponse2004DataRelationships
 
 ___
 
@@ -29,15 +35,19 @@ ___
 
 • **endpoint**? : *[Relationship](relationship.md)*
 
-*Defined in [api.ts:834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L834)*
+*Defined in [packages/hooks/api.ts:731](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L731)*
+
+**`memberof`** InlineResponse2004DataRelationships
 
 ___
 
-### `Optional` eventTypes
+### `Optional` event_types
 
-• **eventTypes**? : *[Relationships](relationships.md)*
+• **event_types**? : *[Relationships](relationships.md)*
 
-*Defined in [api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L822)*
+*Defined in [packages/hooks/api.ts:719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L719)*
+
+**`memberof`** InlineResponse2004DataRelationships
 
 ___
 
@@ -45,4 +55,6 @@ ___
 
 • **levels**? : *[Relationships](relationships.md)*
 
-*Defined in [api.ts:828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L828)*
+*Defined in [packages/hooks/api.ts:725](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L725)*
+
+**`memberof`** InlineResponse2004DataRelationships

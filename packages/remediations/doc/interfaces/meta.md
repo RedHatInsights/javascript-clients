@@ -23,11 +23,9 @@
 
 • **count**: *number*
 
-*Defined in [api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L143)*
+*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L127)*
 
 number of results returned
-
-**`type`** {number}
 
 **`memberof`** Meta
 
@@ -37,10 +35,8 @@ ___
 
 • **total**: *number*
 
-*Defined in [api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L149)*
+*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L133)*
 
 total number of results matching the query
-
-**`type`** {number}
 
 **`memberof`** Meta

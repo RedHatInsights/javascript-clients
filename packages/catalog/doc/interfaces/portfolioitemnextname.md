@@ -14,16 +14,14 @@
 
 ### Properties
 
-* [nextName](portfolioitemnextname.md#optional-nextname)
+* [next_name](portfolioitemnextname.md#optional-next_name)
 
 ## Properties
 
-### `Optional` nextName
+### `Optional` next_name
 
-• **nextName**? : *string*
+• **next_name**? : *string*
 
-*Defined in [api.ts:799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L799)*
-
-**`type`** {string}
+*Defined in [packages/catalog/api.ts:716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L716)*
 
 **`memberof`** PortfolioItemNextName

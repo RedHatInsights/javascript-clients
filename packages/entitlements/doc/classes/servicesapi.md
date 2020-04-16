@@ -6,10 +6,6 @@ ServicesApi - object-oriented interface
 
 **`export`** 
 
-**`class`** ServicesApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -40,15 +36,15 @@ ServicesApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L49)*
+Defined in packages/entitlements/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[ServicesApi](servicesapi.md)*
 
@@ -60,7 +56,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L51)*
+Defined in packages/entitlements/base.ts:51
 
 ___
 
@@ -70,7 +66,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L51)*
+Defined in packages/entitlements/base.ts:51
 
 ___
 
@@ -80,7 +76,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L49)*
+Defined in packages/entitlements/base.ts:49
 
 ## Methods
 
@@ -88,7 +84,7 @@ ___
 
 ▸ **servicesGet**(`options?`: any): *AxiosPromise‹object›*
 
-*Defined in [api.ts:177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L177)*
+*Defined in [packages/entitlements/api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L129)*
 
 **`summary`** get a list of services a user is entitled to
 

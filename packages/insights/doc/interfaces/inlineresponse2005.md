@@ -24,9 +24,7 @@
 
 • **data**: *Array‹[System](system.md)›*
 
-*Defined in [api.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L423)*
-
-**`type`** {Array<System>}
+*Defined in [packages/insights/api.ts:362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L362)*
 
 **`memberof`** InlineResponse2005
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[InlineResponse200Links](inlineresponse200links.md)*
 
-*Defined in [api.ts:417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L417)*
-
-**`type`** {InlineResponse200Links}
+*Defined in [packages/insights/api.ts:356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L356)*
 
 **`memberof`** InlineResponse2005
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[InlineResponse200Meta](inlineresponse200meta.md)*
 
-*Defined in [api.ts:411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L411)*
-
-**`type`** {InlineResponse200Meta}
+*Defined in [packages/insights/api.ts:350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L350)*
 
 **`memberof`** InlineResponse2005

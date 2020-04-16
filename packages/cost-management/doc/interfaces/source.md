@@ -23,7 +23,7 @@
 
 • **id**: *number*
 
-*Defined in [api.ts:2589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2589)*
+*Defined in [api.ts:2682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2682)*
 
 **`type`** {number}
 
@@ -35,7 +35,7 @@ ___
 
 • **sourceType**: *string*
 
-*Defined in [api.ts:2595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2595)*
+*Defined in [api.ts:2688](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2688)*
 
 **`type`** {string}
 

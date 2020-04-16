@@ -2,6 +2,10 @@
 
 # Interface: EventTypeRelationships
 
+**`export`** 
+
+**`interface`** EventTypeRelationships
+
 ## Hierarchy
 
 * **EventTypeRelationships**
@@ -18,4 +22,6 @@
 
 • **levels**? : *[Relationships](relationships.md)*
 
-*Defined in [api.ts:600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L600)*
+*Defined in [packages/hooks/api.ts:513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L513)*
+
+**`memberof`** EventTypeRelationships

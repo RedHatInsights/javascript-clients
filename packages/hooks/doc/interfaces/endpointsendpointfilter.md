@@ -2,6 +2,10 @@
 
 # Interface: EndpointsEndpointFilter
 
+**`export`** 
+
+**`interface`** EndpointsEndpointFilter
+
 ## Hierarchy
 
 * **EndpointsEndpointFilter**
@@ -10,30 +14,36 @@
 
 ### Properties
 
-* [appIds](endpointsendpointfilter.md#optional-appids)
-* [eventTypeIds](endpointsendpointfilter.md#optional-eventtypeids)
-* [levelIds](endpointsendpointfilter.md#optional-levelids)
+* [app_ids](endpointsendpointfilter.md#optional-app_ids)
+* [event_type_ids](endpointsendpointfilter.md#optional-event_type_ids)
+* [level_ids](endpointsendpointfilter.md#optional-level_ids)
 
 ## Properties
 
-### `Optional` appIds
+### `Optional` app_ids
 
-• **appIds**? : *Array‹string›*
+• **app_ids**? : *Array‹string›*
 
-*Defined in [api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L360)*
+*Defined in [packages/hooks/api.ts:286](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L286)*
 
-___
-
-### `Optional` eventTypeIds
-
-• **eventTypeIds**? : *Array‹string›*
-
-*Defined in [api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L366)*
+**`memberof`** EndpointsEndpointFilter
 
 ___
 
-### `Optional` levelIds
+### `Optional` event_type_ids
 
-• **levelIds**? : *Array‹string›*
+• **event_type_ids**? : *Array‹string›*
 
-*Defined in [api.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L372)*
+*Defined in [packages/hooks/api.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L292)*
+
+**`memberof`** EndpointsEndpointFilter
+
+___
+
+### `Optional` level_ids
+
+• **level_ids**? : *Array‹string›*
+
+*Defined in [packages/hooks/api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L298)*
+
+**`memberof`** EndpointsEndpointFilter

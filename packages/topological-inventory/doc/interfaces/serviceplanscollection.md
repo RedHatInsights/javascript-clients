@@ -24,9 +24,7 @@
 
 • **data**? : *Array‹[ServicePlan](serviceplan.md)›*
 
-*Defined in [api.ts:3203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3203)*
-
-**`type`** {Array<ServicePlan>}
+*Defined in [packages/topological-inventory/api.ts:3096](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3096)*
 
 **`memberof`** ServicePlansCollection
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:3197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3197)*
-
-**`type`** {CollectionLinks}
+*Defined in [packages/topological-inventory/api.ts:3090](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3090)*
 
 **`memberof`** ServicePlansCollection
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:3191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3191)*
-
-**`type`** {CollectionMetadata}
+*Defined in [packages/topological-inventory/api.ts:3084](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3084)*
 
 **`memberof`** ServicePlansCollection

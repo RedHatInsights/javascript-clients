@@ -26,6 +26,7 @@
 * [DnfModule](interfaces/dnfmodule.md)
 * [FactSet](interfaces/factset.md)
 * [HostOut](interfaces/hostout.md)
+* [HostOutAllOf](interfaces/hostoutallof.md)
 * [HostQueryOutput](interfaces/hostqueryoutput.md)
 * [HostSystemProfileOut](interfaces/hostsystemprofileout.md)
 * [InstalledProduct](interfaces/installedproduct.md)
@@ -60,9 +61,9 @@
 
 ### `Const` BASE_PATH
 
-• **BASE_PATH**: *string* =  "http://localhost".replace(/\/+$/, "")
+• **BASE_PATH**: *string* = "http://localhost".replace(/\/+$/, "")
 
-*Defined in [api.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L20)*
+Defined in packages/host-inventory/base.ts:20
 
 ## Functions
 
@@ -70,9 +71,11 @@
 
 ▸ **HostsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1201)*
+*Defined in [packages/host-inventory/api.ts:1022](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1022)*
 
 HostsApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -96,11 +99,11 @@ Name | Type |
 
 * **apiHostGetHostTags**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `search?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **apiHostMergeFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: any, `branchId?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **apiHostMergeFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **apiHostPatchById**(`hostIdList`: Array‹string›, `patchHostIn`: [PatchHostIn](interfaces/patchhostin.md), `branchId?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **apiHostReplaceFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: any, `branchId?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **apiHostReplaceFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 ___
 
@@ -108,9 +111,11 @@ ___
 
 ▸ **HostsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2031)*
+*Defined in [packages/host-inventory/api.ts:1885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1885)*
 
 HostsApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -124,7 +129,7 @@ Name | Type |
 
 * **apiHostAddHostList**(`createHostIn`: Array‹[CreateHostIn](interfaces/createhostin.md)›, `options?`: any): *AxiosPromise‹[BulkHostOut](interfaces/bulkhostout.md)›*
 
-* **apiHostDeleteById**(`hostIdList`: Array‹string›, `branchId?`: string, `options?`: any): *AxiosPromise‹Response›*
+* **apiHostDeleteById**(`hostIdList`: Array‹string›, `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
 
 * **apiHostGetHostById**(`hostIdList`: Array‹string›, `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `registeredWith?`: "insights", `options?`: any): *AxiosPromise‹[HostQueryOutput](interfaces/hostqueryoutput.md)›*
 
@@ -136,11 +141,11 @@ Name | Type |
 
 * **apiHostGetHostTags**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `search?`: string, `options?`: any): *AxiosPromise‹[TagsOut](interfaces/tagsout.md)›*
 
-* **apiHostMergeFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: any, `branchId?`: string, `options?`: any): *AxiosPromise‹Response›*
+* **apiHostMergeFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **apiHostPatchById**(`hostIdList`: Array‹string›, `patchHostIn`: [PatchHostIn](interfaces/patchhostin.md), `branchId?`: string, `options?`: any): *AxiosPromise‹Response›*
+* **apiHostPatchById**(`hostIdList`: Array‹string›, `patchHostIn`: [PatchHostIn](interfaces/patchhostin.md), `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **apiHostReplaceFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: any, `branchId?`: string, `options?`: any): *AxiosPromise‹Response›*
+* **apiHostReplaceFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
 
 ___
 
@@ -148,9 +153,11 @@ ___
 
 ▸ **HostsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1842)*
+*Defined in [packages/host-inventory/api.ts:1696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1696)*
 
 HostsApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -166,7 +173,7 @@ Name | Type |
 
 * **apiHostDeleteById**(`hostIdList`: Array‹string›, `branchId?`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **apiHostGetHostById**(`hostIdList`: Array‹string›, `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `registeredWith?`: "insights", `options?`: any): *function*
 
@@ -188,17 +195,17 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[TagsOut](interfaces/tagsout.md)›*
 
-* **apiHostMergeFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: any, `branchId?`: string, `options?`: any): *function*
+* **apiHostMergeFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **apiHostPatchById**(`hostIdList`: Array‹string›, `patchHostIn`: [PatchHostIn](interfaces/patchhostin.md), `branchId?`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
-* **apiHostReplaceFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: any, `branchId?`: string, `options?`: any): *function*
+* **apiHostReplaceFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 ___
 
@@ -206,9 +213,11 @@ ___
 
 ▸ **TagsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2349)*
+*Defined in [packages/host-inventory/api.ts:2204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2204)*
 
 TagsApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -226,9 +235,11 @@ ___
 
 ▸ **TagsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2457)*
+*Defined in [packages/host-inventory/api.ts:2315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2315)*
 
 TagsApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -248,9 +259,11 @@ ___
 
 ▸ **TagsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2428)*
+*Defined in [packages/host-inventory/api.ts:2286](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2286)*
 
 TagsApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -270,7 +283,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L26)*
+Defined in packages/host-inventory/base.ts:26
 
 **`export`** 
 
@@ -278,22 +291,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [api.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L27)*
+Defined in packages/host-inventory/base.ts:27
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [api.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L30)*
+Defined in packages/host-inventory/base.ts:30
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [api.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L28)*
+Defined in packages/host-inventory/base.ts:28
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [api.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L29)*
+Defined in packages/host-inventory/base.ts:29

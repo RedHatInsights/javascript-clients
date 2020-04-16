@@ -18,9 +18,9 @@
 * [description](costmodelout.md#description)
 * [markup](costmodelout.md#optional-markup)
 * [name](costmodelout.md#name)
-* [providers](costmodelout.md#optional-providers)
 * [rates](costmodelout.md#optional-rates)
 * [sourceType](costmodelout.md#sourcetype)
+* [sources](costmodelout.md#optional-sources)
 * [updatedTimestamp](costmodelout.md#optional-updatedtimestamp)
 * [uuid](costmodelout.md#optional-uuid)
 
@@ -74,21 +74,9 @@ ___
 
 ___
 
-### `Optional` providers
-
-• **providers**? : *Array‹[CostModelRespProviders](costmodelrespproviders.md)›*
-
-*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L145)*
-
-**`type`** {Array<CostModelRespProviders>}
-
-**`memberof`** CostModelOut
-
-___
-
 ### `Optional` rates
 
-• **rates**? : *Array‹[Rate](rate.md)›*
+• **rates**? : *Array‹[Rate](../modules/rate.md)›*
 
 *Defined in [api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L151)*
 
@@ -105,6 +93,18 @@ ___
 *Defined in [api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L139)*
 
 **`type`** {string}
+
+**`memberof`** CostModelOut
+
+___
+
+### `Optional` sources
+
+• **sources**? : *Array‹[CostModelRespSources](costmodelrespsources.md)›*
+
+*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L145)*
+
+**`type`** {Array<CostModelRespSources>}
 
 **`memberof`** CostModelOut
 

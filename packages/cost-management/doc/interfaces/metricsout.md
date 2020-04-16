@@ -14,6 +14,7 @@
 
 ### Properties
 
+* [defaultCostType](metricsout.md#defaultcosttype)
 * [labelMeasurement](metricsout.md#labelmeasurement)
 * [labelMeasurementUnit](metricsout.md#labelmeasurementunit)
 * [labelMetric](metricsout.md#labelmetric)
@@ -22,11 +23,23 @@
 
 ## Properties
 
+###  defaultCostType
+
+• **defaultCostType**: *string*
+
+*Defined in [api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L437)*
+
+**`type`** {string}
+
+**`memberof`** MetricsOut
+
+___
+
 ###  labelMeasurement
 
 • **labelMeasurement**: *string*
 
-*Defined in [api.ts:411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L411)*
+*Defined in [api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L425)*
 
 **`type`** {string}
 
@@ -38,7 +51,7 @@ ___
 
 • **labelMeasurementUnit**: *string*
 
-*Defined in [api.ts:417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L417)*
+*Defined in [api.ts:431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L431)*
 
 **`type`** {string}
 
@@ -50,7 +63,7 @@ ___
 
 • **labelMetric**: *string*
 
-*Defined in [api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L405)*
+*Defined in [api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L419)*
 
 **`type`** {string}
 
@@ -62,7 +75,7 @@ ___
 
 • **metric**: *string*
 
-*Defined in [api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L399)*
+*Defined in [api.ts:413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L413)*
 
 **`type`** {string}
 
@@ -74,7 +87,7 @@ ___
 
 • **sourceType**: *string*
 
-*Defined in [api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L393)*
+*Defined in [api.ts:407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L407)*
 
 **`type`** {string}
 

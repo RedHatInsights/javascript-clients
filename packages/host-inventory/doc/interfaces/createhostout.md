@@ -12,29 +12,31 @@ Data of a single host belonging to an account. Represents the hosts without its 
 
 * **CreateHostOut**
 
+  ↳ [HostOut](hostout.md)
+
 ## Index
 
 ### Properties
 
 * [account](createhostout.md#account)
-* [ansibleHost](createhostout.md#optional-ansiblehost)
-* [biosUuid](createhostout.md#optional-biosuuid)
+* [ansible_host](createhostout.md#optional-ansible_host)
+* [bios_uuid](createhostout.md#optional-bios_uuid)
 * [created](createhostout.md#optional-created)
-* [culledTimestamp](createhostout.md#optional-culledtimestamp)
-* [displayName](createhostout.md#optional-displayname)
-* [externalId](createhostout.md#optional-externalid)
+* [culled_timestamp](createhostout.md#optional-culled_timestamp)
+* [display_name](createhostout.md#optional-display_name)
+* [external_id](createhostout.md#optional-external_id)
 * [facts](createhostout.md#optional-facts)
 * [fqdn](createhostout.md#optional-fqdn)
 * [id](createhostout.md#optional-id)
-* [insightsId](createhostout.md#optional-insightsid)
-* [ipAddresses](createhostout.md#optional-ipaddresses)
-* [macAddresses](createhostout.md#optional-macaddresses)
+* [insights_id](createhostout.md#optional-insights_id)
+* [ip_addresses](createhostout.md#optional-ip_addresses)
+* [mac_addresses](createhostout.md#optional-mac_addresses)
 * [reporter](createhostout.md#optional-reporter)
-* [rhelMachineId](createhostout.md#optional-rhelmachineid)
-* [satelliteId](createhostout.md#optional-satelliteid)
-* [staleTimestamp](createhostout.md#optional-staletimestamp)
-* [staleWarningTimestamp](createhostout.md#optional-stalewarningtimestamp)
-* [subscriptionManagerId](createhostout.md#optional-subscriptionmanagerid)
+* [rhel_machine_id](createhostout.md#optional-rhel_machine_id)
+* [satellite_id](createhostout.md#optional-satellite_id)
+* [stale_timestamp](createhostout.md#optional-stale_timestamp)
+* [stale_warning_timestamp](createhostout.md#optional-stale_warning_timestamp)
+* [subscription_manager_id](createhostout.md#optional-subscription_manager_id)
 * [tags](createhostout.md#optional-tags)
 * [updated](createhostout.md#optional-updated)
 
@@ -44,39 +46,33 @@ Data of a single host belonging to an account. Represents the hosts without its 
 
 • **account**: *string*
 
-*Defined in [api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L321)*
+*Defined in [packages/host-inventory/api.ts:266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L266)*
 
 A Red Hat Account number that owns the host.
 
-**`type`** {string}
-
 **`memberof`** CreateHostOut
 
 ___
 
-### `Optional` ansibleHost
+### `Optional` ansible_host
 
-• **ansibleHost**? : *string | null*
+• **ansible_host**? : *string | null*
 
-*Defined in [api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L315)*
+*Defined in [packages/host-inventory/api.ts:260](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L260)*
 
 The ansible host name for remediations
 
-**`type`** {string}
-
 **`memberof`** CreateHostOut
 
 ___
 
-### `Optional` biosUuid
+### `Optional` bios_uuid
 
-• **biosUuid**? : *string | null*
+• **bios_uuid**? : *string | null*
 
-*Defined in [api.ts:351](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L351)*
+*Defined in [packages/host-inventory/api.ts:296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L296)*
 
 A UUID of the host machine BIOS.  This field is considered to be a canonical fact.
-
-**`type`** {string}
 
 **`memberof`** CreateHostOut
 
@@ -84,55 +80,47 @@ ___
 
 ### `Optional` created
 
-• **created**? : *Date*
+• **created**? : *string*
 
-*Defined in [api.ts:387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L387)*
+*Defined in [packages/host-inventory/api.ts:332](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L332)*
 
 A timestamp when the entry was created.
 
-**`type`** {Date}
-
 **`memberof`** CreateHostOut
 
 ___
 
-### `Optional` culledTimestamp
+### `Optional` culled_timestamp
 
-• **culledTimestamp**? : *Date | null*
+• **culled_timestamp**? : *string | null*
 
-*Defined in [api.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L423)*
+*Defined in [packages/host-inventory/api.ts:368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L368)*
 
 Timestamp from which the host is considered deleted.
 
-**`type`** {Date}
-
 **`memberof`** CreateHostOut
 
 ___
 
-### `Optional` displayName
+### `Optional` display_name
 
-• **displayName**? : *string | null*
+• **display_name**? : *string | null*
 
-*Defined in [api.ts:309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L309)*
+*Defined in [packages/host-inventory/api.ts:254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L254)*
 
 A host’s human-readable display name, e.g. in a form of a domain name.
 
-**`type`** {string}
-
 **`memberof`** CreateHostOut
 
 ___
 
-### `Optional` externalId
+### `Optional` external_id
 
-• **externalId**? : *string | null*
+• **external_id**? : *string | null*
 
-*Defined in [api.ts:375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L375)*
+*Defined in [packages/host-inventory/api.ts:320](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L320)*
 
 Host’s reference in the external source e.g. AWS EC2, Azure, OpenStack, etc. This field is considered to be a canonical fact.
-
-**`type`** {string}
 
 **`memberof`** CreateHostOut
 
@@ -142,11 +130,9 @@ ___
 
 • **facts**? : *Array‹[FactSet](factset.md)›*
 
-*Defined in [api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L399)*
+*Defined in [packages/host-inventory/api.ts:344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L344)*
 
 A set of facts belonging to the host.
-
-**`type`** {Array<FactSet>}
 
 **`memberof`** CreateHostOut
 
@@ -156,11 +142,9 @@ ___
 
 • **fqdn**? : *string | null*
 
-*Defined in [api.ts:363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L363)*
+*Defined in [packages/host-inventory/api.ts:308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L308)*
 
 A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
-
-**`type`** {string}
 
 **`memberof`** CreateHostOut
 
@@ -170,53 +154,45 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L381)*
+*Defined in [packages/host-inventory/api.ts:326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L326)*
 
 A durable and reliable platform-wide host identifier. Applications should use this identifier to reference hosts.
 
-**`type`** {string}
-
 **`memberof`** CreateHostOut
 
 ___
 
-### `Optional` insightsId
+### `Optional` insights_id
 
-• **insightsId**? : *string | null*
+• **insights_id**? : *string | null*
 
-*Defined in [api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L327)*
+*Defined in [packages/host-inventory/api.ts:272](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L272)*
 
 An ID defined in /etc/insights-client/machine-id. This field is considered a canonical fact.
 
-**`type`** {string}
-
 **`memberof`** CreateHostOut
 
 ___
 
-### `Optional` ipAddresses
+### `Optional` ip_addresses
 
-• **ipAddresses**? : *Array‹string› | null*
+• **ip_addresses**? : *Array‹string› | null*
 
-*Defined in [api.ts:357](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L357)*
+*Defined in [packages/host-inventory/api.ts:302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L302)*
 
 Host’s network IP addresses.  This field is considered to be a canonical fact.
 
-**`type`** {Array<string>}
-
 **`memberof`** CreateHostOut
 
 ___
 
-### `Optional` macAddresses
+### `Optional` mac_addresses
 
-• **macAddresses**? : *Array‹string› | null*
+• **mac_addresses**? : *Array‹string› | null*
 
-*Defined in [api.ts:369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L369)*
+*Defined in [packages/host-inventory/api.ts:314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L314)*
 
 Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
-
-**`type`** {Array<string>}
 
 **`memberof`** CreateHostOut
 
@@ -226,81 +202,69 @@ ___
 
 • **reporter**? : *string | null*
 
-*Defined in [api.ts:429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L429)*
+*Defined in [packages/host-inventory/api.ts:374](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L374)*
 
 Reporting source of the host. Used when updating the stale_timestamp.
 
-**`type`** {string}
-
 **`memberof`** CreateHostOut
 
 ___
 
-### `Optional` rhelMachineId
+### `Optional` rhel_machine_id
 
-• **rhelMachineId**? : *string | null*
+• **rhel_machine_id**? : *string | null*
 
-*Defined in [api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L333)*
+*Defined in [packages/host-inventory/api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L278)*
 
 A Machine ID of a RHEL host.  This field is considered to be a canonical fact.
 
-**`type`** {string}
-
 **`memberof`** CreateHostOut
 
 ___
 
-### `Optional` satelliteId
+### `Optional` satellite_id
 
-• **satelliteId**? : *string | null*
+• **satellite_id**? : *string | null*
 
-*Defined in [api.ts:345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L345)*
+*Defined in [packages/host-inventory/api.ts:290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L290)*
 
 A Red Hat Satellite ID of a RHEL host.  This field is considered to be a canonical fact.
 
-**`type`** {string}
-
 **`memberof`** CreateHostOut
 
 ___
 
-### `Optional` staleTimestamp
+### `Optional` stale_timestamp
 
-• **staleTimestamp**? : *Date | null*
+• **stale_timestamp**? : *string | null*
 
-*Defined in [api.ts:411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L411)*
+*Defined in [packages/host-inventory/api.ts:356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L356)*
 
 Timestamp from which the host is considered stale.
 
-**`type`** {Date}
-
 **`memberof`** CreateHostOut
 
 ___
 
-### `Optional` staleWarningTimestamp
+### `Optional` stale_warning_timestamp
 
-• **staleWarningTimestamp**? : *Date | null*
+• **stale_warning_timestamp**? : *string | null*
 
-*Defined in [api.ts:417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L417)*
+*Defined in [packages/host-inventory/api.ts:362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L362)*
 
 Timestamp from which the host is considered too stale to be listed without an explicit toggle.
 
-**`type`** {Date}
-
 **`memberof`** CreateHostOut
 
 ___
 
-### `Optional` subscriptionManagerId
+### `Optional` subscription_manager_id
 
-• **subscriptionManagerId**? : *string | null*
+• **subscription_manager_id**? : *string | null*
 
-*Defined in [api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L339)*
+*Defined in [packages/host-inventory/api.ts:284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L284)*
 
 A Red Hat Subcription Manager ID of a RHEL host.  This field is considered to be a canonical fact.
-
-**`type`** {string}
 
 **`memberof`** CreateHostOut
 
@@ -310,11 +274,9 @@ ___
 
 • **tags**? : *Array‹[StructuredTag](structuredtag.md)›*
 
-*Defined in [api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L405)*
+*Defined in [packages/host-inventory/api.ts:350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L350)*
 
 An array of the tags on the host
-
-**`type`** {Array<StructuredTag>}
 
 **`memberof`** CreateHostOut
 
@@ -322,12 +284,10 @@ ___
 
 ### `Optional` updated
 
-• **updated**? : *Date*
+• **updated**? : *string*
 
-*Defined in [api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L393)*
+*Defined in [packages/host-inventory/api.ts:338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L338)*
 
 A timestamp when the entry was last updated.
-
-**`type`** {Date}
 
 **`memberof`** CreateHostOut

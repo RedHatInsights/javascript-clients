@@ -14,31 +14,27 @@
 
 ### Properties
 
-* [firstName](userout.md#firstname)
-* [lastName](userout.md#lastname)
+* [first_name](userout.md#first_name)
+* [last_name](userout.md#last_name)
 * [username](userout.md#username)
 
 ## Properties
 
-###  firstName
+###  first_name
 
-• **firstName**: *string*
+• **first_name**: *string*
 
-*Defined in [api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1131)*
-
-**`type`** {string}
+*Defined in [api.ts:1136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1136)*
 
 **`memberof`** UserOut
 
 ___
 
-###  lastName
+###  last_name
 
-• **lastName**: *string*
+• **last_name**: *string*
 
-*Defined in [api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1137)*
-
-**`type`** {string}
+*Defined in [api.ts:1142](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1142)*
 
 **`memberof`** UserOut
 
@@ -48,8 +44,6 @@ ___
 
 • **username**: *string*
 
-*Defined in [api.ts:1125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1125)*
-
-**`type`** {string}
+*Defined in [api.ts:1130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1130)*
 
 **`memberof`** UserOut

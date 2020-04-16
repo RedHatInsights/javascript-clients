@@ -24,9 +24,7 @@
 
 • **data**: *Array‹[Ack](ack.md)›*
 
-*Defined in [api.ts:257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L257)*
-
-**`type`** {Array<Ack>}
+*Defined in [packages/insights/api.ts:201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L201)*
 
 **`memberof`** InlineResponse200
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[InlineResponse200Links](inlineresponse200links.md)*
 
-*Defined in [api.ts:251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L251)*
-
-**`type`** {InlineResponse200Links}
+*Defined in [packages/insights/api.ts:195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L195)*
 
 **`memberof`** InlineResponse200
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[InlineResponse200Meta](inlineresponse200meta.md)*
 
-*Defined in [api.ts:245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L245)*
-
-**`type`** {InlineResponse200Meta}
+*Defined in [packages/insights/api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L189)*
 
 **`memberof`** InlineResponse200

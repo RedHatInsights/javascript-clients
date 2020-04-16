@@ -16,31 +16,27 @@ Resource with tags
 
 ### Properties
 
-* [appName](tagresource.md#appname)
-* [objectType](tagresource.md#objecttype)
+* [app_name](tagresource.md#app_name)
+* [object_type](tagresource.md#object_type)
 * [tags](tagresource.md#tags)
 
 ## Properties
 
-###  appName
+###  app_name
 
-• **appName**: *string*
+• **app_name**: *string*
 
-*Defined in [api.ts:508](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L508)*
-
-**`type`** {string}
+*Defined in [packages/approval/api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L437)*
 
 **`memberof`** TagResource
 
 ___
 
-###  objectType
+###  object_type
 
-• **objectType**: *string*
+• **object_type**: *string*
 
-*Defined in [api.ts:514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L514)*
-
-**`type`** {string}
+*Defined in [packages/approval/api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L443)*
 
 **`memberof`** TagResource
 
@@ -50,8 +46,6 @@ ___
 
 • **tags**: *Array‹[Tag](tag.md)›*
 
-*Defined in [api.ts:520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L520)*
-
-**`type`** {Array<Tag>}
+*Defined in [packages/approval/api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L449)*
 
 **`memberof`** TagResource

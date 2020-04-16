@@ -24,11 +24,9 @@
 
 • **operationName**? : *string*
 
-*Defined in [api.ts:288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L288)*
+*Defined in [packages/catalog/api.ts:226](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L226)*
 
 If the Query contains several named operations, the operationName controls which one should be executed
-
-**`type`** {string}
 
 **`memberof`** GraphQLRequest
 
@@ -38,11 +36,9 @@ ___
 
 • **query**: *string*
 
-*Defined in [api.ts:282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L282)*
+*Defined in [packages/catalog/api.ts:220](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L220)*
 
 The GraphQL query
-
-**`type`** {string}
 
 **`memberof`** GraphQLRequest
 
@@ -50,12 +46,10 @@ ___
 
 ### `Optional` variables
 
-• **variables**? : *any | null*
+• **variables**? : *object | null*
 
-*Defined in [api.ts:294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L294)*
+*Defined in [packages/catalog/api.ts:232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L232)*
 
 Optional Query variables
-
-**`type`** {any}
 
 **`memberof`** GraphQLRequest

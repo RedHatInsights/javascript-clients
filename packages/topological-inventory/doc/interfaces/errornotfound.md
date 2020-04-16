@@ -22,8 +22,6 @@
 
 • **errors**? : *Array‹[ErrorNotFoundErrors](errornotfounderrors.md)›*
 
-*Defined in [api.ts:1317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1317)*
-
-**`type`** {Array<ErrorNotFoundErrors>}
+*Defined in [packages/topological-inventory/api.ts:1244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1244)*
 
 **`memberof`** ErrorNotFound

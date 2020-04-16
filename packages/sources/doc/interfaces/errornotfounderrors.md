@@ -23,9 +23,7 @@
 
 • **detail**? : *string*
 
-*Defined in [api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L595)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L532)*
 
 **`memberof`** ErrorNotFoundErrors
 
@@ -35,8 +33,6 @@ ___
 
 • **status**? : *number*
 
-*Defined in [api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L589)*
-
-**`type`** {number}
+*Defined in [packages/sources/api.ts:526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L526)*
 
 **`memberof`** ErrorNotFoundErrors

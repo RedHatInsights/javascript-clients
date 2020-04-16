@@ -14,39 +14,37 @@
 
 ### Properties
 
-* [archivedAt](vm.md#optional-archivedat)
+* [archived_at](vm.md#optional-archived_at)
 * [cpus](vm.md#optional-cpus)
-* [createdAt](vm.md#optional-createdat)
+* [created_at](vm.md#optional-created_at)
 * [description](vm.md#optional-description)
 * [extra](vm.md#optional-extra)
-* [flavorId](vm.md#optional-flavorid)
-* [hostInventoryUuid](vm.md#optional-hostinventoryuuid)
+* [flavor_id](vm.md#optional-flavor_id)
+* [host_inventory_uuid](vm.md#optional-host_inventory_uuid)
 * [hostname](vm.md#optional-hostname)
 * [id](vm.md#optional-id)
-* [lastSeenAt](vm.md#optional-lastseenat)
-* [macAddresses](vm.md#optional-macaddresses)
+* [last_seen_at](vm.md#optional-last_seen_at)
+* [mac_addresses](vm.md#optional-mac_addresses)
 * [memory](vm.md#optional-memory)
 * [name](vm.md#optional-name)
-* [orchestrationStackId](vm.md#optional-orchestrationstackid)
-* [powerState](vm.md#optional-powerstate)
-* [sourceCreatedAt](vm.md#optional-sourcecreatedat)
-* [sourceDeletedAt](vm.md#optional-sourcedeletedat)
-* [sourceId](vm.md#optional-sourceid)
-* [sourceRef](vm.md#optional-sourceref)
-* [sourceRegionId](vm.md#optional-sourceregionid)
-* [subscriptionId](vm.md#optional-subscriptionid)
-* [uidEms](vm.md#optional-uidems)
-* [updatedAt](vm.md#optional-updatedat)
+* [orchestration_stack_id](vm.md#optional-orchestration_stack_id)
+* [power_state](vm.md#optional-power_state)
+* [source_created_at](vm.md#optional-source_created_at)
+* [source_deleted_at](vm.md#optional-source_deleted_at)
+* [source_id](vm.md#optional-source_id)
+* [source_ref](vm.md#optional-source_ref)
+* [source_region_id](vm.md#optional-source_region_id)
+* [subscription_id](vm.md#optional-subscription_id)
+* [uid_ems](vm.md#optional-uid_ems)
+* [updated_at](vm.md#optional-updated_at)
 
 ## Properties
 
-### `Optional` archivedAt
+### `Optional` archived_at
 
-• **archivedAt**? : *Date*
+• **archived_at**? : *string*
 
-*Defined in [api.ts:3803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3803)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:3681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3681)*
 
 **`memberof`** Vm
 
@@ -56,23 +54,19 @@ ___
 
 • **cpus**? : *number*
 
-*Defined in [api.ts:3809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3809)*
+*Defined in [packages/topological-inventory/api.ts:3687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3687)*
 
 Total number of CPUs
-
-**`type`** {number}
 
 **`memberof`** Vm
 
 ___
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:3815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3815)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:3693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3693)*
 
 **`memberof`** Vm
 
@@ -82,11 +76,9 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:3821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3821)*
+*Defined in [packages/topological-inventory/api.ts:3699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3699)*
 
 Description of the Vm
-
-**`type`** {string}
 
 **`memberof`** Vm
 
@@ -94,37 +86,31 @@ ___
 
 ### `Optional` extra
 
-• **extra**? : *any*
+• **extra**? : *object*
 
-*Defined in [api.ts:3827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3827)*
-
-**`type`** {any}
+*Defined in [packages/topological-inventory/api.ts:3705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3705)*
 
 **`memberof`** Vm
 
 ___
 
-### `Optional` flavorId
+### `Optional` flavor_id
 
-• **flavorId**? : *string*
+• **flavor_id**? : *string*
 
-*Defined in [api.ts:3833](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3833)*
+*Defined in [packages/topological-inventory/api.ts:3711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3711)*
 
 ID of the resource
 
-**`type`** {string}
-
 **`memberof`** Vm
 
 ___
 
-### `Optional` hostInventoryUuid
+### `Optional` host_inventory_uuid
 
-• **hostInventoryUuid**? : *string*
+• **host_inventory_uuid**? : *string*
 
-*Defined in [api.ts:3839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3839)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:3717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3717)*
 
 **`memberof`** Vm
 
@@ -134,9 +120,7 @@ ___
 
 • **hostname**? : *string*
 
-*Defined in [api.ts:3845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3845)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:3723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3723)*
 
 **`memberof`** Vm
 
@@ -146,35 +130,29 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:3851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3851)*
+*Defined in [packages/topological-inventory/api.ts:3729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3729)*
 
 ID of the resource
 
-**`type`** {string}
+**`memberof`** Vm
+
+___
+
+### `Optional` last_seen_at
+
+• **last_seen_at**? : *string*
+
+*Defined in [packages/topological-inventory/api.ts:3735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3735)*
 
 **`memberof`** Vm
 
 ___
 
-### `Optional` lastSeenAt
+### `Optional` mac_addresses
 
-• **lastSeenAt**? : *Date*
+• **mac_addresses**? : *Array‹string›*
 
-*Defined in [api.ts:3857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3857)*
-
-**`type`** {Date}
-
-**`memberof`** Vm
-
-___
-
-### `Optional` macAddresses
-
-• **macAddresses**? : *Array‹string›*
-
-*Defined in [api.ts:3863](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3863)*
-
-**`type`** {Array<string>}
+*Defined in [packages/topological-inventory/api.ts:3741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3741)*
 
 **`memberof`** Vm
 
@@ -184,11 +162,9 @@ ___
 
 • **memory**? : *number*
 
-*Defined in [api.ts:3869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3869)*
+*Defined in [packages/topological-inventory/api.ts:3747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3747)*
 
 Total RAM in bytes
-
-**`type`** {number}
 
 **`memberof`** Vm
 
@@ -198,138 +174,116 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:3875](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3875)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:3753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3753)*
 
 **`memberof`** Vm
 
 ___
 
-### `Optional` orchestrationStackId
+### `Optional` orchestration_stack_id
 
-• **orchestrationStackId**? : *string*
+• **orchestration_stack_id**? : *string*
 
-*Defined in [api.ts:3881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3881)*
+*Defined in [packages/topological-inventory/api.ts:3759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3759)*
 
 ID of the resource
 
-**`type`** {string}
+**`memberof`** Vm
+
+___
+
+### `Optional` power_state
+
+• **power_state**? : *string*
+
+*Defined in [packages/topological-inventory/api.ts:3765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3765)*
 
 **`memberof`** Vm
 
 ___
 
-### `Optional` powerState
+### `Optional` source_created_at
 
-• **powerState**? : *string*
+• **source_created_at**? : *string*
 
-*Defined in [api.ts:3887](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3887)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:3771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3771)*
 
 **`memberof`** Vm
 
 ___
 
-### `Optional` sourceCreatedAt
+### `Optional` source_deleted_at
 
-• **sourceCreatedAt**? : *Date*
+• **source_deleted_at**? : *string*
 
-*Defined in [api.ts:3893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3893)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:3777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3777)*
 
 **`memberof`** Vm
 
 ___
 
-### `Optional` sourceDeletedAt
+### `Optional` source_id
 
-• **sourceDeletedAt**? : *Date*
+• **source_id**? : *string*
 
-*Defined in [api.ts:3899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3899)*
-
-**`type`** {Date}
-
-**`memberof`** Vm
-
-___
-
-### `Optional` sourceId
-
-• **sourceId**? : *string*
-
-*Defined in [api.ts:3905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3905)*
+*Defined in [packages/topological-inventory/api.ts:3783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3783)*
 
 ID of the resource
 
-**`type`** {string}
+**`memberof`** Vm
+
+___
+
+### `Optional` source_ref
+
+• **source_ref**? : *string*
+
+*Defined in [packages/topological-inventory/api.ts:3789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3789)*
 
 **`memberof`** Vm
 
 ___
 
-### `Optional` sourceRef
+### `Optional` source_region_id
 
-• **sourceRef**? : *string*
+• **source_region_id**? : *string*
 
-*Defined in [api.ts:3911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3911)*
-
-**`type`** {string}
-
-**`memberof`** Vm
-
-___
-
-### `Optional` sourceRegionId
-
-• **sourceRegionId**? : *string*
-
-*Defined in [api.ts:3917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3917)*
+*Defined in [packages/topological-inventory/api.ts:3795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3795)*
 
 ID of the resource
 
-**`type`** {string}
-
 **`memberof`** Vm
 
 ___
 
-### `Optional` subscriptionId
+### `Optional` subscription_id
 
-• **subscriptionId**? : *string*
+• **subscription_id**? : *string*
 
-*Defined in [api.ts:3923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3923)*
+*Defined in [packages/topological-inventory/api.ts:3801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3801)*
 
 ID of the resource
 
-**`type`** {string}
-
 **`memberof`** Vm
 
 ___
 
-### `Optional` uidEms
+### `Optional` uid_ems
 
-• **uidEms**? : *string*
+• **uid_ems**? : *string*
 
-*Defined in [api.ts:3929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3929)*
+*Defined in [packages/topological-inventory/api.ts:3807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3807)*
 
 Cross-Source Unique Reference
 
-**`type`** {string}
-
 **`memberof`** Vm
 
 ___
 
-### `Optional` updatedAt
+### `Optional` updated_at
 
-• **updatedAt**? : *Date*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:3935](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3935)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:3813](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3813)*
 
 **`memberof`** Vm

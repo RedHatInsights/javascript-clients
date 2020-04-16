@@ -2,6 +2,10 @@
 
 # Interface: InlineResponse2003
 
+**`export`** 
+
+**`interface`** InlineResponse2003
+
 ## Hierarchy
 
 * **InlineResponse2003**
@@ -18,9 +22,11 @@
 
 ### `Optional` data
 
-• **data**? : *Array‹[Endpoint](../modules/endpoint.md)›*
+• **data**? : *Array‹[Endpoint](endpoint.md)›*
 
-*Defined in [api.ts:716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L716)*
+*Defined in [packages/hooks/api.ts:622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L622)*
+
+**`memberof`** InlineResponse2003
 
 ___
 
@@ -28,7 +34,9 @@ ___
 
 • **links**? : *[Links](links.md)*
 
-*Defined in [api.ts:728](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L728)*
+*Defined in [packages/hooks/api.ts:634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L634)*
+
+**`memberof`** InlineResponse2003
 
 ___
 
@@ -36,4 +44,6 @@ ___
 
 • **meta**? : *[Metadata](metadata.md)*
 
-*Defined in [api.ts:722](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L722)*
+*Defined in [packages/hooks/api.ts:628](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L628)*
+
+**`memberof`** InlineResponse2003

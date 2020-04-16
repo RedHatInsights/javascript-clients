@@ -14,33 +14,29 @@
 
 ### Properties
 
-* [portfolioId](createportfolioitem.md#portfolioid)
-* [serviceOfferingRef](createportfolioitem.md#optional-serviceofferingref)
+* [portfolio_id](createportfolioitem.md#portfolio_id)
+* [service_offering_ref](createportfolioitem.md#optional-service_offering_ref)
 
 ## Properties
 
-###  portfolioId
+###  portfolio_id
 
-• **portfolioId**: *string*
+• **portfolio_id**: *string*
 
-*Defined in [api.ts:262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L262)*
+*Defined in [packages/catalog/api.ts:201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L201)*
 
 The Portfolio this portfolio item should belong to
-
-**`type`** {string}
 
 **`memberof`** CreatePortfolioItem
 
 ___
 
-### `Optional` serviceOfferingRef
+### `Optional` service_offering_ref
 
-• **serviceOfferingRef**? : *string*
+• **service_offering_ref**? : *string*
 
-*Defined in [api.ts:268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L268)*
+*Defined in [packages/catalog/api.ts:207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L207)*
 
 The service offering ref should be retrieved from a call to the Topology Service.
-
-**`type`** {string}
 
 **`memberof`** CreatePortfolioItem

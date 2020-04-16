@@ -2,6 +2,10 @@
 
 # Interface: Links
 
+**`export`** 
+
+**`interface`** Links
+
 ## Hierarchy
 
 * **Links**
@@ -21,7 +25,11 @@
 
 • **first**? : *string*
 
-*Defined in [api.ts:916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L916)*
+*Defined in [packages/hooks/api.ts:804](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L804)*
+
+Link to the first page of records
+
+**`memberof`** Links
 
 ___
 
@@ -29,7 +37,11 @@ ___
 
 • **last**? : *string*
 
-*Defined in [api.ts:922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L922)*
+*Defined in [packages/hooks/api.ts:810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L810)*
+
+Link to the last page of records
+
+**`memberof`** Links
 
 ___
 
@@ -37,7 +49,11 @@ ___
 
 • **next**? : *string*
 
-*Defined in [api.ts:934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L934)*
+*Defined in [packages/hooks/api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L822)*
+
+Link to next page of records, if such page exists
+
+**`memberof`** Links
 
 ___
 
@@ -45,4 +61,8 @@ ___
 
 • **previous**? : *string*
 
-*Defined in [api.ts:928](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L928)*
+*Defined in [packages/hooks/api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L816)*
+
+Link to previous page of records, if such page exists
+
+**`memberof`** Links

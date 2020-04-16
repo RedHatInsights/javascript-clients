@@ -22,10 +22,8 @@
 
 • **justification**? : *string*
 
-*Defined in [api.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L155)*
+*Defined in [packages/insights/api.ts:102](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L102)*
 
 The reason the rule was acked
-
-**`type`** {string}
 
 **`memberof`** AckJustification

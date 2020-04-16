@@ -4,9 +4,9 @@
 
 ## Index
 
-### Modules
+### Enumerations
 
-* [RuleRating](modules/rulerating.md)
+* [RuleRatingRatingEnum](enums/ruleratingratingenum.md)
 
 ### Classes
 
@@ -63,6 +63,7 @@
 * [RuleCategory](interfaces/rulecategory.md)
 * [RuleForAccount](interfaces/ruleforaccount.md)
 * [RuleImpact](interfaces/ruleimpact.md)
+* [RuleRating](interfaces/rulerating.md)
 * [RuleSet](interfaces/ruleset.md)
 * [SettingDDF](interfaces/settingddf.md)
 * [SettingsDDF](interfaces/settingsddf.md)
@@ -148,9 +149,9 @@
 
 ### `Const` BASE_PATH
 
-• **BASE_PATH**: *string* =  "https://cloud.redhat.com/api/insights/v1".replace(/\/+$/, "")
+• **BASE_PATH**: *string* = "https://cloud.redhat.com/api/insights/v1".replace(/\/+$/, "")
 
-*Defined in [api.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L20)*
+Defined in packages/insights/base.ts:20
 
 ## Functions
 
@@ -158,9 +159,11 @@
 
 ▸ **AccountSettingApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1317)*
+*Defined in [packages/insights/api.ts:1235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1235)*
 
 AccountSettingApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -180,9 +183,11 @@ ___
 
 ▸ **AccountSettingApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:1425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1425)*
+*Defined in [packages/insights/api.ts:1349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1349)*
 
 AccountSettingApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -196,7 +201,7 @@ Name | Type |
 
 * **accountSettingCreate**(`accountSetting`: [AccountSetting](interfaces/accountsetting.md), `options?`: any): *AxiosPromise‹[AccountSetting](interfaces/accountsetting.md)›*
 
-* **accountSettingList**(`options?`: any): *AxiosPromise‹Response›*
+* **accountSettingList**(`options?`: any): *AxiosPromise‹void›*
 
 ___
 
@@ -204,9 +209,11 @@ ___
 
 ▸ **AccountSettingApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1389)*
+*Defined in [packages/insights/api.ts:1313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1313)*
 
 AccountSettingApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -222,7 +229,7 @@ Name | Type |
 
 * **accountSettingList**(`options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 ___
 
@@ -230,9 +237,11 @@ ___
 
 ▸ **AckApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1485)*
+*Defined in [packages/insights/api.ts:1410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1410)*
 
 AckApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -258,9 +267,11 @@ ___
 
 ▸ **AckApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:1756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1756)*
+*Defined in [packages/insights/api.ts:1696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1696)*
 
 AckApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -274,7 +285,7 @@ Name | Type |
 
 * **ackCreate**(`ackInput`: [AckInput](interfaces/ackinput.md), `options?`: any): *AxiosPromise‹[Ack](interfaces/ack.md)›*
 
-* **ackDelete**(`ruleId`: string, `options?`: any): *AxiosPromise‹Response›*
+* **ackDelete**(`ruleId`: string, `options?`: any): *AxiosPromise‹void›*
 
 * **ackList**(`limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[InlineResponse200](interfaces/inlineresponse200.md)›*
 
@@ -288,9 +299,11 @@ ___
 
 ▸ **AckApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1675)*
+*Defined in [packages/insights/api.ts:1615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1615)*
 
 AckApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -306,7 +319,7 @@ Name | Type |
 
 * **ackDelete**(`ruleId`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **ackList**(`limit?`: number, `offset?`: number, `options?`: any): *function*
 
@@ -326,9 +339,11 @@ ___
 
 ▸ **ExportApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1888](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1888)*
+*Defined in [packages/insights/api.ts:1829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1829)*
 
 ExportApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -350,9 +365,11 @@ ___
 
 ▸ **ExportApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2152)*
+*Defined in [packages/insights/api.ts:2102](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2102)*
 
 ExportApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -364,11 +381,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **exportHitsList**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2001](interfaces/inlineresponse2001.md)[]›*
+* **exportHitsList**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹Array‹[InlineResponse2001](interfaces/inlineresponse2001.md)››*
 
-* **exportListCsv**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹Response›*
+* **exportListCsv**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹void›*
 
-* **exportListJson**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2001](interfaces/inlineresponse2001.md)[]›*
+* **exportListJson**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹Array‹[InlineResponse2001](interfaces/inlineresponse2001.md)››*
 
 ___
 
@@ -376,9 +393,11 @@ ___
 
 ▸ **ExportApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2083](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2083)*
+*Defined in [packages/insights/api.ts:2033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2033)*
 
 ExportApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -394,7 +413,7 @@ Name | Type |
 
 * **exportListCsv**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **exportListJson**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *function*
 
@@ -406,9 +425,11 @@ ___
 
 ▸ **HostackApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2272](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2272)*
+*Defined in [packages/insights/api.ts:2223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2223)*
 
 HostackApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -434,9 +455,11 @@ ___
 
 ▸ **HostackApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2555](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2555)*
+*Defined in [packages/insights/api.ts:2521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2521)*
 
 HostackApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -450,7 +473,7 @@ Name | Type |
 
 * **hostackCreate**(`hostAck`: [HostAck](interfaces/hostack.md), `options?`: any): *AxiosPromise‹[HostAck](interfaces/hostack.md)›*
 
-* **hostackDelete**(`id`: number, `options?`: any): *AxiosPromise‹Response›*
+* **hostackDelete**(`id`: number, `options?`: any): *AxiosPromise‹void›*
 
 * **hostackList**(`limit?`: number, `offset?`: number, `ruleId?`: Array‹string›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2002](interfaces/inlineresponse2002.md)›*
 
@@ -464,9 +487,11 @@ ___
 
 ▸ **HostackApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2472)*
+*Defined in [packages/insights/api.ts:2438](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2438)*
 
 HostackApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -482,7 +507,7 @@ Name | Type |
 
 * **hostackDelete**(`id`: number, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **hostackList**(`limit?`: number, `offset?`: number, `ruleId?`: Array‹string›, `tags?`: Array‹string›, `options?`: any): *function*
 
@@ -502,9 +527,11 @@ ___
 
 ▸ **KcsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2691)*
+*Defined in [packages/insights/api.ts:2658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2658)*
 
 KcsApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -524,9 +551,11 @@ ___
 
 ▸ **KcsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2796)*
+*Defined in [packages/insights/api.ts:2769](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2769)*
 
 KcsApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -538,9 +567,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **kcsList**(`options?`: any): *AxiosPromise‹[Kcs](interfaces/kcs.md)[]›*
+* **kcsList**(`options?`: any): *AxiosPromise‹Array‹[Kcs](interfaces/kcs.md)››*
 
-* **kcsRead**(`nodeId`: string, `options?`: any): *AxiosPromise‹string[]›*
+* **kcsRead**(`nodeId`: string, `options?`: any): *AxiosPromise‹Array‹string››*
 
 ___
 
@@ -548,9 +577,11 @@ ___
 
 ▸ **KcsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2760)*
+*Defined in [packages/insights/api.ts:2733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2733)*
 
 KcsApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -574,9 +605,11 @@ ___
 
 ▸ **RatingApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2856)*
+*Defined in [packages/insights/api.ts:2830](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2830)*
 
 RatingApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -586,7 +619,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **ratingCreate**(`ruleRating`: [RuleRating](modules/rulerating.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **ratingCreate**(`ruleRating`: [RuleRating](interfaces/rulerating.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **ratingList**(`limit?`: number, `offset?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -598,9 +631,11 @@ ___
 
 ▸ **RatingApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3023](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3023)*
+*Defined in [packages/insights/api.ts:3006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3006)*
 
 RatingApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -612,11 +647,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **ratingCreate**(`ruleRating`: [RuleRating](modules/rulerating.md), `options?`: any): *AxiosPromise‹[RuleRating](modules/rulerating.md)›*
+* **ratingCreate**(`ruleRating`: [RuleRating](interfaces/rulerating.md), `options?`: any): *AxiosPromise‹[RuleRating](interfaces/rulerating.md)›*
 
 * **ratingList**(`limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[InlineResponse2003](interfaces/inlineresponse2003.md)›*
 
-* **ratingRead**(`rule`: string, `options?`: any): *AxiosPromise‹[RuleRating](modules/rulerating.md)›*
+* **ratingRead**(`rule`: string, `options?`: any): *AxiosPromise‹[RuleRating](interfaces/rulerating.md)›*
 
 ___
 
@@ -624,9 +659,11 @@ ___
 
 ▸ **RatingApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2971)*
+*Defined in [packages/insights/api.ts:2954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2954)*
 
 RatingApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -636,9 +673,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **ratingCreate**(`ruleRating`: [RuleRating](modules/rulerating.md), `options?`: any): *function*
+* **ratingCreate**(`ruleRating`: [RuleRating](interfaces/rulerating.md), `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RuleRating](modules/rulerating.md)›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RuleRating](interfaces/rulerating.md)›*
 
 * **ratingList**(`limit?`: number, `offset?`: number, `options?`: any): *function*
 
@@ -646,7 +683,7 @@ Name | Type |
 
 * **ratingRead**(`rule`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RuleRating](modules/rulerating.md)›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RuleRating](interfaces/rulerating.md)›*
 
 ___
 
@@ -654,9 +691,11 @@ ___
 
 ▸ **ResolutionRiskApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3109)*
+*Defined in [packages/insights/api.ts:3093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3093)*
 
 ResolutionRiskApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -674,9 +713,11 @@ ___
 
 ▸ **ResolutionRiskApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3167)*
+*Defined in [packages/insights/api.ts:3154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3154)*
 
 ResolutionRiskApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -688,7 +729,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **resolutionRiskList**(`options?`: any): *AxiosPromise‹Response›*
+* **resolutionRiskList**(`options?`: any): *AxiosPromise‹void›*
 
 ___
 
@@ -696,9 +737,11 @@ ___
 
 ▸ **ResolutionRiskApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3145)*
+*Defined in [packages/insights/api.ts:3132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3132)*
 
 ResolutionRiskApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -710,7 +753,7 @@ Name | Type |
 
 * **resolutionRiskList**(`options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 ___
 
@@ -718,9 +761,11 @@ ___
 
 ▸ **RuleApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3205)*
+*Defined in [packages/insights/api.ts:3193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3193)*
 
 RuleApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -746,9 +791,11 @@ ___
 
 ▸ **RuleApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3579)*
+*Defined in [packages/insights/api.ts:3582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3582)*
 
 RuleApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -776,9 +823,11 @@ ___
 
 ▸ **RuleApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3481)*
+*Defined in [packages/insights/api.ts:3484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3484)*
 
 RuleApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -814,9 +863,11 @@ ___
 
 ▸ **RulecategoryApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3745)*
+*Defined in [packages/insights/api.ts:3749](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3749)*
 
 RulecategoryApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -836,9 +887,11 @@ ___
 
 ▸ **RulecategoryApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3850](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3850)*
+*Defined in [packages/insights/api.ts:3860](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3860)*
 
 RulecategoryApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -850,7 +903,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **rulecategoryList**(`options?`: any): *AxiosPromise‹[RuleCategory](interfaces/rulecategory.md)[]›*
+* **rulecategoryList**(`options?`: any): *AxiosPromise‹Array‹[RuleCategory](interfaces/rulecategory.md)››*
 
 * **rulecategoryRead**(`id`: number, `options?`: any): *AxiosPromise‹[RuleCategory](interfaces/rulecategory.md)›*
 
@@ -860,9 +913,11 @@ ___
 
 ▸ **RulecategoryApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3814](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3814)*
+*Defined in [packages/insights/api.ts:3824](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3824)*
 
 RulecategoryApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -886,9 +941,11 @@ ___
 
 ▸ **SettingsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3910)*
+*Defined in [packages/insights/api.ts:3921](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3921)*
 
 SettingsApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -908,9 +965,11 @@ ___
 
 ▸ **SettingsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:4018](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4018)*
+*Defined in [packages/insights/api.ts:4035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4035)*
 
 SettingsApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -924,7 +983,7 @@ Name | Type |
 
 * **settingsCreate**(`settingsInput`: [SettingsInput](interfaces/settingsinput.md), `options?`: any): *AxiosPromise‹[SettingsInput](interfaces/settingsinput.md)›*
 
-* **settingsList**(`options?`: any): *AxiosPromise‹[SettingsDDF](interfaces/settingsddf.md)[]›*
+* **settingsList**(`options?`: any): *AxiosPromise‹Array‹[SettingsDDF](interfaces/settingsddf.md)››*
 
 ___
 
@@ -932,9 +991,11 @@ ___
 
 ▸ **SettingsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3982)*
+*Defined in [packages/insights/api.ts:3999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3999)*
 
 SettingsApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -958,9 +1019,11 @@ ___
 
 ▸ **StatsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4078](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4078)*
+*Defined in [packages/insights/api.ts:4096](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4096)*
 
 StatsApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -986,9 +1049,11 @@ ___
 
 ▸ **StatsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:4320](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4320)*
+*Defined in [packages/insights/api.ts:4353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4353)*
 
 StatsApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1000,7 +1065,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **statsList**(`options?`: any): *AxiosPromise‹Response›*
+* **statsList**(`options?`: any): *AxiosPromise‹void›*
 
 * **statsReports**(`tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[Stats](interfaces/stats.md)›*
 
@@ -1016,9 +1081,11 @@ ___
 
 ▸ **StatsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4242)*
+*Defined in [packages/insights/api.ts:4275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4275)*
 
 StatsApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1030,7 +1097,7 @@ Name | Type |
 
 * **statsList**(`options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **statsReports**(`tags?`: Array‹string›, `options?`: any): *function*
 
@@ -1054,9 +1121,11 @@ ___
 
 ▸ **SystemApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4446)*
+*Defined in [packages/insights/api.ts:4480](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4480)*
 
 SystemApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -1078,9 +1147,11 @@ ___
 
 ▸ **SystemApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:4628](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4628)*
+*Defined in [packages/insights/api.ts:4671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4671)*
 
 SystemApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1096,7 +1167,7 @@ Name | Type |
 
 * **systemRead**(`uuid`: string, `options?`: any): *AxiosPromise‹[System](interfaces/system.md)›*
 
-* **systemReports**(`uuid`: string, `options?`: any): *AxiosPromise‹[Report](interfaces/report.md)[]›*
+* **systemReports**(`uuid`: string, `options?`: any): *AxiosPromise‹Array‹[Report](interfaces/report.md)››*
 
 ___
 
@@ -1104,9 +1175,11 @@ ___
 
 ▸ **SystemApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4573)*
+*Defined in [packages/insights/api.ts:4616](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4616)*
 
 SystemApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1134,9 +1207,11 @@ ___
 
 ▸ **SystemtypeApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4720)*
+*Defined in [packages/insights/api.ts:4764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4764)*
 
 SystemtypeApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -1156,9 +1231,11 @@ ___
 
 ▸ **SystemtypeApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:4825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4825)*
+*Defined in [packages/insights/api.ts:4875](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4875)*
 
 SystemtypeApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1170,7 +1247,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **systemtypeList**(`options?`: any): *AxiosPromise‹[SystemType](interfaces/systemtype.md)[]›*
+* **systemtypeList**(`options?`: any): *AxiosPromise‹Array‹[SystemType](interfaces/systemtype.md)››*
 
 * **systemtypeRead**(`id`: number, `options?`: any): *AxiosPromise‹[SystemType](interfaces/systemtype.md)›*
 
@@ -1180,9 +1257,11 @@ ___
 
 ▸ **SystemtypeApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4789)*
+*Defined in [packages/insights/api.ts:4839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4839)*
 
 SystemtypeApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1206,9 +1285,11 @@ ___
 
 ▸ **TagApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4885)*
+*Defined in [packages/insights/api.ts:4936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4936)*
 
 TagApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -1226,9 +1307,11 @@ ___
 
 ▸ **TagApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:4943](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4943)*
+*Defined in [packages/insights/api.ts:4997](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4997)*
 
 TagApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1248,9 +1331,11 @@ ___
 
 ▸ **TagApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4921](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4921)*
+*Defined in [packages/insights/api.ts:4975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4975)*
 
 TagApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1270,9 +1355,11 @@ ___
 
 ▸ **TopicApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4981)*
+*Defined in [packages/insights/api.ts:5036](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5036)*
 
 TopicApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -1296,9 +1383,11 @@ ___
 
 ▸ **TopicApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:5198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5198)*
+*Defined in [packages/insights/api.ts:5265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5265)*
 
 TopicApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1310,11 +1399,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **topicList**(`showDisabled?`: boolean, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[Topic](interfaces/topic.md)[]›*
+* **topicList**(`showDisabled?`: boolean, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹Array‹[Topic](interfaces/topic.md)››*
 
 * **topicRead**(`slug`: string, `options?`: any): *AxiosPromise‹[Topic](interfaces/topic.md)›*
 
-* **topicRulesWithTag**(`slug`: string, `options?`: any): *AxiosPromise‹[Rule](interfaces/rule.md)[]›*
+* **topicRulesWithTag**(`slug`: string, `options?`: any): *AxiosPromise‹Array‹[Rule](interfaces/rule.md)››*
 
 * **topicSystems**(`slug`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[SystemsForRule](interfaces/systemsforrule.md)›*
 
@@ -1324,9 +1413,11 @@ ___
 
 ▸ **TopicApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5131)*
+*Defined in [packages/insights/api.ts:5198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5198)*
 
 TopicApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1358,9 +1449,11 @@ ___
 
 ▸ **TotalRiskApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5308)*
+*Defined in [packages/insights/api.ts:5376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5376)*
 
 TotalRiskApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -1378,9 +1471,11 @@ ___
 
 ▸ **TotalRiskApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:5366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5366)*
+*Defined in [packages/insights/api.ts:5437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5437)*
 
 TotalRiskApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1392,7 +1487,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **totalRiskList**(`options?`: any): *AxiosPromise‹Response›*
+* **totalRiskList**(`options?`: any): *AxiosPromise‹void›*
 
 ___
 
@@ -1400,9 +1495,11 @@ ___
 
 ▸ **TotalRiskApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5344)*
+*Defined in [packages/insights/api.ts:5415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5415)*
 
 TotalRiskApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1414,7 +1511,7 @@ Name | Type |
 
 * **totalRiskList**(`options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 ___
 
@@ -1422,9 +1519,11 @@ ___
 
 ▸ **UsageApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5404)*
+*Defined in [packages/insights/api.ts:5476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5476)*
 
 UsageApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -1442,9 +1541,11 @@ ___
 
 ▸ **UsageApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:5462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5462)*
+*Defined in [packages/insights/api.ts:5537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5537)*
 
 UsageApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1456,7 +1557,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **usageList**(`options?`: any): *AxiosPromise‹Response›*
+* **usageList**(`options?`: any): *AxiosPromise‹void›*
 
 ___
 
@@ -1464,9 +1565,11 @@ ___
 
 ▸ **UsageApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5440)*
+*Defined in [packages/insights/api.ts:5515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5515)*
 
 UsageApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1478,7 +1581,7 @@ Name | Type |
 
 * **usageList**(`options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 ___
 
@@ -1486,9 +1589,11 @@ ___
 
 ▸ **UserPreferencesApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5500)*
+*Defined in [packages/insights/api.ts:5576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5576)*
 
 UserPreferencesApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -1508,9 +1613,11 @@ ___
 
 ▸ **UserPreferencesApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:5608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5608)*
+*Defined in [packages/insights/api.ts:5690](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5690)*
 
 UserPreferencesApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1524,7 +1631,7 @@ Name | Type |
 
 * **userPreferencesCreate**(`preferencesInput`: [PreferencesInput](interfaces/preferencesinput.md), `options?`: any): *AxiosPromise‹[PreferencesInput](interfaces/preferencesinput.md)›*
 
-* **userPreferencesList**(`options?`: any): *AxiosPromise‹[SettingsDDF](interfaces/settingsddf.md)[]›*
+* **userPreferencesList**(`options?`: any): *AxiosPromise‹Array‹[SettingsDDF](interfaces/settingsddf.md)››*
 
 ___
 
@@ -1532,9 +1639,11 @@ ___
 
 ▸ **UserPreferencesApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5572)*
+*Defined in [packages/insights/api.ts:5654](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5654)*
 
 UserPreferencesApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1558,9 +1667,11 @@ ___
 
 ▸ **WeeklyreportsubscriptionApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5668)*
+*Defined in [packages/insights/api.ts:5751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5751)*
 
 WeeklyreportsubscriptionApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -1580,9 +1691,11 @@ ___
 
 ▸ **WeeklyreportsubscriptionApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:5776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5776)*
+*Defined in [packages/insights/api.ts:5865](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5865)*
 
 WeeklyreportsubscriptionApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1604,9 +1717,11 @@ ___
 
 ▸ **WeeklyreportsubscriptionApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5740](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5740)*
+*Defined in [packages/insights/api.ts:5829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5829)*
 
 WeeklyreportsubscriptionApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1630,7 +1745,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L26)*
+Defined in packages/insights/base.ts:26
 
 **`export`** 
 
@@ -1638,22 +1753,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [api.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L27)*
+Defined in packages/insights/base.ts:27
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [api.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L30)*
+Defined in packages/insights/base.ts:30
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [api.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L28)*
+Defined in packages/insights/base.ts:28
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [api.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L29)*
+Defined in packages/insights/base.ts:29

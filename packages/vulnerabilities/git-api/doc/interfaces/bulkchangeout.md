@@ -22,10 +22,8 @@
 
 • **updated**: *Array‹string›*
 
-*Defined in [git-api/api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L109)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L58)*
 
 List of updated objects/updated object IDs.
-
-**`type`** {Array<string>}
 
 **`memberof`** BulkChangeOut

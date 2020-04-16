@@ -2,6 +2,10 @@
 
 # Interface: Metadata
 
+**`export`** 
+
+**`interface`** Metadata
+
 ## Hierarchy
 
 * **Metadata**
@@ -20,7 +24,11 @@
 
 • **limit**? : *number*
 
-*Defined in [api.ts:954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L954)*
+*Defined in [packages/hooks/api.ts:841](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L841)*
+
+The maximum number of records to return.
+
+**`memberof`** Metadata
 
 ___
 
@@ -28,7 +36,11 @@ ___
 
 • **offset**? : *number*
 
-*Defined in [api.ts:960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L960)*
+*Defined in [packages/hooks/api.ts:847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L847)*
+
+The number of records to skip before returning.
+
+**`memberof`** Metadata
 
 ___
 
@@ -36,4 +48,8 @@ ___
 
 • **total**? : *number*
 
-*Defined in [api.ts:948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L948)*
+*Defined in [packages/hooks/api.ts:835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L835)*
+
+The total number of available records.
+
+**`memberof`** Metadata

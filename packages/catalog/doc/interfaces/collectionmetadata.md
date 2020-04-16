@@ -22,10 +22,8 @@
 
 • **count**? : *number*
 
-*Defined in [api.ts:202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L202)*
+*Defined in [packages/catalog/api.ts:144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L144)*
 
 Total number of items in the result set, of which only a subset is returned, defined by the QueryLimit parameter.
-
-**`type`** {number}
 
 **`memberof`** CollectionMetadata

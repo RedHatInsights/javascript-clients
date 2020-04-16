@@ -24,9 +24,7 @@
 
 • **data**: *Array‹[HostAck](hostack.md)›*
 
-*Defined in [api.ts:345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L345)*
-
-**`type`** {Array<HostAck>}
+*Defined in [packages/insights/api.ts:287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L287)*
 
 **`memberof`** InlineResponse2002
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[InlineResponse200Links](inlineresponse200links.md)*
 
-*Defined in [api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L339)*
-
-**`type`** {InlineResponse200Links}
+*Defined in [packages/insights/api.ts:281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L281)*
 
 **`memberof`** InlineResponse2002
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[InlineResponse200Meta](inlineresponse200meta.md)*
 
-*Defined in [api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L333)*
-
-**`type`** {InlineResponse200Meta}
+*Defined in [packages/insights/api.ts:275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L275)*
 
 **`memberof`** InlineResponse2002

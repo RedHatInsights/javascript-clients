@@ -14,48 +14,42 @@
 
 ### Properties
 
-* [providerControlParameters](orderparametersserviceoffering.md#optional-providercontrolparameters)
-* [serviceParameters](orderparametersserviceoffering.md#optional-serviceparameters)
-* [servicePlanId](orderparametersserviceoffering.md#optional-serviceplanid)
+* [provider_control_parameters](orderparametersserviceoffering.md#optional-provider_control_parameters)
+* [service_parameters](orderparametersserviceoffering.md#optional-service_parameters)
+* [service_plan_id](orderparametersserviceoffering.md#optional-service_plan_id)
 
 ## Properties
 
-### `Optional` providerControlParameters
+### `Optional` provider_control_parameters
 
-• **providerControlParameters**? : *any*
+• **provider_control_parameters**? : *object*
 
-*Defined in [api.ts:2185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2185)*
+*Defined in [packages/topological-inventory/api.ts:2095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2095)*
 
 The provider specific parameters needed to provision this service. This might include namespaces, special keys
 
-**`type`** {any}
-
 **`memberof`** OrderParametersServiceOffering
 
 ___
 
-### `Optional` serviceParameters
+### `Optional` service_parameters
 
-• **serviceParameters**? : *any*
+• **service_parameters**? : *object*
 
-*Defined in [api.ts:2179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2179)*
+*Defined in [packages/topological-inventory/api.ts:2089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2089)*
 
 JSON object with provisioning parameters
 
-**`type`** {any}
-
 **`memberof`** OrderParametersServiceOffering
 
 ___
 
-### `Optional` servicePlanId
+### `Optional` service_plan_id
 
-• **servicePlanId**? : *string*
+• **service_plan_id**? : *string*
 
-*Defined in [api.ts:2191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2191)*
+*Defined in [packages/topological-inventory/api.ts:2101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2101)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** OrderParametersServiceOffering

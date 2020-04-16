@@ -16,24 +16,24 @@
 
 * [active](rule.md#optional-active)
 * [category](rule.md#category)
-* [createdAt](rule.md#optional-createdat)
-* [deletedAt](rule.md#optional-deletedat)
+* [created_at](rule.md#optional-created_at)
+* [deleted_at](rule.md#optional-deleted_at)
 * [description](rule.md#description)
 * [generic](rule.md#generic)
 * [impact](rule.md#impact)
 * [likelihood](rule.md#optional-likelihood)
-* [moreInfo](rule.md#optional-moreinfo)
-* [nodeId](rule.md#optional-nodeid)
-* [publishDate](rule.md#optional-publishdate)
+* [more_info](rule.md#optional-more_info)
+* [node_id](rule.md#optional-node_id)
+* [publish_date](rule.md#optional-publish_date)
 * [reason](rule.md#reason)
-* [rebootRequired](rule.md#optional-rebootrequired)
-* [resolutionSet](rule.md#resolutionset)
-* [ruleId](rule.md#ruleid)
+* [reboot_required](rule.md#optional-reboot_required)
+* [resolution_set](rule.md#resolution_set)
+* [rule_id](rule.md#rule_id)
 * [ruleset](rule.md#ruleset)
 * [summary](rule.md#summary)
 * [tags](rule.md#optional-tags)
-* [totalRisk](rule.md#optional-totalrisk)
-* [updatedAt](rule.md#optional-updatedat)
+* [total_risk](rule.md#optional-total_risk)
+* [updated_at](rule.md#optional-updated_at)
 
 ## Properties
 
@@ -41,9 +41,7 @@
 
 • **active**? : *boolean*
 
-*Defined in [api.ts:685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L685)*
-
-**`type`** {boolean}
+*Defined in [packages/insights/api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L613)*
 
 **`memberof`** Rule
 
@@ -53,33 +51,27 @@ ___
 
 • **category**: *[RuleCategory](rulecategory.md)*
 
-*Defined in [api.ts:691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L691)*
-
-**`type`** {RuleCategory}
+*Defined in [packages/insights/api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L619)*
 
 **`memberof`** Rule
 
 ___
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L655)*
-
-**`type`** {Date}
+*Defined in [packages/insights/api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L583)*
 
 **`memberof`** Rule
 
 ___
 
-### `Optional` deletedAt
+### `Optional` deleted_at
 
-• **deletedAt**? : *Date*
+• **deleted_at**? : *string*
 
-*Defined in [api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L667)*
-
-**`type`** {Date}
+*Defined in [packages/insights/api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L595)*
 
 **`memberof`** Rule
 
@@ -89,9 +81,7 @@ ___
 
 • **description**: *string*
 
-*Defined in [api.ts:679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L679)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L607)*
 
 **`memberof`** Rule
 
@@ -101,9 +91,7 @@ ___
 
 • **generic**: *string*
 
-*Defined in [api.ts:739](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L739)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L667)*
 
 **`memberof`** Rule
 
@@ -113,9 +101,7 @@ ___
 
 • **impact**: *[RuleImpact](ruleimpact.md)*
 
-*Defined in [api.ts:697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L697)*
-
-**`type`** {RuleImpact}
+*Defined in [packages/insights/api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L625)*
 
 **`memberof`** Rule
 
@@ -125,47 +111,39 @@ ___
 
 • **likelihood**? : *number*
 
-*Defined in [api.ts:703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L703)*
-
-**`type`** {number}
+*Defined in [packages/insights/api.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L631)*
 
 **`memberof`** Rule
 
 ___
 
-### `Optional` moreInfo
+### `Optional` more_info
 
-• **moreInfo**? : *string*
+• **more_info**? : *string*
 
-*Defined in [api.ts:751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L751)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L679)*
 
 **`memberof`** Rule
 
 ___
 
-### `Optional` nodeId
+### `Optional` node_id
 
-• **nodeId**? : *string*
+• **node_id**? : *string*
 
-*Defined in [api.ts:709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L709)*
+*Defined in [packages/insights/api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L637)*
 
 KCS solution number
 
-**`type`** {string}
-
 **`memberof`** Rule
 
 ___
 
-### `Optional` publishDate
+### `Optional` publish_date
 
-• **publishDate**? : *Date | null*
+• **publish_date**? : *string | null*
 
-*Defined in [api.ts:727](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L727)*
-
-**`type`** {Date}
+*Defined in [packages/insights/api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L655)*
 
 **`memberof`** Rule
 
@@ -175,47 +153,39 @@ ___
 
 • **reason**: *string*
 
-*Defined in [api.ts:745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L745)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L673)*
 
 **`memberof`** Rule
 
 ___
 
-### `Optional` rebootRequired
+### `Optional` reboot_required
 
-• **rebootRequired**? : *boolean*
+• **reboot_required**? : *boolean*
 
-*Defined in [api.ts:721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L721)*
-
-**`type`** {boolean}
+*Defined in [packages/insights/api.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L649)*
 
 **`memberof`** Rule
 
 ___
 
-###  resolutionSet
+###  resolution_set
 
-• **resolutionSet**: *Array‹[Resolution](resolution.md)›*
+• **resolution_set**: *Array‹[Resolution](resolution.md)›*
 
-*Defined in [api.ts:757](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L757)*
-
-**`type`** {Array<Resolution>}
+*Defined in [packages/insights/api.ts:685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L685)*
 
 **`memberof`** Rule
 
 ___
 
-###  ruleId
+###  rule_id
 
-• **ruleId**: *string*
+• **rule_id**: *string*
 
-*Defined in [api.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L649)*
+*Defined in [packages/insights/api.ts:577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L577)*
 
 Rule ID from Insights
-
-**`type`** {string}
 
 **`memberof`** Rule
 
@@ -225,9 +195,7 @@ ___
 
 • **ruleset**: *[RuleSet](ruleset.md)*
 
-*Defined in [api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L673)*
-
-**`type`** {RuleSet}
+*Defined in [packages/insights/api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L601)*
 
 **`memberof`** Rule
 
@@ -237,9 +205,7 @@ ___
 
 • **summary**: *string*
 
-*Defined in [api.ts:733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L733)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L661)*
 
 **`memberof`** Rule
 
@@ -249,32 +215,26 @@ ___
 
 • **tags**? : *string*
 
-*Defined in [api.ts:715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L715)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L643)*
 
 **`memberof`** Rule
 
 ___
 
-### `Optional` totalRisk
+### `Optional` total_risk
 
-• **totalRisk**? : *number*
+• **total_risk**? : *number*
 
-*Defined in [api.ts:763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L763)*
-
-**`type`** {number}
+*Defined in [packages/insights/api.ts:691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L691)*
 
 **`memberof`** Rule
 
 ___
 
-### `Optional` updatedAt
+### `Optional` updated_at
 
-• **updatedAt**? : *Date*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L661)*
-
-**`type`** {Date}
+*Defined in [packages/insights/api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L589)*
 
 **`memberof`** Rule

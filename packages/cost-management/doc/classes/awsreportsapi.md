@@ -90,7 +90,7 @@ ___
 
 ▸ **getAWSCostReports**(`delta?`: string, `filter?`: any, `groupBy?`: any, `orderBy?`: any, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[ReportCost](../interfaces/reportcost.md)›*
 
-*Defined in [api.ts:3206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3206)*
+*Defined in [api.ts:3299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3299)*
 
 **`summary`** Query to obtain cost reports
 
@@ -118,7 +118,7 @@ ___
 
 ▸ **getAWSInstanceReports**(`filter?`: any, `groupBy?`: any, `orderBy?`: any, `units?`: string, `offset?`: number, `limit?`: number, `computeCount?`: boolean, `options?`: any): *AxiosPromise‹[ReportInstanceInventory](../interfaces/reportinstanceinventory.md)›*
 
-*Defined in [api.ts:3224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3224)*
+*Defined in [api.ts:3317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3317)*
 
 **`summary`** Query to obtain AWS instance type data
 
@@ -147,7 +147,7 @@ ___
 
 ▸ **getAWSStorageReports**(`filter?`: any, `groupBy?`: any, `orderBy?`: any, `units?`: string, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[ReportStorageInventory](../interfaces/reportstorageinventory.md)›*
 
-*Defined in [api.ts:3241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3241)*
+*Defined in [api.ts:3334](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3334)*
 
 **`summary`** Query to obtain AWS storage data
 

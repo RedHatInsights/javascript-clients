@@ -24,8 +24,6 @@ tag details
 
 • **tag**? : *string*
 
-*Defined in [api.ts:494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L494)*
-
-**`type`** {string}
+*Defined in [packages/approval/api.ts:424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L424)*
 
 **`memberof`** Tag

@@ -14,33 +14,29 @@
 
 ### Properties
 
-* [applicationVersion](versionout.md#applicationversion)
-* [databaseVersion](versionout.md#databaseversion)
+* [application_version](versionout.md#application_version)
+* [database_version](versionout.md#database_version)
 
 ## Properties
 
-###  applicationVersion
+###  application_version
 
-• **applicationVersion**: *string*
+• **application_version**: *string*
 
-*Defined in [api.ts:1415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1415)*
+*Defined in [packages/vulnerabilities/api.ts:1224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1224)*
 
 Version of application.
-
-**`type`** {string}
 
 **`memberof`** VersionOut
 
 ___
 
-###  databaseVersion
+###  database_version
 
-• **databaseVersion**: *Object*
+• **database_version**: *string | number*
 
-*Defined in [api.ts:1421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1421)*
+*Defined in [packages/vulnerabilities/api.ts:1230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1230)*
 
 Version of database schema.
-
-**`type`** {Object}
 
 **`memberof`** VersionOut

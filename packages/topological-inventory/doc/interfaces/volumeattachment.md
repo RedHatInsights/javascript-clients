@@ -16,10 +16,10 @@
 
 * [device](volumeattachment.md#optional-device)
 * [id](volumeattachment.md#optional-id)
-* [lastSeenAt](volumeattachment.md#optional-lastseenat)
+* [last_seen_at](volumeattachment.md#optional-last_seen_at)
 * [state](volumeattachment.md#optional-state)
-* [vmId](volumeattachment.md#optional-vmid)
-* [volumeId](volumeattachment.md#optional-volumeid)
+* [vm_id](volumeattachment.md#optional-vm_id)
+* [volume_id](volumeattachment.md#optional-volume_id)
 
 ## Properties
 
@@ -27,9 +27,7 @@
 
 • **device**? : *string*
 
-*Defined in [api.ts:4085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4085)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:3960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3960)*
 
 **`memberof`** VolumeAttachment
 
@@ -39,23 +37,19 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:4091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4091)*
+*Defined in [packages/topological-inventory/api.ts:3966](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3966)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** VolumeAttachment
 
 ___
 
-### `Optional` lastSeenAt
+### `Optional` last_seen_at
 
-• **lastSeenAt**? : *Date*
+• **last_seen_at**? : *string*
 
-*Defined in [api.ts:4097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4097)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:3972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3972)*
 
 **`memberof`** VolumeAttachment
 
@@ -65,36 +59,30 @@ ___
 
 • **state**? : *string*
 
-*Defined in [api.ts:4103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4103)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:3978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3978)*
 
 **`memberof`** VolumeAttachment
 
 ___
 
-### `Optional` vmId
+### `Optional` vm_id
 
-• **vmId**? : *string*
+• **vm_id**? : *string*
 
-*Defined in [api.ts:4109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4109)*
+*Defined in [packages/topological-inventory/api.ts:3984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3984)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** VolumeAttachment
 
 ___
 
-### `Optional` volumeId
+### `Optional` volume_id
 
-• **volumeId**? : *string*
+• **volume_id**? : *string*
 
-*Defined in [api.ts:4115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4115)*
+*Defined in [packages/topological-inventory/api.ts:3990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3990)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** VolumeAttachment

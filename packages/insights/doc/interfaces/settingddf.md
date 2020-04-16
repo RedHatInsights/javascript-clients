@@ -15,11 +15,13 @@
 ### Properties
 
 * [component](settingddf.md#component)
-* [helpText](settingddf.md#helptext)
+* [description](settingddf.md#optional-description)
+* [helpText](settingddf.md#optional-helptext)
 * [initialValue](settingddf.md#initialvalue)
 * [isRequired](settingddf.md#isrequired)
-* [label](settingddf.md#label)
+* [label](settingddf.md#optional-label)
 * [name](settingddf.md#name)
+* [title](settingddf.md#optional-title)
 
 ## Properties
 
@@ -27,21 +29,27 @@
 
 • **component**: *string*
 
-*Defined in [api.ts:1061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1061)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L990)*
 
 **`memberof`** SettingDDF
 
 ___
 
-###  helpText
+### `Optional` description
 
-• **helpText**: *string*
+• **description**? : *string*
 
-*Defined in [api.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1055)*
+*Defined in [packages/insights/api.ts:978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L978)*
 
-**`type`** {string}
+**`memberof`** SettingDDF
+
+___
+
+### `Optional` helpText
+
+• **helpText**? : *string*
+
+*Defined in [packages/insights/api.ts:984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L984)*
 
 **`memberof`** SettingDDF
 
@@ -51,9 +59,7 @@ ___
 
 • **initialValue**: *boolean*
 
-*Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1073)*
-
-**`type`** {boolean}
+*Defined in [packages/insights/api.ts:1002](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1002)*
 
 **`memberof`** SettingDDF
 
@@ -63,21 +69,17 @@ ___
 
 • **isRequired**: *boolean*
 
-*Defined in [api.ts:1067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1067)*
-
-**`type`** {boolean}
+*Defined in [packages/insights/api.ts:996](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L996)*
 
 **`memberof`** SettingDDF
 
 ___
 
-###  label
+### `Optional` label
 
-• **label**: *string*
+• **label**? : *string*
 
-*Defined in [api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1049)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:966](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L966)*
 
 **`memberof`** SettingDDF
 
@@ -87,8 +89,16 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1043)*
+*Defined in [packages/insights/api.ts:960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L960)*
 
-**`type`** {string}
+**`memberof`** SettingDDF
+
+___
+
+### `Optional` title
+
+• **title**? : *string*
+
+*Defined in [packages/insights/api.ts:972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L972)*
 
 **`memberof`** SettingDDF

@@ -27,7 +27,7 @@
 
 • **count**? : *number*
 
-*Defined in [api.ts:2475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2475)*
+*Defined in [api.ts:2528](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2528)*
 
 **`type`** {number}
 
@@ -39,7 +39,7 @@ ___
 
 • **delta**? : *[ReportDelta](reportdelta.md)*
 
-*Defined in [api.ts:2481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2481)*
+*Defined in [api.ts:2534](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2534)*
 
 **`type`** {ReportDelta}
 
@@ -51,7 +51,7 @@ ___
 
 • **filter**? : *Object*
 
-*Defined in [api.ts:2499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2499)*
+*Defined in [api.ts:2552](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2552)*
 
 **`type`** {Object}
 
@@ -63,7 +63,7 @@ ___
 
 • **groupBy**? : *Object*
 
-*Defined in [api.ts:2487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2487)*
+*Defined in [api.ts:2540](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2540)*
 
 **`type`** {Object}
 
@@ -75,7 +75,7 @@ ___
 
 • **orderBy**? : *Object*
 
-*Defined in [api.ts:2493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2493)*
+*Defined in [api.ts:2546](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2546)*
 
 **`type`** {Object}
 
@@ -87,7 +87,7 @@ ___
 
 • **units**? : *string*
 
-*Defined in [api.ts:2505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2505)*
+*Defined in [api.ts:2558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2558)*
 
 The units for the output data.
 

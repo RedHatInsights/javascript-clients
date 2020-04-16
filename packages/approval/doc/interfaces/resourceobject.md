@@ -16,48 +16,42 @@ Resource object definition
 
 ### Properties
 
-* [appName](resourceobject.md#appname)
-* [objectId](resourceobject.md#objectid)
-* [objectType](resourceobject.md#objecttype)
+* [app_name](resourceobject.md#app_name)
+* [object_id](resourceobject.md#object_id)
+* [object_type](resourceobject.md#object_type)
 
 ## Properties
 
-###  appName
+###  app_name
 
-• **appName**: *string*
+• **app_name**: *string*
 
-*Defined in [api.ts:474](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L474)*
+*Defined in [packages/approval/api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L405)*
 
 Application name the object belongs to
 
-**`type`** {string}
-
 **`memberof`** ResourceObject
 
 ___
 
-###  objectId
+###  object_id
 
-• **objectId**: *string*
+• **object_id**: *string*
 
-*Defined in [api.ts:480](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L480)*
+*Defined in [packages/approval/api.ts:411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L411)*
 
 Id of the object
 
-**`type`** {string}
-
 **`memberof`** ResourceObject
 
 ___
 
-###  objectType
+###  object_type
 
-• **objectType**: *string*
+• **object_type**: *string*
 
-*Defined in [api.ts:468](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L468)*
+*Defined in [packages/approval/api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L399)*
 
 Object type
-
-**`type`** {string}
 
 **`memberof`** ResourceObject

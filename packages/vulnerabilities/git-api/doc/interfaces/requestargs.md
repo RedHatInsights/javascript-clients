@@ -23,7 +23,7 @@
 
 • **options**: *any*
 
-*Defined in [git-api/api.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L40)*
+Defined in packages/vulnerabilities/git-api/base.ts:40
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 • **url**: *string*
 
-*Defined in [git-api/api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L39)*
+Defined in packages/vulnerabilities/git-api/base.ts:39

@@ -24,9 +24,7 @@
 
 • **data**? : *Array‹[Subnet](subnet.md)›*
 
-*Defined in [api.ts:3491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3491)*
-
-**`type`** {Array<Subnet>}
+*Defined in [packages/topological-inventory/api.ts:3378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3378)*
 
 **`memberof`** SubnetsCollection
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:3485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3485)*
-
-**`type`** {CollectionLinks}
+*Defined in [packages/topological-inventory/api.ts:3372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3372)*
 
 **`memberof`** SubnetsCollection
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:3479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3479)*
-
-**`type`** {CollectionMetadata}
+*Defined in [packages/topological-inventory/api.ts:3366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3366)*
 
 **`memberof`** SubnetsCollection

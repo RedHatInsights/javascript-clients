@@ -22,8 +22,6 @@
 
 • **count**: *number*
 
-*Defined in [api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L469)*
-
-**`type`** {number}
+*Defined in [packages/insights/api.ts:406](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L406)*
 
 **`memberof`** InlineResponse200Meta

@@ -22,7 +22,7 @@
 
 • **count**? : *number*
 
-*Defined in [api.ts:477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L477)*
+*Defined in [api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L497)*
 
 **`type`** {number}
 

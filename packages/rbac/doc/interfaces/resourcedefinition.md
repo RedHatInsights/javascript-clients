@@ -20,10 +20,8 @@
 
 ###  attributeFilter
 
-• **attributeFilter**: *[ResourceDefinitionFilter](../modules/resourcedefinitionfilter.md)*
+• **attributeFilter**: *[ResourceDefinitionFilter](resourcedefinitionfilter.md)*
 
-*Defined in [api.ts:763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L763)*
-
-**`type`** {ResourceDefinitionFilter}
+*Defined in [packages/rbac/api.ts:750](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L750)*
 
 **`memberof`** ResourceDefinition

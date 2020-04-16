@@ -16,7 +16,7 @@
 
 * [details](diagnosis.md#details)
 * [id](diagnosis.md#id)
-* [insightsId](diagnosis.md#insightsid)
+* [insights_id](diagnosis.md#insights_id)
 
 ## Properties
 
@@ -24,15 +24,13 @@
 
 • **details**: *object*
 
-*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L95)*
-
-**`type`** {{ [key: string]: any; }}
+*Defined in [api.ts:82](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L82)*
 
 **`memberof`** Diagnosis
 
 #### Type declaration:
 
-* \[ **key**: *string*\]: any
+* \[ **key**: *string*\]: object
 
 ___
 
@@ -40,20 +38,16 @@ ___
 
 • **id**: *string*
 
-*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L83)*
-
-**`type`** {string}
+*Defined in [api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L70)*
 
 **`memberof`** Diagnosis
 
 ___
 
-###  insightsId
+###  insights_id
 
-• **insightsId**: *string*
+• **insights_id**: *string*
 
-*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L89)*
-
-**`type`** {string}
+*Defined in [api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L76)*
 
 **`memberof`** Diagnosis

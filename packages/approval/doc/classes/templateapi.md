@@ -6,10 +6,6 @@ TemplateApi - object-oriented interface
 
 **`export`** 
 
-**`class`** TemplateApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -41,15 +37,15 @@ TemplateApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L49)*
+Defined in packages/approval/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[TemplateApi](templateapi.md)*
 
@@ -61,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
+Defined in packages/approval/base.ts:51
 
 ___
 
@@ -71,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
+Defined in packages/approval/base.ts:51
 
 ___
 
@@ -81,15 +77,15 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L49)*
+Defined in packages/approval/base.ts:49
 
 ## Methods
 
 ###  listTemplates
 
-▸ **listTemplates**(`limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[TemplateCollection](../interfaces/templatecollection.md)›*
+▸ **listTemplates**(`limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[TemplateCollection](../interfaces/templatecollection.md)›*
 
-*Defined in [api.ts:1661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1661)*
+*Defined in [packages/approval/api.ts:1621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1621)*
 
 Return all templates
 
@@ -105,7 +101,7 @@ Name | Type |
 ------ | ------ |
 `limit?` | number |
 `offset?` | number |
-`filter?` | any |
+`filter?` | object |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[TemplateCollection](../interfaces/templatecollection.md)›*
@@ -116,7 +112,7 @@ ___
 
 ▸ **showTemplate**(`id`: string, `options?`: any): *AxiosPromise‹[Template](../interfaces/template.md)›*
 
-*Defined in [api.ts:1673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1673)*
+*Defined in [packages/approval/api.ts:1633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1633)*
 
 Return a template by given id
 

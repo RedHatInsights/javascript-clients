@@ -2,6 +2,10 @@
 
 # Interface: AppsRegisterApplication
 
+**`export`** 
+
+**`interface`** AppsRegisterApplication
+
 ## Hierarchy
 
 * **AppsRegisterApplication**
@@ -19,7 +23,9 @@
 
 • **name**? : *string*
 
-*Defined in [api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L163)*
+*Defined in [packages/hooks/api.ts:105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L105)*
+
+**`memberof`** AppsRegisterApplication
 
 ___
 
@@ -27,4 +33,6 @@ ___
 
 • **title**? : *string*
 
-*Defined in [api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L169)*
+*Defined in [packages/hooks/api.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L111)*
+
+**`memberof`** AppsRegisterApplication

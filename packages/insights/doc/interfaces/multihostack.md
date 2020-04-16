@@ -23,9 +23,7 @@
 
 • **justification**: *string*
 
-*Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L529)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L463)*
 
 **`memberof`** MultiHostAck
 
@@ -35,8 +33,6 @@ ___
 
 • **systems**: *Array‹string›*
 
-*Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L523)*
-
-**`type`** {Array<string>}
+*Defined in [packages/insights/api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L457)*
 
 **`memberof`** MultiHostAck

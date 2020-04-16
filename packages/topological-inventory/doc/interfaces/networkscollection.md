@@ -24,9 +24,7 @@
 
 • **data**? : *Array‹[Network](network.md)›*
 
-*Defined in [api.ts:2047](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2047)*
-
-**`type`** {Array<Network>}
+*Defined in [packages/topological-inventory/api.ts:1960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1960)*
 
 **`memberof`** NetworksCollection
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:2041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2041)*
-
-**`type`** {CollectionLinks}
+*Defined in [packages/topological-inventory/api.ts:1954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1954)*
 
 **`memberof`** NetworksCollection
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:2035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2035)*
-
-**`type`** {CollectionMetadata}
+*Defined in [packages/topological-inventory/api.ts:1948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1948)*
 
 **`memberof`** NetworksCollection

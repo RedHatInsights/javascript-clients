@@ -27,7 +27,7 @@
 
 • **data**: *Array‹any›*
 
-*Defined in [api.ts:2172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2172)*
+*Defined in [api.ts:2197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2197)*
 
 **`type`** {Array<any>}
 
@@ -39,7 +39,7 @@ ___
 
 • **filter**? : *[ReportOpenShiftAzureFilter](reportopenshiftazurefilter.md)*
 
-*Defined in [api.ts:2166](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2166)*
+*Defined in [api.ts:2191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2191)*
 
 **`type`** {ReportOpenShiftAzureFilter}
 
@@ -51,7 +51,7 @@ ___
 
 • **groupBy**? : *[ReportOpenShiftAzureGrouping](reportopenshiftazuregrouping.md)*
 
-*Defined in [api.ts:2154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2154)*
+*Defined in [api.ts:2179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2179)*
 
 **`type`** {ReportOpenShiftAzureGrouping}
 
@@ -63,7 +63,7 @@ ___
 
 • **links**? : *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:2148](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2148)*
+*Defined in [api.ts:2173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2173)*
 
 **`type`** {PaginationLinks}
 
@@ -75,7 +75,7 @@ ___
 
 • **meta**? : *[ReportPaginationMeta](reportpaginationmeta.md)*
 
-*Defined in [api.ts:2142](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2142)*
+*Defined in [api.ts:2167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2167)*
 
 **`type`** {ReportPaginationMeta}
 
@@ -87,7 +87,7 @@ ___
 
 • **orderBy**? : *[ReportOpenShiftAzureOrdering](../modules/reportopenshiftazureordering.md)*
 
-*Defined in [api.ts:2160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2160)*
+*Defined in [api.ts:2185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2185)*
 
 **`type`** {ReportOpenShiftAzureOrdering}
 

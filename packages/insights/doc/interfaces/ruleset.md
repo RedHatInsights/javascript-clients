@@ -14,20 +14,18 @@
 
 ### Properties
 
-* [createdAt](ruleset.md#optional-createdat)
+* [created_at](ruleset.md#optional-created_at)
 * [description](ruleset.md#description)
-* [ruleSource](ruleset.md#rulesource)
-* [updatedAt](ruleset.md#optional-updatedat)
+* [rule_source](ruleset.md#rule_source)
+* [updated_at](ruleset.md#optional-updated_at)
 
 ## Properties
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:1011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1011)*
-
-**`type`** {Date}
+*Defined in [packages/insights/api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L929)*
 
 **`memberof`** RuleSet
 
@@ -37,32 +35,26 @@ ___
 
 • **description**: *string*
 
-*Defined in [api.ts:1029](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1029)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:947](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L947)*
 
 **`memberof`** RuleSet
 
 ___
 
-###  ruleSource
+###  rule_source
 
-• **ruleSource**: *string*
+• **rule_source**: *string*
 
-*Defined in [api.ts:1023](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1023)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:941](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L941)*
 
 **`memberof`** RuleSet
 
 ___
 
-### `Optional` updatedAt
+### `Optional` updated_at
 
-• **updatedAt**? : *Date*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:1017](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1017)*
-
-**`type`** {Date}
+*Defined in [packages/insights/api.ts:935](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L935)*
 
 **`memberof`** RuleSet

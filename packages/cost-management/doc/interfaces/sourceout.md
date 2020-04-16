@@ -30,7 +30,7 @@
 
 • **authentication**? : *any*
 
-*Defined in [api.ts:2665](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2665)*
+*Defined in [api.ts:2758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2758)*
 
 Dictionary containing resource name.
 
@@ -44,7 +44,7 @@ ___
 
 • **billingSource**? : *any*
 
-*Defined in [api.ts:2671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2671)*
+*Defined in [api.ts:2764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2764)*
 
 Dictionary containing billing source.
 
@@ -58,9 +58,9 @@ ___
 
 • **costModels**? : *Array‹any›*
 
-*Defined in [api.ts:2689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2689)*
+*Defined in [api.ts:2782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2782)*
 
-List of cost model name and UUIDs associated with this provider.
+List of cost model name and UUIDs associated with this source.
 
 **`type`** {Array<any>}
 
@@ -72,7 +72,7 @@ ___
 
 • **id**: *number*
 
-*Defined in [api.ts:2641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2641)*
+*Defined in [api.ts:2734](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2734)*
 
 **`type`** {number}
 
@@ -84,7 +84,7 @@ ___
 
 • **infrastructure**? : *string*
 
-*Defined in [api.ts:2683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2683)*
+*Defined in [api.ts:2776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2776)*
 
 OpenShift foundational infrastructure type.
 
@@ -98,7 +98,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:2659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2659)*
+*Defined in [api.ts:2752](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2752)*
 
 **`type`** {string}
 
@@ -110,7 +110,7 @@ ___
 
 • **providerLinked**? : *boolean*
 
-*Defined in [api.ts:2677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2677)*
+*Defined in [api.ts:2770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2770)*
 
 Flag to indicate if provider is linked to source.
 
@@ -124,7 +124,7 @@ ___
 
 • **sourceType**: *string*
 
-*Defined in [api.ts:2647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2647)*
+*Defined in [api.ts:2740](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2740)*
 
 **`type`** {string}
 
@@ -136,7 +136,7 @@ ___
 
 • **uuid**? : *string*
 
-*Defined in [api.ts:2653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2653)*
+*Defined in [api.ts:2746](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2746)*
 
 **`type`** {string}
 

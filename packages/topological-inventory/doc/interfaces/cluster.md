@@ -14,40 +14,36 @@
 
 ### Properties
 
-* [archivedAt](cluster.md#optional-archivedat)
-* [createdAt](cluster.md#optional-createdat)
+* [archived_at](cluster.md#optional-archived_at)
+* [created_at](cluster.md#optional-created_at)
 * [extra](cluster.md#optional-extra)
 * [id](cluster.md#optional-id)
-* [lastSeenAt](cluster.md#optional-lastseenat)
+* [last_seen_at](cluster.md#optional-last_seen_at)
 * [name](cluster.md#optional-name)
-* [sourceCreatedAt](cluster.md#optional-sourcecreatedat)
-* [sourceDeletedAt](cluster.md#optional-sourcedeletedat)
-* [sourceId](cluster.md#optional-sourceid)
-* [sourceRef](cluster.md#optional-sourceref)
-* [uidEms](cluster.md#optional-uidems)
-* [updatedAt](cluster.md#optional-updatedat)
+* [source_created_at](cluster.md#optional-source_created_at)
+* [source_deleted_at](cluster.md#optional-source_deleted_at)
+* [source_id](cluster.md#optional-source_id)
+* [source_ref](cluster.md#optional-source_ref)
+* [uid_ems](cluster.md#optional-uid_ems)
+* [updated_at](cluster.md#optional-updated_at)
 
 ## Properties
 
-### `Optional` archivedAt
+### `Optional` archived_at
 
-• **archivedAt**? : *Date*
+• **archived_at**? : *string*
 
-*Defined in [api.ts:191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L191)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L138)*
 
 **`memberof`** Cluster
 
 ___
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L197)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L144)*
 
 **`memberof`** Cluster
 
@@ -55,11 +51,9 @@ ___
 
 ### `Optional` extra
 
-• **extra**? : *any*
+• **extra**? : *object*
 
-*Defined in [api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L203)*
-
-**`type`** {any}
+*Defined in [packages/topological-inventory/api.ts:150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L150)*
 
 **`memberof`** Cluster
 
@@ -69,23 +63,19 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L209)*
+*Defined in [packages/topological-inventory/api.ts:156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L156)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** Cluster
 
 ___
 
-### `Optional` lastSeenAt
+### `Optional` last_seen_at
 
-• **lastSeenAt**? : *Date*
+• **last_seen_at**? : *string*
 
-*Defined in [api.ts:215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L215)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L162)*
 
 **`memberof`** Cluster
 
@@ -95,82 +85,68 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L221)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L168)*
 
 **`memberof`** Cluster
 
 ___
 
-### `Optional` sourceCreatedAt
+### `Optional` source_created_at
 
-• **sourceCreatedAt**? : *Date*
+• **source_created_at**? : *string*
 
-*Defined in [api.ts:227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L227)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L174)*
 
 **`memberof`** Cluster
 
 ___
 
-### `Optional` sourceDeletedAt
+### `Optional` source_deleted_at
 
-• **sourceDeletedAt**? : *Date*
+• **source_deleted_at**? : *string*
 
-*Defined in [api.ts:233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L233)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L180)*
 
 **`memberof`** Cluster
 
 ___
 
-### `Optional` sourceId
+### `Optional` source_id
 
-• **sourceId**? : *string*
+• **source_id**? : *string*
 
-*Defined in [api.ts:239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L239)*
+*Defined in [packages/topological-inventory/api.ts:186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L186)*
 
 ID of the resource
 
-**`type`** {string}
+**`memberof`** Cluster
+
+___
+
+### `Optional` source_ref
+
+• **source_ref**? : *string*
+
+*Defined in [packages/topological-inventory/api.ts:192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L192)*
 
 **`memberof`** Cluster
 
 ___
 
-### `Optional` sourceRef
+### `Optional` uid_ems
 
-• **sourceRef**? : *string*
+• **uid_ems**? : *string*
 
-*Defined in [api.ts:245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L245)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L198)*
 
 **`memberof`** Cluster
 
 ___
 
-### `Optional` uidEms
+### `Optional` updated_at
 
-• **uidEms**? : *string*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L251)*
-
-**`type`** {string}
-
-**`memberof`** Cluster
-
-___
-
-### `Optional` updatedAt
-
-• **updatedAt**? : *Date*
-
-*Defined in [api.ts:257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L257)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L204)*
 
 **`memberof`** Cluster

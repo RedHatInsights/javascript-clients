@@ -15,16 +15,16 @@
 ### Properties
 
 * [authtype](authentication.md#optional-authtype)
-* [availabilityStatus](authentication.md#optional-availabilitystatus)
-* [availabilityStatusError](authentication.md#optional-availabilitystatuserror)
+* [availability_status](authentication.md#optional-availability_status)
+* [availability_status_error](authentication.md#optional-availability_status_error)
 * [extra](authentication.md#optional-extra)
 * [id](authentication.md#optional-id)
 * [name](authentication.md#optional-name)
 * [password](authentication.md#optional-password)
-* [resourceId](authentication.md#optional-resourceid)
-* [resourceType](authentication.md#optional-resourcetype)
+* [resource_id](authentication.md#optional-resource_id)
+* [resource_type](authentication.md#optional-resource_type)
 * [status](authentication.md#optional-status)
-* [statusDetails](authentication.md#optional-statusdetails)
+* [status_details](authentication.md#optional-status_details)
 * [tenant](authentication.md#optional-tenant)
 * [username](authentication.md#optional-username)
 
@@ -34,33 +34,27 @@
 
 • **authtype**? : *string*
 
-*Defined in [api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L247)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L193)*
 
 **`memberof`** Authentication
 
 ___
 
-### `Optional` availabilityStatus
+### `Optional` availability_status
 
-• **availabilityStatus**? : *string*
+• **availability_status**? : *string*
 
-*Defined in [api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L253)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L199)*
 
 **`memberof`** Authentication
 
 ___
 
-### `Optional` availabilityStatusError
+### `Optional` availability_status_error
 
-• **availabilityStatusError**? : *string*
+• **availability_status_error**? : *string*
 
-*Defined in [api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L259)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L205)*
 
 **`memberof`** Authentication
 
@@ -70,9 +64,7 @@ ___
 
 • **extra**? : *[AuthenticationExtra](authenticationextra.md)*
 
-*Defined in [api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L265)*
-
-**`type`** {AuthenticationExtra}
+*Defined in [packages/sources/api.ts:211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L211)*
 
 **`memberof`** Authentication
 
@@ -82,11 +74,9 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L271)*
+*Defined in [packages/sources/api.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L217)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** Authentication
 
@@ -96,9 +86,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L277)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L223)*
 
 **`memberof`** Authentication
 
@@ -108,35 +96,29 @@ ___
 
 • **password**? : *string*
 
-*Defined in [api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L283)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L229)*
 
 **`memberof`** Authentication
 
 ___
 
-### `Optional` resourceId
+### `Optional` resource_id
 
-• **resourceId**? : *string*
+• **resource_id**? : *string*
 
-*Defined in [api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L289)*
+*Defined in [packages/sources/api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L235)*
 
 ID of the resource
 
-**`type`** {string}
-
 **`memberof`** Authentication
 
 ___
 
-### `Optional` resourceType
+### `Optional` resource_type
 
-• **resourceType**? : *string*
+• **resource_type**? : *string*
 
-*Defined in [api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L295)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L241)*
 
 **`memberof`** Authentication
 
@@ -146,21 +128,17 @@ ___
 
 • **status**? : *string*
 
-*Defined in [api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L301)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L247)*
 
 **`memberof`** Authentication
 
 ___
 
-### `Optional` statusDetails
+### `Optional` status_details
 
-• **statusDetails**? : *string*
+• **status_details**? : *string*
 
-*Defined in [api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L307)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L253)*
 
 **`memberof`** Authentication
 
@@ -170,9 +148,7 @@ ___
 
 • **tenant**? : *string*
 
-*Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L313)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L259)*
 
 **`memberof`** Authentication
 
@@ -182,8 +158,6 @@ ___
 
 • **username**? : *string*
 
-*Defined in [api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L319)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L265)*
 
 **`memberof`** Authentication

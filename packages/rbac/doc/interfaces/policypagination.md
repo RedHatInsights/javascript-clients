@@ -8,7 +8,9 @@
 
 ## Hierarchy
 
-* **PolicyPagination**
+* [ListPagination](listpagination.md)
+
+  ↳ **PolicyPagination**
 
 ## Index
 
@@ -24,9 +26,7 @@
 
 • **data**: *Array‹[PolicyExtended](policyextended.md)›*
 
-*Defined in [api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L627)*
-
-**`type`** {Array<PolicyExtended>}
+*Defined in [packages/rbac/api.ts:605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L605)*
 
 **`memberof`** PolicyPagination
 
@@ -36,11 +36,11 @@ ___
 
 • **links**? : *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L621)*
+*Inherited from [AccessPagination](accesspagination.md).[links](accesspagination.md#optional-links)*
 
-**`type`** {PaginationLinks}
+*Defined in [packages/rbac/api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L410)*
 
-**`memberof`** PolicyPagination
+**`memberof`** ListPagination
 
 ___
 
@@ -48,8 +48,8 @@ ___
 
 • **meta**? : *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L615)*
+*Inherited from [AccessPagination](accesspagination.md).[meta](accesspagination.md#optional-meta)*
 
-**`type`** {PaginationMeta}
+*Defined in [packages/rbac/api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L404)*
 
-**`memberof`** PolicyPagination
+**`memberof`** ListPagination

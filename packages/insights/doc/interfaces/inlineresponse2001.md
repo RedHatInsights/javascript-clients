@@ -15,13 +15,13 @@
 ### Properties
 
 * [hostname](inlineresponse2001.md#optional-hostname)
-* [lastSeen](inlineresponse2001.md#optional-lastseen)
+* [last_seen](inlineresponse2001.md#optional-last_seen)
 * [likelihood](inlineresponse2001.md#optional-likelihood)
-* [publishDate](inlineresponse2001.md#optional-publishdate)
-* [resultsUrl](inlineresponse2001.md#optional-resultsurl)
-* [solutionUrl](inlineresponse2001.md#optional-solutionurl)
+* [publish_date](inlineresponse2001.md#optional-publish_date)
+* [results_url](inlineresponse2001.md#optional-results_url)
+* [solution_url](inlineresponse2001.md#optional-solution_url)
 * [title](inlineresponse2001.md#optional-title)
-* [totalRisk](inlineresponse2001.md#optional-totalrisk)
+* [total_risk](inlineresponse2001.md#optional-total_risk)
 * [uuid](inlineresponse2001.md#optional-uuid)
 
 ## Properties
@@ -30,21 +30,17 @@
 
 • **hostname**? : *string*
 
-*Defined in [api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L271)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L214)*
 
 **`memberof`** InlineResponse2001
 
 ___
 
-### `Optional` lastSeen
+### `Optional` last_seen
 
-• **lastSeen**? : *string*
+• **last_seen**? : *string*
 
-*Defined in [api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L283)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:226](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L226)*
 
 **`memberof`** InlineResponse2001
 
@@ -54,45 +50,37 @@ ___
 
 • **likelihood**? : *number*
 
-*Defined in [api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L307)*
-
-**`type`** {number}
+*Defined in [packages/insights/api.ts:250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L250)*
 
 **`memberof`** InlineResponse2001
 
 ___
 
-### `Optional` publishDate
+### `Optional` publish_date
 
-• **publishDate**? : *string*
+• **publish_date**? : *string*
 
-*Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L313)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L256)*
 
 **`memberof`** InlineResponse2001
 
 ___
 
-### `Optional` resultsUrl
+### `Optional` results_url
 
-• **resultsUrl**? : *string*
+• **results_url**? : *string*
 
-*Defined in [api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L319)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L262)*
 
 **`memberof`** InlineResponse2001
 
 ___
 
-### `Optional` solutionUrl
+### `Optional` solution_url
 
-• **solutionUrl**? : *string*
+• **solution_url**? : *string*
 
-*Defined in [api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L295)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L238)*
 
 **`memberof`** InlineResponse2001
 
@@ -102,21 +90,17 @@ ___
 
 • **title**? : *string*
 
-*Defined in [api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L289)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L232)*
 
 **`memberof`** InlineResponse2001
 
 ___
 
-### `Optional` totalRisk
+### `Optional` total_risk
 
-• **totalRisk**? : *number*
+• **total_risk**? : *number*
 
-*Defined in [api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L301)*
-
-**`type`** {number}
+*Defined in [packages/insights/api.ts:244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L244)*
 
 **`memberof`** InlineResponse2001
 
@@ -126,8 +110,6 @@ ___
 
 • **uuid**? : *string*
 
-*Defined in [api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L277)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:220](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L220)*
 
 **`memberof`** InlineResponse2001

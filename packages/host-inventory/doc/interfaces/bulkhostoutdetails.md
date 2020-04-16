@@ -25,11 +25,9 @@
 
 • **detail**? : *string*
 
-*Defined in [api.ts:185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L185)*
+*Defined in [packages/host-inventory/api.ts:132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L132)*
 
 Details about why a host failed to be created or updated.
-
-**`type`** {string}
 
 **`memberof`** BulkHostOutDetails
 
@@ -39,9 +37,7 @@ ___
 
 • **host**? : *[CreateHostOut](createhostout.md)*
 
-*Defined in [api.ts:173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L173)*
-
-**`type`** {CreateHostOut}
+*Defined in [packages/host-inventory/api.ts:120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L120)*
 
 **`memberof`** BulkHostOutDetails
 
@@ -51,11 +47,9 @@ ___
 
 • **status**? : *number*
 
-*Defined in [api.ts:167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L167)*
+*Defined in [packages/host-inventory/api.ts:114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L114)*
 
 HTTP status code of the results of the host create/update process
-
-**`type`** {number}
 
 **`memberof`** BulkHostOutDetails
 
@@ -65,10 +59,8 @@ ___
 
 • **title**? : *string*
 
-*Defined in [api.ts:179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L179)*
+*Defined in [packages/host-inventory/api.ts:126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L126)*
 
 Short description of why a host failed to be created or updated.
-
-**`type`** {string}
 
 **`memberof`** BulkHostOutDetails

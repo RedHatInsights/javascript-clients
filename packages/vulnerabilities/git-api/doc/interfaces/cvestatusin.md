@@ -15,8 +15,8 @@
 ### Properties
 
 * [cve](cvestatusin.md#cve)
-* [statusId](cvestatusin.md#optional-statusid)
-* [statusText](cvestatusin.md#optional-statustext)
+* [status_id](cvestatusin.md#optional-status_id)
+* [status_text](cvestatusin.md#optional-status_text)
 
 ## Properties
 
@@ -24,36 +24,30 @@
 
 • **cve**: *[CveOrList](cveorlist.md)*
 
-*Defined in [git-api/api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L379)*
-
-**`type`** {CveOrList}
+*Defined in [packages/vulnerabilities/git-api/api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L319)*
 
 **`memberof`** CveStatusIn
 
 ___
 
-### `Optional` statusId
+### `Optional` status_id
 
-• **statusId**? : *number*
+• **status_id**? : *number*
 
-*Defined in [git-api/api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L385)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L325)*
 
 Status ID to be set, obtained by GET method.
 
-**`type`** {number}
-
 **`memberof`** CveStatusIn
 
 ___
 
-### `Optional` statusText
+### `Optional` status_text
 
-• **statusText**? : *string | null*
+• **status_text**? : *string | null*
 
-*Defined in [git-api/api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L391)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L331)*
 
 Complementary text to the status.
-
-**`type`** {string}
 
 **`memberof`** CveStatusIn

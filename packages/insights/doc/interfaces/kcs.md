@@ -14,33 +14,29 @@
 
 ### Properties
 
-* [nodeId](kcs.md#nodeid)
-* [ruleUrl](kcs.md#ruleurl)
+* [node_id](kcs.md#node_id)
+* [rule_url](kcs.md#rule_url)
 
 ## Properties
 
-###  nodeId
+###  node_id
 
-• **nodeId**: *string*
+• **node_id**: *string*
 
-*Defined in [api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L489)*
+*Defined in [packages/insights/api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L425)*
 
 KCS solution number
-
-**`type`** {string}
 
 **`memberof`** Kcs
 
 ___
 
-###  ruleUrl
+###  rule_url
 
-• **ruleUrl**: *string*
+• **rule_url**: *string*
 
-*Defined in [api.ts:483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L483)*
+*Defined in [packages/insights/api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L419)*
 
 Rule URL on C.R.C.
-
-**`type`** {string}
 
 **`memberof`** Kcs

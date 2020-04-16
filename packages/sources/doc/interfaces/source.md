@@ -14,39 +14,35 @@
 
 ### Properties
 
-* [availabilityStatus](source.md#optional-availabilitystatus)
-* [createdAt](source.md#optional-createdat)
+* [availability_status](source.md#optional-availability_status)
+* [created_at](source.md#optional-created_at)
 * [id](source.md#optional-id)
 * [imported](source.md#optional-imported)
 * [name](source.md#optional-name)
-* [sourceRef](source.md#optional-sourceref)
-* [sourceTypeId](source.md#optional-sourcetypeid)
+* [source_ref](source.md#optional-source_ref)
+* [source_type_id](source.md#optional-source_type_id)
 * [tenant](source.md#optional-tenant)
 * [uid](source.md#optional-uid)
-* [updatedAt](source.md#optional-updatedat)
+* [updated_at](source.md#optional-updated_at)
 * [version](source.md#optional-version)
 
 ## Properties
 
-### `Optional` availabilityStatus
+### `Optional` availability_status
 
-• **availabilityStatus**? : *string*
+• **availability_status**? : *string*
 
-*Defined in [api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L655)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L589)*
 
 **`memberof`** Source
 
 ___
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L661)*
-
-**`type`** {Date}
+*Defined in [packages/sources/api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L595)*
 
 **`memberof`** Source
 
@@ -56,11 +52,9 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L667)*
+*Defined in [packages/sources/api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L601)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** Source
 
@@ -70,9 +64,7 @@ ___
 
 • **imported**? : *string*
 
-*Defined in [api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L673)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L607)*
 
 **`memberof`** Source
 
@@ -82,35 +74,29 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L679)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L613)*
 
 **`memberof`** Source
 
 ___
 
-### `Optional` sourceRef
+### `Optional` source_ref
 
-• **sourceRef**? : *string*
+• **source_ref**? : *string*
 
-*Defined in [api.ts:685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L685)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L619)*
 
 **`memberof`** Source
 
 ___
 
-### `Optional` sourceTypeId
+### `Optional` source_type_id
 
-• **sourceTypeId**? : *string*
+• **source_type_id**? : *string*
 
-*Defined in [api.ts:691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L691)*
+*Defined in [packages/sources/api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L625)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** Source
 
@@ -120,9 +106,7 @@ ___
 
 • **tenant**? : *string*
 
-*Defined in [api.ts:697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L697)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L631)*
 
 **`memberof`** Source
 
@@ -132,21 +116,17 @@ ___
 
 • **uid**? : *string*
 
-*Defined in [api.ts:703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L703)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L637)*
 
 **`memberof`** Source
 
 ___
 
-### `Optional` updatedAt
+### `Optional` updated_at
 
-• **updatedAt**? : *Date*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L709)*
-
-**`type`** {Date}
+*Defined in [packages/sources/api.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L643)*
 
 **`memberof`** Source
 
@@ -156,8 +136,6 @@ ___
 
 • **version**? : *string*
 
-*Defined in [api.ts:715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L715)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L649)*
 
 **`memberof`** Source

@@ -6,10 +6,6 @@ RequestApi - object-oriented interface
 
 **`export`** 
 
-**`class`** RequestApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -44,15 +40,15 @@ RequestApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L49)*
+Defined in packages/approval/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[RequestApi](requestapi.md)*
 
@@ -64,7 +60,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
+Defined in packages/approval/base.ts:51
 
 ___
 
@@ -74,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
+Defined in packages/approval/base.ts:51
 
 ___
 
@@ -84,15 +80,15 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L49)*
+Defined in packages/approval/base.ts:49
 
 ## Methods
 
 ###  createRequest
 
-▸ **createRequest**(`requestIn`: [RequestIn](../interfaces/requestin.md), `options?`: any): *AxiosPromise‹[Request](../modules/request.md)›*
+▸ **createRequest**(`requestIn`: [RequestIn](../interfaces/requestin.md), `options?`: any): *AxiosPromise‹[Request](../interfaces/request.md)›*
 
-*Defined in [api.ts:1420](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1420)*
+*Defined in [packages/approval/api.ts:1373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1373)*
 
 Add an approval request by given parameters, available to anyone
 
@@ -109,15 +105,15 @@ Name | Type | Description |
 `requestIn` | [RequestIn](../interfaces/requestin.md) | Parameters need to create a request |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Request](../modules/request.md)›*
+**Returns:** *AxiosPromise‹[Request](../interfaces/request.md)›*
 
 ___
 
 ###  listRequests
 
-▸ **listRequests**(`xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
+▸ **listRequests**(`xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
 
-*Defined in [api.ts:1435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1435)*
+*Defined in [packages/approval/api.ts:1388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1388)*
 
 The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
 
@@ -134,7 +130,7 @@ Name | Type |
 `xRhPersona?` | "approval/admin" &#124; "approval/approver" &#124; "approval/requester" |
 `limit?` | number |
 `offset?` | number |
-`filter?` | any |
+`filter?` | object |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
@@ -145,7 +141,7 @@ ___
 
 ▸ **listRequestsByRequest**(`requestId`: string, `xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `options?`: any): *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
 
-*Defined in [api.ts:1448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1448)*
+*Defined in [packages/approval/api.ts:1401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1401)*
 
 Return an array of child requests of a given request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
 
@@ -169,9 +165,9 @@ ___
 
 ###  showRequest
 
-▸ **showRequest**(`id`: string, `options?`: any): *AxiosPromise‹[Request](../modules/request.md)›*
+▸ **showRequest**(`id`: string, `options?`: any): *AxiosPromise‹[Request](../interfaces/request.md)›*
 
-*Defined in [api.ts:1460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1460)*
+*Defined in [packages/approval/api.ts:1413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1413)*
 
 Return an approval request by given id, available to anyone who can access the request
 
@@ -188,15 +184,15 @@ Name | Type | Description |
 `id` | string | Query by id |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Request](../modules/request.md)›*
+**Returns:** *AxiosPromise‹[Request](../interfaces/request.md)›*
 
 ___
 
 ###  showRequestContent
 
-▸ **showRequestContent**(`requestId`: string, `options?`: any): *AxiosPromise‹any›*
+▸ **showRequestContent**(`requestId`: string, `options?`: any): *AxiosPromise‹object›*
 
-*Defined in [api.ts:1472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1472)*
+*Defined in [packages/approval/api.ts:1425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1425)*
 
 Return request content of a given request id, available to all
 
@@ -213,4 +209,4 @@ Name | Type | Description |
 `requestId` | string | Id of request |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹any›*
+**Returns:** *AxiosPromise‹object›*

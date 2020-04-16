@@ -10,6 +10,8 @@
 
 * **Policy**
 
+  ↳ [PolicyIn](policyin.md)
+
 ## Index
 
 ### Properties
@@ -23,9 +25,7 @@
 
 • **description**? : *string*
 
-*Defined in [api.ts:519](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L519)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L486)*
 
 **`memberof`** Policy
 
@@ -35,8 +35,6 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L513)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:480](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L480)*
 
 **`memberof`** Policy

@@ -2,6 +2,10 @@
 
 # Interface: InlineResponse2004
 
+**`export`** 
+
+**`interface`** InlineResponse2004
+
 ## Hierarchy
 
 * **InlineResponse2004**
@@ -16,6 +20,8 @@
 
 ### `Optional` data
 
-• **data**? : *[InlineResponse2004Data](../modules/inlineresponse2004data.md)*
+• **data**? : *[InlineResponse2004Data](inlineresponse2004data.md)*
 
-*Defined in [api.ts:742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L742)*
+*Defined in [packages/hooks/api.ts:647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L647)*
+
+**`memberof`** InlineResponse2004

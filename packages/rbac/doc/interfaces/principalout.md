@@ -15,9 +15,9 @@
 ### Properties
 
 * [email](principalout.md#email)
-* [firstName](principalout.md#optional-firstname)
-* [isActive](principalout.md#optional-isactive)
-* [lastName](principalout.md#optional-lastname)
+* [first_name](principalout.md#optional-first_name)
+* [is_active](principalout.md#optional-is_active)
+* [last_name](principalout.md#optional-last_name)
 * [username](principalout.md#username)
 * [uuid](principalout.md#uuid)
 
@@ -27,45 +27,37 @@
 
 • **email**: *string*
 
-*Defined in [api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L699)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L687)*
 
 **`memberof`** PrincipalOut
 
 ___
 
-### `Optional` firstName
+### `Optional` first_name
 
-• **firstName**? : *string*
+• **first_name**? : *string*
 
-*Defined in [api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L705)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L693)*
 
 **`memberof`** PrincipalOut
 
 ___
 
-### `Optional` isActive
+### `Optional` is_active
 
-• **isActive**? : *boolean*
+• **is_active**? : *boolean*
 
-*Defined in [api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L717)*
-
-**`type`** {boolean}
+*Defined in [packages/rbac/api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L705)*
 
 **`memberof`** PrincipalOut
 
 ___
 
-### `Optional` lastName
+### `Optional` last_name
 
-• **lastName**? : *string*
+• **last_name**? : *string*
 
-*Defined in [api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L711)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L699)*
 
 **`memberof`** PrincipalOut
 
@@ -75,9 +67,7 @@ ___
 
 • **username**: *string*
 
-*Defined in [api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L693)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L681)*
 
 **`memberof`** PrincipalOut
 
@@ -87,8 +77,6 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L723)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L711)*
 
 **`memberof`** PrincipalOut

@@ -22,11 +22,9 @@
 
 ### `Optional` data
 
-• **data**? : *Array‹[Order](../modules/order.md)›*
+• **data**? : *Array‹[Order](order.md)›*
 
-*Defined in [api.ts:605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L605)*
-
-**`type`** {Array<Order>}
+*Defined in [packages/catalog/api.ts:526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L526)*
 
 **`memberof`** OrdersCollection
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L599)*
-
-**`type`** {CollectionLinks}
+*Defined in [packages/catalog/api.ts:520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L520)*
 
 **`memberof`** OrdersCollection
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L593)*
-
-**`type`** {CollectionMetadata}
+*Defined in [packages/catalog/api.ts:514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L514)*
 
 **`memberof`** OrdersCollection

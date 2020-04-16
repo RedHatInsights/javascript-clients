@@ -33,7 +33,7 @@
 
 Name | Type | Default |
 ------ | ------ | ------ |
-`param` | [ConfigurationParameters](../interfaces/configurationparameters.md) |  {} |
+`param` | [ConfigurationParameters](../interfaces/configurationparameters.md) | {} |
 
 **Returns:** *[Configuration](configuration.md)*
 
@@ -77,8 +77,6 @@ ___
 
 base options for axios calls
 
-**`type`** {any}
-
 **`memberof`** Configuration
 
 ___
@@ -90,8 +88,6 @@ ___
 *Defined in [configuration.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/configuration.ts#L58)*
 
 override base path
-
-**`type`** {string}
 
 **`memberof`** Configuration
 
@@ -105,8 +101,6 @@ ___
 
 parameter for basic security
 
-**`type`** {string}
-
 **`memberof`** Configuration
 
 ___
@@ -118,7 +112,5 @@ ___
 *Defined in [configuration.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/configuration.ts#L37)*
 
 parameter for basic security
-
-**`type`** {string}
 
 **`memberof`** Configuration

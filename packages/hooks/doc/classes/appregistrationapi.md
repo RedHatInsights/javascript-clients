@@ -2,6 +2,10 @@
 
 # Class: AppRegistrationApi
 
+AppRegistrationApi - object-oriented interface
+
+**`export`** 
+
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -32,15 +36,15 @@
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L49)*
+Defined in packages/hooks/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[AppRegistrationApi](appregistrationapi.md)*
 
@@ -52,7 +56,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
+Defined in packages/hooks/base.ts:51
 
 ___
 
@@ -62,7 +66,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
+Defined in packages/hooks/base.ts:51
 
 ___
 
@@ -72,7 +76,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L49)*
+Defined in packages/hooks/base.ts:49
 
 ## Methods
 
@@ -80,7 +84,13 @@ ___
 
 ▸ **appRegistrationCreate**(`inlineObject`: [InlineObject](../interfaces/inlineobject.md), `options?`: any): *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)›*
 
-*Defined in [api.ts:1096](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1096)*
+*Defined in [packages/hooks/api.ts:983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L983)*
+
+Register an application
+
+**`throws`** {RequiredError}
+
+**`memberof`** AppRegistrationApi
 
 **Parameters:**
 

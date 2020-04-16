@@ -7,6 +7,7 @@
 ### Modules
 
 * [Markup](modules/markup.md)
+* [Rate](modules/rate.md)
 * [ReportAzureOrdering](modules/reportazureordering.md)
 * [ReportCostsOpenShiftOrdering](modules/reportcostsopenshiftordering.md)
 * [ReportInventoryOpenShiftOrdering](modules/reportinventoryopenshiftordering.md)
@@ -30,8 +31,8 @@
 * [CostModelsApi](classes/costmodelsapi.md)
 * [MetricsApi](classes/metricsapi.md)
 * [OpenShiftReportsApi](classes/openshiftreportsapi.md)
-* [ProvidersApi](classes/providersapi.md)
 * [RequiredError](classes/requirederror.md)
+* [SettingsApi](classes/settingsapi.md)
 * [SourcesApi](classes/sourcesapi.md)
 * [StatusApi](classes/statusapi.md)
 * [TagsApi](classes/tagsapi.md)
@@ -43,24 +44,16 @@
 * [CostModelOut](interfaces/costmodelout.md)
 * [CostModelPagination](interfaces/costmodelpagination.md)
 * [CostModelResp](interfaces/costmodelresp.md)
-* [CostModelRespProviders](interfaces/costmodelrespproviders.md)
+* [CostModelRespSources](interfaces/costmodelrespsources.md)
 * [Customer](interfaces/customer.md)
 * [CustomerOut](interfaces/customerout.md)
+* [DependencyError](interfaces/dependencyerror.md)
 * [ListPagination](interfaces/listpagination.md)
 * [Metrics](interfaces/metrics.md)
 * [MetricsOut](interfaces/metricsout.md)
 * [ModelError](interfaces/modelerror.md)
 * [PaginationLinks](interfaces/paginationlinks.md)
 * [PaginationMeta](interfaces/paginationmeta.md)
-* [Provider](interfaces/provider.md)
-* [ProviderAuthenticationIn](interfaces/providerauthenticationin.md)
-* [ProviderAuthenticationOut](interfaces/providerauthenticationout.md)
-* [ProviderBillingSourceIn](interfaces/providerbillingsourcein.md)
-* [ProviderBillingSourceOut](interfaces/providerbillingsourceout.md)
-* [ProviderIn](interfaces/providerin.md)
-* [ProviderOut](interfaces/providerout.md)
-* [ProviderPagination](interfaces/providerpagination.md)
-* [Rate](interfaces/rate.md)
 * [Report](interfaces/report.md)
 * [ReportAzureFilter](interfaces/reportazurefilter.md)
 * [ReportAzureGrouping](interfaces/reportazuregrouping.md)
@@ -74,6 +67,8 @@
 * [ReportOpenShiftAWSGrouping](interfaces/reportopenshiftawsgrouping.md)
 * [ReportOpenShiftAWSInstanceInventory](interfaces/reportopenshiftawsinstanceinventory.md)
 * [ReportOpenShiftAWSStorageInventory](interfaces/reportopenshiftawsstorageinventory.md)
+* [ReportOpenShiftAllInstanceInventory](interfaces/reportopenshiftallinstanceinventory.md)
+* [ReportOpenShiftAllStorageInventory](interfaces/reportopenshiftallstorageinventory.md)
 * [ReportOpenShiftAzureFilter](interfaces/reportopenshiftazurefilter.md)
 * [ReportOpenShiftAzureGrouping](interfaces/reportopenshiftazuregrouping.md)
 * [ReportOpenShiftAzureInstanceInventory](interfaces/reportopenshiftazureinstanceinventory.md)
@@ -86,6 +81,8 @@
 * [ReportPaginationMeta](interfaces/reportpaginationmeta.md)
 * [ReportStorageInventory](interfaces/reportstorageinventory.md)
 * [RequestArgs](interfaces/requestargs.md)
+* [SettingIn](interfaces/settingin.md)
+* [SettingOut](interfaces/settingout.md)
 * [Source](interfaces/source.md)
 * [SourceIn](interfaces/sourcein.md)
 * [SourceOut](interfaces/sourceout.md)
@@ -117,9 +114,9 @@
 * [OpenShiftReportsApiAxiosParamCreator](globals.md#const-openshiftreportsapiaxiosparamcreator)
 * [OpenShiftReportsApiFactory](globals.md#const-openshiftreportsapifactory)
 * [OpenShiftReportsApiFp](globals.md#const-openshiftreportsapifp)
-* [ProvidersApiAxiosParamCreator](globals.md#const-providersapiaxiosparamcreator)
-* [ProvidersApiFactory](globals.md#const-providersapifactory)
-* [ProvidersApiFp](globals.md#const-providersapifp)
+* [SettingsApiAxiosParamCreator](globals.md#const-settingsapiaxiosparamcreator)
+* [SettingsApiFactory](globals.md#const-settingsapifactory)
+* [SettingsApiFp](globals.md#const-settingsapifp)
 * [SourcesApiAxiosParamCreator](globals.md#const-sourcesapiaxiosparamcreator)
 * [SourcesApiFactory](globals.md#const-sourcesapifactory)
 * [SourcesApiFp](globals.md#const-sourcesapifp)
@@ -148,7 +145,7 @@
 
 ▸ **AWSReportsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2865](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2865)*
+*Defined in [api.ts:2958](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2958)*
 
 AWSReportsApi - axios parameter creator
 
@@ -172,7 +169,7 @@ ___
 
 ▸ **AWSReportsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3135)*
+*Defined in [api.ts:3228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3228)*
 
 AWSReportsApi - factory interface
 
@@ -198,7 +195,7 @@ ___
 
 ▸ **AWSReportsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3068)*
+*Defined in [api.ts:3161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3161)*
 
 AWSReportsApi - functional programming interface
 
@@ -228,7 +225,7 @@ ___
 
 ▸ **AzureReportsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3251)*
+*Defined in [api.ts:3344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3344)*
 
 AzureReportsApi - axios parameter creator
 
@@ -252,7 +249,7 @@ ___
 
 ▸ **AzureReportsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3515)*
+*Defined in [api.ts:3608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3608)*
 
 AzureReportsApi - factory interface
 
@@ -278,7 +275,7 @@ ___
 
 ▸ **AzureReportsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3449)*
+*Defined in [api.ts:3542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3542)*
 
 AzureReportsApi - functional programming interface
 
@@ -308,7 +305,7 @@ ___
 
 ▸ **CostModelsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3629)*
+*Defined in [api.ts:3722](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3722)*
 
 CostModelsApi - axios parameter creator
 
@@ -326,7 +323,7 @@ Name | Type |
 
 * **getCostModel**(`costModelUuid`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listCostModels**(`offset?`: number, `limit?`: number, `providerUuid?`: string, `sourceType?`: string, `name?`: string, `description?`: string, `ordering?`: "name" | "-name" | "source_type" | "-source_type" | "updated_timestamp" | "-updated_timestamp", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listCostModels**(`offset?`: number, `limit?`: number, `sourceUuid?`: string, `sourceType?`: string, `name?`: string, `description?`: string, `ordering?`: "name" | "-name" | "source_type" | "-source_type" | "updated_timestamp" | "-updated_timestamp", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **updateCostModel**(`costModelUuid`: string, `costModel`: [CostModel](interfaces/costmodel.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -336,7 +333,7 @@ ___
 
 ▸ **CostModelsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3954)*
+*Defined in [api.ts:4053](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4053)*
 
 CostModelsApi - factory interface
 
@@ -356,7 +353,7 @@ Name | Type |
 
 * **getCostModel**(`costModelUuid`: string, `options?`: any): *AxiosPromise‹[CostModelOut](interfaces/costmodelout.md)›*
 
-* **listCostModels**(`offset?`: number, `limit?`: number, `providerUuid?`: string, `sourceType?`: string, `name?`: string, `description?`: string, `ordering?`: "name" | "-name" | "source_type" | "-source_type" | "updated_timestamp" | "-updated_timestamp", `options?`: any): *AxiosPromise‹[CostModelPagination](interfaces/costmodelpagination.md)›*
+* **listCostModels**(`offset?`: number, `limit?`: number, `sourceUuid?`: string, `sourceType?`: string, `name?`: string, `description?`: string, `ordering?`: "name" | "-name" | "source_type" | "-source_type" | "updated_timestamp" | "-updated_timestamp", `options?`: any): *AxiosPromise‹[CostModelPagination](interfaces/costmodelpagination.md)›*
 
 * **updateCostModel**(`costModelUuid`: string, `costModel`: [CostModel](interfaces/costmodel.md), `options?`: any): *AxiosPromise‹[CostModelOut](interfaces/costmodelout.md)›*
 
@@ -366,7 +363,7 @@ ___
 
 ▸ **CostModelsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3868)*
+*Defined in [api.ts:3967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L3967)*
 
 CostModelsApi - functional programming interface
 
@@ -390,7 +387,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[CostModelOut](interfaces/costmodelout.md)›*
 
-* **listCostModels**(`offset?`: number, `limit?`: number, `providerUuid?`: string, `sourceType?`: string, `name?`: string, `description?`: string, `ordering?`: "name" | "-name" | "source_type" | "-source_type" | "updated_timestamp" | "-updated_timestamp", `options?`: any): *function*
+* **listCostModels**(`offset?`: number, `limit?`: number, `sourceUuid?`: string, `sourceType?`: string, `name?`: string, `description?`: string, `ordering?`: "name" | "-name" | "source_type" | "-source_type" | "updated_timestamp" | "-updated_timestamp", `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[CostModelPagination](interfaces/costmodelpagination.md)›*
 
@@ -404,7 +401,7 @@ ___
 
 ▸ **MetricsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4096](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4096)*
+*Defined in [api.ts:4195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4195)*
 
 MetricsApi - axios parameter creator
 
@@ -424,7 +421,7 @@ ___
 
 ▸ **MetricsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:4154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4154)*
+*Defined in [api.ts:4259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4259)*
 
 MetricsApi - factory interface
 
@@ -446,7 +443,7 @@ ___
 
 ▸ **MetricsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4132)*
+*Defined in [api.ts:4237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4237)*
 
 MetricsApi - functional programming interface
 
@@ -468,7 +465,7 @@ ___
 
 ▸ **OpenShiftReportsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4192)*
+*Defined in [api.ts:4297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4297)*
 
 OpenShiftReportsApi - axios parameter creator
 
@@ -485,6 +482,12 @@ Name | Type |
 * **getOpenShiftAWSInventoryInstanceReport**(`filter?`: any, `groupBy?`: any, `orderBy?`: any, `units?`: string, `offset?`: number, `limit?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **getOpenShiftAWSInventoryStorageReport**(`filter?`: any, `groupBy?`: any, `orderBy?`: any, `units?`: string, `offset?`: number, `limit?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+
+* **getOpenShiftAllCostReports**(`delta?`: string, `filter?`: any, `groupBy?`: any, `orderBy?`: any, `offset?`: number, `limit?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+
+* **getOpenShiftAllInventoryInstanceReport**(`filter?`: any, `groupBy?`: any, `orderBy?`: any, `units?`: string, `offset?`: number, `limit?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+
+* **getOpenShiftAllInventoryStorageReport**(`filter?`: any, `groupBy?`: any, `orderBy?`: any, `units?`: string, `offset?`: number, `limit?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **getOpenShiftAzureCostReports**(`delta?`: string, `filter?`: any, `groupBy?`: any, `orderBy?`: any, `offset?`: number, `limit?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -506,7 +509,7 @@ ___
 
 ▸ **OpenShiftReportsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:5012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5012)*
+*Defined in [api.ts:5363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5363)*
 
 OpenShiftReportsApi - factory interface
 
@@ -525,6 +528,12 @@ Name | Type |
 * **getOpenShiftAWSInventoryInstanceReport**(`filter?`: any, `groupBy?`: any, `orderBy?`: any, `units?`: string, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[ReportOpenShiftAWSInstanceInventory](interfaces/reportopenshiftawsinstanceinventory.md)›*
 
 * **getOpenShiftAWSInventoryStorageReport**(`filter?`: any, `groupBy?`: any, `orderBy?`: any, `units?`: string, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[ReportOpenShiftAWSStorageInventory](interfaces/reportopenshiftawsstorageinventory.md)›*
+
+* **getOpenShiftAllCostReports**(`delta?`: string, `filter?`: any, `groupBy?`: any, `orderBy?`: any, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[ReportCosts](interfaces/reportcosts.md)›*
+
+* **getOpenShiftAllInventoryInstanceReport**(`filter?`: any, `groupBy?`: any, `orderBy?`: any, `units?`: string, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[ReportOpenShiftAllInstanceInventory](interfaces/reportopenshiftallinstanceinventory.md)›*
+
+* **getOpenShiftAllInventoryStorageReport**(`filter?`: any, `groupBy?`: any, `orderBy?`: any, `units?`: string, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[ReportOpenShiftAllStorageInventory](interfaces/reportopenshiftallstorageinventory.md)›*
 
 * **getOpenShiftAzureCostReports**(`delta?`: string, `filter?`: any, `groupBy?`: any, `orderBy?`: any, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[ReportCosts](interfaces/reportcosts.md)›*
 
@@ -546,7 +555,7 @@ ___
 
 ▸ **OpenShiftReportsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4816)*
+*Defined in [api.ts:5110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5110)*
 
 OpenShiftReportsApi - functional programming interface
 
@@ -569,6 +578,18 @@ Name | Type |
 * **getOpenShiftAWSInventoryStorageReport**(`filter?`: any, `groupBy?`: any, `orderBy?`: any, `units?`: string, `offset?`: number, `limit?`: number, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ReportOpenShiftAWSStorageInventory](interfaces/reportopenshiftawsstorageinventory.md)›*
+
+* **getOpenShiftAllCostReports**(`delta?`: string, `filter?`: any, `groupBy?`: any, `orderBy?`: any, `offset?`: number, `limit?`: number, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ReportCosts](interfaces/reportcosts.md)›*
+
+* **getOpenShiftAllInventoryInstanceReport**(`filter?`: any, `groupBy?`: any, `orderBy?`: any, `units?`: string, `offset?`: number, `limit?`: number, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ReportOpenShiftAllInstanceInventory](interfaces/reportopenshiftallinstanceinventory.md)›*
+
+* **getOpenShiftAllInventoryStorageReport**(`filter?`: any, `groupBy?`: any, `orderBy?`: any, `units?`: string, `offset?`: number, `limit?`: number, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ReportOpenShiftAllStorageInventory](interfaces/reportopenshiftallstorageinventory.md)›*
 
 * **getOpenShiftAzureCostReports**(`delta?`: string, `filter?`: any, `groupBy?`: any, `orderBy?`: any, `offset?`: number, `limit?`: number, `options?`: any): *function*
 
@@ -600,13 +621,13 @@ Name | Type |
 
 ___
 
-### `Const` ProvidersApiAxiosParamCreator
+### `Const` SettingsApiAxiosParamCreator
 
-▸ **ProvidersApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
+▸ **SettingsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5344)*
+*Defined in [api.ts:5791](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5791)*
 
-ProvidersApi - axios parameter creator
+SettingsApi - axios parameter creator
 
 **Parameters:**
 
@@ -616,25 +637,19 @@ Name | Type |
 
 **Returns:** *object*
 
-* **createProvider**(`providerIn`: [ProviderIn](interfaces/providerin.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **assignSettings**(`settingIn`: [SettingIn](interfaces/settingin.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **deleteProvider**(`uuid`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
-
-* **getProvider**(`uuid`: string, `stats?`: "true" | "false", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
-
-* **listProviders**(`type?`: string, `name?`: string, `stats?`: "true" | "false", `offset?`: number, `limit?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
-
-* **updateProvider**(`uuid`: string, `providerIn`: [ProviderIn](interfaces/providerin.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getSettings**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 ___
 
-### `Const` ProvidersApiFactory
+### `Const` SettingsApiFactory
 
-▸ **ProvidersApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
+▸ **SettingsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:5669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5669)*
+*Defined in [api.ts:5911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5911)*
 
-ProvidersApi - factory interface
+SettingsApi - factory interface
 
 **Parameters:**
 
@@ -646,25 +661,19 @@ Name | Type |
 
 **Returns:** *object*
 
-* **createProvider**(`providerIn`: [ProviderIn](interfaces/providerin.md), `options?`: any): *AxiosPromise‹[ProviderOut](interfaces/providerout.md)›*
+* **assignSettings**(`settingIn`: [SettingIn](interfaces/settingin.md), `options?`: any): *AxiosPromise‹Response›*
 
-* **deleteProvider**(`uuid`: string, `options?`: any): *AxiosPromise‹Response›*
-
-* **getProvider**(`uuid`: string, `stats?`: "true" | "false", `options?`: any): *AxiosPromise‹[ProviderOut](interfaces/providerout.md)›*
-
-* **listProviders**(`type?`: string, `name?`: string, `stats?`: "true" | "false", `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[ProviderPagination](interfaces/providerpagination.md)›*
-
-* **updateProvider**(`uuid`: string, `providerIn`: [ProviderIn](interfaces/providerin.md), `options?`: any): *AxiosPromise‹[ProviderOut](interfaces/providerout.md)›*
+* **getSettings**(`options?`: any): *AxiosPromise‹[SettingOut](interfaces/settingout.md)[]›*
 
 ___
 
-### `Const` ProvidersApiFp
+### `Const` SettingsApiFp
 
-▸ **ProvidersApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
+▸ **SettingsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5584)*
+*Defined in [api.ts:5875](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5875)*
 
-ProvidersApi - functional programming interface
+SettingsApi - functional programming interface
 
 **Parameters:**
 
@@ -674,25 +683,13 @@ Name | Type |
 
 **Returns:** *object*
 
-* **createProvider**(`providerIn`: [ProviderIn](interfaces/providerin.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ProviderOut](interfaces/providerout.md)›*
-
-* **deleteProvider**(`uuid`: string, `options?`: any): *function*
+* **assignSettings**(`settingIn`: [SettingIn](interfaces/settingin.md), `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
 
-* **getProvider**(`uuid`: string, `stats?`: "true" | "false", `options?`: any): *function*
+* **getSettings**(`options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ProviderOut](interfaces/providerout.md)›*
-
-* **listProviders**(`type?`: string, `name?`: string, `stats?`: "true" | "false", `offset?`: number, `limit?`: number, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ProviderPagination](interfaces/providerpagination.md)›*
-
-* **updateProvider**(`uuid`: string, `providerIn`: [ProviderIn](interfaces/providerin.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ProviderOut](interfaces/providerout.md)›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[SettingOut](interfaces/settingout.md)››*
 
 ___
 
@@ -700,7 +697,7 @@ ___
 
 ▸ **SourcesApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5809)*
+*Defined in [api.ts:5971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5971)*
 
 SourcesApi - axios parameter creator
 
@@ -726,7 +723,7 @@ ___
 
 ▸ **SourcesApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:6042](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6042)*
+*Defined in [api.ts:6228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6228)*
 
 SourcesApi - factory interface
 
@@ -754,7 +751,7 @@ ___
 
 ▸ **SourcesApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5973](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L5973)*
+*Defined in [api.ts:6159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6159)*
 
 SourcesApi - functional programming interface
 
@@ -788,7 +785,7 @@ ___
 
 ▸ **StatusApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:6156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6156)*
+*Defined in [api.ts:6342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6342)*
 
 StatusApi - axios parameter creator
 
@@ -808,7 +805,7 @@ ___
 
 ▸ **StatusApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:6214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6214)*
+*Defined in [api.ts:6400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6400)*
 
 StatusApi - factory interface
 
@@ -830,7 +827,7 @@ ___
 
 ▸ **StatusApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:6192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6192)*
+*Defined in [api.ts:6378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6378)*
 
 StatusApi - functional programming interface
 
@@ -852,7 +849,7 @@ ___
 
 ▸ **TagsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:6252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6252)*
+*Defined in [api.ts:6438](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6438)*
 
 TagsApi - axios parameter creator
 
@@ -870,6 +867,8 @@ Name | Type |
 
 * **getOpenShiftAWSTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
+* **getOpenShiftAllTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+
 * **getOpenShiftAzureTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **getOpenShiftTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
@@ -880,7 +879,7 @@ ___
 
 ▸ **TagsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:6620](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6620)*
+*Defined in [api.ts:6876](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6876)*
 
 TagsApi - factory interface
 
@@ -900,6 +899,8 @@ Name | Type |
 
 * **getOpenShiftAWSTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[Tags](interfaces/tags.md)›*
 
+* **getOpenShiftAllTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[Tags](interfaces/tags.md)›*
+
 * **getOpenShiftAzureTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[Tags](interfaces/tags.md)›*
 
 * **getOpenShiftTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[Tags](interfaces/tags.md)›*
@@ -910,7 +911,7 @@ ___
 
 ▸ **TagsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:6526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6526)*
+*Defined in [api.ts:6765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L6765)*
 
 TagsApi - functional programming interface
 
@@ -931,6 +932,10 @@ Name | Type |
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Tags](interfaces/tags.md)›*
 
 * **getOpenShiftAWSTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Tags](interfaces/tags.md)›*
+
+* **getOpenShiftAllTagData**(`filter?`: any, `keyOnly?`: boolean, `offset?`: number, `limit?`: number, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Tags](interfaces/tags.md)›*
 

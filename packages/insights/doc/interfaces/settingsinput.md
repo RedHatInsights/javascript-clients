@@ -14,29 +14,25 @@
 
 ### Properties
 
-* [isSubscribed](settingsinput.md#issubscribed)
-* [showSatelliteHosts](settingsinput.md#showsatellitehosts)
+* [is_subscribed](settingsinput.md#is_subscribed)
+* [show_satellite_hosts](settingsinput.md#show_satellite_hosts)
 
 ## Properties
 
-###  isSubscribed
+###  is_subscribed
 
-• **isSubscribed**: *boolean*
+• **is_subscribed**: *boolean*
 
-*Defined in [api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1107)*
-
-**`type`** {boolean}
+*Defined in [packages/insights/api.ts:1034](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1034)*
 
 **`memberof`** SettingsInput
 
 ___
 
-###  showSatelliteHosts
+###  show_satellite_hosts
 
-• **showSatelliteHosts**: *boolean*
+• **show_satellite_hosts**: *boolean*
 
-*Defined in [api.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1101)*
-
-**`type`** {boolean}
+*Defined in [packages/insights/api.ts:1028](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1028)*
 
 **`memberof`** SettingsInput

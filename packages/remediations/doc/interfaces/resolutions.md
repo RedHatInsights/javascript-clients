@@ -15,7 +15,7 @@
 ### Properties
 
 * [id](resolutions.md#id)
-* [resolutionRisk](resolutions.md#resolutionrisk)
+* [resolution_risk](resolutions.md#resolution_risk)
 * [resolutions](resolutions.md#resolutions)
 
 ## Properties
@@ -24,21 +24,17 @@
 
 • **id**: *string*
 
-*Defined in [api.ts:1027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1027)*
-
-**`type`** {string}
+*Defined in [api.ts:1036](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1036)*
 
 **`memberof`** Resolutions
 
 ___
 
-###  resolutionRisk
+###  resolution_risk
 
-• **resolutionRisk**: *[ResolutionRisk](../enums/resolutionrisk.md)*
+• **resolution_risk**: *[ResolutionRisk](../enums/resolutionrisk.md)*
 
-*Defined in [api.ts:1033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1033)*
-
-**`type`** {ResolutionRisk}
+*Defined in [api.ts:1042](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1042)*
 
 **`memberof`** Resolutions
 
@@ -48,8 +44,6 @@ ___
 
 • **resolutions**: *Array‹[ResolutionsResolutions](resolutionsresolutions.md)›*
 
-*Defined in [api.ts:1039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1039)*
-
-**`type`** {Array<ResolutionsResolutions>}
+*Defined in [api.ts:1048](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1048)*
 
 **`memberof`** Resolutions

@@ -25,11 +25,9 @@
 
 ###  created
 
-• **created**: *Date*
+• **created**: *string*
 
-*Defined in [api.ts:343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L343)*
-
-**`type`** {Date}
+*Defined in [packages/rbac/api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L285)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -39,9 +37,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L331)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L273)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -49,11 +45,9 @@ ___
 
 ###  modified
 
-• **modified**: *Date*
+• **modified**: *string*
 
-*Defined in [api.ts:349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L349)*
-
-**`type`** {Date}
+*Defined in [packages/rbac/api.ts:291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L291)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -63,9 +57,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L325)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L267)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -75,9 +67,7 @@ ___
 
 • **principals**: *Array‹[Principal](principal.md)›*
 
-*Defined in [api.ts:355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L355)*
-
-**`type`** {Array<Principal>}
+*Defined in [packages/rbac/api.ts:297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L297)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -87,8 +77,6 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [api.ts:337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L337)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L279)*
 
 **`memberof`** GroupWithPrincipals

@@ -24,9 +24,7 @@
 
 • **data**? : *Array‹[Availability](availability.md)›*
 
-*Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L109)*
-
-**`type`** {Array<Availability>}
+*Defined in [packages/topological-inventory/api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L58)*
 
 **`memberof`** AvailabilitiesCollection
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L103)*
-
-**`type`** {CollectionLinks}
+*Defined in [packages/topological-inventory/api.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L52)*
 
 **`memberof`** AvailabilitiesCollection
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L97)*
-
-**`type`** {CollectionMetadata}
+*Defined in [packages/topological-inventory/api.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L46)*
 
 **`memberof`** AvailabilitiesCollection

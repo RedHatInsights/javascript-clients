@@ -14,50 +14,44 @@
 
 ### Properties
 
-* [createdAt](hostack.md#optional-createdat)
-* [createdBy](hostack.md#optional-createdby)
-* [displayName](hostack.md#optional-displayname)
+* [created_at](hostack.md#optional-created_at)
+* [created_by](hostack.md#optional-created_by)
+* [display_name](hostack.md#optional-display_name)
 * [id](hostack.md#optional-id)
 * [justification](hostack.md#optional-justification)
 * [rule](hostack.md#rule)
-* [systemUuid](hostack.md#systemuuid)
-* [updatedAt](hostack.md#optional-updatedat)
+* [system_uuid](hostack.md#system_uuid)
+* [updated_at](hostack.md#optional-updated_at)
 
 ## Properties
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L199)*
-
-**`type`** {Date}
+*Defined in [packages/insights/api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L145)*
 
 **`memberof`** HostAck
 
 ___
 
-### `Optional` createdBy
+### `Optional` created_by
 
-• **createdBy**? : *string*
+• **created_by**? : *string*
 
-*Defined in [api.ts:193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L193)*
+*Defined in [packages/insights/api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L139)*
 
 The username that created this acknowledgement
 
-**`type`** {string}
-
 **`memberof`** HostAck
 
 ___
 
-### `Optional` displayName
+### `Optional` display_name
 
-• **displayName**? : *string*
+• **display_name**? : *string*
 
-*Defined in [api.ts:211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L211)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L157)*
 
 **`memberof`** HostAck
 
@@ -67,9 +61,7 @@ ___
 
 • **id**? : *number*
 
-*Defined in [api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L169)*
-
-**`type`** {number}
+*Defined in [packages/insights/api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L115)*
 
 **`memberof`** HostAck
 
@@ -79,9 +71,7 @@ ___
 
 • **justification**? : *string*
 
-*Defined in [api.ts:187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L187)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L133)*
 
 **`memberof`** HostAck
 
@@ -91,32 +81,26 @@ ___
 
 • **rule**: *string*
 
-*Defined in [api.ts:175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L175)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L121)*
 
 **`memberof`** HostAck
 
 ___
 
-###  systemUuid
+###  system_uuid
 
-• **systemUuid**: *string*
+• **system_uuid**: *string*
 
-*Defined in [api.ts:181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L181)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L127)*
 
 **`memberof`** HostAck
 
 ___
 
-### `Optional` updatedAt
+### `Optional` updated_at
 
-• **updatedAt**? : *Date*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L205)*
-
-**`type`** {Date}
+*Defined in [packages/insights/api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L151)*
 
 **`memberof`** HostAck

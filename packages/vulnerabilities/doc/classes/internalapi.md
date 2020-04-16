@@ -6,10 +6,6 @@ InternalApi - object-oriented interface
 
 **`export`** 
 
-**`class`** InternalApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -43,15 +39,15 @@ InternalApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L49)*
+Defined in packages/vulnerabilities/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[InternalApi](internalapi.md)*
 
@@ -63,7 +59,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L51)*
+Defined in packages/vulnerabilities/base.ts:51
 
 ___
 
@@ -73,7 +69,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L51)*
+Defined in packages/vulnerabilities/base.ts:51
 
 ___
 
@@ -83,15 +79,15 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L49)*
+Defined in packages/vulnerabilities/base.ts:49
 
 ## Methods
 
 ###  refreshAccount
 
-▸ **refreshAccount**(`accountId`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **refreshAccount**(`accountId`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:3489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3489)*
+*Defined in [packages/vulnerabilities/api.ts:3381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3381)*
 
 Refresh cached counts for given account ID. Admin interface, available only to internal users.
 
@@ -108,15 +104,15 @@ Name | Type | Description |
 `accountId` | string | Account ID of user. |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  refreshAccountCve
 
-▸ **refreshAccountCve**(`accountId`: string, `cveId`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **refreshAccountCve**(`accountId`: string, `cveId`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:3502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3502)*
+*Defined in [packages/vulnerabilities/api.ts:3394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3394)*
 
 Refresh cached counts for given account ID and CVE. Admin interface, available only to internal users.
 
@@ -134,15 +130,15 @@ Name | Type | Description |
 `cveId` | string | CVE id. |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  refreshCve
 
-▸ **refreshCve**(`cveId`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **refreshCve**(`cveId`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:3514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3514)*
+*Defined in [packages/vulnerabilities/api.ts:3406](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3406)*
 
 Refresh cached counts for given CVE. Admin interface, available only to internal users.
 
@@ -159,15 +155,15 @@ Name | Type | Description |
 `cveId` | string | CVE id. |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  refreshSystem
 
-▸ **refreshSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **refreshSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:3526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3526)*
+*Defined in [packages/vulnerabilities/api.ts:3418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3418)*
 
 Refresh cached counts for given inventory ID. Admin interface, available only to internal users.
 
@@ -184,4 +180,4 @@ Name | Type | Description |
 `inventoryId` | string | Inventory ID. |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*

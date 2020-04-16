@@ -2,6 +2,10 @@
 
 # Interface: AppAttributes
 
+**`export`** 
+
+**`interface`** AppAttributes
+
 ## Hierarchy
 
 * **AppAttributes**
@@ -19,7 +23,11 @@
 
 • **name**? : *string*
 
-*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L129)*
+*Defined in [packages/hooks/api.ts:73](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L73)*
+
+Name of the application, used to identify the sender in messages
+
+**`memberof`** AppAttributes
 
 ___
 
@@ -27,4 +35,8 @@ ___
 
 • **title**? : *string*
 
-*Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L135)*
+*Defined in [packages/hooks/api.ts:79](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L79)*
+
+Title of the application, shown to the user when configuring filters
+
+**`memberof`** AppAttributes

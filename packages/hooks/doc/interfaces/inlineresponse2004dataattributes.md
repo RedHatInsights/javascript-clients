@@ -2,6 +2,10 @@
 
 # Interface: InlineResponse2004DataAttributes
 
+**`export`** 
+
+**`interface`** InlineResponse2004DataAttributes
+
 ## Hierarchy
 
 * **InlineResponse2004DataAttributes**
@@ -18,4 +22,6 @@
 
 • **enabled**? : *boolean*
 
-*Defined in [api.ts:802](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L802)*
+*Defined in [packages/hooks/api.ts:700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L700)*
+
+**`memberof`** InlineResponse2004DataAttributes

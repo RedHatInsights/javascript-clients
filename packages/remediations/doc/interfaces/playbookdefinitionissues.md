@@ -24,9 +24,7 @@
 
 • **id**: *string*
 
-*Defined in [api.ts:183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L183)*
-
-**`type`** {string}
+*Defined in [api.ts:165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L165)*
 
 **`memberof`** PlaybookDefinitionIssues
 
@@ -36,9 +34,7 @@ ___
 
 • **resolution**? : *string*
 
-*Defined in [api.ts:195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L195)*
-
-**`type`** {string}
+*Defined in [api.ts:177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L177)*
 
 **`memberof`** PlaybookDefinitionIssues
 
@@ -48,8 +44,6 @@ ___
 
 • **systems**: *Array‹string›*
 
-*Defined in [api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L189)*
-
-**`type`** {Array<string>}
+*Defined in [api.ts:171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L171)*
 
 **`memberof`** PlaybookDefinitionIssues

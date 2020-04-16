@@ -14,36 +14,32 @@
 
 ### Properties
 
-* [createdAt](sourcetype.md#optional-createdat)
-* [iconUrl](sourcetype.md#optional-iconurl)
+* [created_at](sourcetype.md#optional-created_at)
+* [icon_url](sourcetype.md#optional-icon_url)
 * [id](sourcetype.md#optional-id)
 * [name](sourcetype.md#optional-name)
-* [productName](sourcetype.md#optional-productname)
+* [product_name](sourcetype.md#optional-product_name)
 * [schema](sourcetype.md#optional-schema)
-* [updatedAt](sourcetype.md#optional-updatedat)
+* [updated_at](sourcetype.md#optional-updated_at)
 * [vendor](sourcetype.md#optional-vendor)
 
 ## Properties
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L729)*
-
-**`type`** {Date}
+*Defined in [packages/sources/api.ts:662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L662)*
 
 **`memberof`** SourceType
 
 ___
 
-### `Optional` iconUrl
+### `Optional` icon_url
 
-• **iconUrl**? : *string*
+• **icon_url**? : *string*
 
-*Defined in [api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L735)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L668)*
 
 **`memberof`** SourceType
 
@@ -53,11 +49,9 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L741)*
+*Defined in [packages/sources/api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L674)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** SourceType
 
@@ -67,21 +61,17 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L747)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L680)*
 
 **`memberof`** SourceType
 
 ___
 
-### `Optional` productName
+### `Optional` product_name
 
-• **productName**? : *string*
+• **product_name**? : *string*
 
-*Defined in [api.ts:753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L753)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L686)*
 
 **`memberof`** SourceType
 
@@ -91,21 +81,17 @@ ___
 
 • **schema**? : *string*
 
-*Defined in [api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L759)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L692)*
 
 **`memberof`** SourceType
 
 ___
 
-### `Optional` updatedAt
+### `Optional` updated_at
 
-• **updatedAt**? : *Date*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L765)*
-
-**`type`** {Date}
+*Defined in [packages/sources/api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L698)*
 
 **`memberof`** SourceType
 
@@ -115,8 +101,6 @@ ___
 
 • **vendor**? : *string*
 
-*Defined in [api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L771)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L704)*
 
 **`memberof`** SourceType
