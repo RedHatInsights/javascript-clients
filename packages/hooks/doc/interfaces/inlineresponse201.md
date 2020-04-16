@@ -2,6 +2,10 @@
 
 # Interface: InlineResponse201
 
+**`export`** 
+
+**`interface`** InlineResponse201
+
 ## Hierarchy
 
 * **InlineResponse201**
@@ -16,6 +20,8 @@
 
 ### `Optional` data
 
-• **data**? : *[Endpoint](../modules/endpoint.md)*
+• **data**? : *[Endpoint](endpoint.md)*
 
-*Defined in [api.ts:848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L848)*
+*Defined in [packages/hooks/api.ts:744](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L744)*
+
+**`memberof`** InlineResponse201

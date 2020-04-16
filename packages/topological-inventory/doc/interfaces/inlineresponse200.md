@@ -14,16 +14,14 @@
 
 ### Properties
 
-* [taskId](inlineresponse200.md#optional-taskid)
+* [task_id](inlineresponse200.md#optional-task_id)
 
 ## Properties
 
-### `Optional` taskId
+### `Optional` task_id
 
-• **taskId**? : *string*
+• **task_id**? : *string*
 
-*Defined in [api.ts:1651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1651)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:1570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1570)*
 
 **`memberof`** InlineResponse200

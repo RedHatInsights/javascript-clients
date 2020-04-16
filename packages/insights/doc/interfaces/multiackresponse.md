@@ -15,7 +15,7 @@
 ### Properties
 
 * [count](multiackresponse.md#count)
-* [hostIds](multiackresponse.md#hostids)
+* [host_ids](multiackresponse.md#host_ids)
 
 ## Properties
 
@@ -23,20 +23,16 @@
 
 • **count**: *number*
 
-*Defined in [api.ts:503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L503)*
-
-**`type`** {number}
+*Defined in [packages/insights/api.ts:438](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L438)*
 
 **`memberof`** MultiAckResponse
 
 ___
 
-###  hostIds
+###  host_ids
 
-• **hostIds**: *Array‹string›*
+• **host_ids**: *Array‹string›*
 
-*Defined in [api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L509)*
-
-**`type`** {Array<string>}
+*Defined in [packages/insights/api.ts:444](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L444)*
 
 **`memberof`** MultiAckResponse

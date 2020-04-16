@@ -24,9 +24,7 @@
 
 • **data**? : *Array‹[ServiceInventory](serviceinventory.md)›*
 
-*Defined in [api.ts:2627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2627)*
-
-**`type`** {Array<ServiceInventory>}
+*Defined in [packages/topological-inventory/api.ts:2529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2529)*
 
 **`memberof`** ServiceInventoriesCollection
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:2621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2621)*
-
-**`type`** {CollectionLinks}
+*Defined in [packages/topological-inventory/api.ts:2523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2523)*
 
 **`memberof`** ServiceInventoriesCollection
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:2615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2615)*
-
-**`type`** {CollectionMetadata}
+*Defined in [packages/topological-inventory/api.ts:2517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2517)*
 
 **`memberof`** ServiceInventoriesCollection

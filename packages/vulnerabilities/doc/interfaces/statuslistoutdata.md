@@ -23,11 +23,9 @@
 
 • **id**: *number*
 
-*Defined in [api.ts:1249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1249)*
+*Defined in [packages/vulnerabilities/api.ts:1060](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1060)*
 
 Internal status_id.
-
-**`type`** {number}
 
 **`memberof`** StatusListOutData
 
@@ -37,10 +35,8 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:1255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1255)*
+*Defined in [packages/vulnerabilities/api.ts:1066](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1066)*
 
 Represenation of internal status_id.
-
-**`type`** {string}
 
 **`memberof`** StatusListOutData

@@ -15,11 +15,11 @@
 ### Properties
 
 * [console](playbookrunsystemdetails.md#console)
-* [playbookRunExecutorId](playbookrunsystemdetails.md#playbookrunexecutorid)
+* [playbook_run_executor_id](playbookrunsystemdetails.md#playbook_run_executor_id)
 * [status](playbookrunsystemdetails.md#status)
-* [systemId](playbookrunsystemdetails.md#systemid)
-* [systemName](playbookrunsystemdetails.md#systemname)
-* [updatedAt](playbookrunsystemdetails.md#updatedat)
+* [system_id](playbookrunsystemdetails.md#system_id)
+* [system_name](playbookrunsystemdetails.md#system_name)
+* [updated_at](playbookrunsystemdetails.md#updated_at)
 
 ## Properties
 
@@ -27,23 +27,19 @@
 
 • **console**: *string*
 
-*Defined in [api.ts:473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L473)*
+*Defined in [api.ts:481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L481)*
 
 Current formatted system log from playbook run system.
-
-**`type`** {string}
 
 **`memberof`** PlaybookRunSystemDetails
 
 ___
 
-###  playbookRunExecutorId
+###  playbook_run_executor_id
 
-• **playbookRunExecutorId**: *string*
+• **playbook_run_executor_id**: *string*
 
-*Defined in [api.ts:479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L479)*
-
-**`type`** {string}
+*Defined in [api.ts:487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L487)*
 
 **`memberof`** PlaybookRunSystemDetails
 
@@ -53,44 +49,36 @@ ___
 
 • **status**: *[PlaybookRunSystemStatus](../enums/playbookrunsystemstatus.md)*
 
-*Defined in [api.ts:467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L467)*
-
-**`type`** {PlaybookRunSystemStatus}
+*Defined in [api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L475)*
 
 **`memberof`** PlaybookRunSystemDetails
 
 ___
 
-###  systemId
+###  system_id
 
-• **systemId**: *string*
+• **system_id**: *string*
 
-*Defined in [api.ts:455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L455)*
-
-**`type`** {string}
+*Defined in [api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L463)*
 
 **`memberof`** PlaybookRunSystemDetails
 
 ___
 
-###  systemName
+###  system_name
 
-• **systemName**: *string*
+• **system_name**: *string*
 
-*Defined in [api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L461)*
-
-**`type`** {string}
+*Defined in [api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L469)*
 
 **`memberof`** PlaybookRunSystemDetails
 
 ___
 
-###  updatedAt
+###  updated_at
 
-• **updatedAt**: *Date*
+• **updated_at**: *string*
 
-*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L485)*
-
-**`type`** {Date}
+*Defined in [api.ts:493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L493)*
 
 **`memberof`** PlaybookRunSystemDetails

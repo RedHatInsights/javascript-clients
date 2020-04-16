@@ -15,7 +15,7 @@
 ### Properties
 
 * [cve](statusoutupdated.md#cve)
-* [inventoryId](statusoutupdated.md#inventoryid)
+* [inventory_id](statusoutupdated.md#inventory_id)
 
 ## Properties
 
@@ -23,20 +23,16 @@
 
 • **cve**: *string*
 
-*Defined in [api.ts:1303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1303)*
-
-**`type`** {string}
+*Defined in [packages/vulnerabilities/api.ts:1111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1111)*
 
 **`memberof`** StatusOutUpdated
 
 ___
 
-###  inventoryId
+###  inventory_id
 
-• **inventoryId**: *string*
+• **inventory_id**: *string*
 
-*Defined in [api.ts:1297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1297)*
-
-**`type`** {string}
+*Defined in [packages/vulnerabilities/api.ts:1105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1105)*
 
 **`memberof`** StatusOutUpdated

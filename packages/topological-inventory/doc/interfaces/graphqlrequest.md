@@ -24,11 +24,9 @@
 
 • **operationName**? : *string*
 
-*Defined in [api.ts:1469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1469)*
+*Defined in [packages/topological-inventory/api.ts:1392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1392)*
 
 If the Query contains several named operations, the operationName controls which one should be executed
-
-**`type`** {string}
 
 **`memberof`** GraphQLRequest
 
@@ -38,11 +36,9 @@ ___
 
 • **query**: *string*
 
-*Defined in [api.ts:1463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1463)*
+*Defined in [packages/topological-inventory/api.ts:1386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1386)*
 
 The GraphQL query
-
-**`type`** {string}
 
 **`memberof`** GraphQLRequest
 
@@ -50,12 +46,10 @@ ___
 
 ### `Optional` variables
 
-• **variables**? : *any | null*
+• **variables**? : *object | null*
 
-*Defined in [api.ts:1475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1475)*
+*Defined in [packages/topological-inventory/api.ts:1398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1398)*
 
 Optional Query variables
-
-**`type`** {any}
 
 **`memberof`** GraphQLRequest

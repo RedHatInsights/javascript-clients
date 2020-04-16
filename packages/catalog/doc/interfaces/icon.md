@@ -15,11 +15,11 @@
 ### Properties
 
 * [id](icon.md#optional-id)
-* [imageId](icon.md#optional-imageid)
-* [portfolioId](icon.md#optional-portfolioid)
-* [portfolioItemId](icon.md#optional-portfolioitemid)
-* [sourceId](icon.md#optional-sourceid)
-* [sourceRef](icon.md#optional-sourceref)
+* [image_id](icon.md#optional-image_id)
+* [portfolio_id](icon.md#optional-portfolio_id)
+* [portfolio_item_id](icon.md#optional-portfolio_item_id)
+* [source_id](icon.md#optional-source_id)
+* [source_ref](icon.md#optional-source_ref)
 
 ## Properties
 
@@ -27,80 +27,68 @@
 
 • **id**? : *string*
 
-*Defined in [api.ts:328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L328)*
+*Defined in [packages/catalog/api.ts:264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L264)*
 
 The unique identifier for this Service Offering Icon
 
-**`type`** {string}
-
 **`memberof`** Icon
 
 ___
 
-### `Optional` imageId
+### `Optional` image_id
 
-• **imageId**? : *string*
+• **image_id**? : *string*
 
-*Defined in [api.ts:334](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L334)*
+*Defined in [packages/catalog/api.ts:270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L270)*
 
 The Image reference containing the binary image data for this icon
 
-**`type`** {string}
-
 **`memberof`** Icon
 
 ___
 
-### `Optional` portfolioId
+### `Optional` portfolio_id
 
-• **portfolioId**? : *string*
+• **portfolio_id**? : *string*
 
-*Defined in [api.ts:352](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L352)*
+*Defined in [packages/catalog/api.ts:288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L288)*
 
 The portfolio this icon belongs to.
 
-**`type`** {string}
-
 **`memberof`** Icon
 
 ___
 
-### `Optional` portfolioItemId
+### `Optional` portfolio_item_id
 
-• **portfolioItemId**? : *string*
+• **portfolio_item_id**? : *string*
 
-*Defined in [api.ts:358](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L358)*
+*Defined in [packages/catalog/api.ts:294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L294)*
 
 The portfolio_item this icon belongs to.
 
-**`type`** {string}
-
 **`memberof`** Icon
 
 ___
 
-### `Optional` sourceId
+### `Optional` source_id
 
-• **sourceId**? : *string*
+• **source_id**? : *string*
 
-*Defined in [api.ts:346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L346)*
+*Defined in [packages/catalog/api.ts:282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L282)*
 
 The source ID for this icon
 
-**`type`** {string}
-
 **`memberof`** Icon
 
 ___
 
-### `Optional` sourceRef
+### `Optional` source_ref
 
-• **sourceRef**? : *string*
+• **source_ref**? : *string*
 
-*Defined in [api.ts:340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L340)*
+*Defined in [packages/catalog/api.ts:276](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L276)*
 
 Stores the Source Ref for this icon
-
-**`type`** {string}
 
 **`memberof`** Icon

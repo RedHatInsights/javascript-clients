@@ -24,9 +24,7 @@
 
 • **count**? : *number*
 
-*Defined in [api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L419)*
-
-**`type`** {number}
+*Defined in [packages/sources/api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L360)*
 
 **`memberof`** CollectionMetadata
 
@@ -36,9 +34,7 @@ ___
 
 • **limit**? : *number*
 
-*Defined in [api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L425)*
-
-**`type`** {number}
+*Defined in [packages/sources/api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L366)*
 
 **`memberof`** CollectionMetadata
 
@@ -48,8 +44,6 @@ ___
 
 • **offset**? : *number*
 
-*Defined in [api.ts:431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L431)*
-
-**`type`** {number}
+*Defined in [packages/sources/api.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L372)*
 
 **`memberof`** CollectionMetadata

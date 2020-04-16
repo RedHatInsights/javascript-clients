@@ -23,9 +23,7 @@
 
 • **name**? : *string*
 
-*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L129)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:78](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L78)*
 
 **`memberof`** AdditionalGroup
 
@@ -35,8 +33,6 @@ ___
 
 • **uuid**? : *string*
 
-*Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L135)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:84](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L84)*
 
 **`memberof`** AdditionalGroup

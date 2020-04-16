@@ -14,122 +14,108 @@
 
 ### Properties
 
-* [businessRisk](cvedetailoutdataattributes.md#businessrisk)
-* [businessRiskId](cvedetailoutdataattributes.md#businessriskid)
-* [businessRiskText](cvedetailoutdataattributes.md#businessrisktext)
-* [cvss2Metrics](cvedetailoutdataattributes.md#cvss2metrics)
-* [cvss2Score](cvedetailoutdataattributes.md#cvss2score)
-* [cvss3Metrics](cvedetailoutdataattributes.md#cvss3metrics)
-* [cvss3Score](cvedetailoutdataattributes.md#cvss3score)
+* [business_risk](cvedetailoutdataattributes.md#business_risk)
+* [business_risk_id](cvedetailoutdataattributes.md#business_risk_id)
+* [business_risk_text](cvedetailoutdataattributes.md#business_risk_text)
+* [cvss2_metrics](cvedetailoutdataattributes.md#cvss2_metrics)
+* [cvss2_score](cvedetailoutdataattributes.md#cvss2_score)
+* [cvss3_metrics](cvedetailoutdataattributes.md#cvss3_metrics)
+* [cvss3_score](cvedetailoutdataattributes.md#cvss3_score)
 * [description](cvedetailoutdataattributes.md#description)
 * [impact](cvedetailoutdataattributes.md#impact)
-* [modifiedDate](cvedetailoutdataattributes.md#modifieddate)
-* [publicDate](cvedetailoutdataattributes.md#publicdate)
-* [redhatUrl](cvedetailoutdataattributes.md#redhaturl)
+* [modified_date](cvedetailoutdataattributes.md#modified_date)
+* [public_date](cvedetailoutdataattributes.md#public_date)
+* [redhat_url](cvedetailoutdataattributes.md#redhat_url)
 * [rules](cvedetailoutdataattributes.md#rules)
-* [secondaryUrl](cvedetailoutdataattributes.md#secondaryurl)
+* [secondary_url](cvedetailoutdataattributes.md#secondary_url)
 * [status](cvedetailoutdataattributes.md#status)
-* [statusId](cvedetailoutdataattributes.md#statusid)
-* [statusText](cvedetailoutdataattributes.md#statustext)
+* [status_id](cvedetailoutdataattributes.md#status_id)
+* [status_text](cvedetailoutdataattributes.md#status_text)
 * [synopsis](cvedetailoutdataattributes.md#synopsis)
-* [systemsStatusDetail](cvedetailoutdataattributes.md#systemsstatusdetail)
-* [systemsStatusDivergent](cvedetailoutdataattributes.md#systemsstatusdivergent)
+* [systems_status_detail](cvedetailoutdataattributes.md#systems_status_detail)
+* [systems_status_divergent](cvedetailoutdataattributes.md#systems_status_divergent)
 
 ## Properties
 
-###  businessRisk
+###  business_risk
 
-• **businessRisk**: *string*
+• **business_risk**: *string*
 
-*Defined in [git-api/api.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L217)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L160)*
 
 Business risk of the vulnerability.
 
-**`type`** {string}
-
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  businessRiskId
+###  business_risk_id
 
-• **businessRiskId**: *number*
+• **business_risk_id**: *number*
 
-*Defined in [git-api/api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L223)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:166](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L166)*
 
 Internal ID of the vulnerability business risk.
 
-**`type`** {number}
-
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  businessRiskText
+###  business_risk_text
 
-• **businessRiskText**: *string | null*
+• **business_risk_text**: *string | null*
 
-*Defined in [git-api/api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L229)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L172)*
 
 Complementary text to the business risk.
 
-**`type`** {string}
-
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  cvss2Metrics
+###  cvss2_metrics
 
-• **cvss2Metrics**: *string | null*
+• **cvss2_metrics**: *string | null*
 
-*Defined in [git-api/api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L235)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L178)*
 
 cvss2 metrics of the CVE.
 
-**`type`** {string}
-
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  cvss2Score
+###  cvss2_score
 
-• **cvss2Score**: *string | null*
+• **cvss2_score**: *string | null*
 
-*Defined in [git-api/api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L241)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L184)*
 
 String representation of cvss2 score of the CVE.
 
-**`type`** {string}
-
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  cvss3Metrics
+###  cvss3_metrics
 
-• **cvss3Metrics**: *string | null*
+• **cvss3_metrics**: *string | null*
 
-*Defined in [git-api/api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L247)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L190)*
 
 cvss3 metrics of the CVE.
 
-**`type`** {string}
-
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  cvss3Score
+###  cvss3_score
 
-• **cvss3Score**: *string | null*
+• **cvss3_score**: *string | null*
 
-*Defined in [git-api/api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L253)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L196)*
 
 String representation of cvss3 score of the CVE.
-
-**`type`** {string}
 
 **`memberof`** CveDetailOutDataAttributes
 
@@ -139,11 +125,9 @@ ___
 
 • **description**: *string*
 
-*Defined in [git-api/api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L259)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L202)*
 
 Description of the CVE.
-
-**`type`** {string}
 
 **`memberof`** CveDetailOutDataAttributes
 
@@ -153,53 +137,45 @@ ___
 
 • **impact**: *string*
 
-*Defined in [git-api/api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L271)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L214)*
 
 Red Hat security impact of the CVE.
 
-**`type`** {string}
-
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  modifiedDate
+###  modified_date
 
-• **modifiedDate**: *string | null*
+• **modified_date**: *string | null*
 
-*Defined in [git-api/api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L265)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L208)*
 
 String representation of ISO-8601 formatted date of last modification of the CVE.
 
-**`type`** {string}
-
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  publicDate
+###  public_date
 
-• **publicDate**: *string | null*
+• **public_date**: *string | null*
 
-*Defined in [git-api/api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L277)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:220](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L220)*
 
 String representation of ISO-8601 formatted date of first public disclosure of the CVE.
 
-**`type`** {string}
-
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  redhatUrl
+###  redhat_url
 
-• **redhatUrl**: *string | null*
+• **redhat_url**: *string | null*
 
-*Defined in [git-api/api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L283)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:226](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L226)*
 
 Additional resource about the CVE, provided by Red Hat.
-
-**`type`** {string}
 
 **`memberof`** CveDetailOutDataAttributes
 
@@ -209,23 +185,19 @@ ___
 
 • **rules**: *Array‹[InsightsRule](insightsrule.md)›*
 
-*Defined in [git-api/api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L289)*
-
-**`type`** {Array<InsightsRule>}
+*Defined in [packages/vulnerabilities/git-api/api.ts:232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L232)*
 
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  secondaryUrl
+###  secondary_url
 
-• **secondaryUrl**: *string | null*
+• **secondary_url**: *string | null*
 
-*Defined in [git-api/api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L295)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L238)*
 
 Additional resources about the CVE.
-
-**`type`** {string}
 
 **`memberof`** CveDetailOutDataAttributes
 
@@ -235,39 +207,33 @@ ___
 
 • **status**: *string*
 
-*Defined in [git-api/api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L301)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L244)*
 
 Status of the vulnerability.
 
-**`type`** {string}
-
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  statusId
+###  status_id
 
-• **statusId**: *number*
+• **status_id**: *number*
 
-*Defined in [git-api/api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L307)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L250)*
 
 Internal ID of the vulnerability status.
 
-**`type`** {number}
-
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  statusText
+###  status_text
 
-• **statusText**: *string | null*
+• **status_text**: *string | null*
 
-*Defined in [git-api/api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L313)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L256)*
 
 Complementary text to the status.
-
-**`type`** {string}
 
 **`memberof`** CveDetailOutDataAttributes
 
@@ -277,38 +243,32 @@ ___
 
 • **synopsis**: *string*
 
-*Defined in [git-api/api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L319)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L262)*
 
 Synopsis of the CVE.
 
-**`type`** {string}
-
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  systemsStatusDetail
+###  systems_status_detail
 
-• **systemsStatusDetail**: *any*
+• **systems_status_detail**: *object*
 
-*Defined in [git-api/api.ts:325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L325)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L268)*
 
 Counts of systems with given status type.
 
-**`type`** {any}
-
 **`memberof`** CveDetailOutDataAttributes
 
 ___
 
-###  systemsStatusDivergent
+###  systems_status_divergent
 
-• **systemsStatusDivergent**: *number*
+• **systems_status_divergent**: *number*
 
-*Defined in [git-api/api.ts:331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L331)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L274)*
 
 How many systems-CVE pairs have different status than CVE-level.
-
-**`type`** {number}
 
 **`memberof`** CveDetailOutDataAttributes

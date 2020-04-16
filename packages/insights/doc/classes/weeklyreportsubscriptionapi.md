@@ -6,10 +6,6 @@ WeeklyreportsubscriptionApi - object-oriented interface
 
 **`export`** 
 
-**`class`** WeeklyreportsubscriptionApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -41,15 +37,15 @@ WeeklyreportsubscriptionApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[WeeklyreportsubscriptionApi](weeklyreportsubscriptionapi.md)*
 
@@ -61,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -71,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -81,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 ## Methods
 
@@ -89,9 +85,9 @@ ___
 
 ▸ **weeklyreportsubscriptionCreate**(`weeklyReportSubscription`: [WeeklyReportSubscription](../interfaces/weeklyreportsubscription.md), `options?`: any): *AxiosPromise‹[WeeklyReportSubscription](../interfaces/weeklyreportsubscription.md)›*
 
-*Defined in [api.ts:5815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5815)*
+*Defined in [packages/insights/api.ts:5904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5904)*
 
-If 'is_subscribed' is true, a subscription is added if it doesn't already exist.  If it is false, the subscription is removed if it exists.
+If \'is_subscribed\' is true, a subscription is added if it doesn\'t already exist.  If it is false, the subscription is removed if it exists.
 
 **`summary`** Set the subscription status of the current user to the supplied `is_subscribed` value.
 
@@ -114,11 +110,11 @@ ___
 
 ▸ **weeklyreportsubscriptionList**(`options?`: any): *AxiosPromise‹[WeeklyReportSubscription](../interfaces/weeklyreportsubscription.md)›*
 
-*Defined in [api.ts:5826](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5826)*
+*Defined in [packages/insights/api.ts:5915](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5915)*
 
 This shows the presence of a weekly report subscription by the user in this account.
 
-**`summary`** Show the user's current subscription status.
+**`summary`** Show the user\'s current subscription status.
 
 **`throws`** {RequiredError}
 

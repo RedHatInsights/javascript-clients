@@ -26,11 +26,9 @@
 
 ###  created
 
-• **created**: *Date*
+• **created**: *string*
 
-*Defined in [api.ts:387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L387)*
-
-**`type`** {Date}
+*Defined in [packages/rbac/api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L341)*
 
 **`memberof`** GroupWithPrincipalsAndRoles
 
@@ -40,9 +38,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L375)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L329)*
 
 **`memberof`** GroupWithPrincipalsAndRoles
 
@@ -50,11 +46,9 @@ ___
 
 ###  modified
 
-• **modified**: *Date*
+• **modified**: *string*
 
-*Defined in [api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L393)*
-
-**`type`** {Date}
+*Defined in [packages/rbac/api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L347)*
 
 **`memberof`** GroupWithPrincipalsAndRoles
 
@@ -64,9 +58,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L369)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L323)*
 
 **`memberof`** GroupWithPrincipalsAndRoles
 
@@ -76,9 +68,7 @@ ___
 
 • **principals**: *Array‹[Principal](principal.md)›*
 
-*Defined in [api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L399)*
-
-**`type`** {Array<Principal>}
+*Defined in [packages/rbac/api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L353)*
 
 **`memberof`** GroupWithPrincipalsAndRoles
 
@@ -88,9 +78,7 @@ ___
 
 • **roles**: *Array‹[RoleOut](roleout.md)›*
 
-*Defined in [api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L405)*
-
-**`type`** {Array<RoleOut>}
+*Defined in [packages/rbac/api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L359)*
 
 **`memberof`** GroupWithPrincipalsAndRoles
 
@@ -100,8 +88,6 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [api.ts:381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L381)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L335)*
 
 **`memberof`** GroupWithPrincipalsAndRoles

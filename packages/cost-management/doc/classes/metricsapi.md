@@ -88,7 +88,7 @@ ___
 
 ▸ **getMetrics**(`options?`: any): *AxiosPromise‹[Metrics](../interfaces/metrics.md)›*
 
-*Defined in [api.ts:4182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4182)*
+*Defined in [api.ts:4287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L4287)*
 
 **`summary`** Obtain Metrics
 

@@ -35,14 +35,20 @@
 * [ExecutiveReportCvesBySeverity8to10](interfaces/executivereportcvesbyseverity8to10.md)
 * [ExecutiveReportRecentCves](interfaces/executivereportrecentcves.md)
 * [ExecutiveReportTopCves](interfaces/executivereporttopcves.md)
+* [InsightsRule](interfaces/insightsrule.md)
 * [InventoryIdOrList](interfaces/inventoryidorlist.md)
 * [Links](interfaces/links.md)
 * [Meta](interfaces/meta.md)
 * [MetaAffectedSystems](interfaces/metaaffectedsystems.md)
+* [MetaAffectedSystemsAllOf](interfaces/metaaffectedsystemsallof.md)
 * [MetaCves](interfaces/metacves.md)
+* [MetaCvesAllOf](interfaces/metacvesallof.md)
 * [MetaCvesSystems](interfaces/metacvessystems.md)
+* [MetaCvesSystemsAllOf](interfaces/metacvessystemsallof.md)
 * [MetaSystems](interfaces/metasystems.md)
+* [MetaSystemsAllOf](interfaces/metasystemsallof.md)
 * [MetaVulnerabilitiesOut](interfaces/metavulnerabilitiesout.md)
+* [MetaVulnerabilitiesOutAllOf](interfaces/metavulnerabilitiesoutallof.md)
 * [OptOutIn](interfaces/optoutin.md)
 * [RequestArgs](interfaces/requestargs.md)
 * [StatusIn](interfaces/statusin.md)
@@ -79,9 +85,9 @@
 
 ### `Const` BASE_PATH
 
-• **BASE_PATH**: *string* =  "http://localhost".replace(/\/+$/, "")
+• **BASE_PATH**: *string* = "http://localhost".replace(/\/+$/, "")
 
-*Defined in [api.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L20)*
+Defined in packages/vulnerabilities/base.ts:20
 
 ## Functions
 
@@ -89,9 +95,11 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1455)*
+*Defined in [packages/vulnerabilities/api.ts:1262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1262)*
 
 DefaultApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -103,15 +111,15 @@ Name | Type |
 
 * **deleteSystem**(`inventoryId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `securityRule?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **getBusinessRiskList**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **getCveDetails**(`cveId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **getCveList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `dataFormat?`: string, `businessRiskId?`: string, `statusId?`: string, `showAll?`: boolean, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getCveList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `dataFormat?`: string, `businessRiskId?`: string, `statusId?`: string, `securityRule?`: boolean, `showAll?`: boolean, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `stale?`: boolean, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `stale?`: boolean, `securityRule?`: boolean, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **getExecutiveReport**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -139,9 +147,11 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2703)*
+*Defined in [packages/vulnerabilities/api.ts:2576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2576)*
 
 DefaultApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -153,17 +163,17 @@ Name | Type |
 
 **Returns:** *object*
 
-* **deleteSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹Response›*
+* **deleteSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `options?`: any): *AxiosPromise‹[AffectedSystemsOut](interfaces/affectedsystemsout.md)›*
+* **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `securityRule?`: string, `options?`: any): *AxiosPromise‹[AffectedSystemsOut](interfaces/affectedsystemsout.md)›*
 
 * **getBusinessRiskList**(`options?`: any): *AxiosPromise‹[BusinessRiskListOut](interfaces/businessrisklistout.md)›*
 
 * **getCveDetails**(`cveId`: string, `options?`: any): *AxiosPromise‹[CveDetailOut](interfaces/cvedetailout.md)›*
 
-* **getCveList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `dataFormat?`: string, `businessRiskId?`: string, `statusId?`: string, `showAll?`: boolean, `options?`: any): *AxiosPromise‹[VulnerabilitiesOut](interfaces/vulnerabilitiesout.md)›*
+* **getCveList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `dataFormat?`: string, `businessRiskId?`: string, `statusId?`: string, `securityRule?`: boolean, `showAll?`: boolean, `options?`: any): *AxiosPromise‹[VulnerabilitiesOut](interfaces/vulnerabilitiesout.md)›*
 
-* **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `stale?`: boolean, `options?`: any): *AxiosPromise‹[SystemCvesOut](interfaces/systemcvesout.md)›*
+* **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `stale?`: boolean, `securityRule?`: boolean, `options?`: any): *AxiosPromise‹[SystemCvesOut](interfaces/systemcvesout.md)›*
 
 * **getExecutiveReport**(`options?`: any): *AxiosPromise‹[ExecutiveReport](interfaces/executivereport.md)›*
 
@@ -181,7 +191,7 @@ Name | Type |
 
 * **setStatus**(`statusIn`: [StatusIn](interfaces/statusin.md), `options?`: any): *AxiosPromise‹[StatusOut](interfaces/statusout.md)›*
 
-* **setSystemOptOut**(`inventoryId`: string, `value`: boolean, `options?`: any): *AxiosPromise‹Response›*
+* **setSystemOptOut**(`inventoryId`: string, `value`: boolean, `options?`: any): *AxiosPromise‹void›*
 
 * **setSystemsOptOut**(`optOutIn`: [OptOutIn](interfaces/optoutin.md), `options?`: any): *AxiosPromise‹[BulkChangeOut](interfaces/bulkchangeout.md)›*
 
@@ -191,9 +201,11 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2427)*
+*Defined in [packages/vulnerabilities/api.ts:2297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2297)*
 
 DefaultApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -205,9 +217,9 @@ Name | Type |
 
 * **deleteSystem**(`inventoryId`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
-* **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `options?`: any): *function*
+* **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `securityRule?`: string, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[AffectedSystemsOut](interfaces/affectedsystemsout.md)›*
 
@@ -219,11 +231,11 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[CveDetailOut](interfaces/cvedetailout.md)›*
 
-* **getCveList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `dataFormat?`: string, `businessRiskId?`: string, `statusId?`: string, `showAll?`: boolean, `options?`: any): *function*
+* **getCveList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `dataFormat?`: string, `businessRiskId?`: string, `statusId?`: string, `securityRule?`: boolean, `showAll?`: boolean, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[VulnerabilitiesOut](interfaces/vulnerabilitiesout.md)›*
 
-* **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `stale?`: boolean, `options?`: any): *function*
+* **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `stale?`: boolean, `securityRule?`: boolean, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[SystemCvesOut](interfaces/systemcvesout.md)›*
 
@@ -261,7 +273,7 @@ Name | Type |
 
 * **setSystemOptOut**(`inventoryId`: string, `value`: boolean, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **setSystemsOptOut**(`optOutIn`: [OptOutIn](interfaces/optoutin.md), `options?`: any): *function*
 
@@ -273,9 +285,11 @@ ___
 
 ▸ **InternalApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3159)*
+*Defined in [packages/vulnerabilities/api.ts:3039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3039)*
 
 InternalApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -299,9 +313,11 @@ ___
 
 ▸ **InternalApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3428)*
+*Defined in [packages/vulnerabilities/api.ts:3320](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3320)*
 
 InternalApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -313,13 +329,13 @@ Name | Type |
 
 **Returns:** *object*
 
-* **refreshAccount**(`accountId`: string, `options?`: any): *AxiosPromise‹Response›*
+* **refreshAccount**(`accountId`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **refreshAccountCve**(`accountId`: string, `cveId`: string, `options?`: any): *AxiosPromise‹Response›*
+* **refreshAccountCve**(`accountId`: string, `cveId`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **refreshCve**(`cveId`: string, `options?`: any): *AxiosPromise‹Response›*
+* **refreshCve**(`cveId`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **refreshSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹Response›*
+* **refreshSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹void›*
 
 ___
 
@@ -327,9 +343,11 @@ ___
 
 ▸ **InternalApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3362)*
+*Defined in [packages/vulnerabilities/api.ts:3254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L3254)*
 
 InternalApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -341,19 +359,19 @@ Name | Type |
 
 * **refreshAccount**(`accountId`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **refreshAccountCve**(`accountId`: string, `cveId`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **refreshCve**(`cveId`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **refreshSystem**(`inventoryId`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 ## Object literals
 
@@ -361,7 +379,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L26)*
+Defined in packages/vulnerabilities/base.ts:26
 
 **`export`** 
 
@@ -369,22 +387,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [api.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L27)*
+Defined in packages/vulnerabilities/base.ts:27
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [api.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L30)*
+Defined in packages/vulnerabilities/base.ts:30
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [api.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L28)*
+Defined in packages/vulnerabilities/base.ts:28
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [api.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L29)*
+Defined in packages/vulnerabilities/base.ts:29

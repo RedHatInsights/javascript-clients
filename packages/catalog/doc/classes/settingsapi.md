@@ -6,10 +6,6 @@ SettingsApi - object-oriented interface
 
 **`export`** 
 
-**`class`** SettingsApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -44,15 +40,15 @@ SettingsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
+Defined in packages/catalog/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[SettingsApi](settingsapi.md)*
 
@@ -64,7 +60,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
+Defined in packages/catalog/base.ts:51
 
 ___
 
@@ -74,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
+Defined in packages/catalog/base.ts:51
 
 ___
 
@@ -84,15 +80,15 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
+Defined in packages/catalog/base.ts:49
 
 ## Methods
 
 ###  createSetting
 
-▸ **createSetting**(`setting`: [Setting](../interfaces/setting.md), `options?`: any): *AxiosPromise‹Response›*
+▸ **createSetting**(`setting`: [Setting](../interfaces/setting.md), `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:6599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6599)*
+*Defined in [packages/catalog/api.ts:6676](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6676)*
 
 Create Tenant Setting
 
@@ -109,15 +105,15 @@ Name | Type | Description |
 `setting` | [Setting](../interfaces/setting.md) | Json encoded key/value pair to create a new setting |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  destroySetting
 
-▸ **destroySetting**(`name`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **destroySetting**(`name`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:6611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6611)*
+*Defined in [packages/catalog/api.ts:6688](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6688)*
 
 Delete a Tenant Setting
 
@@ -134,7 +130,7 @@ Name | Type | Description |
 `name` | string | name of the setting |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
@@ -142,7 +138,7 @@ ___
 
 ▸ **listSettings**(`options?`: any): *AxiosPromise‹[TenantSettings](../interfaces/tenantsettings.md)›*
 
-*Defined in [api.ts:6622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6622)*
+*Defined in [packages/catalog/api.ts:6699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6699)*
 
 List Tenant Settings
 
@@ -164,9 +160,9 @@ ___
 
 ###  showSetting
 
-▸ **showSetting**(`name`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **showSetting**(`name`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:6634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6634)*
+*Defined in [packages/catalog/api.ts:6711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6711)*
 
 Get a specific Tenant Setting
 
@@ -183,15 +179,15 @@ Name | Type | Description |
 `name` | string | name of the setting |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  updateSetting
 
-▸ **updateSetting**(`name`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **updateSetting**(`name`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:6646](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6646)*
+*Defined in [packages/catalog/api.ts:6723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6723)*
 
 Update a Tenant Setting
 
@@ -208,4 +204,4 @@ Name | Type | Description |
 `name` | string | name of the setting |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*

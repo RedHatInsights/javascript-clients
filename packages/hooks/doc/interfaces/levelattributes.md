@@ -2,6 +2,10 @@
 
 # Interface: LevelAttributes
 
+**`export`** 
+
+**`interface`** LevelAttributes
+
 ## Hierarchy
 
 * **LevelAttributes**
@@ -18,4 +22,8 @@
 
 • **title**? : *string*
 
-*Defined in [api.ts:902](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L902)*
+*Defined in [packages/hooks/api.ts:791](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L791)*
+
+Title of the level, shown to the user when configuring filters
+
+**`memberof`** LevelAttributes

@@ -55,9 +55,9 @@
 
 ### `Const` BASE_PATH
 
-• **BASE_PATH**: *string* =  "https://cloud.redhat.com//api/sources/v1.0".replace(/\/+$/, "")
+• **BASE_PATH**: *string* = "https://cloud.redhat.com//api/sources/v1.0".replace(/\/+$/, "")
 
-*Defined in [api.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L20)*
+Defined in packages/sources/base.ts:20
 
 ## Functions
 
@@ -65,9 +65,11 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L857)*
+*Defined in [packages/sources/api.ts:786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L786)*
 
 DefaultApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -99,29 +101,29 @@ Name | Type |
 
 * **getDocumentation**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listApplicationTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listApplicationTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listApplicationTypes**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listApplicationTypes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listApplications**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listApplications**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listAuthentications**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listAuthentications**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listEndpointAuthentications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listEndpointAuthentications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listEndpoints**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listEndpoints**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listSourceApplicationTypes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listSourceApplicationTypes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listSourceApplications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listSourceApplications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listSourceEndpoints**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listSourceEndpoints**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listSourceTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listSourceTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listSourceTypes**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listSourceTypes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listSources**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listSources**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **postGraphQL**(`graphQLRequest`: [GraphQLRequest](interfaces/graphqlrequest.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -151,9 +153,11 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2974)*
+*Defined in [packages/sources/api.ts:3005](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3005)*
 
 DefaultApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -165,7 +169,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **checkAvailabilitySource**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
+* **checkAvailabilitySource**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
 * **createApplication**(`application`: [Application](interfaces/application.md), `options?`: any): *AxiosPromise‹[Application](interfaces/application.md)›*
 
@@ -177,39 +181,39 @@ Name | Type |
 
 * **createSourceType**(`sourceType`: [SourceType](interfaces/sourcetype.md), `options?`: any): *AxiosPromise‹[SourceType](interfaces/sourcetype.md)›*
 
-* **deleteApplication**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
+* **deleteApplication**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **deleteAuthentication**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
+* **deleteAuthentication**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **deleteEndpoint**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
+* **deleteEndpoint**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **deleteSource**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
+* **deleteSource**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **getDocumentation**(`options?`: any): *AxiosPromise‹any›*
+* **getDocumentation**(`options?`: any): *AxiosPromise‹object›*
 
-* **listApplicationTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[SourcesCollection](interfaces/sourcescollection.md)›*
+* **listApplicationTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SourcesCollection](interfaces/sourcescollection.md)›*
 
-* **listApplicationTypes**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[ApplicationTypesCollection](interfaces/applicationtypescollection.md)›*
+* **listApplicationTypes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ApplicationTypesCollection](interfaces/applicationtypescollection.md)›*
 
-* **listApplications**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[ApplicationsCollection](interfaces/applicationscollection.md)›*
+* **listApplications**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ApplicationsCollection](interfaces/applicationscollection.md)›*
 
-* **listAuthentications**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[AuthenticationsCollection](interfaces/authenticationscollection.md)›*
+* **listAuthentications**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[AuthenticationsCollection](interfaces/authenticationscollection.md)›*
 
-* **listEndpointAuthentications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[AuthenticationsCollection](interfaces/authenticationscollection.md)›*
+* **listEndpointAuthentications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[AuthenticationsCollection](interfaces/authenticationscollection.md)›*
 
-* **listEndpoints**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[EndpointsCollection](interfaces/endpointscollection.md)›*
+* **listEndpoints**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[EndpointsCollection](interfaces/endpointscollection.md)›*
 
-* **listSourceApplicationTypes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[ApplicationTypesCollection](interfaces/applicationtypescollection.md)›*
+* **listSourceApplicationTypes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ApplicationTypesCollection](interfaces/applicationtypescollection.md)›*
 
-* **listSourceApplications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[ApplicationsCollection](interfaces/applicationscollection.md)›*
+* **listSourceApplications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ApplicationsCollection](interfaces/applicationscollection.md)›*
 
-* **listSourceEndpoints**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[EndpointsCollection](interfaces/endpointscollection.md)›*
+* **listSourceEndpoints**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[EndpointsCollection](interfaces/endpointscollection.md)›*
 
-* **listSourceTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[SourcesCollection](interfaces/sourcescollection.md)›*
+* **listSourceTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SourcesCollection](interfaces/sourcescollection.md)›*
 
-* **listSourceTypes**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[SourceTypesCollection](interfaces/sourcetypescollection.md)›*
+* **listSourceTypes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SourceTypesCollection](interfaces/sourcetypescollection.md)›*
 
-* **listSources**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[SourcesCollection](interfaces/sourcescollection.md)›*
+* **listSources**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SourcesCollection](interfaces/sourcescollection.md)›*
 
 * **postGraphQL**(`graphQLRequest`: [GraphQLRequest](interfaces/graphqlrequest.md), `options?`: any): *AxiosPromise‹[GraphQLResponse](interfaces/graphqlresponse.md)›*
 
@@ -225,13 +229,13 @@ Name | Type |
 
 * **showSourceType**(`id`: string, `options?`: any): *AxiosPromise‹[SourceType](interfaces/sourcetype.md)›*
 
-* **updateApplication**(`id`: string, `application`: [Application](interfaces/application.md), `options?`: any): *AxiosPromise‹Response›*
+* **updateApplication**(`id`: string, `application`: [Application](interfaces/application.md), `options?`: any): *AxiosPromise‹void›*
 
-* **updateAuthentication**(`id`: string, `authentication`: [Authentication](interfaces/authentication.md), `options?`: any): *AxiosPromise‹Response›*
+* **updateAuthentication**(`id`: string, `authentication`: [Authentication](interfaces/authentication.md), `options?`: any): *AxiosPromise‹void›*
 
-* **updateEndpoint**(`id`: string, `endpoint`: [Endpoint](interfaces/endpoint.md), `options?`: any): *AxiosPromise‹Response›*
+* **updateEndpoint**(`id`: string, `endpoint`: [Endpoint](interfaces/endpoint.md), `options?`: any): *AxiosPromise‹void›*
 
-* **updateSource**(`id`: string, `source`: [Source](interfaces/source.md), `options?`: any): *AxiosPromise‹Response›*
+* **updateSource**(`id`: string, `source`: [Source](interfaces/source.md), `options?`: any): *AxiosPromise‹void›*
 
 ___
 
@@ -239,9 +243,11 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2444](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2444)*
+*Defined in [packages/sources/api.ts:2475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2475)*
 
 DefaultApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -253,7 +259,7 @@ Name | Type |
 
 * **checkAvailabilitySource**(`id`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **createApplication**(`application`: [Application](interfaces/application.md), `options?`: any): *function*
 
@@ -277,69 +283,69 @@ Name | Type |
 
 * **deleteApplication**(`id`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **deleteAuthentication**(`id`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **deleteEndpoint**(`id`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **deleteSource**(`id`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **getDocumentation**(`options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹any›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹object›*
 
-* **listApplicationTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[SourcesCollection](interfaces/sourcescollection.md)›*
-
-* **listApplicationTypes**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ApplicationTypesCollection](interfaces/applicationtypescollection.md)›*
-
-* **listApplications**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ApplicationsCollection](interfaces/applicationscollection.md)›*
-
-* **listAuthentications**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[AuthenticationsCollection](interfaces/authenticationscollection.md)›*
-
-* **listEndpointAuthentications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[AuthenticationsCollection](interfaces/authenticationscollection.md)›*
-
-* **listEndpoints**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[EndpointsCollection](interfaces/endpointscollection.md)›*
-
-* **listSourceApplicationTypes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ApplicationTypesCollection](interfaces/applicationtypescollection.md)›*
-
-* **listSourceApplications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ApplicationsCollection](interfaces/applicationscollection.md)›*
-
-* **listSourceEndpoints**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[EndpointsCollection](interfaces/endpointscollection.md)›*
-
-* **listSourceTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *function*
+* **listApplicationTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[SourcesCollection](interfaces/sourcescollection.md)›*
 
-* **listSourceTypes**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *function*
+* **listApplicationTypes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ApplicationTypesCollection](interfaces/applicationtypescollection.md)›*
+
+* **listApplications**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ApplicationsCollection](interfaces/applicationscollection.md)›*
+
+* **listAuthentications**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[AuthenticationsCollection](interfaces/authenticationscollection.md)›*
+
+* **listEndpointAuthentications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[AuthenticationsCollection](interfaces/authenticationscollection.md)›*
+
+* **listEndpoints**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[EndpointsCollection](interfaces/endpointscollection.md)›*
+
+* **listSourceApplicationTypes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ApplicationTypesCollection](interfaces/applicationtypescollection.md)›*
+
+* **listSourceApplications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ApplicationsCollection](interfaces/applicationscollection.md)›*
+
+* **listSourceEndpoints**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[EndpointsCollection](interfaces/endpointscollection.md)›*
+
+* **listSourceTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[SourcesCollection](interfaces/sourcescollection.md)›*
+
+* **listSourceTypes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[SourceTypesCollection](interfaces/sourcetypescollection.md)›*
 
-* **listSources**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *function*
+* **listSources**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[SourcesCollection](interfaces/sourcescollection.md)›*
 
@@ -373,19 +379,19 @@ Name | Type |
 
 * **updateApplication**(`id`: string, `application`: [Application](interfaces/application.md), `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **updateAuthentication**(`id`: string, `authentication`: [Authentication](interfaces/authentication.md), `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **updateEndpoint**(`id`: string, `endpoint`: [Endpoint](interfaces/endpoint.md), `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **updateSource**(`id`: string, `source`: [Source](interfaces/source.md), `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 ## Object literals
 
@@ -393,7 +399,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L26)*
+Defined in packages/sources/base.ts:26
 
 **`export`** 
 
@@ -401,22 +407,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [api.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L27)*
+Defined in packages/sources/base.ts:27
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [api.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L30)*
+Defined in packages/sources/base.ts:30
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [api.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L28)*
+Defined in packages/sources/base.ts:28
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [api.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L29)*
+Defined in packages/sources/base.ts:29

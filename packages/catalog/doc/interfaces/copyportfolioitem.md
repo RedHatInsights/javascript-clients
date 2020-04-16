@@ -14,33 +14,29 @@
 
 ### Properties
 
-* [portfolioId](copyportfolioitem.md#optional-portfolioid)
-* [portfolioItemName](copyportfolioitem.md#optional-portfolioitemname)
+* [portfolio_id](copyportfolioitem.md#optional-portfolio_id)
+* [portfolio_item_name](copyportfolioitem.md#optional-portfolio_item_name)
 
 ## Properties
 
-### `Optional` portfolioId
+### `Optional` portfolio_id
 
-• **portfolioId**? : *string*
+• **portfolio_id**? : *string*
 
-*Defined in [api.ts:216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L216)*
+*Defined in [packages/catalog/api.ts:157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L157)*
 
 The portfolio to place the new copy of the Portfolio Item in
-
-**`type`** {string}
 
 **`memberof`** CopyPortfolioItem
 
 ___
 
-### `Optional` portfolioItemName
+### `Optional` portfolio_item_name
 
-• **portfolioItemName**? : *string*
+• **portfolio_item_name**? : *string*
 
-*Defined in [api.ts:222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L222)*
+*Defined in [packages/catalog/api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L163)*
 
 The name of the copied portfolio item
-
-**`type`** {string}
 
 **`memberof`** CopyPortfolioItem

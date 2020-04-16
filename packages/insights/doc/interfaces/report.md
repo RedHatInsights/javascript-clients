@@ -22,11 +22,9 @@
 
 ###  details
 
-• **details**: *any*
+• **details**: *object*
 
-*Defined in [api.ts:577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L577)*
-
-**`type`** {any}
+*Defined in [packages/insights/api.ts:508](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L508)*
 
 **`memberof`** Report
 
@@ -36,9 +34,7 @@ ___
 
 • **resolution**? : *[Resolution](resolution.md)*
 
-*Defined in [api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L583)*
-
-**`type`** {Resolution}
+*Defined in [packages/insights/api.ts:514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L514)*
 
 **`memberof`** Report
 
@@ -48,8 +44,6 @@ ___
 
 • **rule**? : *[Rule](rule.md)*
 
-*Defined in [api.ts:571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L571)*
-
-**`type`** {Rule}
+*Defined in [packages/insights/api.ts:502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L502)*
 
 **`memberof`** Report

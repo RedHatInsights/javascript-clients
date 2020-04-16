@@ -14,16 +14,14 @@
 
 ### Properties
 
-* [showSatelliteHosts](accountsetting.md#optional-showsatellitehosts)
+* [show_satellite_hosts](accountsetting.md#optional-show_satellite_hosts)
 
 ## Properties
 
-### `Optional` showSatelliteHosts
+### `Optional` show_satellite_hosts
 
-• **showSatelliteHosts**? : *boolean*
+• **show_satellite_hosts**? : *boolean*
 
-*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L83)*
-
-**`type`** {boolean}
+*Defined in [packages/insights/api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L33)*
 
 **`memberof`** AccountSetting

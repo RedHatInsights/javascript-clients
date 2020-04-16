@@ -25,11 +25,9 @@
 
 • **first**? : *string*
 
-*Defined in [api.ts:173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L173)*
+*Defined in [packages/approval/api.ts:116](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L116)*
 
 The link to fetch the first group of items in the result set
-
-**`type`** {string}
 
 **`memberof`** CollectionLinks
 
@@ -39,11 +37,9 @@ ___
 
 • **last**? : *string*
 
-*Defined in [api.ts:179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L179)*
+*Defined in [packages/approval/api.ts:122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L122)*
 
 The link to fetch the last group of items in the result set
-
-**`type`** {string}
 
 **`memberof`** CollectionLinks
 
@@ -53,11 +49,9 @@ ___
 
 • **next**? : *string*
 
-*Defined in [api.ts:191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L191)*
+*Defined in [packages/approval/api.ts:134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L134)*
 
 The link to fetch the next group of items in the result set
-
-**`type`** {string}
 
 **`memberof`** CollectionLinks
 
@@ -67,10 +61,8 @@ ___
 
 • **prev**? : *string*
 
-*Defined in [api.ts:185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L185)*
+*Defined in [packages/approval/api.ts:128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L128)*
 
 The link to fetch the previous group of items in the result set
-
-**`type`** {string}
 
 **`memberof`** CollectionLinks

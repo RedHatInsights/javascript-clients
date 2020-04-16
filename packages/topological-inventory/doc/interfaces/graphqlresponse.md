@@ -21,13 +21,11 @@
 
 ### `Optional` data
 
-• **data**? : *any*
+• **data**? : *object*
 
-*Defined in [api.ts:1489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1489)*
+*Defined in [packages/topological-inventory/api.ts:1411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1411)*
 
 Results from the GraphQL query
-
-**`type`** {any}
 
 **`memberof`** GraphQLResponse
 
@@ -35,12 +33,10 @@ ___
 
 ### `Optional` errors
 
-• **errors**? : *Array‹any›*
+• **errors**? : *Array‹object›*
 
-*Defined in [api.ts:1495](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1495)*
+*Defined in [packages/topological-inventory/api.ts:1417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1417)*
 
 Errors resulting from the GraphQL query
-
-**`type`** {Array<any>}
 
 **`memberof`** GraphQLResponse

@@ -2,6 +2,10 @@
 
 # Interface: ErrorsSource
 
+**`export`** 
+
+**`interface`** ErrorsSource
+
 ## Hierarchy
 
 * **ErrorsSource**
@@ -19,7 +23,9 @@
 
 • **parameter**? : *string*
 
-*Defined in [api.ts:520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L520)*
+*Defined in [packages/hooks/api.ts:441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L441)*
+
+**`memberof`** ErrorsSource
 
 ___
 
@@ -27,4 +33,6 @@ ___
 
 • **pointer**? : *string*
 
-*Defined in [api.ts:514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L514)*
+*Defined in [packages/hooks/api.ts:435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L435)*
+
+**`memberof`** ErrorsSource

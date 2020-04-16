@@ -2,9 +2,11 @@
 
 # Class: RequiredError
 
+**`export`** 
+
 ## Hierarchy
 
-* Error
+* [Error](requirederror.md#static-error)
 
   ↳ **RequiredError**
 
@@ -28,7 +30,7 @@
 
 \+ **new RequiredError**(`field`: string, `msg?`: string): *[RequiredError](requirederror.md)*
 
-*Defined in [api.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L66)*
+Defined in packages/hooks/base.ts:66
 
 **Parameters:**
 
@@ -45,7 +47,7 @@ Name | Type |
 
 • **field**: *string*
 
-*Defined in [api.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L67)*
+Defined in packages/hooks/base.ts:67
 
 ___
 
@@ -53,7 +55,7 @@ ___
 
 • **message**: *string*
 
-*Inherited from void*
+*Inherited from [RequiredError](requirederror.md).[message](requirederror.md#message)*
 
 Defined in node_modules/typescript/lib/lib.es5.d.ts:974
 
@@ -65,7 +67,7 @@ ___
 
 *Overrides void*
 
-*Defined in [api.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L66)*
+Defined in packages/hooks/base.ts:66
 
 ___
 
@@ -73,9 +75,7 @@ ___
 
 • **stack**? : *string*
 
-*Inherited from void*
-
-*Overrides void*
+*Inherited from [RequiredError](requirederror.md).[stack](requirederror.md#optional-stack)*
 
 Defined in node_modules/typescript/lib/lib.es5.d.ts:975
 

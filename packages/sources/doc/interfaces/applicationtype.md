@@ -14,48 +14,42 @@
 
 ### Properties
 
-* [createdAt](applicationtype.md#optional-createdat)
-* [dependentApplications](applicationtype.md#optional-dependentapplications)
-* [displayName](applicationtype.md#optional-displayname)
+* [created_at](applicationtype.md#optional-created_at)
+* [dependent_applications](applicationtype.md#optional-dependent_applications)
+* [display_name](applicationtype.md#optional-display_name)
 * [id](applicationtype.md#optional-id)
 * [name](applicationtype.md#optional-name)
-* [supportedAuthenticationTypes](applicationtype.md#optional-supportedauthenticationtypes)
-* [supportedSourceTypes](applicationtype.md#optional-supportedsourcetypes)
-* [updatedAt](applicationtype.md#optional-updatedat)
+* [supported_authentication_types](applicationtype.md#optional-supported_authentication_types)
+* [supported_source_types](applicationtype.md#optional-supported_source_types)
+* [updated_at](applicationtype.md#optional-updated_at)
 
 ## Properties
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L139)*
-
-**`type`** {Date}
+*Defined in [packages/sources/api.ts:88](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L88)*
 
 **`memberof`** ApplicationType
 
 ___
 
-### `Optional` dependentApplications
+### `Optional` dependent_applications
 
-• **dependentApplications**? : *any*
+• **dependent_applications**? : *object*
 
-*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L145)*
-
-**`type`** {any}
+*Defined in [packages/sources/api.ts:94](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L94)*
 
 **`memberof`** ApplicationType
 
 ___
 
-### `Optional` displayName
+### `Optional` display_name
 
-• **displayName**? : *string*
+• **display_name**? : *string*
 
-*Defined in [api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L151)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:100](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L100)*
 
 **`memberof`** ApplicationType
 
@@ -65,11 +59,9 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L157)*
+*Defined in [packages/sources/api.ts:106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L106)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** ApplicationType
 
@@ -79,44 +71,36 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L163)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L112)*
 
 **`memberof`** ApplicationType
 
 ___
 
-### `Optional` supportedAuthenticationTypes
+### `Optional` supported_authentication_types
 
-• **supportedAuthenticationTypes**? : *any*
+• **supported_authentication_types**? : *object*
 
-*Defined in [api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L169)*
-
-**`type`** {any}
+*Defined in [packages/sources/api.ts:118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L118)*
 
 **`memberof`** ApplicationType
 
 ___
 
-### `Optional` supportedSourceTypes
+### `Optional` supported_source_types
 
-• **supportedSourceTypes**? : *any*
+• **supported_source_types**? : *object*
 
-*Defined in [api.ts:175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L175)*
-
-**`type`** {any}
+*Defined in [packages/sources/api.ts:124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L124)*
 
 **`memberof`** ApplicationType
 
 ___
 
-### `Optional` updatedAt
+### `Optional` updated_at
 
-• **updatedAt**? : *Date*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L181)*
-
-**`type`** {Date}
+*Defined in [packages/sources/api.ts:130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L130)*
 
 **`memberof`** ApplicationType

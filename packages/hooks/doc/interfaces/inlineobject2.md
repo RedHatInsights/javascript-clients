@@ -2,6 +2,10 @@
 
 # Interface: InlineObject2
 
+**`export`** 
+
+**`interface`** InlineObject2
+
 ## Hierarchy
 
 * **InlineObject2**
@@ -18,4 +22,6 @@
 
 • **endpoint**? : *[EndpointsIdEndpoint](endpointsidendpoint.md)*
 
-*Defined in [api.ts:648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L648)*
+*Defined in [packages/hooks/api.ts:558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L558)*
+
+**`memberof`** InlineObject2

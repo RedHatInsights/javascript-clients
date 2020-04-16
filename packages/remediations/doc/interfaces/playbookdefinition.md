@@ -14,20 +14,18 @@
 
 ### Properties
 
-* [autoReboot](playbookdefinition.md#optional-autoreboot)
+* [auto_reboot](playbookdefinition.md#optional-auto_reboot)
 * [issues](playbookdefinition.md#issues)
 
 ## Properties
 
-### `Optional` autoReboot
+### `Optional` auto_reboot
 
-• **autoReboot**? : *boolean*
+• **auto_reboot**? : *boolean*
 
-*Defined in [api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L169)*
+*Defined in [api.ts:152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L152)*
 
 Indicates whether systems that require reboot for the remediation to be properly applied should be rebooted automatically or not
-
-**`type`** {boolean}
 
 **`memberof`** PlaybookDefinition
 
@@ -37,8 +35,6 @@ ___
 
 • **issues**: *Array‹[PlaybookDefinitionIssues](playbookdefinitionissues.md)›*
 
-*Defined in [api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L163)*
-
-**`type`** {Array<PlaybookDefinitionIssues>}
+*Defined in [api.ts:146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L146)*
 
 **`memberof`** PlaybookDefinition

@@ -6,10 +6,6 @@ RulecategoryApi - object-oriented interface
 
 **`export`** 
 
-**`class`** RulecategoryApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -41,15 +37,15 @@ RulecategoryApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[RulecategoryApi](rulecategoryapi.md)*
 
@@ -61,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -71,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -81,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 ## Methods
 
@@ -89,7 +85,7 @@ ___
 
 ▸ **rulecategoryList**(`options?`: any): *AxiosPromise‹[RuleCategory](../interfaces/rulecategory.md)[]›*
 
-*Defined in [api.ts:3888](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3888)*
+*Defined in [packages/insights/api.ts:3898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3898)*
 
 Categories are listed in decreasing order of importance.
 
@@ -113,7 +109,7 @@ ___
 
 ▸ **rulecategoryRead**(`id`: number, `options?`: any): *AxiosPromise‹[RuleCategory](../interfaces/rulecategory.md)›*
 
-*Defined in [api.ts:3900](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3900)*
+*Defined in [packages/insights/api.ts:3910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3910)*
 
 Categories are listed in decreasing order of importance.
 

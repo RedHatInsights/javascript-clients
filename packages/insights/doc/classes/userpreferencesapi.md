@@ -6,10 +6,6 @@ UserPreferencesApi - object-oriented interface
 
 **`export`** 
 
-**`class`** UserPreferencesApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -41,15 +37,15 @@ UserPreferencesApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[UserPreferencesApi](userpreferencesapi.md)*
 
@@ -61,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -71,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -81,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 ## Methods
 
@@ -89,7 +85,7 @@ ___
 
 ▸ **userPreferencesCreate**(`preferencesInput`: [PreferencesInput](../interfaces/preferencesinput.md), `options?`: any): *AxiosPromise‹[PreferencesInput](../interfaces/preferencesinput.md)›*
 
-*Defined in [api.ts:5647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5647)*
+*Defined in [packages/insights/api.ts:5729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5729)*
 
 The current account settings will be updated, or one will be created, with the
 
@@ -114,9 +110,9 @@ ___
 
 ▸ **userPreferencesList**(`options?`: any): *AxiosPromise‹[SettingsDDF](../interfaces/settingsddf.md)[]›*
 
-*Defined in [api.ts:5658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5658)*
+*Defined in [packages/insights/api.ts:5740](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5740)*
 
-This simply compiles the 'show_satellite_hosts' account-wide setting and the weekly report 'is_subscribed' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
 
 **`summary`** Describe the settings we have in a Data-Driven Forms way.
 

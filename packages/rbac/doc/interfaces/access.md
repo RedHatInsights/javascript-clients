@@ -23,9 +23,7 @@
 
 • **permission**: *string*
 
-*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L83)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L33)*
 
 **`memberof`** Access
 
@@ -35,8 +33,6 @@ ___
 
 • **resourceDefinitions**: *Array‹[ResourceDefinition](resourcedefinition.md)›*
 
-*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L89)*
-
-**`type`** {Array<ResourceDefinition>}
+*Defined in [packages/rbac/api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L39)*
 
 **`memberof`** Access

@@ -14,16 +14,14 @@
 
 ### Properties
 
-* [isSubscribed](weeklyreportsubscription.md#issubscribed)
+* [is_subscribed](weeklyreportsubscription.md#is_subscribed)
 
 ## Properties
 
-###  isSubscribed
+###  is_subscribed
 
-• **isSubscribed**: *boolean*
+• **is_subscribed**: *boolean*
 
-*Defined in [api.ts:1309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1309)*
-
-**`type`** {boolean}
+*Defined in [packages/insights/api.ts:1228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1228)*
 
 **`memberof`** WeeklyReportSubscription

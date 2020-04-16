@@ -15,7 +15,7 @@
 ### Properties
 
 * [add](remediationinput.md#optional-add)
-* [autoReboot](remediationinput.md#optional-autoreboot)
+* [auto_reboot](remediationinput.md#optional-auto_reboot)
 * [name](remediationinput.md#optional-name)
 
 ## Properties
@@ -24,23 +24,19 @@
 
 • **add**? : *[RemediationInputAdd](remediationinputadd.md)*
 
-*Defined in [api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L698)*
-
-**`type`** {RemediationInputAdd}
+*Defined in [api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L699)*
 
 **`memberof`** RemediationInput
 
 ___
 
-### `Optional` autoReboot
+### `Optional` auto_reboot
 
-• **autoReboot**? : *boolean*
+• **auto_reboot**? : *boolean*
 
-*Defined in [api.ts:692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L692)*
+*Defined in [api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L693)*
 
 Indicates whether systems that require reboot for the remediation to be properly applied should be rebooted automatically or not
-
-**`type`** {boolean}
 
 **`memberof`** RemediationInput
 
@@ -50,8 +46,6 @@ ___
 
 • **name**? : *string | null*
 
-*Defined in [api.ts:686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L686)*
-
-**`type`** {string}
+*Defined in [api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L687)*
 
 **`memberof`** RemediationInput

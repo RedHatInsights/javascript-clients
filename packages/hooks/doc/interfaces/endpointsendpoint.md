@@ -2,6 +2,10 @@
 
 # Interface: EndpointsEndpoint
 
+**`export`** 
+
+**`interface`** EndpointsEndpoint
+
 ## Hierarchy
 
 * **EndpointsEndpoint**
@@ -21,7 +25,9 @@
 
 • **filter**? : *[EndpointsEndpointFilter](endpointsendpointfilter.md)*
 
-*Defined in [api.ts:346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L346)*
+*Defined in [packages/hooks/api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L273)*
+
+**`memberof`** EndpointsEndpoint
 
 ___
 
@@ -29,7 +35,9 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:334](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L334)*
+*Defined in [packages/hooks/api.ts:261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L261)*
+
+**`memberof`** EndpointsEndpoint
 
 ___
 
@@ -37,7 +45,9 @@ ___
 
 • **type**? : *string*
 
-*Defined in [api.ts:340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L340)*
+*Defined in [packages/hooks/api.ts:267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L267)*
+
+**`memberof`** EndpointsEndpoint
 
 ___
 
@@ -45,4 +55,6 @@ ___
 
 • **url**? : *string*
 
-*Defined in [api.ts:328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L328)*
+*Defined in [packages/hooks/api.ts:255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L255)*
+
+**`memberof`** EndpointsEndpoint

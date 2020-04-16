@@ -14,18 +14,16 @@
 
 ### Properties
 
-* [totalItems](businessrisklistoutmeta.md#totalitems)
+* [total_items](businessrisklistoutmeta.md#total_items)
 
 ## Properties
 
-###  totalItems
+###  total_items
 
-• **totalItems**: *number*
+• **total_items**: *number*
 
-*Defined in [api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L163)*
+*Defined in [packages/vulnerabilities/api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L109)*
 
 Total number of available business risk/business_risk_id pairs.
-
-**`type`** {number}
 
 **`memberof`** BusinessRiskListOutMeta

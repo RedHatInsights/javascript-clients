@@ -15,7 +15,7 @@
 ### Properties
 
 * [description](tenant.md#optional-description)
-* [externalTenant](tenant.md#optional-externaltenant)
+* [external_tenant](tenant.md#optional-external_tenant)
 * [name](tenant.md#optional-name)
 
 ## Properties
@@ -24,21 +24,17 @@
 
 • **description**? : *string*
 
-*Defined in [api.ts:843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L843)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:773](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L773)*
 
 **`memberof`** Tenant
 
 ___
 
-### `Optional` externalTenant
+### `Optional` external_tenant
 
-• **externalTenant**? : *string*
+• **external_tenant**? : *string*
 
-*Defined in [api.ts:849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L849)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:779](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L779)*
 
 **`memberof`** Tenant
 
@@ -48,8 +44,6 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L837)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:767](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L767)*
 
 **`memberof`** Tenant

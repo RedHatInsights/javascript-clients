@@ -23,9 +23,7 @@
 
 • **detail**? : *string*
 
-*Defined in [api.ts:1337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1337)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:1263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1263)*
 
 **`memberof`** ErrorNotFoundErrors
 
@@ -35,8 +33,6 @@ ___
 
 • **status**? : *number*
 
-*Defined in [api.ts:1331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1331)*
-
-**`type`** {number}
+*Defined in [packages/topological-inventory/api.ts:1257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1257)*
 
 **`memberof`** ErrorNotFoundErrors

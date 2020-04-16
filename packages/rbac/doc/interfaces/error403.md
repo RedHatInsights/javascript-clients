@@ -20,10 +20,8 @@
 
 ###  errors
 
-• **errors**: *Array‹any›*
+• **errors**: *Array‹object›*
 
-*Defined in [api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L149)*
-
-**`type`** {Array<any>}
+*Defined in [packages/rbac/api.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L97)*
 
 **`memberof`** Error403

@@ -24,9 +24,7 @@
 
 • **data**? : *Array‹[Flavor](flavor.md)›*
 
-*Defined in [api.ts:1449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1449)*
-
-**`type`** {Array<Flavor>}
+*Defined in [packages/topological-inventory/api.ts:1373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1373)*
 
 **`memberof`** FlavorsCollection
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:1443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1443)*
-
-**`type`** {CollectionLinks}
+*Defined in [packages/topological-inventory/api.ts:1367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1367)*
 
 **`memberof`** FlavorsCollection
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:1437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1437)*
-
-**`type`** {CollectionMetadata}
+*Defined in [packages/topological-inventory/api.ts:1361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1361)*
 
 **`memberof`** FlavorsCollection

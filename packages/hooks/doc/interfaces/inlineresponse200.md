@@ -2,6 +2,10 @@
 
 # Interface: InlineResponse200
 
+**`export`** 
+
+**`interface`** InlineResponse200
+
 ## Hierarchy
 
 * **InlineResponse200**
@@ -17,14 +21,18 @@
 
 ### `Optional` data
 
-• **data**? : *Array‹[App](../modules/app.md)›*
+• **data**? : *Array‹[App](app.md)›*
 
-*Defined in [api.ts:662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L662)*
+*Defined in [packages/hooks/api.ts:571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L571)*
+
+**`memberof`** InlineResponse200
 
 ___
 
 ### `Optional` included
 
-• **included**? : *Array‹Object›*
+• **included**? : *Array‹[EventType](eventtype.md) | [Level](level.md)›*
 
-*Defined in [api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L668)*
+*Defined in [packages/hooks/api.ts:577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L577)*
+
+**`memberof`** InlineResponse200

@@ -23,7 +23,7 @@
 
 • **unit**? : *[UnitEnum](../enums/markup.unitenum.md)*
 
-*Defined in [api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L339)*
+*Defined in [api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L353)*
 
 **`type`** {string}
 
@@ -35,7 +35,7 @@ ___
 
 • **value**? : *number*
 
-*Defined in [api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L333)*
+*Defined in [api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L347)*
 
 **`type`** {number}
 

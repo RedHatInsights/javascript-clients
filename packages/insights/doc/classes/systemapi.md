@@ -6,10 +6,6 @@ SystemApi - object-oriented interface
 
 **`export`** 
 
-**`class`** SystemApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -42,15 +38,15 @@ SystemApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[SystemApi](systemapi.md)*
 
@@ -62,7 +58,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -72,7 +68,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -82,7 +78,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 ## Methods
 
@@ -90,7 +86,7 @@ ___
 
 ▸ **systemList**(`limit?`: number, `offset?`: number, `sort?`: "hits" | "last_seen" | "display_name" | "-hits" | "-last_seen" | "-display_name", `displayName?`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2005](../interfaces/inlineresponse2005.md)›*
 
-*Defined in [api.ts:4686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4686)*
+*Defined in [packages/insights/api.ts:4729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4729)*
 
 Results can be sorted and systems can be filtered by display name.
 
@@ -119,7 +115,7 @@ ___
 
 ▸ **systemRead**(`uuid`: string, `options?`: any): *AxiosPromise‹[System](../interfaces/system.md)›*
 
-*Defined in [api.ts:4698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4698)*
+*Defined in [packages/insights/api.ts:4741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4741)*
 
 Retrieve the reports for a single system by Insights Inventory UUID
 
@@ -133,7 +129,7 @@ Retrieve the reports for a single system by Insights Inventory UUID
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`uuid` | string | The system&#39;s Host ID in the Inventory |
+`uuid` | string | The system\&#39;s Host ID in the Inventory |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[System](../interfaces/system.md)›*
@@ -144,9 +140,9 @@ ___
 
 ▸ **systemReports**(`uuid`: string, `options?`: any): *AxiosPromise‹[Report](../interfaces/report.md)[]›*
 
-*Defined in [api.ts:4710](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4710)*
+*Defined in [packages/insights/api.ts:4753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4753)*
 
-Returns reports that: * are in the user's account * have an active, not-deleted rule * where the rule has not been acked by this account If the host ID is not found, return an empty list.
+Returns reports that: * are in the user\'s account * have an active, not-deleted rule * where the rule has not been acked by this account If the host ID is not found, return an empty list.
 
 **`summary`** Returns the list of latest reports for an Inventory Host ID.
 
@@ -158,7 +154,7 @@ Returns reports that: * are in the user's account * have an active, not-deleted 
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`uuid` | string | The system&#39;s Host ID in the Inventory |
+`uuid` | string | The system\&#39;s Host ID in the Inventory |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[Report](../interfaces/report.md)[]›*

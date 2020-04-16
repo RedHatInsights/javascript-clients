@@ -22,8 +22,6 @@
 
 • **data**: *Array‹[RoleOut](roleout.md)›*
 
-*Defined in [api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L419)*
-
-**`type`** {Array<RoleOut>}
+*Defined in [packages/rbac/api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L391)*
 
 **`memberof`** InlineResponse200

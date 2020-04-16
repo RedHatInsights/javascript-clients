@@ -2,6 +2,10 @@
 
 # Interface: InlineObject
 
+**`export`** 
+
+**`interface`** InlineObject
+
 ## Hierarchy
 
 * **InlineObject**
@@ -11,7 +15,7 @@
 ### Properties
 
 * [application](inlineobject.md#optional-application)
-* [eventTypes](inlineobject.md#optional-eventtypes)
+* [event_types](inlineobject.md#optional-event_types)
 
 ## Properties
 
@@ -19,12 +23,16 @@
 
 • **application**? : *[AppsRegisterApplication](appsregisterapplication.md)*
 
-*Defined in [api.ts:614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L614)*
+*Defined in [packages/hooks/api.ts:526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L526)*
+
+**`memberof`** InlineObject
 
 ___
 
-### `Optional` eventTypes
+### `Optional` event_types
 
-• **eventTypes**? : *[AppsRegisterEventTypes](appsregistereventtypes.md)*
+• **event_types**? : *[AppsRegisterEventTypes](appsregistereventtypes.md)*
 
-*Defined in [api.ts:620](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L620)*
+*Defined in [packages/hooks/api.ts:532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L532)*
+
+**`memberof`** InlineObject

@@ -2,6 +2,10 @@
 
 # Interface: AppsRegisterEventTypes
 
+**`export`** 
+
+**`interface`** AppsRegisterEventTypes
+
 ## Hierarchy
 
 * **AppsRegisterEventTypes**
@@ -18,9 +22,11 @@
 
 ### `Optional` id
 
-• **id**? : *Object*
+• **id**? : *number | string*
 
-*Defined in [api.ts:183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L183)*
+*Defined in [packages/hooks/api.ts:124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L124)*
+
+**`memberof`** AppsRegisterEventTypes
 
 ___
 
@@ -28,7 +34,9 @@ ___
 
 • **levels**? : *[AppsRegisterEventTypesLevels](appsregistereventtypeslevels.md)*
 
-*Defined in [api.ts:195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L195)*
+*Defined in [packages/hooks/api.ts:136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L136)*
+
+**`memberof`** AppsRegisterEventTypes
 
 ___
 
@@ -36,4 +44,6 @@ ___
 
 • **title**? : *string*
 
-*Defined in [api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L189)*
+*Defined in [packages/hooks/api.ts:130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L130)*
+
+**`memberof`** AppsRegisterEventTypes

@@ -24,9 +24,7 @@
 
 • **data**? : *Array‹[ContainerImage](containerimage.md)›*
 
-*Defined in [api.ts:645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L645)*
-
-**`type`** {Array<ContainerImage>}
+*Defined in [packages/topological-inventory/api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L584)*
 
 **`memberof`** ContainerImagesCollection
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L639)*
-
-**`type`** {CollectionLinks}
+*Defined in [packages/topological-inventory/api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L578)*
 
 **`memberof`** ContainerImagesCollection
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L633)*
-
-**`type`** {CollectionMetadata}
+*Defined in [packages/topological-inventory/api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L572)*
 
 **`memberof`** ContainerImagesCollection

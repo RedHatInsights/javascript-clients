@@ -4,8 +4,6 @@
 
 **`export`** 
 
-**`enum`** {string}
-
 ## Index
 
 ### Enumeration members
@@ -22,7 +20,7 @@
 
 • **Canceled**: = "canceled"
 
-*Defined in [api.ts:518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L518)*
+*Defined in [api.ts:524](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L524)*
 
 ___
 
@@ -30,7 +28,7 @@ ___
 
 • **Failure**: = "failure"
 
-*Defined in [api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L517)*
+*Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L523)*
 
 ___
 
@@ -38,7 +36,7 @@ ___
 
 • **Pending**: = "pending"
 
-*Defined in [api.ts:514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L514)*
+*Defined in [api.ts:520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L520)*
 
 ___
 
@@ -46,7 +44,7 @@ ___
 
 • **Running**: = "running"
 
-*Defined in [api.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L515)*
+*Defined in [api.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L521)*
 
 ___
 
@@ -54,4 +52,4 @@ ___
 
 • **Success**: = "success"
 
-*Defined in [api.ts:516](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L516)*
+*Defined in [api.ts:522](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L522)*

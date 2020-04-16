@@ -14,29 +14,25 @@
 
 ### Properties
 
-* [staleCount](stalesystemstats.md#stalecount)
-* [warnCount](stalesystemstats.md#warncount)
+* [stale_count](stalesystemstats.md#stale_count)
+* [warn_count](stalesystemstats.md#warn_count)
 
 ## Properties
 
-###  staleCount
+###  stale_count
 
-• **staleCount**: *number*
+• **stale_count**: *number*
 
-*Defined in [api.ts:1121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1121)*
-
-**`type`** {number}
+*Defined in [packages/insights/api.ts:1047](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1047)*
 
 **`memberof`** StaleSystemStats
 
 ___
 
-###  warnCount
+###  warn_count
 
-• **warnCount**: *number*
+• **warn_count**: *number*
 
-*Defined in [api.ts:1127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1127)*
-
-**`type`** {number}
+*Defined in [packages/insights/api.ts:1053](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1053)*
 
 **`memberof`** StaleSystemStats

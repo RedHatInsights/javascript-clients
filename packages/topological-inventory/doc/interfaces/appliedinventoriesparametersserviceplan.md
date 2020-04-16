@@ -14,18 +14,16 @@
 
 ### Properties
 
-* [serviceParameters](appliedinventoriesparametersserviceplan.md#optional-serviceparameters)
+* [service_parameters](appliedinventoriesparametersserviceplan.md#optional-service_parameters)
 
 ## Properties
 
-### `Optional` serviceParameters
+### `Optional` service_parameters
 
-• **serviceParameters**? : *any*
+• **service_parameters**? : *object*
 
-*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L83)*
+*Defined in [packages/topological-inventory/api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L33)*
 
 The provider specific parameters needed to compute list of used service inventories
-
-**`type`** {any}
 
 **`memberof`** AppliedInventoriesParametersServicePlan

@@ -2,6 +2,10 @@
 
 # Interface: ErrorsErrors
 
+**`export`** 
+
+**`interface`** ErrorsErrors
+
 ## Hierarchy
 
 * **ErrorsErrors**
@@ -24,7 +28,9 @@
 
 • **code**? : *string*
 
-*Defined in [api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L476)*
+*Defined in [packages/hooks/api.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L398)*
+
+**`memberof`** ErrorsErrors
 
 ___
 
@@ -32,7 +38,9 @@ ___
 
 • **detail**? : *string*
 
-*Defined in [api.ts:488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L488)*
+*Defined in [packages/hooks/api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L410)*
+
+**`memberof`** ErrorsErrors
 
 ___
 
@@ -40,15 +48,19 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:464](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L464)*
+*Defined in [packages/hooks/api.ts:386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L386)*
+
+**`memberof`** ErrorsErrors
 
 ___
 
 ### `Optional` meta
 
-• **meta**? : *any*
+• **meta**? : *object*
 
-*Defined in [api.ts:500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L500)*
+*Defined in [packages/hooks/api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L422)*
+
+**`memberof`** ErrorsErrors
 
 ___
 
@@ -56,7 +68,9 @@ ___
 
 • **source**? : *[ErrorsSource](errorssource.md)*
 
-*Defined in [api.ts:494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L494)*
+*Defined in [packages/hooks/api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L416)*
+
+**`memberof`** ErrorsErrors
 
 ___
 
@@ -64,7 +78,9 @@ ___
 
 • **status**? : *string*
 
-*Defined in [api.ts:470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L470)*
+*Defined in [packages/hooks/api.ts:392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L392)*
+
+**`memberof`** ErrorsErrors
 
 ___
 
@@ -72,4 +88,6 @@ ___
 
 • **title**? : *string*
 
-*Defined in [api.ts:482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L482)*
+*Defined in [packages/hooks/api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L404)*
+
+**`memberof`** ErrorsErrors

@@ -14,16 +14,14 @@
 
 ### Properties
 
-* [restoreKey](restorekey.md#optional-restorekey)
+* [restore_key](restorekey.md#optional-restore_key)
 
 ## Properties
 
-### `Optional` restoreKey
+### `Optional` restore_key
 
-• **restoreKey**? : *string*
+• **restore_key**? : *string*
 
-*Defined in [api.ts:940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L940)*
-
-**`type`** {string}
+*Defined in [packages/catalog/api.ts:847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L847)*
 
 **`memberof`** RestoreKey

@@ -6,10 +6,6 @@ AccountSettingApi - object-oriented interface
 
 **`export`** 
 
-**`class`** AccountSettingApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -41,15 +37,15 @@ AccountSettingApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[AccountSettingApi](accountsettingapi.md)*
 
@@ -61,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -71,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -81,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 ## Methods
 
@@ -89,11 +85,11 @@ ___
 
 ▸ **accountSettingCreate**(`accountSetting`: [AccountSetting](../interfaces/accountsetting.md), `options?`: any): *AxiosPromise‹[AccountSetting](../interfaces/accountsetting.md)›*
 
-*Defined in [api.ts:1464](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1464)*
+*Defined in [packages/insights/api.ts:1388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1388)*
 
 A new object will be created, even if the default settings are supplied.
 
-**`summary`** Update this account's settings, and return the updated settings.
+**`summary`** Update this account\'s settings, and return the updated settings.
 
 **`throws`** {RequiredError}
 
@@ -112,13 +108,13 @@ ___
 
 ###  accountSettingList
 
-▸ **accountSettingList**(`options?`: any): *AxiosPromise‹Response›*
+▸ **accountSettingList**(`options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:1475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1475)*
+*Defined in [packages/insights/api.ts:1399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1399)*
 
 This will not create a new account settings object if none exists.
 
-**`summary`** Show this account's settings, or the defaults.
+**`summary`** Show this account\'s settings, or the defaults.
 
 **`throws`** {RequiredError}
 
@@ -130,4 +126,4 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*

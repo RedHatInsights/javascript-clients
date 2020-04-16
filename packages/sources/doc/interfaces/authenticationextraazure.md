@@ -14,16 +14,14 @@
 
 ### Properties
 
-* [tenantId](authenticationextraazure.md#optional-tenantid)
+* [tenant_id](authenticationextraazure.md#optional-tenant_id)
 
 ## Properties
 
-### `Optional` tenantId
+### `Optional` tenant_id
 
-• **tenantId**? : *string*
+• **tenant_id**? : *string*
 
-*Defined in [api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L347)*
-
-**`type`** {string}
+*Defined in [packages/sources/api.ts:291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L291)*
 
 **`memberof`** AuthenticationExtraAzure

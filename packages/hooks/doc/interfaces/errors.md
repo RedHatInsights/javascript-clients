@@ -2,6 +2,10 @@
 
 # Interface: Errors
 
+**`export`** 
+
+**`interface`** Errors
+
 ## Hierarchy
 
 * **Errors**
@@ -18,4 +22,6 @@
 
 • **errors**? : *Array‹[ErrorsErrors](errorserrors.md)›*
 
-*Defined in [api.ts:450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L450)*
+*Defined in [packages/hooks/api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L373)*
+
+**`memberof`** Errors

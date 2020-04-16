@@ -4,15 +4,15 @@
 
 ## Index
 
-### Modules
+### Enumerations
 
-* [ApprovalRequest](modules/approvalrequest.md)
-* [Order](modules/order.md)
-* [OrderItem](modules/orderitem.md)
-* [ProgressMessage](modules/progressmessage.md)
-* [ShareInfo](modules/shareinfo.md)
-* [SharePolicy](modules/sharepolicy.md)
-* [UnsharePolicy](modules/unsharepolicy.md)
+* [ApprovalRequestStateEnum](enums/approvalrequeststateenum.md)
+* [OrderItemStateEnum](enums/orderitemstateenum.md)
+* [OrderStateEnum](enums/orderstateenum.md)
+* [ProgressMessageLevelEnum](enums/progressmessagelevelenum.md)
+* [ShareInfoPermissionsEnum](enums/shareinfopermissionsenum.md)
+* [SharePolicyPermissionsEnum](enums/sharepolicypermissionsenum.md)
+* [UnsharePolicyPermissionsEnum](enums/unsharepolicypermissionsenum.md)
 
 ### Classes
 
@@ -32,6 +32,7 @@
 
 ### Interfaces
 
+* [ApprovalRequest](interfaces/approvalrequest.md)
 * [ApprovalRequestsCollection](interfaces/approvalrequestscollection.md)
 * [CollectionLinks](interfaces/collectionlinks.md)
 * [CollectionMetadata](interfaces/collectionmetadata.md)
@@ -43,6 +44,8 @@
 * [GraphQLResponse](interfaces/graphqlresponse.md)
 * [Icon](interfaces/icon.md)
 * [ImportServicePlan](interfaces/importserviceplan.md)
+* [Order](interfaces/order.md)
+* [OrderItem](interfaces/orderitem.md)
 * [OrderItemsCollection](interfaces/orderitemscollection.md)
 * [OrdersCollection](interfaces/orderscollection.md)
 * [PatchModifiedServicePlan](interfaces/patchmodifiedserviceplan.md)
@@ -51,16 +54,20 @@
 * [PortfolioItemNextName](interfaces/portfolioitemnextname.md)
 * [PortfolioItemsCollection](interfaces/portfolioitemscollection.md)
 * [PortfoliosCollection](interfaces/portfolioscollection.md)
+* [ProgressMessage](interfaces/progressmessage.md)
 * [ProgressMessagesCollection](interfaces/progressmessagescollection.md)
 * [RequestArgs](interfaces/requestargs.md)
 * [RestoreKey](interfaces/restorekey.md)
 * [ServicePlan](interfaces/serviceplan.md)
 * [Setting](interfaces/setting.md)
+* [ShareInfo](interfaces/shareinfo.md)
+* [SharePolicy](interfaces/sharepolicy.md)
 * [Tag](interfaces/tag.md)
 * [TagsCollection](interfaces/tagscollection.md)
 * [Tenant](interfaces/tenant.md)
 * [TenantSettings](interfaces/tenantsettings.md)
 * [TenantsCollection](interfaces/tenantscollection.md)
+* [UnsharePolicy](interfaces/unsharepolicy.md)
 
 ### Variables
 
@@ -107,9 +114,9 @@
 
 ### `Const` BASE_PATH
 
-• **BASE_PATH**: *string* =  "https://cloud.redhat.com//api/catalog/v1.0".replace(/\/+$/, "")
+• **BASE_PATH**: *string* = "https://cloud.redhat.com//api/catalog/v1.0".replace(/\/+$/, "")
 
-*Defined in [api.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L20)*
+Defined in packages/catalog/base.ts:20
 
 ## Functions
 
@@ -117,9 +124,11 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1235)*
+*Defined in [packages/catalog/api.ts:1116](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1116)*
 
 DefaultApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -139,9 +148,11 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:1355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1355)*
+*Defined in [packages/catalog/api.ts:1242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1242)*
 
 DefaultApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -153,7 +164,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **getDocumentation**(`options?`: any): *AxiosPromise‹any›*
+* **getDocumentation**(`options?`: any): *AxiosPromise‹object›*
 
 * **postGraphQL**(`graphQLRequest`: [GraphQLRequest](interfaces/graphqlrequest.md), `options?`: any): *AxiosPromise‹[GraphQLResponse](interfaces/graphqlresponse.md)›*
 
@@ -163,9 +174,11 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1319)*
+*Defined in [packages/catalog/api.ts:1206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1206)*
 
 DefaultApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -177,7 +190,7 @@ Name | Type |
 
 * **getDocumentation**(`options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹any›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹object›*
 
 * **postGraphQL**(`graphQLRequest`: [GraphQLRequest](interfaces/graphqlrequest.md), `options?`: any): *function*
 
@@ -189,9 +202,11 @@ ___
 
 ▸ **IconApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1415)*
+*Defined in [packages/catalog/api.ts:1303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1303)*
 
 IconApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -217,9 +232,11 @@ ___
 
 ▸ **IconApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:1723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1723)*
+*Defined in [packages/catalog/api.ts:1626](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1626)*
 
 IconApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -233,7 +250,7 @@ Name | Type |
 
 * **createIcon**(`content?`: any, `portfolioId?`: string, `portfolioItemId?`: string, `options?`: any): *AxiosPromise‹[Icon](interfaces/icon.md)›*
 
-* **destroyIcon**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
+* **destroyIcon**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
 * **getIcon**(`id`: string, `options?`: any): *AxiosPromise‹[Icon](interfaces/icon.md)›*
 
@@ -247,9 +264,11 @@ ___
 
 ▸ **IconApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1641)*
+*Defined in [packages/catalog/api.ts:1544](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1544)*
 
 IconApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -265,7 +284,7 @@ Name | Type |
 
 * **destroyIcon**(`id`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **getIcon**(`id`: string, `options?`: any): *function*
 
@@ -285,9 +304,11 @@ ___
 
 ▸ **OrderApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1857)*
+*Defined in [packages/catalog/api.ts:1761](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1761)*
 
 OrderApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -297,7 +318,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **addToOrder**(`orderId`: string, `orderItem`: [OrderItem](modules/orderitem.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **addToOrder**(`orderId`: string, `orderItem`: [OrderItem](interfaces/orderitem.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **cancelOrder**(`orderId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -305,9 +326,9 @@ Name | Type |
 
 * **destroyOrder**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listOrderItemsFromOrder**(`orderId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listOrderItemsFromOrder**(`orderId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listOrders**(`limit?`: number, `offset?`: number, `filter?`: any, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listOrders**(`limit?`: number, `offset?`: number, `filter?`: object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **restoreOrder**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -323,9 +344,11 @@ ___
 
 ▸ **OrderApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2454)*
+*Defined in [packages/catalog/api.ts:2388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2388)*
 
 OrderApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -337,25 +360,25 @@ Name | Type |
 
 **Returns:** *object*
 
-* **addToOrder**(`orderId`: string, `orderItem`: [OrderItem](modules/orderitem.md), `options?`: any): *AxiosPromise‹[OrderItem](modules/orderitem.md)›*
+* **addToOrder**(`orderId`: string, `orderItem`: [OrderItem](interfaces/orderitem.md), `options?`: any): *AxiosPromise‹[OrderItem](interfaces/orderitem.md)›*
 
-* **cancelOrder**(`orderId`: string, `options?`: any): *AxiosPromise‹[Order](modules/order.md)›*
+* **cancelOrder**(`orderId`: string, `options?`: any): *AxiosPromise‹[Order](interfaces/order.md)›*
 
-* **createOrder**(`options?`: any): *AxiosPromise‹[Order](modules/order.md)›*
+* **createOrder**(`options?`: any): *AxiosPromise‹[Order](interfaces/order.md)›*
 
 * **destroyOrder**(`id`: string, `options?`: any): *AxiosPromise‹[RestoreKey](interfaces/restorekey.md)›*
 
-* **listOrderItemsFromOrder**(`orderId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[OrderItemsCollection](interfaces/orderitemscollection.md)›*
+* **listOrderItemsFromOrder**(`orderId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[OrderItemsCollection](interfaces/orderitemscollection.md)›*
 
-* **listOrders**(`limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[OrdersCollection](interfaces/orderscollection.md)›*
+* **listOrders**(`limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[OrdersCollection](interfaces/orderscollection.md)›*
 
-* **restoreOrder**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *AxiosPromise‹[Order](modules/order.md)›*
+* **restoreOrder**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *AxiosPromise‹[Order](interfaces/order.md)›*
 
-* **showOrder**(`id`: string, `options?`: any): *AxiosPromise‹[Order](modules/order.md)›*
+* **showOrder**(`id`: string, `options?`: any): *AxiosPromise‹[Order](interfaces/order.md)›*
 
-* **showOrderItemFromOrder**(`orderId`: string, `id`: string, `options?`: any): *AxiosPromise‹[OrderItem](modules/orderitem.md)›*
+* **showOrderItemFromOrder**(`orderId`: string, `id`: string, `options?`: any): *AxiosPromise‹[OrderItem](interfaces/orderitem.md)›*
 
-* **submitOrder**(`orderId`: string, `options?`: any): *AxiosPromise‹[Order](modules/order.md)›*
+* **submitOrder**(`orderId`: string, `options?`: any): *AxiosPromise‹[Order](interfaces/order.md)›*
 
 ___
 
@@ -363,9 +386,11 @@ ___
 
 ▸ **OrderApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2298)*
+*Defined in [packages/catalog/api.ts:2232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2232)*
 
 OrderApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -375,45 +400,45 @@ Name | Type |
 
 **Returns:** *object*
 
-* **addToOrder**(`orderId`: string, `orderItem`: [OrderItem](modules/orderitem.md), `options?`: any): *function*
+* **addToOrder**(`orderId`: string, `orderItem`: [OrderItem](interfaces/orderitem.md), `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItem](modules/orderitem.md)›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItem](interfaces/orderitem.md)›*
 
 * **cancelOrder**(`orderId`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](modules/order.md)›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](interfaces/order.md)›*
 
 * **createOrder**(`options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](modules/order.md)›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](interfaces/order.md)›*
 
 * **destroyOrder**(`id`: string, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RestoreKey](interfaces/restorekey.md)›*
 
-* **listOrderItemsFromOrder**(`orderId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *function*
+* **listOrderItemsFromOrder**(`orderId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItemsCollection](interfaces/orderitemscollection.md)›*
 
-* **listOrders**(`limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *function*
+* **listOrders**(`limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrdersCollection](interfaces/orderscollection.md)›*
 
 * **restoreOrder**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](modules/order.md)›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](interfaces/order.md)›*
 
 * **showOrder**(`id`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](modules/order.md)›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](interfaces/order.md)›*
 
 * **showOrderItemFromOrder**(`orderId`: string, `id`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItem](modules/orderitem.md)›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItem](interfaces/orderitem.md)›*
 
 * **submitOrder**(`orderId`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](modules/order.md)›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](interfaces/order.md)›*
 
 ___
 
@@ -421,9 +446,11 @@ ___
 
 ▸ **OrderItemApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2706](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2706)*
+*Defined in [packages/catalog/api.ts:2641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2641)*
 
 OrderItemApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -435,11 +462,11 @@ Name | Type |
 
 * **destroyOrderItem**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listApprovalRequests**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listApprovalRequests**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listOrderItems**(`limit?`: number, `offset?`: number, `filter?`: any, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listOrderItems**(`limit?`: number, `offset?`: number, `filter?`: object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listProgressMessages**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listProgressMessages**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **restoreOrderItem**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -451,9 +478,11 @@ ___
 
 ▸ **OrderItemApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3099)*
+*Defined in [packages/catalog/api.ts:3052](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3052)*
 
 OrderItemApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -467,15 +496,15 @@ Name | Type |
 
 * **destroyOrderItem**(`id`: string, `options?`: any): *AxiosPromise‹[RestoreKey](interfaces/restorekey.md)›*
 
-* **listApprovalRequests**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[ApprovalRequestsCollection](interfaces/approvalrequestscollection.md)›*
+* **listApprovalRequests**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[ApprovalRequestsCollection](interfaces/approvalrequestscollection.md)›*
 
-* **listOrderItems**(`limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[OrderItemsCollection](interfaces/orderitemscollection.md)›*
+* **listOrderItems**(`limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[OrderItemsCollection](interfaces/orderitemscollection.md)›*
 
-* **listProgressMessages**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[ProgressMessagesCollection](interfaces/progressmessagescollection.md)›*
+* **listProgressMessages**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[ProgressMessagesCollection](interfaces/progressmessagescollection.md)›*
 
-* **restoreOrderItem**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *AxiosPromise‹[OrderItem](modules/orderitem.md)›*
+* **restoreOrderItem**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *AxiosPromise‹[OrderItem](interfaces/orderitem.md)›*
 
-* **showOrderItem**(`id`: string, `options?`: any): *AxiosPromise‹[OrderItem](modules/orderitem.md)›*
+* **showOrderItem**(`id`: string, `options?`: any): *AxiosPromise‹[OrderItem](interfaces/orderitem.md)›*
 
 ___
 
@@ -483,9 +512,11 @@ ___
 
 ▸ **OrderItemApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2997](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2997)*
+*Defined in [packages/catalog/api.ts:2950](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2950)*
 
 OrderItemApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -499,25 +530,25 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RestoreKey](interfaces/restorekey.md)›*
 
-* **listApprovalRequests**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *function*
+* **listApprovalRequests**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ApprovalRequestsCollection](interfaces/approvalrequestscollection.md)›*
 
-* **listOrderItems**(`limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *function*
+* **listOrderItems**(`limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItemsCollection](interfaces/orderitemscollection.md)›*
 
-* **listProgressMessages**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *function*
+* **listProgressMessages**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ProgressMessagesCollection](interfaces/progressmessagescollection.md)›*
 
 * **restoreOrderItem**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItem](modules/orderitem.md)›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItem](interfaces/orderitem.md)›*
 
 * **showOrderItem**(`id`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItem](modules/orderitem.md)›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItem](interfaces/orderitem.md)›*
 
 ___
 
@@ -525,9 +556,11 @@ ___
 
 ▸ **PortfolioApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3267)*
+*Defined in [packages/catalog/api.ts:3221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3221)*
 
 PortfolioApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -543,11 +576,11 @@ Name | Type |
 
 * **destroyPortfolio**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **fetchPortfolioItemsWithPortfolio**(`portfolioId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **fetchPortfolioItemsWithPortfolio**(`portfolioId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listPortfolioTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listPortfolioTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listPortfolios**(`limit?`: number, `offset?`: number, `filter?`: any, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listPortfolios**(`limit?`: number, `offset?`: number, `filter?`: object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **postCopyPortfolio**(`portfolioId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -555,7 +588,7 @@ Name | Type |
 
 * **shareInfo**(`portfolioId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **sharePortfolio**(`portfolioId`: string, `sharePolicy`: [SharePolicy](modules/sharepolicy.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **sharePortfolio**(`portfolioId`: string, `sharePolicy`: [SharePolicy](interfaces/sharepolicy.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **showPortfolio**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -563,7 +596,7 @@ Name | Type |
 
 * **unDeletePortfolio**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **unsharePortfolio**(`portfolioId`: string, `unsharePolicy`: [UnsharePolicy](modules/unsharepolicy.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **unsharePortfolio**(`portfolioId`: string, `unsharePolicy`: [UnsharePolicy](interfaces/unsharepolicy.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **updatePortfolio**(`id`: string, `portfolio`: [Portfolio](interfaces/portfolio.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -573,9 +606,11 @@ ___
 
 ▸ **PortfolioApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:4190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4190)*
+*Defined in [packages/catalog/api.ts:4189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4189)*
 
 PortfolioApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -587,25 +622,25 @@ Name | Type |
 
 **Returns:** *object*
 
-* **addPortfolioTag**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *AxiosPromise‹[Tag](interfaces/tag.md)[]›*
+* **addPortfolioTag**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *AxiosPromise‹Array‹[Tag](interfaces/tag.md)››*
 
 * **createPortfolio**(`portfolio`: [Portfolio](interfaces/portfolio.md), `options?`: any): *AxiosPromise‹[Portfolio](interfaces/portfolio.md)›*
 
 * **destroyPortfolio**(`id`: string, `options?`: any): *AxiosPromise‹[RestoreKey](interfaces/restorekey.md)›*
 
-* **fetchPortfolioItemsWithPortfolio**(`portfolioId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[PortfolioItemsCollection](interfaces/portfolioitemscollection.md)›*
+* **fetchPortfolioItemsWithPortfolio**(`portfolioId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[PortfolioItemsCollection](interfaces/portfolioitemscollection.md)›*
 
-* **listPortfolioTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[TagsCollection](interfaces/tagscollection.md)›*
+* **listPortfolioTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[TagsCollection](interfaces/tagscollection.md)›*
 
-* **listPortfolios**(`limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[PortfoliosCollection](interfaces/portfolioscollection.md)›*
+* **listPortfolios**(`limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[PortfoliosCollection](interfaces/portfolioscollection.md)›*
 
 * **postCopyPortfolio**(`portfolioId`: string, `options?`: any): *AxiosPromise‹[Portfolio](interfaces/portfolio.md)›*
 
-* **removePortfolioTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *AxiosPromise‹Response›*
+* **removePortfolioTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *AxiosPromise‹void›*
 
-* **shareInfo**(`portfolioId`: string, `options?`: any): *AxiosPromise‹[ShareInfo](modules/shareinfo.md)[]›*
+* **shareInfo**(`portfolioId`: string, `options?`: any): *AxiosPromise‹Array‹[ShareInfo](interfaces/shareinfo.md)››*
 
-* **sharePortfolio**(`portfolioId`: string, `sharePolicy`: [SharePolicy](modules/sharepolicy.md), `options?`: any): *AxiosPromise‹Response›*
+* **sharePortfolio**(`portfolioId`: string, `sharePolicy`: [SharePolicy](interfaces/sharepolicy.md), `options?`: any): *AxiosPromise‹void›*
 
 * **showPortfolio**(`id`: string, `options?`: any): *AxiosPromise‹[Portfolio](interfaces/portfolio.md)›*
 
@@ -613,7 +648,7 @@ Name | Type |
 
 * **unDeletePortfolio**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *AxiosPromise‹[Portfolio](interfaces/portfolio.md)›*
 
-* **unsharePortfolio**(`portfolioId`: string, `unsharePolicy`: [UnsharePolicy](modules/unsharepolicy.md), `options?`: any): *AxiosPromise‹Response›*
+* **unsharePortfolio**(`portfolioId`: string, `unsharePolicy`: [UnsharePolicy](interfaces/unsharepolicy.md), `options?`: any): *AxiosPromise‹void›*
 
 * **updatePortfolio**(`id`: string, `portfolio`: [Portfolio](interfaces/portfolio.md), `options?`: any): *AxiosPromise‹[Portfolio](interfaces/portfolio.md)›*
 
@@ -623,9 +658,11 @@ ___
 
 ▸ **PortfolioApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3957](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3957)*
+*Defined in [packages/catalog/api.ts:3956](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3956)*
 
 PortfolioApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -647,15 +684,15 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RestoreKey](interfaces/restorekey.md)›*
 
-* **fetchPortfolioItemsWithPortfolio**(`portfolioId`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *function*
+* **fetchPortfolioItemsWithPortfolio**(`portfolioId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PortfolioItemsCollection](interfaces/portfolioitemscollection.md)›*
 
-* **listPortfolioTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *function*
+* **listPortfolioTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[TagsCollection](interfaces/tagscollection.md)›*
 
-* **listPortfolios**(`limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *function*
+* **listPortfolios**(`limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PortfoliosCollection](interfaces/portfolioscollection.md)›*
 
@@ -665,15 +702,15 @@ Name | Type |
 
 * **removePortfolioTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **shareInfo**(`portfolioId`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[ShareInfo](modules/shareinfo.md)››*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[ShareInfo](interfaces/shareinfo.md)››*
 
-* **sharePortfolio**(`portfolioId`: string, `sharePolicy`: [SharePolicy](modules/sharepolicy.md), `options?`: any): *function*
+* **sharePortfolio**(`portfolioId`: string, `sharePolicy`: [SharePolicy](interfaces/sharepolicy.md), `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **showPortfolio**(`id`: string, `options?`: any): *function*
 
@@ -687,9 +724,9 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Portfolio](interfaces/portfolio.md)›*
 
-* **unsharePortfolio**(`portfolioId`: string, `unsharePolicy`: [UnsharePolicy](modules/unsharepolicy.md), `options?`: any): *function*
+* **unsharePortfolio**(`portfolioId`: string, `unsharePolicy`: [UnsharePolicy](interfaces/unsharepolicy.md), `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **updatePortfolio**(`id`: string, `portfolio`: [Portfolio](interfaces/portfolio.md), `options?`: any): *function*
 
@@ -701,9 +738,11 @@ ___
 
 ▸ **PortfolioItemApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4566)*
+*Defined in [packages/catalog/api.ts:4566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4566)*
 
 PortfolioItemApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -721,9 +760,9 @@ Name | Type |
 
 * **getPortfolioItemNextName**(`portfolioItemId`: string, `destinationPortfolioId?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: any, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: object, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **listProviderControlParameters**(`portfolioItemId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -747,9 +786,11 @@ ___
 
 ▸ **PortfolioItemApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:5410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5410)*
+*Defined in [packages/catalog/api.ts:5452](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5452)*
 
 PortfolioItemApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -761,7 +802,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **addPortfolioItemTag**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *AxiosPromise‹[Tag](interfaces/tag.md)[]›*
+* **addPortfolioItemTag**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *AxiosPromise‹Array‹[Tag](interfaces/tag.md)››*
 
 * **createPortfolioItem**(`createPortfolioItem`: [CreatePortfolioItem](interfaces/createportfolioitem.md), `options?`: any): *AxiosPromise‹[PortfolioItem](interfaces/portfolioitem.md)›*
 
@@ -769,17 +810,17 @@ Name | Type |
 
 * **getPortfolioItemNextName**(`portfolioItemId`: string, `destinationPortfolioId?`: string, `options?`: any): *AxiosPromise‹[PortfolioItemNextName](interfaces/portfolioitemnextname.md)›*
 
-* **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[TagsCollection](interfaces/tagscollection.md)›*
+* **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[TagsCollection](interfaces/tagscollection.md)›*
 
-* **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *AxiosPromise‹[PortfolioItemsCollection](interfaces/portfolioitemscollection.md)›*
+* **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[PortfolioItemsCollection](interfaces/portfolioitemscollection.md)›*
 
-* **listProviderControlParameters**(`portfolioItemId`: string, `options?`: any): *AxiosPromise‹any›*
+* **listProviderControlParameters**(`portfolioItemId`: string, `options?`: any): *AxiosPromise‹object›*
 
-* **listServicePlans**(`portfolioItemId`: string, `options?`: any): *AxiosPromise‹[ServicePlan](interfaces/serviceplan.md)[]›*
+* **listServicePlans**(`portfolioItemId`: string, `options?`: any): *AxiosPromise‹Array‹[ServicePlan](interfaces/serviceplan.md)››*
 
 * **postCopyPortfolioItem**(`portfolioItemId`: string, `copyPortfolioItem?`: [CopyPortfolioItem](interfaces/copyportfolioitem.md), `options?`: any): *AxiosPromise‹[PortfolioItem](interfaces/portfolioitem.md)›*
 
-* **removePortfolioItemTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *AxiosPromise‹Response›*
+* **removePortfolioItemTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *AxiosPromise‹void›*
 
 * **showPortfolioItem**(`id`: string, `options?`: any): *AxiosPromise‹[PortfolioItem](interfaces/portfolioitem.md)›*
 
@@ -795,9 +836,11 @@ ___
 
 ▸ **PortfolioItemApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5194)*
+*Defined in [packages/catalog/api.ts:5236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5236)*
 
 PortfolioItemApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -823,17 +866,17 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PortfolioItemNextName](interfaces/portfolioitemnextname.md)›*
 
-* **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *function*
+* **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[TagsCollection](interfaces/tagscollection.md)›*
 
-* **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: any, `options?`: any): *function*
+* **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PortfolioItemsCollection](interfaces/portfolioitemscollection.md)›*
 
 * **listProviderControlParameters**(`portfolioItemId`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹any›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹object›*
 
 * **listServicePlans**(`portfolioItemId`: string, `options?`: any): *function*
 
@@ -845,7 +888,7 @@ Name | Type |
 
 * **removePortfolioItemTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **showPortfolioItem**(`id`: string, `options?`: any): *function*
 
@@ -869,9 +912,11 @@ ___
 
 ▸ **ServicePlansApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:5758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5758)*
+*Defined in [packages/catalog/api.ts:5801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5801)*
 
 ServicePlansApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -899,9 +944,11 @@ ___
 
 ▸ **ServicePlansApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:6099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6099)*
+*Defined in [packages/catalog/api.ts:6160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6160)*
 
 ServicePlansApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -913,11 +960,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **createServicePlan**(`importServicePlan?`: [ImportServicePlan](interfaces/importserviceplan.md), `options?`: any): *AxiosPromise‹[ServicePlan](interfaces/serviceplan.md)[]›*
+* **createServicePlan**(`importServicePlan?`: [ImportServicePlan](interfaces/importserviceplan.md), `options?`: any): *AxiosPromise‹Array‹[ServicePlan](interfaces/serviceplan.md)››*
 
-* **patchServicePlanModified**(`id`: string, `patchModifiedServicePlan?`: [PatchModifiedServicePlan](interfaces/patchmodifiedserviceplan.md), `options?`: any): *AxiosPromise‹any›*
+* **patchServicePlanModified**(`id`: string, `patchModifiedServicePlan?`: [PatchModifiedServicePlan](interfaces/patchmodifiedserviceplan.md), `options?`: any): *AxiosPromise‹object›*
 
-* **resetServicePlanModified**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
+* **resetServicePlanModified**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
 * **showServicePlan**(`id`: string, `options?`: any): *AxiosPromise‹[ServicePlan](interfaces/serviceplan.md)›*
 
@@ -931,9 +978,11 @@ ___
 
 ▸ **ServicePlansApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:6005](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6005)*
+*Defined in [packages/catalog/api.ts:6066](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6066)*
 
 ServicePlansApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -949,11 +998,11 @@ Name | Type |
 
 * **patchServicePlanModified**(`id`: string, `patchModifiedServicePlan?`: [PatchModifiedServicePlan](interfaces/patchmodifiedserviceplan.md), `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹any›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹object›*
 
 * **resetServicePlanModified**(`id`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **showServicePlan**(`id`: string, `options?`: any): *function*
 
@@ -973,9 +1022,11 @@ ___
 
 ▸ **SettingsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:6251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6251)*
+*Defined in [packages/catalog/api.ts:6313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6313)*
 
 SettingsApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -1001,9 +1052,11 @@ ___
 
 ▸ **SettingsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:6530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6530)*
+*Defined in [packages/catalog/api.ts:6607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6607)*
 
 SettingsApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1015,15 +1068,15 @@ Name | Type |
 
 **Returns:** *object*
 
-* **createSetting**(`setting`: [Setting](interfaces/setting.md), `options?`: any): *AxiosPromise‹Response›*
+* **createSetting**(`setting`: [Setting](interfaces/setting.md), `options?`: any): *AxiosPromise‹void›*
 
-* **destroySetting**(`name`: string, `options?`: any): *AxiosPromise‹Response›*
+* **destroySetting**(`name`: string, `options?`: any): *AxiosPromise‹void›*
 
 * **listSettings**(`options?`: any): *AxiosPromise‹[TenantSettings](interfaces/tenantsettings.md)›*
 
-* **showSetting**(`name`: string, `options?`: any): *AxiosPromise‹Response›*
+* **showSetting**(`name`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **updateSetting**(`name`: string, `options?`: any): *AxiosPromise‹Response›*
+* **updateSetting**(`name`: string, `options?`: any): *AxiosPromise‹void›*
 
 ___
 
@@ -1031,9 +1084,11 @@ ___
 
 ▸ **SettingsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:6452](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6452)*
+*Defined in [packages/catalog/api.ts:6529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6529)*
 
 SettingsApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1045,11 +1100,11 @@ Name | Type |
 
 * **createSetting**(`setting`: [Setting](interfaces/setting.md), `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **destroySetting**(`name`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **listSettings**(`options?`: any): *function*
 
@@ -1057,11 +1112,11 @@ Name | Type |
 
 * **showSetting**(`name`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **updateSetting**(`name`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 ___
 
@@ -1069,9 +1124,11 @@ ___
 
 ▸ **TagsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:6656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6656)*
+*Defined in [packages/catalog/api.ts:6734](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6734)*
 
 TagsApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -1089,9 +1146,11 @@ ___
 
 ▸ **TagsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:6720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6720)*
+*Defined in [packages/catalog/api.ts:6801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6801)*
 
 TagsApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1111,9 +1170,11 @@ ___
 
 ▸ **TagsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:6698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6698)*
+*Defined in [packages/catalog/api.ts:6779](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6779)*
 
 TagsApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1133,9 +1194,11 @@ ___
 
 ▸ **TenantApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:6758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6758)*
+*Defined in [packages/catalog/api.ts:6840](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6840)*
 
 TenantApi - axios parameter creator
+
+**`export`** 
 
 **Parameters:**
 
@@ -1157,9 +1220,11 @@ ___
 
 ▸ **TenantApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:6928](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6928)*
+*Defined in [packages/catalog/api.ts:7019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7019)*
 
 TenantApi - factory interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1175,7 +1240,7 @@ Name | Type |
 
 * **showTenant**(`tenantId`: string, `options?`: any): *AxiosPromise‹[Tenant](interfaces/tenant.md)›*
 
-* **tenantSeed**(`tenantId`: string, `options?`: any): *AxiosPromise‹Response›*
+* **tenantSeed**(`tenantId`: string, `options?`: any): *AxiosPromise‹void›*
 
 ___
 
@@ -1183,9 +1248,11 @@ ___
 
 ▸ **TenantApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:6878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6878)*
+*Defined in [packages/catalog/api.ts:6969](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6969)*
 
 TenantApi - functional programming interface
+
+**`export`** 
 
 **Parameters:**
 
@@ -1205,7 +1272,7 @@ Name | Type |
 
 * **tenantSeed**(`tenantId`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 ## Object literals
 
@@ -1213,7 +1280,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L26)*
+Defined in packages/catalog/base.ts:26
 
 **`export`** 
 
@@ -1221,22 +1288,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [api.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L27)*
+Defined in packages/catalog/base.ts:27
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [api.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L30)*
+Defined in packages/catalog/base.ts:30
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [api.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L28)*
+Defined in packages/catalog/base.ts:28
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [api.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L29)*
+Defined in packages/catalog/base.ts:29

@@ -2,6 +2,10 @@
 
 # Interface: Relationships
 
+**`export`** 
+
+**`interface`** Relationships
+
 ## Hierarchy
 
 * **Relationships**
@@ -18,4 +22,6 @@
 
 • **data**? : *Array‹[Relationship](relationship.md)›*
 
-*Defined in [api.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L994)*
+*Defined in [packages/hooks/api.ts:879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L879)*
+
+**`memberof`** Relationships

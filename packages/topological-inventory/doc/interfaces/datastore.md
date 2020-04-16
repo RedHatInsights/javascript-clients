@@ -15,21 +15,21 @@
 ### Properties
 
 * [accessible](datastore.md#optional-accessible)
-* [archivedAt](datastore.md#optional-archivedat)
-* [createdAt](datastore.md#optional-createdat)
+* [archived_at](datastore.md#optional-archived_at)
+* [created_at](datastore.md#optional-created_at)
 * [extra](datastore.md#optional-extra)
-* [freeSpace](datastore.md#optional-freespace)
+* [free_space](datastore.md#optional-free_space)
 * [id](datastore.md#optional-id)
-* [lastSeenAt](datastore.md#optional-lastseenat)
+* [last_seen_at](datastore.md#optional-last_seen_at)
 * [location](datastore.md#optional-location)
 * [name](datastore.md#optional-name)
-* [sourceCreatedAt](datastore.md#optional-sourcecreatedat)
-* [sourceDeletedAt](datastore.md#optional-sourcedeletedat)
-* [sourceId](datastore.md#optional-sourceid)
-* [sourceRef](datastore.md#optional-sourceref)
+* [source_created_at](datastore.md#optional-source_created_at)
+* [source_deleted_at](datastore.md#optional-source_deleted_at)
+* [source_id](datastore.md#optional-source_id)
+* [source_ref](datastore.md#optional-source_ref)
 * [status](datastore.md#optional-status)
-* [totalSpace](datastore.md#optional-totalspace)
-* [updatedAt](datastore.md#optional-updatedat)
+* [total_space](datastore.md#optional-total_space)
+* [updated_at](datastore.md#optional-updated_at)
 
 ## Properties
 
@@ -37,33 +37,27 @@
 
 • **accessible**? : *boolean*
 
-*Defined in [api.ts:1187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1187)*
-
-**`type`** {boolean}
+*Defined in [packages/topological-inventory/api.ts:1116](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1116)*
 
 **`memberof`** Datastore
 
 ___
 
-### `Optional` archivedAt
+### `Optional` archived_at
 
-• **archivedAt**? : *Date*
+• **archived_at**? : *string*
 
-*Defined in [api.ts:1193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1193)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:1122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1122)*
 
 **`memberof`** Datastore
 
 ___
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:1199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1199)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:1128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1128)*
 
 **`memberof`** Datastore
 
@@ -71,23 +65,19 @@ ___
 
 ### `Optional` extra
 
-• **extra**? : *any*
+• **extra**? : *object*
 
-*Defined in [api.ts:1205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1205)*
-
-**`type`** {any}
+*Defined in [packages/topological-inventory/api.ts:1134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1134)*
 
 **`memberof`** Datastore
 
 ___
 
-### `Optional` freeSpace
+### `Optional` free_space
 
-• **freeSpace**? : *number*
+• **free_space**? : *number*
 
-*Defined in [api.ts:1211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1211)*
-
-**`type`** {number}
+*Defined in [packages/topological-inventory/api.ts:1140](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1140)*
 
 **`memberof`** Datastore
 
@@ -97,23 +87,19 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:1217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1217)*
+*Defined in [packages/topological-inventory/api.ts:1146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1146)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** Datastore
 
 ___
 
-### `Optional` lastSeenAt
+### `Optional` last_seen_at
 
-• **lastSeenAt**? : *Date*
+• **last_seen_at**? : *string*
 
-*Defined in [api.ts:1223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1223)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:1152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1152)*
 
 **`memberof`** Datastore
 
@@ -123,9 +109,7 @@ ___
 
 • **location**? : *string*
 
-*Defined in [api.ts:1229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1229)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:1158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1158)*
 
 **`memberof`** Datastore
 
@@ -135,59 +119,49 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:1235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1235)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:1164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1164)*
 
 **`memberof`** Datastore
 
 ___
 
-### `Optional` sourceCreatedAt
+### `Optional` source_created_at
 
-• **sourceCreatedAt**? : *Date*
+• **source_created_at**? : *string*
 
-*Defined in [api.ts:1241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1241)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:1170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1170)*
 
 **`memberof`** Datastore
 
 ___
 
-### `Optional` sourceDeletedAt
+### `Optional` source_deleted_at
 
-• **sourceDeletedAt**? : *Date*
+• **source_deleted_at**? : *string*
 
-*Defined in [api.ts:1247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1247)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:1176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1176)*
 
 **`memberof`** Datastore
 
 ___
 
-### `Optional` sourceId
+### `Optional` source_id
 
-• **sourceId**? : *string*
+• **source_id**? : *string*
 
-*Defined in [api.ts:1253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1253)*
+*Defined in [packages/topological-inventory/api.ts:1182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1182)*
 
 ID of the resource
 
-**`type`** {string}
-
 **`memberof`** Datastore
 
 ___
 
-### `Optional` sourceRef
+### `Optional` source_ref
 
-• **sourceRef**? : *string*
+• **source_ref**? : *string*
 
-*Defined in [api.ts:1259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1259)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:1188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1188)*
 
 **`memberof`** Datastore
 
@@ -197,32 +171,26 @@ ___
 
 • **status**? : *string*
 
-*Defined in [api.ts:1265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1265)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:1194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1194)*
 
 **`memberof`** Datastore
 
 ___
 
-### `Optional` totalSpace
+### `Optional` total_space
 
-• **totalSpace**? : *number*
+• **total_space**? : *number*
 
-*Defined in [api.ts:1271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1271)*
-
-**`type`** {number}
+*Defined in [packages/topological-inventory/api.ts:1200](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1200)*
 
 **`memberof`** Datastore
 
 ___
 
-### `Optional` updatedAt
+### `Optional` updated_at
 
-• **updatedAt**? : *Date*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:1277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1277)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:1206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1206)*
 
 **`memberof`** Datastore

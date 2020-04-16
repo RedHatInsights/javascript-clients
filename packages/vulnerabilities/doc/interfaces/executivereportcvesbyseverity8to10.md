@@ -23,11 +23,9 @@
 
 • **count**: *number*
 
-*Defined in [api.ts:537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L537)*
+*Defined in [packages/vulnerabilities/api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L476)*
 
 Number of CVEs with CVSS score higher or equal to 8.
-
-**`type`** {number}
 
 **`memberof`** ExecutiveReportCvesBySeverity8to10
 
@@ -37,10 +35,8 @@ ___
 
 • **percentage**: *number*
 
-*Defined in [api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L543)*
+*Defined in [packages/vulnerabilities/api.ts:482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L482)*
 
 Percentage of CVEs with CVSS score higher or equal to 8.
-
-**`type`** {number}
 
 **`memberof`** ExecutiveReportCvesBySeverity8to10

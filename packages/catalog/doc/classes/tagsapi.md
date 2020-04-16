@@ -6,10 +6,6 @@ TagsApi - object-oriented interface
 
 **`export`** 
 
-**`class`** TagsApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -40,15 +36,15 @@ TagsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
+Defined in packages/catalog/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[TagsApi](tagsapi.md)*
 
@@ -60,7 +56,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
+Defined in packages/catalog/base.ts:51
 
 ___
 
@@ -70,7 +66,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
+Defined in packages/catalog/base.ts:51
 
 ___
 
@@ -80,7 +76,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
+Defined in packages/catalog/base.ts:49
 
 ## Methods
 
@@ -88,7 +84,7 @@ ___
 
 ▸ **listTags**(`options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
 
-*Defined in [api.ts:6748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6748)*
+*Defined in [packages/catalog/api.ts:6829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6829)*
 
 List Tags
 

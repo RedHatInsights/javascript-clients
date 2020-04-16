@@ -14,20 +14,18 @@
 
 ### Properties
 
-* [hasPlaybook](resolution.md#optional-hasplaybook)
+* [has_playbook](resolution.md#optional-has_playbook)
 * [resolution](resolution.md#resolution)
-* [resolutionRisk](resolution.md#optional-resolutionrisk)
-* [systemType](resolution.md#systemtype)
+* [resolution_risk](resolution.md#optional-resolution_risk)
+* [system_type](resolution.md#system_type)
 
 ## Properties
 
-### `Optional` hasPlaybook
+### `Optional` has_playbook
 
-• **hasPlaybook**? : *boolean*
+• **has_playbook**? : *boolean*
 
-*Defined in [api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L615)*
-
-**`type`** {boolean}
+*Defined in [packages/insights/api.ts:545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L545)*
 
 **`memberof`** Resolution
 
@@ -37,32 +35,26 @@ ___
 
 • **resolution**: *string*
 
-*Defined in [api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L603)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:533](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L533)*
 
 **`memberof`** Resolution
 
 ___
 
-### `Optional` resolutionRisk
+### `Optional` resolution_risk
 
-• **resolutionRisk**? : *[ResolutionRisk](resolutionrisk.md)*
+• **resolution_risk**? : *[ResolutionRisk](resolutionrisk.md)*
 
-*Defined in [api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L609)*
-
-**`type`** {ResolutionRisk}
+*Defined in [packages/insights/api.ts:539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L539)*
 
 **`memberof`** Resolution
 
 ___
 
-###  systemType
+###  system_type
 
-• **systemType**: *number*
+• **system_type**: *number*
 
-*Defined in [api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L597)*
-
-**`type`** {number}
+*Defined in [packages/insights/api.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L527)*
 
 **`memberof`** Resolution

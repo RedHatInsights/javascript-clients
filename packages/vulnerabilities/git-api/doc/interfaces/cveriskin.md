@@ -14,35 +14,31 @@
 
 ### Properties
 
-* [businessRiskId](cveriskin.md#optional-businessriskid)
-* [businessRiskText](cveriskin.md#optional-businessrisktext)
+* [business_risk_id](cveriskin.md#optional-business_risk_id)
+* [business_risk_text](cveriskin.md#optional-business_risk_text)
 * [cve](cveriskin.md#cve)
 
 ## Properties
 
-### `Optional` businessRiskId
+### `Optional` business_risk_id
 
-• **businessRiskId**? : *number*
+• **business_risk_id**? : *number*
 
-*Defined in [git-api/api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L359)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L300)*
 
 Business risk ID to be set, obtained by GET method.
-
-**`type`** {number}
 
 **`memberof`** CveRiskIn
 
 ___
 
-### `Optional` businessRiskText
+### `Optional` business_risk_text
 
-• **businessRiskText**? : *string | null*
+• **business_risk_text**? : *string | null*
 
-*Defined in [git-api/api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L365)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L306)*
 
 Complementary text to the business risk.
-
-**`type`** {string}
 
 **`memberof`** CveRiskIn
 
@@ -52,8 +48,6 @@ ___
 
 • **cve**: *[CveOrList](cveorlist.md)*
 
-*Defined in [git-api/api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L353)*
-
-**`type`** {CveOrList}
+*Defined in [packages/vulnerabilities/git-api/api.ts:294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L294)*
 
 **`memberof`** CveRiskIn

@@ -22,8 +22,6 @@
 
 • **systems**: *Array‹string›*
 
-*Defined in [api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L543)*
-
-**`type`** {Array<string>}
+*Defined in [packages/insights/api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L476)*
 
 **`memberof`** MultiHostUnAck

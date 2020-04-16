@@ -2,6 +2,10 @@
 
 # Interface: AppRelationships
 
+**`export`** 
+
+**`interface`** AppRelationships
+
 ## Hierarchy
 
 * **AppRelationships**
@@ -10,12 +14,14 @@
 
 ### Properties
 
-* [eventTypes](apprelationships.md#optional-eventtypes)
+* [event_types](apprelationships.md#optional-event_types)
 
 ## Properties
 
-### `Optional` eventTypes
+### `Optional` event_types
 
-• **eventTypes**? : *[Relationships](relationships.md)*
+• **event_types**? : *[Relationships](relationships.md)*
 
-*Defined in [api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L149)*
+*Defined in [packages/hooks/api.ts:92](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L92)*
+
+**`memberof`** AppRelationships

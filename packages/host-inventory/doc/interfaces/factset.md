@@ -23,13 +23,11 @@ A set of string facts belonging to a single namespace.
 
 ###  facts
 
-• **facts**: *any*
+• **facts**: *object*
 
-*Defined in [api.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L527)*
+*Defined in [packages/host-inventory/api.ts:468](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L468)*
 
 The facts themselves.
-
-**`type`** {any}
 
 **`memberof`** FactSet
 
@@ -39,10 +37,8 @@ ___
 
 • **namespace**: *string*
 
-*Defined in [api.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L521)*
+*Defined in [packages/host-inventory/api.ts:462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L462)*
 
 A namespace the facts belong to.
-
-**`type`** {string}
 
 **`memberof`** FactSet

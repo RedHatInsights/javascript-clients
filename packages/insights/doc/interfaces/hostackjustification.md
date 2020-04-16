@@ -23,9 +23,7 @@
 
 • **id**? : *number*
 
-*Defined in [api.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L225)*
-
-**`type`** {number}
+*Defined in [packages/insights/api.ts:170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L170)*
 
 **`memberof`** HostAckJustification
 
@@ -35,8 +33,6 @@ ___
 
 • **justification**? : *string*
 
-*Defined in [api.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L231)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L176)*
 
 **`memberof`** HostAckJustification

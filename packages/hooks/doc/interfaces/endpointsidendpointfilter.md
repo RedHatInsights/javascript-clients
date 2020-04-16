@@ -2,6 +2,10 @@
 
 # Interface: EndpointsIdEndpointFilter
 
+**`export`** 
+
+**`interface`** EndpointsIdEndpointFilter
+
 ## Hierarchy
 
 * **EndpointsIdEndpointFilter**
@@ -10,39 +14,47 @@
 
 ### Properties
 
-* [appIds](endpointsidendpointfilter.md#optional-appids)
-* [destroy](endpointsidendpointfilter.md#optional-destroy)
-* [eventTypeIds](endpointsidendpointfilter.md#optional-eventtypeids)
-* [levelIds](endpointsidendpointfilter.md#optional-levelids)
+* [_destroy](endpointsidendpointfilter.md#optional-_destroy)
+* [app_ids](endpointsidendpointfilter.md#optional-app_ids)
+* [event_type_ids](endpointsidendpointfilter.md#optional-event_type_ids)
+* [level_ids](endpointsidendpointfilter.md#optional-level_ids)
 
 ## Properties
 
-### `Optional` appIds
+### `Optional` _destroy
 
-• **appIds**? : *Array‹string›*
+• **_destroy**? : *boolean*
 
-*Defined in [api.ts:418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L418)*
+*Defined in [packages/hooks/api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L360)*
 
-___
-
-### `Optional` destroy
-
-• **destroy**? : *boolean*
-
-*Defined in [api.ts:436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L436)*
+**`memberof`** EndpointsIdEndpointFilter
 
 ___
 
-### `Optional` eventTypeIds
+### `Optional` app_ids
 
-• **eventTypeIds**? : *Array‹string›*
+• **app_ids**? : *Array‹string›*
 
-*Defined in [api.ts:424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L424)*
+*Defined in [packages/hooks/api.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L342)*
+
+**`memberof`** EndpointsIdEndpointFilter
 
 ___
 
-### `Optional` levelIds
+### `Optional` event_type_ids
 
-• **levelIds**? : *Array‹string›*
+• **event_type_ids**? : *Array‹string›*
 
-*Defined in [api.ts:430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L430)*
+*Defined in [packages/hooks/api.ts:348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L348)*
+
+**`memberof`** EndpointsIdEndpointFilter
+
+___
+
+### `Optional` level_ids
+
+• **level_ids**? : *Array‹string›*
+
+*Defined in [packages/hooks/api.ts:354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L354)*
+
+**`memberof`** EndpointsIdEndpointFilter

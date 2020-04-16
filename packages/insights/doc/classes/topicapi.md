@@ -6,10 +6,6 @@ TopicApi - object-oriented interface
 
 **`export`** 
 
-**`class`** TopicApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -43,15 +39,15 @@ TopicApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[TopicApi](topicapi.md)*
 
@@ -63,7 +59,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -73,7 +69,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -83,7 +79,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 ## Methods
 
@@ -91,9 +87,9 @@ ___
 
 ▸ **topicList**(`showDisabled?`: boolean, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[Topic](../interfaces/topic.md)[]›*
 
-*Defined in [api.ts:5261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5261)*
+*Defined in [packages/insights/api.ts:5328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5328)*
 
-Normally this only shows enabled topics, but if the 'show_disabled' parameter is set to True then this will show disabled topics as well.
+Normally this only shows enabled topics, but if the \'show_disabled\' parameter is set to True then this will show disabled topics as well.
 
 **`summary`** List the rule topics and their impacted systems counts.
 
@@ -117,9 +113,9 @@ ___
 
 ▸ **topicRead**(`slug`: string, `options?`: any): *AxiosPromise‹[Topic](../interfaces/topic.md)›*
 
-*Defined in [api.ts:5273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5273)*
+*Defined in [packages/insights/api.ts:5340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5340)*
 
-This also lists the topic's impacted systems count.
+This also lists the topic\'s impacted systems count.
 
 **`summary`** Retrieve a single topic by slug.
 
@@ -142,7 +138,7 @@ ___
 
 ▸ **topicRulesWithTag**(`slug`: string, `options?`: any): *AxiosPromise‹[Rule](../interfaces/rule.md)[]›*
 
-*Defined in [api.ts:5285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5285)*
+*Defined in [packages/insights/api.ts:5352](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5352)*
 
 This shows the rule information for rules with this tag.
 
@@ -167,7 +163,7 @@ ___
 
 ▸ **topicSystems**(`slug`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[SystemsForRule](../interfaces/systemsforrule.md)›*
 
-*Defined in [api.ts:5298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5298)*
+*Defined in [packages/insights/api.ts:5365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5365)*
 
 Systems are just listed by their UUID.
 

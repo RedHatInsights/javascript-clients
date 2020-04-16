@@ -15,9 +15,9 @@
 ### Properties
 
 * [cve](statusin.md#cve)
-* [inventoryId](statusin.md#optional-inventoryid)
-* [statusId](statusin.md#optional-statusid)
-* [statusText](statusin.md#optional-statustext)
+* [inventory_id](statusin.md#optional-inventory_id)
+* [status_id](statusin.md#optional-status_id)
+* [status_text](statusin.md#optional-status_text)
 
 ## Properties
 
@@ -25,48 +25,40 @@
 
 • **cve**: *[CveOrList](cveorlist.md)*
 
-*Defined in [git-api/api.ts:1271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1271)*
-
-**`type`** {CveOrList}
+*Defined in [packages/vulnerabilities/git-api/api.ts:1016](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1016)*
 
 **`memberof`** StatusIn
 
 ___
 
-### `Optional` inventoryId
+### `Optional` inventory_id
 
-• **inventoryId**? : *[InventoryIdOrList](inventoryidorlist.md)*
+• **inventory_id**? : *[InventoryIdOrList](inventoryidorlist.md)*
 
-*Defined in [git-api/api.ts:1265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1265)*
-
-**`type`** {InventoryIdOrList}
+*Defined in [packages/vulnerabilities/git-api/api.ts:1010](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1010)*
 
 **`memberof`** StatusIn
 
 ___
 
-### `Optional` statusId
+### `Optional` status_id
 
-• **statusId**? : *number*
+• **status_id**? : *number*
 
-*Defined in [git-api/api.ts:1277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1277)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1022](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1022)*
 
 Status ID to be set, obtained by GET method. If not specified, global CVE status is set.
 
-**`type`** {number}
-
 **`memberof`** StatusIn
 
 ___
 
-### `Optional` statusText
+### `Optional` status_text
 
-• **statusText**? : *string | null*
+• **status_text**? : *string | null*
 
-*Defined in [git-api/api.ts:1283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1283)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1028](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1028)*
 
 Complementary text to the status.
-
-**`type`** {string}
 
 **`memberof`** StatusIn

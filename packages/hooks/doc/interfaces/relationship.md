@@ -2,6 +2,10 @@
 
 # Interface: Relationship
 
+**`export`** 
+
+**`interface`** Relationship
+
 ## Hierarchy
 
 * **Relationship**
@@ -19,7 +23,9 @@
 
 • **id**? : *string*
 
-*Defined in [api.ts:974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L974)*
+*Defined in [packages/hooks/api.ts:860](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L860)*
+
+**`memberof`** Relationship
 
 ___
 
@@ -27,4 +33,6 @@ ___
 
 • **type**? : *string*
 
-*Defined in [api.ts:980](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L980)*
+*Defined in [packages/hooks/api.ts:866](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L866)*
+
+**`memberof`** Relationship

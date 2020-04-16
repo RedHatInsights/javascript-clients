@@ -14,36 +14,32 @@
 
 ### Properties
 
-* [archivedAt](subscription.md#optional-archivedat)
-* [createdAt](subscription.md#optional-createdat)
+* [archived_at](subscription.md#optional-archived_at)
+* [created_at](subscription.md#optional-created_at)
 * [id](subscription.md#optional-id)
-* [lastSeenAt](subscription.md#optional-lastseenat)
+* [last_seen_at](subscription.md#optional-last_seen_at)
 * [name](subscription.md#optional-name)
-* [sourceId](subscription.md#optional-sourceid)
-* [sourceRef](subscription.md#optional-sourceref)
-* [updatedAt](subscription.md#optional-updatedat)
+* [source_id](subscription.md#optional-source_id)
+* [source_ref](subscription.md#optional-source_ref)
+* [updated_at](subscription.md#optional-updated_at)
 
 ## Properties
 
-### `Optional` archivedAt
+### `Optional` archived_at
 
-• **archivedAt**? : *Date*
+• **archived_at**? : *string*
 
-*Defined in [api.ts:3505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3505)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:3391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3391)*
 
 **`memberof`** Subscription
 
 ___
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:3511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3511)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:3397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3397)*
 
 **`memberof`** Subscription
 
@@ -53,23 +49,19 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:3517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3517)*
+*Defined in [packages/topological-inventory/api.ts:3403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3403)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** Subscription
 
 ___
 
-### `Optional` lastSeenAt
+### `Optional` last_seen_at
 
-• **lastSeenAt**? : *Date*
+• **last_seen_at**? : *string*
 
-*Defined in [api.ts:3523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3523)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:3409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3409)*
 
 **`memberof`** Subscription
 
@@ -79,46 +71,38 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:3529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3529)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:3415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3415)*
 
 **`memberof`** Subscription
 
 ___
 
-### `Optional` sourceId
+### `Optional` source_id
 
-• **sourceId**? : *string*
+• **source_id**? : *string*
 
-*Defined in [api.ts:3535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3535)*
+*Defined in [packages/topological-inventory/api.ts:3421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3421)*
 
 ID of the resource
 
-**`type`** {string}
+**`memberof`** Subscription
+
+___
+
+### `Optional` source_ref
+
+• **source_ref**? : *string*
+
+*Defined in [packages/topological-inventory/api.ts:3427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3427)*
 
 **`memberof`** Subscription
 
 ___
 
-### `Optional` sourceRef
+### `Optional` updated_at
 
-• **sourceRef**? : *string*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:3541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3541)*
-
-**`type`** {string}
-
-**`memberof`** Subscription
-
-___
-
-### `Optional` updatedAt
-
-• **updatedAt**? : *Date*
-
-*Defined in [api.ts:3547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3547)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:3433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3433)*
 
 **`memberof`** Subscription

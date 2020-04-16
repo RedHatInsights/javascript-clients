@@ -24,9 +24,7 @@
 
 • **count**? : *number*
 
-*Defined in [api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L329)*
-
-**`type`** {number}
+*Defined in [packages/topological-inventory/api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L273)*
 
 **`memberof`** CollectionMetadata
 
@@ -36,9 +34,7 @@ ___
 
 • **limit**? : *number*
 
-*Defined in [api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L335)*
-
-**`type`** {number}
+*Defined in [packages/topological-inventory/api.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L279)*
 
 **`memberof`** CollectionMetadata
 
@@ -48,8 +44,6 @@ ___
 
 • **offset**? : *number*
 
-*Defined in [api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L341)*
-
-**`type`** {number}
+*Defined in [packages/topological-inventory/api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L285)*
 
 **`memberof`** CollectionMetadata

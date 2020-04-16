@@ -25,7 +25,7 @@
 
 • **authentication**: *any*
 
-*Defined in [api.ts:2621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2621)*
+*Defined in [api.ts:2714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2714)*
 
 Dictionary containing resource name.
 
@@ -39,7 +39,7 @@ ___
 
 • **billingSource**: *any*
 
-*Defined in [api.ts:2627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2627)*
+*Defined in [api.ts:2720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2720)*
 
 Dictionary containing billing source.
 
@@ -53,7 +53,7 @@ ___
 
 • **id**: *number*
 
-*Defined in [api.ts:2609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2609)*
+*Defined in [api.ts:2702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2702)*
 
 **`type`** {number}
 
@@ -65,7 +65,7 @@ ___
 
 • **sourceType**: *string*
 
-*Defined in [api.ts:2615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2615)*
+*Defined in [api.ts:2708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L2708)*
 
 **`type`** {string}
 

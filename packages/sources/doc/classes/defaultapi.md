@@ -6,10 +6,6 @@ DefaultApi - object-oriented interface
 
 **`export`** 
 
-**`class`** DefaultApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -73,15 +69,15 @@ DefaultApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L49)*
+Defined in packages/sources/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[DefaultApi](defaultapi.md)*
 
@@ -93,7 +89,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L51)*
+Defined in packages/sources/base.ts:51
 
 ___
 
@@ -103,7 +99,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L51)*
+Defined in packages/sources/base.ts:51
 
 ___
 
@@ -113,15 +109,15 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L49)*
+Defined in packages/sources/base.ts:49
 
 ## Methods
 
 ###  checkAvailabilitySource
 
-▸ **checkAvailabilitySource**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **checkAvailabilitySource**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:3379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3379)*
+*Defined in [packages/sources/api.ts:3410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3410)*
 
 Checks Availability of a Source
 
@@ -138,7 +134,7 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
@@ -146,7 +142,7 @@ ___
 
 ▸ **createApplication**(`application`: [Application](../interfaces/application.md), `options?`: any): *AxiosPromise‹[Application](../interfaces/application.md)›*
 
-*Defined in [api.ts:3391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3391)*
+*Defined in [packages/sources/api.ts:3422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3422)*
 
 Creates a Application object
 
@@ -171,7 +167,7 @@ ___
 
 ▸ **createAuthentication**(`authentication`: [Authentication](../interfaces/authentication.md), `options?`: any): *AxiosPromise‹[Authentication](../interfaces/authentication.md)›*
 
-*Defined in [api.ts:3403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3403)*
+*Defined in [packages/sources/api.ts:3434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3434)*
 
 Creates a Authentication object
 
@@ -196,7 +192,7 @@ ___
 
 ▸ **createEndpoint**(`endpoint`: [Endpoint](../interfaces/endpoint.md), `options?`: any): *AxiosPromise‹[Endpoint](../interfaces/endpoint.md)›*
 
-*Defined in [api.ts:3415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3415)*
+*Defined in [packages/sources/api.ts:3446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3446)*
 
 Creates a Endpoint object
 
@@ -221,7 +217,7 @@ ___
 
 ▸ **createSource**(`source`: [Source](../interfaces/source.md), `options?`: any): *AxiosPromise‹[Source](../interfaces/source.md)›*
 
-*Defined in [api.ts:3427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3427)*
+*Defined in [packages/sources/api.ts:3458](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3458)*
 
 Creates a Source object
 
@@ -246,7 +242,7 @@ ___
 
 ▸ **createSourceType**(`sourceType`: [SourceType](../interfaces/sourcetype.md), `options?`: any): *AxiosPromise‹[SourceType](../interfaces/sourcetype.md)›*
 
-*Defined in [api.ts:3439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3439)*
+*Defined in [packages/sources/api.ts:3470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3470)*
 
 Creates a SourceType object
 
@@ -269,9 +265,9 @@ ___
 
 ###  deleteApplication
 
-▸ **deleteApplication**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **deleteApplication**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:3451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3451)*
+*Defined in [packages/sources/api.ts:3482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3482)*
 
 Deletes a Application object
 
@@ -288,15 +284,15 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  deleteAuthentication
 
-▸ **deleteAuthentication**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **deleteAuthentication**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:3463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3463)*
+*Defined in [packages/sources/api.ts:3494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3494)*
 
 Deletes a Authentication object
 
@@ -313,15 +309,15 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  deleteEndpoint
 
-▸ **deleteEndpoint**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **deleteEndpoint**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:3475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3475)*
+*Defined in [packages/sources/api.ts:3506](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3506)*
 
 Deletes a Endpoint object
 
@@ -338,15 +334,15 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  deleteSource
 
-▸ **deleteSource**(`id`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **deleteSource**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:3487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3487)*
+*Defined in [packages/sources/api.ts:3518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3518)*
 
 Deletes a Source object
 
@@ -363,15 +359,15 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  getDocumentation
 
-▸ **getDocumentation**(`options?`: any): *AxiosPromise‹any›*
+▸ **getDocumentation**(`options?`: any): *AxiosPromise‹object›*
 
-*Defined in [api.ts:3498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3498)*
+*Defined in [packages/sources/api.ts:3529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3529)*
 
 **`summary`** Return this API document in JSON format
 
@@ -385,15 +381,15 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹any›*
+**Returns:** *AxiosPromise‹object›*
 
 ___
 
 ###  listApplicationTypeSources
 
-▸ **listApplicationTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
+▸ **listApplicationTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
 
-*Defined in [api.ts:3514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3514)*
+*Defined in [packages/sources/api.ts:3545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3545)*
 
 Returns an array of Source objects
 
@@ -410,8 +406,8 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `limit?` | number | - |
 `offset?` | number | - |
-`filter?` | any | - |
-`sortBy?` | Object | - |
+`filter?` | object | - |
+`sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
@@ -420,9 +416,9 @@ ___
 
 ###  listApplicationTypes
 
-▸ **listApplicationTypes**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)›*
+▸ **listApplicationTypes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)›*
 
-*Defined in [api.ts:3529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3529)*
+*Defined in [packages/sources/api.ts:3560](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3560)*
 
 Returns an array of ApplicationType objects
 
@@ -438,8 +434,8 @@ Name | Type |
 ------ | ------ |
 `limit?` | number |
 `offset?` | number |
-`filter?` | any |
-`sortBy?` | Object |
+`filter?` | object |
+`sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)›*
@@ -448,9 +444,9 @@ ___
 
 ###  listApplications
 
-▸ **listApplications**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[ApplicationsCollection](../interfaces/applicationscollection.md)›*
+▸ **listApplications**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ApplicationsCollection](../interfaces/applicationscollection.md)›*
 
-*Defined in [api.ts:3544](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3544)*
+*Defined in [packages/sources/api.ts:3575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3575)*
 
 Returns an array of Application objects
 
@@ -466,8 +462,8 @@ Name | Type |
 ------ | ------ |
 `limit?` | number |
 `offset?` | number |
-`filter?` | any |
-`sortBy?` | Object |
+`filter?` | object |
+`sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[ApplicationsCollection](../interfaces/applicationscollection.md)›*
@@ -476,9 +472,9 @@ ___
 
 ###  listAuthentications
 
-▸ **listAuthentications**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[AuthenticationsCollection](../interfaces/authenticationscollection.md)›*
+▸ **listAuthentications**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[AuthenticationsCollection](../interfaces/authenticationscollection.md)›*
 
-*Defined in [api.ts:3559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3559)*
+*Defined in [packages/sources/api.ts:3590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3590)*
 
 Returns an array of Authentication objects
 
@@ -494,8 +490,8 @@ Name | Type |
 ------ | ------ |
 `limit?` | number |
 `offset?` | number |
-`filter?` | any |
-`sortBy?` | Object |
+`filter?` | object |
+`sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[AuthenticationsCollection](../interfaces/authenticationscollection.md)›*
@@ -504,9 +500,9 @@ ___
 
 ###  listEndpointAuthentications
 
-▸ **listEndpointAuthentications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[AuthenticationsCollection](../interfaces/authenticationscollection.md)›*
+▸ **listEndpointAuthentications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[AuthenticationsCollection](../interfaces/authenticationscollection.md)›*
 
-*Defined in [api.ts:3575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3575)*
+*Defined in [packages/sources/api.ts:3606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3606)*
 
 Returns an array of Authentication objects
 
@@ -523,8 +519,8 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `limit?` | number | - |
 `offset?` | number | - |
-`filter?` | any | - |
-`sortBy?` | Object | - |
+`filter?` | object | - |
+`sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[AuthenticationsCollection](../interfaces/authenticationscollection.md)›*
@@ -533,9 +529,9 @@ ___
 
 ###  listEndpoints
 
-▸ **listEndpoints**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[EndpointsCollection](../interfaces/endpointscollection.md)›*
+▸ **listEndpoints**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[EndpointsCollection](../interfaces/endpointscollection.md)›*
 
-*Defined in [api.ts:3590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3590)*
+*Defined in [packages/sources/api.ts:3621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3621)*
 
 Returns an array of Endpoint objects
 
@@ -551,8 +547,8 @@ Name | Type |
 ------ | ------ |
 `limit?` | number |
 `offset?` | number |
-`filter?` | any |
-`sortBy?` | Object |
+`filter?` | object |
+`sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[EndpointsCollection](../interfaces/endpointscollection.md)›*
@@ -561,9 +557,9 @@ ___
 
 ###  listSourceApplicationTypes
 
-▸ **listSourceApplicationTypes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)›*
+▸ **listSourceApplicationTypes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)›*
 
-*Defined in [api.ts:3606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3606)*
+*Defined in [packages/sources/api.ts:3637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3637)*
 
 Returns an array of ApplicationType objects
 
@@ -580,8 +576,8 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `limit?` | number | - |
 `offset?` | number | - |
-`filter?` | any | - |
-`sortBy?` | Object | - |
+`filter?` | object | - |
+`sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[ApplicationTypesCollection](../interfaces/applicationtypescollection.md)›*
@@ -590,9 +586,9 @@ ___
 
 ###  listSourceApplications
 
-▸ **listSourceApplications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[ApplicationsCollection](../interfaces/applicationscollection.md)›*
+▸ **listSourceApplications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ApplicationsCollection](../interfaces/applicationscollection.md)›*
 
-*Defined in [api.ts:3622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3622)*
+*Defined in [packages/sources/api.ts:3653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3653)*
 
 Returns an array of Application objects
 
@@ -609,8 +605,8 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `limit?` | number | - |
 `offset?` | number | - |
-`filter?` | any | - |
-`sortBy?` | Object | - |
+`filter?` | object | - |
+`sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[ApplicationsCollection](../interfaces/applicationscollection.md)›*
@@ -619,9 +615,9 @@ ___
 
 ###  listSourceEndpoints
 
-▸ **listSourceEndpoints**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[EndpointsCollection](../interfaces/endpointscollection.md)›*
+▸ **listSourceEndpoints**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[EndpointsCollection](../interfaces/endpointscollection.md)›*
 
-*Defined in [api.ts:3638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3638)*
+*Defined in [packages/sources/api.ts:3669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3669)*
 
 Returns an array of Endpoint objects
 
@@ -638,8 +634,8 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `limit?` | number | - |
 `offset?` | number | - |
-`filter?` | any | - |
-`sortBy?` | Object | - |
+`filter?` | object | - |
+`sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[EndpointsCollection](../interfaces/endpointscollection.md)›*
@@ -648,9 +644,9 @@ ___
 
 ###  listSourceTypeSources
 
-▸ **listSourceTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
+▸ **listSourceTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
 
-*Defined in [api.ts:3654](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3654)*
+*Defined in [packages/sources/api.ts:3685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3685)*
 
 Returns an array of Source objects
 
@@ -667,8 +663,8 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `limit?` | number | - |
 `offset?` | number | - |
-`filter?` | any | - |
-`sortBy?` | Object | - |
+`filter?` | object | - |
+`sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
@@ -677,9 +673,9 @@ ___
 
 ###  listSourceTypes
 
-▸ **listSourceTypes**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[SourceTypesCollection](../interfaces/sourcetypescollection.md)›*
+▸ **listSourceTypes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SourceTypesCollection](../interfaces/sourcetypescollection.md)›*
 
-*Defined in [api.ts:3669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3669)*
+*Defined in [packages/sources/api.ts:3700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3700)*
 
 Returns an array of SourceType objects
 
@@ -695,8 +691,8 @@ Name | Type |
 ------ | ------ |
 `limit?` | number |
 `offset?` | number |
-`filter?` | any |
-`sortBy?` | Object |
+`filter?` | object |
+`sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[SourceTypesCollection](../interfaces/sourcetypescollection.md)›*
@@ -705,9 +701,9 @@ ___
 
 ###  listSources
 
-▸ **listSources**(`limit?`: number, `offset?`: number, `filter?`: any, `sortBy?`: Object, `options?`: any): *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
+▸ **listSources**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
 
-*Defined in [api.ts:3684](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3684)*
+*Defined in [packages/sources/api.ts:3715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3715)*
 
 Returns an array of Source objects
 
@@ -723,8 +719,8 @@ Name | Type |
 ------ | ------ |
 `limit?` | number |
 `offset?` | number |
-`filter?` | any |
-`sortBy?` | Object |
+`filter?` | object |
+`sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
@@ -735,7 +731,7 @@ ___
 
 ▸ **postGraphQL**(`graphQLRequest`: [GraphQLRequest](../interfaces/graphqlrequest.md), `options?`: any): *AxiosPromise‹[GraphQLResponse](../interfaces/graphqlresponse.md)›*
 
-*Defined in [api.ts:3696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3696)*
+*Defined in [packages/sources/api.ts:3727](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3727)*
 
 Performs a GraphQL Query
 
@@ -760,7 +756,7 @@ ___
 
 ▸ **showApplication**(`id`: string, `options?`: any): *AxiosPromise‹[Application](../interfaces/application.md)›*
 
-*Defined in [api.ts:3708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3708)*
+*Defined in [packages/sources/api.ts:3739](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3739)*
 
 Returns a Application object
 
@@ -785,7 +781,7 @@ ___
 
 ▸ **showApplicationType**(`id`: string, `options?`: any): *AxiosPromise‹[ApplicationType](../interfaces/applicationtype.md)›*
 
-*Defined in [api.ts:3720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3720)*
+*Defined in [packages/sources/api.ts:3751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3751)*
 
 Returns a ApplicationType object
 
@@ -810,7 +806,7 @@ ___
 
 ▸ **showAuthentication**(`id`: string, `options?`: any): *AxiosPromise‹[Authentication](../interfaces/authentication.md)›*
 
-*Defined in [api.ts:3732](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3732)*
+*Defined in [packages/sources/api.ts:3763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3763)*
 
 Returns a Authentication object
 
@@ -835,7 +831,7 @@ ___
 
 ▸ **showEndpoint**(`id`: string, `options?`: any): *AxiosPromise‹[Endpoint](../interfaces/endpoint.md)›*
 
-*Defined in [api.ts:3744](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3744)*
+*Defined in [packages/sources/api.ts:3775](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3775)*
 
 Returns a Endpoint object
 
@@ -860,7 +856,7 @@ ___
 
 ▸ **showSource**(`id`: string, `options?`: any): *AxiosPromise‹[Source](../interfaces/source.md)›*
 
-*Defined in [api.ts:3756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3756)*
+*Defined in [packages/sources/api.ts:3787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3787)*
 
 Returns a Source object
 
@@ -885,7 +881,7 @@ ___
 
 ▸ **showSourceType**(`id`: string, `options?`: any): *AxiosPromise‹[SourceType](../interfaces/sourcetype.md)›*
 
-*Defined in [api.ts:3768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3768)*
+*Defined in [packages/sources/api.ts:3799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3799)*
 
 Returns a SourceType object
 
@@ -908,9 +904,9 @@ ___
 
 ###  updateApplication
 
-▸ **updateApplication**(`id`: string, `application`: [Application](../interfaces/application.md), `options?`: any): *AxiosPromise‹Response›*
+▸ **updateApplication**(`id`: string, `application`: [Application](../interfaces/application.md), `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:3781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3781)*
+*Defined in [packages/sources/api.ts:3812](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3812)*
 
 Updates a Application object
 
@@ -928,15 +924,15 @@ Name | Type | Description |
 `application` | [Application](../interfaces/application.md) | Application attributes to update |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  updateAuthentication
 
-▸ **updateAuthentication**(`id`: string, `authentication`: [Authentication](../interfaces/authentication.md), `options?`: any): *AxiosPromise‹Response›*
+▸ **updateAuthentication**(`id`: string, `authentication`: [Authentication](../interfaces/authentication.md), `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:3794](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3794)*
+*Defined in [packages/sources/api.ts:3825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3825)*
 
 Updates a Authentication object
 
@@ -954,15 +950,15 @@ Name | Type | Description |
 `authentication` | [Authentication](../interfaces/authentication.md) | Authentication attributes to update |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  updateEndpoint
 
-▸ **updateEndpoint**(`id`: string, `endpoint`: [Endpoint](../interfaces/endpoint.md), `options?`: any): *AxiosPromise‹Response›*
+▸ **updateEndpoint**(`id`: string, `endpoint`: [Endpoint](../interfaces/endpoint.md), `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:3807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3807)*
+*Defined in [packages/sources/api.ts:3838](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3838)*
 
 Updates a Endpoint object
 
@@ -980,15 +976,15 @@ Name | Type | Description |
 `endpoint` | [Endpoint](../interfaces/endpoint.md) | Endpoint attributes to update |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  updateSource
 
-▸ **updateSource**(`id`: string, `source`: [Source](../interfaces/source.md), `options?`: any): *AxiosPromise‹Response›*
+▸ **updateSource**(`id`: string, `source`: [Source](../interfaces/source.md), `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:3820](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3820)*
+*Defined in [packages/sources/api.ts:3851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3851)*
 
 Updates a Source object
 
@@ -1006,4 +1002,4 @@ Name | Type | Description |
 `source` | [Source](../interfaces/source.md) | Source attributes to update |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*

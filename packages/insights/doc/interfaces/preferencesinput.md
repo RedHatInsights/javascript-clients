@@ -14,16 +14,14 @@
 
 ### Properties
 
-* [isSubscribed](preferencesinput.md#issubscribed)
+* [is_subscribed](preferencesinput.md#is_subscribed)
 
 ## Properties
 
-###  isSubscribed
+###  is_subscribed
 
-• **isSubscribed**: *boolean*
+• **is_subscribed**: *boolean*
 
-*Defined in [api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L557)*
-
-**`type`** {boolean}
+*Defined in [packages/insights/api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L489)*
 
 **`memberof`** PreferencesInput

@@ -14,42 +14,38 @@
 
 ### Properties
 
-* [archivedAt](orchestrationstack.md#optional-archivedat)
-* [createdAt](orchestrationstack.md#optional-createdat)
+* [archived_at](orchestrationstack.md#optional-archived_at)
+* [created_at](orchestrationstack.md#optional-created_at)
 * [description](orchestrationstack.md#optional-description)
 * [id](orchestrationstack.md#optional-id)
-* [lastSeenAt](orchestrationstack.md#optional-lastseenat)
+* [last_seen_at](orchestrationstack.md#optional-last_seen_at)
 * [name](orchestrationstack.md#optional-name)
-* [parentOrchestrationStackId](orchestrationstack.md#optional-parentorchestrationstackid)
-* [sourceCreatedAt](orchestrationstack.md#optional-sourcecreatedat)
-* [sourceDeletedAt](orchestrationstack.md#optional-sourcedeletedat)
-* [sourceId](orchestrationstack.md#optional-sourceid)
-* [sourceRef](orchestrationstack.md#optional-sourceref)
-* [sourceRegionId](orchestrationstack.md#optional-sourceregionid)
-* [subscriptionId](orchestrationstack.md#optional-subscriptionid)
-* [updatedAt](orchestrationstack.md#optional-updatedat)
+* [parent_orchestration_stack_id](orchestrationstack.md#optional-parent_orchestration_stack_id)
+* [source_created_at](orchestrationstack.md#optional-source_created_at)
+* [source_deleted_at](orchestrationstack.md#optional-source_deleted_at)
+* [source_id](orchestrationstack.md#optional-source_id)
+* [source_ref](orchestrationstack.md#optional-source_ref)
+* [source_region_id](orchestrationstack.md#optional-source_region_id)
+* [subscription_id](orchestrationstack.md#optional-subscription_id)
+* [updated_at](orchestrationstack.md#optional-updated_at)
 
 ## Properties
 
-### `Optional` archivedAt
+### `Optional` archived_at
 
-• **archivedAt**? : *Date*
+• **archived_at**? : *string*
 
-*Defined in [api.ts:2061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2061)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:1973](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1973)*
 
 **`memberof`** OrchestrationStack
 
 ___
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:2067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2067)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:1979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1979)*
 
 **`memberof`** OrchestrationStack
 
@@ -59,11 +55,9 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:2073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2073)*
+*Defined in [packages/topological-inventory/api.ts:1985](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1985)*
 
 Description of the OrchestrationStack
-
-**`type`** {string}
 
 **`memberof`** OrchestrationStack
 
@@ -73,23 +67,19 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:2079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2079)*
+*Defined in [packages/topological-inventory/api.ts:1991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1991)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** OrchestrationStack
 
 ___
 
-### `Optional` lastSeenAt
+### `Optional` last_seen_at
 
-• **lastSeenAt**? : *Date*
+• **last_seen_at**? : *string*
 
-*Defined in [api.ts:2085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2085)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:1997](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1997)*
 
 **`memberof`** OrchestrationStack
 
@@ -99,112 +89,94 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:2091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2091)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:2003](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2003)*
 
 **`memberof`** OrchestrationStack
 
 ___
 
-### `Optional` parentOrchestrationStackId
+### `Optional` parent_orchestration_stack_id
 
-• **parentOrchestrationStackId**? : *string*
+• **parent_orchestration_stack_id**? : *string*
 
-*Defined in [api.ts:2097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2097)*
+*Defined in [packages/topological-inventory/api.ts:2009](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2009)*
 
 ID of the resource
 
-**`type`** {string}
+**`memberof`** OrchestrationStack
+
+___
+
+### `Optional` source_created_at
+
+• **source_created_at**? : *string*
+
+*Defined in [packages/topological-inventory/api.ts:2015](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2015)*
 
 **`memberof`** OrchestrationStack
 
 ___
 
-### `Optional` sourceCreatedAt
+### `Optional` source_deleted_at
 
-• **sourceCreatedAt**? : *Date*
+• **source_deleted_at**? : *string*
 
-*Defined in [api.ts:2103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2103)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:2021](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2021)*
 
 **`memberof`** OrchestrationStack
 
 ___
 
-### `Optional` sourceDeletedAt
+### `Optional` source_id
 
-• **sourceDeletedAt**? : *Date*
+• **source_id**? : *string*
 
-*Defined in [api.ts:2109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2109)*
-
-**`type`** {Date}
-
-**`memberof`** OrchestrationStack
-
-___
-
-### `Optional` sourceId
-
-• **sourceId**? : *string*
-
-*Defined in [api.ts:2115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2115)*
+*Defined in [packages/topological-inventory/api.ts:2027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2027)*
 
 ID of the resource
 
-**`type`** {string}
+**`memberof`** OrchestrationStack
+
+___
+
+### `Optional` source_ref
+
+• **source_ref**? : *string*
+
+*Defined in [packages/topological-inventory/api.ts:2033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2033)*
 
 **`memberof`** OrchestrationStack
 
 ___
 
-### `Optional` sourceRef
+### `Optional` source_region_id
 
-• **sourceRef**? : *string*
+• **source_region_id**? : *string*
 
-*Defined in [api.ts:2121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2121)*
-
-**`type`** {string}
-
-**`memberof`** OrchestrationStack
-
-___
-
-### `Optional` sourceRegionId
-
-• **sourceRegionId**? : *string*
-
-*Defined in [api.ts:2127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2127)*
+*Defined in [packages/topological-inventory/api.ts:2039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2039)*
 
 ID of the resource
 
-**`type`** {string}
-
 **`memberof`** OrchestrationStack
 
 ___
 
-### `Optional` subscriptionId
+### `Optional` subscription_id
 
-• **subscriptionId**? : *string*
+• **subscription_id**? : *string*
 
-*Defined in [api.ts:2133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2133)*
+*Defined in [packages/topological-inventory/api.ts:2045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2045)*
 
 ID of the resource
 
-**`type`** {string}
-
 **`memberof`** OrchestrationStack
 
 ___
 
-### `Optional` updatedAt
+### `Optional` updated_at
 
-• **updatedAt**? : *Date*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:2139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2139)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:2051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2051)*
 
 **`memberof`** OrchestrationStack

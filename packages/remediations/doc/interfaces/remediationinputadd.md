@@ -25,8 +25,6 @@
 
 *Defined in [api.ts:712](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L712)*
 
-**`type`** {Array<RemediationInputAddIssues>}
-
 **`memberof`** RemediationInputAdd
 
 ___
@@ -36,7 +34,5 @@ ___
 • **systems**? : *Array‹string›*
 
 *Defined in [api.ts:718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L718)*
-
-**`type`** {Array<string>}
 
 **`memberof`** RemediationInputAdd

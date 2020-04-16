@@ -19,7 +19,7 @@
 
 • **Asc**: = "asc"
 
-*Defined in [api.ts:1382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1382)*
+*Defined in [api.ts:1263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1263)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **Desc**: = "desc"
 
-*Defined in [api.ts:1383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1383)*
+*Defined in [api.ts:1264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1264)*

@@ -14,23 +14,21 @@
 
 ### Properties
 
-* [createdAt](tag.md#optional-createdat)
+* [created_at](tag.md#optional-created_at)
 * [description](tag.md#optional-description)
 * [id](tag.md#optional-id)
-* [lastSeenAt](tag.md#optional-lastseenat)
+* [last_seen_at](tag.md#optional-last_seen_at)
 * [name](tag.md#optional-name)
 * [namespace](tag.md#optional-namespace)
 * [value](tag.md#optional-value)
 
 ## Properties
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:3587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3587)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:3471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3471)*
 
 **`memberof`** Tag
 
@@ -40,9 +38,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:3593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3593)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:3477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3477)*
 
 **`memberof`** Tag
 
@@ -52,23 +48,19 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:3599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3599)*
+*Defined in [packages/topological-inventory/api.ts:3483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3483)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** Tag
 
 ___
 
-### `Optional` lastSeenAt
+### `Optional` last_seen_at
 
-• **lastSeenAt**? : *Date*
+• **last_seen_at**? : *string*
 
-*Defined in [api.ts:3605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3605)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:3489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3489)*
 
 **`memberof`** Tag
 
@@ -78,9 +70,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:3611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3611)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:3495](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3495)*
 
 **`memberof`** Tag
 
@@ -90,9 +80,7 @@ ___
 
 • **namespace**? : *string*
 
-*Defined in [api.ts:3617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3617)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:3501](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3501)*
 
 **`memberof`** Tag
 
@@ -102,8 +90,6 @@ ___
 
 • **value**? : *string*
 
-*Defined in [api.ts:3623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3623)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:3507](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3507)*
 
 **`memberof`** Tag

@@ -2,6 +2,10 @@
 
 # Class: EndpointsApi
 
+EndpointsApi - object-oriented interface
+
+**`export`** 
+
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -37,15 +41,15 @@
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L49)*
+Defined in packages/hooks/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[EndpointsApi](endpointsapi.md)*
 
@@ -57,7 +61,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
+Defined in packages/hooks/base.ts:51
 
 ___
 
@@ -67,7 +71,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L51)*
+Defined in packages/hooks/base.ts:51
 
 ___
 
@@ -77,21 +81,27 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L49)*
+Defined in packages/hooks/base.ts:49
 
 ## Methods
 
 ###  endpointsCreate
 
-▸ **endpointsCreate**(`X_RH_IDENTITY`: string, `inlineObject1`: [InlineObject1](../interfaces/inlineobject1.md), `options?`: any): *AxiosPromise‹[InlineResponse201](../interfaces/inlineresponse201.md)›*
+▸ **endpointsCreate**(`xRHIDENTITY`: string, `inlineObject1`: [InlineObject1](../interfaces/inlineobject1.md), `options?`: any): *AxiosPromise‹[InlineResponse201](../interfaces/inlineresponse201.md)›*
 
-*Defined in [api.ts:1742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1742)*
+*Defined in [packages/hooks/api.ts:1655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1655)*
+
+Creates an endpoint
+
+**`throws`** {RequiredError}
+
+**`memberof`** EndpointsApi
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`X_RH_IDENTITY` | string |
+`xRHIDENTITY` | string |
 `inlineObject1` | [InlineObject1](../interfaces/inlineobject1.md) |
 `options?` | any |
 
@@ -101,33 +111,43 @@ ___
 
 ###  endpointsDestroy
 
-▸ **endpointsDestroy**(`X_RH_IDENTITY`: string, `id`: number, `options?`: any): *AxiosPromise‹Response›*
+▸ **endpointsDestroy**(`xRHIDENTITY`: string, `id`: number, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:1754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1754)*
+*Defined in [packages/hooks/api.ts:1667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1667)*
+
+**`throws`** {RequiredError}
+
+**`memberof`** EndpointsApi
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`X_RH_IDENTITY` | string |
+`xRHIDENTITY` | string |
 `id` | number |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  endpointsIndex
 
-▸ **endpointsIndex**(`X_RH_IDENTITY`: string, `order?`: string, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[InlineResponse2003](../interfaces/inlineresponse2003.md)›*
+▸ **endpointsIndex**(`xRHIDENTITY`: string, `order?`: string, `offset?`: number, `limit?`: number, `options?`: any): *AxiosPromise‹[InlineResponse2003](../interfaces/inlineresponse2003.md)›*
 
-*Defined in [api.ts:1768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1768)*
+*Defined in [packages/hooks/api.ts:1681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1681)*
+
+List all endpoints
+
+**`throws`** {RequiredError}
+
+**`memberof`** EndpointsApi
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`X_RH_IDENTITY` | string |
+`xRHIDENTITY` | string |
 `order?` | string |
 `offset?` | number |
 `limit?` | number |
@@ -139,15 +159,21 @@ ___
 
 ###  endpointsShow
 
-▸ **endpointsShow**(`X_RH_IDENTITY`: string, `id`: number, `options?`: any): *AxiosPromise‹[InlineResponse201](../interfaces/inlineresponse201.md)›*
+▸ **endpointsShow**(`xRHIDENTITY`: string, `id`: number, `options?`: any): *AxiosPromise‹[InlineResponse201](../interfaces/inlineresponse201.md)›*
 
-*Defined in [api.ts:1780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1780)*
+*Defined in [packages/hooks/api.ts:1693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1693)*
+
+Shows the requested endpoint
+
+**`throws`** {RequiredError}
+
+**`memberof`** EndpointsApi
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`X_RH_IDENTITY` | string |
+`xRHIDENTITY` | string |
 `id` | number |
 `options?` | any |
 
@@ -157,33 +183,45 @@ ___
 
 ###  endpointsTest
 
-▸ **endpointsTest**(`X_RH_IDENTITY`: string, `id`: number, `options?`: any): *AxiosPromise‹Response›*
+▸ **endpointsTest**(`xRHIDENTITY`: string, `id`: number, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:1792](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1792)*
+*Defined in [packages/hooks/api.ts:1705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1705)*
+
+Send a test message to the endpoint
+
+**`throws`** {RequiredError}
+
+**`memberof`** EndpointsApi
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`X_RH_IDENTITY` | string |
+`xRHIDENTITY` | string |
 `id` | number |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
 ###  endpointsUpdate
 
-▸ **endpointsUpdate**(`X_RH_IDENTITY`: string, `id`: number, `inlineObject2`: [InlineObject2](../interfaces/inlineobject2.md), `options?`: any): *AxiosPromise‹[InlineResponse201](../interfaces/inlineresponse201.md)›*
+▸ **endpointsUpdate**(`xRHIDENTITY`: string, `id`: number, `inlineObject2`: [InlineObject2](../interfaces/inlineobject2.md), `options?`: any): *AxiosPromise‹[InlineResponse201](../interfaces/inlineresponse201.md)›*
 
-*Defined in [api.ts:1805](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1805)*
+*Defined in [packages/hooks/api.ts:1718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L1718)*
+
+Updates the requested endpoint
+
+**`throws`** {RequiredError}
+
+**`memberof`** EndpointsApi
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`X_RH_IDENTITY` | string |
+`xRHIDENTITY` | string |
 `id` | number |
 `inlineObject2` | [InlineObject2](../interfaces/inlineobject2.md) |
 `options?` | any |

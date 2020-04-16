@@ -24,9 +24,7 @@
 
 • **data**? : *Array‹[ServiceOfferingIcon](serviceofferingicon.md)›*
 
-*Defined in [api.ts:2917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2917)*
-
-**`type`** {Array<ServiceOfferingIcon>}
+*Defined in [packages/topological-inventory/api.ts:2815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2815)*
 
 **`memberof`** ServiceOfferingIconsCollection
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:2911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2911)*
-
-**`type`** {CollectionLinks}
+*Defined in [packages/topological-inventory/api.ts:2809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2809)*
 
 **`memberof`** ServiceOfferingIconsCollection
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:2905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2905)*
-
-**`type`** {CollectionMetadata}
+*Defined in [packages/topological-inventory/api.ts:2803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2803)*
 
 **`memberof`** ServiceOfferingIconsCollection

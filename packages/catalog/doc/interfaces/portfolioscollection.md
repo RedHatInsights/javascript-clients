@@ -24,9 +24,7 @@
 
 • **data**? : *Array‹[Portfolio](portfolio.md)›*
 
-*Defined in [api.ts:851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L851)*
-
-**`type`** {Array<Portfolio>}
+*Defined in [packages/catalog/api.ts:766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L766)*
 
 **`memberof`** PortfoliosCollection
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L845)*
-
-**`type`** {CollectionLinks}
+*Defined in [packages/catalog/api.ts:760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L760)*
 
 **`memberof`** PortfoliosCollection
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L839)*
-
-**`type`** {CollectionMetadata}
+*Defined in [packages/catalog/api.ts:754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L754)*
 
 **`memberof`** PortfoliosCollection

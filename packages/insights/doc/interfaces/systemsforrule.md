@@ -14,16 +14,14 @@
 
 ### Properties
 
-* [hostIds](systemsforrule.md#hostids)
+* [host_ids](systemsforrule.md#host_ids)
 
 ## Properties
 
-###  hostIds
+###  host_ids
 
-• **hostIds**: *Array‹string›*
+• **host_ids**: *Array‹string›*
 
-*Defined in [api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1231)*
-
-**`type`** {Array<string>}
+*Defined in [packages/insights/api.ts:1153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1153)*
 
 **`memberof`** SystemsForRule

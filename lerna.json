@@ -3,5 +3,10 @@
   "packages": [
     "packages/*"
   ],
-  "version": "independent"
+  "version": "independent",
+  "command": {
+    "run": {
+      "ignore": ["@redhat-cloud-services/cost-management-client", "@redhat-cloud-services/notifications-client"]
+    }
+  }
 }

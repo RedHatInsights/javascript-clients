@@ -20,7 +20,7 @@
 * [description](roleout.md#optional-description)
 * [modified](roleout.md#modified)
 * [name](roleout.md#name)
-* [platformDefault](roleout.md#optional-platformdefault)
+* [platform_default](roleout.md#optional-platform_default)
 * [policyCount](roleout.md#optional-policycount)
 * [system](roleout.md#optional-system)
 * [uuid](roleout.md#uuid)
@@ -31,9 +31,7 @@
 
 • **accessCount**? : *number*
 
-*Defined in [api.ts:900](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L900)*
-
-**`type`** {number}
+*Defined in [packages/rbac/api.ts:879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L879)*
 
 **`memberof`** RoleOut
 
@@ -43,9 +41,7 @@ ___
 
 • **applications**? : *Array‹string›*
 
-*Defined in [api.ts:906](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L906)*
-
-**`type`** {Array<string>}
+*Defined in [packages/rbac/api.ts:885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L885)*
 
 **`memberof`** RoleOut
 
@@ -53,11 +49,9 @@ ___
 
 ###  created
 
-• **created**: *Date*
+• **created**: *string*
 
-*Defined in [api.ts:882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L882)*
-
-**`type`** {Date}
+*Defined in [packages/rbac/api.ts:861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L861)*
 
 **`memberof`** RoleOut
 
@@ -67,9 +61,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L870)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L849)*
 
 **`memberof`** RoleOut
 
@@ -77,11 +69,9 @@ ___
 
 ###  modified
 
-• **modified**: *Date*
+• **modified**: *string*
 
-*Defined in [api.ts:888](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L888)*
-
-**`type`** {Date}
+*Defined in [packages/rbac/api.ts:867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L867)*
 
 **`memberof`** RoleOut
 
@@ -91,21 +81,17 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L864)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L843)*
 
 **`memberof`** RoleOut
 
 ___
 
-### `Optional` platformDefault
+### `Optional` platform_default
 
-• **platformDefault**? : *boolean*
+• **platform_default**? : *boolean*
 
-*Defined in [api.ts:918](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L918)*
-
-**`type`** {boolean}
+*Defined in [packages/rbac/api.ts:897](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L897)*
 
 **`memberof`** RoleOut
 
@@ -115,9 +101,7 @@ ___
 
 • **policyCount**? : *number*
 
-*Defined in [api.ts:894](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L894)*
-
-**`type`** {number}
+*Defined in [packages/rbac/api.ts:873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L873)*
 
 **`memberof`** RoleOut
 
@@ -127,9 +111,7 @@ ___
 
 • **system**? : *boolean*
 
-*Defined in [api.ts:912](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L912)*
-
-**`type`** {boolean}
+*Defined in [packages/rbac/api.ts:891](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L891)*
 
 **`memberof`** RoleOut
 
@@ -139,8 +121,6 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [api.ts:876](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L876)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L855)*
 
 **`memberof`** RoleOut

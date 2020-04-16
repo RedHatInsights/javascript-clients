@@ -23,11 +23,9 @@
 
 • **count**: *number*
 
-*Defined in [git-api/api.ts:503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L503)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:438](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L438)*
 
 Number of CVEs with CVSS score lower than 4.
-
-**`type`** {number}
 
 **`memberof`** ExecutiveReportCvesBySeverity0to39
 
@@ -37,10 +35,8 @@ ___
 
 • **percentage**: *number*
 
-*Defined in [git-api/api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L509)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:444](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L444)*
 
 Percentage of CVEs with CVSS score lower than 4.
-
-**`type`** {number}
 
 **`memberof`** ExecutiveReportCvesBySeverity0to39

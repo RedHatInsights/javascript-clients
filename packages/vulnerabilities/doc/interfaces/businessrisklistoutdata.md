@@ -23,11 +23,9 @@
 
 • **id**: *number*
 
-*Defined in [api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L143)*
+*Defined in [packages/vulnerabilities/api.ts:90](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L90)*
 
 Internal business_risk_id.
-
-**`type`** {number}
 
 **`memberof`** BusinessRiskListOutData
 
@@ -37,10 +35,8 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L149)*
+*Defined in [packages/vulnerabilities/api.ts:96](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L96)*
 
 Represenation of internal business_risk_id.
-
-**`type`** {string}
 
 **`memberof`** BusinessRiskListOutData

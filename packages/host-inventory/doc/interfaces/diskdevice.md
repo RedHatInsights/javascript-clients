@@ -18,7 +18,7 @@ Representation of one mounted device
 
 * [device](diskdevice.md#optional-device)
 * [label](diskdevice.md#optional-label)
-* [mountPoint](diskdevice.md#optional-mountpoint)
+* [mount_point](diskdevice.md#optional-mount_point)
 * [options](diskdevice.md#optional-options)
 * [type](diskdevice.md#optional-type)
 
@@ -28,9 +28,7 @@ Representation of one mounted device
 
 • **device**? : *string*
 
-*Defined in [api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L443)*
-
-**`type`** {string}
+*Defined in [packages/host-inventory/api.ts:387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L387)*
 
 **`memberof`** DiskDevice
 
@@ -40,25 +38,21 @@ ___
 
 • **label**? : *string*
 
-*Defined in [api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L449)*
+*Defined in [packages/host-inventory/api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L393)*
 
 user-defined mount label
-
-**`type`** {string}
 
 **`memberof`** DiskDevice
 
 ___
 
-### `Optional` mountPoint
+### `Optional` mount_point
 
-• **mountPoint**? : *string*
+• **mount_point**? : *string*
 
-*Defined in [api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L461)*
+*Defined in [packages/host-inventory/api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L405)*
 
 mount point
-
-**`type`** {string}
 
 **`memberof`** DiskDevice
 
@@ -68,9 +62,7 @@ ___
 
 • **options**? : *[DiskDeviceOptions](diskdeviceoptions.md)*
 
-*Defined in [api.ts:455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L455)*
-
-**`type`** {DiskDeviceOptions}
+*Defined in [packages/host-inventory/api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L399)*
 
 **`memberof`** DiskDevice
 
@@ -80,10 +72,8 @@ ___
 
 • **type**? : *string*
 
-*Defined in [api.ts:467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L467)*
+*Defined in [packages/host-inventory/api.ts:411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L411)*
 
 mount type
-
-**`type`** {string}
 
 **`memberof`** DiskDevice

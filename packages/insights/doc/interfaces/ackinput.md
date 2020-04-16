@@ -15,7 +15,7 @@
 ### Properties
 
 * [justification](ackinput.md#optional-justification)
-* [ruleId](ackinput.md#ruleid)
+* [rule_id](ackinput.md#rule_id)
 
 ## Properties
 
@@ -23,20 +23,16 @@
 
 • **justification**? : *string*
 
-*Defined in [api.ts:141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L141)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L89)*
 
 **`memberof`** AckInput
 
 ___
 
-###  ruleId
+###  rule_id
 
-• **ruleId**: *string*
+• **rule_id**: *string*
 
-*Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L135)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L83)*
 
 **`memberof`** AckInput

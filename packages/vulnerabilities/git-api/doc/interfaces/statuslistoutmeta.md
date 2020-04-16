@@ -14,18 +14,16 @@
 
 ### Properties
 
-* [totalItems](statuslistoutmeta.md#totalitems)
+* [total_items](statuslistoutmeta.md#total_items)
 
 ## Properties
 
-###  totalItems
+###  total_items
 
-• **totalItems**: *number*
+• **total_items**: *number*
 
-*Defined in [git-api/api.ts:1337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1337)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1079)*
 
 Total number of available status/status_id pairs.
-
-**`type`** {number}
 
 **`memberof`** StatusListOutMeta

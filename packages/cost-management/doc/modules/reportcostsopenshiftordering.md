@@ -12,15 +12,19 @@
 
 * [ClusterEnum](../enums/reportcostsopenshiftordering.clusterenum.md)
 * [CostEnum](../enums/reportcostsopenshiftordering.costenum.md)
+* [InfrastructureEnum](../enums/reportcostsopenshiftordering.infrastructureenum.md)
 * [NodeEnum](../enums/reportcostsopenshiftordering.nodeenum.md)
 * [ProjectEnum](../enums/reportcostsopenshiftordering.projectenum.md)
+* [SupplementaryEnum](../enums/reportcostsopenshiftordering.supplementaryenum.md)
 
 ### Properties
 
 * [cluster](reportcostsopenshiftordering.md#optional-cluster)
 * [cost](reportcostsopenshiftordering.md#optional-cost)
+* [infrastructure](reportcostsopenshiftordering.md#optional-infrastructure)
 * [node](reportcostsopenshiftordering.md#optional-node)
 * [project](reportcostsopenshiftordering.md#optional-project)
+* [supplementary](reportcostsopenshiftordering.md#optional-supplementary)
 
 ## Properties
 
@@ -28,7 +32,7 @@
 
 • **cluster**? : *[ClusterEnum](../enums/reportcostsopenshiftordering.clusterenum.md)*
 
-*Defined in [api.ts:1058](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1058)*
+*Defined in [api.ts:883](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L883)*
 
 **`type`** {string}
 
@@ -40,7 +44,19 @@ ___
 
 • **cost**? : *[CostEnum](../enums/reportcostsopenshiftordering.costenum.md)*
 
-*Defined in [api.ts:1076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1076)*
+*Defined in [api.ts:913](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L913)*
+
+**`type`** {string}
+
+**`memberof`** ReportCostsOpenShiftOrdering
+
+___
+
+### `Optional` infrastructure
+
+• **infrastructure**? : *[InfrastructureEnum](../enums/reportcostsopenshiftordering.infrastructureenum.md)*
+
+*Defined in [api.ts:901](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L901)*
 
 **`type`** {string}
 
@@ -52,7 +68,7 @@ ___
 
 • **node**? : *[NodeEnum](../enums/reportcostsopenshiftordering.nodeenum.md)*
 
-*Defined in [api.ts:1070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1070)*
+*Defined in [api.ts:895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L895)*
 
 **`type`** {string}
 
@@ -64,7 +80,19 @@ ___
 
 • **project**? : *[ProjectEnum](../enums/reportcostsopenshiftordering.projectenum.md)*
 
-*Defined in [api.ts:1064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L1064)*
+*Defined in [api.ts:889](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L889)*
+
+**`type`** {string}
+
+**`memberof`** ReportCostsOpenShiftOrdering
+
+___
+
+### `Optional` supplementary
+
+• **supplementary**? : *[SupplementaryEnum](../enums/reportcostsopenshiftordering.supplementaryenum.md)*
+
+*Defined in [api.ts:907](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L907)*
 
 **`type`** {string}
 

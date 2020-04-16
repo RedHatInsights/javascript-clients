@@ -14,35 +14,31 @@
 
 ### Properties
 
-* [createdAt](ack.md#optional-createdat)
-* [createdBy](ack.md#optional-createdby)
+* [created_at](ack.md#optional-created_at)
+* [created_by](ack.md#optional-created_by)
 * [justification](ack.md#optional-justification)
 * [rule](ack.md#optional-rule)
-* [updatedAt](ack.md#optional-updatedat)
+* [updated_at](ack.md#optional-updated_at)
 
 ## Properties
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L115)*
-
-**`type`** {Date}
+*Defined in [packages/insights/api.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L64)*
 
 **`memberof`** Ack
 
 ___
 
-### `Optional` createdBy
+### `Optional` created_by
 
-• **createdBy**? : *string*
+• **created_by**? : *string*
 
-*Defined in [api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L109)*
+*Defined in [packages/insights/api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L58)*
 
 The user who created the ack
-
-**`type`** {string}
 
 **`memberof`** Ack
 
@@ -52,11 +48,9 @@ ___
 
 • **justification**? : *string*
 
-*Defined in [api.ts:103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L103)*
+*Defined in [packages/insights/api.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L52)*
 
 The reason the rule was acked
-
-**`type`** {string}
 
 **`memberof`** Ack
 
@@ -66,20 +60,16 @@ ___
 
 • **rule**? : *string*
 
-*Defined in [api.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L97)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L46)*
 
 **`memberof`** Ack
 
 ___
 
-### `Optional` updatedAt
+### `Optional` updated_at
 
-• **updatedAt**? : *Date*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L121)*
-
-**`type`** {Date}
+*Defined in [packages/insights/api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L70)*
 
 **`memberof`** Ack

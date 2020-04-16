@@ -16,8 +16,8 @@
 
 * [description](remediationissueresolution.md#description)
 * [id](remediationissueresolution.md#id)
-* [needsReboot](remediationissueresolution.md#needsreboot)
-* [resolutionRisk](remediationissueresolution.md#resolutionrisk)
+* [needs_reboot](remediationissueresolution.md#needs_reboot)
+* [resolution_risk](remediationissueresolution.md#resolution_risk)
 
 ## Properties
 
@@ -25,9 +25,7 @@
 
 • **description**: *string*
 
-*Defined in [api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L816)*
-
-**`type`** {string}
+*Defined in [api.ts:812](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L812)*
 
 **`memberof`** RemediationIssueResolution
 
@@ -37,34 +35,28 @@ ___
 
 • **id**: *string*
 
-*Defined in [api.ts:810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L810)*
-
-**`type`** {string}
+*Defined in [api.ts:806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L806)*
 
 **`memberof`** RemediationIssueResolution
 
 ___
 
-###  needsReboot
+###  needs_reboot
 
-• **needsReboot**: *boolean*
+• **needs_reboot**: *boolean*
 
-*Defined in [api.ts:828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L828)*
+*Defined in [api.ts:824](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L824)*
 
 Indicates whether the given resolution involves system reboot
 
-**`type`** {boolean}
-
 **`memberof`** RemediationIssueResolution
 
 ___
 
-###  resolutionRisk
+###  resolution_risk
 
-• **resolutionRisk**: *[ResolutionRisk](../enums/resolutionrisk.md)*
+• **resolution_risk**: *[ResolutionRisk](../enums/resolutionrisk.md)*
 
-*Defined in [api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L822)*
-
-**`type`** {ResolutionRisk}
+*Defined in [api.ts:818](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L818)*
 
 **`memberof`** RemediationIssueResolution

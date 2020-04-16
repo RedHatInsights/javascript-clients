@@ -6,10 +6,6 @@ TenantApi - object-oriented interface
 
 **`export`** 
 
-**`class`** TenantApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -42,15 +38,15 @@ TenantApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
+Defined in packages/catalog/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[TenantApi](tenantapi.md)*
 
@@ -62,7 +58,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
+Defined in packages/catalog/base.ts:51
 
 ___
 
@@ -72,7 +68,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
+Defined in packages/catalog/base.ts:51
 
 ___
 
@@ -82,7 +78,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L49)*
+Defined in packages/catalog/base.ts:49
 
 ## Methods
 
@@ -90,7 +86,7 @@ ___
 
 ▸ **listTenants**(`options?`: any): *AxiosPromise‹[TenantsCollection](../interfaces/tenantscollection.md)›*
 
-*Defined in [api.ts:6976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6976)*
+*Defined in [packages/catalog/api.ts:7067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7067)*
 
 Get a list of tenants.
 
@@ -114,7 +110,7 @@ ___
 
 ▸ **showTenant**(`tenantId`: string, `options?`: any): *AxiosPromise‹[Tenant](../interfaces/tenant.md)›*
 
-*Defined in [api.ts:6988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6988)*
+*Defined in [packages/catalog/api.ts:7079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7079)*
 
 Gets the tenant specified by the tenant id.
 
@@ -137,9 +133,9 @@ ___
 
 ###  tenantSeed
 
-▸ **tenantSeed**(`tenantId`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **tenantSeed**(`tenantId`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [api.ts:7000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7000)*
+*Defined in [packages/catalog/api.ts:7091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7091)*
 
 Run a task to seed the Tenant Groups required for an org admin to onboard additional users.
 
@@ -156,4 +152,4 @@ Name | Type | Description |
 `tenantId` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*

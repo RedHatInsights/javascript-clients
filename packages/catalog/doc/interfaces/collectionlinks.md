@@ -25,11 +25,9 @@
 
 • **first**? : *string*
 
-*Defined in [api.ts:170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L170)*
+*Defined in [packages/catalog/api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L113)*
 
 The link to fetch the first group of items in the result set
-
-**`type`** {string}
 
 **`memberof`** CollectionLinks
 
@@ -39,11 +37,9 @@ ___
 
 • **last**? : *string*
 
-*Defined in [api.ts:176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L176)*
+*Defined in [packages/catalog/api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L119)*
 
 The link to fetch the last group of items in the result set
-
-**`type`** {string}
 
 **`memberof`** CollectionLinks
 
@@ -53,11 +49,9 @@ ___
 
 • **next**? : *string*
 
-*Defined in [api.ts:188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L188)*
+*Defined in [packages/catalog/api.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L131)*
 
 The link to fetch the next group of items in the result set
-
-**`type`** {string}
 
 **`memberof`** CollectionLinks
 
@@ -67,10 +61,8 @@ ___
 
 • **prev**? : *string*
 
-*Defined in [api.ts:182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L182)*
+*Defined in [packages/catalog/api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L125)*
 
 The link to fetch the previous group of items in the result set
-
-**`type`** {string}
 
 **`memberof`** CollectionLinks

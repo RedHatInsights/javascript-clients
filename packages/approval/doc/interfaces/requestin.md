@@ -19,19 +19,17 @@ Input parameters for approval request object.
 * [content](requestin.md#content)
 * [description](requestin.md#optional-description)
 * [name](requestin.md#name)
-* [tagResources](requestin.md#tagresources)
+* [tag_resources](requestin.md#tag_resources)
 
 ## Properties
 
 ###  content
 
-• **content**: *any*
+• **content**: *object*
 
-*Defined in [api.ts:448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L448)*
+*Defined in [packages/approval/api.ts:380](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L380)*
 
 JSON object with request content
-
-**`type`** {any}
 
 **`memberof`** RequestIn
 
@@ -41,11 +39,9 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L442)*
+*Defined in [packages/approval/api.ts:374](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L374)*
 
 Request description
-
-**`type`** {string}
 
 **`memberof`** RequestIn
 
@@ -55,24 +51,20 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L436)*
+*Defined in [packages/approval/api.ts:368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L368)*
 
 Request name
-
-**`type`** {string}
 
 **`memberof`** RequestIn
 
 ___
 
-###  tagResources
+###  tag_resources
 
-• **tagResources**: *Array‹[TagResource](tagresource.md)›*
+• **tag_resources**: *Array‹[TagResource](tagresource.md)›*
 
-*Defined in [api.ts:454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L454)*
+*Defined in [packages/approval/api.ts:386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L386)*
 
 collection of resources having tags that determine the workflows for the request
-
-**`type`** {Array<TagResource>}
 
 **`memberof`** RequestIn

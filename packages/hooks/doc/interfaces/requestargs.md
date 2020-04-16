@@ -2,6 +2,10 @@
 
 # Interface: RequestArgs
 
+**`export`** 
+
+**`interface`** RequestArgs
+
 ## Hierarchy
 
 * **RequestArgs**
@@ -19,7 +23,7 @@
 
 • **options**: *any*
 
-*Defined in [api.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L40)*
+Defined in packages/hooks/base.ts:40
 
 ___
 
@@ -27,4 +31,4 @@ ___
 
 • **url**: *string*
 
-*Defined in [api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/hooks/api.ts#L39)*
+Defined in packages/hooks/base.ts:39

@@ -22,11 +22,9 @@
 
 ### `Optional` data
 
-• **data**? : *Array‹[Request](../modules/request.md)›*
+• **data**? : *Array‹[Request](request.md)›*
 
-*Defined in [api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L422)*
-
-**`type`** {Array<Request>}
+*Defined in [packages/approval/api.ts:355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L355)*
 
 **`memberof`** RequestCollection
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L416)*
-
-**`type`** {CollectionLinks}
+*Defined in [packages/approval/api.ts:349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L349)*
 
 **`memberof`** RequestCollection
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L410)*
-
-**`type`** {CollectionMetadata}
+*Defined in [packages/approval/api.ts:343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L343)*
 
 **`memberof`** RequestCollection

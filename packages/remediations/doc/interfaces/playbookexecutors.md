@@ -14,42 +14,58 @@
 
 ### Properties
 
-* [executorId](playbookexecutors.md#executorid)
-* [executorName](playbookexecutors.md#executorname)
-* [systemCount](playbookexecutors.md#systemcount)
+* [counts](playbookexecutors.md#counts)
+* [executor_id](playbookexecutors.md#executor_id)
+* [executor_name](playbookexecutors.md#executor_name)
+* [status](playbookexecutors.md#status)
+* [system_count](playbookexecutors.md#system_count)
 
 ## Properties
 
-###  executorId
+###  counts
 
-• **executorId**: *string*
+• **counts**: *[Counts](counts.md)*
 
-*Defined in [api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L315)*
-
-**`type`** {string}
+*Defined in [api.ts:325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L325)*
 
 **`memberof`** PlaybookExecutors
 
 ___
 
-###  executorName
+###  executor_id
 
-• **executorName**: *string*
+• **executor_id**: *string*
 
-*Defined in [api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L321)*
-
-**`type`** {string}
+*Defined in [api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L301)*
 
 **`memberof`** PlaybookExecutors
 
 ___
 
-###  systemCount
+###  executor_name
 
-• **systemCount**: *number*
+• **executor_name**: *string*
 
-*Defined in [api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L327)*
+*Defined in [api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L307)*
 
-**`type`** {number}
+**`memberof`** PlaybookExecutors
+
+___
+
+###  status
+
+• **status**: *[PlaybookRunExecutorStatus](../enums/playbookrunexecutorstatus.md)*
+
+*Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L313)*
+
+**`memberof`** PlaybookExecutors
+
+___
+
+###  system_count
+
+• **system_count**: *number*
+
+*Defined in [api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L319)*
 
 **`memberof`** PlaybookExecutors

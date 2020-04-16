@@ -25,9 +25,7 @@
 
 • **first**? : *string | null*
 
-*Defined in [api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L437)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L375)*
 
 **`memberof`** InlineResponse200Links
 
@@ -37,9 +35,7 @@ ___
 
 • **last**? : *string | null*
 
-*Defined in [api.ts:455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L455)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L393)*
 
 **`memberof`** InlineResponse200Links
 
@@ -49,9 +45,7 @@ ___
 
 • **next**? : *string | null*
 
-*Defined in [api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L449)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L387)*
 
 **`memberof`** InlineResponse200Links
 
@@ -61,8 +55,6 @@ ___
 
 • **previous**? : *string | null*
 
-*Defined in [api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L443)*
-
-**`type`** {string}
+*Defined in [packages/insights/api.ts:381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L381)*
 
 **`memberof`** InlineResponse200Links

@@ -16,33 +16,29 @@ Data of a single host to be updated.
 
 ### Properties
 
-* [ansibleHost](patchhostin.md#optional-ansiblehost)
-* [displayName](patchhostin.md#optional-displayname)
+* [ansible_host](patchhostin.md#optional-ansible_host)
+* [display_name](patchhostin.md#optional-display_name)
 
 ## Properties
 
-### `Optional` ansibleHost
+### `Optional` ansible_host
 
-• **ansibleHost**? : *string*
+• **ansible_host**? : *string*
 
-*Defined in [api.ts:809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L809)*
+*Defined in [packages/host-inventory/api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L637)*
 
 The ansible host name for remediations
-
-**`type`** {string}
 
 **`memberof`** PatchHostIn
 
 ___
 
-### `Optional` displayName
+### `Optional` display_name
 
-• **displayName**? : *string*
+• **display_name**? : *string*
 
-*Defined in [api.ts:815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L815)*
+*Defined in [packages/host-inventory/api.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L643)*
 
 A host’s human-readable display name, e.g. in a form of a domain name.
-
-**`type`** {string}
 
 **`memberof`** PatchHostIn

@@ -21,7 +21,7 @@
 * [description](rolewithaccess.md#optional-description)
 * [modified](rolewithaccess.md#modified)
 * [name](rolewithaccess.md#name)
-* [platformDefault](rolewithaccess.md#optional-platformdefault)
+* [platform_default](rolewithaccess.md#optional-platform_default)
 * [policyCount](rolewithaccess.md#optional-policycount)
 * [system](rolewithaccess.md#optional-system)
 * [uuid](rolewithaccess.md#uuid)
@@ -32,9 +32,7 @@
 
 • **access**: *Array‹[Access](access.md)›*
 
-*Defined in [api.ts:1124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1124)*
-
-**`type`** {Array<Access>}
+*Defined in [packages/rbac/api.ts:1149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1149)*
 
 **`memberof`** RoleWithAccess
 
@@ -44,9 +42,7 @@ ___
 
 • **accessCount**? : *number*
 
-*Defined in [api.ts:1100](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1100)*
-
-**`type`** {number}
+*Defined in [packages/rbac/api.ts:1125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1125)*
 
 **`memberof`** RoleWithAccess
 
@@ -56,9 +52,7 @@ ___
 
 • **applications**? : *Array‹string›*
 
-*Defined in [api.ts:1106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1106)*
-
-**`type`** {Array<string>}
+*Defined in [packages/rbac/api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1131)*
 
 **`memberof`** RoleWithAccess
 
@@ -66,11 +60,9 @@ ___
 
 ###  created
 
-• **created**: *Date*
+• **created**: *string*
 
-*Defined in [api.ts:1082](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1082)*
-
-**`type`** {Date}
+*Defined in [packages/rbac/api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1107)*
 
 **`memberof`** RoleWithAccess
 
@@ -80,9 +72,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:1070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1070)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1095)*
 
 **`memberof`** RoleWithAccess
 
@@ -90,11 +80,9 @@ ___
 
 ###  modified
 
-• **modified**: *Date*
+• **modified**: *string*
 
-*Defined in [api.ts:1088](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1088)*
-
-**`type`** {Date}
+*Defined in [packages/rbac/api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1113)*
 
 **`memberof`** RoleWithAccess
 
@@ -104,21 +92,17 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:1064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1064)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1089)*
 
 **`memberof`** RoleWithAccess
 
 ___
 
-### `Optional` platformDefault
+### `Optional` platform_default
 
-• **platformDefault**? : *boolean*
+• **platform_default**? : *boolean*
 
-*Defined in [api.ts:1118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1118)*
-
-**`type`** {boolean}
+*Defined in [packages/rbac/api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1143)*
 
 **`memberof`** RoleWithAccess
 
@@ -128,9 +112,7 @@ ___
 
 • **policyCount**? : *number*
 
-*Defined in [api.ts:1094](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1094)*
-
-**`type`** {number}
+*Defined in [packages/rbac/api.ts:1119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1119)*
 
 **`memberof`** RoleWithAccess
 
@@ -140,9 +122,7 @@ ___
 
 • **system**? : *boolean*
 
-*Defined in [api.ts:1112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1112)*
-
-**`type`** {boolean}
+*Defined in [packages/rbac/api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1137)*
 
 **`memberof`** RoleWithAccess
 
@@ -152,8 +132,6 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [api.ts:1076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1076)*
-
-**`type`** {string}
+*Defined in [packages/rbac/api.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1101)*
 
 **`memberof`** RoleWithAccess

@@ -21,11 +21,9 @@
 
 ###  created
 
-• **created**: *Date*
+• **created**: *string*
 
-*Defined in [api.ts:1182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1182)*
-
-**`type`** {Date}
+*Defined in [packages/rbac/api.ts:1205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1205)*
 
 **`memberof`** Timestamped
 
@@ -33,10 +31,8 @@ ___
 
 ###  modified
 
-• **modified**: *Date*
+• **modified**: *string*
 
-*Defined in [api.ts:1188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1188)*
-
-**`type`** {Date}
+*Defined in [packages/rbac/api.ts:1211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1211)*
 
 **`memberof`** Timestamped

@@ -6,10 +6,6 @@ RatingApi - object-oriented interface
 
 **`export`** 
 
-**`class`** RatingApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
 * [BaseAPI](baseapi.md)
@@ -42,15 +38,15 @@ RatingApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
 `configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`axios` | AxiosInstance |  globalAxios |
+`basePath` | string | BASE_PATH |
+`axios` | AxiosInstance | globalAxios |
 
 **Returns:** *[RatingApi](ratingapi.md)*
 
@@ -62,7 +58,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -72,7 +68,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)*
+Defined in packages/insights/base.ts:51
 
 ___
 
@@ -82,15 +78,15 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [api.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L49)*
+Defined in packages/insights/base.ts:49
 
 ## Methods
 
 ###  ratingCreate
 
-▸ **ratingCreate**(`ruleRating`: [RuleRating](../modules/rulerating.md), `options?`: any): *AxiosPromise‹[RuleRating](../modules/rulerating.md)›*
+▸ **ratingCreate**(`ruleRating`: [RuleRating](../interfaces/rulerating.md), `options?`: any): *AxiosPromise‹[RuleRating](../interfaces/rulerating.md)›*
 
-*Defined in [api.ts:3074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3074)*
+*Defined in [packages/insights/api.ts:3057](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3057)*
 
 Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
 
@@ -104,10 +100,10 @@ Return the new rating.  Any previous rating for this rule by this user is amende
 
 Name | Type |
 ------ | ------ |
-`ruleRating` | [RuleRating](../modules/rulerating.md) |
+`ruleRating` | [RuleRating](../interfaces/rulerating.md) |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[RuleRating](../modules/rulerating.md)›*
+**Returns:** *AxiosPromise‹[RuleRating](../interfaces/rulerating.md)›*
 
 ___
 
@@ -115,9 +111,9 @@ ___
 
 ▸ **ratingList**(`limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[InlineResponse2003](../interfaces/inlineresponse2003.md)›*
 
-*Defined in [api.ts:3087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3087)*
+*Defined in [packages/insights/api.ts:3070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3070)*
 
-Only the current user's ratings are listed here.
+Only the current user\'s ratings are listed here.
 
 **`summary`** List all rules rated by the current user
 
@@ -139,9 +135,9 @@ ___
 
 ###  ratingRead
 
-▸ **ratingRead**(`rule`: string, `options?`: any): *AxiosPromise‹[RuleRating](../modules/rulerating.md)›*
+▸ **ratingRead**(`rule`: string, `options?`: any): *AxiosPromise‹[RuleRating](../interfaces/rulerating.md)›*
 
-*Defined in [api.ts:3099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3099)*
+*Defined in [packages/insights/api.ts:3082](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3082)*
 
 Retrieve the ratings for a single rule, by Insights Rule ID
 
@@ -158,4 +154,4 @@ Name | Type | Description |
 `rule` | string | Insights Rule ID |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[RuleRating](../modules/rulerating.md)›*
+**Returns:** *AxiosPromise‹[RuleRating](../interfaces/rulerating.md)›*

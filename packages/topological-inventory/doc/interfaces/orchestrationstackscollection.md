@@ -24,9 +24,7 @@
 
 • **data**? : *Array‹[OrchestrationStack](orchestrationstack.md)›*
 
-*Defined in [api.ts:2165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2165)*
-
-**`type`** {Array<OrchestrationStack>}
+*Defined in [packages/topological-inventory/api.ts:2076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2076)*
 
 **`memberof`** OrchestrationStacksCollection
 
@@ -36,9 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:2159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2159)*
-
-**`type`** {CollectionLinks}
+*Defined in [packages/topological-inventory/api.ts:2070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2070)*
 
 **`memberof`** OrchestrationStacksCollection
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:2153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2153)*
-
-**`type`** {CollectionMetadata}
+*Defined in [packages/topological-inventory/api.ts:2064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2064)*
 
 **`memberof`** OrchestrationStacksCollection

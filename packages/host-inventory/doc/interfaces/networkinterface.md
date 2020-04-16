@@ -16,9 +16,9 @@ Representation of one network interface
 
 ### Properties
 
-* [ipv4Addresses](networkinterface.md#optional-ipv4addresses)
-* [ipv6Addresses](networkinterface.md#optional-ipv6addresses)
-* [macAddress](networkinterface.md#optional-macaddress)
+* [ipv4_addresses](networkinterface.md#optional-ipv4_addresses)
+* [ipv6_addresses](networkinterface.md#optional-ipv6_addresses)
+* [mac_address](networkinterface.md#optional-mac_address)
 * [mtu](networkinterface.md#optional-mtu)
 * [name](networkinterface.md#optional-name)
 * [state](networkinterface.md#optional-state)
@@ -26,39 +26,33 @@ Representation of one network interface
 
 ## Properties
 
-### `Optional` ipv4Addresses
+### `Optional` ipv4_addresses
 
-• **ipv4Addresses**? : *Array‹string›*
+• **ipv4_addresses**? : *Array‹string›*
 
-*Defined in [api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L759)*
-
-**`type`** {Array<string>}
+*Defined in [packages/host-inventory/api.ts:588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L588)*
 
 **`memberof`** NetworkInterface
 
 ___
 
-### `Optional` ipv6Addresses
+### `Optional` ipv6_addresses
 
-• **ipv6Addresses**? : *Array‹string›*
+• **ipv6_addresses**? : *Array‹string›*
 
-*Defined in [api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L765)*
-
-**`type`** {Array<string>}
+*Defined in [packages/host-inventory/api.ts:594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L594)*
 
 **`memberof`** NetworkInterface
 
 ___
 
-### `Optional` macAddress
+### `Optional` mac_address
 
-• **macAddress**? : *string*
+• **mac_address**? : *string*
 
-*Defined in [api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L777)*
+*Defined in [packages/host-inventory/api.ts:606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L606)*
 
 MAC address (with or without colons)
-
-**`type`** {string}
 
 **`memberof`** NetworkInterface
 
@@ -68,11 +62,9 @@ ___
 
 • **mtu**? : *number*
 
-*Defined in [api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L771)*
+*Defined in [packages/host-inventory/api.ts:600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L600)*
 
 MTU
-
-**`type`** {number}
 
 **`memberof`** NetworkInterface
 
@@ -82,11 +74,9 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L783)*
+*Defined in [packages/host-inventory/api.ts:612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L612)*
 
 name of interface
-
-**`type`** {string}
 
 **`memberof`** NetworkInterface
 
@@ -96,11 +86,9 @@ ___
 
 • **state**? : *string*
 
-*Defined in [api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L789)*
+*Defined in [packages/host-inventory/api.ts:618](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L618)*
 
 interface state (UP, DOWN, UNKNOWN)
-
-**`type`** {string}
 
 **`memberof`** NetworkInterface
 
@@ -110,10 +98,8 @@ ___
 
 • **type**? : *string*
 
-*Defined in [api.ts:795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L795)*
+*Defined in [packages/host-inventory/api.ts:624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L624)*
 
 interface type (ether, loopback)
-
-**`type`** {string}
 
 **`memberof`** NetworkInterface

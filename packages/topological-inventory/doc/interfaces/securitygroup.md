@@ -14,44 +14,40 @@
 
 ### Properties
 
-* [archivedAt](securitygroup.md#optional-archivedat)
-* [createdAt](securitygroup.md#optional-createdat)
+* [archived_at](securitygroup.md#optional-archived_at)
+* [created_at](securitygroup.md#optional-created_at)
 * [description](securitygroup.md#optional-description)
 * [extra](securitygroup.md#optional-extra)
 * [id](securitygroup.md#optional-id)
-* [lastSeenAt](securitygroup.md#optional-lastseenat)
+* [last_seen_at](securitygroup.md#optional-last_seen_at)
 * [name](securitygroup.md#optional-name)
-* [networkId](securitygroup.md#optional-networkid)
-* [orchestrationStackId](securitygroup.md#optional-orchestrationstackid)
-* [sourceCreatedAt](securitygroup.md#optional-sourcecreatedat)
-* [sourceDeletedAt](securitygroup.md#optional-sourcedeletedat)
-* [sourceId](securitygroup.md#optional-sourceid)
-* [sourceRef](securitygroup.md#optional-sourceref)
-* [sourceRegionId](securitygroup.md#optional-sourceregionid)
-* [subscriptionId](securitygroup.md#optional-subscriptionid)
-* [updatedAt](securitygroup.md#optional-updatedat)
+* [network_id](securitygroup.md#optional-network_id)
+* [orchestration_stack_id](securitygroup.md#optional-orchestration_stack_id)
+* [source_created_at](securitygroup.md#optional-source_created_at)
+* [source_deleted_at](securitygroup.md#optional-source_deleted_at)
+* [source_id](securitygroup.md#optional-source_id)
+* [source_ref](securitygroup.md#optional-source_ref)
+* [source_region_id](securitygroup.md#optional-source_region_id)
+* [subscription_id](securitygroup.md#optional-subscription_id)
+* [updated_at](securitygroup.md#optional-updated_at)
 
 ## Properties
 
-### `Optional` archivedAt
+### `Optional` archived_at
 
-• **archivedAt**? : *Date*
+• **archived_at**? : *string*
 
-*Defined in [api.ts:2225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2225)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:2133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2133)*
 
 **`memberof`** SecurityGroup
 
 ___
 
-### `Optional` createdAt
+### `Optional` created_at
 
-• **createdAt**? : *Date*
+• **created_at**? : *string*
 
-*Defined in [api.ts:2231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2231)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:2139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2139)*
 
 **`memberof`** SecurityGroup
 
@@ -61,9 +57,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:2237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2237)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:2145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2145)*
 
 **`memberof`** SecurityGroup
 
@@ -71,11 +65,9 @@ ___
 
 ### `Optional` extra
 
-• **extra**? : *any*
+• **extra**? : *object*
 
-*Defined in [api.ts:2243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2243)*
-
-**`type`** {any}
+*Defined in [packages/topological-inventory/api.ts:2151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2151)*
 
 **`memberof`** SecurityGroup
 
@@ -85,23 +77,19 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:2249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2249)*
+*Defined in [packages/topological-inventory/api.ts:2157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2157)*
 
 ID of the resource
-
-**`type`** {string}
 
 **`memberof`** SecurityGroup
 
 ___
 
-### `Optional` lastSeenAt
+### `Optional` last_seen_at
 
-• **lastSeenAt**? : *Date*
+• **last_seen_at**? : *string*
 
-*Defined in [api.ts:2255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2255)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:2163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2163)*
 
 **`memberof`** SecurityGroup
 
@@ -111,126 +99,106 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:2261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2261)*
-
-**`type`** {string}
+*Defined in [packages/topological-inventory/api.ts:2169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2169)*
 
 **`memberof`** SecurityGroup
 
 ___
 
-### `Optional` networkId
+### `Optional` network_id
 
-• **networkId**? : *string*
+• **network_id**? : *string*
 
-*Defined in [api.ts:2267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2267)*
+*Defined in [packages/topological-inventory/api.ts:2175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2175)*
 
 ID of the resource
 
-**`type`** {string}
-
 **`memberof`** SecurityGroup
 
 ___
 
-### `Optional` orchestrationStackId
+### `Optional` orchestration_stack_id
 
-• **orchestrationStackId**? : *string*
+• **orchestration_stack_id**? : *string*
 
-*Defined in [api.ts:2273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2273)*
+*Defined in [packages/topological-inventory/api.ts:2181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2181)*
 
 ID of the resource
 
-**`type`** {string}
+**`memberof`** SecurityGroup
+
+___
+
+### `Optional` source_created_at
+
+• **source_created_at**? : *string*
+
+*Defined in [packages/topological-inventory/api.ts:2187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2187)*
 
 **`memberof`** SecurityGroup
 
 ___
 
-### `Optional` sourceCreatedAt
+### `Optional` source_deleted_at
 
-• **sourceCreatedAt**? : *Date*
+• **source_deleted_at**? : *string*
 
-*Defined in [api.ts:2279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2279)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:2193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2193)*
 
 **`memberof`** SecurityGroup
 
 ___
 
-### `Optional` sourceDeletedAt
+### `Optional` source_id
 
-• **sourceDeletedAt**? : *Date*
+• **source_id**? : *string*
 
-*Defined in [api.ts:2285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2285)*
-
-**`type`** {Date}
-
-**`memberof`** SecurityGroup
-
-___
-
-### `Optional` sourceId
-
-• **sourceId**? : *string*
-
-*Defined in [api.ts:2291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2291)*
+*Defined in [packages/topological-inventory/api.ts:2199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2199)*
 
 ID of the resource
 
-**`type`** {string}
+**`memberof`** SecurityGroup
+
+___
+
+### `Optional` source_ref
+
+• **source_ref**? : *string*
+
+*Defined in [packages/topological-inventory/api.ts:2205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2205)*
 
 **`memberof`** SecurityGroup
 
 ___
 
-### `Optional` sourceRef
+### `Optional` source_region_id
 
-• **sourceRef**? : *string*
+• **source_region_id**? : *string*
 
-*Defined in [api.ts:2297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2297)*
-
-**`type`** {string}
-
-**`memberof`** SecurityGroup
-
-___
-
-### `Optional` sourceRegionId
-
-• **sourceRegionId**? : *string*
-
-*Defined in [api.ts:2303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2303)*
+*Defined in [packages/topological-inventory/api.ts:2211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2211)*
 
 ID of the resource
 
-**`type`** {string}
-
 **`memberof`** SecurityGroup
 
 ___
 
-### `Optional` subscriptionId
+### `Optional` subscription_id
 
-• **subscriptionId**? : *string*
+• **subscription_id**? : *string*
 
-*Defined in [api.ts:2309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2309)*
+*Defined in [packages/topological-inventory/api.ts:2217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2217)*
 
 ID of the resource
 
-**`type`** {string}
-
 **`memberof`** SecurityGroup
 
 ___
 
-### `Optional` updatedAt
+### `Optional` updated_at
 
-• **updatedAt**? : *Date*
+• **updated_at**? : *string*
 
-*Defined in [api.ts:2315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2315)*
-
-**`type`** {Date}
+*Defined in [packages/topological-inventory/api.ts:2223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2223)*
 
 **`memberof`** SecurityGroup

@@ -16,8 +16,8 @@
 
 * [description](resolutionsresolutions.md#description)
 * [id](resolutionsresolutions.md#id)
-* [needsReboot](resolutionsresolutions.md#needsreboot)
-* [resolutionRisk](resolutionsresolutions.md#resolutionrisk)
+* [needs_reboot](resolutionsresolutions.md#needs_reboot)
+* [resolution_risk](resolutionsresolutions.md#resolution_risk)
 
 ## Properties
 
@@ -25,9 +25,7 @@
 
 • **description**: *string*
 
-*Defined in [api.ts:1073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1073)*
-
-**`type`** {string}
+*Defined in [api.ts:1080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1080)*
 
 **`memberof`** ResolutionsResolutions
 
@@ -37,34 +35,28 @@ ___
 
 • **id**: *string*
 
-*Defined in [api.ts:1067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1067)*
-
-**`type`** {string}
+*Defined in [api.ts:1074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1074)*
 
 **`memberof`** ResolutionsResolutions
 
 ___
 
-###  needsReboot
+###  needs_reboot
 
-• **needsReboot**: *boolean*
+• **needs_reboot**: *boolean*
 
-*Defined in [api.ts:1079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1079)*
+*Defined in [api.ts:1086](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1086)*
 
 Indicates whether the given resolution involves system reboot
 
-**`type`** {boolean}
-
 **`memberof`** ResolutionsResolutions
 
 ___
 
-###  resolutionRisk
+###  resolution_risk
 
-• **resolutionRisk**: *[ResolutionRisk](../enums/resolutionrisk.md)*
+• **resolution_risk**: *[ResolutionRisk](../enums/resolutionrisk.md)*
 
-*Defined in [api.ts:1085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1085)*
-
-**`type`** {ResolutionRisk}
+*Defined in [api.ts:1092](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1092)*
 
 **`memberof`** ResolutionsResolutions
