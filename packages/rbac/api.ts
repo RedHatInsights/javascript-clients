@@ -1233,7 +1233,7 @@ export const AccessApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * Access responses are sorted in ascending order by an ID internal to the database
          * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
-         * @param {string} application The application name to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned.
+         * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -1302,7 +1302,7 @@ export const AccessApiFp = function(configuration?: Configuration) {
         /**
          * Access responses are sorted in ascending order by an ID internal to the database
          * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
-         * @param {string} application The application name to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned.
+         * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -1328,7 +1328,7 @@ export const AccessApiFactory = function (configuration?: Configuration, basePat
         /**
          * Access responses are sorted in ascending order by an ID internal to the database
          * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
-         * @param {string} application The application name to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned.
+         * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -1351,7 +1351,7 @@ export class AccessApi extends BaseAPI {
     /**
      * Access responses are sorted in ascending order by an ID internal to the database
      * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
-     * @param {string} application The application name to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned.
+     * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
      * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.

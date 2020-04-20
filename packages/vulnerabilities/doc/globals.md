@@ -87,7 +87,7 @@
 
 • **BASE_PATH**: *string* = "http://localhost".replace(/\/+$/, "")
 
-Defined in packages/vulnerabilities/base.ts:20
+*Defined in [packages/vulnerabilities/base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L20)*
 
 ## Functions
 
@@ -379,7 +379,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-Defined in packages/vulnerabilities/base.ts:26
+*Defined in [packages/vulnerabilities/base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L26)*
 
 **`export`** 
 
@@ -387,22 +387,22 @@ Defined in packages/vulnerabilities/base.ts:26
 
 • **csv**: *string* = ","
 
-Defined in packages/vulnerabilities/base.ts:27
+*Defined in [packages/vulnerabilities/base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L27)*
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-Defined in packages/vulnerabilities/base.ts:30
+*Defined in [packages/vulnerabilities/base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L30)*
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-Defined in packages/vulnerabilities/base.ts:28
+*Defined in [packages/vulnerabilities/base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L28)*
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-Defined in packages/vulnerabilities/base.ts:29
+*Defined in [packages/vulnerabilities/base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L29)*

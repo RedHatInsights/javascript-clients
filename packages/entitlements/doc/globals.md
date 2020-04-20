@@ -37,7 +37,7 @@
 
 • **BASE_PATH**: *string* = "https://raw.githubusercontent.com/api/entitlements/v1".replace(/\/+$/, "")
 
-Defined in packages/entitlements/base.ts:20
+*Defined in [packages/entitlements/base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L20)*
 
 ## Functions
 
@@ -115,7 +115,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-Defined in packages/entitlements/base.ts:26
+*Defined in [packages/entitlements/base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L26)*
 
 **`export`** 
 
@@ -123,22 +123,22 @@ Defined in packages/entitlements/base.ts:26
 
 • **csv**: *string* = ","
 
-Defined in packages/entitlements/base.ts:27
+*Defined in [packages/entitlements/base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L27)*
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-Defined in packages/entitlements/base.ts:30
+*Defined in [packages/entitlements/base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L30)*
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-Defined in packages/entitlements/base.ts:28
+*Defined in [packages/entitlements/base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L28)*
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-Defined in packages/entitlements/base.ts:29
+*Defined in [packages/entitlements/base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L29)*
