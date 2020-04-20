@@ -23,7 +23,7 @@
 
 • **options**: *any*
 
-Defined in packages/catalog/base.ts:40
+*Defined in [packages/catalog/base.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L40)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 • **url**: *string*
 
-Defined in packages/catalog/base.ts:39
+*Defined in [packages/catalog/base.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L39)*
