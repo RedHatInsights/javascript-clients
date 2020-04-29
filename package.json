@@ -6,7 +6,6 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna exec npm install",
-    "release": "semantic-release",
     "clear-packages": "lerna exec rm -- -rf node_modules; lerna exec rm -- package-lock.json; rm -rf node_modules",
     "prepare": "npm run bootstrap && npm run generate && npm run build",
     "audit": "lerna exec npm audit",
@@ -14,7 +13,8 @@
     "generate": "npm run generate:prod && npm run doc",
     "doc": "lerna run doc",
     "build": "lerna run build",
-    "generate:prod": "lerna run generate:prod"
+    "generate:prod": "lerna run generate:prod",
+    "release:bot": "node config/release.sh"
   },
   "repository": {
     "type": "git",
@@ -27,29 +27,16 @@
   },
   "homepage": "https://github.com/RedHatInsights/javascript-clients#readme",
   "devDependencies": {
-    "@khala/commit-analyzer-wildcard": "^2.4.1",
-    "@khala/npm-release-monorepo": "^2.4.1",
-    "@khala/wildcard-release-notes": "^2.4.1",
+    "@octokit/rest": "^17.6.0",
     "@openapitools/openapi-generator-cli": "1.0.12-4.3.0",
-    "@semantic-release/git": "^9.0.0",
-    "@semantic-release/github": "^7.0.5",
-    "@semantic-release/npm": "^7.0.5",
     "@types/node": "^13.11.1",
     "@typescript-eslint/eslint-plugin": "^2.28.0",
     "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
     "lerna": "^3.20.2",
     "semantic-release": "^17.0.4",
     "typedoc": "^0.17.4",
     "typedoc-plugin-markdown": "^2.2.17",
     "typescript": "^3.8.3"
-  },
-  "release": {
-    "monorepo": "./packages",
-    "plugins": [
-      "@khala/commit-analyzer-wildcard",
-      "@khala/npm-release-monorepo",
-      "@khala/wildcard-release-notes",
-      "@semantic-release/github"
-    ]
   }
 }
