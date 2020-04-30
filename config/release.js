@@ -55,6 +55,9 @@ const releaseComment = (pckgName, newVersion) => `
         return ;
     }
 
+    const { stdout: releaser } = await exec('npm whoami');
+    console.log(`Releasing packages as ${(releaser)}`);
+
     const packages = await calculatePackages();
     console.log(`Running release for packages ${packages}`);
     const packagesUpdated = await packages.map(async (packageFolder) => {
