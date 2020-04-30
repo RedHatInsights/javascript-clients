@@ -36,7 +36,7 @@ UsageApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-Defined in packages/insights/base.ts:49
+*Defined in [packages/insights/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
 
 **Parameters:**
 
@@ -56,7 +56,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-Defined in packages/insights/base.ts:51
+*Defined in [packages/insights/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-Defined in packages/insights/base.ts:51
+*Defined in [packages/insights/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-Defined in packages/insights/base.ts:49
+*Defined in [packages/insights/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
 
 ## Methods
 
@@ -84,7 +84,7 @@ Defined in packages/insights/base.ts:49
 
 ▸ **usageList**(`options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/insights/api.ts:5565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5565)*
+*Defined in [packages/insights/api.ts:5559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5559)*
 
 This uses a HashLogLog structure to record number of hits, and this is therefore an approximation.
 

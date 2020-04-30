@@ -81,6 +81,12 @@ export interface AdditionalGroup {
      * @type {string}
      * @memberof AdditionalGroup
      */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AdditionalGroup
+     */
     uuid?: string;
 }
 /**
@@ -1233,7 +1239,7 @@ export const AccessApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * Access responses are sorted in ascending order by an ID internal to the database
          * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
-         * @param {string} application The application name to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned.
+         * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -1302,7 +1308,7 @@ export const AccessApiFp = function(configuration?: Configuration) {
         /**
          * Access responses are sorted in ascending order by an ID internal to the database
          * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
-         * @param {string} application The application name to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned.
+         * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -1328,7 +1334,7 @@ export const AccessApiFactory = function (configuration?: Configuration, basePat
         /**
          * Access responses are sorted in ascending order by an ID internal to the database
          * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
-         * @param {string} application The application name to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned.
+         * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -1351,7 +1357,7 @@ export class AccessApi extends BaseAPI {
     /**
      * Access responses are sorted in ascending order by an ID internal to the database
      * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
-     * @param {string} application The application name to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned.
+     * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
      * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
@@ -1710,11 +1716,13 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @summary Get a list of principals from a group in the tenant
          * @param {string} uuid ID of group from which to get principals
          * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup(uuid: string, principalUsername?: string, orderBy?: 'username', options: any = {}): RequestArgs {
+        getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options: any = {}): RequestArgs {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getPrincipalsFromGroup.');
@@ -1738,6 +1746,14 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
 
             if (principalUsername !== undefined) {
                 localVarQueryParameter['principal_username'] = principalUsername;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
             }
 
             if (orderBy !== undefined) {
@@ -2077,12 +2093,14 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @summary Get a list of principals from a group in the tenant
          * @param {string} uuid ID of group from which to get principals
          * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup(uuid: string, principalUsername?: string, orderBy?: 'username', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).getPrincipalsFromGroup(uuid, principalUsername, orderBy, options);
+        getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
+            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2233,12 +2251,14 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @summary Get a list of principals from a group in the tenant
          * @param {string} uuid ID of group from which to get principals
          * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup(uuid: string, principalUsername?: string, orderBy?: 'username', options?: any): AxiosPromise<PrincipalPagination> {
-            return GroupApiFp(configuration).getPrincipalsFromGroup(uuid, principalUsername, orderBy, options)(axios, basePath);
+        getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options?: any): AxiosPromise<PrincipalPagination> {
+            return GroupApiFp(configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, options)(axios, basePath);
         },
         /**
          * By default, responses are sorted in ascending order by group name
@@ -2388,13 +2408,15 @@ export class GroupApi extends BaseAPI {
      * @summary Get a list of principals from a group in the tenant
      * @param {string} uuid ID of group from which to get principals
      * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
+     * @param {number} [limit] Parameter for selecting the amount of data returned.
+     * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public getPrincipalsFromGroup(uuid: string, principalUsername?: string, orderBy?: 'username', options?: any) {
-        return GroupApiFp(this.configuration).getPrincipalsFromGroup(uuid, principalUsername, orderBy, options)(this.axios, this.basePath);
+    public getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options?: any) {
+        return GroupApiFp(this.configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2953,10 +2975,11 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [usernames] Usernames of principals to get
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
+         * @param {string} [email] Exact e-mail address of principal to search for
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', options: any = {}): RequestArgs {
+        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, options: any = {}): RequestArgs {
             const localVarPath = `/principals/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2989,6 +3012,10 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['sort_order'] = sortOrder;
             }
 
+            if (email !== undefined) {
+                localVarQueryParameter['email'] = email;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3018,11 +3045,12 @@ export const PrincipalApiFp = function(configuration?: Configuration) {
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [usernames] Usernames of principals to get
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
+         * @param {string} [email] Exact e-mail address of principal to search for
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
-            const localVarAxiosArgs = PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, usernames, sortOrder, options);
+        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
+            const localVarAxiosArgs = PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3044,11 +3072,12 @@ export const PrincipalApiFactory = function (configuration?: Configuration, base
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [usernames] Usernames of principals to get
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
+         * @param {string} [email] Exact e-mail address of principal to search for
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', options?: any): AxiosPromise<PrincipalPagination> {
-            return PrincipalApiFp(configuration).listPrincipals(limit, offset, usernames, sortOrder, options)(axios, basePath);
+        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, options?: any): AxiosPromise<PrincipalPagination> {
+            return PrincipalApiFp(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, options)(axios, basePath);
         },
     };
 };
@@ -3067,12 +3096,13 @@ export class PrincipalApi extends BaseAPI {
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {string} [usernames] Usernames of principals to get
      * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
+     * @param {string} [email] Exact e-mail address of principal to search for
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PrincipalApi
      */
-    public listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', options?: any) {
-        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, usernames, sortOrder, options)(this.axios, this.basePath);
+    public listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, options?: any) {
+        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, usernames, sortOrder, email, options)(this.axios, this.basePath);
     }
 
 }

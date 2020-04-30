@@ -2016,7 +2016,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * Execute remediation, RBAC permission {remediations:remediation:execute}
          * @summary Execute remediation
          * @param {string} id Remediation identifier
-         * @param {any} [data] Excluded executors from playbook run
+         * @param {any} [data]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2382,7 +2382,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * Execute remediation, RBAC permission {remediations:remediation:execute}
          * @summary Execute remediation
          * @param {string} id Remediation identifier
-         * @param {any} [data] Excluded executors from playbook run
+         * @param {any} [data]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2601,7 +2601,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * Execute remediation, RBAC permission {remediations:remediation:execute}
          * @summary Execute remediation
          * @param {string} id Remediation identifier
-         * @param {any} [data] Excluded executors from playbook run
+         * @param {any} [data]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2837,7 +2837,7 @@ export class RemediationsApi extends BaseAPI {
      * Execute remediation, RBAC permission {remediations:remediation:execute}
      * @summary Execute remediation
      * @param {string} id Remediation identifier
-     * @param {any} [data] Excluded executors from playbook run
+     * @param {any} [data]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi

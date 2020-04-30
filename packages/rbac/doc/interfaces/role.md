@@ -25,7 +25,7 @@
 
 • **description**? : *string*
 
-*Defined in [packages/rbac/api.ts:804](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L804)*
+*Defined in [packages/rbac/api.ts:810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L810)*
 
 **`memberof`** Role
 
@@ -35,6 +35,6 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/rbac/api.ts:798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L798)*
+*Defined in [packages/rbac/api.ts:804](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L804)*
 
 **`memberof`** Role

@@ -23,7 +23,7 @@
 
 • **options**: *any*
 
-Defined in packages/sources/base.ts:40
+*Defined in [packages/sources/base.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/base.ts#L40)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 • **url**: *string*
 
-Defined in packages/sources/base.ts:39
+*Defined in [packages/sources/base.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/base.ts#L39)*

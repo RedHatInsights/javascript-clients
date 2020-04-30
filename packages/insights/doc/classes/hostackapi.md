@@ -40,7 +40,7 @@ HostackApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-Defined in packages/insights/base.ts:49
+*Defined in [packages/insights/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
 
 **Parameters:**
 
@@ -60,7 +60,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-Defined in packages/insights/base.ts:51
+*Defined in [packages/insights/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-Defined in packages/insights/base.ts:51
+*Defined in [packages/insights/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-Defined in packages/insights/base.ts:49
+*Defined in [packages/insights/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
 
 ## Methods
 
@@ -88,7 +88,7 @@ Defined in packages/insights/base.ts:49
 
 ▸ **hostackCreate**(`hostAck`: [HostAck](../interfaces/hostack.md), `options?`: any): *AxiosPromise‹[HostAck](../interfaces/hostack.md)›*
 
-*Defined in [packages/insights/api.ts:2595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2595)*
+*Defined in [packages/insights/api.ts:2589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2589)*
 
 Return the new hostack.  If there\'s already an acknowledgement of this rule by this account for a system, then return that.  This does not take an \'id\' number.
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **hostackDelete**(`id`: number, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/insights/api.ts:2607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2607)*
+*Defined in [packages/insights/api.ts:2601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2601)*
 
 Takes the hostack ID (given in the hostack list) as an identifier.
 
@@ -138,7 +138,7 @@ ___
 
 ▸ **hostackList**(`limit?`: number, `offset?`: number, `ruleId?`: Array‹string›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2002](../interfaces/inlineresponse2002.md)›*
 
-*Defined in [packages/insights/api.ts:2622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2622)*
+*Defined in [packages/insights/api.ts:2616](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2616)*
 
 Hostacks are retrieved, edited and deleted by the \'id\' field.
 
@@ -166,7 +166,7 @@ ___
 
 ▸ **hostackRead**(`id`: number, `options?`: any): *AxiosPromise‹[HostAck](../interfaces/hostack.md)›*
 
-*Defined in [packages/insights/api.ts:2634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2634)*
+*Defined in [packages/insights/api.ts:2628](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2628)*
 
 This view handles listing, retrieving, creating and deleting hostacks.
 
@@ -191,7 +191,7 @@ ___
 
 ▸ **hostackUpdate**(`id`: number, `hostAckJustification`: [HostAckJustification](../interfaces/hostackjustification.md), `options?`: any): *AxiosPromise‹[HostAckJustification](../interfaces/hostackjustification.md)›*
 
-*Defined in [packages/insights/api.ts:2647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2647)*
+*Defined in [packages/insights/api.ts:2641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2641)*
 
 The justification is taken from the request body.  The created_by field is taken from the username in the x-rh-identity field, and the updated_at field is set to the current time.
 

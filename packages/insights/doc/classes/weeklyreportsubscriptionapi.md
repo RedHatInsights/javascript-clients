@@ -37,7 +37,7 @@ WeeklyreportsubscriptionApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-Defined in packages/insights/base.ts:49
+*Defined in [packages/insights/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-Defined in packages/insights/base.ts:51
+*Defined in [packages/insights/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-Defined in packages/insights/base.ts:51
+*Defined in [packages/insights/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-Defined in packages/insights/base.ts:49
+*Defined in [packages/insights/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
 
 ## Methods
 
@@ -85,7 +85,7 @@ Defined in packages/insights/base.ts:49
 
 ▸ **weeklyreportsubscriptionCreate**(`weeklyReportSubscription`: [WeeklyReportSubscription](../interfaces/weeklyreportsubscription.md), `options?`: any): *AxiosPromise‹[WeeklyReportSubscription](../interfaces/weeklyreportsubscription.md)›*
 
-*Defined in [packages/insights/api.ts:5904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5904)*
+*Defined in [packages/insights/api.ts:5898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5898)*
 
 If \'is_subscribed\' is true, a subscription is added if it doesn\'t already exist.  If it is false, the subscription is removed if it exists.
 
@@ -110,7 +110,7 @@ ___
 
 ▸ **weeklyreportsubscriptionList**(`options?`: any): *AxiosPromise‹[WeeklyReportSubscription](../interfaces/weeklyreportsubscription.md)›*
 
-*Defined in [packages/insights/api.ts:5915](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5915)*
+*Defined in [packages/insights/api.ts:5909](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5909)*
 
 This shows the presence of a weekly report subscription by the user in this account.
 

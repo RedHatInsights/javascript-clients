@@ -26,7 +26,7 @@
 
 • **display_name**: *string*
 
-*Defined in [packages/insights/api.ts:1103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1103)*
+*Defined in [packages/insights/api.ts:1097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1097)*
 
 **`memberof`** System
 
@@ -36,7 +36,7 @@ ___
 
 • **hits**? : *number*
 
-*Defined in [packages/insights/api.ts:1091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1091)*
+*Defined in [packages/insights/api.ts:1085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1085)*
 
 **`memberof`** System
 
@@ -46,7 +46,7 @@ ___
 
 • **last_seen**? : *string*
 
-*Defined in [packages/insights/api.ts:1109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1109)*
+*Defined in [packages/insights/api.ts:1103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1103)*
 
 **`memberof`** System
 
@@ -56,7 +56,7 @@ ___
 
 • **stale_at**: *string*
 
-*Defined in [packages/insights/api.ts:1115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1115)*
+*Defined in [packages/insights/api.ts:1109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1109)*
 
 **`memberof`** System
 
@@ -66,6 +66,6 @@ ___
 
 • **system_uuid**: *string*
 
-*Defined in [packages/insights/api.ts:1097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1097)*
+*Defined in [packages/insights/api.ts:1091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1091)*
 
 **`memberof`** System

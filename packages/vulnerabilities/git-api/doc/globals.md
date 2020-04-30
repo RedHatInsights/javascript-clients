@@ -87,7 +87,7 @@
 
 • **BASE_PATH**: *string* = "http://localhost".replace(/\/+$/, "")
 
-Defined in packages/vulnerabilities/git-api/base.ts:20
+*Defined in [packages/vulnerabilities/git-api/base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L20)*
 
 ## Functions
 
@@ -127,7 +127,7 @@ Name | Type |
 
 * **getSystemDetails**(`inventoryId`: string, `stale?`: boolean, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **getSystemsList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `dataFormat?`: string, `stale?`: boolean, `optOut?`: boolean, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getSystemsList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `dataFormat?`: string, `stale?`: boolean, `uuid?`: string, `optOut?`: boolean, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **getVersion**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -147,7 +147,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2576)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2582)*
 
 DefaultApi - factory interface
 
@@ -181,7 +181,7 @@ Name | Type |
 
 * **getSystemDetails**(`inventoryId`: string, `stale?`: boolean, `options?`: any): *AxiosPromise‹[SystemDetailsOut](interfaces/systemdetailsout.md)›*
 
-* **getSystemsList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `dataFormat?`: string, `stale?`: boolean, `optOut?`: boolean, `options?`: any): *AxiosPromise‹[SystemListOut](interfaces/systemlistout.md)›*
+* **getSystemsList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `dataFormat?`: string, `stale?`: boolean, `uuid?`: string, `optOut?`: boolean, `options?`: any): *AxiosPromise‹[SystemListOut](interfaces/systemlistout.md)›*
 
 * **getVersion**(`options?`: any): *AxiosPromise‹[VersionOut](interfaces/versionout.md)›*
 
@@ -201,7 +201,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2297)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2302)*
 
 DefaultApi - functional programming interface
 
@@ -251,7 +251,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[SystemDetailsOut](interfaces/systemdetailsout.md)›*
 
-* **getSystemsList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `dataFormat?`: string, `stale?`: boolean, `optOut?`: boolean, `options?`: any): *function*
+* **getSystemsList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `dataFormat?`: string, `stale?`: boolean, `uuid?`: string, `optOut?`: boolean, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[SystemListOut](interfaces/systemlistout.md)›*
 
@@ -285,7 +285,7 @@ ___
 
 ▸ **InternalApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:3039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3039)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:3047](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3047)*
 
 InternalApi - axios parameter creator
 
@@ -313,7 +313,7 @@ ___
 
 ▸ **InternalApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:3320](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3320)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:3328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3328)*
 
 InternalApi - factory interface
 
@@ -343,7 +343,7 @@ ___
 
 ▸ **InternalApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:3254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3254)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:3262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3262)*
 
 InternalApi - functional programming interface
 
@@ -379,7 +379,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-Defined in packages/vulnerabilities/git-api/base.ts:26
+*Defined in [packages/vulnerabilities/git-api/base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L26)*
 
 **`export`** 
 
@@ -387,22 +387,22 @@ Defined in packages/vulnerabilities/git-api/base.ts:26
 
 • **csv**: *string* = ","
 
-Defined in packages/vulnerabilities/git-api/base.ts:27
+*Defined in [packages/vulnerabilities/git-api/base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L27)*
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-Defined in packages/vulnerabilities/git-api/base.ts:30
+*Defined in [packages/vulnerabilities/git-api/base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L30)*
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-Defined in packages/vulnerabilities/git-api/base.ts:28
+*Defined in [packages/vulnerabilities/git-api/base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L28)*
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-Defined in packages/vulnerabilities/git-api/base.ts:29
+*Defined in [packages/vulnerabilities/git-api/base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L29)*

@@ -22,6 +22,6 @@
 
 • **errors**: *Array‹object›*
 
-*Defined in [packages/rbac/api.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L423)*
+*Defined in [packages/rbac/api.ts:429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L429)*
 
 **`memberof`** ModelError

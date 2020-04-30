@@ -40,7 +40,7 @@ PolicyApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-Defined in packages/rbac/base.ts:49
+*Defined in [packages/rbac/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
 
 **Parameters:**
 
@@ -60,7 +60,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-Defined in packages/rbac/base.ts:51
+*Defined in [packages/rbac/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-Defined in packages/rbac/base.ts:51
+*Defined in [packages/rbac/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-Defined in packages/rbac/base.ts:49
+*Defined in [packages/rbac/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
 
 ## Methods
 
@@ -88,7 +88,7 @@ Defined in packages/rbac/base.ts:49
 
 ▸ **createPolicies**(`policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
 
-*Defined in [packages/rbac/api.ts:2881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2881)*
+*Defined in [packages/rbac/api.ts:2903](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2903)*
 
 **`summary`** Create a policy in a tenant
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **deletePolicy**(`uuid`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/rbac/api.ts:2893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2893)*
+*Defined in [packages/rbac/api.ts:2915](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2915)*
 
 **`summary`** Delete a policy in the tenant
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **getPolicy**(`uuid`: string, `options?`: any): *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
 
-*Defined in [packages/rbac/api.ts:2905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2905)*
+*Defined in [packages/rbac/api.ts:2927](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2927)*
 
 **`summary`** Get a policy in the tenant
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: string, `options?`: any): *AxiosPromise‹[PolicyPagination](../interfaces/policypagination.md)›*
 
-*Defined in [packages/rbac/api.ts:2923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2923)*
+*Defined in [packages/rbac/api.ts:2945](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2945)*
 
 By default, responses are sorted in ascending order by policy name
 
@@ -188,7 +188,7 @@ ___
 
 ▸ **updatePolicy**(`uuid`: string, `policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
 
-*Defined in [packages/rbac/api.ts:2936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2936)*
+*Defined in [packages/rbac/api.ts:2958](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2958)*
 
 **`summary`** Update a policy in the tenant
 

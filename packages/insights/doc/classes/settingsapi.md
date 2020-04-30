@@ -37,7 +37,7 @@ SettingsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-Defined in packages/insights/base.ts:49
+*Defined in [packages/insights/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-Defined in packages/insights/base.ts:51
+*Defined in [packages/insights/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-Defined in packages/insights/base.ts:51
+*Defined in [packages/insights/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-Defined in packages/insights/base.ts:49
+*Defined in [packages/insights/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
 
 ## Methods
 
@@ -85,7 +85,7 @@ Defined in packages/insights/base.ts:49
 
 ▸ **settingsCreate**(`settingsInput`: [SettingsInput](../interfaces/settingsinput.md), `options?`: any): *AxiosPromise‹[SettingsInput](../interfaces/settingsinput.md)›*
 
-*Defined in [packages/insights/api.ts:4074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4074)*
+*Defined in [packages/insights/api.ts:4068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4068)*
 
 The current account settings will be updated, or one will be created, with the
 
@@ -110,9 +110,9 @@ ___
 
 ▸ **settingsList**(`options?`: any): *AxiosPromise‹[SettingsDDF](../interfaces/settingsddf.md)[]›*
 
-*Defined in [packages/insights/api.ts:4085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4085)*
+*Defined in [packages/insights/api.ts:4079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4079)*
 
-This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
 
 **`summary`** Describe the settings we have in a Data-Driven Forms way.
 

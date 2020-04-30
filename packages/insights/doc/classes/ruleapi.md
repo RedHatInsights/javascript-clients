@@ -40,7 +40,7 @@ RuleApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-Defined in packages/insights/base.ts:49
+*Defined in [packages/insights/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
 
 **Parameters:**
 
@@ -60,7 +60,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-Defined in packages/insights/base.ts:51
+*Defined in [packages/insights/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-Defined in packages/insights/base.ts:51
+*Defined in [packages/insights/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-Defined in packages/insights/base.ts:49
+*Defined in [packages/insights/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
 
 ## Methods
 
@@ -88,7 +88,7 @@ Defined in packages/insights/base.ts:49
 
 ▸ **ruleAckHosts**(`ruleId`: string, `multiHostAck`: [MultiHostAck](../interfaces/multihostack.md), `options?`: any): *AxiosPromise‹[MultiAckResponse](../interfaces/multiackresponse.md)›*
 
-*Defined in [packages/insights/api.ts:3672](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3672)*
+*Defined in [packages/insights/api.ts:3666](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3666)*
 
 Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
 
@@ -112,9 +112,9 @@ ___
 
 ###  ruleList
 
-▸ **ruleList**(`limit?`: number, `offset?`: number, `category?`: Array‹1 | 2 | 3 | 4›, `hasTag?`: Array‹string›, `tags?`: Array‹string›, `impact?`: Array‹1 | 2 | 3 | 4›, `impacting?`: boolean, `incident?`: boolean, `likelihood?`: Array‹1 | 2 | 3 | 4›, `reportsShown?`: boolean, `resRisk?`: Array‹1 | 2 | 3 | 4›, `sort?`: "category" | "description" | "impact" | "impacted_count" | "likelihood" | "playbook_count" | "publish_date" | "rule_id" | "total_risk" | "resolution_risk" | "-category" | "-description" | "-impact" | "-impacted_count" | "-likelihood" | "-playbook_count" | "-publish_date" | "-rule_id" | "-total_risk" | "-resolution_risk", `text?`: string, `topic?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `hasPlaybook?`: boolean, `options?`: any): *AxiosPromise‹[InlineResponse2004](../interfaces/inlineresponse2004.md)›*
+▸ **ruleList**(`limit?`: number, `offset?`: number, `category?`: Array‹1 | 2 | 3 | 4›, `hasTag?`: Array‹string›, `tags?`: Array‹string›, `impact?`: Array‹1 | 2 | 3 | 4›, `impacting?`: boolean, `incident?`: boolean, `likelihood?`: Array‹1 | 2 | 3 | 4›, `reportsShown?`: boolean, `resRisk?`: Array‹1 | 2 | 3 | 4›, `sort?`: Array‹"category" | "description" | "impact" | "impacted_count" | "likelihood" | "playbook_count" | "publish_date" | "rule_id" | "total_risk" | "resolution_risk" | "-category" | "-description" | "-impact" | "-impacted_count" | "-likelihood" | "-playbook_count" | "-publish_date" | "-rule_id" | "-total_risk" | "-resolution_risk"›, `text?`: string, `topic?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `hasPlaybook?`: boolean, `options?`: any): *AxiosPromise‹[InlineResponse2004](../interfaces/inlineresponse2004.md)›*
 
-*Defined in [packages/insights/api.ts:3699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3699)*
+*Defined in [packages/insights/api.ts:3693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3693)*
 
 If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
 
@@ -139,7 +139,7 @@ Name | Type |
 `likelihood?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
 `reportsShown?` | boolean |
 `resRisk?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
-`sort?` | "category" &#124; "description" &#124; "impact" &#124; "impacted_count" &#124; "likelihood" &#124; "playbook_count" &#124; "publish_date" &#124; "rule_id" &#124; "total_risk" &#124; "resolution_risk" &#124; "-category" &#124; "-description" &#124; "-impact" &#124; "-impacted_count" &#124; "-likelihood" &#124; "-playbook_count" &#124; "-publish_date" &#124; "-rule_id" &#124; "-total_risk" &#124; "-resolution_risk" |
+`sort?` | Array‹"category" &#124; "description" &#124; "impact" &#124; "impacted_count" &#124; "likelihood" &#124; "playbook_count" &#124; "publish_date" &#124; "rule_id" &#124; "total_risk" &#124; "resolution_risk" &#124; "-category" &#124; "-description" &#124; "-impact" &#124; "-impacted_count" &#124; "-likelihood" &#124; "-playbook_count" &#124; "-publish_date" &#124; "-rule_id" &#124; "-total_risk" &#124; "-resolution_risk"› |
 `text?` | string |
 `topic?` | string |
 `totalRisk?` | Array‹1 &#124; 2 &#124; 3 &#124; 4› |
@@ -154,7 +154,7 @@ ___
 
 ▸ **ruleRead**(`ruleId`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[RuleForAccount](../interfaces/ruleforaccount.md)›*
 
-*Defined in [packages/insights/api.ts:3712](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3712)*
+*Defined in [packages/insights/api.ts:3706](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3706)*
 
 This includes the account-relevant details such as number of impacted systems and host acknowledgements.
 
@@ -180,7 +180,7 @@ ___
 
 ▸ **ruleSystems**(`ruleId`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[SystemsForRule](../interfaces/systemsforrule.md)›*
 
-*Defined in [packages/insights/api.ts:3725](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3725)*
+*Defined in [packages/insights/api.ts:3719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3719)*
 
 All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
 
@@ -206,7 +206,7 @@ ___
 
 ▸ **ruleUnackHosts**(`ruleId`: string, `multiHostUnAck`: [MultiHostUnAck](../interfaces/multihostunack.md), `options?`: any): *AxiosPromise‹[MultiAckResponse](../interfaces/multiackresponse.md)›*
 
-*Defined in [packages/insights/api.ts:3738](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3738)*
+*Defined in [packages/insights/api.ts:3732](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3732)*
 
 Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
 
