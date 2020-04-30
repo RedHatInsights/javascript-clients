@@ -55,7 +55,7 @@ const releaseComment = (pckgName, newVersion) => `
         return ;
     }
 
-    const packages = calculatePackages(files);
+    const packages = calculatePackages();
     console.log(`Running release for packages ${packages}`);
     const packagesUpdated = await packages.map(async (packageFolder) => {
         const packagePath = resolve(__dirname, `../${monorepoFolder}/${packageFolder}/package.json`);
