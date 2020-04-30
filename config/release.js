@@ -60,7 +60,7 @@ const releaseComment = (pckgName, newVersion) => `
 
     const packages = await calculatePackages();
     console.log(`Running release for packages ${packages}`);
-    const packagesUpdated = await packages.map(async (packageFolder) => {
+    const packagesUpdated = await Promise.all(packages.map(async (packageFolder) => {
         const packagePath = resolve(__dirname, `../${monorepoFolder}/${packageFolder}/package.json`);
         const pckg = await readJson(packagePath);
         const { stdout: version } = await exec(`npm view ${pckg.name} version`);
@@ -79,7 +79,7 @@ const releaseComment = (pckgName, newVersion) => `
             body: releaseComment(pckg.name, newVersion)
         });
         return `${monorepoFolder}/${packageFolder}/package.json`;
-    });
+    }));
 
     console.log(`Pushing files ${packagesUpdated} to ${owner}/${repo}`);
     uploadFiles(
