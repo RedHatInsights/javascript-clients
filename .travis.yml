@@ -6,8 +6,9 @@ node_js:
 - '10'
 install:
   - npm ci
+before_install:
+ - printf "@redhat-cloud-services:registry=https://registry.npmjs.org/\n//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
 script:
-  - cp .npmrc.template $HOME/.npmrc
   - npm run build
 branches:
   except:
