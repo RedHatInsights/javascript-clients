@@ -26,7 +26,7 @@
 
 • **access**: *Array‹[Access](access.md)›*
 
-*Defined in [packages/rbac/api.ts:817](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L817)*
+*Defined in [packages/rbac/api.ts:823](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L823)*
 
 **`memberof`** RoleIn
 
@@ -38,7 +38,7 @@ ___
 
 *Inherited from [Role](role.md).[description](role.md#optional-description)*
 
-*Defined in [packages/rbac/api.ts:804](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L804)*
+*Defined in [packages/rbac/api.ts:810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L810)*
 
 **`memberof`** Role
 
@@ -50,6 +50,6 @@ ___
 
 *Inherited from [Role](role.md).[name](role.md#name)*
 
-*Defined in [packages/rbac/api.ts:798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L798)*
+*Defined in [packages/rbac/api.ts:804](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L804)*
 
 **`memberof`** Role

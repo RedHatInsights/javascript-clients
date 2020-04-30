@@ -32,7 +32,7 @@
 
 • **access**: *Array‹[Access](access.md)›*
 
-*Defined in [packages/rbac/api.ts:1149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1149)*
+*Defined in [packages/rbac/api.ts:1155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1155)*
 
 **`memberof`** RoleWithAccess
 
@@ -42,7 +42,7 @@ ___
 
 • **accessCount**? : *number*
 
-*Defined in [packages/rbac/api.ts:1125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1125)*
+*Defined in [packages/rbac/api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1131)*
 
 **`memberof`** RoleWithAccess
 
@@ -52,7 +52,7 @@ ___
 
 • **applications**? : *Array‹string›*
 
-*Defined in [packages/rbac/api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1131)*
+*Defined in [packages/rbac/api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1137)*
 
 **`memberof`** RoleWithAccess
 
@@ -62,7 +62,7 @@ ___
 
 • **created**: *string*
 
-*Defined in [packages/rbac/api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1107)*
+*Defined in [packages/rbac/api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1113)*
 
 **`memberof`** RoleWithAccess
 
@@ -72,7 +72,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/rbac/api.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1095)*
+*Defined in [packages/rbac/api.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1101)*
 
 **`memberof`** RoleWithAccess
 
@@ -82,7 +82,7 @@ ___
 
 • **modified**: *string*
 
-*Defined in [packages/rbac/api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1113)*
+*Defined in [packages/rbac/api.ts:1119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1119)*
 
 **`memberof`** RoleWithAccess
 
@@ -92,7 +92,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/rbac/api.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1089)*
+*Defined in [packages/rbac/api.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1095)*
 
 **`memberof`** RoleWithAccess
 
@@ -102,7 +102,7 @@ ___
 
 • **platform_default**? : *boolean*
 
-*Defined in [packages/rbac/api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1143)*
+*Defined in [packages/rbac/api.ts:1149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1149)*
 
 **`memberof`** RoleWithAccess
 
@@ -112,7 +112,7 @@ ___
 
 • **policyCount**? : *number*
 
-*Defined in [packages/rbac/api.ts:1119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1119)*
+*Defined in [packages/rbac/api.ts:1125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1125)*
 
 **`memberof`** RoleWithAccess
 
@@ -122,7 +122,7 @@ ___
 
 • **system**? : *boolean*
 
-*Defined in [packages/rbac/api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1137)*
+*Defined in [packages/rbac/api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1143)*
 
 **`memberof`** RoleWithAccess
 
@@ -132,6 +132,6 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [packages/rbac/api.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1101)*
+*Defined in [packages/rbac/api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1107)*
 
 **`memberof`** RoleWithAccess

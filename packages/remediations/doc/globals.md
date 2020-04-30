@@ -104,7 +104,7 @@ ___
 
 ### `Const` env
 
-• **env**: *Dict‹string›* = process.env
+• **env**: *ProcessEnv‹›* = process.env
 
 *Defined in [test/config.ts:1](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/test/config.ts#L1)*
 

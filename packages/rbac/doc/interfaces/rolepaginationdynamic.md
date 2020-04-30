@@ -26,7 +26,7 @@
 
 • **data**: *Array‹[RoleOutDynamic](roleoutdynamic.md)›*
 
-*Defined in [packages/rbac/api.ts:1063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1063)*
+*Defined in [packages/rbac/api.ts:1069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1069)*
 
 **`memberof`** RolePaginationDynamic
 
@@ -38,7 +38,7 @@ ___
 
 *Inherited from [AccessPagination](accesspagination.md).[links](accesspagination.md#optional-links)*
 
-*Defined in [packages/rbac/api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L410)*
+*Defined in [packages/rbac/api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L416)*
 
 **`memberof`** ListPagination
 
@@ -50,6 +50,6 @@ ___
 
 *Inherited from [AccessPagination](accesspagination.md).[meta](accesspagination.md#optional-meta)*
 
-*Defined in [packages/rbac/api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L404)*
+*Defined in [packages/rbac/api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L410)*
 
 **`memberof`** ListPagination

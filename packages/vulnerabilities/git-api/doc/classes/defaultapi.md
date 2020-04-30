@@ -99,7 +99,7 @@ ___
 
 ▸ **deleteSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2802](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2802)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2809)*
 
 Deletes system from database.
 
@@ -124,7 +124,7 @@ ___
 
 ▸ **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `securityRule?`: string, `options?`: any): *AxiosPromise‹[AffectedSystemsOut](../interfaces/affectedsystemsout.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2823](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2823)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2830](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2830)*
 
 Report of affected systems for a given CVE.
 
@@ -158,7 +158,7 @@ ___
 
 ▸ **getBusinessRiskList**(`options?`: any): *AxiosPromise‹[BusinessRiskListOut](../interfaces/businessrisklistout.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2834)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2841](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2841)*
 
 Returns available business risk and business_risk_id pairs where business_risk_id is internal ID of the business risk.
 
@@ -182,7 +182,7 @@ ___
 
 ▸ **getCveDetails**(`cveId`: string, `options?`: any): *AxiosPromise‹[CveDetailOut](../interfaces/cvedetailout.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2846)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2853](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2853)*
 
 Show all information about given CVE.
 
@@ -207,7 +207,7 @@ ___
 
 ▸ **getCveList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `dataFormat?`: string, `businessRiskId?`: string, `statusId?`: string, `securityRule?`: boolean, `showAll?`: boolean, `options?`: any): *AxiosPromise‹[VulnerabilitiesOut](../interfaces/vulnerabilitiesout.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2873)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2880)*
 
 Overview of vulnerabilities across whole host inventory.
 
@@ -247,7 +247,7 @@ ___
 
 ▸ **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `stale?`: boolean, `securityRule?`: boolean, `options?`: any): *AxiosPromise‹[SystemCvesOut](../interfaces/systemcvesout.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2901](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2901)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2908](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2908)*
 
 Shows detailed information about all CVEs the system is exposed to.
 
@@ -288,7 +288,7 @@ ___
 
 ▸ **getExecutiveReport**(`options?`: any): *AxiosPromise‹[ExecutiveReport](../interfaces/executivereport.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2912](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2912)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2919](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2919)*
 
 Returns top level overview of vulnerabilities affecting given account.
 
@@ -312,7 +312,7 @@ ___
 
 ▸ **getStatusList**(`options?`: any): *AxiosPromise‹[StatusListOut](../interfaces/statuslistout.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2923)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2930](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2930)*
 
 Returns available status and status_id pairs where status_id is internal ID of the status.
 
@@ -336,7 +336,7 @@ ___
 
 ▸ **getSystemDetails**(`inventoryId`: string, `stale?`: boolean, `options?`: any): *AxiosPromise‹[SystemDetailsOut](../interfaces/systemdetailsout.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2936)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2943](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2943)*
 
 Provides details of a system, e.g. it\'s opt out status.
 
@@ -360,9 +360,9 @@ ___
 
 ###  getSystemsList
 
-▸ **getSystemsList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `dataFormat?`: string, `stale?`: boolean, `optOut?`: boolean, `options?`: any): *AxiosPromise‹[SystemListOut](../interfaces/systemlistout.md)›*
+▸ **getSystemsList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `dataFormat?`: string, `stale?`: boolean, `uuid?`: string, `optOut?`: boolean, `options?`: any): *AxiosPromise‹[SystemListOut](../interfaces/systemlistout.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2956](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2956)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2964](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2964)*
 
 List systems visible to logged in account with basic information related to vulnerabilities.
 
@@ -384,6 +384,7 @@ Name | Type |
 `sort?` | string |
 `dataFormat?` | string |
 `stale?` | boolean |
+`uuid?` | string |
 `optOut?` | boolean |
 `options?` | any |
 
@@ -395,7 +396,7 @@ ___
 
 ▸ **getVersion**(`options?`: any): *AxiosPromise‹[VersionOut](../interfaces/versionout.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2967)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2975)*
 
 Get application version.
 
@@ -419,7 +420,7 @@ ___
 
 ▸ **setCveBusinessRisk**(`cveRiskIn`: [CveRiskIn](../interfaces/cveriskin.md), `options?`: any): *AxiosPromise‹[BulkChangeOut](../interfaces/bulkchangeout.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2979)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2987)*
 
 Sets business risk for a CVE.
 
@@ -444,7 +445,7 @@ ___
 
 ▸ **setCveStatus**(`cveStatusIn`: [CveStatusIn](../interfaces/cvestatusin.md), `options?`: any): *AxiosPromise‹[BulkChangeOut](../interfaces/bulkchangeout.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2991)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2999)*
 
 Sets status for a CVE.
 
@@ -469,7 +470,7 @@ ___
 
 ▸ **setStatus**(`statusIn`: [StatusIn](../interfaces/statusin.md), `options?`: any): *AxiosPromise‹[StatusOut](../interfaces/statusout.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:3003](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3003)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:3011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3011)*
 
 Sets status for given hosts and CVEs.
 
@@ -494,7 +495,7 @@ ___
 
 ▸ **setSystemOptOut**(`inventoryId`: string, `value`: boolean, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:3016](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3016)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:3024](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3024)*
 
 Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
 
@@ -520,7 +521,7 @@ ___
 
 ▸ **setSystemsOptOut**(`optOutIn`: [OptOutIn](../interfaces/optoutin.md), `options?`: any): *AxiosPromise‹[BulkChangeOut](../interfaces/bulkchangeout.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:3028](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3028)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:3036](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3036)*
 
 Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
 

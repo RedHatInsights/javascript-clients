@@ -24,7 +24,7 @@
 
 • **category**: *object*
 
-*Defined in [packages/insights/api.ts:1078](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1078)*
+*Defined in [packages/insights/api.ts:1072](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1072)*
 
 **`memberof`** Stats
 
@@ -38,7 +38,7 @@ ___
 
 • **total**: *number*
 
-*Defined in [packages/insights/api.ts:1066](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1066)*
+*Defined in [packages/insights/api.ts:1060](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1060)*
 
 **`memberof`** Stats
 
@@ -48,7 +48,7 @@ ___
 
 • **total_risk**: *object*
 
-*Defined in [packages/insights/api.ts:1072](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1072)*
+*Defined in [packages/insights/api.ts:1066](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1066)*
 
 **`memberof`** Stats
 

@@ -1026,12 +1026,6 @@ export interface SettingsInput {
      * @memberof SettingsInput
      */
     show_satellite_hosts: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof SettingsInput
-     */
-    is_subscribed: boolean;
 }
 /**
  *
@@ -3251,7 +3245,7 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
          * @param {boolean} [reportsShown] Display rules where reports are shown or not
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
-         * @param {'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'} [sort] Order by this field
+         * @param {Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>} [sort] Order by this field
          * @param {string} [text] Display rules with this text in their text fields
          * @param {string} [topic] Display rules in this topic (slug)
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
@@ -3259,7 +3253,7 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options: any = {}): RequestArgs {
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options: any = {}): RequestArgs {
             const localVarPath = `/rule/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3314,8 +3308,8 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter['res_risk'] = resRisk.join(COLLECTION_FORMATS.csv);
             }
 
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
+            if (sort) {
+                localVarQueryParameter['sort'] = sort.join(COLLECTION_FORMATS.csv);
             }
 
             if (text !== undefined) {
@@ -3512,7 +3506,7 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
          * @param {boolean} [reportsShown] Display rules where reports are shown or not
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
-         * @param {'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'} [sort] Order by this field
+         * @param {Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>} [sort] Order by this field
          * @param {string} [text] Display rules with this text in their text fields
          * @param {string} [topic] Display rules in this topic (slug)
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
@@ -3520,7 +3514,7 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004> {
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004> {
             const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleList(limit, offset, category, hasTag, tags, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, hasPlaybook, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3606,7 +3600,7 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
          * @param {boolean} [reportsShown] Display rules where reports are shown or not
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
-         * @param {'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'} [sort] Order by this field
+         * @param {Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>} [sort] Order by this field
          * @param {string} [text] Display rules with this text in their text fields
          * @param {string} [topic] Display rules in this topic (slug)
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
@@ -3614,7 +3608,7 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any): AxiosPromise<InlineResponse2004> {
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any): AxiosPromise<InlineResponse2004> {
             return RuleApiFp(configuration).ruleList(limit, offset, category, hasTag, tags, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, hasPlaybook, options)(axios, basePath);
         },
         /**
@@ -3687,7 +3681,7 @@ export class RuleApi extends BaseAPI {
      * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
      * @param {boolean} [reportsShown] Display rules where reports are shown or not
      * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
-     * @param {'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'} [sort] Order by this field
+     * @param {Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>} [sort] Order by this field
      * @param {string} [text] Display rules with this text in their text fields
      * @param {string} [topic] Display rules in this topic (slug)
      * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
@@ -3696,7 +3690,7 @@ export class RuleApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RuleApi
      */
-    public ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk', text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any) {
+    public ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any) {
         return RuleApiFp(this.configuration).ruleList(limit, offset, category, hasTag, tags, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, hasPlaybook, options)(this.axios, this.basePath);
     }
 
@@ -3960,7 +3954,7 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+         * This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
          * @summary Describe the settings we have in a Data-Driven Forms way.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4013,7 +4007,7 @@ export const SettingsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+         * This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
          * @summary Describe the settings we have in a Data-Driven Forms way.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4045,7 +4039,7 @@ export const SettingsApiFactory = function (configuration?: Configuration, baseP
             return SettingsApiFp(configuration).settingsCreate(settingsInput, options)(axios, basePath);
         },
         /**
-         * This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+         * This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
          * @summary Describe the settings we have in a Data-Driven Forms way.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4076,7 +4070,7 @@ export class SettingsApi extends BaseAPI {
     }
 
     /**
-     * This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+     * This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
      * @summary Describe the settings we have in a Data-Driven Forms way.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

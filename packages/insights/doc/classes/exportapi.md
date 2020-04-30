@@ -86,7 +86,7 @@ ___
 
 ▸ **exportHitsList**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)[]›*
 
-*Defined in [packages/insights/api.ts:2176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2176)*
+*Defined in [packages/insights/api.ts:2170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2170)*
 
 We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
 
@@ -117,7 +117,7 @@ ___
 
 ▸ **exportListCsv**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/insights/api.ts:2194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2194)*
+*Defined in [packages/insights/api.ts:2188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2188)*
 
 The accepted content type is not required.
 
@@ -148,7 +148,7 @@ ___
 
 ▸ **exportListJson**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)[]›*
 
-*Defined in [packages/insights/api.ts:2212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2212)*
+*Defined in [packages/insights/api.ts:2206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2206)*
 
 The accepted content type is not required.
 
