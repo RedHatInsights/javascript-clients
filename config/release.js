@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const fs = require('fs');
 
 const bot = require('./comment-bot');
-const { pushFile, octokit: pushBot } = require('./push-bot');
+const { uploadFiles, octokit: pushBot } = require('./push-bot');
 const exec = util.promisify(require('child_process').exec);
 
 const readDir = (folder) => util.promisify(fs.readdir)(folder);
