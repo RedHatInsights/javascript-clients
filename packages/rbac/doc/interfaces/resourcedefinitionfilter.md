@@ -24,7 +24,7 @@
 
 • **key**: *string*
 
-*Defined in [packages/rbac/api.ts:763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L763)*
+*Defined in [packages/rbac/api.ts:769](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L769)*
 
 **`memberof`** ResourceDefinitionFilter
 
@@ -34,7 +34,7 @@ ___
 
 • **operation**: *[ResourceDefinitionFilterOperationEnum](../enums/resourcedefinitionfilteroperationenum.md)*
 
-*Defined in [packages/rbac/api.ts:769](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L769)*
+*Defined in [packages/rbac/api.ts:775](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L775)*
 
 **`memberof`** ResourceDefinitionFilter
 
@@ -44,6 +44,6 @@ ___
 
 • **value**: *string*
 
-*Defined in [packages/rbac/api.ts:775](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L775)*
+*Defined in [packages/rbac/api.ts:781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L781)*
 
 **`memberof`** ResourceDefinitionFilter

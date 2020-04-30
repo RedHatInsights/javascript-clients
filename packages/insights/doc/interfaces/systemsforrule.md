@@ -22,6 +22,6 @@
 
 • **host_ids**: *Array‹string›*
 
-*Defined in [packages/insights/api.ts:1153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1153)*
+*Defined in [packages/insights/api.ts:1147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1147)*
 
 **`memberof`** SystemsForRule

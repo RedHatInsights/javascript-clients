@@ -23,7 +23,7 @@
 
 • **stale_count**: *number*
 
-*Defined in [packages/insights/api.ts:1047](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1047)*
+*Defined in [packages/insights/api.ts:1041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1041)*
 
 **`memberof`** StaleSystemStats
 
@@ -33,6 +33,6 @@ ___
 
 • **warn_count**: *number*
 
-*Defined in [packages/insights/api.ts:1053](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1053)*
+*Defined in [packages/insights/api.ts:1047](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1047)*
 
 **`memberof`** StaleSystemStats

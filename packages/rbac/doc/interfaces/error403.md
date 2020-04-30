@@ -22,6 +22,6 @@
 
 • **errors**: *Array‹object›*
 
-*Defined in [packages/rbac/api.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L97)*
+*Defined in [packages/rbac/api.ts:103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L103)*
 
 **`memberof`** Error403

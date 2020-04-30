@@ -1315,7 +1315,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * Report of affected systems for a given CVE.
          * @summary Affected systems for a given CVE.
          * @param {string} cveId CVE id.
-         * @param {string} [filter] Full text filter.
+         * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -1503,7 +1503,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Overview of vulnerabilities across whole host inventory.
          * @summary Vulnerabilities overview.
-         * @param {string} [filter] Full text filter.
+         * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -1628,7 +1628,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * Shows detailed information about all CVEs the system is exposed to.
          * @summary CVE report for a system.
          * @param {string} inventoryId Inventory ID.
-         * @param {string} [filter] Full text filter.
+         * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -1900,7 +1900,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * List systems visible to logged in account with basic information related to vulnerabilities.
          * @summary List systems.
-         * @param {string} [filter] Full text filter.
+         * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -1908,11 +1908,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [sort] Sorting used for response.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
+         * @param {string} [uuid] Filter based on UUID of inventory.
          * @param {boolean} [optOut] If set to true, shows systems which have been opted out from vulnerability application. If not set defaults to false.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, optOut?: boolean, options: any = {}): RequestArgs {
+        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, optOut?: boolean, options: any = {}): RequestArgs {
             const localVarPath = `/v1/systems`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1967,6 +1968,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (stale !== undefined) {
                 localVarQueryParameter['stale'] = stale;
+            }
+
+            if (uuid !== undefined) {
+                localVarQueryParameter['uuid'] = uuid;
             }
 
             if (optOut !== undefined) {
@@ -2314,7 +2319,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * Report of affected systems for a given CVE.
          * @summary Affected systems for a given CVE.
          * @param {string} cveId CVE id.
-         * @param {string} [filter] Full text filter.
+         * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -2363,7 +2368,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         /**
          * Overview of vulnerabilities across whole host inventory.
          * @summary Vulnerabilities overview.
-         * @param {string} [filter] Full text filter.
+         * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -2393,7 +2398,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * Shows detailed information about all CVEs the system is exposed to.
          * @summary CVE report for a system.
          * @param {string} inventoryId Inventory ID.
-         * @param {string} [filter] Full text filter.
+         * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -2463,7 +2468,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         /**
          * List systems visible to logged in account with basic information related to vulnerabilities.
          * @summary List systems.
-         * @param {string} [filter] Full text filter.
+         * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -2471,12 +2476,13 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [sort] Sorting used for response.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
+         * @param {string} [uuid] Filter based on UUID of inventory.
          * @param {boolean} [optOut] If set to true, shows systems which have been opted out from vulnerability application. If not set defaults to false.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, optOut?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemListOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, optOut, options);
+        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, optOut?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemListOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, optOut, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2589,7 +2595,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * Report of affected systems for a given CVE.
          * @summary Affected systems for a given CVE.
          * @param {string} cveId CVE id.
-         * @param {string} [filter] Full text filter.
+         * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -2626,7 +2632,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         /**
          * Overview of vulnerabilities across whole host inventory.
          * @summary Vulnerabilities overview.
-         * @param {string} [filter] Full text filter.
+         * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -2652,7 +2658,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * Shows detailed information about all CVEs the system is exposed to.
          * @summary CVE report for a system.
          * @param {string} inventoryId Inventory ID.
-         * @param {string} [filter] Full text filter.
+         * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -2706,7 +2712,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         /**
          * List systems visible to logged in account with basic information related to vulnerabilities.
          * @summary List systems.
-         * @param {string} [filter] Full text filter.
+         * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -2714,12 +2720,13 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [sort] Sorting used for response.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
+         * @param {string} [uuid] Filter based on UUID of inventory.
          * @param {boolean} [optOut] If set to true, shows systems which have been opted out from vulnerability application. If not set defaults to false.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, optOut?: boolean, options?: any): AxiosPromise<SystemListOut> {
-            return DefaultApiFp(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, optOut, options)(axios, basePath);
+        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, optOut?: boolean, options?: any): AxiosPromise<SystemListOut> {
+            return DefaultApiFp(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, optOut, options)(axios, basePath);
         },
         /**
          * Get application version.
@@ -2807,7 +2814,7 @@ export class DefaultApi extends BaseAPI {
      * Report of affected systems for a given CVE.
      * @summary Affected systems for a given CVE.
      * @param {string} cveId CVE id.
-     * @param {string} [filter] Full text filter.
+     * @param {string} [filter] Full text filter for the display name of system.
      * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -2850,7 +2857,7 @@ export class DefaultApi extends BaseAPI {
     /**
      * Overview of vulnerabilities across whole host inventory.
      * @summary Vulnerabilities overview.
-     * @param {string} [filter] Full text filter.
+     * @param {string} [filter] Full text filter for the display name of system.
      * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -2878,7 +2885,7 @@ export class DefaultApi extends BaseAPI {
      * Shows detailed information about all CVEs the system is exposed to.
      * @summary CVE report for a system.
      * @param {string} inventoryId Inventory ID.
-     * @param {string} [filter] Full text filter.
+     * @param {string} [filter] Full text filter for the display name of system.
      * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -2940,7 +2947,7 @@ export class DefaultApi extends BaseAPI {
     /**
      * List systems visible to logged in account with basic information related to vulnerabilities.
      * @summary List systems.
-     * @param {string} [filter] Full text filter.
+     * @param {string} [filter] Full text filter for the display name of system.
      * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -2948,13 +2955,14 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [sort] Sorting used for response.
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
+     * @param {string} [uuid] Filter based on UUID of inventory.
      * @param {boolean} [optOut] If set to true, shows systems which have been opted out from vulnerability application. If not set defaults to false.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, optOut?: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, optOut, options)(this.axios, this.basePath);
+    public getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, optOut?: boolean, options?: any) {
+        return DefaultApiFp(this.configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, optOut, options)(this.axios, this.basePath);
     }
 
     /**
