@@ -7,14 +7,14 @@
   "scripts": {
     "bootstrap": "lerna exec npm install",
     "clear-packages": "lerna exec rm -- -rf node_modules; lerna exec rm -- package-lock.json; rm -rf node_modules",
-    "prepare": "npm run bootstrap && npm run generate && npm run build",
+    "prepare": "npm run bootstrap",
     "audit": "lerna exec npm audit",
     "test": "echo \"Error: no test specified\" && exit 0",
-    "generate": "npm run generate:prod && npm run doc",
+    "generate": "npm run generate:prod && npm run doc && npm run build",
     "doc": "lerna run doc",
     "build": "lerna run build",
     "generate:prod": "lerna run generate:prod",
-    "release:bot": "node config/release.sh"
+    "release:bot": "node config/release.js"
   },
   "repository": {
     "type": "git",
