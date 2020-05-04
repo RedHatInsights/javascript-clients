@@ -1,34 +1,34 @@
 {
-  "name": "@redhat-cloud-services/notifications-client",
-  "version": "0.0.1",
-  "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RedHatInsights/javascript-clients.git"
-  },
-  "author": "",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/RedHatInsights/javascript-clients/issues"
-  },
-  "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/notifications#readme",
-  "scripts": {
-    "doc": "typedoc --theme markdown --out doc --module commonjs --mode file --gitRevision master",
-    "build": "tsc",
-    "generate": "TS_POST_PROCESS_FILE='./postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
-    "generate:prod": "SPEC='https://cloud.redhat.com/api/hooks/v1/openapi.json' npm run generate"
-  },
-  "dependencies": {
-    "axios": "^0.19.2"
-  },
-  "devDependencies": {
-    "@types/node": "^13.11.1",
-    "typedoc": "^0.17.4",
-    "typedoc-plugin-markdown": "^2.2.17"
-  }
+    "name": "@redhat-cloud-services/notifications-client",
+    "version": "1.0.63",
+    "description": "",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RedHatInsights/javascript-clients.git"
+    },
+    "author": "",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/RedHatInsights/javascript-clients/issues"
+    },
+    "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/notifications#readme",
+    "scripts": {
+        "doc": "typedoc --theme markdown --out doc --module commonjs --mode file --gitRevision master",
+        "build": "tsc",
+        "generate": "TS_POST_PROCESS_FILE='./postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
+        "generate:prod": "SPEC='https://cloud.redhat.com/api/hooks/v1/openapi.json' npm run generate"
+    },
+    "dependencies": {
+        "axios": "^0.19.2"
+    },
+    "devDependencies": {
+        "@types/node": "^13.11.1",
+        "typedoc": "^0.17.4",
+        "typedoc-plugin-markdown": "^2.2.17"
+    }
 }
