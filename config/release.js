@@ -39,12 +39,12 @@ const packageName = (pckgName, newVersion) => {
     return `${spaces}:package:[${newNameVersion}](https://www.npmjs.com/package/${newNameVersion}):package:`;
 };
 
-const releaseComment = (pckgName, newVersion) => `
+const releaseComment = (packages) => `
 &emsp;&emsp;&emsp;&emsp;&emsp;🌱  🌸 🌷 🌻 🌟  **New version of package has been released**  🌟  🌻 🌷 🌸 🌱
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;The release is available on:
 
-**${packageName(pckgName, newVersion)}**
+${packages.map(({ name, version }) => `**${packageName(name, version)}**`).join('\n')}
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:boom:This feature is brought to you by [probot](https://probot.github.io/):rocket:
 `;
@@ -60,7 +60,7 @@ const releaseComment = (pckgName, newVersion) => `
 
     const packages = await calculatePackages();
     console.log(`Running release for packages ${packages}`);
-    const packagesUpdated = await Promise.all(packages.map(async (packageFolder) => {
+    const { packagesUpdated, packagesInfo } = (await Promise.all(packages.map(async (packageFolder) => {
         const packagePath = resolve(__dirname, `../${monorepoFolder}/${packageFolder}/package.json`);
         const pckg = await readJson(packagePath);
         const { stdout: version } = await exec(`npm view ${pckg.name} version`);
@@ -71,15 +71,31 @@ const releaseComment = (pckgName, newVersion) => `
         const { stderr } = await exec(`cd ${resolve(__dirname, `../${monorepoFolder}/${packageFolder}`)} && npm publish && cd -`);
         console.log(stderr);
         console.log(`New comment for ${owner}/${repo} on PR ${prNumber}`);
-        await bot.issues.createComment({
-            owner,
-            repo,
-            // eslint-disable-next-line camelcase
-            issue_number: prNumber,
-            body: releaseComment(pckg.name, newVersion)
-        });
-        return `${monorepoFolder}/${packageFolder}/package.json`;
-    }));
+        return {
+            path: `${monorepoFolder}/${packageFolder}/package.json`,
+            meta: {
+                name: pckg.name,
+                version: newVersion
+            }
+        };
+    }))).recuce(({ packagesUpdated, packagesInfo }, { path, meta }) => ({
+        packagesUpdated: [
+            ...packagesUpdated,
+            path
+        ],
+        packagesInfo: [
+            ...packagesInfo,
+            meta
+        ]
+    }), { packagesUpdated: [], packagesInfo: [] });
+
+    await bot.issues.createComment({
+        owner,
+        repo,
+        // eslint-disable-next-line camelcase
+        issue_number: prNumber,
+        body: releaseComment(packagesInfo)
+    });
 
     console.log(`Pushing files ${packagesUpdated} to ${owner}/${repo}`);
     uploadFiles(
