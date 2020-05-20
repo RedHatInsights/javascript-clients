@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "doc": "typedoc --theme markdown --out doc --module commonjs --mode file --gitRevision master",
+    "doc": "typedoc --theme markdown --out doc --module commonjs --mode file .",
     "build": "tsc",
     "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
     "generate:prod": "SPEC='https://cloud.redhat.com/api/patch/v1/openapi.json' npm run generate"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.39",
+    "typedoc": "^0.17.4",
+    "typedoc-plugin-markdown": "^2.2.17"
   },
   "author": "",
   "license": "ISC"
