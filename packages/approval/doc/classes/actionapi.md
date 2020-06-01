@@ -86,11 +86,11 @@ ___
 
 ▸ **createAction**(`requestId`: string, `action`: [Action](../interfaces/action.md), `options?`: any): *AxiosPromise‹[Action](../interfaces/action.md)›*
 
-*Defined in [packages/approval/api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L822)*
+*Defined in [packages/approval/api.ts:905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L905)*
 
-Add an action to a given request. Admin can do approve, deny, memo, and cancel operations; approver can do approve, deny and memo operations; while requester can do only cancel operation.
+Create an action under a request identified by its id. Admin can create approve, deny, memo, and cancel operations; approver can create approve, deny, and memo operations; while requester can create only cancel operation.
 
-**`summary`** Add an action to a given request
+**`summary`** Create an action under the request
 
 **`throws`** {RequiredError}
 
@@ -100,8 +100,8 @@ Add an action to a given request. Admin can do approve, deny, memo, and cancel o
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`requestId` | string | Id of request |
-`action` | [Action](../interfaces/action.md) | Action object that will be added |
+`requestId` | string | ID of a request |
+`action` | [Action](../interfaces/action.md) | Action object that needs to be added |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[Action](../interfaces/action.md)›*
@@ -112,9 +112,9 @@ ___
 
 ▸ **listActionsByRequest**(`requestId`: string, `options?`: any): *AxiosPromise‹[ActionCollection](../interfaces/actioncollection.md)›*
 
-*Defined in [packages/approval/api.ts:834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L834)*
+*Defined in [packages/approval/api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L917)*
 
-Return actions in a given request, available for admin/approver
+Find actions of a request identified by its id, available to everyone
 
 **`summary`** List all actions of a request
 
@@ -126,7 +126,7 @@ Return actions in a given request, available for admin/approver
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`requestId` | string | Id of request |
+`requestId` | string | ID of a request |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[ActionCollection](../interfaces/actioncollection.md)›*
@@ -137,11 +137,11 @@ ___
 
 ▸ **showAction**(`id`: string, `options?`: any): *AxiosPromise‹[Action](../interfaces/action.md)›*
 
-*Defined in [packages/approval/api.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L846)*
+*Defined in [packages/approval/api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L929)*
 
-Return an user action by id, available to all
+Find an action by its id, available to everyone
 
-**`summary`** Return an user action by id
+**`summary`** Return an action
 
 **`throws`** {RequiredError}
 
@@ -151,7 +151,7 @@ Return an user action by id, available to all
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`id` | string | Query by id |
+`id` | string | ID used to select a resource |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[Action](../interfaces/action.md)›*

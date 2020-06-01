@@ -88,11 +88,11 @@ ___
 
 ▸ **createRequest**(`requestIn`: [RequestIn](../interfaces/requestin.md), `options?`: any): *AxiosPromise‹[Request](../interfaces/request.md)›*
 
-*Defined in [packages/approval/api.ts:1373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1373)*
+*Defined in [packages/approval/api.ts:1527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1527)*
 
-Add an approval request by given parameters, available to anyone
+Create an approval request using given parameters, available to everyone
 
-**`summary`** Add an approval request by given parameters
+**`summary`** Create a new approval request
 
 **`throws`** {RequiredError}
 
@@ -102,7 +102,7 @@ Add an approval request by given parameters, available to anyone
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`requestIn` | [RequestIn](../interfaces/requestin.md) | Parameters need to create a request |
+`requestIn` | [RequestIn](../interfaces/requestin.md) | Parameters needed to create a request |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[Request](../interfaces/request.md)›*
@@ -111,13 +111,13 @@ ___
 
 ###  listRequests
 
-▸ **listRequests**(`xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
+▸ **listRequests**(`xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
 
-*Defined in [packages/approval/api.ts:1388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1388)*
+*Defined in [packages/approval/api.ts:1543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1543)*
 
 The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
 
-**`summary`** Return an array of requester made approval requests, available to anyone
+**`summary`** List filtered requests, available to everyone
 
 **`throws`** {RequiredError}
 
@@ -131,6 +131,7 @@ Name | Type |
 `limit?` | number |
 `offset?` | number |
 `filter?` | object |
+`sortBy?` | string |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
@@ -141,11 +142,11 @@ ___
 
 ▸ **listRequestsByRequest**(`requestId`: string, `xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `options?`: any): *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
 
-*Defined in [packages/approval/api.ts:1401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1401)*
+*Defined in [packages/approval/api.ts:1556](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1556)*
 
-Return an array of child requests of a given request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
+Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
 
-**`summary`** Return an array of child requests of a given request id
+**`summary`** List filtered child requests of a request
 
 **`throws`** {RequiredError}
 
@@ -155,7 +156,7 @@ Return an array of child requests of a given request id. The result depends on t
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`requestId` | string | Id of request |
+`requestId` | string | ID of a request |
 `xRhPersona?` | "approval/admin" &#124; "approval/approver" &#124; "approval/requester" | - |
 `options?` | any | - |
 
@@ -167,11 +168,11 @@ ___
 
 ▸ **showRequest**(`id`: string, `options?`: any): *AxiosPromise‹[Request](../interfaces/request.md)›*
 
-*Defined in [packages/approval/api.ts:1413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1413)*
+*Defined in [packages/approval/api.ts:1568](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1568)*
 
-Return an approval request by given id, available to anyone who can access the request
+Find an approval request by its id, available to anyone who can access the request
 
-**`summary`** Return an approval request by given id
+**`summary`** Return an approval request
 
 **`throws`** {RequiredError}
 
@@ -181,7 +182,7 @@ Return an approval request by given id, available to anyone who can access the r
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`id` | string | Query by id |
+`id` | string | ID used to select a resource |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[Request](../interfaces/request.md)›*
@@ -192,11 +193,11 @@ ___
 
 ▸ **showRequestContent**(`requestId`: string, `options?`: any): *AxiosPromise‹object›*
 
-*Defined in [packages/approval/api.ts:1425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1425)*
+*Defined in [packages/approval/api.ts:1580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1580)*
 
-Return request content of a given request id, available to all
+Find the request content based on a request id, available to everyone
 
-**`summary`** Return request content of a given request id
+**`summary`** Return the request content of a request
 
 **`throws`** {RequiredError}
 
@@ -206,7 +207,7 @@ Return request content of a given request id, available to all
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`requestId` | string | Id of request |
+`requestId` | string | ID of a request |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹object›*

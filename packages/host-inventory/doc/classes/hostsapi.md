@@ -93,9 +93,9 @@ ___
 
 ▸ **apiHostAddHostList**(`createHostIn`: Array‹[CreateHostIn](../interfaces/createhostin.md)›, `options?`: any): *AxiosPromise‹[BulkHostOut](../interfaces/bulkhostout.md)›*
 
-*Defined in [packages/host-inventory/api.ts:2038](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2038)*
+*Defined in [packages/host-inventory/api.ts:2026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2026)*
 
-Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account.
+Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
 
 **`summary`** Create/update multiple host and add them to the host list
 
@@ -118,7 +118,7 @@ ___
 
 ▸ **apiHostDeleteById**(`hostIdList`: Array‹string›, `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/host-inventory/api.ts:2051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2051)*
+*Defined in [packages/host-inventory/api.ts:2039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2039)*
 
 Delete hosts by IDs
 
@@ -144,7 +144,7 @@ ___
 
 ▸ **apiHostGetHostById**(`hostIdList`: Array‹string›, `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `options?`: any): *AxiosPromise‹[HostQueryOutput](../interfaces/hostqueryoutput.md)›*
 
-*Defined in [packages/host-inventory/api.ts:2068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2068)*
+*Defined in [packages/host-inventory/api.ts:2056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2056)*
 
 Find one or more hosts by their ID.
 
@@ -174,7 +174,7 @@ ___
 
 ▸ **apiHostGetHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `registeredWith?`: "insights", `options?`: any): *AxiosPromise‹[HostQueryOutput](../interfaces/hostqueryoutput.md)›*
 
-*Defined in [packages/host-inventory/api.ts:2091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2091)*
+*Defined in [packages/host-inventory/api.ts:2079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2079)*
 
 Read the entire list of all hosts available to the account.
 
@@ -210,7 +210,7 @@ ___
 
 ▸ **apiHostGetHostSystemProfileById**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `branchId?`: string, `options?`: any): *AxiosPromise‹[SystemProfileByHostOut](../interfaces/systemprofilebyhostout.md)›*
 
-*Defined in [packages/host-inventory/api.ts:2108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2108)*
+*Defined in [packages/host-inventory/api.ts:2096](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2096)*
 
 Find one or more hosts by their ID and return the id and system profile
 
@@ -240,7 +240,7 @@ ___
 
 ▸ **apiHostGetHostTagCount**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `options?`: any): *AxiosPromise‹[TagCountOut](../interfaces/tagcountout.md)›*
 
-*Defined in [packages/host-inventory/api.ts:2124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2124)*
+*Defined in [packages/host-inventory/api.ts:2112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2112)*
 
 Get the number of tags on a host
 
@@ -269,7 +269,7 @@ ___
 
 ▸ **apiHostGetHostTags**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `search?`: string, `options?`: any): *AxiosPromise‹[TagsOut](../interfaces/tagsout.md)›*
 
-*Defined in [packages/host-inventory/api.ts:2141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2141)*
+*Defined in [packages/host-inventory/api.ts:2129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2129)*
 
 Get the tags on a host
 
@@ -299,7 +299,7 @@ ___
 
 ▸ **apiHostMergeFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/host-inventory/api.ts:2156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2156)*
+*Defined in [packages/host-inventory/api.ts:2144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2144)*
 
 Merge one or multiple hosts facts under a namespace.
 
@@ -327,7 +327,7 @@ ___
 
 ▸ **apiHostPatchById**(`hostIdList`: Array‹string›, `patchHostIn`: [PatchHostIn](../interfaces/patchhostin.md), `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/host-inventory/api.ts:2170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2170)*
+*Defined in [packages/host-inventory/api.ts:2158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2158)*
 
 Update a host
 
@@ -354,7 +354,7 @@ ___
 
 ▸ **apiHostReplaceFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/host-inventory/api.ts:2185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2185)*
+*Defined in [packages/host-inventory/api.ts:2173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2173)*
 
 Replace facts under a namespace
 

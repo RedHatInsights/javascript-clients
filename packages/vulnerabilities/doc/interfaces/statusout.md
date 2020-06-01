@@ -22,7 +22,7 @@
 
 • **updated**: *Array‹[StatusOutUpdated](statusoutupdated.md)›*
 
-*Defined in [packages/vulnerabilities/api.ts:1092](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1092)*
+*Defined in [packages/vulnerabilities/api.ts:1154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1154)*
 
 List of updated objects/updated object IDs.
 

@@ -28,7 +28,7 @@
 
 • **business_risk_id**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L942)*
+*Defined in [packages/vulnerabilities/api.ts:1004](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1004)*
 
 Filter based on business risk IDs.
 
@@ -40,9 +40,9 @@ ___
 
 • **cvss_from**: *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L948)*
+*Defined in [packages/vulnerabilities/api.ts:1010](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1010)*
 
-Filter based on cvss score, starting from the value.
+Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
 
 **`memberof`** MetaVulnerabilitiesOutAllOf
 
@@ -52,7 +52,7 @@ ___
 
 • **cvss_to**: *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L954)*
+*Defined in [packages/vulnerabilities/api.ts:1016](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1016)*
 
 Filter based on cvss score, up to the value.
 
@@ -64,7 +64,7 @@ ___
 
 • **impact**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L978)*
+*Defined in [packages/vulnerabilities/api.ts:1040](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1040)*
 
 Filter based on impact IDs.
 
@@ -76,7 +76,7 @@ ___
 
 • **public_from**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:966](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L966)*
+*Defined in [packages/vulnerabilities/api.ts:1028](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1028)*
 
 Filter CVEs based on their published date, starting from the date.
 
@@ -88,7 +88,7 @@ ___
 
 • **public_to**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L972)*
+*Defined in [packages/vulnerabilities/api.ts:1034](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1034)*
 
 Filter CVEs based on their published date, up to the date.
 
@@ -100,7 +100,7 @@ ___
 
 • **show_all**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/api.ts:960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L960)*
+*Defined in [packages/vulnerabilities/api.ts:1022](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1022)*
 
 Show all known vulnerabilities, regardless of number of affected systems.
 

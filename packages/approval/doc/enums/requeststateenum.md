@@ -10,6 +10,7 @@
 
 * [Canceled](requeststateenum.md#canceled)
 * [Completed](requeststateenum.md#completed)
+* [Failed](requeststateenum.md#failed)
 * [Notified](requeststateenum.md#notified)
 * [Pending](requeststateenum.md#pending)
 * [Skipped](requeststateenum.md#skipped)
@@ -21,7 +22,7 @@
 
 • **Canceled**: = "canceled"
 
-*Defined in [packages/approval/api.ts:314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L314)*
+*Defined in [packages/approval/api.ts:401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L401)*
 
 ___
 
@@ -29,7 +30,15 @@ ___
 
 • **Completed**: = "completed"
 
-*Defined in [packages/approval/api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L315)*
+*Defined in [packages/approval/api.ts:402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L402)*
+
+___
+
+###  Failed
+
+• **Failed**: = "failed"
+
+*Defined in [packages/approval/api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L403)*
 
 ___
 
@@ -37,7 +46,7 @@ ___
 
 • **Notified**: = "notified"
 
-*Defined in [packages/approval/api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L316)*
+*Defined in [packages/approval/api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L404)*
 
 ___
 
@@ -45,7 +54,7 @@ ___
 
 • **Pending**: = "pending"
 
-*Defined in [packages/approval/api.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L317)*
+*Defined in [packages/approval/api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L405)*
 
 ___
 
@@ -53,7 +62,7 @@ ___
 
 • **Skipped**: = "skipped"
 
-*Defined in [packages/approval/api.ts:318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L318)*
+*Defined in [packages/approval/api.ts:406](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L406)*
 
 ___
 
@@ -61,4 +70,4 @@ ___
 
 • **Started**: = "started"
 
-*Defined in [packages/approval/api.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L319)*
+*Defined in [packages/approval/api.ts:407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L407)*

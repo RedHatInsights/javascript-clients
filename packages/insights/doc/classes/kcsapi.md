@@ -83,9 +83,9 @@ ___
 
 ###  kcsList
 
-▸ **kcsList**(`options?`: any): *AxiosPromise‹[Kcs](../interfaces/kcs.md)[]›*
+▸ **kcsList**(`nodeIds?`: Array‹string›, `options?`: any): *AxiosPromise‹[Kcs](../interfaces/kcs.md)[]›*
 
-*Defined in [packages/insights/api.ts:2801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2801)*
+*Defined in [packages/insights/api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L247)*
 
 Returns a list of dicts of the C.R.C rule URL and its KCS solution number
 
@@ -99,6 +99,7 @@ Returns a list of dicts of the C.R.C rule URL and its KCS solution number
 
 Name | Type |
 ------ | ------ |
+`nodeIds?` | Array‹string› |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[Kcs](../interfaces/kcs.md)[]›*
@@ -109,7 +110,7 @@ ___
 
 ▸ **kcsRead**(`nodeId`: string, `options?`: any): *AxiosPromise‹string[]›*
 
-*Defined in [packages/insights/api.ts:2813](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2813)*
+*Defined in [packages/insights/api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L259)*
 
 Returns a list of C.R.C rule url(s) for that KCS solution
 

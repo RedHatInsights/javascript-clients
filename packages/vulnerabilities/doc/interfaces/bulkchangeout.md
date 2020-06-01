@@ -22,7 +22,7 @@
 
 • **updated**: *Array‹string›*
 
-*Defined in [packages/vulnerabilities/api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L58)*
+*Defined in [packages/vulnerabilities/api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L83)*
 
 List of updated objects/updated object IDs.
 

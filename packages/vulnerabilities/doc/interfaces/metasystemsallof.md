@@ -22,7 +22,7 @@
 
 • **opt_out**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/api.ts:880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L880)*
+*Defined in [packages/vulnerabilities/api.ts:942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L942)*
 
 Whether the filter to show opted out systems is active or not. If not set, defaults to hiding opted out systems.
 

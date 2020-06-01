@@ -26,7 +26,7 @@
 
 • **last_evaluation**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1162)*
+*Defined in [packages/vulnerabilities/api.ts:1249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1249)*
 
 Date of last evaluation.
 
@@ -38,7 +38,7 @@ ___
 
 • **last_upload**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1180)*
+*Defined in [packages/vulnerabilities/api.ts:1267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1267)*
 
 Date of the latest upload of archive.
 
@@ -50,7 +50,7 @@ ___
 
 • **opt_out**: *boolean*
 
-*Defined in [packages/vulnerabilities/api.ts:1174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1174)*
+*Defined in [packages/vulnerabilities/api.ts:1261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1261)*
 
 System opt out status.
 
@@ -62,7 +62,7 @@ ___
 
 • **rules_evaluation**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1168)*
+*Defined in [packages/vulnerabilities/api.ts:1255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1255)*
 
 Date of last security rules evaluation.
 
@@ -74,7 +74,7 @@ ___
 
 • **stale**? : *boolean*
 
-*Defined in [packages/vulnerabilities/api.ts:1186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1186)*
+*Defined in [packages/vulnerabilities/api.ts:1273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1273)*
 
 System stale status.
 

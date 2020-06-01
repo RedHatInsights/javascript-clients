@@ -2,7 +2,7 @@
 
 # Interface: RequestIn
 
-Input parameters for approval request object.
+Input parameters for approval request object
 
 **`export`** 
 
@@ -27,9 +27,9 @@ Input parameters for approval request object.
 
 • **content**: *object*
 
-*Defined in [packages/approval/api.ts:380](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L380)*
+*Defined in [packages/approval/api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L469)*
 
-JSON object with request content
+Content of the request in JSON format
 
 **`memberof`** RequestIn
 
@@ -39,9 +39,9 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/approval/api.ts:374](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L374)*
+*Defined in [packages/approval/api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L463)*
 
-Request description
+Describe the request in more details
 
 **`memberof`** RequestIn
 
@@ -51,9 +51,9 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/approval/api.ts:368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L368)*
+*Defined in [packages/approval/api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L457)*
 
-Request name
+Name of the the request to be created
 
 **`memberof`** RequestIn
 
@@ -63,8 +63,8 @@ ___
 
 • **tag_resources**: *Array‹[TagResource](tagresource.md)›*
 
-*Defined in [packages/approval/api.ts:386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L386)*
+*Defined in [packages/approval/api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L475)*
 
-collection of resources having tags that determine the workflows for the request
+An array of resource tags that determine the workflows for the request
 
 **`memberof`** RequestIn

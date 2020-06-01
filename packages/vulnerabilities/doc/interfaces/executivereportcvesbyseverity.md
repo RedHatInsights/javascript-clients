@@ -19,6 +19,7 @@ Number of CVEs discovered on the managed systems, divided into buckets based on 
 * [_0to3_9](executivereportcvesbyseverity.md#_0to3_9)
 * [_4to7_9](executivereportcvesbyseverity.md#_4to7_9)
 * [_8to10](executivereportcvesbyseverity.md#_8to10)
+* [na](executivereportcvesbyseverity.md#na)
 
 ## Properties
 
@@ -26,7 +27,7 @@ Number of CVEs discovered on the managed systems, divided into buckets based on 
 
 • **_0to3_9**: *[ExecutiveReportCvesBySeverity0to39](executivereportcvesbyseverity0to39.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L413)*
+*Defined in [packages/vulnerabilities/api.ts:438](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L438)*
 
 **`memberof`** ExecutiveReportCvesBySeverity
 
@@ -36,7 +37,7 @@ ___
 
 • **_4to7_9**: *[ExecutiveReportCvesBySeverity4to79](executivereportcvesbyseverity4to79.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L419)*
+*Defined in [packages/vulnerabilities/api.ts:444](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L444)*
 
 **`memberof`** ExecutiveReportCvesBySeverity
 
@@ -46,6 +47,16 @@ ___
 
 • **_8to10**: *[ExecutiveReportCvesBySeverity8to10](executivereportcvesbyseverity8to10.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L425)*
+*Defined in [packages/vulnerabilities/api.ts:450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L450)*
+
+**`memberof`** ExecutiveReportCvesBySeverity
+
+___
+
+###  na
+
+• **na**: *[ExecutiveReportCvesBySeverityNa](executivereportcvesbyseverityna.md)*
+
+*Defined in [packages/vulnerabilities/api.ts:456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L456)*
 
 **`memberof`** ExecutiveReportCvesBySeverity

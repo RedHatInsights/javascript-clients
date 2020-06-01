@@ -32,7 +32,6 @@ Data of a single host belonging to an account. Represents the hosts without its 
 * [stale_timestamp](createhostin.md#stale_timestamp)
 * [subscription_manager_id](createhostin.md#optional-subscription_manager_id)
 * [system_profile](createhostin.md#optional-system_profile)
-* [tags](createhostin.md#optional-tags)
 
 ## Properties
 
@@ -160,7 +159,7 @@ ___
 
 • **reporter**: *string*
 
-*Defined in [packages/host-inventory/api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L241)*
+*Defined in [packages/host-inventory/api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L235)*
 
 Reporting source of the host. Used when updating the stale_timestamp.
 
@@ -196,7 +195,7 @@ ___
 
 • **stale_timestamp**: *string*
 
-*Defined in [packages/host-inventory/api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L235)*
+*Defined in [packages/host-inventory/api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L229)*
 
 Timestamp from which the host is considered stale.
 
@@ -218,20 +217,8 @@ ___
 
 ### `Optional` system_profile
 
-• **system_profile**? : *[SystemProfileIn](systemprofilein.md)*
-
-*Defined in [packages/host-inventory/api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L229)*
-
-**`memberof`** CreateHostIn
-
-___
-
-### `Optional` tags
-
-• **tags**? : *Array‹[StructuredTag](structuredtag.md)›*
+• **system_profile**? : *[SystemProfile](systemprofile.md)*
 
 *Defined in [packages/host-inventory/api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L223)*
-
-The tags on a host
 
 **`memberof`** CreateHostIn

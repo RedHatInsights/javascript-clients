@@ -2,6 +2,8 @@
 
 # Interface: Action
 
+An action that changes the state of a request
+
 **`export`** 
 
 **`interface`** Action
@@ -41,7 +43,7 @@ ___
 
 *Defined in [packages/approval/api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L39)*
 
-Timestamp of creation
+Time when the action was created
 
 **`memberof`** Action
 
@@ -53,6 +55,8 @@ ___
 
 *Defined in [packages/approval/api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L33)*
 
+ID of the action
+
 **`memberof`** Action
 
 ___
@@ -63,7 +67,7 @@ ___
 
 *Defined in [packages/approval/api.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L57)*
 
-Types of action, may be one of the value (approve, cancel, deny, notify, memo, skip, or start). The request state will be updated according to the operation.
+Action type, must be one of the predefined values. The request state will be updated according to the operation.
 
 **`memberof`** Action
 
@@ -87,6 +91,6 @@ ___
 
 *Defined in [packages/approval/api.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L45)*
 
-Associated request id
+ID of the request that the action belongs to
 
 **`memberof`** Action

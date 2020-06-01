@@ -26,9 +26,9 @@ Resource object definition
 
 • **app_name**: *string*
 
-*Defined in [packages/approval/api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L405)*
+*Defined in [packages/approval/api.ts:494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L494)*
 
-Application name the object belongs to
+Name of the application that the object belongs to
 
 **`memberof`** ResourceObject
 
@@ -38,9 +38,9 @@ ___
 
 • **object_id**: *string*
 
-*Defined in [packages/approval/api.ts:411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L411)*
+*Defined in [packages/approval/api.ts:500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L500)*
 
-Id of the object
+ID of the object
 
 **`memberof`** ResourceObject
 
@@ -50,7 +50,7 @@ ___
 
 • **object_type**: *string*
 
-*Defined in [packages/approval/api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L399)*
+*Defined in [packages/approval/api.ts:488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L488)*
 
 Object type
 

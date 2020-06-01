@@ -22,7 +22,7 @@
 
 • **status_id**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:730](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L730)*
+*Defined in [packages/vulnerabilities/api.ts:780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L780)*
 
 Filer based on CVE status ID.
 

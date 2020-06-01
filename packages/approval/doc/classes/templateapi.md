@@ -83,13 +83,13 @@ ___
 
 ###  listTemplates
 
-▸ **listTemplates**(`limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[TemplateCollection](../interfaces/templatecollection.md)›*
+▸ **listTemplates**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[TemplateCollection](../interfaces/templatecollection.md)›*
 
-*Defined in [packages/approval/api.ts:1621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1621)*
+*Defined in [packages/approval/api.ts:1772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1772)*
 
-Return all templates
+Find all templates, available to admin only
 
-**`summary`** Return all templates, only available for admin
+**`summary`** List templates
 
 **`throws`** {RequiredError}
 
@@ -102,6 +102,7 @@ Name | Type |
 `limit?` | number |
 `offset?` | number |
 `filter?` | object |
+`sortBy?` | string |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[TemplateCollection](../interfaces/templatecollection.md)›*
@@ -112,11 +113,11 @@ ___
 
 ▸ **showTemplate**(`id`: string, `options?`: any): *AxiosPromise‹[Template](../interfaces/template.md)›*
 
-*Defined in [packages/approval/api.ts:1633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1633)*
+*Defined in [packages/approval/api.ts:1784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1784)*
 
-Return a template by given id
+Find a template by its id, available to admin only
 
-**`summary`** Return a template by given id, only available for admin
+**`summary`** Return a template
 
 **`throws`** {RequiredError}
 
@@ -126,7 +127,7 @@ Return a template by given id
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`id` | string | Query by id |
+`id` | string | ID used to select a resource |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[Template](../interfaces/template.md)›*

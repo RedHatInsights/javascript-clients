@@ -8,43 +8,15 @@
 
 * **BaseAPI**
 
-  ↳ [AccountSettingApi](accountsettingapi.md)
-
-  ↳ [AckApi](ackapi.md)
-
-  ↳ [ExportApi](exportapi.md)
-
-  ↳ [HostackApi](hostackapi.md)
-
   ↳ [KcsApi](kcsapi.md)
-
-  ↳ [RatingApi](ratingapi.md)
 
   ↳ [ResolutionRiskApi](resolutionriskapi.md)
 
-  ↳ [RuleApi](ruleapi.md)
-
   ↳ [RulecategoryApi](rulecategoryapi.md)
-
-  ↳ [SettingsApi](settingsapi.md)
-
-  ↳ [StatsApi](statsapi.md)
-
-  ↳ [SystemApi](systemapi.md)
 
   ↳ [SystemtypeApi](systemtypeapi.md)
 
-  ↳ [TagApi](tagapi.md)
-
-  ↳ [TopicApi](topicapi.md)
-
   ↳ [TotalRiskApi](totalriskapi.md)
-
-  ↳ [UsageApi](usageapi.md)
-
-  ↳ [UserPreferencesApi](userpreferencesapi.md)
-
-  ↳ [WeeklyreportsubscriptionApi](weeklyreportsubscriptionapi.md)
 
 ## Index
 

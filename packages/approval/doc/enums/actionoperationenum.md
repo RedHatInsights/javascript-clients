@@ -11,6 +11,7 @@
 * [Approve](actionoperationenum.md#approve)
 * [Cancel](actionoperationenum.md#cancel)
 * [Deny](actionoperationenum.md#deny)
+* [Error](actionoperationenum.md#error)
 * [Memo](actionoperationenum.md#memo)
 * [Notify](actionoperationenum.md#notify)
 * [Skip](actionoperationenum.md#skip)
@@ -42,11 +43,19 @@ ___
 
 ___
 
+###  Error
+
+• **Error**: = "error"
+
+*Defined in [packages/approval/api.ts:74](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L74)*
+
+___
+
 ###  Memo
 
 • **Memo**: = "memo"
 
-*Defined in [packages/approval/api.ts:75](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L75)*
+*Defined in [packages/approval/api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L76)*
 
 ___
 
@@ -54,7 +63,7 @@ ___
 
 • **Notify**: = "notify"
 
-*Defined in [packages/approval/api.ts:74](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L74)*
+*Defined in [packages/approval/api.ts:75](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L75)*
 
 ___
 
@@ -62,7 +71,7 @@ ___
 
 • **Skip**: = "skip"
 
-*Defined in [packages/approval/api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L76)*
+*Defined in [packages/approval/api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L77)*
 
 ___
 
@@ -70,4 +79,4 @@ ___
 
 • **Start**: = "start"
 
-*Defined in [packages/approval/api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L77)*
+*Defined in [packages/approval/api.ts:78](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L78)*
