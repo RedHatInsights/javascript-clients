@@ -24,6 +24,8 @@ tag details
 
 • **tag**? : *string*
 
-*Defined in [packages/approval/api.ts:424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L424)*
+*Defined in [packages/approval/api.ts:484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L484)*
+
+The string representation of the tag
 
 **`memberof`** Tag

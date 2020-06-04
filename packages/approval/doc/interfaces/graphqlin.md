@@ -24,9 +24,9 @@
 
 • **operationName**? : *string*
 
-*Defined in [packages/approval/api.ts:178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L178)*
+*Defined in [packages/approval/api.ts:179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L179)*
 
-If the Query contains several named operations, the operationName controls which one should be executed
+If the query contains several named operations, the operationName controls which one should be executed
 
 **`memberof`** GraphqlIn
 
@@ -36,7 +36,7 @@ ___
 
 • **query**: *string*
 
-*Defined in [packages/approval/api.ts:172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L172)*
+*Defined in [packages/approval/api.ts:173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L173)*
 
 The GraphQL query
 
@@ -48,8 +48,8 @@ ___
 
 • **variables**? : *object | null*
 
-*Defined in [packages/approval/api.ts:184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L184)*
+*Defined in [packages/approval/api.ts:185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L185)*
 
-Optional Query variables
+Optional query variables
 
 **`memberof`** GraphqlIn

@@ -3387,10 +3387,11 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
          * @summary List all systems affected by this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms \&#39;key\&#39;, \&#39;key&#x3D;value\&#39;, \&#39;namespace/key\&#39; or \&#39;namespace/key&#x3D;value\&#39;.  Omitting a part, or supplying \&#39;*\&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
+         * @param {Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>} [sort] Order by this field
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystems(ruleId: string, tags?: Array<string>, options: any = {}): RequestArgs {
+        ruleSystems(ruleId: string, tags?: Array<string>, sort?: Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>, options: any = {}): RequestArgs {
             // verify required parameter 'ruleId' is not null or undefined
             if (ruleId === null || ruleId === undefined) {
                 throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleSystems.');
@@ -3408,6 +3409,10 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (tags) {
                 localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (sort) {
+                localVarQueryParameter['sort'] = sort.join(COLLECTION_FORMATS.csv);
             }
 
 
@@ -3541,11 +3546,12 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * @summary List all systems affected by this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms \&#39;key\&#39;, \&#39;key&#x3D;value\&#39;, \&#39;namespace/key\&#39; or \&#39;namespace/key&#x3D;value\&#39;.  Omitting a part, or supplying \&#39;*\&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
+         * @param {Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>} [sort] Order by this field
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystems(ruleId: string, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule> {
-            const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleSystems(ruleId, tags, options);
+        ruleSystems(ruleId: string, tags?: Array<string>, sort?: Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule> {
+            const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleSystems(ruleId, tags, sort, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3627,11 +3633,12 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
          * @summary List all systems affected by this rule.
          * @param {string} ruleId Rule ID from Insights
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms \&#39;key\&#39;, \&#39;key&#x3D;value\&#39;, \&#39;namespace/key\&#39; or \&#39;namespace/key&#x3D;value\&#39;.  Omitting a part, or supplying \&#39;*\&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
+         * @param {Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>} [sort] Order by this field
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystems(ruleId: string, tags?: Array<string>, options?: any): AxiosPromise<SystemsForRule> {
-            return RuleApiFp(configuration).ruleSystems(ruleId, tags, options)(axios, basePath);
+        ruleSystems(ruleId: string, tags?: Array<string>, sort?: Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>, options?: any): AxiosPromise<SystemsForRule> {
+            return RuleApiFp(configuration).ruleSystems(ruleId, tags, sort, options)(axios, basePath);
         },
         /**
          * Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
@@ -3712,12 +3719,13 @@ export class RuleApi extends BaseAPI {
      * @summary List all systems affected by this rule.
      * @param {string} ruleId Rule ID from Insights
      * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms \&#39;key\&#39;, \&#39;key&#x3D;value\&#39;, \&#39;namespace/key\&#39; or \&#39;namespace/key&#x3D;value\&#39;.  Omitting a part, or supplying \&#39;*\&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
+     * @param {Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>} [sort] Order by this field
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RuleApi
      */
-    public ruleSystems(ruleId: string, tags?: Array<string>, options?: any) {
-        return RuleApiFp(this.configuration).ruleSystems(ruleId, tags, options)(this.axios, this.basePath);
+    public ruleSystems(ruleId: string, tags?: Array<string>, sort?: Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>, options?: any) {
+        return RuleApiFp(this.configuration).ruleSystems(ruleId, tags, sort, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5146,10 +5154,11 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
          * @summary List all systems affected by this rule topic.
          * @param {string} slug Rule topic slug
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms \&#39;key\&#39;, \&#39;key&#x3D;value\&#39;, \&#39;namespace/key\&#39; or \&#39;namespace/key&#x3D;value\&#39;.  Omitting a part, or supplying \&#39;*\&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
+         * @param {Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>} [sort] Order by this field
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicSystems(slug: string, tags?: Array<string>, options: any = {}): RequestArgs {
+        topicSystems(slug: string, tags?: Array<string>, sort?: Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>, options: any = {}): RequestArgs {
             // verify required parameter 'slug' is not null or undefined
             if (slug === null || slug === undefined) {
                 throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicSystems.');
@@ -5167,6 +5176,10 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
 
             if (tags) {
                 localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (sort) {
+                localVarQueryParameter['sort'] = sort.join(COLLECTION_FORMATS.csv);
             }
 
 
@@ -5239,11 +5252,12 @@ export const TopicApiFp = function(configuration?: Configuration) {
          * @summary List all systems affected by this rule topic.
          * @param {string} slug Rule topic slug
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms \&#39;key\&#39;, \&#39;key&#x3D;value\&#39;, \&#39;namespace/key\&#39; or \&#39;namespace/key&#x3D;value\&#39;.  Omitting a part, or supplying \&#39;*\&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
+         * @param {Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>} [sort] Order by this field
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicSystems(slug: string, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule> {
-            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicSystems(slug, tags, options);
+        topicSystems(slug: string, tags?: Array<string>, sort?: Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule> {
+            const localVarAxiosArgs = TopicApiAxiosParamCreator(configuration).topicSystems(slug, tags, sort, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5294,11 +5308,12 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
          * @summary List all systems affected by this rule topic.
          * @param {string} slug Rule topic slug
          * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms \&#39;key\&#39;, \&#39;key&#x3D;value\&#39;, \&#39;namespace/key\&#39; or \&#39;namespace/key&#x3D;value\&#39;.  Omitting a part, or supplying \&#39;*\&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
+         * @param {Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>} [sort] Order by this field
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicSystems(slug: string, tags?: Array<string>, options?: any): AxiosPromise<SystemsForRule> {
-            return TopicApiFp(configuration).topicSystems(slug, tags, options)(axios, basePath);
+        topicSystems(slug: string, tags?: Array<string>, sort?: Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>, options?: any): AxiosPromise<SystemsForRule> {
+            return TopicApiFp(configuration).topicSystems(slug, tags, sort, options)(axios, basePath);
         },
     };
 };
@@ -5352,12 +5367,13 @@ export class TopicApi extends BaseAPI {
      * @summary List all systems affected by this rule topic.
      * @param {string} slug Rule topic slug
      * @param {Array<string>} [tags] Tags have a key, and optional namespace and value, in the forms \&#39;key\&#39;, \&#39;key&#x3D;value\&#39;, \&#39;namespace/key\&#39; or \&#39;namespace/key&#x3D;value\&#39;.  Omitting a part, or supplying \&#39;*\&#39; for that part, matches anything for that part.  One or more tag searches can be supplied, separated by commas.  Strings should be URI encoded, including slashes
+     * @param {Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>} [sort] Order by this field
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TopicApi
      */
-    public topicSystems(slug: string, tags?: Array<string>, options?: any) {
-        return TopicApiFp(this.configuration).topicSystems(slug, tags, options)(this.axios, this.basePath);
+    public topicSystems(slug: string, tags?: Array<string>, sort?: Array<'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated' | '-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated'>, options?: any) {
+        return TopicApiFp(this.configuration).topicSystems(slug, tags, sort, options)(this.axios, this.basePath);
     }
 
 }

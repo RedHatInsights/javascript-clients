@@ -14,30 +14,30 @@
 
 ### Properties
 
-* [advisoryType](controllersadvisoryitemattributes.md#optional-advisorytype)
-* [applicableSystems](controllersadvisoryitemattributes.md#optional-applicablesystems)
+* [advisory_type](controllersadvisoryitemattributes.md#optional-advisory_type)
+* [applicable_systems](controllersadvisoryitemattributes.md#optional-applicable_systems)
 * [description](controllersadvisoryitemattributes.md#optional-description)
-* [publicDate](controllersadvisoryitemattributes.md#optional-publicdate)
+* [public_date](controllersadvisoryitemattributes.md#optional-public_date)
 * [severity](controllersadvisoryitemattributes.md#optional-severity)
 * [synopsis](controllersadvisoryitemattributes.md#optional-synopsis)
 
 ## Properties
 
-### `Optional` advisoryType
+### `Optional` advisory_type
 
-• **advisoryType**? : *number*
+• **advisory_type**? : *number*
 
-*Defined in [packages/patch/api.ts:243](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L243)*
+*Defined in [packages/patch/api.ts:188](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L188)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
 ___
 
-### `Optional` applicableSystems
+### `Optional` applicable_systems
 
-• **applicableSystems**? : *number*
+• **applicable_systems**? : *number*
 
-*Defined in [packages/patch/api.ts:249](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L249)*
+*Defined in [packages/patch/api.ts:194](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L194)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -47,17 +47,17 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:255](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L255)*
+*Defined in [packages/patch/api.ts:200](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L200)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
 ___
 
-### `Optional` publicDate
+### `Optional` public_date
 
-• **publicDate**? : *string*
+• **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:261](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L261)*
+*Defined in [packages/patch/api.ts:206](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L206)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -67,7 +67,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:267](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L267)*
+*Defined in [packages/patch/api.ts:212](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L212)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -77,6 +77,6 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:273](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L273)*
+*Defined in [packages/patch/api.ts:218](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L218)*
 
 **`memberof`** ControllersAdvisoryItemAttributes

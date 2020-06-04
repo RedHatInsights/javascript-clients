@@ -85,7 +85,7 @@ ___
 
 ▸ **weeklyreportsubscriptionCreate**(`weeklyReportSubscription`: [WeeklyReportSubscription](../interfaces/weeklyreportsubscription.md), `options?`: any): *AxiosPromise‹[WeeklyReportSubscription](../interfaces/weeklyreportsubscription.md)›*
 
-*Defined in [packages/insights/api.ts:5898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5898)*
+*Defined in [packages/insights/api.ts:5914](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5914)*
 
 If \'is_subscribed\' is true, a subscription is added if it doesn\'t already exist.  If it is false, the subscription is removed if it exists.
 
@@ -110,7 +110,7 @@ ___
 
 ▸ **weeklyreportsubscriptionList**(`options?`: any): *AxiosPromise‹[WeeklyReportSubscription](../interfaces/weeklyreportsubscription.md)›*
 
-*Defined in [packages/insights/api.ts:5909](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5909)*
+*Defined in [packages/insights/api.ts:5925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5925)*
 
 This shows the presence of a weekly report subscription by the user in this account.
 

@@ -30,7 +30,7 @@ Representation of one network interface
 
 • **ipv4_addresses**? : *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L588)*
+*Defined in [packages/host-inventory/api.ts:576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L576)*
 
 **`memberof`** NetworkInterface
 
@@ -40,7 +40,7 @@ ___
 
 • **ipv6_addresses**? : *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L594)*
+*Defined in [packages/host-inventory/api.ts:582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L582)*
 
 **`memberof`** NetworkInterface
 
@@ -50,7 +50,7 @@ ___
 
 • **mac_address**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L606)*
+*Defined in [packages/host-inventory/api.ts:594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L594)*
 
 MAC address (with or without colons)
 
@@ -62,7 +62,7 @@ ___
 
 • **mtu**? : *number*
 
-*Defined in [packages/host-inventory/api.ts:600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L600)*
+*Defined in [packages/host-inventory/api.ts:588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L588)*
 
 MTU
 
@@ -74,7 +74,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L612)*
+*Defined in [packages/host-inventory/api.ts:600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L600)*
 
 name of interface
 
@@ -86,7 +86,7 @@ ___
 
 • **state**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:618](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L618)*
+*Defined in [packages/host-inventory/api.ts:606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L606)*
 
 interface state (UP, DOWN, UNKNOWN)
 
@@ -98,7 +98,7 @@ ___
 
 • **type**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L624)*
+*Defined in [packages/host-inventory/api.ts:612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L612)*
 
 interface type (ether, loopback)
 

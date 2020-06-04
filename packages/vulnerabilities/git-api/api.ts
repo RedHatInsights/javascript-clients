@@ -22,6 +22,31 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
 /**
  *
  * @export
+ * @interface AffectedSystemsIdsOut
+ */
+export interface AffectedSystemsIdsOut {
+    /**
+     *
+     * @type {string | Array<string>}
+     * @memberof AffectedSystemsIdsOut
+     */
+    data: string | Array<string>;
+    /**
+     *
+     * @type {Links}
+     * @memberof AffectedSystemsIdsOut
+     */
+    links: Links;
+    /**
+     *
+     * @type {MetaAffectedSystems}
+     * @memberof AffectedSystemsIdsOut
+     */
+    meta: MetaAffectedSystems;
+}
+/**
+ *
+ * @export
  * @interface AffectedSystemsOut
  */
 export interface AffectedSystemsOut {
@@ -772,6 +797,12 @@ export interface MetaCves extends Meta {
      */
     impact: string | null;
     /**
+     * Filter based on presence of security rule
+     * @type {boolean}
+     * @memberof MetaCves
+     */
+    security_rule: boolean | null;
+    /**
      * Filer based on CVE status ID.
      * @type {string}
      * @memberof MetaCves
@@ -820,6 +851,12 @@ export interface MetaCvesAllOf {
      * @memberof MetaCvesAllOf
      */
     impact: string | null;
+    /**
+     * Filter based on presence of security rule
+     * @type {boolean}
+     * @memberof MetaCvesAllOf
+     */
+    security_rule: boolean | null;
     /**
      * Filer based on CVE status ID.
      * @type {string}
@@ -1407,6 +1444,101 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Report of IDs of affected systems for a given CVE.
+         * @summary IDs of affected systems for a given CVE.
+         * @param {string} cveId CVE id.
+         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {string} [sort] Sorting used for response.
+         * @param {string} [statusId] Filer based on CVE status ID.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, securityRule?: string, options: any = {}): RequestArgs {
+            // verify required parameter 'cveId' is not null or undefined
+            if (cveId === null || cveId === undefined) {
+                throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getAffectedSystemsIdsByCve.');
+            }
+            const localVarPath = `/v1/cves/{cve_id}/affected_systems/ids`
+                .replace(`{${"cve_id"}}`, encodeURIComponent(String(cveId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? configuration.apiKey("x-rh-identity")
+                    : configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (statusId !== undefined) {
+                localVarQueryParameter['status_id'] = statusId;
+            }
+
+            if (dataFormat !== undefined) {
+                localVarQueryParameter['data_format'] = dataFormat;
+            }
+
+            if (securityRule !== undefined) {
+                localVarQueryParameter['security_rule'] = securityRule;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns available business risk and business_risk_id pairs where business_risk_id is internal ID of the business risk.
          * @summary Available business risk/business_risk_id pairs.
          * @param {*} [options] Override http request option.
@@ -1642,12 +1774,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
-         * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, stale?: boolean, securityRule?: boolean, options: any = {}): RequestArgs {
+        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, options: any = {}): RequestArgs {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getCveListBySystem.');
@@ -1731,10 +1862,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (businessRiskId !== undefined) {
                 localVarQueryParameter['business_risk_id'] = businessRiskId;
-            }
-
-            if (stale !== undefined) {
-                localVarQueryParameter['stale'] = stale;
             }
 
             if (securityRule !== undefined) {
@@ -1846,11 +1973,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * Provides details of a system, e.g. it\'s opt out status.
          * @summary System details.
          * @param {string} inventoryId Inventory ID.
-         * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemDetails(inventoryId: string, stale?: boolean, options: any = {}): RequestArgs {
+        getSystemDetails(inventoryId: string, options: any = {}): RequestArgs {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getSystemDetails.');
@@ -1878,10 +2004,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (stale !== undefined) {
-                localVarQueryParameter['stale'] = stale;
             }
 
 
@@ -2339,6 +2461,29 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Report of IDs of affected systems for a given CVE.
+         * @summary IDs of affected systems for a given CVE.
+         * @param {string} cveId CVE id.
+         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {string} [sort] Sorting used for response.
+         * @param {string} [statusId] Filer based on CVE status ID.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, securityRule?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsIdsOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, securityRule, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns available business risk and business_risk_id pairs where business_risk_id is internal ID of the business risk.
          * @summary Available business risk/business_risk_id pairs.
          * @param {*} [options] Override http request option.
@@ -2412,13 +2557,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
-         * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, stale?: boolean, securityRule?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, stale, securityRule, options);
+        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2454,12 +2598,11 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * Provides details of a system, e.g. it\'s opt out status.
          * @summary System details.
          * @param {string} inventoryId Inventory ID.
-         * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemDetails(inventoryId: string, stale?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemDetailsOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getSystemDetails(inventoryId, stale, options);
+        getSystemDetails(inventoryId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemDetailsOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getSystemDetails(inventoryId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2611,6 +2754,25 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, securityRule, options)(axios, basePath);
         },
         /**
+         * Report of IDs of affected systems for a given CVE.
+         * @summary IDs of affected systems for a given CVE.
+         * @param {string} cveId CVE id.
+         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {string} [sort] Sorting used for response.
+         * @param {string} [statusId] Filer based on CVE status ID.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, securityRule?: string, options?: any): AxiosPromise<AffectedSystemsIdsOut> {
+            return DefaultApiFp(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, securityRule, options)(axios, basePath);
+        },
+        /**
          * Returns available business risk and business_risk_id pairs where business_risk_id is internal ID of the business risk.
          * @summary Available business risk/business_risk_id pairs.
          * @param {*} [options] Override http request option.
@@ -2672,13 +2834,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
-         * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, stale?: boolean, securityRule?: boolean, options?: any): AxiosPromise<SystemCvesOut> {
-            return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, stale, securityRule, options)(axios, basePath);
+        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, options?: any): AxiosPromise<SystemCvesOut> {
+            return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, options)(axios, basePath);
         },
         /**
          * Returns top level overview of vulnerabilities affecting given account.
@@ -2702,12 +2863,11 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * Provides details of a system, e.g. it\'s opt out status.
          * @summary System details.
          * @param {string} inventoryId Inventory ID.
-         * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemDetails(inventoryId: string, stale?: boolean, options?: any): AxiosPromise<SystemDetailsOut> {
-            return DefaultApiFp(configuration).getSystemDetails(inventoryId, stale, options)(axios, basePath);
+        getSystemDetails(inventoryId: string, options?: any): AxiosPromise<SystemDetailsOut> {
+            return DefaultApiFp(configuration).getSystemDetails(inventoryId, options)(axios, basePath);
         },
         /**
          * List systems visible to logged in account with basic information related to vulnerabilities.
@@ -2832,6 +2992,27 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Report of IDs of affected systems for a given CVE.
+     * @summary IDs of affected systems for a given CVE.
+     * @param {string} cveId CVE id.
+     * @param {string} [filter] Full text filter for the display name of system.
+     * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {string} [sort] Sorting used for response.
+     * @param {string} [statusId] Filer based on CVE status ID.
+     * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+     * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, securityRule?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, securityRule, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns available business risk and business_risk_id pairs where business_risk_id is internal ID of the business risk.
      * @summary Available business risk/business_risk_id pairs.
      * @param {*} [options] Override http request option.
@@ -2899,14 +3080,13 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [statusId] Filer based on CVE status ID.
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {string} [businessRiskId] Filter based on business risk IDs.
-     * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
      * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, stale?: boolean, securityRule?: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, stale, securityRule, options)(this.axios, this.basePath);
+    public getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, options?: any) {
+        return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2935,13 +3115,12 @@ export class DefaultApi extends BaseAPI {
      * Provides details of a system, e.g. it\'s opt out status.
      * @summary System details.
      * @param {string} inventoryId Inventory ID.
-     * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getSystemDetails(inventoryId: string, stale?: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).getSystemDetails(inventoryId, stale, options)(this.axios, this.basePath);
+    public getSystemDetails(inventoryId: string, options?: any) {
+        return DefaultApiFp(this.configuration).getSystemDetails(inventoryId, options)(this.axios, this.basePath);
     }
 
     /**

@@ -18,7 +18,7 @@
 * [limit](controllerslistmeta.md#optional-limit)
 * [offset](controllerslistmeta.md#optional-offset)
 * [sort](controllerslistmeta.md#optional-sort)
-* [totalItems](controllerslistmeta.md#optional-totalitems)
+* [total_items](controllerslistmeta.md#optional-total_items)
 
 ## Properties
 
@@ -26,7 +26,7 @@
 
 • **filter**? : *object*
 
-*Defined in [packages/patch/api.ts:365](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L365)*
+*Defined in [packages/patch/api.ts:306](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L306)*
 
 **`memberof`** ControllersListMeta
 
@@ -40,7 +40,7 @@ ___
 
 • **limit**? : *number*
 
-*Defined in [packages/patch/api.ts:371](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L371)*
+*Defined in [packages/patch/api.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L312)*
 
 **`memberof`** ControllersListMeta
 
@@ -50,7 +50,7 @@ ___
 
 • **offset**? : *number*
 
-*Defined in [packages/patch/api.ts:377](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L377)*
+*Defined in [packages/patch/api.ts:318](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L318)*
 
 **`memberof`** ControllersListMeta
 
@@ -60,16 +60,16 @@ ___
 
 • **sort**? : *Array‹string›*
 
-*Defined in [packages/patch/api.ts:383](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L383)*
+*Defined in [packages/patch/api.ts:324](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L324)*
 
 **`memberof`** ControllersListMeta
 
 ___
 
-### `Optional` totalItems
+### `Optional` total_items
 
-• **totalItems**? : *number*
+• **total_items**? : *number*
 
-*Defined in [packages/patch/api.ts:389](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L389)*
+*Defined in [packages/patch/api.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L330)*
 
 **`memberof`** ControllersListMeta
