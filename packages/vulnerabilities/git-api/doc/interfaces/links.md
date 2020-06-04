@@ -25,7 +25,7 @@
 
 • **first**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L625)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L650)*
 
 Link to first page.
 
@@ -37,7 +37,7 @@ ___
 
 • **last**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L631)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L656)*
 
 Link to last page.
 
@@ -49,7 +49,7 @@ ___
 
 • **next**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L637)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L662)*
 
 Link to next page.
 
@@ -61,7 +61,7 @@ ___
 
 • **previous**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L643)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L668)*
 
 Link to next page.
 

@@ -30,7 +30,7 @@
 
 \+ **new RequiredError**(`field`: string, `msg?`: string): *[RequiredError](requirederror.md)*
 
-*Defined in [packages/patch/api.ts:66](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L66)*
+Defined in packages/patch/base.ts:66
 
 **Parameters:**
 
@@ -47,7 +47,7 @@ Name | Type |
 
 • **field**: *string*
 
-*Defined in [packages/patch/api.ts:67](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L67)*
+Defined in packages/patch/base.ts:67
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 *Overrides void*
 
-*Defined in [packages/patch/api.ts:66](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L66)*
+Defined in packages/patch/base.ts:66
 
 ___
 

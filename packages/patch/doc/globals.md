@@ -53,7 +53,7 @@
 
 • **BASE_PATH**: *string* = "https://cloud.redhat.com".replace(/\/+$/, "")
 
-*Defined in [packages/patch/api.ts:20](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L20)*
+Defined in packages/patch/base.ts:20
 
 ## Functions
 
@@ -61,7 +61,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/patch/api.ts:609](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L609)*
+*Defined in [packages/patch/api.ts:542](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L542)*
 
 DefaultApi - axios parameter creator
 
@@ -95,7 +95,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/patch/api.ts:1268](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L1268)*
+*Defined in [packages/patch/api.ts:1222](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L1222)*
 
 DefaultApi - factory interface
 
@@ -111,7 +111,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **deletesystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹Response›*
+* **deletesystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹void›*
 
 * **detailAdvisory**(`advisoryId`: string, `options?`: any): *AxiosPromise‹[ControllersAdvisoryDetailResponse](interfaces/controllersadvisorydetailresponse.md)›*
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/patch/api.ts:1118](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L1118)*
+*Defined in [packages/patch/api.ts:1072](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L1072)*
 
 DefaultApi - functional programming interface
 
@@ -147,7 +147,7 @@ Name | Type |
 
 * **deletesystem**(`inventoryId`: string, `options?`: any): *function*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Response›*
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 * **detailAdvisory**(`advisoryId`: string, `options?`: any): *function*
 
@@ -179,7 +179,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [packages/patch/api.ts:26](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L26)*
+Defined in packages/patch/base.ts:26
 
 **`export`** 
 
@@ -187,22 +187,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [packages/patch/api.ts:27](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L27)*
+Defined in packages/patch/base.ts:27
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [packages/patch/api.ts:30](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L30)*
+Defined in packages/patch/base.ts:30
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [packages/patch/api.ts:28](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L28)*
+Defined in packages/patch/base.ts:28
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [packages/patch/api.ts:29](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L29)*
+Defined in packages/patch/base.ts:29

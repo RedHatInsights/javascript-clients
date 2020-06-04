@@ -24,9 +24,9 @@
 
 • **count**? : *number*
 
-*Defined in [packages/approval/api.ts:147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L147)*
+*Defined in [packages/approval/api.ts:148](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L148)*
 
-This is the total number of items in the result set, of which only a subset is returned defined by the QueryLimit parameter
+Total number of items in the result set, of which only a subset is returned defined by the QueryLimit parameter
 
 **`memberof`** CollectionMetadata
 
@@ -36,9 +36,9 @@ ___
 
 • **limit**? : *number*
 
-*Defined in [packages/approval/api.ts:153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L153)*
+*Defined in [packages/approval/api.ts:154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L154)*
 
-This is the number of items each page can display
+The number of items each page can display
 
 **`memberof`** CollectionMetadata
 
@@ -48,8 +48,8 @@ ___
 
 • **offset**? : *number*
 
-*Defined in [packages/approval/api.ts:159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L159)*
+*Defined in [packages/approval/api.ts:160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L160)*
 
-This is the offset from beginning of the result set
+Offset from beginning of the result set
 
 **`memberof`** CollectionMetadata

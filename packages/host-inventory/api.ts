@@ -216,12 +216,6 @@ export interface CreateHostIn {
      */
     facts?: Array<FactSet>;
     /**
-     * The tags on a host
-     * @type {Array<StructuredTag>}
-     * @memberof CreateHostIn
-     */
-    tags?: Array<StructuredTag>;
-    /**
      *
      * @type {SystemProfileIn}
      * @memberof CreateHostIn
@@ -342,12 +336,6 @@ export interface CreateHostOut {
      * @memberof CreateHostOut
      */
     facts?: Array<FactSet>;
-    /**
-     * An array of the tags on the host
-     * @type {Array<StructuredTag>}
-     * @memberof CreateHostOut
-     */
-    tags?: Array<StructuredTag>;
     /**
      * Timestamp from which the host is considered stale.
      * @type {string}

@@ -87,7 +87,7 @@ ___
 
 ▸ **topicList**(`showDisabled?`: boolean, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[Topic](../interfaces/topic.md)[]›*
 
-*Defined in [packages/insights/api.ts:5322](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5322)*
+*Defined in [packages/insights/api.ts:5337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5337)*
 
 Normally this only shows enabled topics, but if the \'show_disabled\' parameter is set to True then this will show disabled topics as well.
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **topicRead**(`slug`: string, `options?`: any): *AxiosPromise‹[Topic](../interfaces/topic.md)›*
 
-*Defined in [packages/insights/api.ts:5334](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5334)*
+*Defined in [packages/insights/api.ts:5349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5349)*
 
 This also lists the topic\'s impacted systems count.
 
@@ -138,7 +138,7 @@ ___
 
 ▸ **topicRulesWithTag**(`slug`: string, `options?`: any): *AxiosPromise‹[Rule](../interfaces/rule.md)[]›*
 
-*Defined in [packages/insights/api.ts:5346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5346)*
+*Defined in [packages/insights/api.ts:5361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5361)*
 
 This shows the rule information for rules with this tag.
 
@@ -161,9 +161,9 @@ ___
 
 ###  topicSystems
 
-▸ **topicSystems**(`slug`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[SystemsForRule](../interfaces/systemsforrule.md)›*
+▸ **topicSystems**(`slug`: string, `tags?`: Array‹string›, `sort?`: Array‹"display_name" | "last_seen" | "stale_at" | "system_uuid" | "updated" | "-display_name" | "-last_seen" | "-stale_at" | "-system_uuid" | "-updated"›, `options?`: any): *AxiosPromise‹[SystemsForRule](../interfaces/systemsforrule.md)›*
 
-*Defined in [packages/insights/api.ts:5359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5359)*
+*Defined in [packages/insights/api.ts:5375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5375)*
 
 Systems are just listed by their UUID.
 
@@ -179,6 +179,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `slug` | string | Rule topic slug |
 `tags?` | Array‹string› | - |
+`sort?` | Array‹"display_name" &#124; "last_seen" &#124; "stale_at" &#124; "system_uuid" &#124; "updated" &#124; "-display_name" &#124; "-last_seen" &#124; "-stale_at" &#124; "-system_uuid" &#124; "-updated"› | - |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[SystemsForRule](../interfaces/systemsforrule.md)›*

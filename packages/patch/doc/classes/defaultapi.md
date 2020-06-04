@@ -42,7 +42,7 @@ DefaultApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [packages/patch/api.ts:49](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L49)*
+Defined in packages/patch/base.ts:49
 
 **Parameters:**
 
@@ -62,7 +62,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [packages/patch/api.ts:51](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L51)*
+Defined in packages/patch/base.ts:51
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [packages/patch/api.ts:51](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L51)*
+Defined in packages/patch/base.ts:51
 
 ___
 
@@ -82,15 +82,15 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [packages/patch/api.ts:49](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L49)*
+Defined in packages/patch/base.ts:49
 
 ## Methods
 
 ###  deletesystem
 
-▸ **deletesystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹Response›*
+▸ **deletesystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/patch/api.ts:1401](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L1401)*
+*Defined in [packages/patch/api.ts:1355](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L1355)*
 
 Delete system by inventory id
 
@@ -107,7 +107,7 @@ Name | Type | Description |
 `inventoryId` | string | Inventory ID |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹Response›*
+**Returns:** *AxiosPromise‹void›*
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 ▸ **detailAdvisory**(`advisoryId`: string, `options?`: any): *AxiosPromise‹[ControllersAdvisoryDetailResponse](../interfaces/controllersadvisorydetailresponse.md)›*
 
-*Defined in [packages/patch/api.ts:1413](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L1413)*
+*Defined in [packages/patch/api.ts:1367](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L1367)*
 
 Show me details an advisory by given advisory name
 
@@ -140,7 +140,7 @@ ___
 
 ▸ **detailSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹[ControllersSystemDetailResponse](../interfaces/controllerssystemdetailresponse.md)›*
 
-*Defined in [packages/patch/api.ts:1425](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L1425)*
+*Defined in [packages/patch/api.ts:1379](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L1379)*
 
 Show me details about a system by given inventory id
 
@@ -165,7 +165,7 @@ ___
 
 ▸ **listAdvisories**(`limit?`: number, `offset?`: number, `sort?`: "id" | "name" | "advisory_type" | "synopsis" | "public_date" | "applicable_systems", `search?`: string, `filterId?`: string, `filterDescription?`: string, `filterPublicDate?`: string, `filterSynopsis?`: string, `filterAdvisoryType?`: string, `filterSeverity?`: string, `filterApplicableSystems?`: string, `options?`: any): *AxiosPromise‹[ControllersAdvisoriesResponse](../interfaces/controllersadvisoriesresponse.md)›*
 
-*Defined in [packages/patch/api.ts:1447](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L1447)*
+*Defined in [packages/patch/api.ts:1401](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L1401)*
 
 Show me all applicable advisories for all my systems
 
@@ -200,7 +200,7 @@ ___
 
 ▸ **listAdvisorySystems**(`advisoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "enabled" | "stale", `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterEnabled?`: string, `filterStale?`: string, `options?`: any): *AxiosPromise‹[ControllersAdvisorySystemsResponse](../interfaces/controllersadvisorysystemsresponse.md)›*
 
-*Defined in [packages/patch/api.ts:1471](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L1471)*
+*Defined in [packages/patch/api.ts:1425](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L1425)*
 
 Show me systems on which the given advisory is applicable
 
@@ -237,7 +237,7 @@ ___
 
 ▸ **listSystemAdvisories**(`inventoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "name" | "type" | "synopsis" | "public_date", `search?`: string, `filterId?`: string, `filterDescription?`: string, `filterPublicDate?`: string, `filterSynopsis?`: string, `filterAdvisoryType?`: string, `filterSeverity?`: string, `options?`: any): *AxiosPromise‹[ControllersSystemAdvisoriesResponse](../interfaces/controllerssystemadvisoriesresponse.md)›*
 
-*Defined in [packages/patch/api.ts:1493](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L1493)*
+*Defined in [packages/patch/api.ts:1447](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L1447)*
 
 Show me advisories for a system by given inventory id
 
@@ -272,7 +272,7 @@ ___
 
 ▸ **listSystems**(`limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "enabled" | "stale", `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterEnabled?`: string, `filterStale?`: string, `options?`: any): *AxiosPromise‹[ControllersSystemsResponse](../interfaces/controllerssystemsresponse.md)›*
 
-*Defined in [packages/patch/api.ts:1516](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L1516)*
+*Defined in [packages/patch/api.ts:1470](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L1470)*
 
 Show me all my systems
 

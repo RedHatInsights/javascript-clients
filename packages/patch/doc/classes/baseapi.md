@@ -28,7 +28,7 @@
 
 \+ **new BaseAPI**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[BaseAPI](baseapi.md)*
 
-*Defined in [packages/patch/api.ts:49](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L49)*
+Defined in packages/patch/base.ts:49
 
 **Parameters:**
 
@@ -46,7 +46,7 @@ Name | Type | Default |
 
 • **axios**: *AxiosInstance*
 
-*Defined in [packages/patch/api.ts:51](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L51)*
+Defined in packages/patch/base.ts:51
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 • **basePath**: *string*
 
-*Defined in [packages/patch/api.ts:51](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L51)*
+Defined in packages/patch/base.ts:51
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 • **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Defined in [packages/patch/api.ts:49](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L49)*
+Defined in packages/patch/base.ts:49

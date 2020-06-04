@@ -23,7 +23,7 @@
 
 • **options**: *any*
 
-*Defined in [packages/patch/api.ts:40](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L40)*
+Defined in packages/patch/base.ts:40
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 • **url**: *string*
 
-*Defined in [packages/patch/api.ts:39](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L39)*
+Defined in packages/patch/base.ts:39

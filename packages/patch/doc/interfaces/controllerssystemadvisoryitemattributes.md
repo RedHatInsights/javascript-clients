@@ -14,19 +14,19 @@
 
 ### Properties
 
-* [advisoryType](controllerssystemadvisoryitemattributes.md#optional-advisorytype)
+* [advisory_type](controllerssystemadvisoryitemattributes.md#optional-advisory_type)
 * [description](controllerssystemadvisoryitemattributes.md#optional-description)
-* [publicDate](controllerssystemadvisoryitemattributes.md#optional-publicdate)
+* [public_date](controllerssystemadvisoryitemattributes.md#optional-public_date)
 * [severity](controllerssystemadvisoryitemattributes.md#optional-severity)
 * [synopsis](controllerssystemadvisoryitemattributes.md#optional-synopsis)
 
 ## Properties
 
-### `Optional` advisoryType
+### `Optional` advisory_type
 
-• **advisoryType**? : *number*
+• **advisory_type**? : *number*
 
-*Defined in [packages/patch/api.ts:455](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L455)*
+*Defined in [packages/patch/api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L393)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -36,17 +36,17 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:461](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L461)*
+*Defined in [packages/patch/api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L399)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
 ___
 
-### `Optional` publicDate
+### `Optional` public_date
 
-• **publicDate**? : *string*
+• **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:467](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L467)*
+*Defined in [packages/patch/api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L405)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -56,7 +56,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:473](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L473)*
+*Defined in [packages/patch/api.ts:411](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L411)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -66,6 +66,6 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:479](https://github.com/jiridostal/javascript-clients/blob/142d57b/packages/patch/api.ts#L479)*
+*Defined in [packages/patch/api.ts:417](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L417)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes

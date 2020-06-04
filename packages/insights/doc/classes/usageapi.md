@@ -84,7 +84,7 @@ ___
 
 ▸ **usageList**(`options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/insights/api.ts:5559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5559)*
+*Defined in [packages/insights/api.ts:5575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5575)*
 
 This uses a HashLogLog structure to record number of hits, and this is therefore an approximation.
 
