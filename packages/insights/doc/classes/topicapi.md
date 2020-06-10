@@ -87,7 +87,7 @@ ___
 
 ▸ **topicList**(`showDisabled?`: boolean, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[Topic](../interfaces/topic.md)[]›*
 
-*Defined in [packages/insights/api.ts:5337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5337)*
+*Defined in [packages/insights/api.ts:5606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5606)*
 
 Normally this only shows enabled topics, but if the \'show_disabled\' parameter is set to True then this will show disabled topics as well.
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **topicRead**(`slug`: string, `options?`: any): *AxiosPromise‹[Topic](../interfaces/topic.md)›*
 
-*Defined in [packages/insights/api.ts:5349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5349)*
+*Defined in [packages/insights/api.ts:5618](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5618)*
 
 This also lists the topic\'s impacted systems count.
 
@@ -138,7 +138,7 @@ ___
 
 ▸ **topicRulesWithTag**(`slug`: string, `options?`: any): *AxiosPromise‹[Rule](../interfaces/rule.md)[]›*
 
-*Defined in [packages/insights/api.ts:5361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5361)*
+*Defined in [packages/insights/api.ts:5630](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5630)*
 
 This shows the rule information for rules with this tag.
 
@@ -163,7 +163,7 @@ ___
 
 ▸ **topicSystems**(`slug`: string, `tags?`: Array‹string›, `sort?`: Array‹"display_name" | "last_seen" | "stale_at" | "system_uuid" | "updated" | "-display_name" | "-last_seen" | "-stale_at" | "-system_uuid" | "-updated"›, `options?`: any): *AxiosPromise‹[SystemsForRule](../interfaces/systemsforrule.md)›*
 
-*Defined in [packages/insights/api.ts:5375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5375)*
+*Defined in [packages/insights/api.ts:5644](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5644)*
 
 Systems are just listed by their UUID.
 

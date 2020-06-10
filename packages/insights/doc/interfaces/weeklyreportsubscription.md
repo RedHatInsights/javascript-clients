@@ -22,6 +22,6 @@
 
 • **is_subscribed**: *boolean*
 
-*Defined in [packages/insights/api.ts:1222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1222)*
+*Defined in [packages/insights/api.ts:1246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1246)*
 
 **`memberof`** WeeklyReportSubscription

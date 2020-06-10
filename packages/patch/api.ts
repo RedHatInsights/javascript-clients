@@ -152,6 +152,55 @@ export interface ControllersAdvisoryDetailResponse {
 /**
  *
  * @export
+ * @interface ControllersAdvisoryInlineItem
+ */
+export interface ControllersAdvisoryInlineItem {
+    /**
+     *
+     * @type {number}
+     * @memberof ControllersAdvisoryInlineItem
+     */
+    advisory_type?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof ControllersAdvisoryInlineItem
+     */
+    applicable_systems?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersAdvisoryInlineItem
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersAdvisoryInlineItem
+     */
+    id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersAdvisoryInlineItem
+     */
+    public_date?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof ControllersAdvisoryInlineItem
+     */
+    severity?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersAdvisoryInlineItem
+     */
+    synopsis?: string;
+}
+/**
+ *
+ * @export
  * @interface ControllersAdvisoryItem
  */
 export interface ControllersAdvisoryItem {
@@ -432,6 +481,61 @@ export interface ControllersSystemDetailResponse {
 /**
  *
  * @export
+ * @interface ControllersSystemInlineItem
+ */
+export interface ControllersSystemInlineItem {
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersSystemInlineItem
+     */
+    display_name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersSystemInlineItem
+     */
+    id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersSystemInlineItem
+     */
+    last_evaluation?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersSystemInlineItem
+     */
+    last_upload?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof ControllersSystemInlineItem
+     */
+    rhba_count?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof ControllersSystemInlineItem
+     */
+    rhea_count?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof ControllersSystemInlineItem
+     */
+    rhsa_count?: number;
+    /**
+     * Not used Enabled        bool       `json:\"enabled\" csv:\"enabled\" query:\"(NOT system_platform.opt_out)\"`
+     * @type {boolean}
+     * @memberof ControllersSystemInlineItem
+     */
+    stale?: boolean;
+}
+/**
+ *
+ * @export
  * @interface ControllersSystemItem
  */
 export interface ControllersSystemItem {
@@ -468,12 +572,6 @@ export interface ControllersSystemItemAttributes {
     display_name?: string;
     /**
      *
-     * @type {boolean}
-     * @memberof ControllersSystemItemAttributes
-     */
-    enabled?: boolean;
-    /**
-     *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
@@ -503,7 +601,7 @@ export interface ControllersSystemItemAttributes {
      */
     rhsa_count?: number;
     /**
-     *
+     * Not used Enabled        bool       `json:\"enabled\" csv:\"enabled\" query:\"(NOT system_platform.opt_out)\"`
      * @type {boolean}
      * @memberof ControllersSystemItemAttributes
      */
@@ -674,6 +772,167 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Export applicable advisories for all my systems
+         * @summary Export applicable advisories for all my systems
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryType] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {string} [filterApplicableSystems] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportAdvisories(search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, filterApplicableSystems?: string, options: any = {}): RequestArgs {
+            const localVarPath = `/api/patch/v1/export/advisories`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication RhIdentity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? configuration.apiKey("x-rh-identity")
+                    : configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
+            }
+
+            if (filterId !== undefined) {
+                localVarQueryParameter['filter[id]'] = filterId;
+            }
+
+            if (filterDescription !== undefined) {
+                localVarQueryParameter['filter[description]'] = filterDescription;
+            }
+
+            if (filterPublicDate !== undefined) {
+                localVarQueryParameter['filter[public_date]'] = filterPublicDate;
+            }
+
+            if (filterSynopsis !== undefined) {
+                localVarQueryParameter['filter[synopsis]'] = filterSynopsis;
+            }
+
+            if (filterAdvisoryType !== undefined) {
+                localVarQueryParameter['filter[advisory_type]'] = filterAdvisoryType;
+            }
+
+            if (filterSeverity !== undefined) {
+                localVarQueryParameter['filter[severity]'] = filterSeverity;
+            }
+
+            if (filterApplicableSystems !== undefined) {
+                localVarQueryParameter['filter[applicable_systems]'] = filterApplicableSystems;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Export systems for my account
+         * @summary Export systems for my account
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterLastEvaluation] Filter
+         * @param {string} [filterLastUpload] Filter
+         * @param {string} [filterRhsaCount] Filter
+         * @param {string} [filterRhbaCount] Filter
+         * @param {string} [filterRheaCount] Filter
+         * @param {string} [filterEnabled] Filter
+         * @param {string} [filterStale] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportSystems(filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options: any = {}): RequestArgs {
+            const localVarPath = `/api/patch/v1/export/systems`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication RhIdentity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? configuration.apiKey("x-rh-identity")
+                    : configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (filterId !== undefined) {
+                localVarQueryParameter['filter[id]'] = filterId;
+            }
+
+            if (filterDisplayName !== undefined) {
+                localVarQueryParameter['filter[display_name]'] = filterDisplayName;
+            }
+
+            if (filterLastEvaluation !== undefined) {
+                localVarQueryParameter['filter[last_evaluation]'] = filterLastEvaluation;
+            }
+
+            if (filterLastUpload !== undefined) {
+                localVarQueryParameter['filter[last_upload]'] = filterLastUpload;
+            }
+
+            if (filterRhsaCount !== undefined) {
+                localVarQueryParameter['filter[rhsa_count]'] = filterRhsaCount;
+            }
+
+            if (filterRhbaCount !== undefined) {
+                localVarQueryParameter['filter[rhba_count]'] = filterRhbaCount;
+            }
+
+            if (filterRheaCount !== undefined) {
+                localVarQueryParameter['filter[rhea_count]'] = filterRheaCount;
+            }
+
+            if (filterEnabled !== undefined) {
+                localVarQueryParameter['filter[enabled]'] = filterEnabled;
+            }
+
+            if (filterStale !== undefined) {
+                localVarQueryParameter['filter[stale]'] = filterStale;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Show me all applicable advisories for all my systems
          * @summary Show me all applicable advisories for all my systems
          * @param {number} [limit] Limit for paging, set -1 to return all
@@ -772,7 +1031,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} advisoryId Advisory ID
          * @param {number} [limit] Limit for paging, set -1 to return all
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale'} [sort] Sort field
+         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -780,12 +1039,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [filterRhsaCount] Filter
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterEnabled] Filter
          * @param {string} [filterStale] Filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options: any = {}): RequestArgs {
+        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options: any = {}): RequestArgs {
             // verify required parameter 'advisoryId' is not null or undefined
             if (advisoryId === null || advisoryId === undefined) {
                 throw new RequiredError('advisoryId','Required parameter advisoryId was null or undefined when calling listAdvisorySystems.');
@@ -847,10 +1105,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (filterRheaCount !== undefined) {
                 localVarQueryParameter['filter[rhea_count]'] = filterRheaCount;
-            }
-
-            if (filterEnabled !== undefined) {
-                localVarQueryParameter['filter[enabled]'] = filterEnabled;
             }
 
             if (filterStale !== undefined) {
@@ -969,7 +1223,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @summary Show me all my systems
          * @param {number} [limit] Limit for paging, set -1 to return all
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale'} [sort] Sort field
+         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -977,12 +1231,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [filterRhsaCount] Filter
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterEnabled] Filter
          * @param {string} [filterStale] Filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options: any = {}): RequestArgs {
+        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options: any = {}): RequestArgs {
             const localVarPath = `/api/patch/v1/systems`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1039,10 +1292,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (filterRheaCount !== undefined) {
                 localVarQueryParameter['filter[rhea_count]'] = filterRheaCount;
-            }
-
-            if (filterEnabled !== undefined) {
-                localVarQueryParameter['filter[enabled]'] = filterEnabled;
             }
 
             if (filterStale !== undefined) {
@@ -1114,6 +1363,49 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Export applicable advisories for all my systems
+         * @summary Export applicable advisories for all my systems
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryType] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {string} [filterApplicableSystems] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportAdvisories(search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, filterApplicableSystems?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersAdvisoryInlineItem>> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).exportAdvisories(search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, filterApplicableSystems, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Export systems for my account
+         * @summary Export systems for my account
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterLastEvaluation] Filter
+         * @param {string} [filterLastUpload] Filter
+         * @param {string} [filterRhsaCount] Filter
+         * @param {string} [filterRhbaCount] Filter
+         * @param {string} [filterRheaCount] Filter
+         * @param {string} [filterEnabled] Filter
+         * @param {string} [filterStale] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportSystems(filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersSystemInlineItem>> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).exportSystems(filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Show me all applicable advisories for all my systems
          * @summary Show me all applicable advisories for all my systems
          * @param {number} [limit] Limit for paging, set -1 to return all
@@ -1143,7 +1435,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} advisoryId Advisory ID
          * @param {number} [limit] Limit for paging, set -1 to return all
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale'} [sort] Sort field
+         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -1151,13 +1443,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [filterRhsaCount] Filter
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterEnabled] Filter
          * @param {string} [filterStale] Filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisorySystemsResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options);
+        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisorySystemsResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1192,7 +1483,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @summary Show me all my systems
          * @param {number} [limit] Limit for paging, set -1 to return all
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale'} [sort] Sort field
+         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -1200,13 +1491,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [filterRhsaCount] Filter
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterEnabled] Filter
          * @param {string} [filterStale] Filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemsResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSystems(limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options);
+        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemsResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSystems(limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1252,6 +1542,41 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).detailSystem(inventoryId, options)(axios, basePath);
         },
         /**
+         * Export applicable advisories for all my systems
+         * @summary Export applicable advisories for all my systems
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryType] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {string} [filterApplicableSystems] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportAdvisories(search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, filterApplicableSystems?: string, options?: any): AxiosPromise<Array<ControllersAdvisoryInlineItem>> {
+            return DefaultApiFp(configuration).exportAdvisories(search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, filterApplicableSystems, options)(axios, basePath);
+        },
+        /**
+         * Export systems for my account
+         * @summary Export systems for my account
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterLastEvaluation] Filter
+         * @param {string} [filterLastUpload] Filter
+         * @param {string} [filterRhsaCount] Filter
+         * @param {string} [filterRhbaCount] Filter
+         * @param {string} [filterRheaCount] Filter
+         * @param {string} [filterEnabled] Filter
+         * @param {string} [filterStale] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportSystems(filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options?: any): AxiosPromise<Array<ControllersSystemInlineItem>> {
+            return DefaultApiFp(configuration).exportSystems(filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options)(axios, basePath);
+        },
+        /**
          * Show me all applicable advisories for all my systems
          * @summary Show me all applicable advisories for all my systems
          * @param {number} [limit] Limit for paging, set -1 to return all
@@ -1277,7 +1602,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} advisoryId Advisory ID
          * @param {number} [limit] Limit for paging, set -1 to return all
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale'} [sort] Sort field
+         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -1285,13 +1610,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [filterRhsaCount] Filter
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterEnabled] Filter
          * @param {string} [filterStale] Filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options?: any): AxiosPromise<ControllersAdvisorySystemsResponse> {
-            return DefaultApiFp(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options)(axios, basePath);
+        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any): AxiosPromise<ControllersAdvisorySystemsResponse> {
+            return DefaultApiFp(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options)(axios, basePath);
         },
         /**
          * Show me advisories for a system by given inventory id
@@ -1318,7 +1642,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @summary Show me all my systems
          * @param {number} [limit] Limit for paging, set -1 to return all
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale'} [sort] Sort field
+         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -1326,13 +1650,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [filterRhsaCount] Filter
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterEnabled] Filter
          * @param {string} [filterStale] Filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options?: any): AxiosPromise<ControllersSystemsResponse> {
-            return DefaultApiFp(configuration).listSystems(limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options)(axios, basePath);
+        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any): AxiosPromise<ControllersSystemsResponse> {
+            return DefaultApiFp(configuration).listSystems(limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options)(axios, basePath);
         },
     };
 };
@@ -1381,6 +1704,45 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Export applicable advisories for all my systems
+     * @summary Export applicable advisories for all my systems
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterDescription] Filter
+     * @param {string} [filterPublicDate] Filter
+     * @param {string} [filterSynopsis] Filter
+     * @param {string} [filterAdvisoryType] Filter
+     * @param {string} [filterSeverity] Filter
+     * @param {string} [filterApplicableSystems] Filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public exportAdvisories(search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, filterApplicableSystems?: string, options?: any) {
+        return DefaultApiFp(this.configuration).exportAdvisories(search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, filterApplicableSystems, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Export systems for my account
+     * @summary Export systems for my account
+     * @param {string} [filterId] Filter
+     * @param {string} [filterDisplayName] Filter
+     * @param {string} [filterLastEvaluation] Filter
+     * @param {string} [filterLastUpload] Filter
+     * @param {string} [filterRhsaCount] Filter
+     * @param {string} [filterRhbaCount] Filter
+     * @param {string} [filterRheaCount] Filter
+     * @param {string} [filterEnabled] Filter
+     * @param {string} [filterStale] Filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public exportSystems(filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options?: any) {
+        return DefaultApiFp(this.configuration).exportSystems(filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Show me all applicable advisories for all my systems
      * @summary Show me all applicable advisories for all my systems
      * @param {number} [limit] Limit for paging, set -1 to return all
@@ -1408,7 +1770,7 @@ export class DefaultApi extends BaseAPI {
      * @param {string} advisoryId Advisory ID
      * @param {number} [limit] Limit for paging, set -1 to return all
      * @param {number} [offset] Offset for paging
-     * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale'} [sort] Sort field
+     * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
      * @param {string} [filterId] Filter
      * @param {string} [filterDisplayName] Filter
      * @param {string} [filterLastEvaluation] Filter
@@ -1416,14 +1778,13 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [filterRhsaCount] Filter
      * @param {string} [filterRhbaCount] Filter
      * @param {string} [filterRheaCount] Filter
-     * @param {string} [filterEnabled] Filter
      * @param {string} [filterStale] Filter
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listAdvisorySystems(advisoryId, limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options)(this.axios, this.basePath);
+    public listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any) {
+        return DefaultApiFp(this.configuration).listAdvisorySystems(advisoryId, limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1453,7 +1814,7 @@ export class DefaultApi extends BaseAPI {
      * @summary Show me all my systems
      * @param {number} [limit] Limit for paging, set -1 to return all
      * @param {number} [offset] Offset for paging
-     * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale'} [sort] Sort field
+     * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
      * @param {string} [filterId] Filter
      * @param {string} [filterDisplayName] Filter
      * @param {string} [filterLastEvaluation] Filter
@@ -1461,14 +1822,13 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [filterRhsaCount] Filter
      * @param {string} [filterRhbaCount] Filter
      * @param {string} [filterRheaCount] Filter
-     * @param {string} [filterEnabled] Filter
      * @param {string} [filterStale] Filter
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'enabled' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listSystems(limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options)(this.axios, this.basePath);
+    public listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any) {
+        return DefaultApiFp(this.configuration).listSystems(limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options)(this.axios, this.basePath);
     }
 
 }

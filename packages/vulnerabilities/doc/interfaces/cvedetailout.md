@@ -22,6 +22,6 @@
 
 • **data**? : *[CveDetailOutData](cvedetailoutdata.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L122)*
+*Defined in [packages/vulnerabilities/api.ts:147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L147)*
 
 **`memberof`** CveDetailOut

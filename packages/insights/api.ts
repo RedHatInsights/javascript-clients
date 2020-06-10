@@ -1079,12 +1079,6 @@ export interface Stats {
 export interface System {
     /**
      *
-     * @type {number}
-     * @memberof System
-     */
-    hits?: number;
-    /**
-     *
      * @type {string}
      * @memberof System
      */
@@ -1107,6 +1101,36 @@ export interface System {
      * @memberof System
      */
     stale_at: string;
+    /**
+     *
+     * @type {number}
+     * @memberof System
+     */
+    hits?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof System
+     */
+    critical_hits?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof System
+     */
+    important_hits?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof System
+     */
+    moderate_hits?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof System
+     */
+    low_hits?: number;
 }
 /**
  *
@@ -1889,7 +1913,7 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
         },
         /**
          * The accepted content type is not required.
-         * @summary Supply the hits list in CSV format.
+         * @summary Supply the list output in CSV format.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -1954,7 +1978,47 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
         },
         /**
          * The accepted content type is not required.
-         * @summary Supply the hits list in JSON format.
+         * @summary Supply the list output in CSV format.
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportListCsv_1(displayName?: string, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', options: any = {}): RequestArgs {
+            const localVarPath = `/export/systems.csv`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (displayName !== undefined) {
+                localVarQueryParameter['display_name'] = displayName;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * The accepted content type is not required.
+         * @summary Supply the list output in JSON format.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2017,6 +2081,86 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * The accepted content type is not required.
+         * @summary Supply the list output in JSON format.
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportListJson_2(displayName?: string, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', options: any = {}): RequestArgs {
+            const localVarPath = `/export/systems.json`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (displayName !== undefined) {
+                localVarQueryParameter['display_name'] = displayName;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Systems can be sorted and filtered by display name.
+         * @summary List of systems with details and hit counts.
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportSystemsList(displayName?: string, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', options: any = {}): RequestArgs {
+            const localVarPath = `/export/systems/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (displayName !== undefined) {
+                localVarQueryParameter['display_name'] = displayName;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -2048,7 +2192,7 @@ export const ExportApiFp = function(configuration?: Configuration) {
         },
         /**
          * The accepted content type is not required.
-         * @summary Supply the hits list in CSV format.
+         * @summary Supply the list output in CSV format.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2068,7 +2212,22 @@ export const ExportApiFp = function(configuration?: Configuration) {
         },
         /**
          * The accepted content type is not required.
-         * @summary Supply the hits list in JSON format.
+         * @summary Supply the list output in CSV format.
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportListCsv_1(displayName?: string, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
+            const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportListCsv_1(displayName, sort, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * The accepted content type is not required.
+         * @summary Supply the list output in JSON format.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2081,6 +2240,36 @@ export const ExportApiFp = function(configuration?: Configuration) {
          */
         exportListJson(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse2001>> {
             const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportListJson(category, impact, likelihood, resRisk, text, totalRisk, tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * The accepted content type is not required.
+         * @summary Supply the list output in JSON format.
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportListJson_2(displayName?: string, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<System>> {
+            const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportListJson_2(displayName, sort, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Systems can be sorted and filtered by display name.
+         * @summary List of systems with details and hit counts.
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportSystemsList(displayName?: string, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<System>> {
+            const localVarAxiosArgs = ExportApiAxiosParamCreator(configuration).exportSystemsList(displayName, sort, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2113,7 +2302,7 @@ export const ExportApiFactory = function (configuration?: Configuration, basePat
         },
         /**
          * The accepted content type is not required.
-         * @summary Supply the hits list in CSV format.
+         * @summary Supply the list output in CSV format.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2129,7 +2318,18 @@ export const ExportApiFactory = function (configuration?: Configuration, basePat
         },
         /**
          * The accepted content type is not required.
-         * @summary Supply the hits list in JSON format.
+         * @summary Supply the list output in CSV format.
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportListCsv_1(displayName?: string, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', options?: any): AxiosPromise<void> {
+            return ExportApiFp(configuration).exportListCsv_1(displayName, sort, options)(axios, basePath);
+        },
+        /**
+         * The accepted content type is not required.
+         * @summary Supply the list output in JSON format.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
          * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2142,6 +2342,28 @@ export const ExportApiFactory = function (configuration?: Configuration, basePat
          */
         exportListJson(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options?: any): AxiosPromise<Array<InlineResponse2001>> {
             return ExportApiFp(configuration).exportListJson(category, impact, likelihood, resRisk, text, totalRisk, tags, options)(axios, basePath);
+        },
+        /**
+         * The accepted content type is not required.
+         * @summary Supply the list output in JSON format.
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportListJson_2(displayName?: string, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', options?: any): AxiosPromise<Array<System>> {
+            return ExportApiFp(configuration).exportListJson_2(displayName, sort, options)(axios, basePath);
+        },
+        /**
+         * Systems can be sorted and filtered by display name.
+         * @summary List of systems with details and hit counts.
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportSystemsList(displayName?: string, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', options?: any): AxiosPromise<Array<System>> {
+            return ExportApiFp(configuration).exportSystemsList(displayName, sort, options)(axios, basePath);
         },
     };
 };
@@ -2173,7 +2395,7 @@ export class ExportApi extends BaseAPI {
 
     /**
      * The accepted content type is not required.
-     * @summary Supply the hits list in CSV format.
+     * @summary Supply the list output in CSV format.
      * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
      * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
      * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2191,7 +2413,20 @@ export class ExportApi extends BaseAPI {
 
     /**
      * The accepted content type is not required.
-     * @summary Supply the hits list in JSON format.
+     * @summary Supply the list output in CSV format.
+     * @param {string} [displayName] Display systems with this text in their display_name
+     * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportApi
+     */
+    public exportListCsv_1(displayName?: string, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', options?: any) {
+        return ExportApiFp(this.configuration).exportListCsv_1(displayName, sort, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * The accepted content type is not required.
+     * @summary Supply the list output in JSON format.
      * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
      * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
      * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
@@ -2205,6 +2440,32 @@ export class ExportApi extends BaseAPI {
      */
     public exportListJson(category?: Array<1 | 2 | 3 | 4>, impact?: Array<1 | 2 | 3 | 4>, likelihood?: Array<1 | 2 | 3 | 4>, resRisk?: Array<1 | 2 | 3 | 4>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, options?: any) {
         return ExportApiFp(this.configuration).exportListJson(category, impact, likelihood, resRisk, text, totalRisk, tags, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * The accepted content type is not required.
+     * @summary Supply the list output in JSON format.
+     * @param {string} [displayName] Display systems with this text in their display_name
+     * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportApi
+     */
+    public exportListJson_2(displayName?: string, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', options?: any) {
+        return ExportApiFp(this.configuration).exportListJson_2(displayName, sort, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Systems can be sorted and filtered by display name.
+     * @summary List of systems with details and hit counts.
+     * @param {string} [displayName] Display systems with this text in their display_name
+     * @param {'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name'} [sort] Order by this field
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportApi
+     */
+    public exportSystemsList(displayName?: string, sort?: 'hits' | 'last_seen' | 'display_name' | '-hits' | '-last_seen' | '-display_name', options?: any) {
+        return ExportApiFp(this.configuration).exportSystemsList(displayName, sort, options)(this.axios, this.basePath);
     }
 
 }
@@ -3243,6 +3504,7 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {boolean} [impacting] Display only rules that are impacting systems currently
          * @param {boolean} [incident] Display only rules that cause an incident
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
          * @param {boolean} [reportsShown] Display rules where reports are shown or not
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
          * @param {Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>} [sort] Order by this field
@@ -3253,7 +3515,7 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options: any = {}): RequestArgs {
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options: any = {}): RequestArgs {
             const localVarPath = `/rule/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3298,6 +3560,10 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (likelihood) {
                 localVarQueryParameter['likelihood'] = likelihood.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (reboot !== undefined) {
+                localVarQueryParameter['reboot'] = reboot;
             }
 
             if (reportsShown !== undefined) {
@@ -3509,6 +3775,7 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * @param {boolean} [impacting] Display only rules that are impacting systems currently
          * @param {boolean} [incident] Display only rules that cause an incident
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
          * @param {boolean} [reportsShown] Display rules where reports are shown or not
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
          * @param {Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>} [sort] Order by this field
@@ -3519,8 +3786,8 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004> {
-            const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleList(limit, offset, category, hasTag, tags, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, hasPlaybook, options);
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004> {
+            const localVarAxiosArgs = RuleApiAxiosParamCreator(configuration).ruleList(limit, offset, category, hasTag, tags, impact, impacting, incident, likelihood, reboot, reportsShown, resRisk, sort, text, topic, totalRisk, hasPlaybook, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3604,6 +3871,7 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
          * @param {boolean} [impacting] Display only rules that are impacting systems currently
          * @param {boolean} [incident] Display only rules that cause an incident
          * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
          * @param {boolean} [reportsShown] Display rules where reports are shown or not
          * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
          * @param {Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>} [sort] Order by this field
@@ -3614,8 +3882,8 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any): AxiosPromise<InlineResponse2004> {
-            return RuleApiFp(configuration).ruleList(limit, offset, category, hasTag, tags, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, hasPlaybook, options)(axios, basePath);
+        ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any): AxiosPromise<InlineResponse2004> {
+            return RuleApiFp(configuration).ruleList(limit, offset, category, hasTag, tags, impact, impacting, incident, likelihood, reboot, reportsShown, resRisk, sort, text, topic, totalRisk, hasPlaybook, options)(axios, basePath);
         },
         /**
          * This includes the account-relevant details such as number of impacted systems and host acknowledgements.
@@ -3686,6 +3954,7 @@ export class RuleApi extends BaseAPI {
      * @param {boolean} [impacting] Display only rules that are impacting systems currently
      * @param {boolean} [incident] Display only rules that cause an incident
      * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+     * @param {boolean} [reboot] Display rules that require a reboot to fix
      * @param {boolean} [reportsShown] Display rules where reports are shown or not
      * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
      * @param {Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>} [sort] Order by this field
@@ -3697,8 +3966,8 @@ export class RuleApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RuleApi
      */
-    public ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any) {
-        return RuleApiFp(this.configuration).ruleList(limit, offset, category, hasTag, tags, impact, impacting, incident, likelihood, reportsShown, resRisk, sort, text, topic, totalRisk, hasPlaybook, options)(this.axios, this.basePath);
+    public ruleList(limit?: number, offset?: number, category?: Array<1 | 2 | 3 | 4>, hasTag?: Array<string>, tags?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, sort?: Array<'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'rule_id' | 'total_risk' | 'resolution_risk' | '-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-rule_id' | '-total_risk' | '-resolution_risk'>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, hasPlaybook?: boolean, options?: any) {
+        return RuleApiFp(this.configuration).ruleList(limit, offset, category, hasTag, tags, impact, impacting, incident, likelihood, reboot, reportsShown, resRisk, sort, text, topic, totalRisk, hasPlaybook, options)(this.axios, this.basePath);
     }
 
     /**

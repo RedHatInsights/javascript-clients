@@ -28,7 +28,10 @@ ExportApi - object-oriented interface
 
 * [exportHitsList](exportapi.md#exporthitslist)
 * [exportListCsv](exportapi.md#exportlistcsv)
+* [exportListCsv_1](exportapi.md#exportlistcsv_1)
 * [exportListJson](exportapi.md#exportlistjson)
+* [exportListJson_2](exportapi.md#exportlistjson_2)
+* [exportSystemsList](exportapi.md#exportsystemslist)
 
 ## Constructors
 
@@ -86,7 +89,7 @@ ___
 
 ▸ **exportHitsList**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)[]›*
 
-*Defined in [packages/insights/api.ts:2170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2170)*
+*Defined in [packages/insights/api.ts:2392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2392)*
 
 We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
 
@@ -117,11 +120,11 @@ ___
 
 ▸ **exportListCsv**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/insights/api.ts:2188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2188)*
+*Defined in [packages/insights/api.ts:2410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2410)*
 
 The accepted content type is not required.
 
-**`summary`** Supply the hits list in CSV format.
+**`summary`** Supply the list output in CSV format.
 
 **`throws`** {RequiredError}
 
@@ -144,15 +147,41 @@ Name | Type |
 
 ___
 
+###  exportListCsv_1
+
+▸ **exportListCsv_1**(`displayName?`: string, `sort?`: "hits" | "last_seen" | "display_name" | "-hits" | "-last_seen" | "-display_name", `options?`: any): *AxiosPromise‹void›*
+
+*Defined in [packages/insights/api.ts:2423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2423)*
+
+The accepted content type is not required.
+
+**`summary`** Supply the list output in CSV format.
+
+**`throws`** {RequiredError}
+
+**`memberof`** ExportApi
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`displayName?` | string |
+`sort?` | "hits" &#124; "last_seen" &#124; "display_name" &#124; "-hits" &#124; "-last_seen" &#124; "-display_name" |
+`options?` | any |
+
+**Returns:** *AxiosPromise‹void›*
+
+___
+
 ###  exportListJson
 
 ▸ **exportListJson**(`category?`: Array‹1 | 2 | 3 | 4›, `impact?`: Array‹1 | 2 | 3 | 4›, `likelihood?`: Array‹1 | 2 | 3 | 4›, `resRisk?`: Array‹1 | 2 | 3 | 4›, `text?`: string, `totalRisk?`: Array‹1 | 2 | 3 | 4›, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)[]›*
 
-*Defined in [packages/insights/api.ts:2206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2206)*
+*Defined in [packages/insights/api.ts:2441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2441)*
 
 The accepted content type is not required.
 
-**`summary`** Supply the hits list in JSON format.
+**`summary`** Supply the list output in JSON format.
 
 **`throws`** {RequiredError}
 
@@ -172,3 +201,55 @@ Name | Type |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[InlineResponse2001](../interfaces/inlineresponse2001.md)[]›*
+
+___
+
+###  exportListJson_2
+
+▸ **exportListJson_2**(`displayName?`: string, `sort?`: "hits" | "last_seen" | "display_name" | "-hits" | "-last_seen" | "-display_name", `options?`: any): *AxiosPromise‹[System](../interfaces/system.md)[]›*
+
+*Defined in [packages/insights/api.ts:2454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2454)*
+
+The accepted content type is not required.
+
+**`summary`** Supply the list output in JSON format.
+
+**`throws`** {RequiredError}
+
+**`memberof`** ExportApi
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`displayName?` | string |
+`sort?` | "hits" &#124; "last_seen" &#124; "display_name" &#124; "-hits" &#124; "-last_seen" &#124; "-display_name" |
+`options?` | any |
+
+**Returns:** *AxiosPromise‹[System](../interfaces/system.md)[]›*
+
+___
+
+###  exportSystemsList
+
+▸ **exportSystemsList**(`displayName?`: string, `sort?`: "hits" | "last_seen" | "display_name" | "-hits" | "-last_seen" | "-display_name", `options?`: any): *AxiosPromise‹[System](../interfaces/system.md)[]›*
+
+*Defined in [packages/insights/api.ts:2467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2467)*
+
+Systems can be sorted and filtered by display name.
+
+**`summary`** List of systems with details and hit counts.
+
+**`throws`** {RequiredError}
+
+**`memberof`** ExportApi
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`displayName?` | string |
+`sort?` | "hits" &#124; "last_seen" &#124; "display_name" &#124; "-hits" &#124; "-last_seen" &#124; "-display_name" |
+`options?` | any |
+
+**Returns:** *AxiosPromise‹[System](../interfaces/system.md)[]›*

@@ -88,7 +88,7 @@ ___
 
 ▸ **ackCreate**(`ackInput`: [AckInput](../interfaces/ackinput.md), `options?`: any): *AxiosPromise‹[Ack](../interfaces/ack.md)›*
 
-*Defined in [packages/insights/api.ts:1762](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1762)*
+*Defined in [packages/insights/api.ts:1786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1786)*
 
 If there\'s already an acknowledgement of this rule by this account, then return that.  Otherwise, a new ack is created.
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **ackDelete**(`ruleId`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/insights/api.ts:1774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1774)*
+*Defined in [packages/insights/api.ts:1798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1798)*
 
 If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.
 
@@ -138,7 +138,7 @@ ___
 
 ▸ **ackList**(`limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[InlineResponse200](../interfaces/inlineresponse200.md)›*
 
-*Defined in [packages/insights/api.ts:1787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1787)*
+*Defined in [packages/insights/api.ts:1811](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1811)*
 
 Will return an empty list if this account has no acks.
 
@@ -164,7 +164,7 @@ ___
 
 ▸ **ackRead**(`ruleId`: string, `options?`: any): *AxiosPromise‹[Ack](../interfaces/ack.md)›*
 
-*Defined in [packages/insights/api.ts:1799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1799)*
+*Defined in [packages/insights/api.ts:1823](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1823)*
 
 This view handles listing, retrieving, creating and deleting acks.  Acks are created and deleted by Insights rule ID, not by their own ack ID.
 
@@ -189,7 +189,7 @@ ___
 
 ▸ **ackUpdate**(`ruleId`: string, `ackJustification`: [AckJustification](../interfaces/ackjustification.md), `options?`: any): *AxiosPromise‹[Ack](../interfaces/ack.md)›*
 
-*Defined in [packages/insights/api.ts:1812](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1812)*
+*Defined in [packages/insights/api.ts:1836](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1836)*
 
 A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.
 

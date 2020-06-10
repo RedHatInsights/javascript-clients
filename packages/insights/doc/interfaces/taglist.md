@@ -22,6 +22,6 @@
 
 • **tags**: *Array‹string›*
 
-*Defined in [packages/insights/api.ts:1160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1160)*
+*Defined in [packages/insights/api.ts:1184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1184)*
 
 **`memberof`** TagList
