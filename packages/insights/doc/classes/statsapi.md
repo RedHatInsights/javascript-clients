@@ -88,7 +88,7 @@ ___
 
 ▸ **statsList**(`options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/insights/api.ts:4423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4423)*
+*Defined in [packages/insights/api.ts:4692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4692)*
 
 Copied sort-of from the APIRootView\'s `get` method.
 
@@ -112,7 +112,7 @@ ___
 
 ▸ **statsReports**(`tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[Stats](../interfaces/stats.md)›*
 
-*Defined in [packages/insights/api.ts:4435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4435)*
+*Defined in [packages/insights/api.ts:4704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4704)*
 
 Only current reports are considered.
 
@@ -137,7 +137,7 @@ ___
 
 ▸ **statsRules**(`tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[Stats](../interfaces/stats.md)›*
 
-*Defined in [packages/insights/api.ts:4447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4447)*
+*Defined in [packages/insights/api.ts:4716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4716)*
 
 Only current reports are considered.
 
@@ -162,7 +162,7 @@ ___
 
 ▸ **statsStaleHosts**(`tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[StaleSystemStats](../interfaces/stalesystemstats.md)›*
 
-*Defined in [packages/insights/api.ts:4459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4459)*
+*Defined in [packages/insights/api.ts:4728](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4728)*
 
 For historic reasons, \'stale\' refers to hosts that are being warned of being stale, and \'stale_warn\' refers to hosts that are being hidden from display.
 
@@ -187,7 +187,7 @@ ___
 
 ▸ **statsSystems**(`tags?`: Array‹string›, `options?`: any): *AxiosPromise‹[Stats](../interfaces/stats.md)›*
 
-*Defined in [packages/insights/api.ts:4471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4471)*
+*Defined in [packages/insights/api.ts:4740](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4740)*
 
 Only current reports are considered.
 

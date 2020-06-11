@@ -30,7 +30,7 @@
 
 • **associated_cves**: *Array‹string›*
 
-*Defined in [packages/vulnerabilities/api.ts:605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L605)*
+*Defined in [packages/vulnerabilities/api.ts:630](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L630)*
 
 List of CVEs associated with the rule.
 
@@ -42,7 +42,7 @@ ___
 
 • **change_risk**: *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L593)*
+*Defined in [packages/vulnerabilities/api.ts:618](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L618)*
 
 Indicates how likely remediation can change environment on the remediatied system.
 
@@ -54,7 +54,7 @@ ___
 
 • **description**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L563)*
+*Defined in [packages/vulnerabilities/api.ts:588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L588)*
 
 Description of the rule.
 
@@ -66,7 +66,7 @@ ___
 
 • **generic**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L575)*
+*Defined in [packages/vulnerabilities/api.ts:600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L600)*
 
 Generic information about the rule.
 
@@ -78,7 +78,7 @@ ___
 
 • **kbase_node_id**: *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L599)*
+*Defined in [packages/vulnerabilities/api.ts:624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L624)*
 
 ID of associated Red Hat knowledgebase article.
 
@@ -90,7 +90,7 @@ ___
 
 • **playbook_count**: *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L587)*
+*Defined in [packages/vulnerabilities/api.ts:612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L612)*
 
 Number of available Ansible playbooks for remediation/mitigation.
 
@@ -102,7 +102,7 @@ ___
 
 • **reboot_required**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/api.ts:581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L581)*
+*Defined in [packages/vulnerabilities/api.ts:606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L606)*
 
 Indicator whter reboot is required to mitigate vulnerability.
 
@@ -114,7 +114,7 @@ ___
 
 • **rule_id**: *string*
 
-*Defined in [packages/vulnerabilities/api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L557)*
+*Defined in [packages/vulnerabilities/api.ts:582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L582)*
 
 ID(s) of associated security rule(s).
 
@@ -126,7 +126,7 @@ ___
 
 • **summary**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L569)*
+*Defined in [packages/vulnerabilities/api.ts:594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L594)*
 
 Summary of the rule.
 

@@ -26,7 +26,7 @@
 
 • **filter**? : *object*
 
-*Defined in [packages/patch/api.ts:306](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L306)*
+*Defined in [packages/patch/api.ts:355](https://github.com/RedHatInsights/javascript-clients/blob/7cb8a69/packages/patch/api.ts#L355)*
 
 **`memberof`** ControllersListMeta
 
@@ -40,7 +40,7 @@ ___
 
 • **limit**? : *number*
 
-*Defined in [packages/patch/api.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L312)*
+*Defined in [packages/patch/api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/7cb8a69/packages/patch/api.ts#L361)*
 
 **`memberof`** ControllersListMeta
 
@@ -50,7 +50,7 @@ ___
 
 • **offset**? : *number*
 
-*Defined in [packages/patch/api.ts:318](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L318)*
+*Defined in [packages/patch/api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/7cb8a69/packages/patch/api.ts#L367)*
 
 **`memberof`** ControllersListMeta
 
@@ -60,7 +60,7 @@ ___
 
 • **sort**? : *Array‹string›*
 
-*Defined in [packages/patch/api.ts:324](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L324)*
+*Defined in [packages/patch/api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/7cb8a69/packages/patch/api.ts#L373)*
 
 **`memberof`** ControllersListMeta
 
@@ -70,6 +70,6 @@ ___
 
 • **total_items**? : *number*
 
-*Defined in [packages/patch/api.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/969a5fc/packages/patch/api.ts#L330)*
+*Defined in [packages/patch/api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/7cb8a69/packages/patch/api.ts#L379)*
 
 **`memberof`** ControllersListMeta

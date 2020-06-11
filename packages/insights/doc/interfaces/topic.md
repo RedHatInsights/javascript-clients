@@ -28,7 +28,7 @@
 
 • **description**: *string*
 
-*Defined in [packages/insights/api.ts:1185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1185)*
+*Defined in [packages/insights/api.ts:1209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1209)*
 
 **`memberof`** Topic
 
@@ -38,7 +38,7 @@ ___
 
 • **enabled**? : *boolean*
 
-*Defined in [packages/insights/api.ts:1203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1203)*
+*Defined in [packages/insights/api.ts:1227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1227)*
 
 **`memberof`** Topic
 
@@ -48,7 +48,7 @@ ___
 
 • **featured**? : *boolean*
 
-*Defined in [packages/insights/api.ts:1197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1197)*
+*Defined in [packages/insights/api.ts:1221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1221)*
 
 **`memberof`** Topic
 
@@ -58,7 +58,7 @@ ___
 
 • **impacted_systems_count**? : *number*
 
-*Defined in [packages/insights/api.ts:1209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1209)*
+*Defined in [packages/insights/api.ts:1233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1233)*
 
 **`memberof`** Topic
 
@@ -68,7 +68,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/insights/api.ts:1173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1173)*
+*Defined in [packages/insights/api.ts:1197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1197)*
 
 **`memberof`** Topic
 
@@ -78,7 +78,7 @@ ___
 
 • **slug**: *string*
 
-*Defined in [packages/insights/api.ts:1179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1179)*
+*Defined in [packages/insights/api.ts:1203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1203)*
 
 Rule topic slug
 
@@ -90,6 +90,6 @@ ___
 
 • **tag**: *string*
 
-*Defined in [packages/insights/api.ts:1191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1191)*
+*Defined in [packages/insights/api.ts:1215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1215)*
 
 **`memberof`** Topic

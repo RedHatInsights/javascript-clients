@@ -26,7 +26,7 @@
 
 • **last_evaluation**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1199)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1224)*
 
 Date of last evaluation.
 
@@ -38,7 +38,7 @@ ___
 
 • **last_upload**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1217)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1242)*
 
 Date of the latest upload of archive.
 
@@ -50,7 +50,7 @@ ___
 
 • **opt_out**: *boolean*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1211)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1236)*
 
 System opt out status.
 
@@ -62,7 +62,7 @@ ___
 
 • **rules_evaluation**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1205)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1230)*
 
 Date of last security rules evaluation.
 
@@ -74,7 +74,7 @@ ___
 
 • **stale**? : *boolean*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1223)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1248)*
 
 System stale status.
 

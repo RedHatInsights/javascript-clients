@@ -33,7 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^2.28.0",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
-    "lerna": "^3.20.2",
+    "lerna": "^3.22.1",
     "semantic-release": "^17.0.4",
     "typedoc": "^0.17.4",
     "typedoc-plugin-markdown": "^2.2.17",

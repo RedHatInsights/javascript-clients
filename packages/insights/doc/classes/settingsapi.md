@@ -85,7 +85,7 @@ ___
 
 ▸ **settingsCreate**(`settingsInput`: [SettingsInput](../interfaces/settingsinput.md), `options?`: any): *AxiosPromise‹[SettingsInput](../interfaces/settingsinput.md)›*
 
-*Defined in [packages/insights/api.ts:4076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4076)*
+*Defined in [packages/insights/api.ts:4345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4345)*
 
 The current account settings will be updated, or one will be created, with the
 
@@ -110,7 +110,7 @@ ___
 
 ▸ **settingsList**(`options?`: any): *AxiosPromise‹[SettingsDDF](../interfaces/settingsddf.md)[]›*
 
-*Defined in [packages/insights/api.ts:4087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4087)*
+*Defined in [packages/insights/api.ts:4356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4356)*
 
 This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
 
