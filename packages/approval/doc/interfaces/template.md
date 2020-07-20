@@ -27,7 +27,7 @@ The template to categorize workflows
 
 • **description**? : *string*
 
-*Defined in [packages/approval/api.ts:534](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L534)*
+*Defined in [packages/approval/api.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L563)*
 
 Describe the template with more details
 
@@ -39,7 +39,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/approval/api.ts:522](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L522)*
+*Defined in [packages/approval/api.ts:551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L551)*
 
 ID of the template
 
@@ -51,7 +51,7 @@ ___
 
 • **metadata**? : *object*
 
-*Defined in [packages/approval/api.ts:540](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L540)*
+*Defined in [packages/approval/api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L569)*
 
 JSON metadata about the template
 
@@ -63,7 +63,7 @@ ___
 
 • **title**? : *string*
 
-*Defined in [packages/approval/api.ts:528](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L528)*
+*Defined in [packages/approval/api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L557)*
 
 Name of the template
 

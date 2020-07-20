@@ -10,6 +10,8 @@
 
   ↳ [ActionApi](actionapi.md)
 
+  ↳ [DefaultApi](defaultapi.md)
+
   ↳ [GraphqlApi](graphqlapi.md)
 
   ↳ [RequestApi](requestapi.md)

@@ -217,10 +217,10 @@ export interface CreateHostIn {
     facts?: Array<FactSet>;
     /**
      *
-     * @type {SystemProfileIn}
+     * @type {SystemProfile}
      * @memberof CreateHostIn
      */
-    system_profile?: SystemProfileIn;
+    system_profile?: SystemProfile;
     /**
      * Timestamp from which the host is considered stale.
      * @type {string}
@@ -532,10 +532,10 @@ export interface HostSystemProfileOut {
     id?: string;
     /**
      *
-     * @type {SystemProfileIn}
+     * @type {SystemProfile}
      * @memberof HostSystemProfileOut
      */
-    system_profile?: SystemProfileIn;
+    system_profile?: SystemProfile;
 }
 /**
  * Representation of one installed product
@@ -656,6 +656,205 @@ export interface StructuredTag {
     value?: string | null;
 }
 /**
+ * Representation of the system profile fields
+ * @export
+ * @interface SystemProfile
+ */
+export interface SystemProfile {
+    /**
+     *
+     * @type {number}
+     * @memberof SystemProfile
+     */
+    number_of_cpus?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemProfile
+     */
+    number_of_sockets?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemProfile
+     */
+    cores_per_socket?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemProfile
+     */
+    system_memory_bytes?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    infrastructure_type?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    infrastructure_vendor?: string;
+    /**
+     *
+     * @type {Array<NetworkInterface>}
+     * @memberof SystemProfile
+     */
+    network_interfaces?: Array<NetworkInterface>;
+    /**
+     *
+     * @type {Array<DiskDevice>}
+     * @memberof SystemProfile
+     */
+    disk_devices?: Array<DiskDevice>;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    bios_vendor?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    bios_version?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    bios_release_date?: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof SystemProfile
+     */
+    cpu_flags?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    os_release?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    os_kernel_version?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    arch?: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof SystemProfile
+     */
+    kernel_modules?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    last_boot_time?: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof SystemProfile
+     */
+    running_processes?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    subscription_status?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    subscription_auto_attach?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemProfile
+     */
+    katello_agent_running?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemProfile
+     */
+    satellite_managed?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    cloud_provider?: string;
+    /**
+     *
+     * @type {Array<YumRepo>}
+     * @memberof SystemProfile
+     */
+    yum_repos?: Array<YumRepo>;
+    /**
+     *
+     * @type {Array<DnfModule>}
+     * @memberof SystemProfile
+     */
+    dnf_modules?: Array<DnfModule>;
+    /**
+     *
+     * @type {Array<InstalledProduct>}
+     * @memberof SystemProfile
+     */
+    installed_products?: Array<InstalledProduct>;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    insights_client_version?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    insights_egg_version?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    captured_date?: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof SystemProfile
+     */
+    installed_packages?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof SystemProfile
+     */
+    installed_services?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof SystemProfile
+     */
+    enabled_services?: Array<string>;
+}
+/**
  * Structure of the output of the host system profile query
  * @export
  * @interface SystemProfileByHostOut
@@ -691,205 +890,6 @@ export interface SystemProfileByHostOut {
      * @memberof SystemProfileByHostOut
      */
     results: Array<HostSystemProfileOut>;
-}
-/**
- * Representation of the system profile fields
- * @export
- * @interface SystemProfileIn
- */
-export interface SystemProfileIn {
-    /**
-     *
-     * @type {number}
-     * @memberof SystemProfileIn
-     */
-    number_of_cpus?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof SystemProfileIn
-     */
-    number_of_sockets?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof SystemProfileIn
-     */
-    cores_per_socket?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof SystemProfileIn
-     */
-    system_memory_bytes?: number;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    infrastructure_type?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    infrastructure_vendor?: string;
-    /**
-     *
-     * @type {Array<NetworkInterface>}
-     * @memberof SystemProfileIn
-     */
-    network_interfaces?: Array<NetworkInterface>;
-    /**
-     *
-     * @type {Array<DiskDevice>}
-     * @memberof SystemProfileIn
-     */
-    disk_devices?: Array<DiskDevice>;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    bios_vendor?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    bios_version?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    bios_release_date?: string;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof SystemProfileIn
-     */
-    cpu_flags?: Array<string>;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    os_release?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    os_kernel_version?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    arch?: string;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof SystemProfileIn
-     */
-    kernel_modules?: Array<string>;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    last_boot_time?: string;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof SystemProfileIn
-     */
-    running_processes?: Array<string>;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    subscription_status?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    subscription_auto_attach?: string;
-    /**
-     *
-     * @type {boolean}
-     * @memberof SystemProfileIn
-     */
-    katello_agent_running?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof SystemProfileIn
-     */
-    satellite_managed?: boolean;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    cloud_provider?: string;
-    /**
-     *
-     * @type {Array<YumRepo>}
-     * @memberof SystemProfileIn
-     */
-    yum_repos?: Array<YumRepo>;
-    /**
-     *
-     * @type {Array<DnfModule>}
-     * @memberof SystemProfileIn
-     */
-    dnf_modules?: Array<DnfModule>;
-    /**
-     *
-     * @type {Array<InstalledProduct>}
-     * @memberof SystemProfileIn
-     */
-    installed_products?: Array<InstalledProduct>;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    insights_client_version?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    insights_egg_version?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemProfileIn
-     */
-    captured_date?: string;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof SystemProfileIn
-     */
-    installed_packages?: Array<string>;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof SystemProfileIn
-     */
-    installed_services?: Array<string>;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof SystemProfileIn
-     */
-    enabled_services?: Array<string>;
 }
 /**
  *
@@ -1010,7 +1010,7 @@ export interface YumRepo {
 export const HostsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account.
+         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
          * @summary Create/update multiple host and add them to the host list
          * @param {Array<CreateHostIn>} createHostIn A list of host objects to be added to the host list
          * @param {*} [options] Override http request option.
@@ -1679,7 +1679,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 export const HostsApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account.
+         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
          * @summary Create/update multiple host and add them to the host list
          * @param {Array<CreateHostIn>} createHostIn A list of host objects to be added to the host list
          * @param {*} [options] Override http request option.
@@ -1867,7 +1867,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
 export const HostsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account.
+         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
          * @summary Create/update multiple host and add them to the host list
          * @param {Array<CreateHostIn>} createHostIn A list of host objects to be added to the host list
          * @param {*} [options] Override http request option.
@@ -2016,7 +2016,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
  */
 export class HostsApi extends BaseAPI {
     /**
-     * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account.
+     * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
      * @summary Create/update multiple host and add them to the host list
      * @param {Array<CreateHostIn>} createHostIn A list of host objects to be added to the host list
      * @param {*} [options] Override http request option.

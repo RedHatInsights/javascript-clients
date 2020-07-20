@@ -27,7 +27,7 @@ Input parameters for approval request object
 
 • **content**: *object*
 
-*Defined in [packages/approval/api.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L440)*
+*Defined in [packages/approval/api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L469)*
 
 Content of the request in JSON format
 
@@ -39,7 +39,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/approval/api.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L434)*
+*Defined in [packages/approval/api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L463)*
 
 Describe the request in more details
 
@@ -51,7 +51,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/approval/api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L428)*
+*Defined in [packages/approval/api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L457)*
 
 Name of the the request to be created
 
@@ -63,7 +63,7 @@ ___
 
 • **tag_resources**: *Array‹[TagResource](tagresource.md)›*
 
-*Defined in [packages/approval/api.ts:446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L446)*
+*Defined in [packages/approval/api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L475)*
 
 An array of resource tags that determine the workflows for the request
 

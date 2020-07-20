@@ -95,7 +95,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:2026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2026)*
 
-Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account.
+Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
 
 **`summary`** Create/update multiple host and add them to the host list
 

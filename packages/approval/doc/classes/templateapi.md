@@ -85,7 +85,7 @@ ___
 
 ▸ **listTemplates**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[TemplateCollection](../interfaces/templatecollection.md)›*
 
-*Defined in [packages/approval/api.ts:1709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1709)*
+*Defined in [packages/approval/api.ts:1772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1772)*
 
 Find all templates, available to admin only
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **showTemplate**(`id`: string, `options?`: any): *AxiosPromise‹[Template](../interfaces/template.md)›*
 
-*Defined in [packages/approval/api.ts:1721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1721)*
+*Defined in [packages/approval/api.ts:1784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1784)*
 
 Find a template by its id, available to admin only
 
