@@ -26,7 +26,7 @@ Resource with tags
 
 • **app_name**: *string*
 
-*Defined in [packages/approval/api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L497)*
+*Defined in [packages/approval/api.ts:526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L526)*
 
 Name of the app that the resource belongs to
 
@@ -38,7 +38,7 @@ ___
 
 • **object_type**: *string*
 
-*Defined in [packages/approval/api.ts:503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L503)*
+*Defined in [packages/approval/api.ts:532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L532)*
 
 The type of the resource
 
@@ -50,7 +50,7 @@ ___
 
 • **tags**: *Array‹[Tag](tag.md)›*
 
-*Defined in [packages/approval/api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L509)*
+*Defined in [packages/approval/api.ts:538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L538)*
 
 An array of tags that the resource is tagged with
 

@@ -33,7 +33,7 @@ ___
 
 ### `Optional` system_profile
 
-• **system_profile**? : *[SystemProfileIn](systemprofilein.md)*
+• **system_profile**? : *[SystemProfile](systemprofile.md)*
 
 *Defined in [packages/host-inventory/api.ts:538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L538)*
 

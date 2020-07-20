@@ -88,7 +88,7 @@ ___
 
 ▸ **createRequest**(`requestIn`: [RequestIn](../interfaces/requestin.md), `options?`: any): *AxiosPromise‹[Request](../interfaces/request.md)›*
 
-*Defined in [packages/approval/api.ts:1452](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1452)*
+*Defined in [packages/approval/api.ts:1527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1527)*
 
 Create an approval request using given parameters, available to everyone
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **listRequests**(`xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
 
-*Defined in [packages/approval/api.ts:1468](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1468)*
+*Defined in [packages/approval/api.ts:1543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1543)*
 
 The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
 
@@ -142,7 +142,7 @@ ___
 
 ▸ **listRequestsByRequest**(`requestId`: string, `xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `options?`: any): *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
 
-*Defined in [packages/approval/api.ts:1481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1481)*
+*Defined in [packages/approval/api.ts:1556](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1556)*
 
 Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
 
@@ -168,7 +168,7 @@ ___
 
 ▸ **showRequest**(`id`: string, `options?`: any): *AxiosPromise‹[Request](../interfaces/request.md)›*
 
-*Defined in [packages/approval/api.ts:1493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1493)*
+*Defined in [packages/approval/api.ts:1568](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1568)*
 
 Find an approval request by its id, available to anyone who can access the request
 
@@ -193,7 +193,7 @@ ___
 
 ▸ **showRequestContent**(`requestId`: string, `options?`: any): *AxiosPromise‹object›*
 
-*Defined in [packages/approval/api.ts:1505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1505)*
+*Defined in [packages/approval/api.ts:1580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1580)*
 
 Find the request content based on a request id, available to everyone
 

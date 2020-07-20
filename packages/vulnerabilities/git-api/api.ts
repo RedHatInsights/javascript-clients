@@ -448,6 +448,12 @@ export interface ExecutiveReportCvesBySeverity {
      * @memberof ExecutiveReportCvesBySeverity
      */
     _8to10: ExecutiveReportCvesBySeverity8to10;
+    /**
+     *
+     * @type {ExecutiveReportCvesBySeverityNa}
+     * @memberof ExecutiveReportCvesBySeverity
+     */
+    na: ExecutiveReportCvesBySeverityNa;
 }
 /**
  *
@@ -503,6 +509,25 @@ export interface ExecutiveReportCvesBySeverity8to10 {
      * Percentage of CVEs with CVSS score higher or equal to 8.
      * @type {number}
      * @memberof ExecutiveReportCvesBySeverity8to10
+     */
+    percentage: number;
+}
+/**
+ *
+ * @export
+ * @interface ExecutiveReportCvesBySeverityNa
+ */
+export interface ExecutiveReportCvesBySeverityNa {
+    /**
+     * Number of CVEs with N/A CVSS score.
+     * @type {number}
+     * @memberof ExecutiveReportCvesBySeverityNa
+     */
+    count: number;
+    /**
+     * Percentage of CVEs with N/A CVSS score.
+     * @type {number}
+     * @memberof ExecutiveReportCvesBySeverityNa
      */
     percentage: number;
 }
@@ -767,7 +792,7 @@ export interface MetaCves extends Meta {
      */
     business_risk_id: string | null;
     /**
-     * Filter based on cvss score, starting from the value.
+     * Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
      * @type {number}
      * @memberof MetaCves
      */
@@ -822,7 +847,7 @@ export interface MetaCvesAllOf {
      */
     business_risk_id: string | null;
     /**
-     * Filter based on cvss score, starting from the value.
+     * Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
      * @type {number}
      * @memberof MetaCvesAllOf
      */
@@ -929,7 +954,7 @@ export interface MetaVulnerabilitiesOut extends Meta {
      */
     business_risk_id: string | null;
     /**
-     * Filter based on cvss score, starting from the value.
+     * Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
      * @type {number}
      * @memberof MetaVulnerabilitiesOut
      */
@@ -978,7 +1003,7 @@ export interface MetaVulnerabilitiesOutAllOf {
      */
     business_risk_id: string | null;
     /**
-     * Filter based on cvss score, starting from the value.
+     * Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
      * @type {number}
      * @memberof MetaVulnerabilitiesOutAllOf
      */
@@ -1435,11 +1460,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [sort] Sorting used for response.
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+         * @param {string} [uuid] Filter based on UUID of inventory.
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, securityRule?: string, options: any = {}): RequestArgs {
+        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, securityRule?: string, options: any = {}): RequestArgs {
             // verify required parameter 'cveId' is not null or undefined
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getAffectedSystemsByCve.');
@@ -1499,6 +1525,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (dataFormat !== undefined) {
                 localVarQueryParameter['data_format'] = dataFormat;
+            }
+
+            if (uuid !== undefined) {
+                localVarQueryParameter['uuid'] = uuid;
             }
 
             if (securityRule !== undefined) {
@@ -1717,7 +1747,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -1841,7 +1871,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -1965,7 +1995,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -2090,7 +2120,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -2867,12 +2897,13 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [sort] Sorting used for response.
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+         * @param {string} [uuid] Filter based on UUID of inventory.
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, securityRule?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, securityRule, options);
+        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, securityRule?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, securityRule, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2938,7 +2969,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -2966,7 +2997,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -2995,7 +3026,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -3025,7 +3056,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -3245,12 +3276,13 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [sort] Sorting used for response.
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+         * @param {string} [uuid] Filter based on UUID of inventory.
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, securityRule?: string, options?: any): AxiosPromise<AffectedSystemsOut> {
-            return DefaultApiFp(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, securityRule, options)(axios, basePath);
+        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, securityRule?: string, options?: any): AxiosPromise<AffectedSystemsOut> {
+            return DefaultApiFp(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, securityRule, options)(axios, basePath);
         },
         /**
          * Report of IDs of affected systems for a given CVE.
@@ -3300,7 +3332,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -3324,7 +3356,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -3349,7 +3381,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -3375,7 +3407,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {string} [sort] Sorting used for response.
-         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+         * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
          * @param {number} [cvssTo] Filter based on cvss score, up to the value.
          * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
          * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -3550,13 +3582,14 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [sort] Sorting used for response.
      * @param {string} [statusId] Filer based on CVE status ID.
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+     * @param {string} [uuid] Filter based on UUID of inventory.
      * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, securityRule?: string, options?: any) {
-        return DefaultApiFp(this.configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, securityRule, options)(this.axios, this.basePath);
+    public getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, securityRule?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, securityRule, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3613,7 +3646,7 @@ export class DefaultApi extends BaseAPI {
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {string} [sort] Sorting used for response.
-     * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+     * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
      * @param {number} [cvssTo] Filter based on cvss score, up to the value.
      * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
      * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -3639,7 +3672,7 @@ export class DefaultApi extends BaseAPI {
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {string} [sort] Sorting used for response.
-     * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+     * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
      * @param {number} [cvssTo] Filter based on cvss score, up to the value.
      * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
      * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -3666,7 +3699,7 @@ export class DefaultApi extends BaseAPI {
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {string} [sort] Sorting used for response.
-     * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+     * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
      * @param {number} [cvssTo] Filter based on cvss score, up to the value.
      * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
      * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.
@@ -3694,7 +3727,7 @@ export class DefaultApi extends BaseAPI {
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {string} [sort] Sorting used for response.
-     * @param {number} [cvssFrom] Filter based on cvss score, starting from the value.
+     * @param {number} [cvssFrom] Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
      * @param {number} [cvssTo] Filter based on cvss score, up to the value.
      * @param {string} [publicFrom] Filter CVEs based on their published date, starting from the date.
      * @param {string} [publicTo] Filter CVEs based on their published date, up to the date.

@@ -87,7 +87,7 @@ ___
 
 ▸ **refreshAccount**(`accountId`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:4211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4211)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:4244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4244)*
 
 Refresh cached counts for given account ID. Admin interface, available only to internal users.
 
@@ -112,7 +112,7 @@ ___
 
 ▸ **refreshAccountCve**(`accountId`: string, `cveId`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:4224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4224)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:4257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4257)*
 
 Refresh cached counts for given account ID and CVE. Admin interface, available only to internal users.
 
@@ -138,7 +138,7 @@ ___
 
 ▸ **refreshCve**(`cveId`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:4236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4236)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:4269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4269)*
 
 Refresh cached counts for given CVE. Admin interface, available only to internal users.
 
@@ -163,7 +163,7 @@ ___
 
 ▸ **refreshSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:4248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4248)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:4281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4281)*
 
 Refresh cached counts for given inventory ID. Admin interface, available only to internal users.
 

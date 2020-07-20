@@ -23,7 +23,7 @@
 
 • **id**? : *number*
 
-*Defined in [packages/insights/api.ts:704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L704)*
+*Defined in [packages/insights/api.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L52)*
 
 **`memberof`** RuleCategory
 
@@ -33,6 +33,6 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/insights/api.ts:710](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L710)*
+*Defined in [packages/insights/api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L58)*
 
 **`memberof`** RuleCategory
