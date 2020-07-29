@@ -3213,10 +3213,11 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          *
          * @summary Get a role in the tenant
          * @param {string} uuid ID of role to get
+         * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRole(uuid: string, options: any = {}): RequestArgs {
+        getRole(uuid: string, scope?: 'account' | 'principal', options: any = {}): RequestArgs {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getRole.');
@@ -3236,6 +3237,10 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (scope !== undefined) {
+                localVarQueryParameter['scope'] = scope;
             }
 
 
@@ -3471,11 +3476,12 @@ export const RoleApiFp = function(configuration?: Configuration) {
          *
          * @summary Get a role in the tenant
          * @param {string} uuid ID of role to get
+         * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRole(uuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RoleWithAccess> {
-            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).getRole(uuid, options);
+        getRole(uuid: string, scope?: 'account' | 'principal', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RoleWithAccess> {
+            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).getRole(uuid, scope, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3566,11 +3572,12 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          *
          * @summary Get a role in the tenant
          * @param {string} uuid ID of role to get
+         * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRole(uuid: string, options?: any): AxiosPromise<RoleWithAccess> {
-            return RoleApiFp(configuration).getRole(uuid, options)(axios, basePath);
+        getRole(uuid: string, scope?: 'account' | 'principal', options?: any): AxiosPromise<RoleWithAccess> {
+            return RoleApiFp(configuration).getRole(uuid, scope, options)(axios, basePath);
         },
         /**
          *
@@ -3650,12 +3657,13 @@ export class RoleApi extends BaseAPI {
      *
      * @summary Get a role in the tenant
      * @param {string} uuid ID of role to get
+     * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public getRole(uuid: string, options?: any) {
-        return RoleApiFp(this.configuration).getRole(uuid, options)(this.axios, this.basePath);
+    public getRole(uuid: string, scope?: 'account' | 'principal', options?: any) {
+        return RoleApiFp(this.configuration).getRole(uuid, scope, options)(this.axios, this.basePath);
     }
 
     /**

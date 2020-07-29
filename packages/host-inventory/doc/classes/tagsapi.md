@@ -84,7 +84,7 @@ ___
 
 ▸ **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `registeredWith?`: "insights", `options?`: any): *AxiosPromise‹[ActiveTags](../interfaces/activetags.md)›*
 
-*Defined in [packages/host-inventory/api.ts:2345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2345)*
+*Defined in [packages/host-inventory/api.ts:2351](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2351)*
 
 **`summary`** Get the active host tags for a given account
 

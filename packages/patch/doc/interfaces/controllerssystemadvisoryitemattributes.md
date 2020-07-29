@@ -26,7 +26,7 @@
 
 • **advisory_type**? : *number*
 
-*Defined in [packages/patch/api.ts:442](https://github.com/RedHatInsights/javascript-clients/blob/6553de7/packages/patch/api.ts#L442)*
+*Defined in [packages/patch/api.ts:442](https://github.com/RedHatInsights/javascript-clients/blob/064feea/packages/patch/api.ts#L442)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -36,7 +36,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:448](https://github.com/RedHatInsights/javascript-clients/blob/6553de7/packages/patch/api.ts#L448)*
+*Defined in [packages/patch/api.ts:448](https://github.com/RedHatInsights/javascript-clients/blob/064feea/packages/patch/api.ts#L448)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -46,7 +46,7 @@ ___
 
 • **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:454](https://github.com/RedHatInsights/javascript-clients/blob/6553de7/packages/patch/api.ts#L454)*
+*Defined in [packages/patch/api.ts:454](https://github.com/RedHatInsights/javascript-clients/blob/064feea/packages/patch/api.ts#L454)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -56,7 +56,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:460](https://github.com/RedHatInsights/javascript-clients/blob/6553de7/packages/patch/api.ts#L460)*
+*Defined in [packages/patch/api.ts:460](https://github.com/RedHatInsights/javascript-clients/blob/064feea/packages/patch/api.ts#L460)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -66,6 +66,6 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/6553de7/packages/patch/api.ts#L466)*
+*Defined in [packages/patch/api.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/064feea/packages/patch/api.ts#L466)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes

@@ -71,7 +71,7 @@
 
 ▸ **HostsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/host-inventory/api.ts:1010](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1010)*
+*Defined in [packages/host-inventory/api.ts:1016](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1016)*
 
 HostsApi - axios parameter creator
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **HostsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/host-inventory/api.ts:1867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1867)*
+*Defined in [packages/host-inventory/api.ts:1873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1873)*
 
 HostsApi - factory interface
 
@@ -153,7 +153,7 @@ ___
 
 ▸ **HostsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/host-inventory/api.ts:1679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1679)*
+*Defined in [packages/host-inventory/api.ts:1685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1685)*
 
 HostsApi - functional programming interface
 
@@ -213,7 +213,7 @@ ___
 
 ▸ **TagsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/host-inventory/api.ts:2184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2184)*
+*Defined in [packages/host-inventory/api.ts:2190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2190)*
 
 TagsApi - axios parameter creator
 
@@ -235,7 +235,7 @@ ___
 
 ▸ **TagsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/host-inventory/api.ts:2301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2301)*
+*Defined in [packages/host-inventory/api.ts:2307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2307)*
 
 TagsApi - factory interface
 
@@ -259,7 +259,7 @@ ___
 
 ▸ **TagsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/host-inventory/api.ts:2271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2271)*
+*Defined in [packages/host-inventory/api.ts:2277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2277)*
 
 TagsApi - functional programming interface
 

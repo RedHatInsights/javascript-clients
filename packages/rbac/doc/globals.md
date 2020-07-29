@@ -526,7 +526,7 @@ Name | Type |
 
 * **deleteRole**(`uuid`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **getRole**(`uuid`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getRole**(`uuid`: string, `scope?`: "account" | "principal", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **getRoleAccess**(`uuid`: string, `limit?`: number, `offset?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -540,7 +540,7 @@ ___
 
 ▸ **RoleApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:3543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3543)*
+*Defined in [packages/rbac/api.ts:3549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3549)*
 
 RoleApi - factory interface
 
@@ -560,7 +560,7 @@ Name | Type |
 
 * **deleteRole**(`uuid`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **getRole**(`uuid`: string, `options?`: any): *AxiosPromise‹[RoleWithAccess](interfaces/rolewithaccess.md)›*
+* **getRole**(`uuid`: string, `scope?`: "account" | "principal", `options?`: any): *AxiosPromise‹[RoleWithAccess](interfaces/rolewithaccess.md)›*
 
 * **getRoleAccess**(`uuid`: string, `limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[AccessPagination](interfaces/accesspagination.md)›*
 
@@ -574,7 +574,7 @@ ___
 
 ▸ **RoleApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3440)*
+*Defined in [packages/rbac/api.ts:3445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3445)*
 
 RoleApi - functional programming interface
 
@@ -596,7 +596,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
-* **getRole**(`uuid`: string, `options?`: any): *function*
+* **getRole**(`uuid`: string, `scope?`: "account" | "principal", `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RoleWithAccess](interfaces/rolewithaccess.md)›*
 
@@ -618,7 +618,7 @@ ___
 
 ▸ **StatusApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3714)*
+*Defined in [packages/rbac/api.ts:3722](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3722)*
 
 StatusApi - axios parameter creator
 
@@ -640,7 +640,7 @@ ___
 
 ▸ **StatusApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:3781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3781)*
+*Defined in [packages/rbac/api.ts:3789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3789)*
 
 StatusApi - factory interface
 
@@ -664,7 +664,7 @@ ___
 
 ▸ **StatusApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3759)*
+*Defined in [packages/rbac/api.ts:3767](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3767)*
 
 StatusApi - functional programming interface
 
