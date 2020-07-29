@@ -853,6 +853,12 @@ export interface SystemProfile {
      * @memberof SystemProfile
      */
     enabled_services?: Array<string>;
+    /**
+     * Indicates if SAP is installed on the system
+     * @type {boolean}
+     * @memberof SystemProfile
+     */
+    sap_system?: boolean;
 }
 /**
  * Structure of the output of the host system profile query

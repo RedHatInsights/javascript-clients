@@ -25,7 +25,7 @@
 
 • **description**: *string*
 
-*Defined in [api.ts:1080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1080)*
+*Defined in [api.ts:1092](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1092)*
 
 **`memberof`** ResolutionsResolutions
 
@@ -35,7 +35,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [api.ts:1074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1074)*
+*Defined in [api.ts:1086](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1086)*
 
 **`memberof`** ResolutionsResolutions
 
@@ -45,7 +45,7 @@ ___
 
 • **needs_reboot**: *boolean*
 
-*Defined in [api.ts:1086](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1086)*
+*Defined in [api.ts:1098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1098)*
 
 Indicates whether the given resolution involves system reboot
 
@@ -57,6 +57,6 @@ ___
 
 • **resolution_risk**: *[ResolutionRisk](../enums/resolutionrisk.md)*
 
-*Defined in [api.ts:1092](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1092)*
+*Defined in [api.ts:1104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1104)*
 
 **`memberof`** ResolutionsResolutions

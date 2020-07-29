@@ -21,6 +21,7 @@
 * [issues](remediationdetails.md#issues)
 * [name](remediationdetails.md#name)
 * [needs_reboot](remediationdetails.md#needs_reboot)
+* [resolved_count](remediationdetails.md#resolved_count)
 * [updated_at](remediationdetails.md#updated_at)
 * [updated_by](remediationdetails.md#updated_by)
 
@@ -72,7 +73,7 @@ ___
 
 • **issues**: *Array‹[RemediationIssue](remediationissue.md)›*
 
-*Defined in [api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L674)*
+*Defined in [api.ts:680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L680)*
 
 **`memberof`** RemediationDetails
 
@@ -95,6 +96,16 @@ ___
 *Defined in [api.ts:638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L638)*
 
 Indicates whether any of the issues contained in the remediation require system reboot
+
+**`memberof`** RemediationDetails
+
+___
+
+###  resolved_count
+
+• **resolved_count**: *number*
+
+*Defined in [api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L674)*
 
 **`memberof`** RemediationDetails
 
