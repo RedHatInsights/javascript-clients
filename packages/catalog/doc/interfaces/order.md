@@ -28,7 +28,7 @@
 
 • **completed_at**? : *string*
 
-*Defined in [packages/catalog/api.ts:350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L350)*
+*Defined in [packages/catalog/api.ts:383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L383)*
 
 **`memberof`** Order
 
@@ -38,7 +38,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [packages/catalog/api.ts:338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L338)*
+*Defined in [packages/catalog/api.ts:371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L371)*
 
 **`memberof`** Order
 
@@ -48,7 +48,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/catalog/api.ts:320](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L320)*
+*Defined in [packages/catalog/api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L353)*
 
 **`memberof`** Order
 
@@ -58,7 +58,7 @@ ___
 
 • **order_request_sent_at**? : *string | null*
 
-*Defined in [packages/catalog/api.ts:344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L344)*
+*Defined in [packages/catalog/api.ts:377](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L377)*
 
 The time at which the order request was sent to the Topology Service
 
@@ -70,7 +70,7 @@ ___
 
 • **owner**? : *string*
 
-*Defined in [packages/catalog/api.ts:356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L356)*
+*Defined in [packages/catalog/api.ts:389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L389)*
 
 **`memberof`** Order
 
@@ -80,7 +80,7 @@ ___
 
 • **state**? : *[OrderStateEnum](../enums/orderstateenum.md)*
 
-*Defined in [packages/catalog/api.ts:332](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L332)*
+*Defined in [packages/catalog/api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L365)*
 
 Current State of the order.
 
@@ -92,6 +92,6 @@ ___
 
 • **user_id**? : *string*
 
-*Defined in [packages/catalog/api.ts:326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L326)*
+*Defined in [packages/catalog/api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L359)*
 
 **`memberof`** Order

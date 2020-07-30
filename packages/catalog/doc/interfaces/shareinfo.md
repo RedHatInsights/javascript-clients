@@ -24,7 +24,7 @@
 
 • **group_name**? : *string*
 
-*Defined in [packages/catalog/api.ts:928](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L928)*
+*Defined in [packages/catalog/api.ts:1121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1121)*
 
 The Group Name
 
@@ -36,7 +36,7 @@ ___
 
 • **group_uuid**? : *string*
 
-*Defined in [packages/catalog/api.ts:922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L922)*
+*Defined in [packages/catalog/api.ts:1115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1115)*
 
 The Group UUID
 
@@ -48,7 +48,7 @@ ___
 
 • **permissions**? : *Array‹[ShareInfoPermissionsEnum](../enums/shareinfopermissionsenum.md)›*
 
-*Defined in [packages/catalog/api.ts:934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L934)*
+*Defined in [packages/catalog/api.ts:1127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1127)*
 
 One or more permissions currently applied to this group.
 

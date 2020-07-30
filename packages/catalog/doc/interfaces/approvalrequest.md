@@ -27,7 +27,7 @@
 
 • **approval_request_ref**? : *string*
 
-*Defined in [packages/catalog/api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L39)*
+*Defined in [packages/catalog/api.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L71)*
 
 The id of the approval submitted to approval-api
 
@@ -39,7 +39,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/catalog/api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L33)*
+*Defined in [packages/catalog/api.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L65)*
 
 The unique identifier for this approval request.
 
@@ -51,7 +51,7 @@ ___
 
 • **order_item_id**? : *string*
 
-*Defined in [packages/catalog/api.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L45)*
+*Defined in [packages/catalog/api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L77)*
 
 The Order Item which the approval request belongs to
 
@@ -63,7 +63,7 @@ ___
 
 • **reason**? : *string*
 
-*Defined in [packages/catalog/api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L51)*
+*Defined in [packages/catalog/api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L83)*
 
 The reason for the current state.
 
@@ -75,7 +75,7 @@ ___
 
 • **request_completed_at**? : *string*
 
-*Defined in [packages/catalog/api.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L57)*
+*Defined in [packages/catalog/api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L89)*
 
 **`memberof`** ApprovalRequest
 
@@ -85,8 +85,8 @@ ___
 
 • **state**? : *[ApprovalRequestStateEnum](../enums/approvalrequeststateenum.md)*
 
-*Defined in [packages/catalog/api.ts:63](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L63)*
+*Defined in [packages/catalog/api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L95)*
 
-The state of the approval request (approved, denied, undecided, canceled)
+The state of the approval request (approved, denied, undecided, canceled, error)
 
 **`memberof`** ApprovalRequest

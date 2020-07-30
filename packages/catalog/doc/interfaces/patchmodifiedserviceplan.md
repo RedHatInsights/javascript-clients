@@ -22,7 +22,7 @@
 
 • **modified**? : *object*
 
-*Defined in [packages/catalog/api.ts:539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L539)*
+*Defined in [packages/catalog/api.ts:689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L689)*
 
 the new modified schema for the service plan
 

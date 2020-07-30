@@ -97,7 +97,7 @@ ___
 
 ▸ **addPortfolioItemTag**(`id`: string, `tag`: Array‹[Tag](../interfaces/tag.md)›, `options?`: any): *AxiosPromise‹[Tag](../interfaces/tag.md)[]›*
 
-*Defined in [packages/catalog/api.ts:5624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5624)*
+*Defined in [packages/catalog/api.ts:6878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6878)*
 
 Adds a single tag to a Portfolio Item object
 
@@ -123,7 +123,7 @@ ___
 
 ▸ **createPortfolioItem**(`createPortfolioItem`: [CreatePortfolioItem](../interfaces/createportfolioitem.md), `options?`: any): *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
 
-*Defined in [packages/catalog/api.ts:5636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5636)*
+*Defined in [packages/catalog/api.ts:6890](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6890)*
 
 Adds a name and description for a portfolio item and returns the newly created portfolio item.
 
@@ -148,7 +148,7 @@ ___
 
 ▸ **destroyPortfolioItem**(`id`: string, `options?`: any): *AxiosPromise‹[RestoreKey](../interfaces/restorekey.md)›*
 
-*Defined in [packages/catalog/api.ts:5648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5648)*
+*Defined in [packages/catalog/api.ts:6902](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6902)*
 
 Deletes the portfolio item based on portfolio item ID passed
 
@@ -173,7 +173,7 @@ ___
 
 ▸ **getPortfolioItemNextName**(`portfolioItemId`: string, `destinationPortfolioId?`: string, `options?`: any): *AxiosPromise‹[PortfolioItemNextName](../interfaces/portfolioitemnextname.md)›*
 
-*Defined in [packages/catalog/api.ts:5661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5661)*
+*Defined in [packages/catalog/api.ts:6915](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6915)*
 
 Get the next name for a the Portfolio Item prior to a copy operation
 
@@ -197,9 +197,9 @@ ___
 
 ###  listPortfolioItemTags
 
-▸ **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
 
-*Defined in [packages/catalog/api.ts:5676](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5676)*
+*Defined in [packages/catalog/api.ts:6931](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6931)*
 
 Returns an array of Tag objects
 
@@ -217,6 +217,7 @@ Name | Type | Description |
 `limit?` | number | - |
 `offset?` | number | - |
 `filter?` | object | - |
+`sortBy?` | string | - |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
@@ -225,9 +226,9 @@ ___
 
 ###  listPortfolioItems
 
-▸ **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[PortfolioItemsCollection](../interfaces/portfolioitemscollection.md)›*
+▸ **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[PortfolioItemsCollection](../interfaces/portfolioitemscollection.md)›*
 
-*Defined in [packages/catalog/api.ts:5690](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5690)*
+*Defined in [packages/catalog/api.ts:6946](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6946)*
 
 Gets a list of portfolio items.
 
@@ -244,6 +245,7 @@ Name | Type |
 `limit?` | number |
 `offset?` | number |
 `filter?` | object |
+`sortBy?` | string |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[PortfolioItemsCollection](../interfaces/portfolioitemscollection.md)›*
@@ -254,7 +256,7 @@ ___
 
 ▸ **listProviderControlParameters**(`portfolioItemId`: string, `options?`: any): *AxiosPromise‹object›*
 
-*Defined in [packages/catalog/api.ts:5702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5702)*
+*Defined in [packages/catalog/api.ts:6958](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6958)*
 
 Gets the provider control parameters for a portfolio item.
 
@@ -279,7 +281,7 @@ ___
 
 ▸ **listServicePlans**(`portfolioItemId`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)[]›*
 
-*Defined in [packages/catalog/api.ts:5714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5714)*
+*Defined in [packages/catalog/api.ts:6970](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6970)*
 
 Gets all service plans for a portfolio item.
 
@@ -304,7 +306,7 @@ ___
 
 ▸ **postCopyPortfolioItem**(`portfolioItemId`: string, `copyPortfolioItem?`: [CopyPortfolioItem](../interfaces/copyportfolioitem.md), `options?`: any): *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
 
-*Defined in [packages/catalog/api.ts:5727](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5727)*
+*Defined in [packages/catalog/api.ts:6983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6983)*
 
 Make a copy of the Portfolio Item.
 
@@ -330,7 +332,7 @@ ___
 
 ▸ **removePortfolioItemTags**(`id`: string, `tag`: Array‹[Tag](../interfaces/tag.md)›, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/catalog/api.ts:5740](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5740)*
+*Defined in [packages/catalog/api.ts:6996](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6996)*
 
 Remove Tags from Portfolio Item
 
@@ -356,7 +358,7 @@ ___
 
 ▸ **showPortfolioItem**(`id`: string, `options?`: any): *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
 
-*Defined in [packages/catalog/api.ts:5752](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5752)*
+*Defined in [packages/catalog/api.ts:7008](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7008)*
 
 Gets a specific portfolio item based on the portfolio item ID passed
 
@@ -381,7 +383,7 @@ ___
 
 ▸ **showPortfolioItemIcon**(`portfolioItemId`: string, `options?`: any): *AxiosPromise‹any›*
 
-*Defined in [packages/catalog/api.ts:5764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5764)*
+*Defined in [packages/catalog/api.ts:7020](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7020)*
 
 Fetch the specified portfolio item\'s icon image.
 
@@ -406,7 +408,7 @@ ___
 
 ▸ **unDeletePortfolioItem**(`portfolioItemId`: string, `restoreKey`: [RestoreKey](../interfaces/restorekey.md), `options?`: any): *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
 
-*Defined in [packages/catalog/api.ts:5777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5777)*
+*Defined in [packages/catalog/api.ts:7033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7033)*
 
 If a record has been discarded, this operation will undelete it so it can be requested normally.
 
@@ -432,7 +434,7 @@ ___
 
 ▸ **updatePortfolioItem**(`id`: string, `portfolioItem`: [PortfolioItem](../interfaces/portfolioitem.md), `options?`: any): *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
 
-*Defined in [packages/catalog/api.ts:5790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5790)*
+*Defined in [packages/catalog/api.ts:7046](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7046)*
 
 Edits portfolio item specified by the given ID.
 
