@@ -93,7 +93,7 @@ ___
 
 ▸ **addToOrder**(`orderId`: string, `orderItem`: [OrderItem](../interfaces/orderitem.md), `options?`: any): *AxiosPromise‹[OrderItem](../interfaces/orderitem.md)›*
 
-*Defined in [packages/catalog/api.ts:2516](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2516)*
+*Defined in [packages/catalog/api.ts:2477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2477)*
 
 Adds an order item to an order in pending state
 
@@ -119,7 +119,7 @@ ___
 
 ▸ **cancelOrder**(`orderId`: string, `options?`: any): *AxiosPromise‹[Order](../interfaces/order.md)›*
 
-*Defined in [packages/catalog/api.ts:2528](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2528)*
+*Defined in [packages/catalog/api.ts:2489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2489)*
 
 Returns an updated order.
 
@@ -144,7 +144,7 @@ ___
 
 ▸ **createOrder**(`options?`: any): *AxiosPromise‹[Order](../interfaces/order.md)›*
 
-*Defined in [packages/catalog/api.ts:2539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2539)*
+*Defined in [packages/catalog/api.ts:2500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2500)*
 
 Creates a new order.
 
@@ -168,7 +168,7 @@ ___
 
 ▸ **destroyOrder**(`id`: string, `options?`: any): *AxiosPromise‹[RestoreKey](../interfaces/restorekey.md)›*
 
-*Defined in [packages/catalog/api.ts:2551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2551)*
+*Defined in [packages/catalog/api.ts:2512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2512)*
 
 Deletes the Order based on order ID passed
 
@@ -191,9 +191,9 @@ ___
 
 ###  listOrderItemsFromOrder
 
-▸ **listOrderItemsFromOrder**(`orderId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[OrderItemsCollection](../interfaces/orderitemscollection.md)›*
+▸ **listOrderItemsFromOrder**(`orderId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[OrderItemsCollection](../interfaces/orderitemscollection.md)›*
 
-*Defined in [packages/catalog/api.ts:2566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2566)*
+*Defined in [packages/catalog/api.ts:2528](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2528)*
 
 Gets a list of items associated with an order.
 
@@ -211,6 +211,7 @@ Name | Type | Description |
 `limit?` | number | - |
 `offset?` | number | - |
 `filter?` | object | - |
+`sortBy?` | string | - |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[OrderItemsCollection](../interfaces/orderitemscollection.md)›*
@@ -219,9 +220,9 @@ ___
 
 ###  listOrders
 
-▸ **listOrders**(`limit?`: number, `offset?`: number, `filter?`: object, `options?`: any): *AxiosPromise‹[OrdersCollection](../interfaces/orderscollection.md)›*
+▸ **listOrders**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[OrdersCollection](../interfaces/orderscollection.md)›*
 
-*Defined in [packages/catalog/api.ts:2580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2580)*
+*Defined in [packages/catalog/api.ts:2543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2543)*
 
 Gets a list of orders associated with the logged in user.
 
@@ -238,6 +239,7 @@ Name | Type |
 `limit?` | number |
 `offset?` | number |
 `filter?` | object |
+`sortBy?` | string |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[OrdersCollection](../interfaces/orderscollection.md)›*
@@ -248,7 +250,7 @@ ___
 
 ▸ **restoreOrder**(`id`: string, `restoreKey`: [RestoreKey](../interfaces/restorekey.md), `options?`: any): *AxiosPromise‹[Order](../interfaces/order.md)›*
 
-*Defined in [packages/catalog/api.ts:2593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2593)*
+*Defined in [packages/catalog/api.ts:2556](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2556)*
 
 Restores the order specified by the order ID.
 
@@ -274,7 +276,7 @@ ___
 
 ▸ **showOrder**(`id`: string, `options?`: any): *AxiosPromise‹[Order](../interfaces/order.md)›*
 
-*Defined in [packages/catalog/api.ts:2605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2605)*
+*Defined in [packages/catalog/api.ts:2568](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2568)*
 
 Get a specific order based on the order ID
 
@@ -299,7 +301,7 @@ ___
 
 ▸ **showOrderItemFromOrder**(`orderId`: string, `id`: string, `options?`: any): *AxiosPromise‹[OrderItem](../interfaces/orderitem.md)›*
 
-*Defined in [packages/catalog/api.ts:2618](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2618)*
+*Defined in [packages/catalog/api.ts:2581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2581)*
 
 Gets an order item associated with an order.
 
@@ -325,7 +327,7 @@ ___
 
 ▸ **submitOrder**(`orderId`: string, `options?`: any): *AxiosPromise‹[Order](../interfaces/order.md)›*
 
-*Defined in [packages/catalog/api.ts:2630](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2630)*
+*Defined in [packages/catalog/api.ts:2593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2593)*
 
 Returns an updated order.
 

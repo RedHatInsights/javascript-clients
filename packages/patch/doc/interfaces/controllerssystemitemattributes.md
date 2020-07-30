@@ -28,7 +28,7 @@
 
 • **display_name**? : *string*
 
-*Defined in [packages/patch/api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/064feea/packages/patch/api.ts#L572)*
+*Defined in [packages/patch/api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/b0e959d/packages/patch/api.ts#L572)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -38,7 +38,7 @@ ___
 
 • **last_evaluation**? : *string*
 
-*Defined in [packages/patch/api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/064feea/packages/patch/api.ts#L578)*
+*Defined in [packages/patch/api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/b0e959d/packages/patch/api.ts#L578)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -48,7 +48,7 @@ ___
 
 • **last_upload**? : *string*
 
-*Defined in [packages/patch/api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/064feea/packages/patch/api.ts#L584)*
+*Defined in [packages/patch/api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/b0e959d/packages/patch/api.ts#L584)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -58,7 +58,7 @@ ___
 
 • **rhba_count**? : *number*
 
-*Defined in [packages/patch/api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/064feea/packages/patch/api.ts#L590)*
+*Defined in [packages/patch/api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/b0e959d/packages/patch/api.ts#L590)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -68,7 +68,7 @@ ___
 
 • **rhea_count**? : *number*
 
-*Defined in [packages/patch/api.ts:596](https://github.com/RedHatInsights/javascript-clients/blob/064feea/packages/patch/api.ts#L596)*
+*Defined in [packages/patch/api.ts:596](https://github.com/RedHatInsights/javascript-clients/blob/b0e959d/packages/patch/api.ts#L596)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -78,7 +78,7 @@ ___
 
 • **rhsa_count**? : *number*
 
-*Defined in [packages/patch/api.ts:602](https://github.com/RedHatInsights/javascript-clients/blob/064feea/packages/patch/api.ts#L602)*
+*Defined in [packages/patch/api.ts:602](https://github.com/RedHatInsights/javascript-clients/blob/b0e959d/packages/patch/api.ts#L602)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -88,7 +88,7 @@ ___
 
 • **stale**? : *boolean*
 
-*Defined in [packages/patch/api.ts:608](https://github.com/RedHatInsights/javascript-clients/blob/064feea/packages/patch/api.ts#L608)*
+*Defined in [packages/patch/api.ts:608](https://github.com/RedHatInsights/javascript-clients/blob/b0e959d/packages/patch/api.ts#L608)*
 
 Not used Enabled        bool       `json:\"enabled\" csv:\"enabled\" query:\"(NOT system_platform.opt_out)\"`
 

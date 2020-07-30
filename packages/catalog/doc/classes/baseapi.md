@@ -16,6 +16,8 @@
 
   ↳ [OrderItemApi](orderitemapi.md)
 
+  ↳ [OrderProcessApi](orderprocessapi.md)
+
   ↳ [PortfolioApi](portfolioapi.md)
 
   ↳ [PortfolioItemApi](portfolioitemapi.md)

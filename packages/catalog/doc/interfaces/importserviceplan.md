@@ -22,7 +22,7 @@
 
 • **portfolio_item_id**? : *string*
 
-*Defined in [packages/catalog/api.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L307)*
+*Defined in [packages/catalog/api.ts:340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L340)*
 
 The Portfolio Item to import the service plans for.
 

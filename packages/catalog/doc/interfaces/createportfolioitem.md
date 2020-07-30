@@ -23,7 +23,7 @@
 
 • **portfolio_id**: *string*
 
-*Defined in [packages/catalog/api.ts:201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L201)*
+*Defined in [packages/catalog/api.ts:234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L234)*
 
 The Portfolio this portfolio item should belong to
 
@@ -35,7 +35,7 @@ ___
 
 • **service_offering_ref**? : *string*
 
-*Defined in [packages/catalog/api.ts:207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L207)*
+*Defined in [packages/catalog/api.ts:240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L240)*
 
 The service offering ref should be retrieved from a call to the Topology Service.
 

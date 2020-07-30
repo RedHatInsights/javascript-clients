@@ -11,6 +11,7 @@
 * [Approved](approvalrequeststateenum.md#approved)
 * [Canceled](approvalrequeststateenum.md#canceled)
 * [Denied](approvalrequeststateenum.md#denied)
+* [Error](approvalrequeststateenum.md#error)
 * [Undecided](approvalrequeststateenum.md#undecided)
 
 ## Enumeration members
@@ -19,7 +20,7 @@
 
 • **Approved**: = "approved"
 
-*Defined in [packages/catalog/api.ts:72](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L72)*
+*Defined in [packages/catalog/api.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L104)*
 
 ___
 
@@ -27,7 +28,7 @@ ___
 
 • **Canceled**: = "canceled"
 
-*Defined in [packages/catalog/api.ts:74](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L74)*
+*Defined in [packages/catalog/api.ts:106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L106)*
 
 ___
 
@@ -35,7 +36,15 @@ ___
 
 • **Denied**: = "denied"
 
-*Defined in [packages/catalog/api.ts:73](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L73)*
+*Defined in [packages/catalog/api.ts:105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L105)*
+
+___
+
+###  Error
+
+• **Error**: = "error"
+
+*Defined in [packages/catalog/api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L107)*
 
 ___
 
@@ -43,4 +52,4 @@ ___
 
 • **Undecided**: = "undecided"
 
-*Defined in [packages/catalog/api.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L71)*
+*Defined in [packages/catalog/api.ts:103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L103)*
