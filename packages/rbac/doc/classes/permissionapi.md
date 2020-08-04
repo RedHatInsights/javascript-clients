@@ -1,8 +1,8 @@
-[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [StatusApi](statusapi.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [PermissionApi](permissionapi.md)
 
-# Class: StatusApi
+# Class: PermissionApi
 
-StatusApi - object-oriented interface
+PermissionApi - object-oriented interface
 
 **`export`** 
 
@@ -10,29 +10,29 @@ StatusApi - object-oriented interface
 
 * [BaseAPI](baseapi.md)
 
-  ↳ **StatusApi**
+  ↳ **PermissionApi**
 
 ## Index
 
 ### Constructors
 
-* [constructor](statusapi.md#constructor)
+* [constructor](permissionapi.md#constructor)
 
 ### Properties
 
-* [axios](statusapi.md#protected-axios)
-* [basePath](statusapi.md#protected-basepath)
-* [configuration](statusapi.md#protected-configuration)
+* [axios](permissionapi.md#protected-axios)
+* [basePath](permissionapi.md#protected-basepath)
+* [configuration](permissionapi.md#protected-configuration)
 
 ### Methods
 
-* [getStatus](statusapi.md#getstatus)
+* [listPermissions](permissionapi.md#listpermissions)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new StatusApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[StatusApi](statusapi.md)*
+\+ **new PermissionApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[PermissionApi](permissionapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -46,7 +46,7 @@ Name | Type | Default |
 `basePath` | string | BASE_PATH |
 `axios` | AxiosInstance | globalAxios |
 
-**Returns:** *[StatusApi](statusapi.md)*
+**Returns:** *[PermissionApi](permissionapi.md)*
 
 ## Properties
 
@@ -80,22 +80,31 @@ ___
 
 ## Methods
 
-###  getStatus
+###  listPermissions
 
-▸ **getStatus**(`options?`: any): *AxiosPromise‹[Status](../interfaces/status.md)›*
+▸ **listPermissions**(`limit?`: number, `offset?`: number, `orderBy?`: string, `application?`: string, `resourceType?`: string, `verb?`: string, `permission?`: string, `options?`: any): *AxiosPromise‹[PermissionPagination](../interfaces/permissionpagination.md)›*
 
-*Defined in [packages/rbac/api.ts:4036](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4036)*
+*Defined in [packages/rbac/api.ts:2696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2696)*
 
-**`summary`** Obtain server status
+By default, responses are sorted in ascending order by permission application.
+
+**`summary`** List the permissions for a tenant
 
 **`throws`** {RequiredError}
 
-**`memberof`** StatusApi
+**`memberof`** PermissionApi
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
+`limit?` | number |
+`offset?` | number |
+`orderBy?` | string |
+`application?` | string |
+`resourceType?` | string |
+`verb?` | string |
+`permission?` | string |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[Status](../interfaces/status.md)›*
+**Returns:** *AxiosPromise‹[PermissionPagination](../interfaces/permissionpagination.md)›*

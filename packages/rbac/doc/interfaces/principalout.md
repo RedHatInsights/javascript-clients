@@ -27,7 +27,7 @@
 
 • **email**: *string*
 
-*Defined in [packages/rbac/api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L693)*
+*Defined in [packages/rbac/api.ts:750](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L750)*
 
 **`memberof`** PrincipalOut
 
@@ -37,7 +37,7 @@ ___
 
 • **first_name**? : *string*
 
-*Defined in [packages/rbac/api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L699)*
+*Defined in [packages/rbac/api.ts:756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L756)*
 
 **`memberof`** PrincipalOut
 
@@ -47,7 +47,7 @@ ___
 
 • **is_active**? : *boolean*
 
-*Defined in [packages/rbac/api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L711)*
+*Defined in [packages/rbac/api.ts:768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L768)*
 
 **`memberof`** PrincipalOut
 
@@ -57,7 +57,7 @@ ___
 
 • **last_name**? : *string*
 
-*Defined in [packages/rbac/api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L705)*
+*Defined in [packages/rbac/api.ts:762](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L762)*
 
 **`memberof`** PrincipalOut
 
@@ -67,7 +67,7 @@ ___
 
 • **username**: *string*
 
-*Defined in [packages/rbac/api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L687)*
+*Defined in [packages/rbac/api.ts:744](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L744)*
 
 **`memberof`** PrincipalOut
 
@@ -77,6 +77,6 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [packages/rbac/api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L717)*
+*Defined in [packages/rbac/api.ts:774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L774)*
 
 **`memberof`** PrincipalOut

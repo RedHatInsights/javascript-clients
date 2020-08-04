@@ -14,6 +14,8 @@
 
   ↳ [GroupPagination](grouppagination.md)
 
+  ↳ [PermissionPagination](permissionpagination.md)
+
   ↳ [PolicyPagination](policypagination.md)
 
   ↳ [PrincipalPagination](principalpagination.md)

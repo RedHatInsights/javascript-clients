@@ -1,34 +1,34 @@
-[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [RolePaginationDynamic](rolepaginationdynamic.md)
+[@redhat-cloud-services/rbac-client](../README.md) › [Globals](../globals.md) › [PermissionPagination](permissionpagination.md)
 
-# Interface: RolePaginationDynamic
+# Interface: PermissionPagination
 
 **`export`** 
 
-**`interface`** RolePaginationDynamic
+**`interface`** PermissionPagination
 
 ## Hierarchy
 
 * [ListPagination](listpagination.md)
 
-  ↳ **RolePaginationDynamic**
+  ↳ **PermissionPagination**
 
 ## Index
 
 ### Properties
 
-* [data](rolepaginationdynamic.md#data)
-* [links](rolepaginationdynamic.md#optional-links)
-* [meta](rolepaginationdynamic.md#optional-meta)
+* [data](permissionpagination.md#data)
+* [links](permissionpagination.md#optional-links)
+* [meta](permissionpagination.md#optional-meta)
 
 ## Properties
 
 ###  data
 
-• **data**: *Array‹[RoleOutDynamic](roleoutdynamic.md)›*
+• **data**: *Array‹[Permission](permission.md)›*
 
-*Defined in [packages/rbac/api.ts:1126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1126)*
+*Defined in [packages/rbac/api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L517)*
 
-**`memberof`** RolePaginationDynamic
+**`memberof`** PermissionPagination
 
 ___
 
