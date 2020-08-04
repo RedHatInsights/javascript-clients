@@ -22,6 +22,6 @@
 
 • **username**: *string*
 
-*Defined in [packages/rbac/api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L674)*
+*Defined in [packages/rbac/api.ts:731](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L731)*
 
 **`memberof`** PrincipalIn

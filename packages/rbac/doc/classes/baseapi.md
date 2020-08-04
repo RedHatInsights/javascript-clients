@@ -12,6 +12,8 @@
 
   ↳ [GroupApi](groupapi.md)
 
+  ↳ [PermissionApi](permissionapi.md)
+
   ↳ [PolicyApi](policyapi.md)
 
   ↳ [PrincipalApi](principalapi.md)

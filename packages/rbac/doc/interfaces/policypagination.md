@@ -26,7 +26,7 @@
 
 • **data**: *Array‹[PolicyExtended](policyextended.md)›*
 
-*Defined in [packages/rbac/api.ts:611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L611)*
+*Defined in [packages/rbac/api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L668)*
 
 **`memberof`** PolicyPagination
 

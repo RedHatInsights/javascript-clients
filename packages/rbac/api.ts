@@ -475,6 +475,63 @@ export interface PaginationMeta {
 /**
  *
  * @export
+ * @interface Permission
+ */
+export interface Permission {
+    /**
+     *
+     * @type {string}
+     * @memberof Permission
+     */
+    application?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Permission
+     */
+    resource_type?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Permission
+     */
+    verb?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Permission
+     */
+    permission?: string;
+}
+/**
+ *
+ * @export
+ * @interface PermissionPagination
+ */
+export interface PermissionPagination extends ListPagination {
+    /**
+     *
+     * @type {Array<Permission>}
+     * @memberof PermissionPagination
+     */
+    data: Array<Permission>;
+}
+/**
+ *
+ * @export
+ * @interface PermissionPaginationAllOf
+ */
+export interface PermissionPaginationAllOf {
+    /**
+     *
+     * @type {Array<Permission>}
+     * @memberof PermissionPaginationAllOf
+     */
+    data: Array<Permission>;
+}
+/**
+ *
+ * @export
  * @interface Policy
  */
 export interface Policy {
@@ -2476,6 +2533,168 @@ export class GroupApi extends BaseAPI {
      */
     public updateGroup(uuid: string, group: Group, options?: any) {
         return GroupApiFp(this.configuration).updateGroup(uuid, group, options)(this.axios, this.basePath);
+    }
+
+}
+
+
+/**
+ * PermissionApi - axios parameter creator
+ * @export
+ */
+export const PermissionApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * By default, responses are sorted in ascending order by permission application.
+         * @summary List the permissions for a tenant
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {string} [application] Partial match for the application name of a permission.
+         * @param {string} [resourceType] Partial match for the resource type name of a permission.
+         * @param {string} [verb] Partial match for the operation verb name of a permission.
+         * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, options: any = {}): RequestArgs {
+            const localVarPath = `/permissions/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (application !== undefined) {
+                localVarQueryParameter['application'] = application;
+            }
+
+            if (resourceType !== undefined) {
+                localVarQueryParameter['resource_type'] = resourceType;
+            }
+
+            if (verb !== undefined) {
+                localVarQueryParameter['verb'] = verb;
+            }
+
+            if (permission !== undefined) {
+                localVarQueryParameter['permission'] = permission;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * PermissionApi - functional programming interface
+ * @export
+ */
+export const PermissionApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * By default, responses are sorted in ascending order by permission application.
+         * @summary List the permissions for a tenant
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {string} [application] Partial match for the application name of a permission.
+         * @param {string} [resourceType] Partial match for the resource type name of a permission.
+         * @param {string} [verb] Partial match for the operation verb name of a permission.
+         * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionPagination> {
+            const localVarAxiosArgs = PermissionApiAxiosParamCreator(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * PermissionApi - factory interface
+ * @export
+ */
+export const PermissionApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * By default, responses are sorted in ascending order by permission application.
+         * @summary List the permissions for a tenant
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {string} [application] Partial match for the application name of a permission.
+         * @param {string} [resourceType] Partial match for the resource type name of a permission.
+         * @param {string} [verb] Partial match for the operation verb name of a permission.
+         * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, options?: any): AxiosPromise<PermissionPagination> {
+            return PermissionApiFp(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * PermissionApi - object-oriented interface
+ * @export
+ * @class PermissionApi
+ * @extends {BaseAPI}
+ */
+export class PermissionApi extends BaseAPI {
+    /**
+     * By default, responses are sorted in ascending order by permission application.
+     * @summary List the permissions for a tenant
+     * @param {number} [limit] Parameter for selecting the amount of data returned.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+     * @param {string} [application] Partial match for the application name of a permission.
+     * @param {string} [resourceType] Partial match for the resource type name of a permission.
+     * @param {string} [verb] Partial match for the operation verb name of a permission.
+     * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PermissionApi
+     */
+    public listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, options?: any) {
+        return PermissionApiFp(this.configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, options)(this.axios, this.basePath);
     }
 
 }
