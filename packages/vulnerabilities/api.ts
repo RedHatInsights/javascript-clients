@@ -989,6 +989,12 @@ export interface MetaVulnerabilitiesOut extends Meta {
      * @memberof MetaVulnerabilitiesOut
      */
     impact: string | null;
+    /**
+     * Total number of systems managed by vulnerability application.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    system_count?: number;
 }
 /**
  *
@@ -1038,6 +1044,12 @@ export interface MetaVulnerabilitiesOutAllOf {
      * @memberof MetaVulnerabilitiesOutAllOf
      */
     impact: string | null;
+    /**
+     * Total number of systems managed by vulnerability application.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOutAllOf
+     */
+    system_count?: number;
 }
 /**
  *
@@ -1410,7 +1422,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling deleteSystem.');
             }
-            const localVarPath = `/v1/systems/{inventory_id}`
+            const localVarPath = `/systems/{inventory_id}`
                 .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1470,7 +1482,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getAffectedSystemsByCve.');
             }
-            const localVarPath = `/v1/cves/{cve_id}/affected_systems`
+            const localVarPath = `/cves/{cve_id}/affected_systems`
                 .replace(`{${"cve_id"}}`, encodeURIComponent(String(cveId)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1569,7 +1581,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getAffectedSystemsIdsByCve.');
             }
-            const localVarPath = `/v1/cves/{cve_id}/affected_systems/ids`
+            const localVarPath = `/cves/{cve_id}/affected_systems/ids`
                 .replace(`{${"cve_id"}}`, encodeURIComponent(String(cveId)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1644,13 +1656,43 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Checks database availability and API response threshold time.
+         * @summary Health status of application
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getApiStatus(options: any = {}): RequestArgs {
+            const localVarPath = `/apistatus`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns available business risk and business_risk_id pairs where business_risk_id is internal ID of the business risk.
          * @summary Available business risk/business_risk_id pairs.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         getBusinessRiskList(options: any = {}): RequestArgs {
-            const localVarPath = `/v1/business_risk`;
+            const localVarPath = `/business_risk`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -1699,7 +1741,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getCveDetails.');
             }
-            const localVarPath = `/v1/cves/{cve_id}`
+            const localVarPath = `/cves/{cve_id}`
                 .replace(`{${"cve_id"}}`, encodeURIComponent(String(cveId)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1764,7 +1806,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getCveIdsBySystem.');
             }
-            const localVarPath = `/v1/systems/{inventory_id}/cves/ids`
+            const localVarPath = `/systems/{inventory_id}/cves/ids`
                 .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1885,7 +1927,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, showAll?: boolean, options: any = {}): RequestArgs {
-            const localVarPath = `/v1/vulnerabilities/cves/ids`;
+            const localVarPath = `/vulnerabilities/cves/ids`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2009,7 +2051,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, showAll?: boolean, options: any = {}): RequestArgs {
-            const localVarPath = `/v1/vulnerabilities/cves`;
+            const localVarPath = `/vulnerabilities/cves`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2137,7 +2179,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getCveListBySystem.');
             }
-            const localVarPath = `/v1/systems/{inventory_id}/cves`
+            const localVarPath = `/systems/{inventory_id}/cves`
                 .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2242,7 +2284,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         getExecutiveReport(options: any = {}): RequestArgs {
-            const localVarPath = `/v1/report/executive`;
+            const localVarPath = `/report/executive`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2286,7 +2328,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         getStatusList(options: any = {}): RequestArgs {
-            const localVarPath = `/v1/status`;
+            const localVarPath = `/status`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2335,7 +2377,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getSystemDetails.');
             }
-            const localVarPath = `/v1/systems/{inventory_id}`
+            const localVarPath = `/systems/{inventory_id}`
                 .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2390,7 +2432,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         getSystemsIds(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, optOut?: boolean, options: any = {}): RequestArgs {
-            const localVarPath = `/v1/systems/ids`;
+            const localVarPath = `/systems/ids`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2484,7 +2526,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, optOut?: boolean, options: any = {}): RequestArgs {
-            const localVarPath = `/v1/systems`;
+            const localVarPath = `/systems`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2568,7 +2610,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         getVersion(options: any = {}): RequestArgs {
-            const localVarPath = `/v1/version`;
+            const localVarPath = `/version`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2603,7 +2645,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             if (cveRiskIn === null || cveRiskIn === undefined) {
                 throw new RequiredError('cveRiskIn','Required parameter cveRiskIn was null or undefined when calling setCveBusinessRisk.');
             }
-            const localVarPath = `/v1/cves/business_risk`;
+            const localVarPath = `/cves/business_risk`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2656,7 +2698,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             if (cveStatusIn === null || cveStatusIn === undefined) {
                 throw new RequiredError('cveStatusIn','Required parameter cveStatusIn was null or undefined when calling setCveStatus.');
             }
-            const localVarPath = `/v1/cves/status`;
+            const localVarPath = `/cves/status`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2709,7 +2751,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             if (statusIn === null || statusIn === undefined) {
                 throw new RequiredError('statusIn','Required parameter statusIn was null or undefined when calling setStatus.');
             }
-            const localVarPath = `/v1/status`;
+            const localVarPath = `/status`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2767,7 +2809,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             if (value === null || value === undefined) {
                 throw new RequiredError('value','Required parameter value was null or undefined when calling setSystemOptOut.');
             }
-            const localVarPath = `/v1/systems/{inventory_id}/opt_out`
+            const localVarPath = `/systems/{inventory_id}/opt_out`
                 .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2821,7 +2863,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             if (optOutIn === null || optOutIn === undefined) {
                 throw new RequiredError('optOutIn','Required parameter optOutIn was null or undefined when calling setSystemsOptOut.');
             }
-            const localVarPath = `/v1/systems/opt_out`;
+            const localVarPath = `/systems/opt_out`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2927,6 +2969,19 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, securityRule?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsIdsOut> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, securityRule, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Checks database availability and API response threshold time.
+         * @summary Health status of application
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getApiStatus(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getApiStatus(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3304,6 +3359,15 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, securityRule, options)(axios, basePath);
         },
         /**
+         * Checks database availability and API response threshold time.
+         * @summary Health status of application
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getApiStatus(options?: any): AxiosPromise<void> {
+            return DefaultApiFp(configuration).getApiStatus(options)(axios, basePath);
+        },
+        /**
          * Returns available business risk and business_risk_id pairs where business_risk_id is internal ID of the business risk.
          * @summary Available business risk/business_risk_id pairs.
          * @param {*} [options] Override http request option.
@@ -3614,6 +3678,17 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Checks database availability and API response threshold time.
+     * @summary Health status of application
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public getApiStatus(options?: any) {
+        return DefaultApiFp(this.configuration).getApiStatus(options)(this.axios, this.basePath);
+    }
+
+    /**
      * Returns available business risk and business_risk_id pairs where business_risk_id is internal ID of the business risk.
      * @summary Available business risk/business_risk_id pairs.
      * @param {*} [options] Override http request option.
@@ -3913,7 +3988,7 @@ export const InternalApiAxiosParamCreator = function (configuration?: Configurat
             if (accountId === null || accountId === undefined) {
                 throw new RequiredError('accountId','Required parameter accountId was null or undefined when calling refreshAccount.');
             }
-            const localVarPath = `/v1/refresh/accounts/{account_id}`
+            const localVarPath = `/refresh/accounts/{account_id}`
                 .replace(`{${"account_id"}}`, encodeURIComponent(String(accountId)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3968,7 +4043,7 @@ export const InternalApiAxiosParamCreator = function (configuration?: Configurat
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling refreshAccountCve.');
             }
-            const localVarPath = `/v1/refresh/accounts/{account_id}/cves/{cve_id}`
+            const localVarPath = `/refresh/accounts/{account_id}/cves/{cve_id}`
                 .replace(`{${"account_id"}}`, encodeURIComponent(String(accountId)))
                 .replace(`{${"cve_id"}}`, encodeURIComponent(String(cveId)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
@@ -4019,7 +4094,7 @@ export const InternalApiAxiosParamCreator = function (configuration?: Configurat
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling refreshCve.');
             }
-            const localVarPath = `/v1/refresh/cves/{cve_id}`
+            const localVarPath = `/refresh/cves/{cve_id}`
                 .replace(`{${"cve_id"}}`, encodeURIComponent(String(cveId)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4069,7 +4144,7 @@ export const InternalApiAxiosParamCreator = function (configuration?: Configurat
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling refreshSystem.');
             }
-            const localVarPath = `/v1/refresh/systems/{inventory_id}`
+            const localVarPath = `/refresh/systems/{inventory_id}`
                 .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;

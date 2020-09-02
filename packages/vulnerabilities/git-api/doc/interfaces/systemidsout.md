@@ -24,7 +24,7 @@
 
 • **data**: *string | Array‹string›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1286](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1286)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1298)*
 
 **`memberof`** SystemIdsOut
 
@@ -34,7 +34,7 @@ ___
 
 • **links**: *[Links](links.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1292)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1304)*
 
 **`memberof`** SystemIdsOut
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**: *[MetaSystems](metasystems.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1298)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1310)*
 
 **`memberof`** SystemIdsOut

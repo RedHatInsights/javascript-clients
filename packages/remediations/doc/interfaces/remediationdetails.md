@@ -14,6 +14,7 @@
 
 ### Properties
 
+* [archived](remediationdetails.md#archived)
 * [auto_reboot](remediationdetails.md#auto_reboot)
 * [created_at](remediationdetails.md#created_at)
 * [created_by](remediationdetails.md#created_by)
@@ -27,11 +28,23 @@
 
 ## Properties
 
+###  archived
+
+• **archived**: *boolean*
+
+*Defined in [api.ts:644](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L644)*
+
+Indicates whether a remediation has been marked as archived
+
+**`memberof`** RemediationDetails
+
+___
+
 ###  auto_reboot
 
 • **auto_reboot**: *boolean*
 
-*Defined in [api.ts:644](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L644)*
+*Defined in [api.ts:650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L650)*
 
 Indicates whether systems that require reboot for the remediation to be properly applied should be rebooted automatically or not
 
@@ -43,7 +56,7 @@ ___
 
 • **created_at**: *string*
 
-*Defined in [api.ts:656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L656)*
+*Defined in [api.ts:662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L662)*
 
 **`memberof`** RemediationDetails
 
@@ -53,7 +66,7 @@ ___
 
 • **created_by**: *[UserOut](userout.md)*
 
-*Defined in [api.ts:650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L650)*
+*Defined in [api.ts:656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L656)*
 
 **`memberof`** RemediationDetails
 
@@ -73,7 +86,7 @@ ___
 
 • **issues**: *Array‹[RemediationIssue](remediationissue.md)›*
 
-*Defined in [api.ts:680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L680)*
+*Defined in [api.ts:686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L686)*
 
 **`memberof`** RemediationDetails
 
@@ -105,7 +118,7 @@ ___
 
 • **resolved_count**: *number*
 
-*Defined in [api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L674)*
+*Defined in [api.ts:680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L680)*
 
 **`memberof`** RemediationDetails
 
@@ -115,7 +128,7 @@ ___
 
 • **updated_at**: *string*
 
-*Defined in [api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L668)*
+*Defined in [api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L674)*
 
 **`memberof`** RemediationDetails
 
@@ -125,6 +138,6 @@ ___
 
 • **updated_by**: *[UserOut](userout.md)*
 
-*Defined in [api.ts:662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L662)*
+*Defined in [api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L668)*
 
 **`memberof`** RemediationDetails

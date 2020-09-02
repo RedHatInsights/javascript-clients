@@ -27,7 +27,7 @@
 
 • **api_version**: *number*
 
-*Defined in [packages/rbac/api.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1225)*
+*Defined in [packages/rbac/api.ts:1305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1305)*
 
 **`memberof`** Status
 
@@ -37,7 +37,7 @@ ___
 
 • **commit**? : *string*
 
-*Defined in [packages/rbac/api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1231)*
+*Defined in [packages/rbac/api.ts:1311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1311)*
 
 **`memberof`** Status
 
@@ -47,7 +47,7 @@ ___
 
 • **modules**? : *object*
 
-*Defined in [packages/rbac/api.ts:1255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1255)*
+*Defined in [packages/rbac/api.ts:1335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1335)*
 
 **`memberof`** Status
 
@@ -57,7 +57,7 @@ ___
 
 • **platform_info**? : *object*
 
-*Defined in [packages/rbac/api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1243)*
+*Defined in [packages/rbac/api.ts:1323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1323)*
 
 **`memberof`** Status
 
@@ -67,7 +67,7 @@ ___
 
 • **python_version**? : *string*
 
-*Defined in [packages/rbac/api.ts:1249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1249)*
+*Defined in [packages/rbac/api.ts:1329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1329)*
 
 **`memberof`** Status
 
@@ -77,6 +77,6 @@ ___
 
 • **server_address**? : *string*
 
-*Defined in [packages/rbac/api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1237)*
+*Defined in [packages/rbac/api.ts:1317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1317)*
 
 **`memberof`** Status

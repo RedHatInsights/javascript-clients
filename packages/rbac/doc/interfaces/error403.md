@@ -20,7 +20,7 @@
 
 ###  errors
 
-• **errors**: *Array‹object›*
+• **errors**: *Array‹[Error403Errors](error403errors.md)›*
 
 *Defined in [packages/rbac/api.ts:103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L103)*
 

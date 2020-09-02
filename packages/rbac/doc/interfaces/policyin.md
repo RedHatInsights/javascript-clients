@@ -29,7 +29,7 @@
 
 *Inherited from [Policy](policy.md).[description](policy.md#optional-description)*
 
-*Defined in [packages/rbac/api.ts:549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L549)*
+*Defined in [packages/rbac/api.ts:593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L593)*
 
 **`memberof`** Policy
 
@@ -39,7 +39,7 @@ ___
 
 • **group**: *string*
 
-*Defined in [packages/rbac/api.ts:630](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L630)*
+*Defined in [packages/rbac/api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L674)*
 
 **`memberof`** PolicyIn
 
@@ -51,7 +51,7 @@ ___
 
 *Inherited from [Policy](policy.md).[name](policy.md#name)*
 
-*Defined in [packages/rbac/api.ts:543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L543)*
+*Defined in [packages/rbac/api.ts:587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L587)*
 
 **`memberof`** Policy
 
@@ -61,6 +61,6 @@ ___
 
 • **roles**: *Array‹string›*
 
-*Defined in [packages/rbac/api.ts:636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L636)*
+*Defined in [packages/rbac/api.ts:680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L680)*
 
 **`memberof`** PolicyIn

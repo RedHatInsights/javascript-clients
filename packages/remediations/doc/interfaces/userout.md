@@ -24,7 +24,7 @@
 
 • **first_name**: *string*
 
-*Defined in [api.ts:1148](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1148)*
+*Defined in [api.ts:1172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1172)*
 
 **`memberof`** UserOut
 
@@ -34,7 +34,7 @@ ___
 
 • **last_name**: *string*
 
-*Defined in [api.ts:1154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1154)*
+*Defined in [api.ts:1178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1178)*
 
 **`memberof`** UserOut
 
@@ -44,6 +44,6 @@ ___
 
 • **username**: *string*
 
-*Defined in [api.ts:1142](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1142)*
+*Defined in [api.ts:1166](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1166)*
 
 **`memberof`** UserOut

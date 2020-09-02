@@ -85,7 +85,7 @@ ___
 
 ▸ **getResolutionsForIssue**(`issue`: string, `options?`: any): *AxiosPromise‹[Resolutions](../interfaces/resolutions.md)›*
 
-*Defined in [api.ts:3056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3056)*
+*Defined in [api.ts:3080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3080)*
 
 Provides information about resolutions available for the given issue
 
@@ -110,7 +110,7 @@ ___
 
 ▸ **getResolutionsForIssues**(`resolutionsBatchInput`: [ResolutionsBatchInput](../interfaces/resolutionsbatchinput.md), `options?`: any): *AxiosPromise‹object›*
 
-*Defined in [api.ts:3068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3068)*
+*Defined in [api.ts:3092](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3092)*
 
 Provides information about resolutions available for the given issues
 

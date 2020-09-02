@@ -23,7 +23,7 @@
 
 • **name**? : *string*
 
-*Defined in [packages/catalog/api.ts:1096](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1096)*
+*Defined in [packages/catalog/api.ts:1108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1108)*
 
 **`memberof`** Setting
 
@@ -33,6 +33,6 @@ ___
 
 • **value**? : *string*
 
-*Defined in [packages/catalog/api.ts:1102](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1102)*
+*Defined in [packages/catalog/api.ts:1114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1114)*
 
 **`memberof`** Setting

@@ -89,8 +89,6 @@ Name | Type |
 
 * **createSource**(`source`: [Source](interfaces/source.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **createSourceType**(`sourceType`: [SourceType](interfaces/sourcetype.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
-
 * **deleteApplication**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **deleteAuthentication**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
@@ -153,7 +151,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/sources/api.ts:3005](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3005)*
+*Defined in [packages/sources/api.ts:2946](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2946)*
 
 DefaultApi - factory interface
 
@@ -178,8 +176,6 @@ Name | Type |
 * **createEndpoint**(`endpoint`: [Endpoint](interfaces/endpoint.md), `options?`: any): *AxiosPromise‹[Endpoint](interfaces/endpoint.md)›*
 
 * **createSource**(`source`: [Source](interfaces/source.md), `options?`: any): *AxiosPromise‹[Source](interfaces/source.md)›*
-
-* **createSourceType**(`sourceType`: [SourceType](interfaces/sourcetype.md), `options?`: any): *AxiosPromise‹[SourceType](interfaces/sourcetype.md)›*
 
 * **deleteApplication**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
@@ -243,7 +239,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/sources/api.ts:2475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2475)*
+*Defined in [packages/sources/api.ts:2430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2430)*
 
 DefaultApi - functional programming interface
 
@@ -276,10 +272,6 @@ Name | Type |
 * **createSource**(`source`: [Source](interfaces/source.md), `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Source](interfaces/source.md)›*
-
-* **createSourceType**(`sourceType`: [SourceType](interfaces/sourcetype.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[SourceType](interfaces/sourcetype.md)›*
 
 * **deleteApplication**(`id`: string, `options?`: any): *function*
 

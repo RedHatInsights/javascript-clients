@@ -86,6 +86,8 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:2351](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2351)*
 
+Required permissions: inventory:hosts:read
+
 **`summary`** Get the active host tags for a given account
 
 **`throws`** {RequiredError}

@@ -18,6 +18,7 @@
 
 * [access](rolein.md#access)
 * [description](rolein.md#optional-description)
+* [display_name](rolein.md#optional-display_name)
 * [name](rolein.md#name)
 
 ## Properties
@@ -26,7 +27,7 @@
 
 • **access**: *Array‹[Access](access.md)›*
 
-*Defined in [packages/rbac/api.ts:880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L880)*
+*Defined in [packages/rbac/api.ts:942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L942)*
 
 **`memberof`** RoleIn
 
@@ -38,7 +39,19 @@ ___
 
 *Inherited from [Role](role.md).[description](role.md#optional-description)*
 
-*Defined in [packages/rbac/api.ts:867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L867)*
+*Defined in [packages/rbac/api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L929)*
+
+**`memberof`** Role
+
+___
+
+### `Optional` display_name
+
+• **display_name**? : *string*
+
+*Inherited from [Role](role.md).[display_name](role.md#optional-display_name)*
+
+*Defined in [packages/rbac/api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L923)*
 
 **`memberof`** Role
 
@@ -50,6 +63,6 @@ ___
 
 *Inherited from [Role](role.md).[name](role.md#name)*
 
-*Defined in [packages/rbac/api.ts:861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L861)*
+*Defined in [packages/rbac/api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L917)*
 
 **`memberof`** Role

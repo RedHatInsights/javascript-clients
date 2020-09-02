@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[Tenant](tenant.md)›*
 
-*Defined in [packages/catalog/api.ts:1271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1271)*
+*Defined in [packages/catalog/api.ts:1283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1283)*
 
 **`memberof`** TenantsCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [packages/catalog/api.ts:1265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1265)*
+*Defined in [packages/catalog/api.ts:1277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1277)*
 
 **`memberof`** TenantsCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [packages/catalog/api.ts:1259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1259)*
+*Defined in [packages/catalog/api.ts:1271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1271)*
 
 **`memberof`** TenantsCollection

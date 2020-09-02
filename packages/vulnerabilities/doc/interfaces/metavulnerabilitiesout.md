@@ -31,6 +31,7 @@
 * [public_to](metavulnerabilitiesout.md#public_to)
 * [show_all](metavulnerabilitiesout.md#show_all)
 * [sort](metavulnerabilitiesout.md#sort)
+* [system_count](metavulnerabilitiesout.md#optional-system_count)
 * [total_items](metavulnerabilitiesout.md#total_items)
 
 ## Properties
@@ -228,6 +229,18 @@ ___
 Sorting filter.
 
 **`memberof`** Meta
+
+___
+
+### `Optional` system_count
+
+• **system_count**? : *number*
+
+*Defined in [packages/vulnerabilities/api.ts:997](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L997)*
+
+Total number of systems managed by vulnerability application.
+
+**`memberof`** MetaVulnerabilitiesOut
 
 ___
 
