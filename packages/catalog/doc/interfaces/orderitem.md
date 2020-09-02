@@ -24,6 +24,8 @@
 * [order_request_sent_at](orderitem.md#optional-order_request_sent_at)
 * [owner](orderitem.md#optional-owner)
 * [portfolio_item_id](orderitem.md#portfolio_item_id)
+* [process_scope](orderitem.md#optional-process_scope)
+* [process_sequence](orderitem.md#optional-process_sequence)
 * [provider_control_parameters](orderitem.md#optional-provider_control_parameters)
 * [service_parameters](orderitem.md#optional-service_parameters)
 * [state](orderitem.md#optional-state)
@@ -136,6 +138,30 @@ ___
 *Defined in [packages/catalog/api.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L440)*
 
 Stores the Portfolio Item ID.
+
+**`memberof`** OrderItem
+
+___
+
+### `Optional` process_scope
+
+• **process_scope**? : *string*
+
+*Defined in [packages/catalog/api.ts:506](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L506)*
+
+Denotes the scope in which the order item will run for the order it belongs to. It can be \'before\', \'after\', or \'applicable\'
+
+**`memberof`** OrderItem
+
+___
+
+### `Optional` process_sequence
+
+• **process_sequence**? : *number*
+
+*Defined in [packages/catalog/api.ts:500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L500)*
+
+The sequence that this order item is ran relative to the other order items within the order.
 
 **`memberof`** OrderItem
 

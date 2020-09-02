@@ -22,6 +22,6 @@
 
 • **associations_to_remove**? : *Array‹[OrderProcessAssociationsToRemoveAssociationsToRemoveEnum](../enums/orderprocessassociationstoremoveassociationstoremoveenum.md)›*
 
-*Defined in [packages/catalog/api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L603)*
+*Defined in [packages/catalog/api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L615)*
 
 **`memberof`** OrderProcessAssociationsToRemove

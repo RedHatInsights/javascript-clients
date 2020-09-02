@@ -23,7 +23,7 @@
 
 • **group_uuids**: *Array‹string›*
 
-*Defined in [packages/catalog/api.ts:1158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1158)*
+*Defined in [packages/catalog/api.ts:1170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1170)*
 
 An array of group UUID\'s retrieved from the RBAC Service with whom the resource has to be shared.
 
@@ -35,7 +35,7 @@ ___
 
 • **permissions**: *Array‹[SharePolicyPermissionsEnum](../enums/sharepolicypermissionsenum.md)›*
 
-*Defined in [packages/catalog/api.ts:1152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1152)*
+*Defined in [packages/catalog/api.ts:1164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1164)*
 
 The permissions to apply for this share. The valid values are read, update, delete and order
 

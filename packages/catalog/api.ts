@@ -492,6 +492,18 @@ export interface OrderItem {
      * @memberof OrderItem
      */
     insights_request_id?: string;
+    /**
+     * The sequence that this order item is ran relative to the other order items within the order.
+     * @type {number}
+     * @memberof OrderItem
+     */
+    process_sequence?: number;
+    /**
+     * Denotes the scope in which the order item will run for the order it belongs to. It can be \'before\', \'after\', or \'applicable\'
+     * @type {string}
+     * @memberof OrderItem
+     */
+    process_scope?: string;
 }
 
 /**
@@ -551,7 +563,7 @@ export interface OrderProcess {
      * @type {string}
      * @memberof OrderProcess
      */
-    name?: string;
+    name: string;
     /**
      * The order process description.
      * @type {string}
@@ -4986,10 +4998,11 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * Fetch the specified portfolio\'s icon image.
          * @summary Fetches the specified portfolio\'s icon image
          * @param {string} portfolioId The Portfolio ID
+         * @param {string} [cacheId] Artificial string to help avoid falsey browser cache. This can occur after changing static resources like images. The browser will return an outdated cached response. Appending different query will result in a new async call, instead of retrieving the resource from the browser cache.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioIcon(portfolioId: string, options: any = {}): RequestArgs {
+        showPortfolioIcon(portfolioId: string, cacheId?: string, options: any = {}): RequestArgs {
             // verify required parameter 'portfolioId' is not null or undefined
             if (portfolioId === null || portfolioId === undefined) {
                 throw new RequiredError('portfolioId','Required parameter portfolioId was null or undefined when calling showPortfolioIcon.');
@@ -5009,6 +5022,10 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (cacheId !== undefined) {
+                localVarQueryParameter['cache_id'] = cacheId;
             }
 
 
@@ -5358,11 +5375,12 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * Fetch the specified portfolio\'s icon image.
          * @summary Fetches the specified portfolio\'s icon image
          * @param {string} portfolioId The Portfolio ID
+         * @param {string} [cacheId] Artificial string to help avoid falsey browser cache. This can occur after changing static resources like images. The browser will return an outdated cached response. Appending different query will result in a new async call, instead of retrieving the resource from the browser cache.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioIcon(portfolioId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).showPortfolioIcon(portfolioId, options);
+        showPortfolioIcon(portfolioId: string, cacheId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
+            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).showPortfolioIcon(portfolioId, cacheId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5550,11 +5568,12 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * Fetch the specified portfolio\'s icon image.
          * @summary Fetches the specified portfolio\'s icon image
          * @param {string} portfolioId The Portfolio ID
+         * @param {string} [cacheId] Artificial string to help avoid falsey browser cache. This can occur after changing static resources like images. The browser will return an outdated cached response. Appending different query will result in a new async call, instead of retrieving the resource from the browser cache.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioIcon(portfolioId: string, options?: any): AxiosPromise<any> {
-            return PortfolioApiFp(configuration).showPortfolioIcon(portfolioId, options)(axios, basePath);
+        showPortfolioIcon(portfolioId: string, cacheId?: string, options?: any): AxiosPromise<any> {
+            return PortfolioApiFp(configuration).showPortfolioIcon(portfolioId, cacheId, options)(axios, basePath);
         },
         /**
          * Undeletes the portfolio specified by the portfolio ID.
@@ -5749,12 +5768,13 @@ export class PortfolioApi extends BaseAPI {
      * Fetch the specified portfolio\'s icon image.
      * @summary Fetches the specified portfolio\'s icon image
      * @param {string} portfolioId The Portfolio ID
+     * @param {string} [cacheId] Artificial string to help avoid falsey browser cache. This can occur after changing static resources like images. The browser will return an outdated cached response. Appending different query will result in a new async call, instead of retrieving the resource from the browser cache.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioApi
      */
-    public showPortfolioIcon(portfolioId: string, options?: any) {
-        return PortfolioApiFp(this.configuration).showPortfolioIcon(portfolioId, options)(this.axios, this.basePath);
+    public showPortfolioIcon(portfolioId: string, cacheId?: string, options?: any) {
+        return PortfolioApiFp(this.configuration).showPortfolioIcon(portfolioId, cacheId, options)(this.axios, this.basePath);
     }
 
     /**
@@ -6294,10 +6314,11 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * Gets a specific portfolio item based on the portfolio item ID passed
          * @summary Gets a specific portfolio item
          * @param {string} id ID of the resource
+         * @param {boolean} [showDiscarded] Whether or not to display the discarded result.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioItem(id: string, options: any = {}): RequestArgs {
+        showPortfolioItem(id: string, showDiscarded?: boolean, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showPortfolioItem.');
@@ -6317,6 +6338,10 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (showDiscarded !== undefined) {
+                localVarQueryParameter['show_discarded'] = showDiscarded;
             }
 
 
@@ -6640,11 +6665,12 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * Gets a specific portfolio item based on the portfolio item ID passed
          * @summary Gets a specific portfolio item
          * @param {string} id ID of the resource
+         * @param {boolean} [showDiscarded] Whether or not to display the discarded result.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioItem(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).showPortfolioItem(id, options);
+        showPortfolioItem(id: string, showDiscarded?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem> {
+            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).showPortfolioItem(id, showDiscarded, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6818,11 +6844,12 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * Gets a specific portfolio item based on the portfolio item ID passed
          * @summary Gets a specific portfolio item
          * @param {string} id ID of the resource
+         * @param {boolean} [showDiscarded] Whether or not to display the discarded result.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioItem(id: string, options?: any): AxiosPromise<PortfolioItem> {
-            return PortfolioItemApiFp(configuration).showPortfolioItem(id, options)(axios, basePath);
+        showPortfolioItem(id: string, showDiscarded?: boolean, options?: any): AxiosPromise<PortfolioItem> {
+            return PortfolioItemApiFp(configuration).showPortfolioItem(id, showDiscarded, options)(axios, basePath);
         },
         /**
          * Fetch the specified portfolio item\'s icon image.
@@ -7001,12 +7028,13 @@ export class PortfolioItemApi extends BaseAPI {
      * Gets a specific portfolio item based on the portfolio item ID passed
      * @summary Gets a specific portfolio item
      * @param {string} id ID of the resource
+     * @param {boolean} [showDiscarded] Whether or not to display the discarded result.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioItemApi
      */
-    public showPortfolioItem(id: string, options?: any) {
-        return PortfolioItemApiFp(this.configuration).showPortfolioItem(id, options)(this.axios, this.basePath);
+    public showPortfolioItem(id: string, showDiscarded?: boolean, options?: any) {
+        return PortfolioItemApiFp(this.configuration).showPortfolioItem(id, showDiscarded, options)(this.axios, this.basePath);
     }
 
     /**

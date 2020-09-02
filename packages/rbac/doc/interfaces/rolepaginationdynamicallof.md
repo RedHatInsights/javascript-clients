@@ -22,6 +22,6 @@
 
 • **data**: *Array‹[RoleOutDynamic](roleoutdynamic.md)›*
 
-*Defined in [packages/rbac/api.ts:1139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1139)*
+*Defined in [packages/rbac/api.ts:1213](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1213)*
 
 **`memberof`** RolePaginationDynamicAllOf

@@ -1016,7 +1016,7 @@ export interface YumRepo {
 export const HostsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
+         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> Required permissions: inventory:hosts:write <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
          * @summary Create/update multiple host and add them to the host list
          * @param {Array<CreateHostIn>} createHostIn A list of host objects to be added to the host list
          * @param {*} [options] Override http request option.
@@ -1072,7 +1072,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Delete hosts by IDs
+         * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
          * @summary Delete hosts by IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} [branchId] Filter by branch_id
@@ -1121,7 +1121,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Find one or more hosts by their ID.
+         * Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
          * @summary Find hosts by their IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} [branchId] Filter by branch_id
@@ -1190,7 +1190,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Read the entire list of all hosts available to the account.
+         * Read the entire list of all hosts available to the account. <br /><br /> Required permissions: inventory:hosts:read
          * @summary Read the entire list of hosts
          * @param {string} [displayName] A part of a searched host’s display name.
          * @param {string} [fqdn] Filter by a host\&#39;s FQDN
@@ -1288,7 +1288,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Find one or more hosts by their ID and return the id and system profile
+         * Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
          * @summary Return one or more hosts system profile
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
@@ -1357,7 +1357,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Get the number of tags on a host
+         * Get the number of tags on a host <br /><br /> Required permissions: inventory:hosts:read
          * @summary Get the number of tags on a host
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
@@ -1421,7 +1421,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Get the tags on a host
+         * Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read
          * @summary Get the tags on a host
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
@@ -1490,7 +1490,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Merge one or multiple hosts facts under a namespace.
+         * Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
          * @summary Merge facts under a namespace
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} namespace A namespace of the merged facts.
@@ -1554,7 +1554,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Update a host
+         * Update a host <br /><br /> Required permissions: inventory:hosts:write
          * @summary Update a host
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
@@ -1612,7 +1612,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Replace facts under a namespace
+         * Replace facts under a namespace <br /><br /> Required permissions: inventory:hosts:write
          * @summary Replace facts under a namespace
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} namespace A namespace of the merged facts.
@@ -1685,7 +1685,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 export const HostsApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
+         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> Required permissions: inventory:hosts:write <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
          * @summary Create/update multiple host and add them to the host list
          * @param {Array<CreateHostIn>} createHostIn A list of host objects to be added to the host list
          * @param {*} [options] Override http request option.
@@ -1699,7 +1699,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Delete hosts by IDs
+         * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
          * @summary Delete hosts by IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} [branchId] Filter by branch_id
@@ -1714,7 +1714,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Find one or more hosts by their ID.
+         * Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
          * @summary Find hosts by their IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} [branchId] Filter by branch_id
@@ -1733,7 +1733,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Read the entire list of all hosts available to the account.
+         * Read the entire list of all hosts available to the account. <br /><br /> Required permissions: inventory:hosts:read
          * @summary Read the entire list of hosts
          * @param {string} [displayName] A part of a searched host’s display name.
          * @param {string} [fqdn] Filter by a host\&#39;s FQDN
@@ -1758,7 +1758,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Find one or more hosts by their ID and return the id and system profile
+         * Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
          * @summary Return one or more hosts system profile
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
@@ -1777,7 +1777,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Get the number of tags on a host
+         * Get the number of tags on a host <br /><br /> Required permissions: inventory:hosts:read
          * @summary Get the number of tags on a host
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
@@ -1795,7 +1795,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Get the tags on a host
+         * Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read
          * @summary Get the tags on a host
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
@@ -1814,7 +1814,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Merge one or multiple hosts facts under a namespace.
+         * Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
          * @summary Merge facts under a namespace
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} namespace A namespace of the merged facts.
@@ -1831,7 +1831,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Update a host
+         * Update a host <br /><br /> Required permissions: inventory:hosts:write
          * @summary Update a host
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
@@ -1847,7 +1847,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Replace facts under a namespace
+         * Replace facts under a namespace <br /><br /> Required permissions: inventory:hosts:write
          * @summary Replace facts under a namespace
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} namespace A namespace of the merged facts.
@@ -1873,7 +1873,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
 export const HostsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
+         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> Required permissions: inventory:hosts:write <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
          * @summary Create/update multiple host and add them to the host list
          * @param {Array<CreateHostIn>} createHostIn A list of host objects to be added to the host list
          * @param {*} [options] Override http request option.
@@ -1883,7 +1883,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
             return HostsApiFp(configuration).apiHostAddHostList(createHostIn, options)(axios, basePath);
         },
         /**
-         * Delete hosts by IDs
+         * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
          * @summary Delete hosts by IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} [branchId] Filter by branch_id
@@ -1894,7 +1894,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
             return HostsApiFp(configuration).apiHostDeleteById(hostIdList, branchId, options)(axios, basePath);
         },
         /**
-         * Find one or more hosts by their ID.
+         * Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
          * @summary Find hosts by their IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} [branchId] Filter by branch_id
@@ -1909,7 +1909,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
             return HostsApiFp(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options)(axios, basePath);
         },
         /**
-         * Read the entire list of all hosts available to the account.
+         * Read the entire list of all hosts available to the account. <br /><br /> Required permissions: inventory:hosts:read
          * @summary Read the entire list of hosts
          * @param {string} [displayName] A part of a searched host’s display name.
          * @param {string} [fqdn] Filter by a host\&#39;s FQDN
@@ -1930,7 +1930,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
             return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, options)(axios, basePath);
         },
         /**
-         * Find one or more hosts by their ID and return the id and system profile
+         * Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
          * @summary Return one or more hosts system profile
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
@@ -1945,7 +1945,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
             return HostsApiFp(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, options)(axios, basePath);
         },
         /**
-         * Get the number of tags on a host
+         * Get the number of tags on a host <br /><br /> Required permissions: inventory:hosts:read
          * @summary Get the number of tags on a host
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
@@ -1959,7 +1959,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
             return HostsApiFp(configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options)(axios, basePath);
         },
         /**
-         * Get the tags on a host
+         * Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read
          * @summary Get the tags on a host
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
@@ -1974,7 +1974,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
             return HostsApiFp(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options)(axios, basePath);
         },
         /**
-         * Merge one or multiple hosts facts under a namespace.
+         * Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
          * @summary Merge facts under a namespace
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} namespace A namespace of the merged facts.
@@ -1987,7 +1987,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
             return HostsApiFp(configuration).apiHostMergeFacts(hostIdList, namespace, body, branchId, options)(axios, basePath);
         },
         /**
-         * Update a host
+         * Update a host <br /><br /> Required permissions: inventory:hosts:write
          * @summary Update a host
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
@@ -1999,7 +1999,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
             return HostsApiFp(configuration).apiHostPatchById(hostIdList, patchHostIn, branchId, options)(axios, basePath);
         },
         /**
-         * Replace facts under a namespace
+         * Replace facts under a namespace <br /><br /> Required permissions: inventory:hosts:write
          * @summary Replace facts under a namespace
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {string} namespace A namespace of the merged facts.
@@ -2022,7 +2022,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
  */
 export class HostsApi extends BaseAPI {
     /**
-     * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
+     * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> Required permissions: inventory:hosts:write <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
      * @summary Create/update multiple host and add them to the host list
      * @param {Array<CreateHostIn>} createHostIn A list of host objects to be added to the host list
      * @param {*} [options] Override http request option.
@@ -2034,7 +2034,7 @@ export class HostsApi extends BaseAPI {
     }
 
     /**
-     * Delete hosts by IDs
+     * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
      * @summary Delete hosts by IDs
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {string} [branchId] Filter by branch_id
@@ -2047,7 +2047,7 @@ export class HostsApi extends BaseAPI {
     }
 
     /**
-     * Find one or more hosts by their ID.
+     * Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
      * @summary Find hosts by their IDs
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {string} [branchId] Filter by branch_id
@@ -2064,7 +2064,7 @@ export class HostsApi extends BaseAPI {
     }
 
     /**
-     * Read the entire list of all hosts available to the account.
+     * Read the entire list of all hosts available to the account. <br /><br /> Required permissions: inventory:hosts:read
      * @summary Read the entire list of hosts
      * @param {string} [displayName] A part of a searched host’s display name.
      * @param {string} [fqdn] Filter by a host\&#39;s FQDN
@@ -2087,7 +2087,7 @@ export class HostsApi extends BaseAPI {
     }
 
     /**
-     * Find one or more hosts by their ID and return the id and system profile
+     * Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
      * @summary Return one or more hosts system profile
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {number} [perPage] A number of items to return per page.
@@ -2104,7 +2104,7 @@ export class HostsApi extends BaseAPI {
     }
 
     /**
-     * Get the number of tags on a host
+     * Get the number of tags on a host <br /><br /> Required permissions: inventory:hosts:read
      * @summary Get the number of tags on a host
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {number} [perPage] A number of items to return per page.
@@ -2120,7 +2120,7 @@ export class HostsApi extends BaseAPI {
     }
 
     /**
-     * Get the tags on a host
+     * Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read
      * @summary Get the tags on a host
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {number} [perPage] A number of items to return per page.
@@ -2137,7 +2137,7 @@ export class HostsApi extends BaseAPI {
     }
 
     /**
-     * Merge one or multiple hosts facts under a namespace.
+     * Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
      * @summary Merge facts under a namespace
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {string} namespace A namespace of the merged facts.
@@ -2152,7 +2152,7 @@ export class HostsApi extends BaseAPI {
     }
 
     /**
-     * Update a host
+     * Update a host <br /><br /> Required permissions: inventory:hosts:write
      * @summary Update a host
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
@@ -2166,7 +2166,7 @@ export class HostsApi extends BaseAPI {
     }
 
     /**
-     * Replace facts under a namespace
+     * Replace facts under a namespace <br /><br /> Required permissions: inventory:hosts:write
      * @summary Replace facts under a namespace
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {string} namespace A namespace of the merged facts.
@@ -2190,7 +2190,7 @@ export class HostsApi extends BaseAPI {
 export const TagsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
+         * Required permissions: inventory:hosts:read
          * @summary Get the active host tags for a given account
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {'tag' | 'count'} [orderBy] Ordering field name
@@ -2277,7 +2277,7 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
 export const TagsApiFp = function(configuration?: Configuration) {
     return {
         /**
-         *
+         * Required permissions: inventory:hosts:read
          * @summary Get the active host tags for a given account
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {'tag' | 'count'} [orderBy] Ordering field name
@@ -2307,7 +2307,7 @@ export const TagsApiFp = function(configuration?: Configuration) {
 export const TagsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         *
+         * Required permissions: inventory:hosts:read
          * @summary Get the active host tags for a given account
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {'tag' | 'count'} [orderBy] Ordering field name
@@ -2334,7 +2334,7 @@ export const TagsApiFactory = function (configuration?: Configuration, basePath?
  */
 export class TagsApi extends BaseAPI {
     /**
-     *
+     * Required permissions: inventory:hosts:read
      * @summary Get the active host tags for a given account
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
      * @param {'tag' | 'count'} [orderBy] Ordering field name

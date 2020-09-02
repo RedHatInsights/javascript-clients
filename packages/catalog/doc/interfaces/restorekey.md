@@ -22,6 +22,6 @@
 
 • **restore_key**? : *string*
 
-*Defined in [packages/catalog/api.ts:1034](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1034)*
+*Defined in [packages/catalog/api.ts:1046](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1046)*
 
 **`memberof`** RestoreKey

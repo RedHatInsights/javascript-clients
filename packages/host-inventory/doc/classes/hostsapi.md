@@ -95,7 +95,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:2032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2032)*
 
-Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
+Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> Required permissions: inventory:hosts:write <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
 
 **`summary`** Create/update multiple host and add them to the host list
 
@@ -120,7 +120,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:2045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2045)*
 
-Delete hosts by IDs
+Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
 
 **`summary`** Delete hosts by IDs
 
@@ -146,7 +146,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:2062](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2062)*
 
-Find one or more hosts by their ID.
+Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
 
 **`summary`** Find hosts by their IDs
 
@@ -176,7 +176,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:2085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2085)*
 
-Read the entire list of all hosts available to the account.
+Read the entire list of all hosts available to the account. <br /><br /> Required permissions: inventory:hosts:read
 
 **`summary`** Read the entire list of hosts
 
@@ -212,7 +212,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:2102](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2102)*
 
-Find one or more hosts by their ID and return the id and system profile
+Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
 
 **`summary`** Return one or more hosts system profile
 
@@ -242,7 +242,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:2118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2118)*
 
-Get the number of tags on a host
+Get the number of tags on a host <br /><br /> Required permissions: inventory:hosts:read
 
 **`summary`** Get the number of tags on a host
 
@@ -271,7 +271,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:2135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2135)*
 
-Get the tags on a host
+Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read
 
 **`summary`** Get the tags on a host
 
@@ -301,7 +301,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:2150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2150)*
 
-Merge one or multiple hosts facts under a namespace.
+Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
 
 **`summary`** Merge facts under a namespace
 
@@ -329,7 +329,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:2164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2164)*
 
-Update a host
+Update a host <br /><br /> Required permissions: inventory:hosts:write
 
 **`summary`** Update a host
 
@@ -356,7 +356,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:2179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2179)*
 
-Replace facts under a namespace
+Replace facts under a namespace <br /><br /> Required permissions: inventory:hosts:write
 
 **`summary`** Replace facts under a namespace
 

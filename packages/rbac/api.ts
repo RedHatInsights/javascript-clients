@@ -97,10 +97,54 @@ export interface AdditionalGroup {
 export interface Error403 {
     /**
      *
-     * @type {Array<object>}
+     * @type {Array<Error403Errors>}
      * @memberof Error403
      */
-    errors: Array<object>;
+    errors: Array<Error403Errors>;
+}
+/**
+ *
+ * @export
+ * @interface Error403Errors
+ */
+export interface Error403Errors {
+    /**
+     *
+     * @type {string}
+     * @memberof Error403Errors
+     */
+    detail?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Error403Errors
+     */
+    source?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Error403Errors
+     */
+    status?: string;
+}
+/**
+ *
+ * @export
+ * @interface ErrorErrors
+ */
+export interface ErrorErrors {
+    /**
+     *
+     * @type {string}
+     * @memberof ErrorErrors
+     */
+    detail?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ErrorErrors
+     */
+    status?: string;
 }
 /**
  *
@@ -423,10 +467,10 @@ export interface ListPagination {
 export interface ModelError {
     /**
      *
-     * @type {Array<object>}
+     * @type {Array<ErrorErrors>}
      * @memberof ModelError
      */
-    errors: Array<object>;
+    errors: Array<ErrorErrors>;
 }
 /**
  *
@@ -716,6 +760,12 @@ export interface Principal {
      * @memberof Principal
      */
     is_active?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Principal
+     */
+    is_org_admin?: boolean;
 }
 /**
  *
@@ -766,6 +816,12 @@ export interface PrincipalOut {
      * @memberof PrincipalOut
      */
     is_active?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof PrincipalOut
+     */
+    is_org_admin?: boolean;
     /**
      *
      * @type {string}
@@ -864,6 +920,12 @@ export interface Role {
      * @type {string}
      * @memberof Role
      */
+    display_name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Role
+     */
     description?: string;
 }
 /**
@@ -904,6 +966,12 @@ export interface RoleOut {
      * @memberof RoleOut
      */
     name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleOut
+     */
+    display_name?: string;
     /**
      *
      * @type {string}
@@ -971,6 +1039,12 @@ export interface RoleOutDynamic {
      * @memberof RoleOutDynamic
      */
     name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleOutDynamic
+     */
+    display_name?: string;
     /**
      *
      * @type {string}
@@ -1150,6 +1224,12 @@ export interface RoleWithAccess {
      * @memberof RoleWithAccess
      */
     name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleWithAccess
+     */
+    display_name?: string;
     /**
      *
      * @type {string}
@@ -2550,9 +2630,9 @@ export const PermissionApiAxiosParamCreator = function (configuration?: Configur
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
-         * @param {string} [application] Partial match for the application name of a permission.
-         * @param {string} [resourceType] Partial match for the resource type name of a permission.
-         * @param {string} [verb] Partial match for the operation verb name of a permission.
+         * @param {string} [application] Exact match for the application name of a permission. You may also use a comma-separated list to match on multiple applications.
+         * @param {string} [resourceType] Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
+         * @param {string} [verb] Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
          * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2630,9 +2710,9 @@ export const PermissionApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
-         * @param {string} [application] Partial match for the application name of a permission.
-         * @param {string} [resourceType] Partial match for the resource type name of a permission.
-         * @param {string} [verb] Partial match for the operation verb name of a permission.
+         * @param {string} [application] Exact match for the application name of a permission. You may also use a comma-separated list to match on multiple applications.
+         * @param {string} [resourceType] Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
+         * @param {string} [verb] Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
          * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2659,9 +2739,9 @@ export const PermissionApiFactory = function (configuration?: Configuration, bas
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
-         * @param {string} [application] Partial match for the application name of a permission.
-         * @param {string} [resourceType] Partial match for the resource type name of a permission.
-         * @param {string} [verb] Partial match for the operation verb name of a permission.
+         * @param {string} [application] Exact match for the application name of a permission. You may also use a comma-separated list to match on multiple applications.
+         * @param {string} [resourceType] Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
+         * @param {string} [verb] Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
          * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2685,9 +2765,9 @@ export class PermissionApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
-     * @param {string} [application] Partial match for the application name of a permission.
-     * @param {string} [resourceType] Partial match for the resource type name of a permission.
-     * @param {string} [verb] Partial match for the operation verb name of a permission.
+     * @param {string} [application] Exact match for the application name of a permission. You may also use a comma-separated list to match on multiple applications.
+     * @param {string} [resourceType] Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
+     * @param {string} [verb] Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
      * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

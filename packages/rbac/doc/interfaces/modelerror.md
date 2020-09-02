@@ -20,8 +20,8 @@
 
 ###  errors
 
-• **errors**: *Array‹object›*
+• **errors**: *Array‹[ErrorErrors](errorerrors.md)›*
 
-*Defined in [packages/rbac/api.ts:429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L429)*
+*Defined in [packages/rbac/api.ts:473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L473)*
 
 **`memberof`** ModelError

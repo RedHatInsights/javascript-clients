@@ -26,7 +26,7 @@
 
 • **description**: *string*
 
-*Defined in [api.ts:768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L768)*
+*Defined in [api.ts:780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L780)*
 
 **`memberof`** RemediationIssue
 
@@ -36,7 +36,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [api.ts:762](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L762)*
+*Defined in [api.ts:774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L774)*
 
 **`memberof`** RemediationIssue
 
@@ -46,7 +46,7 @@ ___
 
 • **resolution**: *[RemediationIssueResolution](remediationissueresolution.md)*
 
-*Defined in [api.ts:774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L774)*
+*Defined in [api.ts:786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L786)*
 
 **`memberof`** RemediationIssue
 
@@ -56,7 +56,7 @@ ___
 
 • **resolutions_available**? : *number*
 
-*Defined in [api.ts:780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L780)*
+*Defined in [api.ts:792](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L792)*
 
 The total number of available resolutions for this issue
 
@@ -68,6 +68,6 @@ ___
 
 • **systems**: *Array‹[SystemOut](systemout.md)›*
 
-*Defined in [api.ts:786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L786)*
+*Defined in [api.ts:798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L798)*
 
 **`memberof`** RemediationIssue

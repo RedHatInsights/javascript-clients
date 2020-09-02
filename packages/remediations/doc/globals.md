@@ -114,7 +114,7 @@ ___
 
 ▸ **DiagnosisApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1161)*
+*Defined in [api.ts:1185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1185)*
 
 DiagnosisApi - axios parameter creator
 
@@ -136,7 +136,7 @@ ___
 
 ▸ **DiagnosisApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:1235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1235)*
+*Defined in [api.ts:1259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1259)*
 
 DiagnosisApi - factory interface
 
@@ -160,7 +160,7 @@ ___
 
 ▸ **DiagnosisApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1211)*
+*Defined in [api.ts:1235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1235)*
 
 DiagnosisApi - functional programming interface
 
@@ -184,7 +184,7 @@ ___
 
 ▸ **GeneratorApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1278)*
+*Defined in [api.ts:1302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1302)*
 
 GeneratorApi - axios parameter creator
 
@@ -206,7 +206,7 @@ ___
 
 ▸ **GeneratorApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:1349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1349)*
+*Defined in [api.ts:1373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1373)*
 
 GeneratorApi - factory interface
 
@@ -230,7 +230,7 @@ ___
 
 ▸ **GeneratorApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1326)*
+*Defined in [api.ts:1350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1350)*
 
 GeneratorApi - functional programming interface
 
@@ -254,7 +254,7 @@ ___
 
 ▸ **RemediationsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1390](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1390)*
+*Defined in [api.ts:1414](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1414)*
 
 RemediationsApi - axios parameter creator
 
@@ -308,7 +308,7 @@ ___
 
 ▸ **RemediationsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2446)*
+*Defined in [api.ts:2470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2470)*
 
 RemediationsApi - factory interface
 
@@ -364,7 +364,7 @@ ___
 
 ▸ **RemediationsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2171)*
+*Defined in [api.ts:2195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2195)*
 
 RemediationsApi - functional programming interface
 
@@ -452,7 +452,7 @@ ___
 
 ▸ **ResolutionsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2895)*
+*Defined in [api.ts:2919](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2919)*
 
 ResolutionsApi - axios parameter creator
 
@@ -476,7 +476,7 @@ ___
 
 ▸ **ResolutionsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3016](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3016)*
+*Defined in [api.ts:3040](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3040)*
 
 ResolutionsApi - factory interface
 
@@ -502,7 +502,7 @@ ___
 
 ▸ **ResolutionsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2979)*
+*Defined in [api.ts:3003](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3003)*
 
 ResolutionsApi - functional programming interface
 
@@ -530,7 +530,7 @@ ___
 
 ▸ **VersionApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3079)*
+*Defined in [api.ts:3103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3103)*
 
 VersionApi - axios parameter creator
 
@@ -552,7 +552,7 @@ ___
 
 ▸ **VersionApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3140](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3140)*
+*Defined in [api.ts:3164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3164)*
 
 VersionApi - factory interface
 
@@ -576,7 +576,7 @@ ___
 
 ▸ **VersionApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3118)*
+*Defined in [api.ts:3142](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3142)*
 
 VersionApi - functional programming interface
 

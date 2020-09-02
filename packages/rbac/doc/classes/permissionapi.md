@@ -84,7 +84,7 @@ ___
 
 ▸ **listPermissions**(`limit?`: number, `offset?`: number, `orderBy?`: string, `application?`: string, `resourceType?`: string, `verb?`: string, `permission?`: string, `options?`: any): *AxiosPromise‹[PermissionPagination](../interfaces/permissionpagination.md)›*
 
-*Defined in [packages/rbac/api.ts:2696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2696)*
+*Defined in [packages/rbac/api.ts:2776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2776)*
 
 By default, responses are sorted in ascending order by permission application.
 

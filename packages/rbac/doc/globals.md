@@ -29,6 +29,8 @@
 * [AdditionalGroup](interfaces/additionalgroup.md)
 * [ConfigurationParameters](interfaces/configurationparameters.md)
 * [Error403](interfaces/error403.md)
+* [Error403Errors](interfaces/error403errors.md)
+* [ErrorErrors](interfaces/errorerrors.md)
 * [Group](interfaces/group.md)
 * [GroupOut](interfaces/groupout.md)
 * [GroupPagination](interfaces/grouppagination.md)
@@ -123,7 +125,7 @@
 
 ▸ **AccessApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:1294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1294)*
+*Defined in [packages/rbac/api.ts:1374](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1374)*
 
 AccessApi - axios parameter creator
 
@@ -145,7 +147,7 @@ ___
 
 ▸ **AccessApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:1389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1389)*
+*Defined in [packages/rbac/api.ts:1469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1469)*
 
 AccessApi - factory interface
 
@@ -169,7 +171,7 @@ ___
 
 ▸ **AccessApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:1363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1363)*
+*Defined in [packages/rbac/api.ts:1443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1443)*
 
 AccessApi - functional programming interface
 
@@ -193,7 +195,7 @@ ___
 
 ▸ **GroupApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:1436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1436)*
+*Defined in [packages/rbac/api.ts:1516](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1516)*
 
 GroupApi - axios parameter creator
 
@@ -235,7 +237,7 @@ ___
 
 ▸ **GroupApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:2236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2236)*
+*Defined in [packages/rbac/api.ts:2316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2316)*
 
 GroupApi - factory interface
 
@@ -279,7 +281,7 @@ ___
 
 ▸ **GroupApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:2049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2049)*
+*Defined in [packages/rbac/api.ts:2129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2129)*
 
 GroupApi - functional programming interface
 
@@ -343,7 +345,7 @@ ___
 
 ▸ **PermissionApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:2545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2545)*
+*Defined in [packages/rbac/api.ts:2625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2625)*
 
 PermissionApi - axios parameter creator
 
@@ -365,7 +367,7 @@ ___
 
 ▸ **PermissionApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:2654](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2654)*
+*Defined in [packages/rbac/api.ts:2734](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2734)*
 
 PermissionApi - factory interface
 
@@ -389,7 +391,7 @@ ___
 
 ▸ **PermissionApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:2625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2625)*
+*Defined in [packages/rbac/api.ts:2705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2705)*
 
 PermissionApi - functional programming interface
 
@@ -413,7 +415,7 @@ ___
 
 ▸ **PolicyApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:2707](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2707)*
+*Defined in [packages/rbac/api.ts:2787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2787)*
 
 PolicyApi - axios parameter creator
 
@@ -443,7 +445,7 @@ ___
 
 ▸ **PolicyApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:3053](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3053)*
+*Defined in [packages/rbac/api.ts:3133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3133)*
 
 PolicyApi - factory interface
 
@@ -475,7 +477,7 @@ ___
 
 ▸ **PolicyApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:2967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2967)*
+*Defined in [packages/rbac/api.ts:3047](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3047)*
 
 PolicyApi - functional programming interface
 
@@ -515,7 +517,7 @@ ___
 
 ▸ **PrincipalApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3196)*
+*Defined in [packages/rbac/api.ts:3276](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3276)*
 
 PrincipalApi - axios parameter creator
 
@@ -537,7 +539,7 @@ ___
 
 ▸ **PrincipalApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:3293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3293)*
+*Defined in [packages/rbac/api.ts:3373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3373)*
 
 PrincipalApi - factory interface
 
@@ -561,7 +563,7 @@ ___
 
 ▸ **PrincipalApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3266)*
+*Defined in [packages/rbac/api.ts:3346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3346)*
 
 PrincipalApi - functional programming interface
 
@@ -585,7 +587,7 @@ ___
 
 ▸ **RoleApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3342)*
+*Defined in [packages/rbac/api.ts:3422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3422)*
 
 RoleApi - axios parameter creator
 
@@ -617,7 +619,7 @@ ___
 
 ▸ **RoleApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:3768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3768)*
+*Defined in [packages/rbac/api.ts:3848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3848)*
 
 RoleApi - factory interface
 
@@ -651,7 +653,7 @@ ___
 
 ▸ **RoleApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3664](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3664)*
+*Defined in [packages/rbac/api.ts:3744](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3744)*
 
 RoleApi - functional programming interface
 
@@ -695,7 +697,7 @@ ___
 
 ▸ **StatusApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3941](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3941)*
+*Defined in [packages/rbac/api.ts:4021](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4021)*
 
 StatusApi - axios parameter creator
 
@@ -717,7 +719,7 @@ ___
 
 ▸ **StatusApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:4008](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4008)*
+*Defined in [packages/rbac/api.ts:4088](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4088)*
 
 StatusApi - factory interface
 
@@ -741,7 +743,7 @@ ___
 
 ▸ **StatusApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3986)*
+*Defined in [packages/rbac/api.ts:4066](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4066)*
 
 StatusApi - functional programming interface
 
