@@ -25,6 +25,8 @@
 * [ControllersFilterData](interfaces/controllersfilterdata.md)
 * [ControllersLinks](interfaces/controllerslinks.md)
 * [ControllersListMeta](interfaces/controllerslistmeta.md)
+* [ControllersPackageSystemItem](interfaces/controllerspackagesystemitem.md)
+* [ControllersPackageSystemsResponse](interfaces/controllerspackagesystemsresponse.md)
 * [ControllersSystemAdvisoriesResponse](interfaces/controllerssystemadvisoriesresponse.md)
 * [ControllersSystemAdvisoryItem](interfaces/controllerssystemadvisoryitem.md)
 * [ControllersSystemAdvisoryItemAttributes](interfaces/controllerssystemadvisoryitemattributes.md)
@@ -32,7 +34,10 @@
 * [ControllersSystemInlineItem](interfaces/controllerssysteminlineitem.md)
 * [ControllersSystemItem](interfaces/controllerssystemitem.md)
 * [ControllersSystemItemAttributes](interfaces/controllerssystemitemattributes.md)
+* [ControllersSystemPackageData](interfaces/controllerssystempackagedata.md)
+* [ControllersSystemPackageResponse](interfaces/controllerssystempackageresponse.md)
 * [ControllersSystemsResponse](interfaces/controllerssystemsresponse.md)
+* [ModelsPackageUpdate](interfaces/modelspackageupdate.md)
 * [RequestArgs](interfaces/requestargs.md)
 
 ### Variables
@@ -55,7 +60,7 @@
 
 • **BASE_PATH**: *string* = "https://cloud.redhat.com".replace(/\/+$/, "")
 
-*Defined in [packages/patch/base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/18f6719/packages/patch/base.ts#L20)*
+*Defined in [packages/patch/base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/base.ts#L20)*
 
 ## Functions
 
@@ -63,7 +68,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/patch/api.ts:640](https://github.com/RedHatInsights/javascript-clients/blob/18f6719/packages/patch/api.ts#L640)*
+*Defined in [packages/patch/api.ts:795](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/api.ts#L795)*
 
 DefaultApi - axios parameter creator
 
@@ -89,11 +94,15 @@ Name | Type |
 
 * **listAdvisories**(`limit?`: number, `offset?`: number, `sort?`: "id" | "name" | "advisory_type" | "synopsis" | "public_date" | "applicable_systems", `search?`: string, `filterId?`: string, `filterDescription?`: string, `filterPublicDate?`: string, `filterSynopsis?`: string, `filterAdvisoryType?`: string, `filterSeverity?`: string, `filterApplicableSystems?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listAdvisorySystems**(`advisoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale", `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listAdvisorySystems**(`advisoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale", `search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `tags?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **listSystemAdvisories**(`inventoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "name" | "type" | "synopsis" | "public_date", `search?`: string, `filterId?`: string, `filterDescription?`: string, `filterPublicDate?`: string, `filterSynopsis?`: string, `filterAdvisoryType?`: string, `filterSeverity?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listSystems**(`limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale", `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listSystems**(`limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale" | "packages_installed" | "packages_updatable", `search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `filterPackagesInstalled?`: string, `filterPackagesUpdatable?`: string, `tags?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+
+* **packageSystems**(`packageName`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+
+* **systemPackages**(`inventoryId`: string, `search?`: string, `filterName?`: string, `filterDescription?`: string, `filterEvra?`: string, `filterSummary?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 ___
 
@@ -101,7 +110,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/patch/api.ts:1512](https://github.com/RedHatInsights/javascript-clients/blob/18f6719/packages/patch/api.ts#L1512)*
+*Defined in [packages/patch/api.ts:1849](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/api.ts#L1849)*
 
 DefaultApi - factory interface
 
@@ -129,11 +138,15 @@ Name | Type |
 
 * **listAdvisories**(`limit?`: number, `offset?`: number, `sort?`: "id" | "name" | "advisory_type" | "synopsis" | "public_date" | "applicable_systems", `search?`: string, `filterId?`: string, `filterDescription?`: string, `filterPublicDate?`: string, `filterSynopsis?`: string, `filterAdvisoryType?`: string, `filterSeverity?`: string, `filterApplicableSystems?`: string, `options?`: any): *AxiosPromise‹[ControllersAdvisoriesResponse](interfaces/controllersadvisoriesresponse.md)›*
 
-* **listAdvisorySystems**(`advisoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale", `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `options?`: any): *AxiosPromise‹[ControllersAdvisorySystemsResponse](interfaces/controllersadvisorysystemsresponse.md)›*
+* **listAdvisorySystems**(`advisoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale", `search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `tags?`: string, `options?`: any): *AxiosPromise‹[ControllersAdvisorySystemsResponse](interfaces/controllersadvisorysystemsresponse.md)›*
 
 * **listSystemAdvisories**(`inventoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "name" | "type" | "synopsis" | "public_date", `search?`: string, `filterId?`: string, `filterDescription?`: string, `filterPublicDate?`: string, `filterSynopsis?`: string, `filterAdvisoryType?`: string, `filterSeverity?`: string, `options?`: any): *AxiosPromise‹[ControllersSystemAdvisoriesResponse](interfaces/controllerssystemadvisoriesresponse.md)›*
 
-* **listSystems**(`limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale", `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `options?`: any): *AxiosPromise‹[ControllersSystemsResponse](interfaces/controllerssystemsresponse.md)›*
+* **listSystems**(`limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale" | "packages_installed" | "packages_updatable", `search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `filterPackagesInstalled?`: string, `filterPackagesUpdatable?`: string, `tags?`: string, `options?`: any): *AxiosPromise‹[ControllersSystemsResponse](interfaces/controllerssystemsresponse.md)›*
+
+* **packageSystems**(`packageName`: string, `options?`: any): *AxiosPromise‹[ControllersPackageSystemsResponse](interfaces/controllerspackagesystemsresponse.md)›*
+
+* **systemPackages**(`inventoryId`: string, `search?`: string, `filterName?`: string, `filterDescription?`: string, `filterEvra?`: string, `filterSummary?`: string, `options?`: any): *AxiosPromise‹[ControllersSystemPackageResponse](interfaces/controllerssystempackageresponse.md)›*
 
 ___
 
@@ -141,7 +154,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/patch/api.ts:1321](https://github.com/RedHatInsights/javascript-clients/blob/18f6719/packages/patch/api.ts#L1321)*
+*Defined in [packages/patch/api.ts:1619](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/api.ts#L1619)*
 
 DefaultApi - functional programming interface
 
@@ -179,7 +192,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ControllersAdvisoriesResponse](interfaces/controllersadvisoriesresponse.md)›*
 
-* **listAdvisorySystems**(`advisoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale", `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `options?`: any): *function*
+* **listAdvisorySystems**(`advisoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale", `search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `tags?`: string, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ControllersAdvisorySystemsResponse](interfaces/controllersadvisorysystemsresponse.md)›*
 
@@ -187,9 +200,17 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ControllersSystemAdvisoriesResponse](interfaces/controllerssystemadvisoriesresponse.md)›*
 
-* **listSystems**(`limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale", `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `options?`: any): *function*
+* **listSystems**(`limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale" | "packages_installed" | "packages_updatable", `search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `filterPackagesInstalled?`: string, `filterPackagesUpdatable?`: string, `tags?`: string, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ControllersSystemsResponse](interfaces/controllerssystemsresponse.md)›*
+
+* **packageSystems**(`packageName`: string, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ControllersPackageSystemsResponse](interfaces/controllerspackagesystemsresponse.md)›*
+
+* **systemPackages**(`inventoryId`: string, `search?`: string, `filterName?`: string, `filterDescription?`: string, `filterEvra?`: string, `filterSummary?`: string, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ControllersSystemPackageResponse](interfaces/controllerssystempackageresponse.md)›*
 
 ## Object literals
 
@@ -197,7 +218,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [packages/patch/base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/18f6719/packages/patch/base.ts#L26)*
+*Defined in [packages/patch/base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/base.ts#L26)*
 
 **`export`** 
 
@@ -205,22 +226,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [packages/patch/base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/18f6719/packages/patch/base.ts#L27)*
+*Defined in [packages/patch/base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/base.ts#L27)*
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [packages/patch/base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/18f6719/packages/patch/base.ts#L30)*
+*Defined in [packages/patch/base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/base.ts#L30)*
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [packages/patch/base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/18f6719/packages/patch/base.ts#L28)*
+*Defined in [packages/patch/base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/base.ts#L28)*
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [packages/patch/base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/18f6719/packages/patch/base.ts#L29)*
+*Defined in [packages/patch/base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/base.ts#L29)*

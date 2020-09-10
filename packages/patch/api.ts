@@ -76,6 +76,12 @@ export interface ControllersAdvisoryDetailAttributes {
     modified_date?: string;
     /**
      *
+     * @type {{ [key: string]: string; }}
+     * @memberof ControllersAdvisoryDetailAttributes
+     */
+    packages?: { [key: string]: string; };
+    /**
+     *
      * @type {string}
      * @memberof ControllersAdvisoryDetailAttributes
      */
@@ -381,6 +387,50 @@ export interface ControllersListMeta {
 /**
  *
  * @export
+ * @interface ControllersPackageSystemItem
+ */
+export interface ControllersPackageSystemItem {
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersPackageSystemItem
+     */
+    evra?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersPackageSystemItem
+     */
+    id?: string;
+}
+/**
+ *
+ * @export
+ * @interface ControllersPackageSystemsResponse
+ */
+export interface ControllersPackageSystemsResponse {
+    /**
+     *
+     * @type {Array<ControllersPackageSystemItem>}
+     * @memberof ControllersPackageSystemsResponse
+     */
+    data?: Array<ControllersPackageSystemItem>;
+    /**
+     *
+     * @type {ControllersLinks}
+     * @memberof ControllersPackageSystemsResponse
+     */
+    links?: ControllersLinks;
+    /**
+     *
+     * @type {ControllersListMeta}
+     * @memberof ControllersPackageSystemsResponse
+     */
+    meta?: ControllersListMeta;
+}
+/**
+ *
+ * @export
  * @interface ControllersSystemAdvisoriesResponse
  */
 export interface ControllersSystemAdvisoriesResponse {
@@ -513,6 +563,18 @@ export interface ControllersSystemInlineItem {
      * @type {number}
      * @memberof ControllersSystemInlineItem
      */
+    packages_installed?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof ControllersSystemInlineItem
+     */
+    packages_updatable?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof ControllersSystemInlineItem
+     */
     rhba_count?: number;
     /**
      *
@@ -587,6 +649,18 @@ export interface ControllersSystemItemAttributes {
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
+    packages_installed?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof ControllersSystemItemAttributes
+     */
+    packages_updatable?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof ControllersSystemItemAttributes
+     */
     rhba_count?: number;
     /**
      *
@@ -606,6 +680,68 @@ export interface ControllersSystemItemAttributes {
      * @memberof ControllersSystemItemAttributes
      */
     stale?: boolean;
+}
+/**
+ *
+ * @export
+ * @interface ControllersSystemPackageData
+ */
+export interface ControllersSystemPackageData {
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersSystemPackageData
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersSystemPackageData
+     */
+    evra?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersSystemPackageData
+     */
+    name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersSystemPackageData
+     */
+    summary?: string;
+    /**
+     *
+     * @type {Array<ModelsPackageUpdate>}
+     * @memberof ControllersSystemPackageData
+     */
+    updates?: Array<ModelsPackageUpdate>;
+}
+/**
+ *
+ * @export
+ * @interface ControllersSystemPackageResponse
+ */
+export interface ControllersSystemPackageResponse {
+    /**
+     *
+     * @type {Array<ControllersSystemPackageData>}
+     * @memberof ControllersSystemPackageResponse
+     */
+    data?: Array<ControllersSystemPackageData>;
+    /**
+     *
+     * @type {ControllersLinks}
+     * @memberof ControllersSystemPackageResponse
+     */
+    links?: ControllersLinks;
+    /**
+     *
+     * @type {ControllersListMeta}
+     * @memberof ControllersSystemPackageResponse
+     */
+    meta?: ControllersListMeta;
 }
 /**
  *
@@ -631,6 +767,25 @@ export interface ControllersSystemsResponse {
      * @memberof ControllersSystemsResponse
      */
     meta?: ControllersListMeta;
+}
+/**
+ *
+ * @export
+ * @interface ModelsPackageUpdate
+ */
+export interface ModelsPackageUpdate {
+    /**
+     *
+     * @type {string}
+     * @memberof ModelsPackageUpdate
+     */
+    advisory?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ModelsPackageUpdate
+     */
+    evra?: string;
 }
 
 /**
@@ -1032,6 +1187,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {number} [limit] Limit for paging, set -1 to return all
          * @param {number} [offset] Offset for paging
          * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
+         * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -1040,10 +1196,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
          * @param {string} [filterStale] Filter
+         * @param {string} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options: any = {}): RequestArgs {
+        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, tags?: string, options: any = {}): RequestArgs {
             // verify required parameter 'advisoryId' is not null or undefined
             if (advisoryId === null || advisoryId === undefined) {
                 throw new RequiredError('advisoryId','Required parameter advisoryId was null or undefined when calling listAdvisorySystems.');
@@ -1079,6 +1236,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['sort'] = sort;
             }
 
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
+            }
+
             if (filterId !== undefined) {
                 localVarQueryParameter['filter[id]'] = filterId;
             }
@@ -1109,6 +1270,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (filterStale !== undefined) {
                 localVarQueryParameter['filter[stale]'] = filterStale;
+            }
+
+            if (tags !== undefined) {
+                localVarQueryParameter['tags'] = tags;
             }
 
 
@@ -1223,7 +1388,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @summary Show me all my systems
          * @param {number} [limit] Limit for paging, set -1 to return all
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
+         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable'} [sort] Sort field
+         * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -1232,10 +1398,13 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
          * @param {string} [filterStale] Filter
+         * @param {string} [filterPackagesInstalled] Filter
+         * @param {string} [filterPackagesUpdatable] Filter
+         * @param {string} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options: any = {}): RequestArgs {
+        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: string, options: any = {}): RequestArgs {
             const localVarPath = `/api/patch/v1/systems`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1264,6 +1433,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (sort !== undefined) {
                 localVarQueryParameter['sort'] = sort;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
             }
 
             if (filterId !== undefined) {
@@ -1296,6 +1469,131 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (filterStale !== undefined) {
                 localVarQueryParameter['filter[stale]'] = filterStale;
+            }
+
+            if (filterPackagesInstalled !== undefined) {
+                localVarQueryParameter['filter[packages_installed]'] = filterPackagesInstalled;
+            }
+
+            if (filterPackagesUpdatable !== undefined) {
+                localVarQueryParameter['filter[packages_updatable]'] = filterPackagesUpdatable;
+            }
+
+            if (tags !== undefined) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Show me all my systems which have a package installed
+         * @summary Show me all my systems which have a package installed
+         * @param {string} packageName Package name
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        packageSystems(packageName: string, options: any = {}): RequestArgs {
+            // verify required parameter 'packageName' is not null or undefined
+            if (packageName === null || packageName === undefined) {
+                throw new RequiredError('packageName','Required parameter packageName was null or undefined when calling packageSystems.');
+            }
+            const localVarPath = `/api/patch/v1/packages/{package_name}/systems`
+                .replace(`{${"package_name"}}`, encodeURIComponent(String(packageName)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication RhIdentity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? configuration.apiKey("x-rh-identity")
+                    : configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Show me details about a system packages by given inventory id
+         * @summary Show me details about a system packages by given inventory id
+         * @param {string} inventoryId Inventory ID
+         * @param {string} [search] Find matching text
+         * @param {string} [filterName] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterEvra] Filter
+         * @param {string} [filterSummary] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, options: any = {}): RequestArgs {
+            // verify required parameter 'inventoryId' is not null or undefined
+            if (inventoryId === null || inventoryId === undefined) {
+                throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling systemPackages.');
+            }
+            const localVarPath = `/api/patch/v1/systems/{inventory_id}/packages`
+                .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication RhIdentity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? configuration.apiKey("x-rh-identity")
+                    : configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
+            }
+
+            if (filterName !== undefined) {
+                localVarQueryParameter['filter[name]'] = filterName;
+            }
+
+            if (filterDescription !== undefined) {
+                localVarQueryParameter['filter[description]'] = filterDescription;
+            }
+
+            if (filterEvra !== undefined) {
+                localVarQueryParameter['filter[evra]'] = filterEvra;
+            }
+
+            if (filterSummary !== undefined) {
+                localVarQueryParameter['filter[summary]'] = filterSummary;
             }
 
 
@@ -1436,6 +1734,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Limit for paging, set -1 to return all
          * @param {number} [offset] Offset for paging
          * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
+         * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -1444,11 +1743,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
          * @param {string} [filterStale] Filter
+         * @param {string} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisorySystemsResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options);
+        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, tags?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisorySystemsResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1483,7 +1783,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @summary Show me all my systems
          * @param {number} [limit] Limit for paging, set -1 to return all
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
+         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable'} [sort] Sort field
+         * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -1492,11 +1793,47 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
          * @param {string} [filterStale] Filter
+         * @param {string} [filterPackagesInstalled] Filter
+         * @param {string} [filterPackagesUpdatable] Filter
+         * @param {string} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemsResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSystems(limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options);
+        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemsResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, filterPackagesInstalled, filterPackagesUpdatable, tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Show me all my systems which have a package installed
+         * @summary Show me all my systems which have a package installed
+         * @param {string} packageName Package name
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        packageSystems(packageName: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackageSystemsResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).packageSystems(packageName, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Show me details about a system packages by given inventory id
+         * @summary Show me details about a system packages by given inventory id
+         * @param {string} inventoryId Inventory ID
+         * @param {string} [search] Find matching text
+         * @param {string} [filterName] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterEvra] Filter
+         * @param {string} [filterSummary] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemPackageResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).systemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1603,6 +1940,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [limit] Limit for paging, set -1 to return all
          * @param {number} [offset] Offset for paging
          * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
+         * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -1611,11 +1949,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
          * @param {string} [filterStale] Filter
+         * @param {string} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any): AxiosPromise<ControllersAdvisorySystemsResponse> {
-            return DefaultApiFp(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options)(axios, basePath);
+        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, tags?: string, options?: any): AxiosPromise<ControllersAdvisorySystemsResponse> {
+            return DefaultApiFp(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, tags, options)(axios, basePath);
         },
         /**
          * Show me advisories for a system by given inventory id
@@ -1642,7 +1981,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @summary Show me all my systems
          * @param {number} [limit] Limit for paging, set -1 to return all
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
+         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable'} [sort] Sort field
+         * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -1651,11 +1991,39 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
          * @param {string} [filterStale] Filter
+         * @param {string} [filterPackagesInstalled] Filter
+         * @param {string} [filterPackagesUpdatable] Filter
+         * @param {string} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any): AxiosPromise<ControllersSystemsResponse> {
-            return DefaultApiFp(configuration).listSystems(limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options)(axios, basePath);
+        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: string, options?: any): AxiosPromise<ControllersSystemsResponse> {
+            return DefaultApiFp(configuration).listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, filterPackagesInstalled, filterPackagesUpdatable, tags, options)(axios, basePath);
+        },
+        /**
+         * Show me all my systems which have a package installed
+         * @summary Show me all my systems which have a package installed
+         * @param {string} packageName Package name
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        packageSystems(packageName: string, options?: any): AxiosPromise<ControllersPackageSystemsResponse> {
+            return DefaultApiFp(configuration).packageSystems(packageName, options)(axios, basePath);
+        },
+        /**
+         * Show me details about a system packages by given inventory id
+         * @summary Show me details about a system packages by given inventory id
+         * @param {string} inventoryId Inventory ID
+         * @param {string} [search] Find matching text
+         * @param {string} [filterName] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterEvra] Filter
+         * @param {string} [filterSummary] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, options?: any): AxiosPromise<ControllersSystemPackageResponse> {
+            return DefaultApiFp(configuration).systemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, options)(axios, basePath);
         },
     };
 };
@@ -1771,6 +2139,7 @@ export class DefaultApi extends BaseAPI {
      * @param {number} [limit] Limit for paging, set -1 to return all
      * @param {number} [offset] Offset for paging
      * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
+     * @param {string} [search] Find matching text
      * @param {string} [filterId] Filter
      * @param {string} [filterDisplayName] Filter
      * @param {string} [filterLastEvaluation] Filter
@@ -1779,12 +2148,13 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [filterRhbaCount] Filter
      * @param {string} [filterRheaCount] Filter
      * @param {string} [filterStale] Filter
+     * @param {string} [tags] Tag filter
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listAdvisorySystems(advisoryId, limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options)(this.axios, this.basePath);
+    public listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, tags?: string, options?: any) {
+        return DefaultApiFp(this.configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, tags, options)(this.axios, this.basePath);
     }
 
     /**
@@ -1814,7 +2184,8 @@ export class DefaultApi extends BaseAPI {
      * @summary Show me all my systems
      * @param {number} [limit] Limit for paging, set -1 to return all
      * @param {number} [offset] Offset for paging
-     * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale'} [sort] Sort field
+     * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable'} [sort] Sort field
+     * @param {string} [search] Find matching text
      * @param {string} [filterId] Filter
      * @param {string} [filterDisplayName] Filter
      * @param {string} [filterLastEvaluation] Filter
@@ -1823,12 +2194,44 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [filterRhbaCount] Filter
      * @param {string} [filterRheaCount] Filter
      * @param {string} [filterStale] Filter
+     * @param {string} [filterPackagesInstalled] Filter
+     * @param {string} [filterPackagesUpdatable] Filter
+     * @param {string} [tags] Tag filter
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listSystems(limit, offset, sort, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options)(this.axios, this.basePath);
+    public listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: string, options?: any) {
+        return DefaultApiFp(this.configuration).listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, filterPackagesInstalled, filterPackagesUpdatable, tags, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Show me all my systems which have a package installed
+     * @summary Show me all my systems which have a package installed
+     * @param {string} packageName Package name
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public packageSystems(packageName: string, options?: any) {
+        return DefaultApiFp(this.configuration).packageSystems(packageName, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Show me details about a system packages by given inventory id
+     * @summary Show me details about a system packages by given inventory id
+     * @param {string} inventoryId Inventory ID
+     * @param {string} [search] Find matching text
+     * @param {string} [filterName] Filter
+     * @param {string} [filterDescription] Filter
+     * @param {string} [filterEvra] Filter
+     * @param {string} [filterSummary] Filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public systemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, options?: any) {
+        return DefaultApiFp(this.configuration).systemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, options)(this.axios, this.basePath);
     }
 
 }

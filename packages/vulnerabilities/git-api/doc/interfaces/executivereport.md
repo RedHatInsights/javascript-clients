@@ -26,7 +26,7 @@
 
 • **cves_by_severity**: *[ExecutiveReportCvesBySeverity](executivereportcvesbyseverity.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L413)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L419)*
 
 **`memberof`** ExecutiveReport
 
@@ -36,7 +36,7 @@ ___
 
 • **cves_total**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L407)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L413)*
 
 Number of unique CVEs discovered on the managed systems.
 
@@ -48,7 +48,7 @@ ___
 
 • **recent_cves**: *[ExecutiveReportRecentCves](executivereportrecentcves.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L419)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L425)*
 
 **`memberof`** ExecutiveReport
 
@@ -58,7 +58,7 @@ ___
 
 • **system_count**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L401)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L407)*
 
 Total number of systems managed by vulnerability application.
 
@@ -70,6 +70,6 @@ ___
 
 • **top_cves**? : *Array‹[ExecutiveReportTopCves](executivereporttopcves.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L425)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L431)*
 
 **`memberof`** ExecutiveReport
