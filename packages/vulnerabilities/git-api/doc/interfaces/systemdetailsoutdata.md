@@ -19,6 +19,7 @@
 * [opt_out](systemdetailsoutdata.md#opt_out)
 * [rules_evaluation](systemdetailsoutdata.md#rules_evaluation)
 * [stale](systemdetailsoutdata.md#optional-stale)
+* [tags](systemdetailsoutdata.md#tags)
 
 ## Properties
 
@@ -26,7 +27,7 @@
 
 • **last_evaluation**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1261)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1365)*
 
 Date of last evaluation.
 
@@ -38,7 +39,7 @@ ___
 
 • **last_upload**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1279)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1383)*
 
 Date of the latest upload of archive.
 
@@ -50,7 +51,7 @@ ___
 
 • **opt_out**: *boolean*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1273)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1377](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1377)*
 
 System opt out status.
 
@@ -62,7 +63,7 @@ ___
 
 • **rules_evaluation**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1267)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1371)*
 
 Date of last security rules evaluation.
 
@@ -74,8 +75,18 @@ ___
 
 • **stale**? : *boolean*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1285)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1389)*
 
 System stale status.
+
+**`memberof`** SystemDetailsOutData
+
+___
+
+###  tags
+
+• **tags**: *Array‹[SystemDetailsOutDataTags](systemdetailsoutdatatags.md)›*
+
+*Defined in [packages/vulnerabilities/git-api/api.ts:1395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1395)*
 
 **`memberof`** SystemDetailsOutData
