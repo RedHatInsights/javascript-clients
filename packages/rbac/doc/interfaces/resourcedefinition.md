@@ -22,6 +22,6 @@
 
 • **attributeFilter**: *[ResourceDefinitionFilter](resourcedefinitionfilter.md)*
 
-*Defined in [packages/rbac/api.ts:869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L869)*
+*Defined in [packages/rbac/api.ts:895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L895)*
 
 **`memberof`** ResourceDefinition

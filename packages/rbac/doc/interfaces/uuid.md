@@ -22,6 +22,6 @@
 
 • **uuid**: *string*
 
-*Defined in [packages/rbac/api.ts:1367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1367)*
+*Defined in [packages/rbac/api.ts:1393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1393)*
 
 **`memberof`** UUID

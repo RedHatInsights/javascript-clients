@@ -14,6 +14,7 @@
 
 ### Properties
 
+* [advisories_list](cvedetailoutdataattributes.md#advisories_list)
 * [business_risk](cvedetailoutdataattributes.md#business_risk)
 * [business_risk_id](cvedetailoutdataattributes.md#business_risk_id)
 * [business_risk_text](cvedetailoutdataattributes.md#business_risk_text)
@@ -36,6 +37,16 @@
 * [systems_status_divergent](cvedetailoutdataattributes.md#systems_status_divergent)
 
 ## Properties
+
+###  advisories_list
+
+• **advisories_list**: *Array‹string›*
+
+*Defined in [packages/vulnerabilities/git-api/api.ts:305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L305)*
+
+**`memberof`** CveDetailOutDataAttributes
+
+___
 
 ###  business_risk
 

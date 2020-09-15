@@ -550,6 +550,32 @@ export interface Permission {
 /**
  *
  * @export
+ * @interface PermissionOptionsPagination
+ */
+export interface PermissionOptionsPagination extends ListPagination {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof PermissionOptionsPagination
+     */
+    data: Array<string>;
+}
+/**
+ *
+ * @export
+ * @interface PermissionOptionsPaginationAllOf
+ */
+export interface PermissionOptionsPaginationAllOf {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof PermissionOptionsPaginationAllOf
+     */
+    data: Array<string>;
+}
+/**
+ *
+ * @export
  * @interface PermissionPagination
  */
 export interface PermissionPagination extends ListPagination {
@@ -2625,6 +2651,76 @@ export class GroupApi extends BaseAPI {
 export const PermissionApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
+         * By default, options of application is returned. And could be resource_type or verb on demand.
+         * @summary List the available options for fields of permissions for a tenant
+         * @param {'application' | 'resource_type' | 'verb'} field specify which fields of permission to display
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {string} [application] Filter returned options based on application. You may also use a comma-separated list to filter on multiple applications.
+         * @param {string} [resourceType] Filter returned options based on resource_type. You may also use a comma-separated list to filter on multiple resource_types.
+         * @param {string} [verb] Filter returned options based on verb. You may also use a comma-separated list to filter on multiple verbs.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, options: any = {}): RequestArgs {
+            // verify required parameter 'field' is not null or undefined
+            if (field === null || field === undefined) {
+                throw new RequiredError('field','Required parameter field was null or undefined when calling listPermissionOptions.');
+            }
+            const localVarPath = `/permissions/options/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (field !== undefined) {
+                localVarQueryParameter['field'] = field;
+            }
+
+            if (application !== undefined) {
+                localVarQueryParameter['application'] = application;
+            }
+
+            if (resourceType !== undefined) {
+                localVarQueryParameter['resource_type'] = resourceType;
+            }
+
+            if (verb !== undefined) {
+                localVarQueryParameter['verb'] = verb;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * By default, responses are sorted in ascending order by permission application.
          * @summary List the permissions for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
@@ -2705,6 +2801,25 @@ export const PermissionApiAxiosParamCreator = function (configuration?: Configur
 export const PermissionApiFp = function(configuration?: Configuration) {
     return {
         /**
+         * By default, options of application is returned. And could be resource_type or verb on demand.
+         * @summary List the available options for fields of permissions for a tenant
+         * @param {'application' | 'resource_type' | 'verb'} field specify which fields of permission to display
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {string} [application] Filter returned options based on application. You may also use a comma-separated list to filter on multiple applications.
+         * @param {string} [resourceType] Filter returned options based on resource_type. You may also use a comma-separated list to filter on multiple resource_types.
+         * @param {string} [verb] Filter returned options based on verb. You may also use a comma-separated list to filter on multiple verbs.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionOptionsPagination> {
+            const localVarAxiosArgs = PermissionApiAxiosParamCreator(configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * By default, responses are sorted in ascending order by permission application.
          * @summary List the permissions for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
@@ -2734,6 +2849,21 @@ export const PermissionApiFp = function(configuration?: Configuration) {
 export const PermissionApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
+         * By default, options of application is returned. And could be resource_type or verb on demand.
+         * @summary List the available options for fields of permissions for a tenant
+         * @param {'application' | 'resource_type' | 'verb'} field specify which fields of permission to display
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {string} [application] Filter returned options based on application. You may also use a comma-separated list to filter on multiple applications.
+         * @param {string} [resourceType] Filter returned options based on resource_type. You may also use a comma-separated list to filter on multiple resource_types.
+         * @param {string} [verb] Filter returned options based on verb. You may also use a comma-separated list to filter on multiple verbs.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, options?: any): AxiosPromise<PermissionOptionsPagination> {
+            return PermissionApiFp(configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, options)(axios, basePath);
+        },
+        /**
          * By default, responses are sorted in ascending order by permission application.
          * @summary List the permissions for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
@@ -2759,6 +2889,23 @@ export const PermissionApiFactory = function (configuration?: Configuration, bas
  * @extends {BaseAPI}
  */
 export class PermissionApi extends BaseAPI {
+    /**
+     * By default, options of application is returned. And could be resource_type or verb on demand.
+     * @summary List the available options for fields of permissions for a tenant
+     * @param {'application' | 'resource_type' | 'verb'} field specify which fields of permission to display
+     * @param {number} [limit] Parameter for selecting the amount of data returned.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {string} [application] Filter returned options based on application. You may also use a comma-separated list to filter on multiple applications.
+     * @param {string} [resourceType] Filter returned options based on resource_type. You may also use a comma-separated list to filter on multiple resource_types.
+     * @param {string} [verb] Filter returned options based on verb. You may also use a comma-separated list to filter on multiple verbs.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PermissionApi
+     */
+    public listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, options?: any) {
+        return PermissionApiFp(this.configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, options)(this.axios, this.basePath);
+    }
+
     /**
      * By default, responses are sorted in ascending order by permission application.
      * @summary List the permissions for a tenant
@@ -3618,10 +3765,11 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
+         * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, options: any = {}): RequestArgs {
+        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, options: any = {}): RequestArgs {
             const localVarPath = `/roles/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3668,6 +3816,10 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (username !== undefined) {
                 localVarQueryParameter['username'] = username;
+            }
+
+            if (application !== undefined) {
+                localVarQueryParameter['application'] = application;
             }
 
 
@@ -3813,11 +3965,12 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
+         * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic> {
-            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, nameMatch, scope, orderBy, addFields, username, options);
+        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic> {
+            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, nameMatch, scope, orderBy, addFields, username, application, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3901,11 +4054,12 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
+         * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, options?: any): AxiosPromise<RolePaginationDynamic> {
-            return RoleApiFp(configuration).listRoles(limit, offset, name, nameMatch, scope, orderBy, addFields, username, options)(axios, basePath);
+        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, options?: any): AxiosPromise<RolePaginationDynamic> {
+            return RoleApiFp(configuration).listRoles(limit, offset, name, nameMatch, scope, orderBy, addFields, username, application, options)(axios, basePath);
         },
         /**
          *
@@ -3990,12 +4144,13 @@ export class RoleApi extends BaseAPI {
      * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
      * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
      * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
+     * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, options?: any) {
-        return RoleApiFp(this.configuration).listRoles(limit, offset, name, nameMatch, scope, orderBy, addFields, username, options)(this.axios, this.basePath);
+    public listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, options?: any) {
+        return RoleApiFp(this.configuration).listRoles(limit, offset, name, nameMatch, scope, orderBy, addFields, username, application, options)(this.axios, this.basePath);
     }
 
     /**

@@ -88,7 +88,7 @@ ___
 
 ▸ **createPolicies**(`policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
 
-*Defined in [packages/rbac/api.ts:3210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3210)*
+*Defined in [packages/rbac/api.ts:3357](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3357)*
 
 **`summary`** Create a policy in a tenant
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **deletePolicy**(`uuid`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/rbac/api.ts:3222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3222)*
+*Defined in [packages/rbac/api.ts:3369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3369)*
 
 **`summary`** Delete a policy in the tenant
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **getPolicy**(`uuid`: string, `options?`: any): *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
 
-*Defined in [packages/rbac/api.ts:3234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3234)*
+*Defined in [packages/rbac/api.ts:3381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3381)*
 
 **`summary`** Get a policy in the tenant
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: string, `options?`: any): *AxiosPromise‹[PolicyPagination](../interfaces/policypagination.md)›*
 
-*Defined in [packages/rbac/api.ts:3252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3252)*
+*Defined in [packages/rbac/api.ts:3399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3399)*
 
 By default, responses are sorted in ascending order by policy name
 
@@ -188,7 +188,7 @@ ___
 
 ▸ **updatePolicy**(`uuid`: string, `policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
 
-*Defined in [packages/rbac/api.ts:3265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3265)*
+*Defined in [packages/rbac/api.ts:3412](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3412)*
 
 **`summary`** Update a policy in the tenant
 

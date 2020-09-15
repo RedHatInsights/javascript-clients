@@ -43,6 +43,7 @@ Representation of the system profile fields
 * [os_kernel_version](systemprofile.md#optional-os_kernel_version)
 * [os_release](systemprofile.md#optional-os_release)
 * [running_processes](systemprofile.md#optional-running_processes)
+* [sap_sids](systemprofile.md#optional-sap_sids)
 * [sap_system](systemprofile.md#optional-sap_system)
 * [satellite_managed](systemprofile.md#optional-satellite_managed)
 * [subscription_auto_attach](systemprofile.md#optional-subscription_auto_attach)
@@ -317,6 +318,18 @@ ___
 • **running_processes**? : *Array‹string›*
 
 *Defined in [packages/host-inventory/api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L771)*
+
+**`memberof`** SystemProfile
+
+___
+
+### `Optional` sap_sids
+
+• **sap_sids**? : *Array‹string›*
+
+*Defined in [packages/host-inventory/api.ts:867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L867)*
+
+list of SAP SIDs
 
 **`memberof`** SystemProfile
 

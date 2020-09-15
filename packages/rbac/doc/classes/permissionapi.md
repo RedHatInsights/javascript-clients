@@ -26,6 +26,7 @@ PermissionApi - object-oriented interface
 
 ### Methods
 
+* [listPermissionOptions](permissionapi.md#listpermissionoptions)
 * [listPermissions](permissionapi.md#listpermissions)
 
 ## Constructors
@@ -80,11 +81,41 @@ ___
 
 ## Methods
 
+###  listPermissionOptions
+
+▸ **listPermissionOptions**(`field`: "application" | "resource_type" | "verb", `limit?`: number, `offset?`: number, `application?`: string, `resourceType?`: string, `verb?`: string, `options?`: any): *AxiosPromise‹[PermissionOptionsPagination](../interfaces/permissionoptionspagination.md)›*
+
+*Defined in [packages/rbac/api.ts:2905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2905)*
+
+By default, options of application is returned. And could be resource_type or verb on demand.
+
+**`summary`** List the available options for fields of permissions for a tenant
+
+**`throws`** {RequiredError}
+
+**`memberof`** PermissionApi
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`field` | "application" &#124; "resource_type" &#124; "verb" | specify which fields of permission to display |
+`limit?` | number | - |
+`offset?` | number | - |
+`application?` | string | - |
+`resourceType?` | string | - |
+`verb?` | string | - |
+`options?` | any | - |
+
+**Returns:** *AxiosPromise‹[PermissionOptionsPagination](../interfaces/permissionoptionspagination.md)›*
+
+___
+
 ###  listPermissions
 
 ▸ **listPermissions**(`limit?`: number, `offset?`: number, `orderBy?`: string, `application?`: string, `resourceType?`: string, `verb?`: string, `permission?`: string, `options?`: any): *AxiosPromise‹[PermissionPagination](../interfaces/permissionpagination.md)›*
 
-*Defined in [packages/rbac/api.ts:2776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2776)*
+*Defined in [packages/rbac/api.ts:2923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2923)*
 
 By default, responses are sorted in ascending order by permission application.
 

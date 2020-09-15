@@ -859,6 +859,12 @@ export interface SystemProfile {
      * @memberof SystemProfile
      */
     sap_system?: boolean;
+    /**
+     * list of SAP SIDs
+     * @type {Array<string>}
+     * @memberof SystemProfile
+     */
+    sap_sids?: Array<string>;
 }
 /**
  * Structure of the output of the host system profile query
