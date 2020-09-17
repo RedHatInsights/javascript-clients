@@ -23,7 +23,7 @@
 
 • **evra**? : *string*
 
-*Defined in [packages/patch/api.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/api.ts#L398)*
+*Defined in [packages/patch/api.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/e0a8650/packages/patch/api.ts#L398)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -33,6 +33,6 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/patch/api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/api.ts#L404)*
+*Defined in [packages/patch/api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/e0a8650/packages/patch/api.ts#L404)*
 
 **`memberof`** ControllersPackageSystemItem

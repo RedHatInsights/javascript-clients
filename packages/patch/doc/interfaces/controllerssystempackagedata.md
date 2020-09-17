@@ -27,7 +27,7 @@
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:695](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/api.ts#L695)*
+*Defined in [packages/patch/api.ts:695](https://github.com/RedHatInsights/javascript-clients/blob/e0a8650/packages/patch/api.ts#L695)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -37,7 +37,7 @@ ___
 
 • **evra**? : *string*
 
-*Defined in [packages/patch/api.ts:701](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/api.ts#L701)*
+*Defined in [packages/patch/api.ts:701](https://github.com/RedHatInsights/javascript-clients/blob/e0a8650/packages/patch/api.ts#L701)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -47,7 +47,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/patch/api.ts:707](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/api.ts#L707)*
+*Defined in [packages/patch/api.ts:707](https://github.com/RedHatInsights/javascript-clients/blob/e0a8650/packages/patch/api.ts#L707)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -57,7 +57,7 @@ ___
 
 • **summary**? : *string*
 
-*Defined in [packages/patch/api.ts:713](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/api.ts#L713)*
+*Defined in [packages/patch/api.ts:713](https://github.com/RedHatInsights/javascript-clients/blob/e0a8650/packages/patch/api.ts#L713)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -67,7 +67,7 @@ ___
 
 • **updatable**? : *boolean*
 
-*Defined in [packages/patch/api.ts:719](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/api.ts#L719)*
+*Defined in [packages/patch/api.ts:719](https://github.com/RedHatInsights/javascript-clients/blob/e0a8650/packages/patch/api.ts#L719)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -77,6 +77,6 @@ ___
 
 • **updates**? : *Array‹[ModelsPackageUpdate](modelspackageupdate.md)›*
 
-*Defined in [packages/patch/api.ts:725](https://github.com/RedHatInsights/javascript-clients/blob/5a7659a/packages/patch/api.ts#L725)*
+*Defined in [packages/patch/api.ts:725](https://github.com/RedHatInsights/javascript-clients/blob/e0a8650/packages/patch/api.ts#L725)*
 
 **`memberof`** ControllersSystemPackageData
