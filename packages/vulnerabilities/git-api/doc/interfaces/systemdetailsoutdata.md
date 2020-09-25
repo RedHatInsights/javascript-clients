@@ -20,6 +20,7 @@
 * [rules_evaluation](systemdetailsoutdata.md#rules_evaluation)
 * [stale](systemdetailsoutdata.md#optional-stale)
 * [tags](systemdetailsoutdata.md#tags)
+* [updated](systemdetailsoutdata.md#optional-updated)
 
 ## Properties
 
@@ -87,6 +88,18 @@ ___
 
 • **tags**: *Array‹[SystemDetailsOutDataTags](systemdetailsoutdatatags.md)›*
 
+*Defined in [packages/vulnerabilities/git-api/api.ts:1401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1401)*
+
+**`memberof`** SystemDetailsOutData
+
+___
+
+### `Optional` updated
+
+• **updated**? : *string | null*
+
 *Defined in [packages/vulnerabilities/git-api/api.ts:1395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1395)*
+
+Date of the lastest upload of archive taken from Inventory syndicated data.
 
 **`memberof`** SystemDetailsOutData

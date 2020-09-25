@@ -563,7 +563,7 @@ export interface OrderProcess {
      * @type {string}
      * @memberof OrderProcess
      */
-    name: string;
+    name?: string;
     /**
      * The order process description.
      * @type {string}

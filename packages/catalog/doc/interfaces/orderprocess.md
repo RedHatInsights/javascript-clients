@@ -20,7 +20,7 @@
 * [description](orderprocess.md#optional-description)
 * [id](orderprocess.md#optional-id)
 * [metadata](orderprocess.md#optional-metadata)
-* [name](orderprocess.md#name)
+* [name](orderprocess.md#optional-name)
 * [updated_at](orderprocess.md#optional-updated_at)
 
 ## Properties
@@ -93,9 +93,9 @@ JSON Metadata about the order process
 
 ___
 
-###  name
+### `Optional` name
 
-• **name**: *string*
+• **name**? : *string*
 
 *Defined in [packages/catalog/api.ts:566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L566)*
 

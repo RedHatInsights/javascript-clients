@@ -92,7 +92,7 @@ ___
 
 ▸ **addWorkflowToTemplate**(`templateId`: string, `workflow`: [Workflow](../interfaces/workflow.md), `options?`: any): *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
 
-*Defined in [packages/approval/api.ts:2498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2498)*
+*Defined in [packages/approval/api.ts:2492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2492)*
 
 Create a workflow from a template identified by its id, available to admin only
 
@@ -118,7 +118,7 @@ ___
 
 ▸ **destroyWorkflow**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/approval/api.ts:2510](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2510)*
+*Defined in [packages/approval/api.ts:2504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2504)*
 
 Delete an approval workflow by its id, available to admin only
 
@@ -143,7 +143,7 @@ ___
 
 ▸ **linkWorkflow**(`id`: string, `resourceObject`: [ResourceObject](../interfaces/resourceobject.md), `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/approval/api.ts:2523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2523)*
+*Defined in [packages/approval/api.ts:2517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2517)*
 
 Link a resource object to a workflow identified by its id, available to admin only
 
@@ -169,7 +169,7 @@ ___
 
 ▸ **listWorkflows**(`appName?`: string, `objectId?`: string, `objectType?`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[WorkflowCollection](../interfaces/workflowcollection.md)›*
 
-*Defined in [packages/approval/api.ts:2541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2541)*
+*Defined in [packages/approval/api.ts:2535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2535)*
 
 Find approval workflows matching search parameters, available to admin only. Optionally select workflows linked to a resource object whose app_name, object_type and object_id are specified by query parameters. Default sorting is by sequence number in ascending order.
 
@@ -200,7 +200,7 @@ ___
 
 ▸ **listWorkflowsByTemplate**(`templateId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[WorkflowCollection](../interfaces/workflowcollection.md)›*
 
-*Defined in [packages/approval/api.ts:2557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2557)*
+*Defined in [packages/approval/api.ts:2551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2551)*
 
 Find workflows based on the template id, available to admin only
 
@@ -229,7 +229,7 @@ ___
 
 ▸ **reposition**(`id`: string, `reposition`: [Reposition](../interfaces/reposition.md), `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/approval/api.ts:2570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2570)*
+*Defined in [packages/approval/api.ts:2564](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2564)*
 
 Adjust the position of a workflow related to others by an offset number
 
@@ -255,7 +255,7 @@ ___
 
 ▸ **showWorkflow**(`id`: string, `options?`: any): *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
 
-*Defined in [packages/approval/api.ts:2582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2582)*
+*Defined in [packages/approval/api.ts:2576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2576)*
 
 Find an approval workflow by its id, available to admin only
 
@@ -280,7 +280,7 @@ ___
 
 ▸ **unlinkWorkflow**(`id`: string, `resourceObject`: [ResourceObject](../interfaces/resourceobject.md), `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/approval/api.ts:2595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2595)*
+*Defined in [packages/approval/api.ts:2589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2589)*
 
 Break the link between a resource object selected by the body and a workflow by its id, available to admin only
 
@@ -306,7 +306,7 @@ ___
 
 ▸ **updateWorkflow**(`id`: string, `workflow`: [Workflow](../interfaces/workflow.md), `options?`: any): *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
 
-*Defined in [packages/approval/api.ts:2608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2608)*
+*Defined in [packages/approval/api.ts:2602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2602)*
 
 Find an approval workflow by its id and update its content, available to admin only
 

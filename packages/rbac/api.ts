@@ -3430,10 +3430,12 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
          * @param {string} [usernames] Usernames of principals to get
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
          * @param {string} [email] Exact e-mail address of principal to search for
+         * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
+         * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, options: any = {}): RequestArgs {
+        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', options: any = {}): RequestArgs {
             const localVarPath = `/principals/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3470,6 +3472,14 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['email'] = email;
             }
 
+            if (status !== undefined) {
+                localVarQueryParameter['status'] = status;
+            }
+
+            if (adminOnly !== undefined) {
+                localVarQueryParameter['admin_only'] = adminOnly;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3500,11 +3510,13 @@ export const PrincipalApiFp = function(configuration?: Configuration) {
          * @param {string} [usernames] Usernames of principals to get
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
          * @param {string} [email] Exact e-mail address of principal to search for
+         * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
+         * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
-            const localVarAxiosArgs = PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, options);
+        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
+            const localVarAxiosArgs = PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3527,11 +3539,13 @@ export const PrincipalApiFactory = function (configuration?: Configuration, base
          * @param {string} [usernames] Usernames of principals to get
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
          * @param {string} [email] Exact e-mail address of principal to search for
+         * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
+         * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, options?: any): AxiosPromise<PrincipalPagination> {
-            return PrincipalApiFp(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, options)(axios, basePath);
+        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', options?: any): AxiosPromise<PrincipalPagination> {
+            return PrincipalApiFp(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, options)(axios, basePath);
         },
     };
 };
@@ -3551,12 +3565,14 @@ export class PrincipalApi extends BaseAPI {
      * @param {string} [usernames] Usernames of principals to get
      * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
      * @param {string} [email] Exact e-mail address of principal to search for
+     * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
+     * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PrincipalApi
      */
-    public listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, options?: any) {
-        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, usernames, sortOrder, email, options)(this.axios, this.basePath);
+    public listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', options?: any) {
+        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, options)(this.axios, this.basePath);
     }
 
 }
