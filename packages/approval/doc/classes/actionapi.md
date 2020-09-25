@@ -86,7 +86,7 @@ ___
 
 ▸ **createAction**(`requestId`: string, `action`: [Action](../interfaces/action.md), `options?`: any): *AxiosPromise‹[Action](../interfaces/action.md)›*
 
-*Defined in [packages/approval/api.ts:905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L905)*
+*Defined in [packages/approval/api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L899)*
 
 Create an action under a request identified by its id. Admin can create approve, deny, memo, and cancel operations; approver can create approve, deny, and memo operations; while requester can create only cancel operation.
 
@@ -112,7 +112,7 @@ ___
 
 ▸ **listActionsByRequest**(`requestId`: string, `options?`: any): *AxiosPromise‹[ActionCollection](../interfaces/actioncollection.md)›*
 
-*Defined in [packages/approval/api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L917)*
+*Defined in [packages/approval/api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L911)*
 
 Find actions of a request identified by its id, available to everyone
 
@@ -137,7 +137,7 @@ ___
 
 ▸ **showAction**(`id`: string, `options?`: any): *AxiosPromise‹[Action](../interfaces/action.md)›*
 
-*Defined in [packages/approval/api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L929)*
+*Defined in [packages/approval/api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L923)*
 
 Find an action by its id, available to everyone
 

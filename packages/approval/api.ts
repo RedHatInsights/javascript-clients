@@ -624,12 +624,6 @@ export interface Workflow {
      */
     description?: string | null;
     /**
-     * an indicator of the execution order for selected workflows
-     * @type {number}
-     * @memberof Workflow
-     */
-    sequence?: number;
-    /**
      * Array of RBAC groups associated with workflow. The groups need to have approval permission
      * @type {Array<GroupRef>}
      * @memberof Workflow

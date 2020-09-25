@@ -84,7 +84,7 @@ ___
 
 ▸ **getDocumentation**(`options?`: any): *AxiosPromise‹object›*
 
-*Defined in [packages/approval/api.ts:1029](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1029)*
+*Defined in [packages/approval/api.ts:1023](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1023)*
 
 **`summary`** Return this API document in JSON format
 
