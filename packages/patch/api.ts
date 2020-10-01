@@ -387,6 +387,81 @@ export interface ControllersListMeta {
 /**
  *
  * @export
+ * @interface ControllersPackageDetailAttributes
+ */
+export interface ControllersPackageDetailAttributes {
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersPackageDetailAttributes
+     */
+    advisory_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersPackageDetailAttributes
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersPackageDetailAttributes
+     */
+    name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersPackageDetailAttributes
+     */
+    summary?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersPackageDetailAttributes
+     */
+    version?: string;
+}
+/**
+ *
+ * @export
+ * @interface ControllersPackageDetailItem
+ */
+export interface ControllersPackageDetailItem {
+    /**
+     *
+     * @type {ControllersPackageDetailAttributes}
+     * @memberof ControllersPackageDetailItem
+     */
+    attributes?: ControllersPackageDetailAttributes;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersPackageDetailItem
+     */
+    id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersPackageDetailItem
+     */
+    type?: string;
+}
+/**
+ *
+ * @export
+ * @interface ControllersPackageDetailResponse
+ */
+export interface ControllersPackageDetailResponse {
+    /**
+     *
+     * @type {ControllersPackageDetailItem}
+     * @memberof ControllersPackageDetailResponse
+     */
+    data?: ControllersPackageDetailItem;
+}
+/**
+ *
+ * @export
  * @interface ControllersPackageSystemItem
  */
 export interface ControllersPackageSystemItem {
@@ -1094,6 +1169,50 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Show me metadata of selected package
+         * @summary Show me metadata of selected package
+         * @param {string} packageName package_name - latest, nevra - exact version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        latestPackage(packageName: string, options: any = {}): RequestArgs {
+            // verify required parameter 'packageName' is not null or undefined
+            if (packageName === null || packageName === undefined) {
+                throw new RequiredError('packageName','Required parameter packageName was null or undefined when calling latestPackage.');
+            }
+            const localVarPath = `/api/patch/v1/packages/{package_name}`
+                .replace(`{${"package_name"}}`, encodeURIComponent(String(packageName)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication RhIdentity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? configuration.apiKey("x-rh-identity")
+                    : configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Show me all applicable advisories for all my systems
          * @summary Show me all applicable advisories for all my systems
          * @param {number} [limit] Limit for paging, set -1 to return all
@@ -1753,6 +1872,20 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Show me metadata of selected package
+         * @summary Show me metadata of selected package
+         * @param {string} packageName package_name - latest, nevra - exact version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        latestPackage(packageName: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackageDetailResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).latestPackage(packageName, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Show me all applicable advisories for all my systems
          * @summary Show me all applicable advisories for all my systems
          * @param {number} [limit] Limit for paging, set -1 to return all
@@ -1977,6 +2110,16 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).exportSystems(filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options)(axios, basePath);
         },
         /**
+         * Show me metadata of selected package
+         * @summary Show me metadata of selected package
+         * @param {string} packageName package_name - latest, nevra - exact version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        latestPackage(packageName: string, options?: any): AxiosPromise<ControllersPackageDetailResponse> {
+            return DefaultApiFp(configuration).latestPackage(packageName, options)(axios, basePath);
+        },
+        /**
          * Show me all applicable advisories for all my systems
          * @summary Show me all applicable advisories for all my systems
          * @param {number} [limit] Limit for paging, set -1 to return all
@@ -2181,6 +2324,18 @@ export class DefaultApi extends BaseAPI {
      */
     public exportSystems(filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options?: any) {
         return DefaultApiFp(this.configuration).exportSystems(filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Show me metadata of selected package
+     * @summary Show me metadata of selected package
+     * @param {string} packageName package_name - latest, nevra - exact version
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public latestPackage(packageName: string, options?: any) {
+        return DefaultApiFp(this.configuration).latestPackage(packageName, options)(this.axios, this.basePath);
     }
 
     /**

@@ -25,6 +25,9 @@
 * [ControllersFilterData](interfaces/controllersfilterdata.md)
 * [ControllersLinks](interfaces/controllerslinks.md)
 * [ControllersListMeta](interfaces/controllerslistmeta.md)
+* [ControllersPackageDetailAttributes](interfaces/controllerspackagedetailattributes.md)
+* [ControllersPackageDetailItem](interfaces/controllerspackagedetailitem.md)
+* [ControllersPackageDetailResponse](interfaces/controllerspackagedetailresponse.md)
 * [ControllersPackageSystemItem](interfaces/controllerspackagesystemitem.md)
 * [ControllersPackageSystemsResponse](interfaces/controllerspackagesystemsresponse.md)
 * [ControllersSystemAdvisoriesResponse](interfaces/controllerssystemadvisoriesresponse.md)
@@ -60,7 +63,7 @@
 
 • **BASE_PATH**: *string* = "https://cloud.redhat.com".replace(/\/+$/, "")
 
-*Defined in [packages/patch/base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/e5f39d2/packages/patch/base.ts#L20)*
+*Defined in [packages/patch/base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/fc233a9/packages/patch/base.ts#L20)*
 
 ## Functions
 
@@ -68,7 +71,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/patch/api.ts:801](https://github.com/RedHatInsights/javascript-clients/blob/e5f39d2/packages/patch/api.ts#L801)*
+*Defined in [packages/patch/api.ts:876](https://github.com/RedHatInsights/javascript-clients/blob/fc233a9/packages/patch/api.ts#L876)*
 
 DefaultApi - axios parameter creator
 
@@ -92,6 +95,8 @@ Name | Type |
 
 * **exportSystems**(`filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterEnabled?`: string, `filterStale?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
+* **latestPackage**(`packageName`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+
 * **listAdvisories**(`limit?`: number, `offset?`: number, `sort?`: "id" | "name" | "advisory_type" | "synopsis" | "public_date" | "applicable_systems", `search?`: string, `filterId?`: string, `filterDescription?`: string, `filterPublicDate?`: string, `filterSynopsis?`: string, `filterAdvisoryType?`: string, `filterSeverity?`: string, `filterApplicableSystems?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **listAdvisorySystems**(`advisoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale", `search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `tags?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
@@ -112,7 +117,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/patch/api.ts:1912](https://github.com/RedHatInsights/javascript-clients/blob/e5f39d2/packages/patch/api.ts#L1912)*
+*Defined in [packages/patch/api.ts:2045](https://github.com/RedHatInsights/javascript-clients/blob/fc233a9/packages/patch/api.ts#L2045)*
 
 DefaultApi - factory interface
 
@@ -138,6 +143,8 @@ Name | Type |
 
 * **exportSystems**(`filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterEnabled?`: string, `filterStale?`: string, `options?`: any): *AxiosPromise‹Array‹[ControllersSystemInlineItem](interfaces/controllerssysteminlineitem.md)››*
 
+* **latestPackage**(`packageName`: string, `options?`: any): *AxiosPromise‹[ControllersPackageDetailResponse](interfaces/controllerspackagedetailresponse.md)›*
+
 * **listAdvisories**(`limit?`: number, `offset?`: number, `sort?`: "id" | "name" | "advisory_type" | "synopsis" | "public_date" | "applicable_systems", `search?`: string, `filterId?`: string, `filterDescription?`: string, `filterPublicDate?`: string, `filterSynopsis?`: string, `filterAdvisoryType?`: string, `filterSeverity?`: string, `filterApplicableSystems?`: string, `options?`: any): *AxiosPromise‹[ControllersAdvisoriesResponse](interfaces/controllersadvisoriesresponse.md)›*
 
 * **listAdvisorySystems**(`advisoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale", `search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `tags?`: string, `options?`: any): *AxiosPromise‹[ControllersAdvisorySystemsResponse](interfaces/controllersadvisorysystemsresponse.md)›*
@@ -158,7 +165,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/patch/api.ts:1668](https://github.com/RedHatInsights/javascript-clients/blob/e5f39d2/packages/patch/api.ts#L1668)*
+*Defined in [packages/patch/api.ts:1787](https://github.com/RedHatInsights/javascript-clients/blob/fc233a9/packages/patch/api.ts#L1787)*
 
 DefaultApi - functional programming interface
 
@@ -191,6 +198,10 @@ Name | Type |
 * **exportSystems**(`filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterEnabled?`: string, `filterStale?`: string, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[ControllersSystemInlineItem](interfaces/controllerssysteminlineitem.md)››*
+
+* **latestPackage**(`packageName`: string, `options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ControllersPackageDetailResponse](interfaces/controllerspackagedetailresponse.md)›*
 
 * **listAdvisories**(`limit?`: number, `offset?`: number, `sort?`: "id" | "name" | "advisory_type" | "synopsis" | "public_date" | "applicable_systems", `search?`: string, `filterId?`: string, `filterDescription?`: string, `filterPublicDate?`: string, `filterSynopsis?`: string, `filterAdvisoryType?`: string, `filterSeverity?`: string, `filterApplicableSystems?`: string, `options?`: any): *function*
 
@@ -226,7 +237,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [packages/patch/base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/e5f39d2/packages/patch/base.ts#L26)*
+*Defined in [packages/patch/base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/fc233a9/packages/patch/base.ts#L26)*
 
 **`export`** 
 
@@ -234,22 +245,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [packages/patch/base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/e5f39d2/packages/patch/base.ts#L27)*
+*Defined in [packages/patch/base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/fc233a9/packages/patch/base.ts#L27)*
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [packages/patch/base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/e5f39d2/packages/patch/base.ts#L30)*
+*Defined in [packages/patch/base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/fc233a9/packages/patch/base.ts#L30)*
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [packages/patch/base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/e5f39d2/packages/patch/base.ts#L28)*
+*Defined in [packages/patch/base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/fc233a9/packages/patch/base.ts#L28)*
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [packages/patch/base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/e5f39d2/packages/patch/base.ts#L29)*
+*Defined in [packages/patch/base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/fc233a9/packages/patch/base.ts#L29)*
