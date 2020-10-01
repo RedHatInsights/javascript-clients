@@ -2730,10 +2730,11 @@ export const PermissionApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} [resourceType] Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
          * @param {string} [verb] Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
          * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
+         * @param {'true' | 'false'} [excludeGlobals] If set to \&#39;true\&#39;, this will exclude any permission with a global allowance on either \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, options: any = {}): RequestArgs {
+        listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options: any = {}): RequestArgs {
             const localVarPath = `/permissions/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2776,6 +2777,10 @@ export const PermissionApiAxiosParamCreator = function (configuration?: Configur
 
             if (permission !== undefined) {
                 localVarQueryParameter['permission'] = permission;
+            }
+
+            if (excludeGlobals !== undefined) {
+                localVarQueryParameter['exclude_globals'] = excludeGlobals;
             }
 
 
@@ -2829,11 +2834,12 @@ export const PermissionApiFp = function(configuration?: Configuration) {
          * @param {string} [resourceType] Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
          * @param {string} [verb] Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
          * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
+         * @param {'true' | 'false'} [excludeGlobals] If set to \&#39;true\&#39;, this will exclude any permission with a global allowance on either \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionPagination> {
-            const localVarAxiosArgs = PermissionApiAxiosParamCreator(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, options);
+        listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionPagination> {
+            const localVarAxiosArgs = PermissionApiAxiosParamCreator(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2873,11 +2879,12 @@ export const PermissionApiFactory = function (configuration?: Configuration, bas
          * @param {string} [resourceType] Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
          * @param {string} [verb] Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
          * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
+         * @param {'true' | 'false'} [excludeGlobals] If set to \&#39;true\&#39;, this will exclude any permission with a global allowance on either \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, options?: any): AxiosPromise<PermissionPagination> {
-            return PermissionApiFp(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, options)(axios, basePath);
+        listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options?: any): AxiosPromise<PermissionPagination> {
+            return PermissionApiFp(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, options)(axios, basePath);
         },
     };
 };
@@ -2916,12 +2923,13 @@ export class PermissionApi extends BaseAPI {
      * @param {string} [resourceType] Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
      * @param {string} [verb] Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
      * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
+     * @param {'true' | 'false'} [excludeGlobals] If set to \&#39;true\&#39;, this will exclude any permission with a global allowance on either \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PermissionApi
      */
-    public listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, options?: any) {
-        return PermissionApiFp(this.configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, options)(this.axios, this.basePath);
+    public listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options?: any) {
+        return PermissionApiFp(this.configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, options)(this.axios, this.basePath);
     }
 
 }
