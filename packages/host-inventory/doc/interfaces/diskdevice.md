@@ -60,9 +60,11 @@ ___
 
 ### `Optional` options
 
-• **options**? : *[DiskDeviceOptions](diskdeviceoptions.md)*
+• **options**? : *object*
 
 *Defined in [packages/host-inventory/api.ts:387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L387)*
+
+mount options
 
 **`memberof`** DiskDevice
 
