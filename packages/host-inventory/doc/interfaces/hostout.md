@@ -145,7 +145,7 @@ ___
 
 *Overrides [CreateHostOut](createhostout.md).[facts](createhostout.md#optional-facts)*
 
-*Defined in [packages/host-inventory/api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L469)*
+*Defined in [packages/host-inventory/api.ts:450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L450)*
 
 A set of facts belonging to the host.
 

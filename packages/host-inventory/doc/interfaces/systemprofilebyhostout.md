@@ -28,7 +28,7 @@ Structure of the output of the host system profile query
 
 • **count**: *number*
 
-*Defined in [packages/host-inventory/api.ts:880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L880)*
+*Defined in [packages/host-inventory/api.ts:861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L861)*
 
 A number of entries on the current page.
 
@@ -40,7 +40,7 @@ ___
 
 • **page**: *number*
 
-*Defined in [packages/host-inventory/api.ts:886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L886)*
+*Defined in [packages/host-inventory/api.ts:867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L867)*
 
 A current page number.
 
@@ -52,7 +52,7 @@ ___
 
 • **per_page**: *number*
 
-*Defined in [packages/host-inventory/api.ts:892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L892)*
+*Defined in [packages/host-inventory/api.ts:873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L873)*
 
 A page size – a number of entries per single page.
 
@@ -64,7 +64,7 @@ ___
 
 • **results**: *Array‹[HostSystemProfileOut](hostsystemprofileout.md)›*
 
-*Defined in [packages/host-inventory/api.ts:904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L904)*
+*Defined in [packages/host-inventory/api.ts:885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L885)*
 
 Actual host search query result entries.
 
@@ -76,7 +76,7 @@ ___
 
 • **total**: *number*
 
-*Defined in [packages/host-inventory/api.ts:898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L898)*
+*Defined in [packages/host-inventory/api.ts:879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L879)*
 
 A total count of the found entries.
 

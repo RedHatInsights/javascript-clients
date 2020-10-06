@@ -619,7 +619,7 @@ Name | Type |
 
 * **getRoleAccess**(`uuid`: string, `limit?`: number, `offset?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listRoles**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `orderBy?`: string, `addFields?`: Array‹"groups_in" | "groups_in_count"›, `username?`: string, `application?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listRoles**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `orderBy?`: string, `addFields?`: Array‹"groups_in" | "groups_in_count"›, `username?`: string, `application?`: string, `permission?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **updateRole**(`uuid`: string, `roleWithAccess`: [RoleWithAccess](interfaces/rolewithaccess.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -629,7 +629,7 @@ ___
 
 ▸ **RoleApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:4025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4025)*
+*Defined in [packages/rbac/api.ts:4031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4031)*
 
 RoleApi - factory interface
 
@@ -653,7 +653,7 @@ Name | Type |
 
 * **getRoleAccess**(`uuid`: string, `limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[AccessPagination](interfaces/accesspagination.md)›*
 
-* **listRoles**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `orderBy?`: string, `addFields?`: Array‹"groups_in" | "groups_in_count"›, `username?`: string, `application?`: string, `options?`: any): *AxiosPromise‹[RolePaginationDynamic](interfaces/rolepaginationdynamic.md)›*
+* **listRoles**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `orderBy?`: string, `addFields?`: Array‹"groups_in" | "groups_in_count"›, `username?`: string, `application?`: string, `permission?`: string, `options?`: any): *AxiosPromise‹[RolePaginationDynamic](interfaces/rolepaginationdynamic.md)›*
 
 * **updateRole**(`uuid`: string, `roleWithAccess`: [RoleWithAccess](interfaces/rolewithaccess.md), `options?`: any): *AxiosPromise‹void›*
 
@@ -663,7 +663,7 @@ ___
 
 ▸ **RoleApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3920](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3920)*
+*Defined in [packages/rbac/api.ts:3925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3925)*
 
 RoleApi - functional programming interface
 
@@ -693,7 +693,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[AccessPagination](interfaces/accesspagination.md)›*
 
-* **listRoles**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `orderBy?`: string, `addFields?`: Array‹"groups_in" | "groups_in_count"›, `username?`: string, `application?`: string, `options?`: any): *function*
+* **listRoles**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `orderBy?`: string, `addFields?`: Array‹"groups_in" | "groups_in_count"›, `username?`: string, `application?`: string, `permission?`: string, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RolePaginationDynamic](interfaces/rolepaginationdynamic.md)›*
 
@@ -707,7 +707,7 @@ ___
 
 ▸ **StatusApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:4200](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4200)*
+*Defined in [packages/rbac/api.ts:4208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4208)*
 
 StatusApi - axios parameter creator
 
@@ -729,7 +729,7 @@ ___
 
 ▸ **StatusApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:4267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4267)*
+*Defined in [packages/rbac/api.ts:4275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4275)*
 
 StatusApi - factory interface
 
@@ -753,7 +753,7 @@ ___
 
 ▸ **StatusApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:4245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4245)*
+*Defined in [packages/rbac/api.ts:4253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4253)*
 
 StatusApi - functional programming interface
 
