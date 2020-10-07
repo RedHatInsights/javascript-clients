@@ -1621,6 +1621,41 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
+         * Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}
+         * @summary Download Remediations
+         * @param {Array<string>} [selectedRemediations] Selected Remediations for download
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        downloadPlaybooks(selectedRemediations?: Array<string>, options: any = {}): RequestArgs {
+            const localVarPath = `/remediations/download`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (selectedRemediations) {
+                localVarQueryParameter['selected_remediations'] = selectedRemediations;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Get details on execution of the remediation
          * @summary Get details on execution of the remediation
          * @param {string} id Remediation identifier
@@ -2274,6 +2309,20 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}
+         * @summary Download Remediations
+         * @param {Array<string>} [selectedRemediations] Selected Remediations for download
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        downloadPlaybooks(selectedRemediations?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
+            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).downloadPlaybooks(selectedRemediations, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Get details on execution of the remediation
          * @summary Get details on execution of the remediation
          * @param {string} id Remediation identifier
@@ -2530,6 +2579,16 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).deleteRemediationIssueSystem(id, issue, system, options)(axios, basePath);
         },
         /**
+         * Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}
+         * @summary Download Remediations
+         * @param {Array<string>} [selectedRemediations] Selected Remediations for download
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        downloadPlaybooks(selectedRemediations?: Array<string>, options?: any): AxiosPromise<any> {
+            return RemediationsApiFp(configuration).downloadPlaybooks(selectedRemediations, options)(axios, basePath);
+        },
+        /**
          * Get details on execution of the remediation
          * @summary Get details on execution of the remediation
          * @param {string} id Remediation identifier
@@ -2746,6 +2805,18 @@ export class RemediationsApi extends BaseAPI {
      */
     public deleteRemediationIssueSystem(id: string, issue: string, system: string, options?: any) {
         return RemediationsApiFp(this.configuration).deleteRemediationIssueSystem(id, issue, system, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}
+     * @summary Download Remediations
+     * @param {Array<string>} [selectedRemediations] Selected Remediations for download
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RemediationsApi
+     */
+    public downloadPlaybooks(selectedRemediations?: Array<string>, options?: any) {
+        return RemediationsApiFp(this.configuration).downloadPlaybooks(selectedRemediations, options)(this.axios, this.basePath);
     }
 
     /**

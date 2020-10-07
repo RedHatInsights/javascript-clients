@@ -462,6 +462,37 @@ export interface ControllersPackageDetailResponse {
 /**
  *
  * @export
+ * @interface ControllersPackageItem
+ */
+export interface ControllersPackageItem {
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersPackageItem
+     */
+    name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersPackageItem
+     */
+    summary?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof ControllersPackageItem
+     */
+    systems_installed?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof ControllersPackageItem
+     */
+    systems_updatable?: number;
+}
+/**
+ *
+ * @export
  * @interface ControllersPackageSystemItem
  */
 export interface ControllersPackageSystemItem {
@@ -500,6 +531,31 @@ export interface ControllersPackageSystemsResponse {
      *
      * @type {ControllersListMeta}
      * @memberof ControllersPackageSystemsResponse
+     */
+    meta?: ControllersListMeta;
+}
+/**
+ *
+ * @export
+ * @interface ControllersPackagesResponse
+ */
+export interface ControllersPackagesResponse {
+    /**
+     *
+     * @type {Array<ControllersPackageItem>}
+     * @memberof ControllersPackagesResponse
+     */
+    data?: Array<ControllersPackageItem>;
+    /**
+     *
+     * @type {ControllersLinks}
+     * @memberof ControllersPackagesResponse
+     */
+    links?: ControllersLinks;
+    /**
+     *
+     * @type {ControllersListMeta}
+     * @memberof ControllersPackagesResponse
      */
     meta?: ControllersListMeta;
 }
@@ -1415,6 +1471,84 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Show me all installed packages across my systems
+         * @summary Show me all installed packages across my systems
+         * @param {number} [limit] Limit for paging, set -1 to return all
+         * @param {number} [offset] Offset for paging
+         * @param {'id' | 'name' | 'systems_installed' | 'systems_updatable'} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterName] Filter
+         * @param {string} [filterSystemsInstalled] Filter
+         * @param {string} [filterSystemsUpdatable] Filter
+         * @param {string} [tags] Tag filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_updatable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsUpdatable?: string, tags?: string, options: any = {}): RequestArgs {
+            const localVarPath = `/api/patch/v1/packages/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication RhIdentity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? configuration.apiKey("x-rh-identity")
+                    : configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
+            }
+
+            if (filterName !== undefined) {
+                localVarQueryParameter['filter[name]'] = filterName;
+            }
+
+            if (filterSystemsInstalled !== undefined) {
+                localVarQueryParameter['filter[systems_installed]'] = filterSystemsInstalled;
+            }
+
+            if (filterSystemsUpdatable !== undefined) {
+                localVarQueryParameter['filter[systems_updatable]'] = filterSystemsUpdatable;
+            }
+
+            if (tags !== undefined) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Show me advisories for a system by given inventory id
          * @summary Show me advisories for a system by given inventory id
          * @param {string} inventoryId Inventory ID
@@ -1635,44 +1769,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/api/patch/v1/packages/{package_name}/systems`
                 .replace(`{${"package_name"}}`, encodeURIComponent(String(packageName)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Show me all installed packages across my systems
-         * @summary Show me all installed packages across my systems
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        packages(options: any = {}): RequestArgs {
-            const localVarPath = `/api/patch/v1/packages/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -1937,6 +2033,27 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Show me all installed packages across my systems
+         * @summary Show me all installed packages across my systems
+         * @param {number} [limit] Limit for paging, set -1 to return all
+         * @param {number} [offset] Offset for paging
+         * @param {'id' | 'name' | 'systems_installed' | 'systems_updatable'} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterName] Filter
+         * @param {string} [filterSystemsInstalled] Filter
+         * @param {string} [filterSystemsUpdatable] Filter
+         * @param {string} [tags] Tag filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_updatable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsUpdatable?: string, tags?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackagesResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsUpdatable, tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Show me advisories for a system by given inventory id
          * @summary Show me advisories for a system by given inventory id
          * @param {string} inventoryId Inventory ID
@@ -1997,19 +2114,6 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         packageSystems(packageName: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackageSystemsResponse> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).packageSystems(packageName, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all installed packages across my systems
-         * @summary Show me all installed packages across my systems
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        packages(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackageSystemsResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).packages(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2163,6 +2267,23 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, tags, options)(axios, basePath);
         },
         /**
+         * Show me all installed packages across my systems
+         * @summary Show me all installed packages across my systems
+         * @param {number} [limit] Limit for paging, set -1 to return all
+         * @param {number} [offset] Offset for paging
+         * @param {'id' | 'name' | 'systems_installed' | 'systems_updatable'} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterName] Filter
+         * @param {string} [filterSystemsInstalled] Filter
+         * @param {string} [filterSystemsUpdatable] Filter
+         * @param {string} [tags] Tag filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_updatable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsUpdatable?: string, tags?: string, options?: any): AxiosPromise<ControllersPackagesResponse> {
+            return DefaultApiFp(configuration).listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsUpdatable, tags, options)(axios, basePath);
+        },
+        /**
          * Show me advisories for a system by given inventory id
          * @summary Show me advisories for a system by given inventory id
          * @param {string} inventoryId Inventory ID
@@ -2215,15 +2336,6 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         packageSystems(packageName: string, options?: any): AxiosPromise<ControllersPackageSystemsResponse> {
             return DefaultApiFp(configuration).packageSystems(packageName, options)(axios, basePath);
-        },
-        /**
-         * Show me all installed packages across my systems
-         * @summary Show me all installed packages across my systems
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        packages(options?: any): AxiosPromise<ControllersPackageSystemsResponse> {
-            return DefaultApiFp(configuration).packages(options)(axios, basePath);
         },
         /**
          * Show me details about a system packages by given inventory id
@@ -2386,6 +2498,25 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
+     * Show me all installed packages across my systems
+     * @summary Show me all installed packages across my systems
+     * @param {number} [limit] Limit for paging, set -1 to return all
+     * @param {number} [offset] Offset for paging
+     * @param {'id' | 'name' | 'systems_installed' | 'systems_updatable'} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterName] Filter
+     * @param {string} [filterSystemsInstalled] Filter
+     * @param {string} [filterSystemsUpdatable] Filter
+     * @param {string} [tags] Tag filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_updatable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsUpdatable?: string, tags?: string, options?: any) {
+        return DefaultApiFp(this.configuration).listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsUpdatable, tags, options)(this.axios, this.basePath);
+    }
+
+    /**
      * Show me advisories for a system by given inventory id
      * @summary Show me advisories for a system by given inventory id
      * @param {string} inventoryId Inventory ID
@@ -2443,17 +2574,6 @@ export class DefaultApi extends BaseAPI {
      */
     public packageSystems(packageName: string, options?: any) {
         return DefaultApiFp(this.configuration).packageSystems(packageName, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Show me all installed packages across my systems
-     * @summary Show me all installed packages across my systems
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public packages(options?: any) {
-        return DefaultApiFp(this.configuration).packages(options)(this.axios, this.basePath);
     }
 
     /**
