@@ -28,7 +28,7 @@ Representation of one installed product
 
 *Defined in [packages/host-inventory/api.ts:538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L538)*
 
-the product ID
+The product ID
 
 **`memberof`** InstalledProduct
 
@@ -50,6 +50,6 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:544](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L544)*
 
-subscription status for product
+Subscription status for product
 
 **`memberof`** InstalledProduct
