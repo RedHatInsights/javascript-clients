@@ -64,7 +64,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L569)*
 
-MTU
+MTU (Maximum transmission unit)
 
 **`memberof`** NetworkInterface
 
@@ -76,7 +76,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L581)*
 
-name of interface
+Name of interface
 
 **`memberof`** NetworkInterface
 
@@ -88,7 +88,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L587)*
 
-interface state (UP, DOWN, UNKNOWN)
+Interface state (UP, DOWN, UNKNOWN)
 
 **`memberof`** NetworkInterface
 
@@ -100,6 +100,6 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L593)*
 
-interface type (ether, loopback)
+Interface type (ether, loopback)
 
 **`memberof`** NetworkInterface

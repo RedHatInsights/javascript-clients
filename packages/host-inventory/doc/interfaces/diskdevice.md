@@ -40,7 +40,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L381)*
 
-user-defined mount label
+User-defined mount label
 
 **`memberof`** DiskDevice
 
@@ -52,7 +52,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L393)*
 
-mount point
+The mount point
 
 **`memberof`** DiskDevice
 
@@ -64,7 +64,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L387)*
 
-mount options
+Mount options for nested object
 
 **`memberof`** DiskDevice
 
@@ -76,6 +76,6 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L399)*
 
-mount type
+The mount type
 
 **`memberof`** DiskDevice

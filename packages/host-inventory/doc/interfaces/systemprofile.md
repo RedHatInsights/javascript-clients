@@ -49,6 +49,7 @@ Representation of the system profile fields
 * [subscription_auto_attach](systemprofile.md#optional-subscription_auto_attach)
 * [subscription_status](systemprofile.md#optional-subscription_status)
 * [system_memory_bytes](systemprofile.md#optional-system_memory_bytes)
+* [tuned_profile](systemprofile.md#optional-tuned_profile)
 * [yum_repos](systemprofile.md#optional-yum_repos)
 
 ## Properties
@@ -329,7 +330,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L848)*
 
-list of SAP SIDs
+List of SAP SIDs
 
 **`memberof`** SystemProfile
 
@@ -382,6 +383,18 @@ ___
 • **system_memory_bytes**? : *number*
 
 *Defined in [packages/host-inventory/api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L668)*
+
+**`memberof`** SystemProfile
+
+___
+
+### `Optional` tuned_profile
+
+• **tuned_profile**? : *string*
+
+*Defined in [packages/host-inventory/api.ts:854](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L854)*
+
+Current profile resulting from command tuned-adm active
 
 **`memberof`** SystemProfile
 

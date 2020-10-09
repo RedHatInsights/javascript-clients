@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[ControllersPackageSystemItem](controllerspackagesystemitem.md)›*
 
-*Defined in [packages/patch/api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/954689f/packages/patch/api.ts#L523)*
+*Defined in [packages/patch/api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/acc93dd/packages/patch/api.ts#L523)*
 
 **`memberof`** ControllersPackageSystemsResponse
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[ControllersLinks](controllerslinks.md)*
 
-*Defined in [packages/patch/api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/954689f/packages/patch/api.ts#L529)*
+*Defined in [packages/patch/api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/acc93dd/packages/patch/api.ts#L529)*
 
 **`memberof`** ControllersPackageSystemsResponse
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[ControllersListMeta](controllerslistmeta.md)*
 
-*Defined in [packages/patch/api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/954689f/packages/patch/api.ts#L535)*
+*Defined in [packages/patch/api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/acc93dd/packages/patch/api.ts#L535)*
 
 **`memberof`** ControllersPackageSystemsResponse

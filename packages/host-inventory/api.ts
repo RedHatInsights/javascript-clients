@@ -374,25 +374,25 @@ export interface DiskDevice {
      */
     device?: string;
     /**
-     * user-defined mount label
+     * User-defined mount label
      * @type {string}
      * @memberof DiskDevice
      */
     label?: string;
     /**
-     * mount options
+     * Mount options for nested object
      * @type {object}
      * @memberof DiskDevice
      */
     options?: object;
     /**
-     * mount point
+     * The mount point
      * @type {string}
      * @memberof DiskDevice
      */
     mount_point?: string;
     /**
-     * mount type
+     * The mount type
      * @type {string}
      * @memberof DiskDevice
      */
@@ -531,13 +531,13 @@ export interface InstalledProduct {
      */
     name?: string;
     /**
-     * the product ID
+     * The product ID
      * @type {string}
      * @memberof InstalledProduct
      */
     id?: string;
     /**
-     * subscription status for product
+     * Subscription status for product
      * @type {string}
      * @memberof InstalledProduct
      */
@@ -562,7 +562,7 @@ export interface NetworkInterface {
      */
     ipv6_addresses?: Array<string>;
     /**
-     * MTU
+     * MTU (Maximum transmission unit)
      * @type {number}
      * @memberof NetworkInterface
      */
@@ -574,19 +574,19 @@ export interface NetworkInterface {
      */
     mac_address?: string;
     /**
-     * name of interface
+     * Name of interface
      * @type {string}
      * @memberof NetworkInterface
      */
     name?: string;
     /**
-     * interface state (UP, DOWN, UNKNOWN)
+     * Interface state (UP, DOWN, UNKNOWN)
      * @type {string}
      * @memberof NetworkInterface
      */
     state?: string;
     /**
-     * interface type (ether, loopback)
+     * Interface type (ether, loopback)
      * @type {string}
      * @memberof NetworkInterface
      */
@@ -841,11 +841,17 @@ export interface SystemProfile {
      */
     sap_system?: boolean;
     /**
-     * list of SAP SIDs
+     * List of SAP SIDs
      * @type {Array<string>}
      * @memberof SystemProfile
      */
     sap_sids?: Array<string>;
+    /**
+     * Current profile resulting from command tuned-adm active
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    tuned_profile?: string;
 }
 /**
  * Structure of the output of the host system profile query
