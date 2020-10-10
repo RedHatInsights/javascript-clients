@@ -60,6 +60,37 @@ export interface RuleCategory {
 /**
  *
  * @export
+ * @interface StatusReady
+ */
+export interface StatusReady {
+    /**
+     *
+     * @type {boolean}
+     * @memberof StatusReady
+     */
+    django: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof StatusReady
+     */
+    database: boolean;
+    /**
+     * RBAC (Role-Based Access Control)
+     * @type {boolean}
+     * @memberof StatusReady
+     */
+    rbac: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof StatusReady
+     */
+    advisor: boolean;
+}
+/**
+ *
+ * @export
  * @interface SystemType
  */
 export interface SystemType {
@@ -530,6 +561,169 @@ export class RulecategoryApi extends BaseAPI {
      */
     public rulecategoryRead(id: number, options?: any) {
         return RulecategoryApiFp(this.configuration).rulecategoryRead(id, options)(this.axios, this.basePath);
+    }
+
+}
+
+
+/**
+ * StatusApi - axios parameter creator
+ * @export
+ */
+export const StatusApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * A list of statistics views.
+         * @summary Provide a simple list of URLs contained here.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statusList(options: any = {}): RequestArgs {
+            const localVarPath = `/status/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * This returns a dictionary with properties defining the status of the components Advisor relies on. * \'django\' should always be True.  If Django isn\'t ready, you can\'t get this information :-) * \'database\' is True when a database access returns successfully with valid information. * \'rbac\' is True when we can make a request to the RBAC API and get a valid response. * \'advisor\' is True if all of the above are True.
+         * @summary Is the Advisor API ready to serve requests?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statusReady(options: any = {}): RequestArgs {
+            const localVarPath = `/status/ready/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * StatusApi - functional programming interface
+ * @export
+ */
+export const StatusApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * A list of statistics views.
+         * @summary Provide a simple list of URLs contained here.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statusList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
+            const localVarAxiosArgs = StatusApiAxiosParamCreator(configuration).statusList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * This returns a dictionary with properties defining the status of the components Advisor relies on. * \'django\' should always be True.  If Django isn\'t ready, you can\'t get this information :-) * \'database\' is True when a database access returns successfully with valid information. * \'rbac\' is True when we can make a request to the RBAC API and get a valid response. * \'advisor\' is True if all of the above are True.
+         * @summary Is the Advisor API ready to serve requests?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statusReady(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusReady> {
+            const localVarAxiosArgs = StatusApiAxiosParamCreator(configuration).statusReady(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * StatusApi - factory interface
+ * @export
+ */
+export const StatusApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * A list of statistics views.
+         * @summary Provide a simple list of URLs contained here.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statusList(options?: any): AxiosPromise<void> {
+            return StatusApiFp(configuration).statusList(options)(axios, basePath);
+        },
+        /**
+         * This returns a dictionary with properties defining the status of the components Advisor relies on. * \'django\' should always be True.  If Django isn\'t ready, you can\'t get this information :-) * \'database\' is True when a database access returns successfully with valid information. * \'rbac\' is True when we can make a request to the RBAC API and get a valid response. * \'advisor\' is True if all of the above are True.
+         * @summary Is the Advisor API ready to serve requests?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statusReady(options?: any): AxiosPromise<StatusReady> {
+            return StatusApiFp(configuration).statusReady(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * StatusApi - object-oriented interface
+ * @export
+ * @class StatusApi
+ * @extends {BaseAPI}
+ */
+export class StatusApi extends BaseAPI {
+    /**
+     * A list of statistics views.
+     * @summary Provide a simple list of URLs contained here.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StatusApi
+     */
+    public statusList(options?: any) {
+        return StatusApiFp(this.configuration).statusList(options)(this.axios, this.basePath);
+    }
+
+    /**
+     * This returns a dictionary with properties defining the status of the components Advisor relies on. * \'django\' should always be True.  If Django isn\'t ready, you can\'t get this information :-) * \'database\' is True when a database access returns successfully with valid information. * \'rbac\' is True when we can make a request to the RBAC API and get a valid response. * \'advisor\' is True if all of the above are True.
+     * @summary Is the Advisor API ready to serve requests?
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StatusApi
+     */
+    public statusReady(options?: any) {
+        return StatusApiFp(this.configuration).statusReady(options)(this.axios, this.basePath);
     }
 
 }

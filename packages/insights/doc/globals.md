@@ -12,6 +12,7 @@
 * [RequiredError](classes/requirederror.md)
 * [ResolutionRiskApi](classes/resolutionriskapi.md)
 * [RulecategoryApi](classes/rulecategoryapi.md)
+* [StatusApi](classes/statusapi.md)
 * [SystemtypeApi](classes/systemtypeapi.md)
 * [TotalRiskApi](classes/totalriskapi.md)
 
@@ -21,6 +22,7 @@
 * [Kcs](interfaces/kcs.md)
 * [RequestArgs](interfaces/requestargs.md)
 * [RuleCategory](interfaces/rulecategory.md)
+* [StatusReady](interfaces/statusready.md)
 * [SystemType](interfaces/systemtype.md)
 
 ### Variables
@@ -38,6 +40,9 @@
 * [RulecategoryApiAxiosParamCreator](globals.md#const-rulecategoryapiaxiosparamcreator)
 * [RulecategoryApiFactory](globals.md#const-rulecategoryapifactory)
 * [RulecategoryApiFp](globals.md#const-rulecategoryapifp)
+* [StatusApiAxiosParamCreator](globals.md#const-statusapiaxiosparamcreator)
+* [StatusApiFactory](globals.md#const-statusapifactory)
+* [StatusApiFp](globals.md#const-statusapifp)
 * [SystemtypeApiAxiosParamCreator](globals.md#const-systemtypeapiaxiosparamcreator)
 * [SystemtypeApiFactory](globals.md#const-systemtypeapifactory)
 * [SystemtypeApiFp](globals.md#const-systemtypeapifp)
@@ -63,7 +68,7 @@
 
 ▸ **KcsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/insights/api.ts:90](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L90)*
+*Defined in [packages/insights/api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L121)*
 
 KcsApi - axios parameter creator
 
@@ -87,7 +92,7 @@ ___
 
 ▸ **KcsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/insights/api.ts:207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L207)*
+*Defined in [packages/insights/api.ts:238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L238)*
 
 KcsApi - factory interface
 
@@ -113,7 +118,7 @@ ___
 
 ▸ **KcsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/insights/api.ts:170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L170)*
+*Defined in [packages/insights/api.ts:201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L201)*
 
 KcsApi - functional programming interface
 
@@ -141,7 +146,7 @@ ___
 
 ▸ **ResolutionRiskApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/insights/api.ts:270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L270)*
+*Defined in [packages/insights/api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L301)*
 
 ResolutionRiskApi - axios parameter creator
 
@@ -163,7 +168,7 @@ ___
 
 ▸ **ResolutionRiskApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/insights/api.ts:331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L331)*
+*Defined in [packages/insights/api.ts:362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L362)*
 
 ResolutionRiskApi - factory interface
 
@@ -187,7 +192,7 @@ ___
 
 ▸ **ResolutionRiskApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/insights/api.ts:309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L309)*
+*Defined in [packages/insights/api.ts:340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L340)*
 
 ResolutionRiskApi - functional programming interface
 
@@ -211,7 +216,7 @@ ___
 
 ▸ **RulecategoryApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/insights/api.ts:370](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L370)*
+*Defined in [packages/insights/api.ts:401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L401)*
 
 RulecategoryApi - axios parameter creator
 
@@ -235,7 +240,7 @@ ___
 
 ▸ **RulecategoryApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/insights/api.ts:481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L481)*
+*Defined in [packages/insights/api.ts:512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L512)*
 
 RulecategoryApi - factory interface
 
@@ -261,7 +266,7 @@ ___
 
 ▸ **RulecategoryApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/insights/api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L445)*
+*Defined in [packages/insights/api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L476)*
 
 RulecategoryApi - functional programming interface
 
@@ -285,11 +290,89 @@ Name | Type |
 
 ___
 
+### `Const` StatusApiAxiosParamCreator
+
+▸ **StatusApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
+
+*Defined in [packages/insights/api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L573)*
+
+StatusApi - axios parameter creator
+
+**`export`** 
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`configuration?` | [Configuration](classes/configuration.md) |
+
+**Returns:** *object*
+
+* **statusList**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+
+* **statusReady**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+
+___
+
+### `Const` StatusApiFactory
+
+▸ **StatusApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
+
+*Defined in [packages/insights/api.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L677)*
+
+StatusApi - factory interface
+
+**`export`** 
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`configuration?` | [Configuration](classes/configuration.md) |
+`basePath?` | string |
+`axios?` | AxiosInstance |
+
+**Returns:** *object*
+
+* **statusList**(`options?`: any): *AxiosPromise‹void›*
+
+* **statusReady**(`options?`: any): *AxiosPromise‹[StatusReady](interfaces/statusready.md)›*
+
+___
+
+### `Const` StatusApiFp
+
+▸ **StatusApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
+
+*Defined in [packages/insights/api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L642)*
+
+StatusApi - functional programming interface
+
+**`export`** 
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`configuration?` | [Configuration](classes/configuration.md) |
+
+**Returns:** *object*
+
+* **statusList**(`options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+
+* **statusReady**(`options?`: any): *function*
+
+  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[StatusReady](interfaces/statusready.md)›*
+
+___
+
 ### `Const` SystemtypeApiAxiosParamCreator
 
 ▸ **SystemtypeApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/insights/api.ts:542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L542)*
+*Defined in [packages/insights/api.ts:736](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L736)*
 
 SystemtypeApi - axios parameter creator
 
@@ -313,7 +396,7 @@ ___
 
 ▸ **SystemtypeApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/insights/api.ts:653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L653)*
+*Defined in [packages/insights/api.ts:847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L847)*
 
 SystemtypeApi - factory interface
 
@@ -339,7 +422,7 @@ ___
 
 ▸ **SystemtypeApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/insights/api.ts:617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L617)*
+*Defined in [packages/insights/api.ts:811](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L811)*
 
 SystemtypeApi - functional programming interface
 
@@ -367,7 +450,7 @@ ___
 
 ▸ **TotalRiskApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/insights/api.ts:714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L714)*
+*Defined in [packages/insights/api.ts:908](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L908)*
 
 TotalRiskApi - axios parameter creator
 
@@ -389,7 +472,7 @@ ___
 
 ▸ **TotalRiskApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/insights/api.ts:775](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L775)*
+*Defined in [packages/insights/api.ts:969](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L969)*
 
 TotalRiskApi - factory interface
 
@@ -413,7 +496,7 @@ ___
 
 ▸ **TotalRiskApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/insights/api.ts:753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L753)*
+*Defined in [packages/insights/api.ts:947](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L947)*
 
 TotalRiskApi - functional programming interface
 

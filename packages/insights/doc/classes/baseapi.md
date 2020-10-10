@@ -14,6 +14,8 @@
 
   ↳ [RulecategoryApi](rulecategoryapi.md)
 
+  ↳ [StatusApi](statusapi.md)
+
   ↳ [SystemtypeApi](systemtypeapi.md)
 
   ↳ [TotalRiskApi](totalriskapi.md)
