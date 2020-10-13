@@ -23,7 +23,7 @@
 
 • **id**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1238)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1268)*
 
 Internal status_id.
 
@@ -35,7 +35,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1244)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1274)*
 
 Represenation of internal status_id.
 
