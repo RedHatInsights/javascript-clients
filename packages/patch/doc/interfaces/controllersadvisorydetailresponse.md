@@ -22,6 +22,6 @@
 
 • **data**? : *[ControllersAdvisoryDetailItem](controllersadvisorydetailitem.md)*
 
-*Defined in [packages/patch/api.ts:156](https://github.com/RedHatInsights/javascript-clients/blob/fff47de/packages/patch/api.ts#L156)*
+*Defined in [packages/patch/api.ts:156](https://github.com/RedHatInsights/javascript-clients/blob/7ed15e5/packages/patch/api.ts#L156)*
 
 **`memberof`** ControllersAdvisoryDetailResponse
