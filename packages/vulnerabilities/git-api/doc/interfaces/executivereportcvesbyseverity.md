@@ -27,7 +27,7 @@ Number of CVEs discovered on the managed systems, divided into buckets based on 
 
 • **_0to3_9**: *[ExecutiveReportCvesBySeverity0to39](executivereportcvesbyseverity0to39.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:444](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L444)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L450)*
 
 **`memberof`** ExecutiveReportCvesBySeverity
 
@@ -37,7 +37,7 @@ ___
 
 • **_4to7_9**: *[ExecutiveReportCvesBySeverity4to79](executivereportcvesbyseverity4to79.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L450)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L456)*
 
 **`memberof`** ExecutiveReportCvesBySeverity
 
@@ -47,7 +47,7 @@ ___
 
 • **_8to10**: *[ExecutiveReportCvesBySeverity8to10](executivereportcvesbyseverity8to10.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L456)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L462)*
 
 **`memberof`** ExecutiveReportCvesBySeverity
 
@@ -57,6 +57,6 @@ ___
 
 • **na**: *[ExecutiveReportCvesBySeverityNa](executivereportcvesbyseverityna.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L462)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:468](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L468)*
 
 **`memberof`** ExecutiveReportCvesBySeverity
