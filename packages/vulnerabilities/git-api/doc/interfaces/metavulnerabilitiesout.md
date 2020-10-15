@@ -16,6 +16,7 @@
 
 ### Properties
 
+* [affecting](metavulnerabilitiesout.md#affecting)
 * [business_risk_id](metavulnerabilitiesout.md#business_risk_id)
 * [cvss_from](metavulnerabilitiesout.md#cvss_from)
 * [cvss_to](metavulnerabilitiesout.md#cvss_to)
@@ -38,11 +39,23 @@
 
 ## Properties
 
+###  affecting
+
+• **affecting**: *string | null*
+
+*Defined in [packages/vulnerabilities/git-api/api.ts:1039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1039)*
+
+Description of CVE showing preferences
+
+**`memberof`** MetaVulnerabilitiesOut
+
+___
+
 ###  business_risk_id
 
 • **business_risk_id**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1027)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1045)*
 
 Filter based on business risk IDs.
 
@@ -54,7 +67,7 @@ ___
 
 • **cvss_from**: *number | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1033)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1051)*
 
 Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
 
@@ -66,7 +79,7 @@ ___
 
 • **cvss_to**: *number | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1039)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1057](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1057)*
 
 Filter based on cvss score, up to the value.
 
@@ -106,7 +119,7 @@ ___
 
 • **impact**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1063)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1081)*
 
 Filter based on impact IDs.
 
@@ -188,7 +201,7 @@ ___
 
 • **public_from**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1051)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1069)*
 
 Filter CVEs based on their published date, starting from the date.
 
@@ -200,7 +213,7 @@ ___
 
 • **public_to**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1057](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1057)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1075)*
 
 Filter CVEs based on their published date, up to the date.
 
@@ -212,7 +225,7 @@ ___
 
 • **rule_presence**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1075)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1093)*
 
 Filter based on presence of security rule
 
@@ -224,7 +237,7 @@ ___
 
 • **security_rule**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1081)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1099)*
 
 Filter based on presence of security rule - deprecated
 
@@ -236,7 +249,7 @@ ___
 
 • **show_all**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1045)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1063)*
 
 Show all known vulnerabilities, regardless of number of affected systems.
 
@@ -262,7 +275,7 @@ ___
 
 • **system_count**? : *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1069)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1087)*
 
 Total number of systems managed by vulnerability application.
 

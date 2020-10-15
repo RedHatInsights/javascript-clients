@@ -17,6 +17,7 @@
 ### Properties
 
 * [data_format](metasystems.md#data_format)
+* [excluded](metasystems.md#excluded)
 * [filter](metasystems.md#filter)
 * [limit](metasystems.md#limit)
 * [offset](metasystems.md#offset)
@@ -40,6 +41,18 @@
 Format of the output data, either JSON (default) or CSV.
 
 **`memberof`** Meta
+
+___
+
+###  excluded
+
+• **excluded**: *string | null*
+
+*Defined in [packages/vulnerabilities/git-api/api.ts:1007](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1007)*
+
+Display setting of opted out systems.
+
+**`memberof`** MetaSystems
 
 ___
 
