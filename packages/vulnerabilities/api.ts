@@ -297,6 +297,12 @@ export interface CveDetailOutDataAttributes {
      * @memberof CveDetailOutDataAttributes
      */
     systems_status_divergent: number;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof CveDetailOutDataAttributes
+     */
+    advisories_list: Array<string>;
 }
 /**
  *
@@ -765,6 +771,18 @@ export interface MetaAffectedSystems extends Meta {
      * @memberof MetaAffectedSystems
      */
     status_id: string | null;
+    /**
+     * Filters security rules by its error key.
+     * @type {string}
+     * @memberof MetaAffectedSystems
+     */
+    rule_key: string | null;
+    /**
+     * Filter based on presence of security rule
+     * @type {string}
+     * @memberof MetaAffectedSystems
+     */
+    rule_presence: string | null;
 }
 /**
  *
@@ -778,6 +796,18 @@ export interface MetaAffectedSystemsAllOf {
      * @memberof MetaAffectedSystemsAllOf
      */
     status_id: string | null;
+    /**
+     * Filters security rules by its error key.
+     * @type {string}
+     * @memberof MetaAffectedSystemsAllOf
+     */
+    rule_key: string | null;
+    /**
+     * Filter based on presence of security rule
+     * @type {string}
+     * @memberof MetaAffectedSystemsAllOf
+     */
+    rule_presence: string | null;
 }
 /**
  *
@@ -822,17 +852,23 @@ export interface MetaCves extends Meta {
      */
     impact: string | null;
     /**
-     * Filter based on presence of security rule
-     * @type {boolean}
-     * @memberof MetaCves
-     */
-    security_rule: boolean | null;
-    /**
      * Filer based on CVE status ID.
      * @type {string}
      * @memberof MetaCves
      */
     status_id: string | null;
+    /**
+     * Filter based on presence of security rule
+     * @type {string}
+     * @memberof MetaCves
+     */
+    rule_presence: string | null;
+    /**
+     * Filter based on presence of security_rule - deprecated
+     * @type {boolean}
+     * @memberof MetaCves
+     */
+    security_rule: boolean | null;
 }
 /**
  *
@@ -877,17 +913,23 @@ export interface MetaCvesAllOf {
      */
     impact: string | null;
     /**
-     * Filter based on presence of security rule
-     * @type {boolean}
-     * @memberof MetaCvesAllOf
-     */
-    security_rule: boolean | null;
-    /**
      * Filer based on CVE status ID.
      * @type {string}
      * @memberof MetaCvesAllOf
      */
     status_id: string | null;
+    /**
+     * Filter based on presence of security rule
+     * @type {string}
+     * @memberof MetaCvesAllOf
+     */
+    rule_presence: string | null;
+    /**
+     * Filter based on presence of security_rule - deprecated
+     * @type {boolean}
+     * @memberof MetaCvesAllOf
+     */
+    security_rule: boolean | null;
 }
 /**
  *
@@ -995,6 +1037,18 @@ export interface MetaVulnerabilitiesOut extends Meta {
      * @memberof MetaVulnerabilitiesOut
      */
     system_count?: number;
+    /**
+     * Filter based on presence of security rule
+     * @type {string}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    rule_presence: string | null;
+    /**
+     * Filter based on presence of security rule - deprecated
+     * @type {boolean}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    security_rule: boolean | null;
 }
 /**
  *
@@ -1050,6 +1104,18 @@ export interface MetaVulnerabilitiesOutAllOf {
      * @memberof MetaVulnerabilitiesOutAllOf
      */
     system_count?: number;
+    /**
+     * Filter based on presence of security rule
+     * @type {string}
+     * @memberof MetaVulnerabilitiesOutAllOf
+     */
+    rule_presence: string | null;
+    /**
+     * Filter based on presence of security rule - deprecated
+     * @type {boolean}
+     * @memberof MetaVulnerabilitiesOutAllOf
+     */
+    security_rule: boolean | null;
 }
 /**
  *
@@ -1069,6 +1135,44 @@ export interface OptOutIn {
      * @memberof OptOutIn
      */
     opt_out: boolean;
+}
+/**
+ *
+ * @export
+ * @interface PlaybookTemplate
+ */
+export interface PlaybookTemplate {
+    /**
+     *
+     * @type {Array<PlaybookTemplateData>}
+     * @memberof PlaybookTemplate
+     */
+    data?: Array<PlaybookTemplateData>;
+}
+/**
+ *
+ * @export
+ * @interface PlaybookTemplateData
+ */
+export interface PlaybookTemplateData {
+    /**
+     * Playbook template description.
+     * @type {string}
+     * @memberof PlaybookTemplateData
+     */
+    description: string;
+    /**
+     * Actual playbook template.
+     * @type {string}
+     * @memberof PlaybookTemplateData
+     */
+    play: string;
+    /**
+     * Revision of the playbook template.
+     * @type {string}
+     * @memberof PlaybookTemplateData
+     */
+    version: string;
 }
 /**
  *
@@ -1283,6 +1387,43 @@ export interface SystemDetailsOutData {
      * @memberof SystemDetailsOutData
      */
     stale?: boolean;
+    /**
+     * Date of the lastest upload of archive taken from Inventory syndicated data.
+     * @type {string}
+     * @memberof SystemDetailsOutData
+     */
+    updated?: string | null;
+    /**
+     *
+     * @type {Array<SystemDetailsOutDataTags>}
+     * @memberof SystemDetailsOutData
+     */
+    tags: Array<SystemDetailsOutDataTags>;
+}
+/**
+ *
+ * @export
+ * @interface SystemDetailsOutDataTags
+ */
+export interface SystemDetailsOutDataTags {
+    /**
+     * Namespace of single tag.
+     * @type {string}
+     * @memberof SystemDetailsOutDataTags
+     */
+    namespace: string;
+    /**
+     * Key of the single tag.
+     * @type {string}
+     * @memberof SystemDetailsOutDataTags
+     */
+    key: string;
+    /**
+     * Value of the single tag.
+     * @type {string}
+     * @memberof SystemDetailsOutDataTags
+     */
+    value: string | null;
 }
 /**
  *
@@ -1473,11 +1614,15 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [uuid] Filter based on UUID of inventory.
-         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, securityRule?: string, options: any = {}): RequestArgs {
+        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSystem?: boolean, securityRule?: string, options: any = {}): RequestArgs {
             // verify required parameter 'cveId' is not null or undefined
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getAffectedSystemsByCve.');
@@ -1543,6 +1688,22 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['uuid'] = uuid;
             }
 
+            if (ruleKey) {
+                localVarQueryParameter['rule_key'] = ruleKey;
+            }
+
+            if (rulePresence) {
+                localVarQueryParameter['rule_presence'] = rulePresence;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (sapSystem !== undefined) {
+                localVarQueryParameter['sap_system'] = sapSystem;
+            }
+
             if (securityRule !== undefined) {
                 localVarQueryParameter['security_rule'] = securityRule;
             }
@@ -1572,11 +1733,13 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [sort] Sorting used for response.
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
-         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, securityRule?: string, options: any = {}): RequestArgs {
+        getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, securityRule?: string, options: any = {}): RequestArgs {
             // verify required parameter 'cveId' is not null or undefined
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getAffectedSystemsIdsByCve.');
@@ -1636,6 +1799,14 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (dataFormat !== undefined) {
                 localVarQueryParameter['data_format'] = dataFormat;
+            }
+
+            if (ruleKey) {
+                localVarQueryParameter['rule_key'] = ruleKey;
+            }
+
+            if (rulePresence) {
+                localVarQueryParameter['rule_presence'] = rulePresence;
             }
 
             if (securityRule !== undefined) {
@@ -1797,11 +1968,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
-         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, options: any = {}): RequestArgs {
+        getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options: any = {}): RequestArgs {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getCveIdsBySystem.');
@@ -1891,6 +2063,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['security_rule'] = securityRule;
             }
 
+            if (rulePresence) {
+                localVarQueryParameter['rule_presence'] = rulePresence;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1921,12 +2097,13 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
-         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {boolean} [showAll] Show all known vulnerabilities IDs, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, showAll?: boolean, options: any = {}): RequestArgs {
+        getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, options: any = {}): RequestArgs {
             const localVarPath = `/vulnerabilities/cves/ids`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2011,6 +2188,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['security_rule'] = securityRule;
             }
 
+            if (rulePresence) {
+                localVarQueryParameter['rule_presence'] = rulePresence;
+            }
+
             if (showAll !== undefined) {
                 localVarQueryParameter['show_all'] = showAll;
             }
@@ -2045,12 +2226,13 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
-         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, showAll?: boolean, options: any = {}): RequestArgs {
+        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, options: any = {}): RequestArgs {
             const localVarPath = `/vulnerabilities/cves`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2135,6 +2317,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['security_rule'] = securityRule;
             }
 
+            if (rulePresence) {
+                localVarQueryParameter['rule_presence'] = rulePresence;
+            }
+
             if (showAll !== undefined) {
                 localVarQueryParameter['show_all'] = showAll;
             }
@@ -2170,11 +2356,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
-         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, options: any = {}): RequestArgs {
+        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options: any = {}): RequestArgs {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getCveListBySystem.');
@@ -2264,6 +2451,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['security_rule'] = securityRule;
             }
 
+            if (rulePresence) {
+                localVarQueryParameter['rule_presence'] = rulePresence;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2285,6 +2476,56 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          */
         getExecutiveReport(options: any = {}): RequestArgs {
             const localVarPath = `/report/executive`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? configuration.apiKey("x-rh-identity")
+                    : configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Return Ansible playbook template for given rule id.
+         * @summary Playbook template for CVEs with security rules.
+         * @param {string} ruleId Insights security rule ID.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookTemplate(ruleId: string, options: any = {}): RequestArgs {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling getPlaybookTemplate.');
+            }
+            const localVarPath = `/playbooks/templates/{rule_id}`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2521,11 +2762,13 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
          * @param {string} [uuid] Filter based on UUID of inventory.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [optOut] If set to true, shows systems which have been opted out from vulnerability application. If not set defaults to false.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, optOut?: boolean, options: any = {}): RequestArgs {
+        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSystem?: boolean, optOut?: boolean, options: any = {}): RequestArgs {
             const localVarPath = `/systems`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2584,6 +2827,14 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (uuid !== undefined) {
                 localVarQueryParameter['uuid'] = uuid;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (sapSystem !== undefined) {
+                localVarQueryParameter['sap_system'] = sapSystem;
             }
 
             if (optOut !== undefined) {
@@ -2940,12 +3191,16 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [uuid] Filter based on UUID of inventory.
-         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, securityRule?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, securityRule, options);
+        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSystem?: boolean, securityRule?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSystem, securityRule, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2963,12 +3218,14 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [sort] Sorting used for response.
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
-         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, securityRule?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsIdsOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, securityRule, options);
+        getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, securityRule?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsIdsOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, ruleKey, rulePresence, securityRule, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3032,12 +3289,13 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
-         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesIdsOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, options);
+        getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesIdsOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3060,13 +3318,14 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
-         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {boolean} [showAll] Show all known vulnerabilities IDs, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, showAll?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesIdsOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, showAll, options);
+        getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesIdsOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3089,13 +3348,14 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
-         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, showAll?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, showAll, options);
+        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3119,12 +3379,13 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
-         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, options);
+        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3138,6 +3399,20 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         getExecutiveReport(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExecutiveReport> {
             const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getExecutiveReport(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Return Ansible playbook template for given rule id.
+         * @summary Playbook template for CVEs with security rules.
+         * @param {string} ruleId Insights security rule ID.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookTemplate(ruleId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookTemplate> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getPlaybookTemplate(ruleId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3205,12 +3480,14 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
          * @param {string} [uuid] Filter based on UUID of inventory.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [optOut] If set to true, shows systems which have been opted out from vulnerability application. If not set defaults to false.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, optOut?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemListOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, optOut, options);
+        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSystem?: boolean, optOut?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemListOut> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSystem, optOut, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3332,12 +3609,16 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [uuid] Filter based on UUID of inventory.
-         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, securityRule?: string, options?: any): AxiosPromise<AffectedSystemsOut> {
-            return DefaultApiFp(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, securityRule, options)(axios, basePath);
+        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSystem?: boolean, securityRule?: string, options?: any): AxiosPromise<AffectedSystemsOut> {
+            return DefaultApiFp(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSystem, securityRule, options)(axios, basePath);
         },
         /**
          * Report of IDs of affected systems for a given CVE.
@@ -3351,12 +3632,14 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [sort] Sorting used for response.
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
-         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, securityRule?: string, options?: any): AxiosPromise<AffectedSystemsIdsOut> {
-            return DefaultApiFp(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, securityRule, options)(axios, basePath);
+        getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, securityRule?: string, options?: any): AxiosPromise<AffectedSystemsIdsOut> {
+            return DefaultApiFp(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, ruleKey, rulePresence, securityRule, options)(axios, basePath);
         },
         /**
          * Checks database availability and API response threshold time.
@@ -3404,12 +3687,13 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
-         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, options?: any): AxiosPromise<SystemCvesIdsOut> {
-            return DefaultApiFp(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, options)(axios, basePath);
+        getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options?: any): AxiosPromise<SystemCvesIdsOut> {
+            return DefaultApiFp(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options)(axios, basePath);
         },
         /**
          * Overview of vulnerabilities IDs across whole host inventory.
@@ -3428,13 +3712,14 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
-         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {boolean} [showAll] Show all known vulnerabilities IDs, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, showAll?: boolean, options?: any): AxiosPromise<VulnerabilitiesIdsOut> {
-            return DefaultApiFp(configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, showAll, options)(axios, basePath);
+        getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, options?: any): AxiosPromise<VulnerabilitiesIdsOut> {
+            return DefaultApiFp(configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, options)(axios, basePath);
         },
         /**
          * Overview of vulnerabilities across whole host inventory.
@@ -3453,13 +3738,14 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {string} [statusId] Filer based on CVE status ID.
-         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, showAll?: boolean, options?: any): AxiosPromise<VulnerabilitiesOut> {
-            return DefaultApiFp(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, showAll, options)(axios, basePath);
+        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, options?: any): AxiosPromise<VulnerabilitiesOut> {
+            return DefaultApiFp(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, options)(axios, basePath);
         },
         /**
          * Shows detailed information about all CVEs the system is exposed to.
@@ -3479,12 +3765,13 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {string} [businessRiskId] Filter based on business risk IDs.
-         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+         * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, options?: any): AxiosPromise<SystemCvesOut> {
-            return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, options)(axios, basePath);
+        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options?: any): AxiosPromise<SystemCvesOut> {
+            return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options)(axios, basePath);
         },
         /**
          * Returns top level overview of vulnerabilities affecting given account.
@@ -3494,6 +3781,16 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         getExecutiveReport(options?: any): AxiosPromise<ExecutiveReport> {
             return DefaultApiFp(configuration).getExecutiveReport(options)(axios, basePath);
+        },
+        /**
+         * Return Ansible playbook template for given rule id.
+         * @summary Playbook template for CVEs with security rules.
+         * @param {string} ruleId Insights security rule ID.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookTemplate(ruleId: string, options?: any): AxiosPromise<PlaybookTemplate> {
+            return DefaultApiFp(configuration).getPlaybookTemplate(ruleId, options)(axios, basePath);
         },
         /**
          * Returns available status and status_id pairs where status_id is internal ID of the status.
@@ -3545,12 +3842,14 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
          * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
          * @param {string} [uuid] Filter based on UUID of inventory.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [optOut] If set to true, shows systems which have been opted out from vulnerability application. If not set defaults to false.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, optOut?: boolean, options?: any): AxiosPromise<SystemListOut> {
-            return DefaultApiFp(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, optOut, options)(axios, basePath);
+        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSystem?: boolean, optOut?: boolean, options?: any): AxiosPromise<SystemListOut> {
+            return DefaultApiFp(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSystem, optOut, options)(axios, basePath);
         },
         /**
          * Get application version.
@@ -3647,13 +3946,17 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [statusId] Filer based on CVE status ID.
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {string} [uuid] Filter based on UUID of inventory.
-     * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
+     * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+     * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+     * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+     * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+     * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, securityRule?: string, options?: any) {
-        return DefaultApiFp(this.configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, securityRule, options)(this.axios, this.basePath);
+    public getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSystem?: boolean, securityRule?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSystem, securityRule, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3668,13 +3971,15 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [sort] Sorting used for response.
      * @param {string} [statusId] Filer based on CVE status ID.
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
-     * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule.
+     * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+     * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+     * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, securityRule?: string, options?: any) {
-        return DefaultApiFp(this.configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, securityRule, options)(this.axios, this.basePath);
+    public getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, securityRule?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, ruleKey, rulePresence, securityRule, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3729,13 +4034,14 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [statusId] Filer based on CVE status ID.
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {string} [businessRiskId] Filter based on business risk IDs.
-     * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+     * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+     * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, options)(this.axios, this.basePath);
+    public getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options?: any) {
+        return DefaultApiFp(this.configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3755,14 +4061,15 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {string} [businessRiskId] Filter based on business risk IDs.
      * @param {string} [statusId] Filer based on CVE status ID.
-     * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+     * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+     * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
      * @param {boolean} [showAll] Show all known vulnerabilities IDs, regardless of number of affected systems.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, showAll?: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, showAll, options)(this.axios, this.basePath);
+    public getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, options?: any) {
+        return DefaultApiFp(this.configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3782,14 +4089,15 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {string} [businessRiskId] Filter based on business risk IDs.
      * @param {string} [statusId] Filer based on CVE status ID.
-     * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+     * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+     * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
      * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, showAll?: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, showAll, options)(this.axios, this.basePath);
+    public getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, options?: any) {
+        return DefaultApiFp(this.configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3810,13 +4118,14 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [statusId] Filer based on CVE status ID.
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {string} [businessRiskId] Filter based on business risk IDs.
-     * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs.
+     * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
+     * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, options)(this.axios, this.basePath);
+    public getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options?: any) {
+        return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3828,6 +4137,18 @@ export class DefaultApi extends BaseAPI {
      */
     public getExecutiveReport(options?: any) {
         return DefaultApiFp(this.configuration).getExecutiveReport(options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Return Ansible playbook template for given rule id.
+     * @summary Playbook template for CVEs with security rules.
+     * @param {string} ruleId Insights security rule ID.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public getPlaybookTemplate(ruleId: string, options?: any) {
+        return DefaultApiFp(this.configuration).getPlaybookTemplate(ruleId, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3886,13 +4207,15 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
      * @param {boolean} [stale] If set to true, shows stale systems. If not set defaults to false.
      * @param {string} [uuid] Filter based on UUID of inventory.
+     * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+     * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
      * @param {boolean} [optOut] If set to true, shows systems which have been opted out from vulnerability application. If not set defaults to false.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, optOut?: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, optOut, options)(this.axios, this.basePath);
+    public getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSystem?: boolean, optOut?: boolean, options?: any) {
+        return DefaultApiFp(this.configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSystem, optOut, options)(this.axios, this.basePath);
     }
 
     /**
