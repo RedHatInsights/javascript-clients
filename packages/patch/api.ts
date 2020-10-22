@@ -501,13 +501,25 @@ export interface ControllersPackageSystemItem {
      * @type {string}
      * @memberof ControllersPackageSystemItem
      */
-    evra?: string;
+    available_evra?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageSystemItem
      */
     id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersPackageSystemItem
+     */
+    installed_evra?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof ControllersPackageSystemItem
+     */
+    updatable?: boolean;
 }
 /**
  *
@@ -1144,6 +1156,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Export systems for my account
          * @summary Export systems for my account
+         * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -1151,12 +1164,14 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [filterRhsaCount] Filter
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterEnabled] Filter
          * @param {string} [filterStale] Filter
+         * @param {string} [filterPackagesInstalled] Filter
+         * @param {string} [filterPackagesUpdatable] Filter
+         * @param {Array<string>} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportSystems(filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options: any = {}): RequestArgs {
+        exportSystems(search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/api/patch/v1/export/systems`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1173,6 +1188,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                     ? configuration.apiKey("x-rh-identity")
                     : configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
             }
 
             if (filterId !== undefined) {
@@ -1203,12 +1222,20 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['filter[rhea_count]'] = filterRheaCount;
             }
 
-            if (filterEnabled !== undefined) {
-                localVarQueryParameter['filter[enabled]'] = filterEnabled;
-            }
-
             if (filterStale !== undefined) {
                 localVarQueryParameter['filter[stale]'] = filterStale;
+            }
+
+            if (filterPackagesInstalled !== undefined) {
+                localVarQueryParameter['filter[packages_installed]'] = filterPackagesInstalled;
+            }
+
+            if (filterPackagesUpdatable !== undefined) {
+                localVarQueryParameter['filter[packages_updatable]'] = filterPackagesUpdatable;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
             }
 
 
@@ -1283,10 +1310,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [filterSeverity] Filter
          * @param {string} [filterApplicableSystems] Filter
          * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisories(limit?: number, offset?: number, sort?: 'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, filterApplicableSystems?: string, tags?: Array<string>, options: any = {}): RequestArgs {
+        listAdvisories(limit?: number, offset?: number, sort?: 'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, filterApplicableSystems?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/api/patch/v1/advisories`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1353,6 +1382,14 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['tags'] = tags;
             }
 
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (filterSystemProfileSapSidsIn) {
+                localVarQueryParameter['filter[system_profile][sap_sids][in]'] = filterSystemProfileSapSidsIn;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1382,10 +1419,13 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
          * @param {string} [filterStale] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options: any = {}): RequestArgs {
+        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options: any = {}): RequestArgs {
             // verify required parameter 'advisoryId' is not null or undefined
             if (advisoryId === null || advisoryId === undefined) {
                 throw new RequiredError('advisoryId','Required parameter advisoryId was null or undefined when calling listAdvisorySystems.');
@@ -1457,6 +1497,18 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['filter[stale]'] = filterStale;
             }
 
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (filterSystemProfileSapSidsIn) {
+                localVarQueryParameter['filter[system_profile][sap_sids][in]'] = filterSystemProfileSapSidsIn;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1480,11 +1532,14 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [filterName] Filter
          * @param {string} [filterSystemsInstalled] Filter
          * @param {string} [filterSystemsUpdatable] Filter
+         * @param {string} [filterSummary] Filter
          * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_updatable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsUpdatable?: string, tags?: Array<string>, options: any = {}): RequestArgs {
+        listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_updatable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsUpdatable?: string, filterSummary?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/api/patch/v1/packages/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1531,8 +1586,20 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['filter[systems_updatable]'] = filterSystemsUpdatable;
             }
 
+            if (filterSummary !== undefined) {
+                localVarQueryParameter['filter[summary]'] = filterSummary;
+            }
+
             if (tags) {
                 localVarQueryParameter['tags'] = tags;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (filterSystemProfileSapSidsIn) {
+                localVarQueryParameter['filter[system_profile][sap_sids][in]'] = filterSystemProfileSapSidsIn;
             }
 
 
@@ -1562,11 +1629,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [filterSynopsis] Filter
          * @param {string} [filterAdvisoryType] Filter
          * @param {string} [filterSeverity] Filter
-         * @param {Array<string>} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, tags?: Array<string>, options: any = {}): RequestArgs {
+        listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, options: any = {}): RequestArgs {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling listSystemAdvisories.');
@@ -1630,10 +1696,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['filter[severity]'] = filterSeverity;
             }
 
-            if (tags) {
-                localVarQueryParameter['tags'] = tags;
-            }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1665,10 +1727,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [filterPackagesInstalled] Filter
          * @param {string} [filterPackagesUpdatable] Filter
          * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: Array<string>, options: any = {}): RequestArgs {
+        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options: any = {}): RequestArgs {
             const localVarPath = `/api/patch/v1/systems`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1747,6 +1811,14 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['tags'] = tags;
             }
 
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (filterSystemProfileSapSidsIn) {
+                localVarQueryParameter['filter[system_profile][sap_sids][in]'] = filterSystemProfileSapSidsIn;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1765,10 +1837,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @summary Show me all my systems which have a package installed
          * @param {string} packageName Package name
          * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        packageSystems(packageName: string, tags?: Array<string>, options: any = {}): RequestArgs {
+        packageSystems(packageName: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options: any = {}): RequestArgs {
             // verify required parameter 'packageName' is not null or undefined
             if (packageName === null || packageName === undefined) {
                 throw new RequiredError('packageName','Required parameter packageName was null or undefined when calling packageSystems.');
@@ -1796,6 +1870,14 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['tags'] = tags;
             }
 
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (filterSystemProfileSapSidsIn) {
+                localVarQueryParameter['filter[system_profile][sap_sids][in]'] = filterSystemProfileSapSidsIn;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1819,11 +1901,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [filterEvra] Filter
          * @param {string} [filterSummary] Filter
          * @param {boolean} [filterUpdatable] Filter
-         * @param {Array<string>} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, tags?: Array<string>, options: any = {}): RequestArgs {
+        systemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, options: any = {}): RequestArgs {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling systemPackages.');
@@ -1869,10 +1950,6 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (filterUpdatable !== undefined) {
                 localVarQueryParameter['filter[updatable]'] = filterUpdatable;
-            }
-
-            if (tags) {
-                localVarQueryParameter['tags'] = tags;
             }
 
 
@@ -1963,6 +2040,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         /**
          * Export systems for my account
          * @summary Export systems for my account
+         * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -1970,13 +2048,15 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [filterRhsaCount] Filter
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterEnabled] Filter
          * @param {string} [filterStale] Filter
+         * @param {string} [filterPackagesInstalled] Filter
+         * @param {string} [filterPackagesUpdatable] Filter
+         * @param {Array<string>} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportSystems(filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersSystemInlineItem>> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).exportSystems(filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options);
+        exportSystems(search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersSystemInlineItem>> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).exportSystems(search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, filterPackagesInstalled, filterPackagesUpdatable, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2011,11 +2091,13 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [filterSeverity] Filter
          * @param {string} [filterApplicableSystems] Filter
          * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisories(limit?: number, offset?: number, sort?: 'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, filterApplicableSystems?: string, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisoriesResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listAdvisories(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, filterApplicableSystems, tags, options);
+        listAdvisories(limit?: number, offset?: number, sort?: 'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, filterApplicableSystems?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisoriesResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listAdvisories(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, filterApplicableSystems, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2037,11 +2119,14 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
          * @param {string} [filterStale] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisorySystemsResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options);
+        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisorySystemsResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2057,12 +2142,15 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [filterName] Filter
          * @param {string} [filterSystemsInstalled] Filter
          * @param {string} [filterSystemsUpdatable] Filter
+         * @param {string} [filterSummary] Filter
          * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_updatable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsUpdatable?: string, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackagesResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsUpdatable, tags, options);
+        listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_updatable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsUpdatable?: string, filterSummary?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackagesResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsUpdatable, filterSummary, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2082,12 +2170,11 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [filterSynopsis] Filter
          * @param {string} [filterAdvisoryType] Filter
          * @param {string} [filterSeverity] Filter
-         * @param {Array<string>} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemAdvisoriesResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSystemAdvisories(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, tags, options);
+        listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemAdvisoriesResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSystemAdvisories(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2111,11 +2198,13 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [filterPackagesInstalled] Filter
          * @param {string} [filterPackagesUpdatable] Filter
          * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemsResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, filterPackagesInstalled, filterPackagesUpdatable, tags, options);
+        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemsResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, filterPackagesInstalled, filterPackagesUpdatable, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2126,11 +2215,13 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @summary Show me all my systems which have a package installed
          * @param {string} packageName Package name
          * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        packageSystems(packageName: string, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackageSystemsResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).packageSystems(packageName, tags, options);
+        packageSystems(packageName: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackageSystemsResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).packageSystems(packageName, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2146,12 +2237,11 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [filterEvra] Filter
          * @param {string} [filterSummary] Filter
          * @param {boolean} [filterUpdatable] Filter
-         * @param {Array<string>} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, tags?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemPackageResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).systemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, tags, options);
+        systemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemPackageResponse> {
+            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).systemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2216,6 +2306,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         /**
          * Export systems for my account
          * @summary Export systems for my account
+         * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterLastEvaluation] Filter
@@ -2223,13 +2314,15 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [filterRhsaCount] Filter
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterEnabled] Filter
          * @param {string} [filterStale] Filter
+         * @param {string} [filterPackagesInstalled] Filter
+         * @param {string} [filterPackagesUpdatable] Filter
+         * @param {Array<string>} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportSystems(filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options?: any): AxiosPromise<Array<ControllersSystemInlineItem>> {
-            return DefaultApiFp(configuration).exportSystems(filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options)(axios, basePath);
+        exportSystems(search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: Array<string>, options?: any): AxiosPromise<Array<ControllersSystemInlineItem>> {
+            return DefaultApiFp(configuration).exportSystems(search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, filterPackagesInstalled, filterPackagesUpdatable, tags, options)(axios, basePath);
         },
         /**
          * Show me metadata of selected package
@@ -2256,11 +2349,13 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [filterSeverity] Filter
          * @param {string} [filterApplicableSystems] Filter
          * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisories(limit?: number, offset?: number, sort?: 'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, filterApplicableSystems?: string, tags?: Array<string>, options?: any): AxiosPromise<ControllersAdvisoriesResponse> {
-            return DefaultApiFp(configuration).listAdvisories(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, filterApplicableSystems, tags, options)(axios, basePath);
+        listAdvisories(limit?: number, offset?: number, sort?: 'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, filterApplicableSystems?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any): AxiosPromise<ControllersAdvisoriesResponse> {
+            return DefaultApiFp(configuration).listAdvisories(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, filterApplicableSystems, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options)(axios, basePath);
         },
         /**
          * Show me systems on which the given advisory is applicable
@@ -2278,11 +2373,14 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [filterRhbaCount] Filter
          * @param {string} [filterRheaCount] Filter
          * @param {string} [filterStale] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any): AxiosPromise<ControllersAdvisorySystemsResponse> {
-            return DefaultApiFp(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options)(axios, basePath);
+        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any): AxiosPromise<ControllersAdvisorySystemsResponse> {
+            return DefaultApiFp(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options)(axios, basePath);
         },
         /**
          * Show me all installed packages across my systems
@@ -2294,12 +2392,15 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [filterName] Filter
          * @param {string} [filterSystemsInstalled] Filter
          * @param {string} [filterSystemsUpdatable] Filter
+         * @param {string} [filterSummary] Filter
          * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_updatable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsUpdatable?: string, tags?: Array<string>, options?: any): AxiosPromise<ControllersPackagesResponse> {
-            return DefaultApiFp(configuration).listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsUpdatable, tags, options)(axios, basePath);
+        listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_updatable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsUpdatable?: string, filterSummary?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any): AxiosPromise<ControllersPackagesResponse> {
+            return DefaultApiFp(configuration).listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsUpdatable, filterSummary, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options)(axios, basePath);
         },
         /**
          * Show me advisories for a system by given inventory id
@@ -2315,12 +2416,11 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [filterSynopsis] Filter
          * @param {string} [filterAdvisoryType] Filter
          * @param {string} [filterSeverity] Filter
-         * @param {Array<string>} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, tags?: Array<string>, options?: any): AxiosPromise<ControllersSystemAdvisoriesResponse> {
-            return DefaultApiFp(configuration).listSystemAdvisories(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, tags, options)(axios, basePath);
+        listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, options?: any): AxiosPromise<ControllersSystemAdvisoriesResponse> {
+            return DefaultApiFp(configuration).listSystemAdvisories(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, options)(axios, basePath);
         },
         /**
          * Show me all my systems
@@ -2340,22 +2440,26 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [filterPackagesInstalled] Filter
          * @param {string} [filterPackagesUpdatable] Filter
          * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: Array<string>, options?: any): AxiosPromise<ControllersSystemsResponse> {
-            return DefaultApiFp(configuration).listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, filterPackagesInstalled, filterPackagesUpdatable, tags, options)(axios, basePath);
+        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any): AxiosPromise<ControllersSystemsResponse> {
+            return DefaultApiFp(configuration).listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, filterPackagesInstalled, filterPackagesUpdatable, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options)(axios, basePath);
         },
         /**
          * Show me all my systems which have a package installed
          * @summary Show me all my systems which have a package installed
          * @param {string} packageName Package name
          * @param {Array<string>} [tags] Tag filter
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        packageSystems(packageName: string, tags?: Array<string>, options?: any): AxiosPromise<ControllersPackageSystemsResponse> {
-            return DefaultApiFp(configuration).packageSystems(packageName, tags, options)(axios, basePath);
+        packageSystems(packageName: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any): AxiosPromise<ControllersPackageSystemsResponse> {
+            return DefaultApiFp(configuration).packageSystems(packageName, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options)(axios, basePath);
         },
         /**
          * Show me details about a system packages by given inventory id
@@ -2367,12 +2471,11 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [filterEvra] Filter
          * @param {string} [filterSummary] Filter
          * @param {boolean} [filterUpdatable] Filter
-         * @param {Array<string>} [tags] Tag filter
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, tags?: Array<string>, options?: any): AxiosPromise<ControllersSystemPackageResponse> {
-            return DefaultApiFp(configuration).systemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, tags, options)(axios, basePath);
+        systemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, options?: any): AxiosPromise<ControllersSystemPackageResponse> {
+            return DefaultApiFp(configuration).systemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, options)(axios, basePath);
         },
     };
 };
@@ -2442,6 +2545,7 @@ export class DefaultApi extends BaseAPI {
     /**
      * Export systems for my account
      * @summary Export systems for my account
+     * @param {string} [search] Find matching text
      * @param {string} [filterId] Filter
      * @param {string} [filterDisplayName] Filter
      * @param {string} [filterLastEvaluation] Filter
@@ -2449,14 +2553,16 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [filterRhsaCount] Filter
      * @param {string} [filterRhbaCount] Filter
      * @param {string} [filterRheaCount] Filter
-     * @param {string} [filterEnabled] Filter
      * @param {string} [filterStale] Filter
+     * @param {string} [filterPackagesInstalled] Filter
+     * @param {string} [filterPackagesUpdatable] Filter
+     * @param {Array<string>} [tags] Tag filter
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public exportSystems(filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterEnabled?: string, filterStale?: string, options?: any) {
-        return DefaultApiFp(this.configuration).exportSystems(filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterEnabled, filterStale, options)(this.axios, this.basePath);
+    public exportSystems(search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: Array<string>, options?: any) {
+        return DefaultApiFp(this.configuration).exportSystems(search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, filterPackagesInstalled, filterPackagesUpdatable, tags, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2486,12 +2592,14 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [filterSeverity] Filter
      * @param {string} [filterApplicableSystems] Filter
      * @param {Array<string>} [tags] Tag filter
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listAdvisories(limit?: number, offset?: number, sort?: 'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, filterApplicableSystems?: string, tags?: Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listAdvisories(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, filterApplicableSystems, tags, options)(this.axios, this.basePath);
+    public listAdvisories(limit?: number, offset?: number, sort?: 'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, filterApplicableSystems?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any) {
+        return DefaultApiFp(this.configuration).listAdvisories(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, filterApplicableSystems, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2510,12 +2618,15 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [filterRhbaCount] Filter
      * @param {string} [filterRheaCount] Filter
      * @param {string} [filterStale] Filter
+     * @param {Array<string>} [tags] Tag filter
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, options)(this.axios, this.basePath);
+    public listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any) {
+        return DefaultApiFp(this.configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2528,13 +2639,16 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [filterName] Filter
      * @param {string} [filterSystemsInstalled] Filter
      * @param {string} [filterSystemsUpdatable] Filter
+     * @param {string} [filterSummary] Filter
      * @param {Array<string>} [tags] Tag filter
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_updatable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsUpdatable?: string, tags?: Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsUpdatable, tags, options)(this.axios, this.basePath);
+    public listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_updatable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsUpdatable?: string, filterSummary?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any) {
+        return DefaultApiFp(this.configuration).listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsUpdatable, filterSummary, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2551,13 +2665,12 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [filterSynopsis] Filter
      * @param {string} [filterAdvisoryType] Filter
      * @param {string} [filterSeverity] Filter
-     * @param {Array<string>} [tags] Tag filter
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, tags?: Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSystemAdvisories(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, tags, options)(this.axios, this.basePath);
+    public listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterSeverity?: string, options?: any) {
+        return DefaultApiFp(this.configuration).listSystemAdvisories(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterSeverity, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2578,12 +2691,14 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [filterPackagesInstalled] Filter
      * @param {string} [filterPackagesUpdatable] Filter
      * @param {Array<string>} [tags] Tag filter
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, filterPackagesInstalled, filterPackagesUpdatable, tags, options)(this.axios, this.basePath);
+    public listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'stale' | 'packages_installed' | 'packages_updatable', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesUpdatable?: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any) {
+        return DefaultApiFp(this.configuration).listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterStale, filterPackagesInstalled, filterPackagesUpdatable, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2591,12 +2706,14 @@ export class DefaultApi extends BaseAPI {
      * @summary Show me all my systems which have a package installed
      * @param {string} packageName Package name
      * @param {Array<string>} [tags] Tag filter
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSidsIn] Filter systems by their SAP SIDs
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public packageSystems(packageName: string, tags?: Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).packageSystems(packageName, tags, options)(this.axios, this.basePath);
+    public packageSystems(packageName: string, tags?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSidsIn?: Array<string>, options?: any) {
+        return DefaultApiFp(this.configuration).packageSystems(packageName, tags, filterSystemProfileSapSystem, filterSystemProfileSapSidsIn, options)(this.axios, this.basePath);
     }
 
     /**
@@ -2609,13 +2726,12 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [filterEvra] Filter
      * @param {string} [filterSummary] Filter
      * @param {boolean} [filterUpdatable] Filter
-     * @param {Array<string>} [tags] Tag filter
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public systemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, tags?: Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).systemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, tags, options)(this.axios, this.basePath);
+    public systemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, options?: any) {
+        return DefaultApiFp(this.configuration).systemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, options)(this.axios, this.basePath);
     }
 
 }
