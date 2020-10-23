@@ -28,7 +28,7 @@ Representation of one mounted device
 
 • **device**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L375)*
+*Defined in [packages/host-inventory/api.ts:394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L394)*
 
 **`memberof`** DiskDevice
 
@@ -38,7 +38,7 @@ ___
 
 • **label**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L381)*
+*Defined in [packages/host-inventory/api.ts:400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L400)*
 
 User-defined mount label
 
@@ -50,7 +50,7 @@ ___
 
 • **mount_point**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L393)*
+*Defined in [packages/host-inventory/api.ts:412](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L412)*
 
 The mount point
 
@@ -62,7 +62,7 @@ ___
 
 • **options**? : *object*
 
-*Defined in [packages/host-inventory/api.ts:387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L387)*
+*Defined in [packages/host-inventory/api.ts:406](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L406)*
 
 Mount options for nested object
 
@@ -74,7 +74,7 @@ ___
 
 • **type**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L399)*
+*Defined in [packages/host-inventory/api.ts:418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L418)*
 
 The mount type
 

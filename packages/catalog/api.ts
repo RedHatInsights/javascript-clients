@@ -3322,57 +3322,6 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Adds a single tag to a Order Process object
-         * @summary Add Tag for Order Process
-         * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        addOrderProcessTag(id: string, tag: Array<Tag>, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling addOrderProcessTag.');
-            }
-            // verify required parameter 'tag' is not null or undefined
-            if (tag === null || tag === undefined) {
-                throw new RequiredError('tag','Required parameter tag was null or undefined when calling addOrderProcessTag.');
-            }
-            const localVarPath = `/order_processes/{id}/tag`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication BasicAuth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof tag !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(tag !== undefined ? tag : {}) : (tag || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Adds an order process.
          * @summary Add a new order process
          * @param {OrderProcess} orderProcess Parameters needed to add an OrderProcess
@@ -3511,68 +3460,6 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Returns an array of Tag objects
-         * @summary List Tags for OrderProcess
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string} [sortBy] Field to sort collection by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listOrderProcessTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling listOrderProcessTags.');
-            }
-            const localVarPath = `/order_processes/{id}/tags`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication BasicAuth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets a list of order processes. Optionally select order processes linked to a resource object whose app_name, object_type and object_id are specified by query parameters.
          * @summary List OrderProcesses
          * @param {string} [appName] Name of the application.
@@ -3688,57 +3575,6 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
             const needsSerialization = (typeof orderProcessAssociationsToRemove !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.data =  needsSerialization ? JSON.stringify(orderProcessAssociationsToRemove !== undefined ? orderProcessAssociationsToRemove : {}) : (orderProcessAssociationsToRemove || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Remove Tags from Order Process
-         * @summary Remove Tags from Order Process
-         * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        removeOrderProcessTags(id: string, tag: Array<Tag>, options: any = {}): RequestArgs {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling removeOrderProcessTags.');
-            }
-            // verify required parameter 'tag' is not null or undefined
-            if (tag === null || tag === undefined) {
-                throw new RequiredError('tag','Required parameter tag was null or undefined when calling removeOrderProcessTags.');
-            }
-            const localVarPath = `/order_processes/{id}/untag`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication BasicAuth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof tag !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(tag !== undefined ? tag : {}) : (tag || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -3929,21 +3765,6 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Adds a single tag to a Order Process object
-         * @summary Add Tag for Order Process
-         * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        addOrderProcessTag(id: string, tag: Array<Tag>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Tag>> {
-            const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).addOrderProcessTag(id, tag, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Adds an order process.
          * @summary Add a new order process
          * @param {OrderProcess} orderProcess Parameters needed to add an OrderProcess
@@ -3987,24 +3808,6 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
-         * @summary List Tags for OrderProcess
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string} [sortBy] Field to sort collection by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listOrderProcessTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).listOrderProcessTags(id, limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Gets a list of order processes. Optionally select order processes linked to a resource object whose app_name, object_type and object_id are specified by query parameters.
          * @summary List OrderProcesses
          * @param {string} [appName] Name of the application.
@@ -4034,21 +3837,6 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          */
         removeOrderProcessAssociation(id: string, orderProcessAssociationsToRemove: OrderProcessAssociationsToRemove, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess> {
             const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).removeOrderProcessAssociation(id, orderProcessAssociationsToRemove, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Remove Tags from Order Process
-         * @summary Remove Tags from Order Process
-         * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        removeOrderProcessTags(id: string, tag: Array<Tag>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).removeOrderProcessTags(id, tag, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4130,17 +3918,6 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
             return OrderProcessApiFp(configuration).addOrderProcessBeforeItem(id, orderProcessPortfolioItemId, options)(axios, basePath);
         },
         /**
-         * Adds a single tag to a Order Process object
-         * @summary Add Tag for Order Process
-         * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        addOrderProcessTag(id: string, tag: Array<Tag>, options?: any): AxiosPromise<Array<Tag>> {
-            return OrderProcessApiFp(configuration).addOrderProcessTag(id, tag, options)(axios, basePath);
-        },
-        /**
          * Adds an order process.
          * @summary Add a new order process
          * @param {OrderProcess} orderProcess Parameters needed to add an OrderProcess
@@ -4172,20 +3949,6 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
             return OrderProcessApiFp(configuration).linkTagToOrderProcess(id, resourceObject, options)(axios, basePath);
         },
         /**
-         * Returns an array of Tag objects
-         * @summary List Tags for OrderProcess
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string} [sortBy] Field to sort collection by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listOrderProcessTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<TagsCollection> {
-            return OrderProcessApiFp(configuration).listOrderProcessTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
-        },
-        /**
          * Gets a list of order processes. Optionally select order processes linked to a resource object whose app_name, object_type and object_id are specified by query parameters.
          * @summary List OrderProcesses
          * @param {string} [appName] Name of the application.
@@ -4211,17 +3974,6 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          */
         removeOrderProcessAssociation(id: string, orderProcessAssociationsToRemove: OrderProcessAssociationsToRemove, options?: any): AxiosPromise<OrderProcess> {
             return OrderProcessApiFp(configuration).removeOrderProcessAssociation(id, orderProcessAssociationsToRemove, options)(axios, basePath);
-        },
-        /**
-         * Remove Tags from Order Process
-         * @summary Remove Tags from Order Process
-         * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        removeOrderProcessTags(id: string, tag: Array<Tag>, options?: any): AxiosPromise<void> {
-            return OrderProcessApiFp(configuration).removeOrderProcessTags(id, tag, options)(axios, basePath);
         },
         /**
          * Gets the order process specified by the order process ID.
@@ -4292,19 +4044,6 @@ export class OrderProcessApi extends BaseAPI {
     }
 
     /**
-     * Adds a single tag to a Order Process object
-     * @summary Add Tag for Order Process
-     * @param {string} id ID of the resource
-     * @param {Array<Tag>} tag
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof OrderProcessApi
-     */
-    public addOrderProcessTag(id: string, tag: Array<Tag>, options?: any) {
-        return OrderProcessApiFp(this.configuration).addOrderProcessTag(id, tag, options)(this.axios, this.basePath);
-    }
-
-    /**
      * Adds an order process.
      * @summary Add a new order process
      * @param {OrderProcess} orderProcess Parameters needed to add an OrderProcess
@@ -4342,22 +4081,6 @@ export class OrderProcessApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
-     * @summary List Tags for OrderProcess
-     * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string} [sortBy] Field to sort collection by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof OrderProcessApi
-     */
-    public listOrderProcessTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return OrderProcessApiFp(this.configuration).listOrderProcessTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
-    }
-
-    /**
      * Gets a list of order processes. Optionally select order processes linked to a resource object whose app_name, object_type and object_id are specified by query parameters.
      * @summary List OrderProcesses
      * @param {string} [appName] Name of the application.
@@ -4386,19 +4109,6 @@ export class OrderProcessApi extends BaseAPI {
      */
     public removeOrderProcessAssociation(id: string, orderProcessAssociationsToRemove: OrderProcessAssociationsToRemove, options?: any) {
         return OrderProcessApiFp(this.configuration).removeOrderProcessAssociation(id, orderProcessAssociationsToRemove, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * Remove Tags from Order Process
-     * @summary Remove Tags from Order Process
-     * @param {string} id ID of the resource
-     * @param {Array<Tag>} tag
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof OrderProcessApi
-     */
-    public removeOrderProcessTags(id: string, tag: Array<Tag>, options?: any) {
-        return OrderProcessApiFp(this.configuration).removeOrderProcessTags(id, tag, options)(this.axios, this.basePath);
     }
 
     /**

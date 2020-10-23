@@ -25,7 +25,7 @@ Individual host record that contains only the host id and system profile
 
 • **id**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L513)*
+*Defined in [packages/host-inventory/api.ts:532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L532)*
 
 **`memberof`** HostSystemProfileOut
 
@@ -35,6 +35,6 @@ ___
 
 • **system_profile**? : *[SystemProfile](systemprofile.md)*
 
-*Defined in [packages/host-inventory/api.ts:519](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L519)*
+*Defined in [packages/host-inventory/api.ts:538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L538)*
 
 **`memberof`** HostSystemProfileOut
