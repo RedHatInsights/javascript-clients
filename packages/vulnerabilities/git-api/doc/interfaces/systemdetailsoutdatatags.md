@@ -34,7 +34,7 @@ ___
 
 ###  namespace
 
-• **namespace**: *string*
+• **namespace**: *string | null*
 
 *Defined in [packages/vulnerabilities/git-api/api.ts:1468](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1468)*
 

@@ -24,7 +24,7 @@
 
 • **data**: *string | Array‹string›*
 
-*Defined in [packages/vulnerabilities/api.ts:1302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1302)*
+*Defined in [packages/vulnerabilities/api.ts:1356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1356)*
 
 **`memberof`** SystemCvesIdsOut
 
@@ -34,7 +34,7 @@ ___
 
 • **links**: *[Links](links.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:1308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1308)*
+*Defined in [packages/vulnerabilities/api.ts:1362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1362)*
 
 **`memberof`** SystemCvesIdsOut
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**: *[MetaCves](metacves.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:1314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1314)*
+*Defined in [packages/vulnerabilities/api.ts:1368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1368)*
 
 **`memberof`** SystemCvesIdsOut

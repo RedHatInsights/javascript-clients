@@ -119,7 +119,7 @@ Name | Type |
 
 * **deleteSystem**(`inventoryId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `securityRule?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `securityRule?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **getAffectedSystemsIdsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `securityRule?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -135,7 +135,7 @@ Name | Type |
 
 * **getCveList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `dataFormat?`: string, `businessRiskId?`: string, `statusId?`: string, `securityRule?`: boolean, `rulePresence?`: Array‹boolean›, `showAll?`: boolean, `affecting?`: Array‹boolean›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `securityRule?`: boolean, `rulePresence?`: Array‹boolean›, `showAdvisories?`: boolean, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `securityRule?`: boolean, `rulePresence?`: Array‹boolean›, `showAdvisories?`: boolean, `advisory?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **getExecutiveReport**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -167,7 +167,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:3683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3683)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:3695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3695)*
 
 DefaultApi - factory interface
 
@@ -185,7 +185,7 @@ Name | Type |
 
 * **deleteSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `securityRule?`: string, `options?`: any): *AxiosPromise‹[AffectedSystemsOut](interfaces/affectedsystemsout.md)›*
+* **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `securityRule?`: string, `options?`: any): *AxiosPromise‹[AffectedSystemsOut](interfaces/affectedsystemsout.md)›*
 
 * **getAffectedSystemsIdsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `securityRule?`: string, `options?`: any): *AxiosPromise‹[AffectedSystemsIdsOut](interfaces/affectedsystemsidsout.md)›*
 
@@ -201,7 +201,7 @@ Name | Type |
 
 * **getCveList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `dataFormat?`: string, `businessRiskId?`: string, `statusId?`: string, `securityRule?`: boolean, `rulePresence?`: Array‹boolean›, `showAll?`: boolean, `affecting?`: Array‹boolean›, `options?`: any): *AxiosPromise‹[VulnerabilitiesOut](interfaces/vulnerabilitiesout.md)›*
 
-* **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `securityRule?`: boolean, `rulePresence?`: Array‹boolean›, `showAdvisories?`: boolean, `options?`: any): *AxiosPromise‹[SystemCvesOut](interfaces/systemcvesout.md)›*
+* **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `securityRule?`: boolean, `rulePresence?`: Array‹boolean›, `showAdvisories?`: boolean, `advisory?`: string, `options?`: any): *AxiosPromise‹[SystemCvesOut](interfaces/systemcvesout.md)›*
 
 * **getExecutiveReport**(`options?`: any): *AxiosPromise‹[ExecutiveReport](interfaces/executivereport.md)›*
 
@@ -233,7 +233,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:3254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3254)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:3264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3264)*
 
 DefaultApi - functional programming interface
 
@@ -251,7 +251,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
-* **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `securityRule?`: string, `options?`: any): *function*
+* **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `securityRule?`: string, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[AffectedSystemsOut](interfaces/affectedsystemsout.md)›*
 
@@ -283,7 +283,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[VulnerabilitiesOut](interfaces/vulnerabilitiesout.md)›*
 
-* **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `securityRule?`: boolean, `rulePresence?`: Array‹boolean›, `showAdvisories?`: boolean, `options?`: any): *function*
+* **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `securityRule?`: boolean, `rulePresence?`: Array‹boolean›, `showAdvisories?`: boolean, `advisory?`: string, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[SystemCvesOut](interfaces/systemcvesout.md)›*
 
@@ -341,7 +341,7 @@ ___
 
 ▸ **InternalApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:4410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4410)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:4426](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4426)*
 
 InternalApi - axios parameter creator
 
@@ -369,7 +369,7 @@ ___
 
 ▸ **InternalApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:4691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4691)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:4707](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4707)*
 
 InternalApi - factory interface
 
@@ -399,7 +399,7 @@ ___
 
 ▸ **InternalApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:4625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4625)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:4641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4641)*
 
 InternalApi - functional programming interface
 
