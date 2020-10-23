@@ -84,7 +84,7 @@ ___
 
 ▸ **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *AxiosPromise‹[ActiveTags](../interfaces/activetags.md)›*
 
-*Defined in [packages/host-inventory/api.ts:2660](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2660)*
+*Defined in [packages/host-inventory/api.ts:2815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2815)*
 
 Required permissions: inventory:hosts:read
 

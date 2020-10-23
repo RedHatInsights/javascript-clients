@@ -132,6 +132,25 @@ export interface BulkHostOutDetails {
     detail?: string;
 }
 /**
+ * Data required to create a check-in record for a host.
+ * @export
+ * @interface CreateCheckIn
+ */
+export interface CreateCheckIn {
+    /**
+     * A set of string facts about a host.
+     * @type {object}
+     * @memberof CreateCheckIn
+     */
+    canonical_facts: object;
+    /**
+     * Defines how far in the future the host becomes stale (in minutes).
+     * @type {number}
+     * @memberof CreateCheckIn
+     */
+    checkin_frequency?: number;
+}
+/**
  * Data of a single host belonging to an account. Represents the hosts without its Inventory metadata.
  * @export
  * @interface CreateHostIn
@@ -847,12 +866,56 @@ export interface SystemProfile {
      */
     sap_sids?: Array<string>;
     /**
+     * The instance number of the SAP HANA system
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    sap_instance_number?: string;
+    /**
+     * The version of the SAP HANA lifecycle management program
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    sap_version?: string;
+    /**
      * Current profile resulting from command tuned-adm active
      * @type {string}
      * @memberof SystemProfile
      */
     tuned_profile?: string;
+    /**
+     * The current SELinux mode, either enforcing, permissive, or disabled
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    selinux_current_mode?: SystemProfileSelinuxCurrentModeEnum;
+    /**
+     * The SELinux mode provided in the config file
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    selinux_config_file?: SystemProfileSelinuxConfigFileEnum;
 }
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum SystemProfileSelinuxCurrentModeEnum {
+    Enforcing = 'enforcing',
+    Permissive = 'permissive',
+    Disabled = 'disabled'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum SystemProfileSelinuxConfigFileEnum {
+    Enforcing = 'enforcing',
+    Permissive = 'permissive',
+    Disabled = 'disabled'
+}
+
 /**
  * Structure of the output of the host system profile query
  * @export
@@ -1513,6 +1576,62 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
+         * Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
+         * @summary Update staleness timestamps for a host matching the provided facts
+         * @param {CreateCheckIn} createCheckIn A list of host objects to be added to the host list
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostHostCheckin(createCheckIn: CreateCheckIn, options: any = {}): RequestArgs {
+            // verify required parameter 'createCheckIn' is not null or undefined
+            if (createCheckIn === null || createCheckIn === undefined) {
+                throw new RequiredError('createCheckIn','Required parameter createCheckIn was null or undefined when calling apiHostHostCheckin.');
+            }
+            const localVarPath = `/hosts/checkin`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? configuration.apiKey("x-rh-identity")
+                    : configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            // authentication BearerAuth required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? configuration.accessToken()
+                    : configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof createCheckIn !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(createCheckIn !== undefined ? createCheckIn : {}) : (createCheckIn || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
          * @summary Merge facts under a namespace
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
@@ -1838,6 +1957,20 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
+         * @summary Update staleness timestamps for a host matching the provided facts
+         * @param {CreateCheckIn} createCheckIn A list of host objects to be added to the host list
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<BulkHostOut> {
+            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostHostCheckin(createCheckIn, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
          * @summary Merge facts under a namespace
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
@@ -1997,6 +2130,16 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          */
         apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options?: any): AxiosPromise<TagsOut> {
             return HostsApiFp(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options)(axios, basePath);
+        },
+        /**
+         * Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
+         * @summary Update staleness timestamps for a host matching the provided facts
+         * @param {CreateCheckIn} createCheckIn A list of host objects to be added to the host list
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any): AxiosPromise<BulkHostOut> {
+            return HostsApiFp(configuration).apiHostHostCheckin(createCheckIn, options)(axios, basePath);
         },
         /**
          * Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
@@ -2160,6 +2303,18 @@ export class HostsApi extends BaseAPI {
      */
     public apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
+     * @summary Update staleness timestamps for a host matching the provided facts
+     * @param {CreateCheckIn} createCheckIn A list of host objects to be added to the host list
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HostsApi
+     */
+    public apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any) {
+        return HostsApiFp(this.configuration).apiHostHostCheckin(createCheckIn, options)(this.axios, this.basePath);
     }
 
     /**

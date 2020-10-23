@@ -603,6 +603,36 @@ export const StatusApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
+         * This returns a dictionary with properties defining the status of the components Advisor relies on. At the moment this is the same as the Readiness check (see `/ready/`). In the future it may include other checks if we need to, but the properties of `/ready/` will always be included.
+         * @summary Is the Advisor API live and serving requests?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statusLive(options: any = {}): RequestArgs {
+            const localVarPath = `/status/live/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * This returns a dictionary with properties defining the status of the components Advisor relies on. * \'django\' should always be True.  If Django isn\'t ready, you can\'t get this information :-) * \'database\' is True when a database access returns successfully with valid information. * \'rbac\' is True when we can make a request to the RBAC API and get a valid response. * \'advisor\' is True if all of the above are True.
          * @summary Is the Advisor API ready to serve requests?
          * @param {*} [options] Override http request option.
@@ -655,6 +685,19 @@ export const StatusApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * This returns a dictionary with properties defining the status of the components Advisor relies on. At the moment this is the same as the Readiness check (see `/ready/`). In the future it may include other checks if we need to, but the properties of `/ready/` will always be included.
+         * @summary Is the Advisor API live and serving requests?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statusLive(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusReady> {
+            const localVarAxiosArgs = StatusApiAxiosParamCreator(configuration).statusLive(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * This returns a dictionary with properties defining the status of the components Advisor relies on. * \'django\' should always be True.  If Django isn\'t ready, you can\'t get this information :-) * \'database\' is True when a database access returns successfully with valid information. * \'rbac\' is True when we can make a request to the RBAC API and get a valid response. * \'advisor\' is True if all of the above are True.
          * @summary Is the Advisor API ready to serve requests?
          * @param {*} [options] Override http request option.
@@ -686,6 +729,15 @@ export const StatusApiFactory = function (configuration?: Configuration, basePat
             return StatusApiFp(configuration).statusList(options)(axios, basePath);
         },
         /**
+         * This returns a dictionary with properties defining the status of the components Advisor relies on. At the moment this is the same as the Readiness check (see `/ready/`). In the future it may include other checks if we need to, but the properties of `/ready/` will always be included.
+         * @summary Is the Advisor API live and serving requests?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statusLive(options?: any): AxiosPromise<StatusReady> {
+            return StatusApiFp(configuration).statusLive(options)(axios, basePath);
+        },
+        /**
          * This returns a dictionary with properties defining the status of the components Advisor relies on. * \'django\' should always be True.  If Django isn\'t ready, you can\'t get this information :-) * \'database\' is True when a database access returns successfully with valid information. * \'rbac\' is True when we can make a request to the RBAC API and get a valid response. * \'advisor\' is True if all of the above are True.
          * @summary Is the Advisor API ready to serve requests?
          * @param {*} [options] Override http request option.
@@ -713,6 +765,17 @@ export class StatusApi extends BaseAPI {
      */
     public statusList(options?: any) {
         return StatusApiFp(this.configuration).statusList(options)(this.axios, this.basePath);
+    }
+
+    /**
+     * This returns a dictionary with properties defining the status of the components Advisor relies on. At the moment this is the same as the Readiness check (see `/ready/`). In the future it may include other checks if we need to, but the properties of `/ready/` will always be included.
+     * @summary Is the Advisor API live and serving requests?
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StatusApi
+     */
+    public statusLive(options?: any) {
+        return StatusApiFp(this.configuration).statusLive(options)(this.axios, this.basePath);
     }
 
     /**
