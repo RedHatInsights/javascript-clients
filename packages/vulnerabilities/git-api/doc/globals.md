@@ -9,7 +9,6 @@
 * [BaseAPI](classes/baseapi.md)
 * [Configuration](classes/configuration.md)
 * [DefaultApi](classes/defaultapi.md)
-* [InternalApi](classes/internalapi.md)
 * [RequiredError](classes/requirederror.md)
 
 ### Interfaces
@@ -81,9 +80,6 @@
 * [DefaultApiAxiosParamCreator](globals.md#const-defaultapiaxiosparamcreator)
 * [DefaultApiFactory](globals.md#const-defaultapifactory)
 * [DefaultApiFp](globals.md#const-defaultapifp)
-* [InternalApiAxiosParamCreator](globals.md#const-internalapiaxiosparamcreator)
-* [InternalApiFactory](globals.md#const-internalapifactory)
-* [InternalApiFp](globals.md#const-internalapifp)
 
 ### Object literals
 
@@ -334,100 +330,6 @@ Name | Type |
 * **setSystemsOptOut**(`optOutIn`: [OptOutIn](interfaces/optoutin.md), `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[BulkChangeOut](interfaces/bulkchangeout.md)›*
-
-___
-
-### `Const` InternalApiAxiosParamCreator
-
-▸ **InternalApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
-
-*Defined in [packages/vulnerabilities/git-api/api.ts:4514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4514)*
-
-InternalApi - axios parameter creator
-
-**`export`** 
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`configuration?` | [Configuration](classes/configuration.md) |
-
-**Returns:** *object*
-
-* **refreshAccount**(`accountId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
-
-* **refreshAccountCve**(`accountId`: string, `cveId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
-
-* **refreshCve**(`cveId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
-
-* **refreshSystem**(`inventoryId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
-
-___
-
-### `Const` InternalApiFactory
-
-▸ **InternalApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
-
-*Defined in [packages/vulnerabilities/git-api/api.ts:4795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4795)*
-
-InternalApi - factory interface
-
-**`export`** 
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`configuration?` | [Configuration](classes/configuration.md) |
-`basePath?` | string |
-`axios?` | AxiosInstance |
-
-**Returns:** *object*
-
-* **refreshAccount**(`accountId`: string, `options?`: any): *AxiosPromise‹void›*
-
-* **refreshAccountCve**(`accountId`: string, `cveId`: string, `options?`: any): *AxiosPromise‹void›*
-
-* **refreshCve**(`cveId`: string, `options?`: any): *AxiosPromise‹void›*
-
-* **refreshSystem**(`inventoryId`: string, `options?`: any): *AxiosPromise‹void›*
-
-___
-
-### `Const` InternalApiFp
-
-▸ **InternalApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
-
-*Defined in [packages/vulnerabilities/git-api/api.ts:4729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4729)*
-
-InternalApi - functional programming interface
-
-**`export`** 
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`configuration?` | [Configuration](classes/configuration.md) |
-
-**Returns:** *object*
-
-* **refreshAccount**(`accountId`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
-
-* **refreshAccountCve**(`accountId`: string, `cveId`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
-
-* **refreshCve**(`cveId`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
-
-* **refreshSystem**(`inventoryId`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
 
 ## Object literals
 

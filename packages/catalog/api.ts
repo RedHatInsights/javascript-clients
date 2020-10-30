@@ -504,6 +504,12 @@ export interface OrderItem {
      * @memberof OrderItem
      */
     process_scope?: string;
+    /**
+     * Contains a prefix-stripped key/value object that contains all of the information exposed from product provisioning. Must be exposed from Tower with prefix \'expose_to_cloud_redhat_com_\'
+     * @type {object}
+     * @memberof OrderItem
+     */
+    artifacts?: object;
 }
 
 /**
