@@ -25,7 +25,7 @@
 
 • **available_evra**? : *string*
 
-*Defined in [packages/patch/api.ts:504](https://github.com/RedHatInsights/javascript-clients/blob/efdc955/packages/patch/api.ts#L504)*
+*Defined in [packages/patch/api.ts:504](https://github.com/RedHatInsights/javascript-clients/blob/ebfd578/packages/patch/api.ts#L504)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -35,7 +35,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/patch/api.ts:510](https://github.com/RedHatInsights/javascript-clients/blob/efdc955/packages/patch/api.ts#L510)*
+*Defined in [packages/patch/api.ts:510](https://github.com/RedHatInsights/javascript-clients/blob/ebfd578/packages/patch/api.ts#L510)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -45,7 +45,7 @@ ___
 
 • **installed_evra**? : *string*
 
-*Defined in [packages/patch/api.ts:516](https://github.com/RedHatInsights/javascript-clients/blob/efdc955/packages/patch/api.ts#L516)*
+*Defined in [packages/patch/api.ts:516](https://github.com/RedHatInsights/javascript-clients/blob/ebfd578/packages/patch/api.ts#L516)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -55,6 +55,6 @@ ___
 
 • **updatable**? : *boolean*
 
-*Defined in [packages/patch/api.ts:522](https://github.com/RedHatInsights/javascript-clients/blob/efdc955/packages/patch/api.ts#L522)*
+*Defined in [packages/patch/api.ts:522](https://github.com/RedHatInsights/javascript-clients/blob/ebfd578/packages/patch/api.ts#L522)*
 
 **`memberof`** ControllersPackageSystemItem

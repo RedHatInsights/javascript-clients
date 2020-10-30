@@ -88,7 +88,7 @@ ___
 
 ▸ **createSetting**(`setting`: [Setting](../interfaces/setting.md), `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/catalog/api.ts:7670](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7670)*
+*Defined in [packages/catalog/api.ts:7676](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7676)*
 
 Create Tenant Setting
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **destroySetting**(`name`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/catalog/api.ts:7682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7682)*
+*Defined in [packages/catalog/api.ts:7688](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7688)*
 
 Delete a Tenant Setting
 
@@ -138,7 +138,7 @@ ___
 
 ▸ **listSettings**(`options?`: any): *AxiosPromise‹[TenantSettings](../interfaces/tenantsettings.md)›*
 
-*Defined in [packages/catalog/api.ts:7693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7693)*
+*Defined in [packages/catalog/api.ts:7699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7699)*
 
 List Tenant Settings
 
@@ -162,7 +162,7 @@ ___
 
 ▸ **showSetting**(`name`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/catalog/api.ts:7705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7705)*
+*Defined in [packages/catalog/api.ts:7711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7711)*
 
 Get a specific Tenant Setting
 
@@ -187,7 +187,7 @@ ___
 
 ▸ **updateSetting**(`name`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/catalog/api.ts:7717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7717)*
+*Defined in [packages/catalog/api.ts:7723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7723)*
 
 Update a Tenant Setting
 

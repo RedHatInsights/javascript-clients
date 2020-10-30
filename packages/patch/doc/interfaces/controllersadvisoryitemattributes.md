@@ -27,7 +27,7 @@
 
 • **advisory_type**? : *number*
 
-*Defined in [packages/patch/api.ts:243](https://github.com/RedHatInsights/javascript-clients/blob/efdc955/packages/patch/api.ts#L243)*
+*Defined in [packages/patch/api.ts:243](https://github.com/RedHatInsights/javascript-clients/blob/ebfd578/packages/patch/api.ts#L243)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -37,7 +37,7 @@ ___
 
 • **applicable_systems**? : *number*
 
-*Defined in [packages/patch/api.ts:249](https://github.com/RedHatInsights/javascript-clients/blob/efdc955/packages/patch/api.ts#L249)*
+*Defined in [packages/patch/api.ts:249](https://github.com/RedHatInsights/javascript-clients/blob/ebfd578/packages/patch/api.ts#L249)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -47,7 +47,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:255](https://github.com/RedHatInsights/javascript-clients/blob/efdc955/packages/patch/api.ts#L255)*
+*Defined in [packages/patch/api.ts:255](https://github.com/RedHatInsights/javascript-clients/blob/ebfd578/packages/patch/api.ts#L255)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -57,7 +57,7 @@ ___
 
 • **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:261](https://github.com/RedHatInsights/javascript-clients/blob/efdc955/packages/patch/api.ts#L261)*
+*Defined in [packages/patch/api.ts:261](https://github.com/RedHatInsights/javascript-clients/blob/ebfd578/packages/patch/api.ts#L261)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -67,7 +67,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:267](https://github.com/RedHatInsights/javascript-clients/blob/efdc955/packages/patch/api.ts#L267)*
+*Defined in [packages/patch/api.ts:267](https://github.com/RedHatInsights/javascript-clients/blob/ebfd578/packages/patch/api.ts#L267)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -77,6 +77,6 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/efdc955/packages/patch/api.ts#L273)*
+*Defined in [packages/patch/api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/ebfd578/packages/patch/api.ts#L273)*
 
 **`memberof`** ControllersAdvisoryItemAttributes

@@ -28,7 +28,7 @@
 
 • **create_json_schema**? : *object*
 
-*Defined in [packages/catalog/api.ts:1071](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1071)*
+*Defined in [packages/catalog/api.ts:1077](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1077)*
 
 JSON schema for the object.
 
@@ -40,7 +40,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/catalog/api.ts:1065](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1065)*
+*Defined in [packages/catalog/api.ts:1071](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1071)*
 
 The service plan description.
 
@@ -52,7 +52,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/catalog/api.ts:1083](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1083)*
+*Defined in [packages/catalog/api.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1089)*
 
 The unique identifier for this service plan.
 
@@ -64,7 +64,7 @@ ___
 
 • **imported**? : *boolean*
 
-*Defined in [packages/catalog/api.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1089)*
+*Defined in [packages/catalog/api.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1095)*
 
 Whether or not the ServicePlan has been imported for editing
 
@@ -76,7 +76,7 @@ ___
 
 • **modified**? : *boolean*
 
-*Defined in [packages/catalog/api.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1095)*
+*Defined in [packages/catalog/api.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1101)*
 
 Whether or not the ServicePlan has a modified schema
 
@@ -88,7 +88,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/catalog/api.ts:1059](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1059)*
+*Defined in [packages/catalog/api.ts:1065](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1065)*
 
 The name of the service plan.
 
@@ -100,7 +100,7 @@ ___
 
 • **portfolio_item_id**? : *string*
 
-*Defined in [packages/catalog/api.ts:1077](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1077)*
+*Defined in [packages/catalog/api.ts:1083](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1083)*
 
 The reference ID of the Portfolio Item
 
