@@ -23,7 +23,7 @@
 
 • **ApprovalPending**: = "Approval Pending"
 
-*Defined in [packages/catalog/api.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L515)*
+*Defined in [packages/catalog/api.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L521)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **Approved**: = "Approved"
 
-*Defined in [packages/catalog/api.ts:519](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L519)*
+*Defined in [packages/catalog/api.ts:525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L525)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **Canceled**: = "Canceled"
 
-*Defined in [packages/catalog/api.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L521)*
+*Defined in [packages/catalog/api.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L527)*
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 • **Completed**: = "Completed"
 
-*Defined in [packages/catalog/api.ts:518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L518)*
+*Defined in [packages/catalog/api.ts:524](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L524)*
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **Created**: = "Created"
 
-*Defined in [packages/catalog/api.ts:514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L514)*
+*Defined in [packages/catalog/api.ts:520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L520)*
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • **Denied**: = "Denied"
 
-*Defined in [packages/catalog/api.ts:520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L520)*
+*Defined in [packages/catalog/api.ts:526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L526)*
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 • **Failed**: = "Failed"
 
-*Defined in [packages/catalog/api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L517)*
+*Defined in [packages/catalog/api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L523)*
 
 ___
 
@@ -79,4 +79,4 @@ ___
 
 • **Ordered**: = "Ordered"
 
-*Defined in [packages/catalog/api.ts:516](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L516)*
+*Defined in [packages/catalog/api.ts:522](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L522)*

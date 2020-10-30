@@ -17,7 +17,7 @@
 
 • **After**: = "after"
 
-*Defined in [packages/catalog/api.ts:624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L624)*
+*Defined in [packages/catalog/api.ts:630](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L630)*
 
 ___
 
@@ -25,4 +25,4 @@ ___
 
 • **Before**: = "before"
 
-*Defined in [packages/catalog/api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L623)*
+*Defined in [packages/catalog/api.ts:629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L629)*

@@ -29,7 +29,7 @@
 
 • **after_portfolio_item_id**? : *string*
 
-*Defined in [packages/catalog/api.ts:596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L596)*
+*Defined in [packages/catalog/api.ts:602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L602)*
 
 The ID of the portfolio item associated to the \'after\' step
 
@@ -41,7 +41,7 @@ ___
 
 • **before_portfolio_item_id**? : *string*
 
-*Defined in [packages/catalog/api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L590)*
+*Defined in [packages/catalog/api.ts:596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L596)*
 
 The ID of the portfolio item associated to the \'before\' step
 
@@ -53,7 +53,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [packages/catalog/api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L578)*
+*Defined in [packages/catalog/api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L584)*
 
 **`memberof`** OrderProcess
 
@@ -63,7 +63,7 @@ ___
 
 • **description**? : *string | null*
 
-*Defined in [packages/catalog/api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L572)*
+*Defined in [packages/catalog/api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L578)*
 
 The order process description.
 
@@ -75,7 +75,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/catalog/api.ts:560](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L560)*
+*Defined in [packages/catalog/api.ts:566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L566)*
 
 **`memberof`** OrderProcess
 
@@ -85,7 +85,7 @@ ___
 
 • **metadata**? : *object*
 
-*Defined in [packages/catalog/api.ts:602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L602)*
+*Defined in [packages/catalog/api.ts:608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L608)*
 
 JSON Metadata about the order process
 
@@ -97,7 +97,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/catalog/api.ts:566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L566)*
+*Defined in [packages/catalog/api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L572)*
 
 The name of the order process.
 
@@ -109,6 +109,6 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [packages/catalog/api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L584)*
+*Defined in [packages/catalog/api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L590)*
 
 **`memberof`** OrderProcess

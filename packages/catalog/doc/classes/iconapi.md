@@ -85,7 +85,7 @@ ___
 
 ▸ **createIcon**(`content?`: any, `portfolioId?`: string, `portfolioItemId?`: string, `options?`: any): *AxiosPromise‹[Icon](../interfaces/icon.md)›*
 
-*Defined in [packages/catalog/api.ts:1697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1697)*
+*Defined in [packages/catalog/api.ts:1703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1703)*
 
 Creates an Icon from the specified parameters
 
@@ -112,7 +112,7 @@ ___
 
 ▸ **destroyIcon**(`id`: string, `options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/catalog/api.ts:1709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1709)*
+*Defined in [packages/catalog/api.ts:1715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1715)*
 
 Deletes the icon based on the icon ID passed
 

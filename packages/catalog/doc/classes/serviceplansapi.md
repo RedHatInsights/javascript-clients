@@ -89,7 +89,7 @@ ___
 
 ▸ **createServicePlan**(`importServicePlan?`: [ImportServicePlan](../interfaces/importserviceplan.md), `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)[]›*
 
-*Defined in [packages/catalog/api.ts:7235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7235)*
+*Defined in [packages/catalog/api.ts:7241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7241)*
 
 Returns the new Service Plan
 
@@ -114,7 +114,7 @@ ___
 
 ▸ **patchServicePlanModified**(`id`: string, `patchModifiedServicePlan?`: [PatchModifiedServicePlan](../interfaces/patchmodifiedserviceplan.md), `options?`: any): *AxiosPromise‹object›*
 
-*Defined in [packages/catalog/api.ts:7248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7248)*
+*Defined in [packages/catalog/api.ts:7254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7254)*
 
 **`summary`** Patch Service Plan Modified Schema
 
@@ -138,7 +138,7 @@ ___
 
 ▸ **resetServicePlanModified**(`id`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)[]›*
 
-*Defined in [packages/catalog/api.ts:7260](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7260)*
+*Defined in [packages/catalog/api.ts:7266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7266)*
 
 Resets the Service Plan\'s Modified schema and returns the new one if it has been reset
 
@@ -163,7 +163,7 @@ ___
 
 ▸ **showServicePlan**(`id`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
 
-*Defined in [packages/catalog/api.ts:7272](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7272)*
+*Defined in [packages/catalog/api.ts:7278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7278)*
 
 Returns the specified Service Plan
 
@@ -188,7 +188,7 @@ ___
 
 ▸ **showServicePlanBase**(`id`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
 
-*Defined in [packages/catalog/api.ts:7284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7284)*
+*Defined in [packages/catalog/api.ts:7290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7290)*
 
 Returns the specified Service Plan\'s base schema
 
@@ -213,7 +213,7 @@ ___
 
 ▸ **showServicePlanModified**(`id`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
 
-*Defined in [packages/catalog/api.ts:7296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7296)*
+*Defined in [packages/catalog/api.ts:7302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7302)*
 
 Returns the specified Service Plan\'s modified schema
 

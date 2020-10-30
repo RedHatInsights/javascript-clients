@@ -14,6 +14,7 @@
 
 ### Properties
 
+* [artifacts](orderitem.md#optional-artifacts)
 * [completed_at](orderitem.md#optional-completed_at)
 * [count](orderitem.md#count)
 * [created_at](orderitem.md#optional-created_at)
@@ -32,6 +33,18 @@
 * [updated_at](orderitem.md#optional-updated_at)
 
 ## Properties
+
+### `Optional` artifacts
+
+• **artifacts**? : *object*
+
+*Defined in [packages/catalog/api.ts:512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L512)*
+
+Contains a prefix-stripped key/value object that contains all of the information exposed from product provisioning. Must be exposed from Tower with prefix \'expose_to_cloud_redhat_com_\'
+
+**`memberof`** OrderItem
+
+___
 
 ### `Optional` completed_at
 
