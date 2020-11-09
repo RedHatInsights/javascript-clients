@@ -47,7 +47,7 @@ A database entry representing a single host with its Inventory metadata.
 
 *Inherited from [CreateHostOut](createhostout.md).[account](createhostout.md#account)*
 
-*Defined in [packages/host-inventory/api.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L279)*
+*Defined in [packages/host-inventory/api.ts:168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L168)*
 
 A Red Hat Account number that owns the host.
 
@@ -61,7 +61,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[ansible_host](createhostout.md#optional-ansible_host)*
 
-*Defined in [packages/host-inventory/api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L273)*
+*Defined in [packages/host-inventory/api.ts:162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L162)*
 
 The ansible host name for remediations
 
@@ -75,7 +75,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[bios_uuid](createhostout.md#optional-bios_uuid)*
 
-*Defined in [packages/host-inventory/api.ts:309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L309)*
+*Defined in [packages/host-inventory/api.ts:198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L198)*
 
 A UUID of the host machine BIOS.  This field is considered to be a canonical fact.
 
@@ -89,7 +89,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[created](createhostout.md#optional-created)*
 
-*Defined in [packages/host-inventory/api.ts:345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L345)*
+*Defined in [packages/host-inventory/api.ts:234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L234)*
 
 A timestamp when the entry was created.
 
@@ -103,7 +103,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[culled_timestamp](createhostout.md#optional-culled_timestamp)*
 
-*Defined in [packages/host-inventory/api.ts:375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L375)*
+*Defined in [packages/host-inventory/api.ts:264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L264)*
 
 Timestamp from which the host is considered deleted.
 
@@ -117,7 +117,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[display_name](createhostout.md#optional-display_name)*
 
-*Defined in [packages/host-inventory/api.ts:267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L267)*
+*Defined in [packages/host-inventory/api.ts:156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L156)*
 
 A host’s human-readable display name, e.g. in a form of a domain name.
 
@@ -131,7 +131,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[external_id](createhostout.md#optional-external_id)*
 
-*Defined in [packages/host-inventory/api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L333)*
+*Defined in [packages/host-inventory/api.ts:222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L222)*
 
 Host’s reference in the external source e.g. AWS EC2, Azure, OpenStack, etc. This field is considered to be a canonical fact.
 
@@ -145,7 +145,7 @@ ___
 
 *Overrides [CreateHostOut](createhostout.md).[facts](createhostout.md#optional-facts)*
 
-*Defined in [packages/host-inventory/api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L469)*
+*Defined in [packages/host-inventory/api.ts:358](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L358)*
 
 A set of facts belonging to the host.
 
@@ -159,7 +159,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[fqdn](createhostout.md#optional-fqdn)*
 
-*Defined in [packages/host-inventory/api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L321)*
+*Defined in [packages/host-inventory/api.ts:210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L210)*
 
 A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
 
@@ -173,7 +173,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[id](createhostout.md#optional-id)*
 
-*Defined in [packages/host-inventory/api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L339)*
+*Defined in [packages/host-inventory/api.ts:228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L228)*
 
 A durable and reliable platform-wide host identifier. Applications should use this identifier to reference hosts.
 
@@ -187,7 +187,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[insights_id](createhostout.md#optional-insights_id)*
 
-*Defined in [packages/host-inventory/api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L285)*
+*Defined in [packages/host-inventory/api.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L174)*
 
 An ID defined in /etc/insights-client/machine-id. This field is considered a canonical fact.
 
@@ -201,7 +201,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[ip_addresses](createhostout.md#optional-ip_addresses)*
 
-*Defined in [packages/host-inventory/api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L315)*
+*Defined in [packages/host-inventory/api.ts:204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L204)*
 
 Host’s network IP addresses.  This field is considered to be a canonical fact.
 
@@ -215,7 +215,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[mac_addresses](createhostout.md#optional-mac_addresses)*
 
-*Defined in [packages/host-inventory/api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L327)*
+*Defined in [packages/host-inventory/api.ts:216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L216)*
 
 Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
 
@@ -229,7 +229,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[reporter](createhostout.md#optional-reporter)*
 
-*Defined in [packages/host-inventory/api.ts:381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L381)*
+*Defined in [packages/host-inventory/api.ts:270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L270)*
 
 Reporting source of the host. Used when updating the stale_timestamp.
 
@@ -243,7 +243,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[rhel_machine_id](createhostout.md#optional-rhel_machine_id)*
 
-*Defined in [packages/host-inventory/api.ts:291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L291)*
+*Defined in [packages/host-inventory/api.ts:180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L180)*
 
 A Machine ID of a RHEL host.  This field is considered to be a canonical fact.
 
@@ -257,7 +257,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[satellite_id](createhostout.md#optional-satellite_id)*
 
-*Defined in [packages/host-inventory/api.ts:303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L303)*
+*Defined in [packages/host-inventory/api.ts:192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L192)*
 
 A Red Hat Satellite ID of a RHEL host.  This field is considered to be a canonical fact.
 
@@ -271,7 +271,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[stale_timestamp](createhostout.md#optional-stale_timestamp)*
 
-*Defined in [packages/host-inventory/api.ts:363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L363)*
+*Defined in [packages/host-inventory/api.ts:252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L252)*
 
 Timestamp from which the host is considered stale.
 
@@ -285,7 +285,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[stale_warning_timestamp](createhostout.md#optional-stale_warning_timestamp)*
 
-*Defined in [packages/host-inventory/api.ts:369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L369)*
+*Defined in [packages/host-inventory/api.ts:258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L258)*
 
 Timestamp from which the host is considered too stale to be listed without an explicit toggle.
 
@@ -299,7 +299,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[subscription_manager_id](createhostout.md#optional-subscription_manager_id)*
 
-*Defined in [packages/host-inventory/api.ts:297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L297)*
+*Defined in [packages/host-inventory/api.ts:186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L186)*
 
 A Red Hat Subcription Manager ID of a RHEL host.  This field is considered to be a canonical fact.
 
@@ -313,7 +313,7 @@ ___
 
 *Inherited from [CreateHostOut](createhostout.md).[updated](createhostout.md#optional-updated)*
 
-*Defined in [packages/host-inventory/api.ts:351](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L351)*
+*Defined in [packages/host-inventory/api.ts:240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L240)*
 
 A timestamp when the entry was last updated.
 

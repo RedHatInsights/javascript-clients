@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[OrderProcess](orderprocess.md)›*
 
-*Defined in [packages/catalog/api.ts:656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L656)*
+*Defined in [packages/catalog/api.ts:662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L662)*
 
 **`memberof`** OrderProcessCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [packages/catalog/api.ts:650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L650)*
+*Defined in [packages/catalog/api.ts:656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L656)*
 
 **`memberof`** OrderProcessCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [packages/catalog/api.ts:644](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L644)*
+*Defined in [packages/catalog/api.ts:650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L650)*
 
 **`memberof`** OrderProcessCollection

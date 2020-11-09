@@ -83,9 +83,9 @@ ___
 
 ###  apiSystemProfileGetSapSids
 
-▸ **apiSystemProfileGetSapSids**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *AxiosPromise‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)›*
+▸ **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *AxiosPromise‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)›*
 
-*Defined in [packages/host-inventory/api.ts:2618](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2618)*
+*Defined in [packages/host-inventory/api.ts:2423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2423)*
 
 Required permissions: inventory:hosts:read
 
@@ -99,6 +99,7 @@ Required permissions: inventory:hosts:read
 
 Name | Type |
 ------ | ------ |
+`search?` | string |
 `tags?` | Array‹string› |
 `perPage?` | number |
 `page?` | number |
@@ -115,7 +116,7 @@ ___
 
 ▸ **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *AxiosPromise‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)›*
 
-*Defined in [packages/host-inventory/api.ts:2635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2635)*
+*Defined in [packages/host-inventory/api.ts:2440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2440)*
 
 Required permissions: inventory:hosts:read
 

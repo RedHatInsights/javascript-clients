@@ -19,7 +19,7 @@
 
 • **Debug**: = "debug"
 
-*Defined in [packages/catalog/api.ts:988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L988)*
+*Defined in [packages/catalog/api.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L994)*
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 • **Error**: = "error"
 
-*Defined in [packages/catalog/api.ts:986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L986)*
+*Defined in [packages/catalog/api.ts:992](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L992)*
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 • **Info**: = "info"
 
-*Defined in [packages/catalog/api.ts:985](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L985)*
+*Defined in [packages/catalog/api.ts:991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L991)*
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 • **Warning**: = "warning"
 
-*Defined in [packages/catalog/api.ts:987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L987)*
+*Defined in [packages/catalog/api.ts:993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L993)*

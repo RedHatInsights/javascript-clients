@@ -415,6 +415,12 @@ export interface OrderItem {
      */
     id?: string;
     /**
+     * Name of the Portfolio Item or Order Process
+     * @type {string}
+     * @memberof OrderItem
+     */
+    name?: string;
+    /**
      *
      * @type {number}
      * @memberof OrderItem

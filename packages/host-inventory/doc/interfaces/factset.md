@@ -25,7 +25,7 @@ A set of string facts belonging to a single namespace.
 
 • **facts**: *object*
 
-*Defined in [packages/host-inventory/api.ts:456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L456)*
+*Defined in [packages/host-inventory/api.ts:345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L345)*
 
 The facts themselves.
 
@@ -37,7 +37,7 @@ ___
 
 • **namespace**: *string*
 
-*Defined in [packages/host-inventory/api.ts:450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L450)*
+*Defined in [packages/host-inventory/api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L339)*
 
 A namespace the facts belong to.
 
