@@ -84,7 +84,7 @@ ___
 
 ▸ **listTags**(`options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
 
-*Defined in [packages/catalog/api.ts:7829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7829)*
+*Defined in [packages/catalog/api.ts:7835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7835)*
 
 List Tags
 

@@ -28,7 +28,7 @@ Structure of the output of the host system profile query
 
 • **count**: *number*
 
-*Defined in [packages/host-inventory/api.ts:930](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L930)*
+*Defined in [packages/host-inventory/api.ts:819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L819)*
 
 A number of entries on the current page.
 
@@ -40,7 +40,7 @@ ___
 
 • **page**: *number*
 
-*Defined in [packages/host-inventory/api.ts:936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L936)*
+*Defined in [packages/host-inventory/api.ts:825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L825)*
 
 A current page number.
 
@@ -52,7 +52,7 @@ ___
 
 • **per_page**: *number*
 
-*Defined in [packages/host-inventory/api.ts:942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L942)*
+*Defined in [packages/host-inventory/api.ts:831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L831)*
 
 A page size – a number of entries per single page.
 
@@ -64,7 +64,7 @@ ___
 
 • **results**: *Array‹[HostSystemProfileOut](hostsystemprofileout.md)›*
 
-*Defined in [packages/host-inventory/api.ts:954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L954)*
+*Defined in [packages/host-inventory/api.ts:843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L843)*
 
 Actual host search query result entries.
 
@@ -76,7 +76,7 @@ ___
 
 • **total**: *number*
 
-*Defined in [packages/host-inventory/api.ts:948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L948)*
+*Defined in [packages/host-inventory/api.ts:837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L837)*
 
 A total count of the found entries.
 

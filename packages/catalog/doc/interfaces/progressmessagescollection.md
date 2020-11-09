@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[ProgressMessage](progressmessage.md)›*
 
-*Defined in [packages/catalog/api.ts:1014](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1014)*
+*Defined in [packages/catalog/api.ts:1020](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1020)*
 
 **`memberof`** ProgressMessagesCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [packages/catalog/api.ts:1008](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1008)*
+*Defined in [packages/catalog/api.ts:1014](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1014)*
 
 **`memberof`** ProgressMessagesCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [packages/catalog/api.ts:1002](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1002)*
+*Defined in [packages/catalog/api.ts:1008](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1008)*
 
 **`memberof`** ProgressMessagesCollection

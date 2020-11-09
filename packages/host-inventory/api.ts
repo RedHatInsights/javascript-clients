@@ -76,182 +76,71 @@ export interface ActiveTags {
     results: Array<ActiveTag>;
 }
 /**
- *
- * @export
- * @interface BulkHostOut
- */
-export interface BulkHostOut {
-    /**
-     * Total number of items in the \"data\" list.
-     * @type {number}
-     * @memberof BulkHostOut
-     */
-    total?: number;
-    /**
-     * Number of items in the \"data\" list that contain errors.
-     * @type {number}
-     * @memberof BulkHostOut
-     */
-    errors?: number;
-    /**
-     * List of hosts that were created, updated or failed to be processed.
-     * @type {Array<BulkHostOutDetails>}
-     * @memberof BulkHostOut
-     */
-    data?: Array<BulkHostOutDetails>;
-}
-/**
- *
- * @export
- * @interface BulkHostOutDetails
- */
-export interface BulkHostOutDetails {
-    /**
-     * HTTP status code of the results of the host create/update process
-     * @type {number}
-     * @memberof BulkHostOutDetails
-     */
-    status?: number;
-    /**
-     *
-     * @type {CreateHostOut}
-     * @memberof BulkHostOutDetails
-     */
-    host?: CreateHostOut;
-    /**
-     * Short description of why a host failed to be created or updated.
-     * @type {string}
-     * @memberof BulkHostOutDetails
-     */
-    title?: string;
-    /**
-     * Details about why a host failed to be created or updated.
-     * @type {string}
-     * @memberof BulkHostOutDetails
-     */
-    detail?: string;
-}
-/**
  * Data required to create a check-in record for a host.
  * @export
  * @interface CreateCheckIn
  */
 export interface CreateCheckIn {
     /**
-     * A set of string facts about a host.
-     * @type {object}
-     * @memberof CreateCheckIn
-     */
-    canonical_facts: object;
-    /**
-     * Defines how far in the future the host becomes stale (in minutes).
-     * @type {number}
-     * @memberof CreateCheckIn
-     */
-    checkin_frequency?: number;
-}
-/**
- * Data of a single host belonging to an account. Represents the hosts without its Inventory metadata.
- * @export
- * @interface CreateHostIn
- */
-export interface CreateHostIn {
-    /**
-     * A host’s human-readable display name, e.g. in a form of a domain name.
-     * @type {string}
-     * @memberof CreateHostIn
-     */
-    display_name?: string;
-    /**
-     * The ansible host name for remediations
-     * @type {string}
-     * @memberof CreateHostIn
-     */
-    ansible_host?: string;
-    /**
-     * A Red Hat Account number that owns the host.
-     * @type {string}
-     * @memberof CreateHostIn
-     */
-    account: string;
-    /**
      * An ID defined in /etc/insights-client/machine-id. This field is considered a canonical fact.
      * @type {string}
-     * @memberof CreateHostIn
+     * @memberof CreateCheckIn
      */
     insights_id?: string;
     /**
      * A Machine ID of a RHEL host.  This field is considered to be a canonical fact.
      * @type {string}
-     * @memberof CreateHostIn
+     * @memberof CreateCheckIn
      */
     rhel_machine_id?: string;
     /**
      * A Red Hat Subcription Manager ID of a RHEL host.  This field is considered to be a canonical fact.
      * @type {string}
-     * @memberof CreateHostIn
+     * @memberof CreateCheckIn
      */
     subscription_manager_id?: string;
     /**
      * A Red Hat Satellite ID of a RHEL host.  This field is considered to be a canonical fact.
      * @type {string}
-     * @memberof CreateHostIn
+     * @memberof CreateCheckIn
      */
     satellite_id?: string;
     /**
      * A UUID of the host machine BIOS.  This field is considered to be a canonical fact.
      * @type {string}
-     * @memberof CreateHostIn
+     * @memberof CreateCheckIn
      */
     bios_uuid?: string;
     /**
      * Host’s network IP addresses.  This field is considered to be a canonical fact.
      * @type {Array<string>}
-     * @memberof CreateHostIn
+     * @memberof CreateCheckIn
      */
     ip_addresses?: Array<string>;
     /**
      * A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
      * @type {string}
-     * @memberof CreateHostIn
+     * @memberof CreateCheckIn
      */
     fqdn?: string;
     /**
      * Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
      * @type {Array<string>}
-     * @memberof CreateHostIn
+     * @memberof CreateCheckIn
      */
     mac_addresses?: Array<string>;
     /**
      * Host’s reference in the external source e.g. AWS EC2, Azure, OpenStack, etc. This field is considered to be a canonical fact.
      * @type {string}
-     * @memberof CreateHostIn
+     * @memberof CreateCheckIn
      */
     external_id?: string;
     /**
-     * A set of facts belonging to the host.
-     * @type {Array<FactSet>}
-     * @memberof CreateHostIn
+     * How long from now to expect another check-in (in minutes).
+     * @type {number}
+     * @memberof CreateCheckIn
      */
-    facts?: Array<FactSet>;
-    /**
-     *
-     * @type {SystemProfile}
-     * @memberof CreateHostIn
-     */
-    system_profile?: SystemProfile;
-    /**
-     * Timestamp from which the host is considered stale.
-     * @type {string}
-     * @memberof CreateHostIn
-     */
-    stale_timestamp: string;
-    /**
-     * Reporting source of the host. Used when updating the stale_timestamp.
-     * @type {string}
-     * @memberof CreateHostIn
-     */
-    reporter: string;
+    checkin_frequency?: number;
 }
 /**
  * Data of a single host belonging to an account. Represents the hosts without its Inventory metadata.
@@ -1097,62 +986,6 @@ export interface YumRepo {
 export const HostsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> Required permissions: inventory:hosts:write <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
-         * @summary Create/update multiple host and add them to the host list
-         * @param {Array<CreateHostIn>} createHostIn A list of host objects to be added to the host list
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiHostAddHostList(createHostIn: Array<CreateHostIn>, options: any = {}): RequestArgs {
-            // verify required parameter 'createHostIn' is not null or undefined
-            if (createHostIn === null || createHostIn === undefined) {
-                throw new RequiredError('createHostIn','Required parameter createHostIn was null or undefined when calling apiHostAddHostList.');
-            }
-            const localVarPath = `/hosts`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication ApiKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
-
-            // authentication BearerAuth required
-            // http bearer authentication required
-            if (configuration && configuration.accessToken) {
-                const accessToken = typeof configuration.accessToken === 'function'
-                    ? configuration.accessToken()
-                    : configuration.accessToken;
-                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof createHostIn !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(createHostIn !== undefined ? createHostIn : {}) : (createHostIn || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
          * @summary Delete hosts by IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
@@ -1578,7 +1411,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
          * @summary Update staleness timestamps for a host matching the provided facts
-         * @param {CreateCheckIn} createCheckIn A list of host objects to be added to the host list
+         * @param {CreateCheckIn} createCheckIn Data required to create a check-in record for a host.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1593,7 +1426,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -1827,20 +1660,6 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 export const HostsApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> Required permissions: inventory:hosts:write <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
-         * @summary Create/update multiple host and add them to the host list
-         * @param {Array<CreateHostIn>} createHostIn A list of host objects to be added to the host list
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiHostAddHostList(createHostIn: Array<CreateHostIn>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<BulkHostOut> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostAddHostList(createHostIn, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
          * @summary Delete hosts by IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
@@ -1959,11 +1778,11 @@ export const HostsApiFp = function(configuration?: Configuration) {
         /**
          * Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
          * @summary Update staleness timestamps for a host matching the provided facts
-         * @param {CreateCheckIn} createCheckIn A list of host objects to be added to the host list
+         * @param {CreateCheckIn} createCheckIn Data required to create a check-in record for a host.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<BulkHostOut> {
+        apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateHostOut> {
             const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostHostCheckin(createCheckIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -2029,16 +1848,6 @@ export const HostsApiFp = function(configuration?: Configuration) {
  */
 export const HostsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
-        /**
-         * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> Required permissions: inventory:hosts:write <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
-         * @summary Create/update multiple host and add them to the host list
-         * @param {Array<CreateHostIn>} createHostIn A list of host objects to be added to the host list
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiHostAddHostList(createHostIn: Array<CreateHostIn>, options?: any): AxiosPromise<BulkHostOut> {
-            return HostsApiFp(configuration).apiHostAddHostList(createHostIn, options)(axios, basePath);
-        },
         /**
          * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
          * @summary Delete hosts by IDs
@@ -2134,11 +1943,11 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
         /**
          * Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
          * @summary Update staleness timestamps for a host matching the provided facts
-         * @param {CreateCheckIn} createCheckIn A list of host objects to be added to the host list
+         * @param {CreateCheckIn} createCheckIn Data required to create a check-in record for a host.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any): AxiosPromise<BulkHostOut> {
+        apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any): AxiosPromise<CreateHostOut> {
             return HostsApiFp(configuration).apiHostHostCheckin(createCheckIn, options)(axios, basePath);
         },
         /**
@@ -2189,18 +1998,6 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
  * @extends {BaseAPI}
  */
 export class HostsApi extends BaseAPI {
-    /**
-     * Create a new host and add it to the host list or update an existing hosts. A host is updated if there is already one with the same canonicals facts and belonging to the same account. <br /><br /> Required permissions: inventory:hosts:write <br /><br /> NOTICE: This operation is deprecated. The explicit creation of hosts is no longer supported. Hosts are created automatically based on uploads processed by the [payload ingress service](/docs/api/ingress#operations-default-post_upload) instead.
-     * @summary Create/update multiple host and add them to the host list
-     * @param {Array<CreateHostIn>} createHostIn A list of host objects to be added to the host list
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof HostsApi
-     */
-    public apiHostAddHostList(createHostIn: Array<CreateHostIn>, options?: any) {
-        return HostsApiFp(this.configuration).apiHostAddHostList(createHostIn, options)(this.axios, this.basePath);
-    }
-
     /**
      * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
      * @summary Delete hosts by IDs
@@ -2308,7 +2105,7 @@ export class HostsApi extends BaseAPI {
     /**
      * Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
      * @summary Update staleness timestamps for a host matching the provided facts
-     * @param {CreateCheckIn} createCheckIn A list of host objects to be added to the host list
+     * @param {CreateCheckIn} createCheckIn Data required to create a check-in record for a host.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
@@ -2373,6 +2170,7 @@ export const SapSystemApiAxiosParamCreator = function (configuration?: Configura
         /**
          * Required permissions: inventory:hosts:read
          * @summary get sap system values
+         * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -2382,7 +2180,7 @@ export const SapSystemApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileGetSapSids(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options: any = {}): RequestArgs {
+        apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options: any = {}): RequestArgs {
             const localVarPath = `/system_profile/sap_sids`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2399,6 +2197,10 @@ export const SapSystemApiAxiosParamCreator = function (configuration?: Configura
                     ? configuration.apiKey("x-rh-identity")
                     : configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
             }
 
             if (tags) {
@@ -2518,6 +2320,7 @@ export const SapSystemApiFp = function(configuration?: Configuration) {
         /**
          * Required permissions: inventory:hosts:read
          * @summary get sap system values
+         * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -2527,8 +2330,8 @@ export const SapSystemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileGetSapSids(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileSapSystemOut> {
-            const localVarAxiosArgs = SapSystemApiAxiosParamCreator(configuration).apiSystemProfileGetSapSids(tags, perPage, page, staleness, registeredWith, filter, options);
+        apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileSapSystemOut> {
+            const localVarAxiosArgs = SapSystemApiAxiosParamCreator(configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2565,6 +2368,7 @@ export const SapSystemApiFactory = function (configuration?: Configuration, base
         /**
          * Required permissions: inventory:hosts:read
          * @summary get sap system values
+         * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -2574,8 +2378,8 @@ export const SapSystemApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileGetSapSids(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any): AxiosPromise<SystemProfileSapSystemOut> {
-            return SapSystemApiFp(configuration).apiSystemProfileGetSapSids(tags, perPage, page, staleness, registeredWith, filter, options)(axios, basePath);
+        apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any): AxiosPromise<SystemProfileSapSystemOut> {
+            return SapSystemApiFp(configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options)(axios, basePath);
         },
         /**
          * Required permissions: inventory:hosts:read
@@ -2605,6 +2409,7 @@ export class SapSystemApi extends BaseAPI {
     /**
      * Required permissions: inventory:hosts:read
      * @summary get sap system values
+     * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
@@ -2615,8 +2420,8 @@ export class SapSystemApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SapSystemApi
      */
-    public apiSystemProfileGetSapSids(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any) {
-        return SapSystemApiFp(this.configuration).apiSystemProfileGetSapSids(tags, perPage, page, staleness, registeredWith, filter, options)(this.axios, this.basePath);
+    public apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any) {
+        return SapSystemApiFp(this.configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options)(this.axios, this.basePath);
     }
 
     /**
