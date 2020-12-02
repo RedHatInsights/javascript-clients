@@ -505,7 +505,7 @@ export interface OrderItem {
      */
     process_sequence?: number;
     /**
-     * Denotes the scope in which the order item will run for the order it belongs to. It can be \'before\', \'after\', or \'applicable\'
+     * Denotes the scope in which the order item will run for the order it belongs to. It can be \'before\', \'after\', or \'product\'
      * @type {string}
      * @memberof OrderItem
      */

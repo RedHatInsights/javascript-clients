@@ -113,7 +113,7 @@ ___
 
 ###  listPermissions
 
-▸ **listPermissions**(`limit?`: number, `offset?`: number, `orderBy?`: string, `application?`: string, `resourceType?`: string, `verb?`: string, `permission?`: string, `excludeGlobals?`: "true" | "false", `options?`: any): *AxiosPromise‹[PermissionPagination](../interfaces/permissionpagination.md)›*
+▸ **listPermissions**(`limit?`: number, `offset?`: number, `orderBy?`: "application" | "resource_type" | "verb" | "permission", `application?`: string, `resourceType?`: string, `verb?`: string, `permission?`: string, `excludeGlobals?`: "true" | "false", `options?`: any): *AxiosPromise‹[PermissionPagination](../interfaces/permissionpagination.md)›*
 
 *Defined in [packages/rbac/api.ts:2931](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2931)*
 
@@ -131,7 +131,7 @@ Name | Type |
 ------ | ------ |
 `limit?` | number |
 `offset?` | number |
-`orderBy?` | string |
+`orderBy?` | "application" &#124; "resource_type" &#124; "verb" &#124; "permission" |
 `application?` | string |
 `resourceType?` | string |
 `verb?` | string |

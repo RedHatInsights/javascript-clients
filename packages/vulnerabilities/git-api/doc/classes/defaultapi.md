@@ -558,7 +558,7 @@ ___
 
 List systems IDs visible to logged in account.
 
-**`summary`** List systems IDs.
+**`summary`** List systems IDs along with additional info about opt out state of the system.
 
 **`throws`** {RequiredError}
 

@@ -1948,11 +1948,11 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
          * @param {Array<string>} [roleNames] List of role name to filter for groups. It is exact match but case-insensitive
          * @param {'all' | 'any'} [roleDiscriminator] Discriminator that works with role_names to indicate matching all/any of the role names
-         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'name' | 'modified' | 'principalCount' | 'policyCount'} [orderBy] Parameter for ordering groups by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: string, options: any = {}): RequestArgs {
+        listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', options: any = {}): RequestArgs {
             const localVarPath = `/groups/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2031,11 +2031,11 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {'name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'modified' | 'policyCount', options: any = {}): RequestArgs {
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options: any = {}): RequestArgs {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling listRolesForGroup.');
@@ -2286,11 +2286,11 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
          * @param {Array<string>} [roleNames] List of role name to filter for groups. It is exact match but case-insensitive
          * @param {'all' | 'any'} [roleDiscriminator] Discriminator that works with role_names to indicate matching all/any of the role names
-         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'name' | 'modified' | 'principalCount' | 'policyCount'} [orderBy] Parameter for ordering groups by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupPagination> {
+        listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupPagination> {
             const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listGroups(limit, offset, name, nameMatch, scope, username, uuid, roleNames, roleDiscriminator, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -2306,11 +2306,11 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {'name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'modified' | 'policyCount', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination> {
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination> {
             const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -2441,11 +2441,11 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
          * @param {Array<string>} [roleNames] List of role name to filter for groups. It is exact match but case-insensitive
          * @param {'all' | 'any'} [roleDiscriminator] Discriminator that works with role_names to indicate matching all/any of the role names
-         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'name' | 'modified' | 'principalCount' | 'policyCount'} [orderBy] Parameter for ordering groups by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: string, options?: any): AxiosPromise<GroupPagination> {
+        listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', options?: any): AxiosPromise<GroupPagination> {
             return GroupApiFp(configuration).listGroups(limit, offset, name, nameMatch, scope, username, uuid, roleNames, roleDiscriminator, orderBy, options)(axios, basePath);
         },
         /**
@@ -2457,11 +2457,11 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {'name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'modified' | 'policyCount', options?: any): AxiosPromise<GroupRolesPagination> {
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): AxiosPromise<GroupRolesPagination> {
             return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, orderBy, options)(axios, basePath);
         },
         /**
@@ -2601,12 +2601,12 @@ export class GroupApi extends BaseAPI {
      * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
      * @param {Array<string>} [roleNames] List of role name to filter for groups. It is exact match but case-insensitive
      * @param {'all' | 'any'} [roleDiscriminator] Discriminator that works with role_names to indicate matching all/any of the role names
-     * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+     * @param {'name' | 'modified' | 'principalCount' | 'policyCount'} [orderBy] Parameter for ordering groups by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: string, options?: any) {
+    public listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', options?: any) {
         return GroupApiFp(this.configuration).listGroups(limit, offset, name, nameMatch, scope, username, uuid, roleNames, roleDiscriminator, orderBy, options)(this.axios, this.basePath);
     }
 
@@ -2619,12 +2619,12 @@ export class GroupApi extends BaseAPI {
      * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
-     * @param {'name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+     * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'modified' | 'policyCount', options?: any) {
+    public listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any) {
         return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, orderBy, options)(this.axios, this.basePath);
     }
 
@@ -2725,7 +2725,7 @@ export const PermissionApiAxiosParamCreator = function (configuration?: Configur
          * @summary List the permissions for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'application' | 'resource_type' | 'verb' | 'permission'} [orderBy] Parameter for ordering permissions by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-application
          * @param {string} [application] Exact match for the application name of a permission. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [resourceType] Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
          * @param {string} [verb] Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
@@ -2734,7 +2734,7 @@ export const PermissionApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options: any = {}): RequestArgs {
+        listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options: any = {}): RequestArgs {
             const localVarPath = `/permissions/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2829,7 +2829,7 @@ export const PermissionApiFp = function(configuration?: Configuration) {
          * @summary List the permissions for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'application' | 'resource_type' | 'verb' | 'permission'} [orderBy] Parameter for ordering permissions by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-application
          * @param {string} [application] Exact match for the application name of a permission. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [resourceType] Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
          * @param {string} [verb] Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
@@ -2838,7 +2838,7 @@ export const PermissionApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionPagination> {
+        listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionPagination> {
             const localVarAxiosArgs = PermissionApiAxiosParamCreator(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -2874,7 +2874,7 @@ export const PermissionApiFactory = function (configuration?: Configuration, bas
          * @summary List the permissions for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'application' | 'resource_type' | 'verb' | 'permission'} [orderBy] Parameter for ordering permissions by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-application
          * @param {string} [application] Exact match for the application name of a permission. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [resourceType] Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
          * @param {string} [verb] Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
@@ -2883,7 +2883,7 @@ export const PermissionApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options?: any): AxiosPromise<PermissionPagination> {
+        listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options?: any): AxiosPromise<PermissionPagination> {
             return PermissionApiFp(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, options)(axios, basePath);
         },
     };
@@ -2918,7 +2918,7 @@ export class PermissionApi extends BaseAPI {
      * @summary List the permissions for a tenant
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
-     * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+     * @param {'application' | 'resource_type' | 'verb' | 'permission'} [orderBy] Parameter for ordering permissions by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-application
      * @param {string} [application] Exact match for the application name of a permission. You may also use a comma-separated list to match on multiple applications.
      * @param {string} [resourceType] Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
      * @param {string} [verb] Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
@@ -2928,7 +2928,7 @@ export class PermissionApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PermissionApi
      */
-    public listPermissions(limit?: number, offset?: number, orderBy?: string, application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options?: any) {
+    public listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options?: any) {
         return PermissionApiFp(this.configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, options)(this.axios, this.basePath);
     }
 
@@ -3079,11 +3079,11 @@ export const PolicyApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
          * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
-         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'name' | 'modified'} [orderBy] Parameter for ordering policies by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: string, options: any = {}): RequestArgs {
+        listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: 'name' | 'modified', options: any = {}): RequestArgs {
             const localVarPath = `/policies/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3252,11 +3252,11 @@ export const PolicyApiFp = function(configuration?: Configuration) {
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
          * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
-         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'name' | 'modified'} [orderBy] Parameter for ordering policies by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyPagination> {
+        listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: 'name' | 'modified', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyPagination> {
             const localVarAxiosArgs = PolicyApiAxiosParamCreator(configuration).listPolicies(limit, offset, name, scope, groupName, groupUuid, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3326,11 +3326,11 @@ export const PolicyApiFactory = function (configuration?: Configuration, basePat
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
          * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
-         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'name' | 'modified'} [orderBy] Parameter for ordering policies by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: string, options?: any): AxiosPromise<PolicyPagination> {
+        listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: 'name' | 'modified', options?: any): AxiosPromise<PolicyPagination> {
             return PolicyApiFp(configuration).listPolicies(limit, offset, name, scope, groupName, groupUuid, orderBy, options)(axios, basePath);
         },
         /**
@@ -3399,12 +3399,12 @@ export class PolicyApi extends BaseAPI {
      * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
      * @param {string} [groupName] Parameter for filtering resource by group name using string contains search.
      * @param {string} [groupUuid] Parameter for filtering resource by group uuid using UUID exact match.
-     * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+     * @param {'name' | 'modified'} [orderBy] Parameter for ordering policies by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PolicyApi
      */
-    public listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: string, options?: any) {
+    public listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: 'name' | 'modified', options?: any) {
         return PolicyApiFp(this.configuration).listPolicies(limit, offset, name, scope, groupName, groupUuid, orderBy, options)(this.axios, this.basePath);
     }
 
@@ -3436,14 +3436,15 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [usernames] Usernames of principals to get
-         * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
+         * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
          * @param {string} [email] Exact e-mail address of principal to search for
          * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
          * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
+         * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', options: any = {}): RequestArgs {
+        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options: any = {}): RequestArgs {
             const localVarPath = `/principals/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3488,6 +3489,10 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['admin_only'] = adminOnly;
             }
 
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3516,15 +3521,16 @@ export const PrincipalApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [usernames] Usernames of principals to get
-         * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
+         * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
          * @param {string} [email] Exact e-mail address of principal to search for
          * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
          * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
+         * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
-            const localVarAxiosArgs = PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, options);
+        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
+            const localVarAxiosArgs = PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3545,15 +3551,16 @@ export const PrincipalApiFactory = function (configuration?: Configuration, base
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [usernames] Usernames of principals to get
-         * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
+         * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
          * @param {string} [email] Exact e-mail address of principal to search for
          * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
          * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
+         * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', options?: any): AxiosPromise<PrincipalPagination> {
-            return PrincipalApiFp(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, options)(axios, basePath);
+        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any): AxiosPromise<PrincipalPagination> {
+            return PrincipalApiFp(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, orderBy, options)(axios, basePath);
         },
     };
 };
@@ -3571,16 +3578,17 @@ export class PrincipalApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {string} [usernames] Usernames of principals to get
-     * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending
+     * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
      * @param {string} [email] Exact e-mail address of principal to search for
      * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
      * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
+     * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PrincipalApi
      */
-    public listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', options?: any) {
-        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, options)(this.axios, this.basePath);
+    public listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any) {
+        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, orderBy, options)(this.axios, this.basePath);
     }
 
 }
@@ -3786,7 +3794,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
          * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
-         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
@@ -3794,7 +3802,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options: any = {}): RequestArgs {
+        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options: any = {}): RequestArgs {
             const localVarPath = `/roles/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3991,7 +3999,7 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
          * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
-         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
@@ -3999,7 +4007,7 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic> {
+        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic> {
             const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, nameMatch, scope, orderBy, addFields, username, application, permission, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -4081,7 +4089,7 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
          * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
-         * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+         * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
@@ -4089,7 +4097,7 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): AxiosPromise<RolePaginationDynamic> {
+        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): AxiosPromise<RolePaginationDynamic> {
             return RoleApiFp(configuration).listRoles(limit, offset, name, nameMatch, scope, orderBy, addFields, username, application, permission, options)(axios, basePath);
         },
         /**
@@ -4172,7 +4180,7 @@ export class RoleApi extends BaseAPI {
      * @param {string} [name] Parameter for filtering resource by name using string contains search.
      * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name.
      * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
-     * @param {string} [orderBy] Parameter for ordering resource by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
+     * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
      * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
      * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
      * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
@@ -4181,7 +4189,7 @@ export class RoleApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: string, addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any) {
+    public listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any) {
         return RoleApiFp(this.configuration).listRoles(limit, offset, name, nameMatch, scope, orderBy, addFields, username, application, permission, options)(this.axios, this.basePath);
     }
 

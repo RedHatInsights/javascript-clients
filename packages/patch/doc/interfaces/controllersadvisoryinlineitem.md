@@ -28,7 +28,7 @@
 
 • **advisory_type**? : *number*
 
-*Defined in [packages/patch/api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/710127e/packages/patch/api.ts#L169)*
+*Defined in [packages/patch/api.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/8e7ff04/packages/patch/api.ts#L169)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -38,7 +38,7 @@ ___
 
 • **applicable_systems**? : *number*
 
-*Defined in [packages/patch/api.ts:175](https://github.com/RedHatInsights/javascript-clients/blob/710127e/packages/patch/api.ts#L175)*
+*Defined in [packages/patch/api.ts:175](https://github.com/RedHatInsights/javascript-clients/blob/8e7ff04/packages/patch/api.ts#L175)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -48,7 +48,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:181](https://github.com/RedHatInsights/javascript-clients/blob/710127e/packages/patch/api.ts#L181)*
+*Defined in [packages/patch/api.ts:181](https://github.com/RedHatInsights/javascript-clients/blob/8e7ff04/packages/patch/api.ts#L181)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -58,7 +58,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/patch/api.ts:187](https://github.com/RedHatInsights/javascript-clients/blob/710127e/packages/patch/api.ts#L187)*
+*Defined in [packages/patch/api.ts:187](https://github.com/RedHatInsights/javascript-clients/blob/8e7ff04/packages/patch/api.ts#L187)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -68,7 +68,7 @@ ___
 
 • **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:193](https://github.com/RedHatInsights/javascript-clients/blob/710127e/packages/patch/api.ts#L193)*
+*Defined in [packages/patch/api.ts:193](https://github.com/RedHatInsights/javascript-clients/blob/8e7ff04/packages/patch/api.ts#L193)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -78,7 +78,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/710127e/packages/patch/api.ts#L199)*
+*Defined in [packages/patch/api.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/8e7ff04/packages/patch/api.ts#L199)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -88,6 +88,6 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:205](https://github.com/RedHatInsights/javascript-clients/blob/710127e/packages/patch/api.ts#L205)*
+*Defined in [packages/patch/api.ts:205](https://github.com/RedHatInsights/javascript-clients/blob/8e7ff04/packages/patch/api.ts#L205)*
 
 **`memberof`** ControllersAdvisoryInlineItem
