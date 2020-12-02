@@ -175,7 +175,7 @@ ___
 
 *Defined in [packages/catalog/api.ts:512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L512)*
 
-Denotes the scope in which the order item will run for the order it belongs to. It can be \'before\', \'after\', or \'applicable\'
+Denotes the scope in which the order item will run for the order it belongs to. It can be \'before\', \'after\', or \'product\'
 
 **`memberof`** OrderItem
 

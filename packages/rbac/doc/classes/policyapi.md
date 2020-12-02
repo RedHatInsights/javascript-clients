@@ -155,7 +155,7 @@ ___
 
 ###  listPolicies
 
-▸ **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: string, `options?`: any): *AxiosPromise‹[PolicyPagination](../interfaces/policypagination.md)›*
+▸ **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: "name" | "modified", `options?`: any): *AxiosPromise‹[PolicyPagination](../interfaces/policypagination.md)›*
 
 *Defined in [packages/rbac/api.ts:3407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3407)*
 
@@ -177,7 +177,7 @@ Name | Type |
 `scope?` | "account" &#124; "principal" |
 `groupName?` | string |
 `groupUuid?` | string |
-`orderBy?` | string |
+`orderBy?` | "name" &#124; "modified" |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[PolicyPagination](../interfaces/policypagination.md)›*

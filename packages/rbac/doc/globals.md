@@ -227,9 +227,9 @@ Name | Type |
 
 * **getPrincipalsFromGroup**(`uuid`: string, `principalUsername?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "username", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listGroups**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `username?`: string, `uuid?`: Array‹string›, `roleNames?`: Array‹string›, `roleDiscriminator?`: "all" | "any", `orderBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listGroups**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `username?`: string, `uuid?`: Array‹string›, `roleNames?`: Array‹string›, `roleDiscriminator?`: "all" | "any", `orderBy?`: "name" | "modified" | "principalCount" | "policyCount", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "name" | "modified" | "policyCount", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "name" | "display_name" | "modified" | "policyCount", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **updateGroup**(`uuid`: string, `group`: [Group](interfaces/group.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -271,9 +271,9 @@ Name | Type |
 
 * **getPrincipalsFromGroup**(`uuid`: string, `principalUsername?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "username", `options?`: any): *AxiosPromise‹[PrincipalPagination](interfaces/principalpagination.md)›*
 
-* **listGroups**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `username?`: string, `uuid?`: Array‹string›, `roleNames?`: Array‹string›, `roleDiscriminator?`: "all" | "any", `orderBy?`: string, `options?`: any): *AxiosPromise‹[GroupPagination](interfaces/grouppagination.md)›*
+* **listGroups**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `username?`: string, `uuid?`: Array‹string›, `roleNames?`: Array‹string›, `roleDiscriminator?`: "all" | "any", `orderBy?`: "name" | "modified" | "principalCount" | "policyCount", `options?`: any): *AxiosPromise‹[GroupPagination](interfaces/grouppagination.md)›*
 
-* **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "name" | "modified" | "policyCount", `options?`: any): *AxiosPromise‹[GroupRolesPagination](interfaces/grouprolespagination.md)›*
+* **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "name" | "display_name" | "modified" | "policyCount", `options?`: any): *AxiosPromise‹[GroupRolesPagination](interfaces/grouprolespagination.md)›*
 
 * **updateGroup**(`uuid`: string, `group`: [Group](interfaces/group.md), `options?`: any): *AxiosPromise‹[GroupOut](interfaces/groupout.md)›*
 
@@ -329,11 +329,11 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PrincipalPagination](interfaces/principalpagination.md)›*
 
-* **listGroups**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `username?`: string, `uuid?`: Array‹string›, `roleNames?`: Array‹string›, `roleDiscriminator?`: "all" | "any", `orderBy?`: string, `options?`: any): *function*
+* **listGroups**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `username?`: string, `uuid?`: Array‹string›, `roleNames?`: Array‹string›, `roleDiscriminator?`: "all" | "any", `orderBy?`: "name" | "modified" | "principalCount" | "policyCount", `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[GroupPagination](interfaces/grouppagination.md)›*
 
-* **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "name" | "modified" | "policyCount", `options?`: any): *function*
+* **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "name" | "display_name" | "modified" | "policyCount", `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[GroupRolesPagination](interfaces/grouprolespagination.md)›*
 
@@ -363,7 +363,7 @@ Name | Type |
 
 * **listPermissionOptions**(`field`: "application" | "resource_type" | "verb", `limit?`: number, `offset?`: number, `application?`: string, `resourceType?`: string, `verb?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listPermissions**(`limit?`: number, `offset?`: number, `orderBy?`: string, `application?`: string, `resourceType?`: string, `verb?`: string, `permission?`: string, `excludeGlobals?`: "true" | "false", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listPermissions**(`limit?`: number, `offset?`: number, `orderBy?`: "application" | "resource_type" | "verb" | "permission", `application?`: string, `resourceType?`: string, `verb?`: string, `permission?`: string, `excludeGlobals?`: "true" | "false", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 ___
 
@@ -389,7 +389,7 @@ Name | Type |
 
 * **listPermissionOptions**(`field`: "application" | "resource_type" | "verb", `limit?`: number, `offset?`: number, `application?`: string, `resourceType?`: string, `verb?`: string, `options?`: any): *AxiosPromise‹[PermissionOptionsPagination](interfaces/permissionoptionspagination.md)›*
 
-* **listPermissions**(`limit?`: number, `offset?`: number, `orderBy?`: string, `application?`: string, `resourceType?`: string, `verb?`: string, `permission?`: string, `excludeGlobals?`: "true" | "false", `options?`: any): *AxiosPromise‹[PermissionPagination](interfaces/permissionpagination.md)›*
+* **listPermissions**(`limit?`: number, `offset?`: number, `orderBy?`: "application" | "resource_type" | "verb" | "permission", `application?`: string, `resourceType?`: string, `verb?`: string, `permission?`: string, `excludeGlobals?`: "true" | "false", `options?`: any): *AxiosPromise‹[PermissionPagination](interfaces/permissionpagination.md)›*
 
 ___
 
@@ -415,7 +415,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PermissionOptionsPagination](interfaces/permissionoptionspagination.md)›*
 
-* **listPermissions**(`limit?`: number, `offset?`: number, `orderBy?`: string, `application?`: string, `resourceType?`: string, `verb?`: string, `permission?`: string, `excludeGlobals?`: "true" | "false", `options?`: any): *function*
+* **listPermissions**(`limit?`: number, `offset?`: number, `orderBy?`: "application" | "resource_type" | "verb" | "permission", `application?`: string, `resourceType?`: string, `verb?`: string, `permission?`: string, `excludeGlobals?`: "true" | "false", `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PermissionPagination](interfaces/permissionpagination.md)›*
 
@@ -445,7 +445,7 @@ Name | Type |
 
 * **getPolicy**(`uuid`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: "name" | "modified", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **updatePolicy**(`uuid`: string, `policyIn`: [PolicyIn](interfaces/policyin.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -477,7 +477,7 @@ Name | Type |
 
 * **getPolicy**(`uuid`: string, `options?`: any): *AxiosPromise‹[PolicyExtended](interfaces/policyextended.md)›*
 
-* **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: string, `options?`: any): *AxiosPromise‹[PolicyPagination](interfaces/policypagination.md)›*
+* **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: "name" | "modified", `options?`: any): *AxiosPromise‹[PolicyPagination](interfaces/policypagination.md)›*
 
 * **updatePolicy**(`uuid`: string, `policyIn`: [PolicyIn](interfaces/policyin.md), `options?`: any): *AxiosPromise‹[PolicyExtended](interfaces/policyextended.md)›*
 
@@ -513,7 +513,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PolicyExtended](interfaces/policyextended.md)›*
 
-* **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: string, `options?`: any): *function*
+* **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: "name" | "modified", `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PolicyPagination](interfaces/policypagination.md)›*
 
@@ -541,7 +541,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **listPrincipals**(`limit?`: number, `offset?`: number, `usernames?`: string, `sortOrder?`: "asc" | "desc", `email?`: string, `status?`: "enabled" | "disabled" | "all", `adminOnly?`: "true" | "false", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listPrincipals**(`limit?`: number, `offset?`: number, `usernames?`: string, `sortOrder?`: "asc" | "desc", `email?`: string, `status?`: "enabled" | "disabled" | "all", `adminOnly?`: "true" | "false", `orderBy?`: "username", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 ___
 
@@ -549,7 +549,7 @@ ___
 
 ▸ **PrincipalApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:3540](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3540)*
+*Defined in [packages/rbac/api.ts:3546](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3546)*
 
 PrincipalApi - factory interface
 
@@ -565,7 +565,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **listPrincipals**(`limit?`: number, `offset?`: number, `usernames?`: string, `sortOrder?`: "asc" | "desc", `email?`: string, `status?`: "enabled" | "disabled" | "all", `adminOnly?`: "true" | "false", `options?`: any): *AxiosPromise‹[PrincipalPagination](interfaces/principalpagination.md)›*
+* **listPrincipals**(`limit?`: number, `offset?`: number, `usernames?`: string, `sortOrder?`: "asc" | "desc", `email?`: string, `status?`: "enabled" | "disabled" | "all", `adminOnly?`: "true" | "false", `orderBy?`: "username", `options?`: any): *AxiosPromise‹[PrincipalPagination](interfaces/principalpagination.md)›*
 
 ___
 
@@ -573,7 +573,7 @@ ___
 
 ▸ **PrincipalApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3511)*
+*Defined in [packages/rbac/api.ts:3516](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3516)*
 
 PrincipalApi - functional programming interface
 
@@ -587,7 +587,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **listPrincipals**(`limit?`: number, `offset?`: number, `usernames?`: string, `sortOrder?`: "asc" | "desc", `email?`: string, `status?`: "enabled" | "disabled" | "all", `adminOnly?`: "true" | "false", `options?`: any): *function*
+* **listPrincipals**(`limit?`: number, `offset?`: number, `usernames?`: string, `sortOrder?`: "asc" | "desc", `email?`: string, `status?`: "enabled" | "disabled" | "all", `adminOnly?`: "true" | "false", `orderBy?`: "username", `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PrincipalPagination](interfaces/principalpagination.md)›*
 
@@ -597,7 +597,7 @@ ___
 
 ▸ **RoleApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3593)*
+*Defined in [packages/rbac/api.ts:3601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3601)*
 
 RoleApi - axios parameter creator
 
@@ -619,7 +619,7 @@ Name | Type |
 
 * **getRoleAccess**(`uuid`: string, `limit?`: number, `offset?`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
-* **listRoles**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `orderBy?`: string, `addFields?`: Array‹"groups_in" | "groups_in_count"›, `username?`: string, `application?`: string, `permission?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listRoles**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `orderBy?`: "name" | "display_name" | "modified" | "policyCount", `addFields?`: Array‹"groups_in" | "groups_in_count"›, `username?`: string, `application?`: string, `permission?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
 * **updateRole**(`uuid`: string, `roleWithAccess`: [RoleWithAccess](interfaces/rolewithaccess.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
 
@@ -629,7 +629,7 @@ ___
 
 ▸ **RoleApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:4031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4031)*
+*Defined in [packages/rbac/api.ts:4039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4039)*
 
 RoleApi - factory interface
 
@@ -653,7 +653,7 @@ Name | Type |
 
 * **getRoleAccess**(`uuid`: string, `limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[AccessPagination](interfaces/accesspagination.md)›*
 
-* **listRoles**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `orderBy?`: string, `addFields?`: Array‹"groups_in" | "groups_in_count"›, `username?`: string, `application?`: string, `permission?`: string, `options?`: any): *AxiosPromise‹[RolePaginationDynamic](interfaces/rolepaginationdynamic.md)›*
+* **listRoles**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `orderBy?`: "name" | "display_name" | "modified" | "policyCount", `addFields?`: Array‹"groups_in" | "groups_in_count"›, `username?`: string, `application?`: string, `permission?`: string, `options?`: any): *AxiosPromise‹[RolePaginationDynamic](interfaces/rolepaginationdynamic.md)›*
 
 * **updateRole**(`uuid`: string, `roleWithAccess`: [RoleWithAccess](interfaces/rolewithaccess.md), `options?`: any): *AxiosPromise‹void›*
 
@@ -663,7 +663,7 @@ ___
 
 ▸ **RoleApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3925)*
+*Defined in [packages/rbac/api.ts:3933](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3933)*
 
 RoleApi - functional programming interface
 
@@ -693,7 +693,7 @@ Name | Type |
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[AccessPagination](interfaces/accesspagination.md)›*
 
-* **listRoles**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `orderBy?`: string, `addFields?`: Array‹"groups_in" | "groups_in_count"›, `username?`: string, `application?`: string, `permission?`: string, `options?`: any): *function*
+* **listRoles**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `orderBy?`: "name" | "display_name" | "modified" | "policyCount", `addFields?`: Array‹"groups_in" | "groups_in_count"›, `username?`: string, `application?`: string, `permission?`: string, `options?`: any): *function*
 
   * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RolePaginationDynamic](interfaces/rolepaginationdynamic.md)›*
 
@@ -707,7 +707,7 @@ ___
 
 ▸ **StatusApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:4208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4208)*
+*Defined in [packages/rbac/api.ts:4216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4216)*
 
 StatusApi - axios parameter creator
 
@@ -729,7 +729,7 @@ ___
 
 ▸ **StatusApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:4275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4275)*
+*Defined in [packages/rbac/api.ts:4283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4283)*
 
 StatusApi - factory interface
 
@@ -753,7 +753,7 @@ ___
 
 ▸ **StatusApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:4253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4253)*
+*Defined in [packages/rbac/api.ts:4261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4261)*
 
 StatusApi - functional programming interface
 

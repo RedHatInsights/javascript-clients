@@ -286,7 +286,7 @@ ___
 
 ###  listGroups
 
-▸ **listGroups**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `username?`: string, `uuid?`: Array‹string›, `roleNames?`: Array‹string›, `roleDiscriminator?`: "all" | "any", `orderBy?`: string, `options?`: any): *AxiosPromise‹[GroupPagination](../interfaces/grouppagination.md)›*
+▸ **listGroups**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `username?`: string, `uuid?`: Array‹string›, `roleNames?`: Array‹string›, `roleDiscriminator?`: "all" | "any", `orderBy?`: "name" | "modified" | "principalCount" | "policyCount", `options?`: any): *AxiosPromise‹[GroupPagination](../interfaces/grouppagination.md)›*
 
 *Defined in [packages/rbac/api.ts:2609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2609)*
 
@@ -311,7 +311,7 @@ Name | Type |
 `uuid?` | Array‹string› |
 `roleNames?` | Array‹string› |
 `roleDiscriminator?` | "all" &#124; "any" |
-`orderBy?` | string |
+`orderBy?` | "name" &#124; "modified" &#124; "principalCount" &#124; "policyCount" |
 `options?` | any |
 
 **Returns:** *AxiosPromise‹[GroupPagination](../interfaces/grouppagination.md)›*
@@ -320,7 +320,7 @@ ___
 
 ###  listRolesForGroup
 
-▸ **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "name" | "modified" | "policyCount", `options?`: any): *AxiosPromise‹[GroupRolesPagination](../interfaces/grouprolespagination.md)›*
+▸ **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDescription?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "name" | "display_name" | "modified" | "policyCount", `options?`: any): *AxiosPromise‹[GroupRolesPagination](../interfaces/grouprolespagination.md)›*
 
 *Defined in [packages/rbac/api.ts:2627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2627)*
 
@@ -342,7 +342,7 @@ Name | Type | Description |
 `roleDescription?` | string | - |
 `limit?` | number | - |
 `offset?` | number | - |
-`orderBy?` | "name" &#124; "modified" &#124; "policyCount" | - |
+`orderBy?` | "name" &#124; "display_name" &#124; "modified" &#124; "policyCount" | - |
 `options?` | any | - |
 
 **Returns:** *AxiosPromise‹[GroupRolesPagination](../interfaces/grouprolespagination.md)›*
