@@ -20,7 +20,7 @@ import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
 
 /**
- *
+ * Pairings of C.R.C rule URL and its KCS solution number (node_id)
  * @export
  * @interface Kcs
  */
@@ -39,7 +39,7 @@ export interface Kcs {
     node_id: string;
 }
 /**
- *
+ * The category for a rule.  In Advisor this is one of \'Security\', \'Availability\', \'Stability\' or \'Performance\'.  We don\'t use a Choices field because we want other projects to use this and choose their own categories.
  * @export
  * @interface RuleCategory
  */
@@ -58,7 +58,75 @@ export interface RuleCategory {
     name: string;
 }
 /**
- *
+ * Outputs the description of the settings in a Data-Driven Forms format.
+ * @export
+ * @interface SettingDDF
+ */
+export interface SettingDDF {
+    /**
+     *
+     * @type {string}
+     * @memberof SettingDDF
+     */
+    name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SettingDDF
+     */
+    label?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SettingDDF
+     */
+    title?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SettingDDF
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SettingDDF
+     */
+    helpText?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SettingDDF
+     */
+    component: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SettingDDF
+     */
+    isRequired: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SettingDDF
+     */
+    initialValue: boolean;
+}
+/**
+ * Combining the DDF fields into one \'fields\' object.
+ * @export
+ * @interface SettingsDDF
+ */
+export interface SettingsDDF {
+    /**
+     *
+     * @type {Array<SettingDDF>}
+     * @memberof SettingsDDF
+     */
+    fields: Array<SettingDDF>;
+}
+/**
+ * Basic information about whether we are ready to serve information.
  * @export
  * @interface StatusReady
  */
@@ -89,7 +157,7 @@ export interface StatusReady {
     advisor: boolean;
 }
 /**
- *
+ * RHN-based system types classified by role and product code.
  * @export
  * @interface SystemType
  */
@@ -113,6 +181,106 @@ export interface SystemType {
      */
     product_code: string;
 }
+
+/**
+ * AccountSettingApi - axios parameter creator
+ * @export
+ */
+export const AccountSettingApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * This will not create a new account settings object if none exists.
+         * @summary Show this account\'s settings, or the defaults.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountSettingList(options: any = {}): RequestArgs {
+            const localVarPath = `/account_setting/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AccountSettingApi - functional programming interface
+ * @export
+ */
+export const AccountSettingApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * This will not create a new account settings object if none exists.
+         * @summary Show this account\'s settings, or the defaults.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountSettingList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
+            const localVarAxiosArgs = AccountSettingApiAxiosParamCreator(configuration).accountSettingList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * AccountSettingApi - factory interface
+ * @export
+ */
+export const AccountSettingApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * This will not create a new account settings object if none exists.
+         * @summary Show this account\'s settings, or the defaults.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountSettingList(options?: any): AxiosPromise<void> {
+            return AccountSettingApiFp(configuration).accountSettingList(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * AccountSettingApi - object-oriented interface
+ * @export
+ * @class AccountSettingApi
+ * @extends {BaseAPI}
+ */
+export class AccountSettingApi extends BaseAPI {
+    /**
+     * This will not create a new account settings object if none exists.
+     * @summary Show this account\'s settings, or the defaults.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountSettingApi
+     */
+    public accountSettingList(options?: any) {
+        return AccountSettingApiFp(this.configuration).accountSettingList(options)(this.axios, this.basePath);
+    }
+
+}
+
 
 /**
  * KcsApi - axios parameter creator
@@ -561,6 +729,106 @@ export class RulecategoryApi extends BaseAPI {
      */
     public rulecategoryRead(id: number, options?: any) {
         return RulecategoryApiFp(this.configuration).rulecategoryRead(id, options)(this.axios, this.basePath);
+    }
+
+}
+
+
+/**
+ * SettingsApi - axios parameter creator
+ * @export
+ */
+export const SettingsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
+         * @summary Describe the settings we have in a Data-Driven Forms way.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        settingsList(options: any = {}): RequestArgs {
+            const localVarPath = `/settings/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * SettingsApi - functional programming interface
+ * @export
+ */
+export const SettingsApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
+         * @summary Describe the settings we have in a Data-Driven Forms way.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        settingsList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SettingsDDF>> {
+            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).settingsList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * SettingsApi - factory interface
+ * @export
+ */
+export const SettingsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
+         * @summary Describe the settings we have in a Data-Driven Forms way.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        settingsList(options?: any): AxiosPromise<Array<SettingsDDF>> {
+            return SettingsApiFp(configuration).settingsList(options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * SettingsApi - object-oriented interface
+ * @export
+ * @class SettingsApi
+ * @extends {BaseAPI}
+ */
+export class SettingsApi extends BaseAPI {
+    /**
+     * This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
+     * @summary Describe the settings we have in a Data-Driven Forms way.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SettingsApi
+     */
+    public settingsList(options?: any) {
+        return SettingsApiFp(this.configuration).settingsList(options)(this.axios, this.basePath);
     }
 
 }

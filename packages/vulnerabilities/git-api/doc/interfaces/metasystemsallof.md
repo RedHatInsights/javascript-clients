@@ -23,7 +23,7 @@
 
 • **excluded**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1026)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1032)*
 
 Display setting of opted out systems.
 
@@ -35,7 +35,7 @@ ___
 
 • **opt_out**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1020](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1020)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1026)*
 
 Whether the filter to show opted out systems is active or not. If not set, defaults to hiding opted out systems.
 

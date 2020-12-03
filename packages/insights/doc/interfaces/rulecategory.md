@@ -2,6 +2,8 @@
 
 # Interface: RuleCategory
 
+The category for a rule.  In Advisor this is one of \'Security\', \'Availability\', \'Stability\' or \'Performance\'.  We don\'t use a Choices field because we want other projects to use this and choose their own categories.
+
 **`export`** 
 
 **`interface`** RuleCategory

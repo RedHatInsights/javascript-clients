@@ -665,6 +665,12 @@ export interface InsightsRule {
      * @memberof InsightsRule
      */
     associated_cves: Array<string>;
+    /**
+     * Shows rules impact number from 1 to 4
+     * @type {number}
+     * @memberof InsightsRule
+     */
+    rule_impact: number | null;
 }
 /**
  *

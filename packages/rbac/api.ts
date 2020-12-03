@@ -1942,7 +1942,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
-         * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name.
+         * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [username] A username for a principal to filter for groups
          * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
@@ -2028,6 +2028,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} uuid ID of group
          * @param {boolean} [exclude] If this is set to true, the result would be roles excluding the ones in the group
          * @param {string} [roleName] Parameter for filtering group roles by role &#x60;name&#x60; using string contains search.
+         * @param {string} [roleDisplayName] Parameter for filtering group roles by role &#x60;display_name&#x60; using string contains search.
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -2035,7 +2036,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options: any = {}): RequestArgs {
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options: any = {}): RequestArgs {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling listRolesForGroup.');
@@ -2063,6 +2064,10 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
 
             if (roleName !== undefined) {
                 localVarQueryParameter['role_name'] = roleName;
+            }
+
+            if (roleDisplayName !== undefined) {
+                localVarQueryParameter['role_display_name'] = roleDisplayName;
             }
 
             if (roleDescription !== undefined) {
@@ -2280,7 +2285,7 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
-         * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name.
+         * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [username] A username for a principal to filter for groups
          * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
@@ -2303,6 +2308,7 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {string} uuid ID of group
          * @param {boolean} [exclude] If this is set to true, the result would be roles excluding the ones in the group
          * @param {string} [roleName] Parameter for filtering group roles by role &#x60;name&#x60; using string contains search.
+         * @param {string} [roleDisplayName] Parameter for filtering group roles by role &#x60;display_name&#x60; using string contains search.
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -2310,8 +2316,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, orderBy, options);
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination> {
+            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, limit, offset, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2435,7 +2441,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
-         * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name.
+         * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [username] A username for a principal to filter for groups
          * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
@@ -2454,6 +2460,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {string} uuid ID of group
          * @param {boolean} [exclude] If this is set to true, the result would be roles excluding the ones in the group
          * @param {string} [roleName] Parameter for filtering group roles by role &#x60;name&#x60; using string contains search.
+         * @param {string} [roleDisplayName] Parameter for filtering group roles by role &#x60;display_name&#x60; using string contains search.
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -2461,8 +2468,8 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): AxiosPromise<GroupRolesPagination> {
-            return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, orderBy, options)(axios, basePath);
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): AxiosPromise<GroupRolesPagination> {
+            return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, limit, offset, orderBy, options)(axios, basePath);
         },
         /**
          *
@@ -2595,7 +2602,7 @@ export class GroupApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {string} [name] Parameter for filtering resource by name using string contains search.
-     * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name.
+     * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
      * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
      * @param {string} [username] A username for a principal to filter for groups
      * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
@@ -2616,6 +2623,7 @@ export class GroupApi extends BaseAPI {
      * @param {string} uuid ID of group
      * @param {boolean} [exclude] If this is set to true, the result would be roles excluding the ones in the group
      * @param {string} [roleName] Parameter for filtering group roles by role &#x60;name&#x60; using string contains search.
+     * @param {string} [roleDisplayName] Parameter for filtering group roles by role &#x60;display_name&#x60; using string contains search.
      * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
@@ -2624,8 +2632,8 @@ export class GroupApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any) {
-        return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, roleName, roleDescription, limit, offset, orderBy, options)(this.axios, this.basePath);
+    public listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any) {
+        return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, limit, offset, orderBy, options)(this.axios, this.basePath);
     }
 
     /**
@@ -3792,7 +3800,8 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
-         * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name.
+         * @param {string} [displayName] Parameter for filtering resource by display_name using string contains search.
+         * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
@@ -3802,7 +3811,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options: any = {}): RequestArgs {
+        listRoles(limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options: any = {}): RequestArgs {
             const localVarPath = `/roles/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3829,6 +3838,10 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (name !== undefined) {
                 localVarQueryParameter['name'] = name;
+            }
+
+            if (displayName !== undefined) {
+                localVarQueryParameter['display_name'] = displayName;
             }
 
             if (nameMatch !== undefined) {
@@ -3997,7 +4010,8 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
-         * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name.
+         * @param {string} [displayName] Parameter for filtering resource by display_name using string contains search.
+         * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
@@ -4007,8 +4021,8 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic> {
-            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, nameMatch, scope, orderBy, addFields, username, application, permission, options);
+        listRoles(limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic> {
+            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4087,7 +4101,8 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
-         * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name.
+         * @param {string} [displayName] Parameter for filtering resource by display_name using string contains search.
+         * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
@@ -4097,8 +4112,8 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): AxiosPromise<RolePaginationDynamic> {
-            return RoleApiFp(configuration).listRoles(limit, offset, name, nameMatch, scope, orderBy, addFields, username, application, permission, options)(axios, basePath);
+        listRoles(limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): AxiosPromise<RolePaginationDynamic> {
+            return RoleApiFp(configuration).listRoles(limit, offset, name, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options)(axios, basePath);
         },
         /**
          *
@@ -4178,7 +4193,8 @@ export class RoleApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {string} [name] Parameter for filtering resource by name using string contains search.
-     * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name.
+     * @param {string} [displayName] Parameter for filtering resource by display_name using string contains search.
+     * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
      * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
      * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
      * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
@@ -4189,8 +4205,8 @@ export class RoleApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public listRoles(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any) {
-        return RoleApiFp(this.configuration).listRoles(limit, offset, name, nameMatch, scope, orderBy, addFields, username, application, permission, options)(this.axios, this.basePath);
+    public listRoles(limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any) {
+        return RoleApiFp(this.configuration).listRoles(limit, offset, name, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options)(this.axios, this.basePath);
     }
 
     /**

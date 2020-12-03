@@ -1,8 +1,8 @@
-[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [ResolutionRiskApi](resolutionriskapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [AccountSettingApi](accountsettingapi.md)
 
-# Class: ResolutionRiskApi
+# Class: AccountSettingApi
 
-ResolutionRiskApi - object-oriented interface
+AccountSettingApi - object-oriented interface
 
 **`export`** 
 
@@ -10,29 +10,29 @@ ResolutionRiskApi - object-oriented interface
 
 * [BaseAPI](baseapi.md)
 
-  ↳ **ResolutionRiskApi**
+  ↳ **AccountSettingApi**
 
 ## Index
 
 ### Constructors
 
-* [constructor](resolutionriskapi.md#constructor)
+* [constructor](accountsettingapi.md#constructor)
 
 ### Properties
 
-* [axios](resolutionriskapi.md#protected-axios)
-* [basePath](resolutionriskapi.md#protected-basepath)
-* [configuration](resolutionriskapi.md#protected-configuration)
+* [axios](accountsettingapi.md#protected-axios)
+* [basePath](accountsettingapi.md#protected-basepath)
+* [configuration](accountsettingapi.md#protected-configuration)
 
 ### Methods
 
-* [resolutionRiskList](resolutionriskapi.md#resolutionrisklist)
+* [accountSettingList](accountsettingapi.md#accountsettinglist)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new ResolutionRiskApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[ResolutionRiskApi](resolutionriskapi.md)*
+\+ **new AccountSettingApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[AccountSettingApi](accountsettingapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -46,7 +46,7 @@ Name | Type | Default |
 `basePath` | string | BASE_PATH |
 `axios` | AxiosInstance | globalAxios |
 
-**Returns:** *[ResolutionRiskApi](resolutionriskapi.md)*
+**Returns:** *[AccountSettingApi](accountsettingapi.md)*
 
 ## Properties
 
@@ -80,19 +80,19 @@ ___
 
 ## Methods
 
-###  resolutionRiskList
+###  accountSettingList
 
-▸ **resolutionRiskList**(`options?`: any): *AxiosPromise‹void›*
+▸ **accountSettingList**(`options?`: any): *AxiosPromise‹void›*
 
-*Defined in [packages/insights/api.ts:558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L558)*
+*Defined in [packages/insights/api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L278)*
 
-Risks are listed in increasing order of severity.
+This will not create a new account settings object if none exists.
 
-**`summary`** List all total risk values.
+**`summary`** Show this account\'s settings, or the defaults.
 
 **`throws`** {RequiredError}
 
-**`memberof`** ResolutionRiskApi
+**`memberof`** AccountSettingApi
 
 **Parameters:**
 

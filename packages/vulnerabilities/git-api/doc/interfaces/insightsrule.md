@@ -22,6 +22,7 @@
 * [playbook_count](insightsrule.md#playbook_count)
 * [reboot_required](insightsrule.md#reboot_required)
 * [rule_id](insightsrule.md#rule_id)
+* [rule_impact](insightsrule.md#rule_impact)
 * [summary](insightsrule.md#summary)
 
 ## Properties
@@ -117,6 +118,18 @@ ___
 *Defined in [packages/vulnerabilities/git-api/api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L619)*
 
 ID(s) of associated security rule(s).
+
+**`memberof`** InsightsRule
+
+___
+
+###  rule_impact
+
+• **rule_impact**: *number | null*
+
+*Defined in [packages/vulnerabilities/git-api/api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L673)*
+
+Shows rules impact number from 1 to 4
 
 **`memberof`** InsightsRule
 

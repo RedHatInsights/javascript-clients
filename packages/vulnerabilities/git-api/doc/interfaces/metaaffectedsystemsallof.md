@@ -25,7 +25,7 @@
 
 • **patch_access**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L828)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L834)*
 
 If show_advisories=true shows access to patch service else null
 
@@ -37,7 +37,7 @@ ___
 
 • **rule_key**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L816)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L822)*
 
 Filters security rules by its error key.
 
@@ -49,7 +49,7 @@ ___
 
 • **rule_presence**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L822)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L828)*
 
 Filter based on presence of security rule
 
@@ -61,7 +61,7 @@ ___
 
 • **status_id**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L810)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L816)*
 
 Filer based on CVE status ID.
 

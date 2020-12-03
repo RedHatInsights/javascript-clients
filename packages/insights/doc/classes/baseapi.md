@@ -8,11 +8,15 @@
 
 * **BaseAPI**
 
+  ↳ [AccountSettingApi](accountsettingapi.md)
+
   ↳ [KcsApi](kcsapi.md)
 
   ↳ [ResolutionRiskApi](resolutionriskapi.md)
 
   ↳ [RulecategoryApi](rulecategoryapi.md)
+
+  ↳ [SettingsApi](settingsapi.md)
 
   ↳ [StatusApi](statusapi.md)
 
