@@ -1,8 +1,8 @@
-[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [ResolutionRiskApi](resolutionriskapi.md)
+[@redhat-cloud-services/insights-client](../README.md) › [Globals](../globals.md) › [SettingsApi](settingsapi.md)
 
-# Class: ResolutionRiskApi
+# Class: SettingsApi
 
-ResolutionRiskApi - object-oriented interface
+SettingsApi - object-oriented interface
 
 **`export`** 
 
@@ -10,29 +10,29 @@ ResolutionRiskApi - object-oriented interface
 
 * [BaseAPI](baseapi.md)
 
-  ↳ **ResolutionRiskApi**
+  ↳ **SettingsApi**
 
 ## Index
 
 ### Constructors
 
-* [constructor](resolutionriskapi.md#constructor)
+* [constructor](settingsapi.md#constructor)
 
 ### Properties
 
-* [axios](resolutionriskapi.md#protected-axios)
-* [basePath](resolutionriskapi.md#protected-basepath)
-* [configuration](resolutionriskapi.md#protected-configuration)
+* [axios](settingsapi.md#protected-axios)
+* [basePath](settingsapi.md#protected-basepath)
+* [configuration](settingsapi.md#protected-configuration)
 
 ### Methods
 
-* [resolutionRiskList](resolutionriskapi.md#resolutionrisklist)
+* [settingsList](settingsapi.md#settingslist)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new ResolutionRiskApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[ResolutionRiskApi](resolutionriskapi.md)*
+\+ **new SettingsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[SettingsApi](settingsapi.md)*
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
@@ -46,7 +46,7 @@ Name | Type | Default |
 `basePath` | string | BASE_PATH |
 `axios` | AxiosInstance | globalAxios |
 
-**Returns:** *[ResolutionRiskApi](resolutionriskapi.md)*
+**Returns:** *[SettingsApi](settingsapi.md)*
 
 ## Properties
 
@@ -80,19 +80,19 @@ ___
 
 ## Methods
 
-###  resolutionRiskList
+###  settingsList
 
-▸ **resolutionRiskList**(`options?`: any): *AxiosPromise‹void›*
+▸ **settingsList**(`options?`: any): *AxiosPromise‹[SettingsDDF](../interfaces/settingsddf.md)[]›*
 
-*Defined in [packages/insights/api.ts:558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L558)*
+*Defined in [packages/insights/api.ts:830](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L830)*
 
-Risks are listed in increasing order of severity.
+This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
 
-**`summary`** List all total risk values.
+**`summary`** Describe the settings we have in a Data-Driven Forms way.
 
 **`throws`** {RequiredError}
 
-**`memberof`** ResolutionRiskApi
+**`memberof`** SettingsApi
 
 **Parameters:**
 
@@ -100,4 +100,4 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *AxiosPromise‹[SettingsDDF](../interfaces/settingsddf.md)[]›*

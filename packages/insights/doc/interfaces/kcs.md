@@ -2,6 +2,8 @@
 
 # Interface: Kcs
 
+Pairings of C.R.C rule URL and its KCS solution number (node_id)
+
 **`export`** 
 
 **`interface`** Kcs
