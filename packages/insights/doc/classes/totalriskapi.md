@@ -82,7 +82,7 @@ ___
 
 ###  totalRiskList
 
-▸ **totalRiskList**(`options?`: any): *AxiosPromise‹void›*
+▸ **totalRiskList**(`options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/insights/api.ts:1328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1328)*
 
@@ -100,4 +100,4 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*

@@ -82,7 +82,7 @@ ___
 
 ###  getDocumentation
 
-▸ **getDocumentation**(`options?`: any): *AxiosPromise‹object›*
+▸ **getDocumentation**(`options?`: any): *Promise‹AxiosResponse‹object››*
 
 *Defined in [packages/approval/api.ts:1023](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1023)*
 
@@ -98,4 +98,4 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹object›*
+**Returns:** *Promise‹AxiosResponse‹object››*

@@ -128,7 +128,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **getDiagnosis**(`system`: string, `remediation?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getDiagnosis**(`system`: string, `remediation?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -174,9 +174,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **getDiagnosis**(`system`: string, `remediation?`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Diagnosis](interfaces/diagnosis.md)›*
+* **getDiagnosis**(`system`: string, `remediation?`: string, `options?`: any): *Promise‹function›*
 
 ___
 
@@ -198,7 +196,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **generate**(`playbookDefinition`: [PlaybookDefinition](interfaces/playbookdefinition.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **generate**(`playbookDefinition`: [PlaybookDefinition](interfaces/playbookdefinition.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -244,9 +242,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **generate**(`playbookDefinition`: [PlaybookDefinition](interfaces/playbookdefinition.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹string›*
+* **generate**(`playbookDefinition`: [PlaybookDefinition](interfaces/playbookdefinition.md), `options?`: any): *Promise‹function›*
 
 ___
 
@@ -268,41 +264,41 @@ Name | Type |
 
 **Returns:** *object*
 
-* **cancelPlaybookRuns**(`id`: string, `playbookRunId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **cancelPlaybookRuns**(`id`: string, `playbookRunId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **createRemediation**(`remediationInput`: [RemediationInput](interfaces/remediationinput.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **createRemediation**(`remediationInput`: [RemediationInput](interfaces/remediationinput.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **deleteRemediation**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **deleteRemediation**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **deleteRemediationIssue**(`id`: string, `issue`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **deleteRemediationIssue**(`id`: string, `issue`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **deleteRemediationIssueSystem**(`id`: string, `issue`: string, `system`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **deleteRemediationIssueSystem**(`id`: string, `issue`: string, `system`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **downloadPlaybooks**(`selectedRemediations?`: Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **downloadPlaybooks**(`selectedRemediations?`: Array‹string›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getPlaybookRunDetails**(`id`: string, `playbookRunId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getPlaybookRunDetails**(`id`: string, `playbookRunId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getPlaybookRunSystemDetails**(`id`: string, `playbookRunId`: string, `system`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getPlaybookRunSystemDetails**(`id`: string, `playbookRunId`: string, `system`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getPlaybookRunSystems**(`id`: string, `playbookRunId`: string, `executor?`: string, `limit?`: number, `offset?`: number, `ansibleHost?`: string, `sort?`: "system_name" | "-system_name", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getPlaybookRunSystems**(`id`: string, `playbookRunId`: string, `executor?`: string, `limit?`: number, `offset?`: number, `ansibleHost?`: string, `sort?`: "system_name" | "-system_name", `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getRemediation**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getRemediation**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getRemediationConnectionStatus**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getRemediationConnectionStatus**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getRemediationIssueSystems**(`id`: string, `issue`: string, `limit?`: number, `offset?`: number, `sort?`: "display_name" | "-display_name", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getRemediationIssueSystems**(`id`: string, `issue`: string, `limit?`: number, `offset?`: number, `sort?`: "display_name" | "-display_name", `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getRemediationPlaybook**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getRemediationPlaybook**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getRemediations**(`sort?`: "updated_at" | "-updated_at" | "name" | "-name" | "system_count" | "-system_count" | "issue_count" | "-issue_count", `filter?`: string, `limit?`: number, `offset?`: number, `system?`: string, `hideArchived?`: boolean, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getRemediations**(`sort?`: "updated_at" | "-updated_at" | "name" | "-name" | "system_count" | "-system_count" | "issue_count" | "-issue_count", `filter?`: string, `limit?`: number, `offset?`: number, `system?`: string, `hideArchived?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listPlaybookRuns**(`id`: string, `limit?`: number, `offset?`: number, `sort?`: "updated_at" | "-updated_at", `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listPlaybookRuns**(`id`: string, `limit?`: number, `offset?`: number, `sort?`: "updated_at" | "-updated_at", `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **runRemediation**(`id`: string, `data?`: any, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **runRemediation**(`id`: string, `data?`: any, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **updateRemediation**(`id`: string, `remediationInput`: [RemediationInput](interfaces/remediationinput.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **updateRemediation**(`id`: string, `remediationInput`: [RemediationInput](interfaces/remediationinput.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **updateRemediationIssue**(`id`: string, `issue`: string, `remediationIssueIn`: [RemediationIssueIn](interfaces/remediationissuein.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **updateRemediationIssue**(`id`: string, `issue`: string, `remediationIssueIn`: [RemediationIssueIn](interfaces/remediationissuein.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -382,77 +378,41 @@ Name | Type |
 
 **Returns:** *object*
 
-* **cancelPlaybookRuns**(`id`: string, `playbookRunId`: string, `options?`: any): *function*
+* **cancelPlaybookRuns**(`id`: string, `playbookRunId`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹object›*
+* **createRemediation**(`remediationInput`: [RemediationInput](interfaces/remediationinput.md), `options?`: any): *Promise‹function›*
 
-* **createRemediation**(`remediationInput`: [RemediationInput](interfaces/remediationinput.md), `options?`: any): *function*
+* **deleteRemediation**(`id`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RemediationCreated](interfaces/remediationcreated.md)›*
+* **deleteRemediationIssue**(`id`: string, `issue`: string, `options?`: any): *Promise‹function›*
 
-* **deleteRemediation**(`id`: string, `options?`: any): *function*
+* **deleteRemediationIssueSystem**(`id`: string, `issue`: string, `system`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **downloadPlaybooks**(`selectedRemediations?`: Array‹string›, `options?`: any): *Promise‹function›*
 
-* **deleteRemediationIssue**(`id`: string, `issue`: string, `options?`: any): *function*
+* **getPlaybookRunDetails**(`id`: string, `playbookRunId`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **getPlaybookRunSystemDetails**(`id`: string, `playbookRunId`: string, `system`: string, `options?`: any): *Promise‹function›*
 
-* **deleteRemediationIssueSystem**(`id`: string, `issue`: string, `system`: string, `options?`: any): *function*
+* **getPlaybookRunSystems**(`id`: string, `playbookRunId`: string, `executor?`: string, `limit?`: number, `offset?`: number, `ansibleHost?`: string, `sort?`: "system_name" | "-system_name", `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **getRemediation**(`id`: string, `options?`: any): *Promise‹function›*
 
-* **downloadPlaybooks**(`selectedRemediations?`: Array‹string›, `options?`: any): *function*
+* **getRemediationConnectionStatus**(`id`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹any›*
+* **getRemediationIssueSystems**(`id`: string, `issue`: string, `limit?`: number, `offset?`: number, `sort?`: "display_name" | "-display_name", `options?`: any): *Promise‹function›*
 
-* **getPlaybookRunDetails**(`id`: string, `playbookRunId`: string, `options?`: any): *function*
+* **getRemediationPlaybook**(`id`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PlaybookRunExecutorDetails](interfaces/playbookrunexecutordetails.md)›*
+* **getRemediations**(`sort?`: "updated_at" | "-updated_at" | "name" | "-name" | "system_count" | "-system_count" | "issue_count" | "-issue_count", `filter?`: string, `limit?`: number, `offset?`: number, `system?`: string, `hideArchived?`: boolean, `options?`: any): *Promise‹function›*
 
-* **getPlaybookRunSystemDetails**(`id`: string, `playbookRunId`: string, `system`: string, `options?`: any): *function*
+* **listPlaybookRuns**(`id`: string, `limit?`: number, `offset?`: number, `sort?`: "updated_at" | "-updated_at", `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PlaybookRunSystemDetails](interfaces/playbookrunsystemdetails.md)›*
+* **runRemediation**(`id`: string, `data?`: any, `options?`: any): *Promise‹function›*
 
-* **getPlaybookRunSystems**(`id`: string, `playbookRunId`: string, `executor?`: string, `limit?`: number, `offset?`: number, `ansibleHost?`: string, `sort?`: "system_name" | "-system_name", `options?`: any): *function*
+* **updateRemediation**(`id`: string, `remediationInput`: [RemediationInput](interfaces/remediationinput.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PlaybookRunSystemList](interfaces/playbookrunsystemlist.md)›*
-
-* **getRemediation**(`id`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RemediationDetails](interfaces/remediationdetails.md)›*
-
-* **getRemediationConnectionStatus**(`id`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RemediationConnectionStatus](interfaces/remediationconnectionstatus.md)›*
-
-* **getRemediationIssueSystems**(`id`: string, `issue`: string, `limit?`: number, `offset?`: number, `sort?`: "display_name" | "-display_name", `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RemediationIssueSystemList](interfaces/remediationissuesystemlist.md)›*
-
-* **getRemediationPlaybook**(`id`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹string›*
-
-* **getRemediations**(`sort?`: "updated_at" | "-updated_at" | "name" | "-name" | "system_count" | "-system_count" | "issue_count" | "-issue_count", `filter?`: string, `limit?`: number, `offset?`: number, `system?`: string, `hideArchived?`: boolean, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RemediationList](interfaces/remediationlist.md)›*
-
-* **listPlaybookRuns**(`id`: string, `limit?`: number, `offset?`: number, `sort?`: "updated_at" | "-updated_at", `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PlaybookRunsList](interfaces/playbookrunslist.md)›*
-
-* **runRemediation**(`id`: string, `data?`: any, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ExecuteRemediation](interfaces/executeremediation.md)›*
-
-* **updateRemediation**(`id`: string, `remediationInput`: [RemediationInput](interfaces/remediationinput.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
-
-* **updateRemediationIssue**(`id`: string, `issue`: string, `remediationIssueIn`: [RemediationIssueIn](interfaces/remediationissuein.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **updateRemediationIssue**(`id`: string, `issue`: string, `remediationIssueIn`: [RemediationIssueIn](interfaces/remediationissuein.md), `options?`: any): *Promise‹function›*
 
 ___
 
@@ -474,9 +434,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **getResolutionsForIssue**(`issue`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getResolutionsForIssue**(`issue`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getResolutionsForIssues**(`resolutionsBatchInput`: [ResolutionsBatchInput](interfaces/resolutionsbatchinput.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getResolutionsForIssues**(`resolutionsBatchInput`: [ResolutionsBatchInput](interfaces/resolutionsbatchinput.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -524,13 +484,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **getResolutionsForIssue**(`issue`: string, `options?`: any): *function*
+* **getResolutionsForIssue**(`issue`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Resolutions](interfaces/resolutions.md)›*
-
-* **getResolutionsForIssues**(`resolutionsBatchInput`: [ResolutionsBatchInput](interfaces/resolutionsbatchinput.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹object›*
+* **getResolutionsForIssues**(`resolutionsBatchInput`: [ResolutionsBatchInput](interfaces/resolutionsbatchinput.md), `options?`: any): *Promise‹function›*
 
 ___
 
@@ -552,7 +508,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **getVersion**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getVersion**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -598,9 +554,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **getVersion**(`options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[InlineResponse200](interfaces/inlineresponse200.md)›*
+* **getVersion**(`options?`: any): *Promise‹function›*
 
 ## Object literals
 

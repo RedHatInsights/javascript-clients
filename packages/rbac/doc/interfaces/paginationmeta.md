@@ -22,6 +22,6 @@
 
 • **count**? : *number*
 
-*Defined in [packages/rbac/api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L517)*
+*Defined in [packages/rbac/api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L572)*
 
 **`memberof`** PaginationMeta

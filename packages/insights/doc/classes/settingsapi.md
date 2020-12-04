@@ -82,7 +82,7 @@ ___
 
 ###  settingsList
 
-▸ **settingsList**(`options?`: any): *AxiosPromise‹[SettingsDDF](../interfaces/settingsddf.md)[]›*
+▸ **settingsList**(`options?`: any): *Promise‹AxiosResponse‹[SettingsDDF](../interfaces/settingsddf.md)[]››*
 
 *Defined in [packages/insights/api.ts:830](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L830)*
 
@@ -100,4 +100,4 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[SettingsDDF](../interfaces/settingsddf.md)[]›*
+**Returns:** *Promise‹AxiosResponse‹[SettingsDDF](../interfaces/settingsddf.md)[]››*

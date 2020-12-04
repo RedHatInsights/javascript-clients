@@ -27,7 +27,7 @@
 
 • **created**: *string*
 
-*Defined in [packages/rbac/api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L335)*
+*Defined in [packages/rbac/api.ts:390](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L390)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -37,7 +37,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/rbac/api.ts:323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L323)*
+*Defined in [packages/rbac/api.ts:378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L378)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -47,7 +47,7 @@ ___
 
 • **modified**: *string*
 
-*Defined in [packages/rbac/api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L341)*
+*Defined in [packages/rbac/api.ts:396](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L396)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -57,7 +57,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/rbac/api.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L317)*
+*Defined in [packages/rbac/api.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L372)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -67,7 +67,7 @@ ___
 
 • **principals**: *Array‹[Principal](principal.md)›*
 
-*Defined in [packages/rbac/api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L347)*
+*Defined in [packages/rbac/api.ts:402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L402)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -77,6 +77,6 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [packages/rbac/api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L329)*
+*Defined in [packages/rbac/api.ts:384](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L384)*
 
 **`memberof`** GroupWithPrincipals

@@ -91,7 +91,7 @@ ___
 
 ###  addOrderProcessAfterItem
 
-▸ **addOrderProcessAfterItem**(`id`: string, `orderProcessPortfolioItemId`: [OrderProcessPortfolioItemId](../interfaces/orderprocessportfolioitemid.md), `options?`: any): *AxiosPromise‹[OrderProcess](../interfaces/orderprocess.md)›*
+▸ **addOrderProcessAfterItem**(`id`: string, `orderProcessPortfolioItemId`: [OrderProcessPortfolioItemId](../interfaces/orderprocessportfolioitemid.md), `options?`: any): *Promise‹AxiosResponse‹[OrderProcess](../interfaces/orderprocess.md)››*
 
 *Defined in [packages/catalog/api.ts:4041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4041)*
 
@@ -111,13 +111,13 @@ Name | Type | Description |
 `orderProcessPortfolioItemId` | [OrderProcessPortfolioItemId](../interfaces/orderprocessportfolioitemid.md) | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[OrderProcess](../interfaces/orderprocess.md)›*
+**Returns:** *Promise‹AxiosResponse‹[OrderProcess](../interfaces/orderprocess.md)››*
 
 ___
 
 ###  addOrderProcessBeforeItem
 
-▸ **addOrderProcessBeforeItem**(`id`: string, `orderProcessPortfolioItemId`: [OrderProcessPortfolioItemId](../interfaces/orderprocessportfolioitemid.md), `options?`: any): *AxiosPromise‹[OrderProcess](../interfaces/orderprocess.md)›*
+▸ **addOrderProcessBeforeItem**(`id`: string, `orderProcessPortfolioItemId`: [OrderProcessPortfolioItemId](../interfaces/orderprocessportfolioitemid.md), `options?`: any): *Promise‹AxiosResponse‹[OrderProcess](../interfaces/orderprocess.md)››*
 
 *Defined in [packages/catalog/api.ts:4054](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4054)*
 
@@ -137,13 +137,13 @@ Name | Type | Description |
 `orderProcessPortfolioItemId` | [OrderProcessPortfolioItemId](../interfaces/orderprocessportfolioitemid.md) | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[OrderProcess](../interfaces/orderprocess.md)›*
+**Returns:** *Promise‹AxiosResponse‹[OrderProcess](../interfaces/orderprocess.md)››*
 
 ___
 
 ###  createOrderProcess
 
-▸ **createOrderProcess**(`orderProcess`: [OrderProcess](../interfaces/orderprocess.md), `options?`: any): *AxiosPromise‹[OrderProcess](../interfaces/orderprocess.md)›*
+▸ **createOrderProcess**(`orderProcess`: [OrderProcess](../interfaces/orderprocess.md), `options?`: any): *Promise‹AxiosResponse‹[OrderProcess](../interfaces/orderprocess.md)››*
 
 *Defined in [packages/catalog/api.ts:4066](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4066)*
 
@@ -162,13 +162,13 @@ Name | Type | Description |
 `orderProcess` | [OrderProcess](../interfaces/orderprocess.md) | Parameters needed to add an OrderProcess |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[OrderProcess](../interfaces/orderprocess.md)›*
+**Returns:** *Promise‹AxiosResponse‹[OrderProcess](../interfaces/orderprocess.md)››*
 
 ___
 
 ###  destroyOrderProcess
 
-▸ **destroyOrderProcess**(`id`: string, `options?`: any): *AxiosPromise‹void›*
+▸ **destroyOrderProcess**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/catalog/api.ts:4078](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4078)*
 
@@ -187,13 +187,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
 ###  linkTagToOrderProcess
 
-▸ **linkTagToOrderProcess**(`id`: string, `resourceObject`: [ResourceObject](../interfaces/resourceobject.md), `options?`: any): *AxiosPromise‹void›*
+▸ **linkTagToOrderProcess**(`id`: string, `resourceObject`: [ResourceObject](../interfaces/resourceobject.md), `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/catalog/api.ts:4091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4091)*
 
@@ -213,13 +213,13 @@ Name | Type | Description |
 `resourceObject` | [ResourceObject](../interfaces/resourceobject.md) | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
 ###  listOrderProcesses
 
-▸ **listOrderProcesses**(`appName?`: string, `objectId?`: string, `objectType?`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[OrderProcessCollection](../interfaces/orderprocesscollection.md)›*
+▸ **listOrderProcesses**(`appName?`: string, `objectId?`: string, `objectType?`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹AxiosResponse‹[OrderProcessCollection](../interfaces/orderprocesscollection.md)››*
 
 *Defined in [packages/catalog/api.ts:4109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4109)*
 
@@ -244,13 +244,13 @@ Name | Type |
 `sortBy?` | string |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[OrderProcessCollection](../interfaces/orderprocesscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[OrderProcessCollection](../interfaces/orderprocesscollection.md)››*
 
 ___
 
 ###  removeOrderProcessAssociation
 
-▸ **removeOrderProcessAssociation**(`id`: string, `orderProcessAssociationsToRemove`: [OrderProcessAssociationsToRemove](../interfaces/orderprocessassociationstoremove.md), `options?`: any): *AxiosPromise‹[OrderProcess](../interfaces/orderprocess.md)›*
+▸ **removeOrderProcessAssociation**(`id`: string, `orderProcessAssociationsToRemove`: [OrderProcessAssociationsToRemove](../interfaces/orderprocessassociationstoremove.md), `options?`: any): *Promise‹AxiosResponse‹[OrderProcess](../interfaces/orderprocess.md)››*
 
 *Defined in [packages/catalog/api.ts:4122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4122)*
 
@@ -270,13 +270,13 @@ Name | Type | Description |
 `orderProcessAssociationsToRemove` | [OrderProcessAssociationsToRemove](../interfaces/orderprocessassociationstoremove.md) | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[OrderProcess](../interfaces/orderprocess.md)›*
+**Returns:** *Promise‹AxiosResponse‹[OrderProcess](../interfaces/orderprocess.md)››*
 
 ___
 
 ###  showOrderProcess
 
-▸ **showOrderProcess**(`id`: string, `options?`: any): *AxiosPromise‹[OrderProcess](../interfaces/orderprocess.md)›*
+▸ **showOrderProcess**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[OrderProcess](../interfaces/orderprocess.md)››*
 
 *Defined in [packages/catalog/api.ts:4134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4134)*
 
@@ -295,13 +295,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[OrderProcess](../interfaces/orderprocess.md)›*
+**Returns:** *Promise‹AxiosResponse‹[OrderProcess](../interfaces/orderprocess.md)››*
 
 ___
 
 ###  unlinkTagFromOrderProcess
 
-▸ **unlinkTagFromOrderProcess**(`id`: string, `resourceObject`: [ResourceObject](../interfaces/resourceobject.md), `options?`: any): *AxiosPromise‹void›*
+▸ **unlinkTagFromOrderProcess**(`id`: string, `resourceObject`: [ResourceObject](../interfaces/resourceobject.md), `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/catalog/api.ts:4147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4147)*
 
@@ -321,13 +321,13 @@ Name | Type | Description |
 `resourceObject` | [ResourceObject](../interfaces/resourceobject.md) | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
 ###  updateOrderProcess
 
-▸ **updateOrderProcess**(`id`: string, `orderProcess`: [OrderProcess](../interfaces/orderprocess.md), `options?`: any): *AxiosPromise‹[OrderProcess](../interfaces/orderprocess.md)›*
+▸ **updateOrderProcess**(`id`: string, `orderProcess`: [OrderProcess](../interfaces/orderprocess.md), `options?`: any): *Promise‹AxiosResponse‹[OrderProcess](../interfaces/orderprocess.md)››*
 
 *Defined in [packages/catalog/api.ts:4160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4160)*
 
@@ -347,4 +347,4 @@ Name | Type | Description |
 `orderProcess` | [OrderProcess](../interfaces/orderprocess.md) | Parameters needed to update a OrderProcess |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[OrderProcess](../interfaces/orderprocess.md)›*
+**Returns:** *Promise‹AxiosResponse‹[OrderProcess](../interfaces/orderprocess.md)››*

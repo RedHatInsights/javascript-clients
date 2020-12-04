@@ -39,7 +39,7 @@ ___
 
 ### `Optional` apiKey
 
-• **apiKey**? : *string | function*
+• **apiKey**? : *string | Promise‹string› | function | function*
 
 *Defined in [packages/catalog/configuration.ts:16](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/configuration.ts#L16)*
 

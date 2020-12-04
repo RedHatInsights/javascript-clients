@@ -194,7 +194,7 @@ export const AccountSettingApiAxiosParamCreator = function (configuration?: Conf
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        accountSettingList(options: any = {}): RequestArgs {
+        accountSettingList: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/account_setting/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -233,8 +233,8 @@ export const AccountSettingApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        accountSettingList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = AccountSettingApiAxiosParamCreator(configuration).accountSettingList(options);
+        async accountSettingList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await AccountSettingApiAxiosParamCreator(configuration).accountSettingList(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -256,7 +256,7 @@ export const AccountSettingApiFactory = function (configuration?: Configuration,
          * @throws {RequiredError}
          */
         accountSettingList(options?: any): AxiosPromise<void> {
-            return AccountSettingApiFp(configuration).accountSettingList(options)(axios, basePath);
+            return AccountSettingApiFp(configuration).accountSettingList(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -276,7 +276,7 @@ export class AccountSettingApi extends BaseAPI {
      * @memberof AccountSettingApi
      */
     public accountSettingList(options?: any) {
-        return AccountSettingApiFp(this.configuration).accountSettingList(options)(this.axios, this.basePath);
+        return AccountSettingApiFp(this.configuration).accountSettingList(options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -295,7 +295,7 @@ export const KcsApiAxiosParamCreator = function (configuration?: Configuration) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        kcsList(nodeIds?: Array<string>, options: any = {}): RequestArgs {
+        kcsList: async (nodeIds?: Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/kcs/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -330,7 +330,7 @@ export const KcsApiAxiosParamCreator = function (configuration?: Configuration) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        kcsRead(nodeId: string, options: any = {}): RequestArgs {
+        kcsRead: async (nodeId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'nodeId' is not null or undefined
             if (nodeId === null || nodeId === undefined) {
                 throw new RequiredError('nodeId','Required parameter nodeId was null or undefined when calling kcsRead.');
@@ -375,8 +375,8 @@ export const KcsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        kcsList(nodeIds?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Kcs>> {
-            const localVarAxiosArgs = KcsApiAxiosParamCreator(configuration).kcsList(nodeIds, options);
+        async kcsList(nodeIds?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Kcs>>> {
+            const localVarAxiosArgs = await KcsApiAxiosParamCreator(configuration).kcsList(nodeIds, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -389,8 +389,8 @@ export const KcsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        kcsRead(nodeId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>> {
-            const localVarAxiosArgs = KcsApiAxiosParamCreator(configuration).kcsRead(nodeId, options);
+        async kcsRead(nodeId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+            const localVarAxiosArgs = await KcsApiAxiosParamCreator(configuration).kcsRead(nodeId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -413,7 +413,7 @@ export const KcsApiFactory = function (configuration?: Configuration, basePath?:
          * @throws {RequiredError}
          */
         kcsList(nodeIds?: Array<string>, options?: any): AxiosPromise<Array<Kcs>> {
-            return KcsApiFp(configuration).kcsList(nodeIds, options)(axios, basePath);
+            return KcsApiFp(configuration).kcsList(nodeIds, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a list of C.R.C rule url(s) for that KCS solution
@@ -423,7 +423,7 @@ export const KcsApiFactory = function (configuration?: Configuration, basePath?:
          * @throws {RequiredError}
          */
         kcsRead(nodeId: string, options?: any): AxiosPromise<Array<string>> {
-            return KcsApiFp(configuration).kcsRead(nodeId, options)(axios, basePath);
+            return KcsApiFp(configuration).kcsRead(nodeId, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -444,7 +444,7 @@ export class KcsApi extends BaseAPI {
      * @memberof KcsApi
      */
     public kcsList(nodeIds?: Array<string>, options?: any) {
-        return KcsApiFp(this.configuration).kcsList(nodeIds, options)(this.axios, this.basePath);
+        return KcsApiFp(this.configuration).kcsList(nodeIds, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -456,7 +456,7 @@ export class KcsApi extends BaseAPI {
      * @memberof KcsApi
      */
     public kcsRead(nodeId: string, options?: any) {
-        return KcsApiFp(this.configuration).kcsRead(nodeId, options)(this.axios, this.basePath);
+        return KcsApiFp(this.configuration).kcsRead(nodeId, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -474,7 +474,7 @@ export const ResolutionRiskApiAxiosParamCreator = function (configuration?: Conf
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resolutionRiskList(options: any = {}): RequestArgs {
+        resolutionRiskList: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/resolution_risk/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -513,8 +513,8 @@ export const ResolutionRiskApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resolutionRiskList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = ResolutionRiskApiAxiosParamCreator(configuration).resolutionRiskList(options);
+        async resolutionRiskList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await ResolutionRiskApiAxiosParamCreator(configuration).resolutionRiskList(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -536,7 +536,7 @@ export const ResolutionRiskApiFactory = function (configuration?: Configuration,
          * @throws {RequiredError}
          */
         resolutionRiskList(options?: any): AxiosPromise<void> {
-            return ResolutionRiskApiFp(configuration).resolutionRiskList(options)(axios, basePath);
+            return ResolutionRiskApiFp(configuration).resolutionRiskList(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -556,7 +556,7 @@ export class ResolutionRiskApi extends BaseAPI {
      * @memberof ResolutionRiskApi
      */
     public resolutionRiskList(options?: any) {
-        return ResolutionRiskApiFp(this.configuration).resolutionRiskList(options)(this.axios, this.basePath);
+        return ResolutionRiskApiFp(this.configuration).resolutionRiskList(options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -574,7 +574,7 @@ export const RulecategoryApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        rulecategoryList(options: any = {}): RequestArgs {
+        rulecategoryList: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/rulecategory/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -605,7 +605,7 @@ export const RulecategoryApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        rulecategoryRead(id: number, options: any = {}): RequestArgs {
+        rulecategoryRead: async (id: number, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling rulecategoryRead.');
@@ -649,8 +649,8 @@ export const RulecategoryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        rulecategoryList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RuleCategory>> {
-            const localVarAxiosArgs = RulecategoryApiAxiosParamCreator(configuration).rulecategoryList(options);
+        async rulecategoryList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RuleCategory>>> {
+            const localVarAxiosArgs = await RulecategoryApiAxiosParamCreator(configuration).rulecategoryList(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -663,8 +663,8 @@ export const RulecategoryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        rulecategoryRead(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleCategory> {
-            const localVarAxiosArgs = RulecategoryApiAxiosParamCreator(configuration).rulecategoryRead(id, options);
+        async rulecategoryRead(id: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleCategory>> {
+            const localVarAxiosArgs = await RulecategoryApiAxiosParamCreator(configuration).rulecategoryRead(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -686,7 +686,7 @@ export const RulecategoryApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         rulecategoryList(options?: any): AxiosPromise<Array<RuleCategory>> {
-            return RulecategoryApiFp(configuration).rulecategoryList(options)(axios, basePath);
+            return RulecategoryApiFp(configuration).rulecategoryList(options).then((request) => request(axios, basePath));
         },
         /**
          * Categories are listed in decreasing order of importance.
@@ -696,7 +696,7 @@ export const RulecategoryApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         rulecategoryRead(id: number, options?: any): AxiosPromise<RuleCategory> {
-            return RulecategoryApiFp(configuration).rulecategoryRead(id, options)(axios, basePath);
+            return RulecategoryApiFp(configuration).rulecategoryRead(id, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -716,7 +716,7 @@ export class RulecategoryApi extends BaseAPI {
      * @memberof RulecategoryApi
      */
     public rulecategoryList(options?: any) {
-        return RulecategoryApiFp(this.configuration).rulecategoryList(options)(this.axios, this.basePath);
+        return RulecategoryApiFp(this.configuration).rulecategoryList(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -728,7 +728,7 @@ export class RulecategoryApi extends BaseAPI {
      * @memberof RulecategoryApi
      */
     public rulecategoryRead(id: number, options?: any) {
-        return RulecategoryApiFp(this.configuration).rulecategoryRead(id, options)(this.axios, this.basePath);
+        return RulecategoryApiFp(this.configuration).rulecategoryRead(id, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -746,7 +746,7 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        settingsList(options: any = {}): RequestArgs {
+        settingsList: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/settings/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -785,8 +785,8 @@ export const SettingsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        settingsList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SettingsDDF>> {
-            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).settingsList(options);
+        async settingsList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SettingsDDF>>> {
+            const localVarAxiosArgs = await SettingsApiAxiosParamCreator(configuration).settingsList(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -808,7 +808,7 @@ export const SettingsApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         settingsList(options?: any): AxiosPromise<Array<SettingsDDF>> {
-            return SettingsApiFp(configuration).settingsList(options)(axios, basePath);
+            return SettingsApiFp(configuration).settingsList(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -828,7 +828,7 @@ export class SettingsApi extends BaseAPI {
      * @memberof SettingsApi
      */
     public settingsList(options?: any) {
-        return SettingsApiFp(this.configuration).settingsList(options)(this.axios, this.basePath);
+        return SettingsApiFp(this.configuration).settingsList(options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -846,7 +846,7 @@ export const StatusApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statusList(options: any = {}): RequestArgs {
+        statusList: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/status/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -876,7 +876,7 @@ export const StatusApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statusLive(options: any = {}): RequestArgs {
+        statusLive: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/status/live/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -906,7 +906,7 @@ export const StatusApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statusReady(options: any = {}): RequestArgs {
+        statusReady: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/status/ready/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -945,8 +945,8 @@ export const StatusApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statusList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = StatusApiAxiosParamCreator(configuration).statusList(options);
+        async statusList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await StatusApiAxiosParamCreator(configuration).statusList(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -958,8 +958,8 @@ export const StatusApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statusLive(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusReady> {
-            const localVarAxiosArgs = StatusApiAxiosParamCreator(configuration).statusLive(options);
+        async statusLive(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusReady>> {
+            const localVarAxiosArgs = await StatusApiAxiosParamCreator(configuration).statusLive(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -971,8 +971,8 @@ export const StatusApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statusReady(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusReady> {
-            const localVarAxiosArgs = StatusApiAxiosParamCreator(configuration).statusReady(options);
+        async statusReady(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusReady>> {
+            const localVarAxiosArgs = await StatusApiAxiosParamCreator(configuration).statusReady(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -994,7 +994,7 @@ export const StatusApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         statusList(options?: any): AxiosPromise<void> {
-            return StatusApiFp(configuration).statusList(options)(axios, basePath);
+            return StatusApiFp(configuration).statusList(options).then((request) => request(axios, basePath));
         },
         /**
          * This returns a dictionary with properties defining the status of the components Advisor relies on. At the moment this is the same as the Readiness check (see `/ready/`). In the future it may include other checks if we need to, but the properties of `/ready/` will always be included.
@@ -1003,7 +1003,7 @@ export const StatusApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         statusLive(options?: any): AxiosPromise<StatusReady> {
-            return StatusApiFp(configuration).statusLive(options)(axios, basePath);
+            return StatusApiFp(configuration).statusLive(options).then((request) => request(axios, basePath));
         },
         /**
          * This returns a dictionary with properties defining the status of the components Advisor relies on. * \'django\' should always be True.  If Django isn\'t ready, you can\'t get this information :-) * \'database\' is True when a database access returns successfully with valid information. * \'rbac\' is True when we can make a request to the RBAC API and get a valid response. * \'advisor\' is True if all of the above are True.
@@ -1012,7 +1012,7 @@ export const StatusApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         statusReady(options?: any): AxiosPromise<StatusReady> {
-            return StatusApiFp(configuration).statusReady(options)(axios, basePath);
+            return StatusApiFp(configuration).statusReady(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1032,7 +1032,7 @@ export class StatusApi extends BaseAPI {
      * @memberof StatusApi
      */
     public statusList(options?: any) {
-        return StatusApiFp(this.configuration).statusList(options)(this.axios, this.basePath);
+        return StatusApiFp(this.configuration).statusList(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1043,7 +1043,7 @@ export class StatusApi extends BaseAPI {
      * @memberof StatusApi
      */
     public statusLive(options?: any) {
-        return StatusApiFp(this.configuration).statusLive(options)(this.axios, this.basePath);
+        return StatusApiFp(this.configuration).statusLive(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1054,7 +1054,7 @@ export class StatusApi extends BaseAPI {
      * @memberof StatusApi
      */
     public statusReady(options?: any) {
-        return StatusApiFp(this.configuration).statusReady(options)(this.axios, this.basePath);
+        return StatusApiFp(this.configuration).statusReady(options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -1072,7 +1072,7 @@ export const SystemtypeApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemtypeList(options: any = {}): RequestArgs {
+        systemtypeList: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/systemtype/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1103,7 +1103,7 @@ export const SystemtypeApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemtypeRead(id: number, options: any = {}): RequestArgs {
+        systemtypeRead: async (id: number, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling systemtypeRead.');
@@ -1147,8 +1147,8 @@ export const SystemtypeApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemtypeList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SystemType>> {
-            const localVarAxiosArgs = SystemtypeApiAxiosParamCreator(configuration).systemtypeList(options);
+        async systemtypeList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SystemType>>> {
+            const localVarAxiosArgs = await SystemtypeApiAxiosParamCreator(configuration).systemtypeList(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1161,8 +1161,8 @@ export const SystemtypeApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemtypeRead(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemType> {
-            const localVarAxiosArgs = SystemtypeApiAxiosParamCreator(configuration).systemtypeRead(id, options);
+        async systemtypeRead(id: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemType>> {
+            const localVarAxiosArgs = await SystemtypeApiAxiosParamCreator(configuration).systemtypeRead(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1184,7 +1184,7 @@ export const SystemtypeApiFactory = function (configuration?: Configuration, bas
          * @throws {RequiredError}
          */
         systemtypeList(options?: any): AxiosPromise<Array<SystemType>> {
-            return SystemtypeApiFp(configuration).systemtypeList(options)(axios, basePath);
+            return SystemtypeApiFp(configuration).systemtypeList(options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve details of a single system type
@@ -1194,7 +1194,7 @@ export const SystemtypeApiFactory = function (configuration?: Configuration, bas
          * @throws {RequiredError}
          */
         systemtypeRead(id: number, options?: any): AxiosPromise<SystemType> {
-            return SystemtypeApiFp(configuration).systemtypeRead(id, options)(axios, basePath);
+            return SystemtypeApiFp(configuration).systemtypeRead(id, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1214,7 +1214,7 @@ export class SystemtypeApi extends BaseAPI {
      * @memberof SystemtypeApi
      */
     public systemtypeList(options?: any) {
-        return SystemtypeApiFp(this.configuration).systemtypeList(options)(this.axios, this.basePath);
+        return SystemtypeApiFp(this.configuration).systemtypeList(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1226,7 +1226,7 @@ export class SystemtypeApi extends BaseAPI {
      * @memberof SystemtypeApi
      */
     public systemtypeRead(id: number, options?: any) {
-        return SystemtypeApiFp(this.configuration).systemtypeRead(id, options)(this.axios, this.basePath);
+        return SystemtypeApiFp(this.configuration).systemtypeRead(id, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -1244,7 +1244,7 @@ export const TotalRiskApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        totalRiskList(options: any = {}): RequestArgs {
+        totalRiskList: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/total_risk/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1283,8 +1283,8 @@ export const TotalRiskApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        totalRiskList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = TotalRiskApiAxiosParamCreator(configuration).totalRiskList(options);
+        async totalRiskList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await TotalRiskApiAxiosParamCreator(configuration).totalRiskList(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1306,7 +1306,7 @@ export const TotalRiskApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         totalRiskList(options?: any): AxiosPromise<void> {
-            return TotalRiskApiFp(configuration).totalRiskList(options)(axios, basePath);
+            return TotalRiskApiFp(configuration).totalRiskList(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1326,7 +1326,7 @@ export class TotalRiskApi extends BaseAPI {
      * @memberof TotalRiskApi
      */
     public totalRiskList(options?: any) {
-        return TotalRiskApiFp(this.configuration).totalRiskList(options)(this.axios, this.basePath);
+        return TotalRiskApiFp(this.configuration).totalRiskList(options).then((request) => request(this.axios, this.basePath));
     }
 
 }

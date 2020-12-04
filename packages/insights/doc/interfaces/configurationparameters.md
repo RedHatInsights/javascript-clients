@@ -38,7 +38,7 @@ ___
 
 ### `Optional` apiKey
 
-• **apiKey**? : *string | function*
+• **apiKey**? : *string | Promise‹string› | function | function*
 
 *Defined in [packages/insights/configuration.ts:16](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/configuration.ts#L16)*
 

@@ -82,7 +82,7 @@ ___
 
 ###  listTags
 
-▸ **listTags**(`options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listTags**(`options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/catalog/api.ts:7835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7835)*
 
@@ -100,4 +100,4 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*

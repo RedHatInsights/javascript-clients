@@ -82,7 +82,7 @@ ___
 
 ###  servicesGet
 
-▸ **servicesGet**(`options?`: any): *AxiosPromise‹object›*
+▸ **servicesGet**(`options?`: any): *Promise‹AxiosResponse‹object››*
 
 *Defined in [packages/entitlements/api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L129)*
 
@@ -98,4 +98,4 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹object›*
+**Returns:** *Promise‹AxiosResponse‹object››*

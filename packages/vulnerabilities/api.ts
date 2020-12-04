@@ -311,12 +311,11 @@ export interface CveDetailOutDataAttributes {
     advisories_list: Array<string | object> | null;
 }
 /**
- *
+ * @type CveOrList
  * @export
- * @interface CveOrList
  */
-export interface CveOrList {
-}
+export type CveOrList = Array<string> | string;
+
 /**
  *
  * @export
@@ -667,12 +666,11 @@ export interface InsightsRule {
     associated_cves: Array<string>;
 }
 /**
- *
+ * @type InventoryIdOrList
  * @export
- * @interface InventoryIdOrList
  */
-export interface InventoryIdOrList {
-}
+export type InventoryIdOrList = Array<string> | string;
+
 /**
  *
  * @export
@@ -770,7 +768,61 @@ export interface Meta {
  * @export
  * @interface MetaAffectedSystems
  */
-export interface MetaAffectedSystems extends Meta {
+export interface MetaAffectedSystems {
+    /**
+     * Full text filter
+     * @type {string}
+     * @memberof MetaAffectedSystems
+     */
+    filter: string | null;
+    /**
+     * Maximum number of paginated results.
+     * @type {number}
+     * @memberof MetaAffectedSystems
+     */
+    limit: number;
+    /**
+     * First record of paginated response.
+     * @type {number}
+     * @memberof MetaAffectedSystems
+     */
+    offset: number;
+    /**
+     * Page number of paginated response.
+     * @type {number}
+     * @memberof MetaAffectedSystems
+     */
+    page: number;
+    /**
+     * Number of records per page of paginated response.
+     * @type {number}
+     * @memberof MetaAffectedSystems
+     */
+    page_size: number;
+    /**
+     * Total number of pages of paginated response.
+     * @type {number}
+     * @memberof MetaAffectedSystems
+     */
+    pages: number;
+    /**
+     * Sorting filter.
+     * @type {string}
+     * @memberof MetaAffectedSystems
+     */
+    sort: string | null;
+    /**
+     * Total number of records.
+     * @type {number}
+     * @memberof MetaAffectedSystems
+     */
+    total_items: number;
+    /**
+     * Format of the output data, either JSON (default) or CSV.
+     * @type {string}
+     * @memberof MetaAffectedSystems
+     */
+    data_format: string;
     /**
      * Filer based on CVE status ID.
      * @type {string}
@@ -832,7 +884,61 @@ export interface MetaAffectedSystemsAllOf {
  * @export
  * @interface MetaCves
  */
-export interface MetaCves extends Meta {
+export interface MetaCves {
+    /**
+     * Full text filter
+     * @type {string}
+     * @memberof MetaCves
+     */
+    filter: string | null;
+    /**
+     * Maximum number of paginated results.
+     * @type {number}
+     * @memberof MetaCves
+     */
+    limit: number;
+    /**
+     * First record of paginated response.
+     * @type {number}
+     * @memberof MetaCves
+     */
+    offset: number;
+    /**
+     * Page number of paginated response.
+     * @type {number}
+     * @memberof MetaCves
+     */
+    page: number;
+    /**
+     * Number of records per page of paginated response.
+     * @type {number}
+     * @memberof MetaCves
+     */
+    page_size: number;
+    /**
+     * Total number of pages of paginated response.
+     * @type {number}
+     * @memberof MetaCves
+     */
+    pages: number;
+    /**
+     * Sorting filter.
+     * @type {string}
+     * @memberof MetaCves
+     */
+    sort: string | null;
+    /**
+     * Total number of records.
+     * @type {number}
+     * @memberof MetaCves
+     */
+    total_items: number;
+    /**
+     * Format of the output data, either JSON (default) or CSV.
+     * @type {string}
+     * @memberof MetaCves
+     */
+    data_format: string;
     /**
      * Filter based on business risk IDs.
      * @type {string}
@@ -966,7 +1072,121 @@ export interface MetaCvesAllOf {
  * @export
  * @interface MetaCvesSystems
  */
-export interface MetaCvesSystems extends MetaCves {
+export interface MetaCvesSystems {
+    /**
+     * Full text filter
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    filter: string | null;
+    /**
+     * Maximum number of paginated results.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    limit: number;
+    /**
+     * First record of paginated response.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    offset: number;
+    /**
+     * Page number of paginated response.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    page: number;
+    /**
+     * Number of records per page of paginated response.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    page_size: number;
+    /**
+     * Total number of pages of paginated response.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    pages: number;
+    /**
+     * Sorting filter.
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    sort: string | null;
+    /**
+     * Total number of records.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    total_items: number;
+    /**
+     * Format of the output data, either JSON (default) or CSV.
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    data_format: string;
+    /**
+     * Filter based on business risk IDs.
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    business_risk_id: string | null;
+    /**
+     * Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    cvss_from: number | null;
+    /**
+     * Filter based on cvss score, up to the value.
+     * @type {number}
+     * @memberof MetaCvesSystems
+     */
+    cvss_to: number | null;
+    /**
+     * Filter CVEs based on their published date, starting from the date.
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    public_from: string | null;
+    /**
+     * Filter CVEs based on their published date, up to the date.
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    public_to: string | null;
+    /**
+     * Filter based on impact IDs.
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    impact: string | null;
+    /**
+     * Filer based on CVE status ID.
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    status_id: string | null;
+    /**
+     * Filter based on presence of security rule
+     * @type {string}
+     * @memberof MetaCvesSystems
+     */
+    rule_presence: string | null;
+    /**
+     * Filter based on presence of security_rule - deprecated
+     * @type {boolean}
+     * @memberof MetaCvesSystems
+     */
+    security_rule: boolean | null;
+    /**
+     * If show_advisories=true shows access to patch service else null
+     * @type {boolean}
+     * @memberof MetaCvesSystems
+     */
+    patch_access: boolean | null;
     /**
      * If given system was opted out.
      * @type {boolean}
@@ -992,7 +1212,61 @@ export interface MetaCvesSystemsAllOf {
  * @export
  * @interface MetaSystems
  */
-export interface MetaSystems extends Meta {
+export interface MetaSystems {
+    /**
+     * Full text filter
+     * @type {string}
+     * @memberof MetaSystems
+     */
+    filter: string | null;
+    /**
+     * Maximum number of paginated results.
+     * @type {number}
+     * @memberof MetaSystems
+     */
+    limit: number;
+    /**
+     * First record of paginated response.
+     * @type {number}
+     * @memberof MetaSystems
+     */
+    offset: number;
+    /**
+     * Page number of paginated response.
+     * @type {number}
+     * @memberof MetaSystems
+     */
+    page: number;
+    /**
+     * Number of records per page of paginated response.
+     * @type {number}
+     * @memberof MetaSystems
+     */
+    page_size: number;
+    /**
+     * Total number of pages of paginated response.
+     * @type {number}
+     * @memberof MetaSystems
+     */
+    pages: number;
+    /**
+     * Sorting filter.
+     * @type {string}
+     * @memberof MetaSystems
+     */
+    sort: string | null;
+    /**
+     * Total number of records.
+     * @type {number}
+     * @memberof MetaSystems
+     */
+    total_items: number;
+    /**
+     * Format of the output data, either JSON (default) or CSV.
+     * @type {string}
+     * @memberof MetaSystems
+     */
+    data_format: string;
     /**
      * Whether the filter to show opted out systems is active or not. If not set, defaults to hiding opted out systems.
      * @type {boolean}
@@ -1030,7 +1304,61 @@ export interface MetaSystemsAllOf {
  * @export
  * @interface MetaVulnerabilitiesOut
  */
-export interface MetaVulnerabilitiesOut extends Meta {
+export interface MetaVulnerabilitiesOut {
+    /**
+     * Full text filter
+     * @type {string}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    filter: string | null;
+    /**
+     * Maximum number of paginated results.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    limit: number;
+    /**
+     * First record of paginated response.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    offset: number;
+    /**
+     * Page number of paginated response.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    page: number;
+    /**
+     * Number of records per page of paginated response.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    page_size: number;
+    /**
+     * Total number of pages of paginated response.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    pages: number;
+    /**
+     * Sorting filter.
+     * @type {string}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    sort: string | null;
+    /**
+     * Total number of records.
+     * @type {number}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    total_items: number;
+    /**
+     * Format of the output data, either JSON (default) or CSV.
+     * @type {string}
+     * @memberof MetaVulnerabilitiesOut
+     */
+    data_format: string;
     /**
      * Description of CVE showing preferences
      * @type {string}
@@ -1612,7 +1940,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteSystem(inventoryId: string, options: any = {}): RequestArgs {
+        deleteSystem: async (inventoryId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling deleteSystem.');
@@ -1631,8 +1959,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -1679,7 +2007,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, securityRule?: string, options: any = {}): RequestArgs {
+        getAffectedSystemsByCve: async (cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, securityRule?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'cveId' is not null or undefined
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getAffectedSystemsByCve.');
@@ -1698,8 +2026,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -1814,7 +2142,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, securityRule?: string, options: any = {}): RequestArgs {
+        getAffectedSystemsIdsByCve: async (cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, securityRule?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'cveId' is not null or undefined
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getAffectedSystemsIdsByCve.');
@@ -1833,8 +2161,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -1931,7 +2259,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getApiStatus(options: any = {}): RequestArgs {
+        getApiStatus: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/apistatus`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1961,7 +2289,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getBusinessRiskList(options: any = {}): RequestArgs {
+        getBusinessRiskList: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/business_risk`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1975,8 +2303,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2007,7 +2335,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveDetails(cveId: string, showAdvisoriesDetails?: boolean, options: any = {}): RequestArgs {
+        getCveDetails: async (cveId: string, showAdvisoriesDetails?: boolean, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'cveId' is not null or undefined
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getCveDetails.');
@@ -2026,8 +2354,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2077,7 +2405,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options: any = {}): RequestArgs {
+        getCveIdsBySystem: async (inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getCveIdsBySystem.');
@@ -2096,8 +2424,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2208,7 +2536,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options: any = {}): RequestArgs {
+        getCveIdsList: async (filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/vulnerabilities/cves/ids`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2222,8 +2550,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2342,7 +2670,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options: any = {}): RequestArgs {
+        getCveList: async (filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/vulnerabilities/cves`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2356,8 +2684,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2477,7 +2805,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, options: any = {}): RequestArgs {
+        getCveListBySystem: async (inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getCveListBySystem.');
@@ -2496,8 +2824,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2598,7 +2926,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getExecutiveReport(options: any = {}): RequestArgs {
+        getExecutiveReport: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/report/executive`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2612,8 +2940,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2643,7 +2971,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookTemplate(ruleId: string, options: any = {}): RequestArgs {
+        getPlaybookTemplate: async (ruleId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'ruleId' is not null or undefined
             if (ruleId === null || ruleId === undefined) {
                 throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling getPlaybookTemplate.');
@@ -2662,8 +2990,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2692,7 +3020,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getStatusList(options: any = {}): RequestArgs {
+        getStatusList: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/status`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2706,8 +3034,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2737,7 +3065,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemDetails(inventoryId: string, options: any = {}): RequestArgs {
+        getSystemDetails: async (inventoryId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getSystemDetails.');
@@ -2756,8 +3084,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2800,7 +3128,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsIds(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, optOut?: boolean, excluded?: Array<boolean>, options: any = {}): RequestArgs {
+        getSystemsIds: async (filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, optOut?: boolean, excluded?: Array<boolean>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/systems/ids`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2814,8 +3142,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2914,7 +3242,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, optOut?: boolean, excluded?: Array<boolean>, options: any = {}): RequestArgs {
+        getSystemsList: async (filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, optOut?: boolean, excluded?: Array<boolean>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/systems`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2928,8 +3256,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -3014,7 +3342,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getVersion(options: any = {}): RequestArgs {
+        getVersion: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/version`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3045,7 +3373,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setCveBusinessRisk(cveRiskIn: CveRiskIn, options: any = {}): RequestArgs {
+        setCveBusinessRisk: async (cveRiskIn: CveRiskIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'cveRiskIn' is not null or undefined
             if (cveRiskIn === null || cveRiskIn === undefined) {
                 throw new RequiredError('cveRiskIn','Required parameter cveRiskIn was null or undefined when calling setCveBusinessRisk.');
@@ -3063,8 +3391,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -3098,7 +3426,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setCveStatus(cveStatusIn: CveStatusIn, options: any = {}): RequestArgs {
+        setCveStatus: async (cveStatusIn: CveStatusIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'cveStatusIn' is not null or undefined
             if (cveStatusIn === null || cveStatusIn === undefined) {
                 throw new RequiredError('cveStatusIn','Required parameter cveStatusIn was null or undefined when calling setCveStatus.');
@@ -3116,8 +3444,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -3151,7 +3479,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setStatus(statusIn: StatusIn, options: any = {}): RequestArgs {
+        setStatus: async (statusIn: StatusIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'statusIn' is not null or undefined
             if (statusIn === null || statusIn === undefined) {
                 throw new RequiredError('statusIn','Required parameter statusIn was null or undefined when calling setStatus.');
@@ -3169,8 +3497,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -3205,7 +3533,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setSystemOptOut(inventoryId: string, value: boolean, options: any = {}): RequestArgs {
+        setSystemOptOut: async (inventoryId: string, value: boolean, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling setSystemOptOut.');
@@ -3228,8 +3556,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -3263,7 +3591,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setSystemsOptOut(optOutIn: OptOutIn, options: any = {}): RequestArgs {
+        setSystemsOptOut: async (optOutIn: OptOutIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'optOutIn' is not null or undefined
             if (optOutIn === null || optOutIn === undefined) {
                 throw new RequiredError('optOutIn','Required parameter optOutIn was null or undefined when calling setSystemsOptOut.');
@@ -3281,8 +3609,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -3325,8 +3653,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteSystem(inventoryId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteSystem(inventoryId, options);
+        async deleteSystem(inventoryId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).deleteSystem(inventoryId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3356,8 +3684,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, securityRule?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, securityRule, options);
+        async getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, securityRule?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, securityRule, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3387,8 +3715,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, securityRule?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsIdsOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, securityRule, options);
+        async getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, securityRule?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsIdsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, securityRule, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3400,8 +3728,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getApiStatus(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getApiStatus(options);
+        async getApiStatus(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getApiStatus(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3413,8 +3741,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getBusinessRiskList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<BusinessRiskListOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getBusinessRiskList(options);
+        async getBusinessRiskList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BusinessRiskListOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getBusinessRiskList(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3428,8 +3756,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveDetails(cveId: string, showAdvisoriesDetails?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<CveDetailOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveDetails(cveId, showAdvisoriesDetails, options);
+        async getCveDetails(cveId: string, showAdvisoriesDetails?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CveDetailOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveDetails(cveId, showAdvisoriesDetails, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3458,8 +3786,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesIdsOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options);
+        async getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesIdsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3489,8 +3817,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesIdsOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options);
+        async getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesIdsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3520,8 +3848,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options);
+        async getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3552,8 +3880,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, options);
+        async getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3565,8 +3893,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getExecutiveReport(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExecutiveReport> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getExecutiveReport(options);
+        async getExecutiveReport(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExecutiveReport>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getExecutiveReport(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3579,8 +3907,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookTemplate(ruleId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookTemplate> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getPlaybookTemplate(ruleId, options);
+        async getPlaybookTemplate(ruleId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookTemplate>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getPlaybookTemplate(ruleId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3592,8 +3920,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getStatusList(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusListOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getStatusList(options);
+        async getStatusList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusListOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getStatusList(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3606,8 +3934,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemDetails(inventoryId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemDetailsOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getSystemDetails(inventoryId, options);
+        async getSystemDetails(inventoryId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemDetailsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getSystemDetails(inventoryId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3633,8 +3961,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsIds(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, optOut?: boolean, excluded?: Array<boolean>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemIdsOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getSystemsIds(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, optOut, excluded, options);
+        async getSystemsIds(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, optOut?: boolean, excluded?: Array<boolean>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemIdsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getSystemsIds(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, optOut, excluded, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3660,8 +3988,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, optOut?: boolean, excluded?: Array<boolean>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemListOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, optOut, excluded, options);
+        async getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, optOut?: boolean, excluded?: Array<boolean>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemListOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, optOut, excluded, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3673,8 +4001,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getVersion(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VersionOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getVersion(options);
+        async getVersion(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VersionOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getVersion(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3687,8 +4015,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setCveBusinessRisk(cveRiskIn: CveRiskIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<BulkChangeOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).setCveBusinessRisk(cveRiskIn, options);
+        async setCveBusinessRisk(cveRiskIn: CveRiskIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BulkChangeOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).setCveBusinessRisk(cveRiskIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3701,8 +4029,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setCveStatus(cveStatusIn: CveStatusIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<BulkChangeOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).setCveStatus(cveStatusIn, options);
+        async setCveStatus(cveStatusIn: CveStatusIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BulkChangeOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).setCveStatus(cveStatusIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3715,8 +4043,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setStatus(statusIn: StatusIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).setStatus(statusIn, options);
+        async setStatus(statusIn: StatusIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).setStatus(statusIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3730,8 +4058,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setSystemOptOut(inventoryId: string, value: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).setSystemOptOut(inventoryId, value, options);
+        async setSystemOptOut(inventoryId: string, value: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).setSystemOptOut(inventoryId, value, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3744,8 +4072,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setSystemsOptOut(optOutIn: OptOutIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<BulkChangeOut> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).setSystemsOptOut(optOutIn, options);
+        async setSystemsOptOut(optOutIn: OptOutIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BulkChangeOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).setSystemsOptOut(optOutIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3768,7 +4096,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         deleteSystem(inventoryId: string, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).deleteSystem(inventoryId, options)(axios, basePath);
+            return DefaultApiFp(configuration).deleteSystem(inventoryId, options).then((request) => request(axios, basePath));
         },
         /**
          * Report of affected systems for a given CVE.
@@ -3795,7 +4123,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, securityRule?: string, options?: any): AxiosPromise<AffectedSystemsOut> {
-            return DefaultApiFp(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, securityRule, options)(axios, basePath);
+            return DefaultApiFp(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, securityRule, options).then((request) => request(axios, basePath));
         },
         /**
          * Report of IDs of affected systems for a given CVE.
@@ -3822,7 +4150,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, securityRule?: string, options?: any): AxiosPromise<AffectedSystemsIdsOut> {
-            return DefaultApiFp(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, securityRule, options)(axios, basePath);
+            return DefaultApiFp(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, securityRule, options).then((request) => request(axios, basePath));
         },
         /**
          * Checks database availability and API response threshold time.
@@ -3831,7 +4159,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getApiStatus(options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).getApiStatus(options)(axios, basePath);
+            return DefaultApiFp(configuration).getApiStatus(options).then((request) => request(axios, basePath));
         },
         /**
          * Returns available business risk and business_risk_id pairs where business_risk_id is internal ID of the business risk.
@@ -3840,7 +4168,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getBusinessRiskList(options?: any): AxiosPromise<BusinessRiskListOut> {
-            return DefaultApiFp(configuration).getBusinessRiskList(options)(axios, basePath);
+            return DefaultApiFp(configuration).getBusinessRiskList(options).then((request) => request(axios, basePath));
         },
         /**
          * Show all information about given CVE.
@@ -3851,7 +4179,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getCveDetails(cveId: string, showAdvisoriesDetails?: boolean, options?: any): AxiosPromise<CveDetailOut> {
-            return DefaultApiFp(configuration).getCveDetails(cveId, showAdvisoriesDetails, options)(axios, basePath);
+            return DefaultApiFp(configuration).getCveDetails(cveId, showAdvisoriesDetails, options).then((request) => request(axios, basePath));
         },
         /**
          * Shows IDs of all CVEs the system is exposed to.
@@ -3877,7 +4205,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options?: any): AxiosPromise<SystemCvesIdsOut> {
-            return DefaultApiFp(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options)(axios, basePath);
+            return DefaultApiFp(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options).then((request) => request(axios, basePath));
         },
         /**
          * Overview of vulnerabilities IDs across whole host inventory.
@@ -3904,7 +4232,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any): AxiosPromise<VulnerabilitiesIdsOut> {
-            return DefaultApiFp(configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options)(axios, basePath);
+            return DefaultApiFp(configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options).then((request) => request(axios, basePath));
         },
         /**
          * Overview of vulnerabilities across whole host inventory.
@@ -3931,7 +4259,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any): AxiosPromise<VulnerabilitiesOut> {
-            return DefaultApiFp(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options)(axios, basePath);
+            return DefaultApiFp(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options).then((request) => request(axios, basePath));
         },
         /**
          * Shows detailed information about all CVEs the system is exposed to.
@@ -3959,7 +4287,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, options?: any): AxiosPromise<SystemCvesOut> {
-            return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, options)(axios, basePath);
+            return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns top level overview of vulnerabilities affecting given account.
@@ -3968,7 +4296,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getExecutiveReport(options?: any): AxiosPromise<ExecutiveReport> {
-            return DefaultApiFp(configuration).getExecutiveReport(options)(axios, basePath);
+            return DefaultApiFp(configuration).getExecutiveReport(options).then((request) => request(axios, basePath));
         },
         /**
          * Return Ansible playbook template for given rule id.
@@ -3978,7 +4306,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getPlaybookTemplate(ruleId: string, options?: any): AxiosPromise<PlaybookTemplate> {
-            return DefaultApiFp(configuration).getPlaybookTemplate(ruleId, options)(axios, basePath);
+            return DefaultApiFp(configuration).getPlaybookTemplate(ruleId, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns available status and status_id pairs where status_id is internal ID of the status.
@@ -3987,7 +4315,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getStatusList(options?: any): AxiosPromise<StatusListOut> {
-            return DefaultApiFp(configuration).getStatusList(options)(axios, basePath);
+            return DefaultApiFp(configuration).getStatusList(options).then((request) => request(axios, basePath));
         },
         /**
          * Provides details of a system, e.g. it\'s opt out status.
@@ -3997,7 +4325,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getSystemDetails(inventoryId: string, options?: any): AxiosPromise<SystemDetailsOut> {
-            return DefaultApiFp(configuration).getSystemDetails(inventoryId, options)(axios, basePath);
+            return DefaultApiFp(configuration).getSystemDetails(inventoryId, options).then((request) => request(axios, basePath));
         },
         /**
          * List systems IDs visible to logged in account.
@@ -4020,7 +4348,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getSystemsIds(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, optOut?: boolean, excluded?: Array<boolean>, options?: any): AxiosPromise<SystemIdsOut> {
-            return DefaultApiFp(configuration).getSystemsIds(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, optOut, excluded, options)(axios, basePath);
+            return DefaultApiFp(configuration).getSystemsIds(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, optOut, excluded, options).then((request) => request(axios, basePath));
         },
         /**
          * List systems visible to logged in account with basic information related to vulnerabilities.
@@ -4043,7 +4371,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, optOut?: boolean, excluded?: Array<boolean>, options?: any): AxiosPromise<SystemListOut> {
-            return DefaultApiFp(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, optOut, excluded, options)(axios, basePath);
+            return DefaultApiFp(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, optOut, excluded, options).then((request) => request(axios, basePath));
         },
         /**
          * Get application version.
@@ -4052,7 +4380,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getVersion(options?: any): AxiosPromise<VersionOut> {
-            return DefaultApiFp(configuration).getVersion(options)(axios, basePath);
+            return DefaultApiFp(configuration).getVersion(options).then((request) => request(axios, basePath));
         },
         /**
          * Sets business risk for a CVE.
@@ -4062,7 +4390,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         setCveBusinessRisk(cveRiskIn: CveRiskIn, options?: any): AxiosPromise<BulkChangeOut> {
-            return DefaultApiFp(configuration).setCveBusinessRisk(cveRiskIn, options)(axios, basePath);
+            return DefaultApiFp(configuration).setCveBusinessRisk(cveRiskIn, options).then((request) => request(axios, basePath));
         },
         /**
          * Sets status for a CVE.
@@ -4072,7 +4400,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         setCveStatus(cveStatusIn: CveStatusIn, options?: any): AxiosPromise<BulkChangeOut> {
-            return DefaultApiFp(configuration).setCveStatus(cveStatusIn, options)(axios, basePath);
+            return DefaultApiFp(configuration).setCveStatus(cveStatusIn, options).then((request) => request(axios, basePath));
         },
         /**
          * Sets status for given hosts and CVEs.
@@ -4082,7 +4410,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         setStatus(statusIn: StatusIn, options?: any): AxiosPromise<StatusOut> {
-            return DefaultApiFp(configuration).setStatus(statusIn, options)(axios, basePath);
+            return DefaultApiFp(configuration).setStatus(statusIn, options).then((request) => request(axios, basePath));
         },
         /**
          * Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
@@ -4093,7 +4421,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         setSystemOptOut(inventoryId: string, value: boolean, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).setSystemOptOut(inventoryId, value, options)(axios, basePath);
+            return DefaultApiFp(configuration).setSystemOptOut(inventoryId, value, options).then((request) => request(axios, basePath));
         },
         /**
          * Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
@@ -4103,7 +4431,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         setSystemsOptOut(optOutIn: OptOutIn, options?: any): AxiosPromise<BulkChangeOut> {
-            return DefaultApiFp(configuration).setSystemsOptOut(optOutIn, options)(axios, basePath);
+            return DefaultApiFp(configuration).setSystemsOptOut(optOutIn, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -4124,7 +4452,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public deleteSystem(inventoryId: string, options?: any) {
-        return DefaultApiFp(this.configuration).deleteSystem(inventoryId, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).deleteSystem(inventoryId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4153,7 +4481,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, securityRule?: string, options?: any) {
-        return DefaultApiFp(this.configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, securityRule, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, securityRule, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4182,7 +4510,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, securityRule?: string, options?: any) {
-        return DefaultApiFp(this.configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, securityRule, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, securityRule, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4193,7 +4521,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getApiStatus(options?: any) {
-        return DefaultApiFp(this.configuration).getApiStatus(options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getApiStatus(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4204,7 +4532,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getBusinessRiskList(options?: any) {
-        return DefaultApiFp(this.configuration).getBusinessRiskList(options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getBusinessRiskList(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4217,7 +4545,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getCveDetails(cveId: string, showAdvisoriesDetails?: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).getCveDetails(cveId, showAdvisoriesDetails, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getCveDetails(cveId, showAdvisoriesDetails, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4245,7 +4573,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options?: any) {
-        return DefaultApiFp(this.configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4274,7 +4602,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any) {
-        return DefaultApiFp(this.configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4303,7 +4631,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any) {
-        return DefaultApiFp(this.configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4333,7 +4661,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, options?: any) {
-        return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4344,7 +4672,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getExecutiveReport(options?: any) {
-        return DefaultApiFp(this.configuration).getExecutiveReport(options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getExecutiveReport(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4356,7 +4684,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getPlaybookTemplate(ruleId: string, options?: any) {
-        return DefaultApiFp(this.configuration).getPlaybookTemplate(ruleId, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getPlaybookTemplate(ruleId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4367,7 +4695,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getStatusList(options?: any) {
-        return DefaultApiFp(this.configuration).getStatusList(options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getStatusList(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4379,7 +4707,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getSystemDetails(inventoryId: string, options?: any) {
-        return DefaultApiFp(this.configuration).getSystemDetails(inventoryId, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getSystemDetails(inventoryId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4404,7 +4732,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getSystemsIds(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, optOut?: boolean, excluded?: Array<boolean>, options?: any) {
-        return DefaultApiFp(this.configuration).getSystemsIds(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, optOut, excluded, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getSystemsIds(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, optOut, excluded, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4429,7 +4757,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, optOut?: boolean, excluded?: Array<boolean>, options?: any) {
-        return DefaultApiFp(this.configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, optOut, excluded, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, optOut, excluded, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4440,7 +4768,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getVersion(options?: any) {
-        return DefaultApiFp(this.configuration).getVersion(options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getVersion(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4452,7 +4780,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public setCveBusinessRisk(cveRiskIn: CveRiskIn, options?: any) {
-        return DefaultApiFp(this.configuration).setCveBusinessRisk(cveRiskIn, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).setCveBusinessRisk(cveRiskIn, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4464,7 +4792,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public setCveStatus(cveStatusIn: CveStatusIn, options?: any) {
-        return DefaultApiFp(this.configuration).setCveStatus(cveStatusIn, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).setCveStatus(cveStatusIn, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4476,7 +4804,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public setStatus(statusIn: StatusIn, options?: any) {
-        return DefaultApiFp(this.configuration).setStatus(statusIn, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).setStatus(statusIn, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4489,7 +4817,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public setSystemOptOut(inventoryId: string, value: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).setSystemOptOut(inventoryId, value, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).setSystemOptOut(inventoryId, value, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4501,7 +4829,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public setSystemsOptOut(optOutIn: OptOutIn, options?: any) {
-        return DefaultApiFp(this.configuration).setSystemsOptOut(optOutIn, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).setSystemsOptOut(optOutIn, options).then((request) => request(this.axios, this.basePath));
     }
 
 }

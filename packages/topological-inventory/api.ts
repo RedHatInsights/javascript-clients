@@ -4146,7 +4146,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appliedInventoriesForServiceOffering(id: string, appliedInventoriesParametersServicePlan: AppliedInventoriesParametersServicePlan, options: any = {}): RequestArgs {
+        appliedInventoriesForServiceOffering: async (id: string, appliedInventoriesParametersServicePlan: AppliedInventoriesParametersServicePlan, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling appliedInventoriesForServiceOffering.');
@@ -4195,7 +4195,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDocumentation(options: any = {}): RequestArgs {
+        getDocumentation: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/openapi.json`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4236,7 +4236,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listClusterHosts(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listClusterHosts: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listClusterHosts.');
@@ -4297,7 +4297,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listClusters(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listClusters: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/clusters`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4354,7 +4354,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerGroupContainers(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerGroupContainers: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listContainerGroupContainers.');
@@ -4416,7 +4416,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerGroupTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerGroupTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listContainerGroupTags.');
@@ -4477,7 +4477,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerGroups(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerGroups: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/container_groups`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4534,7 +4534,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerImageTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerImageTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listContainerImageTags.');
@@ -4595,7 +4595,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerImages(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerImages: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/container_images`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4652,7 +4652,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerNodeContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerNodeContainerGroups: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listContainerNodeContainerGroups.');
@@ -4714,7 +4714,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerNodeTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerNodeTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listContainerNodeTags.');
@@ -4775,7 +4775,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerNodes: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/container_nodes`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4832,7 +4832,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerProjectContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerProjectContainerGroups: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listContainerProjectContainerGroups.');
@@ -4894,7 +4894,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerProjectContainerResourceQuota(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerProjectContainerResourceQuota: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listContainerProjectContainerResourceQuota.');
@@ -4956,7 +4956,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerProjectContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerProjectContainerTemplates: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listContainerProjectContainerTemplates.');
@@ -5018,7 +5018,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerProjectTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerProjectTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listContainerProjectTags.');
@@ -5079,7 +5079,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerProjects(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerProjects: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/container_projects`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5135,7 +5135,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerResourceQuota(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerResourceQuota: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/container_resource_quotas`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5192,7 +5192,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerTemplateTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerTemplateTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listContainerTemplateTags.');
@@ -5253,7 +5253,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerTemplates(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainerTemplates: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/container_templates`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5309,7 +5309,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainers(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listContainers: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/containers`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5365,7 +5365,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listDatastores(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listDatastores: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/datastores`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5421,7 +5421,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listFlavors(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listFlavors: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/flavors`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5477,7 +5477,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listHosts(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listHosts: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/hosts`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5534,7 +5534,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listIpaddressTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listIpaddressTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listIpaddressTags.');
@@ -5595,7 +5595,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listIpaddresses(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listIpaddresses: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/ipaddresses`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5652,7 +5652,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listNetworkAdapterIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listNetworkAdapterIpaddresses: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listNetworkAdapterIpaddresses.');
@@ -5714,7 +5714,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listNetworkAdapterTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listNetworkAdapterTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listNetworkAdapterTags.');
@@ -5775,7 +5775,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listNetworkAdapters(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listNetworkAdapters: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/network_adapters`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5832,7 +5832,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listNetworkSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listNetworkSubnets: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listNetworkSubnets.');
@@ -5894,7 +5894,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listNetworkTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listNetworkTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listNetworkTags.');
@@ -5955,7 +5955,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listNetworks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listNetworks: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/networks`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -6012,7 +6012,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listOrchestrationStackIpaddresses: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackIpaddresses.');
@@ -6074,7 +6074,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listOrchestrationStackNetworkAdapters: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackNetworkAdapters.');
@@ -6136,7 +6136,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listOrchestrationStackNetworks: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackNetworks.');
@@ -6198,7 +6198,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listOrchestrationStackSecurityGroups: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackSecurityGroups.');
@@ -6260,7 +6260,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listOrchestrationStackSubnets: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackSubnets.');
@@ -6322,7 +6322,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listOrchestrationStackVms: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackVms.');
@@ -6384,7 +6384,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listOrchestrationStackVolumes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listOrchestrationStackVolumes.');
@@ -6445,7 +6445,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStacks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listOrchestrationStacks: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/orchestration_stacks`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -6502,7 +6502,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSecurityGroupTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSecurityGroupTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSecurityGroupTags.');
@@ -6564,7 +6564,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSecurityGroupVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSecurityGroupVms: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSecurityGroupVms.');
@@ -6625,7 +6625,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSecurityGroups(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSecurityGroups: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/security_groups`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -6681,7 +6681,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceInstanceNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServiceInstanceNodes: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/service_instance_nodes`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -6738,7 +6738,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceInstanceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServiceInstanceServiceInstanceNodes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listServiceInstanceServiceInstanceNodes.');
@@ -6799,7 +6799,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceInstances(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServiceInstances: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/service_instances`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -6855,7 +6855,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceInventories(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServiceInventories: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/service_inventories`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -6912,7 +6912,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceInventoryTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServiceInventoryTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listServiceInventoryTags.');
@@ -6973,7 +6973,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferingIcons(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServiceOfferingIcons: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/service_offering_icons`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -7029,7 +7029,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferingNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServiceOfferingNodes: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/service_offering_nodes`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -7086,7 +7086,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferingServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServiceOfferingServiceInstances: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listServiceOfferingServiceInstances.');
@@ -7148,7 +7148,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferingServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServiceOfferingServiceOfferingNodes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listServiceOfferingServiceOfferingNodes.');
@@ -7210,7 +7210,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferingServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServiceOfferingServicePlans: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listServiceOfferingServicePlans.');
@@ -7272,7 +7272,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferingTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServiceOfferingTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listServiceOfferingTags.');
@@ -7333,7 +7333,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferings(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServiceOfferings: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/service_offerings`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -7390,7 +7390,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServicePlanServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServicePlanServiceInstances: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listServicePlanServiceInstances.');
@@ -7451,7 +7451,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServicePlans(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listServicePlans: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/service_plans`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -7508,7 +7508,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceAvailabilities(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceAvailabilities: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceAvailabilities.');
@@ -7570,7 +7570,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceClusters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceClusters: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceClusters.');
@@ -7632,7 +7632,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceContainerGroups: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceContainerGroups.');
@@ -7694,7 +7694,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceContainerImages(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceContainerImages: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceContainerImages.');
@@ -7756,7 +7756,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceContainerNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceContainerNodes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceContainerNodes.');
@@ -7818,7 +7818,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceContainerProjects(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceContainerProjects: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceContainerProjects.');
@@ -7880,7 +7880,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceContainerTemplates: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceContainerTemplates.');
@@ -7942,7 +7942,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceContainers(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceContainers: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceContainers.');
@@ -8004,7 +8004,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceDatastores(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceDatastores: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceDatastores.');
@@ -8066,7 +8066,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceHosts(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceHosts: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceHosts.');
@@ -8128,7 +8128,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceIpaddresses: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceIpaddresses.');
@@ -8190,7 +8190,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceNetworkAdapters: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceNetworkAdapters.');
@@ -8252,7 +8252,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceNetworks: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceNetworks.');
@@ -8314,7 +8314,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceOrchestrationStacks: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceOrchestrationStacks.');
@@ -8376,7 +8376,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceRegionIpaddresses: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionIpaddresses.');
@@ -8438,7 +8438,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceRegionNetworkAdapters: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionNetworkAdapters.');
@@ -8500,7 +8500,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceRegionNetworks: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionNetworks.');
@@ -8562,7 +8562,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceRegionOrchestrationStacks: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionOrchestrationStacks.');
@@ -8624,7 +8624,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceRegionSecurityGroups: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionSecurityGroups.');
@@ -8686,7 +8686,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceRegionServiceInstances: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionServiceInstances.');
@@ -8748,7 +8748,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceRegionServiceOfferings: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionServiceOfferings.');
@@ -8810,7 +8810,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceRegionServicePlans: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionServicePlans.');
@@ -8872,7 +8872,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceRegionSubnets: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionSubnets.');
@@ -8934,7 +8934,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceRegionVms: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionVms.');
@@ -8996,7 +8996,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceRegionVolumes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceRegionVolumes.');
@@ -9057,7 +9057,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegions(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceRegions: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/source_regions`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -9114,7 +9114,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceSecurityGroups: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceSecurityGroups.');
@@ -9176,7 +9176,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceServiceInstanceNodes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceServiceInstanceNodes.');
@@ -9238,7 +9238,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceServiceInstances: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceServiceInstances.');
@@ -9300,7 +9300,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceServiceInventories(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceServiceInventories: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceServiceInventories.');
@@ -9362,7 +9362,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceServiceOfferingNodes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceServiceOfferingNodes.');
@@ -9424,7 +9424,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceServiceOfferings: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceServiceOfferings.');
@@ -9486,7 +9486,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceServicePlans: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceServicePlans.');
@@ -9548,7 +9548,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceSourceRegions(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceSourceRegions: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceSourceRegions.');
@@ -9610,7 +9610,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceSubnets: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceSubnets.');
@@ -9672,7 +9672,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceSubscriptions(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceSubscriptions: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceSubscriptions.');
@@ -9734,7 +9734,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceVms: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceVms.');
@@ -9796,7 +9796,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceVolumeTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceVolumeTypes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceVolumeTypes.');
@@ -9858,7 +9858,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceVolumes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceVolumes.');
@@ -9919,7 +9919,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSources(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSources: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/sources`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -9976,7 +9976,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubnetIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubnetIpaddresses: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubnetIpaddresses.');
@@ -10038,7 +10038,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubnetNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubnetNetworkAdapters: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubnetNetworkAdapters.');
@@ -10100,7 +10100,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubnetTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubnetTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubnetTags.');
@@ -10161,7 +10161,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubnets(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubnets: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/subnets`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -10218,7 +10218,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubscriptionIpaddresses: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionIpaddresses.');
@@ -10280,7 +10280,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubscriptionNetworkAdapters: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionNetworkAdapters.');
@@ -10342,7 +10342,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubscriptionNetworks: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionNetworks.');
@@ -10404,7 +10404,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubscriptionOrchestrationStacks: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionOrchestrationStacks.');
@@ -10466,7 +10466,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubscriptionSecurityGroups: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionSecurityGroups.');
@@ -10528,7 +10528,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubscriptionServiceInstances: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionServiceInstances.');
@@ -10590,7 +10590,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubscriptionServiceOfferings: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionServiceOfferings.');
@@ -10652,7 +10652,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubscriptionServicePlans: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionServicePlans.');
@@ -10714,7 +10714,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubscriptionSubnets: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionSubnets.');
@@ -10776,7 +10776,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubscriptionVms: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionVms.');
@@ -10838,7 +10838,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubscriptionVolumes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSubscriptionVolumes.');
@@ -10899,7 +10899,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptions(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSubscriptions: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/subscriptions`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -10956,7 +10956,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTagContainerGroups: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagContainerGroups.');
@@ -11018,7 +11018,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagContainerImages(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTagContainerImages: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagContainerImages.');
@@ -11080,7 +11080,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagContainerNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTagContainerNodes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagContainerNodes.');
@@ -11142,7 +11142,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagContainerProjects(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTagContainerProjects: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagContainerProjects.');
@@ -11204,7 +11204,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTagContainerTemplates: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagContainerTemplates.');
@@ -11266,7 +11266,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTagIpaddresses: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagIpaddresses.');
@@ -11328,7 +11328,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTagNetworkAdapters: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagNetworkAdapters.');
@@ -11390,7 +11390,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTagNetworks: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagNetworks.');
@@ -11452,7 +11452,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTagSecurityGroups: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagSecurityGroups.');
@@ -11514,7 +11514,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagServiceInventories(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTagServiceInventories: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagServiceInventories.');
@@ -11576,7 +11576,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTagServiceOfferings: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagServiceOfferings.');
@@ -11638,7 +11638,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTagSubnets: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagSubnets.');
@@ -11700,7 +11700,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTagVms: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listTagVms.');
@@ -11761,7 +11761,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTags(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTags: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/tags`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -11817,7 +11817,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTasks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listTasks: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/tasks`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -11874,7 +11874,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVmNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listVmNetworkAdapters: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listVmNetworkAdapters.');
@@ -11936,7 +11936,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVmSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listVmSecurityGroups: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listVmSecurityGroups.');
@@ -11998,7 +11998,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVmTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listVmTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listVmTags.');
@@ -12060,7 +12060,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVmVolumeAttachments(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listVmVolumeAttachments: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listVmVolumeAttachments.');
@@ -12122,7 +12122,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVmVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listVmVolumes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listVmVolumes.');
@@ -12183,7 +12183,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVms(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listVms: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/vms`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -12239,7 +12239,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVolumeAttachments(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listVolumeAttachments: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/volume_attachments`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -12296,7 +12296,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVolumeTypeVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listVolumeTypeVolumes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listVolumeTypeVolumes.');
@@ -12357,7 +12357,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVolumeTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listVolumeTypes: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/volume_types`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -12414,7 +12414,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVolumeVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listVolumeVms: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listVolumeVms.');
@@ -12475,7 +12475,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVolumes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listVolumes: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/volumes`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -12529,7 +12529,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        orderServiceOffering(id: string, orderParametersServiceOffering: OrderParametersServiceOffering, options: any = {}): RequestArgs {
+        orderServiceOffering: async (id: string, orderParametersServiceOffering: OrderParametersServiceOffering, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling orderServiceOffering.');
@@ -12580,7 +12580,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        orderServicePlan(id: string, orderParametersServicePlan: OrderParametersServicePlan, options: any = {}): RequestArgs {
+        orderServicePlan: async (id: string, orderParametersServicePlan: OrderParametersServicePlan, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling orderServicePlan.');
@@ -12630,7 +12630,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphQL(graphQLRequest: GraphQLRequest, options: any = {}): RequestArgs {
+        postGraphQL: async (graphQLRequest: GraphQLRequest, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'graphQLRequest' is not null or undefined
             if (graphQLRequest === null || graphQLRequest === undefined) {
                 throw new RequiredError('graphQLRequest','Required parameter graphQLRequest was null or undefined when calling postGraphQL.');
@@ -12675,7 +12675,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showCluster(id: string, options: any = {}): RequestArgs {
+        showCluster: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showCluster.');
@@ -12717,7 +12717,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainer(id: string, options: any = {}): RequestArgs {
+        showContainer: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showContainer.');
@@ -12759,7 +12759,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainerGroup(id: string, options: any = {}): RequestArgs {
+        showContainerGroup: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showContainerGroup.');
@@ -12801,7 +12801,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainerImage(id: string, options: any = {}): RequestArgs {
+        showContainerImage: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showContainerImage.');
@@ -12843,7 +12843,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainerNode(id: string, options: any = {}): RequestArgs {
+        showContainerNode: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showContainerNode.');
@@ -12885,7 +12885,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainerProject(id: string, options: any = {}): RequestArgs {
+        showContainerProject: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showContainerProject.');
@@ -12927,7 +12927,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainerResourceQuota(id: string, options: any = {}): RequestArgs {
+        showContainerResourceQuota: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showContainerResourceQuota.');
@@ -12969,7 +12969,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainerTemplate(id: string, options: any = {}): RequestArgs {
+        showContainerTemplate: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showContainerTemplate.');
@@ -13011,7 +13011,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDatastore(id: string, options: any = {}): RequestArgs {
+        showDatastore: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showDatastore.');
@@ -13053,7 +13053,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showFlavor(id: string, options: any = {}): RequestArgs {
+        showFlavor: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showFlavor.');
@@ -13095,7 +13095,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHost(id: string, options: any = {}): RequestArgs {
+        showHost: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showHost.');
@@ -13137,7 +13137,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showIpaddress(id: string, options: any = {}): RequestArgs {
+        showIpaddress: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showIpaddress.');
@@ -13179,7 +13179,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showNetwork(id: string, options: any = {}): RequestArgs {
+        showNetwork: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showNetwork.');
@@ -13221,7 +13221,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showNetworkAdapter(id: string, options: any = {}): RequestArgs {
+        showNetworkAdapter: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showNetworkAdapter.');
@@ -13263,7 +13263,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showOrchestrationStack(id: string, options: any = {}): RequestArgs {
+        showOrchestrationStack: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showOrchestrationStack.');
@@ -13305,7 +13305,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSecurityGroup(id: string, options: any = {}): RequestArgs {
+        showSecurityGroup: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showSecurityGroup.');
@@ -13347,7 +13347,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceInstance(id: string, options: any = {}): RequestArgs {
+        showServiceInstance: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showServiceInstance.');
@@ -13389,7 +13389,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceInstanceNode(id: string, options: any = {}): RequestArgs {
+        showServiceInstanceNode: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showServiceInstanceNode.');
@@ -13431,7 +13431,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceInventory(id: string, options: any = {}): RequestArgs {
+        showServiceInventory: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showServiceInventory.');
@@ -13473,7 +13473,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceOffering(id: string, options: any = {}): RequestArgs {
+        showServiceOffering: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showServiceOffering.');
@@ -13515,7 +13515,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceOfferingIcon(id: string, options: any = {}): RequestArgs {
+        showServiceOfferingIcon: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showServiceOfferingIcon.');
@@ -13557,7 +13557,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceOfferingIconIconData(id: string, options: any = {}): RequestArgs {
+        showServiceOfferingIconIconData: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showServiceOfferingIconIconData.');
@@ -13599,7 +13599,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceOfferingNode(id: string, options: any = {}): RequestArgs {
+        showServiceOfferingNode: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showServiceOfferingNode.');
@@ -13641,7 +13641,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServicePlan(id: string, options: any = {}): RequestArgs {
+        showServicePlan: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showServicePlan.');
@@ -13683,7 +13683,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSource(id: string, options: any = {}): RequestArgs {
+        showSource: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showSource.');
@@ -13725,7 +13725,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSourceRegion(id: string, options: any = {}): RequestArgs {
+        showSourceRegion: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showSourceRegion.');
@@ -13767,7 +13767,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSubnet(id: string, options: any = {}): RequestArgs {
+        showSubnet: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showSubnet.');
@@ -13809,7 +13809,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSubscription(id: string, options: any = {}): RequestArgs {
+        showSubscription: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showSubscription.');
@@ -13851,7 +13851,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showTag(id: string, options: any = {}): RequestArgs {
+        showTag: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showTag.');
@@ -13893,7 +13893,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showTask(id: string, options: any = {}): RequestArgs {
+        showTask: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showTask.');
@@ -13935,7 +13935,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showVm(id: string, options: any = {}): RequestArgs {
+        showVm: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showVm.');
@@ -13977,7 +13977,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showVolume(id: string, options: any = {}): RequestArgs {
+        showVolume: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showVolume.');
@@ -14019,7 +14019,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showVolumeAttachment(id: string, options: any = {}): RequestArgs {
+        showVolumeAttachment: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showVolumeAttachment.');
@@ -14061,7 +14061,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showVolumeType(id: string, options: any = {}): RequestArgs {
+        showVolumeType: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showVolumeType.');
@@ -14104,7 +14104,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateTask(id: string, task: Task, options: any = {}): RequestArgs {
+        updateTask: async (id: string, task: Task, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling updateTask.');
@@ -14164,8 +14164,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appliedInventoriesForServiceOffering(id: string, appliedInventoriesParametersServicePlan: AppliedInventoriesParametersServicePlan, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).appliedInventoriesForServiceOffering(id, appliedInventoriesParametersServicePlan, options);
+        async appliedInventoriesForServiceOffering(id: string, appliedInventoriesParametersServicePlan: AppliedInventoriesParametersServicePlan, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).appliedInventoriesForServiceOffering(id, appliedInventoriesParametersServicePlan, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14177,8 +14177,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDocumentation(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
+        async getDocumentation(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14195,8 +14195,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listClusterHosts(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listClusterHosts(id, limit, offset, filter, sortBy, options);
+        async listClusterHosts(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listClusterHosts(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14212,8 +14212,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listClusters(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClustersCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listClusters(limit, offset, filter, sortBy, options);
+        async listClusters(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClustersCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listClusters(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14230,8 +14230,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerGroupContainers(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainersCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerGroupContainers(id, limit, offset, filter, sortBy, options);
+        async listContainerGroupContainers(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainersCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerGroupContainers(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14248,8 +14248,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerGroupTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerGroupTags(id, limit, offset, filter, sortBy, options);
+        async listContainerGroupTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerGroupTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14265,8 +14265,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerGroups(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerGroupsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerGroups(limit, offset, filter, sortBy, options);
+        async listContainerGroups(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerGroupsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerGroups(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14283,8 +14283,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerImageTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerImageTags(id, limit, offset, filter, sortBy, options);
+        async listContainerImageTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerImageTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14300,8 +14300,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerImages(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerImagesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerImages(limit, offset, filter, sortBy, options);
+        async listContainerImages(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerImagesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerImages(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14318,8 +14318,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerNodeContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerGroupsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerNodeContainerGroups(id, limit, offset, filter, sortBy, options);
+        async listContainerNodeContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerGroupsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerNodeContainerGroups(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14336,8 +14336,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerNodeTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerNodeTags(id, limit, offset, filter, sortBy, options);
+        async listContainerNodeTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerNodeTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14353,8 +14353,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerNodesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerNodes(limit, offset, filter, sortBy, options);
+        async listContainerNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerNodesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerNodes(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14371,8 +14371,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerProjectContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerGroupsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerProjectContainerGroups(id, limit, offset, filter, sortBy, options);
+        async listContainerProjectContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerGroupsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerProjectContainerGroups(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14389,8 +14389,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerProjectContainerResourceQuota(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerResourceQuotaCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerProjectContainerResourceQuota(id, limit, offset, filter, sortBy, options);
+        async listContainerProjectContainerResourceQuota(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerResourceQuotaCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerProjectContainerResourceQuota(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14407,8 +14407,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerProjectContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerTemplatesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerProjectContainerTemplates(id, limit, offset, filter, sortBy, options);
+        async listContainerProjectContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerTemplatesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerProjectContainerTemplates(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14425,8 +14425,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerProjectTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerProjectTags(id, limit, offset, filter, sortBy, options);
+        async listContainerProjectTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerProjectTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14442,8 +14442,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerProjects(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerProjectsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerProjects(limit, offset, filter, sortBy, options);
+        async listContainerProjects(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerProjectsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerProjects(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14459,8 +14459,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerResourceQuota(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerResourceQuotaCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerResourceQuota(limit, offset, filter, sortBy, options);
+        async listContainerResourceQuota(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerResourceQuotaCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerResourceQuota(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14477,8 +14477,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerTemplateTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerTemplateTags(id, limit, offset, filter, sortBy, options);
+        async listContainerTemplateTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerTemplateTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14494,8 +14494,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainerTemplates(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerTemplatesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainerTemplates(limit, offset, filter, sortBy, options);
+        async listContainerTemplates(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerTemplatesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainerTemplates(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14511,8 +14511,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listContainers(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainersCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listContainers(limit, offset, filter, sortBy, options);
+        async listContainers(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainersCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listContainers(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14528,8 +14528,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listDatastores(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DatastoresCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listDatastores(limit, offset, filter, sortBy, options);
+        async listDatastores(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DatastoresCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listDatastores(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14545,8 +14545,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listFlavors(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<FlavorsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listFlavors(limit, offset, filter, sortBy, options);
+        async listFlavors(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FlavorsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listFlavors(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14562,8 +14562,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listHosts(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listHosts(limit, offset, filter, sortBy, options);
+        async listHosts(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listHosts(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14580,8 +14580,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listIpaddressTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listIpaddressTags(id, limit, offset, filter, sortBy, options);
+        async listIpaddressTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listIpaddressTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14597,8 +14597,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listIpaddresses(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listIpaddresses(limit, offset, filter, sortBy, options);
+        async listIpaddresses(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listIpaddresses(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14615,8 +14615,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listNetworkAdapterIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listNetworkAdapterIpaddresses(id, limit, offset, filter, sortBy, options);
+        async listNetworkAdapterIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listNetworkAdapterIpaddresses(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14633,8 +14633,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listNetworkAdapterTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listNetworkAdapterTags(id, limit, offset, filter, sortBy, options);
+        async listNetworkAdapterTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listNetworkAdapterTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14650,8 +14650,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listNetworkAdapters(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listNetworkAdapters(limit, offset, filter, sortBy, options);
+        async listNetworkAdapters(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listNetworkAdapters(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14668,8 +14668,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listNetworkSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listNetworkSubnets(id, limit, offset, filter, sortBy, options);
+        async listNetworkSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listNetworkSubnets(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14686,8 +14686,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listNetworkTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listNetworkTags(id, limit, offset, filter, sortBy, options);
+        async listNetworkTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listNetworkTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14703,8 +14703,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listNetworks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listNetworks(limit, offset, filter, sortBy, options);
+        async listNetworks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listNetworks(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14721,8 +14721,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackIpaddresses(id, limit, offset, filter, sortBy, options);
+        async listOrchestrationStackIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listOrchestrationStackIpaddresses(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14739,8 +14739,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackNetworkAdapters(id, limit, offset, filter, sortBy, options);
+        async listOrchestrationStackNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listOrchestrationStackNetworkAdapters(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14757,8 +14757,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackNetworks(id, limit, offset, filter, sortBy, options);
+        async listOrchestrationStackNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listOrchestrationStackNetworks(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14775,8 +14775,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackSecurityGroups(id, limit, offset, filter, sortBy, options);
+        async listOrchestrationStackSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listOrchestrationStackSecurityGroups(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14793,8 +14793,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackSubnets(id, limit, offset, filter, sortBy, options);
+        async listOrchestrationStackSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listOrchestrationStackSubnets(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14811,8 +14811,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackVms(id, limit, offset, filter, sortBy, options);
+        async listOrchestrationStackVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listOrchestrationStackVms(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14829,8 +14829,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStackVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStackVolumes(id, limit, offset, filter, sortBy, options);
+        async listOrchestrationStackVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listOrchestrationStackVolumes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14846,8 +14846,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrchestrationStacks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStacksCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listOrchestrationStacks(limit, offset, filter, sortBy, options);
+        async listOrchestrationStacks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStacksCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listOrchestrationStacks(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14864,8 +14864,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSecurityGroupTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSecurityGroupTags(id, limit, offset, filter, sortBy, options);
+        async listSecurityGroupTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSecurityGroupTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14882,8 +14882,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSecurityGroupVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSecurityGroupVms(id, limit, offset, filter, sortBy, options);
+        async listSecurityGroupVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSecurityGroupVms(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14899,8 +14899,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSecurityGroups(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSecurityGroups(limit, offset, filter, sortBy, options);
+        async listSecurityGroups(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSecurityGroups(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14916,8 +14916,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceInstanceNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstanceNodesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceInstanceNodes(limit, offset, filter, sortBy, options);
+        async listServiceInstanceNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstanceNodesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServiceInstanceNodes(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14934,8 +14934,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceInstanceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstanceNodesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceInstanceServiceInstanceNodes(id, limit, offset, filter, sortBy, options);
+        async listServiceInstanceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstanceNodesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServiceInstanceServiceInstanceNodes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14951,8 +14951,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceInstances(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceInstances(limit, offset, filter, sortBy, options);
+        async listServiceInstances(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServiceInstances(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14968,8 +14968,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceInventories(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInventoriesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceInventories(limit, offset, filter, sortBy, options);
+        async listServiceInventories(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInventoriesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServiceInventories(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -14986,8 +14986,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceInventoryTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceInventoryTags(id, limit, offset, filter, sortBy, options);
+        async listServiceInventoryTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServiceInventoryTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15003,8 +15003,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferingIcons(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingIconsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceOfferingIcons(limit, offset, filter, sortBy, options);
+        async listServiceOfferingIcons(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingIconsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServiceOfferingIcons(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15020,8 +15020,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferingNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingNodesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceOfferingNodes(limit, offset, filter, sortBy, options);
+        async listServiceOfferingNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingNodesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServiceOfferingNodes(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15038,8 +15038,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferingServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceOfferingServiceInstances(id, limit, offset, filter, sortBy, options);
+        async listServiceOfferingServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServiceOfferingServiceInstances(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15056,8 +15056,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferingServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingNodesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceOfferingServiceOfferingNodes(id, limit, offset, filter, sortBy, options);
+        async listServiceOfferingServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingNodesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServiceOfferingServiceOfferingNodes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15074,8 +15074,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferingServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceOfferingServicePlans(id, limit, offset, filter, sortBy, options);
+        async listServiceOfferingServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServiceOfferingServicePlans(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15092,8 +15092,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferingTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceOfferingTags(id, limit, offset, filter, sortBy, options);
+        async listServiceOfferingTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServiceOfferingTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15109,8 +15109,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServiceOfferings(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServiceOfferings(limit, offset, filter, sortBy, options);
+        async listServiceOfferings(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServiceOfferings(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15127,8 +15127,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServicePlanServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServicePlanServiceInstances(id, limit, offset, filter, sortBy, options);
+        async listServicePlanServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServicePlanServiceInstances(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15144,8 +15144,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServicePlans(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listServicePlans(limit, offset, filter, sortBy, options);
+        async listServicePlans(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listServicePlans(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15162,8 +15162,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceAvailabilities(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AvailabilitiesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceAvailabilities(id, limit, offset, filter, sortBy, options);
+        async listSourceAvailabilities(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AvailabilitiesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceAvailabilities(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15180,8 +15180,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceClusters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClustersCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceClusters(id, limit, offset, filter, sortBy, options);
+        async listSourceClusters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClustersCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceClusters(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15198,8 +15198,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerGroupsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceContainerGroups(id, limit, offset, filter, sortBy, options);
+        async listSourceContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerGroupsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceContainerGroups(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15216,8 +15216,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceContainerImages(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerImagesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceContainerImages(id, limit, offset, filter, sortBy, options);
+        async listSourceContainerImages(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerImagesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceContainerImages(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15234,8 +15234,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceContainerNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerNodesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceContainerNodes(id, limit, offset, filter, sortBy, options);
+        async listSourceContainerNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerNodesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceContainerNodes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15252,8 +15252,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceContainerProjects(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerProjectsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceContainerProjects(id, limit, offset, filter, sortBy, options);
+        async listSourceContainerProjects(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerProjectsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceContainerProjects(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15270,8 +15270,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerTemplatesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceContainerTemplates(id, limit, offset, filter, sortBy, options);
+        async listSourceContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerTemplatesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceContainerTemplates(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15288,8 +15288,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceContainers(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainersCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceContainers(id, limit, offset, filter, sortBy, options);
+        async listSourceContainers(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainersCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceContainers(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15306,8 +15306,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceDatastores(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DatastoresCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceDatastores(id, limit, offset, filter, sortBy, options);
+        async listSourceDatastores(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DatastoresCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceDatastores(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15324,8 +15324,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceHosts(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceHosts(id, limit, offset, filter, sortBy, options);
+        async listSourceHosts(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceHosts(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15342,8 +15342,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceIpaddresses(id, limit, offset, filter, sortBy, options);
+        async listSourceIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceIpaddresses(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15360,8 +15360,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceNetworkAdapters(id, limit, offset, filter, sortBy, options);
+        async listSourceNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceNetworkAdapters(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15378,8 +15378,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceNetworks(id, limit, offset, filter, sortBy, options);
+        async listSourceNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceNetworks(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15396,8 +15396,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStacksCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceOrchestrationStacks(id, limit, offset, filter, sortBy, options);
+        async listSourceOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStacksCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceOrchestrationStacks(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15414,8 +15414,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionIpaddresses(id, limit, offset, filter, sortBy, options);
+        async listSourceRegionIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceRegionIpaddresses(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15432,8 +15432,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionNetworkAdapters(id, limit, offset, filter, sortBy, options);
+        async listSourceRegionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceRegionNetworkAdapters(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15450,8 +15450,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionNetworks(id, limit, offset, filter, sortBy, options);
+        async listSourceRegionNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceRegionNetworks(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15468,8 +15468,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStacksCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionOrchestrationStacks(id, limit, offset, filter, sortBy, options);
+        async listSourceRegionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStacksCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceRegionOrchestrationStacks(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15486,8 +15486,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionSecurityGroups(id, limit, offset, filter, sortBy, options);
+        async listSourceRegionSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceRegionSecurityGroups(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15504,8 +15504,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionServiceInstances(id, limit, offset, filter, sortBy, options);
+        async listSourceRegionServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceRegionServiceInstances(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15522,8 +15522,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionServiceOfferings(id, limit, offset, filter, sortBy, options);
+        async listSourceRegionServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceRegionServiceOfferings(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15540,8 +15540,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionServicePlans(id, limit, offset, filter, sortBy, options);
+        async listSourceRegionServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceRegionServicePlans(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15558,8 +15558,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionSubnets(id, limit, offset, filter, sortBy, options);
+        async listSourceRegionSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceRegionSubnets(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15576,8 +15576,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionVms(id, limit, offset, filter, sortBy, options);
+        async listSourceRegionVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceRegionVms(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15594,8 +15594,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegionVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegionVolumes(id, limit, offset, filter, sortBy, options);
+        async listSourceRegionVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceRegionVolumes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15611,8 +15611,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceRegions(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceRegionsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceRegions(limit, offset, filter, sortBy, options);
+        async listSourceRegions(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceRegionsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceRegions(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15629,8 +15629,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceSecurityGroups(id, limit, offset, filter, sortBy, options);
+        async listSourceSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceSecurityGroups(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15647,8 +15647,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstanceNodesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceServiceInstanceNodes(id, limit, offset, filter, sortBy, options);
+        async listSourceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstanceNodesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceServiceInstanceNodes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15665,8 +15665,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceServiceInstances(id, limit, offset, filter, sortBy, options);
+        async listSourceServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceServiceInstances(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15683,8 +15683,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceServiceInventories(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInventoriesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceServiceInventories(id, limit, offset, filter, sortBy, options);
+        async listSourceServiceInventories(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInventoriesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceServiceInventories(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15701,8 +15701,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingNodesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceServiceOfferingNodes(id, limit, offset, filter, sortBy, options);
+        async listSourceServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingNodesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceServiceOfferingNodes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15719,8 +15719,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceServiceOfferings(id, limit, offset, filter, sortBy, options);
+        async listSourceServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceServiceOfferings(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15737,8 +15737,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceServicePlans(id, limit, offset, filter, sortBy, options);
+        async listSourceServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceServicePlans(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15755,8 +15755,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceSourceRegions(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceRegionsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceSourceRegions(id, limit, offset, filter, sortBy, options);
+        async listSourceSourceRegions(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceRegionsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceSourceRegions(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15773,8 +15773,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceSubnets(id, limit, offset, filter, sortBy, options);
+        async listSourceSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceSubnets(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15791,8 +15791,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceSubscriptions(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubscriptionsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceSubscriptions(id, limit, offset, filter, sortBy, options);
+        async listSourceSubscriptions(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubscriptionsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceSubscriptions(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15809,8 +15809,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceVms(id, limit, offset, filter, sortBy, options);
+        async listSourceVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceVms(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15827,8 +15827,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceVolumeTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumeTypesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceVolumeTypes(id, limit, offset, filter, sortBy, options);
+        async listSourceVolumeTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumeTypesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceVolumeTypes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15845,8 +15845,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceVolumes(id, limit, offset, filter, sortBy, options);
+        async listSourceVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceVolumes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15862,8 +15862,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSources(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSources(limit, offset, filter, sortBy, options);
+        async listSources(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSources(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15880,8 +15880,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubnetIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubnetIpaddresses(id, limit, offset, filter, sortBy, options);
+        async listSubnetIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubnetIpaddresses(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15898,8 +15898,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubnetNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubnetNetworkAdapters(id, limit, offset, filter, sortBy, options);
+        async listSubnetNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubnetNetworkAdapters(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15916,8 +15916,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubnetTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubnetTags(id, limit, offset, filter, sortBy, options);
+        async listSubnetTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubnetTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15933,8 +15933,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubnets(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubnets(limit, offset, filter, sortBy, options);
+        async listSubnets(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubnets(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15951,8 +15951,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionIpaddresses(id, limit, offset, filter, sortBy, options);
+        async listSubscriptionIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubscriptionIpaddresses(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15969,8 +15969,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionNetworkAdapters(id, limit, offset, filter, sortBy, options);
+        async listSubscriptionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubscriptionNetworkAdapters(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -15987,8 +15987,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionNetworks(id, limit, offset, filter, sortBy, options);
+        async listSubscriptionNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubscriptionNetworks(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16005,8 +16005,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStacksCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionOrchestrationStacks(id, limit, offset, filter, sortBy, options);
+        async listSubscriptionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStacksCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubscriptionOrchestrationStacks(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16023,8 +16023,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionSecurityGroups(id, limit, offset, filter, sortBy, options);
+        async listSubscriptionSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubscriptionSecurityGroups(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16041,8 +16041,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionServiceInstances(id, limit, offset, filter, sortBy, options);
+        async listSubscriptionServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstancesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubscriptionServiceInstances(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16059,8 +16059,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionServiceOfferings(id, limit, offset, filter, sortBy, options);
+        async listSubscriptionServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubscriptionServiceOfferings(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16077,8 +16077,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionServicePlans(id, limit, offset, filter, sortBy, options);
+        async listSubscriptionServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlansCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubscriptionServicePlans(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16095,8 +16095,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionSubnets(id, limit, offset, filter, sortBy, options);
+        async listSubscriptionSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubscriptionSubnets(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16113,8 +16113,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionVms(id, limit, offset, filter, sortBy, options);
+        async listSubscriptionVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubscriptionVms(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16131,8 +16131,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptionVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptionVolumes(id, limit, offset, filter, sortBy, options);
+        async listSubscriptionVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubscriptionVolumes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16148,8 +16148,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSubscriptions(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubscriptionsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSubscriptions(limit, offset, filter, sortBy, options);
+        async listSubscriptions(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubscriptionsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSubscriptions(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16166,8 +16166,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerGroupsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagContainerGroups(id, limit, offset, filter, sortBy, options);
+        async listTagContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerGroupsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTagContainerGroups(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16184,8 +16184,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagContainerImages(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerImagesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagContainerImages(id, limit, offset, filter, sortBy, options);
+        async listTagContainerImages(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerImagesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTagContainerImages(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16202,8 +16202,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagContainerNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerNodesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagContainerNodes(id, limit, offset, filter, sortBy, options);
+        async listTagContainerNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerNodesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTagContainerNodes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16220,8 +16220,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagContainerProjects(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerProjectsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagContainerProjects(id, limit, offset, filter, sortBy, options);
+        async listTagContainerProjects(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerProjectsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTagContainerProjects(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16238,8 +16238,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerTemplatesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagContainerTemplates(id, limit, offset, filter, sortBy, options);
+        async listTagContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerTemplatesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTagContainerTemplates(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16256,8 +16256,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagIpaddresses(id, limit, offset, filter, sortBy, options);
+        async listTagIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpaddressesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTagIpaddresses(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16274,8 +16274,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagNetworkAdapters(id, limit, offset, filter, sortBy, options);
+        async listTagNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTagNetworkAdapters(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16292,8 +16292,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagNetworks(id, limit, offset, filter, sortBy, options);
+        async listTagNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTagNetworks(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16310,8 +16310,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagSecurityGroups(id, limit, offset, filter, sortBy, options);
+        async listTagSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTagSecurityGroups(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16328,8 +16328,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagServiceInventories(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInventoriesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagServiceInventories(id, limit, offset, filter, sortBy, options);
+        async listTagServiceInventories(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInventoriesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTagServiceInventories(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16346,8 +16346,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagServiceOfferings(id, limit, offset, filter, sortBy, options);
+        async listTagServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTagServiceOfferings(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16364,8 +16364,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagSubnets(id, limit, offset, filter, sortBy, options);
+        async listTagSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubnetsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTagSubnets(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16382,8 +16382,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTagVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTagVms(id, limit, offset, filter, sortBy, options);
+        async listTagVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTagVms(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16399,8 +16399,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTags(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTags(limit, offset, filter, sortBy, options);
+        async listTags(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTags(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16416,8 +16416,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTasks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TasksCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listTasks(limit, offset, filter, sortBy, options);
+        async listTasks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TasksCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listTasks(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16434,8 +16434,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVmNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVmNetworkAdapters(id, limit, offset, filter, sortBy, options);
+        async listVmNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdaptersCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listVmNetworkAdapters(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16452,8 +16452,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVmSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVmSecurityGroups(id, limit, offset, filter, sortBy, options);
+        async listVmSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroupsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listVmSecurityGroups(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16470,8 +16470,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVmTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVmTags(id, limit, offset, filter, sortBy, options);
+        async listVmTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listVmTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16488,8 +16488,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVmVolumeAttachments(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumeAttachmentsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVmVolumeAttachments(id, limit, offset, filter, sortBy, options);
+        async listVmVolumeAttachments(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumeAttachmentsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listVmVolumeAttachments(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16506,8 +16506,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVmVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVmVolumes(id, limit, offset, filter, sortBy, options);
+        async listVmVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listVmVolumes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16523,8 +16523,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVms(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVms(limit, offset, filter, sortBy, options);
+        async listVms(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listVms(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16540,8 +16540,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVolumeAttachments(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumeAttachmentsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVolumeAttachments(limit, offset, filter, sortBy, options);
+        async listVolumeAttachments(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumeAttachmentsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listVolumeAttachments(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16558,8 +16558,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVolumeTypeVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVolumeTypeVolumes(id, limit, offset, filter, sortBy, options);
+        async listVolumeTypeVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listVolumeTypeVolumes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16575,8 +16575,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVolumeTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumeTypesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVolumeTypes(limit, offset, filter, sortBy, options);
+        async listVolumeTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumeTypesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listVolumeTypes(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16593,8 +16593,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVolumeVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVolumeVms(id, limit, offset, filter, sortBy, options);
+        async listVolumeVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VmsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listVolumeVms(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16610,8 +16610,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listVolumes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listVolumes(limit, offset, filter, sortBy, options);
+        async listVolumes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listVolumes(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16625,8 +16625,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        orderServiceOffering(id: string, orderParametersServiceOffering: OrderParametersServiceOffering, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).orderServiceOffering(id, orderParametersServiceOffering, options);
+        async orderServiceOffering(id: string, orderParametersServiceOffering: OrderParametersServiceOffering, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).orderServiceOffering(id, orderParametersServiceOffering, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16640,8 +16640,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        orderServicePlan(id: string, orderParametersServicePlan: OrderParametersServicePlan, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).orderServicePlan(id, orderParametersServicePlan, options);
+        async orderServicePlan(id: string, orderParametersServicePlan: OrderParametersServicePlan, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).orderServicePlan(id, orderParametersServicePlan, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16654,8 +16654,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphQL(graphQLRequest: GraphQLRequest, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphQLResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).postGraphQL(graphQLRequest, options);
+        async postGraphQL(graphQLRequest: GraphQLRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphQLResponse>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).postGraphQL(graphQLRequest, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16668,8 +16668,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showCluster(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Cluster> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showCluster(id, options);
+        async showCluster(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Cluster>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showCluster(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16682,8 +16682,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainer(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Container> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showContainer(id, options);
+        async showContainer(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Container>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showContainer(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16696,8 +16696,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainerGroup(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerGroup> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showContainerGroup(id, options);
+        async showContainerGroup(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerGroup>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showContainerGroup(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16710,8 +16710,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainerImage(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerImage> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showContainerImage(id, options);
+        async showContainerImage(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerImage>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showContainerImage(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16724,8 +16724,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainerNode(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerNode> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showContainerNode(id, options);
+        async showContainerNode(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerNode>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showContainerNode(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16738,8 +16738,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainerProject(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerProject> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showContainerProject(id, options);
+        async showContainerProject(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerProject>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showContainerProject(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16752,8 +16752,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainerResourceQuota(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerResourceQuota> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showContainerResourceQuota(id, options);
+        async showContainerResourceQuota(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerResourceQuota>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showContainerResourceQuota(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16766,8 +16766,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showContainerTemplate(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerTemplate> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showContainerTemplate(id, options);
+        async showContainerTemplate(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContainerTemplate>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showContainerTemplate(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16780,8 +16780,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDatastore(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Datastore> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showDatastore(id, options);
+        async showDatastore(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Datastore>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showDatastore(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16794,8 +16794,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showFlavor(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Flavor> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showFlavor(id, options);
+        async showFlavor(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Flavor>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showFlavor(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16808,8 +16808,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHost(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Host> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showHost(id, options);
+        async showHost(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Host>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showHost(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16822,8 +16822,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showIpaddress(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Ipaddress> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showIpaddress(id, options);
+        async showIpaddress(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Ipaddress>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showIpaddress(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16836,8 +16836,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showNetwork(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Network> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showNetwork(id, options);
+        async showNetwork(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Network>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showNetwork(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16850,8 +16850,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showNetworkAdapter(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdapter> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showNetworkAdapter(id, options);
+        async showNetworkAdapter(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkAdapter>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showNetworkAdapter(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16864,8 +16864,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showOrchestrationStack(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStack> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showOrchestrationStack(id, options);
+        async showOrchestrationStack(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrchestrationStack>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showOrchestrationStack(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16878,8 +16878,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSecurityGroup(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroup> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSecurityGroup(id, options);
+        async showSecurityGroup(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGroup>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showSecurityGroup(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16892,8 +16892,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceInstance(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstance> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showServiceInstance(id, options);
+        async showServiceInstance(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstance>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showServiceInstance(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16906,8 +16906,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceInstanceNode(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstanceNode> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showServiceInstanceNode(id, options);
+        async showServiceInstanceNode(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInstanceNode>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showServiceInstanceNode(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16920,8 +16920,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceInventory(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInventory> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showServiceInventory(id, options);
+        async showServiceInventory(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceInventory>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showServiceInventory(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16934,8 +16934,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceOffering(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOffering> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showServiceOffering(id, options);
+        async showServiceOffering(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOffering>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showServiceOffering(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16948,8 +16948,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceOfferingIcon(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingIcon> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showServiceOfferingIcon(id, options);
+        async showServiceOfferingIcon(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingIcon>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showServiceOfferingIcon(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16962,8 +16962,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceOfferingIconIconData(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showServiceOfferingIconIconData(id, options);
+        async showServiceOfferingIconIconData(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showServiceOfferingIconIconData(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16976,8 +16976,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServiceOfferingNode(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingNode> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showServiceOfferingNode(id, options);
+        async showServiceOfferingNode(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceOfferingNode>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showServiceOfferingNode(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -16990,8 +16990,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServicePlan(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlan> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showServicePlan(id, options);
+        async showServicePlan(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlan>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showServicePlan(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -17004,8 +17004,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSource(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Source> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSource(id, options);
+        async showSource(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Source>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showSource(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -17018,8 +17018,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSourceRegion(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceRegion> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSourceRegion(id, options);
+        async showSourceRegion(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceRegion>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showSourceRegion(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -17032,8 +17032,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSubnet(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Subnet> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSubnet(id, options);
+        async showSubnet(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Subnet>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showSubnet(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -17046,8 +17046,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSubscription(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Subscription> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSubscription(id, options);
+        async showSubscription(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Subscription>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showSubscription(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -17060,8 +17060,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showTag(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tag> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showTag(id, options);
+        async showTag(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tag>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showTag(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -17074,8 +17074,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showTask(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Task> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showTask(id, options);
+        async showTask(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Task>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showTask(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -17088,8 +17088,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showVm(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Vm> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showVm(id, options);
+        async showVm(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Vm>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showVm(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -17102,8 +17102,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showVolume(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Volume> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showVolume(id, options);
+        async showVolume(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Volume>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showVolume(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -17116,8 +17116,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showVolumeAttachment(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumeAttachment> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showVolumeAttachment(id, options);
+        async showVolumeAttachment(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumeAttachment>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showVolumeAttachment(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -17130,8 +17130,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showVolumeType(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumeType> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showVolumeType(id, options);
+        async showVolumeType(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VolumeType>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showVolumeType(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -17145,8 +17145,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateTask(id: string, task: Task, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).updateTask(id, task, options);
+        async updateTask(id: string, task: Task, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).updateTask(id, task, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -17170,7 +17170,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         appliedInventoriesForServiceOffering(id: string, appliedInventoriesParametersServicePlan: AppliedInventoriesParametersServicePlan, options?: any): AxiosPromise<InlineResponse200> {
-            return DefaultApiFp(configuration).appliedInventoriesForServiceOffering(id, appliedInventoriesParametersServicePlan, options)(axios, basePath);
+            return DefaultApiFp(configuration).appliedInventoriesForServiceOffering(id, appliedInventoriesParametersServicePlan, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -17179,7 +17179,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getDocumentation(options?: any): AxiosPromise<object> {
-            return DefaultApiFp(configuration).getDocumentation(options)(axios, basePath);
+            return DefaultApiFp(configuration).getDocumentation(options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Host objects
@@ -17193,7 +17193,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listClusterHosts(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<HostsCollection> {
-            return DefaultApiFp(configuration).listClusterHosts(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listClusterHosts(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Cluster objects
@@ -17206,7 +17206,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listClusters(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ClustersCollection> {
-            return DefaultApiFp(configuration).listClusters(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listClusters(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Container objects
@@ -17220,7 +17220,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerGroupContainers(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainersCollection> {
-            return DefaultApiFp(configuration).listContainerGroupContainers(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerGroupContainers(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -17234,7 +17234,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerGroupTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listContainerGroupTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerGroupTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerGroup objects
@@ -17247,7 +17247,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerGroups(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerGroupsCollection> {
-            return DefaultApiFp(configuration).listContainerGroups(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerGroups(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -17261,7 +17261,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerImageTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listContainerImageTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerImageTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerImage objects
@@ -17274,7 +17274,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerImages(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerImagesCollection> {
-            return DefaultApiFp(configuration).listContainerImages(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerImages(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerGroup objects
@@ -17288,7 +17288,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerNodeContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerGroupsCollection> {
-            return DefaultApiFp(configuration).listContainerNodeContainerGroups(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerNodeContainerGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -17302,7 +17302,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerNodeTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listContainerNodeTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerNodeTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerNode objects
@@ -17315,7 +17315,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerNodesCollection> {
-            return DefaultApiFp(configuration).listContainerNodes(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerNodes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerGroup objects
@@ -17329,7 +17329,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerProjectContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerGroupsCollection> {
-            return DefaultApiFp(configuration).listContainerProjectContainerGroups(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerProjectContainerGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerResourceQuota objects
@@ -17343,7 +17343,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerProjectContainerResourceQuota(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerResourceQuotaCollection> {
-            return DefaultApiFp(configuration).listContainerProjectContainerResourceQuota(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerProjectContainerResourceQuota(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerTemplate objects
@@ -17357,7 +17357,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerProjectContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerTemplatesCollection> {
-            return DefaultApiFp(configuration).listContainerProjectContainerTemplates(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerProjectContainerTemplates(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -17371,7 +17371,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerProjectTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listContainerProjectTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerProjectTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerProject objects
@@ -17384,7 +17384,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerProjects(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerProjectsCollection> {
-            return DefaultApiFp(configuration).listContainerProjects(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerProjects(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerResourceQuota objects
@@ -17397,7 +17397,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerResourceQuota(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerResourceQuotaCollection> {
-            return DefaultApiFp(configuration).listContainerResourceQuota(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerResourceQuota(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -17411,7 +17411,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerTemplateTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listContainerTemplateTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerTemplateTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerTemplate objects
@@ -17424,7 +17424,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainerTemplates(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerTemplatesCollection> {
-            return DefaultApiFp(configuration).listContainerTemplates(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainerTemplates(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Container objects
@@ -17437,7 +17437,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listContainers(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainersCollection> {
-            return DefaultApiFp(configuration).listContainers(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listContainers(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Datastore objects
@@ -17450,7 +17450,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listDatastores(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<DatastoresCollection> {
-            return DefaultApiFp(configuration).listDatastores(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listDatastores(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Flavor objects
@@ -17463,7 +17463,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listFlavors(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<FlavorsCollection> {
-            return DefaultApiFp(configuration).listFlavors(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listFlavors(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Host objects
@@ -17476,7 +17476,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listHosts(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<HostsCollection> {
-            return DefaultApiFp(configuration).listHosts(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listHosts(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -17490,7 +17490,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listIpaddressTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listIpaddressTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listIpaddressTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Ipaddress objects
@@ -17503,7 +17503,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listIpaddresses(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<IpaddressesCollection> {
-            return DefaultApiFp(configuration).listIpaddresses(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listIpaddresses(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Ipaddress objects
@@ -17517,7 +17517,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listNetworkAdapterIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<IpaddressesCollection> {
-            return DefaultApiFp(configuration).listNetworkAdapterIpaddresses(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listNetworkAdapterIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -17531,7 +17531,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listNetworkAdapterTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listNetworkAdapterTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listNetworkAdapterTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of NetworkAdapter objects
@@ -17544,7 +17544,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listNetworkAdapters(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworkAdaptersCollection> {
-            return DefaultApiFp(configuration).listNetworkAdapters(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listNetworkAdapters(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Subnet objects
@@ -17558,7 +17558,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listNetworkSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SubnetsCollection> {
-            return DefaultApiFp(configuration).listNetworkSubnets(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listNetworkSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -17572,7 +17572,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listNetworkTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listNetworkTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listNetworkTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Network objects
@@ -17585,7 +17585,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listNetworks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworksCollection> {
-            return DefaultApiFp(configuration).listNetworks(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listNetworks(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Ipaddress objects
@@ -17599,7 +17599,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listOrchestrationStackIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<IpaddressesCollection> {
-            return DefaultApiFp(configuration).listOrchestrationStackIpaddresses(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listOrchestrationStackIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of NetworkAdapter objects
@@ -17613,7 +17613,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listOrchestrationStackNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworkAdaptersCollection> {
-            return DefaultApiFp(configuration).listOrchestrationStackNetworkAdapters(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listOrchestrationStackNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Network objects
@@ -17627,7 +17627,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listOrchestrationStackNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworksCollection> {
-            return DefaultApiFp(configuration).listOrchestrationStackNetworks(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listOrchestrationStackNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of SecurityGroup objects
@@ -17641,7 +17641,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listOrchestrationStackSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SecurityGroupsCollection> {
-            return DefaultApiFp(configuration).listOrchestrationStackSecurityGroups(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listOrchestrationStackSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Subnet objects
@@ -17655,7 +17655,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listOrchestrationStackSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SubnetsCollection> {
-            return DefaultApiFp(configuration).listOrchestrationStackSubnets(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listOrchestrationStackSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Vm objects
@@ -17669,7 +17669,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listOrchestrationStackVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VmsCollection> {
-            return DefaultApiFp(configuration).listOrchestrationStackVms(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listOrchestrationStackVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Volume objects
@@ -17683,7 +17683,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listOrchestrationStackVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VolumesCollection> {
-            return DefaultApiFp(configuration).listOrchestrationStackVolumes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listOrchestrationStackVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of OrchestrationStack objects
@@ -17696,7 +17696,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listOrchestrationStacks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<OrchestrationStacksCollection> {
-            return DefaultApiFp(configuration).listOrchestrationStacks(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listOrchestrationStacks(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -17710,7 +17710,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSecurityGroupTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listSecurityGroupTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSecurityGroupTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Vm objects
@@ -17724,7 +17724,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSecurityGroupVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VmsCollection> {
-            return DefaultApiFp(configuration).listSecurityGroupVms(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSecurityGroupVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of SecurityGroup objects
@@ -17737,7 +17737,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSecurityGroups(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SecurityGroupsCollection> {
-            return DefaultApiFp(configuration).listSecurityGroups(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSecurityGroups(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceInstanceNode objects
@@ -17750,7 +17750,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServiceInstanceNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceInstanceNodesCollection> {
-            return DefaultApiFp(configuration).listServiceInstanceNodes(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServiceInstanceNodes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceInstanceNode objects
@@ -17764,7 +17764,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServiceInstanceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceInstanceNodesCollection> {
-            return DefaultApiFp(configuration).listServiceInstanceServiceInstanceNodes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServiceInstanceServiceInstanceNodes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceInstance objects
@@ -17777,7 +17777,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServiceInstances(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceInstancesCollection> {
-            return DefaultApiFp(configuration).listServiceInstances(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServiceInstances(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceInventory objects
@@ -17790,7 +17790,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServiceInventories(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceInventoriesCollection> {
-            return DefaultApiFp(configuration).listServiceInventories(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServiceInventories(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -17804,7 +17804,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServiceInventoryTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listServiceInventoryTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServiceInventoryTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceOfferingIcon objects
@@ -17817,7 +17817,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServiceOfferingIcons(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceOfferingIconsCollection> {
-            return DefaultApiFp(configuration).listServiceOfferingIcons(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServiceOfferingIcons(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceOfferingNode objects
@@ -17830,7 +17830,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServiceOfferingNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceOfferingNodesCollection> {
-            return DefaultApiFp(configuration).listServiceOfferingNodes(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServiceOfferingNodes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceInstance objects
@@ -17844,7 +17844,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServiceOfferingServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceInstancesCollection> {
-            return DefaultApiFp(configuration).listServiceOfferingServiceInstances(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServiceOfferingServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceOfferingNode objects
@@ -17858,7 +17858,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServiceOfferingServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceOfferingNodesCollection> {
-            return DefaultApiFp(configuration).listServiceOfferingServiceOfferingNodes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServiceOfferingServiceOfferingNodes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServicePlan objects
@@ -17872,7 +17872,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServiceOfferingServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServicePlansCollection> {
-            return DefaultApiFp(configuration).listServiceOfferingServicePlans(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServiceOfferingServicePlans(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -17886,7 +17886,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServiceOfferingTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listServiceOfferingTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServiceOfferingTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceOffering objects
@@ -17899,7 +17899,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServiceOfferings(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceOfferingsCollection> {
-            return DefaultApiFp(configuration).listServiceOfferings(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServiceOfferings(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceInstance objects
@@ -17913,7 +17913,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServicePlanServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceInstancesCollection> {
-            return DefaultApiFp(configuration).listServicePlanServiceInstances(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServicePlanServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServicePlan objects
@@ -17926,7 +17926,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listServicePlans(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServicePlansCollection> {
-            return DefaultApiFp(configuration).listServicePlans(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listServicePlans(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Availability objects
@@ -17940,7 +17940,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceAvailabilities(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<AvailabilitiesCollection> {
-            return DefaultApiFp(configuration).listSourceAvailabilities(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceAvailabilities(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Cluster objects
@@ -17954,7 +17954,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceClusters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ClustersCollection> {
-            return DefaultApiFp(configuration).listSourceClusters(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceClusters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerGroup objects
@@ -17968,7 +17968,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerGroupsCollection> {
-            return DefaultApiFp(configuration).listSourceContainerGroups(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceContainerGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerImage objects
@@ -17982,7 +17982,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceContainerImages(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerImagesCollection> {
-            return DefaultApiFp(configuration).listSourceContainerImages(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceContainerImages(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerNode objects
@@ -17996,7 +17996,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceContainerNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerNodesCollection> {
-            return DefaultApiFp(configuration).listSourceContainerNodes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceContainerNodes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerProject objects
@@ -18010,7 +18010,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceContainerProjects(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerProjectsCollection> {
-            return DefaultApiFp(configuration).listSourceContainerProjects(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceContainerProjects(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerTemplate objects
@@ -18024,7 +18024,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerTemplatesCollection> {
-            return DefaultApiFp(configuration).listSourceContainerTemplates(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceContainerTemplates(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Container objects
@@ -18038,7 +18038,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceContainers(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainersCollection> {
-            return DefaultApiFp(configuration).listSourceContainers(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceContainers(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Datastore objects
@@ -18052,7 +18052,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceDatastores(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<DatastoresCollection> {
-            return DefaultApiFp(configuration).listSourceDatastores(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceDatastores(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Host objects
@@ -18066,7 +18066,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceHosts(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<HostsCollection> {
-            return DefaultApiFp(configuration).listSourceHosts(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceHosts(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Ipaddress objects
@@ -18080,7 +18080,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<IpaddressesCollection> {
-            return DefaultApiFp(configuration).listSourceIpaddresses(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of NetworkAdapter objects
@@ -18094,7 +18094,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworkAdaptersCollection> {
-            return DefaultApiFp(configuration).listSourceNetworkAdapters(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Network objects
@@ -18108,7 +18108,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworksCollection> {
-            return DefaultApiFp(configuration).listSourceNetworks(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of OrchestrationStack objects
@@ -18122,7 +18122,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<OrchestrationStacksCollection> {
-            return DefaultApiFp(configuration).listSourceOrchestrationStacks(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceOrchestrationStacks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Ipaddress objects
@@ -18136,7 +18136,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceRegionIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<IpaddressesCollection> {
-            return DefaultApiFp(configuration).listSourceRegionIpaddresses(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceRegionIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of NetworkAdapter objects
@@ -18150,7 +18150,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceRegionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworkAdaptersCollection> {
-            return DefaultApiFp(configuration).listSourceRegionNetworkAdapters(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceRegionNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Network objects
@@ -18164,7 +18164,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceRegionNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworksCollection> {
-            return DefaultApiFp(configuration).listSourceRegionNetworks(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceRegionNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of OrchestrationStack objects
@@ -18178,7 +18178,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceRegionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<OrchestrationStacksCollection> {
-            return DefaultApiFp(configuration).listSourceRegionOrchestrationStacks(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceRegionOrchestrationStacks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of SecurityGroup objects
@@ -18192,7 +18192,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceRegionSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SecurityGroupsCollection> {
-            return DefaultApiFp(configuration).listSourceRegionSecurityGroups(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceRegionSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceInstance objects
@@ -18206,7 +18206,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceRegionServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceInstancesCollection> {
-            return DefaultApiFp(configuration).listSourceRegionServiceInstances(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceRegionServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceOffering objects
@@ -18220,7 +18220,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceRegionServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceOfferingsCollection> {
-            return DefaultApiFp(configuration).listSourceRegionServiceOfferings(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceRegionServiceOfferings(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServicePlan objects
@@ -18234,7 +18234,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceRegionServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServicePlansCollection> {
-            return DefaultApiFp(configuration).listSourceRegionServicePlans(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceRegionServicePlans(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Subnet objects
@@ -18248,7 +18248,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceRegionSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SubnetsCollection> {
-            return DefaultApiFp(configuration).listSourceRegionSubnets(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceRegionSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Vm objects
@@ -18262,7 +18262,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceRegionVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VmsCollection> {
-            return DefaultApiFp(configuration).listSourceRegionVms(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceRegionVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Volume objects
@@ -18276,7 +18276,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceRegionVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VolumesCollection> {
-            return DefaultApiFp(configuration).listSourceRegionVolumes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceRegionVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of SourceRegion objects
@@ -18289,7 +18289,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceRegions(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SourceRegionsCollection> {
-            return DefaultApiFp(configuration).listSourceRegions(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceRegions(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of SecurityGroup objects
@@ -18303,7 +18303,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SecurityGroupsCollection> {
-            return DefaultApiFp(configuration).listSourceSecurityGroups(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceInstanceNode objects
@@ -18317,7 +18317,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceInstanceNodesCollection> {
-            return DefaultApiFp(configuration).listSourceServiceInstanceNodes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceServiceInstanceNodes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceInstance objects
@@ -18331,7 +18331,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceInstancesCollection> {
-            return DefaultApiFp(configuration).listSourceServiceInstances(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceInventory objects
@@ -18345,7 +18345,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceServiceInventories(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceInventoriesCollection> {
-            return DefaultApiFp(configuration).listSourceServiceInventories(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceServiceInventories(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceOfferingNode objects
@@ -18359,7 +18359,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceOfferingNodesCollection> {
-            return DefaultApiFp(configuration).listSourceServiceOfferingNodes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceServiceOfferingNodes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceOffering objects
@@ -18373,7 +18373,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceOfferingsCollection> {
-            return DefaultApiFp(configuration).listSourceServiceOfferings(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceServiceOfferings(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServicePlan objects
@@ -18387,7 +18387,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServicePlansCollection> {
-            return DefaultApiFp(configuration).listSourceServicePlans(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceServicePlans(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of SourceRegion objects
@@ -18401,7 +18401,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceSourceRegions(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SourceRegionsCollection> {
-            return DefaultApiFp(configuration).listSourceSourceRegions(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceSourceRegions(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Subnet objects
@@ -18415,7 +18415,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SubnetsCollection> {
-            return DefaultApiFp(configuration).listSourceSubnets(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Subscription objects
@@ -18429,7 +18429,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceSubscriptions(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SubscriptionsCollection> {
-            return DefaultApiFp(configuration).listSourceSubscriptions(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceSubscriptions(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Vm objects
@@ -18443,7 +18443,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VmsCollection> {
-            return DefaultApiFp(configuration).listSourceVms(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of VolumeType objects
@@ -18457,7 +18457,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceVolumeTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VolumeTypesCollection> {
-            return DefaultApiFp(configuration).listSourceVolumeTypes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceVolumeTypes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Volume objects
@@ -18471,7 +18471,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VolumesCollection> {
-            return DefaultApiFp(configuration).listSourceVolumes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Source objects
@@ -18484,7 +18484,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSources(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SourcesCollection> {
-            return DefaultApiFp(configuration).listSources(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSources(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Ipaddress objects
@@ -18498,7 +18498,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubnetIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<IpaddressesCollection> {
-            return DefaultApiFp(configuration).listSubnetIpaddresses(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubnetIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of NetworkAdapter objects
@@ -18512,7 +18512,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubnetNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworkAdaptersCollection> {
-            return DefaultApiFp(configuration).listSubnetNetworkAdapters(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubnetNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -18526,7 +18526,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubnetTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listSubnetTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubnetTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Subnet objects
@@ -18539,7 +18539,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubnets(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SubnetsCollection> {
-            return DefaultApiFp(configuration).listSubnets(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubnets(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Ipaddress objects
@@ -18553,7 +18553,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubscriptionIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<IpaddressesCollection> {
-            return DefaultApiFp(configuration).listSubscriptionIpaddresses(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubscriptionIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of NetworkAdapter objects
@@ -18567,7 +18567,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubscriptionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworkAdaptersCollection> {
-            return DefaultApiFp(configuration).listSubscriptionNetworkAdapters(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubscriptionNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Network objects
@@ -18581,7 +18581,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubscriptionNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworksCollection> {
-            return DefaultApiFp(configuration).listSubscriptionNetworks(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubscriptionNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of OrchestrationStack objects
@@ -18595,7 +18595,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubscriptionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<OrchestrationStacksCollection> {
-            return DefaultApiFp(configuration).listSubscriptionOrchestrationStacks(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubscriptionOrchestrationStacks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of SecurityGroup objects
@@ -18609,7 +18609,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubscriptionSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SecurityGroupsCollection> {
-            return DefaultApiFp(configuration).listSubscriptionSecurityGroups(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubscriptionSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceInstance objects
@@ -18623,7 +18623,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubscriptionServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceInstancesCollection> {
-            return DefaultApiFp(configuration).listSubscriptionServiceInstances(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubscriptionServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceOffering objects
@@ -18637,7 +18637,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubscriptionServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceOfferingsCollection> {
-            return DefaultApiFp(configuration).listSubscriptionServiceOfferings(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubscriptionServiceOfferings(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServicePlan objects
@@ -18651,7 +18651,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubscriptionServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServicePlansCollection> {
-            return DefaultApiFp(configuration).listSubscriptionServicePlans(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubscriptionServicePlans(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Subnet objects
@@ -18665,7 +18665,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubscriptionSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SubnetsCollection> {
-            return DefaultApiFp(configuration).listSubscriptionSubnets(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubscriptionSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Vm objects
@@ -18679,7 +18679,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubscriptionVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VmsCollection> {
-            return DefaultApiFp(configuration).listSubscriptionVms(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubscriptionVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Volume objects
@@ -18693,7 +18693,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubscriptionVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VolumesCollection> {
-            return DefaultApiFp(configuration).listSubscriptionVolumes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubscriptionVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Subscription objects
@@ -18706,7 +18706,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSubscriptions(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SubscriptionsCollection> {
-            return DefaultApiFp(configuration).listSubscriptions(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSubscriptions(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerGroup objects
@@ -18720,7 +18720,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTagContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerGroupsCollection> {
-            return DefaultApiFp(configuration).listTagContainerGroups(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTagContainerGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerImage objects
@@ -18734,7 +18734,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTagContainerImages(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerImagesCollection> {
-            return DefaultApiFp(configuration).listTagContainerImages(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTagContainerImages(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerNode objects
@@ -18748,7 +18748,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTagContainerNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerNodesCollection> {
-            return DefaultApiFp(configuration).listTagContainerNodes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTagContainerNodes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerProject objects
@@ -18762,7 +18762,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTagContainerProjects(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerProjectsCollection> {
-            return DefaultApiFp(configuration).listTagContainerProjects(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTagContainerProjects(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ContainerTemplate objects
@@ -18776,7 +18776,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTagContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ContainerTemplatesCollection> {
-            return DefaultApiFp(configuration).listTagContainerTemplates(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTagContainerTemplates(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Ipaddress objects
@@ -18790,7 +18790,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTagIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<IpaddressesCollection> {
-            return DefaultApiFp(configuration).listTagIpaddresses(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTagIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of NetworkAdapter objects
@@ -18804,7 +18804,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTagNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworkAdaptersCollection> {
-            return DefaultApiFp(configuration).listTagNetworkAdapters(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTagNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Network objects
@@ -18818,7 +18818,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTagNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworksCollection> {
-            return DefaultApiFp(configuration).listTagNetworks(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTagNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of SecurityGroup objects
@@ -18832,7 +18832,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTagSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SecurityGroupsCollection> {
-            return DefaultApiFp(configuration).listTagSecurityGroups(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTagSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceInventory objects
@@ -18846,7 +18846,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTagServiceInventories(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceInventoriesCollection> {
-            return DefaultApiFp(configuration).listTagServiceInventories(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTagServiceInventories(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ServiceOffering objects
@@ -18860,7 +18860,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTagServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ServiceOfferingsCollection> {
-            return DefaultApiFp(configuration).listTagServiceOfferings(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTagServiceOfferings(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Subnet objects
@@ -18874,7 +18874,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTagSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SubnetsCollection> {
-            return DefaultApiFp(configuration).listTagSubnets(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTagSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Vm objects
@@ -18888,7 +18888,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTagVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VmsCollection> {
-            return DefaultApiFp(configuration).listTagVms(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTagVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -18901,7 +18901,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTags(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listTags(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTags(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Task objects
@@ -18914,7 +18914,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listTasks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TasksCollection> {
-            return DefaultApiFp(configuration).listTasks(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listTasks(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of NetworkAdapter objects
@@ -18928,7 +18928,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listVmNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<NetworkAdaptersCollection> {
-            return DefaultApiFp(configuration).listVmNetworkAdapters(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listVmNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of SecurityGroup objects
@@ -18942,7 +18942,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listVmSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SecurityGroupsCollection> {
-            return DefaultApiFp(configuration).listVmSecurityGroups(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listVmSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -18956,7 +18956,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listVmTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<TagsCollection> {
-            return DefaultApiFp(configuration).listVmTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listVmTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of VolumeAttachment objects
@@ -18970,7 +18970,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listVmVolumeAttachments(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VolumeAttachmentsCollection> {
-            return DefaultApiFp(configuration).listVmVolumeAttachments(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listVmVolumeAttachments(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Volume objects
@@ -18984,7 +18984,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listVmVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VolumesCollection> {
-            return DefaultApiFp(configuration).listVmVolumes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listVmVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Vm objects
@@ -18997,7 +18997,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listVms(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VmsCollection> {
-            return DefaultApiFp(configuration).listVms(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listVms(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of VolumeAttachment objects
@@ -19010,7 +19010,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listVolumeAttachments(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VolumeAttachmentsCollection> {
-            return DefaultApiFp(configuration).listVolumeAttachments(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listVolumeAttachments(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Volume objects
@@ -19024,7 +19024,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listVolumeTypeVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VolumesCollection> {
-            return DefaultApiFp(configuration).listVolumeTypeVolumes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listVolumeTypeVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of VolumeType objects
@@ -19037,7 +19037,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listVolumeTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VolumeTypesCollection> {
-            return DefaultApiFp(configuration).listVolumeTypes(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listVolumeTypes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Vm objects
@@ -19051,7 +19051,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listVolumeVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VmsCollection> {
-            return DefaultApiFp(configuration).listVolumeVms(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listVolumeVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Volume objects
@@ -19064,7 +19064,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listVolumes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<VolumesCollection> {
-            return DefaultApiFp(configuration).listVolumes(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listVolumes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Task id
@@ -19075,7 +19075,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         orderServiceOffering(id: string, orderParametersServiceOffering: OrderParametersServiceOffering, options?: any): AxiosPromise<InlineResponse200> {
-            return DefaultApiFp(configuration).orderServiceOffering(id, orderParametersServiceOffering, options)(axios, basePath);
+            return DefaultApiFp(configuration).orderServiceOffering(id, orderParametersServiceOffering, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Task id
@@ -19086,7 +19086,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         orderServicePlan(id: string, orderParametersServicePlan: OrderParametersServicePlan, options?: any): AxiosPromise<InlineResponse200> {
-            return DefaultApiFp(configuration).orderServicePlan(id, orderParametersServicePlan, options)(axios, basePath);
+            return DefaultApiFp(configuration).orderServicePlan(id, orderParametersServicePlan, options).then((request) => request(axios, basePath));
         },
         /**
          * Performs a GraphQL Query
@@ -19096,7 +19096,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         postGraphQL(graphQLRequest: GraphQLRequest, options?: any): AxiosPromise<GraphQLResponse> {
-            return DefaultApiFp(configuration).postGraphQL(graphQLRequest, options)(axios, basePath);
+            return DefaultApiFp(configuration).postGraphQL(graphQLRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Cluster object
@@ -19106,7 +19106,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showCluster(id: string, options?: any): AxiosPromise<Cluster> {
-            return DefaultApiFp(configuration).showCluster(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showCluster(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Container object
@@ -19116,7 +19116,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showContainer(id: string, options?: any): AxiosPromise<Container> {
-            return DefaultApiFp(configuration).showContainer(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showContainer(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ContainerGroup object
@@ -19126,7 +19126,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showContainerGroup(id: string, options?: any): AxiosPromise<ContainerGroup> {
-            return DefaultApiFp(configuration).showContainerGroup(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showContainerGroup(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ContainerImage object
@@ -19136,7 +19136,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showContainerImage(id: string, options?: any): AxiosPromise<ContainerImage> {
-            return DefaultApiFp(configuration).showContainerImage(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showContainerImage(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ContainerNode object
@@ -19146,7 +19146,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showContainerNode(id: string, options?: any): AxiosPromise<ContainerNode> {
-            return DefaultApiFp(configuration).showContainerNode(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showContainerNode(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ContainerProject object
@@ -19156,7 +19156,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showContainerProject(id: string, options?: any): AxiosPromise<ContainerProject> {
-            return DefaultApiFp(configuration).showContainerProject(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showContainerProject(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ContainerResourceQuota object
@@ -19166,7 +19166,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showContainerResourceQuota(id: string, options?: any): AxiosPromise<ContainerResourceQuota> {
-            return DefaultApiFp(configuration).showContainerResourceQuota(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showContainerResourceQuota(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ContainerTemplate object
@@ -19176,7 +19176,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showContainerTemplate(id: string, options?: any): AxiosPromise<ContainerTemplate> {
-            return DefaultApiFp(configuration).showContainerTemplate(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showContainerTemplate(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Datastore object
@@ -19186,7 +19186,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showDatastore(id: string, options?: any): AxiosPromise<Datastore> {
-            return DefaultApiFp(configuration).showDatastore(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showDatastore(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Flavor object
@@ -19196,7 +19196,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showFlavor(id: string, options?: any): AxiosPromise<Flavor> {
-            return DefaultApiFp(configuration).showFlavor(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showFlavor(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Host object
@@ -19206,7 +19206,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showHost(id: string, options?: any): AxiosPromise<Host> {
-            return DefaultApiFp(configuration).showHost(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showHost(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Ipaddress object
@@ -19216,7 +19216,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showIpaddress(id: string, options?: any): AxiosPromise<Ipaddress> {
-            return DefaultApiFp(configuration).showIpaddress(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showIpaddress(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Network object
@@ -19226,7 +19226,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showNetwork(id: string, options?: any): AxiosPromise<Network> {
-            return DefaultApiFp(configuration).showNetwork(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showNetwork(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a NetworkAdapter object
@@ -19236,7 +19236,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showNetworkAdapter(id: string, options?: any): AxiosPromise<NetworkAdapter> {
-            return DefaultApiFp(configuration).showNetworkAdapter(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showNetworkAdapter(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a OrchestrationStack object
@@ -19246,7 +19246,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showOrchestrationStack(id: string, options?: any): AxiosPromise<OrchestrationStack> {
-            return DefaultApiFp(configuration).showOrchestrationStack(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showOrchestrationStack(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a SecurityGroup object
@@ -19256,7 +19256,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showSecurityGroup(id: string, options?: any): AxiosPromise<SecurityGroup> {
-            return DefaultApiFp(configuration).showSecurityGroup(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showSecurityGroup(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ServiceInstance object
@@ -19266,7 +19266,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showServiceInstance(id: string, options?: any): AxiosPromise<ServiceInstance> {
-            return DefaultApiFp(configuration).showServiceInstance(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showServiceInstance(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ServiceInstanceNode object
@@ -19276,7 +19276,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showServiceInstanceNode(id: string, options?: any): AxiosPromise<ServiceInstanceNode> {
-            return DefaultApiFp(configuration).showServiceInstanceNode(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showServiceInstanceNode(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ServiceInventory object
@@ -19286,7 +19286,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showServiceInventory(id: string, options?: any): AxiosPromise<ServiceInventory> {
-            return DefaultApiFp(configuration).showServiceInventory(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showServiceInventory(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ServiceOffering object
@@ -19296,7 +19296,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showServiceOffering(id: string, options?: any): AxiosPromise<ServiceOffering> {
-            return DefaultApiFp(configuration).showServiceOffering(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showServiceOffering(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ServiceOfferingIcon object
@@ -19306,7 +19306,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showServiceOfferingIcon(id: string, options?: any): AxiosPromise<ServiceOfferingIcon> {
-            return DefaultApiFp(configuration).showServiceOfferingIcon(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showServiceOfferingIcon(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ServiceOfferingIcon IconData
@@ -19316,7 +19316,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showServiceOfferingIconIconData(id: string, options?: any): AxiosPromise<any> {
-            return DefaultApiFp(configuration).showServiceOfferingIconIconData(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showServiceOfferingIconIconData(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ServiceOfferingNode object
@@ -19326,7 +19326,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showServiceOfferingNode(id: string, options?: any): AxiosPromise<ServiceOfferingNode> {
-            return DefaultApiFp(configuration).showServiceOfferingNode(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showServiceOfferingNode(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ServicePlan object
@@ -19336,7 +19336,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showServicePlan(id: string, options?: any): AxiosPromise<ServicePlan> {
-            return DefaultApiFp(configuration).showServicePlan(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showServicePlan(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Source object
@@ -19346,7 +19346,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showSource(id: string, options?: any): AxiosPromise<Source> {
-            return DefaultApiFp(configuration).showSource(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showSource(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a SourceRegion object
@@ -19356,7 +19356,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showSourceRegion(id: string, options?: any): AxiosPromise<SourceRegion> {
-            return DefaultApiFp(configuration).showSourceRegion(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showSourceRegion(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Subnet object
@@ -19366,7 +19366,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showSubnet(id: string, options?: any): AxiosPromise<Subnet> {
-            return DefaultApiFp(configuration).showSubnet(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showSubnet(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Subscription object
@@ -19376,7 +19376,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showSubscription(id: string, options?: any): AxiosPromise<Subscription> {
-            return DefaultApiFp(configuration).showSubscription(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showSubscription(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Tag object
@@ -19386,7 +19386,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showTag(id: string, options?: any): AxiosPromise<Tag> {
-            return DefaultApiFp(configuration).showTag(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showTag(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Task object
@@ -19396,7 +19396,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showTask(id: string, options?: any): AxiosPromise<Task> {
-            return DefaultApiFp(configuration).showTask(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showTask(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Vm object
@@ -19406,7 +19406,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showVm(id: string, options?: any): AxiosPromise<Vm> {
-            return DefaultApiFp(configuration).showVm(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showVm(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Volume object
@@ -19416,7 +19416,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showVolume(id: string, options?: any): AxiosPromise<Volume> {
-            return DefaultApiFp(configuration).showVolume(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showVolume(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a VolumeAttachment object
@@ -19426,7 +19426,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showVolumeAttachment(id: string, options?: any): AxiosPromise<VolumeAttachment> {
-            return DefaultApiFp(configuration).showVolumeAttachment(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showVolumeAttachment(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a VolumeType object
@@ -19436,7 +19436,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showVolumeType(id: string, options?: any): AxiosPromise<VolumeType> {
-            return DefaultApiFp(configuration).showVolumeType(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showVolumeType(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Updates a Task object
@@ -19447,7 +19447,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         updateTask(id: string, task: Task, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).updateTask(id, task, options)(axios, basePath);
+            return DefaultApiFp(configuration).updateTask(id, task, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -19469,7 +19469,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public appliedInventoriesForServiceOffering(id: string, appliedInventoriesParametersServicePlan: AppliedInventoriesParametersServicePlan, options?: any) {
-        return DefaultApiFp(this.configuration).appliedInventoriesForServiceOffering(id, appliedInventoriesParametersServicePlan, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).appliedInventoriesForServiceOffering(id, appliedInventoriesParametersServicePlan, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19480,7 +19480,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getDocumentation(options?: any) {
-        return DefaultApiFp(this.configuration).getDocumentation(options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getDocumentation(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19496,7 +19496,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listClusterHosts(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listClusterHosts(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listClusterHosts(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19511,7 +19511,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listClusters(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listClusters(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listClusters(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19527,7 +19527,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerGroupContainers(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerGroupContainers(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerGroupContainers(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19543,7 +19543,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerGroupTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerGroupTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerGroupTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19558,7 +19558,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerGroups(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerGroups(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerGroups(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19574,7 +19574,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerImageTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerImageTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerImageTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19589,7 +19589,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerImages(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerImages(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerImages(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19605,7 +19605,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerNodeContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerNodeContainerGroups(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerNodeContainerGroups(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19621,7 +19621,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerNodeTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerNodeTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerNodeTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19636,7 +19636,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerNodes(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerNodes(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19652,7 +19652,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerProjectContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerProjectContainerGroups(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerProjectContainerGroups(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19668,7 +19668,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerProjectContainerResourceQuota(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerProjectContainerResourceQuota(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerProjectContainerResourceQuota(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19684,7 +19684,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerProjectContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerProjectContainerTemplates(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerProjectContainerTemplates(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19700,7 +19700,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerProjectTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerProjectTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerProjectTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19715,7 +19715,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerProjects(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerProjects(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerProjects(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19730,7 +19730,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerResourceQuota(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerResourceQuota(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerResourceQuota(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19746,7 +19746,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerTemplateTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerTemplateTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerTemplateTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19761,7 +19761,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainerTemplates(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainerTemplates(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainerTemplates(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19776,7 +19776,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listContainers(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listContainers(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listContainers(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19791,7 +19791,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listDatastores(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listDatastores(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listDatastores(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19806,7 +19806,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listFlavors(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listFlavors(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listFlavors(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19821,7 +19821,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listHosts(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listHosts(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listHosts(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19837,7 +19837,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listIpaddressTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listIpaddressTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listIpaddressTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19852,7 +19852,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listIpaddresses(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listIpaddresses(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listIpaddresses(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19868,7 +19868,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listNetworkAdapterIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listNetworkAdapterIpaddresses(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listNetworkAdapterIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19884,7 +19884,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listNetworkAdapterTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listNetworkAdapterTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listNetworkAdapterTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19899,7 +19899,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listNetworkAdapters(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listNetworkAdapters(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listNetworkAdapters(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19915,7 +19915,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listNetworkSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listNetworkSubnets(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listNetworkSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19931,7 +19931,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listNetworkTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listNetworkTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listNetworkTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19946,7 +19946,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listNetworks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listNetworks(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listNetworks(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19962,7 +19962,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listOrchestrationStackIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listOrchestrationStackIpaddresses(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listOrchestrationStackIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19978,7 +19978,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listOrchestrationStackNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listOrchestrationStackNetworkAdapters(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listOrchestrationStackNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19994,7 +19994,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listOrchestrationStackNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listOrchestrationStackNetworks(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listOrchestrationStackNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20010,7 +20010,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listOrchestrationStackSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listOrchestrationStackSecurityGroups(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listOrchestrationStackSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20026,7 +20026,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listOrchestrationStackSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listOrchestrationStackSubnets(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listOrchestrationStackSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20042,7 +20042,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listOrchestrationStackVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listOrchestrationStackVms(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listOrchestrationStackVms(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20058,7 +20058,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listOrchestrationStackVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listOrchestrationStackVolumes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listOrchestrationStackVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20073,7 +20073,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listOrchestrationStacks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listOrchestrationStacks(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listOrchestrationStacks(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20089,7 +20089,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSecurityGroupTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSecurityGroupTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSecurityGroupTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20105,7 +20105,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSecurityGroupVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSecurityGroupVms(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSecurityGroupVms(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20120,7 +20120,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSecurityGroups(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSecurityGroups(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSecurityGroups(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20135,7 +20135,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServiceInstanceNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServiceInstanceNodes(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServiceInstanceNodes(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20151,7 +20151,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServiceInstanceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServiceInstanceServiceInstanceNodes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServiceInstanceServiceInstanceNodes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20166,7 +20166,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServiceInstances(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServiceInstances(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServiceInstances(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20181,7 +20181,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServiceInventories(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServiceInventories(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServiceInventories(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20197,7 +20197,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServiceInventoryTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServiceInventoryTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServiceInventoryTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20212,7 +20212,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServiceOfferingIcons(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServiceOfferingIcons(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServiceOfferingIcons(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20227,7 +20227,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServiceOfferingNodes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServiceOfferingNodes(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServiceOfferingNodes(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20243,7 +20243,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServiceOfferingServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServiceOfferingServiceInstances(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServiceOfferingServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20259,7 +20259,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServiceOfferingServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServiceOfferingServiceOfferingNodes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServiceOfferingServiceOfferingNodes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20275,7 +20275,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServiceOfferingServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServiceOfferingServicePlans(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServiceOfferingServicePlans(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20291,7 +20291,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServiceOfferingTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServiceOfferingTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServiceOfferingTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20306,7 +20306,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServiceOfferings(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServiceOfferings(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServiceOfferings(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20322,7 +20322,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServicePlanServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServicePlanServiceInstances(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServicePlanServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20337,7 +20337,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listServicePlans(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listServicePlans(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listServicePlans(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20353,7 +20353,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceAvailabilities(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceAvailabilities(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceAvailabilities(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20369,7 +20369,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceClusters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceClusters(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceClusters(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20385,7 +20385,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceContainerGroups(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceContainerGroups(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20401,7 +20401,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceContainerImages(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceContainerImages(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceContainerImages(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20417,7 +20417,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceContainerNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceContainerNodes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceContainerNodes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20433,7 +20433,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceContainerProjects(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceContainerProjects(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceContainerProjects(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20449,7 +20449,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceContainerTemplates(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceContainerTemplates(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20465,7 +20465,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceContainers(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceContainers(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceContainers(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20481,7 +20481,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceDatastores(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceDatastores(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceDatastores(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20497,7 +20497,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceHosts(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceHosts(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceHosts(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20513,7 +20513,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceIpaddresses(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20529,7 +20529,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceNetworkAdapters(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20545,7 +20545,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceNetworks(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20561,7 +20561,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceOrchestrationStacks(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceOrchestrationStacks(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20577,7 +20577,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceRegionIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceRegionIpaddresses(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceRegionIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20593,7 +20593,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceRegionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceRegionNetworkAdapters(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceRegionNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20609,7 +20609,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceRegionNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceRegionNetworks(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceRegionNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20625,7 +20625,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceRegionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceRegionOrchestrationStacks(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceRegionOrchestrationStacks(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20641,7 +20641,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceRegionSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceRegionSecurityGroups(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceRegionSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20657,7 +20657,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceRegionServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceRegionServiceInstances(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceRegionServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20673,7 +20673,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceRegionServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceRegionServiceOfferings(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceRegionServiceOfferings(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20689,7 +20689,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceRegionServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceRegionServicePlans(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceRegionServicePlans(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20705,7 +20705,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceRegionSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceRegionSubnets(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceRegionSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20721,7 +20721,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceRegionVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceRegionVms(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceRegionVms(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20737,7 +20737,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceRegionVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceRegionVolumes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceRegionVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20752,7 +20752,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceRegions(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceRegions(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceRegions(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20768,7 +20768,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceSecurityGroups(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20784,7 +20784,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceServiceInstanceNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceServiceInstanceNodes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceServiceInstanceNodes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20800,7 +20800,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceServiceInstances(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20816,7 +20816,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceServiceInventories(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceServiceInventories(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceServiceInventories(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20832,7 +20832,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceServiceOfferingNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceServiceOfferingNodes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceServiceOfferingNodes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20848,7 +20848,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceServiceOfferings(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceServiceOfferings(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20864,7 +20864,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceServicePlans(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceServicePlans(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20880,7 +20880,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceSourceRegions(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceSourceRegions(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceSourceRegions(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20896,7 +20896,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceSubnets(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20912,7 +20912,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceSubscriptions(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceSubscriptions(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceSubscriptions(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20928,7 +20928,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceVms(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceVms(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20944,7 +20944,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceVolumeTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceVolumeTypes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceVolumeTypes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20960,7 +20960,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceVolumes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20975,7 +20975,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSources(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSources(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSources(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20991,7 +20991,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubnetIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubnetIpaddresses(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubnetIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21007,7 +21007,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubnetNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubnetNetworkAdapters(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubnetNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21023,7 +21023,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubnetTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubnetTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubnetTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21038,7 +21038,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubnets(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubnets(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubnets(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21054,7 +21054,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubscriptionIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubscriptionIpaddresses(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubscriptionIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21070,7 +21070,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubscriptionNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubscriptionNetworkAdapters(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubscriptionNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21086,7 +21086,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubscriptionNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubscriptionNetworks(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubscriptionNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21102,7 +21102,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubscriptionOrchestrationStacks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubscriptionOrchestrationStacks(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubscriptionOrchestrationStacks(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21118,7 +21118,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubscriptionSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubscriptionSecurityGroups(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubscriptionSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21134,7 +21134,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubscriptionServiceInstances(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubscriptionServiceInstances(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubscriptionServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21150,7 +21150,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubscriptionServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubscriptionServiceOfferings(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubscriptionServiceOfferings(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21166,7 +21166,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubscriptionServicePlans(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubscriptionServicePlans(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubscriptionServicePlans(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21182,7 +21182,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubscriptionSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubscriptionSubnets(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubscriptionSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21198,7 +21198,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubscriptionVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubscriptionVms(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubscriptionVms(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21214,7 +21214,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubscriptionVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubscriptionVolumes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubscriptionVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21229,7 +21229,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSubscriptions(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSubscriptions(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSubscriptions(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21245,7 +21245,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTagContainerGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTagContainerGroups(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTagContainerGroups(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21261,7 +21261,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTagContainerImages(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTagContainerImages(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTagContainerImages(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21277,7 +21277,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTagContainerNodes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTagContainerNodes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTagContainerNodes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21293,7 +21293,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTagContainerProjects(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTagContainerProjects(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTagContainerProjects(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21309,7 +21309,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTagContainerTemplates(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTagContainerTemplates(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTagContainerTemplates(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21325,7 +21325,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTagIpaddresses(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTagIpaddresses(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTagIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21341,7 +21341,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTagNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTagNetworkAdapters(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTagNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21357,7 +21357,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTagNetworks(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTagNetworks(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTagNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21373,7 +21373,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTagSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTagSecurityGroups(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTagSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21389,7 +21389,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTagServiceInventories(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTagServiceInventories(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTagServiceInventories(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21405,7 +21405,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTagServiceOfferings(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTagServiceOfferings(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTagServiceOfferings(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21421,7 +21421,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTagSubnets(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTagSubnets(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTagSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21437,7 +21437,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTagVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTagVms(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTagVms(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21452,7 +21452,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTags(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTags(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTags(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21467,7 +21467,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listTasks(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listTasks(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listTasks(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21483,7 +21483,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listVmNetworkAdapters(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listVmNetworkAdapters(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listVmNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21499,7 +21499,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listVmSecurityGroups(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listVmSecurityGroups(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listVmSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21515,7 +21515,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listVmTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listVmTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listVmTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21531,7 +21531,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listVmVolumeAttachments(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listVmVolumeAttachments(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listVmVolumeAttachments(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21547,7 +21547,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listVmVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listVmVolumes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listVmVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21562,7 +21562,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listVms(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listVms(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listVms(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21577,7 +21577,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listVolumeAttachments(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listVolumeAttachments(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listVolumeAttachments(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21593,7 +21593,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listVolumeTypeVolumes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listVolumeTypeVolumes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listVolumeTypeVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21608,7 +21608,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listVolumeTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listVolumeTypes(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listVolumeTypes(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21624,7 +21624,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listVolumeVms(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listVolumeVms(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listVolumeVms(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21639,7 +21639,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listVolumes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listVolumes(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listVolumes(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21652,7 +21652,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public orderServiceOffering(id: string, orderParametersServiceOffering: OrderParametersServiceOffering, options?: any) {
-        return DefaultApiFp(this.configuration).orderServiceOffering(id, orderParametersServiceOffering, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).orderServiceOffering(id, orderParametersServiceOffering, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21665,7 +21665,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public orderServicePlan(id: string, orderParametersServicePlan: OrderParametersServicePlan, options?: any) {
-        return DefaultApiFp(this.configuration).orderServicePlan(id, orderParametersServicePlan, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).orderServicePlan(id, orderParametersServicePlan, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21677,7 +21677,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public postGraphQL(graphQLRequest: GraphQLRequest, options?: any) {
-        return DefaultApiFp(this.configuration).postGraphQL(graphQLRequest, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).postGraphQL(graphQLRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21689,7 +21689,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showCluster(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showCluster(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showCluster(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21701,7 +21701,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showContainer(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showContainer(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showContainer(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21713,7 +21713,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showContainerGroup(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showContainerGroup(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showContainerGroup(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21725,7 +21725,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showContainerImage(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showContainerImage(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showContainerImage(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21737,7 +21737,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showContainerNode(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showContainerNode(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showContainerNode(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21749,7 +21749,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showContainerProject(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showContainerProject(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showContainerProject(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21761,7 +21761,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showContainerResourceQuota(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showContainerResourceQuota(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showContainerResourceQuota(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21773,7 +21773,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showContainerTemplate(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showContainerTemplate(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showContainerTemplate(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21785,7 +21785,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showDatastore(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showDatastore(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showDatastore(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21797,7 +21797,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showFlavor(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showFlavor(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showFlavor(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21809,7 +21809,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showHost(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showHost(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showHost(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21821,7 +21821,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showIpaddress(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showIpaddress(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showIpaddress(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21833,7 +21833,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showNetwork(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showNetwork(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showNetwork(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21845,7 +21845,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showNetworkAdapter(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showNetworkAdapter(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showNetworkAdapter(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21857,7 +21857,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showOrchestrationStack(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showOrchestrationStack(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showOrchestrationStack(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21869,7 +21869,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showSecurityGroup(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showSecurityGroup(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showSecurityGroup(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21881,7 +21881,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showServiceInstance(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showServiceInstance(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showServiceInstance(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21893,7 +21893,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showServiceInstanceNode(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showServiceInstanceNode(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showServiceInstanceNode(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21905,7 +21905,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showServiceInventory(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showServiceInventory(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showServiceInventory(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21917,7 +21917,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showServiceOffering(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showServiceOffering(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showServiceOffering(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21929,7 +21929,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showServiceOfferingIcon(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showServiceOfferingIcon(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showServiceOfferingIcon(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21941,7 +21941,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showServiceOfferingIconIconData(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showServiceOfferingIconIconData(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showServiceOfferingIconIconData(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21953,7 +21953,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showServiceOfferingNode(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showServiceOfferingNode(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showServiceOfferingNode(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21965,7 +21965,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showServicePlan(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showServicePlan(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showServicePlan(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21977,7 +21977,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showSource(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showSource(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showSource(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21989,7 +21989,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showSourceRegion(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showSourceRegion(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showSourceRegion(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -22001,7 +22001,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showSubnet(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showSubnet(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showSubnet(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -22013,7 +22013,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showSubscription(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showSubscription(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showSubscription(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -22025,7 +22025,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showTag(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showTag(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showTag(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -22037,7 +22037,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showTask(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showTask(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showTask(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -22049,7 +22049,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showVm(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showVm(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showVm(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -22061,7 +22061,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showVolume(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showVolume(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showVolume(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -22073,7 +22073,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showVolumeAttachment(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showVolumeAttachment(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showVolumeAttachment(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -22085,7 +22085,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showVolumeType(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showVolumeType(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showVolumeType(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -22098,7 +22098,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public updateTask(id: string, task: Task, options?: any) {
-        return DefaultApiFp(this.configuration).updateTask(id, task, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).updateTask(id, task, options).then((request) => request(this.axios, this.basePath));
     }
 
 }

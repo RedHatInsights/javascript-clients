@@ -95,7 +95,7 @@ ___
 
 ###  addPortfolioItemTag
 
-▸ **addPortfolioItemTag**(`id`: string, `tag`: Array‹[Tag](../interfaces/tag.md)›, `options?`: any): *AxiosPromise‹[Tag](../interfaces/tag.md)[]›*
+▸ **addPortfolioItemTag**(`id`: string, `tag`: Array‹[Tag](../interfaces/tag.md)›, `options?`: any): *Promise‹AxiosResponse‹[Tag](../interfaces/tag.md)[]››*
 
 *Defined in [packages/catalog/api.ts:6627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6627)*
 
@@ -115,13 +115,13 @@ Name | Type | Description |
 `tag` | Array‹[Tag](../interfaces/tag.md)› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Tag](../interfaces/tag.md)[]›*
+**Returns:** *Promise‹AxiosResponse‹[Tag](../interfaces/tag.md)[]››*
 
 ___
 
 ###  createPortfolioItem
 
-▸ **createPortfolioItem**(`createPortfolioItem`: [CreatePortfolioItem](../interfaces/createportfolioitem.md), `options?`: any): *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
+▸ **createPortfolioItem**(`createPortfolioItem`: [CreatePortfolioItem](../interfaces/createportfolioitem.md), `options?`: any): *Promise‹AxiosResponse‹[PortfolioItem](../interfaces/portfolioitem.md)››*
 
 *Defined in [packages/catalog/api.ts:6639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6639)*
 
@@ -140,13 +140,13 @@ Name | Type |
 `createPortfolioItem` | [CreatePortfolioItem](../interfaces/createportfolioitem.md) |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
+**Returns:** *Promise‹AxiosResponse‹[PortfolioItem](../interfaces/portfolioitem.md)››*
 
 ___
 
 ###  destroyPortfolioItem
 
-▸ **destroyPortfolioItem**(`id`: string, `options?`: any): *AxiosPromise‹[RestoreKey](../interfaces/restorekey.md)›*
+▸ **destroyPortfolioItem**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[RestoreKey](../interfaces/restorekey.md)››*
 
 *Defined in [packages/catalog/api.ts:6651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6651)*
 
@@ -165,13 +165,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[RestoreKey](../interfaces/restorekey.md)›*
+**Returns:** *Promise‹AxiosResponse‹[RestoreKey](../interfaces/restorekey.md)››*
 
 ___
 
 ###  getPortfolioItemNextName
 
-▸ **getPortfolioItemNextName**(`portfolioItemId`: string, `destinationPortfolioId?`: string, `options?`: any): *AxiosPromise‹[PortfolioItemNextName](../interfaces/portfolioitemnextname.md)›*
+▸ **getPortfolioItemNextName**(`portfolioItemId`: string, `destinationPortfolioId?`: string, `options?`: any): *Promise‹AxiosResponse‹[PortfolioItemNextName](../interfaces/portfolioitemnextname.md)››*
 
 *Defined in [packages/catalog/api.ts:6664](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6664)*
 
@@ -191,13 +191,13 @@ Name | Type | Description |
 `destinationPortfolioId?` | string | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[PortfolioItemNextName](../interfaces/portfolioitemnextname.md)›*
+**Returns:** *Promise‹AxiosResponse‹[PortfolioItemNextName](../interfaces/portfolioitemnextname.md)››*
 
 ___
 
 ###  listPortfolioItemTags
 
-▸ **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/catalog/api.ts:6680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6680)*
 
@@ -220,13 +220,13 @@ Name | Type | Description |
 `sortBy?` | string | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listPortfolioItems
 
-▸ **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[PortfolioItemsCollection](../interfaces/portfolioitemscollection.md)›*
+▸ **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹AxiosResponse‹[PortfolioItemsCollection](../interfaces/portfolioitemscollection.md)››*
 
 *Defined in [packages/catalog/api.ts:6695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6695)*
 
@@ -248,13 +248,13 @@ Name | Type |
 `sortBy?` | string |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[PortfolioItemsCollection](../interfaces/portfolioitemscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[PortfolioItemsCollection](../interfaces/portfolioitemscollection.md)››*
 
 ___
 
 ###  listProviderControlParameters
 
-▸ **listProviderControlParameters**(`portfolioItemId`: string, `options?`: any): *AxiosPromise‹object›*
+▸ **listProviderControlParameters**(`portfolioItemId`: string, `options?`: any): *Promise‹AxiosResponse‹object››*
 
 *Defined in [packages/catalog/api.ts:6707](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6707)*
 
@@ -273,13 +273,13 @@ Name | Type | Description |
 `portfolioItemId` | string | The Portfolio Item ID |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹object›*
+**Returns:** *Promise‹AxiosResponse‹object››*
 
 ___
 
 ###  listServicePlans
 
-▸ **listServicePlans**(`portfolioItemId`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)[]›*
+▸ **listServicePlans**(`portfolioItemId`: string, `options?`: any): *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)[]››*
 
 *Defined in [packages/catalog/api.ts:6719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6719)*
 
@@ -298,13 +298,13 @@ Name | Type | Description |
 `portfolioItemId` | string | The Portfolio Item ID |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)[]›*
+**Returns:** *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)[]››*
 
 ___
 
 ###  postCopyPortfolioItem
 
-▸ **postCopyPortfolioItem**(`portfolioItemId`: string, `copyPortfolioItem?`: [CopyPortfolioItem](../interfaces/copyportfolioitem.md), `options?`: any): *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
+▸ **postCopyPortfolioItem**(`portfolioItemId`: string, `copyPortfolioItem?`: [CopyPortfolioItem](../interfaces/copyportfolioitem.md), `options?`: any): *Promise‹AxiosResponse‹[PortfolioItem](../interfaces/portfolioitem.md)››*
 
 *Defined in [packages/catalog/api.ts:6732](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6732)*
 
@@ -324,13 +324,13 @@ Name | Type | Description |
 `copyPortfolioItem?` | [CopyPortfolioItem](../interfaces/copyportfolioitem.md) | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
+**Returns:** *Promise‹AxiosResponse‹[PortfolioItem](../interfaces/portfolioitem.md)››*
 
 ___
 
 ###  removePortfolioItemTags
 
-▸ **removePortfolioItemTags**(`id`: string, `tag`: Array‹[Tag](../interfaces/tag.md)›, `options?`: any): *AxiosPromise‹void›*
+▸ **removePortfolioItemTags**(`id`: string, `tag`: Array‹[Tag](../interfaces/tag.md)›, `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/catalog/api.ts:6745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6745)*
 
@@ -350,13 +350,13 @@ Name | Type | Description |
 `tag` | Array‹[Tag](../interfaces/tag.md)› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
 ###  showPortfolioItem
 
-▸ **showPortfolioItem**(`id`: string, `showDiscarded?`: boolean, `options?`: any): *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
+▸ **showPortfolioItem**(`id`: string, `showDiscarded?`: boolean, `options?`: any): *Promise‹AxiosResponse‹[PortfolioItem](../interfaces/portfolioitem.md)››*
 
 *Defined in [packages/catalog/api.ts:6758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6758)*
 
@@ -376,13 +376,13 @@ Name | Type | Description |
 `showDiscarded?` | boolean | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
+**Returns:** *Promise‹AxiosResponse‹[PortfolioItem](../interfaces/portfolioitem.md)››*
 
 ___
 
 ###  showPortfolioItemIcon
 
-▸ **showPortfolioItemIcon**(`portfolioItemId`: string, `options?`: any): *AxiosPromise‹any›*
+▸ **showPortfolioItemIcon**(`portfolioItemId`: string, `options?`: any): *Promise‹AxiosResponse‹any››*
 
 *Defined in [packages/catalog/api.ts:6770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6770)*
 
@@ -401,13 +401,13 @@ Name | Type | Description |
 `portfolioItemId` | string | The Portfolio Item ID |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹any›*
+**Returns:** *Promise‹AxiosResponse‹any››*
 
 ___
 
 ###  unDeletePortfolioItem
 
-▸ **unDeletePortfolioItem**(`portfolioItemId`: string, `restoreKey`: [RestoreKey](../interfaces/restorekey.md), `options?`: any): *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
+▸ **unDeletePortfolioItem**(`portfolioItemId`: string, `restoreKey`: [RestoreKey](../interfaces/restorekey.md), `options?`: any): *Promise‹AxiosResponse‹[PortfolioItem](../interfaces/portfolioitem.md)››*
 
 *Defined in [packages/catalog/api.ts:6783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6783)*
 
@@ -427,13 +427,13 @@ Name | Type | Description |
 `restoreKey` | [RestoreKey](../interfaces/restorekey.md) | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
+**Returns:** *Promise‹AxiosResponse‹[PortfolioItem](../interfaces/portfolioitem.md)››*
 
 ___
 
 ###  updatePortfolioItem
 
-▸ **updatePortfolioItem**(`id`: string, `portfolioItem`: [PortfolioItem](../interfaces/portfolioitem.md), `options?`: any): *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
+▸ **updatePortfolioItem**(`id`: string, `portfolioItem`: [PortfolioItem](../interfaces/portfolioitem.md), `options?`: any): *Promise‹AxiosResponse‹[PortfolioItem](../interfaces/portfolioitem.md)››*
 
 *Defined in [packages/catalog/api.ts:6796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6796)*
 
@@ -453,4 +453,4 @@ Name | Type | Description |
 `portfolioItem` | [PortfolioItem](../interfaces/portfolioitem.md) | Parameters needed to update a Portfolio Item |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[PortfolioItem](../interfaces/portfolioitem.md)›*
+**Returns:** *Promise‹AxiosResponse‹[PortfolioItem](../interfaces/portfolioitem.md)››*

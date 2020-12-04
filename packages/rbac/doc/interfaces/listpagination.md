@@ -10,20 +10,6 @@
 
 * **ListPagination**
 
-  ↳ [AccessPagination](accesspagination.md)
-
-  ↳ [GroupPagination](grouppagination.md)
-
-  ↳ [PermissionOptionsPagination](permissionoptionspagination.md)
-
-  ↳ [PermissionPagination](permissionpagination.md)
-
-  ↳ [PolicyPagination](policypagination.md)
-
-  ↳ [PrincipalPagination](principalpagination.md)
-
-  ↳ [RolePaginationDynamic](rolepaginationdynamic.md)
-
 ## Index
 
 ### Properties
@@ -37,7 +23,7 @@
 
 • **links**? : *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [packages/rbac/api.ts:460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L460)*
+*Defined in [packages/rbac/api.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L515)*
 
 **`memberof`** ListPagination
 
@@ -47,6 +33,6 @@ ___
 
 • **meta**? : *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [packages/rbac/api.ts:454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L454)*
+*Defined in [packages/rbac/api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L509)*
 
 **`memberof`** ListPagination

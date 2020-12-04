@@ -57,7 +57,7 @@ ___
 
 ### `Optional` apiKey
 
-• **apiKey**? : *string | function*
+• **apiKey**? : *string | Promise‹string› | function | function*
 
 *Defined in [packages/rbac/configuration.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/configuration.ts#L30)*
 

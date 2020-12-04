@@ -43,7 +43,19 @@ export interface Access {
  * @export
  * @interface AccessPagination
  */
-export interface AccessPagination extends ListPagination {
+export interface AccessPagination {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof AccessPagination
+     */
+    meta?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof AccessPagination
+     */
+    links?: PaginationLinks;
     /**
      *
      * @type {Array<Access>}
@@ -229,9 +241,52 @@ export interface GroupOut {
 /**
  *
  * @export
+ * @interface GroupOutAllOf
+ */
+export interface GroupOutAllOf {
+    /**
+     *
+     * @type {number}
+     * @memberof GroupOutAllOf
+     */
+    principalCount?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GroupOutAllOf
+     */
+    roleCount?: number;
+    /**
+     *
+     * @type {boolean}
+     * @memberof GroupOutAllOf
+     */
+    system?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof GroupOutAllOf
+     */
+    platform_default?: boolean;
+}
+/**
+ *
+ * @export
  * @interface GroupPagination
  */
-export interface GroupPagination extends ListPagination {
+export interface GroupPagination {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof GroupPagination
+     */
+    meta?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof GroupPagination
+     */
+    links?: PaginationLinks;
     /**
      *
      * @type {Array<GroupOut>}
@@ -552,7 +607,19 @@ export interface Permission {
  * @export
  * @interface PermissionOptionsPagination
  */
-export interface PermissionOptionsPagination extends ListPagination {
+export interface PermissionOptionsPagination {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof PermissionOptionsPagination
+     */
+    meta?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof PermissionOptionsPagination
+     */
+    links?: PaginationLinks;
     /**
      *
      * @type {Array<string>}
@@ -578,7 +645,19 @@ export interface PermissionOptionsPaginationAllOf {
  * @export
  * @interface PermissionPagination
  */
-export interface PermissionPagination extends ListPagination {
+export interface PermissionPagination {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof PermissionPagination
+     */
+    meta?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof PermissionPagination
+     */
+    links?: PaginationLinks;
     /**
      *
      * @type {Array<Permission>}
@@ -691,7 +770,19 @@ export interface PolicyExtendedAllOf {
  * @export
  * @interface PolicyIn
  */
-export interface PolicyIn extends Policy {
+export interface PolicyIn {
+    /**
+     *
+     * @type {string}
+     * @memberof PolicyIn
+     */
+    name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PolicyIn
+     */
+    description?: string;
     /**
      *
      * @type {string}
@@ -729,7 +820,19 @@ export interface PolicyInAllOf {
  * @export
  * @interface PolicyPagination
  */
-export interface PolicyPagination extends ListPagination {
+export interface PolicyPagination {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof PolicyPagination
+     */
+    meta?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof PolicyPagination
+     */
+    links?: PaginationLinks;
     /**
      *
      * @type {Array<PolicyExtended>}
@@ -860,7 +963,19 @@ export interface PrincipalOut {
  * @export
  * @interface PrincipalPagination
  */
-export interface PrincipalPagination extends ListPagination {
+export interface PrincipalPagination {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof PrincipalPagination
+     */
+    meta?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof PrincipalPagination
+     */
+    links?: PaginationLinks;
     /**
      *
      * @type {Array<Principal>}
@@ -959,7 +1074,25 @@ export interface Role {
  * @export
  * @interface RoleIn
  */
-export interface RoleIn extends Role {
+export interface RoleIn {
+    /**
+     *
+     * @type {string}
+     * @memberof RoleIn
+     */
+    name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleIn
+     */
+    display_name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleIn
+     */
+    description?: string;
     /**
      *
      * @type {Array<Access>}
@@ -1050,6 +1183,43 @@ export interface RoleOut {
      *
      * @type {boolean}
      * @memberof RoleOut
+     */
+    platform_default?: boolean;
+}
+/**
+ *
+ * @export
+ * @interface RoleOutAllOf
+ */
+export interface RoleOutAllOf {
+    /**
+     *
+     * @type {number}
+     * @memberof RoleOutAllOf
+     */
+    policyCount?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RoleOutAllOf
+     */
+    accessCount?: number;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof RoleOutAllOf
+     */
+    applications?: Array<string>;
+    /**
+     *
+     * @type {boolean}
+     * @memberof RoleOutAllOf
+     */
+    system?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof RoleOutAllOf
      */
     platform_default?: boolean;
 }
@@ -1217,7 +1387,19 @@ export interface RolePagination {
  * @export
  * @interface RolePaginationDynamic
  */
-export interface RolePaginationDynamic extends ListPagination {
+export interface RolePaginationDynamic {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof RolePaginationDynamic
+     */
+    meta?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof RolePaginationDynamic
+     */
+    links?: PaginationLinks;
     /**
      *
      * @type {Array<RoleOutDynamic>}
@@ -1237,6 +1419,31 @@ export interface RolePaginationDynamicAllOf {
      * @memberof RolePaginationDynamicAllOf
      */
     data: Array<RoleOutDynamic>;
+}
+/**
+ *
+ * @export
+ * @interface RolePatch
+ */
+export interface RolePatch {
+    /**
+     *
+     * @type {string}
+     * @memberof RolePatch
+     */
+    name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RolePatch
+     */
+    display_name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RolePatch
+     */
+    description?: string;
 }
 /**
  *
@@ -1409,7 +1616,7 @@ export const AccessApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalAccess(application: string, username?: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        getPrincipalAccess: async (application: string, username?: string, limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'application' is not null or undefined
             if (application === null || application === undefined) {
                 throw new RequiredError('application','Required parameter application was null or undefined when calling getPrincipalAccess.');
@@ -1478,8 +1685,8 @@ export const AccessApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalAccess(application: string, username?: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccessPagination> {
-            const localVarAxiosArgs = AccessApiAxiosParamCreator(configuration).getPrincipalAccess(application, username, limit, offset, options);
+        async getPrincipalAccess(application: string, username?: string, limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccessPagination>> {
+            const localVarAxiosArgs = await AccessApiAxiosParamCreator(configuration).getPrincipalAccess(application, username, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1505,7 +1712,7 @@ export const AccessApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         getPrincipalAccess(application: string, username?: string, limit?: number, offset?: number, options?: any): AxiosPromise<AccessPagination> {
-            return AccessApiFp(configuration).getPrincipalAccess(application, username, limit, offset, options)(axios, basePath);
+            return AccessApiFp(configuration).getPrincipalAccess(application, username, limit, offset, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1529,7 +1736,7 @@ export class AccessApi extends BaseAPI {
      * @memberof AccessApi
      */
     public getPrincipalAccess(application: string, username?: string, limit?: number, offset?: number, options?: any) {
-        return AccessApiFp(this.configuration).getPrincipalAccess(application, username, limit, offset, options)(this.axios, this.basePath);
+        return AccessApiFp(this.configuration).getPrincipalAccess(application, username, limit, offset, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -1549,7 +1756,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addPrincipalToGroup(uuid: string, groupPrincipalIn: GroupPrincipalIn, options: any = {}): RequestArgs {
+        addPrincipalToGroup: async (uuid: string, groupPrincipalIn: GroupPrincipalIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling addPrincipalToGroup.');
@@ -1600,7 +1807,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addRoleToGroup(uuid: string, groupRoleIn: GroupRoleIn, options: any = {}): RequestArgs {
+        addRoleToGroup: async (uuid: string, groupRoleIn: GroupRoleIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling addRoleToGroup.');
@@ -1650,7 +1857,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createGroup(group: Group, options: any = {}): RequestArgs {
+        createGroup: async (group: Group, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'group' is not null or undefined
             if (group === null || group === undefined) {
                 throw new RequiredError('group','Required parameter group was null or undefined when calling createGroup.');
@@ -1695,7 +1902,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteGroup(uuid: string, options: any = {}): RequestArgs {
+        deleteGroup: async (uuid: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling deleteGroup.');
@@ -1738,7 +1945,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deletePrincipalFromGroup(uuid: string, usernames: string, options: any = {}): RequestArgs {
+        deletePrincipalFromGroup: async (uuid: string, usernames: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling deletePrincipalFromGroup.');
@@ -1789,7 +1996,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteRoleFromGroup(uuid: string, roles: string, options: any = {}): RequestArgs {
+        deleteRoleFromGroup: async (uuid: string, roles: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling deleteRoleFromGroup.');
@@ -1839,7 +2046,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getGroup(uuid: string, options: any = {}): RequestArgs {
+        getGroup: async (uuid: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getGroup.');
@@ -1885,7 +2092,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options: any = {}): RequestArgs {
+        getPrincipalsFromGroup: async (uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getPrincipalsFromGroup.');
@@ -1952,7 +2159,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', options: any = {}): RequestArgs {
+        listGroups: async (limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/groups/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2036,7 +2243,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options: any = {}): RequestArgs {
+        listRolesForGroup: async (uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling listRolesForGroup.');
@@ -2107,7 +2314,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateGroup(uuid: string, group: Group, options: any = {}): RequestArgs {
+        updateGroup: async (uuid: string, group: Group, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling updateGroup.');
@@ -2167,8 +2374,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addPrincipalToGroup(uuid: string, groupPrincipalIn: GroupPrincipalIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupWithPrincipalsAndRoles> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).addPrincipalToGroup(uuid, groupPrincipalIn, options);
+        async addPrincipalToGroup(uuid: string, groupPrincipalIn: GroupPrincipalIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupWithPrincipalsAndRoles>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).addPrincipalToGroup(uuid, groupPrincipalIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2182,8 +2389,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addRoleToGroup(uuid: string, groupRoleIn: GroupRoleIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).addRoleToGroup(uuid, groupRoleIn, options);
+        async addRoleToGroup(uuid: string, groupRoleIn: GroupRoleIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).addRoleToGroup(uuid, groupRoleIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2196,8 +2403,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createGroup(group: Group, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOut> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).createGroup(group, options);
+        async createGroup(group: Group, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOut>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).createGroup(group, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2210,8 +2417,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteGroup(uuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).deleteGroup(uuid, options);
+        async deleteGroup(uuid: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).deleteGroup(uuid, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2225,8 +2432,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deletePrincipalFromGroup(uuid: string, usernames: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).deletePrincipalFromGroup(uuid, usernames, options);
+        async deletePrincipalFromGroup(uuid: string, usernames: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).deletePrincipalFromGroup(uuid, usernames, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2240,8 +2447,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteRoleFromGroup(uuid: string, roles: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).deleteRoleFromGroup(uuid, roles, options);
+        async deleteRoleFromGroup(uuid: string, roles: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).deleteRoleFromGroup(uuid, roles, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2254,8 +2461,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getGroup(uuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupWithPrincipalsAndRoles> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).getGroup(uuid, options);
+        async getGroup(uuid: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupWithPrincipalsAndRoles>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).getGroup(uuid, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2272,8 +2479,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, options);
+        async getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2295,8 +2502,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupPagination> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listGroups(limit, offset, name, nameMatch, scope, username, uuid, roleNames, roleDiscriminator, orderBy, options);
+        async listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupPagination>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).listGroups(limit, offset, name, nameMatch, scope, username, uuid, roleNames, roleDiscriminator, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2316,8 +2523,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, limit, offset, orderBy, options);
+        async listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, limit, offset, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2331,8 +2538,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateGroup(uuid: string, group: Group, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOut> {
-            const localVarAxiosArgs = GroupApiAxiosParamCreator(configuration).updateGroup(uuid, group, options);
+        async updateGroup(uuid: string, group: Group, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOut>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).updateGroup(uuid, group, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2356,7 +2563,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         addPrincipalToGroup(uuid: string, groupPrincipalIn: GroupPrincipalIn, options?: any): AxiosPromise<GroupWithPrincipalsAndRoles> {
-            return GroupApiFp(configuration).addPrincipalToGroup(uuid, groupPrincipalIn, options)(axios, basePath);
+            return GroupApiFp(configuration).addPrincipalToGroup(uuid, groupPrincipalIn, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -2367,7 +2574,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         addRoleToGroup(uuid: string, groupRoleIn: GroupRoleIn, options?: any): AxiosPromise<InlineResponse200> {
-            return GroupApiFp(configuration).addRoleToGroup(uuid, groupRoleIn, options)(axios, basePath);
+            return GroupApiFp(configuration).addRoleToGroup(uuid, groupRoleIn, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -2377,7 +2584,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         createGroup(group: Group, options?: any): AxiosPromise<GroupOut> {
-            return GroupApiFp(configuration).createGroup(group, options)(axios, basePath);
+            return GroupApiFp(configuration).createGroup(group, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -2387,7 +2594,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         deleteGroup(uuid: string, options?: any): AxiosPromise<void> {
-            return GroupApiFp(configuration).deleteGroup(uuid, options)(axios, basePath);
+            return GroupApiFp(configuration).deleteGroup(uuid, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -2398,7 +2605,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         deletePrincipalFromGroup(uuid: string, usernames: string, options?: any): AxiosPromise<void> {
-            return GroupApiFp(configuration).deletePrincipalFromGroup(uuid, usernames, options)(axios, basePath);
+            return GroupApiFp(configuration).deletePrincipalFromGroup(uuid, usernames, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -2409,7 +2616,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         deleteRoleFromGroup(uuid: string, roles: string, options?: any): AxiosPromise<void> {
-            return GroupApiFp(configuration).deleteRoleFromGroup(uuid, roles, options)(axios, basePath);
+            return GroupApiFp(configuration).deleteRoleFromGroup(uuid, roles, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -2419,7 +2626,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         getGroup(uuid: string, options?: any): AxiosPromise<GroupWithPrincipalsAndRoles> {
-            return GroupApiFp(configuration).getGroup(uuid, options)(axios, basePath);
+            return GroupApiFp(configuration).getGroup(uuid, options).then((request) => request(axios, basePath));
         },
         /**
          * By default, responses are sorted in ascending order by username
@@ -2433,7 +2640,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options?: any): AxiosPromise<PrincipalPagination> {
-            return GroupApiFp(configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, options)(axios, basePath);
+            return GroupApiFp(configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, options).then((request) => request(axios, basePath));
         },
         /**
          * By default, responses are sorted in ascending order by group name
@@ -2452,7 +2659,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', options?: any): AxiosPromise<GroupPagination> {
-            return GroupApiFp(configuration).listGroups(limit, offset, name, nameMatch, scope, username, uuid, roleNames, roleDiscriminator, orderBy, options)(axios, basePath);
+            return GroupApiFp(configuration).listGroups(limit, offset, name, nameMatch, scope, username, uuid, roleNames, roleDiscriminator, orderBy, options).then((request) => request(axios, basePath));
         },
         /**
          * By default, responses are sorted in ascending order by role name
@@ -2469,7 +2676,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): AxiosPromise<GroupRolesPagination> {
-            return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, limit, offset, orderBy, options)(axios, basePath);
+            return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, limit, offset, orderBy, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -2480,7 +2687,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         updateGroup(uuid: string, group: Group, options?: any): AxiosPromise<GroupOut> {
-            return GroupApiFp(configuration).updateGroup(uuid, group, options)(axios, basePath);
+            return GroupApiFp(configuration).updateGroup(uuid, group, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2502,7 +2709,7 @@ export class GroupApi extends BaseAPI {
      * @memberof GroupApi
      */
     public addPrincipalToGroup(uuid: string, groupPrincipalIn: GroupPrincipalIn, options?: any) {
-        return GroupApiFp(this.configuration).addPrincipalToGroup(uuid, groupPrincipalIn, options)(this.axios, this.basePath);
+        return GroupApiFp(this.configuration).addPrincipalToGroup(uuid, groupPrincipalIn, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2515,7 +2722,7 @@ export class GroupApi extends BaseAPI {
      * @memberof GroupApi
      */
     public addRoleToGroup(uuid: string, groupRoleIn: GroupRoleIn, options?: any) {
-        return GroupApiFp(this.configuration).addRoleToGroup(uuid, groupRoleIn, options)(this.axios, this.basePath);
+        return GroupApiFp(this.configuration).addRoleToGroup(uuid, groupRoleIn, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2527,7 +2734,7 @@ export class GroupApi extends BaseAPI {
      * @memberof GroupApi
      */
     public createGroup(group: Group, options?: any) {
-        return GroupApiFp(this.configuration).createGroup(group, options)(this.axios, this.basePath);
+        return GroupApiFp(this.configuration).createGroup(group, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2539,7 +2746,7 @@ export class GroupApi extends BaseAPI {
      * @memberof GroupApi
      */
     public deleteGroup(uuid: string, options?: any) {
-        return GroupApiFp(this.configuration).deleteGroup(uuid, options)(this.axios, this.basePath);
+        return GroupApiFp(this.configuration).deleteGroup(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2552,7 +2759,7 @@ export class GroupApi extends BaseAPI {
      * @memberof GroupApi
      */
     public deletePrincipalFromGroup(uuid: string, usernames: string, options?: any) {
-        return GroupApiFp(this.configuration).deletePrincipalFromGroup(uuid, usernames, options)(this.axios, this.basePath);
+        return GroupApiFp(this.configuration).deletePrincipalFromGroup(uuid, usernames, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2565,7 +2772,7 @@ export class GroupApi extends BaseAPI {
      * @memberof GroupApi
      */
     public deleteRoleFromGroup(uuid: string, roles: string, options?: any) {
-        return GroupApiFp(this.configuration).deleteRoleFromGroup(uuid, roles, options)(this.axios, this.basePath);
+        return GroupApiFp(this.configuration).deleteRoleFromGroup(uuid, roles, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2577,7 +2784,7 @@ export class GroupApi extends BaseAPI {
      * @memberof GroupApi
      */
     public getGroup(uuid: string, options?: any) {
-        return GroupApiFp(this.configuration).getGroup(uuid, options)(this.axios, this.basePath);
+        return GroupApiFp(this.configuration).getGroup(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2593,7 +2800,7 @@ export class GroupApi extends BaseAPI {
      * @memberof GroupApi
      */
     public getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options?: any) {
-        return GroupApiFp(this.configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, options)(this.axios, this.basePath);
+        return GroupApiFp(this.configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2614,7 +2821,7 @@ export class GroupApi extends BaseAPI {
      * @memberof GroupApi
      */
     public listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', options?: any) {
-        return GroupApiFp(this.configuration).listGroups(limit, offset, name, nameMatch, scope, username, uuid, roleNames, roleDiscriminator, orderBy, options)(this.axios, this.basePath);
+        return GroupApiFp(this.configuration).listGroups(limit, offset, name, nameMatch, scope, username, uuid, roleNames, roleDiscriminator, orderBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2633,7 +2840,7 @@ export class GroupApi extends BaseAPI {
      * @memberof GroupApi
      */
     public listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any) {
-        return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, limit, offset, orderBy, options)(this.axios, this.basePath);
+        return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, limit, offset, orderBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2646,7 +2853,7 @@ export class GroupApi extends BaseAPI {
      * @memberof GroupApi
      */
     public updateGroup(uuid: string, group: Group, options?: any) {
-        return GroupApiFp(this.configuration).updateGroup(uuid, group, options)(this.axios, this.basePath);
+        return GroupApiFp(this.configuration).updateGroup(uuid, group, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -2670,7 +2877,7 @@ export const PermissionApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, options: any = {}): RequestArgs {
+        listPermissionOptions: async (field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'field' is not null or undefined
             if (field === null || field === undefined) {
                 throw new RequiredError('field','Required parameter field was null or undefined when calling listPermissionOptions.');
@@ -2742,7 +2949,7 @@ export const PermissionApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options: any = {}): RequestArgs {
+        listPermissions: async (limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/permissions/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2825,8 +3032,8 @@ export const PermissionApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionOptionsPagination> {
-            const localVarAxiosArgs = PermissionApiAxiosParamCreator(configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, options);
+        async listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionOptionsPagination>> {
+            const localVarAxiosArgs = await PermissionApiAxiosParamCreator(configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2846,8 +3053,8 @@ export const PermissionApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionPagination> {
-            const localVarAxiosArgs = PermissionApiAxiosParamCreator(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, options);
+        async listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionPagination>> {
+            const localVarAxiosArgs = await PermissionApiAxiosParamCreator(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2875,7 +3082,7 @@ export const PermissionApiFactory = function (configuration?: Configuration, bas
          * @throws {RequiredError}
          */
         listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, options?: any): AxiosPromise<PermissionOptionsPagination> {
-            return PermissionApiFp(configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, options)(axios, basePath);
+            return PermissionApiFp(configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, options).then((request) => request(axios, basePath));
         },
         /**
          * By default, responses are sorted in ascending order by permission application.
@@ -2892,7 +3099,7 @@ export const PermissionApiFactory = function (configuration?: Configuration, bas
          * @throws {RequiredError}
          */
         listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options?: any): AxiosPromise<PermissionPagination> {
-            return PermissionApiFp(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, options)(axios, basePath);
+            return PermissionApiFp(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2918,7 +3125,7 @@ export class PermissionApi extends BaseAPI {
      * @memberof PermissionApi
      */
     public listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, options?: any) {
-        return PermissionApiFp(this.configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, options)(this.axios, this.basePath);
+        return PermissionApiFp(this.configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2937,7 +3144,7 @@ export class PermissionApi extends BaseAPI {
      * @memberof PermissionApi
      */
     public listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', options?: any) {
-        return PermissionApiFp(this.configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, options)(this.axios, this.basePath);
+        return PermissionApiFp(this.configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -2956,7 +3163,7 @@ export const PolicyApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createPolicies(policyIn: PolicyIn, options: any = {}): RequestArgs {
+        createPolicies: async (policyIn: PolicyIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'policyIn' is not null or undefined
             if (policyIn === null || policyIn === undefined) {
                 throw new RequiredError('policyIn','Required parameter policyIn was null or undefined when calling createPolicies.');
@@ -3001,7 +3208,7 @@ export const PolicyApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deletePolicy(uuid: string, options: any = {}): RequestArgs {
+        deletePolicy: async (uuid: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling deletePolicy.');
@@ -3043,7 +3250,7 @@ export const PolicyApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPolicy(uuid: string, options: any = {}): RequestArgs {
+        getPolicy: async (uuid: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getPolicy.');
@@ -3091,7 +3298,7 @@ export const PolicyApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: 'name' | 'modified', options: any = {}): RequestArgs {
+        listPolicies: async (limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: 'name' | 'modified', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/policies/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3157,7 +3364,7 @@ export const PolicyApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updatePolicy(uuid: string, policyIn: PolicyIn, options: any = {}): RequestArgs {
+        updatePolicy: async (uuid: string, policyIn: PolicyIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling updatePolicy.');
@@ -3216,8 +3423,8 @@ export const PolicyApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createPolicies(policyIn: PolicyIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyExtended> {
-            const localVarAxiosArgs = PolicyApiAxiosParamCreator(configuration).createPolicies(policyIn, options);
+        async createPolicies(policyIn: PolicyIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyExtended>> {
+            const localVarAxiosArgs = await PolicyApiAxiosParamCreator(configuration).createPolicies(policyIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3230,8 +3437,8 @@ export const PolicyApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deletePolicy(uuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = PolicyApiAxiosParamCreator(configuration).deletePolicy(uuid, options);
+        async deletePolicy(uuid: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await PolicyApiAxiosParamCreator(configuration).deletePolicy(uuid, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3244,8 +3451,8 @@ export const PolicyApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPolicy(uuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyExtended> {
-            const localVarAxiosArgs = PolicyApiAxiosParamCreator(configuration).getPolicy(uuid, options);
+        async getPolicy(uuid: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyExtended>> {
+            const localVarAxiosArgs = await PolicyApiAxiosParamCreator(configuration).getPolicy(uuid, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3264,8 +3471,8 @@ export const PolicyApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: 'name' | 'modified', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyPagination> {
-            const localVarAxiosArgs = PolicyApiAxiosParamCreator(configuration).listPolicies(limit, offset, name, scope, groupName, groupUuid, orderBy, options);
+        async listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: 'name' | 'modified', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyPagination>> {
+            const localVarAxiosArgs = await PolicyApiAxiosParamCreator(configuration).listPolicies(limit, offset, name, scope, groupName, groupUuid, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3279,8 +3486,8 @@ export const PolicyApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updatePolicy(uuid: string, policyIn: PolicyIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyExtended> {
-            const localVarAxiosArgs = PolicyApiAxiosParamCreator(configuration).updatePolicy(uuid, policyIn, options);
+        async updatePolicy(uuid: string, policyIn: PolicyIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PolicyExtended>> {
+            const localVarAxiosArgs = await PolicyApiAxiosParamCreator(configuration).updatePolicy(uuid, policyIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3303,7 +3510,7 @@ export const PolicyApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         createPolicies(policyIn: PolicyIn, options?: any): AxiosPromise<PolicyExtended> {
-            return PolicyApiFp(configuration).createPolicies(policyIn, options)(axios, basePath);
+            return PolicyApiFp(configuration).createPolicies(policyIn, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -3313,7 +3520,7 @@ export const PolicyApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         deletePolicy(uuid: string, options?: any): AxiosPromise<void> {
-            return PolicyApiFp(configuration).deletePolicy(uuid, options)(axios, basePath);
+            return PolicyApiFp(configuration).deletePolicy(uuid, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -3323,7 +3530,7 @@ export const PolicyApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         getPolicy(uuid: string, options?: any): AxiosPromise<PolicyExtended> {
-            return PolicyApiFp(configuration).getPolicy(uuid, options)(axios, basePath);
+            return PolicyApiFp(configuration).getPolicy(uuid, options).then((request) => request(axios, basePath));
         },
         /**
          * By default, responses are sorted in ascending order by policy name
@@ -3339,7 +3546,7 @@ export const PolicyApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: 'name' | 'modified', options?: any): AxiosPromise<PolicyPagination> {
-            return PolicyApiFp(configuration).listPolicies(limit, offset, name, scope, groupName, groupUuid, orderBy, options)(axios, basePath);
+            return PolicyApiFp(configuration).listPolicies(limit, offset, name, scope, groupName, groupUuid, orderBy, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -3350,7 +3557,7 @@ export const PolicyApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         updatePolicy(uuid: string, policyIn: PolicyIn, options?: any): AxiosPromise<PolicyExtended> {
-            return PolicyApiFp(configuration).updatePolicy(uuid, policyIn, options)(axios, basePath);
+            return PolicyApiFp(configuration).updatePolicy(uuid, policyIn, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -3371,7 +3578,7 @@ export class PolicyApi extends BaseAPI {
      * @memberof PolicyApi
      */
     public createPolicies(policyIn: PolicyIn, options?: any) {
-        return PolicyApiFp(this.configuration).createPolicies(policyIn, options)(this.axios, this.basePath);
+        return PolicyApiFp(this.configuration).createPolicies(policyIn, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3383,7 +3590,7 @@ export class PolicyApi extends BaseAPI {
      * @memberof PolicyApi
      */
     public deletePolicy(uuid: string, options?: any) {
-        return PolicyApiFp(this.configuration).deletePolicy(uuid, options)(this.axios, this.basePath);
+        return PolicyApiFp(this.configuration).deletePolicy(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3395,7 +3602,7 @@ export class PolicyApi extends BaseAPI {
      * @memberof PolicyApi
      */
     public getPolicy(uuid: string, options?: any) {
-        return PolicyApiFp(this.configuration).getPolicy(uuid, options)(this.axios, this.basePath);
+        return PolicyApiFp(this.configuration).getPolicy(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3413,7 +3620,7 @@ export class PolicyApi extends BaseAPI {
      * @memberof PolicyApi
      */
     public listPolicies(limit?: number, offset?: number, name?: string, scope?: 'account' | 'principal', groupName?: string, groupUuid?: string, orderBy?: 'name' | 'modified', options?: any) {
-        return PolicyApiFp(this.configuration).listPolicies(limit, offset, name, scope, groupName, groupUuid, orderBy, options)(this.axios, this.basePath);
+        return PolicyApiFp(this.configuration).listPolicies(limit, offset, name, scope, groupName, groupUuid, orderBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3426,7 +3633,7 @@ export class PolicyApi extends BaseAPI {
      * @memberof PolicyApi
      */
     public updatePolicy(uuid: string, policyIn: PolicyIn, options?: any) {
-        return PolicyApiFp(this.configuration).updatePolicy(uuid, policyIn, options)(this.axios, this.basePath);
+        return PolicyApiFp(this.configuration).updatePolicy(uuid, policyIn, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -3452,7 +3659,7 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options: any = {}): RequestArgs {
+        listPrincipals: async (limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/principals/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3537,8 +3744,8 @@ export const PrincipalApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination> {
-            const localVarAxiosArgs = PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, orderBy, options);
+        async listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination>> {
+            const localVarAxiosArgs = await PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3568,7 +3775,7 @@ export const PrincipalApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any): AxiosPromise<PrincipalPagination> {
-            return PrincipalApiFp(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, orderBy, options)(axios, basePath);
+            return PrincipalApiFp(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, orderBy, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -3596,7 +3803,7 @@ export class PrincipalApi extends BaseAPI {
      * @memberof PrincipalApi
      */
     public listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any) {
-        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, orderBy, options)(this.axios, this.basePath);
+        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, orderBy, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -3615,7 +3822,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRoles(roleIn: RoleIn, options: any = {}): RequestArgs {
+        createRoles: async (roleIn: RoleIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'roleIn' is not null or undefined
             if (roleIn === null || roleIn === undefined) {
                 throw new RequiredError('roleIn','Required parameter roleIn was null or undefined when calling createRoles.');
@@ -3660,7 +3867,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteRole(uuid: string, options: any = {}): RequestArgs {
+        deleteRole: async (uuid: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling deleteRole.');
@@ -3703,7 +3910,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRole(uuid: string, scope?: 'account' | 'principal', options: any = {}): RequestArgs {
+        getRole: async (uuid: string, scope?: 'account' | 'principal', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getRole.');
@@ -3751,7 +3958,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRoleAccess(uuid: string, limit?: number, offset?: number, options: any = {}): RequestArgs {
+        getRoleAccess: async (uuid: string, limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getRoleAccess.');
@@ -3811,7 +4018,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options: any = {}): RequestArgs {
+        listRoles: async (limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/roles/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3887,13 +4094,60 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
         },
         /**
          *
+         * @summary Patch a Role in the tenant
+         * @param {string} uuid ID of role to update
+         * @param {RolePatch} [rolePatch] Patch to a Role
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        patchRole: async (uuid: string, rolePatch?: RolePatch, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling patchRole.');
+            }
+            const localVarPath = `/roles/{uuid}/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof rolePatch !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(rolePatch !== undefined ? rolePatch : {}) : (rolePatch || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
          * @summary Update a Role in the tenant
          * @param {string} uuid ID of role to update
          * @param {RoleWithAccess} roleWithAccess Update to a Role
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateRole(uuid: string, roleWithAccess: RoleWithAccess, options: any = {}): RequestArgs {
+        updateRole: async (uuid: string, roleWithAccess: RoleWithAccess, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling updateRole.');
@@ -3952,8 +4206,8 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRoles(roleIn: RoleIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RoleWithAccess> {
-            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).createRoles(roleIn, options);
+        async createRoles(roleIn: RoleIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RoleWithAccess>> {
+            const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).createRoles(roleIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3966,8 +4220,8 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteRole(uuid: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).deleteRole(uuid, options);
+        async deleteRole(uuid: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).deleteRole(uuid, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3981,8 +4235,8 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRole(uuid: string, scope?: 'account' | 'principal', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RoleWithAccess> {
-            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).getRole(uuid, scope, options);
+        async getRole(uuid: string, scope?: 'account' | 'principal', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RoleWithAccess>> {
+            const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).getRole(uuid, scope, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3997,8 +4251,8 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRoleAccess(uuid: string, limit?: number, offset?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccessPagination> {
-            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).getRoleAccess(uuid, limit, offset, options);
+        async getRoleAccess(uuid: string, limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccessPagination>> {
+            const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).getRoleAccess(uuid, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4021,8 +4275,23 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic> {
-            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options);
+        async listRoles(limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic>> {
+            const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
+         * @summary Patch a Role in the tenant
+         * @param {string} uuid ID of role to update
+         * @param {RolePatch} [rolePatch] Patch to a Role
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async patchRole(uuid: string, rolePatch?: RolePatch, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RoleWithAccess>> {
+            const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).patchRole(uuid, rolePatch, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4036,8 +4305,8 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateRole(uuid: string, roleWithAccess: RoleWithAccess, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = RoleApiAxiosParamCreator(configuration).updateRole(uuid, roleWithAccess, options);
+        async updateRole(uuid: string, roleWithAccess: RoleWithAccess, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).updateRole(uuid, roleWithAccess, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4060,7 +4329,7 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         createRoles(roleIn: RoleIn, options?: any): AxiosPromise<RoleWithAccess> {
-            return RoleApiFp(configuration).createRoles(roleIn, options)(axios, basePath);
+            return RoleApiFp(configuration).createRoles(roleIn, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -4070,7 +4339,7 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         deleteRole(uuid: string, options?: any): AxiosPromise<void> {
-            return RoleApiFp(configuration).deleteRole(uuid, options)(axios, basePath);
+            return RoleApiFp(configuration).deleteRole(uuid, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -4081,7 +4350,7 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         getRole(uuid: string, scope?: 'account' | 'principal', options?: any): AxiosPromise<RoleWithAccess> {
-            return RoleApiFp(configuration).getRole(uuid, scope, options)(axios, basePath);
+            return RoleApiFp(configuration).getRole(uuid, scope, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -4093,7 +4362,7 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         getRoleAccess(uuid: string, limit?: number, offset?: number, options?: any): AxiosPromise<AccessPagination> {
-            return RoleApiFp(configuration).getRoleAccess(uuid, limit, offset, options)(axios, basePath);
+            return RoleApiFp(configuration).getRoleAccess(uuid, limit, offset, options).then((request) => request(axios, basePath));
         },
         /**
          * By default, responses are sorted in ascending order by role name
@@ -4113,7 +4382,18 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         listRoles(limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): AxiosPromise<RolePaginationDynamic> {
-            return RoleApiFp(configuration).listRoles(limit, offset, name, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options)(axios, basePath);
+            return RoleApiFp(configuration).listRoles(limit, offset, name, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options).then((request) => request(axios, basePath));
+        },
+        /**
+         *
+         * @summary Patch a Role in the tenant
+         * @param {string} uuid ID of role to update
+         * @param {RolePatch} [rolePatch] Patch to a Role
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        patchRole(uuid: string, rolePatch?: RolePatch, options?: any): AxiosPromise<RoleWithAccess> {
+            return RoleApiFp(configuration).patchRole(uuid, rolePatch, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -4124,7 +4404,7 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         updateRole(uuid: string, roleWithAccess: RoleWithAccess, options?: any): AxiosPromise<void> {
-            return RoleApiFp(configuration).updateRole(uuid, roleWithAccess, options)(axios, basePath);
+            return RoleApiFp(configuration).updateRole(uuid, roleWithAccess, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -4145,7 +4425,7 @@ export class RoleApi extends BaseAPI {
      * @memberof RoleApi
      */
     public createRoles(roleIn: RoleIn, options?: any) {
-        return RoleApiFp(this.configuration).createRoles(roleIn, options)(this.axios, this.basePath);
+        return RoleApiFp(this.configuration).createRoles(roleIn, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4157,7 +4437,7 @@ export class RoleApi extends BaseAPI {
      * @memberof RoleApi
      */
     public deleteRole(uuid: string, options?: any) {
-        return RoleApiFp(this.configuration).deleteRole(uuid, options)(this.axios, this.basePath);
+        return RoleApiFp(this.configuration).deleteRole(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4170,7 +4450,7 @@ export class RoleApi extends BaseAPI {
      * @memberof RoleApi
      */
     public getRole(uuid: string, scope?: 'account' | 'principal', options?: any) {
-        return RoleApiFp(this.configuration).getRole(uuid, scope, options)(this.axios, this.basePath);
+        return RoleApiFp(this.configuration).getRole(uuid, scope, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4184,7 +4464,7 @@ export class RoleApi extends BaseAPI {
      * @memberof RoleApi
      */
     public getRoleAccess(uuid: string, limit?: number, offset?: number, options?: any) {
-        return RoleApiFp(this.configuration).getRoleAccess(uuid, limit, offset, options)(this.axios, this.basePath);
+        return RoleApiFp(this.configuration).getRoleAccess(uuid, limit, offset, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4206,7 +4486,20 @@ export class RoleApi extends BaseAPI {
      * @memberof RoleApi
      */
     public listRoles(limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any) {
-        return RoleApiFp(this.configuration).listRoles(limit, offset, name, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options)(this.axios, this.basePath);
+        return RoleApiFp(this.configuration).listRoles(limit, offset, name, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     *
+     * @summary Patch a Role in the tenant
+     * @param {string} uuid ID of role to update
+     * @param {RolePatch} [rolePatch] Patch to a Role
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RoleApi
+     */
+    public patchRole(uuid: string, rolePatch?: RolePatch, options?: any) {
+        return RoleApiFp(this.configuration).patchRole(uuid, rolePatch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4219,7 +4512,7 @@ export class RoleApi extends BaseAPI {
      * @memberof RoleApi
      */
     public updateRole(uuid: string, roleWithAccess: RoleWithAccess, options?: any) {
-        return RoleApiFp(this.configuration).updateRole(uuid, roleWithAccess, options)(this.axios, this.basePath);
+        return RoleApiFp(this.configuration).updateRole(uuid, roleWithAccess, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -4237,7 +4530,7 @@ export const StatusApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getStatus(options: any = {}): RequestArgs {
+        getStatus: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/status/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4282,8 +4575,8 @@ export const StatusApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getStatus(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Status> {
-            const localVarAxiosArgs = StatusApiAxiosParamCreator(configuration).getStatus(options);
+        async getStatus(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Status>> {
+            const localVarAxiosArgs = await StatusApiAxiosParamCreator(configuration).getStatus(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4305,7 +4598,7 @@ export const StatusApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         getStatus(options?: any): AxiosPromise<Status> {
-            return StatusApiFp(configuration).getStatus(options)(axios, basePath);
+            return StatusApiFp(configuration).getStatus(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -4325,7 +4618,7 @@ export class StatusApi extends BaseAPI {
      * @memberof StatusApi
      */
     public getStatus(options?: any) {
-        return StatusApiFp(this.configuration).getStatus(options)(this.axios, this.basePath);
+        return StatusApiFp(this.configuration).getStatus(options).then((request) => request(this.axios, this.basePath));
     }
 
 }

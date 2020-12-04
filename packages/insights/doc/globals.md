@@ -92,7 +92,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **accountSettingList**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **accountSettingList**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -138,9 +138,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **accountSettingList**(`options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **accountSettingList**(`options?`: any): *Promise‹function›*
 
 ___
 
@@ -162,9 +160,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **kcsList**(`nodeIds?`: Array‹string›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **kcsList**(`nodeIds?`: Array‹string›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **kcsRead**(`nodeId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **kcsRead**(`nodeId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -212,13 +210,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **kcsList**(`nodeIds?`: Array‹string›, `options?`: any): *function*
+* **kcsList**(`nodeIds?`: Array‹string›, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[Kcs](interfaces/kcs.md)››*
-
-* **kcsRead**(`nodeId`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹string››*
+* **kcsRead**(`nodeId`: string, `options?`: any): *Promise‹function›*
 
 ___
 
@@ -240,7 +234,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **resolutionRiskList**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **resolutionRiskList**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -286,9 +280,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **resolutionRiskList**(`options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **resolutionRiskList**(`options?`: any): *Promise‹function›*
 
 ___
 
@@ -310,9 +302,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **rulecategoryList**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **rulecategoryList**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **rulecategoryRead**(`id`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **rulecategoryRead**(`id`: number, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -360,13 +352,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **rulecategoryList**(`options?`: any): *function*
+* **rulecategoryList**(`options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[RuleCategory](interfaces/rulecategory.md)››*
-
-* **rulecategoryRead**(`id`: number, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RuleCategory](interfaces/rulecategory.md)›*
+* **rulecategoryRead**(`id`: number, `options?`: any): *Promise‹function›*
 
 ___
 
@@ -388,7 +376,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **settingsList**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **settingsList**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -434,9 +422,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **settingsList**(`options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[SettingsDDF](interfaces/settingsddf.md)››*
+* **settingsList**(`options?`: any): *Promise‹function›*
 
 ___
 
@@ -458,11 +444,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **statusList**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **statusList**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **statusLive**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **statusLive**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **statusReady**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **statusReady**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -512,17 +498,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **statusList**(`options?`: any): *function*
+* **statusList**(`options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **statusLive**(`options?`: any): *Promise‹function›*
 
-* **statusLive**(`options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[StatusReady](interfaces/statusready.md)›*
-
-* **statusReady**(`options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[StatusReady](interfaces/statusready.md)›*
+* **statusReady**(`options?`: any): *Promise‹function›*
 
 ___
 
@@ -544,9 +524,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **systemtypeList**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **systemtypeList**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **systemtypeRead**(`id`: number, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **systemtypeRead**(`id`: number, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -594,13 +574,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **systemtypeList**(`options?`: any): *function*
+* **systemtypeList**(`options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[SystemType](interfaces/systemtype.md)››*
-
-* **systemtypeRead**(`id`: number, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[SystemType](interfaces/systemtype.md)›*
+* **systemtypeRead**(`id`: number, `options?`: any): *Promise‹function›*
 
 ___
 
@@ -622,7 +598,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **totalRiskList**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **totalRiskList**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -668,9 +644,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **totalRiskList**(`options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **totalRiskList**(`options?`: any): *Promise‹function›*
 
 ## Object literals
 

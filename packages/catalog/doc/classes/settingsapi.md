@@ -86,7 +86,7 @@ ___
 
 ###  createSetting
 
-▸ **createSetting**(`setting`: [Setting](../interfaces/setting.md), `options?`: any): *AxiosPromise‹void›*
+▸ **createSetting**(`setting`: [Setting](../interfaces/setting.md), `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/catalog/api.ts:7682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7682)*
 
@@ -105,13 +105,13 @@ Name | Type | Description |
 `setting` | [Setting](../interfaces/setting.md) | Json encoded key/value pair to create a new setting |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
 ###  destroySetting
 
-▸ **destroySetting**(`name`: string, `options?`: any): *AxiosPromise‹void›*
+▸ **destroySetting**(`name`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/catalog/api.ts:7694](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7694)*
 
@@ -130,13 +130,13 @@ Name | Type | Description |
 `name` | string | name of the setting |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
 ###  listSettings
 
-▸ **listSettings**(`options?`: any): *AxiosPromise‹[TenantSettings](../interfaces/tenantsettings.md)›*
+▸ **listSettings**(`options?`: any): *Promise‹AxiosResponse‹[TenantSettings](../interfaces/tenantsettings.md)››*
 
 *Defined in [packages/catalog/api.ts:7705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7705)*
 
@@ -154,13 +154,13 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[TenantSettings](../interfaces/tenantsettings.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TenantSettings](../interfaces/tenantsettings.md)››*
 
 ___
 
 ###  showSetting
 
-▸ **showSetting**(`name`: string, `options?`: any): *AxiosPromise‹void›*
+▸ **showSetting**(`name`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/catalog/api.ts:7717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7717)*
 
@@ -179,13 +179,13 @@ Name | Type | Description |
 `name` | string | name of the setting |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
 ###  updateSetting
 
-▸ **updateSetting**(`name`: string, `options?`: any): *AxiosPromise‹void›*
+▸ **updateSetting**(`name`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/catalog/api.ts:7729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7729)*
 
@@ -204,4 +204,4 @@ Name | Type | Description |
 `name` | string | name of the setting |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*

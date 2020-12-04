@@ -150,9 +150,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **getDocumentation**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getDocumentation**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **postGraphQL**(`graphQLRequest`: [GraphQLRequest](interfaces/graphqlrequest.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **postGraphQL**(`graphQLRequest`: [GraphQLRequest](interfaces/graphqlrequest.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -200,13 +200,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **getDocumentation**(`options?`: any): *function*
+* **getDocumentation**(`options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹object›*
-
-* **postGraphQL**(`graphQLRequest`: [GraphQLRequest](interfaces/graphqlrequest.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[GraphQLResponse](interfaces/graphqlresponse.md)›*
+* **postGraphQL**(`graphQLRequest`: [GraphQLRequest](interfaces/graphqlrequest.md), `options?`: any): *Promise‹function›*
 
 ___
 
@@ -228,9 +224,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **createIcon**(`content?`: any, `portfolioId?`: string, `portfolioItemId?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **createIcon**(`content?`: any, `portfolioId?`: string, `portfolioItemId?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **destroyIcon**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **destroyIcon**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -278,13 +274,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **createIcon**(`content?`: any, `portfolioId?`: string, `portfolioItemId?`: string, `options?`: any): *function*
+* **createIcon**(`content?`: any, `portfolioId?`: string, `portfolioItemId?`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Icon](interfaces/icon.md)›*
-
-* **destroyIcon**(`id`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **destroyIcon**(`id`: string, `options?`: any): *Promise‹function›*
 
 ___
 
@@ -306,25 +298,25 @@ Name | Type |
 
 **Returns:** *object*
 
-* **addToOrder**(`orderId`: string, `orderItem`: [OrderItem](interfaces/orderitem.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **addToOrder**(`orderId`: string, `orderItem`: [OrderItem](interfaces/orderitem.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **cancelOrder**(`orderId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **cancelOrder**(`orderId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **createOrder**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **createOrder**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **destroyOrder**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **destroyOrder**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listOrderItemsFromOrder**(`orderId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listOrderItemsFromOrder**(`orderId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listOrders**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listOrders**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **restoreOrder**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **restoreOrder**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **showOrder**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **showOrder**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **showOrderItemFromOrder**(`orderId`: string, `id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **showOrderItemFromOrder**(`orderId`: string, `id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **submitOrder**(`orderId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **submitOrder**(`orderId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -388,45 +380,25 @@ Name | Type |
 
 **Returns:** *object*
 
-* **addToOrder**(`orderId`: string, `orderItem`: [OrderItem](interfaces/orderitem.md), `options?`: any): *function*
+* **addToOrder**(`orderId`: string, `orderItem`: [OrderItem](interfaces/orderitem.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItem](interfaces/orderitem.md)›*
+* **cancelOrder**(`orderId`: string, `options?`: any): *Promise‹function›*
 
-* **cancelOrder**(`orderId`: string, `options?`: any): *function*
+* **createOrder**(`options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](interfaces/order.md)›*
+* **destroyOrder**(`id`: string, `options?`: any): *Promise‹function›*
 
-* **createOrder**(`options?`: any): *function*
+* **listOrderItemsFromOrder**(`orderId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](interfaces/order.md)›*
+* **listOrders**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹function›*
 
-* **destroyOrder**(`id`: string, `options?`: any): *function*
+* **restoreOrder**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RestoreKey](interfaces/restorekey.md)›*
+* **showOrder**(`id`: string, `options?`: any): *Promise‹function›*
 
-* **listOrderItemsFromOrder**(`orderId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *function*
+* **showOrderItemFromOrder**(`orderId`: string, `id`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItemsCollection](interfaces/orderitemscollection.md)›*
-
-* **listOrders**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrdersCollection](interfaces/orderscollection.md)›*
-
-* **restoreOrder**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](interfaces/order.md)›*
-
-* **showOrder**(`id`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](interfaces/order.md)›*
-
-* **showOrderItemFromOrder**(`orderId`: string, `id`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItem](interfaces/orderitem.md)›*
-
-* **submitOrder**(`orderId`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Order](interfaces/order.md)›*
+* **submitOrder**(`orderId`: string, `options?`: any): *Promise‹function›*
 
 ___
 
@@ -448,17 +420,17 @@ Name | Type |
 
 **Returns:** *object*
 
-* **destroyOrderItem**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **destroyOrderItem**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listApprovalRequests**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listApprovalRequests**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listOrderItems**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listOrderItems**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listProgressMessages**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listProgressMessages**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **restoreOrderItem**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **restoreOrderItem**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **showOrderItem**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **showOrderItem**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -514,29 +486,17 @@ Name | Type |
 
 **Returns:** *object*
 
-* **destroyOrderItem**(`id`: string, `options?`: any): *function*
+* **destroyOrderItem**(`id`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RestoreKey](interfaces/restorekey.md)›*
+* **listApprovalRequests**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹function›*
 
-* **listApprovalRequests**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *function*
+* **listOrderItems**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ApprovalRequestsCollection](interfaces/approvalrequestscollection.md)›*
+* **listProgressMessages**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹function›*
 
-* **listOrderItems**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *function*
+* **restoreOrderItem**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItemsCollection](interfaces/orderitemscollection.md)›*
-
-* **listProgressMessages**(`orderItemId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ProgressMessagesCollection](interfaces/progressmessagescollection.md)›*
-
-* **restoreOrderItem**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItem](interfaces/orderitem.md)›*
-
-* **showOrderItem**(`id`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderItem](interfaces/orderitem.md)›*
+* **showOrderItem**(`id`: string, `options?`: any): *Promise‹function›*
 
 ___
 
@@ -558,25 +518,25 @@ Name | Type |
 
 **Returns:** *object*
 
-* **addOrderProcessAfterItem**(`id`: string, `orderProcessPortfolioItemId`: [OrderProcessPortfolioItemId](interfaces/orderprocessportfolioitemid.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **addOrderProcessAfterItem**(`id`: string, `orderProcessPortfolioItemId`: [OrderProcessPortfolioItemId](interfaces/orderprocessportfolioitemid.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **addOrderProcessBeforeItem**(`id`: string, `orderProcessPortfolioItemId`: [OrderProcessPortfolioItemId](interfaces/orderprocessportfolioitemid.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **addOrderProcessBeforeItem**(`id`: string, `orderProcessPortfolioItemId`: [OrderProcessPortfolioItemId](interfaces/orderprocessportfolioitemid.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **createOrderProcess**(`orderProcess`: [OrderProcess](interfaces/orderprocess.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **createOrderProcess**(`orderProcess`: [OrderProcess](interfaces/orderprocess.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **destroyOrderProcess**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **destroyOrderProcess**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **linkTagToOrderProcess**(`id`: string, `resourceObject`: [ResourceObject](interfaces/resourceobject.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **linkTagToOrderProcess**(`id`: string, `resourceObject`: [ResourceObject](interfaces/resourceobject.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listOrderProcesses**(`appName?`: string, `objectId?`: string, `objectType?`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listOrderProcesses**(`appName?`: string, `objectId?`: string, `objectType?`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **removeOrderProcessAssociation**(`id`: string, `orderProcessAssociationsToRemove`: [OrderProcessAssociationsToRemove](interfaces/orderprocessassociationstoremove.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **removeOrderProcessAssociation**(`id`: string, `orderProcessAssociationsToRemove`: [OrderProcessAssociationsToRemove](interfaces/orderprocessassociationstoremove.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **showOrderProcess**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **showOrderProcess**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **unlinkTagFromOrderProcess**(`id`: string, `resourceObject`: [ResourceObject](interfaces/resourceobject.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **unlinkTagFromOrderProcess**(`id`: string, `resourceObject`: [ResourceObject](interfaces/resourceobject.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **updateOrderProcess**(`id`: string, `orderProcess`: [OrderProcess](interfaces/orderprocess.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **updateOrderProcess**(`id`: string, `orderProcess`: [OrderProcess](interfaces/orderprocess.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -640,45 +600,25 @@ Name | Type |
 
 **Returns:** *object*
 
-* **addOrderProcessAfterItem**(`id`: string, `orderProcessPortfolioItemId`: [OrderProcessPortfolioItemId](interfaces/orderprocessportfolioitemid.md), `options?`: any): *function*
+* **addOrderProcessAfterItem**(`id`: string, `orderProcessPortfolioItemId`: [OrderProcessPortfolioItemId](interfaces/orderprocessportfolioitemid.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderProcess](interfaces/orderprocess.md)›*
+* **addOrderProcessBeforeItem**(`id`: string, `orderProcessPortfolioItemId`: [OrderProcessPortfolioItemId](interfaces/orderprocessportfolioitemid.md), `options?`: any): *Promise‹function›*
 
-* **addOrderProcessBeforeItem**(`id`: string, `orderProcessPortfolioItemId`: [OrderProcessPortfolioItemId](interfaces/orderprocessportfolioitemid.md), `options?`: any): *function*
+* **createOrderProcess**(`orderProcess`: [OrderProcess](interfaces/orderprocess.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderProcess](interfaces/orderprocess.md)›*
+* **destroyOrderProcess**(`id`: string, `options?`: any): *Promise‹function›*
 
-* **createOrderProcess**(`orderProcess`: [OrderProcess](interfaces/orderprocess.md), `options?`: any): *function*
+* **linkTagToOrderProcess**(`id`: string, `resourceObject`: [ResourceObject](interfaces/resourceobject.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderProcess](interfaces/orderprocess.md)›*
+* **listOrderProcesses**(`appName?`: string, `objectId?`: string, `objectType?`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹function›*
 
-* **destroyOrderProcess**(`id`: string, `options?`: any): *function*
+* **removeOrderProcessAssociation**(`id`: string, `orderProcessAssociationsToRemove`: [OrderProcessAssociationsToRemove](interfaces/orderprocessassociationstoremove.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **showOrderProcess**(`id`: string, `options?`: any): *Promise‹function›*
 
-* **linkTagToOrderProcess**(`id`: string, `resourceObject`: [ResourceObject](interfaces/resourceobject.md), `options?`: any): *function*
+* **unlinkTagFromOrderProcess**(`id`: string, `resourceObject`: [ResourceObject](interfaces/resourceobject.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
-
-* **listOrderProcesses**(`appName?`: string, `objectId?`: string, `objectType?`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderProcessCollection](interfaces/orderprocesscollection.md)›*
-
-* **removeOrderProcessAssociation**(`id`: string, `orderProcessAssociationsToRemove`: [OrderProcessAssociationsToRemove](interfaces/orderprocessassociationstoremove.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderProcess](interfaces/orderprocess.md)›*
-
-* **showOrderProcess**(`id`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderProcess](interfaces/orderprocess.md)›*
-
-* **unlinkTagFromOrderProcess**(`id`: string, `resourceObject`: [ResourceObject](interfaces/resourceobject.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
-
-* **updateOrderProcess**(`id`: string, `orderProcess`: [OrderProcess](interfaces/orderprocess.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[OrderProcess](interfaces/orderprocess.md)›*
+* **updateOrderProcess**(`id`: string, `orderProcess`: [OrderProcess](interfaces/orderprocess.md), `options?`: any): *Promise‹function›*
 
 ___
 
@@ -700,35 +640,35 @@ Name | Type |
 
 **Returns:** *object*
 
-* **addPortfolioTag**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **addPortfolioTag**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **createPortfolio**(`portfolio`: [Portfolio](interfaces/portfolio.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **createPortfolio**(`portfolio`: [Portfolio](interfaces/portfolio.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **destroyPortfolio**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **destroyPortfolio**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **fetchPortfolioItemsWithPortfolio**(`portfolioId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **fetchPortfolioItemsWithPortfolio**(`portfolioId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listPortfolioTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listPortfolioTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listPortfolios**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listPortfolios**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **postCopyPortfolio**(`portfolioId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **postCopyPortfolio**(`portfolioId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **removePortfolioTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **removePortfolioTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **shareInfo**(`portfolioId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **shareInfo**(`portfolioId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **sharePortfolio**(`portfolioId`: string, `sharePolicy`: [SharePolicy](interfaces/sharepolicy.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **sharePortfolio**(`portfolioId`: string, `sharePolicy`: [SharePolicy](interfaces/sharepolicy.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **showPortfolio**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **showPortfolio**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **showPortfolioIcon**(`portfolioId`: string, `cacheId?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **showPortfolioIcon**(`portfolioId`: string, `cacheId?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **unDeletePortfolio**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **unDeletePortfolio**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **unsharePortfolio**(`portfolioId`: string, `unsharePolicy`: [UnsharePolicy](interfaces/unsharepolicy.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **unsharePortfolio**(`portfolioId`: string, `unsharePolicy`: [UnsharePolicy](interfaces/unsharepolicy.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **updatePortfolio**(`id`: string, `portfolio`: [Portfolio](interfaces/portfolio.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **updatePortfolio**(`id`: string, `portfolio`: [Portfolio](interfaces/portfolio.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -802,65 +742,35 @@ Name | Type |
 
 **Returns:** *object*
 
-* **addPortfolioTag**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *function*
+* **addPortfolioTag**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[Tag](interfaces/tag.md)››*
+* **createPortfolio**(`portfolio`: [Portfolio](interfaces/portfolio.md), `options?`: any): *Promise‹function›*
 
-* **createPortfolio**(`portfolio`: [Portfolio](interfaces/portfolio.md), `options?`: any): *function*
+* **destroyPortfolio**(`id`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Portfolio](interfaces/portfolio.md)›*
+* **fetchPortfolioItemsWithPortfolio**(`portfolioId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹function›*
 
-* **destroyPortfolio**(`id`: string, `options?`: any): *function*
+* **listPortfolioTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RestoreKey](interfaces/restorekey.md)›*
+* **listPortfolios**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹function›*
 
-* **fetchPortfolioItemsWithPortfolio**(`portfolioId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *function*
+* **postCopyPortfolio**(`portfolioId`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PortfolioItemsCollection](interfaces/portfolioitemscollection.md)›*
+* **removePortfolioTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *Promise‹function›*
 
-* **listPortfolioTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *function*
+* **shareInfo**(`portfolioId`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[TagsCollection](interfaces/tagscollection.md)›*
+* **sharePortfolio**(`portfolioId`: string, `sharePolicy`: [SharePolicy](interfaces/sharepolicy.md), `options?`: any): *Promise‹function›*
 
-* **listPortfolios**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *function*
+* **showPortfolio**(`id`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PortfoliosCollection](interfaces/portfolioscollection.md)›*
+* **showPortfolioIcon**(`portfolioId`: string, `cacheId?`: string, `options?`: any): *Promise‹function›*
 
-* **postCopyPortfolio**(`portfolioId`: string, `options?`: any): *function*
+* **unDeletePortfolio**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Portfolio](interfaces/portfolio.md)›*
+* **unsharePortfolio**(`portfolioId`: string, `unsharePolicy`: [UnsharePolicy](interfaces/unsharepolicy.md), `options?`: any): *Promise‹function›*
 
-* **removePortfolioTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
-
-* **shareInfo**(`portfolioId`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[ShareInfo](interfaces/shareinfo.md)››*
-
-* **sharePortfolio**(`portfolioId`: string, `sharePolicy`: [SharePolicy](interfaces/sharepolicy.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
-
-* **showPortfolio**(`id`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Portfolio](interfaces/portfolio.md)›*
-
-* **showPortfolioIcon**(`portfolioId`: string, `cacheId?`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹any›*
-
-* **unDeletePortfolio**(`id`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Portfolio](interfaces/portfolio.md)›*
-
-* **unsharePortfolio**(`portfolioId`: string, `unsharePolicy`: [UnsharePolicy](interfaces/unsharepolicy.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
-
-* **updatePortfolio**(`id`: string, `portfolio`: [Portfolio](interfaces/portfolio.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Portfolio](interfaces/portfolio.md)›*
+* **updatePortfolio**(`id`: string, `portfolio`: [Portfolio](interfaces/portfolio.md), `options?`: any): *Promise‹function›*
 
 ___
 
@@ -882,33 +792,33 @@ Name | Type |
 
 **Returns:** *object*
 
-* **addPortfolioItemTag**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **addPortfolioItemTag**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **createPortfolioItem**(`createPortfolioItem`: [CreatePortfolioItem](interfaces/createportfolioitem.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **createPortfolioItem**(`createPortfolioItem`: [CreatePortfolioItem](interfaces/createportfolioitem.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **destroyPortfolioItem**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **destroyPortfolioItem**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getPortfolioItemNextName**(`portfolioItemId`: string, `destinationPortfolioId?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **getPortfolioItemNextName**(`portfolioItemId`: string, `destinationPortfolioId?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listProviderControlParameters**(`portfolioItemId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listProviderControlParameters**(`portfolioItemId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listServicePlans**(`portfolioItemId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listServicePlans**(`portfolioItemId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **postCopyPortfolioItem**(`portfolioItemId`: string, `copyPortfolioItem?`: [CopyPortfolioItem](interfaces/copyportfolioitem.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **postCopyPortfolioItem**(`portfolioItemId`: string, `copyPortfolioItem?`: [CopyPortfolioItem](interfaces/copyportfolioitem.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **removePortfolioItemTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **removePortfolioItemTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **showPortfolioItem**(`id`: string, `showDiscarded?`: boolean, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **showPortfolioItem**(`id`: string, `showDiscarded?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **showPortfolioItemIcon**(`portfolioItemId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **showPortfolioItemIcon**(`portfolioItemId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **unDeletePortfolioItem**(`portfolioItemId`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **unDeletePortfolioItem**(`portfolioItemId`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **updatePortfolioItem**(`id`: string, `portfolioItem`: [PortfolioItem](interfaces/portfolioitem.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **updatePortfolioItem**(`id`: string, `portfolioItem`: [PortfolioItem](interfaces/portfolioitem.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -980,61 +890,33 @@ Name | Type |
 
 **Returns:** *object*
 
-* **addPortfolioItemTag**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *function*
+* **addPortfolioItemTag**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[Tag](interfaces/tag.md)››*
+* **createPortfolioItem**(`createPortfolioItem`: [CreatePortfolioItem](interfaces/createportfolioitem.md), `options?`: any): *Promise‹function›*
 
-* **createPortfolioItem**(`createPortfolioItem`: [CreatePortfolioItem](interfaces/createportfolioitem.md), `options?`: any): *function*
+* **destroyPortfolioItem**(`id`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PortfolioItem](interfaces/portfolioitem.md)›*
+* **getPortfolioItemNextName**(`portfolioItemId`: string, `destinationPortfolioId?`: string, `options?`: any): *Promise‹function›*
 
-* **destroyPortfolioItem**(`id`: string, `options?`: any): *function*
+* **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[RestoreKey](interfaces/restorekey.md)›*
+* **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹function›*
 
-* **getPortfolioItemNextName**(`portfolioItemId`: string, `destinationPortfolioId?`: string, `options?`: any): *function*
+* **listProviderControlParameters**(`portfolioItemId`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PortfolioItemNextName](interfaces/portfolioitemnextname.md)›*
+* **listServicePlans**(`portfolioItemId`: string, `options?`: any): *Promise‹function›*
 
-* **listPortfolioItemTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *function*
+* **postCopyPortfolioItem**(`portfolioItemId`: string, `copyPortfolioItem?`: [CopyPortfolioItem](interfaces/copyportfolioitem.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[TagsCollection](interfaces/tagscollection.md)›*
+* **removePortfolioItemTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *Promise‹function›*
 
-* **listPortfolioItems**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *function*
+* **showPortfolioItem**(`id`: string, `showDiscarded?`: boolean, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PortfolioItemsCollection](interfaces/portfolioitemscollection.md)›*
+* **showPortfolioItemIcon**(`portfolioItemId`: string, `options?`: any): *Promise‹function›*
 
-* **listProviderControlParameters**(`portfolioItemId`: string, `options?`: any): *function*
+* **unDeletePortfolioItem**(`portfolioItemId`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹object›*
-
-* **listServicePlans**(`portfolioItemId`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[ServicePlan](interfaces/serviceplan.md)››*
-
-* **postCopyPortfolioItem**(`portfolioItemId`: string, `copyPortfolioItem?`: [CopyPortfolioItem](interfaces/copyportfolioitem.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PortfolioItem](interfaces/portfolioitem.md)›*
-
-* **removePortfolioItemTags**(`id`: string, `tag`: Array‹[Tag](interfaces/tag.md)›, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
-
-* **showPortfolioItem**(`id`: string, `showDiscarded?`: boolean, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PortfolioItem](interfaces/portfolioitem.md)›*
-
-* **showPortfolioItemIcon**(`portfolioItemId`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹any›*
-
-* **unDeletePortfolioItem**(`portfolioItemId`: string, `restoreKey`: [RestoreKey](interfaces/restorekey.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PortfolioItem](interfaces/portfolioitem.md)›*
-
-* **updatePortfolioItem**(`id`: string, `portfolioItem`: [PortfolioItem](interfaces/portfolioitem.md), `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[PortfolioItem](interfaces/portfolioitem.md)›*
+* **updatePortfolioItem**(`id`: string, `portfolioItem`: [PortfolioItem](interfaces/portfolioitem.md), `options?`: any): *Promise‹function›*
 
 ___
 
@@ -1056,17 +938,17 @@ Name | Type |
 
 **Returns:** *object*
 
-* **createServicePlan**(`importServicePlan?`: [ImportServicePlan](interfaces/importserviceplan.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **createServicePlan**(`importServicePlan?`: [ImportServicePlan](interfaces/importserviceplan.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **patchServicePlanModified**(`id`: string, `patchModifiedServicePlan?`: [PatchModifiedServicePlan](interfaces/patchmodifiedserviceplan.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **patchServicePlanModified**(`id`: string, `patchModifiedServicePlan?`: [PatchModifiedServicePlan](interfaces/patchmodifiedserviceplan.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **resetServicePlanModified**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **resetServicePlanModified**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **showServicePlan**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **showServicePlan**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **showServicePlanBase**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **showServicePlanBase**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **showServicePlanModified**(`id`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **showServicePlanModified**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -1122,29 +1004,17 @@ Name | Type |
 
 **Returns:** *object*
 
-* **createServicePlan**(`importServicePlan?`: [ImportServicePlan](interfaces/importserviceplan.md), `options?`: any): *function*
+* **createServicePlan**(`importServicePlan?`: [ImportServicePlan](interfaces/importserviceplan.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[ServicePlan](interfaces/serviceplan.md)››*
+* **patchServicePlanModified**(`id`: string, `patchModifiedServicePlan?`: [PatchModifiedServicePlan](interfaces/patchmodifiedserviceplan.md), `options?`: any): *Promise‹function›*
 
-* **patchServicePlanModified**(`id`: string, `patchModifiedServicePlan?`: [PatchModifiedServicePlan](interfaces/patchmodifiedserviceplan.md), `options?`: any): *function*
+* **resetServicePlanModified**(`id`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹object›*
+* **showServicePlan**(`id`: string, `options?`: any): *Promise‹function›*
 
-* **resetServicePlanModified**(`id`: string, `options?`: any): *function*
+* **showServicePlanBase**(`id`: string, `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹Array‹[ServicePlan](interfaces/serviceplan.md)››*
-
-* **showServicePlan**(`id`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ServicePlan](interfaces/serviceplan.md)›*
-
-* **showServicePlanBase**(`id`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ServicePlan](interfaces/serviceplan.md)›*
-
-* **showServicePlanModified**(`id`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[ServicePlan](interfaces/serviceplan.md)›*
+* **showServicePlanModified**(`id`: string, `options?`: any): *Promise‹function›*
 
 ___
 
@@ -1166,15 +1036,15 @@ Name | Type |
 
 **Returns:** *object*
 
-* **createSetting**(`setting`: [Setting](interfaces/setting.md), `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **createSetting**(`setting`: [Setting](interfaces/setting.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **destroySetting**(`name`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **destroySetting**(`name`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listSettings**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listSettings**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **showSetting**(`name`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **showSetting**(`name`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **updateSetting**(`name`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **updateSetting**(`name`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -1228,25 +1098,15 @@ Name | Type |
 
 **Returns:** *object*
 
-* **createSetting**(`setting`: [Setting](interfaces/setting.md), `options?`: any): *function*
+* **createSetting**(`setting`: [Setting](interfaces/setting.md), `options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **destroySetting**(`name`: string, `options?`: any): *Promise‹function›*
 
-* **destroySetting**(`name`: string, `options?`: any): *function*
+* **listSettings**(`options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **showSetting**(`name`: string, `options?`: any): *Promise‹function›*
 
-* **listSettings**(`options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[TenantSettings](interfaces/tenantsettings.md)›*
-
-* **showSetting**(`name`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
-
-* **updateSetting**(`name`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **updateSetting**(`name`: string, `options?`: any): *Promise‹function›*
 
 ___
 
@@ -1268,7 +1128,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **listTags**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listTags**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -1314,9 +1174,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **listTags**(`options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[TagsCollection](interfaces/tagscollection.md)›*
+* **listTags**(`options?`: any): *Promise‹function›*
 
 ___
 
@@ -1338,11 +1196,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **listTenants**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **listTenants**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **showTenant**(`tenantId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **showTenant**(`tenantId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **tenantSeed**(`tenantId`: string, `options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **tenantSeed**(`tenantId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -1392,17 +1250,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **listTenants**(`options?`: any): *function*
+* **listTenants**(`options?`: any): *Promise‹function›*
 
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[TenantsCollection](interfaces/tenantscollection.md)›*
+* **showTenant**(`tenantId`: string, `options?`: any): *Promise‹function›*
 
-* **showTenant**(`tenantId`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹[Tenant](interfaces/tenant.md)›*
-
-* **tenantSeed**(`tenantId`: string, `options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹void›*
+* **tenantSeed**(`tenantId`: string, `options?`: any): *Promise‹function›*
 
 ## Object literals
 

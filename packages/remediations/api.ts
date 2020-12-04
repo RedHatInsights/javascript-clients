@@ -1192,7 +1192,7 @@ export const DiagnosisApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDiagnosis(system: string, remediation?: string, options: any = {}): RequestArgs {
+        getDiagnosis: async (system: string, remediation?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'system' is not null or undefined
             if (system === null || system === undefined) {
                 throw new RequiredError('system','Required parameter system was null or undefined when calling getDiagnosis.');
@@ -1242,8 +1242,8 @@ export const DiagnosisApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDiagnosis(system: string, remediation?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Diagnosis> {
-            const localVarAxiosArgs = DiagnosisApiAxiosParamCreator(configuration).getDiagnosis(system, remediation, options);
+        async getDiagnosis(system: string, remediation?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Diagnosis>> {
+            const localVarAxiosArgs = await DiagnosisApiAxiosParamCreator(configuration).getDiagnosis(system, remediation, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1267,7 +1267,7 @@ export const DiagnosisApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         getDiagnosis(system: string, remediation?: string, options?: any): AxiosPromise<Diagnosis> {
-            return DiagnosisApiFp(configuration).getDiagnosis(system, remediation, options)(axios, basePath);
+            return DiagnosisApiFp(configuration).getDiagnosis(system, remediation, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1289,7 +1289,7 @@ export class DiagnosisApi extends BaseAPI {
      * @memberof DiagnosisApi
      */
     public getDiagnosis(system: string, remediation?: string, options?: any) {
-        return DiagnosisApiFp(this.configuration).getDiagnosis(system, remediation, options)(this.axios, this.basePath);
+        return DiagnosisApiFp(this.configuration).getDiagnosis(system, remediation, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -1308,7 +1308,7 @@ export const GeneratorApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        generate(playbookDefinition: PlaybookDefinition, options: any = {}): RequestArgs {
+        generate: async (playbookDefinition: PlaybookDefinition, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'playbookDefinition' is not null or undefined
             if (playbookDefinition === null || playbookDefinition === undefined) {
                 throw new RequiredError('playbookDefinition','Required parameter playbookDefinition was null or undefined when calling generate.');
@@ -1356,8 +1356,8 @@ export const GeneratorApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        generate(playbookDefinition: PlaybookDefinition, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<string> {
-            const localVarAxiosArgs = GeneratorApiAxiosParamCreator(configuration).generate(playbookDefinition, options);
+        async generate(playbookDefinition: PlaybookDefinition, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await GeneratorApiAxiosParamCreator(configuration).generate(playbookDefinition, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1380,7 +1380,7 @@ export const GeneratorApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         generate(playbookDefinition: PlaybookDefinition, options?: any): AxiosPromise<string> {
-            return GeneratorApiFp(configuration).generate(playbookDefinition, options)(axios, basePath);
+            return GeneratorApiFp(configuration).generate(playbookDefinition, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1401,7 +1401,7 @@ export class GeneratorApi extends BaseAPI {
      * @memberof GeneratorApi
      */
     public generate(playbookDefinition: PlaybookDefinition, options?: any) {
-        return GeneratorApiFp(this.configuration).generate(playbookDefinition, options)(this.axios, this.basePath);
+        return GeneratorApiFp(this.configuration).generate(playbookDefinition, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -1421,7 +1421,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        cancelPlaybookRuns(id: string, playbookRunId: string, options: any = {}): RequestArgs {
+        cancelPlaybookRuns: async (id: string, playbookRunId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling cancelPlaybookRuns.');
@@ -1462,7 +1462,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRemediation(remediationInput: RemediationInput, options: any = {}): RequestArgs {
+        createRemediation: async (remediationInput: RemediationInput, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'remediationInput' is not null or undefined
             if (remediationInput === null || remediationInput === undefined) {
                 throw new RequiredError('remediationInput','Required parameter remediationInput was null or undefined when calling createRemediation.');
@@ -1501,7 +1501,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteRemediation(id: string, options: any = {}): RequestArgs {
+        deleteRemediation: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling deleteRemediation.');
@@ -1538,7 +1538,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteRemediationIssue(id: string, issue: string, options: any = {}): RequestArgs {
+        deleteRemediationIssue: async (id: string, issue: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling deleteRemediationIssue.');
@@ -1581,7 +1581,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteRemediationIssueSystem(id: string, issue: string, system: string, options: any = {}): RequestArgs {
+        deleteRemediationIssueSystem: async (id: string, issue: string, system: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling deleteRemediationIssueSystem.');
@@ -1627,7 +1627,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        downloadPlaybooks(selectedRemediations?: Array<string>, options: any = {}): RequestArgs {
+        downloadPlaybooks: async (selectedRemediations?: Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/remediations/download`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1663,7 +1663,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookRunDetails(id: string, playbookRunId: string, options: any = {}): RequestArgs {
+        getPlaybookRunDetails: async (id: string, playbookRunId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling getPlaybookRunDetails.');
@@ -1706,7 +1706,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookRunSystemDetails(id: string, playbookRunId: string, system: string, options: any = {}): RequestArgs {
+        getPlaybookRunSystemDetails: async (id: string, playbookRunId: string, system: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling getPlaybookRunSystemDetails.');
@@ -1758,7 +1758,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, sort?: 'system_name' | '-system_name', options: any = {}): RequestArgs {
+        getPlaybookRunSystems: async (id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, sort?: 'system_name' | '-system_name', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling getPlaybookRunSystems.');
@@ -1819,7 +1819,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediation(id: string, options: any = {}): RequestArgs {
+        getRemediation: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling getRemediation.');
@@ -1855,7 +1855,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediationConnectionStatus(id: string, options: any = {}): RequestArgs {
+        getRemediationConnectionStatus: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling getRemediationConnectionStatus.');
@@ -1895,7 +1895,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediationIssueSystems(id: string, issue: string, limit?: number, offset?: number, sort?: 'display_name' | '-display_name', options: any = {}): RequestArgs {
+        getRemediationIssueSystems: async (id: string, issue: string, limit?: number, offset?: number, sort?: 'display_name' | '-display_name', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling getRemediationIssueSystems.');
@@ -1948,7 +1948,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediationPlaybook(id: string, options: any = {}): RequestArgs {
+        getRemediationPlaybook: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling getRemediationPlaybook.');
@@ -1989,7 +1989,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, options: any = {}): RequestArgs {
+        getRemediations: async (sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/remediations`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2047,7 +2047,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPlaybookRuns(id: string, limit?: number, offset?: number, sort?: 'updated_at' | '-updated_at', options: any = {}): RequestArgs {
+        listPlaybookRuns: async (id: string, limit?: number, offset?: number, sort?: 'updated_at' | '-updated_at', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listPlaybookRuns.');
@@ -2096,7 +2096,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        runRemediation(id: string, data?: any, options: any = {}): RequestArgs {
+        runRemediation: async (id: string, data?: any, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling runRemediation.');
@@ -2137,7 +2137,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateRemediation(id: string, remediationInput: RemediationInput, options: any = {}): RequestArgs {
+        updateRemediation: async (id: string, remediationInput: RemediationInput, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling updateRemediation.');
@@ -2183,7 +2183,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateRemediationIssue(id: string, issue: string, remediationIssueIn: RemediationIssueIn, options: any = {}): RequestArgs {
+        updateRemediationIssue: async (id: string, issue: string, remediationIssueIn: RemediationIssueIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling updateRemediationIssue.');
@@ -2242,8 +2242,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        cancelPlaybookRuns(id: string, playbookRunId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).cancelPlaybookRuns(id, playbookRunId, options);
+        async cancelPlaybookRuns(id: string, playbookRunId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).cancelPlaybookRuns(id, playbookRunId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2256,8 +2256,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRemediation(remediationInput: RemediationInput, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationCreated> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).createRemediation(remediationInput, options);
+        async createRemediation(remediationInput: RemediationInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationCreated>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).createRemediation(remediationInput, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2270,8 +2270,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteRemediation(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).deleteRemediation(id, options);
+        async deleteRemediation(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).deleteRemediation(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2285,8 +2285,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteRemediationIssue(id: string, issue: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).deleteRemediationIssue(id, issue, options);
+        async deleteRemediationIssue(id: string, issue: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).deleteRemediationIssue(id, issue, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2301,8 +2301,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteRemediationIssueSystem(id: string, issue: string, system: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).deleteRemediationIssueSystem(id, issue, system, options);
+        async deleteRemediationIssueSystem(id: string, issue: string, system: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).deleteRemediationIssueSystem(id, issue, system, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2315,8 +2315,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        downloadPlaybooks(selectedRemediations?: Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).downloadPlaybooks(selectedRemediations, options);
+        async downloadPlaybooks(selectedRemediations?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).downloadPlaybooks(selectedRemediations, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2330,8 +2330,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookRunDetails(id: string, playbookRunId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunExecutorDetails> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getPlaybookRunDetails(id, playbookRunId, options);
+        async getPlaybookRunDetails(id: string, playbookRunId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunExecutorDetails>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).getPlaybookRunDetails(id, playbookRunId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2346,8 +2346,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookRunSystemDetails(id: string, playbookRunId: string, system: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunSystemDetails> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getPlaybookRunSystemDetails(id, playbookRunId, system, options);
+        async getPlaybookRunSystemDetails(id: string, playbookRunId: string, system: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunSystemDetails>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).getPlaybookRunSystemDetails(id, playbookRunId, system, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2366,8 +2366,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, sort?: 'system_name' | '-system_name', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunSystemList> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, ansibleHost, sort, options);
+        async getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, sort?: 'system_name' | '-system_name', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunSystemList>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, ansibleHost, sort, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2380,8 +2380,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediation(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationDetails> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getRemediation(id, options);
+        async getRemediation(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationDetails>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).getRemediation(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2394,8 +2394,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediationConnectionStatus(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationConnectionStatus> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getRemediationConnectionStatus(id, options);
+        async getRemediationConnectionStatus(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationConnectionStatus>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).getRemediationConnectionStatus(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2412,8 +2412,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediationIssueSystems(id: string, issue: string, limit?: number, offset?: number, sort?: 'display_name' | '-display_name', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationIssueSystemList> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getRemediationIssueSystems(id, issue, limit, offset, sort, options);
+        async getRemediationIssueSystems(id: string, issue: string, limit?: number, offset?: number, sort?: 'display_name' | '-display_name', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationIssueSystemList>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).getRemediationIssueSystems(id, issue, limit, offset, sort, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2426,8 +2426,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediationPlaybook(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<string> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getRemediationPlaybook(id, options);
+        async getRemediationPlaybook(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).getRemediationPlaybook(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2445,8 +2445,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationList> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, options);
+        async getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationList>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2462,8 +2462,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPlaybookRuns(id: string, limit?: number, offset?: number, sort?: 'updated_at' | '-updated_at', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunsList> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).listPlaybookRuns(id, limit, offset, sort, options);
+        async listPlaybookRuns(id: string, limit?: number, offset?: number, sort?: 'updated_at' | '-updated_at', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlaybookRunsList>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).listPlaybookRuns(id, limit, offset, sort, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2477,8 +2477,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        runRemediation(id: string, data?: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExecuteRemediation> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).runRemediation(id, data, options);
+        async runRemediation(id: string, data?: any, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExecuteRemediation>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).runRemediation(id, data, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2492,8 +2492,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateRemediation(id: string, remediationInput: RemediationInput, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).updateRemediation(id, remediationInput, options);
+        async updateRemediation(id: string, remediationInput: RemediationInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).updateRemediation(id, remediationInput, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2508,8 +2508,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateRemediationIssue(id: string, issue: string, remediationIssueIn: RemediationIssueIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = RemediationsApiAxiosParamCreator(configuration).updateRemediationIssue(id, issue, remediationIssueIn, options);
+        async updateRemediationIssue(id: string, issue: string, remediationIssueIn: RemediationIssueIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).updateRemediationIssue(id, issue, remediationIssueIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2533,7 +2533,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         cancelPlaybookRuns(id: string, playbookRunId: string, options?: any): AxiosPromise<object> {
-            return RemediationsApiFp(configuration).cancelPlaybookRuns(id, playbookRunId, options)(axios, basePath);
+            return RemediationsApiFp(configuration).cancelPlaybookRuns(id, playbookRunId, options).then((request) => request(axios, basePath));
         },
         /**
          * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
@@ -2543,7 +2543,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         createRemediation(remediationInput: RemediationInput, options?: any): AxiosPromise<RemediationCreated> {
-            return RemediationsApiFp(configuration).createRemediation(remediationInput, options)(axios, basePath);
+            return RemediationsApiFp(configuration).createRemediation(remediationInput, options).then((request) => request(axios, basePath));
         },
         /**
          * Removes the given Remediation, RBAC permission {remediations:remediation:write}
@@ -2553,7 +2553,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         deleteRemediation(id: string, options?: any): AxiosPromise<void> {
-            return RemediationsApiFp(configuration).deleteRemediation(id, options)(axios, basePath);
+            return RemediationsApiFp(configuration).deleteRemediation(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Removes the given Issue from the Remediation, RBAC permission {remediations:remediation:write}
@@ -2564,7 +2564,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         deleteRemediationIssue(id: string, issue: string, options?: any): AxiosPromise<void> {
-            return RemediationsApiFp(configuration).deleteRemediationIssue(id, issue, options)(axios, basePath);
+            return RemediationsApiFp(configuration).deleteRemediationIssue(id, issue, options).then((request) => request(axios, basePath));
         },
         /**
          * Removes the given System from the Issue Remediation, RBAC permission {remediations:remediation:write}
@@ -2576,7 +2576,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         deleteRemediationIssueSystem(id: string, issue: string, system: string, options?: any): AxiosPromise<void> {
-            return RemediationsApiFp(configuration).deleteRemediationIssueSystem(id, issue, system, options)(axios, basePath);
+            return RemediationsApiFp(configuration).deleteRemediationIssueSystem(id, issue, system, options).then((request) => request(axios, basePath));
         },
         /**
          * Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}
@@ -2586,7 +2586,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         downloadPlaybooks(selectedRemediations?: Array<string>, options?: any): AxiosPromise<any> {
-            return RemediationsApiFp(configuration).downloadPlaybooks(selectedRemediations, options)(axios, basePath);
+            return RemediationsApiFp(configuration).downloadPlaybooks(selectedRemediations, options).then((request) => request(axios, basePath));
         },
         /**
          * Get details on execution of the remediation
@@ -2597,7 +2597,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         getPlaybookRunDetails(id: string, playbookRunId: string, options?: any): AxiosPromise<PlaybookRunExecutorDetails> {
-            return RemediationsApiFp(configuration).getPlaybookRunDetails(id, playbookRunId, options)(axios, basePath);
+            return RemediationsApiFp(configuration).getPlaybookRunDetails(id, playbookRunId, options).then((request) => request(axios, basePath));
         },
         /**
          * Get details and updated log of system being executed on in specific playbook run
@@ -2609,7 +2609,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         getPlaybookRunSystemDetails(id: string, playbookRunId: string, system: string, options?: any): AxiosPromise<PlaybookRunSystemDetails> {
-            return RemediationsApiFp(configuration).getPlaybookRunSystemDetails(id, playbookRunId, system, options)(axios, basePath);
+            return RemediationsApiFp(configuration).getPlaybookRunSystemDetails(id, playbookRunId, system, options).then((request) => request(axios, basePath));
         },
         /**
          * Get details on systems being executed on in specific playbook run
@@ -2625,7 +2625,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, sort?: 'system_name' | '-system_name', options?: any): AxiosPromise<PlaybookRunSystemList> {
-            return RemediationsApiFp(configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, ansibleHost, sort, options)(axios, basePath);
+            return RemediationsApiFp(configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, ansibleHost, sort, options).then((request) => request(axios, basePath));
         },
         /**
          * Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
@@ -2635,7 +2635,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         getRemediation(id: string, options?: any): AxiosPromise<RemediationDetails> {
-            return RemediationsApiFp(configuration).getRemediation(id, options)(axios, basePath);
+            return RemediationsApiFp(configuration).getRemediation(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Get satellite connection status for a given host, RBAC permission {remediations:remediation:execute}
@@ -2645,7 +2645,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         getRemediationConnectionStatus(id: string, options?: any): AxiosPromise<RemediationConnectionStatus> {
-            return RemediationsApiFp(configuration).getRemediationConnectionStatus(id, options)(axios, basePath);
+            return RemediationsApiFp(configuration).getRemediationConnectionStatus(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Get a paginated list of systems from a given issue, RBAC permission {remediations:remediation:read}
@@ -2659,7 +2659,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         getRemediationIssueSystems(id: string, issue: string, limit?: number, offset?: number, sort?: 'display_name' | '-display_name', options?: any): AxiosPromise<RemediationIssueSystemList> {
-            return RemediationsApiFp(configuration).getRemediationIssueSystems(id, issue, limit, offset, sort, options)(axios, basePath);
+            return RemediationsApiFp(configuration).getRemediationIssueSystems(id, issue, limit, offset, sort, options).then((request) => request(axios, basePath));
         },
         /**
          * Provides Ansible Playbook, RBAC permission {remediations:remediation:read}
@@ -2669,7 +2669,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         getRemediationPlaybook(id: string, options?: any): AxiosPromise<string> {
-            return RemediationsApiFp(configuration).getRemediationPlaybook(id, options)(axios, basePath);
+            return RemediationsApiFp(configuration).getRemediationPlaybook(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Provides information about Remediations, RBAC permission {remediations:remediation:read}
@@ -2684,7 +2684,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, options?: any): AxiosPromise<RemediationList> {
-            return RemediationsApiFp(configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, options)(axios, basePath);
+            return RemediationsApiFp(configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, options).then((request) => request(axios, basePath));
         },
         /**
          * List of executions of this remediation
@@ -2697,7 +2697,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         listPlaybookRuns(id: string, limit?: number, offset?: number, sort?: 'updated_at' | '-updated_at', options?: any): AxiosPromise<PlaybookRunsList> {
-            return RemediationsApiFp(configuration).listPlaybookRuns(id, limit, offset, sort, options)(axios, basePath);
+            return RemediationsApiFp(configuration).listPlaybookRuns(id, limit, offset, sort, options).then((request) => request(axios, basePath));
         },
         /**
          * Execute remediation, RBAC permission {remediations:remediation:execute}
@@ -2708,7 +2708,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         runRemediation(id: string, data?: any, options?: any): AxiosPromise<ExecuteRemediation> {
-            return RemediationsApiFp(configuration).runRemediation(id, data, options)(axios, basePath);
+            return RemediationsApiFp(configuration).runRemediation(id, data, options).then((request) => request(axios, basePath));
         },
         /**
          * Updates the given Remediation, RBAC permission {remediations:remediation:write}
@@ -2719,7 +2719,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         updateRemediation(id: string, remediationInput: RemediationInput, options?: any): AxiosPromise<void> {
-            return RemediationsApiFp(configuration).updateRemediation(id, remediationInput, options)(axios, basePath);
+            return RemediationsApiFp(configuration).updateRemediation(id, remediationInput, options).then((request) => request(axios, basePath));
         },
         /**
          * Updates the given Remediation Issue, RBAC permission {remediations:remediation:write}
@@ -2731,7 +2731,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         updateRemediationIssue(id: string, issue: string, remediationIssueIn: RemediationIssueIn, options?: any): AxiosPromise<void> {
-            return RemediationsApiFp(configuration).updateRemediationIssue(id, issue, remediationIssueIn, options)(axios, basePath);
+            return RemediationsApiFp(configuration).updateRemediationIssue(id, issue, remediationIssueIn, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2753,7 +2753,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public cancelPlaybookRuns(id: string, playbookRunId: string, options?: any) {
-        return RemediationsApiFp(this.configuration).cancelPlaybookRuns(id, playbookRunId, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).cancelPlaybookRuns(id, playbookRunId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2765,7 +2765,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public createRemediation(remediationInput: RemediationInput, options?: any) {
-        return RemediationsApiFp(this.configuration).createRemediation(remediationInput, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).createRemediation(remediationInput, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2777,7 +2777,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public deleteRemediation(id: string, options?: any) {
-        return RemediationsApiFp(this.configuration).deleteRemediation(id, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).deleteRemediation(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2790,7 +2790,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public deleteRemediationIssue(id: string, issue: string, options?: any) {
-        return RemediationsApiFp(this.configuration).deleteRemediationIssue(id, issue, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).deleteRemediationIssue(id, issue, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2804,7 +2804,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public deleteRemediationIssueSystem(id: string, issue: string, system: string, options?: any) {
-        return RemediationsApiFp(this.configuration).deleteRemediationIssueSystem(id, issue, system, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).deleteRemediationIssueSystem(id, issue, system, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2816,7 +2816,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public downloadPlaybooks(selectedRemediations?: Array<string>, options?: any) {
-        return RemediationsApiFp(this.configuration).downloadPlaybooks(selectedRemediations, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).downloadPlaybooks(selectedRemediations, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2829,7 +2829,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public getPlaybookRunDetails(id: string, playbookRunId: string, options?: any) {
-        return RemediationsApiFp(this.configuration).getPlaybookRunDetails(id, playbookRunId, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).getPlaybookRunDetails(id, playbookRunId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2843,7 +2843,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public getPlaybookRunSystemDetails(id: string, playbookRunId: string, system: string, options?: any) {
-        return RemediationsApiFp(this.configuration).getPlaybookRunSystemDetails(id, playbookRunId, system, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).getPlaybookRunSystemDetails(id, playbookRunId, system, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2861,7 +2861,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public getPlaybookRunSystems(id: string, playbookRunId: string, executor?: string, limit?: number, offset?: number, ansibleHost?: string, sort?: 'system_name' | '-system_name', options?: any) {
-        return RemediationsApiFp(this.configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, ansibleHost, sort, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).getPlaybookRunSystems(id, playbookRunId, executor, limit, offset, ansibleHost, sort, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2873,7 +2873,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public getRemediation(id: string, options?: any) {
-        return RemediationsApiFp(this.configuration).getRemediation(id, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).getRemediation(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2885,7 +2885,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public getRemediationConnectionStatus(id: string, options?: any) {
-        return RemediationsApiFp(this.configuration).getRemediationConnectionStatus(id, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).getRemediationConnectionStatus(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2901,7 +2901,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public getRemediationIssueSystems(id: string, issue: string, limit?: number, offset?: number, sort?: 'display_name' | '-display_name', options?: any) {
-        return RemediationsApiFp(this.configuration).getRemediationIssueSystems(id, issue, limit, offset, sort, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).getRemediationIssueSystems(id, issue, limit, offset, sort, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2913,7 +2913,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public getRemediationPlaybook(id: string, options?: any) {
-        return RemediationsApiFp(this.configuration).getRemediationPlaybook(id, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).getRemediationPlaybook(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2930,7 +2930,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, options?: any) {
-        return RemediationsApiFp(this.configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2945,7 +2945,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public listPlaybookRuns(id: string, limit?: number, offset?: number, sort?: 'updated_at' | '-updated_at', options?: any) {
-        return RemediationsApiFp(this.configuration).listPlaybookRuns(id, limit, offset, sort, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).listPlaybookRuns(id, limit, offset, sort, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2958,7 +2958,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public runRemediation(id: string, data?: any, options?: any) {
-        return RemediationsApiFp(this.configuration).runRemediation(id, data, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).runRemediation(id, data, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2971,7 +2971,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public updateRemediation(id: string, remediationInput: RemediationInput, options?: any) {
-        return RemediationsApiFp(this.configuration).updateRemediation(id, remediationInput, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).updateRemediation(id, remediationInput, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2985,7 +2985,7 @@ export class RemediationsApi extends BaseAPI {
      * @memberof RemediationsApi
      */
     public updateRemediationIssue(id: string, issue: string, remediationIssueIn: RemediationIssueIn, options?: any) {
-        return RemediationsApiFp(this.configuration).updateRemediationIssue(id, issue, remediationIssueIn, options)(this.axios, this.basePath);
+        return RemediationsApiFp(this.configuration).updateRemediationIssue(id, issue, remediationIssueIn, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -3004,7 +3004,7 @@ export const ResolutionsApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getResolutionsForIssue(issue: string, options: any = {}): RequestArgs {
+        getResolutionsForIssue: async (issue: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'issue' is not null or undefined
             if (issue === null || issue === undefined) {
                 throw new RequiredError('issue','Required parameter issue was null or undefined when calling getResolutionsForIssue.');
@@ -3040,7 +3040,7 @@ export const ResolutionsApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getResolutionsForIssues(resolutionsBatchInput: ResolutionsBatchInput, options: any = {}): RequestArgs {
+        getResolutionsForIssues: async (resolutionsBatchInput: ResolutionsBatchInput, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'resolutionsBatchInput' is not null or undefined
             if (resolutionsBatchInput === null || resolutionsBatchInput === undefined) {
                 throw new RequiredError('resolutionsBatchInput','Required parameter resolutionsBatchInput was null or undefined when calling getResolutionsForIssues.');
@@ -3088,8 +3088,8 @@ export const ResolutionsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getResolutionsForIssue(issue: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resolutions> {
-            const localVarAxiosArgs = ResolutionsApiAxiosParamCreator(configuration).getResolutionsForIssue(issue, options);
+        async getResolutionsForIssue(issue: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resolutions>> {
+            const localVarAxiosArgs = await ResolutionsApiAxiosParamCreator(configuration).getResolutionsForIssue(issue, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3102,8 +3102,8 @@ export const ResolutionsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getResolutionsForIssues(resolutionsBatchInput: ResolutionsBatchInput, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: Resolutions | boolean; }> {
-            const localVarAxiosArgs = ResolutionsApiAxiosParamCreator(configuration).getResolutionsForIssues(resolutionsBatchInput, options);
+        async getResolutionsForIssues(resolutionsBatchInput: ResolutionsBatchInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: Resolutions | boolean; }>> {
+            const localVarAxiosArgs = await ResolutionsApiAxiosParamCreator(configuration).getResolutionsForIssues(resolutionsBatchInput, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3126,7 +3126,7 @@ export const ResolutionsApiFactory = function (configuration?: Configuration, ba
          * @throws {RequiredError}
          */
         getResolutionsForIssue(issue: string, options?: any): AxiosPromise<Resolutions> {
-            return ResolutionsApiFp(configuration).getResolutionsForIssue(issue, options)(axios, basePath);
+            return ResolutionsApiFp(configuration).getResolutionsForIssue(issue, options).then((request) => request(axios, basePath));
         },
         /**
          * Provides information about resolutions available for the given issues
@@ -3136,7 +3136,7 @@ export const ResolutionsApiFactory = function (configuration?: Configuration, ba
          * @throws {RequiredError}
          */
         getResolutionsForIssues(resolutionsBatchInput: ResolutionsBatchInput, options?: any): AxiosPromise<{ [key: string]: Resolutions | boolean; }> {
-            return ResolutionsApiFp(configuration).getResolutionsForIssues(resolutionsBatchInput, options)(axios, basePath);
+            return ResolutionsApiFp(configuration).getResolutionsForIssues(resolutionsBatchInput, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -3157,7 +3157,7 @@ export class ResolutionsApi extends BaseAPI {
      * @memberof ResolutionsApi
      */
     public getResolutionsForIssue(issue: string, options?: any) {
-        return ResolutionsApiFp(this.configuration).getResolutionsForIssue(issue, options)(this.axios, this.basePath);
+        return ResolutionsApiFp(this.configuration).getResolutionsForIssue(issue, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3169,7 +3169,7 @@ export class ResolutionsApi extends BaseAPI {
      * @memberof ResolutionsApi
      */
     public getResolutionsForIssues(resolutionsBatchInput: ResolutionsBatchInput, options?: any) {
-        return ResolutionsApiFp(this.configuration).getResolutionsForIssues(resolutionsBatchInput, options)(this.axios, this.basePath);
+        return ResolutionsApiFp(this.configuration).getResolutionsForIssues(resolutionsBatchInput, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -3187,7 +3187,7 @@ export const VersionApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getVersion(options: any = {}): RequestArgs {
+        getVersion: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/version`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3226,8 +3226,8 @@ export const VersionApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getVersion(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200> {
-            const localVarAxiosArgs = VersionApiAxiosParamCreator(configuration).getVersion(options);
+        async getVersion(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
+            const localVarAxiosArgs = await VersionApiAxiosParamCreator(configuration).getVersion(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3249,7 +3249,7 @@ export const VersionApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getVersion(options?: any): AxiosPromise<InlineResponse200> {
-            return VersionApiFp(configuration).getVersion(options)(axios, basePath);
+            return VersionApiFp(configuration).getVersion(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -3269,7 +3269,7 @@ export class VersionApi extends BaseAPI {
      * @memberof VersionApi
      */
     public getVersion(options?: any) {
-        return VersionApiFp(this.configuration).getVersion(options)(this.axios, this.basePath);
+        return VersionApiFp(this.configuration).getVersion(options).then((request) => request(this.axios, this.basePath));
     }
 
 }

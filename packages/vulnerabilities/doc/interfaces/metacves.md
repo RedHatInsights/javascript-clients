@@ -8,11 +8,7 @@
 
 ## Hierarchy
 
-* [Meta](meta.md)
-
-  ↳ **MetaCves**
-
-  ↳ [MetaCvesSystems](metacvessystems.md)
+* **MetaCves**
 
 ## Index
 
@@ -44,7 +40,7 @@
 
 • **business_risk_id**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:841](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L841)*
+*Defined in [packages/vulnerabilities/api.ts:947](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L947)*
 
 Filter based on business risk IDs.
 
@@ -56,7 +52,7 @@ ___
 
 • **cvss_from**: *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L847)*
+*Defined in [packages/vulnerabilities/api.ts:953](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L953)*
 
 Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
 
@@ -68,7 +64,7 @@ ___
 
 • **cvss_to**: *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:853](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L853)*
+*Defined in [packages/vulnerabilities/api.ts:959](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L959)*
 
 Filter based on cvss score, up to the value.
 
@@ -80,13 +76,11 @@ ___
 
 • **data_format**: *string*
 
-*Inherited from [Meta](meta.md).[data_format](meta.md#data_format)*
-
-*Defined in [packages/vulnerabilities/api.ts:766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L766)*
+*Defined in [packages/vulnerabilities/api.ts:941](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L941)*
 
 Format of the output data, either JSON (default) or CSV.
 
-**`memberof`** Meta
+**`memberof`** MetaCves
 
 ___
 
@@ -94,13 +88,11 @@ ___
 
 • **filter**: *string | null*
 
-*Inherited from [Meta](meta.md).[filter](meta.md#filter)*
-
-*Defined in [packages/vulnerabilities/api.ts:718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L718)*
+*Defined in [packages/vulnerabilities/api.ts:893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L893)*
 
 Full text filter
 
-**`memberof`** Meta
+**`memberof`** MetaCves
 
 ___
 
@@ -108,7 +100,7 @@ ___
 
 • **impact**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:871](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L871)*
+*Defined in [packages/vulnerabilities/api.ts:977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L977)*
 
 Filter based on impact IDs.
 
@@ -120,13 +112,11 @@ ___
 
 • **limit**: *number*
 
-*Inherited from [Meta](meta.md).[limit](meta.md#limit)*
-
-*Defined in [packages/vulnerabilities/api.ts:724](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L724)*
+*Defined in [packages/vulnerabilities/api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L899)*
 
 Maximum number of paginated results.
 
-**`memberof`** Meta
+**`memberof`** MetaCves
 
 ___
 
@@ -134,13 +124,11 @@ ___
 
 • **offset**: *number*
 
-*Inherited from [Meta](meta.md).[offset](meta.md#offset)*
-
-*Defined in [packages/vulnerabilities/api.ts:730](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L730)*
+*Defined in [packages/vulnerabilities/api.ts:905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L905)*
 
 First record of paginated response.
 
-**`memberof`** Meta
+**`memberof`** MetaCves
 
 ___
 
@@ -148,13 +136,11 @@ ___
 
 • **page**: *number*
 
-*Inherited from [Meta](meta.md).[page](meta.md#page)*
-
-*Defined in [packages/vulnerabilities/api.ts:736](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L736)*
+*Defined in [packages/vulnerabilities/api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L911)*
 
 Page number of paginated response.
 
-**`memberof`** Meta
+**`memberof`** MetaCves
 
 ___
 
@@ -162,13 +148,11 @@ ___
 
 • **page_size**: *number*
 
-*Inherited from [Meta](meta.md).[page_size](meta.md#page_size)*
-
-*Defined in [packages/vulnerabilities/api.ts:742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L742)*
+*Defined in [packages/vulnerabilities/api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L917)*
 
 Number of records per page of paginated response.
 
-**`memberof`** Meta
+**`memberof`** MetaCves
 
 ___
 
@@ -176,13 +160,11 @@ ___
 
 • **pages**: *number*
 
-*Inherited from [Meta](meta.md).[pages](meta.md#pages)*
-
-*Defined in [packages/vulnerabilities/api.ts:748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L748)*
+*Defined in [packages/vulnerabilities/api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L923)*
 
 Total number of pages of paginated response.
 
-**`memberof`** Meta
+**`memberof`** MetaCves
 
 ___
 
@@ -190,7 +172,7 @@ ___
 
 • **patch_access**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/api.ts:895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L895)*
+*Defined in [packages/vulnerabilities/api.ts:1001](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1001)*
 
 If show_advisories=true shows access to patch service else null
 
@@ -202,7 +184,7 @@ ___
 
 • **public_from**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:859](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L859)*
+*Defined in [packages/vulnerabilities/api.ts:965](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L965)*
 
 Filter CVEs based on their published date, starting from the date.
 
@@ -214,7 +196,7 @@ ___
 
 • **public_to**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:865](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L865)*
+*Defined in [packages/vulnerabilities/api.ts:971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L971)*
 
 Filter CVEs based on their published date, up to the date.
 
@@ -226,7 +208,7 @@ ___
 
 • **rule_presence**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:883](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L883)*
+*Defined in [packages/vulnerabilities/api.ts:989](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L989)*
 
 Filter based on presence of security rule
 
@@ -238,7 +220,7 @@ ___
 
 • **security_rule**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/api.ts:889](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L889)*
+*Defined in [packages/vulnerabilities/api.ts:995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L995)*
 
 Filter based on presence of security_rule - deprecated
 
@@ -250,13 +232,11 @@ ___
 
 • **sort**: *string | null*
 
-*Inherited from [Meta](meta.md).[sort](meta.md#sort)*
-
-*Defined in [packages/vulnerabilities/api.ts:754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L754)*
+*Defined in [packages/vulnerabilities/api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L929)*
 
 Sorting filter.
 
-**`memberof`** Meta
+**`memberof`** MetaCves
 
 ___
 
@@ -264,7 +244,7 @@ ___
 
 • **status_id**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:877](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L877)*
+*Defined in [packages/vulnerabilities/api.ts:983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L983)*
 
 Filer based on CVE status ID.
 
@@ -276,10 +256,8 @@ ___
 
 • **total_items**: *number*
 
-*Inherited from [Meta](meta.md).[total_items](meta.md#total_items)*
-
-*Defined in [packages/vulnerabilities/api.ts:760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L760)*
+*Defined in [packages/vulnerabilities/api.ts:935](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L935)*
 
 Total number of records.
 
-**`memberof`** Meta
+**`memberof`** MetaCves

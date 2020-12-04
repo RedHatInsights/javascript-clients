@@ -45,7 +45,7 @@ export const ServicesApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        servicesGet(options: any = {}): RequestArgs {
+        servicesGet: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/services`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -84,8 +84,8 @@ export const ServicesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        servicesGet(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: ServiceDetails; }> {
-            const localVarAxiosArgs = ServicesApiAxiosParamCreator(configuration).servicesGet(options);
+        async servicesGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: ServiceDetails; }>> {
+            const localVarAxiosArgs = await ServicesApiAxiosParamCreator(configuration).servicesGet(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -107,7 +107,7 @@ export const ServicesApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         servicesGet(options?: any): AxiosPromise<{ [key: string]: ServiceDetails; }> {
-            return ServicesApiFp(configuration).servicesGet(options)(axios, basePath);
+            return ServicesApiFp(configuration).servicesGet(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -127,7 +127,7 @@ export class ServicesApi extends BaseAPI {
      * @memberof ServicesApi
      */
     public servicesGet(options?: any) {
-        return ServicesApiFp(this.configuration).servicesGet(options)(this.axios, this.basePath);
+        return ServicesApiFp(this.configuration).servicesGet(options).then((request) => request(this.axios, this.basePath));
     }
 
 }

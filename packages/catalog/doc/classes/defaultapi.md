@@ -83,7 +83,7 @@ ___
 
 ###  getDocumentation
 
-▸ **getDocumentation**(`options?`: any): *AxiosPromise‹object›*
+▸ **getDocumentation**(`options?`: any): *Promise‹AxiosResponse‹object››*
 
 *Defined in [packages/catalog/api.ts:1497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1497)*
 
@@ -99,13 +99,13 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹object›*
+**Returns:** *Promise‹AxiosResponse‹object››*
 
 ___
 
 ###  postGraphQL
 
-▸ **postGraphQL**(`graphQLRequest`: [GraphQLRequest](../interfaces/graphqlrequest.md), `options?`: any): *AxiosPromise‹[GraphQLResponse](../interfaces/graphqlresponse.md)›*
+▸ **postGraphQL**(`graphQLRequest`: [GraphQLRequest](../interfaces/graphqlrequest.md), `options?`: any): *Promise‹AxiosResponse‹[GraphQLResponse](../interfaces/graphqlresponse.md)››*
 
 *Defined in [packages/catalog/api.ts:1509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1509)*
 
@@ -124,4 +124,4 @@ Name | Type | Description |
 `graphQLRequest` | [GraphQLRequest](../interfaces/graphqlrequest.md) | GraphQL Query Request |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[GraphQLResponse](../interfaces/graphqlresponse.md)›*
+**Returns:** *Promise‹AxiosResponse‹[GraphQLResponse](../interfaces/graphqlresponse.md)››*

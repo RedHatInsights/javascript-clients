@@ -83,7 +83,7 @@ ___
 
 ###  kcsList
 
-▸ **kcsList**(`nodeIds?`: Array‹string›, `options?`: any): *AxiosPromise‹[Kcs](../interfaces/kcs.md)[]›*
+▸ **kcsList**(`nodeIds?`: Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[Kcs](../interfaces/kcs.md)[]››*
 
 *Defined in [packages/insights/api.ts:446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L446)*
 
@@ -102,13 +102,13 @@ Name | Type |
 `nodeIds?` | Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[Kcs](../interfaces/kcs.md)[]›*
+**Returns:** *Promise‹AxiosResponse‹[Kcs](../interfaces/kcs.md)[]››*
 
 ___
 
 ###  kcsRead
 
-▸ **kcsRead**(`nodeId`: string, `options?`: any): *AxiosPromise‹string[]›*
+▸ **kcsRead**(`nodeId`: string, `options?`: any): *Promise‹AxiosResponse‹string[]››*
 
 *Defined in [packages/insights/api.ts:458](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L458)*
 
@@ -127,4 +127,4 @@ Name | Type | Description |
 `nodeId` | string | KCS solution number |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹string[]›*
+**Returns:** *Promise‹AxiosResponse‹string[]››*

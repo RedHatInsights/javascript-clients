@@ -86,7 +86,7 @@ ___
 
 ###  createRequest
 
-▸ **createRequest**(`requestIn`: [RequestIn](../interfaces/requestin.md), `options?`: any): *AxiosPromise‹[Request](../interfaces/request.md)›*
+▸ **createRequest**(`requestIn`: [RequestIn](../interfaces/requestin.md), `options?`: any): *Promise‹AxiosResponse‹[Request](../interfaces/request.md)››*
 
 *Defined in [packages/approval/api.ts:1521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1521)*
 
@@ -105,13 +105,13 @@ Name | Type | Description |
 `requestIn` | [RequestIn](../interfaces/requestin.md) | Parameters needed to create a request |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Request](../interfaces/request.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Request](../interfaces/request.md)››*
 
 ___
 
 ###  listRequests
 
-▸ **listRequests**(`xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
+▸ **listRequests**(`xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹AxiosResponse‹[RequestCollection](../interfaces/requestcollection.md)››*
 
 *Defined in [packages/approval/api.ts:1537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1537)*
 
@@ -134,13 +134,13 @@ Name | Type |
 `sortBy?` | string |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[RequestCollection](../interfaces/requestcollection.md)››*
 
 ___
 
 ###  listRequestsByRequest
 
-▸ **listRequestsByRequest**(`requestId`: string, `xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `options?`: any): *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
+▸ **listRequestsByRequest**(`requestId`: string, `xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `options?`: any): *Promise‹AxiosResponse‹[RequestCollection](../interfaces/requestcollection.md)››*
 
 *Defined in [packages/approval/api.ts:1550](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1550)*
 
@@ -160,13 +160,13 @@ Name | Type | Description |
 `xRhPersona?` | "approval/admin" &#124; "approval/approver" &#124; "approval/requester" | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[RequestCollection](../interfaces/requestcollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[RequestCollection](../interfaces/requestcollection.md)››*
 
 ___
 
 ###  showRequest
 
-▸ **showRequest**(`id`: string, `options?`: any): *AxiosPromise‹[Request](../interfaces/request.md)›*
+▸ **showRequest**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Request](../interfaces/request.md)››*
 
 *Defined in [packages/approval/api.ts:1562](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1562)*
 
@@ -185,13 +185,13 @@ Name | Type | Description |
 `id` | string | ID used to select a resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Request](../interfaces/request.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Request](../interfaces/request.md)››*
 
 ___
 
 ###  showRequestContent
 
-▸ **showRequestContent**(`requestId`: string, `options?`: any): *AxiosPromise‹object›*
+▸ **showRequestContent**(`requestId`: string, `options?`: any): *Promise‹AxiosResponse‹object››*
 
 *Defined in [packages/approval/api.ts:1574](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1574)*
 
@@ -210,4 +210,4 @@ Name | Type | Description |
 `requestId` | string | ID of a request |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹object›*
+**Returns:** *Promise‹AxiosResponse‹object››*

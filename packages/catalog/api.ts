@@ -1338,7 +1338,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDocumentation(options: any = {}): RequestArgs {
+        getDocumentation: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/openapi.json`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1375,7 +1375,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphQL(graphQLRequest: GraphQLRequest, options: any = {}): RequestArgs {
+        postGraphQL: async (graphQLRequest: GraphQLRequest, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'graphQLRequest' is not null or undefined
             if (graphQLRequest === null || graphQLRequest === undefined) {
                 throw new RequiredError('graphQLRequest','Required parameter graphQLRequest was null or undefined when calling postGraphQL.');
@@ -1428,8 +1428,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDocumentation(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
+        async getDocumentation(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1442,8 +1442,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphQL(graphQLRequest: GraphQLRequest, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphQLResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).postGraphQL(graphQLRequest, options);
+        async postGraphQL(graphQLRequest: GraphQLRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphQLResponse>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).postGraphQL(graphQLRequest, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1465,7 +1465,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getDocumentation(options?: any): AxiosPromise<object> {
-            return DefaultApiFp(configuration).getDocumentation(options)(axios, basePath);
+            return DefaultApiFp(configuration).getDocumentation(options).then((request) => request(axios, basePath));
         },
         /**
          * Performs a GraphQL Query
@@ -1475,7 +1475,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         postGraphQL(graphQLRequest: GraphQLRequest, options?: any): AxiosPromise<GraphQLResponse> {
-            return DefaultApiFp(configuration).postGraphQL(graphQLRequest, options)(axios, basePath);
+            return DefaultApiFp(configuration).postGraphQL(graphQLRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1495,7 +1495,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getDocumentation(options?: any) {
-        return DefaultApiFp(this.configuration).getDocumentation(options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getDocumentation(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1507,7 +1507,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public postGraphQL(graphQLRequest: GraphQLRequest, options?: any) {
-        return DefaultApiFp(this.configuration).postGraphQL(graphQLRequest, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).postGraphQL(graphQLRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -1528,7 +1528,7 @@ export const IconApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createIcon(content?: any, portfolioId?: string, portfolioItemId?: string, options: any = {}): RequestArgs {
+        createIcon: async (content?: any, portfolioId?: string, portfolioItemId?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/icons`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1581,7 +1581,7 @@ export const IconApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyIcon(id: string, options: any = {}): RequestArgs {
+        destroyIcon: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling destroyIcon.');
@@ -1634,8 +1634,8 @@ export const IconApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createIcon(content?: any, portfolioId?: string, portfolioItemId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Icon> {
-            const localVarAxiosArgs = IconApiAxiosParamCreator(configuration).createIcon(content, portfolioId, portfolioItemId, options);
+        async createIcon(content?: any, portfolioId?: string, portfolioItemId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Icon>> {
+            const localVarAxiosArgs = await IconApiAxiosParamCreator(configuration).createIcon(content, portfolioId, portfolioItemId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1648,8 +1648,8 @@ export const IconApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyIcon(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = IconApiAxiosParamCreator(configuration).destroyIcon(id, options);
+        async destroyIcon(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await IconApiAxiosParamCreator(configuration).destroyIcon(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1674,7 +1674,7 @@ export const IconApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         createIcon(content?: any, portfolioId?: string, portfolioItemId?: string, options?: any): AxiosPromise<Icon> {
-            return IconApiFp(configuration).createIcon(content, portfolioId, portfolioItemId, options)(axios, basePath);
+            return IconApiFp(configuration).createIcon(content, portfolioId, portfolioItemId, options).then((request) => request(axios, basePath));
         },
         /**
          * Deletes the icon based on the icon ID passed
@@ -1684,7 +1684,7 @@ export const IconApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         destroyIcon(id: string, options?: any): AxiosPromise<void> {
-            return IconApiFp(configuration).destroyIcon(id, options)(axios, basePath);
+            return IconApiFp(configuration).destroyIcon(id, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1707,7 +1707,7 @@ export class IconApi extends BaseAPI {
      * @memberof IconApi
      */
     public createIcon(content?: any, portfolioId?: string, portfolioItemId?: string, options?: any) {
-        return IconApiFp(this.configuration).createIcon(content, portfolioId, portfolioItemId, options)(this.axios, this.basePath);
+        return IconApiFp(this.configuration).createIcon(content, portfolioId, portfolioItemId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1719,7 +1719,7 @@ export class IconApi extends BaseAPI {
      * @memberof IconApi
      */
     public destroyIcon(id: string, options?: any) {
-        return IconApiFp(this.configuration).destroyIcon(id, options)(this.axios, this.basePath);
+        return IconApiFp(this.configuration).destroyIcon(id, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -1739,7 +1739,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addToOrder(orderId: string, orderItem: OrderItem, options: any = {}): RequestArgs {
+        addToOrder: async (orderId: string, orderItem: OrderItem, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'orderId' is not null or undefined
             if (orderId === null || orderId === undefined) {
                 throw new RequiredError('orderId','Required parameter orderId was null or undefined when calling addToOrder.');
@@ -1789,7 +1789,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        cancelOrder(orderId: string, options: any = {}): RequestArgs {
+        cancelOrder: async (orderId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'orderId' is not null or undefined
             if (orderId === null || orderId === undefined) {
                 throw new RequiredError('orderId','Required parameter orderId was null or undefined when calling cancelOrder.');
@@ -1830,7 +1830,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createOrder(options: any = {}): RequestArgs {
+        createOrder: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/orders`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1867,7 +1867,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyOrder(id: string, options: any = {}): RequestArgs {
+        destroyOrder: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling destroyOrder.');
@@ -1913,7 +1913,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrderItemsFromOrder(orderId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listOrderItemsFromOrder: async (orderId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'orderId' is not null or undefined
             if (orderId === null || orderId === undefined) {
                 throw new RequiredError('orderId','Required parameter orderId was null or undefined when calling listOrderItemsFromOrder.');
@@ -1974,7 +1974,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrders(limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listOrders: async (limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/orders`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2028,7 +2028,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        restoreOrder(id: string, restoreKey: RestoreKey, options: any = {}): RequestArgs {
+        restoreOrder: async (id: string, restoreKey: RestoreKey, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling restoreOrder.');
@@ -2078,7 +2078,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showOrder(id: string, options: any = {}): RequestArgs {
+        showOrder: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showOrder.');
@@ -2121,7 +2121,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showOrderItemFromOrder(orderId: string, id: string, options: any = {}): RequestArgs {
+        showOrderItemFromOrder: async (orderId: string, id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'orderId' is not null or undefined
             if (orderId === null || orderId === undefined) {
                 throw new RequiredError('orderId','Required parameter orderId was null or undefined when calling showOrderItemFromOrder.');
@@ -2168,7 +2168,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        submitOrder(orderId: string, options: any = {}): RequestArgs {
+        submitOrder: async (orderId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'orderId' is not null or undefined
             if (orderId === null || orderId === undefined) {
                 throw new RequiredError('orderId','Required parameter orderId was null or undefined when calling submitOrder.');
@@ -2220,8 +2220,8 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addToOrder(orderId: string, orderItem: OrderItem, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItem> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).addToOrder(orderId, orderItem, options);
+        async addToOrder(orderId: string, orderItem: OrderItem, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItem>> {
+            const localVarAxiosArgs = await OrderApiAxiosParamCreator(configuration).addToOrder(orderId, orderItem, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2234,8 +2234,8 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        cancelOrder(orderId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Order> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).cancelOrder(orderId, options);
+        async cancelOrder(orderId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Order>> {
+            const localVarAxiosArgs = await OrderApiAxiosParamCreator(configuration).cancelOrder(orderId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2247,8 +2247,8 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createOrder(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Order> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).createOrder(options);
+        async createOrder(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Order>> {
+            const localVarAxiosArgs = await OrderApiAxiosParamCreator(configuration).createOrder(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2261,8 +2261,8 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyOrder(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RestoreKey> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).destroyOrder(id, options);
+        async destroyOrder(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RestoreKey>> {
+            const localVarAxiosArgs = await OrderApiAxiosParamCreator(configuration).destroyOrder(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2279,8 +2279,8 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrderItemsFromOrder(orderId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItemsCollection> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).listOrderItemsFromOrder(orderId, limit, offset, filter, sortBy, options);
+        async listOrderItemsFromOrder(orderId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItemsCollection>> {
+            const localVarAxiosArgs = await OrderApiAxiosParamCreator(configuration).listOrderItemsFromOrder(orderId, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2296,8 +2296,8 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrders(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrdersCollection> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).listOrders(limit, offset, filter, sortBy, options);
+        async listOrders(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrdersCollection>> {
+            const localVarAxiosArgs = await OrderApiAxiosParamCreator(configuration).listOrders(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2311,8 +2311,8 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        restoreOrder(id: string, restoreKey: RestoreKey, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Order> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).restoreOrder(id, restoreKey, options);
+        async restoreOrder(id: string, restoreKey: RestoreKey, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Order>> {
+            const localVarAxiosArgs = await OrderApiAxiosParamCreator(configuration).restoreOrder(id, restoreKey, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2325,8 +2325,8 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showOrder(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Order> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).showOrder(id, options);
+        async showOrder(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Order>> {
+            const localVarAxiosArgs = await OrderApiAxiosParamCreator(configuration).showOrder(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2340,8 +2340,8 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showOrderItemFromOrder(orderId: string, id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItem> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).showOrderItemFromOrder(orderId, id, options);
+        async showOrderItemFromOrder(orderId: string, id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItem>> {
+            const localVarAxiosArgs = await OrderApiAxiosParamCreator(configuration).showOrderItemFromOrder(orderId, id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2354,8 +2354,8 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        submitOrder(orderId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Order> {
-            const localVarAxiosArgs = OrderApiAxiosParamCreator(configuration).submitOrder(orderId, options);
+        async submitOrder(orderId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Order>> {
+            const localVarAxiosArgs = await OrderApiAxiosParamCreator(configuration).submitOrder(orderId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2379,7 +2379,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         addToOrder(orderId: string, orderItem: OrderItem, options?: any): AxiosPromise<OrderItem> {
-            return OrderApiFp(configuration).addToOrder(orderId, orderItem, options)(axios, basePath);
+            return OrderApiFp(configuration).addToOrder(orderId, orderItem, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an updated order.
@@ -2389,7 +2389,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         cancelOrder(orderId: string, options?: any): AxiosPromise<Order> {
-            return OrderApiFp(configuration).cancelOrder(orderId, options)(axios, basePath);
+            return OrderApiFp(configuration).cancelOrder(orderId, options).then((request) => request(axios, basePath));
         },
         /**
          * Creates a new order.
@@ -2398,7 +2398,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         createOrder(options?: any): AxiosPromise<Order> {
-            return OrderApiFp(configuration).createOrder(options)(axios, basePath);
+            return OrderApiFp(configuration).createOrder(options).then((request) => request(axios, basePath));
         },
         /**
          * Deletes the Order based on order ID passed
@@ -2408,7 +2408,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         destroyOrder(id: string, options?: any): AxiosPromise<RestoreKey> {
-            return OrderApiFp(configuration).destroyOrder(id, options)(axios, basePath);
+            return OrderApiFp(configuration).destroyOrder(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets a list of items associated with an order.
@@ -2422,7 +2422,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         listOrderItemsFromOrder(orderId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<OrderItemsCollection> {
-            return OrderApiFp(configuration).listOrderItemsFromOrder(orderId, limit, offset, filter, sortBy, options)(axios, basePath);
+            return OrderApiFp(configuration).listOrderItemsFromOrder(orderId, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets a list of orders associated with the logged in user.
@@ -2435,7 +2435,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         listOrders(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<OrdersCollection> {
-            return OrderApiFp(configuration).listOrders(limit, offset, filter, sortBy, options)(axios, basePath);
+            return OrderApiFp(configuration).listOrders(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Restores the order specified by the order ID.
@@ -2446,7 +2446,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         restoreOrder(id: string, restoreKey: RestoreKey, options?: any): AxiosPromise<Order> {
-            return OrderApiFp(configuration).restoreOrder(id, restoreKey, options)(axios, basePath);
+            return OrderApiFp(configuration).restoreOrder(id, restoreKey, options).then((request) => request(axios, basePath));
         },
         /**
          * Get a specific order based on the order ID
@@ -2456,7 +2456,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         showOrder(id: string, options?: any): AxiosPromise<Order> {
-            return OrderApiFp(configuration).showOrder(id, options)(axios, basePath);
+            return OrderApiFp(configuration).showOrder(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets an order item associated with an order.
@@ -2467,7 +2467,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         showOrderItemFromOrder(orderId: string, id: string, options?: any): AxiosPromise<OrderItem> {
-            return OrderApiFp(configuration).showOrderItemFromOrder(orderId, id, options)(axios, basePath);
+            return OrderApiFp(configuration).showOrderItemFromOrder(orderId, id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an updated order.
@@ -2477,7 +2477,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         submitOrder(orderId: string, options?: any): AxiosPromise<Order> {
-            return OrderApiFp(configuration).submitOrder(orderId, options)(axios, basePath);
+            return OrderApiFp(configuration).submitOrder(orderId, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2499,7 +2499,7 @@ export class OrderApi extends BaseAPI {
      * @memberof OrderApi
      */
     public addToOrder(orderId: string, orderItem: OrderItem, options?: any) {
-        return OrderApiFp(this.configuration).addToOrder(orderId, orderItem, options)(this.axios, this.basePath);
+        return OrderApiFp(this.configuration).addToOrder(orderId, orderItem, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2511,7 +2511,7 @@ export class OrderApi extends BaseAPI {
      * @memberof OrderApi
      */
     public cancelOrder(orderId: string, options?: any) {
-        return OrderApiFp(this.configuration).cancelOrder(orderId, options)(this.axios, this.basePath);
+        return OrderApiFp(this.configuration).cancelOrder(orderId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2522,7 +2522,7 @@ export class OrderApi extends BaseAPI {
      * @memberof OrderApi
      */
     public createOrder(options?: any) {
-        return OrderApiFp(this.configuration).createOrder(options)(this.axios, this.basePath);
+        return OrderApiFp(this.configuration).createOrder(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2534,7 +2534,7 @@ export class OrderApi extends BaseAPI {
      * @memberof OrderApi
      */
     public destroyOrder(id: string, options?: any) {
-        return OrderApiFp(this.configuration).destroyOrder(id, options)(this.axios, this.basePath);
+        return OrderApiFp(this.configuration).destroyOrder(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2550,7 +2550,7 @@ export class OrderApi extends BaseAPI {
      * @memberof OrderApi
      */
     public listOrderItemsFromOrder(orderId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return OrderApiFp(this.configuration).listOrderItemsFromOrder(orderId, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return OrderApiFp(this.configuration).listOrderItemsFromOrder(orderId, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2565,7 +2565,7 @@ export class OrderApi extends BaseAPI {
      * @memberof OrderApi
      */
     public listOrders(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return OrderApiFp(this.configuration).listOrders(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return OrderApiFp(this.configuration).listOrders(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2578,7 +2578,7 @@ export class OrderApi extends BaseAPI {
      * @memberof OrderApi
      */
     public restoreOrder(id: string, restoreKey: RestoreKey, options?: any) {
-        return OrderApiFp(this.configuration).restoreOrder(id, restoreKey, options)(this.axios, this.basePath);
+        return OrderApiFp(this.configuration).restoreOrder(id, restoreKey, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2590,7 +2590,7 @@ export class OrderApi extends BaseAPI {
      * @memberof OrderApi
      */
     public showOrder(id: string, options?: any) {
-        return OrderApiFp(this.configuration).showOrder(id, options)(this.axios, this.basePath);
+        return OrderApiFp(this.configuration).showOrder(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2603,7 +2603,7 @@ export class OrderApi extends BaseAPI {
      * @memberof OrderApi
      */
     public showOrderItemFromOrder(orderId: string, id: string, options?: any) {
-        return OrderApiFp(this.configuration).showOrderItemFromOrder(orderId, id, options)(this.axios, this.basePath);
+        return OrderApiFp(this.configuration).showOrderItemFromOrder(orderId, id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2615,7 +2615,7 @@ export class OrderApi extends BaseAPI {
      * @memberof OrderApi
      */
     public submitOrder(orderId: string, options?: any) {
-        return OrderApiFp(this.configuration).submitOrder(orderId, options)(this.axios, this.basePath);
+        return OrderApiFp(this.configuration).submitOrder(orderId, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -2634,7 +2634,7 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyOrderItem(id: string, options: any = {}): RequestArgs {
+        destroyOrderItem: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling destroyOrderItem.');
@@ -2680,7 +2680,7 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApprovalRequests(orderItemId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listApprovalRequests: async (orderItemId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'orderItemId' is not null or undefined
             if (orderItemId === null || orderItemId === undefined) {
                 throw new RequiredError('orderItemId','Required parameter orderItemId was null or undefined when calling listApprovalRequests.');
@@ -2741,7 +2741,7 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrderItems(limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listOrderItems: async (limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/order_items`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2798,7 +2798,7 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listProgressMessages(orderItemId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listProgressMessages: async (orderItemId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'orderItemId' is not null or undefined
             if (orderItemId === null || orderItemId === undefined) {
                 throw new RequiredError('orderItemId','Required parameter orderItemId was null or undefined when calling listProgressMessages.');
@@ -2857,7 +2857,7 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        restoreOrderItem(id: string, restoreKey: RestoreKey, options: any = {}): RequestArgs {
+        restoreOrderItem: async (id: string, restoreKey: RestoreKey, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling restoreOrderItem.');
@@ -2907,7 +2907,7 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showOrderItem(id: string, options: any = {}): RequestArgs {
+        showOrderItem: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showOrderItem.');
@@ -2958,8 +2958,8 @@ export const OrderItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyOrderItem(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RestoreKey> {
-            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).destroyOrderItem(id, options);
+        async destroyOrderItem(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RestoreKey>> {
+            const localVarAxiosArgs = await OrderItemApiAxiosParamCreator(configuration).destroyOrderItem(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2976,8 +2976,8 @@ export const OrderItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApprovalRequests(orderItemId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApprovalRequestsCollection> {
-            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).listApprovalRequests(orderItemId, limit, offset, filter, sortBy, options);
+        async listApprovalRequests(orderItemId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApprovalRequestsCollection>> {
+            const localVarAxiosArgs = await OrderItemApiAxiosParamCreator(configuration).listApprovalRequests(orderItemId, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2993,8 +2993,8 @@ export const OrderItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrderItems(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItemsCollection> {
-            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).listOrderItems(limit, offset, filter, sortBy, options);
+        async listOrderItems(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItemsCollection>> {
+            const localVarAxiosArgs = await OrderItemApiAxiosParamCreator(configuration).listOrderItems(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3011,8 +3011,8 @@ export const OrderItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listProgressMessages(orderItemId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProgressMessagesCollection> {
-            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).listProgressMessages(orderItemId, limit, offset, filter, sortBy, options);
+        async listProgressMessages(orderItemId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProgressMessagesCollection>> {
+            const localVarAxiosArgs = await OrderItemApiAxiosParamCreator(configuration).listProgressMessages(orderItemId, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3026,8 +3026,8 @@ export const OrderItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        restoreOrderItem(id: string, restoreKey: RestoreKey, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItem> {
-            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).restoreOrderItem(id, restoreKey, options);
+        async restoreOrderItem(id: string, restoreKey: RestoreKey, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItem>> {
+            const localVarAxiosArgs = await OrderItemApiAxiosParamCreator(configuration).restoreOrderItem(id, restoreKey, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3040,8 +3040,8 @@ export const OrderItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showOrderItem(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItem> {
-            const localVarAxiosArgs = OrderItemApiAxiosParamCreator(configuration).showOrderItem(id, options);
+        async showOrderItem(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderItem>> {
+            const localVarAxiosArgs = await OrderItemApiAxiosParamCreator(configuration).showOrderItem(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3064,7 +3064,7 @@ export const OrderItemApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         destroyOrderItem(id: string, options?: any): AxiosPromise<RestoreKey> {
-            return OrderItemApiFp(configuration).destroyOrderItem(id, options)(axios, basePath);
+            return OrderItemApiFp(configuration).destroyOrderItem(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets a list of approval request associated with an order item. As the item is being approved one can check the status of the approvals.
@@ -3078,7 +3078,7 @@ export const OrderItemApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         listApprovalRequests(orderItemId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<ApprovalRequestsCollection> {
-            return OrderItemApiFp(configuration).listApprovalRequests(orderItemId, limit, offset, filter, sortBy, options)(axios, basePath);
+            return OrderItemApiFp(configuration).listApprovalRequests(orderItemId, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets a list of order items.
@@ -3091,7 +3091,7 @@ export const OrderItemApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         listOrderItems(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<OrderItemsCollection> {
-            return OrderItemApiFp(configuration).listOrderItems(limit, offset, filter, sortBy, options)(axios, basePath);
+            return OrderItemApiFp(configuration).listOrderItems(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets a list of progress messages associated with an order item. As the item is being processed the provider can update the progress messages.
@@ -3105,7 +3105,7 @@ export const OrderItemApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         listProgressMessages(orderItemId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<ProgressMessagesCollection> {
-            return OrderItemApiFp(configuration).listProgressMessages(orderItemId, limit, offset, filter, sortBy, options)(axios, basePath);
+            return OrderItemApiFp(configuration).listProgressMessages(orderItemId, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Restores the order item specified by the order item ID.
@@ -3116,7 +3116,7 @@ export const OrderItemApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         restoreOrderItem(id: string, restoreKey: RestoreKey, options?: any): AxiosPromise<OrderItem> {
-            return OrderItemApiFp(configuration).restoreOrderItem(id, restoreKey, options)(axios, basePath);
+            return OrderItemApiFp(configuration).restoreOrderItem(id, restoreKey, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets a specific order item based on the order item ID passed
@@ -3126,7 +3126,7 @@ export const OrderItemApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         showOrderItem(id: string, options?: any): AxiosPromise<OrderItem> {
-            return OrderItemApiFp(configuration).showOrderItem(id, options)(axios, basePath);
+            return OrderItemApiFp(configuration).showOrderItem(id, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -3147,7 +3147,7 @@ export class OrderItemApi extends BaseAPI {
      * @memberof OrderItemApi
      */
     public destroyOrderItem(id: string, options?: any) {
-        return OrderItemApiFp(this.configuration).destroyOrderItem(id, options)(this.axios, this.basePath);
+        return OrderItemApiFp(this.configuration).destroyOrderItem(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3163,7 +3163,7 @@ export class OrderItemApi extends BaseAPI {
      * @memberof OrderItemApi
      */
     public listApprovalRequests(orderItemId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return OrderItemApiFp(this.configuration).listApprovalRequests(orderItemId, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return OrderItemApiFp(this.configuration).listApprovalRequests(orderItemId, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3178,7 +3178,7 @@ export class OrderItemApi extends BaseAPI {
      * @memberof OrderItemApi
      */
     public listOrderItems(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return OrderItemApiFp(this.configuration).listOrderItems(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return OrderItemApiFp(this.configuration).listOrderItems(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3194,7 +3194,7 @@ export class OrderItemApi extends BaseAPI {
      * @memberof OrderItemApi
      */
     public listProgressMessages(orderItemId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return OrderItemApiFp(this.configuration).listProgressMessages(orderItemId, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return OrderItemApiFp(this.configuration).listProgressMessages(orderItemId, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3207,7 +3207,7 @@ export class OrderItemApi extends BaseAPI {
      * @memberof OrderItemApi
      */
     public restoreOrderItem(id: string, restoreKey: RestoreKey, options?: any) {
-        return OrderItemApiFp(this.configuration).restoreOrderItem(id, restoreKey, options)(this.axios, this.basePath);
+        return OrderItemApiFp(this.configuration).restoreOrderItem(id, restoreKey, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3219,7 +3219,7 @@ export class OrderItemApi extends BaseAPI {
      * @memberof OrderItemApi
      */
     public showOrderItem(id: string, options?: any) {
-        return OrderItemApiFp(this.configuration).showOrderItem(id, options)(this.axios, this.basePath);
+        return OrderItemApiFp(this.configuration).showOrderItem(id, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -3239,7 +3239,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addOrderProcessAfterItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options: any = {}): RequestArgs {
+        addOrderProcessAfterItem: async (id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling addOrderProcessAfterItem.');
@@ -3290,7 +3290,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addOrderProcessBeforeItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options: any = {}): RequestArgs {
+        addOrderProcessBeforeItem: async (id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling addOrderProcessBeforeItem.');
@@ -3340,7 +3340,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createOrderProcess(orderProcess: OrderProcess, options: any = {}): RequestArgs {
+        createOrderProcess: async (orderProcess: OrderProcess, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'orderProcess' is not null or undefined
             if (orderProcess === null || orderProcess === undefined) {
                 throw new RequiredError('orderProcess','Required parameter orderProcess was null or undefined when calling createOrderProcess.');
@@ -3385,7 +3385,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyOrderProcess(id: string, options: any = {}): RequestArgs {
+        destroyOrderProcess: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling destroyOrderProcess.');
@@ -3428,7 +3428,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        linkTagToOrderProcess(id: string, resourceObject: ResourceObject, options: any = {}): RequestArgs {
+        linkTagToOrderProcess: async (id: string, resourceObject: ResourceObject, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling linkTagToOrderProcess.');
@@ -3484,7 +3484,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrderProcesses(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listOrderProcesses: async (appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/order_processes`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3550,7 +3550,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        removeOrderProcessAssociation(id: string, orderProcessAssociationsToRemove: OrderProcessAssociationsToRemove, options: any = {}): RequestArgs {
+        removeOrderProcessAssociation: async (id: string, orderProcessAssociationsToRemove: OrderProcessAssociationsToRemove, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling removeOrderProcessAssociation.');
@@ -3600,7 +3600,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showOrderProcess(id: string, options: any = {}): RequestArgs {
+        showOrderProcess: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showOrderProcess.');
@@ -3643,7 +3643,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        unlinkTagFromOrderProcess(id: string, resourceObject: ResourceObject, options: any = {}): RequestArgs {
+        unlinkTagFromOrderProcess: async (id: string, resourceObject: ResourceObject, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling unlinkTagFromOrderProcess.');
@@ -3694,7 +3694,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateOrderProcess(id: string, orderProcess: OrderProcess, options: any = {}): RequestArgs {
+        updateOrderProcess: async (id: string, orderProcess: OrderProcess, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling updateOrderProcess.');
@@ -3754,8 +3754,8 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addOrderProcessAfterItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess> {
-            const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).addOrderProcessAfterItem(id, orderProcessPortfolioItemId, options);
+        async addOrderProcessAfterItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess>> {
+            const localVarAxiosArgs = await OrderProcessApiAxiosParamCreator(configuration).addOrderProcessAfterItem(id, orderProcessPortfolioItemId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3769,8 +3769,8 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addOrderProcessBeforeItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess> {
-            const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).addOrderProcessBeforeItem(id, orderProcessPortfolioItemId, options);
+        async addOrderProcessBeforeItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess>> {
+            const localVarAxiosArgs = await OrderProcessApiAxiosParamCreator(configuration).addOrderProcessBeforeItem(id, orderProcessPortfolioItemId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3783,8 +3783,8 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createOrderProcess(orderProcess: OrderProcess, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess> {
-            const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).createOrderProcess(orderProcess, options);
+        async createOrderProcess(orderProcess: OrderProcess, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess>> {
+            const localVarAxiosArgs = await OrderProcessApiAxiosParamCreator(configuration).createOrderProcess(orderProcess, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3797,8 +3797,8 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyOrderProcess(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).destroyOrderProcess(id, options);
+        async destroyOrderProcess(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await OrderProcessApiAxiosParamCreator(configuration).destroyOrderProcess(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3812,8 +3812,8 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        linkTagToOrderProcess(id: string, resourceObject: ResourceObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).linkTagToOrderProcess(id, resourceObject, options);
+        async linkTagToOrderProcess(id: string, resourceObject: ResourceObject, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await OrderProcessApiAxiosParamCreator(configuration).linkTagToOrderProcess(id, resourceObject, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3832,8 +3832,8 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrderProcesses(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcessCollection> {
-            const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).listOrderProcesses(appName, objectId, objectType, limit, offset, filter, sortBy, options);
+        async listOrderProcesses(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcessCollection>> {
+            const localVarAxiosArgs = await OrderProcessApiAxiosParamCreator(configuration).listOrderProcesses(appName, objectId, objectType, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3847,8 +3847,8 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        removeOrderProcessAssociation(id: string, orderProcessAssociationsToRemove: OrderProcessAssociationsToRemove, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess> {
-            const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).removeOrderProcessAssociation(id, orderProcessAssociationsToRemove, options);
+        async removeOrderProcessAssociation(id: string, orderProcessAssociationsToRemove: OrderProcessAssociationsToRemove, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess>> {
+            const localVarAxiosArgs = await OrderProcessApiAxiosParamCreator(configuration).removeOrderProcessAssociation(id, orderProcessAssociationsToRemove, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3861,8 +3861,8 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showOrderProcess(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess> {
-            const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).showOrderProcess(id, options);
+        async showOrderProcess(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess>> {
+            const localVarAxiosArgs = await OrderProcessApiAxiosParamCreator(configuration).showOrderProcess(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3876,8 +3876,8 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        unlinkTagFromOrderProcess(id: string, resourceObject: ResourceObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).unlinkTagFromOrderProcess(id, resourceObject, options);
+        async unlinkTagFromOrderProcess(id: string, resourceObject: ResourceObject, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await OrderProcessApiAxiosParamCreator(configuration).unlinkTagFromOrderProcess(id, resourceObject, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3891,8 +3891,8 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateOrderProcess(id: string, orderProcess: OrderProcess, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess> {
-            const localVarAxiosArgs = OrderProcessApiAxiosParamCreator(configuration).updateOrderProcess(id, orderProcess, options);
+        async updateOrderProcess(id: string, orderProcess: OrderProcess, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess>> {
+            const localVarAxiosArgs = await OrderProcessApiAxiosParamCreator(configuration).updateOrderProcess(id, orderProcess, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3916,7 +3916,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         addOrderProcessAfterItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options?: any): AxiosPromise<OrderProcess> {
-            return OrderProcessApiFp(configuration).addOrderProcessAfterItem(id, orderProcessPortfolioItemId, options)(axios, basePath);
+            return OrderProcessApiFp(configuration).addOrderProcessAfterItem(id, orderProcessPortfolioItemId, options).then((request) => request(axios, basePath));
         },
         /**
          * Defines the product that will be executed before ordering when using this Order Process
@@ -3927,7 +3927,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         addOrderProcessBeforeItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options?: any): AxiosPromise<OrderProcess> {
-            return OrderProcessApiFp(configuration).addOrderProcessBeforeItem(id, orderProcessPortfolioItemId, options)(axios, basePath);
+            return OrderProcessApiFp(configuration).addOrderProcessBeforeItem(id, orderProcessPortfolioItemId, options).then((request) => request(axios, basePath));
         },
         /**
          * Adds an order process.
@@ -3937,7 +3937,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         createOrderProcess(orderProcess: OrderProcess, options?: any): AxiosPromise<OrderProcess> {
-            return OrderProcessApiFp(configuration).createOrderProcess(orderProcess, options)(axios, basePath);
+            return OrderProcessApiFp(configuration).createOrderProcess(orderProcess, options).then((request) => request(axios, basePath));
         },
         /**
          * Deletes the order process specified by the ID.
@@ -3947,7 +3947,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         destroyOrderProcess(id: string, options?: any): AxiosPromise<void> {
-            return OrderProcessApiFp(configuration).destroyOrderProcess(id, options)(axios, basePath);
+            return OrderProcessApiFp(configuration).destroyOrderProcess(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Links a tag to an order process
@@ -3958,7 +3958,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         linkTagToOrderProcess(id: string, resourceObject: ResourceObject, options?: any): AxiosPromise<void> {
-            return OrderProcessApiFp(configuration).linkTagToOrderProcess(id, resourceObject, options)(axios, basePath);
+            return OrderProcessApiFp(configuration).linkTagToOrderProcess(id, resourceObject, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets a list of order processes. Optionally select order processes linked to a resource object whose app_name, object_type and object_id are specified by query parameters.
@@ -3974,7 +3974,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         listOrderProcesses(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<OrderProcessCollection> {
-            return OrderProcessApiFp(configuration).listOrderProcesses(appName, objectId, objectType, limit, offset, filter, sortBy, options)(axios, basePath);
+            return OrderProcessApiFp(configuration).listOrderProcesses(appName, objectId, objectType, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Removes the association to the product(s) defined in the \'before\' and/or \'after\' that would be executed when using this Order Process
@@ -3985,7 +3985,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         removeOrderProcessAssociation(id: string, orderProcessAssociationsToRemove: OrderProcessAssociationsToRemove, options?: any): AxiosPromise<OrderProcess> {
-            return OrderProcessApiFp(configuration).removeOrderProcessAssociation(id, orderProcessAssociationsToRemove, options)(axios, basePath);
+            return OrderProcessApiFp(configuration).removeOrderProcessAssociation(id, orderProcessAssociationsToRemove, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets the order process specified by the order process ID.
@@ -3995,7 +3995,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         showOrderProcess(id: string, options?: any): AxiosPromise<OrderProcess> {
-            return OrderProcessApiFp(configuration).showOrderProcess(id, options)(axios, basePath);
+            return OrderProcessApiFp(configuration).showOrderProcess(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Unlinks a tag from an order process
@@ -4006,7 +4006,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         unlinkTagFromOrderProcess(id: string, resourceObject: ResourceObject, options?: any): AxiosPromise<void> {
-            return OrderProcessApiFp(configuration).unlinkTagFromOrderProcess(id, resourceObject, options)(axios, basePath);
+            return OrderProcessApiFp(configuration).unlinkTagFromOrderProcess(id, resourceObject, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns the edited order process.
@@ -4017,7 +4017,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         updateOrderProcess(id: string, orderProcess: OrderProcess, options?: any): AxiosPromise<OrderProcess> {
-            return OrderProcessApiFp(configuration).updateOrderProcess(id, orderProcess, options)(axios, basePath);
+            return OrderProcessApiFp(configuration).updateOrderProcess(id, orderProcess, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -4039,7 +4039,7 @@ export class OrderProcessApi extends BaseAPI {
      * @memberof OrderProcessApi
      */
     public addOrderProcessAfterItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options?: any) {
-        return OrderProcessApiFp(this.configuration).addOrderProcessAfterItem(id, orderProcessPortfolioItemId, options)(this.axios, this.basePath);
+        return OrderProcessApiFp(this.configuration).addOrderProcessAfterItem(id, orderProcessPortfolioItemId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4052,7 +4052,7 @@ export class OrderProcessApi extends BaseAPI {
      * @memberof OrderProcessApi
      */
     public addOrderProcessBeforeItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options?: any) {
-        return OrderProcessApiFp(this.configuration).addOrderProcessBeforeItem(id, orderProcessPortfolioItemId, options)(this.axios, this.basePath);
+        return OrderProcessApiFp(this.configuration).addOrderProcessBeforeItem(id, orderProcessPortfolioItemId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4064,7 +4064,7 @@ export class OrderProcessApi extends BaseAPI {
      * @memberof OrderProcessApi
      */
     public createOrderProcess(orderProcess: OrderProcess, options?: any) {
-        return OrderProcessApiFp(this.configuration).createOrderProcess(orderProcess, options)(this.axios, this.basePath);
+        return OrderProcessApiFp(this.configuration).createOrderProcess(orderProcess, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4076,7 +4076,7 @@ export class OrderProcessApi extends BaseAPI {
      * @memberof OrderProcessApi
      */
     public destroyOrderProcess(id: string, options?: any) {
-        return OrderProcessApiFp(this.configuration).destroyOrderProcess(id, options)(this.axios, this.basePath);
+        return OrderProcessApiFp(this.configuration).destroyOrderProcess(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4089,7 +4089,7 @@ export class OrderProcessApi extends BaseAPI {
      * @memberof OrderProcessApi
      */
     public linkTagToOrderProcess(id: string, resourceObject: ResourceObject, options?: any) {
-        return OrderProcessApiFp(this.configuration).linkTagToOrderProcess(id, resourceObject, options)(this.axios, this.basePath);
+        return OrderProcessApiFp(this.configuration).linkTagToOrderProcess(id, resourceObject, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4107,7 +4107,7 @@ export class OrderProcessApi extends BaseAPI {
      * @memberof OrderProcessApi
      */
     public listOrderProcesses(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return OrderProcessApiFp(this.configuration).listOrderProcesses(appName, objectId, objectType, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return OrderProcessApiFp(this.configuration).listOrderProcesses(appName, objectId, objectType, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4120,7 +4120,7 @@ export class OrderProcessApi extends BaseAPI {
      * @memberof OrderProcessApi
      */
     public removeOrderProcessAssociation(id: string, orderProcessAssociationsToRemove: OrderProcessAssociationsToRemove, options?: any) {
-        return OrderProcessApiFp(this.configuration).removeOrderProcessAssociation(id, orderProcessAssociationsToRemove, options)(this.axios, this.basePath);
+        return OrderProcessApiFp(this.configuration).removeOrderProcessAssociation(id, orderProcessAssociationsToRemove, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4132,7 +4132,7 @@ export class OrderProcessApi extends BaseAPI {
      * @memberof OrderProcessApi
      */
     public showOrderProcess(id: string, options?: any) {
-        return OrderProcessApiFp(this.configuration).showOrderProcess(id, options)(this.axios, this.basePath);
+        return OrderProcessApiFp(this.configuration).showOrderProcess(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4145,7 +4145,7 @@ export class OrderProcessApi extends BaseAPI {
      * @memberof OrderProcessApi
      */
     public unlinkTagFromOrderProcess(id: string, resourceObject: ResourceObject, options?: any) {
-        return OrderProcessApiFp(this.configuration).unlinkTagFromOrderProcess(id, resourceObject, options)(this.axios, this.basePath);
+        return OrderProcessApiFp(this.configuration).unlinkTagFromOrderProcess(id, resourceObject, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4158,7 +4158,7 @@ export class OrderProcessApi extends BaseAPI {
      * @memberof OrderProcessApi
      */
     public updateOrderProcess(id: string, orderProcess: OrderProcess, options?: any) {
-        return OrderProcessApiFp(this.configuration).updateOrderProcess(id, orderProcess, options)(this.axios, this.basePath);
+        return OrderProcessApiFp(this.configuration).updateOrderProcess(id, orderProcess, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -4178,7 +4178,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addPortfolioTag(id: string, tag: Array<Tag>, options: any = {}): RequestArgs {
+        addPortfolioTag: async (id: string, tag: Array<Tag>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling addPortfolioTag.');
@@ -4228,7 +4228,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createPortfolio(portfolio: Portfolio, options: any = {}): RequestArgs {
+        createPortfolio: async (portfolio: Portfolio, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'portfolio' is not null or undefined
             if (portfolio === null || portfolio === undefined) {
                 throw new RequiredError('portfolio','Required parameter portfolio was null or undefined when calling createPortfolio.');
@@ -4273,7 +4273,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyPortfolio(id: string, options: any = {}): RequestArgs {
+        destroyPortfolio: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling destroyPortfolio.');
@@ -4319,7 +4319,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fetchPortfolioItemsWithPortfolio(portfolioId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        fetchPortfolioItemsWithPortfolio: async (portfolioId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'portfolioId' is not null or undefined
             if (portfolioId === null || portfolioId === undefined) {
                 throw new RequiredError('portfolioId','Required parameter portfolioId was null or undefined when calling fetchPortfolioItemsWithPortfolio.');
@@ -4381,7 +4381,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolioTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listPortfolioTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listPortfolioTags.');
@@ -4442,7 +4442,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolios(limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listPortfolios: async (limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/portfolios`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4495,7 +4495,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postCopyPortfolio(portfolioId: string, options: any = {}): RequestArgs {
+        postCopyPortfolio: async (portfolioId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'portfolioId' is not null or undefined
             if (portfolioId === null || portfolioId === undefined) {
                 throw new RequiredError('portfolioId','Required parameter portfolioId was null or undefined when calling postCopyPortfolio.');
@@ -4538,7 +4538,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        removePortfolioTags(id: string, tag: Array<Tag>, options: any = {}): RequestArgs {
+        removePortfolioTags: async (id: string, tag: Array<Tag>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling removePortfolioTags.');
@@ -4588,7 +4588,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        shareInfo(portfolioId: string, options: any = {}): RequestArgs {
+        shareInfo: async (portfolioId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'portfolioId' is not null or undefined
             if (portfolioId === null || portfolioId === undefined) {
                 throw new RequiredError('portfolioId','Required parameter portfolioId was null or undefined when calling shareInfo.');
@@ -4631,7 +4631,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        sharePortfolio(portfolioId: string, sharePolicy: SharePolicy, options: any = {}): RequestArgs {
+        sharePortfolio: async (portfolioId: string, sharePolicy: SharePolicy, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'portfolioId' is not null or undefined
             if (portfolioId === null || portfolioId === undefined) {
                 throw new RequiredError('portfolioId','Required parameter portfolioId was null or undefined when calling sharePortfolio.');
@@ -4681,7 +4681,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolio(id: string, options: any = {}): RequestArgs {
+        showPortfolio: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showPortfolio.');
@@ -4724,7 +4724,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioIcon(portfolioId: string, cacheId?: string, options: any = {}): RequestArgs {
+        showPortfolioIcon: async (portfolioId: string, cacheId?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'portfolioId' is not null or undefined
             if (portfolioId === null || portfolioId === undefined) {
                 throw new RequiredError('portfolioId','Required parameter portfolioId was null or undefined when calling showPortfolioIcon.');
@@ -4771,7 +4771,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        unDeletePortfolio(id: string, restoreKey: RestoreKey, options: any = {}): RequestArgs {
+        unDeletePortfolio: async (id: string, restoreKey: RestoreKey, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling unDeletePortfolio.');
@@ -4822,7 +4822,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        unsharePortfolio(portfolioId: string, unsharePolicy: UnsharePolicy, options: any = {}): RequestArgs {
+        unsharePortfolio: async (portfolioId: string, unsharePolicy: UnsharePolicy, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'portfolioId' is not null or undefined
             if (portfolioId === null || portfolioId === undefined) {
                 throw new RequiredError('portfolioId','Required parameter portfolioId was null or undefined when calling unsharePortfolio.');
@@ -4873,7 +4873,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updatePortfolio(id: string, portfolio: Portfolio, options: any = {}): RequestArgs {
+        updatePortfolio: async (id: string, portfolio: Portfolio, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling updatePortfolio.');
@@ -4933,8 +4933,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addPortfolioTag(id: string, tag: Array<Tag>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Tag>> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).addPortfolioTag(id, tag, options);
+        async addPortfolioTag(id: string, tag: Array<Tag>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Tag>>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).addPortfolioTag(id, tag, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4947,8 +4947,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createPortfolio(portfolio: Portfolio, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).createPortfolio(portfolio, options);
+        async createPortfolio(portfolio: Portfolio, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).createPortfolio(portfolio, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4961,8 +4961,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyPortfolio(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RestoreKey> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).destroyPortfolio(id, options);
+        async destroyPortfolio(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RestoreKey>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).destroyPortfolio(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4979,8 +4979,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fetchPortfolioItemsWithPortfolio(portfolioId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItemsCollection> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).fetchPortfolioItemsWithPortfolio(portfolioId, limit, offset, filter, sortBy, options);
+        async fetchPortfolioItemsWithPortfolio(portfolioId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItemsCollection>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).fetchPortfolioItemsWithPortfolio(portfolioId, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4997,8 +4997,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolioTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).listPortfolioTags(id, limit, offset, filter, sortBy, options);
+        async listPortfolioTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).listPortfolioTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5014,8 +5014,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolios(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfoliosCollection> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).listPortfolios(limit, offset, filter, sortBy, options);
+        async listPortfolios(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfoliosCollection>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).listPortfolios(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5028,8 +5028,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postCopyPortfolio(portfolioId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).postCopyPortfolio(portfolioId, options);
+        async postCopyPortfolio(portfolioId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).postCopyPortfolio(portfolioId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5043,8 +5043,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        removePortfolioTags(id: string, tag: Array<Tag>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).removePortfolioTags(id, tag, options);
+        async removePortfolioTags(id: string, tag: Array<Tag>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).removePortfolioTags(id, tag, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5057,8 +5057,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        shareInfo(portfolioId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ShareInfo>> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).shareInfo(portfolioId, options);
+        async shareInfo(portfolioId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ShareInfo>>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).shareInfo(portfolioId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5072,8 +5072,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        sharePortfolio(portfolioId: string, sharePolicy: SharePolicy, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).sharePortfolio(portfolioId, sharePolicy, options);
+        async sharePortfolio(portfolioId: string, sharePolicy: SharePolicy, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).sharePortfolio(portfolioId, sharePolicy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5086,8 +5086,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolio(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).showPortfolio(id, options);
+        async showPortfolio(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).showPortfolio(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5101,8 +5101,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioIcon(portfolioId: string, cacheId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).showPortfolioIcon(portfolioId, cacheId, options);
+        async showPortfolioIcon(portfolioId: string, cacheId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).showPortfolioIcon(portfolioId, cacheId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5116,8 +5116,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        unDeletePortfolio(id: string, restoreKey: RestoreKey, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).unDeletePortfolio(id, restoreKey, options);
+        async unDeletePortfolio(id: string, restoreKey: RestoreKey, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).unDeletePortfolio(id, restoreKey, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5131,8 +5131,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        unsharePortfolio(portfolioId: string, unsharePolicy: UnsharePolicy, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).unsharePortfolio(portfolioId, unsharePolicy, options);
+        async unsharePortfolio(portfolioId: string, unsharePolicy: UnsharePolicy, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).unsharePortfolio(portfolioId, unsharePolicy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5146,8 +5146,8 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updatePortfolio(id: string, portfolio: Portfolio, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio> {
-            const localVarAxiosArgs = PortfolioApiAxiosParamCreator(configuration).updatePortfolio(id, portfolio, options);
+        async updatePortfolio(id: string, portfolio: Portfolio, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Portfolio>> {
+            const localVarAxiosArgs = await PortfolioApiAxiosParamCreator(configuration).updatePortfolio(id, portfolio, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5171,7 +5171,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         addPortfolioTag(id: string, tag: Array<Tag>, options?: any): AxiosPromise<Array<Tag>> {
-            return PortfolioApiFp(configuration).addPortfolioTag(id, tag, options)(axios, basePath);
+            return PortfolioApiFp(configuration).addPortfolioTag(id, tag, options).then((request) => request(axios, basePath));
         },
         /**
          * Adds a portfolio.
@@ -5181,7 +5181,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         createPortfolio(portfolio: Portfolio, options?: any): AxiosPromise<Portfolio> {
-            return PortfolioApiFp(configuration).createPortfolio(portfolio, options)(axios, basePath);
+            return PortfolioApiFp(configuration).createPortfolio(portfolio, options).then((request) => request(axios, basePath));
         },
         /**
          * Deletes the portfolio specified by the ID.
@@ -5191,7 +5191,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         destroyPortfolio(id: string, options?: any): AxiosPromise<RestoreKey> {
-            return PortfolioApiFp(configuration).destroyPortfolio(id, options)(axios, basePath);
+            return PortfolioApiFp(configuration).destroyPortfolio(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets all portfilio items in the portfolio specified by the given ID.
@@ -5205,7 +5205,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         fetchPortfolioItemsWithPortfolio(portfolioId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<PortfolioItemsCollection> {
-            return PortfolioApiFp(configuration).fetchPortfolioItemsWithPortfolio(portfolioId, limit, offset, filter, sortBy, options)(axios, basePath);
+            return PortfolioApiFp(configuration).fetchPortfolioItemsWithPortfolio(portfolioId, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -5219,7 +5219,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         listPortfolioTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<TagsCollection> {
-            return PortfolioApiFp(configuration).listPortfolioTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return PortfolioApiFp(configuration).listPortfolioTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets a list of portfolios.
@@ -5232,7 +5232,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         listPortfolios(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<PortfoliosCollection> {
-            return PortfolioApiFp(configuration).listPortfolios(limit, offset, filter, sortBy, options)(axios, basePath);
+            return PortfolioApiFp(configuration).listPortfolios(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Make a copy of the Portfolio.
@@ -5242,7 +5242,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         postCopyPortfolio(portfolioId: string, options?: any): AxiosPromise<Portfolio> {
-            return PortfolioApiFp(configuration).postCopyPortfolio(portfolioId, options)(axios, basePath);
+            return PortfolioApiFp(configuration).postCopyPortfolio(portfolioId, options).then((request) => request(axios, basePath));
         },
         /**
          * Remove Tags from Portfolio
@@ -5253,7 +5253,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         removePortfolioTags(id: string, tag: Array<Tag>, options?: any): AxiosPromise<void> {
-            return PortfolioApiFp(configuration).removePortfolioTags(id, tag, options)(axios, basePath);
+            return PortfolioApiFp(configuration).removePortfolioTags(id, tag, options).then((request) => request(axios, basePath));
         },
         /**
          * Fetch share information about a portfolio
@@ -5263,7 +5263,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         shareInfo(portfolioId: string, options?: any): AxiosPromise<Array<ShareInfo>> {
-            return PortfolioApiFp(configuration).shareInfo(portfolioId, options)(axios, basePath);
+            return PortfolioApiFp(configuration).shareInfo(portfolioId, options).then((request) => request(axios, basePath));
         },
         /**
          * Share a Portfolio with one or more groups with specific permissions
@@ -5274,7 +5274,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         sharePortfolio(portfolioId: string, sharePolicy: SharePolicy, options?: any): AxiosPromise<void> {
-            return PortfolioApiFp(configuration).sharePortfolio(portfolioId, sharePolicy, options)(axios, basePath);
+            return PortfolioApiFp(configuration).sharePortfolio(portfolioId, sharePolicy, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets the portfolio specified by the portfolio ID.
@@ -5284,7 +5284,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         showPortfolio(id: string, options?: any): AxiosPromise<Portfolio> {
-            return PortfolioApiFp(configuration).showPortfolio(id, options)(axios, basePath);
+            return PortfolioApiFp(configuration).showPortfolio(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Fetch the specified portfolio\'s icon image.
@@ -5295,7 +5295,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         showPortfolioIcon(portfolioId: string, cacheId?: string, options?: any): AxiosPromise<any> {
-            return PortfolioApiFp(configuration).showPortfolioIcon(portfolioId, cacheId, options)(axios, basePath);
+            return PortfolioApiFp(configuration).showPortfolioIcon(portfolioId, cacheId, options).then((request) => request(axios, basePath));
         },
         /**
          * Undeletes the portfolio specified by the portfolio ID.
@@ -5306,7 +5306,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         unDeletePortfolio(id: string, restoreKey: RestoreKey, options?: any): AxiosPromise<Portfolio> {
-            return PortfolioApiFp(configuration).unDeletePortfolio(id, restoreKey, options)(axios, basePath);
+            return PortfolioApiFp(configuration).unDeletePortfolio(id, restoreKey, options).then((request) => request(axios, basePath));
         },
         /**
          * Unshare a Portfolio with one or more groups with specific permissions
@@ -5317,7 +5317,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         unsharePortfolio(portfolioId: string, unsharePolicy: UnsharePolicy, options?: any): AxiosPromise<void> {
-            return PortfolioApiFp(configuration).unsharePortfolio(portfolioId, unsharePolicy, options)(axios, basePath);
+            return PortfolioApiFp(configuration).unsharePortfolio(portfolioId, unsharePolicy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns the edited portfolio.
@@ -5328,7 +5328,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         updatePortfolio(id: string, portfolio: Portfolio, options?: any): AxiosPromise<Portfolio> {
-            return PortfolioApiFp(configuration).updatePortfolio(id, portfolio, options)(axios, basePath);
+            return PortfolioApiFp(configuration).updatePortfolio(id, portfolio, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -5350,7 +5350,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public addPortfolioTag(id: string, tag: Array<Tag>, options?: any) {
-        return PortfolioApiFp(this.configuration).addPortfolioTag(id, tag, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).addPortfolioTag(id, tag, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5362,7 +5362,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public createPortfolio(portfolio: Portfolio, options?: any) {
-        return PortfolioApiFp(this.configuration).createPortfolio(portfolio, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).createPortfolio(portfolio, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5374,7 +5374,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public destroyPortfolio(id: string, options?: any) {
-        return PortfolioApiFp(this.configuration).destroyPortfolio(id, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).destroyPortfolio(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5390,7 +5390,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public fetchPortfolioItemsWithPortfolio(portfolioId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return PortfolioApiFp(this.configuration).fetchPortfolioItemsWithPortfolio(portfolioId, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).fetchPortfolioItemsWithPortfolio(portfolioId, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5406,7 +5406,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public listPortfolioTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return PortfolioApiFp(this.configuration).listPortfolioTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).listPortfolioTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5421,7 +5421,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public listPortfolios(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return PortfolioApiFp(this.configuration).listPortfolios(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).listPortfolios(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5433,7 +5433,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public postCopyPortfolio(portfolioId: string, options?: any) {
-        return PortfolioApiFp(this.configuration).postCopyPortfolio(portfolioId, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).postCopyPortfolio(portfolioId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5446,7 +5446,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public removePortfolioTags(id: string, tag: Array<Tag>, options?: any) {
-        return PortfolioApiFp(this.configuration).removePortfolioTags(id, tag, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).removePortfolioTags(id, tag, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5458,7 +5458,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public shareInfo(portfolioId: string, options?: any) {
-        return PortfolioApiFp(this.configuration).shareInfo(portfolioId, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).shareInfo(portfolioId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5471,7 +5471,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public sharePortfolio(portfolioId: string, sharePolicy: SharePolicy, options?: any) {
-        return PortfolioApiFp(this.configuration).sharePortfolio(portfolioId, sharePolicy, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).sharePortfolio(portfolioId, sharePolicy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5483,7 +5483,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public showPortfolio(id: string, options?: any) {
-        return PortfolioApiFp(this.configuration).showPortfolio(id, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).showPortfolio(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5496,7 +5496,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public showPortfolioIcon(portfolioId: string, cacheId?: string, options?: any) {
-        return PortfolioApiFp(this.configuration).showPortfolioIcon(portfolioId, cacheId, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).showPortfolioIcon(portfolioId, cacheId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5509,7 +5509,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public unDeletePortfolio(id: string, restoreKey: RestoreKey, options?: any) {
-        return PortfolioApiFp(this.configuration).unDeletePortfolio(id, restoreKey, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).unDeletePortfolio(id, restoreKey, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5522,7 +5522,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public unsharePortfolio(portfolioId: string, unsharePolicy: UnsharePolicy, options?: any) {
-        return PortfolioApiFp(this.configuration).unsharePortfolio(portfolioId, unsharePolicy, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).unsharePortfolio(portfolioId, unsharePolicy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5535,7 +5535,7 @@ export class PortfolioApi extends BaseAPI {
      * @memberof PortfolioApi
      */
     public updatePortfolio(id: string, portfolio: Portfolio, options?: any) {
-        return PortfolioApiFp(this.configuration).updatePortfolio(id, portfolio, options)(this.axios, this.basePath);
+        return PortfolioApiFp(this.configuration).updatePortfolio(id, portfolio, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -5555,7 +5555,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addPortfolioItemTag(id: string, tag: Array<Tag>, options: any = {}): RequestArgs {
+        addPortfolioItemTag: async (id: string, tag: Array<Tag>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling addPortfolioItemTag.');
@@ -5605,7 +5605,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createPortfolioItem(createPortfolioItem: CreatePortfolioItem, options: any = {}): RequestArgs {
+        createPortfolioItem: async (createPortfolioItem: CreatePortfolioItem, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'createPortfolioItem' is not null or undefined
             if (createPortfolioItem === null || createPortfolioItem === undefined) {
                 throw new RequiredError('createPortfolioItem','Required parameter createPortfolioItem was null or undefined when calling createPortfolioItem.');
@@ -5650,7 +5650,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyPortfolioItem(id: string, options: any = {}): RequestArgs {
+        destroyPortfolioItem: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling destroyPortfolioItem.');
@@ -5693,7 +5693,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPortfolioItemNextName(portfolioItemId: string, destinationPortfolioId?: string, options: any = {}): RequestArgs {
+        getPortfolioItemNextName: async (portfolioItemId: string, destinationPortfolioId?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'portfolioItemId' is not null or undefined
             if (portfolioItemId === null || portfolioItemId === undefined) {
                 throw new RequiredError('portfolioItemId','Required parameter portfolioItemId was null or undefined when calling getPortfolioItemNextName.');
@@ -5743,7 +5743,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolioItemTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listPortfolioItemTags: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listPortfolioItemTags.');
@@ -5804,7 +5804,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolioItems(limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listPortfolioItems: async (limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/portfolio_items`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5857,7 +5857,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listProviderControlParameters(portfolioItemId: string, options: any = {}): RequestArgs {
+        listProviderControlParameters: async (portfolioItemId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'portfolioItemId' is not null or undefined
             if (portfolioItemId === null || portfolioItemId === undefined) {
                 throw new RequiredError('portfolioItemId','Required parameter portfolioItemId was null or undefined when calling listProviderControlParameters.');
@@ -5899,7 +5899,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServicePlans(portfolioItemId: string, options: any = {}): RequestArgs {
+        listServicePlans: async (portfolioItemId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'portfolioItemId' is not null or undefined
             if (portfolioItemId === null || portfolioItemId === undefined) {
                 throw new RequiredError('portfolioItemId','Required parameter portfolioItemId was null or undefined when calling listServicePlans.');
@@ -5942,7 +5942,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postCopyPortfolioItem(portfolioItemId: string, copyPortfolioItem?: CopyPortfolioItem, options: any = {}): RequestArgs {
+        postCopyPortfolioItem: async (portfolioItemId: string, copyPortfolioItem?: CopyPortfolioItem, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'portfolioItemId' is not null or undefined
             if (portfolioItemId === null || portfolioItemId === undefined) {
                 throw new RequiredError('portfolioItemId','Required parameter portfolioItemId was null or undefined when calling postCopyPortfolioItem.');
@@ -5989,7 +5989,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        removePortfolioItemTags(id: string, tag: Array<Tag>, options: any = {}): RequestArgs {
+        removePortfolioItemTags: async (id: string, tag: Array<Tag>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling removePortfolioItemTags.');
@@ -6040,7 +6040,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioItem(id: string, showDiscarded?: boolean, options: any = {}): RequestArgs {
+        showPortfolioItem: async (id: string, showDiscarded?: boolean, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showPortfolioItem.');
@@ -6086,7 +6086,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioItemIcon(portfolioItemId: string, options: any = {}): RequestArgs {
+        showPortfolioItemIcon: async (portfolioItemId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'portfolioItemId' is not null or undefined
             if (portfolioItemId === null || portfolioItemId === undefined) {
                 throw new RequiredError('portfolioItemId','Required parameter portfolioItemId was null or undefined when calling showPortfolioItemIcon.');
@@ -6129,7 +6129,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        unDeletePortfolioItem(portfolioItemId: string, restoreKey: RestoreKey, options: any = {}): RequestArgs {
+        unDeletePortfolioItem: async (portfolioItemId: string, restoreKey: RestoreKey, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'portfolioItemId' is not null or undefined
             if (portfolioItemId === null || portfolioItemId === undefined) {
                 throw new RequiredError('portfolioItemId','Required parameter portfolioItemId was null or undefined when calling unDeletePortfolioItem.');
@@ -6180,7 +6180,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updatePortfolioItem(id: string, portfolioItem: PortfolioItem, options: any = {}): RequestArgs {
+        updatePortfolioItem: async (id: string, portfolioItem: PortfolioItem, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling updatePortfolioItem.');
@@ -6240,8 +6240,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addPortfolioItemTag(id: string, tag: Array<Tag>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Tag>> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).addPortfolioItemTag(id, tag, options);
+        async addPortfolioItemTag(id: string, tag: Array<Tag>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Tag>>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).addPortfolioItemTag(id, tag, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6254,8 +6254,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createPortfolioItem(createPortfolioItem: CreatePortfolioItem, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).createPortfolioItem(createPortfolioItem, options);
+        async createPortfolioItem(createPortfolioItem: CreatePortfolioItem, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).createPortfolioItem(createPortfolioItem, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6268,8 +6268,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyPortfolioItem(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RestoreKey> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).destroyPortfolioItem(id, options);
+        async destroyPortfolioItem(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RestoreKey>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).destroyPortfolioItem(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6283,8 +6283,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPortfolioItemNextName(portfolioItemId: string, destinationPortfolioId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItemNextName> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).getPortfolioItemNextName(portfolioItemId, destinationPortfolioId, options);
+        async getPortfolioItemNextName(portfolioItemId: string, destinationPortfolioId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItemNextName>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).getPortfolioItemNextName(portfolioItemId, destinationPortfolioId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6301,8 +6301,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolioItemTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).listPortfolioItemTags(id, limit, offset, filter, sortBy, options);
+        async listPortfolioItemTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).listPortfolioItemTags(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6318,8 +6318,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPortfolioItems(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItemsCollection> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).listPortfolioItems(limit, offset, filter, sortBy, options);
+        async listPortfolioItems(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItemsCollection>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).listPortfolioItems(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6332,8 +6332,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listProviderControlParameters(portfolioItemId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).listProviderControlParameters(portfolioItemId, options);
+        async listProviderControlParameters(portfolioItemId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).listProviderControlParameters(portfolioItemId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6346,8 +6346,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listServicePlans(portfolioItemId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ServicePlan>> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).listServicePlans(portfolioItemId, options);
+        async listServicePlans(portfolioItemId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ServicePlan>>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).listServicePlans(portfolioItemId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6361,8 +6361,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postCopyPortfolioItem(portfolioItemId: string, copyPortfolioItem?: CopyPortfolioItem, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).postCopyPortfolioItem(portfolioItemId, copyPortfolioItem, options);
+        async postCopyPortfolioItem(portfolioItemId: string, copyPortfolioItem?: CopyPortfolioItem, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).postCopyPortfolioItem(portfolioItemId, copyPortfolioItem, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6376,8 +6376,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        removePortfolioItemTags(id: string, tag: Array<Tag>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).removePortfolioItemTags(id, tag, options);
+        async removePortfolioItemTags(id: string, tag: Array<Tag>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).removePortfolioItemTags(id, tag, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6391,8 +6391,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioItem(id: string, showDiscarded?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).showPortfolioItem(id, showDiscarded, options);
+        async showPortfolioItem(id: string, showDiscarded?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).showPortfolioItem(id, showDiscarded, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6405,8 +6405,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showPortfolioItemIcon(portfolioItemId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).showPortfolioItemIcon(portfolioItemId, options);
+        async showPortfolioItemIcon(portfolioItemId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).showPortfolioItemIcon(portfolioItemId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6420,8 +6420,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        unDeletePortfolioItem(portfolioItemId: string, restoreKey: RestoreKey, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).unDeletePortfolioItem(portfolioItemId, restoreKey, options);
+        async unDeletePortfolioItem(portfolioItemId: string, restoreKey: RestoreKey, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).unDeletePortfolioItem(portfolioItemId, restoreKey, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6435,8 +6435,8 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updatePortfolioItem(id: string, portfolioItem: PortfolioItem, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem> {
-            const localVarAxiosArgs = PortfolioItemApiAxiosParamCreator(configuration).updatePortfolioItem(id, portfolioItem, options);
+        async updatePortfolioItem(id: string, portfolioItem: PortfolioItem, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PortfolioItem>> {
+            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).updatePortfolioItem(id, portfolioItem, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6460,7 +6460,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         addPortfolioItemTag(id: string, tag: Array<Tag>, options?: any): AxiosPromise<Array<Tag>> {
-            return PortfolioItemApiFp(configuration).addPortfolioItemTag(id, tag, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).addPortfolioItemTag(id, tag, options).then((request) => request(axios, basePath));
         },
         /**
          * Adds a name and description for a portfolio item and returns the newly created portfolio item.
@@ -6470,7 +6470,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         createPortfolioItem(createPortfolioItem: CreatePortfolioItem, options?: any): AxiosPromise<PortfolioItem> {
-            return PortfolioItemApiFp(configuration).createPortfolioItem(createPortfolioItem, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).createPortfolioItem(createPortfolioItem, options).then((request) => request(axios, basePath));
         },
         /**
          * Deletes the portfolio item based on portfolio item ID passed
@@ -6480,7 +6480,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         destroyPortfolioItem(id: string, options?: any): AxiosPromise<RestoreKey> {
-            return PortfolioItemApiFp(configuration).destroyPortfolioItem(id, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).destroyPortfolioItem(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Get the next name for a the Portfolio Item prior to a copy operation
@@ -6491,7 +6491,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         getPortfolioItemNextName(portfolioItemId: string, destinationPortfolioId?: string, options?: any): AxiosPromise<PortfolioItemNextName> {
-            return PortfolioItemApiFp(configuration).getPortfolioItemNextName(portfolioItemId, destinationPortfolioId, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).getPortfolioItemNextName(portfolioItemId, destinationPortfolioId, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Tag objects
@@ -6505,7 +6505,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         listPortfolioItemTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<TagsCollection> {
-            return PortfolioItemApiFp(configuration).listPortfolioItemTags(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).listPortfolioItemTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets a list of portfolio items.
@@ -6518,7 +6518,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         listPortfolioItems(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<PortfolioItemsCollection> {
-            return PortfolioItemApiFp(configuration).listPortfolioItems(limit, offset, filter, sortBy, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).listPortfolioItems(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets the provider control parameters for a portfolio item.
@@ -6528,7 +6528,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         listProviderControlParameters(portfolioItemId: string, options?: any): AxiosPromise<object> {
-            return PortfolioItemApiFp(configuration).listProviderControlParameters(portfolioItemId, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).listProviderControlParameters(portfolioItemId, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets all service plans for a portfolio item.
@@ -6538,7 +6538,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         listServicePlans(portfolioItemId: string, options?: any): AxiosPromise<Array<ServicePlan>> {
-            return PortfolioItemApiFp(configuration).listServicePlans(portfolioItemId, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).listServicePlans(portfolioItemId, options).then((request) => request(axios, basePath));
         },
         /**
          * Make a copy of the Portfolio Item.
@@ -6549,7 +6549,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         postCopyPortfolioItem(portfolioItemId: string, copyPortfolioItem?: CopyPortfolioItem, options?: any): AxiosPromise<PortfolioItem> {
-            return PortfolioItemApiFp(configuration).postCopyPortfolioItem(portfolioItemId, copyPortfolioItem, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).postCopyPortfolioItem(portfolioItemId, copyPortfolioItem, options).then((request) => request(axios, basePath));
         },
         /**
          * Remove Tags from Portfolio Item
@@ -6560,7 +6560,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         removePortfolioItemTags(id: string, tag: Array<Tag>, options?: any): AxiosPromise<void> {
-            return PortfolioItemApiFp(configuration).removePortfolioItemTags(id, tag, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).removePortfolioItemTags(id, tag, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets a specific portfolio item based on the portfolio item ID passed
@@ -6571,7 +6571,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         showPortfolioItem(id: string, showDiscarded?: boolean, options?: any): AxiosPromise<PortfolioItem> {
-            return PortfolioItemApiFp(configuration).showPortfolioItem(id, showDiscarded, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).showPortfolioItem(id, showDiscarded, options).then((request) => request(axios, basePath));
         },
         /**
          * Fetch the specified portfolio item\'s icon image.
@@ -6581,7 +6581,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         showPortfolioItemIcon(portfolioItemId: string, options?: any): AxiosPromise<any> {
-            return PortfolioItemApiFp(configuration).showPortfolioItemIcon(portfolioItemId, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).showPortfolioItemIcon(portfolioItemId, options).then((request) => request(axios, basePath));
         },
         /**
          * If a record has been discarded, this operation will undelete it so it can be requested normally.
@@ -6592,7 +6592,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         unDeletePortfolioItem(portfolioItemId: string, restoreKey: RestoreKey, options?: any): AxiosPromise<PortfolioItem> {
-            return PortfolioItemApiFp(configuration).unDeletePortfolioItem(portfolioItemId, restoreKey, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).unDeletePortfolioItem(portfolioItemId, restoreKey, options).then((request) => request(axios, basePath));
         },
         /**
          * Edits portfolio item specified by the given ID.
@@ -6603,7 +6603,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         updatePortfolioItem(id: string, portfolioItem: PortfolioItem, options?: any): AxiosPromise<PortfolioItem> {
-            return PortfolioItemApiFp(configuration).updatePortfolioItem(id, portfolioItem, options)(axios, basePath);
+            return PortfolioItemApiFp(configuration).updatePortfolioItem(id, portfolioItem, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -6625,7 +6625,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public addPortfolioItemTag(id: string, tag: Array<Tag>, options?: any) {
-        return PortfolioItemApiFp(this.configuration).addPortfolioItemTag(id, tag, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).addPortfolioItemTag(id, tag, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6637,7 +6637,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public createPortfolioItem(createPortfolioItem: CreatePortfolioItem, options?: any) {
-        return PortfolioItemApiFp(this.configuration).createPortfolioItem(createPortfolioItem, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).createPortfolioItem(createPortfolioItem, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6649,7 +6649,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public destroyPortfolioItem(id: string, options?: any) {
-        return PortfolioItemApiFp(this.configuration).destroyPortfolioItem(id, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).destroyPortfolioItem(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6662,7 +6662,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public getPortfolioItemNextName(portfolioItemId: string, destinationPortfolioId?: string, options?: any) {
-        return PortfolioItemApiFp(this.configuration).getPortfolioItemNextName(portfolioItemId, destinationPortfolioId, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).getPortfolioItemNextName(portfolioItemId, destinationPortfolioId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6678,7 +6678,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public listPortfolioItemTags(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return PortfolioItemApiFp(this.configuration).listPortfolioItemTags(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).listPortfolioItemTags(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6693,7 +6693,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public listPortfolioItems(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return PortfolioItemApiFp(this.configuration).listPortfolioItems(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).listPortfolioItems(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6705,7 +6705,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public listProviderControlParameters(portfolioItemId: string, options?: any) {
-        return PortfolioItemApiFp(this.configuration).listProviderControlParameters(portfolioItemId, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).listProviderControlParameters(portfolioItemId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6717,7 +6717,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public listServicePlans(portfolioItemId: string, options?: any) {
-        return PortfolioItemApiFp(this.configuration).listServicePlans(portfolioItemId, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).listServicePlans(portfolioItemId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6730,7 +6730,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public postCopyPortfolioItem(portfolioItemId: string, copyPortfolioItem?: CopyPortfolioItem, options?: any) {
-        return PortfolioItemApiFp(this.configuration).postCopyPortfolioItem(portfolioItemId, copyPortfolioItem, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).postCopyPortfolioItem(portfolioItemId, copyPortfolioItem, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6743,7 +6743,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public removePortfolioItemTags(id: string, tag: Array<Tag>, options?: any) {
-        return PortfolioItemApiFp(this.configuration).removePortfolioItemTags(id, tag, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).removePortfolioItemTags(id, tag, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6756,7 +6756,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public showPortfolioItem(id: string, showDiscarded?: boolean, options?: any) {
-        return PortfolioItemApiFp(this.configuration).showPortfolioItem(id, showDiscarded, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).showPortfolioItem(id, showDiscarded, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6768,7 +6768,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public showPortfolioItemIcon(portfolioItemId: string, options?: any) {
-        return PortfolioItemApiFp(this.configuration).showPortfolioItemIcon(portfolioItemId, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).showPortfolioItemIcon(portfolioItemId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6781,7 +6781,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public unDeletePortfolioItem(portfolioItemId: string, restoreKey: RestoreKey, options?: any) {
-        return PortfolioItemApiFp(this.configuration).unDeletePortfolioItem(portfolioItemId, restoreKey, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).unDeletePortfolioItem(portfolioItemId, restoreKey, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6794,7 +6794,7 @@ export class PortfolioItemApi extends BaseAPI {
      * @memberof PortfolioItemApi
      */
     public updatePortfolioItem(id: string, portfolioItem: PortfolioItem, options?: any) {
-        return PortfolioItemApiFp(this.configuration).updatePortfolioItem(id, portfolioItem, options)(this.axios, this.basePath);
+        return PortfolioItemApiFp(this.configuration).updatePortfolioItem(id, portfolioItem, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -6813,7 +6813,7 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createServicePlan(importServicePlan?: ImportServicePlan, options: any = {}): RequestArgs {
+        createServicePlan: async (importServicePlan?: ImportServicePlan, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/service_plans`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -6855,7 +6855,7 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        patchServicePlanModified(id: string, patchModifiedServicePlan?: PatchModifiedServicePlan, options: any = {}): RequestArgs {
+        patchServicePlanModified: async (id: string, patchModifiedServicePlan?: PatchModifiedServicePlan, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling patchServicePlanModified.');
@@ -6901,7 +6901,7 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resetServicePlanModified(id: string, options: any = {}): RequestArgs {
+        resetServicePlanModified: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling resetServicePlanModified.');
@@ -6943,7 +6943,7 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServicePlan(id: string, options: any = {}): RequestArgs {
+        showServicePlan: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showServicePlan.');
@@ -6985,7 +6985,7 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServicePlanBase(id: string, options: any = {}): RequestArgs {
+        showServicePlanBase: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showServicePlanBase.');
@@ -7027,7 +7027,7 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServicePlanModified(id: string, options: any = {}): RequestArgs {
+        showServicePlanModified: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showServicePlanModified.');
@@ -7078,8 +7078,8 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createServicePlan(importServicePlan?: ImportServicePlan, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ServicePlan>> {
-            const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).createServicePlan(importServicePlan, options);
+        async createServicePlan(importServicePlan?: ImportServicePlan, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ServicePlan>>> {
+            const localVarAxiosArgs = await ServicePlansApiAxiosParamCreator(configuration).createServicePlan(importServicePlan, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7093,8 +7093,8 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        patchServicePlanModified(id: string, patchModifiedServicePlan?: PatchModifiedServicePlan, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).patchServicePlanModified(id, patchModifiedServicePlan, options);
+        async patchServicePlanModified(id: string, patchModifiedServicePlan?: PatchModifiedServicePlan, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await ServicePlansApiAxiosParamCreator(configuration).patchServicePlanModified(id, patchModifiedServicePlan, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7107,8 +7107,8 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resetServicePlanModified(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ServicePlan>> {
-            const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).resetServicePlanModified(id, options);
+        async resetServicePlanModified(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ServicePlan>>> {
+            const localVarAxiosArgs = await ServicePlansApiAxiosParamCreator(configuration).resetServicePlanModified(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7121,8 +7121,8 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServicePlan(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlan> {
-            const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).showServicePlan(id, options);
+        async showServicePlan(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlan>> {
+            const localVarAxiosArgs = await ServicePlansApiAxiosParamCreator(configuration).showServicePlan(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7135,8 +7135,8 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServicePlanBase(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlan> {
-            const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).showServicePlanBase(id, options);
+        async showServicePlanBase(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlan>> {
+            const localVarAxiosArgs = await ServicePlansApiAxiosParamCreator(configuration).showServicePlanBase(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7149,8 +7149,8 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showServicePlanModified(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlan> {
-            const localVarAxiosArgs = ServicePlansApiAxiosParamCreator(configuration).showServicePlanModified(id, options);
+        async showServicePlanModified(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServicePlan>> {
+            const localVarAxiosArgs = await ServicePlansApiAxiosParamCreator(configuration).showServicePlanModified(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7173,7 +7173,7 @@ export const ServicePlansApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         createServicePlan(importServicePlan?: ImportServicePlan, options?: any): AxiosPromise<Array<ServicePlan>> {
-            return ServicePlansApiFp(configuration).createServicePlan(importServicePlan, options)(axios, basePath);
+            return ServicePlansApiFp(configuration).createServicePlan(importServicePlan, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -7184,7 +7184,7 @@ export const ServicePlansApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         patchServicePlanModified(id: string, patchModifiedServicePlan?: PatchModifiedServicePlan, options?: any): AxiosPromise<object> {
-            return ServicePlansApiFp(configuration).patchServicePlanModified(id, patchModifiedServicePlan, options)(axios, basePath);
+            return ServicePlansApiFp(configuration).patchServicePlanModified(id, patchModifiedServicePlan, options).then((request) => request(axios, basePath));
         },
         /**
          * Resets the Service Plan\'s Modified schema and returns the new one if it has been reset
@@ -7194,7 +7194,7 @@ export const ServicePlansApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         resetServicePlanModified(id: string, options?: any): AxiosPromise<Array<ServicePlan>> {
-            return ServicePlansApiFp(configuration).resetServicePlanModified(id, options)(axios, basePath);
+            return ServicePlansApiFp(configuration).resetServicePlanModified(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns the specified Service Plan
@@ -7204,7 +7204,7 @@ export const ServicePlansApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         showServicePlan(id: string, options?: any): AxiosPromise<ServicePlan> {
-            return ServicePlansApiFp(configuration).showServicePlan(id, options)(axios, basePath);
+            return ServicePlansApiFp(configuration).showServicePlan(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns the specified Service Plan\'s base schema
@@ -7214,7 +7214,7 @@ export const ServicePlansApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         showServicePlanBase(id: string, options?: any): AxiosPromise<ServicePlan> {
-            return ServicePlansApiFp(configuration).showServicePlanBase(id, options)(axios, basePath);
+            return ServicePlansApiFp(configuration).showServicePlanBase(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns the specified Service Plan\'s modified schema
@@ -7224,7 +7224,7 @@ export const ServicePlansApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         showServicePlanModified(id: string, options?: any): AxiosPromise<ServicePlan> {
-            return ServicePlansApiFp(configuration).showServicePlanModified(id, options)(axios, basePath);
+            return ServicePlansApiFp(configuration).showServicePlanModified(id, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -7245,7 +7245,7 @@ export class ServicePlansApi extends BaseAPI {
      * @memberof ServicePlansApi
      */
     public createServicePlan(importServicePlan?: ImportServicePlan, options?: any) {
-        return ServicePlansApiFp(this.configuration).createServicePlan(importServicePlan, options)(this.axios, this.basePath);
+        return ServicePlansApiFp(this.configuration).createServicePlan(importServicePlan, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7258,7 +7258,7 @@ export class ServicePlansApi extends BaseAPI {
      * @memberof ServicePlansApi
      */
     public patchServicePlanModified(id: string, patchModifiedServicePlan?: PatchModifiedServicePlan, options?: any) {
-        return ServicePlansApiFp(this.configuration).patchServicePlanModified(id, patchModifiedServicePlan, options)(this.axios, this.basePath);
+        return ServicePlansApiFp(this.configuration).patchServicePlanModified(id, patchModifiedServicePlan, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7270,7 +7270,7 @@ export class ServicePlansApi extends BaseAPI {
      * @memberof ServicePlansApi
      */
     public resetServicePlanModified(id: string, options?: any) {
-        return ServicePlansApiFp(this.configuration).resetServicePlanModified(id, options)(this.axios, this.basePath);
+        return ServicePlansApiFp(this.configuration).resetServicePlanModified(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7282,7 +7282,7 @@ export class ServicePlansApi extends BaseAPI {
      * @memberof ServicePlansApi
      */
     public showServicePlan(id: string, options?: any) {
-        return ServicePlansApiFp(this.configuration).showServicePlan(id, options)(this.axios, this.basePath);
+        return ServicePlansApiFp(this.configuration).showServicePlan(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7294,7 +7294,7 @@ export class ServicePlansApi extends BaseAPI {
      * @memberof ServicePlansApi
      */
     public showServicePlanBase(id: string, options?: any) {
-        return ServicePlansApiFp(this.configuration).showServicePlanBase(id, options)(this.axios, this.basePath);
+        return ServicePlansApiFp(this.configuration).showServicePlanBase(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7306,7 +7306,7 @@ export class ServicePlansApi extends BaseAPI {
      * @memberof ServicePlansApi
      */
     public showServicePlanModified(id: string, options?: any) {
-        return ServicePlansApiFp(this.configuration).showServicePlanModified(id, options)(this.axios, this.basePath);
+        return ServicePlansApiFp(this.configuration).showServicePlanModified(id, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -7325,7 +7325,7 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createSetting(setting: Setting, options: any = {}): RequestArgs {
+        createSetting: async (setting: Setting, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'setting' is not null or undefined
             if (setting === null || setting === undefined) {
                 throw new RequiredError('setting','Required parameter setting was null or undefined when calling createSetting.');
@@ -7370,7 +7370,7 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroySetting(name: string, options: any = {}): RequestArgs {
+        destroySetting: async (name: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             if (name === null || name === undefined) {
                 throw new RequiredError('name','Required parameter name was null or undefined when calling destroySetting.');
@@ -7411,7 +7411,7 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSettings(options: any = {}): RequestArgs {
+        listSettings: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/settings`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -7448,7 +7448,7 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSetting(name: string, options: any = {}): RequestArgs {
+        showSetting: async (name: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             if (name === null || name === undefined) {
                 throw new RequiredError('name','Required parameter name was null or undefined when calling showSetting.');
@@ -7490,7 +7490,7 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateSetting(name: string, options: any = {}): RequestArgs {
+        updateSetting: async (name: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             if (name === null || name === undefined) {
                 throw new RequiredError('name','Required parameter name was null or undefined when calling updateSetting.');
@@ -7541,8 +7541,8 @@ export const SettingsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createSetting(setting: Setting, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).createSetting(setting, options);
+        async createSetting(setting: Setting, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await SettingsApiAxiosParamCreator(configuration).createSetting(setting, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7555,8 +7555,8 @@ export const SettingsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroySetting(name: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).destroySetting(name, options);
+        async destroySetting(name: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await SettingsApiAxiosParamCreator(configuration).destroySetting(name, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7568,8 +7568,8 @@ export const SettingsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSettings(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TenantSettings> {
-            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).listSettings(options);
+        async listSettings(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TenantSettings>> {
+            const localVarAxiosArgs = await SettingsApiAxiosParamCreator(configuration).listSettings(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7582,8 +7582,8 @@ export const SettingsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSetting(name: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).showSetting(name, options);
+        async showSetting(name: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await SettingsApiAxiosParamCreator(configuration).showSetting(name, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7596,8 +7596,8 @@ export const SettingsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateSetting(name: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = SettingsApiAxiosParamCreator(configuration).updateSetting(name, options);
+        async updateSetting(name: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await SettingsApiAxiosParamCreator(configuration).updateSetting(name, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7620,7 +7620,7 @@ export const SettingsApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         createSetting(setting: Setting, options?: any): AxiosPromise<void> {
-            return SettingsApiFp(configuration).createSetting(setting, options)(axios, basePath);
+            return SettingsApiFp(configuration).createSetting(setting, options).then((request) => request(axios, basePath));
         },
         /**
          * Delete a Tenant Setting
@@ -7630,7 +7630,7 @@ export const SettingsApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         destroySetting(name: string, options?: any): AxiosPromise<void> {
-            return SettingsApiFp(configuration).destroySetting(name, options)(axios, basePath);
+            return SettingsApiFp(configuration).destroySetting(name, options).then((request) => request(axios, basePath));
         },
         /**
          * List Tenant Settings
@@ -7639,7 +7639,7 @@ export const SettingsApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         listSettings(options?: any): AxiosPromise<TenantSettings> {
-            return SettingsApiFp(configuration).listSettings(options)(axios, basePath);
+            return SettingsApiFp(configuration).listSettings(options).then((request) => request(axios, basePath));
         },
         /**
          * Get a specific Tenant Setting
@@ -7649,7 +7649,7 @@ export const SettingsApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         showSetting(name: string, options?: any): AxiosPromise<void> {
-            return SettingsApiFp(configuration).showSetting(name, options)(axios, basePath);
+            return SettingsApiFp(configuration).showSetting(name, options).then((request) => request(axios, basePath));
         },
         /**
          * Update a Tenant Setting
@@ -7659,7 +7659,7 @@ export const SettingsApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         updateSetting(name: string, options?: any): AxiosPromise<void> {
-            return SettingsApiFp(configuration).updateSetting(name, options)(axios, basePath);
+            return SettingsApiFp(configuration).updateSetting(name, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -7680,7 +7680,7 @@ export class SettingsApi extends BaseAPI {
      * @memberof SettingsApi
      */
     public createSetting(setting: Setting, options?: any) {
-        return SettingsApiFp(this.configuration).createSetting(setting, options)(this.axios, this.basePath);
+        return SettingsApiFp(this.configuration).createSetting(setting, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7692,7 +7692,7 @@ export class SettingsApi extends BaseAPI {
      * @memberof SettingsApi
      */
     public destroySetting(name: string, options?: any) {
-        return SettingsApiFp(this.configuration).destroySetting(name, options)(this.axios, this.basePath);
+        return SettingsApiFp(this.configuration).destroySetting(name, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7703,7 +7703,7 @@ export class SettingsApi extends BaseAPI {
      * @memberof SettingsApi
      */
     public listSettings(options?: any) {
-        return SettingsApiFp(this.configuration).listSettings(options)(this.axios, this.basePath);
+        return SettingsApiFp(this.configuration).listSettings(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7715,7 +7715,7 @@ export class SettingsApi extends BaseAPI {
      * @memberof SettingsApi
      */
     public showSetting(name: string, options?: any) {
-        return SettingsApiFp(this.configuration).showSetting(name, options)(this.axios, this.basePath);
+        return SettingsApiFp(this.configuration).showSetting(name, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7727,7 +7727,7 @@ export class SettingsApi extends BaseAPI {
      * @memberof SettingsApi
      */
     public updateSetting(name: string, options?: any) {
-        return SettingsApiFp(this.configuration).updateSetting(name, options)(this.axios, this.basePath);
+        return SettingsApiFp(this.configuration).updateSetting(name, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -7745,7 +7745,7 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTags(options: any = {}): RequestArgs {
+        listTags: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/tags`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -7790,8 +7790,8 @@ export const TagsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTags(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection> {
-            const localVarAxiosArgs = TagsApiAxiosParamCreator(configuration).listTags(options);
+        async listTags(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsCollection>> {
+            const localVarAxiosArgs = await TagsApiAxiosParamCreator(configuration).listTags(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7813,7 +7813,7 @@ export const TagsApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         listTags(options?: any): AxiosPromise<TagsCollection> {
-            return TagsApiFp(configuration).listTags(options)(axios, basePath);
+            return TagsApiFp(configuration).listTags(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -7833,7 +7833,7 @@ export class TagsApi extends BaseAPI {
      * @memberof TagsApi
      */
     public listTags(options?: any) {
-        return TagsApiFp(this.configuration).listTags(options)(this.axios, this.basePath);
+        return TagsApiFp(this.configuration).listTags(options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -7851,7 +7851,7 @@ export const TenantApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTenants(options: any = {}): RequestArgs {
+        listTenants: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/tenants`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -7888,7 +7888,7 @@ export const TenantApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showTenant(tenantId: string, options: any = {}): RequestArgs {
+        showTenant: async (tenantId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'tenantId' is not null or undefined
             if (tenantId === null || tenantId === undefined) {
                 throw new RequiredError('tenantId','Required parameter tenantId was null or undefined when calling showTenant.');
@@ -7930,7 +7930,7 @@ export const TenantApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tenantSeed(tenantId: string, options: any = {}): RequestArgs {
+        tenantSeed: async (tenantId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'tenantId' is not null or undefined
             if (tenantId === null || tenantId === undefined) {
                 throw new RequiredError('tenantId','Required parameter tenantId was null or undefined when calling tenantSeed.');
@@ -7980,8 +7980,8 @@ export const TenantApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTenants(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TenantsCollection> {
-            const localVarAxiosArgs = TenantApiAxiosParamCreator(configuration).listTenants(options);
+        async listTenants(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TenantsCollection>> {
+            const localVarAxiosArgs = await TenantApiAxiosParamCreator(configuration).listTenants(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7994,8 +7994,8 @@ export const TenantApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showTenant(tenantId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tenant> {
-            const localVarAxiosArgs = TenantApiAxiosParamCreator(configuration).showTenant(tenantId, options);
+        async showTenant(tenantId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tenant>> {
+            const localVarAxiosArgs = await TenantApiAxiosParamCreator(configuration).showTenant(tenantId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -8008,8 +8008,8 @@ export const TenantApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tenantSeed(tenantId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = TenantApiAxiosParamCreator(configuration).tenantSeed(tenantId, options);
+        async tenantSeed(tenantId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await TenantApiAxiosParamCreator(configuration).tenantSeed(tenantId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -8031,7 +8031,7 @@ export const TenantApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         listTenants(options?: any): AxiosPromise<TenantsCollection> {
-            return TenantApiFp(configuration).listTenants(options)(axios, basePath);
+            return TenantApiFp(configuration).listTenants(options).then((request) => request(axios, basePath));
         },
         /**
          * Gets the tenant specified by the tenant id.
@@ -8041,7 +8041,7 @@ export const TenantApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         showTenant(tenantId: string, options?: any): AxiosPromise<Tenant> {
-            return TenantApiFp(configuration).showTenant(tenantId, options)(axios, basePath);
+            return TenantApiFp(configuration).showTenant(tenantId, options).then((request) => request(axios, basePath));
         },
         /**
          * Run a task to seed the Tenant Groups required for an org admin to onboard additional users.
@@ -8051,7 +8051,7 @@ export const TenantApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         tenantSeed(tenantId: string, options?: any): AxiosPromise<void> {
-            return TenantApiFp(configuration).tenantSeed(tenantId, options)(axios, basePath);
+            return TenantApiFp(configuration).tenantSeed(tenantId, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -8071,7 +8071,7 @@ export class TenantApi extends BaseAPI {
      * @memberof TenantApi
      */
     public listTenants(options?: any) {
-        return TenantApiFp(this.configuration).listTenants(options)(this.axios, this.basePath);
+        return TenantApiFp(this.configuration).listTenants(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8083,7 +8083,7 @@ export class TenantApi extends BaseAPI {
      * @memberof TenantApi
      */
     public showTenant(tenantId: string, options?: any) {
-        return TenantApiFp(this.configuration).showTenant(tenantId, options)(this.axios, this.basePath);
+        return TenantApiFp(this.configuration).showTenant(tenantId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8095,7 +8095,7 @@ export class TenantApi extends BaseAPI {
      * @memberof TenantApi
      */
     public tenantSeed(tenantId: string, options?: any) {
-        return TenantApiFp(this.configuration).tenantSeed(tenantId, options)(this.axios, this.basePath);
+        return TenantApiFp(this.configuration).tenantSeed(tenantId, options).then((request) => request(this.axios, this.basePath));
     }
 
 }

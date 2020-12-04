@@ -676,7 +676,7 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAction(requestId: string, action: Action, options: any = {}): RequestArgs {
+        createAction: async (requestId: string, action: Action, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'requestId' is not null or undefined
             if (requestId === null || requestId === undefined) {
                 throw new RequiredError('requestId','Required parameter requestId was null or undefined when calling createAction.');
@@ -720,7 +720,7 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listActionsByRequest(requestId: string, options: any = {}): RequestArgs {
+        listActionsByRequest: async (requestId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'requestId' is not null or undefined
             if (requestId === null || requestId === undefined) {
                 throw new RequiredError('requestId','Required parameter requestId was null or undefined when calling listActionsByRequest.');
@@ -756,7 +756,7 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showAction(id: string, options: any = {}): RequestArgs {
+        showAction: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showAction.');
@@ -802,8 +802,8 @@ export const ActionApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAction(requestId: string, action: Action, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Action> {
-            const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).createAction(requestId, action, options);
+        async createAction(requestId: string, action: Action, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Action>> {
+            const localVarAxiosArgs = await ActionApiAxiosParamCreator(configuration).createAction(requestId, action, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -816,8 +816,8 @@ export const ActionApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listActionsByRequest(requestId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionCollection> {
-            const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).listActionsByRequest(requestId, options);
+        async listActionsByRequest(requestId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActionCollection>> {
+            const localVarAxiosArgs = await ActionApiAxiosParamCreator(configuration).listActionsByRequest(requestId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -830,8 +830,8 @@ export const ActionApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showAction(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Action> {
-            const localVarAxiosArgs = ActionApiAxiosParamCreator(configuration).showAction(id, options);
+        async showAction(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Action>> {
+            const localVarAxiosArgs = await ActionApiAxiosParamCreator(configuration).showAction(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -855,7 +855,7 @@ export const ActionApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         createAction(requestId: string, action: Action, options?: any): AxiosPromise<Action> {
-            return ActionApiFp(configuration).createAction(requestId, action, options)(axios, basePath);
+            return ActionApiFp(configuration).createAction(requestId, action, options).then((request) => request(axios, basePath));
         },
         /**
          * Find actions of a request identified by its id, available to everyone
@@ -865,7 +865,7 @@ export const ActionApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         listActionsByRequest(requestId: string, options?: any): AxiosPromise<ActionCollection> {
-            return ActionApiFp(configuration).listActionsByRequest(requestId, options)(axios, basePath);
+            return ActionApiFp(configuration).listActionsByRequest(requestId, options).then((request) => request(axios, basePath));
         },
         /**
          * Find an action by its id, available to everyone
@@ -875,7 +875,7 @@ export const ActionApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         showAction(id: string, options?: any): AxiosPromise<Action> {
-            return ActionApiFp(configuration).showAction(id, options)(axios, basePath);
+            return ActionApiFp(configuration).showAction(id, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -897,7 +897,7 @@ export class ActionApi extends BaseAPI {
      * @memberof ActionApi
      */
     public createAction(requestId: string, action: Action, options?: any) {
-        return ActionApiFp(this.configuration).createAction(requestId, action, options)(this.axios, this.basePath);
+        return ActionApiFp(this.configuration).createAction(requestId, action, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -909,7 +909,7 @@ export class ActionApi extends BaseAPI {
      * @memberof ActionApi
      */
     public listActionsByRequest(requestId: string, options?: any) {
-        return ActionApiFp(this.configuration).listActionsByRequest(requestId, options)(this.axios, this.basePath);
+        return ActionApiFp(this.configuration).listActionsByRequest(requestId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -921,7 +921,7 @@ export class ActionApi extends BaseAPI {
      * @memberof ActionApi
      */
     public showAction(id: string, options?: any) {
-        return ActionApiFp(this.configuration).showAction(id, options)(this.axios, this.basePath);
+        return ActionApiFp(this.configuration).showAction(id, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -939,7 +939,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDocumentation(options: any = {}): RequestArgs {
+        getDocumentation: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/openapi.json`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -978,8 +978,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDocumentation(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
+        async getDocumentation(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1001,7 +1001,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getDocumentation(options?: any): AxiosPromise<object> {
-            return DefaultApiFp(configuration).getDocumentation(options)(axios, basePath);
+            return DefaultApiFp(configuration).getDocumentation(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1021,7 +1021,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getDocumentation(options?: any) {
-        return DefaultApiFp(this.configuration).getDocumentation(options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getDocumentation(options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -1040,7 +1040,7 @@ export const GraphqlApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphql(graphqlIn: GraphqlIn, options: any = {}): RequestArgs {
+        postGraphql: async (graphqlIn: GraphqlIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'graphqlIn' is not null or undefined
             if (graphqlIn === null || graphqlIn === undefined) {
                 throw new RequiredError('graphqlIn','Required parameter graphqlIn was null or undefined when calling postGraphql.');
@@ -1088,8 +1088,8 @@ export const GraphqlApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphql(graphqlIn: GraphqlIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphqlOut> {
-            const localVarAxiosArgs = GraphqlApiAxiosParamCreator(configuration).postGraphql(graphqlIn, options);
+        async postGraphql(graphqlIn: GraphqlIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphqlOut>> {
+            const localVarAxiosArgs = await GraphqlApiAxiosParamCreator(configuration).postGraphql(graphqlIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1112,7 +1112,7 @@ export const GraphqlApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         postGraphql(graphqlIn: GraphqlIn, options?: any): AxiosPromise<GraphqlOut> {
-            return GraphqlApiFp(configuration).postGraphql(graphqlIn, options)(axios, basePath);
+            return GraphqlApiFp(configuration).postGraphql(graphqlIn, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1133,7 +1133,7 @@ export class GraphqlApi extends BaseAPI {
      * @memberof GraphqlApi
      */
     public postGraphql(graphqlIn: GraphqlIn, options?: any) {
-        return GraphqlApiFp(this.configuration).postGraphql(graphqlIn, options)(this.axios, this.basePath);
+        return GraphqlApiFp(this.configuration).postGraphql(graphqlIn, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -1152,7 +1152,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRequest(requestIn: RequestIn, options: any = {}): RequestArgs {
+        createRequest: async (requestIn: RequestIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'requestIn' is not null or undefined
             if (requestIn === null || requestIn === undefined) {
                 throw new RequiredError('requestIn','Required parameter requestIn was null or undefined when calling createRequest.');
@@ -1195,7 +1195,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequests(xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listRequests: async (xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/requests`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1247,7 +1247,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequestsByRequest(requestId: string, xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', options: any = {}): RequestArgs {
+        listRequestsByRequest: async (requestId: string, xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'requestId' is not null or undefined
             if (requestId === null || requestId === undefined) {
                 throw new RequiredError('requestId','Required parameter requestId was null or undefined when calling listRequestsByRequest.');
@@ -1287,7 +1287,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRequest(id: string, options: any = {}): RequestArgs {
+        showRequest: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showRequest.');
@@ -1323,7 +1323,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRequestContent(requestId: string, options: any = {}): RequestArgs {
+        showRequestContent: async (requestId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'requestId' is not null or undefined
             if (requestId === null || requestId === undefined) {
                 throw new RequiredError('requestId','Required parameter requestId was null or undefined when calling showRequestContent.');
@@ -1368,8 +1368,8 @@ export const RequestApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRequest(requestIn: RequestIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Request> {
-            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).createRequest(requestIn, options);
+        async createRequest(requestIn: RequestIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Request>> {
+            const localVarAxiosArgs = await RequestApiAxiosParamCreator(configuration).createRequest(requestIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1386,8 +1386,8 @@ export const RequestApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequests(xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestCollection> {
-            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequests(xRhPersona, limit, offset, filter, sortBy, options);
+        async listRequests(xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestCollection>> {
+            const localVarAxiosArgs = await RequestApiAxiosParamCreator(configuration).listRequests(xRhPersona, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1401,8 +1401,8 @@ export const RequestApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRequestsByRequest(requestId: string, xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestCollection> {
-            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).listRequestsByRequest(requestId, xRhPersona, options);
+        async listRequestsByRequest(requestId: string, xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RequestCollection>> {
+            const localVarAxiosArgs = await RequestApiAxiosParamCreator(configuration).listRequestsByRequest(requestId, xRhPersona, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1415,8 +1415,8 @@ export const RequestApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRequest(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Request> {
-            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).showRequest(id, options);
+        async showRequest(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Request>> {
+            const localVarAxiosArgs = await RequestApiAxiosParamCreator(configuration).showRequest(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1429,8 +1429,8 @@ export const RequestApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRequestContent(requestId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = RequestApiAxiosParamCreator(configuration).showRequestContent(requestId, options);
+        async showRequestContent(requestId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await RequestApiAxiosParamCreator(configuration).showRequestContent(requestId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1453,7 +1453,7 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         createRequest(requestIn: RequestIn, options?: any): AxiosPromise<Request> {
-            return RequestApiFp(configuration).createRequest(requestIn, options)(axios, basePath);
+            return RequestApiFp(configuration).createRequest(requestIn, options).then((request) => request(axios, basePath));
         },
         /**
          * The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
@@ -1467,7 +1467,7 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listRequests(xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<RequestCollection> {
-            return RequestApiFp(configuration).listRequests(xRhPersona, limit, offset, filter, sortBy, options)(axios, basePath);
+            return RequestApiFp(configuration).listRequests(xRhPersona, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
@@ -1478,7 +1478,7 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listRequestsByRequest(requestId: string, xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', options?: any): AxiosPromise<RequestCollection> {
-            return RequestApiFp(configuration).listRequestsByRequest(requestId, xRhPersona, options)(axios, basePath);
+            return RequestApiFp(configuration).listRequestsByRequest(requestId, xRhPersona, options).then((request) => request(axios, basePath));
         },
         /**
          * Find an approval request by its id, available to anyone who can access the request
@@ -1488,7 +1488,7 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showRequest(id: string, options?: any): AxiosPromise<Request> {
-            return RequestApiFp(configuration).showRequest(id, options)(axios, basePath);
+            return RequestApiFp(configuration).showRequest(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Find the request content based on a request id, available to everyone
@@ -1498,7 +1498,7 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showRequestContent(requestId: string, options?: any): AxiosPromise<object> {
-            return RequestApiFp(configuration).showRequestContent(requestId, options)(axios, basePath);
+            return RequestApiFp(configuration).showRequestContent(requestId, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1519,7 +1519,7 @@ export class RequestApi extends BaseAPI {
      * @memberof RequestApi
      */
     public createRequest(requestIn: RequestIn, options?: any) {
-        return RequestApiFp(this.configuration).createRequest(requestIn, options)(this.axios, this.basePath);
+        return RequestApiFp(this.configuration).createRequest(requestIn, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1535,7 +1535,7 @@ export class RequestApi extends BaseAPI {
      * @memberof RequestApi
      */
     public listRequests(xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return RequestApiFp(this.configuration).listRequests(xRhPersona, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return RequestApiFp(this.configuration).listRequests(xRhPersona, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1548,7 +1548,7 @@ export class RequestApi extends BaseAPI {
      * @memberof RequestApi
      */
     public listRequestsByRequest(requestId: string, xRhPersona?: 'approval/admin' | 'approval/approver' | 'approval/requester', options?: any) {
-        return RequestApiFp(this.configuration).listRequestsByRequest(requestId, xRhPersona, options)(this.axios, this.basePath);
+        return RequestApiFp(this.configuration).listRequestsByRequest(requestId, xRhPersona, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1560,7 +1560,7 @@ export class RequestApi extends BaseAPI {
      * @memberof RequestApi
      */
     public showRequest(id: string, options?: any) {
-        return RequestApiFp(this.configuration).showRequest(id, options)(this.axios, this.basePath);
+        return RequestApiFp(this.configuration).showRequest(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1572,7 +1572,7 @@ export class RequestApi extends BaseAPI {
      * @memberof RequestApi
      */
     public showRequestContent(requestId: string, options?: any) {
-        return RequestApiFp(this.configuration).showRequestContent(requestId, options)(this.axios, this.basePath);
+        return RequestApiFp(this.configuration).showRequestContent(requestId, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -1594,7 +1594,7 @@ export const TemplateApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTemplates(limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listTemplates: async (limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/templates`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1641,7 +1641,7 @@ export const TemplateApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showTemplate(id: string, options: any = {}): RequestArgs {
+        showTemplate: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showTemplate.');
@@ -1689,8 +1689,8 @@ export const TemplateApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTemplates(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TemplateCollection> {
-            const localVarAxiosArgs = TemplateApiAxiosParamCreator(configuration).listTemplates(limit, offset, filter, sortBy, options);
+        async listTemplates(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TemplateCollection>> {
+            const localVarAxiosArgs = await TemplateApiAxiosParamCreator(configuration).listTemplates(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1703,8 +1703,8 @@ export const TemplateApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showTemplate(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Template> {
-            const localVarAxiosArgs = TemplateApiAxiosParamCreator(configuration).showTemplate(id, options);
+        async showTemplate(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Template>> {
+            const localVarAxiosArgs = await TemplateApiAxiosParamCreator(configuration).showTemplate(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1730,7 +1730,7 @@ export const TemplateApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         listTemplates(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<TemplateCollection> {
-            return TemplateApiFp(configuration).listTemplates(limit, offset, filter, sortBy, options)(axios, basePath);
+            return TemplateApiFp(configuration).listTemplates(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Find a template by its id, available to admin only
@@ -1740,7 +1740,7 @@ export const TemplateApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         showTemplate(id: string, options?: any): AxiosPromise<Template> {
-            return TemplateApiFp(configuration).showTemplate(id, options)(axios, basePath);
+            return TemplateApiFp(configuration).showTemplate(id, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1764,7 +1764,7 @@ export class TemplateApi extends BaseAPI {
      * @memberof TemplateApi
      */
     public listTemplates(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return TemplateApiFp(this.configuration).listTemplates(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return TemplateApiFp(this.configuration).listTemplates(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1776,7 +1776,7 @@ export class TemplateApi extends BaseAPI {
      * @memberof TemplateApi
      */
     public showTemplate(id: string, options?: any) {
-        return TemplateApiFp(this.configuration).showTemplate(id, options)(this.axios, this.basePath);
+        return TemplateApiFp(this.configuration).showTemplate(id, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -1796,7 +1796,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addWorkflowToTemplate(templateId: string, workflow: Workflow, options: any = {}): RequestArgs {
+        addWorkflowToTemplate: async (templateId: string, workflow: Workflow, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'templateId' is not null or undefined
             if (templateId === null || templateId === undefined) {
                 throw new RequiredError('templateId','Required parameter templateId was null or undefined when calling addWorkflowToTemplate.');
@@ -1840,7 +1840,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyWorkflow(id: string, options: any = {}): RequestArgs {
+        destroyWorkflow: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling destroyWorkflow.');
@@ -1877,7 +1877,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        linkWorkflow(id: string, resourceObject: ResourceObject, options: any = {}): RequestArgs {
+        linkWorkflow: async (id: string, resourceObject: ResourceObject, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling linkWorkflow.');
@@ -1927,7 +1927,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflows(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listWorkflows: async (appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/workflows`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1990,7 +1990,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): RequestArgs {
+        listWorkflowsByTemplate: async (templateId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'templateId' is not null or undefined
             if (templateId === null || templateId === undefined) {
                 throw new RequiredError('templateId','Required parameter templateId was null or undefined when calling listWorkflowsByTemplate.');
@@ -2043,7 +2043,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reposition(id: string, reposition: Reposition, options: any = {}): RequestArgs {
+        reposition: async (id: string, reposition: Reposition, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling reposition.');
@@ -2087,7 +2087,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showWorkflow(id: string, options: any = {}): RequestArgs {
+        showWorkflow: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showWorkflow.');
@@ -2124,7 +2124,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        unlinkWorkflow(id: string, resourceObject: ResourceObject, options: any = {}): RequestArgs {
+        unlinkWorkflow: async (id: string, resourceObject: ResourceObject, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling unlinkWorkflow.');
@@ -2169,7 +2169,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateWorkflow(id: string, workflow: Workflow, options: any = {}): RequestArgs {
+        updateWorkflow: async (id: string, workflow: Workflow, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling updateWorkflow.');
@@ -2223,8 +2223,8 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addWorkflowToTemplate(templateId: string, workflow: Workflow, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Workflow> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).addWorkflowToTemplate(templateId, workflow, options);
+        async addWorkflowToTemplate(templateId: string, workflow: Workflow, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Workflow>> {
+            const localVarAxiosArgs = await WorkflowApiAxiosParamCreator(configuration).addWorkflowToTemplate(templateId, workflow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2237,8 +2237,8 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyWorkflow(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).destroyWorkflow(id, options);
+        async destroyWorkflow(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await WorkflowApiAxiosParamCreator(configuration).destroyWorkflow(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2252,8 +2252,8 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        linkWorkflow(id: string, resourceObject: ResourceObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).linkWorkflow(id, resourceObject, options);
+        async linkWorkflow(id: string, resourceObject: ResourceObject, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await WorkflowApiAxiosParamCreator(configuration).linkWorkflow(id, resourceObject, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2272,8 +2272,8 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflows(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowCollection> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).listWorkflows(appName, objectId, objectType, limit, offset, filter, sortBy, options);
+        async listWorkflows(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowCollection>> {
+            const localVarAxiosArgs = await WorkflowApiAxiosParamCreator(configuration).listWorkflows(appName, objectId, objectType, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2290,8 +2290,8 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowCollection> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).listWorkflowsByTemplate(templateId, limit, offset, filter, sortBy, options);
+        async listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowCollection>> {
+            const localVarAxiosArgs = await WorkflowApiAxiosParamCreator(configuration).listWorkflowsByTemplate(templateId, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2305,8 +2305,8 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reposition(id: string, reposition: Reposition, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).reposition(id, reposition, options);
+        async reposition(id: string, reposition: Reposition, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await WorkflowApiAxiosParamCreator(configuration).reposition(id, reposition, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2319,8 +2319,8 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showWorkflow(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Workflow> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).showWorkflow(id, options);
+        async showWorkflow(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Workflow>> {
+            const localVarAxiosArgs = await WorkflowApiAxiosParamCreator(configuration).showWorkflow(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2334,8 +2334,8 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        unlinkWorkflow(id: string, resourceObject: ResourceObject, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).unlinkWorkflow(id, resourceObject, options);
+        async unlinkWorkflow(id: string, resourceObject: ResourceObject, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await WorkflowApiAxiosParamCreator(configuration).unlinkWorkflow(id, resourceObject, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2349,8 +2349,8 @@ export const WorkflowApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateWorkflow(id: string, workflow: Workflow, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Workflow> {
-            const localVarAxiosArgs = WorkflowApiAxiosParamCreator(configuration).updateWorkflow(id, workflow, options);
+        async updateWorkflow(id: string, workflow: Workflow, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Workflow>> {
+            const localVarAxiosArgs = await WorkflowApiAxiosParamCreator(configuration).updateWorkflow(id, workflow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2374,7 +2374,7 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         addWorkflowToTemplate(templateId: string, workflow: Workflow, options?: any): AxiosPromise<Workflow> {
-            return WorkflowApiFp(configuration).addWorkflowToTemplate(templateId, workflow, options)(axios, basePath);
+            return WorkflowApiFp(configuration).addWorkflowToTemplate(templateId, workflow, options).then((request) => request(axios, basePath));
         },
         /**
          * Delete an approval workflow by its id, available to admin only
@@ -2384,7 +2384,7 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         destroyWorkflow(id: string, options?: any): AxiosPromise<void> {
-            return WorkflowApiFp(configuration).destroyWorkflow(id, options)(axios, basePath);
+            return WorkflowApiFp(configuration).destroyWorkflow(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Link a resource object to a workflow identified by its id, available to admin only
@@ -2395,7 +2395,7 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         linkWorkflow(id: string, resourceObject: ResourceObject, options?: any): AxiosPromise<void> {
-            return WorkflowApiFp(configuration).linkWorkflow(id, resourceObject, options)(axios, basePath);
+            return WorkflowApiFp(configuration).linkWorkflow(id, resourceObject, options).then((request) => request(axios, basePath));
         },
         /**
          * Find approval workflows matching search parameters, available to admin only. Optionally select workflows linked to a resource object whose app_name, object_type and object_id are specified by query parameters. Default sorting is by sequence number in ascending order.
@@ -2411,7 +2411,7 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         listWorkflows(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<WorkflowCollection> {
-            return WorkflowApiFp(configuration).listWorkflows(appName, objectId, objectType, limit, offset, filter, sortBy, options)(axios, basePath);
+            return WorkflowApiFp(configuration).listWorkflows(appName, objectId, objectType, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Find workflows based on the template id, available to admin only
@@ -2425,7 +2425,7 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any): AxiosPromise<WorkflowCollection> {
-            return WorkflowApiFp(configuration).listWorkflowsByTemplate(templateId, limit, offset, filter, sortBy, options)(axios, basePath);
+            return WorkflowApiFp(configuration).listWorkflowsByTemplate(templateId, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Adjust the position of a workflow related to others by an offset number
@@ -2436,7 +2436,7 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         reposition(id: string, reposition: Reposition, options?: any): AxiosPromise<void> {
-            return WorkflowApiFp(configuration).reposition(id, reposition, options)(axios, basePath);
+            return WorkflowApiFp(configuration).reposition(id, reposition, options).then((request) => request(axios, basePath));
         },
         /**
          * Find an approval workflow by its id, available to admin only
@@ -2446,7 +2446,7 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         showWorkflow(id: string, options?: any): AxiosPromise<Workflow> {
-            return WorkflowApiFp(configuration).showWorkflow(id, options)(axios, basePath);
+            return WorkflowApiFp(configuration).showWorkflow(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Break the link between a resource object selected by the body and a workflow by its id, available to admin only
@@ -2457,7 +2457,7 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         unlinkWorkflow(id: string, resourceObject: ResourceObject, options?: any): AxiosPromise<void> {
-            return WorkflowApiFp(configuration).unlinkWorkflow(id, resourceObject, options)(axios, basePath);
+            return WorkflowApiFp(configuration).unlinkWorkflow(id, resourceObject, options).then((request) => request(axios, basePath));
         },
         /**
          * Find an approval workflow by its id and update its content, available to admin only
@@ -2468,7 +2468,7 @@ export const WorkflowApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         updateWorkflow(id: string, workflow: Workflow, options?: any): AxiosPromise<Workflow> {
-            return WorkflowApiFp(configuration).updateWorkflow(id, workflow, options)(axios, basePath);
+            return WorkflowApiFp(configuration).updateWorkflow(id, workflow, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2490,7 +2490,7 @@ export class WorkflowApi extends BaseAPI {
      * @memberof WorkflowApi
      */
     public addWorkflowToTemplate(templateId: string, workflow: Workflow, options?: any) {
-        return WorkflowApiFp(this.configuration).addWorkflowToTemplate(templateId, workflow, options)(this.axios, this.basePath);
+        return WorkflowApiFp(this.configuration).addWorkflowToTemplate(templateId, workflow, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2502,7 +2502,7 @@ export class WorkflowApi extends BaseAPI {
      * @memberof WorkflowApi
      */
     public destroyWorkflow(id: string, options?: any) {
-        return WorkflowApiFp(this.configuration).destroyWorkflow(id, options)(this.axios, this.basePath);
+        return WorkflowApiFp(this.configuration).destroyWorkflow(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2515,7 +2515,7 @@ export class WorkflowApi extends BaseAPI {
      * @memberof WorkflowApi
      */
     public linkWorkflow(id: string, resourceObject: ResourceObject, options?: any) {
-        return WorkflowApiFp(this.configuration).linkWorkflow(id, resourceObject, options)(this.axios, this.basePath);
+        return WorkflowApiFp(this.configuration).linkWorkflow(id, resourceObject, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2533,7 +2533,7 @@ export class WorkflowApi extends BaseAPI {
      * @memberof WorkflowApi
      */
     public listWorkflows(appName?: string, objectId?: string, objectType?: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return WorkflowApiFp(this.configuration).listWorkflows(appName, objectId, objectType, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return WorkflowApiFp(this.configuration).listWorkflows(appName, objectId, objectType, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2549,7 +2549,7 @@ export class WorkflowApi extends BaseAPI {
      * @memberof WorkflowApi
      */
     public listWorkflowsByTemplate(templateId: string, limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
-        return WorkflowApiFp(this.configuration).listWorkflowsByTemplate(templateId, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return WorkflowApiFp(this.configuration).listWorkflowsByTemplate(templateId, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2562,7 +2562,7 @@ export class WorkflowApi extends BaseAPI {
      * @memberof WorkflowApi
      */
     public reposition(id: string, reposition: Reposition, options?: any) {
-        return WorkflowApiFp(this.configuration).reposition(id, reposition, options)(this.axios, this.basePath);
+        return WorkflowApiFp(this.configuration).reposition(id, reposition, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2574,7 +2574,7 @@ export class WorkflowApi extends BaseAPI {
      * @memberof WorkflowApi
      */
     public showWorkflow(id: string, options?: any) {
-        return WorkflowApiFp(this.configuration).showWorkflow(id, options)(this.axios, this.basePath);
+        return WorkflowApiFp(this.configuration).showWorkflow(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2587,7 +2587,7 @@ export class WorkflowApi extends BaseAPI {
      * @memberof WorkflowApi
      */
     public unlinkWorkflow(id: string, resourceObject: ResourceObject, options?: any) {
-        return WorkflowApiFp(this.configuration).unlinkWorkflow(id, resourceObject, options)(this.axios, this.basePath);
+        return WorkflowApiFp(this.configuration).unlinkWorkflow(id, resourceObject, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2600,7 +2600,7 @@ export class WorkflowApi extends BaseAPI {
      * @memberof WorkflowApi
      */
     public updateWorkflow(id: string, workflow: Workflow, options?: any) {
-        return WorkflowApiFp(this.configuration).updateWorkflow(id, workflow, options)(this.axios, this.basePath);
+        return WorkflowApiFp(this.configuration).updateWorkflow(id, workflow, options).then((request) => request(this.axios, this.basePath));
     }
 
 }

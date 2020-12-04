@@ -1,13 +1,1 @@
-wwwroot/*.js
-node_modules
-typings
-
-test
-*.sh
-
-jest.config.js
-.openapi-generator
-tsconfig.json
-.eslintrc.yml
-.openapi-generator-ignore
-!dist/*
+# empty npmignore to ensure all required files (e.g., in the dist folder) are published by npm
