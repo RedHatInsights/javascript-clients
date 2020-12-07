@@ -792,7 +792,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        checkAvailabilitySource(id: string, options: any = {}): RequestArgs {
+        checkAvailabilitySource: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling checkAvailabilitySource.');
@@ -834,7 +834,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApplication(application: Application, options: any = {}): RequestArgs {
+        createApplication: async (application: Application, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'application' is not null or undefined
             if (application === null || application === undefined) {
                 throw new RequiredError('application','Required parameter application was null or undefined when calling createApplication.');
@@ -879,7 +879,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAuthentication(authentication: Authentication, options: any = {}): RequestArgs {
+        createAuthentication: async (authentication: Authentication, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'authentication' is not null or undefined
             if (authentication === null || authentication === undefined) {
                 throw new RequiredError('authentication','Required parameter authentication was null or undefined when calling createAuthentication.');
@@ -924,7 +924,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createEndpoint(endpoint: Endpoint, options: any = {}): RequestArgs {
+        createEndpoint: async (endpoint: Endpoint, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'endpoint' is not null or undefined
             if (endpoint === null || endpoint === undefined) {
                 throw new RequiredError('endpoint','Required parameter endpoint was null or undefined when calling createEndpoint.');
@@ -969,7 +969,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createSource(source: Source, options: any = {}): RequestArgs {
+        createSource: async (source: Source, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'source' is not null or undefined
             if (source === null || source === undefined) {
                 throw new RequiredError('source','Required parameter source was null or undefined when calling createSource.');
@@ -1014,7 +1014,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteApplication(id: string, options: any = {}): RequestArgs {
+        deleteApplication: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling deleteApplication.');
@@ -1056,7 +1056,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteAuthentication(id: string, options: any = {}): RequestArgs {
+        deleteAuthentication: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling deleteAuthentication.');
@@ -1098,7 +1098,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteEndpoint(id: string, options: any = {}): RequestArgs {
+        deleteEndpoint: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling deleteEndpoint.');
@@ -1140,7 +1140,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteSource(id: string, options: any = {}): RequestArgs {
+        deleteSource: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling deleteSource.');
@@ -1181,7 +1181,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDocumentation(options: any = {}): RequestArgs {
+        getDocumentation: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/openapi.json`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1222,7 +1222,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listApplicationTypeSources: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listApplicationTypeSources.');
@@ -1283,7 +1283,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplicationTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listApplicationTypes: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/application_types`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1339,7 +1339,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listApplications: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/applications`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1395,7 +1395,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAuthentications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listAuthentications: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/authentications`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1452,7 +1452,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listEndpointAuthentications: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listEndpointAuthentications.');
@@ -1513,7 +1513,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listEndpoints(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listEndpoints: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/endpoints`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1570,7 +1570,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceApplicationTypes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceApplicationTypes.');
@@ -1632,7 +1632,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceApplications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceApplications: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceApplications.');
@@ -1694,7 +1694,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceEndpoints: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceEndpoints.');
@@ -1756,7 +1756,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceTypeSources: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceTypeSources.');
@@ -1817,7 +1817,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSourceTypes: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/source_types`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1873,7 +1873,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSources(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): RequestArgs {
+        listSources: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/sources`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1926,7 +1926,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphQL(graphQLRequest: GraphQLRequest, options: any = {}): RequestArgs {
+        postGraphQL: async (graphQLRequest: GraphQLRequest, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'graphQLRequest' is not null or undefined
             if (graphQLRequest === null || graphQLRequest === undefined) {
                 throw new RequiredError('graphQLRequest','Required parameter graphQLRequest was null or undefined when calling postGraphQL.');
@@ -1971,7 +1971,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showApplication(id: string, options: any = {}): RequestArgs {
+        showApplication: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showApplication.');
@@ -2013,7 +2013,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showApplicationType(id: string, options: any = {}): RequestArgs {
+        showApplicationType: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showApplicationType.');
@@ -2055,7 +2055,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showAuthentication(id: string, options: any = {}): RequestArgs {
+        showAuthentication: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showAuthentication.');
@@ -2097,7 +2097,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showEndpoint(id: string, options: any = {}): RequestArgs {
+        showEndpoint: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showEndpoint.');
@@ -2139,7 +2139,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSource(id: string, options: any = {}): RequestArgs {
+        showSource: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showSource.');
@@ -2181,7 +2181,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSourceType(id: string, options: any = {}): RequestArgs {
+        showSourceType: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling showSourceType.');
@@ -2224,7 +2224,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateApplication(id: string, application: Application, options: any = {}): RequestArgs {
+        updateApplication: async (id: string, application: Application, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling updateApplication.');
@@ -2275,7 +2275,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateAuthentication(id: string, authentication: Authentication, options: any = {}): RequestArgs {
+        updateAuthentication: async (id: string, authentication: Authentication, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling updateAuthentication.');
@@ -2326,7 +2326,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateEndpoint(id: string, endpoint: Endpoint, options: any = {}): RequestArgs {
+        updateEndpoint: async (id: string, endpoint: Endpoint, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling updateEndpoint.');
@@ -2377,7 +2377,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateSource(id: string, source: Source, options: any = {}): RequestArgs {
+        updateSource: async (id: string, source: Source, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling updateSource.');
@@ -2436,8 +2436,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        checkAvailabilitySource(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).checkAvailabilitySource(id, options);
+        async checkAvailabilitySource(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).checkAvailabilitySource(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2450,8 +2450,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApplication(application: Application, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Application> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createApplication(application, options);
+        async createApplication(application: Application, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Application>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).createApplication(application, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2464,8 +2464,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAuthentication(authentication: Authentication, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Authentication> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createAuthentication(authentication, options);
+        async createAuthentication(authentication: Authentication, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Authentication>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).createAuthentication(authentication, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2478,8 +2478,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createEndpoint(endpoint: Endpoint, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Endpoint> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createEndpoint(endpoint, options);
+        async createEndpoint(endpoint: Endpoint, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Endpoint>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).createEndpoint(endpoint, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2492,8 +2492,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createSource(source: Source, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Source> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).createSource(source, options);
+        async createSource(source: Source, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Source>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).createSource(source, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2506,8 +2506,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteApplication(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteApplication(id, options);
+        async deleteApplication(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).deleteApplication(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2520,8 +2520,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteAuthentication(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteAuthentication(id, options);
+        async deleteAuthentication(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).deleteAuthentication(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2534,8 +2534,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteEndpoint(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteEndpoint(id, options);
+        async deleteEndpoint(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).deleteEndpoint(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2548,8 +2548,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteSource(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).deleteSource(id, options);
+        async deleteSource(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).deleteSource(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2561,8 +2561,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDocumentation(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
+        async getDocumentation(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2579,8 +2579,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listApplicationTypeSources(id, limit, offset, filter, sortBy, options);
+        async listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listApplicationTypeSources(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2596,8 +2596,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplicationTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationTypesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listApplicationTypes(limit, offset, filter, sortBy, options);
+        async listApplicationTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationTypesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listApplicationTypes(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2613,8 +2613,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listApplications(limit, offset, filter, sortBy, options);
+        async listApplications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listApplications(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2630,8 +2630,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAuthentications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listAuthentications(limit, offset, filter, sortBy, options);
+        async listAuthentications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listAuthentications(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2648,8 +2648,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listEndpointAuthentications(id, limit, offset, filter, sortBy, options);
+        async listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listEndpointAuthentications(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2665,8 +2665,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listEndpoints(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listEndpoints(limit, offset, filter, sortBy, options);
+        async listEndpoints(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listEndpoints(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2683,8 +2683,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationTypesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceApplicationTypes(id, limit, offset, filter, sortBy, options);
+        async listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationTypesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceApplicationTypes(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2701,8 +2701,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceApplications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceApplications(id, limit, offset, filter, sortBy, options);
+        async listSourceApplications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceApplications(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2719,8 +2719,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceEndpoints(id, limit, offset, filter, sortBy, options);
+        async listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceEndpoints(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2737,8 +2737,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceTypeSources(id, limit, offset, filter, sortBy, options);
+        async listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceTypeSources(id, limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2754,8 +2754,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceTypesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSourceTypes(limit, offset, filter, sortBy, options);
+        async listSourceTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceTypesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceTypes(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2771,8 +2771,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSources(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).listSources(limit, offset, filter, sortBy, options);
+        async listSources(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSources(limit, offset, filter, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2785,8 +2785,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postGraphQL(graphQLRequest: GraphQLRequest, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphQLResponse> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).postGraphQL(graphQLRequest, options);
+        async postGraphQL(graphQLRequest: GraphQLRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphQLResponse>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).postGraphQL(graphQLRequest, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2799,8 +2799,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showApplication(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Application> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showApplication(id, options);
+        async showApplication(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Application>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showApplication(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2813,8 +2813,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showApplicationType(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationType> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showApplicationType(id, options);
+        async showApplicationType(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationType>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showApplicationType(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2827,8 +2827,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showAuthentication(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Authentication> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showAuthentication(id, options);
+        async showAuthentication(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Authentication>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showAuthentication(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2841,8 +2841,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showEndpoint(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Endpoint> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showEndpoint(id, options);
+        async showEndpoint(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Endpoint>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showEndpoint(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2855,8 +2855,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSource(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Source> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSource(id, options);
+        async showSource(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Source>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showSource(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2869,8 +2869,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showSourceType(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceType> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).showSourceType(id, options);
+        async showSourceType(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceType>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showSourceType(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2884,8 +2884,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateApplication(id: string, application: Application, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).updateApplication(id, application, options);
+        async updateApplication(id: string, application: Application, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).updateApplication(id, application, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2899,8 +2899,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateAuthentication(id: string, authentication: Authentication, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).updateAuthentication(id, authentication, options);
+        async updateAuthentication(id: string, authentication: Authentication, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).updateAuthentication(id, authentication, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2914,8 +2914,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateEndpoint(id: string, endpoint: Endpoint, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).updateEndpoint(id, endpoint, options);
+        async updateEndpoint(id: string, endpoint: Endpoint, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).updateEndpoint(id, endpoint, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2929,8 +2929,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateSource(id: string, source: Source, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = DefaultApiAxiosParamCreator(configuration).updateSource(id, source, options);
+        async updateSource(id: string, source: Source, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).updateSource(id, source, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2953,7 +2953,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         checkAvailabilitySource(id: string, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).checkAvailabilitySource(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).checkAvailabilitySource(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Creates a Application object
@@ -2963,7 +2963,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         createApplication(application: Application, options?: any): AxiosPromise<Application> {
-            return DefaultApiFp(configuration).createApplication(application, options)(axios, basePath);
+            return DefaultApiFp(configuration).createApplication(application, options).then((request) => request(axios, basePath));
         },
         /**
          * Creates a Authentication object
@@ -2973,7 +2973,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         createAuthentication(authentication: Authentication, options?: any): AxiosPromise<Authentication> {
-            return DefaultApiFp(configuration).createAuthentication(authentication, options)(axios, basePath);
+            return DefaultApiFp(configuration).createAuthentication(authentication, options).then((request) => request(axios, basePath));
         },
         /**
          * Creates a Endpoint object
@@ -2983,7 +2983,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         createEndpoint(endpoint: Endpoint, options?: any): AxiosPromise<Endpoint> {
-            return DefaultApiFp(configuration).createEndpoint(endpoint, options)(axios, basePath);
+            return DefaultApiFp(configuration).createEndpoint(endpoint, options).then((request) => request(axios, basePath));
         },
         /**
          * Creates a Source object
@@ -2993,7 +2993,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         createSource(source: Source, options?: any): AxiosPromise<Source> {
-            return DefaultApiFp(configuration).createSource(source, options)(axios, basePath);
+            return DefaultApiFp(configuration).createSource(source, options).then((request) => request(axios, basePath));
         },
         /**
          * Deletes a Application object
@@ -3003,7 +3003,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         deleteApplication(id: string, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).deleteApplication(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).deleteApplication(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Deletes a Authentication object
@@ -3013,7 +3013,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         deleteAuthentication(id: string, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).deleteAuthentication(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).deleteAuthentication(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Deletes a Endpoint object
@@ -3023,7 +3023,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         deleteEndpoint(id: string, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).deleteEndpoint(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).deleteEndpoint(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Deletes a Source object
@@ -3033,7 +3033,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         deleteSource(id: string, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).deleteSource(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).deleteSource(id, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -3042,7 +3042,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getDocumentation(options?: any): AxiosPromise<object> {
-            return DefaultApiFp(configuration).getDocumentation(options)(axios, basePath);
+            return DefaultApiFp(configuration).getDocumentation(options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Source objects
@@ -3056,7 +3056,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SourcesCollection> {
-            return DefaultApiFp(configuration).listApplicationTypeSources(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listApplicationTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ApplicationType objects
@@ -3069,7 +3069,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listApplicationTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ApplicationTypesCollection> {
-            return DefaultApiFp(configuration).listApplicationTypes(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listApplicationTypes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Application objects
@@ -3082,7 +3082,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listApplications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ApplicationsCollection> {
-            return DefaultApiFp(configuration).listApplications(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listApplications(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Authentication objects
@@ -3095,7 +3095,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listAuthentications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<AuthenticationsCollection> {
-            return DefaultApiFp(configuration).listAuthentications(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listAuthentications(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Authentication objects
@@ -3109,7 +3109,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<AuthenticationsCollection> {
-            return DefaultApiFp(configuration).listEndpointAuthentications(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listEndpointAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Endpoint objects
@@ -3122,7 +3122,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listEndpoints(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<EndpointsCollection> {
-            return DefaultApiFp(configuration).listEndpoints(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listEndpoints(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of ApplicationType objects
@@ -3136,7 +3136,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ApplicationTypesCollection> {
-            return DefaultApiFp(configuration).listSourceApplicationTypes(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceApplicationTypes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Application objects
@@ -3150,7 +3150,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceApplications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ApplicationsCollection> {
-            return DefaultApiFp(configuration).listSourceApplications(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceApplications(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Endpoint objects
@@ -3164,7 +3164,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<EndpointsCollection> {
-            return DefaultApiFp(configuration).listSourceEndpoints(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceEndpoints(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Source objects
@@ -3178,7 +3178,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SourcesCollection> {
-            return DefaultApiFp(configuration).listSourceTypeSources(id, limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of SourceType objects
@@ -3191,7 +3191,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSourceTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SourceTypesCollection> {
-            return DefaultApiFp(configuration).listSourceTypes(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSourceTypes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns an array of Source objects
@@ -3204,7 +3204,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         listSources(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SourcesCollection> {
-            return DefaultApiFp(configuration).listSources(limit, offset, filter, sortBy, options)(axios, basePath);
+            return DefaultApiFp(configuration).listSources(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Performs a GraphQL Query
@@ -3214,7 +3214,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         postGraphQL(graphQLRequest: GraphQLRequest, options?: any): AxiosPromise<GraphQLResponse> {
-            return DefaultApiFp(configuration).postGraphQL(graphQLRequest, options)(axios, basePath);
+            return DefaultApiFp(configuration).postGraphQL(graphQLRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Application object
@@ -3224,7 +3224,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showApplication(id: string, options?: any): AxiosPromise<Application> {
-            return DefaultApiFp(configuration).showApplication(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showApplication(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a ApplicationType object
@@ -3234,7 +3234,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showApplicationType(id: string, options?: any): AxiosPromise<ApplicationType> {
-            return DefaultApiFp(configuration).showApplicationType(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showApplicationType(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Authentication object
@@ -3244,7 +3244,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showAuthentication(id: string, options?: any): AxiosPromise<Authentication> {
-            return DefaultApiFp(configuration).showAuthentication(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showAuthentication(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Endpoint object
@@ -3254,7 +3254,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showEndpoint(id: string, options?: any): AxiosPromise<Endpoint> {
-            return DefaultApiFp(configuration).showEndpoint(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showEndpoint(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a Source object
@@ -3264,7 +3264,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showSource(id: string, options?: any): AxiosPromise<Source> {
-            return DefaultApiFp(configuration).showSource(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showSource(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns a SourceType object
@@ -3274,7 +3274,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showSourceType(id: string, options?: any): AxiosPromise<SourceType> {
-            return DefaultApiFp(configuration).showSourceType(id, options)(axios, basePath);
+            return DefaultApiFp(configuration).showSourceType(id, options).then((request) => request(axios, basePath));
         },
         /**
          * Updates a Application object
@@ -3285,7 +3285,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         updateApplication(id: string, application: Application, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).updateApplication(id, application, options)(axios, basePath);
+            return DefaultApiFp(configuration).updateApplication(id, application, options).then((request) => request(axios, basePath));
         },
         /**
          * Updates a Authentication object
@@ -3296,7 +3296,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         updateAuthentication(id: string, authentication: Authentication, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).updateAuthentication(id, authentication, options)(axios, basePath);
+            return DefaultApiFp(configuration).updateAuthentication(id, authentication, options).then((request) => request(axios, basePath));
         },
         /**
          * Updates a Endpoint object
@@ -3307,7 +3307,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         updateEndpoint(id: string, endpoint: Endpoint, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).updateEndpoint(id, endpoint, options)(axios, basePath);
+            return DefaultApiFp(configuration).updateEndpoint(id, endpoint, options).then((request) => request(axios, basePath));
         },
         /**
          * Updates a Source object
@@ -3318,7 +3318,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         updateSource(id: string, source: Source, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).updateSource(id, source, options)(axios, basePath);
+            return DefaultApiFp(configuration).updateSource(id, source, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -3339,7 +3339,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public checkAvailabilitySource(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).checkAvailabilitySource(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).checkAvailabilitySource(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3351,7 +3351,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public createApplication(application: Application, options?: any) {
-        return DefaultApiFp(this.configuration).createApplication(application, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).createApplication(application, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3363,7 +3363,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public createAuthentication(authentication: Authentication, options?: any) {
-        return DefaultApiFp(this.configuration).createAuthentication(authentication, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).createAuthentication(authentication, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3375,7 +3375,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public createEndpoint(endpoint: Endpoint, options?: any) {
-        return DefaultApiFp(this.configuration).createEndpoint(endpoint, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).createEndpoint(endpoint, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3387,7 +3387,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public createSource(source: Source, options?: any) {
-        return DefaultApiFp(this.configuration).createSource(source, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).createSource(source, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3399,7 +3399,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public deleteApplication(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).deleteApplication(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).deleteApplication(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3411,7 +3411,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public deleteAuthentication(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).deleteAuthentication(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).deleteAuthentication(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3423,7 +3423,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public deleteEndpoint(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).deleteEndpoint(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).deleteEndpoint(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3435,7 +3435,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public deleteSource(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).deleteSource(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).deleteSource(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3446,7 +3446,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public getDocumentation(options?: any) {
-        return DefaultApiFp(this.configuration).getDocumentation(options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).getDocumentation(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3462,7 +3462,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listApplicationTypeSources(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listApplicationTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3477,7 +3477,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listApplicationTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listApplicationTypes(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listApplicationTypes(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3492,7 +3492,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listApplications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listApplications(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listApplications(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3507,7 +3507,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listAuthentications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listAuthentications(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listAuthentications(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3523,7 +3523,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listEndpointAuthentications(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listEndpointAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3538,7 +3538,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listEndpoints(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listEndpoints(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listEndpoints(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3554,7 +3554,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceApplicationTypes(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceApplicationTypes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3570,7 +3570,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceApplications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceApplications(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceApplications(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3586,7 +3586,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceEndpoints(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceEndpoints(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3602,7 +3602,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceTypeSources(id, limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3617,7 +3617,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSourceTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceTypes(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSourceTypes(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3632,7 +3632,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public listSources(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSources(limit, offset, filter, sortBy, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).listSources(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3644,7 +3644,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public postGraphQL(graphQLRequest: GraphQLRequest, options?: any) {
-        return DefaultApiFp(this.configuration).postGraphQL(graphQLRequest, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).postGraphQL(graphQLRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3656,7 +3656,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showApplication(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showApplication(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showApplication(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3668,7 +3668,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showApplicationType(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showApplicationType(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showApplicationType(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3680,7 +3680,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showAuthentication(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showAuthentication(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showAuthentication(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3692,7 +3692,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showEndpoint(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showEndpoint(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showEndpoint(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3704,7 +3704,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showSource(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showSource(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showSource(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3716,7 +3716,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public showSourceType(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showSourceType(id, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).showSourceType(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3729,7 +3729,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public updateApplication(id: string, application: Application, options?: any) {
-        return DefaultApiFp(this.configuration).updateApplication(id, application, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).updateApplication(id, application, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3742,7 +3742,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public updateAuthentication(id: string, authentication: Authentication, options?: any) {
-        return DefaultApiFp(this.configuration).updateAuthentication(id, authentication, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).updateAuthentication(id, authentication, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3755,7 +3755,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public updateEndpoint(id: string, endpoint: Endpoint, options?: any) {
-        return DefaultApiFp(this.configuration).updateEndpoint(id, endpoint, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).updateEndpoint(id, endpoint, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3768,7 +3768,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public updateSource(id: string, source: Source, options?: any) {
-        return DefaultApiFp(this.configuration).updateSource(id, source, options)(this.axios, this.basePath);
+        return DefaultApiFp(this.configuration).updateSource(id, source, options).then((request) => request(this.axios, this.basePath));
     }
 
 }

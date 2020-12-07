@@ -82,7 +82,7 @@ ___
 
 ###  postGraphql
 
-▸ **postGraphql**(`graphqlIn`: [GraphqlIn](../interfaces/graphqlin.md), `options?`: any): *AxiosPromise‹[GraphqlOut](../interfaces/graphqlout.md)›*
+▸ **postGraphql**(`graphqlIn`: [GraphqlIn](../interfaces/graphqlin.md), `options?`: any): *Promise‹AxiosResponse‹[GraphqlOut](../interfaces/graphqlout.md)››*
 
 *Defined in [packages/approval/api.ts:1135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1135)*
 
@@ -101,4 +101,4 @@ Name | Type | Description |
 `graphqlIn` | [GraphqlIn](../interfaces/graphqlin.md) | GraphQL query request |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[GraphqlOut](../interfaces/graphqlout.md)›*
+**Returns:** *Promise‹AxiosResponse‹[GraphqlOut](../interfaces/graphqlout.md)››*

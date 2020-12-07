@@ -83,9 +83,9 @@ ___
 
 ###  apiSystemProfileGetSapSids
 
-▸ **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *AxiosPromise‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)›*
+▸ **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*
 
-*Defined in [packages/host-inventory/api.ts:2423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2423)*
+*Defined in [packages/host-inventory/api.ts:2858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2858)*
 
 Required permissions: inventory:hosts:read
 
@@ -108,15 +108,15 @@ Name | Type |
 `filter?` | object |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*
 
 ___
 
 ###  apiSystemProfileGetSapSystem
 
-▸ **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *AxiosPromise‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)›*
+▸ **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*
 
-*Defined in [packages/host-inventory/api.ts:2440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2440)*
+*Defined in [packages/host-inventory/api.ts:2875](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2875)*
 
 Required permissions: inventory:hosts:read
 
@@ -138,4 +138,4 @@ Name | Type |
 `filter?` | object |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*

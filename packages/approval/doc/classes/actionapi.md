@@ -84,7 +84,7 @@ ___
 
 ###  createAction
 
-▸ **createAction**(`requestId`: string, `action`: [Action](../interfaces/action.md), `options?`: any): *AxiosPromise‹[Action](../interfaces/action.md)›*
+▸ **createAction**(`requestId`: string, `action`: [Action](../interfaces/action.md), `options?`: any): *Promise‹AxiosResponse‹[Action](../interfaces/action.md)››*
 
 *Defined in [packages/approval/api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L899)*
 
@@ -104,13 +104,13 @@ Name | Type | Description |
 `action` | [Action](../interfaces/action.md) | Action object that needs to be added |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Action](../interfaces/action.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Action](../interfaces/action.md)››*
 
 ___
 
 ###  listActionsByRequest
 
-▸ **listActionsByRequest**(`requestId`: string, `options?`: any): *AxiosPromise‹[ActionCollection](../interfaces/actioncollection.md)›*
+▸ **listActionsByRequest**(`requestId`: string, `options?`: any): *Promise‹AxiosResponse‹[ActionCollection](../interfaces/actioncollection.md)››*
 
 *Defined in [packages/approval/api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L911)*
 
@@ -129,13 +129,13 @@ Name | Type | Description |
 `requestId` | string | ID of a request |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ActionCollection](../interfaces/actioncollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ActionCollection](../interfaces/actioncollection.md)››*
 
 ___
 
 ###  showAction
 
-▸ **showAction**(`id`: string, `options?`: any): *AxiosPromise‹[Action](../interfaces/action.md)›*
+▸ **showAction**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Action](../interfaces/action.md)››*
 
 *Defined in [packages/approval/api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L923)*
 
@@ -154,4 +154,4 @@ Name | Type | Description |
 `id` | string | ID used to select a resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Action](../interfaces/action.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Action](../interfaces/action.md)››*

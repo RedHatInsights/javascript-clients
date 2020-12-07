@@ -83,7 +83,7 @@ ___
 
 ###  getResolutionsForIssue
 
-▸ **getResolutionsForIssue**(`issue`: string, `options?`: any): *AxiosPromise‹[Resolutions](../interfaces/resolutions.md)›*
+▸ **getResolutionsForIssue**(`issue`: string, `options?`: any): *Promise‹AxiosResponse‹[Resolutions](../interfaces/resolutions.md)››*
 
 *Defined in [api.ts:3159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3159)*
 
@@ -102,13 +102,13 @@ Name | Type | Description |
 `issue` | string | Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;) |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Resolutions](../interfaces/resolutions.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Resolutions](../interfaces/resolutions.md)››*
 
 ___
 
 ###  getResolutionsForIssues
 
-▸ **getResolutionsForIssues**(`resolutionsBatchInput`: [ResolutionsBatchInput](../interfaces/resolutionsbatchinput.md), `options?`: any): *AxiosPromise‹object›*
+▸ **getResolutionsForIssues**(`resolutionsBatchInput`: [ResolutionsBatchInput](../interfaces/resolutionsbatchinput.md), `options?`: any): *Promise‹AxiosResponse‹object››*
 
 *Defined in [api.ts:3171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3171)*
 
@@ -127,4 +127,4 @@ Name | Type |
 `resolutionsBatchInput` | [ResolutionsBatchInput](../interfaces/resolutionsbatchinput.md) |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹object›*
+**Returns:** *Promise‹AxiosResponse‹object››*

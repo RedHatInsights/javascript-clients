@@ -25,7 +25,7 @@
     "scripts": {
         "doc": "typedoc --theme markdown --out doc --module commonjs --mode file --gitRevision master",
         "build": "tsc",
-        "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
+        "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
         "generate:prod": "SPEC='https://cloud.redhat.com/api/cost-management/v1/openapi.json' npm run generate"
     },
     "dependencies": {

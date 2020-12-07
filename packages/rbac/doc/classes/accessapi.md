@@ -82,9 +82,9 @@ ___
 
 ###  getPrincipalAccess
 
-▸ **getPrincipalAccess**(`application`: string, `username?`: string, `limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[AccessPagination](../interfaces/accesspagination.md)›*
+▸ **getPrincipalAccess**(`application`: string, `username?`: string, `limit?`: number, `offset?`: number, `options?`: any): *Promise‹AxiosResponse‹[AccessPagination](../interfaces/accesspagination.md)››*
 
-*Defined in [packages/rbac/api.ts:1531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1531)*
+*Defined in [packages/rbac/api.ts:1738](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1738)*
 
 Access responses are sorted in ascending order by an ID internal to the database
 
@@ -104,4 +104,4 @@ Name | Type | Description |
 `offset?` | number | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[AccessPagination](../interfaces/accesspagination.md)›*
+**Returns:** *Promise‹AxiosResponse‹[AccessPagination](../interfaces/accesspagination.md)››*

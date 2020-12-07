@@ -258,7 +258,7 @@ ___
 
 ###  appliedInventoriesForServiceOffering
 
-▸ **appliedInventoriesForServiceOffering**(`id`: string, `appliedInventoriesParametersServicePlan`: [AppliedInventoriesParametersServicePlan](../interfaces/appliedinventoriesparametersserviceplan.md), `options?`: any): *AxiosPromise‹[InlineResponse200](../interfaces/inlineresponse200.md)›*
+▸ **appliedInventoriesForServiceOffering**(`id`: string, `appliedInventoriesParametersServicePlan`: [AppliedInventoriesParametersServicePlan](../interfaces/appliedinventoriesparametersserviceplan.md), `options?`: any): *Promise‹AxiosResponse‹[InlineResponse200](../interfaces/inlineresponse200.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19471)*
 
@@ -278,13 +278,13 @@ Name | Type | Description |
 `appliedInventoriesParametersServicePlan` | [AppliedInventoriesParametersServicePlan](../interfaces/appliedinventoriesparametersserviceplan.md) | Parameters defining input data for computing inventories |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[InlineResponse200](../interfaces/inlineresponse200.md)›*
+**Returns:** *Promise‹AxiosResponse‹[InlineResponse200](../interfaces/inlineresponse200.md)››*
 
 ___
 
 ###  getDocumentation
 
-▸ **getDocumentation**(`options?`: any): *AxiosPromise‹object›*
+▸ **getDocumentation**(`options?`: any): *Promise‹AxiosResponse‹object››*
 
 *Defined in [packages/topological-inventory/api.ts:19482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19482)*
 
@@ -300,13 +300,13 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹object›*
+**Returns:** *Promise‹AxiosResponse‹object››*
 
 ___
 
 ###  listClusterHosts
 
-▸ **listClusterHosts**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[HostsCollection](../interfaces/hostscollection.md)›*
+▸ **listClusterHosts**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[HostsCollection](../interfaces/hostscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19498)*
 
@@ -329,13 +329,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[HostsCollection](../interfaces/hostscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[HostsCollection](../interfaces/hostscollection.md)››*
 
 ___
 
 ###  listClusters
 
-▸ **listClusters**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ClustersCollection](../interfaces/clusterscollection.md)›*
+▸ **listClusters**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ClustersCollection](../interfaces/clusterscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19513)*
 
@@ -357,13 +357,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ClustersCollection](../interfaces/clusterscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ClustersCollection](../interfaces/clusterscollection.md)››*
 
 ___
 
 ###  listContainerGroupContainers
 
-▸ **listContainerGroupContainers**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainersCollection](../interfaces/containerscollection.md)›*
+▸ **listContainerGroupContainers**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainersCollection](../interfaces/containerscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19529)*
 
@@ -386,13 +386,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainersCollection](../interfaces/containerscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainersCollection](../interfaces/containerscollection.md)››*
 
 ___
 
 ###  listContainerGroupTags
 
-▸ **listContainerGroupTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listContainerGroupTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19545)*
 
@@ -415,13 +415,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listContainerGroups
 
-▸ **listContainerGroups**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)›*
+▸ **listContainerGroups**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19560](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19560)*
 
@@ -443,13 +443,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)››*
 
 ___
 
 ###  listContainerImageTags
 
-▸ **listContainerImageTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listContainerImageTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19576)*
 
@@ -472,13 +472,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listContainerImages
 
-▸ **listContainerImages**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerImagesCollection](../interfaces/containerimagescollection.md)›*
+▸ **listContainerImages**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerImagesCollection](../interfaces/containerimagescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19591)*
 
@@ -500,13 +500,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ContainerImagesCollection](../interfaces/containerimagescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerImagesCollection](../interfaces/containerimagescollection.md)››*
 
 ___
 
 ###  listContainerNodeContainerGroups
 
-▸ **listContainerNodeContainerGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)›*
+▸ **listContainerNodeContainerGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19607)*
 
@@ -529,13 +529,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)››*
 
 ___
 
 ###  listContainerNodeTags
 
-▸ **listContainerNodeTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listContainerNodeTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19623)*
 
@@ -558,13 +558,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listContainerNodes
 
-▸ **listContainerNodes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerNodesCollection](../interfaces/containernodescollection.md)›*
+▸ **listContainerNodes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerNodesCollection](../interfaces/containernodescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19638)*
 
@@ -586,13 +586,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ContainerNodesCollection](../interfaces/containernodescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerNodesCollection](../interfaces/containernodescollection.md)››*
 
 ___
 
 ###  listContainerProjectContainerGroups
 
-▸ **listContainerProjectContainerGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)›*
+▸ **listContainerProjectContainerGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19654](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19654)*
 
@@ -615,13 +615,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)››*
 
 ___
 
 ###  listContainerProjectContainerResourceQuota
 
-▸ **listContainerProjectContainerResourceQuota**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)›*
+▸ **listContainerProjectContainerResourceQuota**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19670](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19670)*
 
@@ -644,13 +644,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)››*
 
 ___
 
 ###  listContainerProjectContainerTemplates
 
-▸ **listContainerProjectContainerTemplates**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)›*
+▸ **listContainerProjectContainerTemplates**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19686)*
 
@@ -673,13 +673,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)››*
 
 ___
 
 ###  listContainerProjectTags
 
-▸ **listContainerProjectTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listContainerProjectTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19702)*
 
@@ -702,13 +702,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listContainerProjects
 
-▸ **listContainerProjects**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)›*
+▸ **listContainerProjects**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19717)*
 
@@ -730,13 +730,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)››*
 
 ___
 
 ###  listContainerResourceQuota
 
-▸ **listContainerResourceQuota**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)›*
+▸ **listContainerResourceQuota**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19732](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19732)*
 
@@ -758,13 +758,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerResourceQuotaCollection](../interfaces/containerresourcequotacollection.md)››*
 
 ___
 
 ###  listContainerTemplateTags
 
-▸ **listContainerTemplateTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listContainerTemplateTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19748)*
 
@@ -787,13 +787,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listContainerTemplates
 
-▸ **listContainerTemplates**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)›*
+▸ **listContainerTemplates**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19763)*
 
@@ -815,13 +815,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)››*
 
 ___
 
 ###  listContainers
 
-▸ **listContainers**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainersCollection](../interfaces/containerscollection.md)›*
+▸ **listContainers**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainersCollection](../interfaces/containerscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19778)*
 
@@ -843,13 +843,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ContainersCollection](../interfaces/containerscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainersCollection](../interfaces/containerscollection.md)››*
 
 ___
 
 ###  listDatastores
 
-▸ **listDatastores**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[DatastoresCollection](../interfaces/datastorescollection.md)›*
+▸ **listDatastores**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[DatastoresCollection](../interfaces/datastorescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19793](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19793)*
 
@@ -871,13 +871,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[DatastoresCollection](../interfaces/datastorescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[DatastoresCollection](../interfaces/datastorescollection.md)››*
 
 ___
 
 ###  listFlavors
 
-▸ **listFlavors**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[FlavorsCollection](../interfaces/flavorscollection.md)›*
+▸ **listFlavors**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[FlavorsCollection](../interfaces/flavorscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19808](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19808)*
 
@@ -899,13 +899,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[FlavorsCollection](../interfaces/flavorscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[FlavorsCollection](../interfaces/flavorscollection.md)››*
 
 ___
 
 ###  listHosts
 
-▸ **listHosts**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[HostsCollection](../interfaces/hostscollection.md)›*
+▸ **listHosts**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[HostsCollection](../interfaces/hostscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19823](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19823)*
 
@@ -927,13 +927,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[HostsCollection](../interfaces/hostscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[HostsCollection](../interfaces/hostscollection.md)››*
 
 ___
 
 ###  listIpaddressTags
 
-▸ **listIpaddressTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listIpaddressTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19839)*
 
@@ -956,13 +956,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listIpaddresses
 
-▸ **listIpaddresses**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+▸ **listIpaddresses**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19854](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19854)*
 
@@ -984,13 +984,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 ___
 
 ###  listNetworkAdapterIpaddresses
 
-▸ **listNetworkAdapterIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+▸ **listNetworkAdapterIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19870)*
 
@@ -1013,13 +1013,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 ___
 
 ###  listNetworkAdapterTags
 
-▸ **listNetworkAdapterTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listNetworkAdapterTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19886)*
 
@@ -1042,13 +1042,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listNetworkAdapters
 
-▸ **listNetworkAdapters**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+▸ **listNetworkAdapters**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19901](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19901)*
 
@@ -1070,13 +1070,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 ___
 
 ###  listNetworkSubnets
 
-▸ **listNetworkSubnets**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+▸ **listNetworkSubnets**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19917)*
 
@@ -1099,13 +1099,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 ___
 
 ###  listNetworkTags
 
-▸ **listNetworkTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listNetworkTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19933](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19933)*
 
@@ -1128,13 +1128,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listNetworks
 
-▸ **listNetworks**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworksCollection](../interfaces/networkscollection.md)›*
+▸ **listNetworks**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworksCollection](../interfaces/networkscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19948)*
 
@@ -1156,13 +1156,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[NetworksCollection](../interfaces/networkscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworksCollection](../interfaces/networkscollection.md)››*
 
 ___
 
 ###  listOrchestrationStackIpaddresses
 
-▸ **listOrchestrationStackIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+▸ **listOrchestrationStackIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19964](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19964)*
 
@@ -1185,13 +1185,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 ___
 
 ###  listOrchestrationStackNetworkAdapters
 
-▸ **listOrchestrationStackNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+▸ **listOrchestrationStackNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19980](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19980)*
 
@@ -1214,13 +1214,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 ___
 
 ###  listOrchestrationStackNetworks
 
-▸ **listOrchestrationStackNetworks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworksCollection](../interfaces/networkscollection.md)›*
+▸ **listOrchestrationStackNetworks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworksCollection](../interfaces/networkscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:19996](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L19996)*
 
@@ -1243,13 +1243,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[NetworksCollection](../interfaces/networkscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworksCollection](../interfaces/networkscollection.md)››*
 
 ___
 
 ###  listOrchestrationStackSecurityGroups
 
-▸ **listOrchestrationStackSecurityGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+▸ **listOrchestrationStackSecurityGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20012)*
 
@@ -1272,13 +1272,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 ___
 
 ###  listOrchestrationStackSubnets
 
-▸ **listOrchestrationStackSubnets**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+▸ **listOrchestrationStackSubnets**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20028](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20028)*
 
@@ -1301,13 +1301,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 ___
 
 ###  listOrchestrationStackVms
 
-▸ **listOrchestrationStackVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+▸ **listOrchestrationStackVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20044](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20044)*
 
@@ -1330,13 +1330,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 ___
 
 ###  listOrchestrationStackVolumes
 
-▸ **listOrchestrationStackVolumes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+▸ **listOrchestrationStackVolumes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20060](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20060)*
 
@@ -1359,13 +1359,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 ___
 
 ###  listOrchestrationStacks
 
-▸ **listOrchestrationStacks**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)›*
+▸ **listOrchestrationStacks**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20075)*
 
@@ -1387,13 +1387,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)››*
 
 ___
 
 ###  listSecurityGroupTags
 
-▸ **listSecurityGroupTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listSecurityGroupTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20091)*
 
@@ -1416,13 +1416,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listSecurityGroupVms
 
-▸ **listSecurityGroupVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+▸ **listSecurityGroupVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20107)*
 
@@ -1445,13 +1445,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 ___
 
 ###  listSecurityGroups
 
-▸ **listSecurityGroups**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+▸ **listSecurityGroups**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20122)*
 
@@ -1473,13 +1473,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 ___
 
 ###  listServiceInstanceNodes
 
-▸ **listServiceInstanceNodes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)›*
+▸ **listServiceInstanceNodes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20137)*
 
@@ -1501,13 +1501,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)››*
 
 ___
 
 ###  listServiceInstanceServiceInstanceNodes
 
-▸ **listServiceInstanceServiceInstanceNodes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)›*
+▸ **listServiceInstanceServiceInstanceNodes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20153)*
 
@@ -1530,13 +1530,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)››*
 
 ___
 
 ###  listServiceInstances
 
-▸ **listServiceInstances**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)›*
+▸ **listServiceInstances**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20168)*
 
@@ -1558,13 +1558,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)››*
 
 ___
 
 ###  listServiceInventories
 
-▸ **listServiceInventories**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)›*
+▸ **listServiceInventories**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20183)*
 
@@ -1586,13 +1586,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)››*
 
 ___
 
 ###  listServiceInventoryTags
 
-▸ **listServiceInventoryTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listServiceInventoryTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20199)*
 
@@ -1615,13 +1615,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listServiceOfferingIcons
 
-▸ **listServiceOfferingIcons**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceOfferingIconsCollection](../interfaces/serviceofferingiconscollection.md)›*
+▸ **listServiceOfferingIcons**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceOfferingIconsCollection](../interfaces/serviceofferingiconscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20214)*
 
@@ -1643,13 +1643,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ServiceOfferingIconsCollection](../interfaces/serviceofferingiconscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceOfferingIconsCollection](../interfaces/serviceofferingiconscollection.md)››*
 
 ___
 
 ###  listServiceOfferingNodes
 
-▸ **listServiceOfferingNodes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)›*
+▸ **listServiceOfferingNodes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20229)*
 
@@ -1671,13 +1671,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)››*
 
 ___
 
 ###  listServiceOfferingServiceInstances
 
-▸ **listServiceOfferingServiceInstances**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)›*
+▸ **listServiceOfferingServiceInstances**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20245)*
 
@@ -1700,13 +1700,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)››*
 
 ___
 
 ###  listServiceOfferingServiceOfferingNodes
 
-▸ **listServiceOfferingServiceOfferingNodes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)›*
+▸ **listServiceOfferingServiceOfferingNodes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20261)*
 
@@ -1729,13 +1729,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)››*
 
 ___
 
 ###  listServiceOfferingServicePlans
 
-▸ **listServiceOfferingServicePlans**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)›*
+▸ **listServiceOfferingServicePlans**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20277)*
 
@@ -1758,13 +1758,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)››*
 
 ___
 
 ###  listServiceOfferingTags
 
-▸ **listServiceOfferingTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listServiceOfferingTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20293)*
 
@@ -1787,13 +1787,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listServiceOfferings
 
-▸ **listServiceOfferings**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)›*
+▸ **listServiceOfferings**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20308)*
 
@@ -1815,13 +1815,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)››*
 
 ___
 
 ###  listServicePlanServiceInstances
 
-▸ **listServicePlanServiceInstances**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)›*
+▸ **listServicePlanServiceInstances**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20324](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20324)*
 
@@ -1844,13 +1844,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)››*
 
 ___
 
 ###  listServicePlans
 
-▸ **listServicePlans**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)›*
+▸ **listServicePlans**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20339)*
 
@@ -1872,13 +1872,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)››*
 
 ___
 
 ###  listSourceAvailabilities
 
-▸ **listSourceAvailabilities**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[AvailabilitiesCollection](../interfaces/availabilitiescollection.md)›*
+▸ **listSourceAvailabilities**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[AvailabilitiesCollection](../interfaces/availabilitiescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20355)*
 
@@ -1901,13 +1901,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[AvailabilitiesCollection](../interfaces/availabilitiescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[AvailabilitiesCollection](../interfaces/availabilitiescollection.md)››*
 
 ___
 
 ###  listSourceClusters
 
-▸ **listSourceClusters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ClustersCollection](../interfaces/clusterscollection.md)›*
+▸ **listSourceClusters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ClustersCollection](../interfaces/clusterscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20371)*
 
@@ -1930,13 +1930,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ClustersCollection](../interfaces/clusterscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ClustersCollection](../interfaces/clusterscollection.md)››*
 
 ___
 
 ###  listSourceContainerGroups
 
-▸ **listSourceContainerGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)›*
+▸ **listSourceContainerGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20387)*
 
@@ -1959,13 +1959,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)››*
 
 ___
 
 ###  listSourceContainerImages
 
-▸ **listSourceContainerImages**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerImagesCollection](../interfaces/containerimagescollection.md)›*
+▸ **listSourceContainerImages**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerImagesCollection](../interfaces/containerimagescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20403)*
 
@@ -1988,13 +1988,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerImagesCollection](../interfaces/containerimagescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerImagesCollection](../interfaces/containerimagescollection.md)››*
 
 ___
 
 ###  listSourceContainerNodes
 
-▸ **listSourceContainerNodes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerNodesCollection](../interfaces/containernodescollection.md)›*
+▸ **listSourceContainerNodes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerNodesCollection](../interfaces/containernodescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20419)*
 
@@ -2017,13 +2017,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerNodesCollection](../interfaces/containernodescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerNodesCollection](../interfaces/containernodescollection.md)››*
 
 ___
 
 ###  listSourceContainerProjects
 
-▸ **listSourceContainerProjects**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)›*
+▸ **listSourceContainerProjects**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20435)*
 
@@ -2046,13 +2046,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)››*
 
 ___
 
 ###  listSourceContainerTemplates
 
-▸ **listSourceContainerTemplates**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)›*
+▸ **listSourceContainerTemplates**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20451)*
 
@@ -2075,13 +2075,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)››*
 
 ___
 
 ###  listSourceContainers
 
-▸ **listSourceContainers**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainersCollection](../interfaces/containerscollection.md)›*
+▸ **listSourceContainers**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainersCollection](../interfaces/containerscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20467)*
 
@@ -2104,13 +2104,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainersCollection](../interfaces/containerscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainersCollection](../interfaces/containerscollection.md)››*
 
 ___
 
 ###  listSourceDatastores
 
-▸ **listSourceDatastores**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[DatastoresCollection](../interfaces/datastorescollection.md)›*
+▸ **listSourceDatastores**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[DatastoresCollection](../interfaces/datastorescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20483)*
 
@@ -2133,13 +2133,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[DatastoresCollection](../interfaces/datastorescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[DatastoresCollection](../interfaces/datastorescollection.md)››*
 
 ___
 
 ###  listSourceHosts
 
-▸ **listSourceHosts**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[HostsCollection](../interfaces/hostscollection.md)›*
+▸ **listSourceHosts**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[HostsCollection](../interfaces/hostscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20499)*
 
@@ -2162,13 +2162,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[HostsCollection](../interfaces/hostscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[HostsCollection](../interfaces/hostscollection.md)››*
 
 ___
 
 ###  listSourceIpaddresses
 
-▸ **listSourceIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+▸ **listSourceIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20515)*
 
@@ -2191,13 +2191,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 ___
 
 ###  listSourceNetworkAdapters
 
-▸ **listSourceNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+▸ **listSourceNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20531)*
 
@@ -2220,13 +2220,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 ___
 
 ###  listSourceNetworks
 
-▸ **listSourceNetworks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworksCollection](../interfaces/networkscollection.md)›*
+▸ **listSourceNetworks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworksCollection](../interfaces/networkscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20547)*
 
@@ -2249,13 +2249,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[NetworksCollection](../interfaces/networkscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworksCollection](../interfaces/networkscollection.md)››*
 
 ___
 
 ###  listSourceOrchestrationStacks
 
-▸ **listSourceOrchestrationStacks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)›*
+▸ **listSourceOrchestrationStacks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20563)*
 
@@ -2278,13 +2278,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)››*
 
 ___
 
 ###  listSourceRegionIpaddresses
 
-▸ **listSourceRegionIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+▸ **listSourceRegionIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20579)*
 
@@ -2307,13 +2307,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 ___
 
 ###  listSourceRegionNetworkAdapters
 
-▸ **listSourceRegionNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+▸ **listSourceRegionNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20595)*
 
@@ -2336,13 +2336,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 ___
 
 ###  listSourceRegionNetworks
 
-▸ **listSourceRegionNetworks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworksCollection](../interfaces/networkscollection.md)›*
+▸ **listSourceRegionNetworks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworksCollection](../interfaces/networkscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20611)*
 
@@ -2365,13 +2365,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[NetworksCollection](../interfaces/networkscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworksCollection](../interfaces/networkscollection.md)››*
 
 ___
 
 ###  listSourceRegionOrchestrationStacks
 
-▸ **listSourceRegionOrchestrationStacks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)›*
+▸ **listSourceRegionOrchestrationStacks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20627)*
 
@@ -2394,13 +2394,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)››*
 
 ___
 
 ###  listSourceRegionSecurityGroups
 
-▸ **listSourceRegionSecurityGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+▸ **listSourceRegionSecurityGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20643)*
 
@@ -2423,13 +2423,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 ___
 
 ###  listSourceRegionServiceInstances
 
-▸ **listSourceRegionServiceInstances**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)›*
+▸ **listSourceRegionServiceInstances**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20659)*
 
@@ -2452,13 +2452,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)››*
 
 ___
 
 ###  listSourceRegionServiceOfferings
 
-▸ **listSourceRegionServiceOfferings**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)›*
+▸ **listSourceRegionServiceOfferings**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20675)*
 
@@ -2481,13 +2481,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)››*
 
 ___
 
 ###  listSourceRegionServicePlans
 
-▸ **listSourceRegionServicePlans**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)›*
+▸ **listSourceRegionServicePlans**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20691)*
 
@@ -2510,13 +2510,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)››*
 
 ___
 
 ###  listSourceRegionSubnets
 
-▸ **listSourceRegionSubnets**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+▸ **listSourceRegionSubnets**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20707](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20707)*
 
@@ -2539,13 +2539,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 ___
 
 ###  listSourceRegionVms
 
-▸ **listSourceRegionVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+▸ **listSourceRegionVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20723)*
 
@@ -2568,13 +2568,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 ___
 
 ###  listSourceRegionVolumes
 
-▸ **listSourceRegionVolumes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+▸ **listSourceRegionVolumes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20739](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20739)*
 
@@ -2597,13 +2597,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 ___
 
 ###  listSourceRegions
 
-▸ **listSourceRegions**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SourceRegionsCollection](../interfaces/sourceregionscollection.md)›*
+▸ **listSourceRegions**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SourceRegionsCollection](../interfaces/sourceregionscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20754)*
 
@@ -2625,13 +2625,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[SourceRegionsCollection](../interfaces/sourceregionscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SourceRegionsCollection](../interfaces/sourceregionscollection.md)››*
 
 ___
 
 ###  listSourceSecurityGroups
 
-▸ **listSourceSecurityGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+▸ **listSourceSecurityGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20770)*
 
@@ -2654,13 +2654,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 ___
 
 ###  listSourceServiceInstanceNodes
 
-▸ **listSourceServiceInstanceNodes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)›*
+▸ **listSourceServiceInstanceNodes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20786)*
 
@@ -2683,13 +2683,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInstanceNodesCollection](../interfaces/serviceinstancenodescollection.md)››*
 
 ___
 
 ###  listSourceServiceInstances
 
-▸ **listSourceServiceInstances**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)›*
+▸ **listSourceServiceInstances**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20802](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20802)*
 
@@ -2712,13 +2712,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)››*
 
 ___
 
 ###  listSourceServiceInventories
 
-▸ **listSourceServiceInventories**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)›*
+▸ **listSourceServiceInventories**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20818](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20818)*
 
@@ -2741,13 +2741,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)››*
 
 ___
 
 ###  listSourceServiceOfferingNodes
 
-▸ **listSourceServiceOfferingNodes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)›*
+▸ **listSourceServiceOfferingNodes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20834)*
 
@@ -2770,13 +2770,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceOfferingNodesCollection](../interfaces/serviceofferingnodescollection.md)››*
 
 ___
 
 ###  listSourceServiceOfferings
 
-▸ **listSourceServiceOfferings**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)›*
+▸ **listSourceServiceOfferings**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20850](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20850)*
 
@@ -2799,13 +2799,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)››*
 
 ___
 
 ###  listSourceServicePlans
 
-▸ **listSourceServicePlans**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)›*
+▸ **listSourceServicePlans**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20866](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20866)*
 
@@ -2828,13 +2828,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)››*
 
 ___
 
 ###  listSourceSourceRegions
 
-▸ **listSourceSourceRegions**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SourceRegionsCollection](../interfaces/sourceregionscollection.md)›*
+▸ **listSourceSourceRegions**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SourceRegionsCollection](../interfaces/sourceregionscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20882)*
 
@@ -2857,13 +2857,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SourceRegionsCollection](../interfaces/sourceregionscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SourceRegionsCollection](../interfaces/sourceregionscollection.md)››*
 
 ___
 
 ###  listSourceSubnets
 
-▸ **listSourceSubnets**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+▸ **listSourceSubnets**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20898)*
 
@@ -2886,13 +2886,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 ___
 
 ###  listSourceSubscriptions
 
-▸ **listSourceSubscriptions**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SubscriptionsCollection](../interfaces/subscriptionscollection.md)›*
+▸ **listSourceSubscriptions**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SubscriptionsCollection](../interfaces/subscriptionscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20914](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20914)*
 
@@ -2915,13 +2915,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SubscriptionsCollection](../interfaces/subscriptionscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SubscriptionsCollection](../interfaces/subscriptionscollection.md)››*
 
 ___
 
 ###  listSourceVms
 
-▸ **listSourceVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+▸ **listSourceVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20930](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20930)*
 
@@ -2944,13 +2944,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 ___
 
 ###  listSourceVolumeTypes
 
-▸ **listSourceVolumeTypes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VolumeTypesCollection](../interfaces/volumetypescollection.md)›*
+▸ **listSourceVolumeTypes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VolumeTypesCollection](../interfaces/volumetypescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20946](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20946)*
 
@@ -2973,13 +2973,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VolumeTypesCollection](../interfaces/volumetypescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VolumeTypesCollection](../interfaces/volumetypescollection.md)››*
 
 ___
 
 ###  listSourceVolumes
 
-▸ **listSourceVolumes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+▸ **listSourceVolumes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20962)*
 
@@ -3002,13 +3002,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 ___
 
 ###  listSources
 
-▸ **listSources**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
+▸ **listSources**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SourcesCollection](../interfaces/sourcescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20977)*
 
@@ -3030,13 +3030,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[SourcesCollection](../interfaces/sourcescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SourcesCollection](../interfaces/sourcescollection.md)››*
 
 ___
 
 ###  listSubnetIpaddresses
 
-▸ **listSubnetIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+▸ **listSubnetIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:20993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L20993)*
 
@@ -3059,13 +3059,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 ___
 
 ###  listSubnetNetworkAdapters
 
-▸ **listSubnetNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+▸ **listSubnetNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21009](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21009)*
 
@@ -3088,13 +3088,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 ___
 
 ###  listSubnetTags
 
-▸ **listSubnetTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listSubnetTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21025)*
 
@@ -3117,13 +3117,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listSubnets
 
-▸ **listSubnets**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+▸ **listSubnets**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21040](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21040)*
 
@@ -3145,13 +3145,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 ___
 
 ###  listSubscriptionIpaddresses
 
-▸ **listSubscriptionIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+▸ **listSubscriptionIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21056)*
 
@@ -3174,13 +3174,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 ___
 
 ###  listSubscriptionNetworkAdapters
 
-▸ **listSubscriptionNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+▸ **listSubscriptionNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21072](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21072)*
 
@@ -3203,13 +3203,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 ___
 
 ###  listSubscriptionNetworks
 
-▸ **listSubscriptionNetworks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworksCollection](../interfaces/networkscollection.md)›*
+▸ **listSubscriptionNetworks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworksCollection](../interfaces/networkscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21088](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21088)*
 
@@ -3232,13 +3232,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[NetworksCollection](../interfaces/networkscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworksCollection](../interfaces/networkscollection.md)››*
 
 ___
 
 ###  listSubscriptionOrchestrationStacks
 
-▸ **listSubscriptionOrchestrationStacks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)›*
+▸ **listSubscriptionOrchestrationStacks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21104)*
 
@@ -3261,13 +3261,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[OrchestrationStacksCollection](../interfaces/orchestrationstackscollection.md)››*
 
 ___
 
 ###  listSubscriptionSecurityGroups
 
-▸ **listSubscriptionSecurityGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+▸ **listSubscriptionSecurityGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21120)*
 
@@ -3290,13 +3290,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 ___
 
 ###  listSubscriptionServiceInstances
 
-▸ **listSubscriptionServiceInstances**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)›*
+▸ **listSubscriptionServiceInstances**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21136)*
 
@@ -3319,13 +3319,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInstancesCollection](../interfaces/serviceinstancescollection.md)››*
 
 ___
 
 ###  listSubscriptionServiceOfferings
 
-▸ **listSubscriptionServiceOfferings**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)›*
+▸ **listSubscriptionServiceOfferings**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21152)*
 
@@ -3348,13 +3348,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)››*
 
 ___
 
 ###  listSubscriptionServicePlans
 
-▸ **listSubscriptionServicePlans**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)›*
+▸ **listSubscriptionServicePlans**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21168)*
 
@@ -3377,13 +3377,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServicePlansCollection](../interfaces/serviceplanscollection.md)››*
 
 ___
 
 ###  listSubscriptionSubnets
 
-▸ **listSubscriptionSubnets**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+▸ **listSubscriptionSubnets**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21184)*
 
@@ -3406,13 +3406,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 ___
 
 ###  listSubscriptionVms
 
-▸ **listSubscriptionVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+▸ **listSubscriptionVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21200](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21200)*
 
@@ -3435,13 +3435,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 ___
 
 ###  listSubscriptionVolumes
 
-▸ **listSubscriptionVolumes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+▸ **listSubscriptionVolumes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21216)*
 
@@ -3464,13 +3464,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 ___
 
 ###  listSubscriptions
 
-▸ **listSubscriptions**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SubscriptionsCollection](../interfaces/subscriptionscollection.md)›*
+▸ **listSubscriptions**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SubscriptionsCollection](../interfaces/subscriptionscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21231)*
 
@@ -3492,13 +3492,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[SubscriptionsCollection](../interfaces/subscriptionscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SubscriptionsCollection](../interfaces/subscriptionscollection.md)››*
 
 ___
 
 ###  listTagContainerGroups
 
-▸ **listTagContainerGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)›*
+▸ **listTagContainerGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21247)*
 
@@ -3521,13 +3521,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerGroupsCollection](../interfaces/containergroupscollection.md)››*
 
 ___
 
 ###  listTagContainerImages
 
-▸ **listTagContainerImages**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerImagesCollection](../interfaces/containerimagescollection.md)›*
+▸ **listTagContainerImages**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerImagesCollection](../interfaces/containerimagescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21263)*
 
@@ -3550,13 +3550,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerImagesCollection](../interfaces/containerimagescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerImagesCollection](../interfaces/containerimagescollection.md)››*
 
 ___
 
 ###  listTagContainerNodes
 
-▸ **listTagContainerNodes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerNodesCollection](../interfaces/containernodescollection.md)›*
+▸ **listTagContainerNodes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerNodesCollection](../interfaces/containernodescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21279)*
 
@@ -3579,13 +3579,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerNodesCollection](../interfaces/containernodescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerNodesCollection](../interfaces/containernodescollection.md)››*
 
 ___
 
 ###  listTagContainerProjects
 
-▸ **listTagContainerProjects**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)›*
+▸ **listTagContainerProjects**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21295)*
 
@@ -3608,13 +3608,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerProjectsCollection](../interfaces/containerprojectscollection.md)››*
 
 ___
 
 ###  listTagContainerTemplates
 
-▸ **listTagContainerTemplates**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)›*
+▸ **listTagContainerTemplates**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21311)*
 
@@ -3637,13 +3637,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerTemplatesCollection](../interfaces/containertemplatescollection.md)››*
 
 ___
 
 ###  listTagIpaddresses
 
-▸ **listTagIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+▸ **listTagIpaddresses**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21327)*
 
@@ -3666,13 +3666,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[IpaddressesCollection](../interfaces/ipaddressescollection.md)››*
 
 ___
 
 ###  listTagNetworkAdapters
 
-▸ **listTagNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+▸ **listTagNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21343)*
 
@@ -3695,13 +3695,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 ___
 
 ###  listTagNetworks
 
-▸ **listTagNetworks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworksCollection](../interfaces/networkscollection.md)›*
+▸ **listTagNetworks**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworksCollection](../interfaces/networkscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21359)*
 
@@ -3724,13 +3724,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[NetworksCollection](../interfaces/networkscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworksCollection](../interfaces/networkscollection.md)››*
 
 ___
 
 ###  listTagSecurityGroups
 
-▸ **listTagSecurityGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+▸ **listTagSecurityGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21375)*
 
@@ -3753,13 +3753,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 ___
 
 ###  listTagServiceInventories
 
-▸ **listTagServiceInventories**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)›*
+▸ **listTagServiceInventories**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21391)*
 
@@ -3782,13 +3782,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInventoriesCollection](../interfaces/serviceinventoriescollection.md)››*
 
 ___
 
 ###  listTagServiceOfferings
 
-▸ **listTagServiceOfferings**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)›*
+▸ **listTagServiceOfferings**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21407)*
 
@@ -3811,13 +3811,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceOfferingsCollection](../interfaces/serviceofferingscollection.md)››*
 
 ___
 
 ###  listTagSubnets
 
-▸ **listTagSubnets**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+▸ **listTagSubnets**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21423)*
 
@@ -3840,13 +3840,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SubnetsCollection](../interfaces/subnetscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SubnetsCollection](../interfaces/subnetscollection.md)››*
 
 ___
 
 ###  listTagVms
 
-▸ **listTagVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+▸ **listTagVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21439)*
 
@@ -3869,13 +3869,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 ___
 
 ###  listTags
 
-▸ **listTags**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listTags**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21454)*
 
@@ -3897,13 +3897,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listTasks
 
-▸ **listTasks**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TasksCollection](../interfaces/taskscollection.md)›*
+▸ **listTasks**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TasksCollection](../interfaces/taskscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21469)*
 
@@ -3925,13 +3925,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[TasksCollection](../interfaces/taskscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TasksCollection](../interfaces/taskscollection.md)››*
 
 ___
 
 ###  listVmNetworkAdapters
 
-▸ **listVmNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+▸ **listVmNetworkAdapters**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21485)*
 
@@ -3954,13 +3954,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworkAdaptersCollection](../interfaces/networkadapterscollection.md)››*
 
 ___
 
 ###  listVmSecurityGroups
 
-▸ **listVmSecurityGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+▸ **listVmSecurityGroups**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21501](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21501)*
 
@@ -3983,13 +3983,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SecurityGroupsCollection](../interfaces/securitygroupscollection.md)››*
 
 ___
 
 ###  listVmTags
 
-▸ **listVmTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+▸ **listVmTags**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21517)*
 
@@ -4012,13 +4012,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[TagsCollection](../interfaces/tagscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TagsCollection](../interfaces/tagscollection.md)››*
 
 ___
 
 ###  listVmVolumeAttachments
 
-▸ **listVmVolumeAttachments**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)›*
+▸ **listVmVolumeAttachments**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21533](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21533)*
 
@@ -4041,13 +4041,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)››*
 
 ___
 
 ###  listVmVolumes
 
-▸ **listVmVolumes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+▸ **listVmVolumes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21549)*
 
@@ -4070,13 +4070,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 ___
 
 ###  listVms
 
-▸ **listVms**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+▸ **listVms**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21564](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21564)*
 
@@ -4098,13 +4098,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 ___
 
 ###  listVolumeAttachments
 
-▸ **listVolumeAttachments**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)›*
+▸ **listVolumeAttachments**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21579)*
 
@@ -4126,13 +4126,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VolumeAttachmentsCollection](../interfaces/volumeattachmentscollection.md)››*
 
 ___
 
 ###  listVolumeTypeVolumes
 
-▸ **listVolumeTypeVolumes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+▸ **listVolumeTypeVolumes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21595)*
 
@@ -4155,13 +4155,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 ___
 
 ###  listVolumeTypes
 
-▸ **listVolumeTypes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VolumeTypesCollection](../interfaces/volumetypescollection.md)›*
+▸ **listVolumeTypes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VolumeTypesCollection](../interfaces/volumetypescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21610)*
 
@@ -4183,13 +4183,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[VolumeTypesCollection](../interfaces/volumetypescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VolumeTypesCollection](../interfaces/volumetypescollection.md)››*
 
 ___
 
 ###  listVolumeVms
 
-▸ **listVolumeVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+▸ **listVolumeVms**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21626](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21626)*
 
@@ -4212,13 +4212,13 @@ Name | Type | Description |
 `sortBy?` | string &#124; Array‹string› | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VmsCollection](../interfaces/vmscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VmsCollection](../interfaces/vmscollection.md)››*
 
 ___
 
 ###  listVolumes
 
-▸ **listVolumes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+▸ **listVolumes**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21641)*
 
@@ -4240,13 +4240,13 @@ Name | Type |
 `sortBy?` | string &#124; Array‹string› |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[VolumesCollection](../interfaces/volumescollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VolumesCollection](../interfaces/volumescollection.md)››*
 
 ___
 
 ###  orderServiceOffering
 
-▸ **orderServiceOffering**(`id`: string, `orderParametersServiceOffering`: [OrderParametersServiceOffering](../interfaces/orderparametersserviceoffering.md), `options?`: any): *AxiosPromise‹[InlineResponse200](../interfaces/inlineresponse200.md)›*
+▸ **orderServiceOffering**(`id`: string, `orderParametersServiceOffering`: [OrderParametersServiceOffering](../interfaces/orderparametersserviceoffering.md), `options?`: any): *Promise‹AxiosResponse‹[InlineResponse200](../interfaces/inlineresponse200.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21654](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21654)*
 
@@ -4266,13 +4266,13 @@ Name | Type | Description |
 `orderParametersServiceOffering` | [OrderParametersServiceOffering](../interfaces/orderparametersserviceoffering.md) | Order parameters defining the service and provider control |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[InlineResponse200](../interfaces/inlineresponse200.md)›*
+**Returns:** *Promise‹AxiosResponse‹[InlineResponse200](../interfaces/inlineresponse200.md)››*
 
 ___
 
 ###  orderServicePlan
 
-▸ **orderServicePlan**(`id`: string, `orderParametersServicePlan`: [OrderParametersServicePlan](../interfaces/orderparametersserviceplan.md), `options?`: any): *AxiosPromise‹[InlineResponse200](../interfaces/inlineresponse200.md)›*
+▸ **orderServicePlan**(`id`: string, `orderParametersServicePlan`: [OrderParametersServicePlan](../interfaces/orderparametersserviceplan.md), `options?`: any): *Promise‹AxiosResponse‹[InlineResponse200](../interfaces/inlineresponse200.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21667)*
 
@@ -4292,13 +4292,13 @@ Name | Type | Description |
 `orderParametersServicePlan` | [OrderParametersServicePlan](../interfaces/orderparametersserviceplan.md) | Order parameters defining the service and provider control |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[InlineResponse200](../interfaces/inlineresponse200.md)›*
+**Returns:** *Promise‹AxiosResponse‹[InlineResponse200](../interfaces/inlineresponse200.md)››*
 
 ___
 
 ###  postGraphQL
 
-▸ **postGraphQL**(`graphQLRequest`: [GraphQLRequest](../interfaces/graphqlrequest.md), `options?`: any): *AxiosPromise‹[GraphQLResponse](../interfaces/graphqlresponse.md)›*
+▸ **postGraphQL**(`graphQLRequest`: [GraphQLRequest](../interfaces/graphqlrequest.md), `options?`: any): *Promise‹AxiosResponse‹[GraphQLResponse](../interfaces/graphqlresponse.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21679)*
 
@@ -4317,13 +4317,13 @@ Name | Type | Description |
 `graphQLRequest` | [GraphQLRequest](../interfaces/graphqlrequest.md) | GraphQL Query Request |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[GraphQLResponse](../interfaces/graphqlresponse.md)›*
+**Returns:** *Promise‹AxiosResponse‹[GraphQLResponse](../interfaces/graphqlresponse.md)››*
 
 ___
 
 ###  showCluster
 
-▸ **showCluster**(`id`: string, `options?`: any): *AxiosPromise‹[Cluster](../interfaces/cluster.md)›*
+▸ **showCluster**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Cluster](../interfaces/cluster.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21691)*
 
@@ -4342,13 +4342,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Cluster](../interfaces/cluster.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Cluster](../interfaces/cluster.md)››*
 
 ___
 
 ###  showContainer
 
-▸ **showContainer**(`id`: string, `options?`: any): *AxiosPromise‹[Container](../interfaces/container.md)›*
+▸ **showContainer**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Container](../interfaces/container.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21703)*
 
@@ -4367,13 +4367,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Container](../interfaces/container.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Container](../interfaces/container.md)››*
 
 ___
 
 ###  showContainerGroup
 
-▸ **showContainerGroup**(`id`: string, `options?`: any): *AxiosPromise‹[ContainerGroup](../interfaces/containergroup.md)›*
+▸ **showContainerGroup**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ContainerGroup](../interfaces/containergroup.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21715)*
 
@@ -4392,13 +4392,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerGroup](../interfaces/containergroup.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerGroup](../interfaces/containergroup.md)››*
 
 ___
 
 ###  showContainerImage
 
-▸ **showContainerImage**(`id`: string, `options?`: any): *AxiosPromise‹[ContainerImage](../interfaces/containerimage.md)›*
+▸ **showContainerImage**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ContainerImage](../interfaces/containerimage.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21727](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21727)*
 
@@ -4417,13 +4417,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerImage](../interfaces/containerimage.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerImage](../interfaces/containerimage.md)››*
 
 ___
 
 ###  showContainerNode
 
-▸ **showContainerNode**(`id`: string, `options?`: any): *AxiosPromise‹[ContainerNode](../interfaces/containernode.md)›*
+▸ **showContainerNode**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ContainerNode](../interfaces/containernode.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21739](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21739)*
 
@@ -4442,13 +4442,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerNode](../interfaces/containernode.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerNode](../interfaces/containernode.md)››*
 
 ___
 
 ###  showContainerProject
 
-▸ **showContainerProject**(`id`: string, `options?`: any): *AxiosPromise‹[ContainerProject](../interfaces/containerproject.md)›*
+▸ **showContainerProject**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ContainerProject](../interfaces/containerproject.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21751)*
 
@@ -4467,13 +4467,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerProject](../interfaces/containerproject.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerProject](../interfaces/containerproject.md)››*
 
 ___
 
 ###  showContainerResourceQuota
 
-▸ **showContainerResourceQuota**(`id`: string, `options?`: any): *AxiosPromise‹[ContainerResourceQuota](../interfaces/containerresourcequota.md)›*
+▸ **showContainerResourceQuota**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ContainerResourceQuota](../interfaces/containerresourcequota.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21763)*
 
@@ -4492,13 +4492,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerResourceQuota](../interfaces/containerresourcequota.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerResourceQuota](../interfaces/containerresourcequota.md)››*
 
 ___
 
 ###  showContainerTemplate
 
-▸ **showContainerTemplate**(`id`: string, `options?`: any): *AxiosPromise‹[ContainerTemplate](../interfaces/containertemplate.md)›*
+▸ **showContainerTemplate**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ContainerTemplate](../interfaces/containertemplate.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21775](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21775)*
 
@@ -4517,13 +4517,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ContainerTemplate](../interfaces/containertemplate.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ContainerTemplate](../interfaces/containertemplate.md)››*
 
 ___
 
 ###  showDatastore
 
-▸ **showDatastore**(`id`: string, `options?`: any): *AxiosPromise‹[Datastore](../interfaces/datastore.md)›*
+▸ **showDatastore**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Datastore](../interfaces/datastore.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21787)*
 
@@ -4542,13 +4542,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Datastore](../interfaces/datastore.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Datastore](../interfaces/datastore.md)››*
 
 ___
 
 ###  showFlavor
 
-▸ **showFlavor**(`id`: string, `options?`: any): *AxiosPromise‹[Flavor](../interfaces/flavor.md)›*
+▸ **showFlavor**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Flavor](../interfaces/flavor.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21799)*
 
@@ -4567,13 +4567,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Flavor](../interfaces/flavor.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Flavor](../interfaces/flavor.md)››*
 
 ___
 
 ###  showHost
 
-▸ **showHost**(`id`: string, `options?`: any): *AxiosPromise‹[Host](../interfaces/host.md)›*
+▸ **showHost**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Host](../interfaces/host.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21811](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21811)*
 
@@ -4592,13 +4592,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Host](../interfaces/host.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Host](../interfaces/host.md)››*
 
 ___
 
 ###  showIpaddress
 
-▸ **showIpaddress**(`id`: string, `options?`: any): *AxiosPromise‹[Ipaddress](../interfaces/ipaddress.md)›*
+▸ **showIpaddress**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Ipaddress](../interfaces/ipaddress.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21823](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21823)*
 
@@ -4617,13 +4617,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Ipaddress](../interfaces/ipaddress.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Ipaddress](../interfaces/ipaddress.md)››*
 
 ___
 
 ###  showNetwork
 
-▸ **showNetwork**(`id`: string, `options?`: any): *AxiosPromise‹[Network](../interfaces/network.md)›*
+▸ **showNetwork**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Network](../interfaces/network.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21835)*
 
@@ -4642,13 +4642,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Network](../interfaces/network.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Network](../interfaces/network.md)››*
 
 ___
 
 ###  showNetworkAdapter
 
-▸ **showNetworkAdapter**(`id`: string, `options?`: any): *AxiosPromise‹[NetworkAdapter](../interfaces/networkadapter.md)›*
+▸ **showNetworkAdapter**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[NetworkAdapter](../interfaces/networkadapter.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21847)*
 
@@ -4667,13 +4667,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[NetworkAdapter](../interfaces/networkadapter.md)›*
+**Returns:** *Promise‹AxiosResponse‹[NetworkAdapter](../interfaces/networkadapter.md)››*
 
 ___
 
 ###  showOrchestrationStack
 
-▸ **showOrchestrationStack**(`id`: string, `options?`: any): *AxiosPromise‹[OrchestrationStack](../interfaces/orchestrationstack.md)›*
+▸ **showOrchestrationStack**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[OrchestrationStack](../interfaces/orchestrationstack.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21859](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21859)*
 
@@ -4692,13 +4692,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[OrchestrationStack](../interfaces/orchestrationstack.md)›*
+**Returns:** *Promise‹AxiosResponse‹[OrchestrationStack](../interfaces/orchestrationstack.md)››*
 
 ___
 
 ###  showSecurityGroup
 
-▸ **showSecurityGroup**(`id`: string, `options?`: any): *AxiosPromise‹[SecurityGroup](../interfaces/securitygroup.md)›*
+▸ **showSecurityGroup**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[SecurityGroup](../interfaces/securitygroup.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21871](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21871)*
 
@@ -4717,13 +4717,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SecurityGroup](../interfaces/securitygroup.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SecurityGroup](../interfaces/securitygroup.md)››*
 
 ___
 
 ###  showServiceInstance
 
-▸ **showServiceInstance**(`id`: string, `options?`: any): *AxiosPromise‹[ServiceInstance](../interfaces/serviceinstance.md)›*
+▸ **showServiceInstance**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ServiceInstance](../interfaces/serviceinstance.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21883](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21883)*
 
@@ -4742,13 +4742,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceInstance](../interfaces/serviceinstance.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInstance](../interfaces/serviceinstance.md)››*
 
 ___
 
 ###  showServiceInstanceNode
 
-▸ **showServiceInstanceNode**(`id`: string, `options?`: any): *AxiosPromise‹[ServiceInstanceNode](../interfaces/serviceinstancenode.md)›*
+▸ **showServiceInstanceNode**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ServiceInstanceNode](../interfaces/serviceinstancenode.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21895)*
 
@@ -4767,13 +4767,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceInstanceNode](../interfaces/serviceinstancenode.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInstanceNode](../interfaces/serviceinstancenode.md)››*
 
 ___
 
 ###  showServiceInventory
 
-▸ **showServiceInventory**(`id`: string, `options?`: any): *AxiosPromise‹[ServiceInventory](../interfaces/serviceinventory.md)›*
+▸ **showServiceInventory**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ServiceInventory](../interfaces/serviceinventory.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21907](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21907)*
 
@@ -4792,13 +4792,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceInventory](../interfaces/serviceinventory.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceInventory](../interfaces/serviceinventory.md)››*
 
 ___
 
 ###  showServiceOffering
 
-▸ **showServiceOffering**(`id`: string, `options?`: any): *AxiosPromise‹[ServiceOffering](../interfaces/serviceoffering.md)›*
+▸ **showServiceOffering**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ServiceOffering](../interfaces/serviceoffering.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21919](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21919)*
 
@@ -4817,13 +4817,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceOffering](../interfaces/serviceoffering.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceOffering](../interfaces/serviceoffering.md)››*
 
 ___
 
 ###  showServiceOfferingIcon
 
-▸ **showServiceOfferingIcon**(`id`: string, `options?`: any): *AxiosPromise‹[ServiceOfferingIcon](../interfaces/serviceofferingicon.md)›*
+▸ **showServiceOfferingIcon**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ServiceOfferingIcon](../interfaces/serviceofferingicon.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21931](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21931)*
 
@@ -4842,13 +4842,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceOfferingIcon](../interfaces/serviceofferingicon.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceOfferingIcon](../interfaces/serviceofferingicon.md)››*
 
 ___
 
 ###  showServiceOfferingIconIconData
 
-▸ **showServiceOfferingIconIconData**(`id`: string, `options?`: any): *AxiosPromise‹any›*
+▸ **showServiceOfferingIconIconData**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹any››*
 
 *Defined in [packages/topological-inventory/api.ts:21943](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21943)*
 
@@ -4867,13 +4867,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹any›*
+**Returns:** *Promise‹AxiosResponse‹any››*
 
 ___
 
 ###  showServiceOfferingNode
 
-▸ **showServiceOfferingNode**(`id`: string, `options?`: any): *AxiosPromise‹[ServiceOfferingNode](../interfaces/serviceofferingnode.md)›*
+▸ **showServiceOfferingNode**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ServiceOfferingNode](../interfaces/serviceofferingnode.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21955)*
 
@@ -4892,13 +4892,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServiceOfferingNode](../interfaces/serviceofferingnode.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServiceOfferingNode](../interfaces/serviceofferingnode.md)››*
 
 ___
 
 ###  showServicePlan
 
-▸ **showServicePlan**(`id`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
+▸ **showServicePlan**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21967)*
 
@@ -4917,13 +4917,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)››*
 
 ___
 
 ###  showSource
 
-▸ **showSource**(`id`: string, `options?`: any): *AxiosPromise‹[Source](../interfaces/source.md)›*
+▸ **showSource**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Source](../interfaces/source.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21979)*
 
@@ -4942,13 +4942,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Source](../interfaces/source.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Source](../interfaces/source.md)››*
 
 ___
 
 ###  showSourceRegion
 
-▸ **showSourceRegion**(`id`: string, `options?`: any): *AxiosPromise‹[SourceRegion](../interfaces/sourceregion.md)›*
+▸ **showSourceRegion**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[SourceRegion](../interfaces/sourceregion.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:21991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L21991)*
 
@@ -4967,13 +4967,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SourceRegion](../interfaces/sourceregion.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SourceRegion](../interfaces/sourceregion.md)››*
 
 ___
 
 ###  showSubnet
 
-▸ **showSubnet**(`id`: string, `options?`: any): *AxiosPromise‹[Subnet](../interfaces/subnet.md)›*
+▸ **showSubnet**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Subnet](../interfaces/subnet.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:22003](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L22003)*
 
@@ -4992,13 +4992,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Subnet](../interfaces/subnet.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Subnet](../interfaces/subnet.md)››*
 
 ___
 
 ###  showSubscription
 
-▸ **showSubscription**(`id`: string, `options?`: any): *AxiosPromise‹[Subscription](../interfaces/subscription.md)›*
+▸ **showSubscription**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Subscription](../interfaces/subscription.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:22015](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L22015)*
 
@@ -5017,13 +5017,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Subscription](../interfaces/subscription.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Subscription](../interfaces/subscription.md)››*
 
 ___
 
 ###  showTag
 
-▸ **showTag**(`id`: string, `options?`: any): *AxiosPromise‹[Tag](../interfaces/tag.md)›*
+▸ **showTag**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Tag](../interfaces/tag.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:22027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L22027)*
 
@@ -5042,13 +5042,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Tag](../interfaces/tag.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Tag](../interfaces/tag.md)››*
 
 ___
 
 ###  showTask
 
-▸ **showTask**(`id`: string, `options?`: any): *AxiosPromise‹[Task](../interfaces/task.md)›*
+▸ **showTask**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Task](../interfaces/task.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:22039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L22039)*
 
@@ -5067,13 +5067,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Task](../interfaces/task.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Task](../interfaces/task.md)››*
 
 ___
 
 ###  showVm
 
-▸ **showVm**(`id`: string, `options?`: any): *AxiosPromise‹[Vm](../interfaces/vm.md)›*
+▸ **showVm**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Vm](../interfaces/vm.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:22051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L22051)*
 
@@ -5092,13 +5092,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Vm](../interfaces/vm.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Vm](../interfaces/vm.md)››*
 
 ___
 
 ###  showVolume
 
-▸ **showVolume**(`id`: string, `options?`: any): *AxiosPromise‹[Volume](../interfaces/volume.md)›*
+▸ **showVolume**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Volume](../interfaces/volume.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:22063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L22063)*
 
@@ -5117,13 +5117,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Volume](../interfaces/volume.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Volume](../interfaces/volume.md)››*
 
 ___
 
 ###  showVolumeAttachment
 
-▸ **showVolumeAttachment**(`id`: string, `options?`: any): *AxiosPromise‹[VolumeAttachment](../interfaces/volumeattachment.md)›*
+▸ **showVolumeAttachment**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[VolumeAttachment](../interfaces/volumeattachment.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:22075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L22075)*
 
@@ -5142,13 +5142,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VolumeAttachment](../interfaces/volumeattachment.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VolumeAttachment](../interfaces/volumeattachment.md)››*
 
 ___
 
 ###  showVolumeType
 
-▸ **showVolumeType**(`id`: string, `options?`: any): *AxiosPromise‹[VolumeType](../interfaces/volumetype.md)›*
+▸ **showVolumeType**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[VolumeType](../interfaces/volumetype.md)››*
 
 *Defined in [packages/topological-inventory/api.ts:22087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L22087)*
 
@@ -5167,13 +5167,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[VolumeType](../interfaces/volumetype.md)›*
+**Returns:** *Promise‹AxiosResponse‹[VolumeType](../interfaces/volumetype.md)››*
 
 ___
 
 ###  updateTask
 
-▸ **updateTask**(`id`: string, `task`: [Task](../interfaces/task.md), `options?`: any): *AxiosPromise‹void›*
+▸ **updateTask**(`id`: string, `task`: [Task](../interfaces/task.md), `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/topological-inventory/api.ts:22100](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L22100)*
 
@@ -5193,4 +5193,4 @@ Name | Type | Description |
 `task` | [Task](../interfaces/task.md) | Task attributes to update |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*

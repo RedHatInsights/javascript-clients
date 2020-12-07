@@ -84,7 +84,7 @@ ___
 
 ###  listTenants
 
-▸ **listTenants**(`options?`: any): *AxiosPromise‹[TenantsCollection](../interfaces/tenantscollection.md)›*
+▸ **listTenants**(`options?`: any): *Promise‹AxiosResponse‹[TenantsCollection](../interfaces/tenantscollection.md)››*
 
 *Defined in [packages/catalog/api.ts:8073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L8073)*
 
@@ -102,13 +102,13 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[TenantsCollection](../interfaces/tenantscollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TenantsCollection](../interfaces/tenantscollection.md)››*
 
 ___
 
 ###  showTenant
 
-▸ **showTenant**(`tenantId`: string, `options?`: any): *AxiosPromise‹[Tenant](../interfaces/tenant.md)›*
+▸ **showTenant**(`tenantId`: string, `options?`: any): *Promise‹AxiosResponse‹[Tenant](../interfaces/tenant.md)››*
 
 *Defined in [packages/catalog/api.ts:8085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L8085)*
 
@@ -127,13 +127,13 @@ Name | Type | Description |
 `tenantId` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Tenant](../interfaces/tenant.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Tenant](../interfaces/tenant.md)››*
 
 ___
 
 ###  tenantSeed
 
-▸ **tenantSeed**(`tenantId`: string, `options?`: any): *AxiosPromise‹void›*
+▸ **tenantSeed**(`tenantId`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/catalog/api.ts:8097](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L8097)*
 
@@ -152,4 +152,4 @@ Name | Type | Description |
 `tenantId` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*

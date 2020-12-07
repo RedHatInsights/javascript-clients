@@ -23,7 +23,7 @@
 
 • **principals**: *Array‹[Principal](principal.md)›*
 
-*Defined in [packages/rbac/api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L422)*
+*Defined in [packages/rbac/api.ts:477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L477)*
 
 **`memberof`** GroupWithPrincipalsAndRolesAllOf
 
@@ -33,6 +33,6 @@ ___
 
 • **roles**: *Array‹[RoleOut](roleout.md)›*
 
-*Defined in [packages/rbac/api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L428)*
+*Defined in [packages/rbac/api.ts:483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L483)*
 
 **`memberof`** GroupWithPrincipalsAndRolesAllOf

@@ -83,7 +83,7 @@ ___
 
 ###  rulecategoryList
 
-▸ **rulecategoryList**(`options?`: any): *AxiosPromise‹[RuleCategory](../interfaces/rulecategory.md)[]›*
+▸ **rulecategoryList**(`options?`: any): *Promise‹AxiosResponse‹[RuleCategory](../interfaces/rulecategory.md)[]››*
 
 *Defined in [packages/insights/api.ts:718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L718)*
 
@@ -101,13 +101,13 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[RuleCategory](../interfaces/rulecategory.md)[]›*
+**Returns:** *Promise‹AxiosResponse‹[RuleCategory](../interfaces/rulecategory.md)[]››*
 
 ___
 
 ###  rulecategoryRead
 
-▸ **rulecategoryRead**(`id`: number, `options?`: any): *AxiosPromise‹[RuleCategory](../interfaces/rulecategory.md)›*
+▸ **rulecategoryRead**(`id`: number, `options?`: any): *Promise‹AxiosResponse‹[RuleCategory](../interfaces/rulecategory.md)››*
 
 *Defined in [packages/insights/api.ts:730](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L730)*
 
@@ -126,4 +126,4 @@ Name | Type | Description |
 `id` | number | A unique integer value identifying this rule category. |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[RuleCategory](../interfaces/rulecategory.md)›*
+**Returns:** *Promise‹AxiosResponse‹[RuleCategory](../interfaces/rulecategory.md)››*

@@ -83,7 +83,7 @@ ___
 
 ###  listTemplates
 
-▸ **listTemplates**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[TemplateCollection](../interfaces/templatecollection.md)›*
+▸ **listTemplates**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹AxiosResponse‹[TemplateCollection](../interfaces/templatecollection.md)››*
 
 *Defined in [packages/approval/api.ts:1766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1766)*
 
@@ -105,13 +105,13 @@ Name | Type |
 `sortBy?` | string |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[TemplateCollection](../interfaces/templatecollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[TemplateCollection](../interfaces/templatecollection.md)››*
 
 ___
 
 ###  showTemplate
 
-▸ **showTemplate**(`id`: string, `options?`: any): *AxiosPromise‹[Template](../interfaces/template.md)›*
+▸ **showTemplate**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Template](../interfaces/template.md)››*
 
 *Defined in [packages/approval/api.ts:1778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1778)*
 
@@ -130,4 +130,4 @@ Name | Type | Description |
 `id` | string | ID used to select a resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Template](../interfaces/template.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Template](../interfaces/template.md)››*

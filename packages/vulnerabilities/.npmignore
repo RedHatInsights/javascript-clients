@@ -1,6 +1,1 @@
-node_modules
-.openapi-*
-git_push.sh
-*.ts
-tsconfig.json
-!dist/*
+# empty npmignore to ensure all required files (e.g., in the dist folder) are published by npm

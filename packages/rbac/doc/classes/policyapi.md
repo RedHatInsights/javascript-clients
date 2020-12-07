@@ -86,9 +86,9 @@ ___
 
 ###  createPolicies
 
-▸ **createPolicies**(`policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
+▸ **createPolicies**(`policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *Promise‹AxiosResponse‹[PolicyExtended](../interfaces/policyextended.md)››*
 
-*Defined in [packages/rbac/api.ts:3373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3373)*
+*Defined in [packages/rbac/api.ts:3580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3580)*
 
 **`summary`** Create a policy in a tenant
 
@@ -103,15 +103,15 @@ Name | Type | Description |
 `policyIn` | [PolicyIn](../interfaces/policyin.md) | Policy to create |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
+**Returns:** *Promise‹AxiosResponse‹[PolicyExtended](../interfaces/policyextended.md)››*
 
 ___
 
 ###  deletePolicy
 
-▸ **deletePolicy**(`uuid`: string, `options?`: any): *AxiosPromise‹void›*
+▸ **deletePolicy**(`uuid`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/rbac/api.ts:3385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3385)*
+*Defined in [packages/rbac/api.ts:3592](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3592)*
 
 **`summary`** Delete a policy in the tenant
 
@@ -126,15 +126,15 @@ Name | Type | Description |
 `uuid` | string | ID of policy to delete |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
 ###  getPolicy
 
-▸ **getPolicy**(`uuid`: string, `options?`: any): *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
+▸ **getPolicy**(`uuid`: string, `options?`: any): *Promise‹AxiosResponse‹[PolicyExtended](../interfaces/policyextended.md)››*
 
-*Defined in [packages/rbac/api.ts:3397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3397)*
+*Defined in [packages/rbac/api.ts:3604](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3604)*
 
 **`summary`** Get a policy in the tenant
 
@@ -149,15 +149,15 @@ Name | Type | Description |
 `uuid` | string | ID of policy to get |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
+**Returns:** *Promise‹AxiosResponse‹[PolicyExtended](../interfaces/policyextended.md)››*
 
 ___
 
 ###  listPolicies
 
-▸ **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: "name" | "modified", `options?`: any): *AxiosPromise‹[PolicyPagination](../interfaces/policypagination.md)›*
+▸ **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: "name" | "modified", `options?`: any): *Promise‹AxiosResponse‹[PolicyPagination](../interfaces/policypagination.md)››*
 
-*Defined in [packages/rbac/api.ts:3415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3415)*
+*Defined in [packages/rbac/api.ts:3622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3622)*
 
 By default, responses are sorted in ascending order by policy name
 
@@ -180,15 +180,15 @@ Name | Type |
 `orderBy?` | "name" &#124; "modified" |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[PolicyPagination](../interfaces/policypagination.md)›*
+**Returns:** *Promise‹AxiosResponse‹[PolicyPagination](../interfaces/policypagination.md)››*
 
 ___
 
 ###  updatePolicy
 
-▸ **updatePolicy**(`uuid`: string, `policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
+▸ **updatePolicy**(`uuid`: string, `policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *Promise‹AxiosResponse‹[PolicyExtended](../interfaces/policyextended.md)››*
 
-*Defined in [packages/rbac/api.ts:3428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3428)*
+*Defined in [packages/rbac/api.ts:3635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3635)*
 
 **`summary`** Update a policy in the tenant
 
@@ -204,4 +204,4 @@ Name | Type | Description |
 `policyIn` | [PolicyIn](../interfaces/policyin.md) | Policy to update |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[PolicyExtended](../interfaces/policyextended.md)›*
+**Returns:** *Promise‹AxiosResponse‹[PolicyExtended](../interfaces/policyextended.md)››*

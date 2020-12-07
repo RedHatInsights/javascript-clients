@@ -25,7 +25,7 @@
 
 • **first**? : *string*
 
-*Defined in [packages/rbac/api.ts:486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L486)*
+*Defined in [packages/rbac/api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L541)*
 
 **`memberof`** PaginationLinks
 
@@ -35,7 +35,7 @@ ___
 
 • **last**? : *string*
 
-*Defined in [packages/rbac/api.ts:504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L504)*
+*Defined in [packages/rbac/api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L559)*
 
 **`memberof`** PaginationLinks
 
@@ -45,7 +45,7 @@ ___
 
 • **next**? : *string*
 
-*Defined in [packages/rbac/api.ts:498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L498)*
+*Defined in [packages/rbac/api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L553)*
 
 **`memberof`** PaginationLinks
 
@@ -55,6 +55,6 @@ ___
 
 • **previous**? : *string*
 
-*Defined in [packages/rbac/api.ts:492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L492)*
+*Defined in [packages/rbac/api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L547)*
 
 **`memberof`** PaginationLinks

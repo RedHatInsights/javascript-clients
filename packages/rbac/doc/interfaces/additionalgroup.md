@@ -24,7 +24,7 @@
 
 • **description**? : *string*
 
-*Defined in [packages/rbac/api.ts:84](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L84)*
+*Defined in [packages/rbac/api.ts:96](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L96)*
 
 **`memberof`** AdditionalGroup
 
@@ -34,7 +34,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/rbac/api.ts:78](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L78)*
+*Defined in [packages/rbac/api.ts:90](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L90)*
 
 **`memberof`** AdditionalGroup
 
@@ -44,6 +44,6 @@ ___
 
 • **uuid**? : *string*
 
-*Defined in [packages/rbac/api.ts:90](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L90)*
+*Defined in [packages/rbac/api.ts:102](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L102)*
 
 **`memberof`** AdditionalGroup

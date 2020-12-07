@@ -16,26 +16,37 @@ Data required to create a check-in record for a host.
 
 ### Properties
 
-* [bios_uuid](createcheckin.md#optional-bios_uuid)
+* [Fqdn](createcheckin.md#optional-fqdn)
+* [bios_uuid](createcheckin.md#bios_uuid)
 * [checkin_frequency](createcheckin.md#optional-checkin_frequency)
-* [external_id](createcheckin.md#optional-external_id)
-* [fqdn](createcheckin.md#optional-fqdn)
-* [insights_id](createcheckin.md#optional-insights_id)
-* [ip_addresses](createcheckin.md#optional-ip_addresses)
-* [mac_addresses](createcheckin.md#optional-mac_addresses)
-* [rhel_machine_id](createcheckin.md#optional-rhel_machine_id)
-* [satellite_id](createcheckin.md#optional-satellite_id)
-* [subscription_manager_id](createcheckin.md#optional-subscription_manager_id)
+* [external_id](createcheckin.md#external_id)
+* [fqdn](createcheckin.md#fqdn)
+* [insights_id](createcheckin.md#insights_id)
+* [ip_addresses](createcheckin.md#ip_addresses)
+* [mac_addresses](createcheckin.md#mac_addresses)
+* [rhel_machine_id](createcheckin.md#rhel_machine_id)
+* [satellite_id](createcheckin.md#satellite_id)
+* [subscription_manager_id](createcheckin.md#subscription_manager_id)
 
 ## Properties
 
-### `Optional` bios_uuid
+### `Optional` Fqdn
 
-• **bios_uuid**? : *string*
+• **Fqdn**? : *string | null*
 
-*Defined in [packages/host-inventory/api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L113)*
+*Defined in [packages/host-inventory/api.ts:314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L314)*
 
-A UUID of the host machine BIOS.  This field is considered to be a canonical fact.
+A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
+
+**`memberof`** CreateCheckIn
+
+___
+
+###  bios_uuid
+
+• **bios_uuid**: *string*
+
+*Defined in [packages/host-inventory/api.ts:302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L302)*
 
 **`memberof`** CreateCheckIn
 
@@ -45,7 +56,7 @@ ___
 
 • **checkin_frequency**? : *number*
 
-*Defined in [packages/host-inventory/api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L143)*
+*Defined in [packages/host-inventory/api.ts:338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L338)*
 
 How long from now to expect another check-in (in minutes).
 
@@ -53,96 +64,80 @@ How long from now to expect another check-in (in minutes).
 
 ___
 
-### `Optional` external_id
+###  external_id
 
-• **external_id**? : *string*
+• **external_id**: *string*
 
-*Defined in [packages/host-inventory/api.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L137)*
-
-Host’s reference in the external source e.g. AWS EC2, Azure, OpenStack, etc. This field is considered to be a canonical fact.
+*Defined in [packages/host-inventory/api.ts:326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L326)*
 
 **`memberof`** CreateCheckIn
 
 ___
 
-### `Optional` fqdn
+###  fqdn
 
-• **fqdn**? : *string*
+• **fqdn**: *string*
 
-*Defined in [packages/host-inventory/api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L125)*
-
-A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
+*Defined in [packages/host-inventory/api.ts:332](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L332)*
 
 **`memberof`** CreateCheckIn
 
 ___
 
-### `Optional` insights_id
+###  insights_id
 
-• **insights_id**? : *string*
+• **insights_id**: *string*
 
-*Defined in [packages/host-inventory/api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L89)*
-
-An ID defined in /etc/insights-client/machine-id. This field is considered a canonical fact.
+*Defined in [packages/host-inventory/api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L278)*
 
 **`memberof`** CreateCheckIn
 
 ___
 
-### `Optional` ip_addresses
+###  ip_addresses
 
-• **ip_addresses**? : *Array‹string›*
+• **ip_addresses**: *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L119)*
-
-Host’s network IP addresses.  This field is considered to be a canonical fact.
+*Defined in [packages/host-inventory/api.ts:308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L308)*
 
 **`memberof`** CreateCheckIn
 
 ___
 
-### `Optional` mac_addresses
+###  mac_addresses
 
-• **mac_addresses**? : *Array‹string›*
+• **mac_addresses**: *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L131)*
-
-Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
+*Defined in [packages/host-inventory/api.ts:320](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L320)*
 
 **`memberof`** CreateCheckIn
 
 ___
 
-### `Optional` rhel_machine_id
+###  rhel_machine_id
 
-• **rhel_machine_id**? : *string*
+• **rhel_machine_id**: *string*
 
-*Defined in [packages/host-inventory/api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L95)*
-
-A Machine ID of a RHEL host.  This field is considered to be a canonical fact.
+*Defined in [packages/host-inventory/api.ts:284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L284)*
 
 **`memberof`** CreateCheckIn
 
 ___
 
-### `Optional` satellite_id
+###  satellite_id
 
-• **satellite_id**? : *string*
+• **satellite_id**: *string*
 
-*Defined in [packages/host-inventory/api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L107)*
-
-A Red Hat Satellite ID of a RHEL host.  This field is considered to be a canonical fact.
+*Defined in [packages/host-inventory/api.ts:296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L296)*
 
 **`memberof`** CreateCheckIn
 
 ___
 
-### `Optional` subscription_manager_id
+###  subscription_manager_id
 
-• **subscription_manager_id**? : *string*
+• **subscription_manager_id**: *string*
 
-*Defined in [packages/host-inventory/api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L101)*
-
-A Red Hat Subcription Manager ID of a RHEL host.  This field is considered to be a canonical fact.
+*Defined in [packages/host-inventory/api.ts:290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L290)*
 
 **`memberof`** CreateCheckIn

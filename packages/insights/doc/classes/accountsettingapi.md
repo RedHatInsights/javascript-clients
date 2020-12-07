@@ -82,7 +82,7 @@ ___
 
 ###  accountSettingList
 
-▸ **accountSettingList**(`options?`: any): *AxiosPromise‹void›*
+▸ **accountSettingList**(`options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/insights/api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L278)*
 
@@ -100,4 +100,4 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*

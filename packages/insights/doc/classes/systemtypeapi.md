@@ -83,7 +83,7 @@ ___
 
 ###  systemtypeList
 
-▸ **systemtypeList**(`options?`: any): *AxiosPromise‹[SystemType](../interfaces/systemtype.md)[]›*
+▸ **systemtypeList**(`options?`: any): *Promise‹AxiosResponse‹[SystemType](../interfaces/systemtype.md)[]››*
 
 *Defined in [packages/insights/api.ts:1216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1216)*
 
@@ -101,13 +101,13 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[SystemType](../interfaces/systemtype.md)[]›*
+**Returns:** *Promise‹AxiosResponse‹[SystemType](../interfaces/systemtype.md)[]››*
 
 ___
 
 ###  systemtypeRead
 
-▸ **systemtypeRead**(`id`: number, `options?`: any): *AxiosPromise‹[SystemType](../interfaces/systemtype.md)›*
+▸ **systemtypeRead**(`id`: number, `options?`: any): *Promise‹AxiosResponse‹[SystemType](../interfaces/systemtype.md)››*
 
 *Defined in [packages/insights/api.ts:1228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1228)*
 
@@ -126,4 +126,4 @@ Name | Type | Description |
 `id` | number | A unique integer value identifying this system type. |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[SystemType](../interfaces/systemtype.md)›*
+**Returns:** *Promise‹AxiosResponse‹[SystemType](../interfaces/systemtype.md)››*

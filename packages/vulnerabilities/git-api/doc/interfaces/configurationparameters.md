@@ -38,7 +38,7 @@ ___
 
 ### `Optional` apiKey
 
-• **apiKey**? : *string | function*
+• **apiKey**? : *string | Promise‹string› | function | function*
 
 *Defined in [packages/vulnerabilities/git-api/configuration.ts:16](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/configuration.ts#L16)*
 

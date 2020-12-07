@@ -82,7 +82,7 @@ ___
 
 ###  getDiagnosis
 
-▸ **getDiagnosis**(`system`: string, `remediation?`: string, `options?`: any): *AxiosPromise‹[Diagnosis](../interfaces/diagnosis.md)›*
+▸ **getDiagnosis**(`system`: string, `remediation?`: string, `options?`: any): *Promise‹AxiosResponse‹[Diagnosis](../interfaces/diagnosis.md)››*
 
 *Defined in [api.ts:1291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1291)*
 
@@ -102,4 +102,4 @@ Name | Type | Description |
 `remediation?` | string | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Diagnosis](../interfaces/diagnosis.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Diagnosis](../interfaces/diagnosis.md)››*

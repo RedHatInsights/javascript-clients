@@ -28,7 +28,7 @@ A paginated host search query result with host entries and their Inventory metad
 
 • **count**: *number*
 
-*Defined in [packages/host-inventory/api.ts:384](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L384)*
+*Defined in [packages/host-inventory/api.ts:779](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L779)*
 
 A number of entries on the current page.
 
@@ -40,7 +40,7 @@ ___
 
 • **page**: *number*
 
-*Defined in [packages/host-inventory/api.ts:390](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L390)*
+*Defined in [packages/host-inventory/api.ts:785](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L785)*
 
 A current page number.
 
@@ -52,7 +52,7 @@ ___
 
 • **per_page**: *number*
 
-*Defined in [packages/host-inventory/api.ts:396](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L396)*
+*Defined in [packages/host-inventory/api.ts:791](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L791)*
 
 A page size – a number of entries per single page.
 
@@ -64,7 +64,7 @@ ___
 
 • **results**: *Array‹[HostOut](hostout.md)›*
 
-*Defined in [packages/host-inventory/api.ts:408](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L408)*
+*Defined in [packages/host-inventory/api.ts:803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L803)*
 
 Actual host search query result entries.
 
@@ -76,7 +76,7 @@ ___
 
 • **total**: *number*
 
-*Defined in [packages/host-inventory/api.ts:402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L402)*
+*Defined in [packages/host-inventory/api.ts:797](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L797)*
 
 A total count of the found entries.
 

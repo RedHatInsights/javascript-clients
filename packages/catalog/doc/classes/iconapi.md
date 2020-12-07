@@ -83,7 +83,7 @@ ___
 
 ###  createIcon
 
-▸ **createIcon**(`content?`: any, `portfolioId?`: string, `portfolioItemId?`: string, `options?`: any): *AxiosPromise‹[Icon](../interfaces/icon.md)›*
+▸ **createIcon**(`content?`: any, `portfolioId?`: string, `portfolioItemId?`: string, `options?`: any): *Promise‹AxiosResponse‹[Icon](../interfaces/icon.md)››*
 
 *Defined in [packages/catalog/api.ts:1709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1709)*
 
@@ -104,13 +104,13 @@ Name | Type |
 `portfolioItemId?` | string |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[Icon](../interfaces/icon.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Icon](../interfaces/icon.md)››*
 
 ___
 
 ###  destroyIcon
 
-▸ **destroyIcon**(`id`: string, `options?`: any): *AxiosPromise‹void›*
+▸ **destroyIcon**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/catalog/api.ts:1721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1721)*
 
@@ -129,4 +129,4 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*

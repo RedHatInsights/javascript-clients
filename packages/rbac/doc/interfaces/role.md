@@ -10,8 +10,6 @@
 
 * **Role**
 
-  ↳ [RoleIn](rolein.md)
-
 ## Index
 
 ### Properties
@@ -26,7 +24,7 @@
 
 • **description**? : *string*
 
-*Defined in [packages/rbac/api.ts:955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L955)*
+*Defined in [packages/rbac/api.ts:1070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1070)*
 
 **`memberof`** Role
 
@@ -36,7 +34,7 @@ ___
 
 • **display_name**? : *string*
 
-*Defined in [packages/rbac/api.ts:949](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L949)*
+*Defined in [packages/rbac/api.ts:1064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1064)*
 
 **`memberof`** Role
 
@@ -46,6 +44,6 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/rbac/api.ts:943](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L943)*
+*Defined in [packages/rbac/api.ts:1058](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1058)*
 
 **`memberof`** Role

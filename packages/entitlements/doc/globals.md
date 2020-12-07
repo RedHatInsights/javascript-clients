@@ -59,7 +59,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **servicesGet**(`options`: any): *[RequestArgs](interfaces/requestargs.md)*
+* **servicesGet**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -105,9 +105,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **servicesGet**(`options?`: any): *function*
-
-  * (`axios?`: AxiosInstance, `basePath?`: string): *AxiosPromise‹object›*
+* **servicesGet**(`options?`: any): *Promise‹function›*
 
 ## Object literals
 

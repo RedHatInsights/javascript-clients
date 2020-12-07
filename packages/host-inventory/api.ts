@@ -76,69 +76,277 @@ export interface ActiveTags {
     results: Array<ActiveTag>;
 }
 /**
+ *
+ * @export
+ * @interface CanonicalFactsIn
+ */
+export interface CanonicalFactsIn {
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsIn
+     */
+    insights_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsIn
+     */
+    rhel_machine_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsIn
+     */
+    subscription_manager_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsIn
+     */
+    satellite_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsIn
+     */
+    bios_uuid: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof CanonicalFactsIn
+     */
+    ip_addresses: Array<string>;
+    /**
+     * A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
+     * @type {string}
+     * @memberof CanonicalFactsIn
+     */
+    Fqdn?: string | null;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof CanonicalFactsIn
+     */
+    mac_addresses: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsIn
+     */
+    external_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsIn
+     */
+    fqdn: string;
+}
+/**
+ *
+ * @export
+ * @interface CanonicalFactsInAllOf
+ */
+export interface CanonicalFactsInAllOf {
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsInAllOf
+     */
+    insights_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsInAllOf
+     */
+    rhel_machine_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsInAllOf
+     */
+    subscription_manager_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsInAllOf
+     */
+    satellite_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsInAllOf
+     */
+    bios_uuid?: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof CanonicalFactsInAllOf
+     */
+    ip_addresses?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsInAllOf
+     */
+    fqdn?: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof CanonicalFactsInAllOf
+     */
+    mac_addresses?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsInAllOf
+     */
+    external_id?: string;
+}
+/**
+ *
+ * @export
+ * @interface CanonicalFactsOut
+ */
+export interface CanonicalFactsOut {
+    /**
+     * An ID defined in /etc/insights-client/machine-id. This field is considered a canonical fact.
+     * @type {string}
+     * @memberof CanonicalFactsOut
+     */
+    insights_id?: string | null;
+    /**
+     * A Machine ID of a RHEL host.  This field is considered to be a canonical fact.
+     * @type {string}
+     * @memberof CanonicalFactsOut
+     */
+    rhel_machine_id?: string | null;
+    /**
+     * A Red Hat Subcription Manager ID of a RHEL host.  This field is considered to be a canonical fact.
+     * @type {string}
+     * @memberof CanonicalFactsOut
+     */
+    subscription_manager_id?: string | null;
+    /**
+     * A Red Hat Satellite ID of a RHEL host.  This field is considered to be a canonical fact.
+     * @type {string}
+     * @memberof CanonicalFactsOut
+     */
+    satellite_id?: string | null;
+    /**
+     * A UUID of the host machine BIOS.  This field is considered to be a canonical fact.
+     * @type {string}
+     * @memberof CanonicalFactsOut
+     */
+    bios_uuid?: string | null;
+    /**
+     * Host’s network IP addresses.  This field is considered to be a canonical fact.
+     * @type {Array<string>}
+     * @memberof CanonicalFactsOut
+     */
+    ip_addresses?: Array<string> | null;
+    /**
+     * A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
+     * @type {string}
+     * @memberof CanonicalFactsOut
+     */
+    Fqdn?: string | null;
+    /**
+     * Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
+     * @type {Array<string>}
+     * @memberof CanonicalFactsOut
+     */
+    mac_addresses?: Array<string> | null;
+    /**
+     * Host’s reference in the external source e.g. AWS EC2, Azure, OpenStack, etc. This field is considered to be a canonical fact.
+     * @type {string}
+     * @memberof CanonicalFactsOut
+     */
+    external_id?: string | null;
+}
+/**
  * Data required to create a check-in record for a host.
  * @export
  * @interface CreateCheckIn
  */
 export interface CreateCheckIn {
     /**
-     * An ID defined in /etc/insights-client/machine-id. This field is considered a canonical fact.
+     *
      * @type {string}
      * @memberof CreateCheckIn
      */
-    insights_id?: string;
+    insights_id: string;
     /**
-     * A Machine ID of a RHEL host.  This field is considered to be a canonical fact.
+     *
      * @type {string}
      * @memberof CreateCheckIn
      */
-    rhel_machine_id?: string;
+    rhel_machine_id: string;
     /**
-     * A Red Hat Subcription Manager ID of a RHEL host.  This field is considered to be a canonical fact.
+     *
      * @type {string}
      * @memberof CreateCheckIn
      */
-    subscription_manager_id?: string;
+    subscription_manager_id: string;
     /**
-     * A Red Hat Satellite ID of a RHEL host.  This field is considered to be a canonical fact.
+     *
      * @type {string}
      * @memberof CreateCheckIn
      */
-    satellite_id?: string;
+    satellite_id: string;
     /**
-     * A UUID of the host machine BIOS.  This field is considered to be a canonical fact.
+     *
      * @type {string}
      * @memberof CreateCheckIn
      */
-    bios_uuid?: string;
+    bios_uuid: string;
     /**
-     * Host’s network IP addresses.  This field is considered to be a canonical fact.
+     *
      * @type {Array<string>}
      * @memberof CreateCheckIn
      */
-    ip_addresses?: Array<string>;
+    ip_addresses: Array<string>;
     /**
      * A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
      * @type {string}
      * @memberof CreateCheckIn
      */
-    fqdn?: string;
+    Fqdn?: string | null;
     /**
-     * Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
+     *
      * @type {Array<string>}
      * @memberof CreateCheckIn
      */
-    mac_addresses?: Array<string>;
+    mac_addresses: Array<string>;
     /**
-     * Host’s reference in the external source e.g. AWS EC2, Azure, OpenStack, etc. This field is considered to be a canonical fact.
+     *
      * @type {string}
      * @memberof CreateCheckIn
      */
-    external_id?: string;
+    external_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CreateCheckIn
+     */
+    fqdn: string;
     /**
      * How long from now to expect another check-in (in minutes).
      * @type {number}
      * @memberof CreateCheckIn
+     */
+    checkin_frequency?: number;
+}
+/**
+ *
+ * @export
+ * @interface CreateCheckInAllOf
+ */
+export interface CreateCheckInAllOf {
+    /**
+     * How long from now to expect another check-in (in minutes).
+     * @type {number}
+     * @memberof CreateCheckInAllOf
      */
     checkin_frequency?: number;
 }
@@ -148,24 +356,6 @@ export interface CreateCheckIn {
  * @interface CreateHostOut
  */
 export interface CreateHostOut {
-    /**
-     * A host’s human-readable display name, e.g. in a form of a domain name.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    display_name?: string | null;
-    /**
-     * The ansible host name for remediations
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    ansible_host?: string | null;
-    /**
-     * A Red Hat Account number that owns the host.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    account: string;
     /**
      * An ID defined in /etc/insights-client/machine-id. This field is considered a canonical fact.
      * @type {string}
@@ -207,7 +397,7 @@ export interface CreateHostOut {
      * @type {string}
      * @memberof CreateHostOut
      */
-    fqdn?: string | null;
+    Fqdn?: string | null;
     /**
      * Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
      * @type {Array<string>}
@@ -220,6 +410,24 @@ export interface CreateHostOut {
      * @memberof CreateHostOut
      */
     external_id?: string | null;
+    /**
+     * A host’s human-readable display name, e.g. in a form of a domain name.
+     * @type {string}
+     * @memberof CreateHostOut
+     */
+    display_name?: string | null;
+    /**
+     * The ansible host name for remediations
+     * @type {string}
+     * @memberof CreateHostOut
+     */
+    ansible_host?: string | null;
+    /**
+     * A Red Hat Account number that owns the host.
+     * @type {string}
+     * @memberof CreateHostOut
+     */
+    account: string;
     /**
      * A durable and reliable platform-wide host identifier. Applications should use this identifier to reference hosts.
      * @type {string}
@@ -266,6 +474,79 @@ export interface CreateHostOut {
      * Reporting source of the host. Used when updating the stale_timestamp.
      * @type {string}
      * @memberof CreateHostOut
+     */
+    reporter?: string | null;
+}
+/**
+ *
+ * @export
+ * @interface CreateHostOutAllOf
+ */
+export interface CreateHostOutAllOf {
+    /**
+     * A host’s human-readable display name, e.g. in a form of a domain name.
+     * @type {string}
+     * @memberof CreateHostOutAllOf
+     */
+    display_name?: string | null;
+    /**
+     * The ansible host name for remediations
+     * @type {string}
+     * @memberof CreateHostOutAllOf
+     */
+    ansible_host?: string | null;
+    /**
+     * A Red Hat Account number that owns the host.
+     * @type {string}
+     * @memberof CreateHostOutAllOf
+     */
+    account: string;
+    /**
+     * A durable and reliable platform-wide host identifier. Applications should use this identifier to reference hosts.
+     * @type {string}
+     * @memberof CreateHostOutAllOf
+     */
+    id?: string;
+    /**
+     * A timestamp when the entry was created.
+     * @type {string}
+     * @memberof CreateHostOutAllOf
+     */
+    created?: string;
+    /**
+     * A timestamp when the entry was last updated.
+     * @type {string}
+     * @memberof CreateHostOutAllOf
+     */
+    updated?: string;
+    /**
+     * A set of facts belonging to the host.
+     * @type {Array<FactSet>}
+     * @memberof CreateHostOutAllOf
+     */
+    facts?: Array<FactSet>;
+    /**
+     * Timestamp from which the host is considered stale.
+     * @type {string}
+     * @memberof CreateHostOutAllOf
+     */
+    stale_timestamp?: string | null;
+    /**
+     * Timestamp from which the host is considered too stale to be listed without an explicit toggle.
+     * @type {string}
+     * @memberof CreateHostOutAllOf
+     */
+    stale_warning_timestamp?: string | null;
+    /**
+     * Timestamp from which the host is considered deleted.
+     * @type {string}
+     * @memberof CreateHostOutAllOf
+     */
+    culled_timestamp?: string | null;
+    /**
+     * Reporting source of the host. Used when updating the stale_timestamp.
+     * @type {string}
+     * @memberof CreateHostOutAllOf
      */
     reporter?: string | null;
 }
@@ -349,13 +630,127 @@ export interface FactSet {
  * @export
  * @interface HostOut
  */
-export interface HostOut extends CreateHostOut {
+export interface HostOut {
+    /**
+     * An ID defined in /etc/insights-client/machine-id. This field is considered a canonical fact.
+     * @type {string}
+     * @memberof HostOut
+     */
+    insights_id?: string | null;
+    /**
+     * A Machine ID of a RHEL host.  This field is considered to be a canonical fact.
+     * @type {string}
+     * @memberof HostOut
+     */
+    rhel_machine_id?: string | null;
+    /**
+     * A Red Hat Subcription Manager ID of a RHEL host.  This field is considered to be a canonical fact.
+     * @type {string}
+     * @memberof HostOut
+     */
+    subscription_manager_id?: string | null;
+    /**
+     * A Red Hat Satellite ID of a RHEL host.  This field is considered to be a canonical fact.
+     * @type {string}
+     * @memberof HostOut
+     */
+    satellite_id?: string | null;
+    /**
+     * A UUID of the host machine BIOS.  This field is considered to be a canonical fact.
+     * @type {string}
+     * @memberof HostOut
+     */
+    bios_uuid?: string | null;
+    /**
+     * Host’s network IP addresses.  This field is considered to be a canonical fact.
+     * @type {Array<string>}
+     * @memberof HostOut
+     */
+    ip_addresses?: Array<string> | null;
+    /**
+     * A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
+     * @type {string}
+     * @memberof HostOut
+     */
+    Fqdn?: string | null;
+    /**
+     * Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
+     * @type {Array<string>}
+     * @memberof HostOut
+     */
+    mac_addresses?: Array<string> | null;
+    /**
+     * Host’s reference in the external source e.g. AWS EC2, Azure, OpenStack, etc. This field is considered to be a canonical fact.
+     * @type {string}
+     * @memberof HostOut
+     */
+    external_id?: string | null;
+    /**
+     * A host’s human-readable display name, e.g. in a form of a domain name.
+     * @type {string}
+     * @memberof HostOut
+     */
+    display_name?: string | null;
+    /**
+     * The ansible host name for remediations
+     * @type {string}
+     * @memberof HostOut
+     */
+    ansible_host?: string | null;
+    /**
+     * A Red Hat Account number that owns the host.
+     * @type {string}
+     * @memberof HostOut
+     */
+    account: string;
+    /**
+     * A durable and reliable platform-wide host identifier. Applications should use this identifier to reference hosts.
+     * @type {string}
+     * @memberof HostOut
+     */
+    id?: string;
+    /**
+     * A timestamp when the entry was created.
+     * @type {string}
+     * @memberof HostOut
+     */
+    created?: string;
+    /**
+     * A timestamp when the entry was last updated.
+     * @type {string}
+     * @memberof HostOut
+     */
+    updated?: string;
     /**
      * A set of facts belonging to the host.
      * @type {Array<FactSet>}
      * @memberof HostOut
      */
     facts?: Array<FactSet>;
+    /**
+     * Timestamp from which the host is considered stale.
+     * @type {string}
+     * @memberof HostOut
+     */
+    stale_timestamp?: string | null;
+    /**
+     * Timestamp from which the host is considered too stale to be listed without an explicit toggle.
+     * @type {string}
+     * @memberof HostOut
+     */
+    stale_warning_timestamp?: string | null;
+    /**
+     * Timestamp from which the host is considered deleted.
+     * @type {string}
+     * @memberof HostOut
+     */
+    culled_timestamp?: string | null;
+    /**
+     * Reporting source of the host. Used when updating the stale_timestamp.
+     * @type {string}
+     * @memberof HostOut
+     */
+    reporter?: string | null;
 }
 /**
  *
@@ -624,6 +1019,12 @@ export interface SystemProfile {
     cpu_flags?: Array<string>;
     /**
      *
+     * @type {SystemProfileOperatingSystem}
+     * @memberof SystemProfile
+     */
+    operating_system?: SystemProfileOperatingSystem;
+    /**
+     *
      * @type {string}
      * @memberof SystemProfile
      */
@@ -845,6 +1246,40 @@ export interface SystemProfileByHostOut {
 /**
  *
  * @export
+ * @interface SystemProfileOperatingSystem
+ */
+export interface SystemProfileOperatingSystem {
+    /**
+     * Major release of OS (aka the x version)
+     * @type {number}
+     * @memberof SystemProfileOperatingSystem
+     */
+    major?: number;
+    /**
+     * Minor release of OS (aka the y version)
+     * @type {number}
+     * @memberof SystemProfileOperatingSystem
+     */
+    minor?: number;
+    /**
+     * Name of the distro/os
+     * @type {string}
+     * @memberof SystemProfileOperatingSystem
+     */
+    name?: SystemProfileOperatingSystemNameEnum;
+}
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum SystemProfileOperatingSystemNameEnum {
+    RHEL = 'RHEL'
+}
+
+/**
+ *
+ * @export
  * @interface SystemProfileSapSystemOut
  */
 export interface SystemProfileSapSystemOut {
@@ -993,7 +1428,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostDeleteById(hostIdList: Array<string>, branchId?: string, options: any = {}): RequestArgs {
+        apiHostDeleteById: async (hostIdList: Array<string>, branchId?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostDeleteById.');
@@ -1012,8 +1447,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -1046,7 +1481,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): RequestArgs {
+        apiHostGetHostById: async (hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostById.');
@@ -1065,8 +1500,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -1122,7 +1557,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, options: any = {}): RequestArgs {
+        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/hosts`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1136,8 +1571,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -1218,7 +1653,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, options: any = {}): RequestArgs {
+        apiHostGetHostSystemProfileById: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostSystemProfileById.');
@@ -1237,8 +1672,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -1286,7 +1721,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): RequestArgs {
+        apiHostGetHostTagCount: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostTagCount.');
@@ -1305,8 +1740,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -1351,7 +1786,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options: any = {}): RequestArgs {
+        apiHostGetHostTags: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostTags.');
@@ -1370,8 +1805,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -1415,7 +1850,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostHostCheckin(createCheckIn: CreateCheckIn, options: any = {}): RequestArgs {
+        apiHostHostCheckin: async (createCheckIn: CreateCheckIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'createCheckIn' is not null or undefined
             if (createCheckIn === null || createCheckIn === undefined) {
                 throw new RequiredError('createCheckIn','Required parameter createCheckIn was null or undefined when calling apiHostHostCheckin.');
@@ -1433,8 +1868,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -1474,7 +1909,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostMergeFacts(hostIdList: Array<string>, namespace: string, body: object, branchId?: string, options: any = {}): RequestArgs {
+        apiHostMergeFacts: async (hostIdList: Array<string>, namespace: string, body: object, branchId?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostMergeFacts.');
@@ -1502,8 +1937,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -1537,7 +1972,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostPatchById(hostIdList: Array<string>, patchHostIn: PatchHostIn, branchId?: string, options: any = {}): RequestArgs {
+        apiHostPatchById: async (hostIdList: Array<string>, patchHostIn: PatchHostIn, branchId?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostPatchById.');
@@ -1560,8 +1995,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -1596,7 +2031,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostReplaceFacts(hostIdList: Array<string>, namespace: string, body: object, branchId?: string, options: any = {}): RequestArgs {
+        apiHostReplaceFacts: async (hostIdList: Array<string>, namespace: string, body: object, branchId?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostReplaceFacts.');
@@ -1624,8 +2059,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -1667,8 +2102,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostDeleteById(hostIdList: Array<string>, branchId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostDeleteById(hostIdList, branchId, options);
+        async apiHostDeleteById(hostIdList: Array<string>, branchId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostDeleteById(hostIdList, branchId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1686,8 +2121,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options);
+        async apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1712,8 +2147,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, options);
+        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1731,8 +2166,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileByHostOut> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, options);
+        async apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileByHostOut>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1749,8 +2184,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagCountOut> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options);
+        async apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagCountOut>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1768,8 +2203,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsOut> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options);
+        async apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsOut>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1782,8 +2217,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateHostOut> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostHostCheckin(createCheckIn, options);
+        async apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateHostOut>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostHostCheckin(createCheckIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1799,8 +2234,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostMergeFacts(hostIdList: Array<string>, namespace: string, body: object, branchId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostMergeFacts(hostIdList, namespace, body, branchId, options);
+        async apiHostMergeFacts(hostIdList: Array<string>, namespace: string, body: object, branchId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostMergeFacts(hostIdList, namespace, body, branchId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1815,8 +2250,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostPatchById(hostIdList: Array<string>, patchHostIn: PatchHostIn, branchId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostPatchById(hostIdList, patchHostIn, branchId, options);
+        async apiHostPatchById(hostIdList: Array<string>, patchHostIn: PatchHostIn, branchId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostPatchById(hostIdList, patchHostIn, branchId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1832,8 +2267,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostReplaceFacts(hostIdList: Array<string>, namespace: string, body: object, branchId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = HostsApiAxiosParamCreator(configuration).apiHostReplaceFacts(hostIdList, namespace, body, branchId, options);
+        async apiHostReplaceFacts(hostIdList: Array<string>, namespace: string, body: object, branchId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostReplaceFacts(hostIdList, namespace, body, branchId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1857,7 +2292,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         apiHostDeleteById(hostIdList: Array<string>, branchId?: string, options?: any): AxiosPromise<void> {
-            return HostsApiFp(configuration).apiHostDeleteById(hostIdList, branchId, options)(axios, basePath);
+            return HostsApiFp(configuration).apiHostDeleteById(hostIdList, branchId, options).then((request) => request(axios, basePath));
         },
         /**
          * Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
@@ -1872,7 +2307,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<HostQueryOutput> {
-            return HostsApiFp(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options)(axios, basePath);
+            return HostsApiFp(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
          * Read the entire list of all hosts available to the account. <br /><br /> Required permissions: inventory:hosts:read
@@ -1894,7 +2329,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, options?: any): AxiosPromise<HostQueryOutput> {
-            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, options)(axios, basePath);
+            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, options).then((request) => request(axios, basePath));
         },
         /**
          * Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
@@ -1909,7 +2344,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, options?: any): AxiosPromise<SystemProfileByHostOut> {
-            return HostsApiFp(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, options)(axios, basePath);
+            return HostsApiFp(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, options).then((request) => request(axios, basePath));
         },
         /**
          * Get the number of tags on a host <br /><br /> Required permissions: inventory:hosts:read
@@ -1923,7 +2358,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<TagCountOut> {
-            return HostsApiFp(configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options)(axios, basePath);
+            return HostsApiFp(configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
          * Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read
@@ -1938,7 +2373,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options?: any): AxiosPromise<TagsOut> {
-            return HostsApiFp(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options)(axios, basePath);
+            return HostsApiFp(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options).then((request) => request(axios, basePath));
         },
         /**
          * Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
@@ -1948,7 +2383,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any): AxiosPromise<CreateHostOut> {
-            return HostsApiFp(configuration).apiHostHostCheckin(createCheckIn, options)(axios, basePath);
+            return HostsApiFp(configuration).apiHostHostCheckin(createCheckIn, options).then((request) => request(axios, basePath));
         },
         /**
          * Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
@@ -1961,7 +2396,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         apiHostMergeFacts(hostIdList: Array<string>, namespace: string, body: object, branchId?: string, options?: any): AxiosPromise<void> {
-            return HostsApiFp(configuration).apiHostMergeFacts(hostIdList, namespace, body, branchId, options)(axios, basePath);
+            return HostsApiFp(configuration).apiHostMergeFacts(hostIdList, namespace, body, branchId, options).then((request) => request(axios, basePath));
         },
         /**
          * Update a host <br /><br /> Required permissions: inventory:hosts:write
@@ -1973,7 +2408,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         apiHostPatchById(hostIdList: Array<string>, patchHostIn: PatchHostIn, branchId?: string, options?: any): AxiosPromise<void> {
-            return HostsApiFp(configuration).apiHostPatchById(hostIdList, patchHostIn, branchId, options)(axios, basePath);
+            return HostsApiFp(configuration).apiHostPatchById(hostIdList, patchHostIn, branchId, options).then((request) => request(axios, basePath));
         },
         /**
          * Replace facts under a namespace <br /><br /> Required permissions: inventory:hosts:write
@@ -1986,7 +2421,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         apiHostReplaceFacts(hostIdList: Array<string>, namespace: string, body: object, branchId?: string, options?: any): AxiosPromise<void> {
-            return HostsApiFp(configuration).apiHostReplaceFacts(hostIdList, namespace, body, branchId, options)(axios, basePath);
+            return HostsApiFp(configuration).apiHostReplaceFacts(hostIdList, namespace, body, branchId, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2008,7 +2443,7 @@ export class HostsApi extends BaseAPI {
      * @memberof HostsApi
      */
     public apiHostDeleteById(hostIdList: Array<string>, branchId?: string, options?: any) {
-        return HostsApiFp(this.configuration).apiHostDeleteById(hostIdList, branchId, options)(this.axios, this.basePath);
+        return HostsApiFp(this.configuration).apiHostDeleteById(hostIdList, branchId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2025,7 +2460,7 @@ export class HostsApi extends BaseAPI {
      * @memberof HostsApi
      */
     public apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options)(this.axios, this.basePath);
+        return HostsApiFp(this.configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2049,7 +2484,7 @@ export class HostsApi extends BaseAPI {
      * @memberof HostsApi
      */
     public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, options)(this.axios, this.basePath);
+        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2066,7 +2501,7 @@ export class HostsApi extends BaseAPI {
      * @memberof HostsApi
      */
     public apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, options)(this.axios, this.basePath);
+        return HostsApiFp(this.configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2082,7 +2517,7 @@ export class HostsApi extends BaseAPI {
      * @memberof HostsApi
      */
     public apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options)(this.axios, this.basePath);
+        return HostsApiFp(this.configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2099,7 +2534,7 @@ export class HostsApi extends BaseAPI {
      * @memberof HostsApi
      */
     public apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options)(this.axios, this.basePath);
+        return HostsApiFp(this.configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2111,7 +2546,7 @@ export class HostsApi extends BaseAPI {
      * @memberof HostsApi
      */
     public apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any) {
-        return HostsApiFp(this.configuration).apiHostHostCheckin(createCheckIn, options)(this.axios, this.basePath);
+        return HostsApiFp(this.configuration).apiHostHostCheckin(createCheckIn, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2126,7 +2561,7 @@ export class HostsApi extends BaseAPI {
      * @memberof HostsApi
      */
     public apiHostMergeFacts(hostIdList: Array<string>, namespace: string, body: object, branchId?: string, options?: any) {
-        return HostsApiFp(this.configuration).apiHostMergeFacts(hostIdList, namespace, body, branchId, options)(this.axios, this.basePath);
+        return HostsApiFp(this.configuration).apiHostMergeFacts(hostIdList, namespace, body, branchId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2140,7 +2575,7 @@ export class HostsApi extends BaseAPI {
      * @memberof HostsApi
      */
     public apiHostPatchById(hostIdList: Array<string>, patchHostIn: PatchHostIn, branchId?: string, options?: any) {
-        return HostsApiFp(this.configuration).apiHostPatchById(hostIdList, patchHostIn, branchId, options)(this.axios, this.basePath);
+        return HostsApiFp(this.configuration).apiHostPatchById(hostIdList, patchHostIn, branchId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2155,7 +2590,7 @@ export class HostsApi extends BaseAPI {
      * @memberof HostsApi
      */
     public apiHostReplaceFacts(hostIdList: Array<string>, namespace: string, body: object, branchId?: string, options?: any) {
-        return HostsApiFp(this.configuration).apiHostReplaceFacts(hostIdList, namespace, body, branchId, options)(this.axios, this.basePath);
+        return HostsApiFp(this.configuration).apiHostReplaceFacts(hostIdList, namespace, body, branchId, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -2180,7 +2615,7 @@ export const SapSystemApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options: any = {}): RequestArgs {
+        apiSystemProfileGetSapSids: async (search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/system_profile/sap_sids`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2194,8 +2629,8 @@ export const SapSystemApiAxiosParamCreator = function (configuration?: Configura
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2252,7 +2687,7 @@ export const SapSystemApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileGetSapSystem(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options: any = {}): RequestArgs {
+        apiSystemProfileGetSapSystem: async (tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/system_profile/sap_system`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2266,8 +2701,8 @@ export const SapSystemApiAxiosParamCreator = function (configuration?: Configura
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2330,8 +2765,8 @@ export const SapSystemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileSapSystemOut> {
-            const localVarAxiosArgs = SapSystemApiAxiosParamCreator(configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options);
+        async apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileSapSystemOut>> {
+            const localVarAxiosArgs = await SapSystemApiAxiosParamCreator(configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2349,8 +2784,8 @@ export const SapSystemApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileGetSapSystem(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileSapSystemOut> {
-            const localVarAxiosArgs = SapSystemApiAxiosParamCreator(configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options);
+        async apiSystemProfileGetSapSystem(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileSapSystemOut>> {
+            const localVarAxiosArgs = await SapSystemApiAxiosParamCreator(configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2379,7 +2814,7 @@ export const SapSystemApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any): AxiosPromise<SystemProfileSapSystemOut> {
-            return SapSystemApiFp(configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options)(axios, basePath);
+            return SapSystemApiFp(configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(axios, basePath));
         },
         /**
          * Required permissions: inventory:hosts:read
@@ -2394,7 +2829,7 @@ export const SapSystemApiFactory = function (configuration?: Configuration, base
          * @throws {RequiredError}
          */
         apiSystemProfileGetSapSystem(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any): AxiosPromise<SystemProfileSapSystemOut> {
-            return SapSystemApiFp(configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options)(axios, basePath);
+            return SapSystemApiFp(configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2421,7 +2856,7 @@ export class SapSystemApi extends BaseAPI {
      * @memberof SapSystemApi
      */
     public apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any) {
-        return SapSystemApiFp(this.configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options)(this.axios, this.basePath);
+        return SapSystemApiFp(this.configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2438,7 +2873,7 @@ export class SapSystemApi extends BaseAPI {
      * @memberof SapSystemApi
      */
     public apiSystemProfileGetSapSystem(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: object, options?: any) {
-        return SapSystemApiFp(this.configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options)(this.axios, this.basePath);
+        return SapSystemApiFp(this.configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -2465,7 +2900,7 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, registeredWith?: 'insights', filter?: object, options: any = {}): RequestArgs {
+        apiTagGetTags: async (tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, registeredWith?: 'insights', filter?: object, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/tags`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2479,8 +2914,8 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
             // authentication ApiKeyAuth required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? configuration.apiKey("x-rh-identity")
-                    : configuration.apiKey;
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
@@ -2557,8 +2992,8 @@ export const TagsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, registeredWith?: 'insights', filter?: object, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActiveTags> {
-            const localVarAxiosArgs = TagsApiAxiosParamCreator(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, registeredWith, filter, options);
+        async apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, registeredWith?: 'insights', filter?: object, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActiveTags>> {
+            const localVarAxiosArgs = await TagsApiAxiosParamCreator(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, registeredWith, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2589,7 +3024,7 @@ export const TagsApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, registeredWith?: 'insights', filter?: object, options?: any): AxiosPromise<ActiveTags> {
-            return TagsApiFp(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, registeredWith, filter, options)(axios, basePath);
+            return TagsApiFp(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, registeredWith, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2618,7 +3053,7 @@ export class TagsApi extends BaseAPI {
      * @memberof TagsApi
      */
     public apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, registeredWith?: 'insights', filter?: object, options?: any) {
-        return TagsApiFp(this.configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, registeredWith, filter, options)(this.axios, this.basePath);
+        return TagsApiFp(this.configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
     }
 
 }

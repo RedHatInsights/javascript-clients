@@ -82,9 +82,9 @@ ___
 
 ###  apiTagGetTags
 
-▸ **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *AxiosPromise‹[ActiveTags](../interfaces/activetags.md)›*
+▸ **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[ActiveTags](../interfaces/activetags.md)››*
 
-*Defined in [packages/host-inventory/api.ts:2620](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2620)*
+*Defined in [packages/host-inventory/api.ts:3055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3055)*
 
 Required permissions: inventory:hosts:read
 
@@ -109,4 +109,4 @@ Name | Type |
 `filter?` | object |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ActiveTags](../interfaces/activetags.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ActiveTags](../interfaces/activetags.md)››*

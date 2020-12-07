@@ -28,7 +28,7 @@
 
 • **created**: *string*
 
-*Defined in [packages/rbac/api.ts:650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L650)*
+*Defined in [packages/rbac/api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L729)*
 
 **`memberof`** PolicyExtended
 
@@ -38,7 +38,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/rbac/api.ts:638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L638)*
+*Defined in [packages/rbac/api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L717)*
 
 **`memberof`** PolicyExtended
 
@@ -48,7 +48,7 @@ ___
 
 • **group**: *[GroupOut](groupout.md)*
 
-*Defined in [packages/rbac/api.ts:662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L662)*
+*Defined in [packages/rbac/api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L741)*
 
 **`memberof`** PolicyExtended
 
@@ -58,7 +58,7 @@ ___
 
 • **modified**: *string*
 
-*Defined in [packages/rbac/api.ts:656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L656)*
+*Defined in [packages/rbac/api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L735)*
 
 **`memberof`** PolicyExtended
 
@@ -68,7 +68,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/rbac/api.ts:632](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L632)*
+*Defined in [packages/rbac/api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L711)*
 
 **`memberof`** PolicyExtended
 
@@ -78,7 +78,7 @@ ___
 
 • **roles**: *Array‹[RoleOut](roleout.md)›*
 
-*Defined in [packages/rbac/api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L668)*
+*Defined in [packages/rbac/api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L747)*
 
 **`memberof`** PolicyExtended
 
@@ -88,6 +88,6 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [packages/rbac/api.ts:644](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L644)*
+*Defined in [packages/rbac/api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L723)*
 
 **`memberof`** PolicyExtended

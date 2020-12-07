@@ -82,7 +82,7 @@ ___
 
 ###  getVersion
 
-▸ **getVersion**(`options?`: any): *AxiosPromise‹[InlineResponse200](../interfaces/inlineresponse200.md)›*
+▸ **getVersion**(`options?`: any): *Promise‹AxiosResponse‹[InlineResponse200](../interfaces/inlineresponse200.md)››*
 
 *Defined in [api.ts:3271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3271)*
 
@@ -100,4 +100,4 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[InlineResponse200](../interfaces/inlineresponse200.md)›*
+**Returns:** *Promise‹AxiosResponse‹[InlineResponse200](../interfaces/inlineresponse200.md)››*

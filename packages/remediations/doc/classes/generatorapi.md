@@ -82,7 +82,7 @@ ___
 
 ###  generate
 
-▸ **generate**(`playbookDefinition`: [PlaybookDefinition](../interfaces/playbookdefinition.md), `options?`: any): *AxiosPromise‹string›*
+▸ **generate**(`playbookDefinition`: [PlaybookDefinition](../interfaces/playbookdefinition.md), `options?`: any): *Promise‹AxiosResponse‹string››*
 
 *Defined in [api.ts:1403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1403)*
 
@@ -101,4 +101,4 @@ Name | Type |
 `playbookDefinition` | [PlaybookDefinition](../interfaces/playbookdefinition.md) |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹string›*
+**Returns:** *Promise‹AxiosResponse‹string››*

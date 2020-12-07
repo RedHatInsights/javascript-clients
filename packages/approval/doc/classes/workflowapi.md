@@ -90,7 +90,7 @@ ___
 
 ###  addWorkflowToTemplate
 
-▸ **addWorkflowToTemplate**(`templateId`: string, `workflow`: [Workflow](../interfaces/workflow.md), `options?`: any): *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
+▸ **addWorkflowToTemplate**(`templateId`: string, `workflow`: [Workflow](../interfaces/workflow.md), `options?`: any): *Promise‹AxiosResponse‹[Workflow](../interfaces/workflow.md)››*
 
 *Defined in [packages/approval/api.ts:2492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2492)*
 
@@ -110,13 +110,13 @@ Name | Type | Description |
 `workflow` | [Workflow](../interfaces/workflow.md) | Parameters needed to create a workflow |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Workflow](../interfaces/workflow.md)››*
 
 ___
 
 ###  destroyWorkflow
 
-▸ **destroyWorkflow**(`id`: string, `options?`: any): *AxiosPromise‹void›*
+▸ **destroyWorkflow**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/approval/api.ts:2504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2504)*
 
@@ -135,13 +135,13 @@ Name | Type | Description |
 `id` | string | ID used to select a resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
 ###  linkWorkflow
 
-▸ **linkWorkflow**(`id`: string, `resourceObject`: [ResourceObject](../interfaces/resourceobject.md), `options?`: any): *AxiosPromise‹void›*
+▸ **linkWorkflow**(`id`: string, `resourceObject`: [ResourceObject](../interfaces/resourceobject.md), `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/approval/api.ts:2517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2517)*
 
@@ -161,13 +161,13 @@ Name | Type | Description |
 `resourceObject` | [ResourceObject](../interfaces/resourceobject.md) | Parameters needed to create a link |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
 ###  listWorkflows
 
-▸ **listWorkflows**(`appName?`: string, `objectId?`: string, `objectType?`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[WorkflowCollection](../interfaces/workflowcollection.md)›*
+▸ **listWorkflows**(`appName?`: string, `objectId?`: string, `objectType?`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹AxiosResponse‹[WorkflowCollection](../interfaces/workflowcollection.md)››*
 
 *Defined in [packages/approval/api.ts:2535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2535)*
 
@@ -192,13 +192,13 @@ Name | Type |
 `sortBy?` | string |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[WorkflowCollection](../interfaces/workflowcollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[WorkflowCollection](../interfaces/workflowcollection.md)››*
 
 ___
 
 ###  listWorkflowsByTemplate
 
-▸ **listWorkflowsByTemplate**(`templateId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *AxiosPromise‹[WorkflowCollection](../interfaces/workflowcollection.md)›*
+▸ **listWorkflowsByTemplate**(`templateId`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹AxiosResponse‹[WorkflowCollection](../interfaces/workflowcollection.md)››*
 
 *Defined in [packages/approval/api.ts:2551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2551)*
 
@@ -221,13 +221,13 @@ Name | Type | Description |
 `sortBy?` | string | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[WorkflowCollection](../interfaces/workflowcollection.md)›*
+**Returns:** *Promise‹AxiosResponse‹[WorkflowCollection](../interfaces/workflowcollection.md)››*
 
 ___
 
 ###  reposition
 
-▸ **reposition**(`id`: string, `reposition`: [Reposition](../interfaces/reposition.md), `options?`: any): *AxiosPromise‹void›*
+▸ **reposition**(`id`: string, `reposition`: [Reposition](../interfaces/reposition.md), `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/approval/api.ts:2564](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2564)*
 
@@ -247,13 +247,13 @@ Name | Type | Description |
 `reposition` | [Reposition](../interfaces/reposition.md) | How many levels should the sequence be brought up or down |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
 ###  showWorkflow
 
-▸ **showWorkflow**(`id`: string, `options?`: any): *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
+▸ **showWorkflow**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Workflow](../interfaces/workflow.md)››*
 
 *Defined in [packages/approval/api.ts:2576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2576)*
 
@@ -272,13 +272,13 @@ Name | Type | Description |
 `id` | string | ID used to select a resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Workflow](../interfaces/workflow.md)››*
 
 ___
 
 ###  unlinkWorkflow
 
-▸ **unlinkWorkflow**(`id`: string, `resourceObject`: [ResourceObject](../interfaces/resourceobject.md), `options?`: any): *AxiosPromise‹void›*
+▸ **unlinkWorkflow**(`id`: string, `resourceObject`: [ResourceObject](../interfaces/resourceobject.md), `options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/approval/api.ts:2589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2589)*
 
@@ -298,13 +298,13 @@ Name | Type | Description |
 `resourceObject` | [ResourceObject](../interfaces/resourceobject.md) | Parameters needed to select a resource object |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
 ###  updateWorkflow
 
-▸ **updateWorkflow**(`id`: string, `workflow`: [Workflow](../interfaces/workflow.md), `options?`: any): *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
+▸ **updateWorkflow**(`id`: string, `workflow`: [Workflow](../interfaces/workflow.md), `options?`: any): *Promise‹AxiosResponse‹[Workflow](../interfaces/workflow.md)››*
 
 *Defined in [packages/approval/api.ts:2602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2602)*
 
@@ -324,4 +324,4 @@ Name | Type | Description |
 `workflow` | [Workflow](../interfaces/workflow.md) | Parameters needed to update an approval workflow |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[Workflow](../interfaces/workflow.md)›*
+**Returns:** *Promise‹AxiosResponse‹[Workflow](../interfaces/workflow.md)››*

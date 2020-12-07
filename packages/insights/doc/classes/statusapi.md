@@ -84,7 +84,7 @@ ___
 
 ###  statusList
 
-▸ **statusList**(`options?`: any): *AxiosPromise‹void›*
+▸ **statusList**(`options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/insights/api.ts:1034](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1034)*
 
@@ -102,13 +102,13 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
 ###  statusLive
 
-▸ **statusLive**(`options?`: any): *AxiosPromise‹[StatusReady](../interfaces/statusready.md)›*
+▸ **statusLive**(`options?`: any): *Promise‹AxiosResponse‹[StatusReady](../interfaces/statusready.md)››*
 
 *Defined in [packages/insights/api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1045)*
 
@@ -126,13 +126,13 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[StatusReady](../interfaces/statusready.md)›*
+**Returns:** *Promise‹AxiosResponse‹[StatusReady](../interfaces/statusready.md)››*
 
 ___
 
 ###  statusReady
 
-▸ **statusReady**(`options?`: any): *AxiosPromise‹[StatusReady](../interfaces/statusready.md)›*
+▸ **statusReady**(`options?`: any): *Promise‹AxiosResponse‹[StatusReady](../interfaces/statusready.md)››*
 
 *Defined in [packages/insights/api.ts:1056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1056)*
 
@@ -150,4 +150,4 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[StatusReady](../interfaces/statusready.md)›*
+**Returns:** *Promise‹AxiosResponse‹[StatusReady](../interfaces/statusready.md)››*

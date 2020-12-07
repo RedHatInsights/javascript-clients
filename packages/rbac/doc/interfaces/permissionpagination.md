@@ -8,9 +8,7 @@
 
 ## Hierarchy
 
-* [ListPagination](listpagination.md)
-
-  ↳ **PermissionPagination**
+* **PermissionPagination**
 
 ## Index
 
@@ -26,7 +24,7 @@
 
 • **data**: *Array‹[Permission](permission.md)›*
 
-*Defined in [packages/rbac/api.ts:587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L587)*
+*Defined in [packages/rbac/api.ts:666](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L666)*
 
 **`memberof`** PermissionPagination
 
@@ -36,11 +34,9 @@ ___
 
 • **links**? : *[PaginationLinks](paginationlinks.md)*
 
-*Inherited from [AccessPagination](accesspagination.md).[links](accesspagination.md#optional-links)*
+*Defined in [packages/rbac/api.ts:660](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L660)*
 
-*Defined in [packages/rbac/api.ts:460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L460)*
-
-**`memberof`** ListPagination
+**`memberof`** PermissionPagination
 
 ___
 
@@ -48,8 +44,6 @@ ___
 
 • **meta**? : *[PaginationMeta](paginationmeta.md)*
 
-*Inherited from [AccessPagination](accesspagination.md).[meta](accesspagination.md#optional-meta)*
+*Defined in [packages/rbac/api.ts:654](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L654)*
 
-*Defined in [packages/rbac/api.ts:454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L454)*
-
-**`memberof`** ListPagination
+**`memberof`** PermissionPagination

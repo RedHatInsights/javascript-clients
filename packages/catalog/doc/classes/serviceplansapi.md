@@ -87,7 +87,7 @@ ___
 
 ###  createServicePlan
 
-▸ **createServicePlan**(`importServicePlan?`: [ImportServicePlan](../interfaces/importserviceplan.md), `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)[]›*
+▸ **createServicePlan**(`importServicePlan?`: [ImportServicePlan](../interfaces/importserviceplan.md), `options?`: any): *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)[]››*
 
 *Defined in [packages/catalog/api.ts:7247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7247)*
 
@@ -106,13 +106,13 @@ Name | Type |
 `importServicePlan?` | [ImportServicePlan](../interfaces/importserviceplan.md) |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)[]›*
+**Returns:** *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)[]››*
 
 ___
 
 ###  patchServicePlanModified
 
-▸ **patchServicePlanModified**(`id`: string, `patchModifiedServicePlan?`: [PatchModifiedServicePlan](../interfaces/patchmodifiedserviceplan.md), `options?`: any): *AxiosPromise‹object›*
+▸ **patchServicePlanModified**(`id`: string, `patchModifiedServicePlan?`: [PatchModifiedServicePlan](../interfaces/patchmodifiedserviceplan.md), `options?`: any): *Promise‹AxiosResponse‹object››*
 
 *Defined in [packages/catalog/api.ts:7260](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7260)*
 
@@ -130,13 +130,13 @@ Name | Type | Description |
 `patchModifiedServicePlan?` | [PatchModifiedServicePlan](../interfaces/patchmodifiedserviceplan.md) | - |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹object›*
+**Returns:** *Promise‹AxiosResponse‹object››*
 
 ___
 
 ###  resetServicePlanModified
 
-▸ **resetServicePlanModified**(`id`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)[]›*
+▸ **resetServicePlanModified**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)[]››*
 
 *Defined in [packages/catalog/api.ts:7272](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7272)*
 
@@ -155,13 +155,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)[]›*
+**Returns:** *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)[]››*
 
 ___
 
 ###  showServicePlan
 
-▸ **showServicePlan**(`id`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
+▸ **showServicePlan**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)››*
 
 *Defined in [packages/catalog/api.ts:7284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7284)*
 
@@ -180,13 +180,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)››*
 
 ___
 
 ###  showServicePlanBase
 
-▸ **showServicePlanBase**(`id`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
+▸ **showServicePlanBase**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)››*
 
 *Defined in [packages/catalog/api.ts:7296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7296)*
 
@@ -205,13 +205,13 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)››*
 
 ___
 
 ###  showServicePlanModified
 
-▸ **showServicePlanModified**(`id`: string, `options?`: any): *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
+▸ **showServicePlanModified**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)››*
 
 *Defined in [packages/catalog/api.ts:7308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7308)*
 
@@ -230,4 +230,4 @@ Name | Type | Description |
 `id` | string | ID of the resource |
 `options?` | any | - |
 
-**Returns:** *AxiosPromise‹[ServicePlan](../interfaces/serviceplan.md)›*
+**Returns:** *Promise‹AxiosResponse‹[ServicePlan](../interfaces/serviceplan.md)››*

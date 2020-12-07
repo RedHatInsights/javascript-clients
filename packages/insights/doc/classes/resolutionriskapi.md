@@ -82,7 +82,7 @@ ___
 
 ###  resolutionRiskList
 
-▸ **resolutionRiskList**(`options?`: any): *AxiosPromise‹void›*
+▸ **resolutionRiskList**(`options?`: any): *Promise‹AxiosResponse‹void››*
 
 *Defined in [packages/insights/api.ts:558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L558)*
 
@@ -100,4 +100,4 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *AxiosPromise‹void›*
+**Returns:** *Promise‹AxiosResponse‹void››*
