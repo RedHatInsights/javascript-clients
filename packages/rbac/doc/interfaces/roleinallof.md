@@ -22,6 +22,6 @@
 
 • **access**: *Array‹[Access](access.md)›*
 
-*Defined in [packages/rbac/api.ts:1114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1114)*
+*Defined in [packages/rbac/api.ts:1120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1120)*
 
 **`memberof`** RoleInAllOf

@@ -23,7 +23,7 @@
 
 • **description**? : *string*
 
-*Defined in [packages/rbac/api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L698)*
+*Defined in [packages/rbac/api.ts:704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L704)*
 
 **`memberof`** Policy
 
@@ -33,6 +33,6 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/rbac/api.ts:692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L692)*
+*Defined in [packages/rbac/api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L698)*
 
 **`memberof`** Policy

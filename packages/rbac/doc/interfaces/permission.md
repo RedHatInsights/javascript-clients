@@ -15,6 +15,7 @@
 ### Properties
 
 * [application](permission.md#optional-application)
+* [description](permission.md#optional-description)
 * [permission](permission.md#optional-permission)
 * [resource_type](permission.md#optional-resource_type)
 * [verb](permission.md#optional-verb)
@@ -26,6 +27,16 @@
 • **application**? : *string*
 
 *Defined in [packages/rbac/api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L585)*
+
+**`memberof`** Permission
+
+___
+
+### `Optional` description
+
+• **description**? : *string*
+
+*Defined in [packages/rbac/api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L609)*
 
 **`memberof`** Permission
 

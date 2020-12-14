@@ -22,6 +22,6 @@
 
 • **data**: *Array‹[Principal](principal.md)›*
 
-*Defined in [packages/rbac/api.ts:997](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L997)*
+*Defined in [packages/rbac/api.ts:1003](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1003)*
 
 **`memberof`** PrincipalPaginationAllOf
