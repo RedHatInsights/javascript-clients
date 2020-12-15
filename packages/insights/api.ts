@@ -876,7 +876,7 @@ export const StatusApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statusLive: async (options: any = {}): Promise<RequestArgs> => {
+        statusLiveRead: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/status/live/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -906,7 +906,7 @@ export const StatusApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statusReady: async (options: any = {}): Promise<RequestArgs> => {
+        statusReadyRead: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/status/ready/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -958,8 +958,8 @@ export const StatusApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async statusLive(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusReady>> {
-            const localVarAxiosArgs = await StatusApiAxiosParamCreator(configuration).statusLive(options);
+        async statusLiveRead(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusReady>> {
+            const localVarAxiosArgs = await StatusApiAxiosParamCreator(configuration).statusLiveRead(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -971,8 +971,8 @@ export const StatusApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async statusReady(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusReady>> {
-            const localVarAxiosArgs = await StatusApiAxiosParamCreator(configuration).statusReady(options);
+        async statusReadyRead(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StatusReady>> {
+            const localVarAxiosArgs = await StatusApiAxiosParamCreator(configuration).statusReadyRead(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1002,8 +1002,8 @@ export const StatusApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statusLive(options?: any): AxiosPromise<StatusReady> {
-            return StatusApiFp(configuration).statusLive(options).then((request) => request(axios, basePath));
+        statusLiveRead(options?: any): AxiosPromise<StatusReady> {
+            return StatusApiFp(configuration).statusLiveRead(options).then((request) => request(axios, basePath));
         },
         /**
          * This returns a dictionary with properties defining the status of the components Advisor relies on. * \'django\' should always be True.  If Django isn\'t ready, you can\'t get this information :-) * \'database\' is True when a database access returns successfully with valid information. * \'rbac\' is True when we can make a request to the RBAC API and get a valid response. * \'advisor\' is True if all of the above are True.
@@ -1011,8 +1011,8 @@ export const StatusApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statusReady(options?: any): AxiosPromise<StatusReady> {
-            return StatusApiFp(configuration).statusReady(options).then((request) => request(axios, basePath));
+        statusReadyRead(options?: any): AxiosPromise<StatusReady> {
+            return StatusApiFp(configuration).statusReadyRead(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1042,8 +1042,8 @@ export class StatusApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StatusApi
      */
-    public statusLive(options?: any) {
-        return StatusApiFp(this.configuration).statusLive(options).then((request) => request(this.axios, this.basePath));
+    public statusLiveRead(options?: any) {
+        return StatusApiFp(this.configuration).statusLiveRead(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1053,8 +1053,8 @@ export class StatusApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StatusApi
      */
-    public statusReady(options?: any) {
-        return StatusApiFp(this.configuration).statusReady(options).then((request) => request(this.axios, this.basePath));
+    public statusReadyRead(options?: any) {
+        return StatusApiFp(this.configuration).statusReadyRead(options).then((request) => request(this.axios, this.basePath));
     }
 
 }

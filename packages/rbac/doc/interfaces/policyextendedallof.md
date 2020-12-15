@@ -23,7 +23,7 @@
 
 • **group**: *[GroupOut](groupout.md)*
 
-*Defined in [packages/rbac/api.ts:760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L760)*
+*Defined in [packages/rbac/api.ts:766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L766)*
 
 **`memberof`** PolicyExtendedAllOf
 
@@ -33,6 +33,6 @@ ___
 
 • **roles**: *Array‹[RoleOut](roleout.md)›*
 
-*Defined in [packages/rbac/api.ts:766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L766)*
+*Defined in [packages/rbac/api.ts:772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L772)*
 
 **`memberof`** PolicyExtendedAllOf

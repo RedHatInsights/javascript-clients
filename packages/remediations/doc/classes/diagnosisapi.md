@@ -82,9 +82,9 @@ ___
 
 ###  getDiagnosis
 
-▸ **getDiagnosis**(`system`: string, `remediation?`: string, `options?`: any): *Promise‹AxiosResponse‹[Diagnosis](../interfaces/diagnosis.md)››*
+▸ **getDiagnosis**(`system`: string, `remediation?`: string, `branchId?`: string, `options?`: any): *Promise‹AxiosResponse‹[Diagnosis](../interfaces/diagnosis.md)››*
 
-*Defined in [api.ts:1291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1291)*
+*Defined in [api.ts:1299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1299)*
 
 Provides host-specific diagnosis information
 
@@ -100,6 +100,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `system` | string | System identifier |
 `remediation?` | string | - |
+`branchId?` | string | - |
 `options?` | any | - |
 
 **Returns:** *Promise‹AxiosResponse‹[Diagnosis](../interfaces/diagnosis.md)››*

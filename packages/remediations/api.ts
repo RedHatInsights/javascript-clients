@@ -1189,10 +1189,11 @@ export const DiagnosisApiAxiosParamCreator = function (configuration?: Configura
          * @summary host-specific diagnosis
          * @param {string} system System identifier
          * @param {string} [remediation] Remediation identifier (uuid)
+         * @param {string} [branchId] Branch ID passed by satellite
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDiagnosis: async (system: string, remediation?: string, options: any = {}): Promise<RequestArgs> => {
+        getDiagnosis: async (system: string, remediation?: string, branchId?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'system' is not null or undefined
             if (system === null || system === undefined) {
                 throw new RequiredError('system','Required parameter system was null or undefined when calling getDiagnosis.');
@@ -1210,6 +1211,10 @@ export const DiagnosisApiAxiosParamCreator = function (configuration?: Configura
 
             if (remediation !== undefined) {
                 localVarQueryParameter['remediation'] = remediation;
+            }
+
+            if (branchId !== undefined) {
+                localVarQueryParameter['branch_id'] = branchId;
             }
 
 
@@ -1239,11 +1244,12 @@ export const DiagnosisApiFp = function(configuration?: Configuration) {
          * @summary host-specific diagnosis
          * @param {string} system System identifier
          * @param {string} [remediation] Remediation identifier (uuid)
+         * @param {string} [branchId] Branch ID passed by satellite
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getDiagnosis(system: string, remediation?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Diagnosis>> {
-            const localVarAxiosArgs = await DiagnosisApiAxiosParamCreator(configuration).getDiagnosis(system, remediation, options);
+        async getDiagnosis(system: string, remediation?: string, branchId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Diagnosis>> {
+            const localVarAxiosArgs = await DiagnosisApiAxiosParamCreator(configuration).getDiagnosis(system, remediation, branchId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1263,11 +1269,12 @@ export const DiagnosisApiFactory = function (configuration?: Configuration, base
          * @summary host-specific diagnosis
          * @param {string} system System identifier
          * @param {string} [remediation] Remediation identifier (uuid)
+         * @param {string} [branchId] Branch ID passed by satellite
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getDiagnosis(system: string, remediation?: string, options?: any): AxiosPromise<Diagnosis> {
-            return DiagnosisApiFp(configuration).getDiagnosis(system, remediation, options).then((request) => request(axios, basePath));
+        getDiagnosis(system: string, remediation?: string, branchId?: string, options?: any): AxiosPromise<Diagnosis> {
+            return DiagnosisApiFp(configuration).getDiagnosis(system, remediation, branchId, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1284,12 +1291,13 @@ export class DiagnosisApi extends BaseAPI {
      * @summary host-specific diagnosis
      * @param {string} system System identifier
      * @param {string} [remediation] Remediation identifier (uuid)
+     * @param {string} [branchId] Branch ID passed by satellite
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DiagnosisApi
      */
-    public getDiagnosis(system: string, remediation?: string, options?: any) {
-        return DiagnosisApiFp(this.configuration).getDiagnosis(system, remediation, options).then((request) => request(this.axios, this.basePath));
+    public getDiagnosis(system: string, remediation?: string, branchId?: string, options?: any) {
+        return DiagnosisApiFp(this.configuration).getDiagnosis(system, remediation, branchId, options).then((request) => request(this.axios, this.basePath));
     }
 
 }

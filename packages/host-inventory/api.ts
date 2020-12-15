@@ -946,6 +946,12 @@ export interface StructuredTag {
  */
 export interface SystemProfile {
     /**
+     * A UUID associated with the host\'s RHSM certificate
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    owner_id?: string;
+    /**
      *
      * @type {number}
      * @memberof SystemProfile

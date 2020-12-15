@@ -601,6 +601,12 @@ export interface Permission {
      * @memberof Permission
      */
     permission?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Permission
+     */
+    description?: string;
 }
 /**
  *
@@ -3650,16 +3656,17 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
          * @summary List the principals for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {string} [usernames] Usernames of principals to get
+         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name or email.
+         * @param {string} [usernames] Comma separated usernames of principals to get. If match_criteria is specified, only the first username will be picked up for search.
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
-         * @param {string} [email] Exact e-mail address of principal to search for
+         * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
          * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
          * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals: async (limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options: any = {}): Promise<RequestArgs> => {
+        listPrincipals: async (limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/principals/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3682,6 +3689,10 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (matchCriteria !== undefined) {
+                localVarQueryParameter['match_criteria'] = matchCriteria;
             }
 
             if (usernames !== undefined) {
@@ -3735,17 +3746,18 @@ export const PrincipalApiFp = function(configuration?: Configuration) {
          * @summary List the principals for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {string} [usernames] Usernames of principals to get
+         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name or email.
+         * @param {string} [usernames] Comma separated usernames of principals to get. If match_criteria is specified, only the first username will be picked up for search.
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
-         * @param {string} [email] Exact e-mail address of principal to search for
+         * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
          * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
          * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination>> {
-            const localVarAxiosArgs = await PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, orderBy, options);
+        async listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination>> {
+            const localVarAxiosArgs = await PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3765,17 +3777,18 @@ export const PrincipalApiFactory = function (configuration?: Configuration, base
          * @summary List the principals for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {string} [usernames] Usernames of principals to get
+         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name or email.
+         * @param {string} [usernames] Comma separated usernames of principals to get. If match_criteria is specified, only the first username will be picked up for search.
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
-         * @param {string} [email] Exact e-mail address of principal to search for
+         * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
          * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
          * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any): AxiosPromise<PrincipalPagination> {
-            return PrincipalApiFp(configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, orderBy, options).then((request) => request(axios, basePath));
+        listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any): AxiosPromise<PrincipalPagination> {
+            return PrincipalApiFp(configuration).listPrincipals(limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -3792,9 +3805,10 @@ export class PrincipalApi extends BaseAPI {
      * @summary List the principals for a tenant
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
-     * @param {string} [usernames] Usernames of principals to get
+     * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name or email.
+     * @param {string} [usernames] Comma separated usernames of principals to get. If match_criteria is specified, only the first username will be picked up for search.
      * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
-     * @param {string} [email] Exact e-mail address of principal to search for
+     * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
      * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
      * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
      * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
@@ -3802,8 +3816,8 @@ export class PrincipalApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PrincipalApi
      */
-    public listPrincipals(limit?: number, offset?: number, usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any) {
-        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, usernames, sortOrder, email, status, adminOnly, orderBy, options).then((request) => request(this.axios, this.basePath));
+    public listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any) {
+        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, options).then((request) => request(this.axios, this.basePath));
     }
 
 }

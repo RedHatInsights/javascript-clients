@@ -24,7 +24,7 @@
 
 • **data**: *Array‹[PolicyExtended](policyextended.md)›*
 
-*Defined in [packages/rbac/api.ts:841](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L841)*
+*Defined in [packages/rbac/api.ts:847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L847)*
 
 **`memberof`** PolicyPagination
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [packages/rbac/api.ts:835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L835)*
+*Defined in [packages/rbac/api.ts:841](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L841)*
 
 **`memberof`** PolicyPagination
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [packages/rbac/api.ts:829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L829)*
+*Defined in [packages/rbac/api.ts:835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L835)*
 
 **`memberof`** PolicyPagination
