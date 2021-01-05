@@ -24,7 +24,7 @@
         "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/topological_inventory-api/master/public/doc/openapi-3-v1.0.json' npm run generate"
     },
     "dependencies": {
-        "axios": "^0.19.2"
+        "axios": "^0.21.1"
     },
     "devDependencies": {
         "typedoc": "^0.17.4",
