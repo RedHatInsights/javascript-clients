@@ -17,6 +17,7 @@
 * [filter](controllerslistmeta.md#optional-filter)
 * [limit](controllerslistmeta.md#optional-limit)
 * [offset](controllerslistmeta.md#optional-offset)
+* [search](controllerslistmeta.md#optional-search)
 * [sort](controllerslistmeta.md#optional-sort)
 * [total_items](controllerslistmeta.md#optional-total_items)
 
@@ -26,7 +27,7 @@
 
 • **filter**? : *object*
 
-*Defined in [packages/patch/api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L361)*
+*Defined in [packages/patch/api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L361)*
 
 **`memberof`** ControllersListMeta
 
@@ -40,7 +41,7 @@ ___
 
 • **limit**? : *number*
 
-*Defined in [packages/patch/api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L367)*
+*Defined in [packages/patch/api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L367)*
 
 **`memberof`** ControllersListMeta
 
@@ -50,7 +51,17 @@ ___
 
 • **offset**? : *number*
 
-*Defined in [packages/patch/api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L373)*
+*Defined in [packages/patch/api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L373)*
+
+**`memberof`** ControllersListMeta
+
+___
+
+### `Optional` search
+
+• **search**? : *string*
+
+*Defined in [packages/patch/api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L379)*
 
 **`memberof`** ControllersListMeta
 
@@ -60,7 +71,7 @@ ___
 
 • **sort**? : *Array‹string›*
 
-*Defined in [packages/patch/api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L379)*
+*Defined in [packages/patch/api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L385)*
 
 **`memberof`** ControllersListMeta
 
@@ -70,6 +81,6 @@ ___
 
 • **total_items**? : *number*
 
-*Defined in [packages/patch/api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L385)*
+*Defined in [packages/patch/api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L391)*
 
 **`memberof`** ControllersListMeta

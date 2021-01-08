@@ -34,7 +34,10 @@
 * [ExecutiveReportCvesBySeverity8to10](interfaces/executivereportcvesbyseverity8to10.md)
 * [ExecutiveReportCvesBySeverityNa](interfaces/executivereportcvesbyseverityna.md)
 * [ExecutiveReportRecentCves](interfaces/executivereportrecentcves.md)
+* [ExecutiveReportRulesBySeverity](interfaces/executivereportrulesbyseverity.md)
+* [ExecutiveReportRulesBySeverity0](interfaces/executivereportrulesbyseverity0.md)
 * [ExecutiveReportTopCves](interfaces/executivereporttopcves.md)
+* [ExecutiveReportTopRules](interfaces/executivereporttoprules.md)
 * [InsightsRule](interfaces/insightsrule.md)
 * [Links](interfaces/links.md)
 * [Meta](interfaces/meta.md)
@@ -104,7 +107,7 @@ ___
 
 Ƭ **InventoryIdOrList**: *Array‹string› | string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:678](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L678)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L789)*
 
 **`export`** 
 
@@ -122,7 +125,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1940)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2051)*
 
 DefaultApi - axios parameter creator
 
@@ -186,7 +189,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:4095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4095)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:4206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4206)*
 
 DefaultApi - factory interface
 
@@ -252,7 +255,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:3653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3653)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:3764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L3764)*
 
 DefaultApi - functional programming interface
 

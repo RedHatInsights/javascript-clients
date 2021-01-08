@@ -65,7 +65,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/sources/api.ts:786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L786)*
+*Defined in [packages/sources/api.ts:798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L798)*
 
 DefaultApi - axios parameter creator
 
@@ -115,6 +115,8 @@ Name | Type |
 
 * **listSourceApplications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
+* **listSourceAuthentications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
 * **listSourceEndpoints**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **listSourceTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
@@ -151,7 +153,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/sources/api.ts:2946](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2946)*
+*Defined in [packages/sources/api.ts:3038](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L3038)*
 
 DefaultApi - factory interface
 
@@ -203,6 +205,8 @@ Name | Type |
 
 * **listSourceApplications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[ApplicationsCollection](interfaces/applicationscollection.md)›*
 
+* **listSourceAuthentications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[AuthenticationsCollection](interfaces/authenticationscollection.md)›*
+
 * **listSourceEndpoints**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[EndpointsCollection](interfaces/endpointscollection.md)›*
 
 * **listSourceTypeSources**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *AxiosPromise‹[SourcesCollection](interfaces/sourcescollection.md)›*
@@ -239,7 +243,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/sources/api.ts:2430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2430)*
+*Defined in [packages/sources/api.ts:2504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L2504)*
 
 DefaultApi - functional programming interface
 
@@ -288,6 +292,8 @@ Name | Type |
 * **listSourceApplicationTypes**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹function›*
 
 * **listSourceApplications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹function›*
+
+* **listSourceAuthentications**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹function›*
 
 * **listSourceEndpoints**(`id`: string, `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string | Array‹string›, `options?`: any): *Promise‹function›*
 

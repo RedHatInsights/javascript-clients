@@ -22,6 +22,6 @@
 
 • **data**: *[SystemDetailsOutData](systemdetailsoutdata.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1740](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1740)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1851)*
 
 **`memberof`** SystemDetailsOut

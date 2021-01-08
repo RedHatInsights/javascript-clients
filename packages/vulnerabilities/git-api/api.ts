@@ -430,10 +430,28 @@ export interface ExecutiveReport {
     recent_cves: ExecutiveReportRecentCves;
     /**
      *
+     * @type {ExecutiveReportRulesBySeverity}
+     * @memberof ExecutiveReport
+     */
+    rules_by_severity: ExecutiveReportRulesBySeverity;
+    /**
+     * Number of unique CVEs discovered on the managed systems.
+     * @type {number}
+     * @memberof ExecutiveReport
+     */
+    rules_total: number;
+    /**
+     *
      * @type {Array<ExecutiveReportTopCves>}
      * @memberof ExecutiveReport
      */
     top_cves?: Array<ExecutiveReportTopCves>;
+    /**
+     *
+     * @type {Array<ExecutiveReportTopRules>}
+     * @memberof ExecutiveReport
+     */
+    top_rules?: Array<ExecutiveReportTopRules>;
 }
 /**
  * Number of CVEs discovered on the managed systems, divided into buckets based on their CVSSv3 score (CVSSv2 is used when CVSSv3 is not available).
@@ -568,6 +586,56 @@ export interface ExecutiveReportRecentCves {
     last90days: number;
 }
 /**
+ * Information about how much systems are affected by a security rule, broken down by rule severity.
+ * @export
+ * @interface ExecutiveReportRulesBySeverity
+ */
+export interface ExecutiveReportRulesBySeverity {
+    /**
+     *
+     * @type {ExecutiveReportRulesBySeverity0}
+     * @memberof ExecutiveReportRulesBySeverity
+     */
+    _0: ExecutiveReportRulesBySeverity0;
+    /**
+     *
+     * @type {ExecutiveReportRulesBySeverity0}
+     * @memberof ExecutiveReportRulesBySeverity
+     */
+    _1: ExecutiveReportRulesBySeverity0;
+    /**
+     *
+     * @type {ExecutiveReportRulesBySeverity0}
+     * @memberof ExecutiveReportRulesBySeverity
+     */
+    _2: ExecutiveReportRulesBySeverity0;
+    /**
+     *
+     * @type {ExecutiveReportRulesBySeverity0}
+     * @memberof ExecutiveReportRulesBySeverity
+     */
+    _3: ExecutiveReportRulesBySeverity0;
+}
+/**
+ *
+ * @export
+ * @interface ExecutiveReportRulesBySeverity0
+ */
+export interface ExecutiveReportRulesBySeverity0 {
+    /**
+     * How many unique rules with at least system affected are present.
+     * @type {number}
+     * @memberof ExecutiveReportRulesBySeverity0
+     */
+    rule_count: number;
+    /**
+     * How many unique systems are affected by at least one rules with given severity
+     * @type {number}
+     * @memberof ExecutiveReportRulesBySeverity0
+     */
+    systems_affected: number;
+}
+/**
  *
  * @export
  * @interface ExecutiveReportTopCves
@@ -601,6 +669,43 @@ export interface ExecutiveReportTopCves {
      * Systems affected by the CVE.
      * @type {number}
      * @memberof ExecutiveReportTopCves
+     */
+    systems_affected: number;
+}
+/**
+ *
+ * @export
+ * @interface ExecutiveReportTopRules
+ */
+export interface ExecutiveReportTopRules {
+    /**
+     * All CVEs associated with the rule
+     * @type {Array<string>}
+     * @memberof ExecutiveReportTopRules
+     */
+    associated_cves: Array<string>;
+    /**
+     * Short description of the problem.
+     * @type {string}
+     * @memberof ExecutiveReportTopRules
+     */
+    description: string;
+    /**
+     * Name of the security rule.
+     * @type {string}
+     * @memberof ExecutiveReportTopRules
+     */
+    name: string;
+    /**
+     * Severity of the security rule.
+     * @type {number}
+     * @memberof ExecutiveReportTopRules
+     */
+    severity: number;
+    /**
+     * Number of systems affected by the rule.
+     * @type {number}
+     * @memberof ExecutiveReportTopRules
      */
     systems_affected: number;
 }
@@ -670,6 +775,12 @@ export interface InsightsRule {
      * @memberof InsightsRule
      */
     rule_impact: number | null;
+    /**
+     * Number of systems affected by the rule.
+     * @type {number}
+     * @memberof InsightsRule
+     */
+    systems_affected?: number;
 }
 /**
  * @type InventoryIdOrList
@@ -2008,7 +2119,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2143,7 +2254,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2807,7 +2918,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3685,7 +3796,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3716,7 +3827,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3882,7 +3993,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4123,7 +4234,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4150,7 +4261,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4288,7 +4399,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4480,7 +4591,7 @@ export class DefaultApi extends BaseAPI {
      * @param {Array<string>} [sapSids] List of SAP IDs to filter with
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
      * @param {boolean} [showAdvisories] If true shows advisories list
-     * @param {string} [advisory] filter by advisory name
+     * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
      * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4509,7 +4620,7 @@ export class DefaultApi extends BaseAPI {
      * @param {Array<string>} [sapSids] List of SAP IDs to filter with
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
      * @param {boolean} [showAdvisories] If true shows advisories list
-     * @param {string} [advisory] filter by advisory name
+     * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
      * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4661,7 +4772,7 @@ export class DefaultApi extends BaseAPI {
      * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
      * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
      * @param {boolean} [showAdvisories] If true shows advisories list
-     * @param {string} [advisory] filter by advisory name
+     * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi

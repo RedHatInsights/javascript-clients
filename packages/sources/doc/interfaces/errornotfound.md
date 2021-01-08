@@ -22,6 +22,6 @@
 
 • **errors**? : *Array‹[ErrorNotFoundErrors](errornotfounderrors.md)›*
 
-*Defined in [packages/sources/api.ts:513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L513)*
+*Defined in [packages/sources/api.ts:525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L525)*
 
 **`memberof`** ErrorNotFound

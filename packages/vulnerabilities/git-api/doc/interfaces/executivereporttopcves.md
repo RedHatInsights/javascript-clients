@@ -26,7 +26,7 @@
 
 • **cvss2_score**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L587)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L655)*
 
 String representation of cvss2 score of the CVE.
 
@@ -38,7 +38,7 @@ ___
 
 • **cvss3_score**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L593)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L661)*
 
 String representation of cvss3 score of the CVE.
 
@@ -50,7 +50,7 @@ ___
 
 • **description**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L599)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L667)*
 
 Description of the CVE.
 
@@ -62,7 +62,7 @@ ___
 
 • **synopsis**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L581)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L649)*
 
 CVE synopsis
 
@@ -74,7 +74,7 @@ ___
 
 • **systems_affected**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L605)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L673)*
 
 Systems affected by the CVE.
 

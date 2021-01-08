@@ -25,7 +25,7 @@
 
 • **first**? : *string*
 
-*Defined in [packages/sources/api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L329)*
+*Defined in [packages/sources/api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L341)*
 
 **`memberof`** CollectionLinks
 
@@ -35,7 +35,7 @@ ___
 
 • **last**? : *string*
 
-*Defined in [packages/sources/api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L335)*
+*Defined in [packages/sources/api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L347)*
 
 **`memberof`** CollectionLinks
 
@@ -45,7 +45,7 @@ ___
 
 • **next**? : *string*
 
-*Defined in [packages/sources/api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L341)*
+*Defined in [packages/sources/api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L353)*
 
 **`memberof`** CollectionLinks
 
@@ -55,6 +55,6 @@ ___
 
 • **prev**? : *string*
 
-*Defined in [packages/sources/api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L347)*
+*Defined in [packages/sources/api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L359)*
 
 **`memberof`** CollectionLinks

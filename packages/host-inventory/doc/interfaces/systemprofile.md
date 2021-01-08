@@ -316,6 +316,8 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1043)*
 
+The kernel version represented with a three, optionally four, number scheme.
+
 **`memberof`** SystemProfile
 
 ___

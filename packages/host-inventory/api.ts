@@ -1036,7 +1036,7 @@ export interface SystemProfile {
      */
     os_release?: string;
     /**
-     *
+     * The kernel version represented with a three, optionally four, number scheme.
      * @type {string}
      * @memberof SystemProfile
      */
