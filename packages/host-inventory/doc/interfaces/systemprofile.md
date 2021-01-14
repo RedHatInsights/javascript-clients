@@ -32,6 +32,7 @@ Representation of the system profile fields
 * [insights_client_version](systemprofile.md#optional-insights_client_version)
 * [insights_egg_version](systemprofile.md#optional-insights_egg_version)
 * [installed_packages](systemprofile.md#optional-installed_packages)
+* [installed_packages_delta](systemprofile.md#optional-installed_packages_delta)
 * [installed_products](systemprofile.md#optional-installed_products)
 * [installed_services](systemprofile.md#optional-installed_services)
 * [katello_agent_running](systemprofile.md#optional-katello_agent_running)
@@ -164,7 +165,7 @@ ___
 
 • **enabled_services**? : *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:1151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1151)*
+*Defined in [packages/host-inventory/api.ts:1157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1157)*
 
 **`memberof`** SystemProfile
 
@@ -220,6 +221,16 @@ ___
 
 ___
 
+### `Optional` installed_packages_delta
+
+• **installed_packages_delta**? : *Array‹string›*
+
+*Defined in [packages/host-inventory/api.ts:1145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1145)*
+
+**`memberof`** SystemProfile
+
+___
+
 ### `Optional` installed_products
 
 • **installed_products**? : *Array‹[InstalledProduct](installedproduct.md)›*
@@ -234,7 +245,7 @@ ___
 
 • **installed_services**? : *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:1145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1145)*
+*Defined in [packages/host-inventory/api.ts:1151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1151)*
 
 **`memberof`** SystemProfile
 
@@ -316,6 +327,8 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1043)*
 
+The kernel version represented with a three, optionally four, number scheme.
+
 **`memberof`** SystemProfile
 
 ___
@@ -356,9 +369,9 @@ ___
 
 • **sap_instance_number**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1169)*
+*Defined in [packages/host-inventory/api.ts:1175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1175)*
 
-The instance number of the SAP HANA system
+The instance number of the SAP HANA system (a two-digit number between 00 and 99)
 
 **`memberof`** SystemProfile
 
@@ -368,9 +381,7 @@ ___
 
 • **sap_sids**? : *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:1163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1163)*
-
-List of SAP SIDs
+*Defined in [packages/host-inventory/api.ts:1169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1169)*
 
 **`memberof`** SystemProfile
 
@@ -380,7 +391,7 @@ ___
 
 • **sap_system**? : *boolean*
 
-*Defined in [packages/host-inventory/api.ts:1157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1157)*
+*Defined in [packages/host-inventory/api.ts:1163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1163)*
 
 Indicates if SAP is installed on the system
 
@@ -392,7 +403,7 @@ ___
 
 • **sap_version**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1175)*
+*Defined in [packages/host-inventory/api.ts:1181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1181)*
 
 The version of the SAP HANA lifecycle management program
 
@@ -414,7 +425,7 @@ ___
 
 • **selinux_config_file**? : *[SystemProfileSelinuxConfigFileEnum](../enums/systemprofileselinuxconfigfileenum.md)*
 
-*Defined in [packages/host-inventory/api.ts:1193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1193)*
+*Defined in [packages/host-inventory/api.ts:1199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1199)*
 
 The SELinux mode provided in the config file
 
@@ -426,7 +437,7 @@ ___
 
 • **selinux_current_mode**? : *[SystemProfileSelinuxCurrentModeEnum](../enums/systemprofileselinuxcurrentmodeenum.md)*
 
-*Defined in [packages/host-inventory/api.ts:1187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1187)*
+*Defined in [packages/host-inventory/api.ts:1193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1193)*
 
 The current SELinux mode, either enforcing, permissive, or disabled
 
@@ -468,7 +479,7 @@ ___
 
 • **tuned_profile**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1181)*
+*Defined in [packages/host-inventory/api.ts:1187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1187)*
 
 Current profile resulting from command tuned-adm active
 

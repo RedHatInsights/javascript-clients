@@ -32,7 +32,7 @@
 
 • **cves**? : *Array‹string›*
 
-*Defined in [packages/patch/api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L58)*
+*Defined in [packages/patch/api.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L71)*
 
 **`memberof`** ControllersAdvisoryDetailAttributes
 
@@ -42,7 +42,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L64)*
+*Defined in [packages/patch/api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L77)*
 
 **`memberof`** ControllersAdvisoryDetailAttributes
 
@@ -52,7 +52,7 @@ ___
 
 • **fixes**? : *string*
 
-*Defined in [packages/patch/api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L70)*
+*Defined in [packages/patch/api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L83)*
 
 **`memberof`** ControllersAdvisoryDetailAttributes
 
@@ -62,7 +62,7 @@ ___
 
 • **modified_date**? : *string*
 
-*Defined in [packages/patch/api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L76)*
+*Defined in [packages/patch/api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L89)*
 
 **`memberof`** ControllersAdvisoryDetailAttributes
 
@@ -72,7 +72,7 @@ ___
 
 • **packages**? : *object*
 
-*Defined in [packages/patch/api.ts:82](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L82)*
+*Defined in [packages/patch/api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L95)*
 
 **`memberof`** ControllersAdvisoryDetailAttributes
 
@@ -86,7 +86,7 @@ ___
 
 • **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:88](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L88)*
+*Defined in [packages/patch/api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L101)*
 
 **`memberof`** ControllersAdvisoryDetailAttributes
 
@@ -96,7 +96,7 @@ ___
 
 • **references**? : *Array‹string›*
 
-*Defined in [packages/patch/api.ts:94](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L94)*
+*Defined in [packages/patch/api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L107)*
 
 **`memberof`** ControllersAdvisoryDetailAttributes
 
@@ -106,7 +106,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:100](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L100)*
+*Defined in [packages/patch/api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L113)*
 
 **`memberof`** ControllersAdvisoryDetailAttributes
 
@@ -116,7 +116,7 @@ ___
 
 • **solution**? : *string*
 
-*Defined in [packages/patch/api.ts:106](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L106)*
+*Defined in [packages/patch/api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L119)*
 
 **`memberof`** ControllersAdvisoryDetailAttributes
 
@@ -126,7 +126,7 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:112](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L112)*
+*Defined in [packages/patch/api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L125)*
 
 **`memberof`** ControllersAdvisoryDetailAttributes
 
@@ -136,6 +136,6 @@ ___
 
 • **topic**? : *string*
 
-*Defined in [packages/patch/api.ts:118](https://github.com/RedHatInsights/javascript-clients/blob/6e30b20/packages/patch/api.ts#L118)*
+*Defined in [packages/patch/api.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L131)*
 
 **`memberof`** ControllersAdvisoryDetailAttributes

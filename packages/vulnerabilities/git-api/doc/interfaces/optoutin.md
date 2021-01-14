@@ -23,7 +23,7 @@
 
 • **inventory_id**: *[InventoryIdOrList](../globals.md#inventoryidorlist)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1519](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1519)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1655)*
 
 **`memberof`** OptOutIn
 
@@ -33,7 +33,7 @@ ___
 
 • **opt_out**: *boolean*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1525)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1661)*
 
 Opt out setting to be set.
 

@@ -22,6 +22,7 @@
 * [playbook_count](insightsrule.md#playbook_count)
 * [reboot_required](insightsrule.md#reboot_required)
 * [rule_id](insightsrule.md#rule_id)
+* [rule_impact](insightsrule.md#rule_impact)
 * [summary](insightsrule.md#summary)
 
 ## Properties
@@ -117,6 +118,18 @@ ___
 *Defined in [packages/vulnerabilities/api.ts:618](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L618)*
 
 ID(s) of associated security rule(s).
+
+**`memberof`** InsightsRule
+
+___
+
+###  rule_impact
+
+• **rule_impact**: *number | null*
+
+*Defined in [packages/vulnerabilities/api.ts:672](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L672)*
+
+Shows rules impact number from 1 to 4
 
 **`memberof`** InsightsRule
 
