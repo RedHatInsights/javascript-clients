@@ -569,11 +569,11 @@ export interface DiskDevice {
      */
     label?: string;
     /**
-     * Mount options for nested object
-     * @type {object}
+     * An arbitrary object that doesn’t allow empty string keys.
+     * @type {{ [key: string]: object; }}
      * @memberof DiskDevice
      */
-    options?: object;
+    options?: { [key: string]: object; };
     /**
      * The mount point
      * @type {string}
@@ -1036,7 +1036,7 @@ export interface SystemProfile {
      */
     os_release?: string;
     /**
-     *
+     * The kernel version represented with a three, optionally four, number scheme.
      * @type {string}
      * @memberof SystemProfile
      */
@@ -1142,6 +1142,12 @@ export interface SystemProfile {
      * @type {Array<string>}
      * @memberof SystemProfile
      */
+    installed_packages_delta?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof SystemProfile
+     */
     installed_services?: Array<string>;
     /**
      *
@@ -1156,13 +1162,13 @@ export interface SystemProfile {
      */
     sap_system?: boolean;
     /**
-     * List of SAP SIDs
+     *
      * @type {Array<string>}
      * @memberof SystemProfile
      */
     sap_sids?: Array<string>;
     /**
-     * The instance number of the SAP HANA system
+     * The instance number of the SAP HANA system (a two-digit number between 00 and 99)
      * @type {string}
      * @memberof SystemProfile
      */
@@ -1250,7 +1256,7 @@ export interface SystemProfileByHostOut {
     results: Array<HostSystemProfileOut>;
 }
 /**
- *
+ * Object for OS details
  * @export
  * @interface SystemProfileOperatingSystem
  */

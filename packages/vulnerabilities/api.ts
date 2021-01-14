@@ -664,6 +664,12 @@ export interface InsightsRule {
      * @memberof InsightsRule
      */
     associated_cves: Array<string>;
+    /**
+     * Shows rules impact number from 1 to 4
+     * @type {number}
+     * @memberof InsightsRule
+     */
+    rule_impact: number | null;
 }
 /**
  * @type InventoryIdOrList
@@ -1815,10 +1821,10 @@ export interface SystemDetailsOutDataTags {
 export interface SystemIdsOut {
     /**
      *
-     * @type {string | Array<string>}
+     * @type {string | Array<object>}
      * @memberof SystemIdsOut
      */
-    data: string | Array<string>;
+    data: string | Array<object>;
     /**
      *
      * @type {Links}
@@ -3110,7 +3116,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * List systems IDs visible to logged in account.
-         * @summary List systems IDs.
+         * @summary List systems IDs along with additional info about opt out state of the system.
          * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -3943,7 +3949,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         },
         /**
          * List systems IDs visible to logged in account.
-         * @summary List systems IDs.
+         * @summary List systems IDs along with additional info about opt out state of the system.
          * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -4329,7 +4335,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         },
         /**
          * List systems IDs visible to logged in account.
-         * @summary List systems IDs.
+         * @summary List systems IDs along with additional info about opt out state of the system.
          * @param {string} [filter] Full text filter for the display name of system.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -4712,7 +4718,7 @@ export class DefaultApi extends BaseAPI {
 
     /**
      * List systems IDs visible to logged in account.
-     * @summary List systems IDs.
+     * @summary List systems IDs along with additional info about opt out state of the system.
      * @param {string} [filter] Full text filter for the display name of system.
      * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.

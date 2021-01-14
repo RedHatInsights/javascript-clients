@@ -50,6 +50,12 @@ export interface Application {
      */
     created_at?: string;
     /**
+     *
+     * @type {object}
+     * @memberof Application
+     */
+    extra?: object;
+    /**
      * ID of the resource
      * @type {string}
      * @memberof Application
@@ -239,6 +245,12 @@ export interface Authentication {
      * @memberof Authentication
      */
     resource_type?: string;
+    /**
+     * ID of the resource
+     * @type {string}
+     * @memberof Authentication
+     */
+    source_id?: string;
     /**
      *
      * @type {string}
@@ -1684,6 +1696,68 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns an array of Authentication objects
+         * @summary List Authentications for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceAuthentications: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceAuthentications.');
+            }
+            const localVarPath = `/sources/{id}/authentications`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns an array of Endpoint objects
          * @summary List Endpoints for Source
          * @param {string} id ID of the resource
@@ -2709,6 +2783,24 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns an array of Authentication objects
+         * @summary List Authentications for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listSourceAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceAuthentications(id, limit, offset, filter, sortBy, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns an array of Endpoint objects
          * @summary List Endpoints for Source
          * @param {string} id ID of the resource
@@ -3153,6 +3245,20 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceApplications(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
+         * Returns an array of Authentication objects
+         * @summary List Authentications for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<AuthenticationsCollection> {
+            return DefaultApiFp(configuration).listSourceAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+        /**
          * Returns an array of Endpoint objects
          * @summary List Endpoints for Source
          * @param {string} id ID of the resource
@@ -3571,6 +3677,22 @@ export class DefaultApi extends BaseAPI {
      */
     public listSourceApplications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
         return DefaultApiFp(this.configuration).listSourceApplications(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Returns an array of Authentication objects
+     * @summary List Authentications for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public listSourceAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
+        return DefaultApiFp(this.configuration).listSourceAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

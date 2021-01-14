@@ -64,9 +64,13 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L576)*
 
-Mount options for nested object
+An arbitrary object that doesn’t allow empty string keys.
 
 **`memberof`** DiskDevice
+
+#### Type declaration:
+
+* \[ **key**: *string*\]: object
 
 ___
 

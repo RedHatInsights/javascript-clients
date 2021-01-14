@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[SourceType](sourcetype.md)›*
 
-*Defined in [packages/sources/api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L729)*
+*Defined in [packages/sources/api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L741)*
 
 **`memberof`** SourceTypesCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [packages/sources/api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L723)*
+*Defined in [packages/sources/api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L735)*
 
 **`memberof`** SourceTypesCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [packages/sources/api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L717)*
+*Defined in [packages/sources/api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L729)*
 
 **`memberof`** SourceTypesCollection
