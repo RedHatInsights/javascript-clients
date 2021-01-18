@@ -1427,6 +1427,142 @@ export interface YumRepo {
 }
 
 /**
+ * DefaultApi - axios parameter creator
+ * @export
+ */
+export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Required permissions: inventory:hosts:read
+         * @summary validate system profile schema
+         * @param {string} repoBranch The branch of the inventory-schemas repo to use
+         * @param {string} [repoFork] The fork of the inventory-schemas repo to use
+         * @param {number} [days] How many days worth of kafka messages to validate
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiSystemProfileValidateSchema: async (repoBranch: string, repoFork?: string, days?: number, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'repoBranch' is not null or undefined
+            if (repoBranch === null || repoBranch === undefined) {
+                throw new RequiredError('repoBranch','Required parameter repoBranch was null or undefined when calling apiSystemProfileValidateSchema.');
+            }
+            const localVarPath = `/system_profile/validate_schema`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (repoFork !== undefined) {
+                localVarQueryParameter['repo_fork'] = repoFork;
+            }
+
+            if (repoBranch !== undefined) {
+                localVarQueryParameter['repo_branch'] = repoBranch;
+            }
+
+            if (days !== undefined) {
+                localVarQueryParameter['days'] = days;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * DefaultApi - functional programming interface
+ * @export
+ */
+export const DefaultApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Required permissions: inventory:hosts:read
+         * @summary validate system profile schema
+         * @param {string} repoBranch The branch of the inventory-schemas repo to use
+         * @param {string} [repoFork] The fork of the inventory-schemas repo to use
+         * @param {number} [days] How many days worth of kafka messages to validate
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * DefaultApi - factory interface
+ * @export
+ */
+export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Required permissions: inventory:hosts:read
+         * @summary validate system profile schema
+         * @param {string} repoBranch The branch of the inventory-schemas repo to use
+         * @param {string} [repoFork] The fork of the inventory-schemas repo to use
+         * @param {number} [days] How many days worth of kafka messages to validate
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, options?: any): AxiosPromise<void> {
+            return DefaultApiFp(configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * DefaultApi - object-oriented interface
+ * @export
+ * @class DefaultApi
+ * @extends {BaseAPI}
+ */
+export class DefaultApi extends BaseAPI {
+    /**
+     * Required permissions: inventory:hosts:read
+     * @summary validate system profile schema
+     * @param {string} repoBranch The branch of the inventory-schemas repo to use
+     * @param {string} [repoFork] The fork of the inventory-schemas repo to use
+     * @param {number} [days] How many days worth of kafka messages to validate
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, options?: any) {
+        return DefaultApiFp(this.configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
  * HostsApi - axios parameter creator
  * @export
  */

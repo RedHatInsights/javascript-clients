@@ -8,6 +8,8 @@
 
 * **BaseAPI**
 
+  ↳ [DefaultApi](defaultapi.md)
+
   ↳ [HostsApi](hostsapi.md)
 
   ↳ [SapSystemApi](sapsystemapi.md)
