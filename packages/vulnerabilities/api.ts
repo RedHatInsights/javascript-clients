@@ -369,6 +369,31 @@ export interface CveStatusIn {
 /**
  *
  * @export
+ * @interface Dashboard
+ */
+export interface Dashboard {
+    /**
+     * Number of unique CVEs discovered on the managed systems.
+     * @type {number}
+     * @memberof Dashboard
+     */
+    cves_total: number;
+    /**
+     *
+     * @type {ExecutiveReportCvesBySeverity}
+     * @memberof Dashboard
+     */
+    cves_by_severity: ExecutiveReportCvesBySeverity;
+    /**
+     *
+     * @type {ExecutiveReportRecentCves}
+     * @memberof Dashboard
+     */
+    recent_cves: ExecutiveReportRecentCves;
+}
+/**
+ *
+ * @export
  * @interface Errors
  */
 export interface Errors {
@@ -430,10 +455,28 @@ export interface ExecutiveReport {
     recent_cves: ExecutiveReportRecentCves;
     /**
      *
+     * @type {ExecutiveReportRulesBySeverity}
+     * @memberof ExecutiveReport
+     */
+    rules_by_severity: ExecutiveReportRulesBySeverity;
+    /**
+     * Number of unique CVEs discovered on the managed systems.
+     * @type {number}
+     * @memberof ExecutiveReport
+     */
+    rules_total: number;
+    /**
+     *
      * @type {Array<ExecutiveReportTopCves>}
      * @memberof ExecutiveReport
      */
     top_cves?: Array<ExecutiveReportTopCves>;
+    /**
+     *
+     * @type {Array<ExecutiveReportTopRules>}
+     * @memberof ExecutiveReport
+     */
+    top_rules?: Array<ExecutiveReportTopRules>;
 }
 /**
  * Number of CVEs discovered on the managed systems, divided into buckets based on their CVSSv3 score (CVSSv2 is used when CVSSv3 is not available).
@@ -568,6 +611,56 @@ export interface ExecutiveReportRecentCves {
     last90days: number;
 }
 /**
+ * Information about how much systems are affected by a security rule, broken down by rule severity.
+ * @export
+ * @interface ExecutiveReportRulesBySeverity
+ */
+export interface ExecutiveReportRulesBySeverity {
+    /**
+     *
+     * @type {ExecutiveReportRulesBySeverity0}
+     * @memberof ExecutiveReportRulesBySeverity
+     */
+    _0: ExecutiveReportRulesBySeverity0;
+    /**
+     *
+     * @type {ExecutiveReportRulesBySeverity0}
+     * @memberof ExecutiveReportRulesBySeverity
+     */
+    _1: ExecutiveReportRulesBySeverity0;
+    /**
+     *
+     * @type {ExecutiveReportRulesBySeverity0}
+     * @memberof ExecutiveReportRulesBySeverity
+     */
+    _2: ExecutiveReportRulesBySeverity0;
+    /**
+     *
+     * @type {ExecutiveReportRulesBySeverity0}
+     * @memberof ExecutiveReportRulesBySeverity
+     */
+    _3: ExecutiveReportRulesBySeverity0;
+}
+/**
+ *
+ * @export
+ * @interface ExecutiveReportRulesBySeverity0
+ */
+export interface ExecutiveReportRulesBySeverity0 {
+    /**
+     * How many unique rules with at least system affected are present.
+     * @type {number}
+     * @memberof ExecutiveReportRulesBySeverity0
+     */
+    rule_count: number;
+    /**
+     * How many unique systems are affected by at least one rules with given severity
+     * @type {number}
+     * @memberof ExecutiveReportRulesBySeverity0
+     */
+    systems_affected: number;
+}
+/**
  *
  * @export
  * @interface ExecutiveReportTopCves
@@ -601,6 +694,43 @@ export interface ExecutiveReportTopCves {
      * Systems affected by the CVE.
      * @type {number}
      * @memberof ExecutiveReportTopCves
+     */
+    systems_affected: number;
+}
+/**
+ *
+ * @export
+ * @interface ExecutiveReportTopRules
+ */
+export interface ExecutiveReportTopRules {
+    /**
+     * All CVEs associated with the rule
+     * @type {Array<string>}
+     * @memberof ExecutiveReportTopRules
+     */
+    associated_cves: Array<string>;
+    /**
+     * Short description of the problem.
+     * @type {string}
+     * @memberof ExecutiveReportTopRules
+     */
+    description: string;
+    /**
+     * Name of the security rule.
+     * @type {string}
+     * @memberof ExecutiveReportTopRules
+     */
+    name: string;
+    /**
+     * Severity of the security rule.
+     * @type {number}
+     * @memberof ExecutiveReportTopRules
+     */
+    severity: number;
+    /**
+     * Number of systems affected by the rule.
+     * @type {number}
+     * @memberof ExecutiveReportTopRules
      */
     systems_affected: number;
 }
@@ -670,6 +800,12 @@ export interface InsightsRule {
      * @memberof InsightsRule
      */
     rule_impact: number | null;
+    /**
+     * Number of systems affected by the rule.
+     * @type {number}
+     * @memberof InsightsRule
+     */
+    systems_affected?: number;
 }
 /**
  * @type InventoryIdOrList
@@ -2008,7 +2144,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2143,7 +2279,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2408,10 +2544,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsBySystem: async (inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options: any = {}): Promise<RequestArgs> => {
+        getCveIdsBySystem: async (inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, advisory?: string, ruleKey?: Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getCveIdsBySystem.');
@@ -2505,6 +2643,14 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['rule_presence'] = rulePresence;
             }
 
+            if (advisory !== undefined) {
+                localVarQueryParameter['advisory'] = advisory;
+            }
+
+            if (ruleKey) {
+                localVarQueryParameter['rule_key'] = ruleKey;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2537,12 +2683,15 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAll] Show all known vulnerabilities IDs, regardless of number of affected systems. If combined with new affecting option, resets to default behavior.
          * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected. If combined with (deprecated) show_all option, resets to default behavior.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsList: async (filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options: any = {}): Promise<RequestArgs> => {
+        getCveIdsList: async (filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAll?: boolean, affecting?: Array<boolean>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/vulnerabilities/cves/ids`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2631,6 +2780,18 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['rule_presence'] = rulePresence;
             }
 
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (sapSids) {
+                localVarQueryParameter['sap_sids'] = sapSids;
+            }
+
+            if (sapSystem !== undefined) {
+                localVarQueryParameter['sap_system'] = sapSystem;
+            }
+
             if (showAll !== undefined) {
                 localVarQueryParameter['show_all'] = showAll;
             }
@@ -2671,12 +2832,15 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems. If combined with new affecting option, resets to default behavior.
          * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected. If combined with (deprecated) show_all option, resets to default behavior.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveList: async (filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options: any = {}): Promise<RequestArgs> => {
+        getCveList: async (filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAll?: boolean, affecting?: Array<boolean>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/vulnerabilities/cves`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2765,6 +2929,18 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['rule_presence'] = rulePresence;
             }
 
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (sapSids) {
+                localVarQueryParameter['sap_sids'] = sapSids;
+            }
+
+            if (sapSystem !== undefined) {
+                localVarQueryParameter['sap_system'] = sapSystem;
+            }
+
             if (showAll !== undefined) {
                 localVarQueryParameter['show_all'] = showAll;
             }
@@ -2807,11 +2983,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem: async (inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, options: any = {}): Promise<RequestArgs> => {
+        getCveListBySystem: async (inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, ruleKey?: Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getCveListBySystem.');
@@ -2911,6 +3088,69 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (advisory !== undefined) {
                 localVarQueryParameter['advisory'] = advisory;
+            }
+
+            if (ruleKey) {
+                localVarQueryParameter['rule_key'] = ruleKey;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns top level overview of vulnerabilities affecting given account.
+         * @summary Top level overview of vulnerabilities.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getDashboard: async (tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/dashboard`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (sapSids) {
+                localVarQueryParameter['sap_sids'] = sapSids;
+            }
+
+            if (sapSystem !== undefined) {
+                localVarQueryParameter['sap_system'] = sapSystem;
             }
 
 
@@ -3685,7 +3925,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3716,7 +3956,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3789,11 +4029,13 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesIdsOut>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options);
+        async getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, advisory?: string, ruleKey?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesIdsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, advisory, ruleKey, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3818,13 +4060,16 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAll] Show all known vulnerabilities IDs, regardless of number of affected systems. If combined with new affecting option, resets to default behavior.
          * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected. If combined with (deprecated) show_all option, resets to default behavior.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesIdsOut>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options);
+        async getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAll?: boolean, affecting?: Array<boolean>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesIdsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, tags, sapSids, sapSystem, showAll, affecting, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3849,13 +4094,16 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems. If combined with new affecting option, resets to default behavior.
          * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected. If combined with (deprecated) show_all option, resets to default behavior.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesOut>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options);
+        async getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAll?: boolean, affecting?: Array<boolean>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, tags, sapSids, sapSystem, showAll, affecting, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3882,12 +4130,29 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, options);
+        async getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, ruleKey?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, ruleKey, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns top level overview of vulnerabilities affecting given account.
+         * @summary Top level overview of vulnerabilities.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getDashboard(tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Dashboard>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getDashboard(tags, sapSids, sapSystem, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4123,7 +4388,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4150,7 +4415,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4207,11 +4472,13 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options?: any): AxiosPromise<SystemCvesIdsOut> {
-            return DefaultApiFp(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options).then((request) => request(axios, basePath));
+        getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, advisory?: string, ruleKey?: Array<string>, options?: any): AxiosPromise<SystemCvesIdsOut> {
+            return DefaultApiFp(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, advisory, ruleKey, options).then((request) => request(axios, basePath));
         },
         /**
          * Overview of vulnerabilities IDs across whole host inventory.
@@ -4232,13 +4499,16 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAll] Show all known vulnerabilities IDs, regardless of number of affected systems. If combined with new affecting option, resets to default behavior.
          * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected. If combined with (deprecated) show_all option, resets to default behavior.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any): AxiosPromise<VulnerabilitiesIdsOut> {
-            return DefaultApiFp(configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options).then((request) => request(axios, basePath));
+        getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAll?: boolean, affecting?: Array<boolean>, options?: any): AxiosPromise<VulnerabilitiesIdsOut> {
+            return DefaultApiFp(configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, tags, sapSids, sapSystem, showAll, affecting, options).then((request) => request(axios, basePath));
         },
         /**
          * Overview of vulnerabilities across whole host inventory.
@@ -4259,13 +4529,16 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [statusId] Filer based on CVE status ID.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems. If combined with new affecting option, resets to default behavior.
          * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected. If combined with (deprecated) show_all option, resets to default behavior.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any): AxiosPromise<VulnerabilitiesOut> {
-            return DefaultApiFp(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options).then((request) => request(axios, basePath));
+        getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAll?: boolean, affecting?: Array<boolean>, options?: any): AxiosPromise<VulnerabilitiesOut> {
+            return DefaultApiFp(configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, tags, sapSids, sapSystem, showAll, affecting, options).then((request) => request(axios, basePath));
         },
         /**
          * Shows detailed information about all CVEs the system is exposed to.
@@ -4288,12 +4561,25 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
          * @param {boolean} [showAdvisories] If true shows advisories list
-         * @param {string} [advisory] filter by advisory name
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, options?: any): AxiosPromise<SystemCvesOut> {
-            return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, options).then((request) => request(axios, basePath));
+        getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, ruleKey?: Array<string>, options?: any): AxiosPromise<SystemCvesOut> {
+            return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, ruleKey, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Returns top level overview of vulnerabilities affecting given account.
+         * @summary Top level overview of vulnerabilities.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getDashboard(tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, options?: any): AxiosPromise<Dashboard> {
+            return DefaultApiFp(configuration).getDashboard(tags, sapSids, sapSystem, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns top level overview of vulnerabilities affecting given account.
@@ -4480,7 +4766,7 @@ export class DefaultApi extends BaseAPI {
      * @param {Array<string>} [sapSids] List of SAP IDs to filter with
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
      * @param {boolean} [showAdvisories] If true shows advisories list
-     * @param {string} [advisory] filter by advisory name
+     * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
      * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4509,7 +4795,7 @@ export class DefaultApi extends BaseAPI {
      * @param {Array<string>} [sapSids] List of SAP IDs to filter with
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
      * @param {boolean} [showAdvisories] If true shows advisories list
-     * @param {string} [advisory] filter by advisory name
+     * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
      * @param {string} [securityRule] Filter by presence (boolean) or name (string) of security rule - Deprecated, will get obsolete, use rule_key and rule_presence.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4574,12 +4860,14 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [businessRiskId] Filter based on business risk IDs.
      * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
      * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+     * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+     * @param {Array<string>} [ruleKey] Filters security rules by its error key.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, options?: any) {
-        return DefaultApiFp(this.configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, options).then((request) => request(this.axios, this.basePath));
+    public getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, advisory?: string, ruleKey?: Array<string>, options?: any) {
+        return DefaultApiFp(this.configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, advisory, ruleKey, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4601,14 +4889,17 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [statusId] Filer based on CVE status ID.
      * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
      * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+     * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+     * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+     * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
      * @param {boolean} [showAll] Show all known vulnerabilities IDs, regardless of number of affected systems. If combined with new affecting option, resets to default behavior.
      * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected. If combined with (deprecated) show_all option, resets to default behavior.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any) {
-        return DefaultApiFp(this.configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options).then((request) => request(this.axios, this.basePath));
+    public getCveIdsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAll?: boolean, affecting?: Array<boolean>, options?: any) {
+        return DefaultApiFp(this.configuration).getCveIdsList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, tags, sapSids, sapSystem, showAll, affecting, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4630,14 +4921,17 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [statusId] Filer based on CVE status ID.
      * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
      * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+     * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+     * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+     * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
      * @param {boolean} [showAll] Show all known vulnerabilities, regardless of number of affected systems. If combined with new affecting option, resets to default behavior.
      * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected. If combined with (deprecated) show_all option, resets to default behavior.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAll?: boolean, affecting?: Array<boolean>, options?: any) {
-        return DefaultApiFp(this.configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, showAll, affecting, options).then((request) => request(this.axios, this.basePath));
+    public getCveList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, dataFormat?: string, businessRiskId?: string, statusId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAll?: boolean, affecting?: Array<boolean>, options?: any) {
+        return DefaultApiFp(this.configuration).getCveList(filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, dataFormat, businessRiskId, statusId, securityRule, rulePresence, tags, sapSids, sapSystem, showAll, affecting, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4661,13 +4955,28 @@ export class DefaultApi extends BaseAPI {
      * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
      * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
      * @param {boolean} [showAdvisories] If true shows advisories list
-     * @param {string} [advisory] filter by advisory name
+     * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+     * @param {Array<string>} [ruleKey] Filters security rules by its error key.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, options?: any) {
-        return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, options).then((request) => request(this.axios, this.basePath));
+    public getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, ruleKey?: Array<string>, options?: any) {
+        return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, ruleKey, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Returns top level overview of vulnerabilities affecting given account.
+     * @summary Top level overview of vulnerabilities.
+     * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+     * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+     * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public getDashboard(tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, options?: any) {
+        return DefaultApiFp(this.configuration).getDashboard(tags, sapSids, sapSystem, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

@@ -25,7 +25,7 @@
 
 • **name**? : *string*
 
-*Defined in [packages/patch/api.ts:492](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L492)*
+*Defined in [packages/patch/api.ts:492](https://github.com/RedHatInsights/javascript-clients/blob/8a10980/packages/patch/api.ts#L492)*
 
 **`memberof`** ControllersPackageItem
 
@@ -35,7 +35,7 @@ ___
 
 • **summary**? : *string*
 
-*Defined in [packages/patch/api.ts:498](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L498)*
+*Defined in [packages/patch/api.ts:498](https://github.com/RedHatInsights/javascript-clients/blob/8a10980/packages/patch/api.ts#L498)*
 
 **`memberof`** ControllersPackageItem
 
@@ -45,7 +45,7 @@ ___
 
 • **systems_installed**? : *number*
 
-*Defined in [packages/patch/api.ts:504](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L504)*
+*Defined in [packages/patch/api.ts:504](https://github.com/RedHatInsights/javascript-clients/blob/8a10980/packages/patch/api.ts#L504)*
 
 **`memberof`** ControllersPackageItem
 
@@ -55,6 +55,6 @@ ___
 
 • **systems_updatable**? : *number*
 
-*Defined in [packages/patch/api.ts:510](https://github.com/RedHatInsights/javascript-clients/blob/fcfdd3c/packages/patch/api.ts#L510)*
+*Defined in [packages/patch/api.ts:510](https://github.com/RedHatInsights/javascript-clients/blob/8a10980/packages/patch/api.ts#L510)*
 
 **`memberof`** ControllersPackageItem
