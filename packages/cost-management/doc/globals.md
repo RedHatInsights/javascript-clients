@@ -955,7 +955,7 @@ Name | Type |
 
 *Defined in [api.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/cost-management/api.ts#L26)*
 
-**`export`** 
+**`export`**
 
 ###  csv
 
