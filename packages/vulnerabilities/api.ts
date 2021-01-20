@@ -618,45 +618,45 @@ export interface ExecutiveReportRecentCves {
 export interface ExecutiveReportRulesBySeverity {
     /**
      *
-     * @type {ExecutiveReportRulesBySeverity0}
+     * @type {ExecutiveReportRulesBySeverity1}
      * @memberof ExecutiveReportRulesBySeverity
      */
-    _0: ExecutiveReportRulesBySeverity0;
+    _1: ExecutiveReportRulesBySeverity1;
     /**
      *
-     * @type {ExecutiveReportRulesBySeverity0}
+     * @type {ExecutiveReportRulesBySeverity1}
      * @memberof ExecutiveReportRulesBySeverity
      */
-    _1: ExecutiveReportRulesBySeverity0;
+    _2: ExecutiveReportRulesBySeverity1;
     /**
      *
-     * @type {ExecutiveReportRulesBySeverity0}
+     * @type {ExecutiveReportRulesBySeverity1}
      * @memberof ExecutiveReportRulesBySeverity
      */
-    _2: ExecutiveReportRulesBySeverity0;
+    _3: ExecutiveReportRulesBySeverity1;
     /**
      *
-     * @type {ExecutiveReportRulesBySeverity0}
+     * @type {ExecutiveReportRulesBySeverity1}
      * @memberof ExecutiveReportRulesBySeverity
      */
-    _3: ExecutiveReportRulesBySeverity0;
+    _4: ExecutiveReportRulesBySeverity1;
 }
 /**
  *
  * @export
- * @interface ExecutiveReportRulesBySeverity0
+ * @interface ExecutiveReportRulesBySeverity1
  */
-export interface ExecutiveReportRulesBySeverity0 {
+export interface ExecutiveReportRulesBySeverity1 {
     /**
      * How many unique rules with at least system affected are present.
      * @type {number}
-     * @memberof ExecutiveReportRulesBySeverity0
+     * @memberof ExecutiveReportRulesBySeverity1
      */
     rule_count: number;
     /**
      * How many unique systems are affected by at least one rules with given severity
      * @type {number}
-     * @memberof ExecutiveReportRulesBySeverity0
+     * @memberof ExecutiveReportRulesBySeverity1
      */
     systems_affected: number;
 }
@@ -2068,6 +2068,94 @@ export interface VulnerabilitiesOut {
      */
     meta: MetaVulnerabilitiesOut;
 }
+/**
+ *
+ * @export
+ * @interface VulnerabilitiesPostIn
+ */
+export interface VulnerabilitiesPostIn {
+    /**
+     * Array of CVEs to provide info about
+     * @type {Array<string>}
+     * @memberof VulnerabilitiesPostIn
+     */
+    cve_list: Array<string>;
+}
+/**
+ *
+ * @export
+ * @interface VulnerabilitiesPostOut
+ */
+export interface VulnerabilitiesPostOut {
+    /**
+     *
+     * @type {Array<VulnerabilitiesPostOutData>}
+     * @memberof VulnerabilitiesPostOut
+     */
+    data: Array<VulnerabilitiesPostOutData>;
+    /**
+     *
+     * @type {Links}
+     * @memberof VulnerabilitiesPostOut
+     */
+    links: Links;
+    /**
+     *
+     * @type {Meta}
+     * @memberof VulnerabilitiesPostOut
+     */
+    meta: Meta;
+}
+/**
+ *
+ * @export
+ * @interface VulnerabilitiesPostOutAttributes
+ */
+export interface VulnerabilitiesPostOutAttributes {
+    /**
+     * String representation of cvss3 or cvvs2 (if v3 is not present) score of the CVE.
+     * @type {string}
+     * @memberof VulnerabilitiesPostOutAttributes
+     */
+    cvss_score: string | null;
+    /**
+     * Red Hat security impact of the CVE.
+     * @type {string}
+     * @memberof VulnerabilitiesPostOutAttributes
+     */
+    impact: string;
+    /**
+     * Synopsis of the CVE.
+     * @type {string}
+     * @memberof VulnerabilitiesPostOutAttributes
+     */
+    synopsis: string;
+}
+/**
+ *
+ * @export
+ * @interface VulnerabilitiesPostOutData
+ */
+export interface VulnerabilitiesPostOutData {
+    /**
+     * CVE id.
+     * @type {string}
+     * @memberof VulnerabilitiesPostOutData
+     */
+    id: string;
+    /**
+     * Type of the record.
+     * @type {string}
+     * @memberof VulnerabilitiesPostOutData
+     */
+    type: string;
+    /**
+     *
+     * @type {VulnerabilitiesPostOutAttributes}
+     * @memberof VulnerabilitiesPostOutData
+     */
+    attributes: VulnerabilitiesPostOutAttributes;
+}
 
 /**
  * DefaultApi - axios parameter creator
@@ -2544,12 +2632,13 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {Array<string>} [ruleKey] Filters security rules by its error key.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsBySystem: async (inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, advisory?: string, ruleKey?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        getCveIdsBySystem: async (inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, ruleKey?: Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
             if (inventoryId === null || inventoryId === undefined) {
                 throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling getCveIdsBySystem.');
@@ -2641,6 +2730,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (rulePresence) {
                 localVarQueryParameter['rule_presence'] = rulePresence;
+            }
+
+            if (showAdvisories !== undefined) {
+                localVarQueryParameter['show_advisories'] = showAdvisories;
             }
 
             if (advisory !== undefined) {
@@ -3101,6 +3194,89 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             delete localVarUrlObj.search;
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Overview of vulnerabilities for specific CVEs provided in the body.
+         * @summary Vulnerabilities overview.
+         * @param {VulnerabilitiesPostIn} vulnerabilitiesPostIn List of CVEs to provide info about.
+         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {string} [sort] Sorting used for response.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getCveList_1: async (vulnerabilitiesPostIn: VulnerabilitiesPostIn, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'vulnerabilitiesPostIn' is not null or undefined
+            if (vulnerabilitiesPostIn === null || vulnerabilitiesPostIn === undefined) {
+                throw new RequiredError('vulnerabilitiesPostIn','Required parameter vulnerabilitiesPostIn was null or undefined when calling getCveList_1.');
+            }
+            const localVarPath = `/vulnerabilities/cves`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof vulnerabilitiesPostIn !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(vulnerabilitiesPostIn !== undefined ? vulnerabilitiesPostIn : {}) : (vulnerabilitiesPostIn || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -4029,13 +4205,14 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {Array<string>} [ruleKey] Filters security rules by its error key.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, advisory?: string, ruleKey?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesIdsOut>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, advisory, ruleKey, options);
+        async getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, ruleKey?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesIdsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, ruleKey, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4137,6 +4314,26 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         async getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, ruleKey?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemCvesOut>> {
             const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, ruleKey, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Overview of vulnerabilities for specific CVEs provided in the body.
+         * @summary Vulnerabilities overview.
+         * @param {VulnerabilitiesPostIn} vulnerabilitiesPostIn List of CVEs to provide info about.
+         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {string} [sort] Sorting used for response.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getCveList_1(vulnerabilitiesPostIn: VulnerabilitiesPostIn, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VulnerabilitiesPostOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getCveList_1(vulnerabilitiesPostIn, filter, limit, offset, page, pageSize, sort, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4472,13 +4669,14 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [businessRiskId] Filter based on business risk IDs.
          * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
          * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {Array<string>} [ruleKey] Filters security rules by its error key.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, advisory?: string, ruleKey?: Array<string>, options?: any): AxiosPromise<SystemCvesIdsOut> {
-            return DefaultApiFp(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, advisory, ruleKey, options).then((request) => request(axios, basePath));
+        getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, ruleKey?: Array<string>, options?: any): AxiosPromise<SystemCvesIdsOut> {
+            return DefaultApiFp(configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, ruleKey, options).then((request) => request(axios, basePath));
         },
         /**
          * Overview of vulnerabilities IDs across whole host inventory.
@@ -4568,6 +4766,22 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, ruleKey?: Array<string>, options?: any): AxiosPromise<SystemCvesOut> {
             return DefaultApiFp(configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, ruleKey, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Overview of vulnerabilities for specific CVEs provided in the body.
+         * @summary Vulnerabilities overview.
+         * @param {VulnerabilitiesPostIn} vulnerabilitiesPostIn List of CVEs to provide info about.
+         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {string} [sort] Sorting used for response.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getCveList_1(vulnerabilitiesPostIn: VulnerabilitiesPostIn, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, options?: any): AxiosPromise<VulnerabilitiesPostOut> {
+            return DefaultApiFp(configuration).getCveList_1(vulnerabilitiesPostIn, filter, limit, offset, page, pageSize, sort, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns top level overview of vulnerabilities affecting given account.
@@ -4860,14 +5074,15 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [businessRiskId] Filter based on business risk IDs.
      * @param {boolean} [securityRule] If true shows only CVEs with security rule associated, if false shows CVEs without rules. When not set shows all CVEs - Deprecated, will get obsolete, use rule_presence.
      * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+     * @param {boolean} [showAdvisories] If true shows advisories list
      * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
      * @param {Array<string>} [ruleKey] Filters security rules by its error key.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, advisory?: string, ruleKey?: Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, advisory, ruleKey, options).then((request) => request(this.axios, this.basePath));
+    public getCveIdsBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, ruleKey?: Array<string>, options?: any) {
+        return DefaultApiFp(this.configuration).getCveIdsBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, ruleKey, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4963,6 +5178,24 @@ export class DefaultApi extends BaseAPI {
      */
     public getCveListBySystem(inventoryId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, cvssFrom?: number, cvssTo?: number, publicFrom?: string, publicTo?: string, impact?: string, statusId?: string, dataFormat?: string, businessRiskId?: string, securityRule?: boolean, rulePresence?: Array<boolean>, showAdvisories?: boolean, advisory?: string, ruleKey?: Array<string>, options?: any) {
         return DefaultApiFp(this.configuration).getCveListBySystem(inventoryId, filter, limit, offset, page, pageSize, sort, cvssFrom, cvssTo, publicFrom, publicTo, impact, statusId, dataFormat, businessRiskId, securityRule, rulePresence, showAdvisories, advisory, ruleKey, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Overview of vulnerabilities for specific CVEs provided in the body.
+     * @summary Vulnerabilities overview.
+     * @param {VulnerabilitiesPostIn} vulnerabilitiesPostIn List of CVEs to provide info about.
+     * @param {string} [filter] Full text filter for the display name of system.
+     * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {string} [sort] Sorting used for response.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public getCveList_1(vulnerabilitiesPostIn: VulnerabilitiesPostIn, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getCveList_1(vulnerabilitiesPostIn, filter, limit, offset, page, pageSize, sort, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

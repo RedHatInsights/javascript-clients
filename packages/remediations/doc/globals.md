@@ -118,7 +118,7 @@ ___
 
 DiagnosisApi - axios parameter creator
 
-**`export`** 
+**`export`**
 
 **Parameters:**
 

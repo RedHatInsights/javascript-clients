@@ -71,7 +71,7 @@ ___
 
 ServicesApi - factory interface
 
-**`export`** 
+**`export`**
 
 **Parameters:**
 

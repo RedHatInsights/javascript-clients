@@ -1,21 +1,21 @@
-[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [ExecutiveReportRulesBySeverity0](executivereportrulesbyseverity0.md)
+[@redhat-cloud-services/vulnerabilities-client](../README.md) › [Globals](../globals.md) › [ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)
 
-# Interface: ExecutiveReportRulesBySeverity0
+# Interface: ExecutiveReportRulesBySeverity1
 
 **`export`** 
 
-**`interface`** ExecutiveReportRulesBySeverity0
+**`interface`** ExecutiveReportRulesBySeverity1
 
 ## Hierarchy
 
-* **ExecutiveReportRulesBySeverity0**
+* **ExecutiveReportRulesBySeverity1**
 
 ## Index
 
 ### Properties
 
-* [rule_count](executivereportrulesbyseverity0.md#rule_count)
-* [systems_affected](executivereportrulesbyseverity0.md#systems_affected)
+* [rule_count](executivereportrulesbyseverity1.md#rule_count)
+* [systems_affected](executivereportrulesbyseverity1.md#systems_affected)
 
 ## Properties
 
@@ -27,7 +27,7 @@
 
 How many unique rules with at least system affected are present.
 
-**`memberof`** ExecutiveReportRulesBySeverity0
+**`memberof`** ExecutiveReportRulesBySeverity1
 
 ___
 
@@ -39,4 +39,4 @@ ___
 
 How many unique systems are affected by at least one rules with given severity
 
-**`memberof`** ExecutiveReportRulesBySeverity0
+**`memberof`** ExecutiveReportRulesBySeverity1

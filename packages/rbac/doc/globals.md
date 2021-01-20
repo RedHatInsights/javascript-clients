@@ -134,7 +134,7 @@
 
 AccessApi - axios parameter creator
 
-**`export`** 
+**`export`**
 
 **Parameters:**
 

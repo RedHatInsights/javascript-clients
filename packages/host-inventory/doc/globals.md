@@ -93,7 +93,7 @@
 
 DefaultApi - axios parameter creator
 
-**`export`** 
+**`export`**
 
 **Parameters:**
 
