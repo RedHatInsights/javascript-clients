@@ -29,7 +29,7 @@
         "generate:single": "npm run generate:prod && npm run doc"
     },
     "dependencies": {
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "yaml": "^1.8.3"
     },
     "devDependencies": {

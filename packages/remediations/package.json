@@ -28,7 +28,7 @@
         "verify": "npm-run-all build lint test"
     },
     "dependencies": {
-        "axios": "^0.19.2"
+        "axios": "^0.21.1"
     },
     "devDependencies": {
         "@openapitools/openapi-generator-cli": "1.0.12-4.3.0",
