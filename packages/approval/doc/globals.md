@@ -95,7 +95,7 @@
 
 ActionApi - axios parameter creator
 
-**`export`**
+**`export`** 
 
 **Parameters:**
 

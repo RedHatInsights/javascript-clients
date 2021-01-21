@@ -128,7 +128,7 @@
 
 DefaultApi - axios parameter creator
 
-**`export`**
+**`export`** 
 
 **Parameters:**
 
@@ -502,7 +502,7 @@ ___
 
 DefaultApi - factory interface
 
-**`export`**
+**`export`** 
 
 **Parameters:**
 
