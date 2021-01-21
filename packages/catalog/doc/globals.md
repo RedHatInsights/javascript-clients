@@ -190,7 +190,7 @@ ___
 
 DefaultApi - functional programming interface
 
-**`export`**
+**`export`** 
 
 **Parameters:**
 

@@ -16,16 +16,16 @@ Information about how much systems are affected by a security rule, broken down 
 
 ### Properties
 
-* [_0](executivereportrulesbyseverity.md#_0)
 * [_1](executivereportrulesbyseverity.md#_1)
 * [_2](executivereportrulesbyseverity.md#_2)
 * [_3](executivereportrulesbyseverity.md#_3)
+* [_4](executivereportrulesbyseverity.md#_4)
 
 ## Properties
 
-###  _0
+###  _1
 
-• **_0**: *[ExecutiveReportRulesBySeverity0](executivereportrulesbyseverity0.md)*
+• **_1**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
 *Defined in [packages/vulnerabilities/git-api/api.ts:624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L624)*
 
@@ -33,9 +33,9 @@ Information about how much systems are affected by a security rule, broken down 
 
 ___
 
-###  _1
+###  _2
 
-• **_1**: *[ExecutiveReportRulesBySeverity0](executivereportrulesbyseverity0.md)*
+• **_2**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
 *Defined in [packages/vulnerabilities/git-api/api.ts:630](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L630)*
 
@@ -43,9 +43,9 @@ ___
 
 ___
 
-###  _2
+###  _3
 
-• **_2**: *[ExecutiveReportRulesBySeverity0](executivereportrulesbyseverity0.md)*
+• **_3**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
 *Defined in [packages/vulnerabilities/git-api/api.ts:636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L636)*
 
@@ -53,9 +53,9 @@ ___
 
 ___
 
-###  _3
+###  _4
 
-• **_3**: *[ExecutiveReportRulesBySeverity0](executivereportrulesbyseverity0.md)*
+• **_4**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
 *Defined in [packages/vulnerabilities/git-api/api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L642)*
 
