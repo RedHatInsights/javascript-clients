@@ -22,8 +22,6 @@
 * [public_from](metavulnerabilitiesoutallof.md#public_from)
 * [public_to](metavulnerabilitiesoutallof.md#public_to)
 * [rule_presence](metavulnerabilitiesoutallof.md#rule_presence)
-* [security_rule](metavulnerabilitiesoutallof.md#security_rule)
-* [show_all](metavulnerabilitiesoutallof.md#show_all)
 * [system_count](metavulnerabilitiesoutallof.md#optional-system_count)
 
 ## Properties
@@ -32,7 +30,7 @@
 
 • **affecting**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1582)*
+*Defined in [packages/vulnerabilities/api.ts:1619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1619)*
 
 Description of CVE showing preferences
 
@@ -44,7 +42,7 @@ ___
 
 • **business_risk_id**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1588)*
+*Defined in [packages/vulnerabilities/api.ts:1625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1625)*
 
 Filter based on business risk IDs.
 
@@ -56,7 +54,7 @@ ___
 
 • **cvss_from**: *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1594)*
+*Defined in [packages/vulnerabilities/api.ts:1631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1631)*
 
 Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
 
@@ -68,7 +66,7 @@ ___
 
 • **cvss_to**: *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1600)*
+*Defined in [packages/vulnerabilities/api.ts:1637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1637)*
 
 Filter based on cvss score, up to the value.
 
@@ -80,7 +78,7 @@ ___
 
 • **impact**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1624)*
+*Defined in [packages/vulnerabilities/api.ts:1655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1655)*
 
 Filter based on impact IDs.
 
@@ -92,7 +90,7 @@ ___
 
 • **public_from**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1612)*
+*Defined in [packages/vulnerabilities/api.ts:1643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1643)*
 
 Filter CVEs based on their published date, starting from the date.
 
@@ -104,7 +102,7 @@ ___
 
 • **public_to**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1618](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1618)*
+*Defined in [packages/vulnerabilities/api.ts:1649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1649)*
 
 Filter CVEs based on their published date, up to the date.
 
@@ -116,33 +114,9 @@ ___
 
 • **rule_presence**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1636)*
+*Defined in [packages/vulnerabilities/api.ts:1667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1667)*
 
 Filter based on presence of security rule
-
-**`memberof`** MetaVulnerabilitiesOutAllOf
-
-___
-
-###  security_rule
-
-• **security_rule**: *boolean | null*
-
-*Defined in [packages/vulnerabilities/api.ts:1642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1642)*
-
-Filter based on presence of security rule - deprecated
-
-**`memberof`** MetaVulnerabilitiesOutAllOf
-
-___
-
-###  show_all
-
-• **show_all**: *boolean | null*
-
-*Defined in [packages/vulnerabilities/api.ts:1606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1606)*
-
-Show all known vulnerabilities, regardless of number of affected systems.
 
 **`memberof`** MetaVulnerabilitiesOutAllOf
 
@@ -152,7 +126,7 @@ ___
 
 • **system_count**? : *number*
 
-*Defined in [packages/vulnerabilities/api.ts:1630](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1630)*
+*Defined in [packages/vulnerabilities/api.ts:1661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1661)*
 
 Total number of systems managed by vulnerability application.
 

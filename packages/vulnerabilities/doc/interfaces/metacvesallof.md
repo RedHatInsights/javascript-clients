@@ -22,7 +22,6 @@
 * [public_from](metacvesallof.md#public_from)
 * [public_to](metacvesallof.md#public_to)
 * [rule_presence](metacvesallof.md#rule_presence)
-* [security_rule](metacvesallof.md#security_rule)
 * [status_id](metacvesallof.md#status_id)
 
 ## Properties
@@ -31,7 +30,7 @@
 
 • **business_risk_id**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1156)*
+*Defined in [packages/vulnerabilities/api.ts:1229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1229)*
 
 Filter based on business risk IDs.
 
@@ -43,7 +42,7 @@ ___
 
 • **cvss_from**: *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1162)*
+*Defined in [packages/vulnerabilities/api.ts:1235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1235)*
 
 Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
 
@@ -55,7 +54,7 @@ ___
 
 • **cvss_to**: *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1168)*
+*Defined in [packages/vulnerabilities/api.ts:1241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1241)*
 
 Filter based on cvss score, up to the value.
 
@@ -67,7 +66,7 @@ ___
 
 • **impact**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1186)*
+*Defined in [packages/vulnerabilities/api.ts:1259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1259)*
 
 Filter based on impact IDs.
 
@@ -79,7 +78,7 @@ ___
 
 • **patch_access**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1210)*
+*Defined in [packages/vulnerabilities/api.ts:1277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1277)*
 
 If show_advisories=true shows access to patch service else null
 
@@ -91,7 +90,7 @@ ___
 
 • **public_from**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1174)*
+*Defined in [packages/vulnerabilities/api.ts:1247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1247)*
 
 Filter CVEs based on their published date, starting from the date.
 
@@ -103,7 +102,7 @@ ___
 
 • **public_to**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1180)*
+*Defined in [packages/vulnerabilities/api.ts:1253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1253)*
 
 Filter CVEs based on their published date, up to the date.
 
@@ -115,21 +114,9 @@ ___
 
 • **rule_presence**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1198)*
+*Defined in [packages/vulnerabilities/api.ts:1271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1271)*
 
 Filter based on presence of security rule
-
-**`memberof`** MetaCvesAllOf
-
-___
-
-###  security_rule
-
-• **security_rule**: *boolean | null*
-
-*Defined in [packages/vulnerabilities/api.ts:1204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1204)*
-
-Filter based on presence of security_rule - deprecated
 
 **`memberof`** MetaCvesAllOf
 
@@ -139,7 +126,7 @@ ___
 
 • **status_id**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1192)*
+*Defined in [packages/vulnerabilities/api.ts:1265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1265)*
 
 Filer based on CVE status ID.
 

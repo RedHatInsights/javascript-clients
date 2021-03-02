@@ -60,7 +60,7 @@ ___
 
 *Defined in [packages/catalog/api.ts:377](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L377)*
 
-The time at which the order request was sent to the Topology Service
+The time at which the order request was sent to the catalog inventory Service
 
 **`memberof`** Order
 

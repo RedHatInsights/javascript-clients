@@ -10,6 +10,7 @@
 
 * [After](orderprocessassociationstoremoveassociationstoremoveenum.md#after)
 * [Before](orderprocessassociationstoremoveassociationstoremoveenum.md#before)
+* [Return](orderprocessassociationstoremoveassociationstoremoveenum.md#return)
 
 ## Enumeration members
 
@@ -17,7 +18,7 @@
 
 • **After**: = "after"
 
-*Defined in [packages/catalog/api.ts:636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L636)*
+*Defined in [packages/catalog/api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L642)*
 
 ___
 
@@ -25,4 +26,12 @@ ___
 
 • **Before**: = "before"
 
-*Defined in [packages/catalog/api.ts:635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L635)*
+*Defined in [packages/catalog/api.ts:641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L641)*
+
+___
+
+###  Return
+
+• **Return**: = "return"
+
+*Defined in [packages/catalog/api.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L643)*

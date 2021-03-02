@@ -24,7 +24,7 @@
 
 • **attributes**: *[VulnerabilitiesPostOutAttributes](vulnerabilitiespostoutattributes.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:2157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2157)*
+*Defined in [packages/vulnerabilities/api.ts:2182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2182)*
 
 **`memberof`** VulnerabilitiesPostOutData
 
@@ -34,7 +34,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [packages/vulnerabilities/api.ts:2145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2145)*
+*Defined in [packages/vulnerabilities/api.ts:2170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2170)*
 
 CVE id.
 
@@ -46,7 +46,7 @@ ___
 
 • **type**: *string*
 
-*Defined in [packages/vulnerabilities/api.ts:2151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2151)*
+*Defined in [packages/vulnerabilities/api.ts:2176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2176)*
 
 Type of the record.
 

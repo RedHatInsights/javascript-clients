@@ -64,7 +64,7 @@ ___
 
 *Defined in [packages/host-inventory/api.ts:576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L576)*
 
-An arbitrary object that doesn’t allow empty string keys.
+An arbitrary object that does not allow empty string keys.
 
 **`memberof`** DiskDevice
 

@@ -37,6 +37,6 @@ ___
 
 *Defined in [packages/catalog/api.ts:240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L240)*
 
-The service offering ref should be retrieved from a call to the Topology Service.
+The service offering ref should be retrieved from a call to the catalog inventory Service.
 
 **`memberof`** CreatePortfolioItem

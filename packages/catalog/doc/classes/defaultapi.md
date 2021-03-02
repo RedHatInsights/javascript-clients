@@ -85,7 +85,7 @@ ___
 
 ▸ **getDocumentation**(`options?`: any): *Promise‹AxiosResponse‹object››*
 
-*Defined in [packages/catalog/api.ts:1497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1497)*
+*Defined in [packages/catalog/api.ts:1504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1504)*
 
 **`summary`** Return this API document in JSON format
 
@@ -107,7 +107,7 @@ ___
 
 ▸ **postGraphQL**(`graphQLRequest`: [GraphQLRequest](../interfaces/graphqlrequest.md), `options?`: any): *Promise‹AxiosResponse‹[GraphQLResponse](../interfaces/graphqlresponse.md)››*
 
-*Defined in [packages/catalog/api.ts:1509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1509)*
+*Defined in [packages/catalog/api.ts:1516](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1516)*
 
 Performs a GraphQL Query
 

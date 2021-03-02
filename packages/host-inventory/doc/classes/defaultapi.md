@@ -84,7 +84,7 @@ ___
 
 ▸ **apiSystemProfileValidateSchema**(`repoBranch`: string, `repoFork?`: string, `days?`: number, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/host-inventory/api.ts:1558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1558)*
+*Defined in [packages/host-inventory/api.ts:1589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1589)*
 
 Required permissions: inventory:hosts:read
 

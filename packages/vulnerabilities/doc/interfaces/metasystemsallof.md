@@ -15,7 +15,6 @@
 ### Properties
 
 * [excluded](metasystemsallof.md#excluded)
-* [opt_out](metasystemsallof.md#opt_out)
 
 ## Properties
 
@@ -23,20 +22,8 @@
 
 • **excluded**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1442)*
+*Defined in [packages/vulnerabilities/api.ts:1491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1491)*
 
 Display setting of opted out systems.
-
-**`memberof`** MetaSystemsAllOf
-
-___
-
-###  opt_out
-
-• **opt_out**: *boolean | null*
-
-*Defined in [packages/vulnerabilities/api.ts:1436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1436)*
-
-Whether the filter to show opted out systems is active or not. If not set, defaults to hiding opted out systems.
 
 **`memberof`** MetaSystemsAllOf

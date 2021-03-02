@@ -16,6 +16,7 @@
 
 * [advisory_type](controllersadvisoryitemattributes.md#optional-advisory_type)
 * [applicable_systems](controllersadvisoryitemattributes.md#optional-applicable_systems)
+* [cve_count](controllersadvisoryitemattributes.md#optional-cve_count)
 * [description](controllersadvisoryitemattributes.md#optional-description)
 * [public_date](controllersadvisoryitemattributes.md#optional-public_date)
 * [severity](controllersadvisoryitemattributes.md#optional-severity)
@@ -27,7 +28,7 @@
 
 • **advisory_type**? : *number*
 
-*Defined in [packages/patch/api.ts:256](https://github.com/RedHatInsights/javascript-clients/blob/425773b/packages/patch/api.ts#L256)*
+*Defined in [packages/patch/api.ts:262](https://github.com/RedHatInsights/javascript-clients/blob/2f395d4/packages/patch/api.ts#L262)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -37,7 +38,17 @@ ___
 
 • **applicable_systems**? : *number*
 
-*Defined in [packages/patch/api.ts:262](https://github.com/RedHatInsights/javascript-clients/blob/425773b/packages/patch/api.ts#L262)*
+*Defined in [packages/patch/api.ts:268](https://github.com/RedHatInsights/javascript-clients/blob/2f395d4/packages/patch/api.ts#L268)*
+
+**`memberof`** ControllersAdvisoryItemAttributes
+
+___
+
+### `Optional` cve_count
+
+• **cve_count**? : *number*
+
+*Defined in [packages/patch/api.ts:274](https://github.com/RedHatInsights/javascript-clients/blob/2f395d4/packages/patch/api.ts#L274)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -47,7 +58,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:268](https://github.com/RedHatInsights/javascript-clients/blob/425773b/packages/patch/api.ts#L268)*
+*Defined in [packages/patch/api.ts:280](https://github.com/RedHatInsights/javascript-clients/blob/2f395d4/packages/patch/api.ts#L280)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -57,7 +68,7 @@ ___
 
 • **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:274](https://github.com/RedHatInsights/javascript-clients/blob/425773b/packages/patch/api.ts#L274)*
+*Defined in [packages/patch/api.ts:286](https://github.com/RedHatInsights/javascript-clients/blob/2f395d4/packages/patch/api.ts#L286)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -67,7 +78,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:280](https://github.com/RedHatInsights/javascript-clients/blob/425773b/packages/patch/api.ts#L280)*
+*Defined in [packages/patch/api.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/2f395d4/packages/patch/api.ts#L292)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -77,6 +88,6 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:286](https://github.com/RedHatInsights/javascript-clients/blob/425773b/packages/patch/api.ts#L286)*
+*Defined in [packages/patch/api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/2f395d4/packages/patch/api.ts#L298)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
