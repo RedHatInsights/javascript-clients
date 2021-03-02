@@ -23,7 +23,7 @@
 
 • **advisories**? : *Array‹string›*
 
-*Defined in [packages/patch/api.ts:925](https://github.com/RedHatInsights/javascript-clients/blob/425773b/packages/patch/api.ts#L925)*
+*Defined in [packages/patch/api.ts:979](https://github.com/RedHatInsights/javascript-clients/blob/2f395d4/packages/patch/api.ts#L979)*
 
 **`memberof`** ControllersSystemsAdvisoriesRequest
 
@@ -33,6 +33,6 @@ ___
 
 • **systems**? : *Array‹string›*
 
-*Defined in [packages/patch/api.ts:931](https://github.com/RedHatInsights/javascript-clients/blob/425773b/packages/patch/api.ts#L931)*
+*Defined in [packages/patch/api.ts:985](https://github.com/RedHatInsights/javascript-clients/blob/2f395d4/packages/patch/api.ts#L985)*
 
 **`memberof`** ControllersSystemsAdvisoriesRequest

@@ -569,7 +569,7 @@ export interface DiskDevice {
      */
     label?: string;
     /**
-     * An arbitrary object that doesn’t allow empty string keys.
+     * An arbitrary object that does not allow empty string keys.
      * @type {{ [key: string]: object; }}
      * @memberof DiskDevice
      */
@@ -952,6 +952,18 @@ export interface SystemProfile {
      */
     owner_id?: string;
     /**
+     * A UUID associated with a cloud_connector
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    rhc_client_id?: string;
+    /**
+     * The cpu model name
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    cpu_model?: string;
+    /**
      *
      * @type {number}
      * @memberof SystemProfile
@@ -1197,6 +1209,12 @@ export interface SystemProfile {
      * @memberof SystemProfile
      */
     selinux_config_file?: SystemProfileSelinuxConfigFileEnum;
+    /**
+     *
+     * @type {SystemProfileRhsm}
+     * @memberof SystemProfile
+     */
+    rhsm?: SystemProfileRhsm;
 }
 
 /**
@@ -1289,6 +1307,19 @@ export enum SystemProfileOperatingSystemNameEnum {
     RHEL = 'RHEL'
 }
 
+/**
+ * Object for subscription-manager details
+ * @export
+ * @interface SystemProfileRhsm
+ */
+export interface SystemProfileRhsm {
+    /**
+     * System release set by subscription-manager
+     * @type {string}
+     * @memberof SystemProfileRhsm
+     */
+    version?: string;
+}
 /**
  *
  * @export
@@ -1798,10 +1829,11 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {string} [branchId] Filter by branch_id
+         * @param {object} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostSystemProfileById: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostSystemProfileById: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: object, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostSystemProfileById.');
@@ -1843,6 +1875,10 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 
             if (branchId !== undefined) {
                 localVarQueryParameter['branch_id'] = branchId;
+            }
+
+            if (fields !== undefined) {
+                localVarQueryParameter['fields'] = fields;
             }
 
 
@@ -2311,11 +2347,12 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {string} [branchId] Filter by branch_id
+         * @param {object} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileByHostOut>> {
-            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, options);
+        async apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: object, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileByHostOut>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, fields, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2488,11 +2525,12 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {'display_name' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
          * @param {string} [branchId] Filter by branch_id
+         * @param {object} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, options?: any): AxiosPromise<SystemProfileByHostOut> {
-            return HostsApiFp(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, options).then((request) => request(axios, basePath));
+        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: object, options?: any): AxiosPromise<SystemProfileByHostOut> {
+            return HostsApiFp(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, fields, options).then((request) => request(axios, basePath));
         },
         /**
          * Get the number of tags on a host <br /><br /> Required permissions: inventory:hosts:read
@@ -2644,12 +2682,13 @@ export class HostsApi extends BaseAPI {
      * @param {'display_name' | 'updated'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
      * @param {string} [branchId] Filter by branch_id
+     * @param {object} [fields] Fetches only mentioned system_profile fields
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, options).then((request) => request(this.axios, this.basePath));
+    public apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: object, options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, fields, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

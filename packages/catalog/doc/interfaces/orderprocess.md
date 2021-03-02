@@ -21,6 +21,7 @@
 * [id](orderprocess.md#optional-id)
 * [metadata](orderprocess.md#optional-metadata)
 * [name](orderprocess.md#optional-name)
+* [return_portfolio_item_id](orderprocess.md#optional-return_portfolio_item_id)
 * [updated_at](orderprocess.md#optional-updated_at)
 
 ## Properties
@@ -85,7 +86,7 @@ ___
 
 • **metadata**? : *object*
 
-*Defined in [packages/catalog/api.ts:614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L614)*
+*Defined in [packages/catalog/api.ts:620](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L620)*
 
 JSON Metadata about the order process
 
@@ -100,6 +101,18 @@ ___
 *Defined in [packages/catalog/api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L578)*
 
 The name of the order process.
+
+**`memberof`** OrderProcess
+
+___
+
+### `Optional` return_portfolio_item_id
+
+• **return_portfolio_item_id**? : *string*
+
+*Defined in [packages/catalog/api.ts:614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L614)*
+
+The ID of the portfolio item associated to the item\'s return
 
 **`memberof`** OrderProcess
 

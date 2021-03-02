@@ -17,6 +17,9 @@
 * [cves_by_severity](dashboard.md#cves_by_severity)
 * [cves_total](dashboard.md#cves_total)
 * [recent_cves](dashboard.md#recent_cves)
+* [recent_rules](dashboard.md#recent_rules)
+* [rules_total](dashboard.md#rules_total)
+* [system_count](dashboard.md#system_count)
 
 ## Properties
 
@@ -47,5 +50,41 @@ ___
 • **recent_cves**: *[ExecutiveReportRecentCves](executivereportrecentcves.md)*
 
 *Defined in [packages/vulnerabilities/git-api/api.ts:392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L392)*
+
+**`memberof`** Dashboard
+
+___
+
+###  recent_rules
+
+• **recent_rules**: *Array‹[DashboardRecentRules](dashboardrecentrules.md)›*
+
+*Defined in [packages/vulnerabilities/git-api/api.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L398)*
+
+List of recently (14 days) released security rules.
+
+**`memberof`** Dashboard
+
+___
+
+###  rules_total
+
+• **rules_total**: *number*
+
+*Defined in [packages/vulnerabilities/git-api/api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L404)*
+
+Total number of rules affecting given account.
+
+**`memberof`** Dashboard
+
+___
+
+###  system_count
+
+• **system_count**: *number*
+
+*Defined in [packages/vulnerabilities/git-api/api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L410)*
+
+Total systems registered to Vulnerability service (with applied filtering).
 
 **`memberof`** Dashboard

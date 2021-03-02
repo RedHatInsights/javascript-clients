@@ -233,7 +233,7 @@ export interface CreatePortfolioItem {
      */
     portfolio_id: string;
     /**
-     * The service offering ref should be retrieved from a call to the Topology Service.
+     * The service offering ref should be retrieved from a call to the catalog inventory Service.
      * @type {string}
      * @memberof CreatePortfolioItem
      */
@@ -370,7 +370,7 @@ export interface Order {
      */
     created_at?: string;
     /**
-     * The time at which the order request was sent to the Topology Service
+     * The time at which the order request was sent to the catalog inventory Service
      * @type {string}
      * @memberof Order
      */
@@ -463,7 +463,7 @@ export interface OrderItem {
      */
     created_at?: string;
     /**
-     * The time at which the order request was sent to the Topology Service
+     * The time at which the order request was sent to the catalog inventory Service
      * @type {string}
      * @memberof OrderItem
      */
@@ -607,6 +607,12 @@ export interface OrderProcess {
      */
     after_portfolio_item_id?: string;
     /**
+     * The ID of the portfolio item associated to the item\'s return
+     * @type {string}
+     * @memberof OrderProcess
+     */
+    return_portfolio_item_id?: string;
+    /**
      * JSON Metadata about the order process
      * @type {object}
      * @memberof OrderProcess
@@ -633,7 +639,8 @@ export interface OrderProcessAssociationsToRemove {
     */
 export enum OrderProcessAssociationsToRemoveAssociationsToRemoveEnum {
     Before = 'before',
-    After = 'after'
+    After = 'after',
+    Return = 'return'
 }
 
 /**
@@ -852,7 +859,7 @@ export interface PortfolioItem {
      */
     service_offering_source_ref?: string;
     /**
-     * The service offering type stored by the Topology Service
+     * The service offering type stored by the catalog inventory Service
      * @type {string}
      * @memberof PortfolioItem
      */
@@ -3444,6 +3451,57 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
+         * Defines the product that will be executed on return when using this Order Process
+         * @summary Adds \'return\' product for an Order Process
+         * @param {string} id ID of the resource
+         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        addOrderProcessReturnItem: async (id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling addOrderProcessReturnItem.');
+            }
+            // verify required parameter 'orderProcessPortfolioItemId' is not null or undefined
+            if (orderProcessPortfolioItemId === null || orderProcessPortfolioItemId === undefined) {
+                throw new RequiredError('orderProcessPortfolioItemId','Required parameter orderProcessPortfolioItemId was null or undefined when calling addOrderProcessReturnItem.');
+            }
+            const localVarPath = `/order_processes/{id}/return_portfolio_item`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof orderProcessPortfolioItemId !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(orderProcessPortfolioItemId !== undefined ? orderProcessPortfolioItemId : {}) : (orderProcessPortfolioItemId || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Adds an order process.
          * @summary Add a new order process
          * @param {OrderProcess} orderProcess Parameters needed to add an OrderProcess
@@ -3887,6 +3945,21 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Defines the product that will be executed on return when using this Order Process
+         * @summary Adds \'return\' product for an Order Process
+         * @param {string} id ID of the resource
+         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async addOrderProcessReturnItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderProcess>> {
+            const localVarAxiosArgs = await OrderProcessApiAxiosParamCreator(configuration).addOrderProcessReturnItem(id, orderProcessPortfolioItemId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Adds an order process.
          * @summary Add a new order process
          * @param {OrderProcess} orderProcess Parameters needed to add an OrderProcess
@@ -4040,6 +4113,17 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
             return OrderProcessApiFp(configuration).addOrderProcessBeforeItem(id, orderProcessPortfolioItemId, options).then((request) => request(axios, basePath));
         },
         /**
+         * Defines the product that will be executed on return when using this Order Process
+         * @summary Adds \'return\' product for an Order Process
+         * @param {string} id ID of the resource
+         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        addOrderProcessReturnItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options?: any): AxiosPromise<OrderProcess> {
+            return OrderProcessApiFp(configuration).addOrderProcessReturnItem(id, orderProcessPortfolioItemId, options).then((request) => request(axios, basePath));
+        },
+        /**
          * Adds an order process.
          * @summary Add a new order process
          * @param {OrderProcess} orderProcess Parameters needed to add an OrderProcess
@@ -4163,6 +4247,19 @@ export class OrderProcessApi extends BaseAPI {
      */
     public addOrderProcessBeforeItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options?: any) {
         return OrderProcessApiFp(this.configuration).addOrderProcessBeforeItem(id, orderProcessPortfolioItemId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Defines the product that will be executed on return when using this Order Process
+     * @summary Adds \'return\' product for an Order Process
+     * @param {string} id ID of the resource
+     * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OrderProcessApi
+     */
+    public addOrderProcessReturnItem(id: string, orderProcessPortfolioItemId: OrderProcessPortfolioItemId, options?: any) {
+        return OrderProcessApiFp(this.configuration).addOrderProcessReturnItem(id, orderProcessPortfolioItemId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6004,7 +6101,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
         },
         /**
          * Gets all service plans for a portfolio item.
-         * @summary Gets all service plans for a specific portfolio item; requires a connection to the topology service.
+         * @summary Gets all service plans for a specific portfolio item; requires a connection to the catalog inventory service.
          * @param {string} portfolioItemId The Portfolio Item ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -6451,7 +6548,7 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
         },
         /**
          * Gets all service plans for a portfolio item.
-         * @summary Gets all service plans for a specific portfolio item; requires a connection to the topology service.
+         * @summary Gets all service plans for a specific portfolio item; requires a connection to the catalog inventory service.
          * @param {string} portfolioItemId The Portfolio Item ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -6642,7 +6739,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
         },
         /**
          * Gets all service plans for a portfolio item.
-         * @summary Gets all service plans for a specific portfolio item; requires a connection to the topology service.
+         * @summary Gets all service plans for a specific portfolio item; requires a connection to the catalog inventory service.
          * @param {string} portfolioItemId The Portfolio Item ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -6820,7 +6917,7 @@ export class PortfolioItemApi extends BaseAPI {
 
     /**
      * Gets all service plans for a portfolio item.
-     * @summary Gets all service plans for a specific portfolio item; requires a connection to the topology service.
+     * @summary Gets all service plans for a specific portfolio item; requires a connection to the catalog inventory service.
      * @param {string} portfolioItemId The Portfolio Item ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

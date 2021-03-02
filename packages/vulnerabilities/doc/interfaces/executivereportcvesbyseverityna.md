@@ -23,7 +23,7 @@
 
 • **count**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L580)*
+*Defined in [packages/vulnerabilities/api.ts:653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L653)*
 
 Number of CVEs with N/A CVSS score.
 
@@ -35,7 +35,7 @@ ___
 
 • **percentage**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:586](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L586)*
+*Defined in [packages/vulnerabilities/api.ts:659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L659)*
 
 Percentage of CVEs with N/A CVSS score.
 
