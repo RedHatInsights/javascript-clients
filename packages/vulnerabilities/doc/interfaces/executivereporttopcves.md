@@ -17,6 +17,7 @@
 * [cvss2_score](executivereporttopcves.md#cvss2_score)
 * [cvss3_score](executivereporttopcves.md#cvss3_score)
 * [description](executivereporttopcves.md#description)
+* [security_rule](executivereporttopcves.md#optional-security_rule)
 * [synopsis](executivereporttopcves.md#synopsis)
 * [systems_affected](executivereporttopcves.md#systems_affected)
 
@@ -58,6 +59,18 @@ Description of the CVE.
 
 ___
 
+### `Optional` security_rule
+
+• **security_rule**? : *boolean*
+
+*Defined in [packages/vulnerabilities/api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L771)*
+
+Indicator of security rule presence
+
+**`memberof`** ExecutiveReportTopCves
+
+___
+
 ###  synopsis
 
 • **synopsis**: *string*
@@ -74,7 +87,7 @@ ___
 
 • **systems_affected**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L771)*
+*Defined in [packages/vulnerabilities/api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L777)*
 
 Systems affected by the CVE.
 

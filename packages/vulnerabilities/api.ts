@@ -764,6 +764,12 @@ export interface ExecutiveReportTopCves {
      */
     description: string;
     /**
+     * Indicator of security rule presence
+     * @type {boolean}
+     * @memberof ExecutiveReportTopCves
+     */
+    security_rule?: boolean;
+    /**
      * Systems affected by the CVE.
      * @type {number}
      * @memberof ExecutiveReportTopCves

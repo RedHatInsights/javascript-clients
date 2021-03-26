@@ -22,7 +22,7 @@
 
 • **cve_list**: *Array‹string›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2113)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2131)*
 
 Array of CVEs to provide info about
 
