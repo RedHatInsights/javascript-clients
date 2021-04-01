@@ -22,6 +22,6 @@
 
 • **errors**: *Array‹[Error403Errors](error403errors.md)›*
 
-*Defined in [packages/rbac/api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L115)*
+*Defined in [packages/rbac/api.ts:758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L758)*
 
 **`memberof`** Error403

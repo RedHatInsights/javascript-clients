@@ -14,7 +14,6 @@
 
 ### Properties
 
-* [Fqdn](canonicalfactsin.md#optional-fqdn)
 * [bios_uuid](canonicalfactsin.md#bios_uuid)
 * [external_id](canonicalfactsin.md#external_id)
 * [fqdn](canonicalfactsin.md#fqdn)
@@ -26,18 +25,6 @@
 * [subscription_manager_id](canonicalfactsin.md#subscription_manager_id)
 
 ## Properties
-
-### `Optional` Fqdn
-
-• **Fqdn**? : *string | null*
-
-*Defined in [packages/host-inventory/api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L125)*
-
-A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
-
-**`memberof`** CanonicalFactsIn
-
-___
 
 ###  bios_uuid
 
@@ -63,7 +50,7 @@ ___
 
 • **fqdn**: *string*
 
-*Defined in [packages/host-inventory/api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L143)*
+*Defined in [packages/host-inventory/api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L125)*
 
 **`memberof`** CanonicalFactsIn
 

@@ -22,7 +22,7 @@
 
 • **facts**? : *Array‹[FactSet](factset.md)›*
 
-*Defined in [packages/host-inventory/api.ts:766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L766)*
+*Defined in [packages/host-inventory/api.ts:754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L754)*
 
 A set of facts belonging to the host.
 

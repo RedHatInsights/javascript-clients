@@ -28,7 +28,7 @@
 
 • **last_evaluation**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1920](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1920)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1938](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1938)*
 
 Date of last evaluation.
 
@@ -40,7 +40,7 @@ ___
 
 • **last_upload**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1938](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1938)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1956](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1956)*
 
 Date of the latest upload of archive.
 
@@ -52,7 +52,7 @@ ___
 
 • **opt_out**: *boolean*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1932](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1932)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1950](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1950)*
 
 System opt out status.
 
@@ -64,7 +64,7 @@ ___
 
 • **rules_evaluation**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1926](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1926)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1944)*
 
 Date of last security rules evaluation.
 
@@ -76,7 +76,7 @@ ___
 
 • **stale**? : *boolean*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1944)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1962)*
 
 System stale status.
 
@@ -88,7 +88,7 @@ ___
 
 • **tags**: *Array‹[SystemDetailsOutDataTags](systemdetailsoutdatatags.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1956](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1956)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1974)*
 
 **`memberof`** SystemDetailsOutData
 
@@ -98,7 +98,7 @@ ___
 
 • **updated**? : *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1950](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1950)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1968)*
 
 Date of the lastest upload of archive taken from Inventory syndicated data.
 

@@ -82,11 +82,11 @@ ___
 
 ###  apiSystemProfileValidateSchema
 
-▸ **apiSystemProfileValidateSchema**(`repoBranch`: string, `repoFork?`: string, `days?`: number, `options?`: any): *Promise‹AxiosResponse‹void››*
+▸ **apiSystemProfileValidateSchema**(`repoBranch`: string, `repoFork?`: string, `days?`: number, `maxMessages?`: number, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/host-inventory/api.ts:1589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1589)*
+*Defined in [packages/host-inventory/api.ts:1588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1588)*
 
-Required permissions: inventory:hosts:read
+Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
 
 **`summary`** validate system profile schema
 
@@ -101,6 +101,7 @@ Name | Type | Description |
 `repoBranch` | string | The branch of the inventory-schemas repo to use |
 `repoFork?` | string | - |
 `days?` | number | - |
+`maxMessages?` | number | - |
 `options?` | any | - |
 
 **Returns:** *Promise‹AxiosResponse‹void››*
