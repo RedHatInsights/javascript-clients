@@ -10,6 +10,8 @@
 
   ↳ [AccessApi](accessapi.md)
 
+  ↳ [CrossAccountRequestApi](crossaccountrequestapi.md)
+
   ↳ [GroupApi](groupapi.md)
 
   ↳ [PermissionApi](permissionapi.md)

@@ -256,18 +256,6 @@ export interface Authentication {
      * @type {string}
      * @memberof Authentication
      */
-    status?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Authentication
-     */
-    status_details?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Authentication
-     */
     tenant?: string;
     /**
      *

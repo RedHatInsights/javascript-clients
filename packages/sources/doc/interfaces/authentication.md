@@ -24,8 +24,6 @@
 * [resource_id](authentication.md#optional-resource_id)
 * [resource_type](authentication.md#optional-resource_type)
 * [source_id](authentication.md#optional-source_id)
-* [status](authentication.md#optional-status)
-* [status_details](authentication.md#optional-status_details)
 * [tenant](authentication.md#optional-tenant)
 * [username](authentication.md#optional-username)
 
@@ -137,31 +135,11 @@ ID of the resource
 
 ___
 
-### `Optional` status
-
-• **status**? : *string*
-
-*Defined in [packages/sources/api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L259)*
-
-**`memberof`** Authentication
-
-___
-
-### `Optional` status_details
-
-• **status_details**? : *string*
-
-*Defined in [packages/sources/api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L265)*
-
-**`memberof`** Authentication
-
-___
-
 ### `Optional` tenant
 
 • **tenant**? : *string*
 
-*Defined in [packages/sources/api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L271)*
+*Defined in [packages/sources/api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L259)*
 
 **`memberof`** Authentication
 
@@ -171,6 +149,6 @@ ___
 
 • **username**? : *string*
 
-*Defined in [packages/sources/api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L277)*
+*Defined in [packages/sources/api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L265)*
 
 **`memberof`** Authentication

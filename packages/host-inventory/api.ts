@@ -118,11 +118,11 @@ export interface CanonicalFactsIn {
      */
     ip_addresses: Array<string>;
     /**
-     * A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
+     *
      * @type {string}
      * @memberof CanonicalFactsIn
      */
-    Fqdn?: string | null;
+    fqdn: string;
     /**
      *
      * @type {Array<string>}
@@ -135,12 +135,6 @@ export interface CanonicalFactsIn {
      * @memberof CanonicalFactsIn
      */
     external_id: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CanonicalFactsIn
-     */
-    fqdn: string;
 }
 /**
  *
@@ -250,7 +244,7 @@ export interface CanonicalFactsOut {
      * @type {string}
      * @memberof CanonicalFactsOut
      */
-    Fqdn?: string | null;
+    fqdn?: string | null;
     /**
      * Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
      * @type {Array<string>}
@@ -307,11 +301,11 @@ export interface CreateCheckIn {
      */
     ip_addresses: Array<string>;
     /**
-     * A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
+     *
      * @type {string}
      * @memberof CreateCheckIn
      */
-    Fqdn?: string | null;
+    fqdn: string;
     /**
      *
      * @type {Array<string>}
@@ -324,12 +318,6 @@ export interface CreateCheckIn {
      * @memberof CreateCheckIn
      */
     external_id: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CreateCheckIn
-     */
-    fqdn: string;
     /**
      * How long from now to expect another check-in (in minutes).
      * @type {number}
@@ -397,7 +385,7 @@ export interface CreateHostOut {
      * @type {string}
      * @memberof CreateHostOut
      */
-    Fqdn?: string | null;
+    fqdn?: string | null;
     /**
      * Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
      * @type {Array<string>}
@@ -672,7 +660,7 @@ export interface HostOut {
      * @type {string}
      * @memberof HostOut
      */
-    Fqdn?: string | null;
+    fqdn?: string | null;
     /**
      * Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
      * @type {Array<string>}
@@ -958,6 +946,12 @@ export interface SystemProfile {
      */
     rhc_client_id?: string;
     /**
+     * A UUID associated with the config manager state
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    rhc_config_state?: string;
+    /**
      * The cpu model name
      * @type {string}
      * @memberof SystemProfile
@@ -1208,7 +1202,13 @@ export interface SystemProfile {
      * @type {string}
      * @memberof SystemProfile
      */
-    selinux_config_file?: SystemProfileSelinuxConfigFileEnum;
+    selinux_config_file?: string;
+    /**
+     * Indicates whether the host is part of a marketplace install from AWS, Azure, etc.
+     * @type {boolean}
+     * @memberof SystemProfile
+     */
+    is_marketplace?: boolean;
     /**
      *
      * @type {SystemProfileRhsm}
@@ -1222,15 +1222,6 @@ export interface SystemProfile {
     * @enum {string}
     */
 export enum SystemProfileSelinuxCurrentModeEnum {
-    Enforcing = 'enforcing',
-    Permissive = 'permissive',
-    Disabled = 'disabled'
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export enum SystemProfileSelinuxConfigFileEnum {
     Enforcing = 'enforcing',
     Permissive = 'permissive',
     Disabled = 'disabled'
@@ -1464,15 +1455,16 @@ export interface YumRepo {
 export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Required permissions: inventory:hosts:read
+         * Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
          * @summary validate system profile schema
          * @param {string} repoBranch The branch of the inventory-schemas repo to use
          * @param {string} [repoFork] The fork of the inventory-schemas repo to use
-         * @param {number} [days] How many days worth of kafka messages to validate
+         * @param {number} [days] How many days worth of data to validate
+         * @param {number} [maxMessages] Stops polling when this number of messages has been collected
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileValidateSchema: async (repoBranch: string, repoFork?: string, days?: number, options: any = {}): Promise<RequestArgs> => {
+        apiSystemProfileValidateSchema: async (repoBranch: string, repoFork?: string, days?: number, maxMessages?: number, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'repoBranch' is not null or undefined
             if (repoBranch === null || repoBranch === undefined) {
                 throw new RequiredError('repoBranch','Required parameter repoBranch was null or undefined when calling apiSystemProfileValidateSchema.');
@@ -1507,6 +1499,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['days'] = days;
             }
 
+            if (maxMessages !== undefined) {
+                localVarQueryParameter['max_messages'] = maxMessages;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1530,16 +1526,17 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 export const DefaultApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Required permissions: inventory:hosts:read
+         * Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
          * @summary validate system profile schema
          * @param {string} repoBranch The branch of the inventory-schemas repo to use
          * @param {string} [repoFork] The fork of the inventory-schemas repo to use
-         * @param {number} [days] How many days worth of kafka messages to validate
+         * @param {number} [days] How many days worth of data to validate
+         * @param {number} [maxMessages] Stops polling when this number of messages has been collected
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, options);
+        async apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, maxMessages?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, maxMessages, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -1555,16 +1552,17 @@ export const DefaultApiFp = function(configuration?: Configuration) {
 export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Required permissions: inventory:hosts:read
+         * Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
          * @summary validate system profile schema
          * @param {string} repoBranch The branch of the inventory-schemas repo to use
          * @param {string} [repoFork] The fork of the inventory-schemas repo to use
-         * @param {number} [days] How many days worth of kafka messages to validate
+         * @param {number} [days] How many days worth of data to validate
+         * @param {number} [maxMessages] Stops polling when this number of messages has been collected
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, options).then((request) => request(axios, basePath));
+        apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, maxMessages?: number, options?: any): AxiosPromise<void> {
+            return DefaultApiFp(configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, maxMessages, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1577,17 +1575,18 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
  */
 export class DefaultApi extends BaseAPI {
     /**
-     * Required permissions: inventory:hosts:read
+     * Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
      * @summary validate system profile schema
      * @param {string} repoBranch The branch of the inventory-schemas repo to use
      * @param {string} [repoFork] The fork of the inventory-schemas repo to use
-     * @param {number} [days] How many days worth of kafka messages to validate
+     * @param {number} [days] How many days worth of data to validate
+     * @param {number} [maxMessages] Stops polling when this number of messages has been collected
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, options?: any) {
-        return DefaultApiFp(this.configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, options).then((request) => request(this.axios, this.basePath));
+    public apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, maxMessages?: number, options?: any) {
+        return DefaultApiFp(this.configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, maxMessages, options).then((request) => request(this.axios, this.basePath));
     }
 
 }

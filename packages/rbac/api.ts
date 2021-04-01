@@ -104,6 +104,649 @@ export interface AdditionalGroup {
 /**
  *
  * @export
+ * @interface CrossAccountRequest
+ */
+export interface CrossAccountRequest {
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequest
+     */
+    request_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequest
+     */
+    target_account?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequest
+     */
+    status?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequest
+     */
+    created?: string;
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequest
+     */
+    start_date?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequest
+     */
+    end_date?: any;
+}
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestByAccount
+ */
+export interface CrossAccountRequestByAccount {
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByAccount
+     */
+    request_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByAccount
+     */
+    target_account?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByAccount
+     */
+    status?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByAccount
+     */
+    created?: string;
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequestByAccount
+     */
+    start_date?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequestByAccount
+     */
+    end_date?: any;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByAccount
+     */
+    first_name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByAccount
+     */
+    last_name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByAccount
+     */
+    email?: string;
+}
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestByAccountAllOf
+ */
+export interface CrossAccountRequestByAccountAllOf {
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByAccountAllOf
+     */
+    first_name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByAccountAllOf
+     */
+    last_name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByAccountAllOf
+     */
+    email?: string;
+}
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestByUserId
+ */
+export interface CrossAccountRequestByUserId {
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByUserId
+     */
+    request_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByUserId
+     */
+    target_account?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByUserId
+     */
+    status?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByUserId
+     */
+    created?: string;
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequestByUserId
+     */
+    start_date?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequestByUserId
+     */
+    end_date?: any;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByUserId
+     */
+    user_id?: string;
+}
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestByUserIdAllOf
+ */
+export interface CrossAccountRequestByUserIdAllOf {
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByUserIdAllOf
+     */
+    user_id?: string;
+}
+/**
+ * @type CrossAccountRequestDetail
+ * @export
+ */
+export type CrossAccountRequestDetail = CrossAccountRequestDetailByAccount | CrossAccountRequestDetailByUseId;
+
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestDetailByAccount
+ */
+export interface CrossAccountRequestDetailByAccount {
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestDetailByAccount
+     */
+    request_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestDetailByAccount
+     */
+    target_account?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestDetailByAccount
+     */
+    start_date?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestDetailByAccount
+     */
+    end_date?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestDetailByAccount
+     */
+    status?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestDetailByAccount
+     */
+    created?: string;
+    /**
+     *
+     * @type {Array<CrossAccountRequestWithRolesRoles>}
+     * @memberof CrossAccountRequestDetailByAccount
+     */
+    roles?: Array<CrossAccountRequestWithRolesRoles>;
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequestDetailByAccount
+     */
+    first_name?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequestDetailByAccount
+     */
+    last_name?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequestDetailByAccount
+     */
+    email?: any;
+}
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestDetailByAccountAllOf
+ */
+export interface CrossAccountRequestDetailByAccountAllOf {
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequestDetailByAccountAllOf
+     */
+    first_name?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequestDetailByAccountAllOf
+     */
+    last_name?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequestDetailByAccountAllOf
+     */
+    email?: any;
+}
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestDetailByUseId
+ */
+export interface CrossAccountRequestDetailByUseId {
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestDetailByUseId
+     */
+    request_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestDetailByUseId
+     */
+    target_account?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestDetailByUseId
+     */
+    start_date?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestDetailByUseId
+     */
+    end_date?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestDetailByUseId
+     */
+    status?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestDetailByUseId
+     */
+    created?: string;
+    /**
+     *
+     * @type {Array<CrossAccountRequestWithRolesRoles>}
+     * @memberof CrossAccountRequestDetailByUseId
+     */
+    roles?: Array<CrossAccountRequestWithRolesRoles>;
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequestDetailByUseId
+     */
+    user_id?: any;
+}
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestDetailByUseIdAllOf
+ */
+export interface CrossAccountRequestDetailByUseIdAllOf {
+    /**
+     *
+     * @type {any}
+     * @memberof CrossAccountRequestDetailByUseIdAllOf
+     */
+    user_id?: any;
+}
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestIn
+ */
+export interface CrossAccountRequestIn {
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestIn
+     */
+    target_account: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestIn
+     */
+    start_date: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestIn
+     */
+    end_date: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof CrossAccountRequestIn
+     */
+    roles: Array<string>;
+}
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestOut
+ */
+export interface CrossAccountRequestOut {
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestOut
+     */
+    request_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestOut
+     */
+    target_account?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestOut
+     */
+    start_date?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestOut
+     */
+    end_date?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestOut
+     */
+    status?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestOut
+     */
+    created?: string;
+    /**
+     *
+     * @type {Array<CrossAccountRequestWithRolesRoles>}
+     * @memberof CrossAccountRequestOut
+     */
+    roles?: Array<CrossAccountRequestWithRolesRoles>;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestOut
+     */
+    user_id?: string;
+}
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestPagination
+ */
+export interface CrossAccountRequestPagination {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof CrossAccountRequestPagination
+     */
+    meta?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof CrossAccountRequestPagination
+     */
+    links?: PaginationLinks;
+    /**
+     *
+     * @type {Array<CrossAccountRequestByAccount | CrossAccountRequestByUserId>}
+     * @memberof CrossAccountRequestPagination
+     */
+    data: Array<CrossAccountRequestByAccount | CrossAccountRequestByUserId>;
+}
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestPaginationAllOf
+ */
+export interface CrossAccountRequestPaginationAllOf {
+    /**
+     *
+     * @type {Array<CrossAccountRequestByAccount | CrossAccountRequestByUserId>}
+     * @memberof CrossAccountRequestPaginationAllOf
+     */
+    data: Array<CrossAccountRequestByAccount | CrossAccountRequestByUserId>;
+}
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestPatch
+ */
+export interface CrossAccountRequestPatch {
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestPatch
+     */
+    start_date?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestPatch
+     */
+    end_date?: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof CrossAccountRequestPatch
+     */
+    roles?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestPatch
+     */
+    status?: CrossAccountRequestPatchStatusEnum;
+}
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum CrossAccountRequestPatchStatusEnum {
+    Pending = 'pending',
+    Approved = 'approved',
+    Expired = 'expired',
+    Cancelled = 'cancelled',
+    Denied = 'denied'
+}
+
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestUpdateIn
+ */
+export interface CrossAccountRequestUpdateIn {
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestUpdateIn
+     */
+    start_date: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestUpdateIn
+     */
+    end_date: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof CrossAccountRequestUpdateIn
+     */
+    roles: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestUpdateIn
+     */
+    status?: CrossAccountRequestUpdateInStatusEnum;
+}
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum CrossAccountRequestUpdateInStatusEnum {
+    Pending = 'pending',
+    Approved = 'approved',
+    Expired = 'expired',
+    Cancelled = 'cancelled',
+    Denied = 'denied'
+}
+
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestWithRoles
+ */
+export interface CrossAccountRequestWithRoles {
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestWithRoles
+     */
+    request_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestWithRoles
+     */
+    target_account?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestWithRoles
+     */
+    start_date?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestWithRoles
+     */
+    end_date?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestWithRoles
+     */
+    status?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestWithRoles
+     */
+    created?: string;
+    /**
+     *
+     * @type {Array<CrossAccountRequestWithRolesRoles>}
+     * @memberof CrossAccountRequestWithRoles
+     */
+    roles?: Array<CrossAccountRequestWithRolesRoles>;
+}
+/**
+ *
+ * @export
+ * @interface CrossAccountRequestWithRolesRoles
+ */
+export interface CrossAccountRequestWithRolesRoles {
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestWithRolesRoles
+     */
+    display_name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestWithRolesRoles
+     */
+    description?: string;
+    /**
+     *
+     * @type {Array<Permission>}
+     * @memberof CrossAccountRequestWithRolesRoles
+     */
+    permissions?: Array<Permission>;
+}
+/**
+ *
+ * @export
  * @interface Error403
  */
 export interface Error403 {
@@ -1749,6 +2392,515 @@ export class AccessApi extends BaseAPI {
 
 
 /**
+ * CrossAccountRequestApi - axios parameter creator
+ * @export
+ */
+export const CrossAccountRequestApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Create a cross account request
+         * @param {CrossAccountRequestIn} crossAccountRequestIn CrossAccountRequest to create
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createCrossAccountRequests: async (crossAccountRequestIn: CrossAccountRequestIn, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'crossAccountRequestIn' is not null or undefined
+            if (crossAccountRequestIn === null || crossAccountRequestIn === undefined) {
+                throw new RequiredError('crossAccountRequestIn','Required parameter crossAccountRequestIn was null or undefined when calling createCrossAccountRequests.');
+            }
+            const localVarPath = `/cross-account-requests/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof crossAccountRequestIn !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(crossAccountRequestIn !== undefined ? crossAccountRequestIn : {}) : (crossAccountRequestIn || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @summary Get a cross account request
+         * @param {string} uuid ID of cross account request to get
+         * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+         * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
+         * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getCrossAccountRequest: async (uuid: string, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getCrossAccountRequest.');
+            }
+            const localVarPath = `/cross-account-requests/{uuid}/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (queryBy !== undefined) {
+                localVarQueryParameter['query_by'] = queryBy;
+            }
+
+            if (account !== undefined) {
+                localVarQueryParameter['account'] = account;
+            }
+
+            if (approvedOnly !== undefined) {
+                localVarQueryParameter['approved_only'] = approvedOnly;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * By default, responses are sorted in ascending order by created_at
+         * @summary List the cross account requests for a user or account
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+         * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
+         * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listCrossAccountRequests: async (limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/cross-account-requests/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (queryBy !== undefined) {
+                localVarQueryParameter['query_by'] = queryBy;
+            }
+
+            if (account !== undefined) {
+                localVarQueryParameter['account'] = account;
+            }
+
+            if (approvedOnly !== undefined) {
+                localVarQueryParameter['approved_only'] = approvedOnly;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Update a cross account request
+         * @summary Update a cross account request
+         * @param {string} uuid ID of cross account request to get
+         * @param {CrossAccountRequestPatch} crossAccountRequestPatch Updates to CrossAccountRequest
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        patchCrossAccountRequest: async (uuid: string, crossAccountRequestPatch: CrossAccountRequestPatch, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling patchCrossAccountRequest.');
+            }
+            // verify required parameter 'crossAccountRequestPatch' is not null or undefined
+            if (crossAccountRequestPatch === null || crossAccountRequestPatch === undefined) {
+                throw new RequiredError('crossAccountRequestPatch','Required parameter crossAccountRequestPatch was null or undefined when calling patchCrossAccountRequest.');
+            }
+            const localVarPath = `/cross-account-requests/{uuid}/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof crossAccountRequestPatch !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(crossAccountRequestPatch !== undefined ? crossAccountRequestPatch : {}) : (crossAccountRequestPatch || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Update a cross account request
+         * @summary Update a cross account request
+         * @param {string} uuid ID of cross account request to get
+         * @param {CrossAccountRequestUpdateIn} crossAccountRequestUpdateIn Updates to CrossAccountRequest
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        putCrossAccountRequest: async (uuid: string, crossAccountRequestUpdateIn: CrossAccountRequestUpdateIn, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling putCrossAccountRequest.');
+            }
+            // verify required parameter 'crossAccountRequestUpdateIn' is not null or undefined
+            if (crossAccountRequestUpdateIn === null || crossAccountRequestUpdateIn === undefined) {
+                throw new RequiredError('crossAccountRequestUpdateIn','Required parameter crossAccountRequestUpdateIn was null or undefined when calling putCrossAccountRequest.');
+            }
+            const localVarPath = `/cross-account-requests/{uuid}/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication basic_auth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof crossAccountRequestUpdateIn !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(crossAccountRequestUpdateIn !== undefined ? crossAccountRequestUpdateIn : {}) : (crossAccountRequestUpdateIn || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * CrossAccountRequestApi - functional programming interface
+ * @export
+ */
+export const CrossAccountRequestApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Create a cross account request
+         * @param {CrossAccountRequestIn} crossAccountRequestIn CrossAccountRequest to create
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createCrossAccountRequests(crossAccountRequestIn: CrossAccountRequestIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CrossAccountRequestOut>> {
+            const localVarAxiosArgs = await CrossAccountRequestApiAxiosParamCreator(configuration).createCrossAccountRequests(crossAccountRequestIn, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
+         * @summary Get a cross account request
+         * @param {string} uuid ID of cross account request to get
+         * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+         * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
+         * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getCrossAccountRequest(uuid: string, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CrossAccountRequestDetail>> {
+            const localVarAxiosArgs = await CrossAccountRequestApiAxiosParamCreator(configuration).getCrossAccountRequest(uuid, queryBy, account, approvedOnly, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * By default, responses are sorted in ascending order by created_at
+         * @summary List the cross account requests for a user or account
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+         * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
+         * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CrossAccountRequestPagination>> {
+            const localVarAxiosArgs = await CrossAccountRequestApiAxiosParamCreator(configuration).listCrossAccountRequests(limit, offset, queryBy, account, approvedOnly, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Update a cross account request
+         * @summary Update a cross account request
+         * @param {string} uuid ID of cross account request to get
+         * @param {CrossAccountRequestPatch} crossAccountRequestPatch Updates to CrossAccountRequest
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async patchCrossAccountRequest(uuid: string, crossAccountRequestPatch: CrossAccountRequestPatch, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CrossAccountRequestDetail>> {
+            const localVarAxiosArgs = await CrossAccountRequestApiAxiosParamCreator(configuration).patchCrossAccountRequest(uuid, crossAccountRequestPatch, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Update a cross account request
+         * @summary Update a cross account request
+         * @param {string} uuid ID of cross account request to get
+         * @param {CrossAccountRequestUpdateIn} crossAccountRequestUpdateIn Updates to CrossAccountRequest
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async putCrossAccountRequest(uuid: string, crossAccountRequestUpdateIn: CrossAccountRequestUpdateIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CrossAccountRequestDetail>> {
+            const localVarAxiosArgs = await CrossAccountRequestApiAxiosParamCreator(configuration).putCrossAccountRequest(uuid, crossAccountRequestUpdateIn, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * CrossAccountRequestApi - factory interface
+ * @export
+ */
+export const CrossAccountRequestApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         *
+         * @summary Create a cross account request
+         * @param {CrossAccountRequestIn} crossAccountRequestIn CrossAccountRequest to create
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createCrossAccountRequests(crossAccountRequestIn: CrossAccountRequestIn, options?: any): AxiosPromise<CrossAccountRequestOut> {
+            return CrossAccountRequestApiFp(configuration).createCrossAccountRequests(crossAccountRequestIn, options).then((request) => request(axios, basePath));
+        },
+        /**
+         *
+         * @summary Get a cross account request
+         * @param {string} uuid ID of cross account request to get
+         * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+         * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
+         * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getCrossAccountRequest(uuid: string, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options?: any): AxiosPromise<CrossAccountRequestDetail> {
+            return CrossAccountRequestApiFp(configuration).getCrossAccountRequest(uuid, queryBy, account, approvedOnly, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * By default, responses are sorted in ascending order by created_at
+         * @summary List the cross account requests for a user or account
+         * @param {number} [limit] Parameter for selecting the amount of data returned.
+         * @param {number} [offset] Parameter for selecting the offset of data.
+         * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+         * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
+         * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options?: any): AxiosPromise<CrossAccountRequestPagination> {
+            return CrossAccountRequestApiFp(configuration).listCrossAccountRequests(limit, offset, queryBy, account, approvedOnly, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Update a cross account request
+         * @summary Update a cross account request
+         * @param {string} uuid ID of cross account request to get
+         * @param {CrossAccountRequestPatch} crossAccountRequestPatch Updates to CrossAccountRequest
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        patchCrossAccountRequest(uuid: string, crossAccountRequestPatch: CrossAccountRequestPatch, options?: any): AxiosPromise<CrossAccountRequestDetail> {
+            return CrossAccountRequestApiFp(configuration).patchCrossAccountRequest(uuid, crossAccountRequestPatch, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Update a cross account request
+         * @summary Update a cross account request
+         * @param {string} uuid ID of cross account request to get
+         * @param {CrossAccountRequestUpdateIn} crossAccountRequestUpdateIn Updates to CrossAccountRequest
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        putCrossAccountRequest(uuid: string, crossAccountRequestUpdateIn: CrossAccountRequestUpdateIn, options?: any): AxiosPromise<CrossAccountRequestDetail> {
+            return CrossAccountRequestApiFp(configuration).putCrossAccountRequest(uuid, crossAccountRequestUpdateIn, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * CrossAccountRequestApi - object-oriented interface
+ * @export
+ * @class CrossAccountRequestApi
+ * @extends {BaseAPI}
+ */
+export class CrossAccountRequestApi extends BaseAPI {
+    /**
+     *
+     * @summary Create a cross account request
+     * @param {CrossAccountRequestIn} crossAccountRequestIn CrossAccountRequest to create
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CrossAccountRequestApi
+     */
+    public createCrossAccountRequests(crossAccountRequestIn: CrossAccountRequestIn, options?: any) {
+        return CrossAccountRequestApiFp(this.configuration).createCrossAccountRequests(crossAccountRequestIn, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     *
+     * @summary Get a cross account request
+     * @param {string} uuid ID of cross account request to get
+     * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+     * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
+     * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CrossAccountRequestApi
+     */
+    public getCrossAccountRequest(uuid: string, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options?: any) {
+        return CrossAccountRequestApiFp(this.configuration).getCrossAccountRequest(uuid, queryBy, account, approvedOnly, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * By default, responses are sorted in ascending order by created_at
+     * @summary List the cross account requests for a user or account
+     * @param {number} [limit] Parameter for selecting the amount of data returned.
+     * @param {number} [offset] Parameter for selecting the offset of data.
+     * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+     * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
+     * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CrossAccountRequestApi
+     */
+    public listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options?: any) {
+        return CrossAccountRequestApiFp(this.configuration).listCrossAccountRequests(limit, offset, queryBy, account, approvedOnly, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Update a cross account request
+     * @summary Update a cross account request
+     * @param {string} uuid ID of cross account request to get
+     * @param {CrossAccountRequestPatch} crossAccountRequestPatch Updates to CrossAccountRequest
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CrossAccountRequestApi
+     */
+    public patchCrossAccountRequest(uuid: string, crossAccountRequestPatch: CrossAccountRequestPatch, options?: any) {
+        return CrossAccountRequestApiFp(this.configuration).patchCrossAccountRequest(uuid, crossAccountRequestPatch, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Update a cross account request
+     * @summary Update a cross account request
+     * @param {string} uuid ID of cross account request to get
+     * @param {CrossAccountRequestUpdateIn} crossAccountRequestUpdateIn Updates to CrossAccountRequest
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CrossAccountRequestApi
+     */
+    public putCrossAccountRequest(uuid: string, crossAccountRequestUpdateIn: CrossAccountRequestUpdateIn, options?: any) {
+        return CrossAccountRequestApiFp(this.configuration).putCrossAccountRequest(uuid, crossAccountRequestUpdateIn, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
  * GroupApi - axios parameter creator
  * @export
  */
@@ -2243,13 +3395,14 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [roleName] Parameter for filtering group roles by role &#x60;name&#x60; using string contains search.
          * @param {string} [roleDisplayName] Parameter for filtering group roles by role &#x60;display_name&#x60; using string contains search.
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
+         * @param {boolean} [roleSystem] Parameter for filtering group roles by system flag.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup: async (uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options: any = {}): Promise<RequestArgs> => {
+        listRolesForGroup: async (uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, roleSystem?: boolean, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling listRolesForGroup.');
@@ -2285,6 +3438,10 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
 
             if (roleDescription !== undefined) {
                 localVarQueryParameter['role_description'] = roleDescription;
+            }
+
+            if (roleSystem !== undefined) {
+                localVarQueryParameter['role_system'] = roleSystem;
             }
 
             if (limit !== undefined) {
@@ -2523,14 +3680,15 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {string} [roleName] Parameter for filtering group roles by role &#x60;name&#x60; using string contains search.
          * @param {string} [roleDisplayName] Parameter for filtering group roles by role &#x60;display_name&#x60; using string contains search.
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
+         * @param {boolean} [roleSystem] Parameter for filtering group roles by system flag.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination>> {
-            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, limit, offset, orderBy, options);
+        async listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, roleSystem?: boolean, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, roleSystem, limit, offset, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2675,14 +3833,15 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [roleName] Parameter for filtering group roles by role &#x60;name&#x60; using string contains search.
          * @param {string} [roleDisplayName] Parameter for filtering group roles by role &#x60;display_name&#x60; using string contains search.
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
+         * @param {boolean} [roleSystem] Parameter for filtering group roles by system flag.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): AxiosPromise<GroupRolesPagination> {
-            return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, limit, offset, orderBy, options).then((request) => request(axios, basePath));
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, roleSystem?: boolean, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): AxiosPromise<GroupRolesPagination> {
+            return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, roleSystem, limit, offset, orderBy, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -2838,6 +3997,7 @@ export class GroupApi extends BaseAPI {
      * @param {string} [roleName] Parameter for filtering group roles by role &#x60;name&#x60; using string contains search.
      * @param {string} [roleDisplayName] Parameter for filtering group roles by role &#x60;display_name&#x60; using string contains search.
      * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
+     * @param {boolean} [roleSystem] Parameter for filtering group roles by system flag.
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
@@ -2845,8 +4005,8 @@ export class GroupApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any) {
-        return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, limit, offset, orderBy, options).then((request) => request(this.axios, this.basePath));
+    public listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, roleSystem?: boolean, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any) {
+        return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, roleSystem, limit, offset, orderBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4021,6 +5181,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {boolean} [system] Parameter for filtering resource by system flag.
          * @param {string} [displayName] Parameter for filtering resource by display_name using string contains search.
          * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
@@ -4032,7 +5193,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles: async (limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options: any = {}): Promise<RequestArgs> => {
+        listRoles: async (limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/roles/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4059,6 +5220,10 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (name !== undefined) {
                 localVarQueryParameter['name'] = name;
+            }
+
+            if (system !== undefined) {
+                localVarQueryParameter['system'] = system;
             }
 
             if (displayName !== undefined) {
@@ -4278,6 +5443,7 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {boolean} [system] Parameter for filtering resource by system flag.
          * @param {string} [displayName] Parameter for filtering resource by display_name using string contains search.
          * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
@@ -4289,8 +5455,8 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listRoles(limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic>> {
-            const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options);
+        async listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic>> {
+            const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4384,6 +5550,7 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {string} [name] Parameter for filtering resource by name using string contains search.
+         * @param {boolean} [system] Parameter for filtering resource by system flag.
          * @param {string} [displayName] Parameter for filtering resource by display_name using string contains search.
          * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
@@ -4395,8 +5562,8 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): AxiosPromise<RolePaginationDynamic> {
-            return RoleApiFp(configuration).listRoles(limit, offset, name, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options).then((request) => request(axios, basePath));
+        listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): AxiosPromise<RolePaginationDynamic> {
+            return RoleApiFp(configuration).listRoles(limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -4487,6 +5654,7 @@ export class RoleApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {string} [name] Parameter for filtering resource by name using string contains search.
+     * @param {boolean} [system] Parameter for filtering resource by system flag.
      * @param {string} [displayName] Parameter for filtering resource by display_name using string contains search.
      * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
      * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
@@ -4499,8 +5667,8 @@ export class RoleApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public listRoles(limit?: number, offset?: number, name?: string, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any) {
-        return RoleApiFp(this.configuration).listRoles(limit, offset, name, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options).then((request) => request(this.axios, this.basePath));
+    public listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any) {
+        return RoleApiFp(this.configuration).listRoles(limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

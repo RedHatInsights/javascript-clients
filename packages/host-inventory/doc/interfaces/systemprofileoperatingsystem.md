@@ -26,7 +26,7 @@ Object for OS details
 
 • **major**? : *number*
 
-*Defined in [packages/host-inventory/api.ts:1287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1287)*
+*Defined in [packages/host-inventory/api.ts:1278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1278)*
 
 Major release of OS (aka the x version)
 
@@ -38,7 +38,7 @@ ___
 
 • **minor**? : *number*
 
-*Defined in [packages/host-inventory/api.ts:1293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1293)*
+*Defined in [packages/host-inventory/api.ts:1284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1284)*
 
 Minor release of OS (aka the y version)
 
@@ -50,7 +50,7 @@ ___
 
 • **name**? : *[SystemProfileOperatingSystemNameEnum](../enums/systemprofileoperatingsystemnameenum.md)*
 
-*Defined in [packages/host-inventory/api.ts:1299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1299)*
+*Defined in [packages/host-inventory/api.ts:1290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1290)*
 
 Name of the distro/os
 

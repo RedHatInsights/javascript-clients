@@ -6058,48 +6058,6 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
-         * Gets the provider control parameters for a portfolio item.
-         * @summary Gets the provider control parameters for this portfolio item; requires control paramaters provided when provisioning the portfolio item.
-         * @param {string} portfolioItemId The Portfolio Item ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listProviderControlParameters: async (portfolioItemId: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'portfolioItemId' is not null or undefined
-            if (portfolioItemId === null || portfolioItemId === undefined) {
-                throw new RequiredError('portfolioItemId','Required parameter portfolioItemId was null or undefined when calling listProviderControlParameters.');
-            }
-            const localVarPath = `/portfolio_items/{portfolio_item_id}/provider_control_parameters`
-                .replace(`{${"portfolio_item_id"}}`, encodeURIComponent(String(portfolioItemId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication BasicAuth required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets all service plans for a portfolio item.
          * @summary Gets all service plans for a specific portfolio item; requires a connection to the catalog inventory service.
          * @param {string} portfolioItemId The Portfolio Item ID
@@ -6533,20 +6491,6 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Gets the provider control parameters for a portfolio item.
-         * @summary Gets the provider control parameters for this portfolio item; requires control paramaters provided when provisioning the portfolio item.
-         * @param {string} portfolioItemId The Portfolio Item ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listProviderControlParameters(portfolioItemId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await PortfolioItemApiAxiosParamCreator(configuration).listProviderControlParameters(portfolioItemId, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
          * Gets all service plans for a portfolio item.
          * @summary Gets all service plans for a specific portfolio item; requires a connection to the catalog inventory service.
          * @param {string} portfolioItemId The Portfolio Item ID
@@ -6728,16 +6672,6 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
             return PortfolioItemApiFp(configuration).listPortfolioItems(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Gets the provider control parameters for a portfolio item.
-         * @summary Gets the provider control parameters for this portfolio item; requires control paramaters provided when provisioning the portfolio item.
-         * @param {string} portfolioItemId The Portfolio Item ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listProviderControlParameters(portfolioItemId: string, options?: any): AxiosPromise<object> {
-            return PortfolioItemApiFp(configuration).listProviderControlParameters(portfolioItemId, options).then((request) => request(axios, basePath));
-        },
-        /**
          * Gets all service plans for a portfolio item.
          * @summary Gets all service plans for a specific portfolio item; requires a connection to the catalog inventory service.
          * @param {string} portfolioItemId The Portfolio Item ID
@@ -6901,18 +6835,6 @@ export class PortfolioItemApi extends BaseAPI {
      */
     public listPortfolioItems(limit?: number, offset?: number, filter?: object, sortBy?: string, options?: any) {
         return PortfolioItemApiFp(this.configuration).listPortfolioItems(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Gets the provider control parameters for a portfolio item.
-     * @summary Gets the provider control parameters for this portfolio item; requires control paramaters provided when provisioning the portfolio item.
-     * @param {string} portfolioItemId The Portfolio Item ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PortfolioItemApi
-     */
-    public listProviderControlParameters(portfolioItemId: string, options?: any) {
-        return PortfolioItemApiFp(this.configuration).listProviderControlParameters(portfolioItemId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

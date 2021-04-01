@@ -30,7 +30,7 @@
 
 • **bios_uuid**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L180)*
+*Defined in [packages/host-inventory/api.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L174)*
 
 **`memberof`** CanonicalFactsInAllOf
 
@@ -40,7 +40,7 @@ ___
 
 • **external_id**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L204)*
+*Defined in [packages/host-inventory/api.ts:198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L198)*
 
 **`memberof`** CanonicalFactsInAllOf
 
@@ -50,7 +50,7 @@ ___
 
 • **fqdn**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L192)*
+*Defined in [packages/host-inventory/api.ts:186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L186)*
 
 **`memberof`** CanonicalFactsInAllOf
 
@@ -60,7 +60,7 @@ ___
 
 • **insights_id**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L156)*
+*Defined in [packages/host-inventory/api.ts:150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L150)*
 
 **`memberof`** CanonicalFactsInAllOf
 
@@ -70,7 +70,7 @@ ___
 
 • **ip_addresses**? : *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L186)*
+*Defined in [packages/host-inventory/api.ts:180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L180)*
 
 **`memberof`** CanonicalFactsInAllOf
 
@@ -80,7 +80,7 @@ ___
 
 • **mac_addresses**? : *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L198)*
+*Defined in [packages/host-inventory/api.ts:192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L192)*
 
 **`memberof`** CanonicalFactsInAllOf
 
@@ -90,7 +90,7 @@ ___
 
 • **rhel_machine_id**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L162)*
+*Defined in [packages/host-inventory/api.ts:156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L156)*
 
 **`memberof`** CanonicalFactsInAllOf
 
@@ -100,7 +100,7 @@ ___
 
 • **satellite_id**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L174)*
+*Defined in [packages/host-inventory/api.ts:168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L168)*
 
 **`memberof`** CanonicalFactsInAllOf
 
@@ -110,6 +110,6 @@ ___
 
 • **subscription_manager_id**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L168)*
+*Defined in [packages/host-inventory/api.ts:162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L162)*
 
 **`memberof`** CanonicalFactsInAllOf

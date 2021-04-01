@@ -84,7 +84,7 @@ ___
 
 ▸ **listPrincipals**(`limit?`: number, `offset?`: number, `matchCriteria?`: "partial" | "exact", `usernames?`: string, `sortOrder?`: "asc" | "desc", `email?`: string, `status?`: "enabled" | "disabled" | "all", `adminOnly?`: "true" | "false", `orderBy?`: "username", `options?`: any): *Promise‹AxiosResponse‹[PrincipalPagination](../interfaces/principalpagination.md)››*
 
-*Defined in [packages/rbac/api.ts:3819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3819)*
+*Defined in [packages/rbac/api.ts:4979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4979)*
 
 By default, responses are sorted in ascending order by username
 
