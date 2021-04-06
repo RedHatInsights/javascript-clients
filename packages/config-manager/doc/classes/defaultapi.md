@@ -40,7 +40,7 @@ DefaultApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-Defined in packages/config-manager/base.ts:49
+*Defined in [packages/config-manager/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L49)*
 
 **Parameters:**
 
@@ -60,7 +60,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-Defined in packages/config-manager/base.ts:51
+*Defined in [packages/config-manager/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L51)*
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-Defined in packages/config-manager/base.ts:51
+*Defined in [packages/config-manager/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L51)*
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-Defined in packages/config-manager/base.ts:49
+*Defined in [packages/config-manager/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L49)*
 
 ## Methods
 
@@ -88,7 +88,7 @@ Defined in packages/config-manager/base.ts:49
 
 ▸ **getCurrentState**(`options?`: any): *Promise‹AxiosResponse‹[AccountState](../interfaces/accountstate.md)››*
 
-Defined in packages/config-manager/api.ts:490
+*Defined in [packages/config-manager/api.ts:490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L490)*
 
 **`summary`** Get the current state for requesting account
 
@@ -110,7 +110,7 @@ ___
 
 ▸ **getPlaybookById**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹string››*
 
-Defined in packages/config-manager/api.ts:502
+*Defined in [packages/config-manager/api.ts:502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L502)*
 
 **`summary`** Get ansible playbook for current state configuration
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **getStateById**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[StateArchive](../interfaces/statearchive.md)››*
 
-Defined in packages/config-manager/api.ts:514
+*Defined in [packages/config-manager/api.ts:514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L514)*
 
 **`summary`** Get single state change for requesting account
 
@@ -156,7 +156,7 @@ ___
 
 ▸ **getStates**(`limit?`: number, `offset?`: number, `options?`: any): *Promise‹AxiosResponse‹[StateArchive](../interfaces/statearchive.md)[]››*
 
-Defined in packages/config-manager/api.ts:527
+*Defined in [packages/config-manager/api.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L527)*
 
 **`summary`** Get archive of state changes for requesting account
 
@@ -180,7 +180,7 @@ ___
 
 ▸ **updateStates**(`state`: [State](../interfaces/state.md), `options?`: any): *Promise‹AxiosResponse‹[AccountState](../interfaces/accountstate.md)››*
 
-Defined in packages/config-manager/api.ts:539
+*Defined in [packages/config-manager/api.ts:539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L539)*
 
 **`summary`** Update and roll out configuration state for requesting account
 

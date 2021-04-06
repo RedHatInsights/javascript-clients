@@ -28,7 +28,7 @@
 
 \+ **new BaseAPI**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[BaseAPI](baseapi.md)*
 
-Defined in packages/config-manager/base.ts:49
+*Defined in [packages/config-manager/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L49)*
 
 **Parameters:**
 
@@ -46,7 +46,7 @@ Name | Type | Default |
 
 • **axios**: *AxiosInstance*
 
-Defined in packages/config-manager/base.ts:51
+*Defined in [packages/config-manager/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L51)*
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 • **basePath**: *string*
 
-Defined in packages/config-manager/base.ts:51
+*Defined in [packages/config-manager/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L51)*
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 • **configuration**: *[Configuration](configuration.md) | undefined*
 
-Defined in packages/config-manager/base.ts:49
+*Defined in [packages/config-manager/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L49)*
