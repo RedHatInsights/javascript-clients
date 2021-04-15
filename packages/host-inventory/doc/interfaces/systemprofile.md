@@ -28,6 +28,7 @@ Representation of the system profile fields
 * [disk_devices](systemprofile.md#optional-disk_devices)
 * [dnf_modules](systemprofile.md#optional-dnf_modules)
 * [enabled_services](systemprofile.md#optional-enabled_services)
+* [gpg_pubkeys](systemprofile.md#optional-gpg_pubkeys)
 * [infrastructure_type](systemprofile.md#optional-infrastructure_type)
 * [infrastructure_vendor](systemprofile.md#optional-infrastructure_vendor)
 * [insights_client_version](systemprofile.md#optional-insights_client_version)
@@ -182,7 +183,17 @@ ___
 
 • **enabled_services**? : *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:1163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1163)*
+*Defined in [packages/host-inventory/api.ts:1169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1169)*
+
+**`memberof`** SystemProfile
+
+___
+
+### `Optional` gpg_pubkeys
+
+• **gpg_pubkeys**? : *Array‹string›*
+
+*Defined in [packages/host-inventory/api.ts:1157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1157)*
 
 **`memberof`** SystemProfile
 
@@ -262,7 +273,7 @@ ___
 
 • **installed_services**? : *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:1157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1157)*
+*Defined in [packages/host-inventory/api.ts:1163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1163)*
 
 **`memberof`** SystemProfile
 
@@ -272,7 +283,7 @@ ___
 
 • **is_marketplace**? : *boolean*
 
-*Defined in [packages/host-inventory/api.ts:1211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1211)*
+*Defined in [packages/host-inventory/api.ts:1217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1217)*
 
 Indicates whether the host is part of a marketplace install from AWS, Azure, etc.
 
@@ -412,7 +423,7 @@ ___
 
 • **rhsm**? : *[SystemProfileRhsm](systemprofilerhsm.md)*
 
-*Defined in [packages/host-inventory/api.ts:1217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1217)*
+*Defined in [packages/host-inventory/api.ts:1223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1223)*
 
 **`memberof`** SystemProfile
 
@@ -432,7 +443,7 @@ ___
 
 • **sap_instance_number**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1181)*
+*Defined in [packages/host-inventory/api.ts:1187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1187)*
 
 The instance number of the SAP HANA system (a two-digit number between 00 and 99)
 
@@ -444,7 +455,7 @@ ___
 
 • **sap_sids**? : *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:1175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1175)*
+*Defined in [packages/host-inventory/api.ts:1181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1181)*
 
 **`memberof`** SystemProfile
 
@@ -454,7 +465,7 @@ ___
 
 • **sap_system**? : *boolean*
 
-*Defined in [packages/host-inventory/api.ts:1169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1169)*
+*Defined in [packages/host-inventory/api.ts:1175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1175)*
 
 Indicates if SAP is installed on the system
 
@@ -466,7 +477,7 @@ ___
 
 • **sap_version**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1187)*
+*Defined in [packages/host-inventory/api.ts:1193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1193)*
 
 The version of the SAP HANA lifecycle management program
 
@@ -488,7 +499,7 @@ ___
 
 • **selinux_config_file**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1205)*
+*Defined in [packages/host-inventory/api.ts:1211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1211)*
 
 The SELinux mode provided in the config file
 
@@ -500,7 +511,7 @@ ___
 
 • **selinux_current_mode**? : *[SystemProfileSelinuxCurrentModeEnum](../enums/systemprofileselinuxcurrentmodeenum.md)*
 
-*Defined in [packages/host-inventory/api.ts:1199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1199)*
+*Defined in [packages/host-inventory/api.ts:1205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1205)*
 
 The current SELinux mode, either enforcing, permissive, or disabled
 
@@ -542,7 +553,7 @@ ___
 
 • **tuned_profile**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1193)*
+*Defined in [packages/host-inventory/api.ts:1199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1199)*
 
 Current profile resulting from command tuned-adm active
 

@@ -28,6 +28,7 @@ DefaultApi - object-oriented interface
 
 * [getCurrentState](defaultapi.md#getcurrentstate)
 * [getPlaybookById](defaultapi.md#getplaybookbyid)
+* [getPlaybookPreview](defaultapi.md#getplaybookpreview)
 * [getStateById](defaultapi.md#getstatebyid)
 * [getStates](defaultapi.md#getstates)
 * [updateStates](defaultapi.md#updatestates)
@@ -88,7 +89,7 @@ ___
 
 ▸ **getCurrentState**(`options?`: any): *Promise‹AxiosResponse‹[AccountState](../interfaces/accountstate.md)››*
 
-*Defined in [packages/config-manager/api.ts:490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L490)*
+*Defined in [packages/config-manager/api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L590)*
 
 **`summary`** Get the current state for requesting account
 
@@ -110,7 +111,7 @@ ___
 
 ▸ **getPlaybookById**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹string››*
 
-*Defined in [packages/config-manager/api.ts:502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L502)*
+*Defined in [packages/config-manager/api.ts:602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L602)*
 
 **`summary`** Get ansible playbook for current state configuration
 
@@ -129,11 +130,34 @@ Name | Type | Description |
 
 ___
 
+###  getPlaybookPreview
+
+▸ **getPlaybookPreview**(`state`: [State](../interfaces/state.md), `options?`: any): *Promise‹AxiosResponse‹string››*
+
+*Defined in [packages/config-manager/api.ts:614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L614)*
+
+**`summary`** Get a preview of the playbook built from the provided state map
+
+**`throws`** {RequiredError}
+
+**`memberof`** DefaultApi
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`state` | [State](../interfaces/state.md) | State map used to generate a preview playbook |
+`options?` | any | - |
+
+**Returns:** *Promise‹AxiosResponse‹string››*
+
+___
+
 ###  getStateById
 
 ▸ **getStateById**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[StateArchive](../interfaces/statearchive.md)››*
 
-*Defined in [packages/config-manager/api.ts:514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L514)*
+*Defined in [packages/config-manager/api.ts:626](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L626)*
 
 **`summary`** Get single state change for requesting account
 
@@ -154,9 +178,9 @@ ___
 
 ###  getStates
 
-▸ **getStates**(`limit?`: number, `offset?`: number, `options?`: any): *Promise‹AxiosResponse‹[StateArchive](../interfaces/statearchive.md)[]››*
+▸ **getStates**(`limit?`: number, `offset?`: number, `options?`: any): *Promise‹AxiosResponse‹[StateArchives](../interfaces/statearchives.md)››*
 
-*Defined in [packages/config-manager/api.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L527)*
+*Defined in [packages/config-manager/api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L639)*
 
 **`summary`** Get archive of state changes for requesting account
 
@@ -172,7 +196,7 @@ Name | Type |
 `offset?` | number |
 `options?` | any |
 
-**Returns:** *Promise‹AxiosResponse‹[StateArchive](../interfaces/statearchive.md)[]››*
+**Returns:** *Promise‹AxiosResponse‹[StateArchives](../interfaces/statearchives.md)››*
 
 ___
 
@@ -180,7 +204,7 @@ ___
 
 ▸ **updateStates**(`state`: [State](../interfaces/state.md), `options?`: any): *Promise‹AxiosResponse‹[AccountState](../interfaces/accountstate.md)››*
 
-*Defined in [packages/config-manager/api.ts:539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L539)*
+*Defined in [packages/config-manager/api.ts:651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L651)*
 
 **`summary`** Update and roll out configuration state for requesting account
 

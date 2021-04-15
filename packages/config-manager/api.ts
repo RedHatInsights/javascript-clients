@@ -144,6 +144,43 @@ export interface StateArchive {
      */
     state?: State;
 }
+/**
+ *
+ * @export
+ * @interface StateArchives
+ */
+export interface StateArchives {
+    /**
+     * A total count of found entries
+     * @type {number}
+     * @memberof StateArchives
+     */
+    total?: number;
+    /**
+     * A number of entries returned from offset
+     * @type {number}
+     * @memberof StateArchives
+     */
+    count?: number;
+    /**
+     * A max number of entries to return
+     * @type {number}
+     * @memberof StateArchives
+     */
+    limit?: number;
+    /**
+     * A number representing he starting point for retrieving entries
+     * @type {number}
+     * @memberof StateArchives
+     */
+    offset?: number;
+    /**
+     * Query results
+     * @type {Array<StateArchive>}
+     * @memberof StateArchives
+     */
+    results?: Array<StateArchive>;
+}
 
 /**
  * DefaultApi - axios parameter creator
@@ -211,6 +248,45 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             delete localVarUrlObj.search;
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @summary Get a preview of the playbook built from the provided state map
+         * @param {State} state State map used to generate a preview playbook
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookPreview: async (state: State, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'state' is not null or undefined
+            if (state === null || state === undefined) {
+                throw new RequiredError('state','Required parameter state was null or undefined when calling getPlaybookPreview.');
+            }
+            const localVarPath = `/states/preview`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof state !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(state !== undefined ? state : {}) : (state || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -370,6 +446,20 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         },
         /**
          *
+         * @summary Get a preview of the playbook built from the provided state map
+         * @param {State} state State map used to generate a preview playbook
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getPlaybookPreview(state: State, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getPlaybookPreview(state, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         *
          * @summary Get single state change for requesting account
          * @param {string} id state archive identifier
          * @param {*} [options] Override http request option.
@@ -390,7 +480,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getStates(limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StateArchive>>> {
+        async getStates(limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StateArchives>> {
             const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getStates(limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -441,6 +531,16 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         },
         /**
          *
+         * @summary Get a preview of the playbook built from the provided state map
+         * @param {State} state State map used to generate a preview playbook
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPlaybookPreview(state: State, options?: any): AxiosPromise<string> {
+            return DefaultApiFp(configuration).getPlaybookPreview(state, options).then((request) => request(axios, basePath));
+        },
+        /**
+         *
          * @summary Get single state change for requesting account
          * @param {string} id state archive identifier
          * @param {*} [options] Override http request option.
@@ -457,7 +557,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getStates(limit?: number, offset?: number, options?: any): AxiosPromise<Array<StateArchive>> {
+        getStates(limit?: number, offset?: number, options?: any): AxiosPromise<StateArchives> {
             return DefaultApiFp(configuration).getStates(limit, offset, options).then((request) => request(axios, basePath));
         },
         /**
@@ -501,6 +601,18 @@ export class DefaultApi extends BaseAPI {
      */
     public getPlaybookById(id: string, options?: any) {
         return DefaultApiFp(this.configuration).getPlaybookById(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     *
+     * @summary Get a preview of the playbook built from the provided state map
+     * @param {State} state State map used to generate a preview playbook
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public getPlaybookPreview(state: State, options?: any) {
+        return DefaultApiFp(this.configuration).getPlaybookPreview(state, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

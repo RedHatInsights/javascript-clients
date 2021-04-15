@@ -23,7 +23,7 @@
 
 • **advisory**? : *string*
 
-*Defined in [packages/patch/api.ts:1060](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L1060)*
+*Defined in [packages/patch/api.ts:1108](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L1108)*
 
 **`memberof`** ModelsPackageUpdate
 
@@ -33,6 +33,6 @@ ___
 
 • **evra**? : *string*
 
-*Defined in [packages/patch/api.ts:1066](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L1066)*
+*Defined in [packages/patch/api.ts:1114](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L1114)*
 
 **`memberof`** ModelsPackageUpdate

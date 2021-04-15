@@ -22,6 +22,6 @@
 
 • **data**? : *Array‹[PlaybookTemplateData](playbooktemplatedata.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1723)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1854](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1854)*
 
 **`memberof`** PlaybookTemplate

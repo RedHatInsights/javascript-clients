@@ -23,7 +23,7 @@
 
 • **application_version**: *string*
 
-*Defined in [packages/vulnerabilities/api.ts:2062](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2062)*
+*Defined in [packages/vulnerabilities/api.ts:2193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2193)*
 
 Version of application.
 
@@ -35,7 +35,7 @@ ___
 
 • **database_version**: *string | number*
 
-*Defined in [packages/vulnerabilities/api.ts:2068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2068)*
+*Defined in [packages/vulnerabilities/api.ts:2199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2199)*
 
 Version of database schema.
 

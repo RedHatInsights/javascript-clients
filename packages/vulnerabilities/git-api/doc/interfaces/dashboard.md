@@ -26,7 +26,7 @@
 
 ###  cves_by_severity
 
-• **cves_by_severity**: *[ExecutiveReportCvesBySeverity](executivereportcvesbyseverity.md)*
+• **cves_by_severity**: *[DashboardCvesBySeverity](dashboardcvesbyseverity.md)*
 
 *Defined in [packages/vulnerabilities/git-api/api.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L398)*
 

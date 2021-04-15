@@ -23,7 +23,7 @@
 
 • **cve**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1862)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1993)*
 
 **`memberof`** StatusOutUpdated
 
@@ -33,6 +33,6 @@ ___
 
 • **inventory_id**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1856)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1987)*
 
 **`memberof`** StatusOutUpdated

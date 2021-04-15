@@ -24,7 +24,7 @@
 
 • **description**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1736](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1736)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1867)*
 
 Playbook template description.
 
@@ -36,7 +36,7 @@ ___
 
 • **play**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1742)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1873)*
 
 Actual playbook template.
 
@@ -48,7 +48,7 @@ ___
 
 • **version**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1748)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1879)*
 
 Revision of the playbook template.
 

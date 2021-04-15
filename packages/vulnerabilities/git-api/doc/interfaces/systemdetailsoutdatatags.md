@@ -24,7 +24,7 @@
 
 • **key**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1993)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2124)*
 
 Key of the single tag.
 
@@ -36,7 +36,7 @@ ___
 
 • **namespace**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1987)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2118)*
 
 Namespace of single tag.
 
@@ -48,7 +48,7 @@ ___
 
 • **value**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1999)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2130)*
 
 Value of the single tag.
 

@@ -84,7 +84,7 @@ ___
 
 ▸ **totalRiskList**(`options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/insights/api.ts:1328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1328)*
+*Defined in [packages/insights/api.ts:1060](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1060)*
 
 Total risk values are listed in increasing order of severity.
 

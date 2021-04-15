@@ -24,6 +24,7 @@
 * [RequestArgs](interfaces/requestargs.md)
 * [State](interfaces/state.md)
 * [StateArchive](interfaces/statearchive.md)
+* [StateArchives](interfaces/statearchives.md)
 
 ### Variables
 
@@ -53,7 +54,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/config-manager/api.ts:152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L152)*
+*Defined in [packages/config-manager/api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L189)*
 
 DefaultApi - axios parameter creator
 
@@ -71,6 +72,8 @@ Name | Type |
 
 * **getPlaybookById**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
+* **getPlaybookPreview**(`state`: [State](interfaces/state.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
 * **getStateById**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **getStates**(`limit?`: number, `offset?`: number, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
@@ -83,7 +86,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/config-manager/api.ts:421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L421)*
+*Defined in [packages/config-manager/api.ts:511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L511)*
 
 DefaultApi - factory interface
 
@@ -103,9 +106,11 @@ Name | Type |
 
 * **getPlaybookById**(`id`: string, `options?`: any): *AxiosPromise‹string›*
 
+* **getPlaybookPreview**(`state`: [State](interfaces/state.md), `options?`: any): *AxiosPromise‹string›*
+
 * **getStateById**(`id`: string, `options?`: any): *AxiosPromise‹[StateArchive](interfaces/statearchive.md)›*
 
-* **getStates**(`limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹Array‹[StateArchive](interfaces/statearchive.md)››*
+* **getStates**(`limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[StateArchives](interfaces/statearchives.md)›*
 
 * **updateStates**(`state`: [State](interfaces/state.md), `options?`: any): *AxiosPromise‹[AccountState](interfaces/accountstate.md)›*
 
@@ -115,7 +120,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/config-manager/api.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L342)*
+*Defined in [packages/config-manager/api.ts:418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L418)*
 
 DefaultApi - functional programming interface
 
@@ -132,6 +137,8 @@ Name | Type |
 * **getCurrentState**(`options?`: any): *Promise‹function›*
 
 * **getPlaybookById**(`id`: string, `options?`: any): *Promise‹function›*
+
+* **getPlaybookPreview**(`state`: [State](interfaces/state.md), `options?`: any): *Promise‹function›*
 
 * **getStateById**(`id`: string, `options?`: any): *Promise‹function›*
 

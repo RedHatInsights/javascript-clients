@@ -28,7 +28,7 @@ Representation of one yum repository
 
 • **base_url**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1448)*
+*Defined in [packages/host-inventory/api.ts:1454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1454)*
 
 **`memberof`** YumRepo
 
@@ -38,7 +38,7 @@ ___
 
 • **enabled**? : *boolean*
 
-*Defined in [packages/host-inventory/api.ts:1442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1442)*
+*Defined in [packages/host-inventory/api.ts:1448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1448)*
 
 **`memberof`** YumRepo
 
@@ -48,7 +48,7 @@ ___
 
 • **gpgcheck**? : *boolean*
 
-*Defined in [packages/host-inventory/api.ts:1436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1436)*
+*Defined in [packages/host-inventory/api.ts:1442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1442)*
 
 **`memberof`** YumRepo
 
@@ -58,7 +58,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1424)*
+*Defined in [packages/host-inventory/api.ts:1430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1430)*
 
 **`memberof`** YumRepo
 
@@ -68,6 +68,6 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1430)*
+*Defined in [packages/host-inventory/api.ts:1436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1436)*
 
 **`memberof`** YumRepo

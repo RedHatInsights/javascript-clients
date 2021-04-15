@@ -22,6 +22,6 @@
 
 • **errors**: *Array‹[ErrorsErrors](errorserrors.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:496](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L496)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L627)*
 
 **`memberof`** Errors

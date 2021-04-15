@@ -84,7 +84,7 @@ ___
 
 ▸ **resolutionRiskList**(`options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/insights/api.ts:558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L558)*
+*Defined in [packages/insights/api.ts:390](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L390)*
 
 Risks are listed in increasing order of severity.
 
