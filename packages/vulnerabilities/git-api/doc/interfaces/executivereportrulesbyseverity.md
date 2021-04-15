@@ -27,7 +27,7 @@ Information about how much systems are affected by a security rule, broken down 
 
 • **_1**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L715)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L846)*
 
 **`memberof`** ExecutiveReportRulesBySeverity
 
@@ -37,7 +37,7 @@ ___
 
 • **_2**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L721)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L852)*
 
 **`memberof`** ExecutiveReportRulesBySeverity
 
@@ -47,7 +47,7 @@ ___
 
 • **_3**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:727](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L727)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L858)*
 
 **`memberof`** ExecutiveReportRulesBySeverity
 
@@ -57,6 +57,6 @@ ___
 
 • **_4**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L733)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L864)*
 
 **`memberof`** ExecutiveReportRulesBySeverity

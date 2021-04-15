@@ -1954,10 +1954,11 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @summary Get Remediation Playbook
          * @param {string} id Remediation identifier
          * @param {Array<string>} [hosts] Selected hosts to be included in playbook
+         * @param {boolean} [localhost] Flag for localhost playbook generation
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediationPlaybook: async (id: string, hosts?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        getRemediationPlaybook: async (id: string, hosts?: Array<string>, localhost?: boolean, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling getRemediationPlaybook.');
@@ -1975,6 +1976,10 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
 
             if (hosts) {
                 localVarQueryParameter['hosts'] = hosts;
+            }
+
+            if (localhost !== undefined) {
+                localVarQueryParameter['localhost'] = localhost;
             }
 
 
@@ -2437,11 +2442,12 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @summary Get Remediation Playbook
          * @param {string} id Remediation identifier
          * @param {Array<string>} [hosts] Selected hosts to be included in playbook
+         * @param {boolean} [localhost] Flag for localhost playbook generation
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getRemediationPlaybook(id: string, hosts?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
-            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).getRemediationPlaybook(id, hosts, options);
+        async getRemediationPlaybook(id: string, hosts?: Array<string>, localhost?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).getRemediationPlaybook(id, hosts, localhost, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2680,11 +2686,12 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @summary Get Remediation Playbook
          * @param {string} id Remediation identifier
          * @param {Array<string>} [hosts] Selected hosts to be included in playbook
+         * @param {boolean} [localhost] Flag for localhost playbook generation
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediationPlaybook(id: string, hosts?: Array<string>, options?: any): AxiosPromise<string> {
-            return RemediationsApiFp(configuration).getRemediationPlaybook(id, hosts, options).then((request) => request(axios, basePath));
+        getRemediationPlaybook(id: string, hosts?: Array<string>, localhost?: boolean, options?: any): AxiosPromise<string> {
+            return RemediationsApiFp(configuration).getRemediationPlaybook(id, hosts, localhost, options).then((request) => request(axios, basePath));
         },
         /**
          * Provides information about Remediations, RBAC permission {remediations:remediation:read}
@@ -2924,12 +2931,13 @@ export class RemediationsApi extends BaseAPI {
      * @summary Get Remediation Playbook
      * @param {string} id Remediation identifier
      * @param {Array<string>} [hosts] Selected hosts to be included in playbook
+     * @param {boolean} [localhost] Flag for localhost playbook generation
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi
      */
-    public getRemediationPlaybook(id: string, hosts?: Array<string>, options?: any) {
-        return RemediationsApiFp(this.configuration).getRemediationPlaybook(id, hosts, options).then((request) => request(this.axios, this.basePath));
+    public getRemediationPlaybook(id: string, hosts?: Array<string>, localhost?: boolean, options?: any) {
+        return RemediationsApiFp(this.configuration).getRemediationPlaybook(id, hosts, localhost, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

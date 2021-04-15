@@ -51,7 +51,7 @@ DefaultApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [packages/patch/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/base.ts#L49)*
+*Defined in [packages/patch/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/base.ts#L49)*
 
 **Parameters:**
 
@@ -71,7 +71,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [packages/patch/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/base.ts#L51)*
+*Defined in [packages/patch/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/base.ts#L51)*
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [packages/patch/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/base.ts#L51)*
+*Defined in [packages/patch/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/base.ts#L51)*
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [packages/patch/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/base.ts#L49)*
+*Defined in [packages/patch/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/base.ts#L49)*
 
 ## Methods
 
@@ -99,7 +99,7 @@ ___
 
 ▸ **deletesystem**(`inventoryId`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/patch/api.ts:2920](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L2920)*
+*Defined in [packages/patch/api.ts:3024](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3024)*
 
 Delete system by inventory id
 
@@ -124,7 +124,7 @@ ___
 
 ▸ **detailAdvisory**(`advisoryId`: string, `options?`: any): *Promise‹AxiosResponse‹[ControllersAdvisoryDetailResponse](../interfaces/controllersadvisorydetailresponse.md)››*
 
-*Defined in [packages/patch/api.ts:2932](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L2932)*
+*Defined in [packages/patch/api.ts:3036](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3036)*
 
 Show me details an advisory by given advisory name
 
@@ -149,7 +149,7 @@ ___
 
 ▸ **detailSystem**(`inventoryId`: string, `options?`: any): *Promise‹AxiosResponse‹[ControllersSystemDetailResponse](../interfaces/controllerssystemdetailresponse.md)››*
 
-*Defined in [packages/patch/api.ts:2944](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L2944)*
+*Defined in [packages/patch/api.ts:3048](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3048)*
 
 Show me details about a system by given inventory id
 
@@ -174,7 +174,7 @@ ___
 
 ▸ **exportAdvisories**(`search?`: string, `filterId?`: string, `filterDescription?`: string, `filterPublicDate?`: string, `filterSynopsis?`: string, `filterAdvisoryType?`: string, `filterSeverity?`: string, `filterApplicableSystems?`: string, `options?`: any): *Promise‹AxiosResponse‹[ControllersAdvisoryInlineItem](../interfaces/controllersadvisoryinlineitem.md)[]››*
 
-*Defined in [packages/patch/api.ts:2963](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L2963)*
+*Defined in [packages/patch/api.ts:3067](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3067)*
 
 Export applicable advisories for all my systems
 
@@ -206,7 +206,7 @@ ___
 
 ▸ **exportPackages**(`sort?`: "id" | "name" | "systems_installed" | "systems_updatable", `search?`: string, `filterName?`: string, `filterSystemsInstalled?`: string, `filterSystemsUpdatable?`: string, `filterSummary?`: string, `tags?`: Array‹string›, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ControllersPackageItem](../interfaces/controllerspackageitem.md)[]››*
 
-*Defined in [packages/patch/api.ts:2983](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L2983)*
+*Defined in [packages/patch/api.ts:3087](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3087)*
 
 Show me all installed packages across my systems
 
@@ -239,7 +239,7 @@ ___
 
 ▸ **exportSystems**(`search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `filterPackagesInstalled?`: string, `filterPackagesUpdatable?`: string, `tags?`: Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ControllersSystemInlineItem](../interfaces/controllerssysteminlineitem.md)[]››*
 
-*Defined in [packages/patch/api.ts:3006](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L3006)*
+*Defined in [packages/patch/api.ts:3110](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3110)*
 
 Export systems for my account
 
@@ -275,7 +275,7 @@ ___
 
 ▸ **latestPackage**(`packageName`: string, `options?`: any): *Promise‹AxiosResponse‹[ControllersPackageDetailResponse](../interfaces/controllerspackagedetailresponse.md)››*
 
-*Defined in [packages/patch/api.ts:3018](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L3018)*
+*Defined in [packages/patch/api.ts:3122](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3122)*
 
 Show me metadata of selected package
 
@@ -300,7 +300,7 @@ ___
 
 ▸ **listAdvisories**(`limit?`: number, `offset?`: number, `sort?`: "id" | "name" | "advisory_type" | "synopsis" | "public_date" | "applicable_systems", `search?`: string, `filterId?`: string, `filterDescription?`: string, `filterPublicDate?`: string, `filterSynopsis?`: string, `filterAdvisoryType?`: string, `filterSeverity?`: string, `filterApplicableSystems?`: string, `tags?`: Array‹string›, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ControllersAdvisoriesResponse](../interfaces/controllersadvisoriesresponse.md)››*
 
-*Defined in [packages/patch/api.ts:3043](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L3043)*
+*Defined in [packages/patch/api.ts:3147](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3147)*
 
 Show me all applicable advisories for all my systems
 
@@ -336,9 +336,9 @@ ___
 
 ###  listAdvisorySystems
 
-▸ **listAdvisorySystems**(`advisoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale", `search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `tags?`: Array‹string›, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ControllersAdvisorySystemsResponse](../interfaces/controllersadvisorysystemsresponse.md)››*
+▸ **listAdvisorySystems**(`advisoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale", `search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `filterStaleTimestamp?`: string, `filterStaleWarningTimestamp?`: string, `filterCulledTimestamp?`: string, `filterCreated?`: string, `tags?`: Array‹string›, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ControllersAdvisorySystemsResponse](../interfaces/controllersadvisorysystemsresponse.md)››*
 
-*Defined in [packages/patch/api.ts:3070](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L3070)*
+*Defined in [packages/patch/api.ts:3178](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3178)*
 
 Show me systems on which the given advisory is applicable
 
@@ -365,6 +365,10 @@ Name | Type | Description |
 `filterRhbaCount?` | string | - |
 `filterRheaCount?` | string | - |
 `filterStale?` | string | - |
+`filterStaleTimestamp?` | string | - |
+`filterStaleWarningTimestamp?` | string | - |
+`filterCulledTimestamp?` | string | - |
+`filterCreated?` | string | - |
 `tags?` | Array‹string› | - |
 `filterSystemProfileSapSystem?` | string | - |
 `filterSystemProfileSapSidsIn?` | Array‹string› | - |
@@ -378,7 +382,7 @@ ___
 
 ▸ **listPackages**(`limit?`: number, `offset?`: number, `sort?`: "id" | "name" | "systems_installed" | "systems_updatable", `search?`: string, `filterName?`: string, `filterSystemsInstalled?`: string, `filterSystemsUpdatable?`: string, `filterSummary?`: string, `tags?`: Array‹string›, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ControllersPackagesResponse](../interfaces/controllerspackagesresponse.md)››*
 
-*Defined in [packages/patch/api.ts:3092](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L3092)*
+*Defined in [packages/patch/api.ts:3200](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3200)*
 
 Show me all installed packages across my systems
 
@@ -413,7 +417,7 @@ ___
 
 ▸ **listSystemAdvisories**(`inventoryId`: string, `limit?`: number, `offset?`: number, `sort?`: "id" | "name" | "type" | "synopsis" | "public_date", `search?`: string, `filterId?`: string, `filterDescription?`: string, `filterPublicDate?`: string, `filterSynopsis?`: string, `filterAdvisoryType?`: string, `filterSeverity?`: string, `options?`: any): *Promise‹AxiosResponse‹[ControllersSystemAdvisoriesResponse](../interfaces/controllerssystemadvisoriesresponse.md)››*
 
-*Defined in [packages/patch/api.ts:3114](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L3114)*
+*Defined in [packages/patch/api.ts:3222](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3222)*
 
 Show me advisories for a system by given inventory id
 
@@ -446,9 +450,9 @@ ___
 
 ###  listSystems
 
-▸ **listSystems**(`limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale" | "packages_installed" | "packages_updatable", `search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `filterPackagesInstalled?`: string, `filterPackagesUpdatable?`: string, `tags?`: Array‹string›, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ControllersSystemsResponse](../interfaces/controllerssystemsresponse.md)››*
+▸ **listSystems**(`limit?`: number, `offset?`: number, `sort?`: "id" | "display_name" | "last_evaluation" | "last_upload" | "rhsa_count" | "rhba_count" | "rhea_count" | "stale" | "packages_installed" | "packages_updatable", `search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterStale?`: string, `filterPackagesInstalled?`: string, `filterPackagesUpdatable?`: string, `filterStaleTimestamp?`: string, `filterStaleWarningTimestamp?`: string, `filterCulledTimestamp?`: string, `filterCreated?`: string, `tags?`: Array‹string›, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ControllersSystemsResponse](../interfaces/controllerssystemsresponse.md)››*
 
-*Defined in [packages/patch/api.ts:3142](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L3142)*
+*Defined in [packages/patch/api.ts:3254](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3254)*
 
 Show me all my systems
 
@@ -476,6 +480,10 @@ Name | Type |
 `filterStale?` | string |
 `filterPackagesInstalled?` | string |
 `filterPackagesUpdatable?` | string |
+`filterStaleTimestamp?` | string |
+`filterStaleWarningTimestamp?` | string |
+`filterCulledTimestamp?` | string |
+`filterCreated?` | string |
 `tags?` | Array‹string› |
 `filterSystemProfileSapSystem?` | string |
 `filterSystemProfileSapSidsIn?` | Array‹string› |
@@ -489,7 +497,7 @@ ___
 
 ▸ **packageSystems**(`packageName`: string, `limit?`: number, `offset?`: number, `tags?`: Array‹string›, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[ControllersPackageSystemsResponse](../interfaces/controllerspackagesystemsresponse.md)››*
 
-*Defined in [packages/patch/api.ts:3159](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L3159)*
+*Defined in [packages/patch/api.ts:3271](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3271)*
 
 Show me all my systems which have a package installed
 
@@ -519,7 +527,7 @@ ___
 
 ▸ **systemPackages**(`inventoryId`: string, `limit?`: number, `offset?`: number, `search?`: string, `filterName?`: string, `filterDescription?`: string, `filterEvra?`: string, `filterSummary?`: string, `filterUpdatable?`: boolean, `options?`: any): *Promise‹AxiosResponse‹[ControllersSystemPackageResponse](../interfaces/controllerssystempackageresponse.md)››*
 
-*Defined in [packages/patch/api.ts:3179](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L3179)*
+*Defined in [packages/patch/api.ts:3291](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3291)*
 
 Show me details about a system packages by given inventory id
 
@@ -552,7 +560,7 @@ ___
 
 ▸ **viewAdvisoriesSystems**(`body`: [ControllersSystemsAdvisoriesRequest](../interfaces/controllerssystemsadvisoriesrequest.md), `options?`: any): *Promise‹AxiosResponse‹[ControllersAdvisoriesSystemsResponse](../interfaces/controllersadvisoriessystemsresponse.md)››*
 
-*Defined in [packages/patch/api.ts:3191](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L3191)*
+*Defined in [packages/patch/api.ts:3303](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3303)*
 
 View advisory-system pairs for selected systems and advisories
 
@@ -577,7 +585,7 @@ ___
 
 ▸ **viewSystemsAdvisories**(`body`: [ControllersSystemsAdvisoriesRequest](../interfaces/controllerssystemsadvisoriesrequest.md), `options?`: any): *Promise‹AxiosResponse‹[ControllersSystemsAdvisoriesResponse](../interfaces/controllerssystemsadvisoriesresponse.md)››*
 
-*Defined in [packages/patch/api.ts:3203](https://github.com/RedHatInsights/javascript-clients/blob/86c9750/packages/patch/api.ts#L3203)*
+*Defined in [packages/patch/api.ts:3315](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L3315)*
 
 View system-advisory pairs for selected systems and advisories
 

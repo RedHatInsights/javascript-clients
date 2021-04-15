@@ -23,7 +23,7 @@
 
 • **detail**: *string*
 
-*Defined in [packages/vulnerabilities/api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L509)*
+*Defined in [packages/vulnerabilities/api.ts:640](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L640)*
 
 Error detail.
 
@@ -35,7 +35,7 @@ ___
 
 • **status**: *string*
 
-*Defined in [packages/vulnerabilities/api.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L515)*
+*Defined in [packages/vulnerabilities/api.ts:646](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L646)*
 
 String representation of HTTP status code.
 

@@ -86,7 +86,7 @@ ___
 
 ▸ **statusList**(`options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/insights/api.ts:1034](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1034)*
+*Defined in [packages/insights/api.ts:766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L766)*
 
 A list of statistics views.
 
@@ -110,7 +110,7 @@ ___
 
 ▸ **statusLiveRead**(`options?`: any): *Promise‹AxiosResponse‹[StatusReady](../interfaces/statusready.md)››*
 
-*Defined in [packages/insights/api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1045)*
+*Defined in [packages/insights/api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L777)*
 
 This returns a dictionary with properties defining the status of the components Advisor relies on. At the moment this is the same as the Readiness check (see `/ready/`). In the future it may include other checks if we need to, but the properties of `/ready/` will always be included.
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **statusReadyRead**(`options?`: any): *Promise‹AxiosResponse‹[StatusReady](../interfaces/statusready.md)››*
 
-*Defined in [packages/insights/api.ts:1056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1056)*
+*Defined in [packages/insights/api.ts:788](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L788)*
 
 This returns a dictionary with properties defining the status of the components Advisor relies on. * \'django\' should always be True.  If Django isn\'t ready, you can\'t get this information :-) * \'database\' is True when a database access returns successfully with valid information. * \'rbac\' is True when we can make a request to the RBAC API and get a valid response. * \'advisor\' is True if all of the above are True.
 

@@ -1154,6 +1154,12 @@ export interface SystemProfile {
      * @type {Array<string>}
      * @memberof SystemProfile
      */
+    gpg_pubkeys?: Array<string>;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof SystemProfile
+     */
     installed_services?: Array<string>;
     /**
      *
@@ -1732,10 +1738,11 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
          * @param {object} [filter] Filters hosts based on system_profile fields
+         * @param {object} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, fields?: object, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/hosts`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1804,6 +1811,10 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 
             if (filter !== undefined) {
                 localVarQueryParameter['filter'] = filter;
+            }
+
+            if (fields !== undefined) {
+                localVarQueryParameter['fields'] = fields;
             }
 
 
@@ -2327,11 +2338,12 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
          * @param {object} [filter] Filters hosts based on system_profile fields
+         * @param {object} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
-            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, options);
+        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, fields?: object, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2509,11 +2521,12 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
          * @param {object} [filter] Filters hosts based on system_profile fields
+         * @param {object} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, options?: any): AxiosPromise<HostQueryOutput> {
-            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, options).then((request) => request(axios, basePath));
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, fields?: object, options?: any): AxiosPromise<HostQueryOutput> {
+            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(axios, basePath));
         },
         /**
          * Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
@@ -2664,12 +2677,13 @@ export class HostsApi extends BaseAPI {
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
      * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
      * @param {object} [filter] Filters hosts based on system_profile fields
+     * @param {object} [fields] Fetches only mentioned system_profile fields
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
+    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, fields?: object, options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
