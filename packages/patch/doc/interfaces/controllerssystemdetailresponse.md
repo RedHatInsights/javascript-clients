@@ -22,6 +22,6 @@
 
 • **data**? : *[ControllersSystemItem](controllerssystemitem.md)*
 
-*Defined in [packages/patch/api.ts:709](https://github.com/RedHatInsights/javascript-clients/blob/44877be/packages/patch/api.ts#L709)*
+*Defined in [packages/patch/api.ts:709](https://github.com/RedHatInsights/javascript-clients/blob/646862f/packages/patch/api.ts#L709)*
 
 **`memberof`** ControllersSystemDetailResponse

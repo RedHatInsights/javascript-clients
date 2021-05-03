@@ -88,7 +88,7 @@ ___
 
 ▸ **createCrossAccountRequests**(`crossAccountRequestIn`: [CrossAccountRequestIn](../interfaces/crossaccountrequestin.md), `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestOut](../interfaces/crossaccountrequestout.md)››*
 
-*Defined in [packages/rbac/api.ts:2839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2839)*
+*Defined in [packages/rbac/api.ts:2853](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2853)*
 
 **`summary`** Create a cross account request
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **getCrossAccountRequest**(`uuid`: string, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestDetailByAccount](../interfaces/crossaccountrequestdetailbyaccount.md) | [CrossAccountRequestDetailByUseId](../interfaces/crossaccountrequestdetailbyuseid.md)››*
 
-*Defined in [packages/rbac/api.ts:2854](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2854)*
+*Defined in [packages/rbac/api.ts:2868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2868)*
 
 **`summary`** Get a cross account request
 
@@ -135,9 +135,9 @@ ___
 
 ###  listCrossAccountRequests
 
-▸ **listCrossAccountRequests**(`limit?`: number, `offset?`: number, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestPagination](../interfaces/crossaccountrequestpagination.md)››*
+▸ **listCrossAccountRequests**(`limit?`: number, `offset?`: number, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `status?`: "pending" | "approved" | "denied" | "cancelled" | "expired", `orderBy?`: "request_id" | "start_date" | "end_date" | "created" | "modified" | "status", `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestPagination](../interfaces/crossaccountrequestpagination.md)››*
 
-*Defined in [packages/rbac/api.ts:2870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2870)*
+*Defined in [packages/rbac/api.ts:2886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2886)*
 
 By default, responses are sorted in ascending order by created_at
 
@@ -156,6 +156,8 @@ Name | Type |
 `queryBy?` | "user_id" &#124; "target_account" |
 `account?` | string |
 `approvedOnly?` | "true" |
+`status?` | "pending" &#124; "approved" &#124; "denied" &#124; "cancelled" &#124; "expired" |
+`orderBy?` | "request_id" &#124; "start_date" &#124; "end_date" &#124; "created" &#124; "modified" &#124; "status" |
 `options?` | any |
 
 **Returns:** *Promise‹AxiosResponse‹[CrossAccountRequestPagination](../interfaces/crossaccountrequestpagination.md)››*
@@ -166,7 +168,7 @@ ___
 
 ▸ **patchCrossAccountRequest**(`uuid`: string, `crossAccountRequestPatch`: [CrossAccountRequestPatch](../interfaces/crossaccountrequestpatch.md), `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestDetailByAccount](../interfaces/crossaccountrequestdetailbyaccount.md) | [CrossAccountRequestDetailByUseId](../interfaces/crossaccountrequestdetailbyuseid.md)››*
 
-*Defined in [packages/rbac/api.ts:2883](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2883)*
+*Defined in [packages/rbac/api.ts:2899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2899)*
 
 Update a cross account request
 
@@ -192,7 +194,7 @@ ___
 
 ▸ **putCrossAccountRequest**(`uuid`: string, `crossAccountRequestUpdateIn`: [CrossAccountRequestUpdateIn](../interfaces/crossaccountrequestupdatein.md), `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestDetailByAccount](../interfaces/crossaccountrequestdetailbyaccount.md) | [CrossAccountRequestDetailByUseId](../interfaces/crossaccountrequestdetailbyuseid.md)››*
 
-*Defined in [packages/rbac/api.ts:2896](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2896)*
+*Defined in [packages/rbac/api.ts:2912](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2912)*
 
 Update a cross account request
 

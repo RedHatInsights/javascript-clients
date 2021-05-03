@@ -31,7 +31,7 @@
 
 • **data_format**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1627)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1633)*
 
 Format of the output data, either JSON (default) or CSV.
 
@@ -43,7 +43,7 @@ ___
 
 • **excluded**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1633)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1639)*
 
 Display setting of opted out systems.
 
@@ -55,7 +55,7 @@ ___
 
 • **filter**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1579)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1585)*
 
 Full text filter
 
@@ -67,7 +67,7 @@ ___
 
 • **limit**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1585)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1591)*
 
 Maximum number of paginated results.
 
@@ -79,7 +79,7 @@ ___
 
 • **offset**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1591)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1597)*
 
 First record of paginated response.
 
@@ -91,7 +91,7 @@ ___
 
 • **page**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1597)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1603)*
 
 Page number of paginated response.
 
@@ -103,7 +103,7 @@ ___
 
 • **page_size**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1603)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1609)*
 
 Number of records per page of paginated response.
 
@@ -115,7 +115,7 @@ ___
 
 • **pages**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1609)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1615)*
 
 Total number of pages of paginated response.
 
@@ -127,7 +127,7 @@ ___
 
 • **sort**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1615)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1621)*
 
 Sorting filter.
 
@@ -139,7 +139,7 @@ ___
 
 • **total_items**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1621)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1627)*
 
 Total number of records.
 

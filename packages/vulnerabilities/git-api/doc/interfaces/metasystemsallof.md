@@ -22,7 +22,7 @@
 
 • **excluded**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1646](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1646)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1652)*
 
 Display setting of opted out systems.
 

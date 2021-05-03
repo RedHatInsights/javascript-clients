@@ -1040,6 +1040,12 @@ export interface InsightsRule {
      * @memberof InsightsRule
      */
     systems_affected?: number;
+    /**
+     * Date when the rule was published.
+     * @type {string}
+     * @memberof InsightsRule
+     */
+    publish_date: string | null;
 }
 /**
  * @type InventoryIdOrList
@@ -1820,6 +1826,56 @@ export interface MetaVulnerabilitiesOutAllOf {
      * @memberof MetaVulnerabilitiesOutAllOf
      */
     rule_presence: string | null;
+}
+/**
+ *
+ * @export
+ * @interface MitigatedSystemsIdsOut
+ */
+export interface MitigatedSystemsIdsOut {
+    /**
+     *
+     * @type {string | Array<string>}
+     * @memberof MitigatedSystemsIdsOut
+     */
+    data: string | Array<string>;
+    /**
+     *
+     * @type {Links}
+     * @memberof MitigatedSystemsIdsOut
+     */
+    links: Links;
+    /**
+     *
+     * @type {MetaAffectedSystems}
+     * @memberof MitigatedSystemsIdsOut
+     */
+    meta: MetaAffectedSystems;
+}
+/**
+ *
+ * @export
+ * @interface MitigatedSystemsOut
+ */
+export interface MitigatedSystemsOut {
+    /**
+     *
+     * @type {string | Array<object>}
+     * @memberof MitigatedSystemsOut
+     */
+    data: string | Array<object>;
+    /**
+     *
+     * @type {Links}
+     * @memberof MitigatedSystemsOut
+     */
+    links: Links;
+    /**
+     *
+     * @type {MetaAffectedSystems}
+     * @memberof MitigatedSystemsOut
+     */
+    meta: MetaAffectedSystems;
 }
 /**
  *
@@ -2786,7 +2842,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * Shows IDs of all CVEs the system is exposed to.
          * @summary CVE IDs report for a system.
          * @param {string} inventoryId Inventory ID.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -2930,7 +2986,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Overview of vulnerabilities IDs across whole host inventory.
          * @summary Vulnerabilities IDs overview.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -3074,7 +3130,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Overview of vulnerabilities across whole host inventory.
          * @summary Vulnerabilities overview.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -3219,7 +3275,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * Shows detailed information about all CVEs the system is exposed to.
          * @summary CVE report for a system.
          * @param {string} inventoryId Inventory ID.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -3364,7 +3420,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * Overview of vulnerabilities for specific CVEs provided in the body.
          * @summary Vulnerabilities overview.
          * @param {VulnerabilitiesPostIn} vulnerabilitiesPostIn List of CVEs to provide info about.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -3531,6 +3587,266 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Report of mitigated system IDs for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
+         * @summary IDs of mitigated systems for a given CVE which has a security rule.
+         * @param {string} cveId CVE id.
+         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {string} [sort] Sorting used for response.
+         * @param {string} [statusId] Filer based on CVE status ID.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+         * @param {string} [uuid] Filter based on UUID of inventory.
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+         * @param {boolean} [showAdvisories] If true shows advisories list
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMitigatedSystemsByCve: async (cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'cveId' is not null or undefined
+            if (cveId === null || cveId === undefined) {
+                throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getMitigatedSystemsByCve.');
+            }
+            const localVarPath = `/cves/{cve_id}/rule_mitigated_systems/ids`
+                .replace(`{${"cve_id"}}`, encodeURIComponent(String(cveId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (statusId !== undefined) {
+                localVarQueryParameter['status_id'] = statusId;
+            }
+
+            if (dataFormat !== undefined) {
+                localVarQueryParameter['data_format'] = dataFormat;
+            }
+
+            if (uuid !== undefined) {
+                localVarQueryParameter['uuid'] = uuid;
+            }
+
+            if (ruleKey) {
+                localVarQueryParameter['rule_key'] = ruleKey;
+            }
+
+            if (rulePresence) {
+                localVarQueryParameter['rule_presence'] = rulePresence;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (sapSids) {
+                localVarQueryParameter['sap_sids'] = sapSids;
+            }
+
+            if (sapSystem !== undefined) {
+                localVarQueryParameter['sap_system'] = sapSystem;
+            }
+
+            if (showAdvisories !== undefined) {
+                localVarQueryParameter['show_advisories'] = showAdvisories;
+            }
+
+            if (advisory !== undefined) {
+                localVarQueryParameter['advisory'] = advisory;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Report of mitigated systems for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
+         * @summary Mitigated systems for a given CVE which has a security rule.
+         * @param {string} cveId CVE id.
+         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {string} [sort] Sorting used for response.
+         * @param {string} [statusId] Filer based on CVE status ID.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+         * @param {string} [uuid] Filter based on UUID of inventory.
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+         * @param {boolean} [showAdvisories] If true shows advisories list
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMitigatedSystemsIdsByCve: async (cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'cveId' is not null or undefined
+            if (cveId === null || cveId === undefined) {
+                throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getMitigatedSystemsIdsByCve.');
+            }
+            const localVarPath = `/cves/{cve_id}/rule_mitigated_systems`
+                .replace(`{${"cve_id"}}`, encodeURIComponent(String(cveId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (statusId !== undefined) {
+                localVarQueryParameter['status_id'] = statusId;
+            }
+
+            if (dataFormat !== undefined) {
+                localVarQueryParameter['data_format'] = dataFormat;
+            }
+
+            if (uuid !== undefined) {
+                localVarQueryParameter['uuid'] = uuid;
+            }
+
+            if (ruleKey) {
+                localVarQueryParameter['rule_key'] = ruleKey;
+            }
+
+            if (rulePresence) {
+                localVarQueryParameter['rule_presence'] = rulePresence;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (sapSids) {
+                localVarQueryParameter['sap_sids'] = sapSids;
+            }
+
+            if (sapSystem !== undefined) {
+                localVarQueryParameter['sap_system'] = sapSystem;
+            }
+
+            if (showAdvisories !== undefined) {
+                localVarQueryParameter['show_advisories'] = showAdvisories;
+            }
+
+            if (advisory !== undefined) {
+                localVarQueryParameter['advisory'] = advisory;
             }
 
 
@@ -4337,7 +4653,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * Shows IDs of all CVEs the system is exposed to.
          * @summary CVE IDs report for a system.
          * @param {string} inventoryId Inventory ID.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -4369,7 +4685,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         /**
          * Overview of vulnerabilities IDs across whole host inventory.
          * @summary Vulnerabilities IDs overview.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -4402,7 +4718,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         /**
          * Overview of vulnerabilities across whole host inventory.
          * @summary Vulnerabilities overview.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -4436,7 +4752,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * Shows detailed information about all CVEs the system is exposed to.
          * @summary CVE report for a system.
          * @param {string} inventoryId Inventory ID.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -4469,7 +4785,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * Overview of vulnerabilities for specific CVEs provided in the body.
          * @summary Vulnerabilities overview.
          * @param {VulnerabilitiesPostIn} vulnerabilitiesPostIn List of CVEs to provide info about.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -4509,6 +4825,66 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         async getExecutiveReport(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExecutiveReport>> {
             const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getExecutiveReport(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Report of mitigated system IDs for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
+         * @summary IDs of mitigated systems for a given CVE which has a security rule.
+         * @param {string} cveId CVE id.
+         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {string} [sort] Sorting used for response.
+         * @param {string} [statusId] Filer based on CVE status ID.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+         * @param {string} [uuid] Filter based on UUID of inventory.
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+         * @param {boolean} [showAdvisories] If true shows advisories list
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getMitigatedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MitigatedSystemsIdsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getMitigatedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Report of mitigated systems for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
+         * @summary Mitigated systems for a given CVE which has a security rule.
+         * @param {string} cveId CVE id.
+         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {string} [sort] Sorting used for response.
+         * @param {string} [statusId] Filer based on CVE status ID.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+         * @param {string} [uuid] Filter based on UUID of inventory.
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+         * @param {boolean} [showAdvisories] If true shows advisories list
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getMitigatedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MitigatedSystemsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getMitigatedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4795,7 +5171,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * Shows IDs of all CVEs the system is exposed to.
          * @summary CVE IDs report for a system.
          * @param {string} inventoryId Inventory ID.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -4823,7 +5199,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         /**
          * Overview of vulnerabilities IDs across whole host inventory.
          * @summary Vulnerabilities IDs overview.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -4852,7 +5228,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         /**
          * Overview of vulnerabilities across whole host inventory.
          * @summary Vulnerabilities overview.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -4882,7 +5258,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * Shows detailed information about all CVEs the system is exposed to.
          * @summary CVE report for a system.
          * @param {string} inventoryId Inventory ID.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -4911,7 +5287,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * Overview of vulnerabilities for specific CVEs provided in the body.
          * @summary Vulnerabilities overview.
          * @param {VulnerabilitiesPostIn} vulnerabilitiesPostIn List of CVEs to provide info about.
-         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
          * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
          * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -4943,6 +5319,58 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         getExecutiveReport(options?: any): AxiosPromise<ExecutiveReport> {
             return DefaultApiFp(configuration).getExecutiveReport(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Report of mitigated system IDs for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
+         * @summary IDs of mitigated systems for a given CVE which has a security rule.
+         * @param {string} cveId CVE id.
+         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {string} [sort] Sorting used for response.
+         * @param {string} [statusId] Filer based on CVE status ID.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+         * @param {string} [uuid] Filter based on UUID of inventory.
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+         * @param {boolean} [showAdvisories] If true shows advisories list
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMitigatedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any): AxiosPromise<MitigatedSystemsIdsOut> {
+            return DefaultApiFp(configuration).getMitigatedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Report of mitigated systems for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
+         * @summary Mitigated systems for a given CVE which has a security rule.
+         * @param {string} cveId CVE id.
+         * @param {string} [filter] Full text filter for the display name of system.
+         * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+         * @param {string} [sort] Sorting used for response.
+         * @param {string} [statusId] Filer based on CVE status ID.
+         * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+         * @param {string} [uuid] Filter based on UUID of inventory.
+         * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+         * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+         * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+         * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+         * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+         * @param {boolean} [showAdvisories] If true shows advisories list
+         * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMitigatedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any): AxiosPromise<MitigatedSystemsOut> {
+            return DefaultApiFp(configuration).getMitigatedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options).then((request) => request(axios, basePath));
         },
         /**
          * Return Ansible playbook template for given rule id.
@@ -5194,7 +5622,7 @@ export class DefaultApi extends BaseAPI {
      * Shows IDs of all CVEs the system is exposed to.
      * @summary CVE IDs report for a system.
      * @param {string} inventoryId Inventory ID.
-     * @param {string} [filter] Full text filter for the display name of system.
+     * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
      * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -5224,7 +5652,7 @@ export class DefaultApi extends BaseAPI {
     /**
      * Overview of vulnerabilities IDs across whole host inventory.
      * @summary Vulnerabilities IDs overview.
-     * @param {string} [filter] Full text filter for the display name of system.
+     * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
      * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -5255,7 +5683,7 @@ export class DefaultApi extends BaseAPI {
     /**
      * Overview of vulnerabilities across whole host inventory.
      * @summary Vulnerabilities overview.
-     * @param {string} [filter] Full text filter for the display name of system.
+     * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
      * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -5287,7 +5715,7 @@ export class DefaultApi extends BaseAPI {
      * Shows detailed information about all CVEs the system is exposed to.
      * @summary CVE report for a system.
      * @param {string} inventoryId Inventory ID.
-     * @param {string} [filter] Full text filter for the display name of system.
+     * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
      * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -5318,7 +5746,7 @@ export class DefaultApi extends BaseAPI {
      * Overview of vulnerabilities for specific CVEs provided in the body.
      * @summary Vulnerabilities overview.
      * @param {VulnerabilitiesPostIn} vulnerabilitiesPostIn List of CVEs to provide info about.
-     * @param {string} [filter] Full text filter for the display name of system.
+     * @param {string} [filter] Full text filter for CVE and it\&#39;s description text.
      * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
      * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
@@ -5355,6 +5783,62 @@ export class DefaultApi extends BaseAPI {
      */
     public getExecutiveReport(options?: any) {
         return DefaultApiFp(this.configuration).getExecutiveReport(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Report of mitigated system IDs for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
+     * @summary IDs of mitigated systems for a given CVE which has a security rule.
+     * @param {string} cveId CVE id.
+     * @param {string} [filter] Full text filter for the display name of system.
+     * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {string} [sort] Sorting used for response.
+     * @param {string} [statusId] Filer based on CVE status ID.
+     * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+     * @param {string} [uuid] Filter based on UUID of inventory.
+     * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+     * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+     * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+     * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+     * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+     * @param {boolean} [showAdvisories] If true shows advisories list
+     * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public getMitigatedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getMitigatedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Report of mitigated systems for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
+     * @summary Mitigated systems for a given CVE which has a security rule.
+     * @param {string} cveId CVE id.
+     * @param {string} [filter] Full text filter for the display name of system.
+     * @param {number} [limit] Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {number} [offset] Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {number} [page] Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {number} [pageSize] Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination.
+     * @param {string} [sort] Sorting used for response.
+     * @param {string} [statusId] Filer based on CVE status ID.
+     * @param {string} [dataFormat] Format of the output data, either JSON (default) or CSV.
+     * @param {string} [uuid] Filter based on UUID of inventory.
+     * @param {Array<string>} [ruleKey] Filters security rules by its error key.
+     * @param {Array<boolean>} [rulePresence] Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all.
+     * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
+     * @param {Array<string>} [sapSids] List of SAP IDs to filter with
+     * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
+     * @param {boolean} [showAdvisories] If true shows advisories list
+     * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public getMitigatedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getMitigatedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

@@ -25,7 +25,7 @@
 
 • **display_name**: *string | null*
 
-*Defined in [api.ts:1147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1147)*
+*Defined in [api.ts:1150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1150)*
 
 **`memberof`** SystemOut
 
@@ -35,7 +35,7 @@ ___
 
 • **hostname**: *string | null*
 
-*Defined in [api.ts:1141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1141)*
+*Defined in [api.ts:1144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1144)*
 
 **`memberof`** SystemOut
 
@@ -45,7 +45,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [api.ts:1135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1135)*
+*Defined in [api.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1138)*
 
 **`memberof`** SystemOut
 
@@ -55,6 +55,6 @@ ___
 
 • **resolved**? : *boolean*
 
-*Defined in [api.ts:1153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1153)*
+*Defined in [api.ts:1156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1156)*
 
 **`memberof`** SystemOut

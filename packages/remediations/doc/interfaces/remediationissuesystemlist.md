@@ -23,7 +23,7 @@
 
 • **data**: *Array‹[SystemOut](systemout.md)›*
 
-*Defined in [api.ts:855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L855)*
+*Defined in [api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L858)*
 
 **`memberof`** RemediationIssueSystemList
 
@@ -33,6 +33,6 @@ ___
 
 • **meta**: *[Meta](meta.md)*
 
-*Defined in [api.ts:861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L861)*
+*Defined in [api.ts:864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L864)*
 
 **`memberof`** RemediationIssueSystemList
