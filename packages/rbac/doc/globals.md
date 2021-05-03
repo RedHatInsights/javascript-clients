@@ -253,7 +253,7 @@ Name | Type |
 
 * **getCrossAccountRequest**(`uuid`: string, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **listCrossAccountRequests**(`limit?`: number, `offset?`: number, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **listCrossAccountRequests**(`limit?`: number, `offset?`: number, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `status?`: "pending" | "approved" | "denied" | "cancelled" | "expired", `orderBy?`: "request_id" | "start_date" | "end_date" | "created" | "modified" | "status", `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **patchCrossAccountRequest**(`uuid`: string, `crossAccountRequestPatch`: [CrossAccountRequestPatch](interfaces/crossaccountrequestpatch.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
@@ -265,7 +265,7 @@ ___
 
 ▸ **CrossAccountRequestApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:2760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2760)*
+*Defined in [packages/rbac/api.ts:2772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2772)*
 
 CrossAccountRequestApi - factory interface
 
@@ -285,7 +285,7 @@ Name | Type |
 
 * **getCrossAccountRequest**(`uuid`: string, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `options?`: any): *AxiosPromise‹[CrossAccountRequestDetail](globals.md#crossaccountrequestdetail)›*
 
-* **listCrossAccountRequests**(`limit?`: number, `offset?`: number, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `options?`: any): *AxiosPromise‹[CrossAccountRequestPagination](interfaces/crossaccountrequestpagination.md)›*
+* **listCrossAccountRequests**(`limit?`: number, `offset?`: number, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `status?`: "pending" | "approved" | "denied" | "cancelled" | "expired", `orderBy?`: "request_id" | "start_date" | "end_date" | "created" | "modified" | "status", `options?`: any): *AxiosPromise‹[CrossAccountRequestPagination](interfaces/crossaccountrequestpagination.md)›*
 
 * **patchCrossAccountRequest**(`uuid`: string, `crossAccountRequestPatch`: [CrossAccountRequestPatch](interfaces/crossaccountrequestpatch.md), `options?`: any): *AxiosPromise‹[CrossAccountRequestDetail](globals.md#crossaccountrequestdetail)›*
 
@@ -297,7 +297,7 @@ ___
 
 ▸ **CrossAccountRequestApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:2672](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2672)*
+*Defined in [packages/rbac/api.ts:2682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2682)*
 
 CrossAccountRequestApi - functional programming interface
 
@@ -315,7 +315,7 @@ Name | Type |
 
 * **getCrossAccountRequest**(`uuid`: string, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `options?`: any): *Promise‹function›*
 
-* **listCrossAccountRequests**(`limit?`: number, `offset?`: number, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `options?`: any): *Promise‹function›*
+* **listCrossAccountRequests**(`limit?`: number, `offset?`: number, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `status?`: "pending" | "approved" | "denied" | "cancelled" | "expired", `orderBy?`: "request_id" | "start_date" | "end_date" | "created" | "modified" | "status", `options?`: any): *Promise‹function›*
 
 * **patchCrossAccountRequest**(`uuid`: string, `crossAccountRequestPatch`: [CrossAccountRequestPatch](interfaces/crossaccountrequestpatch.md), `options?`: any): *Promise‹function›*
 
@@ -327,7 +327,7 @@ ___
 
 ▸ **GroupApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:2907](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2907)*
+*Defined in [packages/rbac/api.ts:2923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2923)*
 
 GroupApi - axios parameter creator
 
@@ -369,7 +369,7 @@ ___
 
 ▸ **GroupApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:3719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3719)*
+*Defined in [packages/rbac/api.ts:3735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3735)*
 
 GroupApi - factory interface
 
@@ -413,7 +413,7 @@ ___
 
 ▸ **GroupApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:3530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3530)*
+*Defined in [packages/rbac/api.ts:3546](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3546)*
 
 GroupApi - functional programming interface
 
@@ -455,7 +455,7 @@ ___
 
 ▸ **PermissionApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:4032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4032)*
+*Defined in [packages/rbac/api.ts:4048](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4048)*
 
 PermissionApi - axios parameter creator
 
@@ -479,7 +479,7 @@ ___
 
 ▸ **PermissionApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:4236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4236)*
+*Defined in [packages/rbac/api.ts:4252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4252)*
 
 PermissionApi - factory interface
 
@@ -505,7 +505,7 @@ ___
 
 ▸ **PermissionApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:4187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4187)*
+*Defined in [packages/rbac/api.ts:4203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4203)*
 
 PermissionApi - functional programming interface
 
@@ -529,7 +529,7 @@ ___
 
 ▸ **PolicyApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:4323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4323)*
+*Defined in [packages/rbac/api.ts:4339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4339)*
 
 PolicyApi - axios parameter creator
 
@@ -559,7 +559,7 @@ ___
 
 ▸ **PolicyApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:4669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4669)*
+*Defined in [packages/rbac/api.ts:4685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4685)*
 
 PolicyApi - factory interface
 
@@ -591,7 +591,7 @@ ___
 
 ▸ **PolicyApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:4583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4583)*
+*Defined in [packages/rbac/api.ts:4599](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4599)*
 
 PolicyApi - functional programming interface
 
@@ -621,7 +621,7 @@ ___
 
 ▸ **PrincipalApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:4812](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4812)*
+*Defined in [packages/rbac/api.ts:4828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4828)*
 
 PrincipalApi - axios parameter creator
 
@@ -643,7 +643,7 @@ ___
 
 ▸ **PrincipalApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:4933](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4933)*
+*Defined in [packages/rbac/api.ts:4949](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4949)*
 
 PrincipalApi - factory interface
 
@@ -667,7 +667,7 @@ ___
 
 ▸ **PrincipalApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:4902](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4902)*
+*Defined in [packages/rbac/api.ts:4918](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4918)*
 
 PrincipalApi - functional programming interface
 
@@ -689,7 +689,7 @@ ___
 
 ▸ **RoleApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:4990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4990)*
+*Defined in [packages/rbac/api.ts:5006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5006)*
 
 RoleApi - axios parameter creator
 
@@ -723,7 +723,7 @@ ___
 
 ▸ **RoleApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:5502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5502)*
+*Defined in [packages/rbac/api.ts:5518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5518)*
 
 RoleApi - factory interface
 
@@ -759,7 +759,7 @@ ___
 
 ▸ **RoleApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:5379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5379)*
+*Defined in [packages/rbac/api.ts:5395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5395)*
 
 RoleApi - functional programming interface
 
@@ -793,7 +793,7 @@ ___
 
 ▸ **StatusApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:5707](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5707)*
+*Defined in [packages/rbac/api.ts:5723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5723)*
 
 StatusApi - axios parameter creator
 
@@ -815,7 +815,7 @@ ___
 
 ▸ **StatusApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/rbac/api.ts:5774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5774)*
+*Defined in [packages/rbac/api.ts:5790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5790)*
 
 StatusApi - factory interface
 
@@ -839,7 +839,7 @@ ___
 
 ▸ **StatusApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/rbac/api.ts:5752](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5752)*
+*Defined in [packages/rbac/api.ts:5768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5768)*
 
 StatusApi - functional programming interface
 

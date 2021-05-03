@@ -2507,10 +2507,12 @@ export const CrossAccountRequestApiAxiosParamCreator = function (configuration?:
          * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
          * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
          * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
+         * @param {'pending' | 'approved' | 'denied' | 'cancelled' | 'expired'} [status] Parameter for filtering resource based on status.
+         * @param {'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status'} [orderBy] Parameter for ordering by field. For inverse ordering, use \&#39;-\&#39;, e.g. ?order_by&#x3D;-start_date.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listCrossAccountRequests: async (limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options: any = {}): Promise<RequestArgs> => {
+        listCrossAccountRequests: async (limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/cross-account-requests/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2545,6 +2547,14 @@ export const CrossAccountRequestApiAxiosParamCreator = function (configuration?:
 
             if (approvedOnly !== undefined) {
                 localVarQueryParameter['approved_only'] = approvedOnly;
+            }
+
+            if (status !== undefined) {
+                localVarQueryParameter['status'] = status;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
             }
 
 
@@ -2710,11 +2720,13 @@ export const CrossAccountRequestApiFp = function(configuration?: Configuration) 
          * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
          * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
          * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
+         * @param {'pending' | 'approved' | 'denied' | 'cancelled' | 'expired'} [status] Parameter for filtering resource based on status.
+         * @param {'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status'} [orderBy] Parameter for ordering by field. For inverse ordering, use \&#39;-\&#39;, e.g. ?order_by&#x3D;-start_date.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CrossAccountRequestPagination>> {
-            const localVarAxiosArgs = await CrossAccountRequestApiAxiosParamCreator(configuration).listCrossAccountRequests(limit, offset, queryBy, account, approvedOnly, options);
+        async listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CrossAccountRequestPagination>> {
+            const localVarAxiosArgs = await CrossAccountRequestApiAxiosParamCreator(configuration).listCrossAccountRequests(limit, offset, queryBy, account, approvedOnly, status, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2790,11 +2802,13 @@ export const CrossAccountRequestApiFactory = function (configuration?: Configura
          * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
          * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
          * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
+         * @param {'pending' | 'approved' | 'denied' | 'cancelled' | 'expired'} [status] Parameter for filtering resource based on status.
+         * @param {'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status'} [orderBy] Parameter for ordering by field. For inverse ordering, use \&#39;-\&#39;, e.g. ?order_by&#x3D;-start_date.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options?: any): AxiosPromise<CrossAccountRequestPagination> {
-            return CrossAccountRequestApiFp(configuration).listCrossAccountRequests(limit, offset, queryBy, account, approvedOnly, options).then((request) => request(axios, basePath));
+        listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any): AxiosPromise<CrossAccountRequestPagination> {
+            return CrossAccountRequestApiFp(configuration).listCrossAccountRequests(limit, offset, queryBy, account, approvedOnly, status, orderBy, options).then((request) => request(axios, basePath));
         },
         /**
          * Update a cross account request
@@ -2863,12 +2877,14 @@ export class CrossAccountRequestApi extends BaseAPI {
      * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
      * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
      * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
+     * @param {'pending' | 'approved' | 'denied' | 'cancelled' | 'expired'} [status] Parameter for filtering resource based on status.
+     * @param {'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status'} [orderBy] Parameter for ordering by field. For inverse ordering, use \&#39;-\&#39;, e.g. ?order_by&#x3D;-start_date.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CrossAccountRequestApi
      */
-    public listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options?: any) {
-        return CrossAccountRequestApiFp(this.configuration).listCrossAccountRequests(limit, offset, queryBy, account, approvedOnly, options).then((request) => request(this.axios, this.basePath));
+    public listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any) {
+        return CrossAccountRequestApiFp(this.configuration).listCrossAccountRequests(limit, offset, queryBy, account, approvedOnly, status, orderBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3471,7 +3487,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          *
-         * @summary Udate a group in the tenant
+         * @summary Update a group in the tenant
          * @param {string} uuid ID of group to update
          * @param {Group} group Group to update in tenant
          * @param {*} [options] Override http request option.
@@ -3696,7 +3712,7 @@ export const GroupApiFp = function(configuration?: Configuration) {
         },
         /**
          *
-         * @summary Udate a group in the tenant
+         * @summary Update a group in the tenant
          * @param {string} uuid ID of group to update
          * @param {Group} group Group to update in tenant
          * @param {*} [options] Override http request option.
@@ -3845,7 +3861,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          *
-         * @summary Udate a group in the tenant
+         * @summary Update a group in the tenant
          * @param {string} uuid ID of group to update
          * @param {Group} group Group to update in tenant
          * @param {*} [options] Override http request option.
@@ -4011,7 +4027,7 @@ export class GroupApi extends BaseAPI {
 
     /**
      *
-     * @summary Udate a group in the tenant
+     * @summary Update a group in the tenant
      * @param {string} uuid ID of group to update
      * @param {Group} group Group to update in tenant
      * @param {*} [options] Override http request option.

@@ -85,7 +85,7 @@ ___
 
 ▸ **listPermissionOptions**(`field`: "application" | "resource_type" | "verb", `limit?`: number, `offset?`: number, `application?`: string, `resourceType?`: string, `verb?`: string, `options?`: any): *Promise‹AxiosResponse‹[PermissionOptionsPagination](../interfaces/permissionoptionspagination.md)››*
 
-*Defined in [packages/rbac/api.ts:4293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4293)*
+*Defined in [packages/rbac/api.ts:4309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4309)*
 
 By default, options of application is returned. And could be resource_type or verb on demand.
 
@@ -115,7 +115,7 @@ ___
 
 ▸ **listPermissions**(`limit?`: number, `offset?`: number, `orderBy?`: "application" | "resource_type" | "verb" | "permission", `application?`: string, `resourceType?`: string, `verb?`: string, `permission?`: string, `excludeGlobals?`: "true" | "false", `options?`: any): *Promise‹AxiosResponse‹[PermissionPagination](../interfaces/permissionpagination.md)››*
 
-*Defined in [packages/rbac/api.ts:4312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4312)*
+*Defined in [packages/rbac/api.ts:4328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4328)*
 
 By default, responses are sorted in ascending order by permission application.
 

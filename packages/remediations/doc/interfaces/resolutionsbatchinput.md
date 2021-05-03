@@ -22,6 +22,6 @@
 
 • **issues**: *Array‹string›*
 
-*Defined in [api.ts:1091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1091)*
+*Defined in [api.ts:1094](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1094)*
 
 **`memberof`** ResolutionsBatchInput
