@@ -2860,7 +2860,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {Array<string>} [ruleKey] Filters security rules by its error key.
-         * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
+         * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3004,8 +3004,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-         * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
-         * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
+         * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
+         * @param {Array<boolean>} [affecting] Comma seprated string with bools (array of bools). True value controls displaying CVEs with at least one system affected. False value toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3148,8 +3148,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-         * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
-         * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
+         * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
+         * @param {Array<boolean>} [affecting] Comma seprated string with bools (array of bools). True value controls displaying CVEs with at least one system affected. False value toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3293,7 +3293,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {Array<string>} [ruleKey] Filters security rules by its error key.
-         * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
+         * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4021,7 +4021,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-         * @param {Array<boolean>} [excluded] Comma seprated string with bools. First boolean controls displaying systems which are not excluded. Second one toggles displaying of systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
+         * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4130,7 +4130,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-         * @param {Array<boolean>} [excluded] Comma seprated string with bools. First boolean controls displaying systems which are not excluded. Second one toggles displaying of systems excluded from vulnerability analysis. Defaults to all systems.
+         * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4671,7 +4671,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {Array<string>} [ruleKey] Filters security rules by its error key.
-         * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
+         * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4703,8 +4703,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-         * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
-         * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
+         * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
+         * @param {Array<boolean>} [affecting] Comma seprated string with bools (array of bools). True value controls displaying CVEs with at least one system affected. False value toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4736,8 +4736,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-         * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
-         * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
+         * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
+         * @param {Array<boolean>} [affecting] Comma seprated string with bools (array of bools). True value controls displaying CVEs with at least one system affected. False value toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4770,7 +4770,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {Array<string>} [ruleKey] Filters security rules by its error key.
-         * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
+         * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4946,7 +4946,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-         * @param {Array<boolean>} [excluded] Comma seprated string with bools. First boolean controls displaying systems which are not excluded. Second one toggles displaying of systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
+         * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4972,7 +4972,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-         * @param {Array<boolean>} [excluded] Comma seprated string with bools. First boolean controls displaying systems which are not excluded. Second one toggles displaying of systems excluded from vulnerability analysis. Defaults to all systems.
+         * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5189,7 +5189,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {Array<string>} [ruleKey] Filters security rules by its error key.
-         * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
+         * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5217,8 +5217,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-         * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
-         * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
+         * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
+         * @param {Array<boolean>} [affecting] Comma seprated string with bools (array of bools). True value controls displaying CVEs with at least one system affected. False value toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5246,8 +5246,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-         * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
-         * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
+         * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
+         * @param {Array<boolean>} [affecting] Comma seprated string with bools (array of bools). True value controls displaying CVEs with at least one system affected. False value toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5276,7 +5276,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
          * @param {Array<string>} [ruleKey] Filters security rules by its error key.
-         * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
+         * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5416,7 +5416,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-         * @param {Array<boolean>} [excluded] Comma seprated string with bools. First boolean controls displaying systems which are not excluded. Second one toggles displaying of systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
+         * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5438,7 +5438,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-         * @param {Array<boolean>} [excluded] Comma seprated string with bools. First boolean controls displaying systems which are not excluded. Second one toggles displaying of systems excluded from vulnerability analysis. Defaults to all systems.
+         * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5640,7 +5640,7 @@ export class DefaultApi extends BaseAPI {
      * @param {boolean} [showAdvisories] If true shows advisories list
      * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
      * @param {Array<string>} [ruleKey] Filters security rules by its error key.
-     * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
+     * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
@@ -5670,8 +5670,8 @@ export class DefaultApi extends BaseAPI {
      * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
      * @param {Array<string>} [sapSids] List of SAP IDs to filter with
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-     * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
-     * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
+     * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
+     * @param {Array<boolean>} [affecting] Comma seprated string with bools (array of bools). True value controls displaying CVEs with at least one system affected. False value toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
@@ -5701,8 +5701,8 @@ export class DefaultApi extends BaseAPI {
      * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
      * @param {Array<string>} [sapSids] List of SAP IDs to filter with
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-     * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
-     * @param {Array<boolean>} [affecting] Comma seprated string with bools. First boolean controls displaying CVEs with at least one system affected. Second one toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
+     * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
+     * @param {Array<boolean>} [affecting] Comma seprated string with bools (array of bools). True value controls displaying CVEs with at least one system affected. False value toggles CVEs with no systems affected. Defaults to showing only CVEs with at least one system affected.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
@@ -5733,7 +5733,7 @@ export class DefaultApi extends BaseAPI {
      * @param {boolean} [showAdvisories] If true shows advisories list
      * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
      * @param {Array<string>} [ruleKey] Filters security rules by its error key.
-     * @param {Array<boolean>} [knownExploit] Boolean value which shows cve with known exploits
+     * @param {Array<boolean>} [knownExploit] String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
@@ -5891,7 +5891,7 @@ export class DefaultApi extends BaseAPI {
      * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
      * @param {Array<string>} [sapSids] List of SAP IDs to filter with
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-     * @param {Array<boolean>} [excluded] Comma seprated string with bools. First boolean controls displaying systems which are not excluded. Second one toggles displaying of systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
+     * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
@@ -5915,7 +5915,7 @@ export class DefaultApi extends BaseAPI {
      * @param {Array<string>} [tags] Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding.
      * @param {Array<string>} [sapSids] List of SAP IDs to filter with
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
-     * @param {Array<boolean>} [excluded] Comma seprated string with bools. First boolean controls displaying systems which are not excluded. Second one toggles displaying of systems excluded from vulnerability analysis. Defaults to all systems.
+     * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
