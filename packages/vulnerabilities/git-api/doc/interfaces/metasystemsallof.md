@@ -15,6 +15,7 @@
 ### Properties
 
 * [excluded](metasystemsallof.md#excluded)
+* [rhel_version](metasystemsallof.md#rhel_version)
 
 ## Properties
 
@@ -22,8 +23,20 @@
 
 • **excluded**: *string | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1652)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:1670](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1670)*
 
 Display setting of opted out systems.
+
+**`memberof`** MetaSystemsAllOf
+
+___
+
+###  rhel_version
+
+• **rhel_version**: *string | null*
+
+*Defined in [packages/vulnerabilities/git-api/api.ts:1676](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1676)*
+
+Filter base on system RHEL version.
 
 **`memberof`** MetaSystemsAllOf

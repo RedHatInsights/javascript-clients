@@ -22,6 +22,7 @@
 * [page_size](metaaffectedsystems.md#page_size)
 * [pages](metaaffectedsystems.md#pages)
 * [patch_access](metaaffectedsystems.md#patch_access)
+* [rhel_version](metaaffectedsystems.md#rhel_version)
 * [rule_key](metaaffectedsystems.md#rule_key)
 * [rule_presence](metaaffectedsystems.md#rule_presence)
 * [sort](metaaffectedsystems.md#sort)
@@ -121,6 +122,18 @@ ___
 *Defined in [packages/vulnerabilities/git-api/api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1231)*
 
 If show_advisories=true shows access to patch service else null
+
+**`memberof`** MetaAffectedSystems
+
+___
+
+###  rhel_version
+
+• **rhel_version**: *string | null*
+
+*Defined in [packages/vulnerabilities/git-api/api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1237)*
+
+Filter base on system RHEL version.
 
 **`memberof`** MetaAffectedSystems
 

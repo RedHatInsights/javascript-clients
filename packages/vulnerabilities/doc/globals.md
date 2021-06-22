@@ -58,6 +58,8 @@
 * [MetaSystemsAllOf](interfaces/metasystemsallof.md)
 * [MetaVulnerabilitiesOut](interfaces/metavulnerabilitiesout.md)
 * [MetaVulnerabilitiesOutAllOf](interfaces/metavulnerabilitiesoutallof.md)
+* [MitigatedSystemsIdsOut](interfaces/mitigatedsystemsidsout.md)
+* [MitigatedSystemsOut](interfaces/mitigatedsystemsout.md)
 * [OptOutIn](interfaces/optoutin.md)
 * [PlaybookTemplate](interfaces/playbooktemplate.md)
 * [PlaybookTemplateData](interfaces/playbooktemplatedata.md)
@@ -118,7 +120,7 @@ ___
 
 Ƭ **InventoryIdOrList**: *Array‹string› | string*
 
-*Defined in [packages/vulnerabilities/api.ts:1048](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1048)*
+*Defined in [packages/vulnerabilities/api.ts:1054](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1054)*
 
 **`export`** 
 
@@ -136,7 +138,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/vulnerabilities/api.ts:2344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2344)*
+*Defined in [packages/vulnerabilities/api.ts:2400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2400)*
 
 DefaultApi - axios parameter creator
 
@@ -176,6 +178,10 @@ Name | Type |
 
 * **getExecutiveReport**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
+* **getMitigatedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
+* **getMitigatedSystemsIdsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
 * **getPlaybookTemplate**(`ruleId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **getStatusList**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
@@ -204,7 +210,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/vulnerabilities/api.ts:4701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L4701)*
+*Defined in [packages/vulnerabilities/api.ts:5077](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5077)*
 
 DefaultApi - factory interface
 
@@ -246,6 +252,10 @@ Name | Type |
 
 * **getExecutiveReport**(`options?`: any): *AxiosPromise‹[ExecutiveReport](interfaces/executivereport.md)›*
 
+* **getMitigatedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `options?`: any): *AxiosPromise‹[MitigatedSystemsIdsOut](interfaces/mitigatedsystemsidsout.md)›*
+
+* **getMitigatedSystemsIdsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `options?`: any): *AxiosPromise‹[MitigatedSystemsOut](interfaces/mitigatedsystemsout.md)›*
+
 * **getPlaybookTemplate**(`ruleId`: string, `options?`: any): *AxiosPromise‹[PlaybookTemplate](interfaces/playbooktemplate.md)›*
 
 * **getStatusList**(`options?`: any): *AxiosPromise‹[StatusListOut](interfaces/statuslistout.md)›*
@@ -274,7 +284,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/vulnerabilities/api.ts:4219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L4219)*
+*Defined in [packages/vulnerabilities/api.ts:4535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L4535)*
 
 DefaultApi - functional programming interface
 
@@ -313,6 +323,10 @@ Name | Type |
 * **getDashboard**(`tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `options?`: any): *Promise‹function›*
 
 * **getExecutiveReport**(`options?`: any): *Promise‹function›*
+
+* **getMitigatedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `options?`: any): *Promise‹function›*
+
+* **getMitigatedSystemsIdsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `options?`: any): *Promise‹function›*
 
 * **getPlaybookTemplate**(`ruleId`: string, `options?`: any): *Promise‹function›*
 

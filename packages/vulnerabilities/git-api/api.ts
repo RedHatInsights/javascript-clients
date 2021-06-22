@@ -1229,6 +1229,12 @@ export interface MetaAffectedSystems {
      * @memberof MetaAffectedSystems
      */
     patch_access: boolean | null;
+    /**
+     * Filter base on system RHEL version.
+     * @type {string}
+     * @memberof MetaAffectedSystems
+     */
+    rhel_version: string | null;
 }
 /**
  *
@@ -1260,6 +1266,12 @@ export interface MetaAffectedSystemsAllOf {
      * @memberof MetaAffectedSystemsAllOf
      */
     patch_access: boolean | null;
+    /**
+     * Filter base on system RHEL version.
+     * @type {string}
+     * @memberof MetaAffectedSystemsAllOf
+     */
+    rhel_version: string | null;
 }
 /**
  *
@@ -1637,6 +1649,12 @@ export interface MetaSystems {
      * @memberof MetaSystems
      */
     excluded: string | null;
+    /**
+     * Filter base on system RHEL version.
+     * @type {string}
+     * @memberof MetaSystems
+     */
+    rhel_version: string | null;
 }
 /**
  *
@@ -1650,6 +1668,12 @@ export interface MetaSystemsAllOf {
      * @memberof MetaSystemsAllOf
      */
     excluded: string | null;
+    /**
+     * Filter base on system RHEL version.
+     * @type {string}
+     * @memberof MetaSystemsAllOf
+     */
+    rhel_version: string | null;
 }
 /**
  *
@@ -2154,6 +2178,12 @@ export interface SystemDetailsOutData {
      */
     updated?: string | null;
     /**
+     * Operating system.
+     * @type {string}
+     * @memberof SystemDetailsOutData
+     */
+    os: string;
+    /**
      *
      * @type {Array<SystemDetailsOutDataTags>}
      * @memberof SystemDetailsOutData
@@ -2469,10 +2499,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsByCve: async (cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options: any = {}): Promise<RequestArgs> => {
+        getAffectedSystemsByCve: async (cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'cveId' is not null or undefined
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getAffectedSystemsByCve.');
@@ -2566,6 +2597,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['advisory'] = advisory;
             }
 
+            if (rhelVersion !== undefined) {
+                localVarQueryParameter['rhel_version'] = rhelVersion;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2599,10 +2634,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsIdsByCve: async (cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options: any = {}): Promise<RequestArgs> => {
+        getAffectedSystemsIdsByCve: async (cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'cveId' is not null or undefined
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getAffectedSystemsIdsByCve.');
@@ -2694,6 +2730,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (advisory !== undefined) {
                 localVarQueryParameter['advisory'] = advisory;
+            }
+
+            if (rhelVersion !== undefined) {
+                localVarQueryParameter['rhel_version'] = rhelVersion;
             }
 
 
@@ -3622,10 +3662,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMitigatedSystemsByCve: async (cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options: any = {}): Promise<RequestArgs> => {
+        getMitigatedSystemsByCve: async (cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'cveId' is not null or undefined
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getMitigatedSystemsByCve.');
@@ -3719,6 +3760,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['advisory'] = advisory;
             }
 
+            if (rhelVersion !== undefined) {
+                localVarQueryParameter['rhel_version'] = rhelVersion;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3752,10 +3797,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMitigatedSystemsIdsByCve: async (cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options: any = {}): Promise<RequestArgs> => {
+        getMitigatedSystemsIdsByCve: async (cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'cveId' is not null or undefined
             if (cveId === null || cveId === undefined) {
                 throw new RequiredError('cveId','Required parameter cveId was null or undefined when calling getMitigatedSystemsIdsByCve.');
@@ -3847,6 +3893,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (advisory !== undefined) {
                 localVarQueryParameter['advisory'] = advisory;
+            }
+
+            if (rhelVersion !== undefined) {
+                localVarQueryParameter['rhel_version'] = rhelVersion;
             }
 
 
@@ -4022,10 +4072,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsIds: async (filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, options: any = {}): Promise<RequestArgs> => {
+        getSystemsIds: async (filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, rhelVersion?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/systems/ids`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4102,6 +4153,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['excluded'] = excluded;
             }
 
+            if (rhelVersion !== undefined) {
+                localVarQueryParameter['rhel_version'] = rhelVersion;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4131,10 +4186,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsList: async (filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, options: any = {}): Promise<RequestArgs> => {
+        getSystemsList: async (filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, rhelVersion?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/systems`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4209,6 +4265,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (excluded) {
                 localVarQueryParameter['excluded'] = excluded;
+            }
+
+            if (rhelVersion !== undefined) {
+                localVarQueryParameter['rhel_version'] = rhelVersion;
             }
 
 
@@ -4568,11 +4628,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsOut>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options);
+        async getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, rhelVersion, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4598,11 +4659,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsIdsOut>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options);
+        async getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AffectedSystemsIdsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, rhelVersion, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4850,11 +4912,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMitigatedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MitigatedSystemsIdsOut>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getMitigatedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options);
+        async getMitigatedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MitigatedSystemsIdsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getMitigatedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, rhelVersion, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4880,11 +4943,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMitigatedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MitigatedSystemsOut>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getMitigatedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options);
+        async getMitigatedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MitigatedSystemsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getMitigatedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, rhelVersion, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4947,11 +5011,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getSystemsIds(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemIdsOut>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getSystemsIds(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, excluded, options);
+        async getSystemsIds(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, rhelVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemIdsOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getSystemsIds(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, excluded, rhelVersion, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4973,11 +5038,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemListOut>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, excluded, options);
+        async getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, rhelVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemListOut>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, excluded, rhelVersion, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5106,11 +5172,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any): AxiosPromise<AffectedSystemsOut> {
-            return DefaultApiFp(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options).then((request) => request(axios, basePath));
+        getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options?: any): AxiosPromise<AffectedSystemsOut> {
+            return DefaultApiFp(configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, rhelVersion, options).then((request) => request(axios, basePath));
         },
         /**
          * Report of IDs of affected systems for a given CVE.
@@ -5132,11 +5199,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any): AxiosPromise<AffectedSystemsIdsOut> {
-            return DefaultApiFp(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options).then((request) => request(axios, basePath));
+        getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options?: any): AxiosPromise<AffectedSystemsIdsOut> {
+            return DefaultApiFp(configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, rhelVersion, options).then((request) => request(axios, basePath));
         },
         /**
          * Checks database availability and API response threshold time.
@@ -5340,11 +5408,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMitigatedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any): AxiosPromise<MitigatedSystemsIdsOut> {
-            return DefaultApiFp(configuration).getMitigatedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options).then((request) => request(axios, basePath));
+        getMitigatedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options?: any): AxiosPromise<MitigatedSystemsIdsOut> {
+            return DefaultApiFp(configuration).getMitigatedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, rhelVersion, options).then((request) => request(axios, basePath));
         },
         /**
          * Report of mitigated systems for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
@@ -5366,11 +5435,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {boolean} [showAdvisories] If true shows advisories list
          * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMitigatedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any): AxiosPromise<MitigatedSystemsOut> {
-            return DefaultApiFp(configuration).getMitigatedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options).then((request) => request(axios, basePath));
+        getMitigatedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options?: any): AxiosPromise<MitigatedSystemsOut> {
+            return DefaultApiFp(configuration).getMitigatedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, rhelVersion, options).then((request) => request(axios, basePath));
         },
         /**
          * Return Ansible playbook template for given rule id.
@@ -5417,11 +5487,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsIds(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, options?: any): AxiosPromise<SystemIdsOut> {
-            return DefaultApiFp(configuration).getSystemsIds(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, excluded, options).then((request) => request(axios, basePath));
+        getSystemsIds(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, rhelVersion?: string, options?: any): AxiosPromise<SystemIdsOut> {
+            return DefaultApiFp(configuration).getSystemsIds(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, excluded, rhelVersion, options).then((request) => request(axios, basePath));
         },
         /**
          * List systems visible to logged in account with basic information related to vulnerabilities.
@@ -5439,11 +5510,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {Array<string>} [sapSids] List of SAP IDs to filter with
          * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
          * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
+         * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, options?: any): AxiosPromise<SystemListOut> {
-            return DefaultApiFp(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, excluded, options).then((request) => request(axios, basePath));
+        getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, rhelVersion?: string, options?: any): AxiosPromise<SystemListOut> {
+            return DefaultApiFp(configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, excluded, rhelVersion, options).then((request) => request(axios, basePath));
         },
         /**
          * Get application version.
@@ -5547,12 +5619,13 @@ export class DefaultApi extends BaseAPI {
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
      * @param {boolean} [showAdvisories] If true shows advisories list
      * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+     * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any) {
-        return DefaultApiFp(this.configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options).then((request) => request(this.axios, this.basePath));
+    public getAffectedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getAffectedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, rhelVersion, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5575,12 +5648,13 @@ export class DefaultApi extends BaseAPI {
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
      * @param {boolean} [showAdvisories] If true shows advisories list
      * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+     * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any) {
-        return DefaultApiFp(this.configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options).then((request) => request(this.axios, this.basePath));
+    public getAffectedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getAffectedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, rhelVersion, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5805,12 +5879,13 @@ export class DefaultApi extends BaseAPI {
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
      * @param {boolean} [showAdvisories] If true shows advisories list
      * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+     * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getMitigatedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any) {
-        return DefaultApiFp(this.configuration).getMitigatedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options).then((request) => request(this.axios, this.basePath));
+    public getMitigatedSystemsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getMitigatedSystemsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, rhelVersion, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5833,12 +5908,13 @@ export class DefaultApi extends BaseAPI {
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
      * @param {boolean} [showAdvisories] If true shows advisories list
      * @param {string} [advisory] filter by advisory name, works only with show_advisories&#x3D;true
+     * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getMitigatedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, options?: any) {
-        return DefaultApiFp(this.configuration).getMitigatedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, options).then((request) => request(this.axios, this.basePath));
+    public getMitigatedSystemsIdsByCve(cveId: string, filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, statusId?: string, dataFormat?: string, uuid?: string, ruleKey?: Array<string>, rulePresence?: Array<boolean>, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, showAdvisories?: boolean, advisory?: string, rhelVersion?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getMitigatedSystemsIdsByCve(cveId, filter, limit, offset, page, pageSize, sort, statusId, dataFormat, uuid, ruleKey, rulePresence, tags, sapSids, sapSystem, showAdvisories, advisory, rhelVersion, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5892,12 +5968,13 @@ export class DefaultApi extends BaseAPI {
      * @param {Array<string>} [sapSids] List of SAP IDs to filter with
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
      * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
+     * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getSystemsIds(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, options?: any) {
-        return DefaultApiFp(this.configuration).getSystemsIds(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, excluded, options).then((request) => request(this.axios, this.basePath));
+    public getSystemsIds(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, rhelVersion?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getSystemsIds(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, excluded, rhelVersion, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5916,12 +5993,13 @@ export class DefaultApi extends BaseAPI {
      * @param {Array<string>} [sapSids] List of SAP IDs to filter with
      * @param {boolean} [sapSystem] Boolean value which shows systems managed by SAP.
      * @param {Array<boolean>} [excluded] Comma seprated string with bools (array of bools). True boolean value displays systems which are excluded. False value displays systems excluded from vulnerability analysis. Defaults to showing only those systems which are not excluded.
+     * @param {string} [rhelVersion] Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, options?: any) {
-        return DefaultApiFp(this.configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, excluded, options).then((request) => request(this.axios, this.basePath));
+    public getSystemsList(filter?: string, limit?: number, offset?: number, page?: number, pageSize?: number, sort?: string, dataFormat?: string, stale?: boolean, uuid?: string, tags?: Array<string>, sapSids?: Array<string>, sapSystem?: boolean, excluded?: Array<boolean>, rhelVersion?: string, options?: any) {
+        return DefaultApiFp(this.configuration).getSystemsList(filter, limit, offset, page, pageSize, sort, dataFormat, stale, uuid, tags, sapSids, sapSystem, excluded, rhelVersion, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
