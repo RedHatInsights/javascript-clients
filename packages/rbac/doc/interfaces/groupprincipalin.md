@@ -22,6 +22,6 @@
 
 • **principals**: *Array‹[PrincipalIn](principalin.md)›*
 
-*Defined in [packages/rbac/api.ts:964](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L964)*
+*Defined in [packages/rbac/api.ts:964](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L964)*
 
 **`memberof`** GroupPrincipalIn

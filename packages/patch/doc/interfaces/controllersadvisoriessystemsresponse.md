@@ -22,7 +22,7 @@
 
 • **data**? : *object*
 
-*Defined in [packages/patch/api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L58)*
+*Defined in [packages/patch/api.ts:58](https://github.com/fhlavac/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L58)*
 
 **`memberof`** ControllersAdvisoriesSystemsResponse
 

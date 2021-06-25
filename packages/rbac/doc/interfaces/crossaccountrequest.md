@@ -27,7 +27,7 @@
 
 • **created**? : *string*
 
-*Defined in [packages/rbac/api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L133)*
+*Defined in [packages/rbac/api.ts:133](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L133)*
 
 **`memberof`** CrossAccountRequest
 
@@ -37,7 +37,7 @@ ___
 
 • **end_date**? : *any*
 
-*Defined in [packages/rbac/api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L145)*
+*Defined in [packages/rbac/api.ts:145](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L145)*
 
 **`memberof`** CrossAccountRequest
 
@@ -47,7 +47,7 @@ ___
 
 • **request_id**? : *string*
 
-*Defined in [packages/rbac/api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L115)*
+*Defined in [packages/rbac/api.ts:115](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L115)*
 
 **`memberof`** CrossAccountRequest
 
@@ -57,7 +57,7 @@ ___
 
 • **start_date**? : *any*
 
-*Defined in [packages/rbac/api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L139)*
+*Defined in [packages/rbac/api.ts:139](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L139)*
 
 **`memberof`** CrossAccountRequest
 
@@ -67,7 +67,7 @@ ___
 
 • **status**? : *string*
 
-*Defined in [packages/rbac/api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L127)*
+*Defined in [packages/rbac/api.ts:127](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L127)*
 
 **`memberof`** CrossAccountRequest
 
@@ -77,6 +77,6 @@ ___
 
 • **target_account**? : *string*
 
-*Defined in [packages/rbac/api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L121)*
+*Defined in [packages/rbac/api.ts:121](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L121)*
 
 **`memberof`** CrossAccountRequest

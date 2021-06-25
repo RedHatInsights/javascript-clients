@@ -24,7 +24,7 @@
 
 • **data**: *Array‹[Access](access.md)›*
 
-*Defined in [packages/rbac/api.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L64)*
+*Defined in [packages/rbac/api.ts:64](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L64)*
 
 **`memberof`** AccessPagination
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [packages/rbac/api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L58)*
+*Defined in [packages/rbac/api.ts:58](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L58)*
 
 **`memberof`** AccessPagination
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [packages/rbac/api.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L52)*
+*Defined in [packages/rbac/api.ts:52](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L52)*
 
 **`memberof`** AccessPagination

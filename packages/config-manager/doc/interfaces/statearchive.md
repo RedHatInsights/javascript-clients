@@ -27,7 +27,7 @@
 
 • **account**? : *string*
 
-*Defined in [packages/config-manager/api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L115)*
+*Defined in [packages/config-manager/api.ts:115](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/api.ts#L115)*
 
 **`memberof`** StateArchive
 
@@ -37,7 +37,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [packages/config-manager/api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L139)*
+*Defined in [packages/config-manager/api.ts:139](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/api.ts#L139)*
 
 **`memberof`** StateArchive
 
@@ -47,7 +47,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/config-manager/api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L121)*
+*Defined in [packages/config-manager/api.ts:121](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/api.ts#L121)*
 
 **`memberof`** StateArchive
 
@@ -57,7 +57,7 @@ ___
 
 • **initiator**? : *string*
 
-*Defined in [packages/config-manager/api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L133)*
+*Defined in [packages/config-manager/api.ts:133](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/api.ts#L133)*
 
 **`memberof`** StateArchive
 
@@ -67,7 +67,7 @@ ___
 
 • **label**? : *string*
 
-*Defined in [packages/config-manager/api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L127)*
+*Defined in [packages/config-manager/api.ts:127](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/api.ts#L127)*
 
 **`memberof`** StateArchive
 
@@ -77,6 +77,6 @@ ___
 
 • **state**? : *[State](state.md)*
 
-*Defined in [packages/config-manager/api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L145)*
+*Defined in [packages/config-manager/api.ts:145](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/api.ts#L145)*
 
 **`memberof`** StateArchive

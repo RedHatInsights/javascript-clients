@@ -22,6 +22,6 @@
 
 • **next_name**? : *string*
 
-*Defined in [packages/catalog/api.ts:909](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L909)*
+*Defined in [packages/catalog/api.ts:909](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L909)*
 
 **`memberof`** PortfolioItemNextName

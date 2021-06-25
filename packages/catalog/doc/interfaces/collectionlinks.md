@@ -25,7 +25,7 @@
 
 • **first**? : *string*
 
-*Defined in [packages/catalog/api.ts:146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L146)*
+*Defined in [packages/catalog/api.ts:146](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L146)*
 
 The link to fetch the first group of items in the result set
 
@@ -37,7 +37,7 @@ ___
 
 • **last**? : *string*
 
-*Defined in [packages/catalog/api.ts:152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L152)*
+*Defined in [packages/catalog/api.ts:152](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L152)*
 
 The link to fetch the last group of items in the result set
 
@@ -49,7 +49,7 @@ ___
 
 • **next**? : *string*
 
-*Defined in [packages/catalog/api.ts:164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L164)*
+*Defined in [packages/catalog/api.ts:164](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L164)*
 
 The link to fetch the next group of items in the result set
 
@@ -61,7 +61,7 @@ ___
 
 • **prev**? : *string*
 
-*Defined in [packages/catalog/api.ts:158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L158)*
+*Defined in [packages/catalog/api.ts:158](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L158)*
 
 The link to fetch the previous group of items in the result set
 

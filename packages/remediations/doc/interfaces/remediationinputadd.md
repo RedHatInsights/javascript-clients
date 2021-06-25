@@ -23,7 +23,7 @@
 
 • **issues**: *Array‹[RemediationInputAddIssues](remediationinputaddissues.md)›*
 
-*Defined in [api.ts:733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L733)*
+*Defined in [api.ts:733](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L733)*
 
 **`memberof`** RemediationInputAdd
 
@@ -33,6 +33,6 @@ ___
 
 • **systems**? : *Array‹string›*
 
-*Defined in [api.ts:739](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L739)*
+*Defined in [api.ts:739](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L739)*
 
 **`memberof`** RemediationInputAdd

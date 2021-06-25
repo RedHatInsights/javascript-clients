@@ -40,7 +40,7 @@ CrossAccountRequestApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [packages/rbac/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [packages/rbac/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
 
 **Parameters:**
 
@@ -60,7 +60,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [packages/rbac/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [packages/rbac/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [packages/rbac/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [packages/rbac/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [packages/rbac/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [packages/rbac/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
 
 ## Methods
 
@@ -88,7 +88,7 @@ ___
 
 ▸ **createCrossAccountRequests**(`crossAccountRequestIn`: [CrossAccountRequestIn](../interfaces/crossaccountrequestin.md), `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestOut](../interfaces/crossaccountrequestout.md)››*
 
-*Defined in [packages/rbac/api.ts:2853](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2853)*
+*Defined in [packages/rbac/api.ts:2861](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2861)*
 
 **`summary`** Create a cross account request
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **getCrossAccountRequest**(`uuid`: string, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestDetailByAccount](../interfaces/crossaccountrequestdetailbyaccount.md) | [CrossAccountRequestDetailByUseId](../interfaces/crossaccountrequestdetailbyuseid.md)››*
 
-*Defined in [packages/rbac/api.ts:2868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2868)*
+*Defined in [packages/rbac/api.ts:2876](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2876)*
 
 **`summary`** Get a cross account request
 
@@ -137,7 +137,7 @@ ___
 
 ▸ **listCrossAccountRequests**(`limit?`: number, `offset?`: number, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `status?`: "pending" | "approved" | "denied" | "cancelled" | "expired", `orderBy?`: "request_id" | "start_date" | "end_date" | "created" | "modified" | "status", `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestPagination](../interfaces/crossaccountrequestpagination.md)››*
 
-*Defined in [packages/rbac/api.ts:2886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2886)*
+*Defined in [packages/rbac/api.ts:2894](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2894)*
 
 By default, responses are sorted in ascending order by created_at
 
@@ -168,7 +168,7 @@ ___
 
 ▸ **patchCrossAccountRequest**(`uuid`: string, `crossAccountRequestPatch`: [CrossAccountRequestPatch](../interfaces/crossaccountrequestpatch.md), `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestDetailByAccount](../interfaces/crossaccountrequestdetailbyaccount.md) | [CrossAccountRequestDetailByUseId](../interfaces/crossaccountrequestdetailbyuseid.md)››*
 
-*Defined in [packages/rbac/api.ts:2899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2899)*
+*Defined in [packages/rbac/api.ts:2907](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2907)*
 
 Update a cross account request
 
@@ -194,7 +194,7 @@ ___
 
 ▸ **putCrossAccountRequest**(`uuid`: string, `crossAccountRequestUpdateIn`: [CrossAccountRequestUpdateIn](../interfaces/crossaccountrequestupdatein.md), `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestDetailByAccount](../interfaces/crossaccountrequestdetailbyaccount.md) | [CrossAccountRequestDetailByUseId](../interfaces/crossaccountrequestdetailbyuseid.md)››*
 
-*Defined in [packages/rbac/api.ts:2912](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2912)*
+*Defined in [packages/rbac/api.ts:2920](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2920)*
 
 Update a cross account request
 

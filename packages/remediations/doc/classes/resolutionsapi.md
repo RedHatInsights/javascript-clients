@@ -37,7 +37,7 @@ ResolutionsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/base.ts#L49)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/base.ts#L51)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/base.ts#L51)*
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/base.ts#L49)*
 
 ## Methods
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **getResolutionsForIssue**(`issue`: string, `options?`: any): *Promise‹AxiosResponse‹[Resolutions](../interfaces/resolutions.md)››*
 
-*Defined in [api.ts:3258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3258)*
+*Defined in [api.ts:3258](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L3258)*
 
 Provides information about resolutions available for the given issue
 
@@ -110,7 +110,7 @@ ___
 
 ▸ **getResolutionsForIssues**(`resolutionsBatchInput`: [ResolutionsBatchInput](../interfaces/resolutionsbatchinput.md), `options?`: any): *Promise‹AxiosResponse‹object››*
 
-*Defined in [api.ts:3270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3270)*
+*Defined in [api.ts:3270](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L3270)*
 
 Provides information about resolutions available for the given issues
 

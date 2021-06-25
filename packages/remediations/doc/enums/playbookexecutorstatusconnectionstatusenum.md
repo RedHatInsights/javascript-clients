@@ -23,7 +23,7 @@
 
 • **Connected**: = "connected"
 
-*Defined in [api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L283)*
+*Defined in [api.ts:283](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L283)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **Disabled**: = "disabled"
 
-*Defined in [api.ts:284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L284)*
+*Defined in [api.ts:284](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L284)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **Disconnected**: = "disconnected"
 
-*Defined in [api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L285)*
+*Defined in [api.ts:285](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L285)*
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 • **NoExecutor**: = "no_executor"
 
-*Defined in [api.ts:286](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L286)*
+*Defined in [api.ts:286](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L286)*
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **NoReceptor**: = "no_receptor"
 
-*Defined in [api.ts:288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L288)*
+*Defined in [api.ts:288](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L288)*
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • **NoRhc**: = "no_rhc"
 
-*Defined in [api.ts:290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L290)*
+*Defined in [api.ts:290](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L290)*
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 • **NoSmartManagement**: = "no_smart_management"
 
-*Defined in [api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L289)*
+*Defined in [api.ts:289](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L289)*
 
 ___
 
@@ -79,4 +79,4 @@ ___
 
 • **NoSource**: = "no_source"
 
-*Defined in [api.ts:287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L287)*
+*Defined in [api.ts:287](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L287)*

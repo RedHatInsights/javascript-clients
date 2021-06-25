@@ -32,7 +32,7 @@
 
 • **OrderApprovalDecision**: = "order.approval.decision"
 
-*Defined in [packages/catalog/api.ts:1251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1251)*
+*Defined in [packages/catalog/api.ts:1251](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1251)*
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 • **OrderApprovalReason**: = "order.approval.reason"
 
-*Defined in [packages/catalog/api.ts:1252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1252)*
+*Defined in [packages/catalog/api.ts:1252](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1252)*
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 • **OrderApprovalUpdatedAt**: = "order.approval.updated_at"
 
-*Defined in [packages/catalog/api.ts:1253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1253)*
+*Defined in [packages/catalog/api.ts:1253](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1253)*
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 • **OrderCreatedAt**: = "order.created_at"
 
-*Defined in [packages/catalog/api.ts:1254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1254)*
+*Defined in [packages/catalog/api.ts:1254](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1254)*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 • **OrderOrderId**: = "order.order_id"
 
-*Defined in [packages/catalog/api.ts:1255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1255)*
+*Defined in [packages/catalog/api.ts:1255](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1255)*
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 • **OrderOrderedByEmail**: = "order.ordered_by.email"
 
-*Defined in [packages/catalog/api.ts:1256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1256)*
+*Defined in [packages/catalog/api.ts:1256](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1256)*
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 • **OrderOrderedByName**: = "order.ordered_by.name"
 
-*Defined in [packages/catalog/api.ts:1257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1257)*
+*Defined in [packages/catalog/api.ts:1257](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1257)*
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 • **ProductDescription**: = "product.description"
 
-*Defined in [packages/catalog/api.ts:1258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1258)*
+*Defined in [packages/catalog/api.ts:1258](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1258)*
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 • **ProductHelpUrl**: = "product.help_url"
 
-*Defined in [packages/catalog/api.ts:1259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1259)*
+*Defined in [packages/catalog/api.ts:1259](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1259)*
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 • **ProductLongDescription**: = "product.long_description"
 
-*Defined in [packages/catalog/api.ts:1260](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1260)*
+*Defined in [packages/catalog/api.ts:1260](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1260)*
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 • **ProductName**: = "product.name"
 
-*Defined in [packages/catalog/api.ts:1261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1261)*
+*Defined in [packages/catalog/api.ts:1261](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1261)*
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 • **ProductPlatform**: = "product.platform"
 
-*Defined in [packages/catalog/api.ts:1262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1262)*
+*Defined in [packages/catalog/api.ts:1262](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1262)*
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 • **ProductPortfolioDescription**: = "product.portfolio.description"
 
-*Defined in [packages/catalog/api.ts:1263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1263)*
+*Defined in [packages/catalog/api.ts:1263](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1263)*
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 • **ProductPortfolioName**: = "product.portfolio.name"
 
-*Defined in [packages/catalog/api.ts:1264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1264)*
+*Defined in [packages/catalog/api.ts:1264](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1264)*
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 • **ProductStatus**: = "product.status"
 
-*Defined in [packages/catalog/api.ts:1265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1265)*
+*Defined in [packages/catalog/api.ts:1265](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1265)*
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 • **ProductSupportUrl**: = "product.support_url"
 
-*Defined in [packages/catalog/api.ts:1266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1266)*
+*Defined in [packages/catalog/api.ts:1266](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1266)*
 
 ___
 
@@ -160,4 +160,4 @@ ___
 
 • **ProductVendor**: = "product.vendor"
 
-*Defined in [packages/catalog/api.ts:1267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1267)*
+*Defined in [packages/catalog/api.ts:1267](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1267)*

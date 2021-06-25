@@ -27,7 +27,7 @@
 
 • **api_version**: *number*
 
-*Defined in [packages/rbac/api.ts:2187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2187)*
+*Defined in [packages/rbac/api.ts:2187](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2187)*
 
 **`memberof`** Status
 
@@ -37,7 +37,7 @@ ___
 
 • **commit**? : *string*
 
-*Defined in [packages/rbac/api.ts:2193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2193)*
+*Defined in [packages/rbac/api.ts:2193](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2193)*
 
 **`memberof`** Status
 
@@ -47,7 +47,7 @@ ___
 
 • **modules**? : *object*
 
-*Defined in [packages/rbac/api.ts:2217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2217)*
+*Defined in [packages/rbac/api.ts:2217](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2217)*
 
 **`memberof`** Status
 
@@ -57,7 +57,7 @@ ___
 
 • **platform_info**? : *object*
 
-*Defined in [packages/rbac/api.ts:2205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2205)*
+*Defined in [packages/rbac/api.ts:2205](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2205)*
 
 **`memberof`** Status
 
@@ -67,7 +67,7 @@ ___
 
 • **python_version**? : *string*
 
-*Defined in [packages/rbac/api.ts:2211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2211)*
+*Defined in [packages/rbac/api.ts:2211](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2211)*
 
 **`memberof`** Status
 
@@ -77,6 +77,6 @@ ___
 
 • **server_address**? : *string*
 
-*Defined in [packages/rbac/api.ts:2199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2199)*
+*Defined in [packages/rbac/api.ts:2199](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2199)*
 
 **`memberof`** Status

@@ -23,7 +23,7 @@
 
 • **data**? : *object*
 
-*Defined in [packages/catalog/api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L278)*
+*Defined in [packages/catalog/api.ts:278](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L278)*
 
 Results from the GraphQL query
 
@@ -35,7 +35,7 @@ ___
 
 • **errors**? : *Array‹object›*
 
-*Defined in [packages/catalog/api.ts:284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L284)*
+*Defined in [packages/catalog/api.ts:284](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L284)*
 
 Errors resulting from the GraphQL query
 

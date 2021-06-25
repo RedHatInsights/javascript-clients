@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[ContainerImage](containerimage.md)›*
 
-*Defined in [packages/topological-inventory/api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L584)*
+*Defined in [packages/topological-inventory/api.ts:584](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L584)*
 
 **`memberof`** ContainerImagesCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [packages/topological-inventory/api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L578)*
+*Defined in [packages/topological-inventory/api.ts:578](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L578)*
 
 **`memberof`** ContainerImagesCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [packages/topological-inventory/api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L572)*
+*Defined in [packages/topological-inventory/api.ts:572](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L572)*
 
 **`memberof`** ContainerImagesCollection

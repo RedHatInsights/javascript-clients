@@ -24,7 +24,7 @@
 
 • **data**: *Array‹[VulnerabilitiesPostOutData](vulnerabilitiespostoutdata.md)›*
 
-*Defined in [packages/vulnerabilities/api.ts:2275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2275)*
+*Defined in [packages/vulnerabilities/api.ts:2361](https://github.com/fhlavac/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2361)*
 
 **`memberof`** VulnerabilitiesPostOut
 
@@ -34,7 +34,7 @@ ___
 
 • **links**: *[Links](links.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:2281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2281)*
+*Defined in [packages/vulnerabilities/api.ts:2367](https://github.com/fhlavac/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2367)*
 
 **`memberof`** VulnerabilitiesPostOut
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**: *[Meta](meta.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:2287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2287)*
+*Defined in [packages/vulnerabilities/api.ts:2373](https://github.com/fhlavac/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2373)*
 
 **`memberof`** VulnerabilitiesPostOut

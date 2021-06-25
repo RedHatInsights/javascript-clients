@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[Action](action.md)›*
 
-*Defined in [packages/approval/api.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L104)*
+*Defined in [packages/approval/api.ts:104](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/api.ts#L104)*
 
 **`memberof`** ActionCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [packages/approval/api.ts:98](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L98)*
+*Defined in [packages/approval/api.ts:98](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/api.ts#L98)*
 
 **`memberof`** ActionCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [packages/approval/api.ts:92](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L92)*
+*Defined in [packages/approval/api.ts:92](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/api.ts#L92)*
 
 **`memberof`** ActionCollection

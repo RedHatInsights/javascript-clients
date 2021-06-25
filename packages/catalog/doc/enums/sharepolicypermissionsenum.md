@@ -19,7 +19,7 @@
 
 • **Delete**: = "delete"
 
-*Defined in [packages/catalog/api.ts:1228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1228)*
+*Defined in [packages/catalog/api.ts:1228](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1228)*
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 • **Order**: = "order"
 
-*Defined in [packages/catalog/api.ts:1229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1229)*
+*Defined in [packages/catalog/api.ts:1229](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1229)*
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 • **Read**: = "read"
 
-*Defined in [packages/catalog/api.ts:1226](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1226)*
+*Defined in [packages/catalog/api.ts:1226](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1226)*
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 • **Update**: = "update"
 
-*Defined in [packages/catalog/api.ts:1227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1227)*
+*Defined in [packages/catalog/api.ts:1227](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1227)*

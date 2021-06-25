@@ -37,7 +37,7 @@
 
 • **_default**? : *boolean*
 
-*Defined in [packages/sources/api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L409)*
+*Defined in [packages/sources/api.ts:409](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L409)*
 
 **`memberof`** Endpoint
 
@@ -47,7 +47,7 @@ ___
 
 • **availability_status**? : *string*
 
-*Defined in [packages/sources/api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L385)*
+*Defined in [packages/sources/api.ts:385](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L385)*
 
 **`memberof`** Endpoint
 
@@ -57,7 +57,7 @@ ___
 
 • **availability_status_error**? : *string*
 
-*Defined in [packages/sources/api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L391)*
+*Defined in [packages/sources/api.ts:391](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L391)*
 
 **`memberof`** Endpoint
 
@@ -67,7 +67,7 @@ ___
 
 • **certificate_authority**? : *string*
 
-*Defined in [packages/sources/api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L397)*
+*Defined in [packages/sources/api.ts:397](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L397)*
 
 Optional X.509 Certificate Authority
 
@@ -79,7 +79,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [packages/sources/api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L403)*
+*Defined in [packages/sources/api.ts:403](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L403)*
 
 **`memberof`** Endpoint
 
@@ -89,7 +89,7 @@ ___
 
 • **host**? : *string*
 
-*Defined in [packages/sources/api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L415)*
+*Defined in [packages/sources/api.ts:415](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L415)*
 
 URI host component
 
@@ -101,7 +101,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/sources/api.ts:421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L421)*
+*Defined in [packages/sources/api.ts:421](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L421)*
 
 ID of the resource
 
@@ -113,7 +113,7 @@ ___
 
 • **path**? : *string*
 
-*Defined in [packages/sources/api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L427)*
+*Defined in [packages/sources/api.ts:427](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L427)*
 
 URI path component
 
@@ -125,7 +125,7 @@ ___
 
 • **port**? : *number*
 
-*Defined in [packages/sources/api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L433)*
+*Defined in [packages/sources/api.ts:433](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L433)*
 
 URI port component
 
@@ -137,7 +137,7 @@ ___
 
 • **receptor_node**? : *string*
 
-*Defined in [packages/sources/api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L439)*
+*Defined in [packages/sources/api.ts:439](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L439)*
 
 Identifier of a receptor node
 
@@ -149,7 +149,7 @@ ___
 
 • **role**? : *string*
 
-*Defined in [packages/sources/api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L445)*
+*Defined in [packages/sources/api.ts:445](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L445)*
 
 **`memberof`** Endpoint
 
@@ -159,7 +159,7 @@ ___
 
 • **scheme**? : *string*
 
-*Defined in [packages/sources/api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L451)*
+*Defined in [packages/sources/api.ts:451](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L451)*
 
 URI scheme component
 
@@ -171,7 +171,7 @@ ___
 
 • **source_id**? : *string*
 
-*Defined in [packages/sources/api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L457)*
+*Defined in [packages/sources/api.ts:457](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L457)*
 
 ID of the resource
 
@@ -183,7 +183,7 @@ ___
 
 • **tenant**? : *string*
 
-*Defined in [packages/sources/api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L463)*
+*Defined in [packages/sources/api.ts:463](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L463)*
 
 **`memberof`** Endpoint
 
@@ -193,7 +193,7 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [packages/sources/api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L469)*
+*Defined in [packages/sources/api.ts:469](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L469)*
 
 **`memberof`** Endpoint
 
@@ -203,7 +203,7 @@ ___
 
 • **verify_ssl**? : *boolean*
 
-*Defined in [packages/sources/api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L475)*
+*Defined in [packages/sources/api.ts:475](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L475)*
 
 Should SSL be verified
 

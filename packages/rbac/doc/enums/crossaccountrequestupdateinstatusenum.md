@@ -20,7 +20,7 @@
 
 • **Approved**: = "approved"
 
-*Defined in [packages/rbac/api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L667)*
+*Defined in [packages/rbac/api.ts:667](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L667)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **Cancelled**: = "cancelled"
 
-*Defined in [packages/rbac/api.ts:669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L669)*
+*Defined in [packages/rbac/api.ts:669](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L669)*
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 • **Denied**: = "denied"
 
-*Defined in [packages/rbac/api.ts:670](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L670)*
+*Defined in [packages/rbac/api.ts:670](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L670)*
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 • **Expired**: = "expired"
 
-*Defined in [packages/rbac/api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L668)*
+*Defined in [packages/rbac/api.ts:668](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L668)*
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 • **Pending**: = "pending"
 
-*Defined in [packages/rbac/api.ts:666](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L666)*
+*Defined in [packages/rbac/api.ts:666](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L666)*

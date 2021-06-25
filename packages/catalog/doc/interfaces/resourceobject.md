@@ -26,7 +26,7 @@ Resource object definition
 
 • **app_name**: *string*
 
-*Defined in [packages/catalog/api.ts:1075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1075)*
+*Defined in [packages/catalog/api.ts:1075](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1075)*
 
 Name of the application that the object belongs to
 
@@ -38,7 +38,7 @@ ___
 
 • **object_id**: *string*
 
-*Defined in [packages/catalog/api.ts:1081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1081)*
+*Defined in [packages/catalog/api.ts:1081](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1081)*
 
 ID of the object
 
@@ -50,7 +50,7 @@ ___
 
 • **object_type**: *string*
 
-*Defined in [packages/catalog/api.ts:1069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1069)*
+*Defined in [packages/catalog/api.ts:1069](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L1069)*
 
 Object type
 

@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[ServiceOfferingNode](serviceofferingnode.md)›*
 
-*Defined in [packages/topological-inventory/api.ts:2931](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2931)*
+*Defined in [packages/topological-inventory/api.ts:2931](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2931)*
 
 **`memberof`** ServiceOfferingNodesCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [packages/topological-inventory/api.ts:2925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2925)*
+*Defined in [packages/topological-inventory/api.ts:2925](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2925)*
 
 **`memberof`** ServiceOfferingNodesCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [packages/topological-inventory/api.ts:2919](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2919)*
+*Defined in [packages/topological-inventory/api.ts:2919](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2919)*
 
 **`memberof`** ServiceOfferingNodesCollection

@@ -29,7 +29,7 @@
 
 • **advisory_type**? : *number*
 
-*Defined in [packages/patch/api.ts:182](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L182)*
+*Defined in [packages/patch/api.ts:182](https://github.com/fhlavac/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L182)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -39,7 +39,7 @@ ___
 
 • **applicable_systems**? : *number*
 
-*Defined in [packages/patch/api.ts:188](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L188)*
+*Defined in [packages/patch/api.ts:188](https://github.com/fhlavac/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L188)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -49,7 +49,7 @@ ___
 
 • **cve_count**? : *number*
 
-*Defined in [packages/patch/api.ts:194](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L194)*
+*Defined in [packages/patch/api.ts:194](https://github.com/fhlavac/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L194)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -59,7 +59,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:200](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L200)*
+*Defined in [packages/patch/api.ts:200](https://github.com/fhlavac/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L200)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -69,7 +69,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/patch/api.ts:206](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L206)*
+*Defined in [packages/patch/api.ts:206](https://github.com/fhlavac/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L206)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -79,7 +79,7 @@ ___
 
 • **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:212](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L212)*
+*Defined in [packages/patch/api.ts:212](https://github.com/fhlavac/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L212)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -89,7 +89,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:218](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L218)*
+*Defined in [packages/patch/api.ts:218](https://github.com/fhlavac/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L218)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -99,6 +99,6 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:224](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L224)*
+*Defined in [packages/patch/api.ts:224](https://github.com/fhlavac/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L224)*
 
 **`memberof`** ControllersAdvisoryInlineItem

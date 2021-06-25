@@ -36,7 +36,7 @@ TagsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [packages/host-inventory/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
+*Defined in [packages/host-inventory/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
 
 **Parameters:**
 
@@ -56,7 +56,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [packages/host-inventory/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
+*Defined in [packages/host-inventory/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [packages/host-inventory/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
+*Defined in [packages/host-inventory/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [packages/host-inventory/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
+*Defined in [packages/host-inventory/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
 
 ## Methods
 
@@ -84,7 +84,7 @@ ___
 
 ▸ **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[ActiveTags](../interfaces/activetags.md)››*
 
-*Defined in [packages/host-inventory/api.ts:3255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3255)*
+*Defined in [packages/host-inventory/api.ts:3376](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L3376)*
 
 Required permissions: inventory:hosts:read
 

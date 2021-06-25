@@ -24,7 +24,7 @@
 
 • **data**: *Array‹[RoleOut](roleout.md)›*
 
-*Defined in [packages/rbac/api.ts:2032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2032)*
+*Defined in [packages/rbac/api.ts:2032](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2032)*
 
 **`memberof`** RolePagination
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [packages/rbac/api.ts:2026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2026)*
+*Defined in [packages/rbac/api.ts:2026](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2026)*
 
 **`memberof`** RolePagination
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [packages/rbac/api.ts:2020](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2020)*
+*Defined in [packages/rbac/api.ts:2020](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L2020)*
 
 **`memberof`** RolePagination

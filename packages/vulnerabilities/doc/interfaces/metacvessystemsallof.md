@@ -22,7 +22,7 @@
 
 • **opt_out**: *boolean*
 
-*Defined in [packages/vulnerabilities/api.ts:1566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1566)*
+*Defined in [packages/vulnerabilities/api.ts:1584](https://github.com/fhlavac/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1584)*
 
 If given system was opted out.
 

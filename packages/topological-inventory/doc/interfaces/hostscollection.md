@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[Host](host.md)›*
 
-*Defined in [packages/topological-inventory/api.ts:1557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1557)*
+*Defined in [packages/topological-inventory/api.ts:1557](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1557)*
 
 **`memberof`** HostsCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [packages/topological-inventory/api.ts:1551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1551)*
+*Defined in [packages/topological-inventory/api.ts:1551](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1551)*
 
 **`memberof`** HostsCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [packages/topological-inventory/api.ts:1545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1545)*
+*Defined in [packages/topological-inventory/api.ts:1545](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1545)*
 
 **`memberof`** HostsCollection

@@ -46,7 +46,7 @@
 
 • **BASE_PATH**: *string* = "https://cloud.redhat.com/api/config-manager/v1".replace(/\/+$/, "")
 
-*Defined in [packages/config-manager/base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L20)*
+*Defined in [packages/config-manager/base.ts:20](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/base.ts#L20)*
 
 ## Functions
 
@@ -54,7 +54,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/config-manager/api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L189)*
+*Defined in [packages/config-manager/api.ts:189](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/api.ts#L189)*
 
 DefaultApi - axios parameter creator
 
@@ -86,7 +86,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/config-manager/api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L517)*
+*Defined in [packages/config-manager/api.ts:517](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/api.ts#L517)*
 
 DefaultApi - factory interface
 
@@ -120,7 +120,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/config-manager/api.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L423)*
+*Defined in [packages/config-manager/api.ts:423](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/api.ts#L423)*
 
 DefaultApi - functional programming interface
 
@@ -152,7 +152,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [packages/config-manager/base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L26)*
+*Defined in [packages/config-manager/base.ts:26](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/base.ts#L26)*
 
 **`export`** 
 
@@ -160,22 +160,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [packages/config-manager/base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L27)*
+*Defined in [packages/config-manager/base.ts:27](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/base.ts#L27)*
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [packages/config-manager/base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L30)*
+*Defined in [packages/config-manager/base.ts:30](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/base.ts#L30)*
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [packages/config-manager/base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L28)*
+*Defined in [packages/config-manager/base.ts:28](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/base.ts#L28)*
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [packages/config-manager/base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L29)*
+*Defined in [packages/config-manager/base.ts:29](https://github.com/fhlavac/javascript-clients/blob/master/packages/config-manager/base.ts#L29)*

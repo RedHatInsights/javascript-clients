@@ -36,7 +36,7 @@ GraphqlApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [packages/approval/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L49)*
+*Defined in [packages/approval/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/base.ts#L49)*
 
 **Parameters:**
 
@@ -56,7 +56,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [packages/approval/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)*
+*Defined in [packages/approval/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/base.ts#L51)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [packages/approval/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)*
+*Defined in [packages/approval/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/base.ts#L51)*
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [packages/approval/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L49)*
+*Defined in [packages/approval/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/base.ts#L49)*
 
 ## Methods
 
@@ -84,7 +84,7 @@ ___
 
 ▸ **postGraphql**(`graphqlIn`: [GraphqlIn](../interfaces/graphqlin.md), `options?`: any): *Promise‹AxiosResponse‹[GraphqlOut](../interfaces/graphqlout.md)››*
 
-*Defined in [packages/approval/api.ts:1135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1135)*
+*Defined in [packages/approval/api.ts:1135](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/api.ts#L1135)*
 
 Perform a GraphQL query
 

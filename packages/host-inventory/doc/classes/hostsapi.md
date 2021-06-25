@@ -45,7 +45,7 @@ HostsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [packages/host-inventory/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
+*Defined in [packages/host-inventory/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
 
 **Parameters:**
 
@@ -65,7 +65,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [packages/host-inventory/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
+*Defined in [packages/host-inventory/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [packages/host-inventory/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
+*Defined in [packages/host-inventory/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [packages/host-inventory/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
+*Defined in [packages/host-inventory/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
 
 ## Methods
 
@@ -93,7 +93,7 @@ ___
 
 ▸ **apiHostDeleteById**(`hostIdList`: Array‹string›, `branchId?`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/host-inventory/api.ts:2643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2643)*
+*Defined in [packages/host-inventory/api.ts:2762](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L2762)*
 
 Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
 
@@ -119,7 +119,7 @@ ___
 
 ▸ **apiHostGetHostById**(`hostIdList`: Array‹string›, `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `options?`: any): *Promise‹AxiosResponse‹[HostQueryOutput](../interfaces/hostqueryoutput.md)››*
 
-*Defined in [packages/host-inventory/api.ts:2660](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2660)*
+*Defined in [packages/host-inventory/api.ts:2779](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L2779)*
 
 Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
 
@@ -147,9 +147,9 @@ ___
 
 ###  apiHostGetHostList
 
-▸ **apiHostGetHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `registeredWith?`: "insights", `filter?`: object, `fields?`: object, `options?`: any): *Promise‹AxiosResponse‹[HostQueryOutput](../interfaces/hostqueryoutput.md)››*
+▸ **apiHostGetHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `registeredWith?`: "insights", `filter?`: object, `fields?`: object, `options?`: any): *Promise‹AxiosResponse‹[HostQueryOutput](../interfaces/hostqueryoutput.md)››*
 
-*Defined in [packages/host-inventory/api.ts:2685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2685)*
+*Defined in [packages/host-inventory/api.ts:2806](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L2806)*
 
 Read the entire list of all hosts available to the account. <br /><br /> Required permissions: inventory:hosts:read
 
@@ -167,6 +167,8 @@ Name | Type |
 `fqdn?` | string |
 `hostnameOrId?` | string |
 `insightsId?` | string |
+`providerId?` | string |
+`providerType?` | "alibaba" &#124; "aws" &#124; "azure" &#124; "gcp" &#124; "ibm" |
 `branchId?` | string |
 `perPage?` | number |
 `page?` | number |
@@ -187,7 +189,7 @@ ___
 
 ▸ **apiHostGetHostSystemProfileById**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `branchId?`: string, `fields?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileByHostOut](../interfaces/systemprofilebyhostout.md)››*
 
-*Defined in [packages/host-inventory/api.ts:2703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2703)*
+*Defined in [packages/host-inventory/api.ts:2824](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L2824)*
 
 Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
 
@@ -218,7 +220,7 @@ ___
 
 ▸ **apiHostGetHostTagCount**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `options?`: any): *Promise‹AxiosResponse‹[TagCountOut](../interfaces/tagcountout.md)››*
 
-*Defined in [packages/host-inventory/api.ts:2719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2719)*
+*Defined in [packages/host-inventory/api.ts:2840](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L2840)*
 
 Get the number of tags on a host <br /><br /> Required permissions: inventory:hosts:read
 
@@ -247,7 +249,7 @@ ___
 
 ▸ **apiHostGetHostTags**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated", `orderHow?`: "ASC" | "DESC", `search?`: string, `options?`: any): *Promise‹AxiosResponse‹[TagsOut](../interfaces/tagsout.md)››*
 
-*Defined in [packages/host-inventory/api.ts:2736](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2736)*
+*Defined in [packages/host-inventory/api.ts:2857](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L2857)*
 
 Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read
 
@@ -277,7 +279,7 @@ ___
 
 ▸ **apiHostHostCheckin**(`createCheckIn`: [CreateCheckIn](../interfaces/createcheckin.md), `options?`: any): *Promise‹AxiosResponse‹[CreateHostOut](../interfaces/createhostout.md)››*
 
-*Defined in [packages/host-inventory/api.ts:2748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2748)*
+*Defined in [packages/host-inventory/api.ts:2869](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L2869)*
 
 Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
 
@@ -302,7 +304,7 @@ ___
 
 ▸ **apiHostMergeFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/host-inventory/api.ts:2763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2763)*
+*Defined in [packages/host-inventory/api.ts:2884](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L2884)*
 
 Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
 
@@ -330,7 +332,7 @@ ___
 
 ▸ **apiHostPatchById**(`hostIdList`: Array‹string›, `patchHostIn`: [PatchHostIn](../interfaces/patchhostin.md), `branchId?`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/host-inventory/api.ts:2777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2777)*
+*Defined in [packages/host-inventory/api.ts:2898](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L2898)*
 
 Update a host <br /><br /> Required permissions: inventory:hosts:write
 
@@ -357,7 +359,7 @@ ___
 
 ▸ **apiHostReplaceFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/host-inventory/api.ts:2792](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2792)*
+*Defined in [packages/host-inventory/api.ts:2913](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L2913)*
 
 Replace facts under a namespace <br /><br /> Required permissions: inventory:hosts:write
 

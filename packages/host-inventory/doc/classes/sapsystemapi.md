@@ -37,7 +37,7 @@ SapSystemApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [packages/host-inventory/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
+*Defined in [packages/host-inventory/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [packages/host-inventory/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
+*Defined in [packages/host-inventory/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [packages/host-inventory/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
+*Defined in [packages/host-inventory/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [packages/host-inventory/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
+*Defined in [packages/host-inventory/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
 
 ## Methods
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*
 
-*Defined in [packages/host-inventory/api.ts:3058](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3058)*
+*Defined in [packages/host-inventory/api.ts:3179](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L3179)*
 
 Required permissions: inventory:hosts:read
 
@@ -116,7 +116,7 @@ ___
 
 ▸ **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*
 
-*Defined in [packages/host-inventory/api.ts:3075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3075)*
+*Defined in [packages/host-inventory/api.ts:3196](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L3196)*
 
 Required permissions: inventory:hosts:read
 

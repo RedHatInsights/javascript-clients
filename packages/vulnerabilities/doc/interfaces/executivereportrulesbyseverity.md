@@ -27,7 +27,7 @@ Information about how much systems are affected by a security rule, broken down 
 
 • **_1**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L846)*
+*Defined in [packages/vulnerabilities/api.ts:846](https://github.com/fhlavac/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L846)*
 
 **`memberof`** ExecutiveReportRulesBySeverity
 
@@ -37,7 +37,7 @@ ___
 
 • **_2**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L852)*
+*Defined in [packages/vulnerabilities/api.ts:852](https://github.com/fhlavac/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L852)*
 
 **`memberof`** ExecutiveReportRulesBySeverity
 
@@ -47,7 +47,7 @@ ___
 
 • **_3**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L858)*
+*Defined in [packages/vulnerabilities/api.ts:858](https://github.com/fhlavac/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L858)*
 
 **`memberof`** ExecutiveReportRulesBySeverity
 
@@ -57,6 +57,6 @@ ___
 
 • **_4**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L864)*
+*Defined in [packages/vulnerabilities/api.ts:864](https://github.com/fhlavac/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L864)*
 
 **`memberof`** ExecutiveReportRulesBySeverity

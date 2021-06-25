@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[ApplicationType](applicationtype.md)›*
 
-*Defined in [packages/sources/api.ts:161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L161)*
+*Defined in [packages/sources/api.ts:161](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L161)*
 
 **`memberof`** ApplicationTypesCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [packages/sources/api.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L155)*
+*Defined in [packages/sources/api.ts:155](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L155)*
 
 **`memberof`** ApplicationTypesCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [packages/sources/api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L149)*
+*Defined in [packages/sources/api.ts:149](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L149)*
 
 **`memberof`** ApplicationTypesCollection

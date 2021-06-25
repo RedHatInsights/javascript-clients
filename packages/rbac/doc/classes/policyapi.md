@@ -40,7 +40,7 @@ PolicyApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [packages/rbac/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [packages/rbac/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
 
 **Parameters:**
 
@@ -60,7 +60,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [packages/rbac/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [packages/rbac/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [packages/rbac/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [packages/rbac/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [packages/rbac/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [packages/rbac/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
 
 ## Methods
 
@@ -88,7 +88,7 @@ ___
 
 ▸ **createPolicies**(`policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *Promise‹AxiosResponse‹[PolicyExtended](../interfaces/policyextended.md)››*
 
-*Defined in [packages/rbac/api.ts:4762](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4762)*
+*Defined in [packages/rbac/api.ts:4770](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L4770)*
 
 **`summary`** Create a policy in a tenant
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **deletePolicy**(`uuid`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/rbac/api.ts:4774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4774)*
+*Defined in [packages/rbac/api.ts:4782](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L4782)*
 
 **`summary`** Delete a policy in the tenant
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **getPolicy**(`uuid`: string, `options?`: any): *Promise‹AxiosResponse‹[PolicyExtended](../interfaces/policyextended.md)››*
 
-*Defined in [packages/rbac/api.ts:4786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4786)*
+*Defined in [packages/rbac/api.ts:4794](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L4794)*
 
 **`summary`** Get a policy in the tenant
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: "name" | "modified", `options?`: any): *Promise‹AxiosResponse‹[PolicyPagination](../interfaces/policypagination.md)››*
 
-*Defined in [packages/rbac/api.ts:4804](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4804)*
+*Defined in [packages/rbac/api.ts:4812](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L4812)*
 
 By default, responses are sorted in ascending order by policy name
 
@@ -188,7 +188,7 @@ ___
 
 ▸ **updatePolicy**(`uuid`: string, `policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *Promise‹AxiosResponse‹[PolicyExtended](../interfaces/policyextended.md)››*
 
-*Defined in [packages/rbac/api.ts:4817](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4817)*
+*Defined in [packages/rbac/api.ts:4825](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L4825)*
 
 **`summary`** Update a policy in the tenant
 

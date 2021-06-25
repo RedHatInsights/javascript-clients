@@ -26,7 +26,7 @@
 
 • **code**: *string*
 
-*Defined in [api.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1031)*
+*Defined in [api.ts:1031](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L1031)*
 
 **`memberof`** RequestErrorErrors
 
@@ -36,7 +36,7 @@ ___
 
 • **details**? : *object*
 
-*Defined in [api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1043)*
+*Defined in [api.ts:1043](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L1043)*
 
 **`memberof`** RequestErrorErrors
 
@@ -46,7 +46,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1019)*
+*Defined in [api.ts:1019](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L1019)*
 
 **`memberof`** RequestErrorErrors
 
@@ -56,7 +56,7 @@ ___
 
 • **status**: *number*
 
-*Defined in [api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1025)*
+*Defined in [api.ts:1025](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L1025)*
 
 **`memberof`** RequestErrorErrors
 
@@ -66,6 +66,6 @@ ___
 
 • **title**: *string*
 
-*Defined in [api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1037)*
+*Defined in [api.ts:1037](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L1037)*
 
 **`memberof`** RequestErrorErrors

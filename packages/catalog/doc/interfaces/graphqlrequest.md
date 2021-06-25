@@ -24,7 +24,7 @@
 
 • **operationName**? : *string*
 
-*Defined in [packages/catalog/api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L259)*
+*Defined in [packages/catalog/api.ts:259](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L259)*
 
 If the Query contains several named operations, the operationName controls which one should be executed
 
@@ -36,7 +36,7 @@ ___
 
 • **query**: *string*
 
-*Defined in [packages/catalog/api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L253)*
+*Defined in [packages/catalog/api.ts:253](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L253)*
 
 The GraphQL query
 
@@ -48,7 +48,7 @@ ___
 
 • **variables**? : *object | null*
 
-*Defined in [packages/catalog/api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L265)*
+*Defined in [packages/catalog/api.ts:265](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L265)*
 
 Optional Query variables
 

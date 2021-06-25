@@ -22,6 +22,6 @@
 
 • **id**: *string*
 
-*Defined in [api.ts:616](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L616)*
+*Defined in [api.ts:616](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L616)*
 
 **`memberof`** RemediationCreated

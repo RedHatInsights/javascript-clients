@@ -22,7 +22,7 @@
 
 • **count**? : *number*
 
-*Defined in [packages/catalog/api.ts:177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L177)*
+*Defined in [packages/catalog/api.ts:177](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L177)*
 
 Total number of items in the result set, of which only a subset is returned, defined by the QueryLimit parameter.
 

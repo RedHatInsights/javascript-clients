@@ -29,7 +29,7 @@ An action that changes the state of a request
 
 • **comments**? : *string | null*
 
-*Defined in [packages/approval/api.ts:63](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L63)*
+*Defined in [packages/approval/api.ts:63](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/api.ts#L63)*
 
 Comments for action
 
@@ -41,7 +41,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [packages/approval/api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L39)*
+*Defined in [packages/approval/api.ts:39](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/api.ts#L39)*
 
 Time when the action was created
 
@@ -53,7 +53,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/approval/api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L33)*
+*Defined in [packages/approval/api.ts:33](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/api.ts#L33)*
 
 ID of the action
 
@@ -65,7 +65,7 @@ ___
 
 • **operation**? : *[ActionOperationEnum](../enums/actionoperationenum.md)*
 
-*Defined in [packages/approval/api.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L57)*
+*Defined in [packages/approval/api.ts:57](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/api.ts#L57)*
 
 Action type, must be one of the predefined values. The request state will be updated according to the operation.
 
@@ -77,7 +77,7 @@ ___
 
 • **processed_by**? : *string*
 
-*Defined in [packages/approval/api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L51)*
+*Defined in [packages/approval/api.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/api.ts#L51)*
 
 The person who performs the action
 
@@ -89,7 +89,7 @@ ___
 
 • **request_id**? : *string*
 
-*Defined in [packages/approval/api.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L45)*
+*Defined in [packages/approval/api.ts:45](https://github.com/fhlavac/javascript-clients/blob/master/packages/approval/api.ts#L45)*
 
 ID of the request that the action belongs to
 

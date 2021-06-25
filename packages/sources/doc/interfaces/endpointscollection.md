@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[Endpoint](endpoint.md)›*
 
-*Defined in [packages/sources/api.ts:500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L500)*
+*Defined in [packages/sources/api.ts:500](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L500)*
 
 **`memberof`** EndpointsCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [packages/sources/api.ts:494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L494)*
+*Defined in [packages/sources/api.ts:494](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L494)*
 
 **`memberof`** EndpointsCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [packages/sources/api.ts:488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L488)*
+*Defined in [packages/sources/api.ts:488](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L488)*
 
 **`memberof`** EndpointsCollection

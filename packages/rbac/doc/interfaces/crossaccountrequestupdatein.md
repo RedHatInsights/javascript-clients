@@ -25,7 +25,7 @@
 
 • **end_date**: *string*
 
-*Defined in [packages/rbac/api.ts:646](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L646)*
+*Defined in [packages/rbac/api.ts:646](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L646)*
 
 **`memberof`** CrossAccountRequestUpdateIn
 
@@ -35,7 +35,7 @@ ___
 
 • **roles**: *Array‹string›*
 
-*Defined in [packages/rbac/api.ts:652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L652)*
+*Defined in [packages/rbac/api.ts:652](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L652)*
 
 **`memberof`** CrossAccountRequestUpdateIn
 
@@ -45,7 +45,7 @@ ___
 
 • **start_date**: *string*
 
-*Defined in [packages/rbac/api.ts:640](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L640)*
+*Defined in [packages/rbac/api.ts:640](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L640)*
 
 **`memberof`** CrossAccountRequestUpdateIn
 
@@ -55,6 +55,6 @@ ___
 
 • **status**? : *[CrossAccountRequestUpdateInStatusEnum](../enums/crossaccountrequestupdateinstatusenum.md)*
 
-*Defined in [packages/rbac/api.ts:658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L658)*
+*Defined in [packages/rbac/api.ts:658](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L658)*
 
 **`memberof`** CrossAccountRequestUpdateIn

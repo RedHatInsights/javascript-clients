@@ -26,7 +26,7 @@
 
 • **created_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3109)*
+*Defined in [packages/topological-inventory/api.ts:3109](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3109)*
 
 **`memberof`** Source
 
@@ -36,7 +36,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3115)*
+*Defined in [packages/topological-inventory/api.ts:3115](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3115)*
 
 ID of the resource
 
@@ -48,7 +48,7 @@ ___
 
 • **refresh_status**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3121)*
+*Defined in [packages/topological-inventory/api.ts:3121](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3121)*
 
 **`memberof`** Source
 
@@ -58,7 +58,7 @@ ___
 
 • **uid**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3127)*
+*Defined in [packages/topological-inventory/api.ts:3127](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3127)*
 
 **`memberof`** Source
 
@@ -68,6 +68,6 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3133)*
+*Defined in [packages/topological-inventory/api.ts:3133](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3133)*
 
 **`memberof`** Source

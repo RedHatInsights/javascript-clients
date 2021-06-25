@@ -38,7 +38,7 @@
 
 \+ **new BaseAPI**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[BaseAPI](baseapi.md)*
 
-*Defined in [packages/insights/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
+*Defined in [packages/insights/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/insights/base.ts#L49)*
 
 **Parameters:**
 
@@ -56,7 +56,7 @@ Name | Type | Default |
 
 • **axios**: *AxiosInstance*
 
-*Defined in [packages/insights/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
+*Defined in [packages/insights/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 • **basePath**: *string*
 
-*Defined in [packages/insights/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
+*Defined in [packages/insights/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -72,4 +72,4 @@ ___
 
 • **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Defined in [packages/insights/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
+*Defined in [packages/insights/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/insights/base.ts#L49)*

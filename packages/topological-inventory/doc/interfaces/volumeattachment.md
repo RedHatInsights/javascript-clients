@@ -27,7 +27,7 @@
 
 • **device**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3960)*
+*Defined in [packages/topological-inventory/api.ts:3960](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3960)*
 
 **`memberof`** VolumeAttachment
 
@@ -37,7 +37,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3966](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3966)*
+*Defined in [packages/topological-inventory/api.ts:3966](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3966)*
 
 ID of the resource
 
@@ -49,7 +49,7 @@ ___
 
 • **last_seen_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3972)*
+*Defined in [packages/topological-inventory/api.ts:3972](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3972)*
 
 **`memberof`** VolumeAttachment
 
@@ -59,7 +59,7 @@ ___
 
 • **state**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3978)*
+*Defined in [packages/topological-inventory/api.ts:3978](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3978)*
 
 **`memberof`** VolumeAttachment
 
@@ -69,7 +69,7 @@ ___
 
 • **vm_id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3984)*
+*Defined in [packages/topological-inventory/api.ts:3984](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3984)*
 
 ID of the resource
 
@@ -81,7 +81,7 @@ ___
 
 • **volume_id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3990)*
+*Defined in [packages/topological-inventory/api.ts:3990](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3990)*
 
 ID of the resource
 

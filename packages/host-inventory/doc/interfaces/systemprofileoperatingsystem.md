@@ -2,7 +2,7 @@
 
 # Interface: SystemProfileOperatingSystem
 
-Object for OS details
+Object for OS details. Supports range operations
 
 **`export`** 
 
@@ -26,7 +26,7 @@ Object for OS details
 
 • **major**? : *number*
 
-*Defined in [packages/host-inventory/api.ts:1284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1284)*
+*Defined in [packages/host-inventory/api.ts:1389](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L1389)*
 
 Major release of OS (aka the x version)
 
@@ -38,7 +38,7 @@ ___
 
 • **minor**? : *number*
 
-*Defined in [packages/host-inventory/api.ts:1290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1290)*
+*Defined in [packages/host-inventory/api.ts:1395](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L1395)*
 
 Minor release of OS (aka the y version)
 
@@ -50,7 +50,7 @@ ___
 
 • **name**? : *[SystemProfileOperatingSystemNameEnum](../enums/systemprofileoperatingsystemnameenum.md)*
 
-*Defined in [packages/host-inventory/api.ts:1296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1296)*
+*Defined in [packages/host-inventory/api.ts:1401](https://github.com/fhlavac/javascript-clients/blob/master/packages/host-inventory/api.ts#L1401)*
 
 Name of the distro/os
 

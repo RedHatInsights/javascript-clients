@@ -24,7 +24,7 @@
 
 • **details**: *object*
 
-*Defined in [api.ts:82](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L82)*
+*Defined in [api.ts:82](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L82)*
 
 **`memberof`** Diagnosis
 
@@ -38,7 +38,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L70)*
+*Defined in [api.ts:70](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L70)*
 
 **`memberof`** Diagnosis
 
@@ -48,6 +48,6 @@ ___
 
 • **insights_id**: *string*
 
-*Defined in [api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L76)*
+*Defined in [api.ts:76](https://github.com/fhlavac/javascript-clients/blob/master/packages/remediations/api.ts#L76)*
 
 **`memberof`** Diagnosis

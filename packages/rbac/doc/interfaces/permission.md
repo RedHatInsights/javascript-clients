@@ -26,7 +26,7 @@
 
 • **application**? : *string*
 
-*Defined in [packages/rbac/api.ts:1228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1228)*
+*Defined in [packages/rbac/api.ts:1228](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L1228)*
 
 **`memberof`** Permission
 
@@ -36,7 +36,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/rbac/api.ts:1252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1252)*
+*Defined in [packages/rbac/api.ts:1252](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L1252)*
 
 **`memberof`** Permission
 
@@ -46,7 +46,7 @@ ___
 
 • **permission**? : *string*
 
-*Defined in [packages/rbac/api.ts:1246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1246)*
+*Defined in [packages/rbac/api.ts:1246](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L1246)*
 
 **`memberof`** Permission
 
@@ -56,7 +56,7 @@ ___
 
 • **resource_type**? : *string*
 
-*Defined in [packages/rbac/api.ts:1234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1234)*
+*Defined in [packages/rbac/api.ts:1234](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L1234)*
 
 **`memberof`** Permission
 
@@ -66,6 +66,6 @@ ___
 
 • **verb**? : *string*
 
-*Defined in [packages/rbac/api.ts:1240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1240)*
+*Defined in [packages/rbac/api.ts:1240](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L1240)*
 
 **`memberof`** Permission

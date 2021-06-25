@@ -38,7 +38,7 @@
 
 • **archived_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3257)*
+*Defined in [packages/topological-inventory/api.ts:3257](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3257)*
 
 **`memberof`** Subnet
 
@@ -48,7 +48,7 @@ ___
 
 • **cidr**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3263)*
+*Defined in [packages/topological-inventory/api.ts:3263](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3263)*
 
 **`memberof`** Subnet
 
@@ -58,7 +58,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3269)*
+*Defined in [packages/topological-inventory/api.ts:3269](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3269)*
 
 **`memberof`** Subnet
 
@@ -68,7 +68,7 @@ ___
 
 • **extra**? : *object*
 
-*Defined in [packages/topological-inventory/api.ts:3275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3275)*
+*Defined in [packages/topological-inventory/api.ts:3275](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3275)*
 
 **`memberof`** Subnet
 
@@ -78,7 +78,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3281)*
+*Defined in [packages/topological-inventory/api.ts:3281](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3281)*
 
 ID of the resource
 
@@ -90,7 +90,7 @@ ___
 
 • **last_seen_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3287)*
+*Defined in [packages/topological-inventory/api.ts:3287](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3287)*
 
 **`memberof`** Subnet
 
@@ -100,7 +100,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3293)*
+*Defined in [packages/topological-inventory/api.ts:3293](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3293)*
 
 **`memberof`** Subnet
 
@@ -110,7 +110,7 @@ ___
 
 • **network_id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3299)*
+*Defined in [packages/topological-inventory/api.ts:3299](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3299)*
 
 ID of the resource
 
@@ -122,7 +122,7 @@ ___
 
 • **orchestration_stack_id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3305)*
+*Defined in [packages/topological-inventory/api.ts:3305](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3305)*
 
 ID of the resource
 
@@ -134,7 +134,7 @@ ___
 
 • **source_created_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3311)*
+*Defined in [packages/topological-inventory/api.ts:3311](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3311)*
 
 **`memberof`** Subnet
 
@@ -144,7 +144,7 @@ ___
 
 • **source_deleted_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3317)*
+*Defined in [packages/topological-inventory/api.ts:3317](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3317)*
 
 **`memberof`** Subnet
 
@@ -154,7 +154,7 @@ ___
 
 • **source_id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3323)*
+*Defined in [packages/topological-inventory/api.ts:3323](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3323)*
 
 ID of the resource
 
@@ -166,7 +166,7 @@ ___
 
 • **source_ref**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3329)*
+*Defined in [packages/topological-inventory/api.ts:3329](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3329)*
 
 **`memberof`** Subnet
 
@@ -176,7 +176,7 @@ ___
 
 • **source_region_id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3335)*
+*Defined in [packages/topological-inventory/api.ts:3335](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3335)*
 
 ID of the resource
 
@@ -188,7 +188,7 @@ ___
 
 • **status**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3341)*
+*Defined in [packages/topological-inventory/api.ts:3341](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3341)*
 
 **`memberof`** Subnet
 
@@ -198,7 +198,7 @@ ___
 
 • **subscription_id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3347)*
+*Defined in [packages/topological-inventory/api.ts:3347](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3347)*
 
 ID of the resource
 
@@ -210,6 +210,6 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3353)*
+*Defined in [packages/topological-inventory/api.ts:3353](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3353)*
 
 **`memberof`** Subnet

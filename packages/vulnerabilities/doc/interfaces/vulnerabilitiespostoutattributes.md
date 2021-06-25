@@ -24,7 +24,7 @@
 
 • **cvss_score**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:2300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2300)*
+*Defined in [packages/vulnerabilities/api.ts:2386](https://github.com/fhlavac/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2386)*
 
 String representation of cvss3 or cvvs2 (if v3 is not present) score of the CVE.
 
@@ -36,7 +36,7 @@ ___
 
 • **impact**: *string*
 
-*Defined in [packages/vulnerabilities/api.ts:2306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2306)*
+*Defined in [packages/vulnerabilities/api.ts:2392](https://github.com/fhlavac/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2392)*
 
 Red Hat security impact of the CVE.
 
@@ -48,7 +48,7 @@ ___
 
 • **synopsis**: *string*
 
-*Defined in [packages/vulnerabilities/api.ts:2312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2312)*
+*Defined in [packages/vulnerabilities/api.ts:2398](https://github.com/fhlavac/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2398)*
 
 Synopsis of the CVE.
 

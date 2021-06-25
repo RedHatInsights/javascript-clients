@@ -23,7 +23,7 @@
 
 • **ApprovalPending**: = "Approval Pending"
 
-*Defined in [packages/catalog/api.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L527)*
+*Defined in [packages/catalog/api.ts:527](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L527)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **Approved**: = "Approved"
 
-*Defined in [packages/catalog/api.ts:531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L531)*
+*Defined in [packages/catalog/api.ts:531](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L531)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **Canceled**: = "Canceled"
 
-*Defined in [packages/catalog/api.ts:533](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L533)*
+*Defined in [packages/catalog/api.ts:533](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L533)*
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 • **Completed**: = "Completed"
 
-*Defined in [packages/catalog/api.ts:530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L530)*
+*Defined in [packages/catalog/api.ts:530](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L530)*
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **Created**: = "Created"
 
-*Defined in [packages/catalog/api.ts:526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L526)*
+*Defined in [packages/catalog/api.ts:526](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L526)*
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • **Denied**: = "Denied"
 
-*Defined in [packages/catalog/api.ts:532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L532)*
+*Defined in [packages/catalog/api.ts:532](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L532)*
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 • **Failed**: = "Failed"
 
-*Defined in [packages/catalog/api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L529)*
+*Defined in [packages/catalog/api.ts:529](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L529)*
 
 ___
 
@@ -79,4 +79,4 @@ ___
 
 • **Ordered**: = "Ordered"
 
-*Defined in [packages/catalog/api.ts:528](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L528)*
+*Defined in [packages/catalog/api.ts:528](https://github.com/fhlavac/javascript-clients/blob/master/packages/catalog/api.ts#L528)*

@@ -25,7 +25,7 @@
 
 • **description**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3662)*
+*Defined in [packages/topological-inventory/api.ts:3662](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3662)*
 
 **`memberof`** Tenant
 
@@ -35,7 +35,7 @@ ___
 
 • **external_tenant**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3668)*
+*Defined in [packages/topological-inventory/api.ts:3668](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3668)*
 
 **`memberof`** Tenant
 
@@ -45,7 +45,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3650)*
+*Defined in [packages/topological-inventory/api.ts:3650](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3650)*
 
 ID of the resource
 
@@ -57,6 +57,6 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:3656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3656)*
+*Defined in [packages/topological-inventory/api.ts:3656](https://github.com/fhlavac/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3656)*
 
 **`memberof`** Tenant

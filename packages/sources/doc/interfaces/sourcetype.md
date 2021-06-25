@@ -29,7 +29,7 @@
 
 • **created_at**? : *string*
 
-*Defined in [packages/sources/api.ts:662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L662)*
+*Defined in [packages/sources/api.ts:662](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L662)*
 
 **`memberof`** SourceType
 
@@ -39,7 +39,7 @@ ___
 
 • **icon_url**? : *string*
 
-*Defined in [packages/sources/api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L668)*
+*Defined in [packages/sources/api.ts:668](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L668)*
 
 **`memberof`** SourceType
 
@@ -49,7 +49,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/sources/api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L674)*
+*Defined in [packages/sources/api.ts:674](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L674)*
 
 ID of the resource
 
@@ -61,7 +61,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/sources/api.ts:680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L680)*
+*Defined in [packages/sources/api.ts:680](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L680)*
 
 **`memberof`** SourceType
 
@@ -71,7 +71,7 @@ ___
 
 • **product_name**? : *string*
 
-*Defined in [packages/sources/api.ts:686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L686)*
+*Defined in [packages/sources/api.ts:686](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L686)*
 
 **`memberof`** SourceType
 
@@ -81,7 +81,7 @@ ___
 
 • **schema**? : *string*
 
-*Defined in [packages/sources/api.ts:692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L692)*
+*Defined in [packages/sources/api.ts:692](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L692)*
 
 **`memberof`** SourceType
 
@@ -91,7 +91,7 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [packages/sources/api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L698)*
+*Defined in [packages/sources/api.ts:698](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L698)*
 
 **`memberof`** SourceType
 
@@ -101,6 +101,6 @@ ___
 
 • **vendor**? : *string*
 
-*Defined in [packages/sources/api.ts:704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L704)*
+*Defined in [packages/sources/api.ts:704](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L704)*
 
 **`memberof`** SourceType

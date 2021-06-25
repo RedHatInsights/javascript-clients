@@ -33,7 +33,7 @@
 
 • **authtype**? : *string*
 
-*Defined in [packages/sources/api.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L199)*
+*Defined in [packages/sources/api.ts:199](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L199)*
 
 **`memberof`** Authentication
 
@@ -43,7 +43,7 @@ ___
 
 • **availability_status**? : *string*
 
-*Defined in [packages/sources/api.ts:205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L205)*
+*Defined in [packages/sources/api.ts:205](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L205)*
 
 **`memberof`** Authentication
 
@@ -53,7 +53,7 @@ ___
 
 • **availability_status_error**? : *string*
 
-*Defined in [packages/sources/api.ts:211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L211)*
+*Defined in [packages/sources/api.ts:211](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L211)*
 
 **`memberof`** Authentication
 
@@ -63,7 +63,7 @@ ___
 
 • **extra**? : *[AuthenticationExtra](authenticationextra.md)*
 
-*Defined in [packages/sources/api.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L217)*
+*Defined in [packages/sources/api.ts:217](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L217)*
 
 **`memberof`** Authentication
 
@@ -73,7 +73,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/sources/api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L223)*
+*Defined in [packages/sources/api.ts:223](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L223)*
 
 ID of the resource
 
@@ -85,7 +85,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/sources/api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L229)*
+*Defined in [packages/sources/api.ts:229](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L229)*
 
 **`memberof`** Authentication
 
@@ -95,7 +95,7 @@ ___
 
 • **password**? : *string*
 
-*Defined in [packages/sources/api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L235)*
+*Defined in [packages/sources/api.ts:235](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L235)*
 
 **`memberof`** Authentication
 
@@ -105,7 +105,7 @@ ___
 
 • **resource_id**? : *string*
 
-*Defined in [packages/sources/api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L241)*
+*Defined in [packages/sources/api.ts:241](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L241)*
 
 ID of the resource
 
@@ -117,7 +117,7 @@ ___
 
 • **resource_type**? : *string*
 
-*Defined in [packages/sources/api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L247)*
+*Defined in [packages/sources/api.ts:247](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L247)*
 
 **`memberof`** Authentication
 
@@ -127,7 +127,7 @@ ___
 
 • **source_id**? : *string*
 
-*Defined in [packages/sources/api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L253)*
+*Defined in [packages/sources/api.ts:253](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L253)*
 
 ID of the resource
 
@@ -139,7 +139,7 @@ ___
 
 • **tenant**? : *string*
 
-*Defined in [packages/sources/api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L259)*
+*Defined in [packages/sources/api.ts:259](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L259)*
 
 **`memberof`** Authentication
 
@@ -149,6 +149,6 @@ ___
 
 • **username**? : *string*
 
-*Defined in [packages/sources/api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L265)*
+*Defined in [packages/sources/api.ts:265](https://github.com/fhlavac/javascript-clients/blob/master/packages/sources/api.ts#L265)*
 
 **`memberof`** Authentication

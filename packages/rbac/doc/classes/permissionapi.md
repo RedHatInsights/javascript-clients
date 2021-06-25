@@ -37,7 +37,7 @@ PermissionApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [packages/rbac/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [packages/rbac/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [packages/rbac/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [packages/rbac/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [packages/rbac/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [packages/rbac/base.ts:51](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [packages/rbac/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [packages/rbac/base.ts:49](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
 
 ## Methods
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **listPermissionOptions**(`field`: "application" | "resource_type" | "verb", `limit?`: number, `offset?`: number, `application?`: string, `resourceType?`: string, `verb?`: string, `options?`: any): *Promise‹AxiosResponse‹[PermissionOptionsPagination](../interfaces/permissionoptionspagination.md)››*
 
-*Defined in [packages/rbac/api.ts:4309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4309)*
+*Defined in [packages/rbac/api.ts:4317](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L4317)*
 
 By default, options of application is returned. And could be resource_type or verb on demand.
 
@@ -115,7 +115,7 @@ ___
 
 ▸ **listPermissions**(`limit?`: number, `offset?`: number, `orderBy?`: "application" | "resource_type" | "verb" | "permission", `application?`: string, `resourceType?`: string, `verb?`: string, `permission?`: string, `excludeGlobals?`: "true" | "false", `options?`: any): *Promise‹AxiosResponse‹[PermissionPagination](../interfaces/permissionpagination.md)››*
 
-*Defined in [packages/rbac/api.ts:4328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4328)*
+*Defined in [packages/rbac/api.ts:4336](https://github.com/fhlavac/javascript-clients/blob/master/packages/rbac/api.ts#L4336)*
 
 By default, responses are sorted in ascending order by permission application.
 
