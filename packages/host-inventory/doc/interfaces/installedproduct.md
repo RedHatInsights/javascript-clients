@@ -26,7 +26,7 @@ Representation of one installed product
 
 • **id**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L829)*
+*Defined in [packages/host-inventory/api.ts:901](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L901)*
 
 The product ID
 
@@ -38,7 +38,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:823](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L823)*
+*Defined in [packages/host-inventory/api.ts:895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L895)*
 
 **`memberof`** InstalledProduct
 
@@ -48,7 +48,7 @@ ___
 
 • **status**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L835)*
+*Defined in [packages/host-inventory/api.ts:907](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L907)*
 
 Subscription status for product
 

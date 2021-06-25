@@ -135,6 +135,18 @@ export interface CanonicalFactsIn {
      * @memberof CanonicalFactsIn
      */
     external_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsIn
+     */
+    provider_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsIn
+     */
+    provider_type: string;
 }
 /**
  *
@@ -196,6 +208,18 @@ export interface CanonicalFactsInAllOf {
      * @memberof CanonicalFactsInAllOf
      */
     external_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsInAllOf
+     */
+    provider_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CanonicalFactsInAllOf
+     */
+    provider_type?: string;
 }
 /**
  *
@@ -257,6 +281,18 @@ export interface CanonicalFactsOut {
      * @memberof CanonicalFactsOut
      */
     external_id?: string | null;
+    /**
+     * Host’s reference in the external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM etc. This field is one of the canonical facts and does not work without provider_type.
+     * @type {string}
+     * @memberof CanonicalFactsOut
+     */
+    provider_id?: string | null;
+    /**
+     * Type of external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM, etc. This field is one of the canonical facts and does not workout provider_id.
+     * @type {string}
+     * @memberof CanonicalFactsOut
+     */
+    provider_type?: string | null;
 }
 /**
  * Data required to create a check-in record for a host.
@@ -318,6 +354,18 @@ export interface CreateCheckIn {
      * @memberof CreateCheckIn
      */
     external_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CreateCheckIn
+     */
+    provider_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CreateCheckIn
+     */
+    provider_type: string;
     /**
      * How long from now to expect another check-in (in minutes).
      * @type {number}
@@ -398,6 +446,18 @@ export interface CreateHostOut {
      * @memberof CreateHostOut
      */
     external_id?: string | null;
+    /**
+     * Host’s reference in the external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM etc. This field is one of the canonical facts and does not work without provider_type.
+     * @type {string}
+     * @memberof CreateHostOut
+     */
+    provider_id?: string | null;
+    /**
+     * Type of external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM, etc. This field is one of the canonical facts and does not workout provider_id.
+     * @type {string}
+     * @memberof CreateHostOut
+     */
+    provider_type?: string | null;
     /**
      * A host’s human-readable display name, e.g. in a form of a domain name.
      * @type {string}
@@ -673,6 +733,18 @@ export interface HostOut {
      * @memberof HostOut
      */
     external_id?: string | null;
+    /**
+     * Host’s reference in the external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM etc. This field is one of the canonical facts and does not work without provider_type.
+     * @type {string}
+     * @memberof HostOut
+     */
+    provider_id?: string | null;
+    /**
+     * Type of external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM, etc. This field is one of the canonical facts and does not workout provider_id.
+     * @type {string}
+     * @memberof HostOut
+     */
+    provider_type?: string | null;
     /**
      * A host’s human-readable display name, e.g. in a form of a domain name.
      * @type {string}
@@ -1120,7 +1192,7 @@ export interface SystemProfile {
      */
     installed_products?: Array<InstalledProduct>;
     /**
-     *
+     * the version number of insights client. supports wildcards
      * @type {string}
      * @memberof SystemProfile
      */
@@ -1216,6 +1288,24 @@ export interface SystemProfile {
      */
     is_marketplace?: boolean;
     /**
+     * Indicates the type of host.
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    host_type?: SystemProfileHostTypeEnum;
+    /**
+     * Indicates the greenboot status of an edge device.
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    greenboot_status?: SystemProfileGreenbootStatusEnum;
+    /**
+     * Indicates whether greenboot detected a rolled back update on an edge device.
+     * @type {boolean}
+     * @memberof SystemProfile
+     */
+    greenboot_fallback_detected?: boolean;
+    /**
      *
      * @type {SystemProfileRhsm}
      * @memberof SystemProfile
@@ -1231,6 +1321,21 @@ export enum SystemProfileSelinuxCurrentModeEnum {
     Enforcing = 'enforcing',
     Permissive = 'permissive',
     Disabled = 'disabled'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum SystemProfileHostTypeEnum {
+    Edge = 'edge'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum SystemProfileGreenbootStatusEnum {
+    Red = 'red',
+    Green = 'green'
 }
 
 /**
@@ -1271,7 +1376,7 @@ export interface SystemProfileByHostOut {
     results: Array<HostSystemProfileOut>;
 }
 /**
- * Object for OS details
+ * Object for OS details. Supports range operations
  * @export
  * @interface SystemProfileOperatingSystem
  */
@@ -1729,6 +1834,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [fqdn] Filter by a host\&#39;s FQDN
          * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
          * @param {string} [insightsId] Search for a host by insights_id
+         * @param {string} [providerId] Search for a host by provider_id
+         * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Search for a host by provider_type
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -1742,7 +1849,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, fields?: object, options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, fields?: object, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/hosts`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -1775,6 +1882,14 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 
             if (insightsId !== undefined) {
                 localVarQueryParameter['insights_id'] = insightsId;
+            }
+
+            if (providerId !== undefined) {
+                localVarQueryParameter['provider_id'] = providerId;
+            }
+
+            if (providerType !== undefined) {
+                localVarQueryParameter['provider_type'] = providerType;
             }
 
             if (branchId !== undefined) {
@@ -2329,6 +2444,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {string} [fqdn] Filter by a host\&#39;s FQDN
          * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
          * @param {string} [insightsId] Search for a host by insights_id
+         * @param {string} [providerId] Search for a host by provider_id
+         * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Search for a host by provider_type
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -2342,8 +2459,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, fields?: object, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
-            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options);
+        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, fields?: object, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2512,6 +2629,8 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [fqdn] Filter by a host\&#39;s FQDN
          * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
          * @param {string} [insightsId] Search for a host by insights_id
+         * @param {string} [providerId] Search for a host by provider_id
+         * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Search for a host by provider_type
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -2525,8 +2644,8 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, fields?: object, options?: any): AxiosPromise<HostQueryOutput> {
-            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(axios, basePath));
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, fields?: object, options?: any): AxiosPromise<HostQueryOutput> {
+            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(axios, basePath));
         },
         /**
          * Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
@@ -2668,6 +2787,8 @@ export class HostsApi extends BaseAPI {
      * @param {string} [fqdn] Filter by a host\&#39;s FQDN
      * @param {string} [hostnameOrId] Search for a host by display_name, fqdn, id
      * @param {string} [insightsId] Search for a host by insights_id
+     * @param {string} [providerId] Search for a host by provider_id
+     * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Search for a host by provider_type
      * @param {string} [branchId] Filter by branch_id
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
@@ -2682,8 +2803,8 @@ export class HostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, fields?: object, options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(this.axios, this.basePath));
+    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: object, fields?: object, options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

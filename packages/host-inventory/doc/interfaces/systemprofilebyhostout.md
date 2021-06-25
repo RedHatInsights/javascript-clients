@@ -28,7 +28,7 @@ Structure of the output of the host system profile query
 
 • **count**: *number*
 
-*Defined in [packages/host-inventory/api.ts:1247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1247)*
+*Defined in [packages/host-inventory/api.ts:1352](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1352)*
 
 A number of entries on the current page.
 
@@ -40,7 +40,7 @@ ___
 
 • **page**: *number*
 
-*Defined in [packages/host-inventory/api.ts:1253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1253)*
+*Defined in [packages/host-inventory/api.ts:1358](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1358)*
 
 A current page number.
 
@@ -52,7 +52,7 @@ ___
 
 • **per_page**: *number*
 
-*Defined in [packages/host-inventory/api.ts:1259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1259)*
+*Defined in [packages/host-inventory/api.ts:1364](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1364)*
 
 A page size – a number of entries per single page.
 
@@ -64,7 +64,7 @@ ___
 
 • **results**: *Array‹[HostSystemProfileOut](hostsystemprofileout.md)›*
 
-*Defined in [packages/host-inventory/api.ts:1271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1271)*
+*Defined in [packages/host-inventory/api.ts:1376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1376)*
 
 Actual host search query result entries.
 
@@ -76,7 +76,7 @@ ___
 
 • **total**: *number*
 
-*Defined in [packages/host-inventory/api.ts:1265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1265)*
+*Defined in [packages/host-inventory/api.ts:1370](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1370)*
 
 A total count of the found entries.
 

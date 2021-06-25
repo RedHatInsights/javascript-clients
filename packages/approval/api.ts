@@ -1185,7 +1185,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
+         * The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver). Program generated child requests are not included.
          * @summary List filtered requests, available to everyone
          * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Desired persona of the current login user
          * @param {number} [limit] Maximum number of items per page. Used by pagination
@@ -1240,7 +1240,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
+         * Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver).
          * @summary List filtered child requests of a request
          * @param {string} requestId ID of a request
          * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Desired persona of the current login user
@@ -1376,7 +1376,7 @@ export const RequestApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
+         * The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver). Program generated child requests are not included.
          * @summary List filtered requests, available to everyone
          * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Desired persona of the current login user
          * @param {number} [limit] Maximum number of items per page. Used by pagination
@@ -1394,7 +1394,7 @@ export const RequestApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
+         * Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver).
          * @summary List filtered child requests of a request
          * @param {string} requestId ID of a request
          * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Desired persona of the current login user
@@ -1456,7 +1456,7 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
             return RequestApiFp(configuration).createRequest(requestIn, options).then((request) => request(axios, basePath));
         },
         /**
-         * The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
+         * The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver). Program generated child requests are not included.
          * @summary List filtered requests, available to everyone
          * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Desired persona of the current login user
          * @param {number} [limit] Maximum number of items per page. Used by pagination
@@ -1470,7 +1470,7 @@ export const RequestApiFactory = function (configuration?: Configuration, basePa
             return RequestApiFp(configuration).listRequests(xRhPersona, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
+         * Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver).
          * @summary List filtered child requests of a request
          * @param {string} requestId ID of a request
          * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Desired persona of the current login user
@@ -1523,7 +1523,7 @@ export class RequestApi extends BaseAPI {
     }
 
     /**
-     * The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
+     * The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver). Program generated child requests are not included.
      * @summary List filtered requests, available to everyone
      * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Desired persona of the current login user
      * @param {number} [limit] Maximum number of items per page. Used by pagination
@@ -1539,7 +1539,7 @@ export class RequestApi extends BaseAPI {
     }
 
     /**
-     * Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
+     * Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver).
      * @summary List filtered child requests of a request
      * @param {string} requestId ID of a request
      * @param {'approval/admin' | 'approval/approver' | 'approval/requester'} [xRhPersona] Desired persona of the current login user
