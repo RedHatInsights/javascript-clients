@@ -115,7 +115,7 @@ ___
 
 *Defined in [packages/approval/api.ts:1537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1537)*
 
-The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver). Program generated child requests are not included.
+The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver). Program generated child requests are not included.
 
 **`summary`** List filtered requests, available to everyone
 
@@ -144,7 +144,7 @@ ___
 
 *Defined in [packages/approval/api.ts:1550](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1550)*
 
-Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requseter, or approval/approver).
+Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver).
 
 **`summary`** List filtered child requests of a request
 

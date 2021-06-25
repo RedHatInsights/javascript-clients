@@ -88,7 +88,7 @@ ___
 
 ▸ **createSetting**(`setting`: [Setting](../interfaces/setting.md), `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/catalog/api.ts:7811](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7811)*
+*Defined in [packages/catalog/api.ts:7974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7974)*
 
 Create Tenant Setting
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **destroySetting**(`name`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/catalog/api.ts:7823](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7823)*
+*Defined in [packages/catalog/api.ts:7986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7986)*
 
 Delete a Tenant Setting
 
@@ -138,7 +138,7 @@ ___
 
 ▸ **listSettings**(`options?`: any): *Promise‹AxiosResponse‹[TenantSettings](../interfaces/tenantsettings.md)››*
 
-*Defined in [packages/catalog/api.ts:7834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7834)*
+*Defined in [packages/catalog/api.ts:7997](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7997)*
 
 List Tenant Settings
 
@@ -162,7 +162,7 @@ ___
 
 ▸ **showSetting**(`name`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/catalog/api.ts:7846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7846)*
+*Defined in [packages/catalog/api.ts:8009](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L8009)*
 
 Get a specific Tenant Setting
 
@@ -187,7 +187,7 @@ ___
 
 ▸ **updateSetting**(`name`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/catalog/api.ts:7858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7858)*
+*Defined in [packages/catalog/api.ts:8021](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L8021)*
 
 Update a Tenant Setting
 

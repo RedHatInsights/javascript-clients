@@ -89,7 +89,7 @@ ___
 
 ▸ **getCurrentState**(`options?`: any): *Promise‹AxiosResponse‹[AccountState](../interfaces/accountstate.md)››*
 
-*Defined in [packages/config-manager/api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L590)*
+*Defined in [packages/config-manager/api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L597)*
 
 **`summary`** Get the current state for requesting account
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **getPlaybookById**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹string››*
 
-*Defined in [packages/config-manager/api.ts:602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L602)*
+*Defined in [packages/config-manager/api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L609)*
 
 **`summary`** Get ansible playbook for current state configuration
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **getPlaybookPreview**(`state`: [State](../interfaces/state.md), `options?`: any): *Promise‹AxiosResponse‹string››*
 
-*Defined in [packages/config-manager/api.ts:614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L614)*
+*Defined in [packages/config-manager/api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L621)*
 
 **`summary`** Get a preview of the playbook built from the provided state map
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **getStateById**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[StateArchive](../interfaces/statearchive.md)››*
 
-*Defined in [packages/config-manager/api.ts:626](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L626)*
+*Defined in [packages/config-manager/api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L633)*
 
 **`summary`** Get single state change for requesting account
 
@@ -178,9 +178,9 @@ ___
 
 ###  getStates
 
-▸ **getStates**(`limit?`: number, `offset?`: number, `options?`: any): *Promise‹AxiosResponse‹[StateArchives](../interfaces/statearchives.md)››*
+▸ **getStates**(`limit?`: number, `offset?`: number, `sortBy?`: "created_at" | "created_at:asc" | "created_at:desc", `options?`: any): *Promise‹AxiosResponse‹[StateArchives](../interfaces/statearchives.md)››*
 
-*Defined in [packages/config-manager/api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L639)*
+*Defined in [packages/config-manager/api.ts:647](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L647)*
 
 **`summary`** Get archive of state changes for requesting account
 
@@ -194,6 +194,7 @@ Name | Type |
 ------ | ------ |
 `limit?` | number |
 `offset?` | number |
+`sortBy?` | "created_at" &#124; "created_at:asc" &#124; "created_at:desc" |
 `options?` | any |
 
 **Returns:** *Promise‹AxiosResponse‹[StateArchives](../interfaces/statearchives.md)››*
@@ -204,7 +205,7 @@ ___
 
 ▸ **updateStates**(`state`: [State](../interfaces/state.md), `options?`: any): *Promise‹AxiosResponse‹[AccountState](../interfaces/accountstate.md)››*
 
-*Defined in [packages/config-manager/api.ts:651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L651)*
+*Defined in [packages/config-manager/api.ts:659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L659)*
 
 **`summary`** Update and roll out configuration state for requesting account
 
