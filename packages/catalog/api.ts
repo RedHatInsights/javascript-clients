@@ -1027,6 +1027,35 @@ export interface ProgressMessagesCollection {
     data?: Array<ProgressMessage>;
 }
 /**
+ * The desired increment relative to its current position, or placement to top or bottom of the list.
+ * @export
+ * @interface Reposition
+ */
+export interface Reposition {
+    /**
+     * Move the record up (negative) or down (positive) in the list. Do not set it if placement is used
+     * @type {number}
+     * @memberof Reposition
+     */
+    increment?: number | null;
+    /**
+     * Place the record to the top or bottom of the list. Do not set it if increment is used
+     * @type {string}
+     * @memberof Reposition
+     */
+    placement?: RepositionPlacementEnum;
+}
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum RepositionPlacementEnum {
+    Bottom = 'bottom',
+    Top = 'top'
+}
+
+/**
  * Resource object definition
  * @export
  * @interface ResourceObject
@@ -1203,6 +1232,44 @@ export enum SharePolicyPermissionsEnum {
 /**
  *
  * @export
+ * @interface SubstitutionParameters
+ */
+export interface SubstitutionParameters {
+    /**
+     * substitutable string
+     * @type {string}
+     * @memberof SubstitutionParameters
+     */
+    attributes?: SubstitutionParametersAttributesEnum;
+}
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum SubstitutionParametersAttributesEnum {
+    OrderApprovalDecision = 'order.approval.decision',
+    OrderApprovalReason = 'order.approval.reason',
+    OrderApprovalUpdatedAt = 'order.approval.updated_at',
+    OrderCreatedAt = 'order.created_at',
+    OrderOrderId = 'order.order_id',
+    OrderOrderedByEmail = 'order.ordered_by.email',
+    OrderOrderedByName = 'order.ordered_by.name',
+    ProductDescription = 'product.description',
+    ProductHelpUrl = 'product.help_url',
+    ProductLongDescription = 'product.long_description',
+    ProductName = 'product.name',
+    ProductPlatform = 'product.platform',
+    ProductPortfolioDescription = 'product.portfolio.description',
+    ProductPortfolioName = 'product.portfolio.name',
+    ProductStatus = 'product.status',
+    ProductSupportUrl = 'product.support_url',
+    ProductVendor = 'product.vendor'
+}
+
+/**
+ *
+ * @export
  * @interface Tag
  */
 export interface Tag {
@@ -1256,6 +1323,12 @@ export interface Tenant {
      * @memberof Tenant
      */
     id?: string;
+    /**
+     * Tenant Seeded
+     * @type {boolean}
+     * @memberof Tenant
+     */
+    seeded?: boolean;
 }
 /**
  * The tenant settings and schema
@@ -3762,6 +3835,57 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
+         * Adjust the position of an order process related to others by an offset number
+         * @summary Adjust the position of an order process
+         * @param {string} id ID of the resource
+         * @param {Reposition} reposition How many levels should the sequence be brought up or down
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        reposition: async (id: string, reposition: Reposition, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling reposition.');
+            }
+            // verify required parameter 'reposition' is not null or undefined
+            if (reposition === null || reposition === undefined) {
+                throw new RequiredError('reposition','Required parameter reposition was null or undefined when calling reposition.');
+            }
+            const localVarPath = `/order_processes/{id}/reposition`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuth required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof reposition !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(reposition !== undefined ? reposition : {}) : (reposition || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets the order process specified by the order process ID.
          * @summary Get a specific order process
          * @param {string} id ID of the resource
@@ -4038,6 +4162,21 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Adjust the position of an order process related to others by an offset number
+         * @summary Adjust the position of an order process
+         * @param {string} id ID of the resource
+         * @param {Reposition} reposition How many levels should the sequence be brought up or down
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async reposition(id: string, reposition: Reposition, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await OrderProcessApiAxiosParamCreator(configuration).reposition(id, reposition, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Gets the order process specified by the order process ID.
          * @summary Get a specific order process
          * @param {string} id ID of the resource
@@ -4180,6 +4319,17 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          */
         removeOrderProcessAssociation(id: string, orderProcessAssociationsToRemove: OrderProcessAssociationsToRemove, options?: any): AxiosPromise<OrderProcess> {
             return OrderProcessApiFp(configuration).removeOrderProcessAssociation(id, orderProcessAssociationsToRemove, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Adjust the position of an order process related to others by an offset number
+         * @summary Adjust the position of an order process
+         * @param {string} id ID of the resource
+         * @param {Reposition} reposition How many levels should the sequence be brought up or down
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        reposition(id: string, reposition: Reposition, options?: any): AxiosPromise<void> {
+            return OrderProcessApiFp(configuration).reposition(id, reposition, options).then((request) => request(axios, basePath));
         },
         /**
          * Gets the order process specified by the order process ID.
@@ -4328,6 +4478,19 @@ export class OrderProcessApi extends BaseAPI {
      */
     public removeOrderProcessAssociation(id: string, orderProcessAssociationsToRemove: OrderProcessAssociationsToRemove, options?: any) {
         return OrderProcessApiFp(this.configuration).removeOrderProcessAssociation(id, orderProcessAssociationsToRemove, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Adjust the position of an order process related to others by an offset number
+     * @summary Adjust the position of an order process
+     * @param {string} id ID of the resource
+     * @param {Reposition} reposition How many levels should the sequence be brought up or down
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OrderProcessApi
+     */
+    public reposition(id: string, reposition: Reposition, options?: any) {
+        return OrderProcessApiFp(this.configuration).reposition(id, reposition, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

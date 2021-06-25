@@ -334,10 +334,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @summary Get archive of state changes for requesting account
          * @param {number} [limit] Maximum number of results to return
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
+         * @param {'created_at' | 'created_at:asc' | 'created_at:desc'} [sortBy]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getStates: async (limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
+        getStates: async (limit?: number, offset?: number, sortBy?: 'created_at' | 'created_at:asc' | 'created_at:desc', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/states`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -354,6 +355,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
             }
 
 
@@ -477,11 +482,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @summary Get archive of state changes for requesting account
          * @param {number} [limit] Maximum number of results to return
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
+         * @param {'created_at' | 'created_at:asc' | 'created_at:desc'} [sortBy]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getStates(limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StateArchives>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getStates(limit, offset, options);
+        async getStates(limit?: number, offset?: number, sortBy?: 'created_at' | 'created_at:asc' | 'created_at:desc', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StateArchives>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getStates(limit, offset, sortBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -554,11 +560,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @summary Get archive of state changes for requesting account
          * @param {number} [limit] Maximum number of results to return
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
+         * @param {'created_at' | 'created_at:asc' | 'created_at:desc'} [sortBy]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getStates(limit?: number, offset?: number, options?: any): AxiosPromise<StateArchives> {
-            return DefaultApiFp(configuration).getStates(limit, offset, options).then((request) => request(axios, basePath));
+        getStates(limit?: number, offset?: number, sortBy?: 'created_at' | 'created_at:asc' | 'created_at:desc', options?: any): AxiosPromise<StateArchives> {
+            return DefaultApiFp(configuration).getStates(limit, offset, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -632,12 +639,13 @@ export class DefaultApi extends BaseAPI {
      * @summary Get archive of state changes for requesting account
      * @param {number} [limit] Maximum number of results to return
      * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
+     * @param {'created_at' | 'created_at:asc' | 'created_at:desc'} [sortBy]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getStates(limit?: number, offset?: number, options?: any) {
-        return DefaultApiFp(this.configuration).getStates(limit, offset, options).then((request) => request(this.axios, this.basePath));
+    public getStates(limit?: number, offset?: number, sortBy?: 'created_at' | 'created_at:asc' | 'created_at:desc', options?: any) {
+        return DefaultApiFp(this.configuration).getStates(limit, offset, sortBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

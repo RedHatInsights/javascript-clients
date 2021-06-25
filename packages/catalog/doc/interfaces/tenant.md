@@ -16,6 +16,7 @@
 
 * [external_tenant](tenant.md#optional-external_tenant)
 * [id](tenant.md#optional-id)
+* [seeded](tenant.md#optional-seeded)
 
 ## Properties
 
@@ -23,7 +24,7 @@
 
 • **external_tenant**? : *string*
 
-*Defined in [packages/catalog/api.ts:1252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1252)*
+*Defined in [packages/catalog/api.ts:1319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1319)*
 
 The Request account number
 
@@ -35,8 +36,20 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/catalog/api.ts:1258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1258)*
+*Defined in [packages/catalog/api.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1325)*
 
 The internal tenant id
+
+**`memberof`** Tenant
+
+___
+
+### `Optional` seeded
+
+• **seeded**? : *boolean*
+
+*Defined in [packages/catalog/api.ts:1331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1331)*
+
+Tenant Seeded
 
 **`memberof`** Tenant

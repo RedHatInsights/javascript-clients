@@ -76,7 +76,7 @@ Name | Type |
 
 * **getStateById**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getStates**(`limit?`: number, `offset?`: number, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **getStates**(`limit?`: number, `offset?`: number, `sortBy?`: "created_at" | "created_at:asc" | "created_at:desc", `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **updateStates**(`state`: [State](interfaces/state.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
@@ -86,7 +86,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/config-manager/api.ts:511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L511)*
+*Defined in [packages/config-manager/api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L517)*
 
 DefaultApi - factory interface
 
@@ -110,7 +110,7 @@ Name | Type |
 
 * **getStateById**(`id`: string, `options?`: any): *AxiosPromise‹[StateArchive](interfaces/statearchive.md)›*
 
-* **getStates**(`limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[StateArchives](interfaces/statearchives.md)›*
+* **getStates**(`limit?`: number, `offset?`: number, `sortBy?`: "created_at" | "created_at:asc" | "created_at:desc", `options?`: any): *AxiosPromise‹[StateArchives](interfaces/statearchives.md)›*
 
 * **updateStates**(`state`: [State](interfaces/state.md), `options?`: any): *AxiosPromise‹[AccountState](interfaces/accountstate.md)›*
 
@@ -120,7 +120,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/config-manager/api.ts:418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L418)*
+*Defined in [packages/config-manager/api.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L423)*
 
 DefaultApi - functional programming interface
 
@@ -142,7 +142,7 @@ Name | Type |
 
 * **getStateById**(`id`: string, `options?`: any): *Promise‹function›*
 
-* **getStates**(`limit?`: number, `offset?`: number, `options?`: any): *Promise‹function›*
+* **getStates**(`limit?`: number, `offset?`: number, `sortBy?`: "created_at" | "created_at:asc" | "created_at:desc", `options?`: any): *Promise‹function›*
 
 * **updateStates**(`state`: [State](interfaces/state.md), `options?`: any): *Promise‹function›*
 
