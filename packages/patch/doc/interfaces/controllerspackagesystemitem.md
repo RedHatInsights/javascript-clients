@@ -15,6 +15,7 @@
 ### Properties
 
 * [available_evra](controllerspackagesystemitem.md#optional-available_evra)
+* [display_name](controllerspackagesystemitem.md#optional-display_name)
 * [id](controllerspackagesystemitem.md#optional-id)
 * [installed_evra](controllerspackagesystemitem.md#optional-installed_evra)
 * [updatable](controllerspackagesystemitem.md#optional-updatable)
@@ -25,7 +26,17 @@
 
 • **available_evra**? : *string*
 
-*Defined in [packages/patch/api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L535)*
+*Defined in [packages/patch/api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L535)*
+
+**`memberof`** ControllersPackageSystemItem
+
+___
+
+### `Optional` display_name
+
+• **display_name**? : *string*
+
+*Defined in [packages/patch/api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L541)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -35,7 +46,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/patch/api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L541)*
+*Defined in [packages/patch/api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L547)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -45,7 +56,7 @@ ___
 
 • **installed_evra**? : *string*
 
-*Defined in [packages/patch/api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L547)*
+*Defined in [packages/patch/api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L553)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -55,6 +66,6 @@ ___
 
 • **updatable**? : *boolean*
 
-*Defined in [packages/patch/api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L553)*
+*Defined in [packages/patch/api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L559)*
 
 **`memberof`** ControllersPackageSystemItem

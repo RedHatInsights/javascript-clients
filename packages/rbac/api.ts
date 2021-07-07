@@ -2260,12 +2260,13 @@ export const AccessApiAxiosParamCreator = function (configuration?: Configuratio
          * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
          * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
+         * @param {'application' | 'resource_type' | 'verb'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-application
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalAccess: async (application: string, username?: string, limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
+        getPrincipalAccess: async (application: string, username?: string, orderBy?: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'application' is not null or undefined
             if (application === null || application === undefined) {
                 throw new RequiredError('application','Required parameter application was null or undefined when calling getPrincipalAccess.');
@@ -2292,6 +2293,10 @@ export const AccessApiAxiosParamCreator = function (configuration?: Configuratio
 
             if (username !== undefined) {
                 localVarQueryParameter['username'] = username;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
             }
 
             if (limit !== undefined) {
@@ -2329,13 +2334,14 @@ export const AccessApiFp = function(configuration?: Configuration) {
          * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
          * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
+         * @param {'application' | 'resource_type' | 'verb'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-application
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getPrincipalAccess(application: string, username?: string, limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccessPagination>> {
-            const localVarAxiosArgs = await AccessApiAxiosParamCreator(configuration).getPrincipalAccess(application, username, limit, offset, options);
+        async getPrincipalAccess(application: string, username?: string, orderBy?: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccessPagination>> {
+            const localVarAxiosArgs = await AccessApiAxiosParamCreator(configuration).getPrincipalAccess(application, username, orderBy, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2355,13 +2361,14 @@ export const AccessApiFactory = function (configuration?: Configuration, basePat
          * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
          * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
+         * @param {'application' | 'resource_type' | 'verb'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-application
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalAccess(application: string, username?: string, limit?: number, offset?: number, options?: any): AxiosPromise<AccessPagination> {
-            return AccessApiFp(configuration).getPrincipalAccess(application, username, limit, offset, options).then((request) => request(axios, basePath));
+        getPrincipalAccess(application: string, username?: string, orderBy?: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, options?: any): AxiosPromise<AccessPagination> {
+            return AccessApiFp(configuration).getPrincipalAccess(application, username, orderBy, limit, offset, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2378,14 +2385,15 @@ export class AccessApi extends BaseAPI {
      * @summary Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
      * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
      * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
+     * @param {'application' | 'resource_type' | 'verb'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-application
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccessApi
      */
-    public getPrincipalAccess(application: string, username?: string, limit?: number, offset?: number, options?: any) {
-        return AccessApiFp(this.configuration).getPrincipalAccess(application, username, limit, offset, options).then((request) => request(this.axios, this.basePath));
+    public getPrincipalAccess(application: string, username?: string, orderBy?: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, options?: any) {
+        return AccessApiFp(this.configuration).getPrincipalAccess(application, username, orderBy, limit, offset, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -4832,11 +4840,11 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
          * @summary List the principals for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name or email.
+         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name and/or email.
          * @param {string} [usernames] Comma separated usernames of principals to get. If match_criteria is specified, only the first username will be picked up for search.
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
          * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
-         * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
+         * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
          * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
@@ -4922,11 +4930,11 @@ export const PrincipalApiFp = function(configuration?: Configuration) {
          * @summary List the principals for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name or email.
+         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name and/or email.
          * @param {string} [usernames] Comma separated usernames of principals to get. If match_criteria is specified, only the first username will be picked up for search.
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
          * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
-         * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
+         * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
          * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
@@ -4953,11 +4961,11 @@ export const PrincipalApiFactory = function (configuration?: Configuration, base
          * @summary List the principals for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name or email.
+         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name and/or email.
          * @param {string} [usernames] Comma separated usernames of principals to get. If match_criteria is specified, only the first username will be picked up for search.
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
          * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
-         * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
+         * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
          * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {*} [options] Override http request option.
@@ -4981,11 +4989,11 @@ export class PrincipalApi extends BaseAPI {
      * @summary List the principals for a tenant
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
-     * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name or email.
+     * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name and/or email.
      * @param {string} [usernames] Comma separated usernames of principals to get. If match_criteria is specified, only the first username will be picked up for search.
      * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
      * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
-     * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back. Could not be used with: usernames, email, admin_only
+     * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
      * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
      * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
      * @param {*} [options] Override http request option.

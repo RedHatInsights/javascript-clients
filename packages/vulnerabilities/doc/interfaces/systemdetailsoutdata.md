@@ -17,6 +17,7 @@
 * [last_evaluation](systemdetailsoutdata.md#last_evaluation)
 * [last_upload](systemdetailsoutdata.md#last_upload)
 * [opt_out](systemdetailsoutdata.md#opt_out)
+* [os](systemdetailsoutdata.md#os)
 * [rules_evaluation](systemdetailsoutdata.md#rules_evaluation)
 * [stale](systemdetailsoutdata.md#optional-stale)
 * [tags](systemdetailsoutdata.md#tags)
@@ -28,7 +29,7 @@
 
 • **last_evaluation**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:2069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2069)*
+*Defined in [packages/vulnerabilities/api.ts:2149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2149)*
 
 Date of last evaluation.
 
@@ -40,7 +41,7 @@ ___
 
 • **last_upload**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:2087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2087)*
+*Defined in [packages/vulnerabilities/api.ts:2167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2167)*
 
 Date of the latest upload of archive.
 
@@ -52,9 +53,21 @@ ___
 
 • **opt_out**: *boolean*
 
-*Defined in [packages/vulnerabilities/api.ts:2081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2081)*
+*Defined in [packages/vulnerabilities/api.ts:2161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2161)*
 
 System opt out status.
+
+**`memberof`** SystemDetailsOutData
+
+___
+
+###  os
+
+• **os**: *string*
+
+*Defined in [packages/vulnerabilities/api.ts:2185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2185)*
+
+Operating system.
 
 **`memberof`** SystemDetailsOutData
 
@@ -64,7 +77,7 @@ ___
 
 • **rules_evaluation**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:2075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2075)*
+*Defined in [packages/vulnerabilities/api.ts:2155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2155)*
 
 Date of last security rules evaluation.
 
@@ -76,7 +89,7 @@ ___
 
 • **stale**? : *boolean*
 
-*Defined in [packages/vulnerabilities/api.ts:2093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2093)*
+*Defined in [packages/vulnerabilities/api.ts:2173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2173)*
 
 System stale status.
 
@@ -88,7 +101,7 @@ ___
 
 • **tags**: *Array‹[SystemDetailsOutDataTags](systemdetailsoutdatatags.md)›*
 
-*Defined in [packages/vulnerabilities/api.ts:2105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2105)*
+*Defined in [packages/vulnerabilities/api.ts:2191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2191)*
 
 **`memberof`** SystemDetailsOutData
 
@@ -98,7 +111,7 @@ ___
 
 • **updated**? : *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:2099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2099)*
+*Defined in [packages/vulnerabilities/api.ts:2179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2179)*
 
 Date of the lastest upload of archive taken from Inventory syndicated data.
 

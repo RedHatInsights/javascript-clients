@@ -28,7 +28,7 @@
 
 • **advisory_type**? : *number*
 
-*Defined in [packages/patch/api.ts:262](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L262)*
+*Defined in [packages/patch/api.ts:262](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L262)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -38,7 +38,7 @@ ___
 
 • **applicable_systems**? : *number*
 
-*Defined in [packages/patch/api.ts:268](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L268)*
+*Defined in [packages/patch/api.ts:268](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L268)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -48,7 +48,7 @@ ___
 
 • **cve_count**? : *number*
 
-*Defined in [packages/patch/api.ts:274](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L274)*
+*Defined in [packages/patch/api.ts:274](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L274)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -58,7 +58,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:280](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L280)*
+*Defined in [packages/patch/api.ts:280](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L280)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -68,7 +68,7 @@ ___
 
 • **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:286](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L286)*
+*Defined in [packages/patch/api.ts:286](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L286)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -78,7 +78,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L292)*
+*Defined in [packages/patch/api.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L292)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -88,6 +88,6 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L298)*
+*Defined in [packages/patch/api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L298)*
 
 **`memberof`** ControllersAdvisoryItemAttributes

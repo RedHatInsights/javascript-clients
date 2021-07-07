@@ -19,6 +19,7 @@
 * [description](insightsrule.md#description)
 * [kbase_node_id](insightsrule.md#kbase_node_id)
 * [playbook_count](insightsrule.md#playbook_count)
+* [publish_date](insightsrule.md#publish_date)
 * [reboot_required](insightsrule.md#reboot_required)
 * [rule_id](insightsrule.md#rule_id)
 * [rule_impact](insightsrule.md#rule_impact)
@@ -82,6 +83,18 @@ ___
 *Defined in [packages/vulnerabilities/api.ts:1012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1012)*
 
 Number of available Ansible playbooks for remediation/mitigation.
+
+**`memberof`** InsightsRule
+
+___
+
+###  publish_date
+
+• **publish_date**: *string | null*
+
+*Defined in [packages/vulnerabilities/api.ts:1048](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1048)*
+
+Date when the rule was published.
 
 **`memberof`** InsightsRule
 
