@@ -23,7 +23,7 @@
 
 • **op**? : *string*
 
-*Defined in [packages/patch/api.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L336)*
+*Defined in [packages/patch/api.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L336)*
 
 **`memberof`** ControllersFilterData
 
@@ -33,6 +33,6 @@ ___
 
 • **values**? : *Array‹string›*
 
-*Defined in [packages/patch/api.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L342)*
+*Defined in [packages/patch/api.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L342)*
 
 **`memberof`** ControllersFilterData

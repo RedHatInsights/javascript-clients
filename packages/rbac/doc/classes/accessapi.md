@@ -82,9 +82,9 @@ ___
 
 ###  getPrincipalAccess
 
-▸ **getPrincipalAccess**(`application`: string, `username?`: string, `limit?`: number, `offset?`: number, `options?`: any): *Promise‹AxiosResponse‹[AccessPagination](../interfaces/accesspagination.md)››*
+▸ **getPrincipalAccess**(`application`: string, `username?`: string, `orderBy?`: "application" | "resource_type" | "verb", `limit?`: number, `offset?`: number, `options?`: any): *Promise‹AxiosResponse‹[AccessPagination](../interfaces/accesspagination.md)››*
 
-*Defined in [packages/rbac/api.ts:2387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2387)*
+*Defined in [packages/rbac/api.ts:2395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2395)*
 
 Access responses are sorted in ascending order by an ID internal to the database
 
@@ -100,6 +100,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `application` | string | The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications. |
 `username?` | string | - |
+`orderBy?` | "application" &#124; "resource_type" &#124; "verb" | - |
 `limit?` | number | - |
 `offset?` | number | - |
 `options?` | any | - |

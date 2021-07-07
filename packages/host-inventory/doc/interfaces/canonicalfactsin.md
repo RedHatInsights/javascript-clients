@@ -20,6 +20,8 @@
 * [insights_id](canonicalfactsin.md#insights_id)
 * [ip_addresses](canonicalfactsin.md#ip_addresses)
 * [mac_addresses](canonicalfactsin.md#mac_addresses)
+* [provider_id](canonicalfactsin.md#provider_id)
+* [provider_type](canonicalfactsin.md#provider_type)
 * [rhel_machine_id](canonicalfactsin.md#rhel_machine_id)
 * [satellite_id](canonicalfactsin.md#satellite_id)
 * [subscription_manager_id](canonicalfactsin.md#subscription_manager_id)
@@ -81,6 +83,26 @@ ___
 • **mac_addresses**: *Array‹string›*
 
 *Defined in [packages/host-inventory/api.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L131)*
+
+**`memberof`** CanonicalFactsIn
+
+___
+
+###  provider_id
+
+• **provider_id**: *string*
+
+*Defined in [packages/host-inventory/api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L143)*
+
+**`memberof`** CanonicalFactsIn
+
+___
+
+###  provider_type
+
+• **provider_type**: *string*
+
+*Defined in [packages/host-inventory/api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L149)*
 
 **`memberof`** CanonicalFactsIn
 

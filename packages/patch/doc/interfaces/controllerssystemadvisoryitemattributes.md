@@ -27,7 +27,7 @@
 
 • **advisory_type**? : *number*
 
-*Defined in [packages/patch/api.ts:666](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L666)*
+*Defined in [packages/patch/api.ts:672](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L672)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -37,7 +37,7 @@ ___
 
 • **cve_count**? : *number*
 
-*Defined in [packages/patch/api.ts:672](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L672)*
+*Defined in [packages/patch/api.ts:678](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L678)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -47,7 +47,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:678](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L678)*
+*Defined in [packages/patch/api.ts:684](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L684)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -57,7 +57,7 @@ ___
 
 • **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:684](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L684)*
+*Defined in [packages/patch/api.ts:690](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L690)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -67,7 +67,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:690](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L690)*
+*Defined in [packages/patch/api.ts:696](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L696)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -77,6 +77,6 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:696](https://github.com/RedHatInsights/javascript-clients/blob/d9dc4c9/packages/patch/api.ts#L696)*
+*Defined in [packages/patch/api.ts:702](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L702)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
