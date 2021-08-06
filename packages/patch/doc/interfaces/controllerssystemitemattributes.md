@@ -40,7 +40,7 @@
 
 • **created**? : *string*
 
-*Defined in [packages/patch/api.ts:880](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L880)*
+*Defined in [packages/patch/api.ts:967](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L967)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -50,7 +50,7 @@ ___
 
 • **culled_timestamp**? : *string*
 
-*Defined in [packages/patch/api.ts:886](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L886)*
+*Defined in [packages/patch/api.ts:973](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L973)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -60,7 +60,7 @@ ___
 
 • **display_name**? : *string*
 
-*Defined in [packages/patch/api.ts:892](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L892)*
+*Defined in [packages/patch/api.ts:979](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L979)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -70,7 +70,7 @@ ___
 
 • **insights_id**? : *string*
 
-*Defined in [packages/patch/api.ts:898](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L898)*
+*Defined in [packages/patch/api.ts:985](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L985)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -80,7 +80,7 @@ ___
 
 • **last_evaluation**? : *string*
 
-*Defined in [packages/patch/api.ts:904](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L904)*
+*Defined in [packages/patch/api.ts:991](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L991)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -90,7 +90,7 @@ ___
 
 • **last_upload**? : *string*
 
-*Defined in [packages/patch/api.ts:910](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L910)*
+*Defined in [packages/patch/api.ts:997](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L997)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -100,7 +100,7 @@ ___
 
 • **os_major**? : *string*
 
-*Defined in [packages/patch/api.ts:916](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L916)*
+*Defined in [packages/patch/api.ts:1003](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L1003)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -110,7 +110,7 @@ ___
 
 • **os_minor**? : *string*
 
-*Defined in [packages/patch/api.ts:922](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L922)*
+*Defined in [packages/patch/api.ts:1009](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L1009)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -120,7 +120,7 @@ ___
 
 • **os_name**? : *string*
 
-*Defined in [packages/patch/api.ts:928](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L928)*
+*Defined in [packages/patch/api.ts:1015](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L1015)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -130,7 +130,7 @@ ___
 
 • **packages_installed**? : *number*
 
-*Defined in [packages/patch/api.ts:934](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L934)*
+*Defined in [packages/patch/api.ts:1021](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L1021)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -140,7 +140,7 @@ ___
 
 • **packages_updatable**? : *number*
 
-*Defined in [packages/patch/api.ts:940](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L940)*
+*Defined in [packages/patch/api.ts:1027](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L1027)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -150,7 +150,7 @@ ___
 
 • **rhba_count**? : *number*
 
-*Defined in [packages/patch/api.ts:946](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L946)*
+*Defined in [packages/patch/api.ts:1033](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L1033)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -160,7 +160,7 @@ ___
 
 • **rhea_count**? : *number*
 
-*Defined in [packages/patch/api.ts:952](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L952)*
+*Defined in [packages/patch/api.ts:1039](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L1039)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -170,7 +170,7 @@ ___
 
 • **rhsa_count**? : *number*
 
-*Defined in [packages/patch/api.ts:958](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L958)*
+*Defined in [packages/patch/api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L1045)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -180,7 +180,7 @@ ___
 
 • **rhsm**? : *string*
 
-*Defined in [packages/patch/api.ts:964](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L964)*
+*Defined in [packages/patch/api.ts:1051](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L1051)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -190,7 +190,7 @@ ___
 
 • **stale**? : *boolean*
 
-*Defined in [packages/patch/api.ts:970](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L970)*
+*Defined in [packages/patch/api.ts:1057](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L1057)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -200,7 +200,7 @@ ___
 
 • **stale_timestamp**? : *string*
 
-*Defined in [packages/patch/api.ts:976](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L976)*
+*Defined in [packages/patch/api.ts:1063](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L1063)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -210,7 +210,7 @@ ___
 
 • **stale_warning_timestamp**? : *string*
 
-*Defined in [packages/patch/api.ts:982](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L982)*
+*Defined in [packages/patch/api.ts:1069](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L1069)*
 
 **`memberof`** ControllersSystemItemAttributes
 
@@ -220,6 +220,6 @@ ___
 
 • **third_party**? : *boolean*
 
-*Defined in [packages/patch/api.ts:988](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L988)*
+*Defined in [packages/patch/api.ts:1075](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L1075)*
 
 **`memberof`** ControllersSystemItemAttributes

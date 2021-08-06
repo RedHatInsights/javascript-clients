@@ -26,7 +26,7 @@ RHN-based system types classified by role and product code.
 
 • **id**? : *number*
 
-*Defined in [packages/insights/api.ts:102](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L102)*
+*Defined in [packages/insights/api.ts:114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L114)*
 
 **`memberof`** SystemType
 
@@ -36,7 +36,7 @@ ___
 
 • **product_code**: *string*
 
-*Defined in [packages/insights/api.ts:114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L114)*
+*Defined in [packages/insights/api.ts:126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L126)*
 
 **`memberof`** SystemType
 
@@ -46,6 +46,6 @@ ___
 
 • **role**: *string*
 
-*Defined in [packages/insights/api.ts:108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L108)*
+*Defined in [packages/insights/api.ts:120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L120)*
 
 **`memberof`** SystemType

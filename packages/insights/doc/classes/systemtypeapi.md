@@ -85,7 +85,7 @@ ___
 
 ▸ **systemtypeList**(`options?`: any): *Promise‹AxiosResponse‹[SystemType](../interfaces/systemtype.md)[]››*
 
-*Defined in [packages/insights/api.ts:948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L948)*
+*Defined in [packages/insights/api.ts:860](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L860)*
 
 List all system types by role and product code
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **systemtypeRead**(`id`: number, `options?`: any): *Promise‹AxiosResponse‹[SystemType](../interfaces/systemtype.md)››*
 
-*Defined in [packages/insights/api.ts:960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L960)*
+*Defined in [packages/insights/api.ts:872](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L872)*
 
 Retrieve details of a single system type
 

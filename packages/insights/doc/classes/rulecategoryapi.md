@@ -85,7 +85,7 @@ ___
 
 ▸ **rulecategoryList**(`options?`: any): *Promise‹AxiosResponse‹[RuleCategory](../interfaces/rulecategory.md)[]››*
 
-*Defined in [packages/insights/api.ts:550](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L550)*
+*Defined in [packages/insights/api.ts:462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L462)*
 
 Categories are listed in decreasing order of importance.
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **rulecategoryRead**(`id`: number, `options?`: any): *Promise‹AxiosResponse‹[RuleCategory](../interfaces/rulecategory.md)››*
 
-*Defined in [packages/insights/api.ts:562](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L562)*
+*Defined in [packages/insights/api.ts:474](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L474)*
 
 Categories are listed in decreasing order of importance.
 

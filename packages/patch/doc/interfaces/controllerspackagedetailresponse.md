@@ -22,6 +22,6 @@
 
 • **data**? : *[ControllersPackageDetailItem](controllerspackagedetailitem.md)*
 
-*Defined in [packages/patch/api.ts:491](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L491)*
+*Defined in [packages/patch/api.ts:491](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L491)*
 
 **`memberof`** ControllersPackageDetailResponse

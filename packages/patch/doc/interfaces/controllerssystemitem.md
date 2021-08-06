@@ -24,7 +24,7 @@
 
 • **attributes**? : *[ControllersSystemItemAttributes](controllerssystemitemattributes.md)*
 
-*Defined in [packages/patch/api.ts:855](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L855)*
+*Defined in [packages/patch/api.ts:942](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L942)*
 
 **`memberof`** ControllersSystemItem
 
@@ -34,7 +34,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/patch/api.ts:861](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L861)*
+*Defined in [packages/patch/api.ts:948](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L948)*
 
 **`memberof`** ControllersSystemItem
 
@@ -44,6 +44,6 @@ ___
 
 • **type**? : *string*
 
-*Defined in [packages/patch/api.ts:867](https://github.com/RedHatInsights/javascript-clients/blob/c21a0a5/packages/patch/api.ts#L867)*
+*Defined in [packages/patch/api.ts:954](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L954)*
 
 **`memberof`** ControllersSystemItem

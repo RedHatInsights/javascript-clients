@@ -16,6 +16,8 @@
 
 * [data_format](metaaffectedsystems.md#data_format)
 * [filter](metaaffectedsystems.md#filter)
+* [first_reported_from](metaaffectedsystems.md#first_reported_from)
+* [first_reported_to](metaaffectedsystems.md#first_reported_to)
 * [limit](metaaffectedsystems.md#limit)
 * [offset](metaaffectedsystems.md#offset)
 * [page](metaaffectedsystems.md#page)
@@ -50,6 +52,30 @@ ___
 *Defined in [packages/vulnerabilities/api.ts:1159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1159)*
 
 Full text filter
+
+**`memberof`** MetaAffectedSystems
+
+___
+
+###  first_reported_from
+
+• **first_reported_from**: *string | null*
+
+*Defined in [packages/vulnerabilities/api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1243)*
+
+Filter system-cve pairs based on first time of detection of CVE.
+
+**`memberof`** MetaAffectedSystems
+
+___
+
+###  first_reported_to
+
+• **first_reported_to**: *string | null*
+
+*Defined in [packages/vulnerabilities/api.ts:1249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1249)*
+
+Filter system-cve pairs based on first time of detection of CVE.
 
 **`memberof`** MetaAffectedSystems
 
