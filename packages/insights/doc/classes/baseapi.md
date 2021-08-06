@@ -10,15 +10,11 @@
 
   ↳ [KcsApi](kcsapi.md)
 
-  ↳ [ResolutionRiskApi](resolutionriskapi.md)
-
   ↳ [RulecategoryApi](rulecategoryapi.md)
 
   ↳ [StatusApi](statusapi.md)
 
   ↳ [SystemtypeApi](systemtypeapi.md)
-
-  ↳ [TotalRiskApi](totalriskapi.md)
 
 ## Index
 

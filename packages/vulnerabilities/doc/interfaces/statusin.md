@@ -25,7 +25,7 @@
 
 • **cve**: *[CveOrList](../globals.md#cveorlist)*
 
-*Defined in [packages/vulnerabilities/api.ts:1978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1978)*
+*Defined in [packages/vulnerabilities/api.ts:2038](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2038)*
 
 **`memberof`** StatusIn
 
@@ -35,7 +35,7 @@ ___
 
 • **inventory_id**? : *[InventoryIdOrList](../globals.md#inventoryidorlist)*
 
-*Defined in [packages/vulnerabilities/api.ts:1972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1972)*
+*Defined in [packages/vulnerabilities/api.ts:2032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2032)*
 
 **`memberof`** StatusIn
 
@@ -45,7 +45,7 @@ ___
 
 • **status_id**? : *number*
 
-*Defined in [packages/vulnerabilities/api.ts:1984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1984)*
+*Defined in [packages/vulnerabilities/api.ts:2044](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2044)*
 
 Status ID to be set, obtained by GET method. If not specified, global CVE status is set.
 
@@ -57,7 +57,7 @@ ___
 
 • **status_text**? : *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1990)*
+*Defined in [packages/vulnerabilities/api.ts:2050](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2050)*
 
 Complementary text to the status.
 
