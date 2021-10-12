@@ -24,7 +24,7 @@
 
 • **key**: *string*
 
-*Defined in [packages/vulnerabilities/api.ts:2270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2270)*
+*Defined in [packages/vulnerabilities/api.ts:2264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2264)*
 
 Key of the single tag.
 
@@ -36,7 +36,7 @@ ___
 
 • **namespace**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:2264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2264)*
+*Defined in [packages/vulnerabilities/api.ts:2270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2270)*
 
 Namespace of single tag.
 

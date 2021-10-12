@@ -24,7 +24,7 @@
 
 • **key**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1043)*
+*Defined in [packages/host-inventory/api.ts:1071](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1071)*
 
 **`memberof`** StructuredTag
 
@@ -34,7 +34,7 @@ ___
 
 • **namespace**? : *string | null*
 
-*Defined in [packages/host-inventory/api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1037)*
+*Defined in [packages/host-inventory/api.ts:1065](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1065)*
 
 **`memberof`** StructuredTag
 
@@ -44,6 +44,6 @@ ___
 
 • **value**? : *string | null*
 
-*Defined in [packages/host-inventory/api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1049)*
+*Defined in [packages/host-inventory/api.ts:1077](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1077)*
 
 **`memberof`** StructuredTag

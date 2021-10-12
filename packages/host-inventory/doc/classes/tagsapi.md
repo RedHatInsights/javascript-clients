@@ -82,9 +82,9 @@ ___
 
 ###  apiTagGetTags
 
-▸ **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[ActiveTags](../interfaces/activetags.md)››*
+▸ **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[ActiveTags](../interfaces/activetags.md)››*
 
-*Defined in [packages/host-inventory/api.ts:3431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3431)*
+*Defined in [packages/host-inventory/api.ts:3829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3829)*
 
 Required permissions: inventory:hosts:read
 
@@ -105,6 +105,12 @@ Name | Type |
 `page?` | number |
 `staleness?` | Array‹"fresh" &#124; "stale" &#124; "stale_warning" &#124; "unknown"› |
 `search?` | string |
+`displayName?` | string |
+`fqdn?` | string |
+`hostnameOrId?` | string |
+`insightsId?` | string |
+`providerId?` | string |
+`providerType?` | "alibaba" &#124; "aws" &#124; "azure" &#124; "gcp" &#124; "ibm" |
 `registeredWith?` | "insights" |
 `filter?` | object |
 `options?` | any |

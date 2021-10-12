@@ -27,7 +27,7 @@ StatusApi - object-oriented interface
 ### Methods
 
 * [statusList](statusapi.md#statuslist)
-* [statusLive](statusapi.md#statuslive)
+* [statusLiveRead](statusapi.md#statusliveread)
 * [statusReadyRead](statusapi.md#statusreadyread)
 
 ## Constructors
@@ -106,9 +106,9 @@ Name | Type |
 
 ___
 
-###  statusLive
+###  statusLiveRead
 
-▸ **statusLive**(`options?`: any): *Promise‹AxiosResponse‹[StatusReady](../interfaces/statusready.md)››*
+▸ **statusLiveRead**(`options?`: any): *Promise‹AxiosResponse‹[StatusReady](../interfaces/statusready.md)››*
 
 *Defined in [packages/insights/api.ts:689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L689)*
 

@@ -10,6 +10,9 @@
 * [SystemProfileHostTypeEnum](enums/systemprofilehosttypeenum.md)
 * [SystemProfileOperatingSystemNameEnum](enums/systemprofileoperatingsystemnameenum.md)
 * [SystemProfileSelinuxCurrentModeEnum](enums/systemprofileselinuxcurrentmodeenum.md)
+* [SystemProfileSystemPurposeRoleEnum](enums/systemprofilesystempurposeroleenum.md)
+* [SystemProfileSystemPurposeSlaEnum](enums/systemprofilesystempurposeslaenum.md)
+* [SystemProfileSystemPurposeUsageEnum](enums/systemprofilesystempurposeusageenum.md)
 
 ### Classes
 
@@ -25,6 +28,7 @@
 
 * [ActiveTag](interfaces/activetag.md)
 * [ActiveTags](interfaces/activetags.md)
+* [ActiveTagsAllOf](interfaces/activetagsallof.md)
 * [CanonicalFactsIn](interfaces/canonicalfactsin.md)
 * [CanonicalFactsInAllOf](interfaces/canonicalfactsinallof.md)
 * [CanonicalFactsOut](interfaces/canonicalfactsout.md)
@@ -39,20 +43,34 @@
 * [HostOut](interfaces/hostout.md)
 * [HostOutAllOf](interfaces/hostoutallof.md)
 * [HostQueryOutput](interfaces/hostqueryoutput.md)
+* [HostQueryOutputAllOf](interfaces/hostqueryoutputallof.md)
 * [HostSystemProfileOut](interfaces/hostsystemprofileout.md)
 * [InstalledProduct](interfaces/installedproduct.md)
 * [NetworkInterface](interfaces/networkinterface.md)
+* [PaginationOut](interfaces/paginationout.md)
 * [PatchHostIn](interfaces/patchhostin.md)
+* [PerReporterStaleness](interfaces/perreporterstaleness.md)
 * [RPMOSTreeDeployment](interfaces/rpmostreedeployment.md)
 * [RequestArgs](interfaces/requestargs.md)
 * [StructuredTag](interfaces/structuredtag.md)
 * [SystemProfile](interfaces/systemprofile.md)
+* [SystemProfileAnsible](interfaces/systemprofileansible.md)
 * [SystemProfileByHostOut](interfaces/systemprofilebyhostout.md)
+* [SystemProfileByHostOutAllOf](interfaces/systemprofilebyhostoutallof.md)
+* [SystemProfileDiskDevice](interfaces/systemprofilediskdevice.md)
+* [SystemProfileDnfModule](interfaces/systemprofilednfmodule.md)
+* [SystemProfileInstalledProduct](interfaces/systemprofileinstalledproduct.md)
+* [SystemProfileNetworkInterface](interfaces/systemprofilenetworkinterface.md)
 * [SystemProfileOperatingSystem](interfaces/systemprofileoperatingsystem.md)
 * [SystemProfileRhsm](interfaces/systemprofilerhsm.md)
 * [SystemProfileSapSystemOut](interfaces/systemprofilesapsystemout.md)
+* [SystemProfileSapSystemOutResults](interfaces/systemprofilesapsystemoutresults.md)
+* [SystemProfileSystemPurpose](interfaces/systemprofilesystempurpose.md)
+* [SystemProfileYumRepo](interfaces/systemprofileyumrepo.md)
 * [TagCountOut](interfaces/tagcountout.md)
+* [TagCountOutAllOf](interfaces/tagcountoutallof.md)
 * [TagsOut](interfaces/tagsout.md)
+* [TagsOutAllOf](interfaces/tagsoutallof.md)
 * [YumRepo](interfaces/yumrepo.md)
 
 ### Variables
@@ -92,7 +110,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/host-inventory/api.ts:1621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1621)*
+*Defined in [packages/host-inventory/api.ts:1971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1971)*
 
 DefaultApi - axios parameter creator
 
@@ -114,7 +132,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/host-inventory/api.ts:1718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1718)*
+*Defined in [packages/host-inventory/api.ts:2068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2068)*
 
 DefaultApi - factory interface
 
@@ -138,7 +156,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/host-inventory/api.ts:1692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1692)*
+*Defined in [packages/host-inventory/api.ts:2042](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2042)*
 
 DefaultApi - functional programming interface
 
@@ -160,7 +178,7 @@ ___
 
 ▸ **HostsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/host-inventory/api.ts:1765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1765)*
+*Defined in [packages/host-inventory/api.ts:2115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2115)*
 
 HostsApi - axios parameter creator
 
@@ -200,7 +218,7 @@ ___
 
 ▸ **HostsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/host-inventory/api.ts:2652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2652)*
+*Defined in [packages/host-inventory/api.ts:3002](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3002)*
 
 HostsApi - factory interface
 
@@ -242,7 +260,7 @@ ___
 
 ▸ **HostsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/host-inventory/api.ts:2459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2459)*
+*Defined in [packages/host-inventory/api.ts:2809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2809)*
 
 HostsApi - functional programming interface
 
@@ -282,7 +300,7 @@ ___
 
 ▸ **SapSystemApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/host-inventory/api.ts:2979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2979)*
+*Defined in [packages/host-inventory/api.ts:3329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3329)*
 
 SapSystemApi - axios parameter creator
 
@@ -306,7 +324,7 @@ ___
 
 ▸ **SapSystemApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/host-inventory/api.ts:3177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3177)*
+*Defined in [packages/host-inventory/api.ts:3527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3527)*
 
 SapSystemApi - factory interface
 
@@ -332,7 +350,7 @@ ___
 
 ▸ **SapSystemApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/host-inventory/api.ts:3129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3129)*
+*Defined in [packages/host-inventory/api.ts:3479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3479)*
 
 SapSystemApi - functional programming interface
 
@@ -356,7 +374,7 @@ ___
 
 ▸ **TagsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/host-inventory/api.ts:3262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3262)*
+*Defined in [packages/host-inventory/api.ts:3612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3612)*
 
 TagsApi - axios parameter creator
 
@@ -370,7 +388,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `registeredWith?`: "insights", `filter?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: "insights", `filter?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -378,7 +396,7 @@ ___
 
 ▸ **TagsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/host-inventory/api.ts:3385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3385)*
+*Defined in [packages/host-inventory/api.ts:3771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3771)*
 
 TagsApi - factory interface
 
@@ -394,7 +412,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *AxiosPromise‹[ActiveTags](interfaces/activetags.md)›*
+* **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: "insights", `filter?`: object, `options?`: any): *AxiosPromise‹[ActiveTags](interfaces/activetags.md)›*
 
 ___
 
@@ -402,7 +420,7 @@ ___
 
 ▸ **TagsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/host-inventory/api.ts:3354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3354)*
+*Defined in [packages/host-inventory/api.ts:3734](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3734)*
 
 TagsApi - functional programming interface
 
@@ -416,7 +434,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹function›*
+* **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹function›*
 
 ## Object literals
 

@@ -77,7 +77,7 @@ ___
 
 • **data_format**: *string*
 
-*Defined in [packages/vulnerabilities/api.ts:1359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1359)*
+*Defined in [packages/vulnerabilities/api.ts:1311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1311)*
 
 Format of the output data, either JSON (default) or CSV.
 
@@ -89,7 +89,7 @@ ___
 
 • **filter**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1311)*
+*Defined in [packages/vulnerabilities/api.ts:1317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1317)*
 
 Full text filter
 
@@ -101,7 +101,7 @@ ___
 
 • **first_reported_from**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1419)*
+*Defined in [packages/vulnerabilities/api.ts:1383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1383)*
 
 Filter system-cve pairs based on first time of detection of CVE.
 
@@ -113,7 +113,7 @@ ___
 
 • **first_reported_to**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1425)*
+*Defined in [packages/vulnerabilities/api.ts:1389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1389)*
 
 Filter system-cve pairs based on first time of detection of CVE.
 
@@ -137,7 +137,7 @@ ___
 
 • **limit**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:1317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1317)*
+*Defined in [packages/vulnerabilities/api.ts:1323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1323)*
 
 Maximum number of paginated results.
 
@@ -149,7 +149,7 @@ ___
 
 • **offset**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:1323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1323)*
+*Defined in [packages/vulnerabilities/api.ts:1329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1329)*
 
 First record of paginated response.
 
@@ -161,7 +161,7 @@ ___
 
 • **page**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:1329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1329)*
+*Defined in [packages/vulnerabilities/api.ts:1335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1335)*
 
 Page number of paginated response.
 
@@ -173,7 +173,7 @@ ___
 
 • **page_size**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:1335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1335)*
+*Defined in [packages/vulnerabilities/api.ts:1341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1341)*
 
 Number of records per page of paginated response.
 
@@ -185,7 +185,7 @@ ___
 
 • **pages**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:1341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1341)*
+*Defined in [packages/vulnerabilities/api.ts:1347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1347)*
 
 Total number of pages of paginated response.
 
@@ -197,7 +197,7 @@ ___
 
 • **patch_access**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1413)*
+*Defined in [packages/vulnerabilities/api.ts:1401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1401)*
 
 If show_advisories=true shows access to patch service else null
 
@@ -209,7 +209,7 @@ ___
 
 • **public_from**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1383)*
+*Defined in [packages/vulnerabilities/api.ts:1407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1407)*
 
 Filter CVEs based on their published date, starting from the date.
 
@@ -221,7 +221,7 @@ ___
 
 • **public_to**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1389)*
+*Defined in [packages/vulnerabilities/api.ts:1413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1413)*
 
 Filter CVEs based on their published date, up to the date.
 
@@ -233,7 +233,7 @@ ___
 
 • **rule_presence**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1407)*
+*Defined in [packages/vulnerabilities/api.ts:1419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1419)*
 
 Filter based on presence of security rule
 
@@ -245,7 +245,7 @@ ___
 
 • **sort**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1347)*
+*Defined in [packages/vulnerabilities/api.ts:1353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1353)*
 
 Sorting filter.
 
@@ -257,7 +257,7 @@ ___
 
 • **status_id**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1401)*
+*Defined in [packages/vulnerabilities/api.ts:1425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1425)*
 
 Filer based on CVE status ID.
 
@@ -269,7 +269,7 @@ ___
 
 • **total_items**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:1353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1353)*
+*Defined in [packages/vulnerabilities/api.ts:1359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1359)*
 
 Total number of records.
 

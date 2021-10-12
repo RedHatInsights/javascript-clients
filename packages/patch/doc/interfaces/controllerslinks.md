@@ -25,7 +25,7 @@
 
 • **first**? : *string*
 
-*Defined in [packages/patch/api.ts:355](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L355)*
+*Defined in [packages/patch/api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L385)*
 
 **`memberof`** ControllersLinks
 
@@ -35,7 +35,7 @@ ___
 
 • **last**? : *string*
 
-*Defined in [packages/patch/api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L361)*
+*Defined in [packages/patch/api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L391)*
 
 **`memberof`** ControllersLinks
 
@@ -45,7 +45,7 @@ ___
 
 • **next**? : *string*
 
-*Defined in [packages/patch/api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L367)*
+*Defined in [packages/patch/api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L397)*
 
 **`memberof`** ControllersLinks
 
@@ -55,6 +55,6 @@ ___
 
 • **previous**? : *string*
 
-*Defined in [packages/patch/api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L373)*
+*Defined in [packages/patch/api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L403)*
 
 **`memberof`** ControllersLinks

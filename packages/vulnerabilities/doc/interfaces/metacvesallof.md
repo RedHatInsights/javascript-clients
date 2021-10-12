@@ -68,7 +68,7 @@ ___
 
 • **first_reported_from**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1492)*
+*Defined in [packages/vulnerabilities/api.ts:1456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1456)*
 
 Filter system-cve pairs based on first time of detection of CVE.
 
@@ -80,7 +80,7 @@ ___
 
 • **first_reported_to**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1498)*
+*Defined in [packages/vulnerabilities/api.ts:1462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1462)*
 
 Filter system-cve pairs based on first time of detection of CVE.
 
@@ -104,7 +104,7 @@ ___
 
 • **patch_access**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1486)*
+*Defined in [packages/vulnerabilities/api.ts:1474](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1474)*
 
 If show_advisories=true shows access to patch service else null
 
@@ -116,7 +116,7 @@ ___
 
 • **public_from**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1456)*
+*Defined in [packages/vulnerabilities/api.ts:1480](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1480)*
 
 Filter CVEs based on their published date, starting from the date.
 
@@ -128,7 +128,7 @@ ___
 
 • **public_to**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1462)*
+*Defined in [packages/vulnerabilities/api.ts:1486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1486)*
 
 Filter CVEs based on their published date, up to the date.
 
@@ -140,7 +140,7 @@ ___
 
 • **rule_presence**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1480](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1480)*
+*Defined in [packages/vulnerabilities/api.ts:1492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1492)*
 
 Filter based on presence of security rule
 
@@ -152,7 +152,7 @@ ___
 
 • **status_id**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1474](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1474)*
+*Defined in [packages/vulnerabilities/api.ts:1498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1498)*
 
 Filer based on CVE status ID.
 

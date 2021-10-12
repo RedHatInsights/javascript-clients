@@ -18,14 +18,12 @@ Data required to create a check-in record for a host.
 
 * [bios_uuid](createcheckin.md#bios_uuid)
 * [checkin_frequency](createcheckin.md#optional-checkin_frequency)
-* [external_id](createcheckin.md#external_id)
 * [fqdn](createcheckin.md#fqdn)
 * [insights_id](createcheckin.md#insights_id)
 * [ip_addresses](createcheckin.md#ip_addresses)
 * [mac_addresses](createcheckin.md#mac_addresses)
 * [provider_id](createcheckin.md#provider_id)
 * [provider_type](createcheckin.md#provider_type)
-* [rhel_machine_id](createcheckin.md#rhel_machine_id)
 * [satellite_id](createcheckin.md#satellite_id)
 * [subscription_manager_id](createcheckin.md#subscription_manager_id)
 
@@ -35,7 +33,7 @@ Data required to create a check-in record for a host.
 
 • **bios_uuid**: *string*
 
-*Defined in [packages/host-inventory/api.ts:332](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L332)*
+*Defined in [packages/host-inventory/api.ts:303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L303)*
 
 **`memberof`** CreateCheckIn
 
@@ -45,19 +43,9 @@ ___
 
 • **checkin_frequency**? : *number*
 
-*Defined in [packages/host-inventory/api.ts:374](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L374)*
+*Defined in [packages/host-inventory/api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L339)*
 
 How long from now to expect another check-in (in minutes).
-
-**`memberof`** CreateCheckIn
-
-___
-
-###  external_id
-
-• **external_id**: *string*
-
-*Defined in [packages/host-inventory/api.ts:356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L356)*
 
 **`memberof`** CreateCheckIn
 
@@ -67,7 +55,7 @@ ___
 
 • **fqdn**: *string*
 
-*Defined in [packages/host-inventory/api.ts:344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L344)*
+*Defined in [packages/host-inventory/api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L315)*
 
 **`memberof`** CreateCheckIn
 
@@ -77,7 +65,7 @@ ___
 
 • **insights_id**: *string*
 
-*Defined in [packages/host-inventory/api.ts:308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L308)*
+*Defined in [packages/host-inventory/api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L285)*
 
 **`memberof`** CreateCheckIn
 
@@ -87,7 +75,7 @@ ___
 
 • **ip_addresses**: *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L338)*
+*Defined in [packages/host-inventory/api.ts:309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L309)*
 
 **`memberof`** CreateCheckIn
 
@@ -97,7 +85,7 @@ ___
 
 • **mac_addresses**: *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L350)*
+*Defined in [packages/host-inventory/api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L321)*
 
 **`memberof`** CreateCheckIn
 
@@ -107,7 +95,7 @@ ___
 
 • **provider_id**: *string*
 
-*Defined in [packages/host-inventory/api.ts:362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L362)*
+*Defined in [packages/host-inventory/api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L327)*
 
 **`memberof`** CreateCheckIn
 
@@ -117,17 +105,7 @@ ___
 
 • **provider_type**: *string*
 
-*Defined in [packages/host-inventory/api.ts:368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L368)*
-
-**`memberof`** CreateCheckIn
-
-___
-
-###  rhel_machine_id
-
-• **rhel_machine_id**: *string*
-
-*Defined in [packages/host-inventory/api.ts:314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L314)*
+*Defined in [packages/host-inventory/api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L333)*
 
 **`memberof`** CreateCheckIn
 
@@ -137,7 +115,7 @@ ___
 
 • **satellite_id**: *string*
 
-*Defined in [packages/host-inventory/api.ts:326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L326)*
+*Defined in [packages/host-inventory/api.ts:297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L297)*
 
 **`memberof`** CreateCheckIn
 
@@ -147,6 +125,6 @@ ___
 
 • **subscription_manager_id**: *string*
 
-*Defined in [packages/host-inventory/api.ts:320](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L320)*
+*Defined in [packages/host-inventory/api.ts:291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L291)*
 
 **`memberof`** CreateCheckIn

@@ -224,7 +224,7 @@ Name | Type |
 
 * **statusList**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **statusLive**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **statusLiveRead**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **statusReadyRead**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
@@ -252,7 +252,7 @@ Name | Type |
 
 * **statusList**(`options?`: any): *AxiosPromise‹void›*
 
-* **statusLive**(`options?`: any): *AxiosPromise‹[StatusReady](interfaces/statusready.md)›*
+* **statusLiveRead**(`options?`: any): *AxiosPromise‹[StatusReady](interfaces/statusready.md)›*
 
 * **statusReadyRead**(`options?`: any): *AxiosPromise‹[StatusReady](interfaces/statusready.md)›*
 
@@ -278,7 +278,7 @@ Name | Type |
 
 * **statusList**(`options?`: any): *Promise‹function›*
 
-* **statusLive**(`options?`: any): *Promise‹function›*
+* **statusLiveRead**(`options?`: any): *Promise‹function›*
 
 * **statusReadyRead**(`options?`: any): *Promise‹function›*
 
