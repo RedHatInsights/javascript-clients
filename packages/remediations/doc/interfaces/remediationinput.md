@@ -25,7 +25,7 @@
 
 • **add**? : *[RemediationInputAdd](remediationinputadd.md)*
 
-*Defined in [api.ts:720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L720)*
+*Defined in [api.ts:733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L733)*
 
 **`memberof`** RemediationInput
 
@@ -35,7 +35,7 @@ ___
 
 • **archived**? : *boolean*
 
-*Defined in [api.ts:708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L708)*
+*Defined in [api.ts:721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L721)*
 
 Indicates whether a remediation has been marked as archived
 
@@ -47,7 +47,7 @@ ___
 
 • **auto_reboot**? : *boolean*
 
-*Defined in [api.ts:714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L714)*
+*Defined in [api.ts:727](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L727)*
 
 Indicates whether systems that require reboot for the remediation to be properly applied should be rebooted automatically or not
 
@@ -59,6 +59,6 @@ ___
 
 • **name**? : *string | null*
 
-*Defined in [api.ts:702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L702)*
+*Defined in [api.ts:715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L715)*
 
 **`memberof`** RemediationInput

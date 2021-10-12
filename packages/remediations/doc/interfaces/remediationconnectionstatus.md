@@ -23,7 +23,7 @@
 
 • **data**: *Array‹[PlaybookExecutorStatus](playbookexecutorstatus.md)›*
 
-*Defined in [api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L603)*
+*Defined in [api.ts:616](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L616)*
 
 **`memberof`** RemediationConnectionStatus
 
@@ -33,6 +33,6 @@ ___
 
 • **meta**: *[Meta](meta.md)*
 
-*Defined in [api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L597)*
+*Defined in [api.ts:610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L610)*
 
 **`memberof`** RemediationConnectionStatus

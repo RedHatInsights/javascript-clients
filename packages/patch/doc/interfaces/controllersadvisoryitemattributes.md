@@ -15,10 +15,12 @@
 ### Properties
 
 * [advisory_type](controllersadvisoryitemattributes.md#optional-advisory_type)
+* [advisory_type_name](controllersadvisoryitemattributes.md#optional-advisory_type_name)
 * [applicable_systems](controllersadvisoryitemattributes.md#optional-applicable_systems)
 * [cve_count](controllersadvisoryitemattributes.md#optional-cve_count)
 * [description](controllersadvisoryitemattributes.md#optional-description)
 * [public_date](controllersadvisoryitemattributes.md#optional-public_date)
+* [reboot_required](controllersadvisoryitemattributes.md#optional-reboot_required)
 * [severity](controllersadvisoryitemattributes.md#optional-severity)
 * [synopsis](controllersadvisoryitemattributes.md#optional-synopsis)
 
@@ -28,7 +30,21 @@
 
 • **advisory_type**? : *number*
 
-*Defined in [packages/patch/api.ts:262](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L262)*
+*Defined in [packages/patch/api.ts:280](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L280)*
+
+Deprecated, not useful database ID (0 - unknown, 1 -, enhancement, 2 - bugfix, 3 - security, 4 - unspecified)
+
+**`memberof`** ControllersAdvisoryItemAttributes
+
+___
+
+### `Optional` advisory_type_name
+
+• **advisory_type_name**? : *string*
+
+*Defined in [packages/patch/api.ts:286](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L286)*
+
+Advisory type name, proper ordering ensured (unknown, unspecified, enhancement, bugfix, security)
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -38,7 +54,7 @@ ___
 
 • **applicable_systems**? : *number*
 
-*Defined in [packages/patch/api.ts:268](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L268)*
+*Defined in [packages/patch/api.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L292)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -48,7 +64,7 @@ ___
 
 • **cve_count**? : *number*
 
-*Defined in [packages/patch/api.ts:274](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L274)*
+*Defined in [packages/patch/api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L298)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -58,7 +74,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:280](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L280)*
+*Defined in [packages/patch/api.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L304)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -68,7 +84,17 @@ ___
 
 • **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:286](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L286)*
+*Defined in [packages/patch/api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L310)*
+
+**`memberof`** ControllersAdvisoryItemAttributes
+
+___
+
+### `Optional` reboot_required
+
+• **reboot_required**? : *boolean*
+
+*Defined in [packages/patch/api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L316)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -78,7 +104,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L292)*
+*Defined in [packages/patch/api.ts:322](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L322)*
 
 **`memberof`** ControllersAdvisoryItemAttributes
 
@@ -88,6 +114,6 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L298)*
+*Defined in [packages/patch/api.ts:328](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L328)*
 
 **`memberof`** ControllersAdvisoryItemAttributes

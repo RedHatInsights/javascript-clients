@@ -567,6 +567,19 @@ export interface PlaybookRunSystems {
 /**
  *
  * @export
+ * @interface PlaybookRunsInput
+ */
+export interface PlaybookRunsInput {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof PlaybookRunsInput
+     */
+    exclude?: Array<string>;
+}
+/**
+ *
+ * @export
  * @interface PlaybookRunsList
  */
 export interface PlaybookRunsList {
@@ -2149,11 +2162,11 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * Execute remediation, RBAC permission {remediations:remediation:execute}
          * @summary Execute remediation
          * @param {string} id Remediation identifier
-         * @param {any} [data]
+         * @param {PlaybookRunsInput} [playbookRunsInput]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        runRemediation: async (id: string, data?: any, options: any = {}): Promise<RequestArgs> => {
+        runRemediation: async (id: string, playbookRunsInput?: PlaybookRunsInput, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling runRemediation.');
@@ -2178,8 +2191,8 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             delete localVarUrlObj.search;
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof data !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(data !== undefined ? data : {}) : (data || "");
+            const needsSerialization = (typeof playbookRunsInput !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(playbookRunsInput !== undefined ? playbookRunsInput : {}) : (playbookRunsInput || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -2546,12 +2559,12 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * Execute remediation, RBAC permission {remediations:remediation:execute}
          * @summary Execute remediation
          * @param {string} id Remediation identifier
-         * @param {any} [data]
+         * @param {PlaybookRunsInput} [playbookRunsInput]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async runRemediation(id: string, data?: any, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExecuteRemediation>> {
-            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).runRemediation(id, data, options);
+        async runRemediation(id: string, playbookRunsInput?: PlaybookRunsInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExecuteRemediation>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).runRemediation(id, playbookRunsInput, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2788,12 +2801,12 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * Execute remediation, RBAC permission {remediations:remediation:execute}
          * @summary Execute remediation
          * @param {string} id Remediation identifier
-         * @param {any} [data]
+         * @param {PlaybookRunsInput} [playbookRunsInput]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        runRemediation(id: string, data?: any, options?: any): AxiosPromise<ExecuteRemediation> {
-            return RemediationsApiFp(configuration).runRemediation(id, data, options).then((request) => request(axios, basePath));
+        runRemediation(id: string, playbookRunsInput?: PlaybookRunsInput, options?: any): AxiosPromise<ExecuteRemediation> {
+            return RemediationsApiFp(configuration).runRemediation(id, playbookRunsInput, options).then((request) => request(axios, basePath));
         },
         /**
          * Updates the given Remediation, RBAC permission {remediations:remediation:write}
@@ -3051,13 +3064,13 @@ export class RemediationsApi extends BaseAPI {
      * Execute remediation, RBAC permission {remediations:remediation:execute}
      * @summary Execute remediation
      * @param {string} id Remediation identifier
-     * @param {any} [data]
+     * @param {PlaybookRunsInput} [playbookRunsInput]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi
      */
-    public runRemediation(id: string, data?: any, options?: any) {
-        return RemediationsApiFp(this.configuration).runRemediation(id, data, options).then((request) => request(this.axios, this.basePath));
+    public runRemediation(id: string, playbookRunsInput?: PlaybookRunsInput, options?: any) {
+        return RemediationsApiFp(this.configuration).runRemediation(id, playbookRunsInput, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

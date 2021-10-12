@@ -31,6 +31,7 @@
 * [DashboardCvesBySeverity4to79](interfaces/dashboardcvesbyseverity4to79.md)
 * [DashboardCvesBySeverity8to10](interfaces/dashboardcvesbyseverity8to10.md)
 * [DashboardCvesBySeverityNa](interfaces/dashboardcvesbyseverityna.md)
+* [DashboardRecentCves](interfaces/dashboardrecentcves.md)
 * [DashboardRecentRules](interfaces/dashboardrecentrules.md)
 * [Errors](interfaces/errors.md)
 * [ErrorsErrors](interfaces/errorserrors.md)
@@ -40,7 +41,6 @@
 * [ExecutiveReportCvesBySeverity4to79](interfaces/executivereportcvesbyseverity4to79.md)
 * [ExecutiveReportCvesBySeverity8to10](interfaces/executivereportcvesbyseverity8to10.md)
 * [ExecutiveReportCvesBySeverityNa](interfaces/executivereportcvesbyseverityna.md)
-* [ExecutiveReportRecentCves](interfaces/executivereportrecentcves.md)
 * [ExecutiveReportRulesBySeverity](interfaces/executivereportrulesbyseverity.md)
 * [ExecutiveReportRulesBySeverity1](interfaces/executivereportrulesbyseverity1.md)
 * [ExecutiveReportTopCves](interfaces/executivereporttopcves.md)
@@ -128,7 +128,7 @@ ___
 
 ### `Const` BASE_PATH
 
-• **BASE_PATH**: *string* = "http://localhost".replace(/\/+$/, "")
+• **BASE_PATH**: *string* = "http://localhost/api/vulnerability/v1".replace(/\/+$/, "")
 
 *Defined in [packages/vulnerabilities/git-api/base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L20)*
 

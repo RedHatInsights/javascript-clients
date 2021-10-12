@@ -15,9 +15,11 @@
 ### Properties
 
 * [advisory_type](controllerssystemadvisoryitemattributes.md#optional-advisory_type)
+* [advisory_type_name](controllerssystemadvisoryitemattributes.md#optional-advisory_type_name)
 * [cve_count](controllerssystemadvisoryitemattributes.md#optional-cve_count)
 * [description](controllerssystemadvisoryitemattributes.md#optional-description)
 * [public_date](controllerssystemadvisoryitemattributes.md#optional-public_date)
+* [reboot_required](controllerssystemadvisoryitemattributes.md#optional-reboot_required)
 * [severity](controllerssystemadvisoryitemattributes.md#optional-severity)
 * [synopsis](controllerssystemadvisoryitemattributes.md#optional-synopsis)
 
@@ -27,7 +29,21 @@
 
 • **advisory_type**? : *number*
 
-*Defined in [packages/patch/api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L759)*
+*Defined in [packages/patch/api.ts:807](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L807)*
+
+Deprecated, not useful database ID (0 - unknown, 1 -, enhancement, 2 - bugfix, 3 - security, 4 - unspecified)
+
+**`memberof`** ControllersSystemAdvisoryItemAttributes
+
+___
+
+### `Optional` advisory_type_name
+
+• **advisory_type_name**? : *string*
+
+*Defined in [packages/patch/api.ts:813](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L813)*
+
+Advisory type name, proper ordering ensured (unknown, unspecified, enhancement, bugfix, security)
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -37,7 +53,7 @@ ___
 
 • **cve_count**? : *number*
 
-*Defined in [packages/patch/api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L765)*
+*Defined in [packages/patch/api.ts:819](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L819)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -47,7 +63,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L771)*
+*Defined in [packages/patch/api.ts:825](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L825)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -57,7 +73,17 @@ ___
 
 • **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L777)*
+*Defined in [packages/patch/api.ts:831](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L831)*
+
+**`memberof`** ControllersSystemAdvisoryItemAttributes
+
+___
+
+### `Optional` reboot_required
+
+• **reboot_required**? : *boolean*
+
+*Defined in [packages/patch/api.ts:837](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L837)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -67,7 +93,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L783)*
+*Defined in [packages/patch/api.ts:843](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L843)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes
 
@@ -77,6 +103,6 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L789)*
+*Defined in [packages/patch/api.ts:849](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L849)*
 
 **`memberof`** ControllersSystemAdvisoryItemAttributes

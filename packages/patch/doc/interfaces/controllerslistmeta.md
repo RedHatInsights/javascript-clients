@@ -19,6 +19,7 @@
 * [offset](controllerslistmeta.md#optional-offset)
 * [search](controllerslistmeta.md#optional-search)
 * [sort](controllerslistmeta.md#optional-sort)
+* [subtotals](controllerslistmeta.md#optional-subtotals)
 * [total_items](controllerslistmeta.md#optional-total_items)
 
 ## Properties
@@ -27,7 +28,7 @@
 
 • **filter**? : *object*
 
-*Defined in [packages/patch/api.ts:386](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L386)*
+*Defined in [packages/patch/api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L416)*
 
 **`memberof`** ControllersListMeta
 
@@ -41,7 +42,7 @@ ___
 
 • **limit**? : *number*
 
-*Defined in [packages/patch/api.ts:392](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L392)*
+*Defined in [packages/patch/api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L422)*
 
 **`memberof`** ControllersListMeta
 
@@ -51,7 +52,7 @@ ___
 
 • **offset**? : *number*
 
-*Defined in [packages/patch/api.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L398)*
+*Defined in [packages/patch/api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L428)*
 
 **`memberof`** ControllersListMeta
 
@@ -61,7 +62,7 @@ ___
 
 • **search**? : *string*
 
-*Defined in [packages/patch/api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L404)*
+*Defined in [packages/patch/api.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L434)*
 
 **`memberof`** ControllersListMeta
 
@@ -71,9 +72,23 @@ ___
 
 • **sort**? : *Array‹string›*
 
-*Defined in [packages/patch/api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L410)*
+*Defined in [packages/patch/api.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L440)*
 
 **`memberof`** ControllersListMeta
+
+___
+
+### `Optional` subtotals
+
+• **subtotals**? : *object*
+
+*Defined in [packages/patch/api.ts:446](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L446)*
+
+**`memberof`** ControllersListMeta
+
+#### Type declaration:
+
+* \[ **key**: *string*\]: number
 
 ___
 
@@ -81,6 +96,6 @@ ___
 
 • **total_items**? : *number*
 
-*Defined in [packages/patch/api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/24a5712/packages/patch/api.ts#L416)*
+*Defined in [packages/patch/api.ts:452](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L452)*
 
 **`memberof`** ControllersListMeta

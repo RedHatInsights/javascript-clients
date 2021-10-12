@@ -1,0 +1,29 @@
+[@redhat-cloud-services/host-inventory-client](../README.md) › [Globals](../globals.md) › [HostQueryOutputAllOf](hostqueryoutputallof.md)
+
+# Interface: HostQueryOutputAllOf
+
+**`export`** 
+
+**`interface`** HostQueryOutputAllOf
+
+## Hierarchy
+
+* **HostQueryOutputAllOf**
+
+## Index
+
+### Properties
+
+* [results](hostqueryoutputallof.md#results)
+
+## Properties
+
+###  results
+
+• **results**: *Array‹[HostOut](hostout.md)›*
+
+*Defined in [packages/host-inventory/api.ts:835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L835)*
+
+Actual host search query result entries.
+
+**`memberof`** HostQueryOutputAllOf

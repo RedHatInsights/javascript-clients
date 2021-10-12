@@ -31,7 +31,7 @@ Security rule.
 
 • **associated_cves**? : *Array‹string›*
 
-*Defined in [packages/vulnerabilities/api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L572)*
+*Defined in [packages/vulnerabilities/api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L597)*
 
 List of CVEs associated with the security rule.
 
@@ -43,7 +43,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/vulnerabilities/api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L578)*
+*Defined in [packages/vulnerabilities/api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L603)*
 
 Description of the issue related with the security rule.
 
@@ -55,7 +55,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/vulnerabilities/api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L584)*
+*Defined in [packages/vulnerabilities/api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L609)*
 
 ID of the security rule.
 
@@ -67,7 +67,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/vulnerabilities/api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L590)*
+*Defined in [packages/vulnerabilities/api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L615)*
 
 Name of the security rule.
 
@@ -79,7 +79,7 @@ ___
 
 • **node_id**? : *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L596)*
+*Defined in [packages/vulnerabilities/api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L621)*
 
 Node id of access.redhat.com/node/_* article.
 
@@ -91,7 +91,7 @@ ___
 
 • **public_date**? : *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L602)*
+*Defined in [packages/vulnerabilities/api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L627)*
 
 String representation of ISO-8601 formatted date of release of the security rule.
 
@@ -103,7 +103,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/vulnerabilities/api.ts:608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L608)*
+*Defined in [packages/vulnerabilities/api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L633)*
 
 Number representation of the security rule severity.
 
@@ -115,7 +115,7 @@ ___
 
 • **systems_affected**? : *number*
 
-*Defined in [packages/vulnerabilities/api.ts:614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L614)*
+*Defined in [packages/vulnerabilities/api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L639)*
 
 Number of systems triggering the security rule.
 

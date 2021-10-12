@@ -24,7 +24,7 @@
 
 • **count**? : *number*
 
-*Defined in [packages/host-inventory/api.ts:1497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1497)*
+*Defined in [packages/host-inventory/api.ts:1711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1711)*
 
 The number of items on the current page
 
@@ -34,9 +34,9 @@ ___
 
 ### `Optional` results
 
-• **results**? : *Array‹object›*
+• **results**? : *Array‹[SystemProfileSapSystemOutResults](systemprofilesapsystemoutresults.md)›*
 
-*Defined in [packages/host-inventory/api.ts:1503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1503)*
+*Defined in [packages/host-inventory/api.ts:1717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1717)*
 
 The list of sap_system values on the account
 
@@ -48,7 +48,7 @@ ___
 
 • **total**? : *number*
 
-*Defined in [packages/host-inventory/api.ts:1491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1491)*
+*Defined in [packages/host-inventory/api.ts:1705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1705)*
 
 Total number of items
 

@@ -28,9 +28,9 @@ Structure of the output of the host system profile query
 
 • **count**: *number*
 
-*Defined in [packages/host-inventory/api.ts:1407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1407)*
+*Defined in [packages/host-inventory/api.ts:1478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1478)*
 
-A number of entries on the current page.
+The number of items on the current page
 
 **`memberof`** SystemProfileByHostOut
 
@@ -40,9 +40,9 @@ ___
 
 • **page**: *number*
 
-*Defined in [packages/host-inventory/api.ts:1413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1413)*
+*Defined in [packages/host-inventory/api.ts:1484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1484)*
 
-A current page number.
+The page number
 
 **`memberof`** SystemProfileByHostOut
 
@@ -52,9 +52,9 @@ ___
 
 • **per_page**: *number*
 
-*Defined in [packages/host-inventory/api.ts:1419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1419)*
+*Defined in [packages/host-inventory/api.ts:1490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1490)*
 
-A page size – a number of entries per single page.
+The number of items to return per page
 
 **`memberof`** SystemProfileByHostOut
 
@@ -64,7 +64,7 @@ ___
 
 • **results**: *Array‹[HostSystemProfileOut](hostsystemprofileout.md)›*
 
-*Defined in [packages/host-inventory/api.ts:1431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1431)*
+*Defined in [packages/host-inventory/api.ts:1502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1502)*
 
 Actual host search query result entries.
 
@@ -76,8 +76,8 @@ ___
 
 • **total**: *number*
 
-*Defined in [packages/host-inventory/api.ts:1425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1425)*
+*Defined in [packages/host-inventory/api.ts:1496](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1496)*
 
-A total count of the found entries.
+Total number of items
 
 **`memberof`** SystemProfileByHostOut

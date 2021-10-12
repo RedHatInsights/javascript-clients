@@ -28,9 +28,9 @@ A paginated host search query result with host entries and their Inventory metad
 
 • **count**: *number*
 
-*Defined in [packages/host-inventory/api.ts:839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L839)*
+*Defined in [packages/host-inventory/api.ts:798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L798)*
 
-A number of entries on the current page.
+The number of items on the current page
 
 **`memberof`** HostQueryOutput
 
@@ -40,9 +40,9 @@ ___
 
 • **page**: *number*
 
-*Defined in [packages/host-inventory/api.ts:845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L845)*
+*Defined in [packages/host-inventory/api.ts:804](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L804)*
 
-A current page number.
+The page number
 
 **`memberof`** HostQueryOutput
 
@@ -52,9 +52,9 @@ ___
 
 • **per_page**: *number*
 
-*Defined in [packages/host-inventory/api.ts:851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L851)*
+*Defined in [packages/host-inventory/api.ts:810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L810)*
 
-A page size – a number of entries per single page.
+The number of items to return per page
 
 **`memberof`** HostQueryOutput
 
@@ -64,7 +64,7 @@ ___
 
 • **results**: *Array‹[HostOut](hostout.md)›*
 
-*Defined in [packages/host-inventory/api.ts:863](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L863)*
+*Defined in [packages/host-inventory/api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L822)*
 
 Actual host search query result entries.
 
@@ -76,8 +76,8 @@ ___
 
 • **total**: *number*
 
-*Defined in [packages/host-inventory/api.ts:857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L857)*
+*Defined in [packages/host-inventory/api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L816)*
 
-A total count of the found entries.
+Total number of items
 
 **`memberof`** HostQueryOutput

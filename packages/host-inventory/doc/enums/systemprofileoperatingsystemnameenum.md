@@ -16,4 +16,4 @@
 
 • **RHEL**: = "RHEL"
 
-*Defined in [packages/host-inventory/api.ts:1464](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1464)*
+*Defined in [packages/host-inventory/api.ts:1678](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1678)*

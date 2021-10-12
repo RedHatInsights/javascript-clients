@@ -22,7 +22,7 @@
 
 ###  data
 
-• **data**: *string | Array‹string›*
+• **data**: *string | Array‹object›*
 
 *Defined in [packages/vulnerabilities/git-api/api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L33)*
 

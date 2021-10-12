@@ -24,7 +24,7 @@
 
 • **id**: *string*
 
-*Defined in [api.ts:752](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L752)*
+*Defined in [api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L765)*
 
 **`memberof`** RemediationInputAddIssues
 
@@ -34,7 +34,7 @@ ___
 
 • **resolution**? : *string*
 
-*Defined in [api.ts:758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L758)*
+*Defined in [api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L771)*
 
 **`memberof`** RemediationInputAddIssues
 
@@ -44,6 +44,6 @@ ___
 
 • **systems**? : *Array‹string›*
 
-*Defined in [api.ts:764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L764)*
+*Defined in [api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L777)*
 
 **`memberof`** RemediationInputAddIssues

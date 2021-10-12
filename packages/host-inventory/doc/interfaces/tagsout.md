@@ -14,45 +14,45 @@
 
 ### Properties
 
-* [count](tagsout.md#optional-count)
-* [page](tagsout.md#optional-page)
-* [per_page](tagsout.md#optional-per_page)
+* [count](tagsout.md#count)
+* [page](tagsout.md#page)
+* [per_page](tagsout.md#per_page)
 * [results](tagsout.md#optional-results)
-* [total](tagsout.md#optional-total)
+* [total](tagsout.md#total)
 
 ## Properties
 
-### `Optional` count
+###  count
 
-• **count**? : *number*
+• **count**: *number*
 
-*Defined in [packages/host-inventory/api.ts:1559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1559)*
+*Defined in [packages/host-inventory/api.ts:1890](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1890)*
 
-A number of entries on the current page.
-
-**`memberof`** TagsOut
-
-___
-
-### `Optional` page
-
-• **page**? : *number*
-
-*Defined in [packages/host-inventory/api.ts:1565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1565)*
-
-A current page number.
+The number of items on the current page
 
 **`memberof`** TagsOut
 
 ___
 
-### `Optional` per_page
+###  page
 
-• **per_page**? : *number*
+• **page**: *number*
 
-*Defined in [packages/host-inventory/api.ts:1571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1571)*
+*Defined in [packages/host-inventory/api.ts:1896](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1896)*
 
-A page size – a number of entries per single page.
+The page number
+
+**`memberof`** TagsOut
+
+___
+
+###  per_page
+
+• **per_page**: *number*
+
+*Defined in [packages/host-inventory/api.ts:1902](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1902)*
+
+The number of items to return per page
 
 **`memberof`** TagsOut
 
@@ -62,7 +62,7 @@ ___
 
 • **results**? : *object*
 
-*Defined in [packages/host-inventory/api.ts:1577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1577)*
+*Defined in [packages/host-inventory/api.ts:1914](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1914)*
 
 The list of tags on the systems
 
@@ -74,12 +74,12 @@ The list of tags on the systems
 
 ___
 
-### `Optional` total
+###  total
 
-• **total**? : *number*
+• **total**: *number*
 
-*Defined in [packages/host-inventory/api.ts:1553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1553)*
+*Defined in [packages/host-inventory/api.ts:1908](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1908)*
 
-Total number of items in the \"data\" list.
+Total number of items
 
 **`memberof`** TagsOut
