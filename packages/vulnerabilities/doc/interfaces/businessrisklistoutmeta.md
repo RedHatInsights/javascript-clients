@@ -22,7 +22,7 @@
 
 • **total_items**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L134)*
+*Defined in [api.ts:140](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L140)*
 
 Total number of available business risk/business_risk_id pairs.
 

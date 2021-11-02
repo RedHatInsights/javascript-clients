@@ -28,7 +28,7 @@
 
 • **first_reported_from**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1262)*
+*Defined in [api.ts:1292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1292)*
 
 Filter system-cve pairs based on first time of detection of CVE.
 
@@ -40,7 +40,7 @@ ___
 
 • **first_reported_to**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1268)*
+*Defined in [api.ts:1298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1298)*
 
 Filter system-cve pairs based on first time of detection of CVE.
 
@@ -52,7 +52,7 @@ ___
 
 • **patch_access**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1274)*
+*Defined in [api.ts:1304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1304)*
 
 If show_advisories=true shows access to patch service else null
 
@@ -64,7 +64,7 @@ ___
 
 • **rhel_version**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1280](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1280)*
+*Defined in [api.ts:1310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1310)*
 
 Filter base on system RHEL version.
 
@@ -76,7 +76,7 @@ ___
 
 • **rule_key**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1286](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1286)*
+*Defined in [api.ts:1316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1316)*
 
 Filters security rules by its error key.
 
@@ -88,7 +88,7 @@ ___
 
 • **rule_presence**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1292)*
+*Defined in [api.ts:1322](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1322)*
 
 Filter based on presence of security rule
 
@@ -100,7 +100,7 @@ ___
 
 • **status_id**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1298)*
+*Defined in [api.ts:1328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1328)*
 
 Filer based on CVE status ID.
 

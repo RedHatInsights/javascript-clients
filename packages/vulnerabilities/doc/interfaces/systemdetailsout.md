@@ -15,6 +15,7 @@
 ### Properties
 
 * [data](systemdetailsout.md#data)
+* [meta](systemdetailsout.md#meta)
 
 ## Properties
 
@@ -22,6 +23,16 @@
 
 • **data**: *[SystemDetailsOutData](systemdetailsoutdata.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:2196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2196)*
+*Defined in [api.ts:2281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2281)*
+
+**`memberof`** SystemDetailsOut
+
+___
+
+###  meta
+
+• **meta**: *[MetaPermissions](metapermissions.md)*
+
+*Defined in [api.ts:2287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2287)*
 
 **`memberof`** SystemDetailsOut

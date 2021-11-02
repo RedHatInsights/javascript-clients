@@ -23,7 +23,7 @@
 
 • **rule_count**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:877](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L877)*
+*Defined in [git-api/api.ts:895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L895)*
 
 How many unique rules with at least system affected are present.
 
@@ -35,7 +35,7 @@ ___
 
 • **systems_affected**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:883](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L883)*
+*Defined in [git-api/api.ts:901](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L901)*
 
 How many unique systems are affected by at least one rules with given severity
 

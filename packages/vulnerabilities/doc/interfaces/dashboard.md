@@ -28,7 +28,7 @@
 
 • **cves_by_severity**: *[DashboardCvesBySeverity](dashboardcvesbyseverity.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L392)*
+*Defined in [api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L404)*
 
 **`memberof`** Dashboard
 
@@ -38,7 +38,7 @@ ___
 
 • **cves_total**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L398)*
+*Defined in [api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L410)*
 
 Number of unique CVEs discovered on the managed systems.
 
@@ -50,7 +50,7 @@ ___
 
 • **exploited_cves_count**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L404)*
+*Defined in [api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L416)*
 
 unique number of CVEs having known exploit affecting at least one system
 
@@ -62,7 +62,7 @@ ___
 
 • **recent_cves**: *[DashboardRecentCves](dashboardrecentcves.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L410)*
+*Defined in [api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L422)*
 
 **`memberof`** Dashboard
 
@@ -72,7 +72,7 @@ ___
 
 • **recent_rules**: *Array‹[DashboardRecentRules](dashboardrecentrules.md)›*
 
-*Defined in [packages/vulnerabilities/api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L416)*
+*Defined in [api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L428)*
 
 List of recently (14 days) released security rules.
 
@@ -84,7 +84,7 @@ ___
 
 • **rules_cves_total**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L422)*
+*Defined in [api.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L434)*
 
 Total number of CVEs with associated security rules affecting given account.
 
@@ -96,7 +96,7 @@ ___
 
 • **system_count**: *number*
 
-*Defined in [packages/vulnerabilities/api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L428)*
+*Defined in [api.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L440)*
 
 Total systems registered to Vulnerability service (with applied filtering).
 
