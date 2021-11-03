@@ -15,6 +15,7 @@
 ### Properties
 
 * [data](cvedetailout.md#optional-data)
+* [meta](cvedetailout.md#optional-meta)
 
 ## Properties
 
@@ -22,6 +23,16 @@
 
 • **data**? : *[CveDetailOutData](cvedetailoutdata.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L147)*
+*Defined in [api.ts:153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L153)*
+
+**`memberof`** CveDetailOut
+
+___
+
+### `Optional` meta
+
+• **meta**? : *[MetaPermissions](metapermissions.md)*
+
+*Defined in [api.ts:159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L159)*
 
 **`memberof`** CveDetailOut

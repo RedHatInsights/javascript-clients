@@ -21,6 +21,7 @@
 * [impact](metavulnerabilitiesoutallof.md#impact)
 * [public_from](metavulnerabilitiesoutallof.md#public_from)
 * [public_to](metavulnerabilitiesoutallof.md#public_to)
+* [rhel_version](metavulnerabilitiesoutallof.md#rhel_version)
 * [rule_presence](metavulnerabilitiesoutallof.md#rule_presence)
 * [system_count](metavulnerabilitiesoutallof.md#optional-system_count)
 
@@ -30,7 +31,7 @@
 
 • **affecting**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1864)*
+*Defined in [api.ts:1937](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1937)*
 
 Description of CVE showing preferences
 
@@ -42,7 +43,7 @@ ___
 
 • **business_risk_id**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1870)*
+*Defined in [api.ts:1943](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1943)*
 
 Filter based on business risk IDs.
 
@@ -54,7 +55,7 @@ ___
 
 • **cvss_from**: *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1876](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1876)*
+*Defined in [api.ts:1949](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1949)*
 
 Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
 
@@ -66,7 +67,7 @@ ___
 
 • **cvss_to**: *number | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1882)*
+*Defined in [api.ts:1955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1955)*
 
 Filter based on cvss score, up to the value.
 
@@ -78,7 +79,7 @@ ___
 
 • **impact**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1888](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1888)*
+*Defined in [api.ts:1961](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1961)*
 
 Filter based on impact IDs.
 
@@ -90,7 +91,7 @@ ___
 
 • **public_from**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1894](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1894)*
+*Defined in [api.ts:1967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1967)*
 
 Filter CVEs based on their published date, starting from the date.
 
@@ -102,9 +103,21 @@ ___
 
 • **public_to**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1900](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1900)*
+*Defined in [api.ts:1973](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1973)*
 
 Filter CVEs based on their published date, up to the date.
+
+**`memberof`** MetaVulnerabilitiesOutAllOf
+
+___
+
+###  rhel_version
+
+• **rhel_version**: *string | null*
+
+*Defined in [api.ts:1979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1979)*
+
+Filter base on system RHEL version.
 
 **`memberof`** MetaVulnerabilitiesOutAllOf
 
@@ -114,7 +127,7 @@ ___
 
 • **rule_presence**: *string | null*
 
-*Defined in [packages/vulnerabilities/api.ts:1906](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1906)*
+*Defined in [api.ts:1985](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1985)*
 
 Filter based on presence of security rule
 
@@ -126,7 +139,7 @@ ___
 
 • **system_count**? : *number*
 
-*Defined in [packages/vulnerabilities/api.ts:1912](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1912)*
+*Defined in [api.ts:1991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1991)*
 
 Total number of systems managed by vulnerability application.
 
