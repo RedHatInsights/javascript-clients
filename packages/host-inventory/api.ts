@@ -93,61 +93,7 @@ export interface ActiveTagsAllOf {
  * @export
  * @interface CanonicalFactsIn
  */
-export interface CanonicalFactsIn {
-    /**
-     *
-     * @type {string}
-     * @memberof CanonicalFactsIn
-     */
-    insights_id: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CanonicalFactsIn
-     */
-    subscription_manager_id: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CanonicalFactsIn
-     */
-    satellite_id: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CanonicalFactsIn
-     */
-    bios_uuid: string;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof CanonicalFactsIn
-     */
-    ip_addresses: Array<string>;
-    /**
-     *
-     * @type {string}
-     * @memberof CanonicalFactsIn
-     */
-    fqdn: string;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof CanonicalFactsIn
-     */
-    mac_addresses: Array<string>;
-    /**
-     *
-     * @type {string}
-     * @memberof CanonicalFactsIn
-     */
-    provider_id: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CanonicalFactsIn
-     */
-    provider_type: string;
+export interface CanonicalFactsIn extends CanonicalFactsInAllOf {
 }
 /**
  *
@@ -1406,6 +1352,12 @@ export interface SystemProfile {
      * @memberof SystemProfile
      */
     ansible?: SystemProfileAnsible;
+    /**
+     *
+     * @type {SystemProfileMssql}
+     * @memberof SystemProfile
+     */
+    mssql?: SystemProfileMssql;
 }
 
 /**
@@ -1594,6 +1546,19 @@ export interface SystemProfileInstalledProduct {
      * @memberof SystemProfileInstalledProduct
      */
     status?: string;
+}
+/**
+ * Object containing data specific to the MS SQL workload
+ * @export
+ * @interface SystemProfileMssql
+ */
+export interface SystemProfileMssql {
+    /**
+     * MSSQL version number
+     * @type {string}
+     * @memberof SystemProfileMssql
+     */
+    version?: string;
 }
 /**
  * Representation of one network interface
@@ -2170,12 +2135,12 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById: async (hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostById: async (hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostById.');
@@ -2244,8 +2209,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
@@ -2254,7 +2219,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/hosts`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2356,14 +2321,14 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [branchId] Filter by branch_id
          * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostSystemProfileById: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostSystemProfileById: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostSystemProfileById.');
@@ -2430,12 +2395,12 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTagCount: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostTagCount: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostTagCount.');
@@ -2494,13 +2459,13 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTags: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostTags: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', search?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostTags.');
@@ -2830,12 +2795,12 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
+        async apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -2854,8 +2819,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
@@ -2864,7 +2829,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
+        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -2877,14 +2842,14 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [branchId] Filter by branch_id
          * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileByHostOut>> {
+        async apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileByHostOut>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, fields, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -2897,12 +2862,12 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagCountOut>> {
+        async apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagCountOut>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -2915,13 +2880,13 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsOut>> {
+        async apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', search?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsOut>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3019,12 +2984,12 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<HostQueryOutput> {
+        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<HostQueryOutput> {
             return HostsApiFp(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3039,8 +3004,8 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
@@ -3049,7 +3014,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): AxiosPromise<HostQueryOutput> {
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): AxiosPromise<HostQueryOutput> {
             return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3058,14 +3023,14 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [branchId] Filter by branch_id
          * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options?: any): AxiosPromise<SystemProfileByHostOut> {
+        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options?: any): AxiosPromise<SystemProfileByHostOut> {
             return HostsApiFp(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, fields, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3074,12 +3039,12 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<TagCountOut> {
+        apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<TagCountOut> {
             return HostsApiFp(configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3088,13 +3053,13 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options?: any): AxiosPromise<TagsOut> {
+        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', search?: string, options?: any): AxiosPromise<TagsOut> {
             return HostsApiFp(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3175,13 +3140,13 @@ export class HostsApi extends BaseAPI {
      * @param {string} [branchId] Filter by branch_id
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+     * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+    public apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3197,8 +3162,8 @@ export class HostsApi extends BaseAPI {
      * @param {string} [branchId] Filter by branch_id
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+     * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
      * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
@@ -3208,7 +3173,7 @@ export class HostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any) {
+    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3218,15 +3183,15 @@ export class HostsApi extends BaseAPI {
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+     * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
      * @param {string} [branchId] Filter by branch_id
      * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options?: any) {
+    public apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, fields, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3236,13 +3201,13 @@ export class HostsApi extends BaseAPI {
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+     * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
+    public apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3252,14 +3217,14 @@ export class HostsApi extends BaseAPI {
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'display_name' | 'updated'} [orderBy] Ordering field name
-     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering, defaults to ASC for display_name and to DESC for updated
+     * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
      * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated', orderHow?: 'ASC' | 'DESC', search?: string, options?: any) {
+    public apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', search?: string, options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options).then((request) => request(this.axios, this.basePath));
     }
 

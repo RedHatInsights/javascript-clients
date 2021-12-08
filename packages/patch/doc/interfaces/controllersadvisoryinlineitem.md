@@ -22,6 +22,7 @@
 * [id](controllersadvisoryinlineitem.md#optional-id)
 * [public_date](controllersadvisoryinlineitem.md#optional-public_date)
 * [reboot_required](controllersadvisoryinlineitem.md#optional-reboot_required)
+* [release_versions](controllersadvisoryinlineitem.md#optional-release_versions)
 * [severity](controllersadvisoryinlineitem.md#optional-severity)
 * [synopsis](controllersadvisoryinlineitem.md#optional-synopsis)
 
@@ -31,7 +32,7 @@
 
 • **advisory_type**? : *number*
 
-*Defined in [packages/patch/api.ts:188](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L188)*
+*Defined in [packages/patch/api.ts:200](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L200)*
 
 Deprecated, not useful database ID (0 - unknown, 1 -, enhancement, 2 - bugfix, 3 - security, 4 - unspecified)
 
@@ -43,7 +44,7 @@ ___
 
 • **advisory_type_name**? : *string*
 
-*Defined in [packages/patch/api.ts:194](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L194)*
+*Defined in [packages/patch/api.ts:206](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L206)*
 
 Advisory type name, proper ordering ensured (unknown, unspecified, enhancement, bugfix, security)
 
@@ -55,7 +56,7 @@ ___
 
 • **applicable_systems**? : *number*
 
-*Defined in [packages/patch/api.ts:200](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L200)*
+*Defined in [packages/patch/api.ts:212](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L212)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -65,7 +66,7 @@ ___
 
 • **cve_count**? : *number*
 
-*Defined in [packages/patch/api.ts:206](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L206)*
+*Defined in [packages/patch/api.ts:218](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L218)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -75,7 +76,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:212](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L212)*
+*Defined in [packages/patch/api.ts:224](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L224)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -85,7 +86,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/patch/api.ts:218](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L218)*
+*Defined in [packages/patch/api.ts:230](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L230)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -95,7 +96,7 @@ ___
 
 • **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:224](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L224)*
+*Defined in [packages/patch/api.ts:236](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L236)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -105,7 +106,17 @@ ___
 
 • **reboot_required**? : *boolean*
 
-*Defined in [packages/patch/api.ts:230](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L230)*
+*Defined in [packages/patch/api.ts:242](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L242)*
+
+**`memberof`** ControllersAdvisoryInlineItem
+
+___
+
+### `Optional` release_versions
+
+• **release_versions**? : *Array‹string›*
+
+*Defined in [packages/patch/api.ts:248](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L248)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -115,7 +126,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:236](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L236)*
+*Defined in [packages/patch/api.ts:254](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L254)*
 
 **`memberof`** ControllersAdvisoryInlineItem
 
@@ -125,6 +136,6 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:242](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L242)*
+*Defined in [packages/patch/api.ts:260](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L260)*
 
 **`memberof`** ControllersAdvisoryInlineItem

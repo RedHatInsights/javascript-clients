@@ -23,7 +23,7 @@
 
 • **meta**? : *[MetaPermissions](metapermissions.md)*
 
-*Defined in [git-api/api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L83)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L83)*
 
 **`memberof`** BulkChangeOut
 
@@ -33,7 +33,7 @@ ___
 
 • **updated**: *Array‹string›*
 
-*Defined in [git-api/api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L89)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L89)*
 
 List of updated objects/updated object IDs.
 

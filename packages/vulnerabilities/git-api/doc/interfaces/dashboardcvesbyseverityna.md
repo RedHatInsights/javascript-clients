@@ -24,7 +24,7 @@
 
 • **count**: *number*
 
-*Defined in [git-api/api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L559)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L559)*
 
 Number of CVEs with N/A CVSS score.
 
@@ -36,7 +36,7 @@ ___
 
 • **known_exploits**? : *number*
 
-*Defined in [git-api/api.ts:565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L565)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L565)*
 
 Number of CVEs in given bracket with a known exploit.
 
@@ -48,7 +48,7 @@ ___
 
 • **percentage**: *number*
 
-*Defined in [git-api/api.ts:571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L571)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L571)*
 
 Percentage of CVEs with N/A CVSS score.
 

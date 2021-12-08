@@ -8,108 +8,128 @@
 
 ## Hierarchy
 
-* **CanonicalFactsIn**
+* [CanonicalFactsInAllOf](canonicalfactsinallof.md)
+
+  ↳ **CanonicalFactsIn**
 
 ## Index
 
 ### Properties
 
-* [bios_uuid](canonicalfactsin.md#bios_uuid)
-* [fqdn](canonicalfactsin.md#fqdn)
-* [insights_id](canonicalfactsin.md#insights_id)
-* [ip_addresses](canonicalfactsin.md#ip_addresses)
-* [mac_addresses](canonicalfactsin.md#mac_addresses)
-* [provider_id](canonicalfactsin.md#provider_id)
-* [provider_type](canonicalfactsin.md#provider_type)
-* [satellite_id](canonicalfactsin.md#satellite_id)
-* [subscription_manager_id](canonicalfactsin.md#subscription_manager_id)
+* [bios_uuid](canonicalfactsin.md#optional-bios_uuid)
+* [fqdn](canonicalfactsin.md#optional-fqdn)
+* [insights_id](canonicalfactsin.md#optional-insights_id)
+* [ip_addresses](canonicalfactsin.md#optional-ip_addresses)
+* [mac_addresses](canonicalfactsin.md#optional-mac_addresses)
+* [provider_id](canonicalfactsin.md#optional-provider_id)
+* [provider_type](canonicalfactsin.md#optional-provider_type)
+* [satellite_id](canonicalfactsin.md#optional-satellite_id)
+* [subscription_manager_id](canonicalfactsin.md#optional-subscription_manager_id)
 
 ## Properties
 
-###  bios_uuid
+### `Optional` bios_uuid
 
-• **bios_uuid**: *string*
+• **bios_uuid**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L120)*
+*Inherited from [CanonicalFactsIn](canonicalfactsin.md).[bios_uuid](canonicalfactsin.md#optional-bios_uuid)*
 
-**`memberof`** CanonicalFactsIn
+*Defined in [packages/host-inventory/api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L127)*
 
-___
-
-###  fqdn
-
-• **fqdn**: *string*
-
-*Defined in [packages/host-inventory/api.ts:132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L132)*
-
-**`memberof`** CanonicalFactsIn
+**`memberof`** CanonicalFactsInAllOf
 
 ___
 
-###  insights_id
+### `Optional` fqdn
 
-• **insights_id**: *string*
+• **fqdn**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:102](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L102)*
+*Inherited from [CanonicalFactsIn](canonicalfactsin.md).[fqdn](canonicalfactsin.md#optional-fqdn)*
 
-**`memberof`** CanonicalFactsIn
+*Defined in [packages/host-inventory/api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L139)*
 
-___
-
-###  ip_addresses
-
-• **ip_addresses**: *Array‹string›*
-
-*Defined in [packages/host-inventory/api.ts:126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L126)*
-
-**`memberof`** CanonicalFactsIn
+**`memberof`** CanonicalFactsInAllOf
 
 ___
 
-###  mac_addresses
+### `Optional` insights_id
 
-• **mac_addresses**: *Array‹string›*
+• **insights_id**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L138)*
+*Inherited from [CanonicalFactsIn](canonicalfactsin.md).[insights_id](canonicalfactsin.md#optional-insights_id)*
 
-**`memberof`** CanonicalFactsIn
+*Defined in [packages/host-inventory/api.ts:109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L109)*
 
-___
-
-###  provider_id
-
-• **provider_id**: *string*
-
-*Defined in [packages/host-inventory/api.ts:144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L144)*
-
-**`memberof`** CanonicalFactsIn
+**`memberof`** CanonicalFactsInAllOf
 
 ___
 
-###  provider_type
+### `Optional` ip_addresses
 
-• **provider_type**: *string*
+• **ip_addresses**? : *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L150)*
+*Inherited from [CanonicalFactsIn](canonicalfactsin.md).[ip_addresses](canonicalfactsin.md#optional-ip_addresses)*
 
-**`memberof`** CanonicalFactsIn
+*Defined in [packages/host-inventory/api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L133)*
 
-___
-
-###  satellite_id
-
-• **satellite_id**: *string*
-
-*Defined in [packages/host-inventory/api.ts:114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L114)*
-
-**`memberof`** CanonicalFactsIn
+**`memberof`** CanonicalFactsInAllOf
 
 ___
 
-###  subscription_manager_id
+### `Optional` mac_addresses
 
-• **subscription_manager_id**: *string*
+• **mac_addresses**? : *Array‹string›*
 
-*Defined in [packages/host-inventory/api.ts:108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L108)*
+*Inherited from [CanonicalFactsIn](canonicalfactsin.md).[mac_addresses](canonicalfactsin.md#optional-mac_addresses)*
 
-**`memberof`** CanonicalFactsIn
+*Defined in [packages/host-inventory/api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L145)*
+
+**`memberof`** CanonicalFactsInAllOf
+
+___
+
+### `Optional` provider_id
+
+• **provider_id**? : *string*
+
+*Inherited from [CanonicalFactsIn](canonicalfactsin.md).[provider_id](canonicalfactsin.md#optional-provider_id)*
+
+*Defined in [packages/host-inventory/api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L151)*
+
+**`memberof`** CanonicalFactsInAllOf
+
+___
+
+### `Optional` provider_type
+
+• **provider_type**? : *string*
+
+*Inherited from [CanonicalFactsIn](canonicalfactsin.md).[provider_type](canonicalfactsin.md#optional-provider_type)*
+
+*Defined in [packages/host-inventory/api.ts:157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L157)*
+
+**`memberof`** CanonicalFactsInAllOf
+
+___
+
+### `Optional` satellite_id
+
+• **satellite_id**? : *string*
+
+*Inherited from [CanonicalFactsIn](canonicalfactsin.md).[satellite_id](canonicalfactsin.md#optional-satellite_id)*
+
+*Defined in [packages/host-inventory/api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L121)*
+
+**`memberof`** CanonicalFactsInAllOf
+
+___
+
+### `Optional` subscription_manager_id
+
+• **subscription_manager_id**? : *string*
+
+*Inherited from [CanonicalFactsIn](canonicalfactsin.md).[subscription_manager_id](canonicalfactsin.md#optional-subscription_manager_id)*
+
+*Defined in [packages/host-inventory/api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L115)*
+
+**`memberof`** CanonicalFactsInAllOf

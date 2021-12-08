@@ -24,7 +24,7 @@
 
 • **attributes**? : *[ControllersSystemAdvisoryItemAttributes](controllerssystemadvisoryitemattributes.md)*
 
-*Defined in [packages/patch/api.ts:782](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L782)*
+*Defined in [packages/patch/api.ts:818](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L818)*
 
 **`memberof`** ControllersSystemAdvisoryItem
 
@@ -34,7 +34,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/patch/api.ts:788](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L788)*
+*Defined in [packages/patch/api.ts:824](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L824)*
 
 **`memberof`** ControllersSystemAdvisoryItem
 
@@ -44,6 +44,6 @@ ___
 
 • **type**? : *string*
 
-*Defined in [packages/patch/api.ts:794](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L794)*
+*Defined in [packages/patch/api.ts:830](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L830)*
 
 **`memberof`** ControllersSystemAdvisoryItem

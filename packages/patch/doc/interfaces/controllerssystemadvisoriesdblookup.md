@@ -21,6 +21,7 @@
 * [id](controllerssystemadvisoriesdblookup.md#optional-id)
 * [public_date](controllerssystemadvisoriesdblookup.md#optional-public_date)
 * [reboot_required](controllerssystemadvisoriesdblookup.md#optional-reboot_required)
+* [release_versions](controllerssystemadvisoriesdblookup.md#optional-release_versions)
 * [severity](controllerssystemadvisoriesdblookup.md#optional-severity)
 * [synopsis](controllerssystemadvisoriesdblookup.md#optional-synopsis)
 
@@ -30,7 +31,7 @@
 
 • **advisory_type**? : *number*
 
-*Defined in [packages/patch/api.ts:696](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L696)*
+*Defined in [packages/patch/api.ts:726](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L726)*
 
 Deprecated, not useful database ID (0 - unknown, 1 -, enhancement, 2 - bugfix, 3 - security, 4 - unspecified)
 
@@ -42,7 +43,7 @@ ___
 
 • **advisory_type_name**? : *string*
 
-*Defined in [packages/patch/api.ts:702](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L702)*
+*Defined in [packages/patch/api.ts:732](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L732)*
 
 Advisory type name, proper ordering ensured (unknown, unspecified, enhancement, bugfix, security)
 
@@ -54,7 +55,7 @@ ___
 
 • **cve_count**? : *number*
 
-*Defined in [packages/patch/api.ts:708](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L708)*
+*Defined in [packages/patch/api.ts:738](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L738)*
 
 **`memberof`** ControllersSystemAdvisoriesDBLookup
 
@@ -64,7 +65,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:714](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L714)*
+*Defined in [packages/patch/api.ts:744](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L744)*
 
 **`memberof`** ControllersSystemAdvisoriesDBLookup
 
@@ -74,7 +75,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/patch/api.ts:720](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L720)*
+*Defined in [packages/patch/api.ts:750](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L750)*
 
 **`memberof`** ControllersSystemAdvisoriesDBLookup
 
@@ -84,7 +85,7 @@ ___
 
 • **public_date**? : *string*
 
-*Defined in [packages/patch/api.ts:726](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L726)*
+*Defined in [packages/patch/api.ts:756](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L756)*
 
 **`memberof`** ControllersSystemAdvisoriesDBLookup
 
@@ -94,7 +95,17 @@ ___
 
 • **reboot_required**? : *boolean*
 
-*Defined in [packages/patch/api.ts:732](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L732)*
+*Defined in [packages/patch/api.ts:762](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L762)*
+
+**`memberof`** ControllersSystemAdvisoriesDBLookup
+
+___
+
+### `Optional` release_versions
+
+• **release_versions**? : *Array‹string›*
+
+*Defined in [packages/patch/api.ts:768](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L768)*
 
 **`memberof`** ControllersSystemAdvisoriesDBLookup
 
@@ -104,7 +115,7 @@ ___
 
 • **severity**? : *number*
 
-*Defined in [packages/patch/api.ts:738](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L738)*
+*Defined in [packages/patch/api.ts:774](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L774)*
 
 **`memberof`** ControllersSystemAdvisoriesDBLookup
 
@@ -114,6 +125,6 @@ ___
 
 • **synopsis**? : *string*
 
-*Defined in [packages/patch/api.ts:744](https://github.com/RedHatInsights/javascript-clients/blob/6a9cdc7/packages/patch/api.ts#L744)*
+*Defined in [packages/patch/api.ts:780](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L780)*
 
 **`memberof`** ControllersSystemAdvisoriesDBLookup

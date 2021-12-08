@@ -23,7 +23,7 @@
 
 • **meta**? : *[MetaPermissions](metapermissions.md)*
 
-*Defined in [git-api/api.ts:2193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2193)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2193)*
 
 **`memberof`** StatusOut
 
@@ -33,7 +33,7 @@ ___
 
 • **updated**: *Array‹[StatusOutUpdated](statusoutupdated.md)›*
 
-*Defined in [git-api/api.ts:2199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2199)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2199)*
 
 List of updated objects/updated object IDs.
 
