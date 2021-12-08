@@ -22,7 +22,7 @@
 
 • **results**: *Array‹[HostOut](hostout.md)›*
 
-*Defined in [packages/host-inventory/api.ts:835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L835)*
+*Defined in [packages/host-inventory/api.ts:781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L781)*
 
 Actual host search query result entries.
 

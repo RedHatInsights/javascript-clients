@@ -27,7 +27,7 @@
 
 • **associated_cves**: *Array‹string›*
 
-*Defined in [api.ts:969](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L969)*
+*Defined in [packages/vulnerabilities/api.ts:969](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L969)*
 
 All CVEs associated with the rule
 
@@ -39,7 +39,7 @@ ___
 
 • **description**: *string*
 
-*Defined in [api.ts:975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L975)*
+*Defined in [packages/vulnerabilities/api.ts:975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L975)*
 
 Brief description of the issue.
 
@@ -51,7 +51,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L981)*
+*Defined in [packages/vulnerabilities/api.ts:981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L981)*
 
 Name of the security rule.
 
@@ -63,7 +63,7 @@ ___
 
 • **rule_id**: *string*
 
-*Defined in [api.ts:987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L987)*
+*Defined in [packages/vulnerabilities/api.ts:987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L987)*
 
 ID of associated security rule.
 
@@ -75,7 +75,7 @@ ___
 
 • **severity**: *number*
 
-*Defined in [api.ts:993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L993)*
+*Defined in [packages/vulnerabilities/api.ts:993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L993)*
 
 Severity of the security rule.
 
@@ -87,7 +87,7 @@ ___
 
 • **systems_affected**: *number*
 
-*Defined in [api.ts:999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L999)*
+*Defined in [packages/vulnerabilities/api.ts:999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L999)*
 
 Number of systems affected by the rule.
 

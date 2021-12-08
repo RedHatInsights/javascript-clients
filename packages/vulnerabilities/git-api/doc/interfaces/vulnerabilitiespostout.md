@@ -24,7 +24,7 @@
 
 • **data**: *Array‹[VulnerabilitiesPostOutData](vulnerabilitiespostoutdata.md)›*
 
-*Defined in [git-api/api.ts:2512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2512)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2512)*
 
 **`memberof`** VulnerabilitiesPostOut
 
@@ -34,7 +34,7 @@ ___
 
 • **links**: *[Links](links.md)*
 
-*Defined in [git-api/api.ts:2518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2518)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2518)*
 
 **`memberof`** VulnerabilitiesPostOut
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**: *[Meta](meta.md) & [MetaPermissions](metapermissions.md)*
 
-*Defined in [git-api/api.ts:2524](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2524)*
+*Defined in [packages/vulnerabilities/git-api/api.ts:2524](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2524)*
 
 **`memberof`** VulnerabilitiesPostOut

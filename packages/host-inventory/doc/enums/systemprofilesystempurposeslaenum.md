@@ -18,7 +18,7 @@
 
 • **Premium**: = "Premium"
 
-*Defined in [packages/host-inventory/api.ts:1787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1787)*
+*Defined in [packages/host-inventory/api.ts:1752](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1752)*
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 • **SelfSupport**: = "Self-Support"
 
-*Defined in [packages/host-inventory/api.ts:1789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1789)*
+*Defined in [packages/host-inventory/api.ts:1754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1754)*
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 • **Standard**: = "Standard"
 
-*Defined in [packages/host-inventory/api.ts:1788](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1788)*
+*Defined in [packages/host-inventory/api.ts:1753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1753)*

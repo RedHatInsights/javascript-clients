@@ -28,7 +28,7 @@ Representation of one mounted device
 
 • **device**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1528](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1528)*
+*Defined in [packages/host-inventory/api.ts:1480](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1480)*
 
 **`memberof`** SystemProfileDiskDevice
 
@@ -38,7 +38,7 @@ ___
 
 • **label**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1534](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1534)*
+*Defined in [packages/host-inventory/api.ts:1486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1486)*
 
 User-defined mount label
 
@@ -50,7 +50,7 @@ ___
 
 • **mount_point**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1546](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1546)*
+*Defined in [packages/host-inventory/api.ts:1498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1498)*
 
 The mount point
 
@@ -62,7 +62,7 @@ ___
 
 • **options**? : *object*
 
-*Defined in [packages/host-inventory/api.ts:1540](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1540)*
+*Defined in [packages/host-inventory/api.ts:1492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1492)*
 
 An arbitrary object that does not allow empty string keys.
 
@@ -78,7 +78,7 @@ ___
 
 • **type**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1552](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1552)*
+*Defined in [packages/host-inventory/api.ts:1504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1504)*
 
 The mount type
 

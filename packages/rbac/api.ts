@@ -2191,30 +2191,6 @@ export interface Status {
      * @memberof Status
      */
     commit?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Status
-     */
-    server_address?: string;
-    /**
-     *
-     * @type {object}
-     * @memberof Status
-     */
-    platform_info?: object;
-    /**
-     *
-     * @type {string}
-     * @memberof Status
-     */
-    python_version?: string;
-    /**
-     *
-     * @type {object}
-     * @memberof Status
-     */
-    modules?: object;
 }
 /**
  *
@@ -4065,10 +4041,11 @@ export const PermissionApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} [resourceType] Filter returned options based on resource_type. You may also use a comma-separated list to filter on multiple resource_types.
          * @param {string} [verb] Filter returned options based on verb. You may also use a comma-separated list to filter on multiple verbs.
          * @param {'true' | 'false'} [excludeGlobals] If set to \&#39;true\&#39;, this will exclude any permission option with a global allowance on the supplied \&#39;?field&#x3D;\&#39; value of \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;.
+         * @param {'true' | 'false'} [allowedOnly] If set to \&#39;true\&#39;, this will exclude any permission with a role where the \&#39;application\&#39; is not in the role create allow list.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissionOptions: async (field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, excludeGlobals?: 'true' | 'false', options: any = {}): Promise<RequestArgs> => {
+        listPermissionOptions: async (field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, excludeGlobals?: 'true' | 'false', allowedOnly?: 'true' | 'false', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'field' is not null or undefined
             if (field === null || field === undefined) {
                 throw new RequiredError('field','Required parameter field was null or undefined when calling listPermissionOptions.');
@@ -4117,6 +4094,10 @@ export const PermissionApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['exclude_globals'] = excludeGlobals;
             }
 
+            if (allowedOnly !== undefined) {
+                localVarQueryParameter['allowed_only'] = allowedOnly;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4142,10 +4123,11 @@ export const PermissionApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
          * @param {'true' | 'false'} [excludeGlobals] If set to \&#39;true\&#39;, this will exclude any permission with a global allowance on either \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;.
          * @param {string} [excludeRoles] An optional string filter which accepts one or more role UUIDs, comma-separated, to return permissions not associated with the supplied role(s).
+         * @param {'true' | 'false'} [allowedOnly] If set to \&#39;true\&#39;, this will exclude any permission with a role where the \&#39;application\&#39; is not in the role create allow list.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissions: async (limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', excludeRoles?: string, options: any = {}): Promise<RequestArgs> => {
+        listPermissions: async (limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', excludeRoles?: string, allowedOnly?: 'true' | 'false', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/permissions/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4198,6 +4180,10 @@ export const PermissionApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['exclude_roles'] = excludeRoles;
             }
 
+            if (allowedOnly !== undefined) {
+                localVarQueryParameter['allowed_only'] = allowedOnly;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4230,11 +4216,12 @@ export const PermissionApiFp = function(configuration?: Configuration) {
          * @param {string} [resourceType] Filter returned options based on resource_type. You may also use a comma-separated list to filter on multiple resource_types.
          * @param {string} [verb] Filter returned options based on verb. You may also use a comma-separated list to filter on multiple verbs.
          * @param {'true' | 'false'} [excludeGlobals] If set to \&#39;true\&#39;, this will exclude any permission option with a global allowance on the supplied \&#39;?field&#x3D;\&#39; value of \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;.
+         * @param {'true' | 'false'} [allowedOnly] If set to \&#39;true\&#39;, this will exclude any permission with a role where the \&#39;application\&#39; is not in the role create allow list.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, excludeGlobals?: 'true' | 'false', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionOptionsPagination>> {
-            const localVarAxiosArgs = await PermissionApiAxiosParamCreator(configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, excludeGlobals, options);
+        async listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, excludeGlobals?: 'true' | 'false', allowedOnly?: 'true' | 'false', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionOptionsPagination>> {
+            const localVarAxiosArgs = await PermissionApiAxiosParamCreator(configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, excludeGlobals, allowedOnly, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4252,11 +4239,12 @@ export const PermissionApiFp = function(configuration?: Configuration) {
          * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
          * @param {'true' | 'false'} [excludeGlobals] If set to \&#39;true\&#39;, this will exclude any permission with a global allowance on either \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;.
          * @param {string} [excludeRoles] An optional string filter which accepts one or more role UUIDs, comma-separated, to return permissions not associated with the supplied role(s).
+         * @param {'true' | 'false'} [allowedOnly] If set to \&#39;true\&#39;, this will exclude any permission with a role where the \&#39;application\&#39; is not in the role create allow list.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', excludeRoles?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionPagination>> {
-            const localVarAxiosArgs = await PermissionApiAxiosParamCreator(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, excludeRoles, options);
+        async listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', excludeRoles?: string, allowedOnly?: 'true' | 'false', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionPagination>> {
+            const localVarAxiosArgs = await PermissionApiAxiosParamCreator(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, excludeRoles, allowedOnly, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4281,11 +4269,12 @@ export const PermissionApiFactory = function (configuration?: Configuration, bas
          * @param {string} [resourceType] Filter returned options based on resource_type. You may also use a comma-separated list to filter on multiple resource_types.
          * @param {string} [verb] Filter returned options based on verb. You may also use a comma-separated list to filter on multiple verbs.
          * @param {'true' | 'false'} [excludeGlobals] If set to \&#39;true\&#39;, this will exclude any permission option with a global allowance on the supplied \&#39;?field&#x3D;\&#39; value of \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;.
+         * @param {'true' | 'false'} [allowedOnly] If set to \&#39;true\&#39;, this will exclude any permission with a role where the \&#39;application\&#39; is not in the role create allow list.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, excludeGlobals?: 'true' | 'false', options?: any): AxiosPromise<PermissionOptionsPagination> {
-            return PermissionApiFp(configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, excludeGlobals, options).then((request) => request(axios, basePath));
+        listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, excludeGlobals?: 'true' | 'false', allowedOnly?: 'true' | 'false', options?: any): AxiosPromise<PermissionOptionsPagination> {
+            return PermissionApiFp(configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, excludeGlobals, allowedOnly, options).then((request) => request(axios, basePath));
         },
         /**
          * By default, responses are sorted in ascending order by permission application.
@@ -4299,11 +4288,12 @@ export const PermissionApiFactory = function (configuration?: Configuration, bas
          * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
          * @param {'true' | 'false'} [excludeGlobals] If set to \&#39;true\&#39;, this will exclude any permission with a global allowance on either \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;.
          * @param {string} [excludeRoles] An optional string filter which accepts one or more role UUIDs, comma-separated, to return permissions not associated with the supplied role(s).
+         * @param {'true' | 'false'} [allowedOnly] If set to \&#39;true\&#39;, this will exclude any permission with a role where the \&#39;application\&#39; is not in the role create allow list.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', excludeRoles?: string, options?: any): AxiosPromise<PermissionPagination> {
-            return PermissionApiFp(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, excludeRoles, options).then((request) => request(axios, basePath));
+        listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', excludeRoles?: string, allowedOnly?: 'true' | 'false', options?: any): AxiosPromise<PermissionPagination> {
+            return PermissionApiFp(configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, excludeRoles, allowedOnly, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -4325,12 +4315,13 @@ export class PermissionApi extends BaseAPI {
      * @param {string} [resourceType] Filter returned options based on resource_type. You may also use a comma-separated list to filter on multiple resource_types.
      * @param {string} [verb] Filter returned options based on verb. You may also use a comma-separated list to filter on multiple verbs.
      * @param {'true' | 'false'} [excludeGlobals] If set to \&#39;true\&#39;, this will exclude any permission option with a global allowance on the supplied \&#39;?field&#x3D;\&#39; value of \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;.
+     * @param {'true' | 'false'} [allowedOnly] If set to \&#39;true\&#39;, this will exclude any permission with a role where the \&#39;application\&#39; is not in the role create allow list.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PermissionApi
      */
-    public listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, excludeGlobals?: 'true' | 'false', options?: any) {
-        return PermissionApiFp(this.configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, excludeGlobals, options).then((request) => request(this.axios, this.basePath));
+    public listPermissionOptions(field: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, application?: string, resourceType?: string, verb?: string, excludeGlobals?: 'true' | 'false', allowedOnly?: 'true' | 'false', options?: any) {
+        return PermissionApiFp(this.configuration).listPermissionOptions(field, limit, offset, application, resourceType, verb, excludeGlobals, allowedOnly, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4345,12 +4336,13 @@ export class PermissionApi extends BaseAPI {
      * @param {string} [permission] Partial match for the aggregate permission value name of a permission object.
      * @param {'true' | 'false'} [excludeGlobals] If set to \&#39;true\&#39;, this will exclude any permission with a global allowance on either \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;.
      * @param {string} [excludeRoles] An optional string filter which accepts one or more role UUIDs, comma-separated, to return permissions not associated with the supplied role(s).
+     * @param {'true' | 'false'} [allowedOnly] If set to \&#39;true\&#39;, this will exclude any permission with a role where the \&#39;application\&#39; is not in the role create allow list.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PermissionApi
      */
-    public listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', excludeRoles?: string, options?: any) {
-        return PermissionApiFp(this.configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, excludeRoles, options).then((request) => request(this.axios, this.basePath));
+    public listPermissions(limit?: number, offset?: number, orderBy?: 'application' | 'resource_type' | 'verb' | 'permission', application?: string, resourceType?: string, verb?: string, permission?: string, excludeGlobals?: 'true' | 'false', excludeRoles?: string, allowedOnly?: 'true' | 'false', options?: any) {
+        return PermissionApiFp(this.configuration).listPermissions(limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, excludeRoles, allowedOnly, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -4856,7 +4848,7 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
          * @summary List the principals for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name and/or email.
+         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name and/or email. Currently, match_criteria of partial searches for a username/email using \&quot;starts with\&quot; pattern.
          * @param {string} [usernames] Comma separated usernames of principals to get. If match_criteria is specified, only the first username will be picked up for search.
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
          * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
@@ -4946,7 +4938,7 @@ export const PrincipalApiFp = function(configuration?: Configuration) {
          * @summary List the principals for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name and/or email.
+         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name and/or email. Currently, match_criteria of partial searches for a username/email using \&quot;starts with\&quot; pattern.
          * @param {string} [usernames] Comma separated usernames of principals to get. If match_criteria is specified, only the first username will be picked up for search.
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
          * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
@@ -4977,7 +4969,7 @@ export const PrincipalApiFactory = function (configuration?: Configuration, base
          * @summary List the principals for a tenant
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name and/or email.
+         * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name and/or email. Currently, match_criteria of partial searches for a username/email using \&quot;starts with\&quot; pattern.
          * @param {string} [usernames] Comma separated usernames of principals to get. If match_criteria is specified, only the first username will be picked up for search.
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
          * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
@@ -5005,7 +4997,7 @@ export class PrincipalApi extends BaseAPI {
      * @summary List the principals for a tenant
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
-     * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name and/or email.
+     * @param {'partial' | 'exact'} [matchCriteria] Parameter for specifying the matching criteria for an object\&#39;s name and/or email. Currently, match_criteria of partial searches for a username/email using \&quot;starts with\&quot; pattern.
      * @param {string} [usernames] Comma separated usernames of principals to get. If match_criteria is specified, only the first username will be picked up for search.
      * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
      * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
