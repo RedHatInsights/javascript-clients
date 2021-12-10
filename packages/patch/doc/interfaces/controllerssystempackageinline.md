@@ -27,7 +27,7 @@
 
 • **description**? : *string*
 
-*Defined in [packages/patch/api.ts:1269](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1269)*
+*Defined in [packages/patch/api.ts:1269](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1269)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -37,7 +37,7 @@ ___
 
 • **evra**? : *string*
 
-*Defined in [packages/patch/api.ts:1275](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1275)*
+*Defined in [packages/patch/api.ts:1275](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1275)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -47,7 +47,7 @@ ___
 
 • **latest_evra**? : *string*
 
-*Defined in [packages/patch/api.ts:1281](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1281)*
+*Defined in [packages/patch/api.ts:1281](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1281)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -57,7 +57,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/patch/api.ts:1287](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1287)*
+*Defined in [packages/patch/api.ts:1287](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1287)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -67,7 +67,7 @@ ___
 
 • **summary**? : *string*
 
-*Defined in [packages/patch/api.ts:1293](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1293)*
+*Defined in [packages/patch/api.ts:1293](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1293)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -77,6 +77,6 @@ ___
 
 • **updatable**? : *boolean*
 
-*Defined in [packages/patch/api.ts:1299](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1299)*
+*Defined in [packages/patch/api.ts:1299](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1299)*
 
 **`memberof`** ControllersSystemPackageInline

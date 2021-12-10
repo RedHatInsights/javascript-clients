@@ -44,7 +44,7 @@
 
 • **created**? : *string*
 
-*Defined in [packages/patch/api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L917)*
+*Defined in [packages/patch/api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L917)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -54,7 +54,7 @@ ___
 
 • **culled_timestamp**? : *string*
 
-*Defined in [packages/patch/api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L923)*
+*Defined in [packages/patch/api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L923)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -64,7 +64,7 @@ ___
 
 • **display_name**? : *string*
 
-*Defined in [packages/patch/api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L929)*
+*Defined in [packages/patch/api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L929)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -74,7 +74,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/patch/api.ts:935](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L935)*
+*Defined in [packages/patch/api.ts:935](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L935)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -84,7 +84,7 @@ ___
 
 • **insights_id**? : *string*
 
-*Defined in [packages/patch/api.ts:941](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L941)*
+*Defined in [packages/patch/api.ts:941](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L941)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -94,7 +94,7 @@ ___
 
 • **last_evaluation**? : *string*
 
-*Defined in [packages/patch/api.ts:947](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L947)*
+*Defined in [packages/patch/api.ts:947](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L947)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -104,7 +104,7 @@ ___
 
 • **last_upload**? : *string*
 
-*Defined in [packages/patch/api.ts:953](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L953)*
+*Defined in [packages/patch/api.ts:953](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L953)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -114,7 +114,7 @@ ___
 
 • **os**? : *string*
 
-*Defined in [packages/patch/api.ts:959](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L959)*
+*Defined in [packages/patch/api.ts:959](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L959)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -124,7 +124,7 @@ ___
 
 • **os_major**? : *string*
 
-*Defined in [packages/patch/api.ts:965](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L965)*
+*Defined in [packages/patch/api.ts:965](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L965)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -134,7 +134,7 @@ ___
 
 • **os_minor**? : *string*
 
-*Defined in [packages/patch/api.ts:971](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L971)*
+*Defined in [packages/patch/api.ts:971](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L971)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -144,7 +144,7 @@ ___
 
 • **os_name**? : *string*
 
-*Defined in [packages/patch/api.ts:977](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L977)*
+*Defined in [packages/patch/api.ts:977](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L977)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -154,7 +154,7 @@ ___
 
 • **other_count**? : *number*
 
-*Defined in [packages/patch/api.ts:983](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L983)*
+*Defined in [packages/patch/api.ts:983](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L983)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -164,7 +164,7 @@ ___
 
 • **packages_installed**? : *number*
 
-*Defined in [packages/patch/api.ts:989](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L989)*
+*Defined in [packages/patch/api.ts:989](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L989)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -174,7 +174,7 @@ ___
 
 • **packages_updatable**? : *number*
 
-*Defined in [packages/patch/api.ts:995](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L995)*
+*Defined in [packages/patch/api.ts:995](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L995)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -184,7 +184,7 @@ ___
 
 • **rhba_count**? : *number*
 
-*Defined in [packages/patch/api.ts:1001](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1001)*
+*Defined in [packages/patch/api.ts:1001](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1001)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -194,7 +194,7 @@ ___
 
 • **rhea_count**? : *number*
 
-*Defined in [packages/patch/api.ts:1007](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1007)*
+*Defined in [packages/patch/api.ts:1007](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1007)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -204,7 +204,7 @@ ___
 
 • **rhsa_count**? : *number*
 
-*Defined in [packages/patch/api.ts:1013](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1013)*
+*Defined in [packages/patch/api.ts:1013](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1013)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -214,7 +214,7 @@ ___
 
 • **rhsm**? : *string*
 
-*Defined in [packages/patch/api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1019)*
+*Defined in [packages/patch/api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1019)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -224,7 +224,7 @@ ___
 
 • **stale**? : *boolean*
 
-*Defined in [packages/patch/api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1025)*
+*Defined in [packages/patch/api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1025)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -234,7 +234,7 @@ ___
 
 • **stale_timestamp**? : *string*
 
-*Defined in [packages/patch/api.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1031)*
+*Defined in [packages/patch/api.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1031)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -244,7 +244,7 @@ ___
 
 • **stale_warning_timestamp**? : *string*
 
-*Defined in [packages/patch/api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1037)*
+*Defined in [packages/patch/api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1037)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -254,7 +254,7 @@ ___
 
 • **tags**? : *Array‹[ControllersSystemTag](controllerssystemtag.md)›*
 
-*Defined in [packages/patch/api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1043)*
+*Defined in [packages/patch/api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1043)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -264,6 +264,6 @@ ___
 
 • **third_party**? : *boolean*
 
-*Defined in [packages/patch/api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L1049)*
+*Defined in [packages/patch/api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/9192949/packages/patch/api.ts#L1049)*
 
 **`memberof`** ControllersSystemInlineItem
