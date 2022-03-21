@@ -52,7 +52,7 @@ export interface ApiErrorCollection {
     errors?: Array<ApiError>;
 }
 /**
- *
+ * 
  * @export
  * @interface ApprovalRequest
  */
@@ -82,7 +82,7 @@ export interface ApprovalRequest {
      */
     reason?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ApprovalRequest
      */
@@ -108,32 +108,32 @@ export enum ApprovalRequestStateEnum {
 }
 
 /**
- *
+ * 
  * @export
  * @interface ApprovalRequestsCollection
  */
 export interface ApprovalRequestsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ApprovalRequestsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ApprovalRequestsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ApprovalRequest>}
      * @memberof ApprovalRequestsCollection
      */
     data?: Array<ApprovalRequest>;
 }
 /**
- *
+ * 
  * @export
  * @interface CollectionLinks
  */
@@ -164,7 +164,7 @@ export interface CollectionLinks {
     next?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface CollectionMetadata
  */
@@ -177,7 +177,7 @@ export interface CollectionMetadata {
     count?: number;
 }
 /**
- *
+ * 
  * @export
  * @interface CopyPortfolioItem
  */
@@ -196,7 +196,7 @@ export interface CopyPortfolioItem {
     portfolio_item_name?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface CreateIcon
  */
@@ -221,7 +221,7 @@ export interface CreateIcon {
     portfolio_item_id?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface CreatePortfolioItem
  */
@@ -240,7 +240,7 @@ export interface CreatePortfolioItem {
     service_offering_ref?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface GraphQLRequest
  */
@@ -265,7 +265,7 @@ export interface GraphQLRequest {
     variables?: object | null;
 }
 /**
- *
+ * 
  * @export
  * @interface GraphQLResponse
  */
@@ -284,7 +284,7 @@ export interface GraphQLResponse {
     errors?: Array<object>;
 }
 /**
- *
+ * 
  * @export
  * @interface Icon
  */
@@ -327,7 +327,7 @@ export interface Icon {
     portfolio_item_id?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ImportServicePlan
  */
@@ -340,19 +340,19 @@ export interface ImportServicePlan {
     portfolio_item_id?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface Order
  */
 export interface Order {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Order
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Order
      */
@@ -364,7 +364,7 @@ export interface Order {
      */
     state?: OrderStateEnum;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Order
      */
@@ -376,13 +376,13 @@ export interface Order {
      */
     order_request_sent_at?: string | null;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Order
      */
     completed_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Order
      */
@@ -403,13 +403,13 @@ export enum OrderStateEnum {
 }
 
 /**
- *
+ * 
  * @export
  * @interface OrderItem
  */
 export interface OrderItem {
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrderItem
      */
@@ -421,13 +421,13 @@ export interface OrderItem {
      */
     name?: string;
     /**
-     *
+     * 
      * @type {number}
      * @memberof OrderItem
      */
     count: number;
     /**
-     *
+     * 
      * @type {object}
      * @memberof OrderItem
      */
@@ -457,7 +457,7 @@ export interface OrderItem {
      */
     order_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrderItem
      */
@@ -469,19 +469,19 @@ export interface OrderItem {
      */
     order_request_sent_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrderItem
      */
     completed_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrderItem
      */
     updated_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrderItem
      */
@@ -534,38 +534,38 @@ export enum OrderItemStateEnum {
 }
 
 /**
- *
+ * 
  * @export
  * @interface OrderItemsCollection
  */
 export interface OrderItemsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof OrderItemsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof OrderItemsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<OrderItem>}
      * @memberof OrderItemsCollection
      */
     data?: Array<OrderItem>;
 }
 /**
- *
+ * 
  * @export
  * @interface OrderProcess
  */
 export interface OrderProcess {
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrderProcess
      */
@@ -583,13 +583,13 @@ export interface OrderProcess {
      */
     description?: string | null;
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrderProcess
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrderProcess
      */
@@ -620,13 +620,13 @@ export interface OrderProcess {
     metadata?: object;
 }
 /**
- *
+ * 
  * @export
  * @interface OrderProcessAssociationsToRemove
  */
 export interface OrderProcessAssociationsToRemove {
     /**
-     *
+     * 
      * @type {Array<string>}
      * @memberof OrderProcessAssociationsToRemove
      */
@@ -644,70 +644,70 @@ export enum OrderProcessAssociationsToRemoveAssociationsToRemoveEnum {
 }
 
 /**
- *
+ * 
  * @export
  * @interface OrderProcessCollection
  */
 export interface OrderProcessCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof OrderProcessCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof OrderProcessCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<OrderProcess>}
      * @memberof OrderProcessCollection
      */
     data?: Array<OrderProcess>;
 }
 /**
- *
+ * 
  * @export
  * @interface OrderProcessPortfolioItemId
  */
 export interface OrderProcessPortfolioItemId {
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrderProcessPortfolioItemId
      */
     portfolio_item_id?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface OrdersCollection
  */
 export interface OrdersCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof OrdersCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof OrdersCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Order>}
      * @memberof OrdersCollection
      */
     data?: Array<Order>;
 }
 /**
- *
+ * 
  * @export
  * @interface PatchModifiedServicePlan
  */
@@ -720,37 +720,37 @@ export interface PatchModifiedServicePlan {
     modified?: object;
 }
 /**
- *
+ * 
  * @export
  * @interface Portfolio
  */
 export interface Portfolio {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Portfolio
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Portfolio
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Portfolio
      */
     description?: string | null;
     /**
-     *
+     * 
      * @type {boolean}
      * @memberof Portfolio
      */
     enabled?: boolean;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Portfolio
      */
@@ -762,13 +762,13 @@ export interface Portfolio {
      */
     icon_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Portfolio
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Portfolio
      */
@@ -781,73 +781,73 @@ export interface Portfolio {
     metadata?: object;
 }
 /**
- *
+ * 
  * @export
  * @interface PortfolioItem
  */
 export interface PortfolioItem {
     /**
-     *
+     * 
      * @type {string}
      * @memberof PortfolioItem
      */
     id?: string;
     /**
-     *
+     * 
      * @type {boolean}
      * @memberof PortfolioItem
      */
     favorite?: boolean;
     /**
-     *
+     * 
      * @type {string}
      * @memberof PortfolioItem
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof PortfolioItem
      */
     description?: string | null;
     /**
-     *
+     * 
      * @type {boolean}
      * @memberof PortfolioItem
      */
     orphan?: boolean;
     /**
-     *
+     * 
      * @type {string}
      * @memberof PortfolioItem
      */
     state?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof PortfolioItem
      */
     long_description?: string | null;
     /**
-     *
+     * 
      * @type {string}
      * @memberof PortfolioItem
      */
     distributor?: string | null;
     /**
-     *
+     * 
      * @type {string}
      * @memberof PortfolioItem
      */
     documentation_url?: string | null;
     /**
-     *
+     * 
      * @type {string}
      * @memberof PortfolioItem
      */
     support_url?: string | null;
     /**
-     *
+     * 
      * @type {string}
      * @memberof PortfolioItem
      */
@@ -877,13 +877,13 @@ export interface PortfolioItem {
      */
     icon_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof PortfolioItem
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof PortfolioItem
      */
@@ -896,94 +896,94 @@ export interface PortfolioItem {
     metadata?: object;
 }
 /**
- *
+ * 
  * @export
  * @interface PortfolioItemNextName
  */
 export interface PortfolioItemNextName {
     /**
-     *
+     * 
      * @type {string}
      * @memberof PortfolioItemNextName
      */
     next_name?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface PortfolioItemsCollection
  */
 export interface PortfolioItemsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof PortfolioItemsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof PortfolioItemsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<PortfolioItem>}
      * @memberof PortfolioItemsCollection
      */
     data?: Array<PortfolioItem>;
 }
 /**
- *
+ * 
  * @export
  * @interface PortfoliosCollection
  */
 export interface PortfoliosCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof PortfoliosCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof PortfoliosCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Portfolio>}
      * @memberof PortfoliosCollection
      */
     data?: Array<Portfolio>;
 }
 /**
- *
+ * 
  * @export
  * @interface ProgressMessage
  */
 export interface ProgressMessage {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ProgressMessage
      */
     received_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ProgressMessage
      */
     level?: ProgressMessageLevelEnum;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ProgressMessage
      */
     message?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ProgressMessage
      */
@@ -1002,25 +1002,25 @@ export enum ProgressMessageLevelEnum {
 }
 
 /**
- *
+ * 
  * @export
  * @interface ProgressMessagesCollection
  */
 export interface ProgressMessagesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ProgressMessagesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ProgressMessagesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ProgressMessage>}
      * @memberof ProgressMessagesCollection
      */
@@ -1081,20 +1081,20 @@ export interface ResourceObject {
     object_id: string;
 }
 /**
- *
+ * 
  * @export
  * @interface RestoreKey
  */
 export interface RestoreKey {
     /**
-     *
+     * 
      * @type {string}
      * @memberof RestoreKey
      */
     restore_key?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ServicePlan
  */
@@ -1143,26 +1143,26 @@ export interface ServicePlan {
     modified?: boolean;
 }
 /**
- *
+ * 
  * @export
  * @interface Setting
  */
 export interface Setting {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Setting
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Setting
      */
     value?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ShareInfo
  */
@@ -1199,7 +1199,7 @@ export enum ShareInfoPermissionsEnum {
 }
 
 /**
- *
+ * 
  * @export
  * @interface SharePolicy
  */
@@ -1230,7 +1230,7 @@ export enum SharePolicyPermissionsEnum {
 }
 
 /**
- *
+ * 
  * @export
  * @interface SubstitutionParameters
  */
@@ -1268,45 +1268,45 @@ export enum SubstitutionParametersAttributesEnum {
 }
 
 /**
- *
+ * 
  * @export
  * @interface Tag
  */
 export interface Tag {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tag
      */
     tag?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface TagsCollection
  */
 export interface TagsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof TagsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof TagsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Tag>}
      * @memberof TagsCollection
      */
     data?: Array<Tag>;
 }
 /**
- *
+ * 
  * @export
  * @interface Tenant
  */
@@ -1350,32 +1350,32 @@ export interface TenantSettings {
     schema?: object;
 }
 /**
- *
+ * 
  * @export
  * @interface TenantsCollection
  */
 export interface TenantsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof TenantsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof TenantsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Tenant>}
      * @memberof TenantsCollection
      */
     data?: Array<Tenant>;
 }
 /**
- *
+ * 
  * @export
  * @interface UnsharePolicy
  */
@@ -1413,7 +1413,7 @@ export enum UnsharePolicyPermissionsEnum {
 export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
+         * 
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1436,7 +1436,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1477,7 +1477,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1503,7 +1503,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 export const DefaultApiFp = function(configuration?: Configuration) {
     return {
         /**
-         *
+         * 
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1539,7 +1539,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
 export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         *
+         * 
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1568,7 +1568,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
  */
 export class DefaultApi extends BaseAPI {
     /**
-     *
+     * 
      * @summary Return this API document in JSON format
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1627,21 +1627,21 @@ export const IconApiAxiosParamCreator = function (configuration?: Configuration)
             }
 
 
-            if (content !== undefined) {
+            if (content !== undefined) { 
                 localVarFormParams.append('content', content as any);
             }
-
-            if (portfolioId !== undefined) {
+    
+            if (portfolioId !== undefined) { 
                 localVarFormParams.append('portfolio_id', portfolioId as any);
             }
-
-            if (portfolioItemId !== undefined) {
+    
+            if (portfolioItemId !== undefined) { 
                 localVarFormParams.append('portfolio_item_id', portfolioItemId as any);
             }
-
-
+    
+    
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1684,7 +1684,7 @@ export const IconApiAxiosParamCreator = function (configuration?: Configuration)
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1815,7 +1815,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * Adds an order item to an order in pending state
          * @summary Add an order item to an order in pending state
          * @param {string} orderId The Order ID
-         * @param {OrderItem} orderItem
+         * @param {OrderItem} orderItem 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1846,7 +1846,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1892,7 +1892,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1928,7 +1928,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1970,7 +1970,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2032,7 +2032,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2094,7 +2094,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2150,7 +2150,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2166,7 +2166,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
          * Restores the order specified by the order ID.
          * @summary Restore specific Order
          * @param {string} id ID of the resource
-         * @param {RestoreKey} restoreKey
+         * @param {RestoreKey} restoreKey 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2197,7 +2197,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2243,7 +2243,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2291,7 +2291,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2333,7 +2333,7 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2358,7 +2358,7 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * Adds an order item to an order in pending state
          * @summary Add an order item to an order in pending state
          * @param {string} orderId The Order ID
-         * @param {OrderItem} orderItem
+         * @param {OrderItem} orderItem 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2467,7 +2467,7 @@ export const OrderApiFp = function(configuration?: Configuration) {
          * Restores the order specified by the order ID.
          * @summary Restore specific Order
          * @param {string} id ID of the resource
-         * @param {RestoreKey} restoreKey
+         * @param {RestoreKey} restoreKey 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2534,7 +2534,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * Adds an order item to an order in pending state
          * @summary Add an order item to an order in pending state
          * @param {string} orderId The Order ID
-         * @param {OrderItem} orderItem
+         * @param {OrderItem} orderItem 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2615,7 +2615,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * Restores the order specified by the order ID.
          * @summary Restore specific Order
          * @param {string} id ID of the resource
-         * @param {RestoreKey} restoreKey
+         * @param {RestoreKey} restoreKey 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2667,7 +2667,7 @@ export class OrderApi extends BaseAPI {
      * Adds an order item to an order in pending state
      * @summary Add an order item to an order in pending state
      * @param {string} orderId The Order ID
-     * @param {OrderItem} orderItem
+     * @param {OrderItem} orderItem 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrderApi
@@ -2762,7 +2762,7 @@ export class OrderApi extends BaseAPI {
      * Restores the order specified by the order ID.
      * @summary Restore specific Order
      * @param {string} id ID of the resource
-     * @param {RestoreKey} restoreKey
+     * @param {RestoreKey} restoreKey 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrderApi
@@ -2847,7 +2847,7 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2909,7 +2909,7 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2971,7 +2971,7 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -3027,7 +3027,7 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -3043,7 +3043,7 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
          * Restores the order item specified by the order item ID.
          * @summary Restore specific Order item
          * @param {string} id ID of the resource
-         * @param {RestoreKey} restoreKey
+         * @param {RestoreKey} restoreKey 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3074,7 +3074,7 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3120,7 +3120,7 @@ export const OrderItemApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -3212,7 +3212,7 @@ export const OrderItemApiFp = function(configuration?: Configuration) {
          * Restores the order item specified by the order item ID.
          * @summary Restore specific Order item
          * @param {string} id ID of the resource
-         * @param {RestoreKey} restoreKey
+         * @param {RestoreKey} restoreKey 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3301,7 +3301,7 @@ export const OrderItemApiFactory = function (configuration?: Configuration, base
          * Restores the order item specified by the order item ID.
          * @summary Restore specific Order item
          * @param {string} id ID of the resource
-         * @param {RestoreKey} restoreKey
+         * @param {RestoreKey} restoreKey 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3391,7 +3391,7 @@ export class OrderItemApi extends BaseAPI {
      * Restores the order item specified by the order item ID.
      * @summary Restore specific Order item
      * @param {string} id ID of the resource
-     * @param {RestoreKey} restoreKey
+     * @param {RestoreKey} restoreKey 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrderItemApi
@@ -3425,7 +3425,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * Defines the product that will be executed after ordering when using this Order Process
          * @summary Adds an \'after\' product for an Order Process
          * @param {string} id ID of the resource
-         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3456,7 +3456,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3476,7 +3476,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * Defines the product that will be executed before ordering when using this Order Process
          * @summary Adds a \'before\' product for an Order Process
          * @param {string} id ID of the resource
-         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3507,7 +3507,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3527,7 +3527,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * Defines the product that will be executed on return when using this Order Process
          * @summary Adds \'return\' product for an Order Process
          * @param {string} id ID of the resource
-         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3558,7 +3558,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3603,7 +3603,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3649,7 +3649,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -3665,7 +3665,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * Links a tag to an order process
          * @summary Links a tag to an order process
          * @param {string} id ID of the resource
-         * @param {ResourceObject} resourceObject
+         * @param {ResourceObject} resourceObject 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3696,7 +3696,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3771,7 +3771,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -3787,7 +3787,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * Removes the association to the product(s) defined in the \'before\' and/or \'after\' that would be executed when using this Order Process
          * @summary Removes the \'before\' and/or \'after\' product(s) for an Order Process
          * @param {string} id ID of the resource
-         * @param {OrderProcessAssociationsToRemove} orderProcessAssociationsToRemove
+         * @param {OrderProcessAssociationsToRemove} orderProcessAssociationsToRemove 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3818,7 +3818,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3869,7 +3869,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3915,7 +3915,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -3931,7 +3931,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
          * Unlinks a tag from an order process
          * @summary Unlinks a tag from an order process
          * @param {string} id ID of the resource
-         * @param {ResourceObject} resourceObject
+         * @param {ResourceObject} resourceObject 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3962,7 +3962,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4013,7 +4013,7 @@ export const OrderProcessApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4042,7 +4042,7 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * Defines the product that will be executed after ordering when using this Order Process
          * @summary Adds an \'after\' product for an Order Process
          * @param {string} id ID of the resource
-         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4057,7 +4057,7 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * Defines the product that will be executed before ordering when using this Order Process
          * @summary Adds a \'before\' product for an Order Process
          * @param {string} id ID of the resource
-         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4072,7 +4072,7 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * Defines the product that will be executed on return when using this Order Process
          * @summary Adds \'return\' product for an Order Process
          * @param {string} id ID of the resource
-         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4115,7 +4115,7 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * Links a tag to an order process
          * @summary Links a tag to an order process
          * @param {string} id ID of the resource
-         * @param {ResourceObject} resourceObject
+         * @param {ResourceObject} resourceObject 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4150,7 +4150,7 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * Removes the association to the product(s) defined in the \'before\' and/or \'after\' that would be executed when using this Order Process
          * @summary Removes the \'before\' and/or \'after\' product(s) for an Order Process
          * @param {string} id ID of the resource
-         * @param {OrderProcessAssociationsToRemove} orderProcessAssociationsToRemove
+         * @param {OrderProcessAssociationsToRemove} orderProcessAssociationsToRemove 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4194,7 +4194,7 @@ export const OrderProcessApiFp = function(configuration?: Configuration) {
          * Unlinks a tag from an order process
          * @summary Unlinks a tag from an order process
          * @param {string} id ID of the resource
-         * @param {ResourceObject} resourceObject
+         * @param {ResourceObject} resourceObject 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4233,7 +4233,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * Defines the product that will be executed after ordering when using this Order Process
          * @summary Adds an \'after\' product for an Order Process
          * @param {string} id ID of the resource
-         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4244,7 +4244,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * Defines the product that will be executed before ordering when using this Order Process
          * @summary Adds a \'before\' product for an Order Process
          * @param {string} id ID of the resource
-         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4255,7 +4255,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * Defines the product that will be executed on return when using this Order Process
          * @summary Adds \'return\' product for an Order Process
          * @param {string} id ID of the resource
-         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+         * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4286,7 +4286,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * Links a tag to an order process
          * @summary Links a tag to an order process
          * @param {string} id ID of the resource
-         * @param {ResourceObject} resourceObject
+         * @param {ResourceObject} resourceObject 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4313,7 +4313,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * Removes the association to the product(s) defined in the \'before\' and/or \'after\' that would be executed when using this Order Process
          * @summary Removes the \'before\' and/or \'after\' product(s) for an Order Process
          * @param {string} id ID of the resource
-         * @param {OrderProcessAssociationsToRemove} orderProcessAssociationsToRemove
+         * @param {OrderProcessAssociationsToRemove} orderProcessAssociationsToRemove 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4345,7 +4345,7 @@ export const OrderProcessApiFactory = function (configuration?: Configuration, b
          * Unlinks a tag from an order process
          * @summary Unlinks a tag from an order process
          * @param {string} id ID of the resource
-         * @param {ResourceObject} resourceObject
+         * @param {ResourceObject} resourceObject 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4377,7 +4377,7 @@ export class OrderProcessApi extends BaseAPI {
      * Defines the product that will be executed after ordering when using this Order Process
      * @summary Adds an \'after\' product for an Order Process
      * @param {string} id ID of the resource
-     * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+     * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrderProcessApi
@@ -4390,7 +4390,7 @@ export class OrderProcessApi extends BaseAPI {
      * Defines the product that will be executed before ordering when using this Order Process
      * @summary Adds a \'before\' product for an Order Process
      * @param {string} id ID of the resource
-     * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+     * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrderProcessApi
@@ -4403,7 +4403,7 @@ export class OrderProcessApi extends BaseAPI {
      * Defines the product that will be executed on return when using this Order Process
      * @summary Adds \'return\' product for an Order Process
      * @param {string} id ID of the resource
-     * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId
+     * @param {OrderProcessPortfolioItemId} orderProcessPortfolioItemId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrderProcessApi
@@ -4440,7 +4440,7 @@ export class OrderProcessApi extends BaseAPI {
      * Links a tag to an order process
      * @summary Links a tag to an order process
      * @param {string} id ID of the resource
-     * @param {ResourceObject} resourceObject
+     * @param {ResourceObject} resourceObject 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrderProcessApi
@@ -4471,7 +4471,7 @@ export class OrderProcessApi extends BaseAPI {
      * Removes the association to the product(s) defined in the \'before\' and/or \'after\' that would be executed when using this Order Process
      * @summary Removes the \'before\' and/or \'after\' product(s) for an Order Process
      * @param {string} id ID of the resource
-     * @param {OrderProcessAssociationsToRemove} orderProcessAssociationsToRemove
+     * @param {OrderProcessAssociationsToRemove} orderProcessAssociationsToRemove 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrderProcessApi
@@ -4509,7 +4509,7 @@ export class OrderProcessApi extends BaseAPI {
      * Unlinks a tag from an order process
      * @summary Unlinks a tag from an order process
      * @param {string} id ID of the resource
-     * @param {ResourceObject} resourceObject
+     * @param {ResourceObject} resourceObject 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrderProcessApi
@@ -4544,7 +4544,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * Adds a single tag to Portfolio object
          * @summary Add Tag for Portfolio
          * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
+         * @param {Array<Tag>} tag 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4575,7 +4575,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4620,7 +4620,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4666,7 +4666,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4728,7 +4728,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4790,7 +4790,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4846,7 +4846,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4888,7 +4888,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4904,7 +4904,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * Remove Tags from Portfolio
          * @summary Remove Tags from Portfolio
          * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
+         * @param {Array<Tag>} tag 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4935,7 +4935,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4981,7 +4981,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4997,7 +4997,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * Share a Portfolio with one or more groups with specific permissions
          * @summary Share a portfolio with one or more groups with specific permission
          * @param {string} portfolioId The Portfolio ID
-         * @param {SharePolicy} sharePolicy
+         * @param {SharePolicy} sharePolicy 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5028,7 +5028,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5074,7 +5074,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5121,7 +5121,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5137,7 +5137,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * Undeletes the portfolio specified by the portfolio ID.
          * @summary Undelete specific portfolio
          * @param {string} id ID of the resource
-         * @param {RestoreKey} restoreKey
+         * @param {RestoreKey} restoreKey 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5168,7 +5168,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5188,7 +5188,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
          * Unshare a Portfolio with one or more groups with specific permissions
          * @summary Unshare a portfolio from one or more groups with specific permission
          * @param {string} portfolioId The Portfolio ID
-         * @param {UnsharePolicy} unsharePolicy
+         * @param {UnsharePolicy} unsharePolicy 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5219,7 +5219,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5270,7 +5270,7 @@ export const PortfolioApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5299,7 +5299,7 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * Adds a single tag to Portfolio object
          * @summary Add Tag for Portfolio
          * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
+         * @param {Array<Tag>} tag 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5409,7 +5409,7 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * Remove Tags from Portfolio
          * @summary Remove Tags from Portfolio
          * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
+         * @param {Array<Tag>} tag 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5438,7 +5438,7 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * Share a Portfolio with one or more groups with specific permissions
          * @summary Share a portfolio with one or more groups with specific permission
          * @param {string} portfolioId The Portfolio ID
-         * @param {SharePolicy} sharePolicy
+         * @param {SharePolicy} sharePolicy 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5482,7 +5482,7 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * Undeletes the portfolio specified by the portfolio ID.
          * @summary Undelete specific portfolio
          * @param {string} id ID of the resource
-         * @param {RestoreKey} restoreKey
+         * @param {RestoreKey} restoreKey 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5497,7 +5497,7 @@ export const PortfolioApiFp = function(configuration?: Configuration) {
          * Unshare a Portfolio with one or more groups with specific permissions
          * @summary Unshare a portfolio from one or more groups with specific permission
          * @param {string} portfolioId The Portfolio ID
-         * @param {UnsharePolicy} unsharePolicy
+         * @param {UnsharePolicy} unsharePolicy 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5536,7 +5536,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * Adds a single tag to Portfolio object
          * @summary Add Tag for Portfolio
          * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
+         * @param {Array<Tag>} tag 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5618,7 +5618,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * Remove Tags from Portfolio
          * @summary Remove Tags from Portfolio
          * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
+         * @param {Array<Tag>} tag 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5639,7 +5639,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * Share a Portfolio with one or more groups with specific permissions
          * @summary Share a portfolio with one or more groups with specific permission
          * @param {string} portfolioId The Portfolio ID
-         * @param {SharePolicy} sharePolicy
+         * @param {SharePolicy} sharePolicy 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5671,7 +5671,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * Undeletes the portfolio specified by the portfolio ID.
          * @summary Undelete specific portfolio
          * @param {string} id ID of the resource
-         * @param {RestoreKey} restoreKey
+         * @param {RestoreKey} restoreKey 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5682,7 +5682,7 @@ export const PortfolioApiFactory = function (configuration?: Configuration, base
          * Unshare a Portfolio with one or more groups with specific permissions
          * @summary Unshare a portfolio from one or more groups with specific permission
          * @param {string} portfolioId The Portfolio ID
-         * @param {UnsharePolicy} unsharePolicy
+         * @param {UnsharePolicy} unsharePolicy 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5714,7 +5714,7 @@ export class PortfolioApi extends BaseAPI {
      * Adds a single tag to Portfolio object
      * @summary Add Tag for Portfolio
      * @param {string} id ID of the resource
-     * @param {Array<Tag>} tag
+     * @param {Array<Tag>} tag 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioApi
@@ -5810,7 +5810,7 @@ export class PortfolioApi extends BaseAPI {
      * Remove Tags from Portfolio
      * @summary Remove Tags from Portfolio
      * @param {string} id ID of the resource
-     * @param {Array<Tag>} tag
+     * @param {Array<Tag>} tag 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioApi
@@ -5835,7 +5835,7 @@ export class PortfolioApi extends BaseAPI {
      * Share a Portfolio with one or more groups with specific permissions
      * @summary Share a portfolio with one or more groups with specific permission
      * @param {string} portfolioId The Portfolio ID
-     * @param {SharePolicy} sharePolicy
+     * @param {SharePolicy} sharePolicy 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioApi
@@ -5873,7 +5873,7 @@ export class PortfolioApi extends BaseAPI {
      * Undeletes the portfolio specified by the portfolio ID.
      * @summary Undelete specific portfolio
      * @param {string} id ID of the resource
-     * @param {RestoreKey} restoreKey
+     * @param {RestoreKey} restoreKey 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioApi
@@ -5886,7 +5886,7 @@ export class PortfolioApi extends BaseAPI {
      * Unshare a Portfolio with one or more groups with specific permissions
      * @summary Unshare a portfolio from one or more groups with specific permission
      * @param {string} portfolioId The Portfolio ID
-     * @param {UnsharePolicy} unsharePolicy
+     * @param {UnsharePolicy} unsharePolicy 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioApi
@@ -5921,7 +5921,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * Adds a single tag to a Portfolio Item object
          * @summary Add Tag for Portfolio Item
          * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
+         * @param {Array<Tag>} tag 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5952,7 +5952,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5971,7 +5971,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
         /**
          * Adds a name and description for a portfolio item and returns the newly created portfolio item.
          * @summary Add a new portfolio item
-         * @param {CreatePortfolioItem} createPortfolioItem
+         * @param {CreatePortfolioItem} createPortfolioItem 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5997,7 +5997,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6043,7 +6043,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6090,7 +6090,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6152,7 +6152,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6208,7 +6208,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6250,7 +6250,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6266,7 +6266,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * Make a copy of the Portfolio Item.
          * @summary Make a copy of the Portfolio Item
          * @param {string} portfolioItemId The Portfolio Item ID
-         * @param {CopyPortfolioItem} [copyPortfolioItem]
+         * @param {CopyPortfolioItem} [copyPortfolioItem] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6293,7 +6293,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6313,7 +6313,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * Remove Tags from Portfolio Item
          * @summary Remove Tags from Portfolio Item
          * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
+         * @param {Array<Tag>} tag 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6344,7 +6344,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6395,7 +6395,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6437,7 +6437,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6453,7 +6453,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
          * If a record has been discarded, this operation will undelete it so it can be requested normally.
          * @summary Undelete a specified Portfolio Item
          * @param {string} portfolioItemId The Portfolio Item ID
-         * @param {RestoreKey} restoreKey
+         * @param {RestoreKey} restoreKey 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6484,7 +6484,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6535,7 +6535,7 @@ export const PortfolioItemApiAxiosParamCreator = function (configuration?: Confi
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6564,7 +6564,7 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * Adds a single tag to a Portfolio Item object
          * @summary Add Tag for Portfolio Item
          * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
+         * @param {Array<Tag>} tag 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6578,7 +6578,7 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
         /**
          * Adds a name and description for a portfolio item and returns the newly created portfolio item.
          * @summary Add a new portfolio item
-         * @param {CreatePortfolioItem} createPortfolioItem
+         * @param {CreatePortfolioItem} createPortfolioItem 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6671,7 +6671,7 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * Make a copy of the Portfolio Item.
          * @summary Make a copy of the Portfolio Item
          * @param {string} portfolioItemId The Portfolio Item ID
-         * @param {CopyPortfolioItem} [copyPortfolioItem]
+         * @param {CopyPortfolioItem} [copyPortfolioItem] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6686,7 +6686,7 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * Remove Tags from Portfolio Item
          * @summary Remove Tags from Portfolio Item
          * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
+         * @param {Array<Tag>} tag 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6730,7 +6730,7 @@ export const PortfolioItemApiFp = function(configuration?: Configuration) {
          * If a record has been discarded, this operation will undelete it so it can be requested normally.
          * @summary Undelete a specified Portfolio Item
          * @param {string} portfolioItemId The Portfolio Item ID
-         * @param {RestoreKey} restoreKey
+         * @param {RestoreKey} restoreKey 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6769,7 +6769,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * Adds a single tag to a Portfolio Item object
          * @summary Add Tag for Portfolio Item
          * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
+         * @param {Array<Tag>} tag 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6779,7 +6779,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
         /**
          * Adds a name and description for a portfolio item and returns the newly created portfolio item.
          * @summary Add a new portfolio item
-         * @param {CreatePortfolioItem} createPortfolioItem
+         * @param {CreatePortfolioItem} createPortfolioItem 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6848,7 +6848,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * Make a copy of the Portfolio Item.
          * @summary Make a copy of the Portfolio Item
          * @param {string} portfolioItemId The Portfolio Item ID
-         * @param {CopyPortfolioItem} [copyPortfolioItem]
+         * @param {CopyPortfolioItem} [copyPortfolioItem] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6859,7 +6859,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * Remove Tags from Portfolio Item
          * @summary Remove Tags from Portfolio Item
          * @param {string} id ID of the resource
-         * @param {Array<Tag>} tag
+         * @param {Array<Tag>} tag 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6891,7 +6891,7 @@ export const PortfolioItemApiFactory = function (configuration?: Configuration, 
          * If a record has been discarded, this operation will undelete it so it can be requested normally.
          * @summary Undelete a specified Portfolio Item
          * @param {string} portfolioItemId The Portfolio Item ID
-         * @param {RestoreKey} restoreKey
+         * @param {RestoreKey} restoreKey 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6923,7 +6923,7 @@ export class PortfolioItemApi extends BaseAPI {
      * Adds a single tag to a Portfolio Item object
      * @summary Add Tag for Portfolio Item
      * @param {string} id ID of the resource
-     * @param {Array<Tag>} tag
+     * @param {Array<Tag>} tag 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioItemApi
@@ -6935,7 +6935,7 @@ export class PortfolioItemApi extends BaseAPI {
     /**
      * Adds a name and description for a portfolio item and returns the newly created portfolio item.
      * @summary Add a new portfolio item
-     * @param {CreatePortfolioItem} createPortfolioItem
+     * @param {CreatePortfolioItem} createPortfolioItem 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioItemApi
@@ -7016,7 +7016,7 @@ export class PortfolioItemApi extends BaseAPI {
      * Make a copy of the Portfolio Item.
      * @summary Make a copy of the Portfolio Item
      * @param {string} portfolioItemId The Portfolio Item ID
-     * @param {CopyPortfolioItem} [copyPortfolioItem]
+     * @param {CopyPortfolioItem} [copyPortfolioItem] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioItemApi
@@ -7029,7 +7029,7 @@ export class PortfolioItemApi extends BaseAPI {
      * Remove Tags from Portfolio Item
      * @summary Remove Tags from Portfolio Item
      * @param {string} id ID of the resource
-     * @param {Array<Tag>} tag
+     * @param {Array<Tag>} tag 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioItemApi
@@ -7067,7 +7067,7 @@ export class PortfolioItemApi extends BaseAPI {
      * If a record has been discarded, this operation will undelete it so it can be requested normally.
      * @summary Undelete a specified Portfolio Item
      * @param {string} portfolioItemId The Portfolio Item ID
-     * @param {RestoreKey} restoreKey
+     * @param {RestoreKey} restoreKey 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PortfolioItemApi
@@ -7101,7 +7101,7 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
         /**
          * Returns the new Service Plan
          * @summary Create Service Plan
-         * @param {ImportServicePlan} [importServicePlan]
+         * @param {ImportServicePlan} [importServicePlan] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -7123,7 +7123,7 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -7140,10 +7140,10 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         *
+         * 
          * @summary Patch Service Plan Modified Schema
          * @param {string} id ID of the resource
-         * @param {PatchModifiedServicePlan} [patchModifiedServicePlan]
+         * @param {PatchModifiedServicePlan} [patchModifiedServicePlan] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -7170,7 +7170,7 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -7216,7 +7216,7 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7258,7 +7258,7 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7300,7 +7300,7 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7342,7 +7342,7 @@ export const ServicePlansApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7366,7 +7366,7 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
         /**
          * Returns the new Service Plan
          * @summary Create Service Plan
-         * @param {ImportServicePlan} [importServicePlan]
+         * @param {ImportServicePlan} [importServicePlan] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -7378,10 +7378,10 @@ export const ServicePlansApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         *
+         * 
          * @summary Patch Service Plan Modified Schema
          * @param {string} id ID of the resource
-         * @param {PatchModifiedServicePlan} [patchModifiedServicePlan]
+         * @param {PatchModifiedServicePlan} [patchModifiedServicePlan] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -7460,7 +7460,7 @@ export const ServicePlansApiFactory = function (configuration?: Configuration, b
         /**
          * Returns the new Service Plan
          * @summary Create Service Plan
-         * @param {ImportServicePlan} [importServicePlan]
+         * @param {ImportServicePlan} [importServicePlan] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -7468,10 +7468,10 @@ export const ServicePlansApiFactory = function (configuration?: Configuration, b
             return ServicePlansApiFp(configuration).createServicePlan(importServicePlan, options).then((request) => request(axios, basePath));
         },
         /**
-         *
+         * 
          * @summary Patch Service Plan Modified Schema
          * @param {string} id ID of the resource
-         * @param {PatchModifiedServicePlan} [patchModifiedServicePlan]
+         * @param {PatchModifiedServicePlan} [patchModifiedServicePlan] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -7531,7 +7531,7 @@ export class ServicePlansApi extends BaseAPI {
     /**
      * Returns the new Service Plan
      * @summary Create Service Plan
-     * @param {ImportServicePlan} [importServicePlan]
+     * @param {ImportServicePlan} [importServicePlan] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ServicePlansApi
@@ -7541,10 +7541,10 @@ export class ServicePlansApi extends BaseAPI {
     }
 
     /**
-     *
+     * 
      * @summary Patch Service Plan Modified Schema
      * @param {string} id ID of the resource
-     * @param {PatchModifiedServicePlan} [patchModifiedServicePlan]
+     * @param {PatchModifiedServicePlan} [patchModifiedServicePlan] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ServicePlansApi
@@ -7639,7 +7639,7 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -7685,7 +7685,7 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7721,7 +7721,7 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7763,7 +7763,7 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7805,7 +7805,7 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8055,7 +8055,7 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8161,7 +8161,7 @@ export const TenantApiAxiosParamCreator = function (configuration?: Configuratio
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8203,7 +8203,7 @@ export const TenantApiAxiosParamCreator = function (configuration?: Configuratio
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8245,7 +8245,7 @@ export const TenantApiAxiosParamCreator = function (configuration?: Configuratio
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
